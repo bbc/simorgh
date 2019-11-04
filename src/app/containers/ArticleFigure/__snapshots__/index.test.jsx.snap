@@ -85,61 +85,6 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    display: grid;
-    position: initial;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -160,9 +105,6 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
         </noscript>
       </div>
     </div>
-    <div
-      class="c4"
-    />
   </div>
 </figure>
 `;
@@ -252,61 +194,6 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    display: grid;
-    position: initial;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -329,9 +216,6 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
         />
       </div>
     </div>
-    <div
-      class="c4"
-    />
   </div>
 </figure>
 `;
@@ -369,7 +253,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   left: 0;
 }
 
-.c7 {
+.c6 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -380,16 +264,16 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   width: 100%;
 }
 
-.c7 > p {
+.c6 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c7 > p:last-child {
+.c6 > p:last-child {
   padding-bottom: 0;
 }
 
-.c7 i {
+.c6 i {
   font-style: normal;
 }
 
@@ -411,27 +295,27 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c7 {
+  .c6 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c6 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c7 {
+  .c6 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c7 {
+  .c6 {
     padding: 0.5rem 0 0;
   }
 }
@@ -494,61 +378,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 @supports (display:grid) {
   .c2 {
     display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c6 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c6 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c6 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c6 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c6 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c6 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c6 {
-    display: grid;
-    position: initial;
   }
 }
 
@@ -586,10 +415,10 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
       </div>
     </div>
     <div
-      class="c6"
+      class="c2"
     >
       <figcaption
-        class="c7"
+        class="c6"
       >
         <span
           class="c5"
@@ -612,7 +441,7 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   width: 100%;
 }
 
-.c6 {
+.c5 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -624,7 +453,7 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   margin: 0;
 }
 
-.c5 {
+.c4 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -635,16 +464,16 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   width: 100%;
 }
 
-.c5 > p {
+.c4 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c5 > p:last-child {
+.c4 > p:last-child {
   padding-bottom: 0;
 }
 
-.c5 i {
+.c4 i {
   font-style: normal;
 }
 
@@ -666,27 +495,27 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c4 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c5 {
+  .c4 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c5 {
+  .c4 {
     padding: 0.5rem 0 0;
   }
 }
@@ -752,61 +581,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    display: grid;
-    position: initial;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -830,13 +604,13 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
       </div>
     </div>
     <div
-      class="c4"
+      class="c2"
     >
       <figcaption
-        class="c5"
+        class="c4"
       >
         <span
-          class="c6"
+          class="c5"
         >
           Image caption, 
         </span>
@@ -856,7 +630,7 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   width: 100%;
 }
 
-.c6 {
+.c5 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -868,7 +642,7 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   margin: 0;
 }
 
-.c5 {
+.c4 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -879,33 +653,33 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   width: 100%;
 }
 
-.c5 > p {
+.c4 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c5 > p:last-child {
+.c4 > p:last-child {
   padding-bottom: 0;
 }
 
-.c5 i {
+.c4 i {
   font-style: normal;
 }
 
-.c7 {
+.c6 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c7:visited {
+.c6:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c7:focus,
-.c7:hover {
+.c6:focus,
+.c6:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -928,27 +702,27 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c4 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c4 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c5 {
+  .c4 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c5 {
+  .c4 {
     padding: 0.5rem 0 0;
   }
 }
@@ -1014,61 +788,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    display: grid;
-    position: initial;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -1092,20 +811,20 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
       </div>
     </div>
     <div
-      class="c4"
+      class="c2"
     >
       <figcaption
-        class="c5"
+        class="c4"
       >
         <span
-          class="c6"
+          class="c5"
         >
           Image caption, 
         </span>
         <p>
           This is a caption 
           <a
-            class="c7"
+            class="c6"
             href="https://www.bbc.com"
           >
             containing an inline link
@@ -1229,61 +948,6 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c6 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c6 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c6 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c6 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c6 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c6 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c6 {
-    display: grid;
-    position: initial;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -1317,9 +981,6 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
         </p>
       </div>
     </div>
-    <div
-      class="c6"
-    />
   </div>
 </figure>
 `;
@@ -1415,61 +1076,6 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c5 {
-    display: grid;
-    position: initial;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -1490,9 +1096,6 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
         />
       </div>
     </div>
-    <div
-      class="c5"
-    />
   </div>
 </figure>
 `;
@@ -1588,61 +1191,6 @@ exports[`ArticleFigure should render an image and caption for a square with nest
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c5 {
-    display: inline-block;
-    width: 120%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
-    display: inline-block;
-    width: 120%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
-    display: inline-block;
-    width: 120%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
-    display: inline-block;
-    width: 120%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c5 {
-    display: inline-block;
-    width: 120%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    display: inline-block;
-    width: 120%;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c5 {
-    display: grid;
-    position: initial;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -1663,9 +1211,6 @@ exports[`ArticleFigure should render an image and caption for a square with nest
         />
       </div>
     </div>
-    <div
-      class="c5"
-    />
   </div>
 </figure>
 `;
@@ -1761,61 +1306,6 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c5 {
-    display: grid;
-    position: initial;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -1836,9 +1326,6 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
         />
       </div>
     </div>
-    <div
-      class="c5"
-    />
   </div>
 </figure>
 `;
@@ -1876,7 +1363,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   left: 0;
 }
 
-.c8 {
+.c7 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1887,16 +1374,16 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   width: 100%;
 }
 
-.c8 > p {
+.c7 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c8 > p:last-child {
+.c7 > p:last-child {
   padding-bottom: 0;
 }
 
-.c8 i {
+.c7 i {
   font-style: normal;
 }
 
@@ -1924,27 +1411,27 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
+  .c7 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c8 {
+  .c7 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c8 {
+  .c7 {
     padding: 0.5rem 0 0;
   }
 }
@@ -2007,61 +1494,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 @supports (display:grid) {
   .c2 {
     display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c7 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c7 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c7 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c7 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c7 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c7 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c7 {
-    display: grid;
-    position: initial;
   }
 }
 
@@ -2097,10 +1529,10 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
       </div>
     </div>
     <div
-      class="c7"
+      class="c2"
     >
       <figcaption
-        class="c8"
+        class="c7"
       >
         <span
           class="c6"
@@ -2123,7 +1555,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   width: 100%;
 }
 
-.c7 {
+.c6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -2135,7 +1567,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   margin: 0;
 }
 
-.c6 {
+.c5 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2146,16 +1578,16 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   width: 100%;
 }
 
-.c6 > p {
+.c5 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c6 > p:last-child {
+.c5 > p:last-child {
   padding-bottom: 0;
 }
 
-.c6 i {
+.c5 i {
   font-style: normal;
 }
 
@@ -2183,27 +1615,27 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c5 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c5 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c6 {
+  .c5 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c6 {
+  .c5 {
     padding: 0.5rem 0 0;
   }
 }
@@ -2269,61 +1701,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c5 {
-    display: grid;
-    position: initial;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -2345,13 +1722,13 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
       </div>
     </div>
     <div
-      class="c5"
+      class="c2"
     >
       <figcaption
-        class="c6"
+        class="c5"
       >
         <span
-          class="c7"
+          class="c6"
         >
           Image caption, 
         </span>
@@ -2371,7 +1748,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
   width: 100%;
 }
 
-.c7 {
+.c6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -2383,7 +1760,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
   margin: 0;
 }
 
-.c6 {
+.c5 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2394,33 +1771,33 @@ exports[`ArticleFigure should render an image with caption text with inline link
   width: 100%;
 }
 
-.c6 > p {
+.c5 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c6 > p:last-child {
+.c5 > p:last-child {
   padding-bottom: 0;
 }
 
-.c6 i {
+.c5 i {
   font-style: normal;
 }
 
-.c8 {
+.c7 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c8:visited {
+.c7:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c8:focus,
-.c8:hover {
+.c7:focus,
+.c7:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -2449,27 +1826,27 @@ exports[`ArticleFigure should render an image with caption text with inline link
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c5 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c5 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c6 {
+  .c5 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c6 {
+  .c5 {
     padding: 0.5rem 0 0;
   }
 }
@@ -2535,61 +1912,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c5 {
-    display: grid;
-    position: initial;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -2611,20 +1933,20 @@ exports[`ArticleFigure should render an image with caption text with inline link
       </div>
     </div>
     <div
-      class="c5"
+      class="c2"
     >
       <figcaption
-        class="c6"
+        class="c5"
       >
         <span
-          class="c7"
+          class="c6"
         >
           Image caption, 
         </span>
         <p>
           This is a caption 
           <a
-            class="c8"
+            class="c7"
             href="https://www.bbc.com"
           >
             containing an inline link
@@ -2754,61 +2076,6 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c7 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c7 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c7 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c7 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c7 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c7 {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c7 {
-    display: grid;
-    position: initial;
-  }
-}
-
 <figure
   class="c0"
 >
@@ -2840,9 +2107,6 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
         </p>
       </div>
     </div>
-    <div
-      class="c7"
-    />
   </div>
 </figure>
 `;

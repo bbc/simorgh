@@ -9,12 +9,8 @@ import Grid from '#app/components/Grid';
 const renderCopyright = copyright =>
   copyright && <Copyright>{copyright}</Copyright>;
 
-const renderCaption = (block, type, columns, service) =>
-  block && (
-    <Grid columns={columns}>
-      <Caption block={block} type={type} service={service} />
-    </Grid>
-  );
+const renderCaption = (block, type, service) =>
+  block && <Caption block={block} type={type} service={service} />;
 
 const ArticleFigure = ({
   height,
@@ -37,8 +33,6 @@ const ArticleFigure = ({
   }
   if (height > width) {
     imageOrientation = 'portrait';
-    // ChildWrapper = NestedGridItemChildSmall;
-    // imageSpan.default = '4';
   }
 
   const figureLayouts = {
@@ -121,6 +115,10 @@ const ArticleFigure = ({
       group5: 8,
     },
   };
+
+  const caption = renderCaption(captionBlock, type);
+  const hasCaption = !!caption;
+
   return (
     <Figure>
       <Grid columns={figureLayouts[imageOrientation]}>
@@ -139,7 +137,11 @@ const ArticleFigure = ({
             {showCopyright && renderCopyright(copyright)}
           </ImageWithPlaceholder>
         </Grid>
-        {renderCaption(captionBlock, type, captionLayouts[imageOrientation])}
+        {hasCaption && (
+          <Grid item columns={captionLayouts[imageOrientation]}>
+            {caption}
+          </Grid>
+        )}
       </Grid>
     </Figure>
   );
