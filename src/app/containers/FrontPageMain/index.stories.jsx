@@ -33,6 +33,7 @@ Object.keys(serviceDataSets).forEach(service => {
           isAmp={false}
           pageType="frontPage"
           service={service}
+          pathname={`/${service}`}
         >
           <FrontPageMain frontPageData={serviceDataSets[service]} />
         </RequestContextProvider>
