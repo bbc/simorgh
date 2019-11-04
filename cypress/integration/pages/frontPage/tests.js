@@ -175,8 +175,30 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               const usefulLinks = pageData.find(data => {
                 return data.type === 'useful-links';
               });
+
+              const contentTypes = [
+                'Text',
+                'Feature',
+                'Audio',
+                'Video',
+                'Gallery',
+                'Guide',
+              ];
+
+              let usefulLinksItems = [];
+              if (usefulLinks) {
+                usefulLinksItems = usefulLinks.items.filter(item => {
+                  return (
+                    item.assetTypeCode === 'PRO' &&
+                    contentTypes.includes(item.contentType)
+                  );
+                });
+              }
+
               const isValidUsefulLinks =
-                usefulLinks && 'strapline' in usefulLinks;
+                usefulLinks &&
+                'strapline' in usefulLinks &&
+                usefulLinksItems.length;
 
               if (isValidUsefulLinks) {
                 //  We include the hasStrapline as we don't render Useful Links
