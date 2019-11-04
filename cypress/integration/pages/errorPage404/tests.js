@@ -106,7 +106,10 @@ export const testsThatFollowSmokeTestConfig = ({
           failOnStatusCode: false,
         })
           .get('[class^="StatusCode"]')
-          .should('contain', '404');
+          .should(
+            'contain',
+            appConfig[service][variant].translations.error[404].statusCode,
+          );
       });
       it(`/${service}/500 should have response code 200`, () => {
         cy.testResponseCodeAndType(`/${service}/500`, 200, 'text/html');
@@ -114,7 +117,10 @@ export const testsThatFollowSmokeTestConfig = ({
           failOnStatusCode: false,
         })
           .get('[class^="StatusCode"]')
-          .should('contain', '500');
+          .should(
+            'contain',
+            appConfig[service][variant].translations.error[500].statusCode,
+          );
       });
     });
   });
