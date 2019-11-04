@@ -1,6 +1,7 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
+import dissocPath from 'ramda/src/dissocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -27,6 +28,26 @@ const toggleState = {
     },
   },
 };
+
+// eslint-disable-next-line react/prop-types
+const createMediaAssetPage = ({ pageData }) => (
+  <StaticRouter>
+    <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
+      <ServiceContextProvider service="igbo">
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          isAmp={false}
+          pageType="MAP"
+          pathname="/pidgin/tori-49450859"
+          service="pidgin"
+          statusCode={200}
+        >
+          <CpsAssetPageMain service="pidgin" pageData={pageData} />
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ToggleContext.Provider>
+  </StaticRouter>
+);
 
 describe('CpsAssetPageMain', () => {
   it('should match snapshot for STY', async () => {
@@ -66,25 +87,24 @@ describe('CpsAssetPageMain', () => {
       cpsAssetPreprocessorRules,
     );
 
+    await matchSnapshotAsync(createMediaAssetPage({ pageData }));
+  });
+
+  it('should match snapshot for MAP - hidden timestamp', async () => {
+    const pageData = await preprocessor(
+      pidginPageData,
+      cpsAssetPreprocessorRules,
+    );
+
+    const pageDataWithHiddenTimestamp = dissocPath(
+      ['metadata', 'options', 'allowDateStamp'],
+      pageData,
+    );
+
     await matchSnapshotAsync(
-      <StaticRouter>
-        <ToggleContext.Provider
-          value={{ toggleState, toggleDispatch: jest.fn() }}
-        >
-          <ServiceContextProvider service="igbo">
-            <RequestContextProvider
-              bbcOrigin="https://www.test.bbc.co.uk"
-              isAmp={false}
-              pageType="MAP"
-              pathname="/pidgin/tori-49450859"
-              service="pidgin"
-              statusCode={200}
-            >
-              <CpsAssetPageMain service="pidgin" pageData={pageData} />
-            </RequestContextProvider>
-          </ServiceContextProvider>
-        </ToggleContext.Provider>
-      </StaticRouter>,
+      createMediaAssetPage({
+        pageData: pageDataWithHiddenTimestamp,
+      }),
     );
   });
 });
