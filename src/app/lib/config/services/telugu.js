@@ -9,7 +9,7 @@ import 'moment/locale/te';
 export const service = {
   default: {
     lang: `te`,
-    articleAuthor: `https://www.facebook.com/bbcnewstelugu`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-telugu',
     atiAnalyticsProducerId: '89',
@@ -28,7 +28,7 @@ export const service = {
     locale: `te-IN`,
     datetimeLocale: `te-in`,
     service: 'telugu',
-    serviceName: 'News తెలుగు',
+    serviceName: 'Telugu',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewstelugu',
     twitterSite: '@bbcnewstelugu',
