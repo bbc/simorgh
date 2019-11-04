@@ -1,5 +1,6 @@
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -11,6 +12,7 @@ export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
 export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   service,
   pageType,
+  variant,
 }) =>
   describe(`testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {
     it('should render a media player', () => {
@@ -18,7 +20,8 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
         ({ body }) => {
           const { assetUri } = body.metadata.locators;
           const { versionId } = body.content.blocks[0].versions[0];
-          const { language } = body.metadata;
+          const language = appConfig[service][variant].lang;
+
           cy.get(
             `amp-iframe[src*="${envConfig.avEmbedBaseUrl}/ws/av-embeds/cps${assetUri}/${versionId}/${language}"]`,
           ).should('be.visible');

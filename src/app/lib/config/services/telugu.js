@@ -196,7 +196,7 @@ export const service = {
       },
       {
         title: 'జాతీయం',
-        url: '/telugu/india',
+        url: '/telugu/topics/5a08f030-710f-4168-acee-67294a90fc75',
       },
       {
         title: 'అంతర్జాతీయం',
