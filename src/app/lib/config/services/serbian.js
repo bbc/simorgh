@@ -174,32 +174,6 @@ const baseServiceConfig = {
   },
   fonts: [],
   timezone: 'GMT',
-  navigation: [
-    {
-      title: 'Početna strana',
-      url: '/serbian/lat',
-    },
-    {
-      title: 'Srbija',
-      url: '/serbian/lat/srbija',
-    },
-    {
-      title: 'Balkan',
-      url: '/serbian/lat/balkan',
-    },
-    {
-      title: 'Svet',
-      url: '/serbian/lat/svet',
-    },
-    {
-      title: 'Video',
-      url: '/serbian/lat/media/video',
-    },
-    {
-      title: 'Najpopularnije',
-      url: '/serbian/lat/popular/read',
-    },
-  ],
 };
 
 export const service = {
@@ -209,6 +183,32 @@ export const service = {
     locale: `sr-latn`,
     script: latinDiacritics,
     datetimeLocale: `sr`,
+    navigation: [
+      {
+        title: 'Početna strana',
+        url: '/serbian/lat',
+      },
+      {
+        title: 'Srbija',
+        url: '/serbian/lat/1791445f-977a-4e6d-b490-51f84bb4fc52',
+      },
+      {
+        title: 'Balkan',
+        url: '/serbian/lat/balkan',
+      },
+      {
+        title: 'Svet',
+        url: '/serbian/lat/svet',
+      },
+      {
+        title: 'Video',
+        url: '/serbian/lat/media/video',
+      },
+      {
+        title: 'Najpopularnije',
+        url: '/serbian/lat/popular/read',
+      },
+    ],
   },
   cyr: {
     ...baseServiceConfig,
@@ -216,6 +216,32 @@ export const service = {
     locale: `sr-cyrl`,
     script: cyrillicAndLatin,
     datetimeLocale: `sr-cyrl`,
+    navigation: [
+      {
+        title: 'Почетна страна',
+        url: '/serbian/cyr',
+      },
+      {
+        title: 'Србија',
+        url: '/serbian/cyr/1791445f-977a-4e6d-b490-51f84bb4fc52',
+      },
+      {
+        title: 'Балкан',
+        url: '/serbian/cyr/balkan',
+      },
+      {
+        title: 'Свет',
+        url: '/serbian/cyr/svet',
+      },
+      {
+        title: 'Видео',
+        url: '/serbian/cyr/media/video',
+      },
+      {
+        title: 'Најпопуларније',
+        url: '/serbian/cyr/popular/read',
+      },
+    ],
   },
 };
 

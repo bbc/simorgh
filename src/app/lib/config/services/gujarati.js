@@ -195,7 +195,7 @@ export const service = {
       },
       {
         title: 'ભારત',
-        url: '/gujarati/india',
+        url: '/gujarati/topics/5a08f030-710f-4168-acee-67294a90fc75',
       },
       {
         title: 'આંતરરાષ્ટ્રીય',
