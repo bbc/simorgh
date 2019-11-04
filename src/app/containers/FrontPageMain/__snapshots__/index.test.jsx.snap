@@ -13,12 +13,8 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   margin: 0;
 }
 
-.c1 {
-  position: relative;
-}
-
 .c0 {
-  margin: 0 auto;
+  position: relative;
 }
 
 .c43 {
@@ -435,14 +431,63 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @supports (display:grid) {
-  .c1 {
-    display: block;
+  .c0 {
+    display: grid;
+    position: initial;
   }
 }
 
-@media (min-width:63rem) {
-  .c0 {
-    max-width: 63rem;
+@media (max-width:14.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    display: inline-block;
+    width: 75%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: block;
   }
 }
 
