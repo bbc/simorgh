@@ -88,6 +88,28 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             }
           });
         });
+
+        it('should just work', () => {
+          cy.window().then(win => {
+            const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+            if (media) {
+              const {
+                durationISO8601,
+              } = media.model.blocks[1].model.blocks[0].model.versions[0];
+
+              cy.get('div[class^="StyledVideoContainer"]').within(() => {
+                cy.get('button')
+                  .should('be.visible')
+                  .within(() => {
+                    cy.get('time')
+                      .should('be.visible')
+                      .should('have.attr', 'datetime')
+                      .and('eq', durationISO8601);
+                  });
+              });
+            }
+          });
+        });
       });
     }
   });
