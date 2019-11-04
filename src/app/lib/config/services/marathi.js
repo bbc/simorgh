@@ -195,7 +195,7 @@ export const service = {
       },
       {
         title: 'भारत',
-        url: '/marathi/india',
+        url: '/marathi/topics/5a08f030-710f-4168-acee-67294a90fc75',
       },
       {
         title: 'आंतरराष्ट्रीय',
