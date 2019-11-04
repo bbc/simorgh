@@ -161,7 +161,7 @@ export const service = {
       },
       {
         title: 'Egwuregwu',
-        url: '/igbo/egwuregwu',
+        url: '/igbo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592',
       },
       {
         title: 'Ihe nkiri',

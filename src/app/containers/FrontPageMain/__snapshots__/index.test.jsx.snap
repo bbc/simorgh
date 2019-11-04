@@ -1026,7 +1026,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             </span>
           </h1>
           <section
-            aria-labelledby="Top-Stories"
+            aria-labelledby="Top-stories"
             role="region"
           >
             <div
@@ -1047,7 +1047,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     <span
                       class="c8"
                       dir="ltr"
-                      id="Top-Stories"
+                      id="Top-stories"
                     >
                       Top tori
                     </span>

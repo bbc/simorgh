@@ -8,23 +8,27 @@ import headings from '../Headings';
 import timestamp from '../ArticleTimestamp';
 import text from '../Text';
 import image from '../Image';
+import MediaPlayer from '../CpsAssetMediaPlayer';
 import Blocks from '../Blocks';
 import ATIAnalytics from '../ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import Grid from '#app/components/Grid';
 
-const componentsToRender = {
-  headline: headings,
-  text,
-  image,
-  timestamp,
-};
-
 const CpsAssetPageMain = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
+  const assetUri = path(['locators', 'assetUri'], metadata);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
+
+  const componentsToRender = {
+    headline: headings,
+    subheadline: headings,
+    text,
+    image,
+    timestamp,
+    video: props => <MediaPlayer {...props} assetUri={assetUri} />,
+  };
 
   return (
     <>

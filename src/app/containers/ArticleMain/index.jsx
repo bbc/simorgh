@@ -11,7 +11,7 @@ import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
-import mediaPlayer from '../MediaPlayer';
+import articleMediaPlayer from '../ArticleMediaPlayer';
 import LinkedData from '../LinkedData';
 import {
   getArticleId,
@@ -28,8 +28,8 @@ import {
 const componentsToRender = {
   headline: headings,
   subheadline: headings,
-  audio: mediaPlayer,
-  video: mediaPlayer,
+  audio: articleMediaPlayer,
+  video: articleMediaPlayer,
   text,
   image,
   timestamp,
