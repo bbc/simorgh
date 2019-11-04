@@ -1,6 +1,12 @@
 import 'isomorphic-fetch';
 import CircuitBreaker from './CircuitBreaker';
 
+export function createFetchWithCircuitBreakers() {
+  return async (url, options = { method: 'GET' }) => {
+    
+  };
+}
+
 export function createFetchWithCircuitBreaker(threshold, timeout) {
   const circuitBreaker = new CircuitBreaker({ threshold, timeout });
 
