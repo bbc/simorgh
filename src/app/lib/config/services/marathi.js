@@ -30,7 +30,7 @@ export const service = {
     serviceName: 'Marathi',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsmarathi',
-    twitterSite: '@bbcnews',
+    twitterSite: '@bbcnewsmarathi',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
