@@ -136,7 +136,7 @@
     "@storybook/react": "^5.2.5",
     "@storybook/theming": "^5.2.4",
     "@testing-library/jest-dom": "^4.2.3",
-    "@testing-library/react": "^9.3.0",
+    "@testing-library/react": "^9.3.1",
     "@testing-library/react-hooks": "^3.1.1",
     "amphtml-validator": "^1.0.23",
     "babel-eslint": "^10.0.3",
