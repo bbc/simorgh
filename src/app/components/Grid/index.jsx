@@ -7,10 +7,8 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 
-const group4WrapperMaxWidth = `45.5rem`;
-// (6.75rem * 6) + 5*16px gutters = 728 = 45.5 rem
-const group5WrapperMaxWidth = `46.4rem`;
-// (2.95rem * 12) + 11*16px gutters = 742.4 = 46.4 rem
+const group4WrapperMaxWidth = `63rem`; // 1008px
+const group5WrapperMaxWidth = `80rem`; // 1280px
 
 const gelMaxWidths = css`
   margin: 0 auto;

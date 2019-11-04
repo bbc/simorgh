@@ -3,12 +3,12 @@ import path from 'ramda/src/path';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '../ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
+import Grid from '#app/components/Grid';
 import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
 import timestamp from '../ArticleTimestamp';
-import { GhostGrid } from '#lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
 import mediaPlayer from '../MediaPlayer';
@@ -68,14 +68,24 @@ const ArticleMain = ({ articleData: data }) => {
         dateModified={lastPublished}
         aboutTags={aboutTags}
       />
-      <main role="main">
-        <GhostGrid>
-          <Blocks
-            blocks={path(['content', 'model', 'blocks'], data)}
-            componentsToRender={componentsToRender}
-          />
-        </GhostGrid>
-      </main>
+      <Grid
+        as="main"
+        role="main"
+        columns={{
+          group0: 6,
+          group1: 6,
+          group2: 6,
+          group3: 6,
+          group4: 8,
+          group5: 20,
+        }}
+        enableGelGutters
+      >
+        <Blocks
+          blocks={path(['content', 'model', 'blocks'], data)}
+          componentsToRender={componentsToRender}
+        />
+      </Grid>
     </>
   );
 };

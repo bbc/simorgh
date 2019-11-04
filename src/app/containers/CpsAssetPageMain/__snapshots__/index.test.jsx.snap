@@ -1,6 +1,186 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
+.c3 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c0 {
+  position: relative;
+}
+
+.c2 {
+  position: relative;
+}
+
+.c6 {
+  position: relative;
+}
+
+.c4 {
+  position: relative;
+}
+
+.c5 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+.c5:last-child {
+  padding-bottom: 1rem;
+}
+
+.c7 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    padding: 2.5rem 0;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 83.33333333333333%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    display: inline-block;
+    width: 62.5%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c6 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c4 {
+    display: block;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
 <html
   dir="ltr"
   lang="pcm"
@@ -9,6 +189,15 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
     <title>
       Nigerian man Emeka Nelson don produce generator wey dey use only water - BBC News Ìgbò
     </title>
+    <link
+      href="https://www.test.bbc.co.uk/igbo/afirika-23252735"
+      hreflang="ig"
+      rel="alternate"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/igbo/afirika-23252735.amp"
+      rel="amphtml"
+    />
     <link
       href="https://www.test.bbc.com/pidgin/tori-49450859"
       rel="canonical"
@@ -207,239 +396,16 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
     <script
       type="application/ld+json"
     >
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/igbo/afirika-23252735","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/igbo/afirika-23252735","name":"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?"}}
+    </script>
+    <script
+      type="application/ld+json"
+    >
       {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pidgin/tori-49450859","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/tori-49450859","name":"Nigerian man Emeka Nelson don produce generator wey dey use only water"}}
     </script>
   </head>
   <body>
-    .c3 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-.c6 {
-  grid-column: 1 / span 6;
-}
-
-.c4 {
-  grid-column: 1 / span 6;
-}
-
-.c5 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  padding-bottom: 0.25rem;
-}
-
-.c5:last-child {
-  padding-bottom: 1rem;
-}
-
-.c7 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c1 {
-  position: relative;
-}
-
-.c0 {
-  margin: 0 auto;
-  background-color: #FDFDFD;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (max-width:25rem) {
-  .c6 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c6 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c6 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c6 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c6 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:25rem) {
-  .c4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c4 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    max-width: initial;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c7 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    display: block;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    max-width: 46.4rem;
-  }
-}
-
-<div>
+    <div>
       <noscript />
       <main
         class="c0"
@@ -454,135 +420,135 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           >
             Test MAP to MAP inline link
           </a>
-        </div>
-        <div
-          class="c2"
-        >
-          <h1
-            class="c3"
-            id="content"
-            tabindex="-1"
+          <div
+            class="c2"
           >
-            Nigerian man Emeka Nelson don produce generator wey dey use only water
-          </h1>
-        </div>
-        <div
-          class="c4"
-        >
-          <time
-            class="c5"
-            datetime="2019-08-23"
+            <h1
+              class="c3"
+              id="content"
+              tabindex="-1"
+            >
+              Nigerian man Emeka Nelson don produce generator wey dey use only water
+            </h1>
+          </div>
+          <div
+            class="c4"
           >
-            23 Ọgọọst 2019
-          </time>
-          <time
-            class="c5"
-            datetime="2019-08-23"
+            <time
+              class="c5"
+              datetime="2019-08-23"
+            >
+              23 Ọgọọst 2019
+            </time>
+            <time
+              class="c5"
+              datetime="2019-08-23"
+            >
+              Mgbe ikpeazụ e tinyere ya ozi ọhụrụ 
+              23 Ọgọọst 2019
+            </time>
+          </div>
+          <div
+            class="c6"
           >
-            Mgbe ikpeazụ e tinyere ya ozi ọhụrụ 
-            23 Ọgọọst 2019
-          </time>
-        </div>
-        <div
-          class="c6"
-        >
-          <p
-            class="c7"
+            <p
+              class="c7"
+            >
+              <b>
+                As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
+              </b>
+            </p>
+          </div>
+          <div
+            class="c6"
           >
-            <b>
-              As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
-            </b>
-          </p>
-        </div>
-        <div
-          class="c6"
-        >
-          <p
-            class="c7"
+            <p
+              class="c7"
+            >
+              Wetin ginger Emeka na im friend wey smoke from generator kill.
+            </p>
+          </div>
+          <div
+            class="c6"
           >
-            Wetin ginger Emeka na im friend wey smoke from generator kill.
-          </p>
-        </div>
-        <div
-          class="c6"
-        >
-          <p
-            class="c7"
+            <p
+              class="c7"
+            >
+              BBC carri waka go Awka Anambra state inside South-east Nigeria go see di ogbonge invention wey Nelson produce.
+            </p>
+          </div>
+          <div
+            class="c6"
           >
-            BBC carri waka go Awka Anambra state inside South-east Nigeria go see di ogbonge invention wey Nelson produce.
-          </p>
-        </div>
-        <div
-          class="c6"
-        >
-          <p
-            class="c7"
+            <p
+              class="c7"
+            >
+              Nelson wey no be certified engineer struggle to read for elementary school, work as house help for di age of 5, and no get any university education.
+            </p>
+          </div>
+          <div
+            class="c6"
           >
-            Nelson wey no be certified engineer struggle to read for elementary school, work as house help for di age of 5, and no get any university education.
-          </p>
-        </div>
-        <div
-          class="c6"
-        >
-          <p
-            class="c7"
+            <p
+              class="c7"
+            >
+              Wen we go im house, e dey full with Structural drawings and designs wey e pin for wall and na so e dey take im time dey study di drawing.
+            </p>
+          </div>
+          <div
+            class="c6"
           >
-            Wen we go im house, e dey full with Structural drawings and designs wey e pin for wall and na so e dey take im time dey study di drawing.
-          </p>
-        </div>
-        <div
-          class="c6"
-        >
-          <p
-            class="c7"
+            <p
+              class="c7"
+            >
+              For 16 years, e dey focus to make im dream turn to something real-dat na to make generator wey go run on water.
+            </p>
+          </div>
+          <div
+            class="c6"
           >
-            For 16 years, e dey focus to make im dream turn to something real-dat na to make generator wey go run on water.
-          </p>
-        </div>
-        <div
-          class="c6"
-        >
-          <p
-            class="c7"
+            <p
+              class="c7"
+            >
+              Most of di material wey Nelson take arrange im generator na from  scrap.
+            </p>
+          </div>
+          <div
+            class="c6"
           >
-            Most of di material wey Nelson take arrange im generator na from  scrap.
-          </p>
-        </div>
-        <div
-          class="c6"
-        >
-          <p
-            class="c7"
+            <p
+              class="c7"
+            >
+              Di first generator wey im do explode wen e test am. Dis come make am dey doubt di project but afta plenti years of struggle e come get am right.
+            </p>
+          </div>
+          <div
+            class="c6"
           >
-            Di first generator wey im do explode wen e test am. Dis come make am dey doubt di project but afta plenti years of struggle e come get am right.
-          </p>
-        </div>
-        <div
-          class="c6"
-        >
-          <p
-            class="c7"
+            <p
+              class="c7"
+            >
+              Nelson says im generator get maximum output capacity of 1,000 watts and di voltage dey fluctuate between 220 and 240.
+            </p>
+          </div>
+          <div
+            class="c6"
           >
-            Nelson says im generator get maximum output capacity of 1,000 watts and di voltage dey fluctuate between 220 and 240.
-          </p>
-        </div>
-        <div
-          class="c6"
-        >
-          <p
-            class="c7"
+            <p
+              class="c7"
+            >
+              E say one litre of clean water fit power di generator for 6 hours, and e no go bring out smoke like oda generators, e dey environment friendly.
+            </p>
+          </div>
+          <div
+            class="c6"
           >
-            E say one litre of clean water fit power di generator for 6 hours, and e no go bring out smoke like oda generators, e dey environment friendly.
-          </p>
-        </div>
-        <div
-          class="c6"
-        >
-          <p
-            class="c7"
-          >
-            Dis ogbonge inventor add say im dream na for di generator to dey for millions of homes all ova di world.
-          </p>
+            <p
+              class="c7"
+            >
+              Dis ogbonge inventor add say im dream na for di generator to dey for millions of homes all ova di world.
+            </p>
+          </div>
         </div>
       </main>
     </div>

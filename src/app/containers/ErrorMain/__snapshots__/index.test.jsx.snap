@@ -1,13 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ErrorMain should correctly render for 404 1`] = `
-.c1 {
-  position: relative;
-}
-
 .c0 {
-  margin: 0 auto;
-  background-color: #FDFDFD;
+  position: relative;
 }
 
 .c6 {
@@ -65,20 +60,63 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 }
 
 @supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
   .c1 {
-    display: block;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 83.33333333333333%;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    max-width: 45.5rem;
+  .c1 {
+    display: inline-block;
+    width: 62.5%;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    max-width: 46.4rem;
+  .c1 {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: block;
   }
 }
 
@@ -290,13 +328,8 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
     />
   </head>
   <body>
-    .c1 {
+    .c0 {
   position: relative;
-}
-
-.c0 {
-  margin: 0 auto;
-  background-color: #FDFDFD;
 }
 
 .c6 {
@@ -354,20 +387,63 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 }
 
 @supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
   .c1 {
-    display: block;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 83.33333333333333%;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    max-width: 45.5rem;
+  .c1 {
+    display: inline-block;
+    width: 62.5%;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    max-width: 46.4rem;
+  .c1 {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: block;
   }
 }
 
@@ -529,13 +605,8 @@ exports[`ErrorMain should correctly render for 500 1`] = `
     />
   </head>
   <body>
-    .c1 {
+    .c0 {
   position: relative;
-}
-
-.c0 {
-  margin: 0 auto;
-  background-color: #FDFDFD;
 }
 
 .c6 {
@@ -593,20 +664,63 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 }
 
 @supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
   .c1 {
-    display: block;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 83.33333333333333%;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    max-width: 45.5rem;
+  .c1 {
+    display: inline-block;
+    width: 62.5%;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    max-width: 46.4rem;
+  .c1 {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: block;
   }
 }
 
@@ -763,13 +877,8 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
     />
   </head>
   <body>
-    .c1 {
+    .c0 {
   position: relative;
-}
-
-.c0 {
-  margin: 0 auto;
-  background-color: #FDFDFD;
 }
 
 .c6 {
@@ -827,20 +936,63 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 }
 
 @supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
   .c1 {
-    display: block;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 83.33333333333333%;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    max-width: 45.5rem;
+  .c1 {
+    display: inline-block;
+    width: 62.5%;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    max-width: 46.4rem;
+  .c1 {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: block;
   }
 }
 
@@ -997,13 +1149,8 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
     />
   </head>
   <body>
-    .c1 {
+    .c0 {
   position: relative;
-}
-
-.c0 {
-  margin: 0 auto;
-  background-color: #FDFDFD;
 }
 
 .c6 {
@@ -1061,20 +1208,63 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 }
 
 @supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
   .c1 {
-    display: block;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 83.33333333333333%;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    max-width: 45.5rem;
+  .c1 {
+    display: inline-block;
+    width: 62.5%;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    max-width: 46.4rem;
+  .c1 {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: block;
   }
 }
 

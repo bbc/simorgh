@@ -11,7 +11,7 @@ import image from '../Image';
 import Blocks from '../Blocks';
 import ATIAnalytics from '../ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
-import Grid, { GelPageGridGhost } from '#app/components/Grid';
+import Grid from '#app/components/Grid';
 
 const componentsToRender = {
   headline: headings,
@@ -36,7 +36,7 @@ const CpsAssetPageMain = ({ pageData }) => {
       />
       <LinkedData type="Article" seoTitle={title} />
       <ATIAnalytics data={pageData} />
-      <GelPageGridGhost
+      <Grid
         as="main"
         role="main"
         columns={{
@@ -72,9 +72,9 @@ const CpsAssetPageMain = ({ pageData }) => {
           <Link to="/pidgin/23248703" data-e2e="cpsAssetDummyLink">
             Test MAP to MAP inline link
           </Link>
+          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </Grid>
-        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </GelPageGridGhost>
+      </Grid>
     </>
   );
 };

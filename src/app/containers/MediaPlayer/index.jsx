@@ -12,7 +12,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import useToggle from '../Toggle/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import Grid from '#app/components/Grid';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
@@ -71,7 +71,25 @@ const MediaPlayerContainer = ({ blocks }) => {
   );
 
   return (
-    <GridItemConstrainedMedium>
+    <Grid
+      item
+      startOffset={{
+        group0: 1,
+        group1: 1,
+        group2: 1,
+        group3: 1,
+        group4: 2,
+        group5: 5,
+      }}
+      columns={{
+        group0: 6,
+        group1: 6,
+        group2: 6,
+        group3: 5,
+        group4: 5,
+        group5: 10,
+      }}
+    >
       <Metadata aresMediaBlock={aresMediaBlock} />
       {isAmp ? (
         <AmpMediaPlayer
@@ -87,7 +105,7 @@ const MediaPlayerContainer = ({ blocks }) => {
         />
       )}
       {captionBlock ? <Caption block={captionBlock} type={type} /> : null}
-    </GridItemConstrainedMedium>
+    </Grid>
   );
 };
 

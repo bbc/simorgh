@@ -2,11 +2,7 @@ import React from 'react';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { imageModelPropTypes } from '#models/propTypes/image';
 import ArticleFigure from '../ArticleFigure';
-import {
-  GridItemConstrainedLargeNoMargin,
-  GridItemConstrainedMedium,
-  GridItemConstrainedSmall,
-} from '#lib/styledGrid';
+import Grid from '#app/components/Grid';
 import createSrcset from './helpers/srcSet';
 import getIChefURL from './helpers/ichefUrl';
 import urlWithPageAnchor from '#lib/utilities/pageAnchor';
@@ -59,24 +55,64 @@ const ImageContainer = ({ blocks, position }) => {
   const srcSet = createSrcset(originCode, locator, width);
   const lazyLoad = shouldLazyLoad(position);
 
-  let Wrapper = GridItemConstrainedLargeNoMargin;
+  let type = 'landscape';
 
   if (height === width) {
-    Wrapper = GridItemConstrainedMedium;
+    type = 'square';
   }
   if (height > width) {
-    Wrapper = GridItemConstrainedSmall;
+    type = 'portrait';
   }
+
+  const layouts = {
+    portrait: {
+      group0: 6,
+      group1: 6,
+      group2: 6,
+      group3: 5,
+      group4: 5,
+      group5: 10,
+    },
+    square: {
+      group0: 6,
+      group1: 6,
+      group2: 6,
+      group3: 5,
+      group4: 5,
+      group5: 10,
+    },
+    landscape: {
+      group0: 6,
+      group1: 6,
+      group2: 6,
+      group3: 5,
+      group4: 5,
+      group5: 10,
+    },
+  };
+
+  const hasMargins = {
+    landscape: false,
+    square: true,
+    portrait: true,
+  };
 
   // This grid contain will be refactored in
   // https://github.com/bbc/simorgh/issues/1369
   // https://github.com/bbc/simorgh/issues/1319
   return (
-    <Wrapper
-      padding={{
-        group2: '0px',
-        group3: '0px',
+    <Grid
+      item
+      startOffset={{
+        group0: 1,
+        group1: 1,
+        group2: 1,
+        group3: 1,
+        group4: 2,
+        group5: 5,
       }}
+      columns={layouts[type]}
+      enableGelMargins={hasMargins[type]}
     >
       <ArticleFigure
         alt={altText}
@@ -92,7 +128,7 @@ const ImageContainer = ({ blocks, position }) => {
         fade
         type="image"
       />
-    </Wrapper>
+    </Grid>
   );
 };
 

@@ -7,30 +7,68 @@ exports[`withLoading HOC and no loading prop should return the passed in compone
 `;
 
 exports[`withLoading HOC and the loading prop set to true should return the loading component 1`] = `
-.c1 {
+.c0 {
   position: relative;
 }
 
-.c0 {
-  margin: 0 auto;
-  background-color: #FDFDFD;
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    display: inline-block;
+    width: 83.33333333333333%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    display: inline-block;
+    width: 62.5%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
 }
 
 @supports (display:grid) {
   .c1 {
     display: block;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    max-width: 46.4rem;
   }
 }
 

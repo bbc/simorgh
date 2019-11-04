@@ -12,6 +12,10 @@ exports[`Headings with headline data should render correctly 1`] = `
   padding: 2rem 0;
 }
 
+.c0 {
+  position: relative;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 2rem;
@@ -32,33 +36,9 @@ exports[`Headings with headline data should render correctly 1`] = `
   }
 }
 
-@media (max-width:63rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
+    display: block;
   }
 }
 
@@ -87,6 +67,10 @@ exports[`Headings with plain text headline should render h1 containing correct t
   padding: 2rem 0;
 }
 
+.c0 {
+  position: relative;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 2rem;
@@ -107,33 +91,9 @@ exports[`Headings with plain text headline should render h1 containing correct t
   }
 }
 
-@media (max-width:63rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
+    display: block;
   }
 }
 
@@ -163,7 +123,7 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 }
 
 .c0 {
-  grid-column: 1 / span 6;
+  position: relative;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -186,42 +146,9 @@ exports[`Headings with plain text subheadline should render h2 containing correc
   }
 }
 
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
 @supports (display:grid) {
   .c0 {
-    max-width: initial;
+    display: block;
   }
 }
 
@@ -250,6 +177,10 @@ exports[`Headings with rich text headline with bold text should render h1 with <
   padding: 2rem 0;
 }
 
+.c0 {
+  position: relative;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 2rem;
@@ -270,33 +201,9 @@ exports[`Headings with rich text headline with bold text should render h1 with <
   }
 }
 
-@media (max-width:63rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
+    display: block;
   }
 }
 
@@ -335,6 +242,10 @@ exports[`Headings with rich text headline with italic text should render h1 with
   font-weight: inherit;
 }
 
+.c0 {
+  position: relative;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 2rem;
@@ -355,33 +266,9 @@ exports[`Headings with rich text headline with italic text should render h1 with
   }
 }
 
-@media (max-width:63rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
+    display: block;
   }
 }
 
@@ -422,6 +309,10 @@ exports[`Headings with rich text should render headline with bold & italic text 
   font-weight: inherit;
 }
 
+.c0 {
+  position: relative;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 2rem;
@@ -442,33 +333,9 @@ exports[`Headings with rich text should render headline with bold & italic text 
   }
 }
 
-@media (max-width:63rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
+    display: block;
   }
 }
 
@@ -511,6 +378,10 @@ exports[`Headings with rich text should render headline with italic & bold text 
   font-weight: inherit;
 }
 
+.c0 {
+  position: relative;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 2rem;
@@ -531,33 +402,9 @@ exports[`Headings with rich text should render headline with italic & bold text 
   }
 }
 
-@media (max-width:63rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
+    display: block;
   }
 }
 
@@ -600,6 +447,10 @@ exports[`Headings with rich text with different attributes should render headlin
   font-weight: inherit;
 }
 
+.c0 {
+  position: relative;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 2rem;
@@ -620,33 +471,9 @@ exports[`Headings with rich text with different attributes should render headlin
   }
 }
 
-@media (max-width:63rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
+    display: block;
   }
 }
 
@@ -682,7 +509,7 @@ exports[`Headings with subheadline data should render correctly 1`] = `
 }
 
 .c0 {
-  grid-column: 1 / span 6;
+  position: relative;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -705,42 +532,9 @@ exports[`Headings with subheadline data should render correctly 1`] = `
   }
 }
 
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
 @supports (display:grid) {
   .c0 {
-    max-width: initial;
+    display: block;
   }
 }
 

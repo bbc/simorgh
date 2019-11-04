@@ -4,20 +4,17 @@ import Figure from '@bbc/psammead-figure';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
-import {
-  NestedGridParentLarge,
-  NestedGridParentMedium,
-  NestedGridParentSmall,
-  NestedGridItemChildSmall,
-  NestedGridItemChildMedium,
-  NestedGridItemChildLarge,
-} from '#lib/styledGrid';
+import Grid from '#app/components/Grid';
 
 const renderCopyright = copyright =>
   copyright && <Copyright>{copyright}</Copyright>;
 
-const renderCaption = (block, type, service) =>
-  block && <Caption block={block} type={type} service={service} />;
+const renderCaption = (block, type, columns, service) =>
+  block && (
+    <Grid columns={columns}>
+      <Caption block={block} type={type} service={service} />
+    </Grid>
+  );
 
 const ArticleFigure = ({
   height,
@@ -33,33 +30,101 @@ const ArticleFigure = ({
   srcset,
   showCopyright,
 }) => {
-  const imageSpan = {
-    default: '6',
-    group5: '12',
-  };
-  let ParentWrapper = NestedGridParentLarge;
-  let ChildWrapper = NestedGridItemChildLarge;
+  let imageOrientation = 'landscape';
 
   if (height === width) {
-    ParentWrapper = NestedGridParentMedium;
-    ChildWrapper = NestedGridItemChildMedium;
+    imageOrientation = 'square';
   }
   if (height > width) {
-    ParentWrapper = NestedGridParentSmall;
-    ChildWrapper = NestedGridItemChildSmall;
-    imageSpan.default = '4';
+    imageOrientation = 'portrait';
+    // ChildWrapper = NestedGridItemChildSmall;
+    // imageSpan.default = '4';
   }
 
+  const figureLayouts = {
+    landscape: {
+      group0: 6,
+      group1: 6,
+      group2: 6,
+      group3: 6,
+      group4: 6,
+      group5: 12,
+    },
+    square: {
+      group0: 5,
+      group1: 5,
+      group2: 5,
+      group3: 5,
+      group4: 5,
+      group5: 10,
+    },
+    portrait: {
+      group0: 6,
+      group1: 6,
+      group2: 4,
+      group3: 5,
+      group4: 4,
+      group5: 8,
+    },
+  };
+
+  const imageLayouts = {
+    landscape: {
+      group0: 6,
+      group1: 6,
+      group2: 6,
+      group3: 6,
+      group4: 6,
+      group5: 12,
+    },
+    square: {
+      group0: 6,
+      group1: 6,
+      group2: 6,
+      group3: 6,
+      group4: 6,
+      group5: 12,
+    },
+    portrait: {
+      group0: 4,
+      group1: 4,
+      group2: 4,
+      group3: 4,
+      group4: 4,
+      group5: 8,
+    },
+  };
+
+  const captionLayouts = {
+    landscape: {
+      group0: 6,
+      group1: 6,
+      group2: 6,
+      group3: 6,
+      group4: 6,
+      group5: 12,
+    },
+    square: {
+      group0: 6,
+      group1: 6,
+      group2: 6,
+      group3: 6,
+      group4: 6,
+      group5: 12,
+    },
+    portrait: {
+      group0: 6,
+      group1: 6,
+      group2: 4,
+      group3: 5,
+      group4: 4,
+      group5: 8,
+    },
+  };
   return (
     <Figure>
-      <ParentWrapper>
-        <ChildWrapper
-          gridColumnStart={1}
-          marginLeft={{
-            group3: '1em',
-          }}
-          gridSpan={imageSpan}
-        >
+      <Grid columns={figureLayouts[imageOrientation]}>
+        <Grid item columns={imageLayouts[imageOrientation]}>
           <ImageWithPlaceholder
             ratio={ratio}
             alt={alt}
@@ -73,19 +138,9 @@ const ArticleFigure = ({
           >
             {showCopyright && renderCopyright(copyright)}
           </ImageWithPlaceholder>
-        </ChildWrapper>
-        <ChildWrapper
-          gridColumnStart={1}
-          gridSpan={{
-            default: '6',
-            group3: '5',
-            group4: '5',
-            group5: '10',
-          }}
-        >
-          {renderCaption(captionBlock, type)}
-        </ChildWrapper>
-      </ParentWrapper>
+        </Grid>
+        {renderCaption(captionBlock, type, captionLayouts[imageOrientation])}
+      </Grid>
     </Figure>
   );
 };

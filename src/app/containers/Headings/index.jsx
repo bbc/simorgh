@@ -7,19 +7,30 @@ import { headlineModelPropTypes } from '#models/propTypes/headline';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import {
-  GridItemConstrainedMedium,
-  GridItemConstrainedLarge,
-} from '#lib/styledGrid';
+import Grid from '#app/components/Grid';
 
 const Headings = {
   headline: Headline,
   subheadline: SubHeading,
 };
 
-const GridConstraints = {
-  headline: GridItemConstrainedLarge,
-  subheadline: GridItemConstrainedMedium,
+const layouts = {
+  headline: {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 6,
+    group4: 8,
+    group5: 12,
+  },
+  subheadline: {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 5,
+    group4: 5,
+    group5: 10,
+  },
 };
 
 const sanitiseSubheadline = (type, text) => {
@@ -32,7 +43,6 @@ const sanitiseSubheadline = (type, text) => {
 const HeadingsContainer = ({ blocks, type }) => {
   const { script, service } = useContext(ServiceContext);
   const Heading = Headings[type];
-  const GridConstrain = GridConstraints[type];
 
   const arrayOfFragments = blocks[0].model.blocks[0].model.blocks;
 
@@ -51,11 +61,22 @@ const HeadingsContainer = ({ blocks, type }) => {
   const id = type === 'headline' ? headingId : subHeadingId;
 
   return (
-    <GridConstrain>
+    <Grid
+      item
+      startOffset={{
+        group0: 1,
+        group1: 1,
+        group2: 1,
+        group3: 1,
+        group4: 2,
+        group5: 5,
+      }}
+      columns={layouts[type]}
+    >
       <Heading script={script} service={service} id={id} tabIndex="-1">
         {renderText()}
       </Heading>
-    </GridConstrain>
+    </Grid>
   );
 };
 

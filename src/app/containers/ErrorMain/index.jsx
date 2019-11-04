@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { number, oneOf, string, shape } from 'prop-types';
 import Helmet from 'react-helmet';
-import Grid, { GelPageGridGhost } from '#app/components/Grid';
+import Grid from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ErrorPageComponent from '#app/components/ErrorPage';
 
@@ -55,7 +55,7 @@ const ErrorMain = ({ status }) => {
         messaging={messaging}
         themeColor={themeColor}
       />
-      <GelPageGridGhost
+      <Grid
         as="main"
         role="main"
         columns={{
@@ -94,7 +94,7 @@ const ErrorMain = ({ status }) => {
             service={service}
           />
         </Grid>
-      </GelPageGridGhost>
+      </Grid>
     </>
   );
 };

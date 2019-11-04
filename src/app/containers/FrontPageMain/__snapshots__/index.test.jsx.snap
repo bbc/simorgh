@@ -442,7 +442,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 
 @media (min-width:63rem) {
   .c0 {
-    max-width: 45.5rem;
+    max-width: 63rem;
   }
 }
 
