@@ -113,7 +113,7 @@
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.1.2",
     "semver-compare": "^1.0.0",
-    "styled-components": "^4.4.0",
+    "styled-components": "^4.4.1",
     "styled-normalize": "^8.0.6",
     "uuid": "^3.3.3",
     "winston": "^3.2.1"
