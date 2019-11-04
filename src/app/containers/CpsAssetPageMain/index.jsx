@@ -27,7 +27,7 @@ const CpsAssetPageMain = ({ pageData }) => {
     subheadline: headings,
     text,
     image,
-    timestamp: allowDateStamp ? timestamp : null,
+    timestamp: allowDateStamp ? timestamp : undefined,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };
 
