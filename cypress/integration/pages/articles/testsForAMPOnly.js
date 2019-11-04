@@ -56,19 +56,6 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             },
           );
         });
-
-        it('plays media when a user clicks play', () => {
-          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-            ({ body }) => {
-              const media = getBlockData('video', body);
-              if (media && media.type === 'video') {
-                cy.get('amp-iframe[title="Media player"]').then($iframe => {
-                  cy.wrap($iframe).find('iframe[src*="/av-embeds"]');
-                });
-              }
-            },
-          );
-        });
       });
     }
   });

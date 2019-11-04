@@ -93,22 +93,20 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           cy.window().then(win => {
             const media = getBlockData('video', win.SIMORGH_DATA.pageData);
             if (media && media.type === 'video') {
-              cy.get('div[class^="StyledVideoContainer"]').click(); // We don't need this for AMP.
-
-              cy.get('iframe[class^="StyledIframe"').then($iframe => {
-                // We don't have to wait for $iframe's `load` event, because
-                // `its()` retries until the `embeddedMedia` property appears on
-                // the av-embed `window`. As soon as it appears, 'Bump' has
-                // injected SMP into `div#mediaPlayer` and populated the
-                // `window` with details we can use to assert it's playing.
-                cy.wrap($iframe.get(0).contentWindow, { timeout: 7000 })
-                  .its('embeddedMedia')
-                  .then(embeddedMedia => {
-                    cy.wrap(embeddedMedia.players[0], { timeout: 7000 })
-                      .its('_playing') // We must wait for `_playing` also.
-                      .should('eq', true);
+              cy.get(
+                'div[class^="StyledVideoContainer"] img[class^="StyledImg"]',
+              )
+                .click()
+                .should('not.exist')
+                .then(() => {
+                  cy.get('iframe[class^="StyledIframe"]').then($iframe => {
+                    cy.wrap($iframe.prop('contentWindow'))
+                      .its(
+                        'embeddedMedia.playerInstances.mediaPlayer._currentTime',
+                      )
+                      .should('be.gt', 0);
                   });
-              });
+                });
             }
           });
         });
