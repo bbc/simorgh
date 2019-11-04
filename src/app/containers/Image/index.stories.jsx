@@ -8,10 +8,67 @@ import {
   portrait,
   square,
 } from './helpers/fixtureData';
+import { GelPageGrid } from '#app/components/Grid';
 
-storiesOf('Containers|Image within grid', module)
+storiesOf('Containers|Image within GelPageGrid', module)
   .addParameters({ chromatic: { disable: true } })
-  .add('landscape image', () => <ImageContainer {...imageData(landscape)} />)
-  .add('portrait image', () => <ImageContainer {...imageData(portrait)} />)
-  .add('square image', () => <ImageContainer {...imageData(square)} />)
-  .add('custom ratio image', () => <ImageContainer {...imageData(custom)} />);
+  .add('landscape image', () => (
+    <GelPageGrid
+      columns={{
+        group0: 6,
+        group1: 6,
+        group2: 6,
+        group3: 6,
+        group4: 8,
+        group5: 20,
+      }}
+      enableGelGutters
+    >
+      <ImageContainer {...imageData(landscape)} />
+    </GelPageGrid>
+  ))
+  .add('portrait image', () => (
+    <GelPageGrid
+      columns={{
+        group0: 6,
+        group1: 6,
+        group2: 6,
+        group3: 6,
+        group4: 8,
+        group5: 20,
+      }}
+      enableGelGutters
+    >
+      <ImageContainer {...imageData(portrait)} />
+    </GelPageGrid>
+  ))
+  .add('square image', () => (
+    <GelPageGrid
+      columns={{
+        group0: 6,
+        group1: 6,
+        group2: 6,
+        group3: 6,
+        group4: 8,
+        group5: 20,
+      }}
+      enableGelGutters
+    >
+      <ImageContainer {...imageData(square)} />
+    </GelPageGrid>
+  ))
+  .add('custom ratio image', () => (
+    <GelPageGrid
+      columns={{
+        group0: 6,
+        group1: 6,
+        group2: 6,
+        group3: 6,
+        group4: 8,
+        group5: 20,
+      }}
+      enableGelGutters
+    >
+      <ImageContainer {...imageData(custom)} />
+    </GelPageGrid>
+  ));

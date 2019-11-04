@@ -1,19 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render a news article correctly 1`] = `
-.c1 {
-  position: relative;
-}
-
-.c3 {
-  position: relative;
-}
-
 .c0 {
-  margin: 0 auto;
+  position: relative;
 }
 
 .c2 {
+  position: relative;
+}
+
+.c4 {
+  position: relative;
+}
+
+.c1 {
+  margin: 0 auto;
+}
+
+.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -24,7 +28,7 @@ exports[`should render a news article correctly 1`] = `
   padding: 2rem 0;
 }
 
-.c4 {
+.c5 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -36,58 +40,65 @@ exports[`should render a news article correctly 1`] = `
 }
 
 @supports (display:grid) {
-  .c1 {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
     display: block;
   }
 }
 
 @supports (display:grid) {
-  .c3 {
+  .c4 {
     display: block;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
+  .c1 {
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .c1 {
     max-width: 80rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     padding: 2.5rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -343,14 +354,14 @@ exports[`should render a news article correctly 1`] = `
         chartbeat
       </div>
       <main
-        class="c0"
+        class="c0 c1"
         role="main"
       >
         <div
-          class="c1"
+          class="c2"
         >
           <h1
-            class="c2"
+            class="c3"
             id="content"
             tabindex="-1"
           >
@@ -358,10 +369,10 @@ exports[`should render a news article correctly 1`] = `
           </h1>
         </div>
         <div
-          class="c3"
+          class="c4"
         >
           <p
-            class="c4"
+            class="c5"
           >
             A paragraph.
           </p>
@@ -590,19 +601,23 @@ exports[`should render a persian article correctly 1`] = `
     </script>
   </head>
   <body>
-    .c1 {
+    .c0 {
   position: relative;
-}
-
-.c3 {
-  position: relative;
-}
-
-.c0 {
-  margin: 0 auto;
 }
 
 .c2 {
+  position: relative;
+}
+
+.c4 {
+  position: relative;
+}
+
+.c1 {
+  margin: 0 auto;
+}
+
+.c3 {
   font-size: 2rem;
   line-height: 2.625rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -613,7 +628,7 @@ exports[`should render a persian article correctly 1`] = `
   padding: 2rem 0;
 }
 
-.c4 {
+.c5 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -625,58 +640,65 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 @supports (display:grid) {
-  .c1 {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
     display: block;
   }
 }
 
 @supports (display:grid) {
-  .c3 {
+  .c4 {
     display: block;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
+  .c1 {
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .c1 {
     max-width: 80rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c3 {
     font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     padding: 2.5rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c5 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c5 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
@@ -688,14 +710,14 @@ exports[`should render a persian article correctly 1`] = `
         chartbeat
       </div>
       <main
-        class="c0"
+        class="c0 c1"
         role="main"
       >
         <div
-          class="c1"
+          class="c2"
         >
           <h1
-            class="c2"
+            class="c3"
             id="content"
             tabindex="-1"
           >
@@ -703,10 +725,10 @@ exports[`should render a persian article correctly 1`] = `
           </h1>
         </div>
         <div
-          class="c3"
+          class="c4"
         >
           <p
-            class="c4"
+            class="c5"
           >
             یک پاراگراف.
           </p>
@@ -935,19 +957,23 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
     </script>
   </head>
   <body>
-    .c1 {
+    .c0 {
   position: relative;
-}
-
-.c3 {
-  position: relative;
-}
-
-.c0 {
-  margin: 0 auto;
 }
 
 .c2 {
+  position: relative;
+}
+
+.c4 {
+  position: relative;
+}
+
+.c1 {
+  margin: 0 auto;
+}
+
+.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -958,7 +984,7 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
   padding: 2rem 0;
 }
 
-.c4 {
+.c5 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -970,58 +996,65 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 @supports (display:grid) {
-  .c1 {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
     display: block;
   }
 }
 
 @supports (display:grid) {
-  .c3 {
+  .c4 {
     display: block;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
+  .c1 {
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .c1 {
     max-width: 80rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     padding: 2.5rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -1033,14 +1066,14 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
         chartbeat
       </div>
       <main
-        class="c0"
+        class="c0 c1"
         role="main"
       >
         <div
-          class="c1"
+          class="c2"
         >
           <h1
-            class="c2"
+            class="c3"
             id="content"
             tabindex="-1"
           >
@@ -1048,10 +1081,10 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
           </h1>
         </div>
         <div
-          class="c3"
+          class="c4"
         >
           <p
-            class="c4"
+            class="c5"
           >
             A paragraph in Pidgin.
           </p>

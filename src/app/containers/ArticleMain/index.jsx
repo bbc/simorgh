@@ -69,7 +69,7 @@ const ArticleMain = ({ articleData: data }) => {
         aboutTags={aboutTags}
       />
       <GelPageGrid
-        as="main"
+        forwardedAs="main"
         role="main"
         columns={{
           group0: 6,

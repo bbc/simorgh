@@ -20,7 +20,7 @@ const layouts = {
     group1: 6,
     group2: 6,
     group3: 6,
-    group4: 8,
+    group4: 6,
     group5: 12,
   },
   subheadline: {
@@ -72,6 +72,7 @@ const HeadingsContainer = ({ blocks, type }) => {
         group5: 5,
       }}
       columns={layouts[type]}
+      enableGelMargins
     >
       <Heading script={script} service={service} id={id} tabIndex="-1">
         {renderText()}

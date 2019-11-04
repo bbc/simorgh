@@ -32,6 +32,7 @@ const ParagraphContainer = ({ blocks }) => {
         group4: 5,
         group5: 10,
       }}
+      enableGelMargins
     >
       <Paragraph script={script} service={service}>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
