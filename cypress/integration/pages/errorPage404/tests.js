@@ -104,15 +104,17 @@ export const testsThatFollowSmokeTestConfig = ({
         cy.testResponseCodeAndType(`/${service}/404`, 200, 'text/html');
         cy.visit(`${service}/404`, {
           failOnStatusCode: false,
-        });
-        cy.get('[class^="StatusCode"]').should('contain', '404');
+        })
+          .get('[class^="StatusCode"]')
+          .should('contain', '404');
       });
       it(`/${service}/500 should have response code 200`, () => {
         cy.testResponseCodeAndType(`/${service}/500`, 200, 'text/html');
         cy.visit(`${service}/500`, {
           failOnStatusCode: false,
-        });
-        cy.get('[class^="StatusCode"]').should('contain', '500');
+        })
+          .get('[class^="StatusCode"]')
+          .should('contain', '500');
       });
     });
   });
