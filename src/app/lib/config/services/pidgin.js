@@ -178,7 +178,7 @@ export const service = {
       },
       {
         title: 'Sport',
-        url: '/pidgin/sport',
+        url: '/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592',
       },
       {
         title: 'Entertainment',

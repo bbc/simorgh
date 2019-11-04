@@ -192,7 +192,10 @@ export const service = {
         title: 'Ìròyìn',
         url: '/yoruba',
       },
-      { title: 'Eré ìdárayá', url: '/yoruba/ere_idaraya' },
+      {
+        title: 'Eré ìdárayá',
+        url: '/yoruba/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592',
+      },
       {
         title: 'Fídíò',
         url: '/yoruba/media/video',
