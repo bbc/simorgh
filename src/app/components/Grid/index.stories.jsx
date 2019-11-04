@@ -35,6 +35,15 @@ storiesOf('Components|Grid', module)
       </Grid>
     );
   })
+  .add('Grid as Main ', () => {
+    return (
+      <Grid as="main" role="main" {...outerGridProps}>
+        <Grid {...gridItemProps}>
+          <p>Test</p>
+        </Grid>
+      </Grid>
+    );
+  })
   .add('GelPageGrid', () => {
     return (
       <GelPageGrid {...outerGridProps}>
@@ -44,11 +53,29 @@ storiesOf('Components|Grid', module)
       </GelPageGrid>
     );
   })
+  .add('GelPageGrid as Main ', () => {
+    return (
+      <GelPageGrid as="main" role="main" {...outerGridProps}>
+        <Grid {...gridItemProps}>
+          <p>Relevant styles are not applied</p>
+        </Grid>
+      </GelPageGrid>
+    );
+  })
   .add('GridMaxWidthGroup4', () => {
     return (
       <GridMaxWidthGroup4 {...outerGridProps}>
         <Grid {...gridItemProps}>
           <p>Test</p>
+        </Grid>
+      </GridMaxWidthGroup4>
+    );
+  })
+  .add('GridMaxWidthGroup4 as Main ', () => {
+    return (
+      <GridMaxWidthGroup4 as="main" role="main" {...outerGridProps}>
+        <Grid {...gridItemProps}>
+          <p>Relevant styles are not applied</p>
         </Grid>
       </GridMaxWidthGroup4>
     );
