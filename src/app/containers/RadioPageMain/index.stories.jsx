@@ -56,6 +56,9 @@ storiesOf('Main|Radio Page', module)
             pageType="media"
             origin="https://www.bbc.com"
             service={service}
+            pathname={`/${service}/${
+              matchFixtures(service).params.serviceId[service]
+            }/liveradio`}
           >
             <RadioPageMain
               pageData={liveRadioFixtures[service]}
