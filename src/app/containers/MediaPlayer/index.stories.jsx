@@ -17,6 +17,8 @@ const defaultToggles = {
   },
 };
 
+const articleID = 'c3wmq4d1y3wo';
+
 storiesOf('Containers|Media Player/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
@@ -27,13 +29,19 @@ storiesOf('Containers|Media Player/Canonical', module)
         isAmp={false}
         service={service}
         platform="canonical"
-        id="c3wmq4d1y3wo"
+        pathname="/pathname"
+        id={articleID}
         pageType="article"
         bbcOrigin="https://www.test.bbc.com"
       >
         <ServiceContextProvider service="news">
           <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
-            <MediaPlayerContainer blocks={validVideoWithCaptionBlock} />
+            <MediaPlayerContainer
+              blocks={validVideoWithCaptionBlock}
+              assetId={articleID}
+              assetType="articles"
+              showPlaceholder
+            />
           </ToggleContext.Provider>
         </ServiceContextProvider>
       </RequestContextProvider>
@@ -57,7 +65,12 @@ storiesOf('Containers|Media Player/AMP', module)
       >
         <ServiceContextProvider service="news">
           <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
-            <MediaPlayerContainer blocks={validVideoWithCaptionBlock} />
+            <MediaPlayerContainer
+              blocks={validVideoWithCaptionBlock}
+              assetId={articleID}
+              assetType="articles"
+              showPlaceholder
+            />
           </ToggleContext.Provider>
         </ServiceContextProvider>
       </RequestContextProvider>
