@@ -112,7 +112,7 @@ const ImageContainer = ({ blocks, position }) => {
         group5: 5,
       }}
       columns={layouts[type]}
-      enableGelMargins={hasMargins[type]}
+      enableNegativeGelMargins={!hasMargins[type]}
     >
       <ArticleFigure
         alt={altText}

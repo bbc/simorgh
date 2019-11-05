@@ -117,7 +117,6 @@ const ArticleFigure = ({
   };
 
   const caption = renderCaption(captionBlock, type);
-  const hasCaption = !!caption;
 
   return (
     <Figure>
@@ -137,7 +136,7 @@ const ArticleFigure = ({
             {showCopyright && renderCopyright(copyright)}
           </ImageWithPlaceholder>
         </Grid>
-        {hasCaption && (
+        {caption && (
           <Grid item columns={captionLayouts[imageOrientation]}>
             {caption}
           </Grid>

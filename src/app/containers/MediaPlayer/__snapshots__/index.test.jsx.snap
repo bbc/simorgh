@@ -1,5 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`MediaPlayer Calls the canonical placeholder when platform is canonical and showPlaceholder is true 1`] = `
+.c0 {
+  position: relative;
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: block;
+  }
+}
+
+<div
+  class="c0"
+/>
+`;
+
+exports[`MediaPlayer Does not Call the canonical placeholder when platform is canonical but showPlaceholder is false 1`] = `
+.c0 {
+  position: relative;
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: block;
+  }
+}
+
+<div
+  class="c0"
+/>
+`;
+
+exports[`MediaPlayer Renders the AMP player when platform is AMP 1`] = `
+.c0 {
+  position: relative;
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: block;
+  }
+}
+
+<div
+  class="c0"
+/>
+`;
+
 exports[`MediaPlayer Renders the AMP player with a caption 1`] = `
 <html>
   <head>

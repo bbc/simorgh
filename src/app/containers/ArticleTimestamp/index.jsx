@@ -56,7 +56,6 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
   return (
     <Grid
       item
-      enableGelMargins
       columns={{
         group0: 6,
         group1: 6,

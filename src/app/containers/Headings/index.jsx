@@ -72,7 +72,6 @@ const HeadingsContainer = ({ blocks, type }) => {
         group5: 5,
       }}
       columns={layouts[type]}
-      enableGelMargins
     >
       <Heading script={script} service={service} id={id} tabIndex="-1">
         {renderText()}

@@ -80,6 +80,7 @@ const ArticleMain = ({ articleData: data }) => {
           group5: 20,
         }}
         enableGelGutters
+        enableGelMargins
       >
         <Blocks
           blocks={path(['content', 'model', 'blocks'], data)}
