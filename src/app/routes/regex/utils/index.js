@@ -6,7 +6,7 @@ const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
 const mediaIdRegex = '[a-z0-9]+';
 const mediaServiceIdRegex = 'bbc_\\w+_(?:radio|tv)';
 
-const getServiceRegex = services => Object.keys(services).join('|');
+const getServiceRegex = services => services.join('|');
 
 export const getArticleRegex = services => {
   const serviceRegex = getServiceRegex(services);

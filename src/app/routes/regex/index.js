@@ -1,4 +1,4 @@
-import allServices from '#lib/config/services/loadableConfig';
+import services from '#lib/config/services/loadableConfig';
 import {
   getArticleRegex,
   getArticleSwRegex,
@@ -9,6 +9,8 @@ import {
   getCpsAssetRegex,
   getRadioAndTVRegex,
 } from './utils';
+
+const allServices = Object.keys(services);
 
 export const articlePath = getArticleRegex(allServices);
 export const articleDataPath = `${articlePath}.json`;
