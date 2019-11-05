@@ -1,7 +1,7 @@
 const servicesWithVariants = {
   serbian: ['lat', 'cyr'],
-  ukchina: ['simp', 'trad'],
-  zhongwen: ['simp', 'trad'],
+  ukchina: ['trad', 'simp'],
+  zhongwen: ['trad', 'simp'],
 };
 
 // Remove leading slash from variant

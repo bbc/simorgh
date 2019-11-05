@@ -1,14 +1,15 @@
 import React from 'react';
 import { useParams, useLocation, Redirect } from 'react-router-dom';
-import defaultVariants from '#lib/config/defaultVariants';
+import { variantSanitiser, getVariant } from '#lib/utilities/variantHandler';
 
 const WithVariant = Component => {
   const VariantContainer = props => {
     const { service, variant } = useParams();
     const location = useLocation();
-    const defaultVariant = defaultVariants[service];
+    const defaultVariant = getVariant({ service, variant });
+    const sanitizedVariant = variantSanitiser(variant);
 
-    if (!variant && defaultVariant) {
+    if (!sanitizedVariant && defaultVariant && defaultVariant !== 'default') {
       return (
         <Redirect
           to={{
