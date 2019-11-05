@@ -18,7 +18,12 @@ node {
                     artifactDaysToKeepStr: '10'
                 )
             ),
-            pipelineTriggers([cron(cron_string)])
+            pipelineTriggers([cron(cron_string)]),
+            parameters(
+                [
+                    string(defaultValue: 'latest', name: 'BRANCH')
+                ]
+            )
         ]
     )
     timeout(time: 240, unit: 'MINUTES') {
@@ -26,16 +31,18 @@ node {
             'CI=true'
         ]) {
             cleanWs() // Clean the workspace
-            checkout scm // Checkout from git
 
-            docker.image("${nodeImage}").inside('--ipc host') {
-                try {
-                    Simorgh.installNodeModules()
-                    stage ('Localhost Tests') {
-                        Simorgh.runLocalAndProductionTests()
+            Simorgh.checkoutAndBuild("${params.BRANCH}")
+            dir ("${env.APP_DIR}") {
+                docker.image("${nodeImage}").inside('--ipc host') {
+                    try {
+                        Simorgh.installNodeModules()
+                        stage ('Localhost Tests') {
+                            Simorgh.runLocalAndProductionTests()
+                        }
+                    } finally {
+                        Simorgh.e2esPostBuildSteps('local')
                     }
-                } finally {
-                    Simorgh.e2esPostBuildSteps('local')
                 }
             }
         }
