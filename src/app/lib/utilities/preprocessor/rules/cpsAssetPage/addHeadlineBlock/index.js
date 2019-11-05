@@ -1,4 +1,5 @@
-import { pathOr, deepClone } from 'ramda';
+import pathOr from 'ramda/src/pathOr';
+import deepClone from 'ramda/src/clone';
 
 const getHeadlineBlocks = json => {
   const headlineText = pathOr(null, ['promo', 'headlines', 'headline'], json);
