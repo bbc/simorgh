@@ -53,6 +53,16 @@ jest.mock('../PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
+jest.mock('../PageHandlers/withVariant', () => Component => {
+  const VariantContainer = props => (
+    <div id="VariantContainer">
+      <Component {...props} />
+    </div>
+  );
+
+  return VariantContainer;
+});
+
 jest.mock('../ArticleMain', () => {
   const ArticleMain = () => <div>ArticleMain</div>;
 

@@ -78,6 +78,16 @@ jest.mock('../PageHandlers/withContexts', () => Component => {
   return ContextsContainer;
 });
 
+jest.mock('../PageHandlers/withVariant', () => Component => {
+  const VariantContainer = props => (
+    <div id="VariantContainer">
+      <Component {...props} />
+    </div>
+  );
+
+  return VariantContainer;
+});
+
 jest.mock('../FrontPageMain', () => {
   return jest.fn().mockReturnValue(<div>FrontPageMain</div>);
 });

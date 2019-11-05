@@ -13,8 +13,12 @@ exports[`ArticleContainer Component Composing the Article Container using the pa
       <div
         id="DataContainer"
       >
-        <div>
-          ArticleMain
+        <div
+          id="VariantContainer"
+        >
+          <div>
+            ArticleMain
+          </div>
         </div>
       </div>
     </div>

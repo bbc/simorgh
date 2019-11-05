@@ -16,8 +16,12 @@ exports[`FrontPageContainer Component Composing the Front Page Container using t
         <div
           id="DataContainer"
         >
-          <div>
-            FrontPageMain
+          <div
+            id="VariantContainer"
+          >
+            <div>
+              FrontPageMain
+            </div>
           </div>
         </div>
       </div>
