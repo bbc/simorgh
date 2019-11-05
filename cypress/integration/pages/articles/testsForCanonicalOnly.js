@@ -89,26 +89,29 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           });
         });
 
-        it('plays media when a user clicks play', () => {
-          cy.window().then(win => {
-            const media = getBlockData('video', win.SIMORGH_DATA.pageData);
-            if (media && media.type === 'video') {
-              cy.get(
-                'div[class^="StyledVideoContainer"] img[class^="StyledImg"]',
-              )
-                .click()
-                .should('not.exist')
-                .then(() => {
-                  cy.get('iframe[class^="StyledIframe"]').then($iframe => {
-                    cy.wrap($iframe.prop('contentWindow'))
-                      .its('embeddedMedia.playerInstances.mediaPlayer')
-                      .invoke('currentTime')
-                      .should('be.gt', 0);
+        // See https://github.com/bbc/simorgh/pull/4352 for more information.
+        if (service === 'news') {
+          it('plays media when a user clicks play', () => {
+            cy.window().then(win => {
+              const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+              if (media && media.type === 'video') {
+                cy.get(
+                  'div[class^="StyledVideoContainer"] img[class^="StyledImg"]',
+                )
+                  .click()
+                  .should('not.exist')
+                  .then(() => {
+                    cy.get('iframe[class^="StyledIframe"]').then($iframe => {
+                      cy.wrap($iframe.prop('contentWindow'), { timeout: 8000 })
+                        .its('embeddedMedia.playerInstances.mediaPlayer')
+                        .invoke('currentTime')
+                        .should('be.gt', 0);
+                    });
                   });
-                });
-            }
+              }
+            });
           });
-        });
+        }
       });
     }
   });
