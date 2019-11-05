@@ -1,7 +1,11 @@
 import convertList from '.';
+import {
+  optimoTextWithOrderedList,
+  optimoTextWithUnorderedList,
+} from '../../utils/helpers';
 
 describe('convertList', () => {
-  it('should convert a plain_text list to Optimo format', async () => {
+  it('should convert a mixed type unordered list to Optimo format', async () => {
     const input = {
       numbered: false,
       items: [
@@ -19,74 +23,68 @@ describe('convertList', () => {
       type: 'list',
     };
 
-    const expectedListModel = {
-      blocks: [
+    const expected = optimoTextWithUnorderedList([
+      [
         {
-          type: 'listItem',
-          model: {
-            blocks: [
-              {
-                type: 'paragraph',
-                model: {
-                  text: 'I am a list item',
-                  blocks: [
-                    {
-                      type: 'fragment',
-                      model: {
-                        text: 'I am a list item',
-                        attributes: [],
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        },
-        {
-          type: 'listItem',
-          model: {
-            blocks: [
-              {
-                type: 'paragraph',
-                model: {
-                  text: 'I am a list item with bold text',
-                  blocks: [
-                    {
-                      type: 'fragment',
-                      model: {
-                        text: 'I am a list item with ',
-                        attributes: [],
-                      },
-                    },
-                    {
-                      type: 'fragment',
-                      model: { text: 'bold', attributes: ['bold'] },
-                    },
-                    {
-                      type: 'fragment',
-                      model: { text: ' text', attributes: [] },
-                    },
-                  ],
-                },
-              },
-            ],
-          },
+          text: 'I am a list item',
+          fragments: [
+            {
+              fragment: 'I am a list item',
+              attributes: [],
+            },
+          ],
         },
       ],
+      [
+        {
+          text: 'I am a list item with bold text',
+          fragments: [
+            {
+              fragment: 'I am a list item with ',
+              attributes: [],
+            },
+            {
+              fragment: 'bold',
+              attributes: ['bold'],
+            },
+            {
+              fragment: ' text',
+              attributes: [],
+            },
+          ],
+        },
+      ],
+    ]);
+
+    expect(await convertList(input)).toEqual(expected);
+  });
+
+  it('should convert an ordered list to Optimo format', async () => {
+    const input = {
+      numbered: true,
+      items: [
+        {
+          text: 'I am a list item',
+          markupType: 'plain_text',
+          type: 'listItem',
+        },
+      ],
+      type: 'list',
     };
 
-    const expected = {
-      model: {
-        blocks: [
-          {
-            model: expectedListModel,
-            type: 'unorderedList',
-          },
-        ],
-      },
-      type: 'text',
-    };
+    const expected = optimoTextWithOrderedList([
+      [
+        {
+          text: 'I am a list item',
+          fragments: [
+            {
+              fragment: 'I am a list item',
+              attributes: [],
+            },
+          ],
+        },
+      ],
+    ]);
 
     expect(await convertList(input)).toEqual(expected);
   });
