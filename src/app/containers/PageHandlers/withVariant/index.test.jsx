@@ -10,71 +10,55 @@ jest.mock('react-router-dom', () => ({
   Redirect: ({ to: { pathname } }) => <p>You are going to {pathname}</p>,
 }));
 
+const Component = () => <h1>This is the BBC.</h1>;
+const WithVariantHOC = WithVariant(Component);
+
+function testServiceVariantRedirect({ service, variant, redirectTo }) {
+  beforeEach(() => {
+    useParams.mockReturnValue({
+      service,
+      variant,
+    });
+    useLocation.mockReturnValue({
+      pathname: `/${service}`,
+    });
+  });
+
+  shouldMatchSnapshot(
+    redirectTo ? `should redirect to ${redirectTo}` : 'should not redirect',
+    <WithVariantHOC />,
+  );
+}
+
 describe('WithVariant', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
-  const Component = () => <h1>This is the BBC.</h1>;
-  const WithVariantHOC = WithVariant(Component);
-
   describe('service with no default variant', () => {
-    beforeEach(() => {
-      const service = 'news';
-
-      useParams.mockReturnValue({
-        service,
-      });
-      useLocation.mockReturnValue({
-        pathname: `/${service}`,
-      });
+    testServiceVariantRedirect({
+      service: 'news',
     });
-
-    shouldMatchSnapshot('should not redirect', <WithVariantHOC />);
   });
 
   describe('service (ukchina) with default variant', () => {
-    beforeEach(() => {
-      const service = 'ukchina';
-
-      useParams.mockReturnValue({
-        service,
-      });
-      useLocation.mockReturnValue({
-        pathname: `/${service}`,
-      });
+    testServiceVariantRedirect({
+      service: 'ukchina',
+      redirectTo: '/ukchina/trad',
     });
-
-    shouldMatchSnapshot('should redirect to */trad', <WithVariantHOC />);
   });
 
   describe('service (zhongwen) with default variant', () => {
-    beforeEach(() => {
-      const service = 'zhongwen';
-
-      useParams.mockReturnValue({
-        service,
-      });
-      useLocation.mockReturnValue({
-        pathname: `/${service}`,
-      });
+    testServiceVariantRedirect({
+      service: 'zhongwen',
+      redirectTo: '/zhongwen/trad',
     });
-
-    shouldMatchSnapshot('should redirect to */trad', <WithVariantHOC />);
   });
 
   describe('service (serbian) with default variant', () => {
-    beforeEach(() => {
-      const service = 'serbian';
-
-      useParams.mockReturnValue({
-        service,
-      });
-      useLocation.mockReturnValue({
-        pathname: `/${service}`,
-      });
+    testServiceVariantRedirect({
+      service: 'serbian',
+      redirectTo: '/serbian/lat',
     });
-
-    shouldMatchSnapshot('should redirect to */lat', <WithVariantHOC />);
   });
 });

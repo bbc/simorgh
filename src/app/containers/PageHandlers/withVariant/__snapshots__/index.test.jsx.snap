@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`WithVariant service (serbian) with default variant should redirect to */lat 1`] = `
+exports[`WithVariant service (serbian) with default variant should redirect to /serbian/lat 1`] = `
 <p>
   You are going to 
   /serbian/lat
 </p>
 `;
 
-exports[`WithVariant service (ukchina) with default variant should redirect to */trad 1`] = `
+exports[`WithVariant service (ukchina) with default variant should redirect to /ukchina/trad 1`] = `
 <p>
   You are going to 
   /ukchina/trad
 </p>
 `;
 
-exports[`WithVariant service (zhongwen) with default variant should redirect to */trad 1`] = `
+exports[`WithVariant service (zhongwen) with default variant should redirect to /zhongwen/trad 1`] = `
 <p>
   You are going to 
   /zhongwen/trad
