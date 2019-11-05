@@ -1,4 +1,4 @@
-const getPlaceholderSrc = (src, imageWidth = '512') => {
+const getPlaceholderSrc = (src, imageWidth) => {
   const parts = src.split('/');
   const [domain, media, imgService, width, ...extraParts] = parts;
   const definedWidth = width.replace('$width', imageWidth);

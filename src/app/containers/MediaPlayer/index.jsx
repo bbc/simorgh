@@ -77,8 +77,8 @@ const MediaPlayerContainer = ({
     return null; // this should be the holding image with an error overlay
   }
 
-  const defaultWidth = 512;
-  const placeholderSrc = getPlaceholderSrc(imageUrl, defaultWidth);
+  const DEFAULT_WIDTH = 512;
+  const placeholderSrc = getPlaceholderSrc(imageUrl, DEFAULT_WIDTH);
   const placeholderSrcset = getPlaceholderSrcSet(imageUrl);
 
   const embedSource = embedUrl({
