@@ -8,7 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `mr`,
-    articleAuthor: `https://www.facebook.com/bbcnewsmarathi`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-marathi',
     atiAnalyticsProducerId: '59',
@@ -27,7 +27,7 @@ export const service = {
     locale: `mr-IN`,
     datetimeLocale: `mr`,
     service: 'marathi',
-    serviceName: 'News मराठी',
+    serviceName: 'Marathi',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsmarathi',
     twitterSite: '@bbcnewsmarathi',
@@ -195,7 +195,7 @@ export const service = {
       },
       {
         title: 'भारत',
-        url: '/marathi/india',
+        url: '/marathi/topics/5a08f030-710f-4168-acee-67294a90fc75',
       },
       {
         title: 'आंतरराष्ट्रीय',

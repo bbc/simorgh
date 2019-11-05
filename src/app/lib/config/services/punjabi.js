@@ -8,7 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `pa`,
-    articleAuthor: `https://www.facebook.com/bbcnewspunjabi`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ਅਪਡੇਟ',
     atiAnalyticsAppName: 'news-punjabi',
     atiAnalyticsProducerId: '73',
@@ -27,7 +27,7 @@ export const service = {
     locale: `pa-IN`,
     datetimeLocale: `pa-in`,
     service: 'punjabi',
-    serviceName: 'News ਪੰਜਾਬੀ',
+    serviceName: 'Punjabi',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewspunjabi',
     twitterSite: '@bbcnewspunjabi',
@@ -156,7 +156,7 @@ export const service = {
       },
       {
         title: 'ਭਾਰਤ',
-        url: '/punjabi/india',
+        url: '/punjabi/topics/5a08f030-710f-4168-acee-67294a90fc75',
       },
       {
         title: 'ਕੌਮਾਂਤਰੀ',
