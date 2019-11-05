@@ -18,7 +18,7 @@ const setCookie = (name, value) =>
   Cookie.set(name, value, {
     expires: COOKIE_EXPIRY,
     sameSite: 'None',
-    // secure: true,
+    secure: true,
   });
 
 const setPolicyCookie = (value, logger) => {
