@@ -101,9 +101,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                 .then(() => {
                   cy.get('iframe[class^="StyledIframe"]').then($iframe => {
                     cy.wrap($iframe.prop('contentWindow'))
-                      .its(
-                        'embeddedMedia.playerInstances.mediaPlayer._currentTime',
-                      )
+                      .its('embeddedMedia.playerInstances.mediaPlayer')
+                      .invoke('currentTime')
                       .should('be.gt', 0);
                   });
                 });
