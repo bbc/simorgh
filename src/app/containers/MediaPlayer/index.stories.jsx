@@ -61,6 +61,7 @@ storiesOf('Containers|Media Player/AMP', module)
         platform="amp"
         id="c3wmq4d1y3wo"
         pageType="article"
+        pathname="/pathname"
         bbcOrigin="https://www.test.bbc.com"
       >
         <ServiceContextProvider service="news">
