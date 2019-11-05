@@ -9,8 +9,6 @@ const servicesUsingArticlePaths = ['news', 'scotland'];
 const services = Object.keys(config);
 
 const serviceHasAtLeastOnePageType = service => {
-  console.log(service);
-  // cy.log(service);
   const pageTypes = Object.keys(config[service].pageTypes);
 
   return pageTypes.some(pageType => serviceHasPageType(service, pageType));
@@ -58,7 +56,7 @@ describe('Application unknown route error pages', () => {
         const service = url.includes('igbo') ? 'igbo' : 'news';
         cy.get('h1').should(
           'contain',
-          `${appConfig[service.name].default.translations.error[404].title}`,
+          `${appConfig[config[service].name].default.translations.error[404].title}`,
         );
       });
     });

@@ -35,7 +35,7 @@ export const testsThatFollowSmokeTestConfig = ({
         cy.get('meta[name="article:author"]').should(
           'have.attr',
           'content',
-          appConfig[service][variant].articleAuthor,
+          appConfig[config[service].name][variant].articleAuthor,
         );
       });
 
@@ -75,7 +75,7 @@ export const testsThatFollowSmokeTestConfig = ({
       });
 
       it('should render a paragraph, which contains/displays styled text', () => {
-        if (serviceHasCorrectlyRenderedParagraphs(service)) {
+        if (serviceHasCorrectlyRenderedParagraphs(config[service].name)) {
           cy.request(`${config[service].pageTypes.articles.path}.json`).then(
             ({ body }) => {
               const paragraphData = getBlockData('text', body);
@@ -87,7 +87,7 @@ export const testsThatFollowSmokeTestConfig = ({
         }
       });
 
-      if (serviceHasFigure(service)) {
+      if (serviceHasFigure(config[service].name)) {
         it('should have a placeholder image', () => {
           cy.get('figure div div div')
             .eq(0)
@@ -99,7 +99,7 @@ export const testsThatFollowSmokeTestConfig = ({
             });
         });
 
-        if (serviceHasCaption(service)) {
+        if (serviceHasCaption(config[service].name)) {
           it('should have a visible image with a caption, and also not be lazyloaded', () => {
             cy.get('figure')
               .eq(0)
@@ -150,7 +150,7 @@ export const testsThatFollowSmokeTestConfig = ({
       });
 
       if (
-        serviceHasInlineLink(service) &&
+        serviceHasInlineLink(config[service].name) &&
         (Cypress.env('APP_ENV') === 'local' ||
           Cypress.env('APP_ENV') === 'test')
       ) {
@@ -169,7 +169,7 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       }
 
-      if (serviceHasTimestamp(service)) {
+      if (serviceHasTimestamp(config[service].name)) {
         it('should render a timestamp', () => {
           cy.request(`${config[service].pageTypes.articles.path}.json`).then(
             ({ body }) => {

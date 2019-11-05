@@ -1516,7 +1516,7 @@ const services = {
     },
   },
   ukrainian: {
-    name: 'ukranian',
+    name: 'ukrainian',
     font: undefined,
     isWorldService: true,
     variant: 'default',
