@@ -22,6 +22,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 
+const DEFAULT_WIDTH = 512;
 const MediaPlayerContainer = ({
   blocks,
   assetId,
@@ -77,7 +78,6 @@ const MediaPlayerContainer = ({
     return null; // this should be the holding image with an error overlay
   }
 
-  const DEFAULT_WIDTH = 512;
   const placeholderSrc = getPlaceholderSrc(imageUrl, DEFAULT_WIDTH);
   const placeholderSrcset = getPlaceholderSrcSet(imageUrl);
 
