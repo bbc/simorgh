@@ -14,7 +14,7 @@ export const optimoParagraph = ({ fragments, text }) => ({
   },
 });
 
-export const optimoText = paragraphs => ({
+export const optimoTextWithParagraph = paragraphs => ({
   type: 'text',
   model: {
     blocks: paragraphs.map(optimoParagraph),
@@ -24,7 +24,7 @@ export const optimoText = paragraphs => ({
 export const optimoSubheadline = paragraphs => ({
   type: 'subheadline',
   model: {
-    blocks: [optimoText(paragraphs)],
+    blocks: [optimoTextWithParagraph(paragraphs)],
   },
 });
 
