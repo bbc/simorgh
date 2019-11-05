@@ -1,5 +1,5 @@
 import services from '#lib/config/services/loadableConfig';
-import servicesWithRadioAndTv from '../config';
+import servicesWithRadioAndTv from '../config/servicesWithRadioOrTv';
 import buildRadioAndTvRoutes, {
   buildRadioAndTvDataRoutes,
 } from '../buildRadioAndTvRoutes';

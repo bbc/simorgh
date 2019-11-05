@@ -185,7 +185,7 @@ describe('frontpageManifestRegexPath', () => {
   shouldNotMatchInvalidRoutes(invalidRoutes, frontpageManifestRegexPath);
 });
 
-jest.mock('../config', () => ({
+jest.mock('../config/servicesWithRadioOrTv', () => ({
   gujarati: ['bbc_gujarati_tv'],
   hausa: ['bbc_hausa_radio', 'bbc_afrique_tv'],
   indonesia: ['bbc_indonesian_radio'],
