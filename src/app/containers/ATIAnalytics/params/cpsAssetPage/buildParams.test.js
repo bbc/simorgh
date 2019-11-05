@@ -24,6 +24,7 @@ const serviceContext = {
   atiAnalyticsAppName: 'atiAnalyticsAppName',
   atiAnalyticsProducerId: 'atiAnalyticsProducerId',
   service: 'service',
+  brandName: 'Some BBC Brand',
 };
 
 const expectation = {
@@ -33,7 +34,7 @@ const expectation = {
   contentType: 'article-media-asset',
   language: payload.metadata.language,
   pageIdentifier: `news::${payload.metadata.analyticsLabels.counterName}`,
-  pageTitle: payload.promo.headlines.headline,
+  pageTitle: `${payload.promo.headlines.headline} - ${serviceContext.brandName}`,
   categoryName: 'News',
   producerId: serviceContext.atiAnalyticsProducerId,
   statsDestination: requestContext.statsDestination,

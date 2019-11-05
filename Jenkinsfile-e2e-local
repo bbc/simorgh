@@ -27,15 +27,15 @@ node {
         ]) {
             cleanWs() // Clean the workspace
             checkout scm // Checkout from git
-            
+
             docker.image("${nodeImage}").inside('--ipc host') {
                 try {
                     Simorgh.installNodeModules()
-                    stage ('Test E2Es') {
-                        Simorgh.runE2Es('test', false)
+                    stage ('Localhost Tests') {
+                        Simorgh.runLocalAndProductionTests()
                     }
                 } finally {
-                    Simorgh.e2esPostBuildSteps('test')
+                    Simorgh.e2esPostBuildSteps('local')
                 }
             }
         }
