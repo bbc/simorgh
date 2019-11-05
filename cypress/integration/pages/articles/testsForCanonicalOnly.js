@@ -89,7 +89,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           });
         });
 
-        it('should just work', () => {
+        it('should have a visible play button and duration', () => {
           cy.window().then(win => {
             const media = getBlockData('video', win.SIMORGH_DATA.pageData);
             if (media) {
