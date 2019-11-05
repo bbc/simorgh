@@ -1,7 +1,8 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
-import dissocPath from 'ramda/src/dissocPath';
+import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -90,21 +91,21 @@ describe('CpsAssetPageMain', () => {
     await matchSnapshotAsync(createMediaAssetPage({ pageData }));
   });
 
-  it('should match snapshot for MAP - hidden timestamp', async () => {
-    const pageData = await preprocessor(
-      pidginPageData,
-      cpsAssetPreprocessorRules,
-    );
-
-    const pageDataWithHiddenTimestamp = dissocPath(
+  it('should not show the timestamp when allowDataStamp is false', async () => {
+    const pageDataWithHiddenTimestamp = assocPath(
       ['metadata', 'options', 'allowDateStamp'],
-      pageData,
+      false,
+      await preprocessor(pidginPageData, cpsAssetPreprocessorRules),
     );
 
-    await matchSnapshotAsync(
+    const { asFragment } = render(
       createMediaAssetPage({
         pageData: pageDataWithHiddenTimestamp,
       }),
     );
+
+    expect(document.querySelector('time')).toBeNull();
+    expect(document.querySelector('h1')).not.toBeNull();
+    expect(asFragment()).toMatchSnapshot();
   });
 });
