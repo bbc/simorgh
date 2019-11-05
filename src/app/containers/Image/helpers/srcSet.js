@@ -1,4 +1,4 @@
-import getIchefUrl from './ichefUrl';
+import getIchefUrl from '#lib/utilities/ichefURL';
 
 const createSrcset = (
   originCode,

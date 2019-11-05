@@ -8,7 +8,7 @@ import {
   GridItemConstrainedSmall,
 } from '#lib/styledGrid';
 import createSrcset from './helpers/srcSet';
-import getIChefURL from './helpers/ichefUrl';
+import getIChefURL from '#lib/utilities/ichefURL';
 import urlWithPageAnchor from '#lib/utilities/pageAnchor';
 
 const DEFAULT_IMAGE_RES = 640;
@@ -25,9 +25,7 @@ const getCopyright = copyrightHolder => {
 };
 
 const getRawImageSrc = (originCode, locator) =>
-  originCode !== 'pips'
-    ? getIChefURL(originCode, locator, DEFAULT_IMAGE_RES)
-    : locator;
+  getIChefURL(originCode, locator, DEFAULT_IMAGE_RES);
 
 const shouldLazyLoad = position =>
   !!urlWithPageAnchor() || position[0] > LAZYLOAD_FROM_BLOCK;
