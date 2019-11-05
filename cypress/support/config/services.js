@@ -277,7 +277,9 @@ const services = {
         path:
           Cypress.env('APP_ENV') === 'live'
             ? undefined
-            : '/cymrufyw/articles/c06p32z9x2mo',
+            : Cypress.env('APP_ENV') === 'test'
+            ? '/cymrufyw/articles/c06p32z9x2mo'
+            : '/cymrufyw/erthyglau/c06p32z9x2mo',
         smoke: false,
       },
       errorPage404: {
@@ -704,8 +706,10 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? undefined
-            : '/naidheachdan/articles/c18q7nedn2ko',
+          ? undefined
+          : Cypress.env('APP_ENV') === 'test'
+          ? '/naidheachdan/articles/c18q7nedn2ko'
+          : '/naidheachdan/sgeulachdan/c18q7nedn2ko',
         smoke: false,
       },
       errorPage404: {
