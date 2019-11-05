@@ -286,7 +286,7 @@ const services = {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : '/cymrufyw/articles/c123456abcdo',
+            : '/cymrufyw/erthyglau/c123456abcdo',
         smoke: false,
       },
       frontPage: {
@@ -716,7 +716,7 @@ const services = {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : '/naidheachdan/articles/c123456abcdo',
+            : '/naidheachdan/sgeulachdan/c123456abcdo',
         smoke: false,
       },
       frontPage: {
