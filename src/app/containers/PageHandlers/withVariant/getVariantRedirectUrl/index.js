@@ -11,7 +11,11 @@ const getVariantRedirectUrl = (props, service, variant) => {
   });
   const redirectVariant = cookieVariant || defaultVariant;
 
+  if (!props) return null;
+
   const match = path(['match'], props, {});
+
+  if (!match || !match.path) return null;
 
   const pathTo = pathToRegexp.compile(match.path);
 
