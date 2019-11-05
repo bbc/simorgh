@@ -35,6 +35,12 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       isInitialMount.current = false;
     } else {
       // Only update on subsequent page renders
+      const contentElem = document.getElementById('content');
+
+      if (contentElem) {
+        contentElem.focus();
+      }
+
       const {
         service: nextService,
         variant: nextVariant,

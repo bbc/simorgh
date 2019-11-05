@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react';
-import { withRouter } from 'react-router';
+import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import { Headline, SubHeading } from '@bbc/psammead-headings';
 import { textDefaultPropTypes } from '#models/propTypes';
@@ -30,18 +29,8 @@ const sanitiseSubheadline = (type, text) => {
   return null;
 };
 
-const HeadingsContainer = ({ blocks, type, location }) => {
+const HeadingsContainer = ({ blocks, type }) => {
   const { script, service } = useContext(ServiceContext);
-  const headerRef = useRef();
-  const isInitialMount = useRef(true);
-
-  useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-    } else if (headerRef.current && headerRef.current.tagName === 'H1') {
-      headerRef.current.focus();
-    }
-  }, [location.pathname]);
   const Heading = Headings[type];
   const GridConstrain = GridConstraints[type];
 
@@ -63,13 +52,7 @@ const HeadingsContainer = ({ blocks, type, location }) => {
 
   return (
     <GridConstrain>
-      <Heading
-        script={script}
-        service={service}
-        id={id}
-        tabIndex="-1"
-        ref={headerRef}
-      >
+      <Heading script={script} service={service} id={id} tabIndex="-1">
         {renderText()}
       </Heading>
     </GridConstrain>
@@ -83,4 +66,4 @@ HeadingsContainer.propTypes = {
 
 HeadingsContainer.defaultProps = textDefaultPropTypes;
 
-export default withRouter(HeadingsContainer);
+export default HeadingsContainer;
