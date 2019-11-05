@@ -100,7 +100,7 @@ export const testsThatFollowSmokeTestConfig = ({
       });
     });
     if (envConfig.standaloneErrorPages) {
-      describe(`Test error page routes`, () => {
+      describe(`${service} error page routes`, () => {
         it(`/${service}/404 should have response code 200`, () => {
           cy.testResponseCodeAndType(`/${service}/404`, 200, 'text/html');
           cy.visit(`${service}/404`)
