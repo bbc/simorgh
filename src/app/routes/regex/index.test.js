@@ -1,16 +1,16 @@
 import { matchPath } from 'react-router-dom';
 import {
-  articleRegexPath,
-  articleDataRegexPath,
-  articleSwRegexPath,
-  articleManifestRegexPath,
-  frontpageRegexPath,
-  frontpageDataRegexPath,
-  frontpageManifestRegexPath,
-  frontpageSwRegexPath,
-  cpsAssetPageRegexPath,
-  cpsAssetPageDataRegexPath,
-  radioAndTvRegexPathsArray,
+  articlePath,
+  articleDataPath,
+  articleSwPath,
+  articleManifestPath,
+  frontPagePath,
+  frontPageDataPath,
+  frontPageManifestPath,
+  frontPageSwPath,
+  cpsAssetPagePath,
+  cpsAssetPageDataPath,
+  radioAndTvPath,
 } from './index';
 
 jest.mock('#server/utilities/serviceConfigs', () => ({
@@ -40,7 +40,7 @@ const shouldNotMatchInvalidRoutes = (routes, pathValue) => {
   });
 };
 
-describe('articleRegexPath', () => {
+describe('articlePath', () => {
   const validRoutes = [
     '/news/articles/c5jje4ejkqvo',
     '/news/articles/c5jje4ejkqvo.amp',
@@ -52,7 +52,7 @@ describe('articleRegexPath', () => {
     '/cymrufyw/erthyglau/c7eel0lmr4do.amp',
     '/naidheachdan/sgeulachdan/c7eel0lmr4do',
   ];
-  shouldMatchValidRoutes(validRoutes, articleRegexPath);
+  shouldMatchValidRoutes(validRoutes, articlePath);
 
   const invalidRoutes = [
     '/iplayer/articles/c5jje4ejkqvo',
@@ -64,10 +64,10 @@ describe('articleRegexPath', () => {
     '/news/articles/c5jje4ejkqvo/foobar',
     '/news/articles/c5jje4ejkqvo/.amp',
   ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, articleRegexPath);
+  shouldNotMatchInvalidRoutes(invalidRoutes, articlePath);
 });
 
-describe('articleDataRegexPath', () => {
+describe('articleDataPath', () => {
   const validRoutes = [
     '/news/articles/c5jje4ejkqvo.json',
     '/persian/articles/c7eel0lmr4do.json',
@@ -75,7 +75,7 @@ describe('articleDataRegexPath', () => {
     '/persian/articles/c7eel0lmr4do/trad.json',
     '/cymrufyw/erthyglau/c5jje4ejkqvo.json',
   ];
-  shouldMatchValidRoutes(validRoutes, articleDataRegexPath);
+  shouldMatchValidRoutes(validRoutes, articleDataPath);
 
   const invalidRoutes = [
     '/news/articles/c5jje4ejkqvo',
@@ -84,10 +84,10 @@ describe('articleDataRegexPath', () => {
     '/persian/articles/c7eel0lmr4do/.json',
     '/persian/articles/c7eel0lmr4do/foobar.json',
   ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, articleDataRegexPath);
+  shouldNotMatchInvalidRoutes(invalidRoutes, articleDataPath);
 });
 
-describe('frontpageRegexPath', () => {
+describe('frontPagePath', () => {
   const validRoutes = [
     '/news',
     '/persian',
@@ -98,7 +98,7 @@ describe('frontpageRegexPath', () => {
     '/news/lat.amp',
     '/persian/cyr.amp',
   ];
-  shouldMatchValidRoutes(validRoutes, frontpageRegexPath);
+  shouldMatchValidRoutes(validRoutes, frontPagePath);
 
   const invalidRoutes = [
     '/news/home',
@@ -107,17 +107,17 @@ describe('frontpageRegexPath', () => {
     '/news/foobar',
     '/news/foobar.amp',
   ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, frontpageRegexPath);
+  shouldNotMatchInvalidRoutes(invalidRoutes, frontPagePath);
 });
 
-describe('frontpageDataRegexPath', () => {
+describe('frontPageDataPath', () => {
   const validRoutes = [
     '/news.json',
     '/persian.json',
     '/news/cyr.json',
     '/persian/trad.json',
   ];
-  shouldMatchValidRoutes(validRoutes, frontpageDataRegexPath);
+  shouldMatchValidRoutes(validRoutes, frontPageDataPath);
 
   const invalidRoutes = [
     '/news/data.json',
@@ -125,16 +125,16 @@ describe('frontpageDataRegexPath', () => {
     '/news/foobar.json',
     '/persian/.json',
   ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, frontpageDataRegexPath);
+  shouldNotMatchInvalidRoutes(invalidRoutes, frontPageDataPath);
 });
 
-describe('articleSwRegexPath', () => {
+describe('articleSwPath', () => {
   const validRoutes = [
     '/news/articles/sw.js',
     '/persian/articles/sw.js',
     '/cymrufyw/erthyglau/sw.js',
   ];
-  shouldMatchValidRoutes(validRoutes, articleSwRegexPath);
+  shouldMatchValidRoutes(validRoutes, articleSwPath);
 
   const invalidRoutes = [
     '/news/sw.js',
@@ -142,47 +142,47 @@ describe('articleSwRegexPath', () => {
     '/news/trad/sw.js',
     '/cymrufyw/sw.js',
   ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, articleSwRegexPath);
+  shouldNotMatchInvalidRoutes(invalidRoutes, articleSwPath);
 });
 
-describe('manifestRegexPath', () => {
+describe('manifestPath', () => {
   const validRoutes = [
     '/news/articles/manifest.json',
     '/persian/articles/manifest.json',
     '/naidheachdan/sgeulachdan/manifest.json',
   ];
-  shouldMatchValidRoutes(validRoutes, articleManifestRegexPath);
+  shouldMatchValidRoutes(validRoutes, articleManifestPath);
 
   const invalidRoutes = [
     '/news/manifest.json',
     '/persian/articles/manifest',
     '/news/simp/sw.js',
   ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, articleManifestRegexPath);
+  shouldNotMatchInvalidRoutes(invalidRoutes, articleManifestPath);
 });
 
-describe('frontpageSwRegexPath', () => {
+describe('frontPageSwPath', () => {
   const validRoutes = ['/news/sw.js', '/persian/sw.js'];
-  shouldMatchValidRoutes(validRoutes, frontpageSwRegexPath);
+  shouldMatchValidRoutes(validRoutes, frontPageSwPath);
 
   const invalidRoutes = [
     '/news/articles/sw.js',
     '/persian/sw',
     '/persian/simp/sw.js',
   ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, frontpageSwRegexPath);
+  shouldNotMatchInvalidRoutes(invalidRoutes, frontPageSwPath);
 });
 
-describe('frontpageManifestRegexPath', () => {
+describe('frontPageManifestPath', () => {
   const validRoutes = ['/news/manifest.json', '/persian/manifest.json'];
-  shouldMatchValidRoutes(validRoutes, frontpageManifestRegexPath);
+  shouldMatchValidRoutes(validRoutes, frontPageManifestPath);
 
   const invalidRoutes = [
     '/foobar/manifest.json',
     '/foobar/manifest',
     '/news/trad/sw.js',
   ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, frontpageManifestRegexPath);
+  shouldNotMatchInvalidRoutes(invalidRoutes, frontPageManifestPath);
 });
 
 jest.mock('../config', () => ({
@@ -193,7 +193,7 @@ jest.mock('../config', () => ({
   persian: ['bbc_persian_radio', 'bbc_dari_radio', 'bbc_persian_tv'],
 }));
 
-describe('radioAndTvRegexPathsArray', () => {
+describe('radioAndTvPath', () => {
   describe('should return an array of regexs for the radio config', () => {
     const validRoutes = [
       '/hausa/bbc_hausa_radio/liveradio',
@@ -203,7 +203,7 @@ describe('radioAndTvRegexPathsArray', () => {
       '/hausa/bbc_hausa_radio/liveradio.amp',
       '/hausa/bbc_hausa_radio/abcd1234.amp',
     ];
-    shouldMatchValidRoutes(validRoutes, radioAndTvRegexPathsArray);
+    shouldMatchValidRoutes(validRoutes, radioAndTvPath);
 
     const invalidRoutes = [
       '/hausa/bbc_persian_radio/liveradio',
@@ -214,7 +214,7 @@ describe('radioAndTvRegexPathsArray', () => {
       '/persian/foobar/liveradio',
       '/persian/foobar/liveradio.amp',
     ];
-    shouldNotMatchInvalidRoutes(invalidRoutes, radioAndTvRegexPathsArray);
+    shouldNotMatchInvalidRoutes(invalidRoutes, radioAndTvPath);
   });
 
   describe('should return an array of regexs for the tv config', () => {
@@ -224,7 +224,7 @@ describe('radioAndTvRegexPathsArray', () => {
       '/gujarati/bbc_gujarati_tv/abcd1234',
       '/persian/bbc_persian_tv/abcd1234.amp',
     ];
-    shouldMatchValidRoutes(validRoutes, radioAndTvRegexPathsArray);
+    shouldMatchValidRoutes(validRoutes, radioAndTvPath);
 
     const invalidRoutes = [
       '/persian/bbc_marathi_tv/livetv',
@@ -234,9 +234,9 @@ describe('radioAndTvRegexPathsArray', () => {
       '/marathi/bbc_marathi_tv/.amp',
       '/blah/bbc_hausa_radio/livetv',
     ];
-    shouldNotMatchInvalidRoutes(invalidRoutes, radioAndTvRegexPathsArray);
+    shouldNotMatchInvalidRoutes(invalidRoutes, radioAndTvPath);
   });
-  describe('cpsAssetPageRegexPath', () => {
+  describe('cpsAssetPagePath', () => {
     const validRoutes = [
       '/pidgin/12345678',
       '/pidgin/12345678.amp',
@@ -253,7 +253,7 @@ describe('radioAndTvRegexPathsArray', () => {
       '/zhongwen/test-12345678/simp.amp',
     ];
 
-    shouldMatchValidRoutes(validRoutes, cpsAssetPageRegexPath);
+    shouldMatchValidRoutes(validRoutes, cpsAssetPagePath);
 
     // According to CPS a valid assetUri should have 8 digits or more and CPS index is optional
     const inValidRoutes = [
@@ -266,10 +266,10 @@ describe('radioAndTvRegexPathsArray', () => {
       '/pidgin/test-49450859/',
       '/pidgin/test-494859.amp',
     ];
-    shouldNotMatchInvalidRoutes(inValidRoutes, cpsAssetPageRegexPath);
+    shouldNotMatchInvalidRoutes(inValidRoutes, cpsAssetPagePath);
   });
 
-  describe('cpsAssetPageDataRegexPath', () => {
+  describe('cpsAssetPageDataPath', () => {
     const validRoutes = [
       '/pidgin/12345678.json',
       '/pidgin/test-49450859.json',
@@ -279,7 +279,7 @@ describe('radioAndTvRegexPathsArray', () => {
       '/zhongwen/test-12345678/trad.json',
     ];
 
-    shouldMatchValidRoutes(validRoutes, cpsAssetPageDataRegexPath);
+    shouldMatchValidRoutes(validRoutes, cpsAssetPageDataPath);
 
     // According to CPS a valid assetUri should have 8 digits or more and CPS index is optional
     const inValidRoutes = [
@@ -291,6 +291,6 @@ describe('radioAndTvRegexPathsArray', () => {
       '/pidgin/test-49450859/.json',
       '/pidgin/test-494859.amp.json',
     ];
-    shouldNotMatchInvalidRoutes(inValidRoutes, cpsAssetPageDataRegexPath);
+    shouldNotMatchInvalidRoutes(inValidRoutes, cpsAssetPageDataPath);
   });
 });

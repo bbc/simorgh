@@ -26,4 +26,4 @@ export const cpsAssetPagePath = getCpsAssetRegex(allServices);
 export const cpsAssetPageDataPath = `${cpsAssetPagePath}.json`;
 
 export const radioAndTvPath = getRadioAndTVRegex(allServices);
-export const radioAndTvDataRegex = `${radioAndTvPath}.json`;
+export const radioAndTvDataPath = `${radioAndTvPath}.json`;
