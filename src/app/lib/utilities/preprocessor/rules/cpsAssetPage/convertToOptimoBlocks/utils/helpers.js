@@ -35,30 +35,30 @@ export const listItem = paragraphs => ({
   },
 });
 
-export const unorderedList = paragraphs => ({
+export const unorderedList = listItems => ({
   type: 'unorderedList',
   model: {
-    blocks: paragraphs.map(listItem),
+    blocks: listItems.map(listItem),
   },
 });
 
-export const orderedList = paragraphs => ({
+export const orderedList = listItems => ({
   type: 'orderedList',
   model: {
-    blocks: paragraphs.map(listItem),
+    blocks: listItems.map(listItem),
   },
 });
 
-export const optimoTextWithOrderedList = paragraphs => ({
+export const optimoTextWithOrderedList = listItems => ({
   type: 'text',
   model: {
-    blocks: [orderedList(paragraphs)],
+    blocks: [orderedList(listItems)],
   },
 });
 
-export const optimoTextWithUnorderedList = paragraphs => ({
+export const optimoTextWithUnorderedList = listItems => ({
   type: 'text',
   model: {
-    blocks: [unorderedList(paragraphs)],
+    blocks: [unorderedList(listItems)],
   },
 });
