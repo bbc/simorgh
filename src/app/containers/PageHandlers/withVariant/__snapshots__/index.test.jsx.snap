@@ -7,21 +7,7 @@ exports[`WithVariant service (serbian) with default variant should redirect to *
 </p>
 `;
 
-exports[`WithVariant service (serbian) with default variant should redirect to /trad 1`] = `
-<p>
-  You are going to 
-  /serbian/lat
-</p>
-`;
-
 exports[`WithVariant service (ukchina) with default variant should redirect to */trad 1`] = `
-<p>
-  You are going to 
-  /ukchina/trad
-</p>
-`;
-
-exports[`WithVariant service (ukchina) with default variant should redirect to /trad 1`] = `
 <p>
   You are going to 
   /ukchina/trad
@@ -32,20 +18,6 @@ exports[`WithVariant service (zhongwen) with default variant should redirect to 
 <p>
   You are going to 
   /zhongwen/trad
-</p>
-`;
-
-exports[`WithVariant service (zhongwen) with default variant should redirect to /trad 1`] = `
-<p>
-  You are going to 
-  /zhongwen/trad
-</p>
-`;
-
-exports[`WithVariant service with default variant should redirect 1`] = `
-<p>
-  You are going to 
-  /ukchina/trad
 </p>
 `;
 
