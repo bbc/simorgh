@@ -9,6 +9,7 @@ import withPageWrapper from '../PageHandlers/withPageWrapper';
 import withLoading from '../PageHandlers/withLoading';
 import withError from '../PageHandlers/withError';
 import withData from '../PageHandlers/withData';
+import withVariant from '../PageHandlers/withVariant';
 
 const FrontPageContainer = ({ pageData }) => (
   <FrontPageMain frontPageData={pageData} />
@@ -23,6 +24,7 @@ FrontPageContainer.defaultProps = {
 };
 
 const EnhancedFrontPageContainer = compose(
+  withVariant,
   withContexts,
   withPageWrapper,
   withLoading,

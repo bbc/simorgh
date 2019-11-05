@@ -1,19 +1,20 @@
 import React from 'react';
 import { useParams, useLocation, Redirect } from 'react-router-dom';
-import defaultVariants from '#lib/config/defaultVariants';
+import getVariantRedirectUrl from './getVariantRedirectUrl';
 
 const WithVariant = Component => {
   const VariantContainer = props => {
     const { service, variant } = useParams();
     const location = useLocation();
-    const defaultVariant = defaultVariants[service];
 
-    if (!variant && defaultVariant) {
+    const redirectPath = getVariantRedirectUrl(props, service, variant);
+
+    if (redirectPath) {
       return (
         <Redirect
           to={{
             ...location,
-            pathname: `${location.pathname}/${defaultVariant}`,
+            pathname: redirectPath,
           }}
         />
       );

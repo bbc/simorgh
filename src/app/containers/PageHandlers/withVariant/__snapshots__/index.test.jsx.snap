@@ -10,14 +10,14 @@ exports[`WithVariant service (serbian) with default variant should redirect to *
 exports[`WithVariant service (ukchina) with default variant should redirect to */trad 1`] = `
 <p>
   You are going to 
-  /ukchina/trad
+  /ukchina/simp
 </p>
 `;
 
 exports[`WithVariant service (zhongwen) with default variant should redirect to */trad 1`] = `
 <p>
   You are going to 
-  /zhongwen/trad
+  /zhongwen/simp
 </p>
 `;
 

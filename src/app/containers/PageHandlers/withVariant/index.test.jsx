@@ -2,6 +2,7 @@ import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { useParams, useLocation } from 'react-router-dom';
 import WithVariant from '.';
+import { frontpageRegexPath } from '#app/routes/regex';
 
 jest.mock('react-router-dom', () => ({
   useParams: jest.fn(),
@@ -18,6 +19,13 @@ describe('WithVariant', () => {
   const Component = () => <h1>This is the BBC.</h1>;
   const WithVariantHOC = WithVariant(Component);
 
+  const getMatchProps = (service, path = null) => ({
+    path: path || frontpageRegexPath,
+    params: {
+      service,
+    },
+  });
+
   describe('service with no default variant', () => {
     beforeEach(() => {
       const service = 'news';
@@ -30,7 +38,12 @@ describe('WithVariant', () => {
       });
     });
 
-    shouldMatchSnapshot('should not redirect', <WithVariantHOC />);
+    const match = getMatchProps('news');
+
+    shouldMatchSnapshot(
+      'should not redirect',
+      <WithVariantHOC match={match} />,
+    );
   });
 
   describe('service (ukchina) with default variant', () => {
@@ -45,7 +58,12 @@ describe('WithVariant', () => {
       });
     });
 
-    shouldMatchSnapshot('should redirect to */trad', <WithVariantHOC />);
+    const match = getMatchProps('ukchina');
+
+    shouldMatchSnapshot(
+      'should redirect to */trad',
+      <WithVariantHOC match={match} />,
+    );
   });
 
   describe('service (zhongwen) with default variant', () => {
@@ -60,7 +78,12 @@ describe('WithVariant', () => {
       });
     });
 
-    shouldMatchSnapshot('should redirect to */trad', <WithVariantHOC />);
+    const match = getMatchProps('zhongwen');
+
+    shouldMatchSnapshot(
+      'should redirect to */trad',
+      <WithVariantHOC match={match} />,
+    );
   });
 
   describe('service (serbian) with default variant', () => {
@@ -75,6 +98,11 @@ describe('WithVariant', () => {
       });
     });
 
-    shouldMatchSnapshot('should redirect to */lat', <WithVariantHOC />);
+    const match = getMatchProps('serbian');
+
+    shouldMatchSnapshot(
+      'should redirect to */lat',
+      <WithVariantHOC match={match} />,
+    );
   });
 });

@@ -1,4 +1,4 @@
-const servicesWithVariants = {
+export const servicesWithVariants = {
   serbian: ['lat', 'cyr'],
   ukchina: ['simp', 'trad'],
   zhongwen: ['simp', 'trad'],
