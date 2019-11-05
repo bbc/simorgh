@@ -124,9 +124,13 @@ exports[`Radio Page Blocks should match snapshot for AMP 1`] = `
               title="Audio player"
             >
               <amp-img
+                alt=""
+                attribution=""
+                height="16"
                 layout="fill"
                 placeholder="true"
                 src="http://localhost:7080/images/amp_audio_placeholder.png"
+                width="9"
               />
             </amp-iframe>
           </div>
