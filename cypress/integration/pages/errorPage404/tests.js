@@ -103,9 +103,7 @@ export const testsThatFollowSmokeTestConfig = ({
       describe(`Test error page routes`, () => {
         it(`/${service}/404 should have response code 200`, () => {
           cy.testResponseCodeAndType(`/${service}/404`, 200, 'text/html');
-          cy.visit(`${service}/404`, {
-            failOnStatusCode: false,
-          })
+          cy.visit(`${service}/404`)
             .get('[class^="StatusCode"]')
             .should(
               'contain',
@@ -114,9 +112,7 @@ export const testsThatFollowSmokeTestConfig = ({
         });
         it(`/${service}/500 should have response code 200`, () => {
           cy.testResponseCodeAndType(`/${service}/500`, 200, 'text/html');
-          cy.visit(`${service}/500`, {
-            failOnStatusCode: false,
-          })
+          cy.visit(`${service}/500`)
             .get('[class^="StatusCode"]')
             .should(
               'contain',
