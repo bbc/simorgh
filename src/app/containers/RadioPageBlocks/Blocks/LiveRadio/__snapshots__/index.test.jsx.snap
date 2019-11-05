@@ -56,9 +56,13 @@ exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
               title="Audio player"
             >
               <amp-img
+                alt=""
+                attribution=""
+                height="16"
                 layout="fill"
                 placeholder="true"
                 src="http://localhost:7080/images/amp_audio_placeholder.png"
+                width="9"
               />
             </amp-iframe>
           </div>
@@ -184,9 +188,13 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
               title="Audio player"
             >
               <amp-img
+                alt=""
+                attribution=""
+                height="16"
                 layout="fill"
                 placeholder="true"
                 src="http://localhost:7080/images/amp_audio_placeholder.png"
+                width="9"
               />
             </amp-iframe>
           </div>
