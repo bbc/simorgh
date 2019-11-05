@@ -56,6 +56,42 @@ exports[`ParagraphContainer should render correctly 1`] = `
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    margin-left: 40%;
+  }
+}
+
 @supports (display:grid) {
   .c0 {
     display: block;
@@ -64,6 +100,7 @@ exports[`ParagraphContainer should render correctly 1`] = `
 
 <div
   class="c0"
+  dir="ltr"
 >
   <p
     class="c1"
@@ -142,6 +179,42 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    margin-left: 40%;
+  }
+}
+
 @supports (display:grid) {
   .c0 {
     display: block;
@@ -150,6 +223,7 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 
 <div
   class="c0"
+  dir="ltr"
 >
   <p
     class="c1"

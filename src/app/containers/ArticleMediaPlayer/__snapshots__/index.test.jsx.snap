@@ -22,69 +22,78 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 }
 
 .c0 {
-  grid-column: 1 / span 6;
+  position: relative;
 }
 
-@media (max-width:25rem) {
+@media (max-width:14.9375rem) {
   .c0 {
-    padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
+@media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
-    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+    margin-left: 20%;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
+    margin-left: 40%;
   }
 }
 
 @supports (display:grid) {
   .c0 {
-    max-width: initial;
+    display: block;
   }
 }
 
 <div>
       <div
         class="c0"
+        dir="ltr"
       >
         <div
-          class="c1"
+          class="c0"
+          dir="ltr"
         >
-          <amp-iframe
-            allowfullscreen="allowfullscreen"
-            frameborder="0"
-            layout="fill"
-            sandbox="allow-scripts allow-same-origin"
-            src="https://www.test.bbc.com/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB/amp"
-            title="Media player"
+          <div
+            class="c1"
           >
-            <amp-img
+            <amp-iframe
+              allowfullscreen="allowfullscreen"
+              frameborder="0"
               layout="fill"
-              placeholder="true"
-              src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-            />
-          </amp-iframe>
+              sandbox="allow-scripts allow-same-origin"
+              src="https://www.test.bbc.com/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB/amp"
+              title="Media player"
+            >
+              <amp-img
+                layout="fill"
+                placeholder="true"
+                src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+              />
+            </amp-iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -184,45 +193,48 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 }
 
 .c0 {
-  grid-column: 1 / span 6;
+  position: relative;
 }
 
-@media (max-width:25rem) {
+@media (max-width:14.9375rem) {
   .c0 {
-    padding: 0 0.5rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
+@media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
-    padding: 0 1rem;
+    margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+    margin-left: 20%;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
+    margin-left: 40%;
   }
 }
 
 @supports (display:grid) {
   .c0 {
-    max-width: initial;
+    display: block;
   }
 }
 
@@ -238,50 +250,56 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
     <div>
       <div
         class="c0"
+        dir="ltr"
       >
         <div
-          class="c1"
+          class="c0"
+          dir="ltr"
         >
           <div
-            class="c2 c3"
+            class="c1"
           >
-            <button
-              class="c4 c5"
+            <div
+              class="c2 c3"
             >
-              <span
-                class="c6"
+              <button
+                class="c4 c5"
               >
-                Play video, "Five things ants can teach us about management", 3,11
-              </span>
-              <div
-                aria-hidden="true"
-                class="c7"
-              >
-                <svg
-                  class="c8"
-                  focusable="false"
-                  height="12px"
-                  viewBox="0 0 32 32"
-                  width="12px"
+                <span
+                  class="c6"
                 >
-                  <polygon
-                    points="3,32 29,16 3,0"
-                  />
-                </svg>
-              </div>
-              <time
-                aria-hidden="true"
-                class="c9"
-                datetime="PT3M11S"
-              >
-                3:11
-              </time>
-            </button>
-            <img
-              alt="Image Alt"
-              class="c10"
-              src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-            />
+                  Play video, "Five things ants can teach us about management", 3,11
+                </span>
+                <div
+                  aria-hidden="true"
+                  class="c7"
+                >
+                  <svg
+                    class="c8"
+                    focusable="false"
+                    height="12px"
+                    viewBox="0 0 32 32"
+                    width="12px"
+                  >
+                    <polygon
+                      points="3,32 29,16 3,0"
+                    />
+                  </svg>
+                </div>
+                <time
+                  aria-hidden="true"
+                  class="c9"
+                  datetime="PT3M11S"
+                >
+                  3:11
+                </time>
+              </button>
+              <img
+                alt="Image Alt"
+                class="c10"
+                src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+              />
+            </div>
           </div>
         </div>
       </div>

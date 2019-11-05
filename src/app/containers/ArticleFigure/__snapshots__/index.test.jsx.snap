@@ -33,48 +33,48 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
@@ -90,9 +90,11 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
+      dir="ltr"
     >
       <div
         class="c3"
@@ -142,48 +144,48 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
@@ -199,9 +201,11 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
+      dir="ltr"
     >
       <div
         class="c3"
@@ -329,48 +333,48 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
@@ -386,9 +390,11 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
+      dir="ltr"
     >
       <div
         class="c3"
@@ -416,6 +422,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
     </div>
     <div
       class="c2"
+      dir="ltr"
     >
       <figcaption
         class="c6"
@@ -529,48 +536,48 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
@@ -586,9 +593,11 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
+      dir="ltr"
     >
       <div
         class="c3"
@@ -605,6 +614,7 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
     </div>
     <div
       class="c2"
+      dir="ltr"
     >
       <figcaption
         class="c4"
@@ -736,48 +746,48 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
@@ -793,9 +803,11 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
+      dir="ltr"
     >
       <div
         class="c3"
@@ -812,6 +824,7 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
     </div>
     <div
       class="c2"
+      dir="ltr"
     >
       <figcaption
         class="c4"
@@ -896,48 +909,48 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
@@ -953,9 +966,11 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
+      dir="ltr"
     >
       <div
         class="c3"
@@ -1024,48 +1039,48 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(66.66666666666667%);
     display: inline-block;
-    width: 66.66666666666667%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(66.66666666666667%);
     display: inline-block;
-    width: 66.66666666666667%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(80%);
     display: inline-block;
-    width: 80%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
@@ -1081,9 +1096,11 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
+      dir="ltr"
     >
       <div
         class="c3"
@@ -1139,48 +1156,48 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(120%);
     display: inline-block;
-    width: 120%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(120%);
     display: inline-block;
-    width: 120%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(120%);
     display: inline-block;
-    width: 120%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(120%);
     display: inline-block;
-    width: 120%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(120%);
     display: inline-block;
-    width: 120%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(120%);
     display: inline-block;
-    width: 120%;
     vertical-align: top;
   }
 }
@@ -1196,9 +1213,11 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
+      dir="ltr"
     >
       <div
         class="c3"
@@ -1254,48 +1273,48 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
@@ -1311,9 +1330,11 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
+      dir="ltr"
     >
       <div
         class="c3"
@@ -1445,48 +1466,48 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
@@ -1502,9 +1523,11 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
+      dir="ltr"
     >
       <div
         class="c3"
@@ -1530,6 +1553,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
     </div>
     <div
       class="c2"
+      dir="ltr"
     >
       <figcaption
         class="c7"
@@ -1649,48 +1673,48 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
@@ -1706,9 +1730,11 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
+      dir="ltr"
     >
       <div
         class="c3"
@@ -1723,6 +1749,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
     </div>
     <div
       class="c2"
+      dir="ltr"
     >
       <figcaption
         class="c5"
@@ -1860,48 +1887,48 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
@@ -1917,9 +1944,11 @@ exports[`ArticleFigure should render an image with caption text with inline link
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
+      dir="ltr"
     >
       <div
         class="c3"
@@ -1934,6 +1963,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
     </div>
     <div
       class="c2"
+      dir="ltr"
     >
       <figcaption
         class="c5"
@@ -2024,48 +2054,48 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(100%);
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
@@ -2081,9 +2111,11 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
+      dir="ltr"
     >
       <div
         class="c3"

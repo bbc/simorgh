@@ -208,15 +208,15 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
     />
   </head>
   <body>
-    .c0 {
+    .c1 {
   position: relative;
 }
 
-.c1 {
+.c2 {
   margin: 0 auto;
 }
 
-.c3 {
+.c4 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -227,13 +227,13 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   padding: 2rem 0;
 }
 
-.c7 {
+.c8 {
   height: 165px;
   position: relative;
   overflow: hidden;
 }
 
-.c6 {
+.c7 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -241,7 +241,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   max-width: calc(100vw - 2rem);
 }
 
-.c4 {
+.c5 {
   font-size: 1rem;
   line-height: 1.375rem;
   font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -252,101 +252,191 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   margin: 0;
 }
 
+@media (max-width:14.9375rem) {
+  .c1 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 -0.5rem;
+  }
+}
+
 @supports (display:grid) {
-  .c0 {
+  .c1 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c2 {
+  .c3 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
+  .c3 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c3 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c3 {
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem - 0%);
+    margin-left: 0%;
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
+  .c3 {
+    margin: 0 0.5rem;
+    width: calc(75% - 1rem);
+    margin-left: 12.5%;
     display: inline-block;
-    width: 75%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c2 {
+  .c3 {
+    margin: 0 0.5rem;
+    width: calc(60% - 1rem);
+    margin-left: 20%;
     display: inline-block;
-    width: 60%;
     vertical-align: top;
   }
 }
 
 @supports (display:grid) {
-  .c2 {
+  .c3 {
     display: block;
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    padding: 0;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c2 {
     max-width: 80rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c4 {
     font-size: 2rem;
     line-height: 2.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     font-size: 2.75rem;
     line-height: 3.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     padding: 2.5rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c5 {
+  .c6 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -359,14 +449,14 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.75rem;
   }
@@ -380,68 +470,74 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
           {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=4&p=amharic.bbc_amharic_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares::ws_live:bbc_amharic_radio]&x2=[amp]&x3=[news-amharic]&x4=[am]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x9=[ያድምጡ+-+BBC+News+አማርኛ]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
         </script>
       </amp-analytics>
-      <main
-        class="c0 c1"
-        role="main"
+      <div
+        class="c0"
       >
-        <div
-          class="c2"
+        <main
+          class="c1 c2"
+          dir="ltr"
+          role="main"
         >
-          <h1
-            class="c3"
-            id="content"
-            tabindex="-1"
-          >
-            ያድምጡ
-          </h1>
-          <p
-            class="c4"
-          >
-            ዝግጅቶቻችንን’
-          </p>
           <div
-            class="c5"
+            class="c3"
+            dir="ltr"
           >
+            <h1
+              class="c4"
+              id="content"
+              tabindex="-1"
+            >
+              ያድምጡ
+            </h1>
+            <p
+              class="c5"
+            >
+              ዝግጅቶቻችንን’
+            </p>
             <div
               class="c6"
             >
               <div
                 class="c7"
               >
-                <amp-iframe
-                  allowfullscreen="allowfullscreen"
-                  frameborder="0"
-                  layout="fill"
-                  sandbox="allow-scripts allow-same-origin"
-                  src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
-                  title="Audio player"
+                <div
+                  class="c8"
                 >
-                  <amp-img
+                  <amp-iframe
+                    allowfullscreen="allowfullscreen"
+                    frameborder="0"
                     layout="fill"
-                    placeholder="true"
-                    src="http://localhost:7080/images/amp_audio_placeholder.png"
-                  />
-                </amp-iframe>
+                    sandbox="allow-scripts allow-same-origin"
+                    src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
+                    title="Audio player"
+                  >
+                    <amp-img
+                      layout="fill"
+                      placeholder="true"
+                      src="http://localhost:7080/images/amp_audio_placeholder.png"
+                    />
+                  </amp-iframe>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   </body>
 </html>
 `;
 
 exports[`Radio Page Main should match snapshot for Canonical 1`] = `
-.c0 {
+.c1 {
   position: relative;
 }
 
-.c1 {
+.c2 {
   margin: 0 auto;
 }
 
-.c3 {
+.c4 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -452,7 +548,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   padding: 2rem 0;
 }
 
-.c8 {
+.c9 {
   position: absolute;
   top: 0;
   left: 0;
@@ -462,13 +558,13 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   overflow: hidden;
 }
 
-.c7 {
+.c8 {
   height: 165px;
   position: relative;
   overflow: hidden;
 }
 
-.c6 {
+.c7 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -476,7 +572,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   max-width: calc(100vw - 2rem);
 }
 
-.c4 {
+.c5 {
   font-size: 1rem;
   line-height: 1.375rem;
   font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -487,101 +583,191 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
+@media (max-width:14.9375rem) {
+  .c1 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 -0.5rem;
+  }
+}
+
 @supports (display:grid) {
-  .c0 {
+  .c1 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c2 {
+  .c3 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
+  .c3 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c3 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c3 {
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem - 0%);
+    margin-left: 0%;
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
+  .c3 {
+    margin: 0 0.5rem;
+    width: calc(75% - 1rem);
+    margin-left: 12.5%;
     display: inline-block;
-    width: 75%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c2 {
+  .c3 {
+    margin: 0 0.5rem;
+    width: calc(60% - 1rem);
+    margin-left: 20%;
     display: inline-block;
-    width: 60%;
     vertical-align: top;
   }
 }
 
 @supports (display:grid) {
-  .c2 {
+  .c3 {
     display: block;
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    padding: 0;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c2 {
     max-width: 80rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c4 {
     font-size: 2rem;
     line-height: 2.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     font-size: 2.75rem;
     line-height: 3.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     padding: 2.5rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c5 {
+  .c6 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -594,14 +780,14 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.75rem;
   }
@@ -814,46 +1000,52 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   <body>
     <div>
       <noscript />
-      <main
-        class="c0 c1"
-        role="main"
+      <div
+        class="c0"
       >
-        <div
-          class="c2"
+        <main
+          class="c1 c2"
+          dir="ltr"
+          role="main"
         >
-          <h1
-            class="c3"
-            id="content"
-            tabindex="-1"
-          >
-            ያድምጡ
-          </h1>
-          <p
-            class="c4"
-          >
-            ዝግጅቶቻችንን’
-          </p>
           <div
-            class="c5"
+            class="c3"
+            dir="ltr"
           >
+            <h1
+              class="c4"
+              id="content"
+              tabindex="-1"
+            >
+              ያድምጡ
+            </h1>
+            <p
+              class="c5"
+            >
+              ዝግጅቶቻችንን’
+            </p>
             <div
               class="c6"
             >
               <div
                 class="c7"
               >
-                <iframe
-                  allow="autoplay; fullscreen"
-                  allowfullscreen=""
+                <div
                   class="c8"
-                  src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
-                  title="Audio player"
-                />
+                >
+                  <iframe
+                    allow="autoplay; fullscreen"
+                    allowfullscreen=""
+                    class="c9"
+                    src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
+                    title="Audio player"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   </body>
 </html>
