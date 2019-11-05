@@ -1,17 +1,13 @@
-import pathOr from 'ramda/src/pathOr';
+import { pathOr, deepClone } from 'ramda';
 
-const addHeadingToSTY = jsonRaw => {
-  const headlineText = pathOr(
-    null,
-    ['promo', 'headlines', 'headline'],
-    jsonRaw,
-  );
+const getHeadlineBlocks = json => {
+  const headlineText = pathOr(null, ['promo', 'headlines', 'headline'], json);
 
   if (!headlineText) {
-    return jsonRaw;
+    return json;
   }
 
-  const newBlock = {
+  const headlineBlock = {
     model: {
       blocks: [
         {
@@ -41,17 +37,71 @@ const addHeadingToSTY = jsonRaw => {
     type: 'headline',
   };
 
-  return {
-    ...jsonRaw,
-    content: {
-      model: {
-        blocks: [
-          newBlock,
-          ...pathOr([], ['content', 'model', 'blocks'], jsonRaw),
-        ],
-      },
+  const offScreenHeadlineBlock = {
+    model: {
+      blocks: [
+        {
+          model: {
+            blocks: [
+              {
+                model: {
+                  blocks: [
+                    {
+                      model: {
+                        attributes: [],
+                        text: headlineText,
+                      },
+                      type: 'fragment',
+                    },
+                  ],
+                  text: headlineText,
+                },
+                type: 'paragraph',
+              },
+            ],
+          },
+          type: 'text',
+        },
+      ],
     },
+    type: 'offScreenHeadline',
   };
+
+  return { headlineBlock, offScreenHeadlineBlock };
+};
+const splitBlocksByAresMedia = blocks => {
+  const aresMediaIndexPlusOne =
+    blocks.findIndex(({ type }) => type === 'aresMedia') + 1;
+
+  const aresMediaBlock = blocks.slice(0, aresMediaIndexPlusOne);
+  const mainBlocks = blocks.slice(aresMediaIndexPlusOne, blocks.length);
+
+  return { aresMediaBlock, mainBlocks };
 };
 
-export default addHeadingToSTY;
+const insertHeadlineBlocks = originalJson => {
+  const json = deepClone(originalJson);
+  const { headlineBlock, offScreenHeadlineBlock } = getHeadlineBlocks(json);
+  const { aresMediaBlock, mainBlocks } = splitBlocksByAresMedia(
+    json.content.model.blocks,
+  );
+
+  if (aresMediaBlock) {
+    json.content.model.blocks = [
+      ...offScreenHeadlineBlock,
+      ...aresMediaBlock,
+      ...headlineBlock,
+      ...mainBlocks,
+    ];
+  } else {
+    json.content.model.blocks = [
+      ...offScreenHeadlineBlock,
+      ...headlineBlock,
+      ...mainBlocks,
+    ];
+  }
+
+  return json;
+};
+
+export default insertHeadlineBlocks;

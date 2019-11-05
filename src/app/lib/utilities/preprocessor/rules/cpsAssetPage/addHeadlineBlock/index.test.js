@@ -9,13 +9,19 @@ const input = {
   },
   content: {
     model: {
-      blocks: [{ foo: 'bar' }],
+      blocks: [
+        {
+          model: {
+            type: 'aresMedia',
+          },
+        },
+      ],
     },
   },
 };
 
 describe('addHeadlineBlock', () => {
-  it('should add a headline block to the start if one is availible', async () => {
+  it('should add an off screen headline block as the first block and a headline block after the aresMedia block', async () => {
     const expected = {
       promo: { headlines: { headline: 'i am a headline' } },
       content: {
@@ -48,9 +54,42 @@ describe('addHeadlineBlock', () => {
                   },
                 ],
               },
+              type: 'offScreenHeadline',
+            },
+            {
+              model: {
+                type: 'aresMedia',
+              },
+            },
+            {
+              model: {
+                blocks: [
+                  {
+                    model: {
+                      blocks: [
+                        {
+                          model: {
+                            blocks: [
+                              {
+                                model: {
+                                  attributes: [],
+                                  text: 'i am a headline',
+                                },
+                                type: 'fragment',
+                              },
+                            ],
+                            text: 'i am a headline',
+                          },
+                          type: 'paragraph',
+                        },
+                      ],
+                    },
+                    type: 'text',
+                  },
+                ],
+              },
               type: 'headline',
             },
-            { foo: 'bar' },
           ],
         },
       },
@@ -95,6 +134,35 @@ describe('addHeadlineBlock', () => {
                   },
                 ],
               },
+              type: 'offScreenHeadline',
+            },
+            {
+              model: {
+                blocks: [
+                  {
+                    model: {
+                      blocks: [
+                        {
+                          model: {
+                            blocks: [
+                              {
+                                model: {
+                                  attributes: [],
+                                  text: 'i am a headline',
+                                },
+                                type: 'fragment',
+                              },
+                            ],
+                            text: 'i am a headline',
+                          },
+                          type: 'paragraph',
+                        },
+                      ],
+                    },
+                    type: 'text',
+                  },
+                ],
+              },
               type: 'headline',
             },
           ],
@@ -103,12 +171,5 @@ describe('addHeadlineBlock', () => {
     };
 
     expect(addHeadlineBlock(missingBlocks)).toEqual(expected);
-  });
-
-  it('should do nothing if no headline is availible', () => {
-    const missingHeadline = deepClone(input);
-    delete missingHeadline.promo.headlines.headline;
-
-    expect(addHeadlineBlock(missingHeadline)).toEqual(missingHeadline);
   });
 });
