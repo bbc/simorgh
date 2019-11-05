@@ -9,6 +9,7 @@ import withPageWrapper from '../PageHandlers/withPageWrapper';
 import withError from '../PageHandlers/withError';
 import withLoading from '../PageHandlers/withLoading';
 import withData from '../PageHandlers/withData';
+import withVariant from '../PageHandlers/withVariant';
 
 const ArticleContainer = ({ pageData }) => (
   <ArticleMain articleData={pageData} />
@@ -28,6 +29,7 @@ const EnhancedArticleContainer = compose(
   withLoading,
   withError,
   withData,
+  withVariant,
 )(ArticleContainer);
 
 export default EnhancedArticleContainer;
