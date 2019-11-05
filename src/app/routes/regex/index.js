@@ -1,41 +1,29 @@
-import services from '#lib/config/services/loadableConfig';
-import servicesWithRadioAndTv from '../config';
-import buildRadioAndTvRoutes, {
-  buildRadioAndTvDataRoutes,
-} from '../buildRadioAndTvRoutes';
+import allServices from '#lib/config/services/loadableConfig';
+import {
+  getArticleRegex,
+  getArticleSwRegex,
+  getArticleManifestRegex,
+  getFrontpageRegex,
+  getSwRegex,
+  getManifestRegex,
+  getCpsAssetRegex,
+  getRadioAndTVRegex,
+} from './utils';
 
-const serviceRegex = Object.keys(services).join('|');
-const idRegex = 'c[a-zA-Z0-9]{10}o';
-const ampRegex = '.amp';
-const assetUriRegex = '[a-z-_]{0,}[0-9]{8,}';
+export const articleRegex = getArticleRegex(allServices);
+export const articleDataRegex = `${articleRegex}.json`;
 
-const variantRegex = '/simp|/trad|/cyr|/lat';
+export const articleSwRegex = getArticleSwRegex(allServices);
+export const articleManifestRegex = getArticleManifestRegex(allServices);
 
-const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
+export const frontpageRegex = getFrontpageRegex(allServices);
+export const frontpageDataRegex = `${frontpageRegex}.json`;
 
-export const articleRegexPath = `/:service(${serviceRegex})/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+export const frontpageSwRegex = getSwRegex(allServices);
+export const frontpageManifestRegex = getManifestRegex(allServices);
 
-export const articleDataRegexPath = `${articleRegexPath}.json`;
+export const cpsAssetPageRegex = getCpsAssetRegex(allServices);
+export const cpsAssetPageDataRegex = `${cpsAssetPageRegex}.json`;
 
-export const articleSwRegexPath = `/:service(${serviceRegex})/:local(${articleLocalRegex})/sw.js`;
-
-export const articleManifestRegexPath = `/:service(${serviceRegex})/:local(${articleLocalRegex})/manifest.json`;
-
-export const frontpageRegexPath = `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
-
-export const frontpageDataRegexPath = `${frontpageRegexPath}.json`;
-
-export const frontpageManifestRegexPath = `/:service(${serviceRegex})/manifest.json`;
-
-export const frontpageSwRegexPath = `/:service(${serviceRegex})/sw.js`;
-
-export const radioAndTvRegexPathsArray = buildRadioAndTvRoutes(
-  servicesWithRadioAndTv,
-);
-
-export const radioAndTvDataRegexPath = buildRadioAndTvDataRoutes(
-  servicesWithRadioAndTv,
-);
-
-export const cpsAssetPageRegexPath = `/:service(${serviceRegex})/:assetUri(${assetUriRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
-export const cpsAssetPageDataRegexPath = `${cpsAssetPageRegexPath}.json`;
+export const radioAndTvRegex = getRadioAndTVRegex(allServices);
+export const radioAndTvDataRegex = `${radioAndTvRegex}.json`;
