@@ -1,4 +1,5 @@
 import config from '../../../support/config/services';
+import envConfig from '../../../support/config/envs';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
 // For testing important features that differ between services, e.g. Timestamps.
@@ -98,31 +99,32 @@ export const testsThatFollowSmokeTestConfig = ({
         );
       });
     });
-
-    describe(`Test error page routes`, () => {
-      it(`/${service}/404 should have response code 200`, () => {
-        cy.testResponseCodeAndType(`/${service}/404`, 200, 'text/html');
-        cy.visit(`${service}/404`, {
-          failOnStatusCode: false,
-        })
-          .get('[class^="StatusCode"]')
-          .should(
-            'contain',
-            appConfig[service][variant].translations.error[404].statusCode,
-          );
+    if (envConfig.standaloneErrorPages) {
+      describe(`Test error page routes`, () => {
+        it(`/${service}/404 should have response code 200`, () => {
+          cy.testResponseCodeAndType(`/${service}/404`, 200, 'text/html');
+          cy.visit(`${service}/404`, {
+            failOnStatusCode: false,
+          })
+            .get('[class^="StatusCode"]')
+            .should(
+              'contain',
+              appConfig[service][variant].translations.error[404].statusCode,
+            );
+        });
+        it(`/${service}/500 should have response code 200`, () => {
+          cy.testResponseCodeAndType(`/${service}/500`, 200, 'text/html');
+          cy.visit(`${service}/500`, {
+            failOnStatusCode: false,
+          })
+            .get('[class^="StatusCode"]')
+            .should(
+              'contain',
+              appConfig[service][variant].translations.error[500].statusCode,
+            );
+        });
       });
-      it(`/${service}/500 should have response code 200`, () => {
-        cy.testResponseCodeAndType(`/${service}/500`, 200, 'text/html');
-        cy.visit(`${service}/500`, {
-          failOnStatusCode: false,
-        })
-          .get('[class^="StatusCode"]')
-          .should(
-            'contain',
-            appConfig[service][variant].translations.error[500].statusCode,
-          );
-      });
-    });
+    }
   });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
