@@ -97,12 +97,15 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               const { durationISO8601 } = aresMediaBlocks.model.versions[0];
 
               cy.get('div[class^="StyledVideoContainer"]').within(() => {
-                cy.get('button').should('be.visible');
-                cy.get('svg').should('be.visible');
-                cy.get('time')
+                cy.get('button')
                   .should('be.visible')
-                  .should('have.attr', 'datetime')
-                  .and('eq', durationISO8601);
+                  .within(() => {
+                    cy.get('svg').should('be.visible');
+                    cy.get('time')
+                      .should('be.visible')
+                      .should('have.attr', 'datetime')
+                      .and('eq', durationISO8601);
+                  });
               });
             }
           });
