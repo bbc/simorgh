@@ -9,6 +9,10 @@ const OffScreenHeadline = props => <VisuallyHiddenText as="h1" {...props} />;
 const OffScreenHeadlineContainer = ({ blocks }) => {
   const { text } = path(['0', 'model', 'blocks', '0', 'model'], blocks);
 
+  if (!text) {
+    return null;
+  }
+
   const id = 'content'; // Used for the skiplink
 
   return (
