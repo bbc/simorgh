@@ -4,7 +4,7 @@ const assetUriRegex = '[a-z-_]{0,}[0-9]{8,}';
 const variantRegex = '/simp|/trad|/cyr|/lat';
 const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
 const mediaIdRegex = '[a-z0-9]+';
-const mediaServiceIdRegex = 'bbc_[a-z]+_(?:radio|tv)';
+const mediaServiceIdRegex = 'bbc_[a-z]+_radio|bbc_[a-z]+_tv';
 
 const getServiceRegex = services => services.join('|');
 
