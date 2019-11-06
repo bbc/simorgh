@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-library 'Simorgh/simorgh-clean'
+library 'Simorgh'
 
 // Run latest every 3 hours
 def cron_string = env.BRANCH_NAME == "latest" ? "0 */3 * * *" : ""
