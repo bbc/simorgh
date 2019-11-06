@@ -1,5 +1,7 @@
 import pathOr from 'ramda/src/pathOr';
 import deepClone from 'ramda/src/clone';
+import path from 'ramda/src/path';
+import { getOffScreenHeadlineBlock, getOnScreenHeadlineBlock } from './models';
 
 const getHeadlineBlocks = json => {
   const headlineText = pathOr(null, ['promo', 'headlines', 'headline'], json);
@@ -8,98 +10,43 @@ const getHeadlineBlocks = json => {
     return json;
   }
 
-  const headlineBlock = {
-    model: {
-      blocks: [
-        {
-          model: {
-            blocks: [
-              {
-                model: {
-                  blocks: [
-                    {
-                      model: {
-                        attributes: [],
-                        text: headlineText,
-                      },
-                      type: 'fragment',
-                    },
-                  ],
-                  text: headlineText,
-                },
-                type: 'paragraph',
-              },
-            ],
-          },
-          type: 'text',
-        },
-      ],
-    },
-    type: 'headline',
+  return {
+    offScreenHeadlineBlock: getOffScreenHeadlineBlock(headlineText),
+    headlineBlock: getOnScreenHeadlineBlock(headlineText),
   };
-
-  const offScreenHeadlineBlock = {
-    model: {
-      blocks: [
-        {
-          model: {
-            blocks: [
-              {
-                model: {
-                  blocks: [
-                    {
-                      model: {
-                        attributes: [],
-                        text: headlineText,
-                      },
-                      type: 'fragment',
-                    },
-                  ],
-                  text: headlineText,
-                },
-                type: 'paragraph',
-              },
-            ],
-          },
-          type: 'text',
-        },
-      ],
-    },
-    type: 'offScreenHeadline',
-  };
-
-  return { headlineBlock, offScreenHeadlineBlock };
 };
-const splitBlocksByAresMedia = blocks => {
-  const aresMediaIndexPlusOne =
-    blocks.findIndex(({ type }) => type === 'aresMedia') + 1;
 
-  const aresMediaBlock = blocks.slice(0, aresMediaIndexPlusOne);
-  const mainBlocks = blocks.slice(aresMediaIndexPlusOne, blocks.length);
+const splitBlocksByvideo = blocks => {
+  if (!blocks || blocks.length < 1) {
+    return {};
+  }
 
-  return { aresMediaBlock, mainBlocks };
+  const videoIndexPlusOne =
+    blocks.findIndex(({ type }) => type === 'video') + 1;
+
+  const videoBlock = blocks.slice(0, videoIndexPlusOne);
+  const mainBlocks = blocks.slice(videoIndexPlusOne, blocks.length);
+
+  return { videoBlock, mainBlocks };
 };
 
 const insertHeadlineBlocks = originalJson => {
   const json = deepClone(originalJson);
   const { headlineBlock, offScreenHeadlineBlock } = getHeadlineBlocks(json);
-  const { aresMediaBlock, mainBlocks } = splitBlocksByAresMedia(
-    json.content.model.blocks,
-  );
 
-  if (aresMediaBlock) {
-    json.content.model.blocks = [
-      ...offScreenHeadlineBlock,
-      ...aresMediaBlock,
-      ...headlineBlock,
-      ...mainBlocks,
-    ];
-  } else {
-    json.content.model.blocks = [
-      ...offScreenHeadlineBlock,
-      ...headlineBlock,
-      ...mainBlocks,
-    ];
+  if (path(['content', 'model', 'blocks'], json)) {
+    const { videoBlock, mainBlocks } = splitBlocksByvideo(
+      json.content.model.blocks,
+    );
+
+    if (videoBlock) {
+      json.content.model.blocks = [
+        offScreenHeadlineBlock,
+        ...videoBlock,
+        headlineBlock,
+        ...mainBlocks,
+      ];
+    }
   }
 
   return json;

@@ -8,15 +8,11 @@ const input = {
     },
   },
   content: {
-    model: {
-      blocks: [
-        {
-          model: {
-            type: 'aresMedia',
-          },
-        },
-      ],
-    },
+    blocks: [
+      {
+        type: 'aresMedia',
+      },
+    ],
   },
 };
 
@@ -25,73 +21,69 @@ describe('addHeadlineBlock', () => {
     const expected = {
       promo: { headlines: { headline: 'i am a headline' } },
       content: {
-        model: {
-          blocks: [
-            {
-              model: {
-                blocks: [
-                  {
-                    model: {
-                      blocks: [
-                        {
-                          model: {
-                            blocks: [
-                              {
-                                model: {
-                                  attributes: [],
-                                  text: 'i am a headline',
-                                },
-                                type: 'fragment',
+        blocks: [
+          {
+            model: {
+              blocks: [
+                {
+                  model: {
+                    blocks: [
+                      {
+                        model: {
+                          blocks: [
+                            {
+                              model: {
+                                attributes: [],
+                                text: 'i am a headline',
                               },
-                            ],
-                            text: 'i am a headline',
-                          },
-                          type: 'paragraph',
+                              type: 'fragment',
+                            },
+                          ],
+                          text: 'i am a headline',
                         },
-                      ],
-                    },
-                    type: 'text',
+                        type: 'paragraph',
+                      },
+                    ],
                   },
-                ],
-              },
-              type: 'offScreenHeadline',
+                  type: 'text',
+                },
+              ],
             },
-            {
-              model: {
-                type: 'aresMedia',
-              },
-            },
-            {
-              model: {
-                blocks: [
-                  {
-                    model: {
-                      blocks: [
-                        {
-                          model: {
-                            blocks: [
-                              {
-                                model: {
-                                  attributes: [],
-                                  text: 'i am a headline',
-                                },
-                                type: 'fragment',
+            type: 'offScreenHeadline',
+          },
+          {
+            type: 'aresMedia',
+          },
+          {
+            model: {
+              blocks: [
+                {
+                  model: {
+                    blocks: [
+                      {
+                        model: {
+                          blocks: [
+                            {
+                              model: {
+                                attributes: [],
+                                text: 'i am a headline',
                               },
-                            ],
-                            text: 'i am a headline',
-                          },
-                          type: 'paragraph',
+                              type: 'fragment',
+                            },
+                          ],
+                          text: 'i am a headline',
                         },
-                      ],
-                    },
-                    type: 'text',
+                        type: 'paragraph',
+                      },
+                    ],
                   },
-                ],
-              },
-              type: 'headline',
+                  type: 'text',
+                },
+              ],
             },
-          ],
-        },
+            type: 'headline',
+          },
+        ],
       },
     };
 
@@ -100,73 +92,71 @@ describe('addHeadlineBlock', () => {
 
   it('should add headline block if no blocks are found', () => {
     const missingBlocks = deepClone(input);
-    delete missingBlocks.content.model.blocks;
+    delete missingBlocks.content.blocks;
 
     const expected = {
       promo: { headlines: { headline: 'i am a headline' } },
       content: {
-        model: {
-          blocks: [
-            {
-              model: {
-                blocks: [
-                  {
-                    model: {
-                      blocks: [
-                        {
-                          model: {
-                            blocks: [
-                              {
-                                model: {
-                                  attributes: [],
-                                  text: 'i am a headline',
-                                },
-                                type: 'fragment',
+        blocks: [
+          {
+            model: {
+              blocks: [
+                {
+                  model: {
+                    blocks: [
+                      {
+                        model: {
+                          blocks: [
+                            {
+                              model: {
+                                attributes: [],
+                                text: 'i am a headline',
                               },
-                            ],
-                            text: 'i am a headline',
-                          },
-                          type: 'paragraph',
+                              type: 'fragment',
+                            },
+                          ],
+                          text: 'i am a headline',
                         },
-                      ],
-                    },
-                    type: 'text',
+                        type: 'paragraph',
+                      },
+                    ],
                   },
-                ],
-              },
-              type: 'offScreenHeadline',
+                  type: 'text',
+                },
+              ],
             },
-            {
-              model: {
-                blocks: [
-                  {
-                    model: {
-                      blocks: [
-                        {
-                          model: {
-                            blocks: [
-                              {
-                                model: {
-                                  attributes: [],
-                                  text: 'i am a headline',
-                                },
-                                type: 'fragment',
+            type: 'offScreenHeadline',
+          },
+          {
+            model: {
+              blocks: [
+                {
+                  model: {
+                    blocks: [
+                      {
+                        model: {
+                          blocks: [
+                            {
+                              model: {
+                                attributes: [],
+                                text: 'i am a headline',
                               },
-                            ],
-                            text: 'i am a headline',
-                          },
-                          type: 'paragraph',
+                              type: 'fragment',
+                            },
+                          ],
+                          text: 'i am a headline',
                         },
-                      ],
-                    },
-                    type: 'text',
+                        type: 'paragraph',
+                      },
+                    ],
                   },
-                ],
-              },
-              type: 'headline',
+                  type: 'text',
+                },
+              ],
             },
-          ],
-        },
+            type: 'headline',
+          },
+        ],
       },
     };
 
