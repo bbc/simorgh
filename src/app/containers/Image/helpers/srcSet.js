@@ -23,7 +23,7 @@ const createSrcset = (
 
   const urls = requiredResolutions.map(
     resolution =>
-      `${getIchefUrl(originCode, locator, resolution)} ${resolution}w`,
+      `${getIchefUrl({ originCode, locator, resolution })} ${resolution}w`,
   );
 
   return urls.join(', ');

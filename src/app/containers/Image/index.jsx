@@ -24,9 +24,6 @@ const getCopyright = copyrightHolder => {
   return copyrightHolder;
 };
 
-const getRawImageSrc = (originCode, locator) =>
-  getIChefURL(originCode, locator, DEFAULT_IMAGE_RES);
-
 const shouldLazyLoad = position =>
   !!urlWithPageAnchor() || position[0] > LAZYLOAD_FROM_BLOCK;
 
@@ -53,7 +50,11 @@ const ImageContainer = ({ blocks, position }) => {
   const altText = getText(altTextBlock);
   const copyright = getCopyright(copyrightHolder);
   const ratio = (height / width) * 100;
-  const rawImageSrc = getRawImageSrc(originCode, locator);
+  const rawImageSrc = getIChefURL({
+    originCode,
+    locator,
+    resolution: DEFAULT_IMAGE_RES,
+  });
   const srcSet = createSrcset(originCode, locator, width);
   const lazyLoad = shouldLazyLoad(position);
 
