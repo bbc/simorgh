@@ -29,6 +29,7 @@ describe('fetchCircuitBreaker', () => {
     await expect(fetchCircuitBreaker(`${failureHost}/path`)).rejects.toThrow(
       'Breaker is open',
     );
+
     fetch.mockResponse(successFetchResponse);
     await expect(fetchCircuitBreaker(failureHost)).rejects.toThrow(
       'Breaker is open',
