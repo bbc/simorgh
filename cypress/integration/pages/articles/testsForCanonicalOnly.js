@@ -89,6 +89,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           });
         });
 
+        // This test is being temporarily throttled to the service 'news'.
         if (service === 'news') {
           it('plays media when a user clicks play', () => {
             cy.window().then(win => {
