@@ -258,6 +258,9 @@
                           {
                             "type": "rawImage",
                             "model": {
+                              "height": 900,
+                              "width": 900,
+                              "copyrightHolder": "Sony",
                               "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019qd93.jpg",
                               "originCode": "mpv"
                             }
