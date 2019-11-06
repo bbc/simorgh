@@ -1,8 +1,8 @@
 import deepClone from 'ramda/src/clone';
 import addHeadlineBlock from '.';
 import {
-  getOffScreenHeadlineBlock,
-  getOnScreenHeadlineBlock,
+  getVisuallyHiddenHeadlineBlock,
+  getFauxHeadlineBlock,
   getHeadlineBlock,
 } from './models';
 
@@ -42,11 +42,11 @@ describe('addHeadlineBlock', () => {
         content: {
           model: {
             blocks: [
-              getOffScreenHeadlineBlock('i am a headline'),
+              getVisuallyHiddenHeadlineBlock('i am a headline'),
               {
                 type: 'video',
               },
-              getOnScreenHeadlineBlock('i am a headline'),
+              getFauxHeadlineBlock('i am a headline'),
               {
                 type: 'foobar',
               },
