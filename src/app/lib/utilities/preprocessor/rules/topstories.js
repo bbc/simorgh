@@ -20,8 +20,7 @@ const squashTopStories = jsonRaw => {
     groups = groups.filter(group => {
       if (squashKeys.includes(group.type)) {
         collectedItems = collectedItems.concat(group.items);
-
-        const foundStapline = pathOr(null, ['strapline', 'name'], group);
+        const foundStapline = pathOr(null, ['title'], group);
 
         // collect the first found strapline name
         if (!collectedStrapline && foundStapline) {

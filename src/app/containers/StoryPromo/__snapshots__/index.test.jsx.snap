@@ -25,6 +25,13 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   position: relative;
 }
 
+.c9 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -34,6 +41,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  display: inline;
 }
 
 .c13 {
@@ -45,13 +53,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c9 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c11 {
@@ -156,9 +158,10 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c1 {
-    width: 33.33%;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -174,6 +177,29 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   .c4 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c9 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -198,6 +224,13 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   }
 }
 
+@media (min-width:62.9375rem) {
+  .c10 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c13 {
     font-size: 0.9375rem;
@@ -219,24 +252,10 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c9 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c9 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c9 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c13 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -387,6 +406,13 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   position: relative;
 }
 
+.c9 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -396,6 +422,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  display: inline;
 }
 
 .c13 {
@@ -407,13 +434,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c9 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c11 {
@@ -518,9 +539,10 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c1 {
-    width: 33.33%;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -536,6 +558,29 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   .c4 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c9 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -560,6 +605,13 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   }
 }
 
+@media (min-width:62.9375rem) {
+  .c10 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c13 {
     font-size: 0.9375rem;
@@ -581,24 +633,10 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   }
 }
 
-@media (min-width:37.5rem) {
-  .c9 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c9 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c9 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c13 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -744,6 +782,13 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   position: relative;
 }
 
+.c8 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c9 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -753,6 +798,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  display: inline;
 }
 
 .c12 {
@@ -764,13 +810,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c8 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c10 {
@@ -870,9 +910,10 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c1 {
-    width: 33.33%;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -888,6 +929,29 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   .c4 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c8 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c8 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -912,6 +976,13 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   }
 }
 
+@media (min-width:62.9375rem) {
+  .c9 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c12 {
     font-size: 0.9375rem;
@@ -933,24 +1004,10 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   }
 }
 
-@media (min-width:37.5rem) {
-  .c8 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c8 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c8 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c12 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -1090,6 +1147,13 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   position: relative;
 }
 
+.c8 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c9 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -1099,6 +1163,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  display: inline;
 }
 
 .c12 {
@@ -1110,13 +1175,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c8 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c10 {
@@ -1216,9 +1275,10 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c1 {
-    width: 33.33%;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -1234,6 +1294,29 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   .c4 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c8 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c8 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -1258,6 +1341,13 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   }
 }
 
+@media (min-width:62.9375rem) {
+  .c9 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c12 {
     font-size: 0.9375rem;
@@ -1279,24 +1369,10 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   }
 }
 
-@media (min-width:37.5rem) {
-  .c8 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c8 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c8 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c12 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -1422,6 +1498,13 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   position: relative;
 }
 
+.c5 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -1431,6 +1514,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  display: inline;
 }
 
 .c8 {
@@ -1442,13 +1526,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c5 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -1511,9 +1589,10 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c1 {
-    width: 33.33%;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -1529,6 +1608,29 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   .c4 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c5 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c5 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -1553,6 +1655,13 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   }
 }
 
+@media (min-width:62.9375rem) {
+  .c6 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c8 {
     font-size: 0.9375rem;
@@ -1574,24 +1683,10 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   }
 }
 
-@media (min-width:37.5rem) {
-  .c5 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c5 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c8 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -1679,6 +1774,13 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   position: relative;
 }
 
+.c5 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -1688,6 +1790,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  display: inline;
 }
 
 .c8 {
@@ -1699,13 +1802,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c5 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -1768,9 +1865,10 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c1 {
-    width: 33.33%;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -1786,6 +1884,29 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   .c4 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c5 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c5 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -1810,6 +1931,13 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   }
 }
 
+@media (min-width:62.9375rem) {
+  .c6 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c8 {
     font-size: 0.9375rem;
@@ -1831,24 +1959,10 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   }
 }
 
-@media (min-width:37.5rem) {
-  .c5 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c5 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c8 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -1931,6 +2045,13 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   position: relative;
 }
 
+.c5 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -1940,6 +2061,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  display: inline;
 }
 
 .c10 {
@@ -1951,13 +2073,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c5 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -2041,9 +2157,10 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c1 {
-    width: 33.33%;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -2059,6 +2176,29 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   .c4 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c5 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c5 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -2083,6 +2223,13 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   }
 }
 
+@media (min-width:62.9375rem) {
+  .c6 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c10 {
     font-size: 0.9375rem;
@@ -2104,24 +2251,10 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c5 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c5 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c10 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -2226,6 +2359,13 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   position: relative;
 }
 
+.c5 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -2235,6 +2375,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  display: inline;
 }
 
 .c10 {
@@ -2246,13 +2387,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c5 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -2336,9 +2471,10 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c1 {
-    width: 33.33%;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -2354,6 +2490,29 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   .c4 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c5 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c5 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -2378,6 +2537,13 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   }
 }
 
+@media (min-width:62.9375rem) {
+  .c6 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c10 {
     font-size: 0.9375rem;
@@ -2399,24 +2565,10 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c5 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c5 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c10 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -2531,6 +2683,11 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   bottom: 0;
 }
 
+.c5 {
+  display: inline-block;
+  vertical-align: top;
+}
+
 .c6 {
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -2540,6 +2697,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  display: inline;
 }
 
 .c8 {
@@ -2551,11 +2709,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c5 {
-  display: inline-block;
-  vertical-align: top;
+  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -2702,6 +2856,28 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   }
 }
 
+@media (min-width:37.5rem) {
+  .c5 {
+    width: 50%;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c5 {
+    width: 66.67%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c5 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c6 {
     font-size: 1.375rem;
@@ -2723,6 +2899,13 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   }
 }
 
+@media (min-width:62.9375rem) {
+  .c6 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c8 {
     font-size: 0.9375rem;
@@ -2741,33 +2924,6 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   .c8 {
     display: none;
     visibility: hidden;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    width: 50%;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c5 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 1 / span 6;
   }
 }
 
@@ -2941,6 +3097,13 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   position: relative;
 }
 
+.c5 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -2950,6 +3113,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  display: inline;
 }
 
 .c8 {
@@ -2961,13 +3125,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c5 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -3030,9 +3188,10 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c1 {
-    width: 33.33%;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -3048,6 +3207,29 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   .c4 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c5 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c5 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -3072,6 +3254,13 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   }
 }
 
+@media (min-width:62.9375rem) {
+  .c6 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c8 {
     font-size: 0.9375rem;
@@ -3093,24 +3282,10 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c5 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c5 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c8 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -3198,6 +3373,13 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   position: relative;
 }
 
+.c5 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -3207,6 +3389,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  display: inline;
 }
 
 .c8 {
@@ -3218,13 +3401,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c5 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -3287,9 +3464,10 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c1 {
-    width: 33.33%;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -3305,6 +3483,29 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   .c4 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c5 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c5 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -3329,6 +3530,13 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   }
 }
 
+@media (min-width:62.9375rem) {
+  .c6 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c8 {
     font-size: 0.9375rem;
@@ -3350,24 +3558,10 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   }
 }
 
-@media (min-width:37.5rem) {
-  .c5 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c5 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c8 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -3450,6 +3644,13 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   position: relative;
 }
 
+.c5 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -3459,6 +3660,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  display: inline;
 }
 
 .c8 {
@@ -3470,13 +3672,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c5 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -3539,9 +3735,10 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c1 {
-    width: 33.33%;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -3557,6 +3754,29 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   .c4 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c5 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c5 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -3581,6 +3801,13 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   }
 }
 
+@media (min-width:62.9375rem) {
+  .c6 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c8 {
     font-size: 0.9375rem;
@@ -3602,24 +3829,10 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   }
 }
 
-@media (min-width:37.5rem) {
-  .c5 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c5 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c8 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -3707,6 +3920,13 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   position: relative;
 }
 
+.c5 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -3716,6 +3936,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  display: inline;
 }
 
 .c8 {
@@ -3727,13 +3948,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c5 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -3796,9 +4011,10 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c1 {
-    width: 33.33%;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -3814,6 +4030,29 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   .c4 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c5 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c5 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -3838,6 +4077,13 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   }
 }
 
+@media (min-width:62.9375rem) {
+  .c6 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c8 {
     font-size: 0.9375rem;
@@ -3859,24 +4105,10 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   }
 }
 
-@media (min-width:37.5rem) {
-  .c5 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c5 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c8 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -3968,6 +4200,13 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   position: relative;
 }
 
+.c9 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -3977,6 +4216,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  display: inline;
 }
 
 .c13 {
@@ -3988,13 +4228,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c9 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c11 {
@@ -4099,9 +4333,10 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c1 {
-    width: 33.33%;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -4117,6 +4352,29 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   .c4 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c9 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -4141,6 +4399,13 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   }
 }
 
+@media (min-width:62.9375rem) {
+  .c10 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c13 {
     font-size: 0.9375rem;
@@ -4162,24 +4427,10 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c9 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c9 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c9 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c13 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -4327,6 +4578,13 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   position: relative;
 }
 
+.c9 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -4336,6 +4594,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  display: inline;
 }
 
 .c13 {
@@ -4347,13 +4606,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c9 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c11 {
@@ -4458,9 +4711,10 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c1 {
-    width: 33.33%;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -4476,6 +4730,29 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   .c4 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c9 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -4500,6 +4777,13 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   }
 }
 
+@media (min-width:62.9375rem) {
+  .c10 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c13 {
     font-size: 0.9375rem;
@@ -4521,24 +4805,10 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   }
 }
 
-@media (min-width:37.5rem) {
-  .c9 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c9 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c9 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c13 {
+    display: none;
+    visibility: hidden;
   }
 }
 

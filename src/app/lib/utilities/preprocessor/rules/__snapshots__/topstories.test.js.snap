@@ -75,7 +75,7 @@ Object {
           },
         ],
         "strapline": Object {
-          "name": "ข่าวเด่น",
+          "name": "Top story",
         },
         "title": "Top stories",
         "type": "top-stories",
@@ -1461,7 +1461,7 @@ Object {
           },
         ],
         "strapline": Object {
-          "name": "Isi akụkọ",
+          "name": "Top Stories",
         },
         "title": "Top stories",
         "type": "top-stories",

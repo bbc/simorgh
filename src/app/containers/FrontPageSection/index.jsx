@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { bool, shape, number, arrayOf } from 'prop-types';
+import { bool, shape, number, arrayOf, string, node } from 'prop-types';
 import styled, { css } from 'styled-components';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -11,6 +11,7 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
+import Grid from '@bbc/psammead-grid';
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
 import pathOr from 'ramda/src/pathOr';
@@ -70,43 +71,233 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
   return children;
 };
 
-const StoryPromoComponent = ({ item, sectionNumber, storyNumber }) => {
-  const topStory = sectionNumber === 0 && storyNumber === 0;
+const StoryPromoComponent = ({ item, displayImage, leading, topStory }) => {
   const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
 
   return (
-    <StoryPromo item={item} topStory={topStory} lazyLoadImage={lazyLoadImage} />
+    <StoryPromo
+      item={item}
+      topStory={topStory}
+      lazyLoadImage={lazyLoadImage}
+      displayImage={displayImage}
+      leading={leading}
+    />
   );
+};
+StoryPromoComponent.defaultProps = {
+  displayImage: true,
+  leading: false,
+  topStory: false,
 };
 
 StoryPromoComponent.propTypes = {
   item: shape(storyItem).isRequired,
-  sectionNumber: number.isRequired,
-  storyNumber: number.isRequired,
+  displayImage: bool,
+  leading: bool,
+  topStory: bool,
 };
 
-const StoryPromoRenderer = ({ items, firstSection, sectionNumber }) => {
-  return items.length > 1 ? (
+const columns = {
+  normal: {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 6,
+    group4: 2,
+    group5: 2,
+  },
+  fullWidth: {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 6,
+    group4: 8,
+    group5: 8,
+  },
+};
+
+const TopStories = ({ items, sectionNumber, firstSection }) => {
+  const topColumns = {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 6,
+    group4: 8,
+    group5: 8,
+  };
+
+  const MAX_ITEMS = 13;
+  const itemsToDisplay = items.length - ((items.length - 1) % 4);
+
+  return (
     <MarginWrapper firstSection={firstSection}>
       <StoryPromoUl>
-        {items.map((item, index) => (
-          <StoryPromoLi key={item.id}>
-            <StoryPromoComponent
-              item={item}
-              sectionNumber={sectionNumber}
-              storyNumber={index}
-            />
-          </StoryPromoLi>
-        ))}
+        <MainGridWrapper>
+          {items
+            .slice(0, MAX_ITEMS)
+            .slice(0, itemsToDisplay)
+            .map((item, index) => {
+              const topStory = sectionNumber === 0 && index === 0;
+              return (
+                <Grid
+                  item
+                  columns={index === 0 ? topColumns : columns.normal}
+                  key={item.id}
+                >
+                  <StoryPromoLi>
+                    <StoryPromoComponent
+                      item={item}
+                      topStory={topStory}
+                      displayImage={index < 9}
+                    />
+                  </StoryPromoLi>
+                </Grid>
+              );
+            })}
+        </MainGridWrapper>
       </StoryPromoUl>
     </MarginWrapper>
-  ) : (
-    <MarginWrapper firstSection={firstSection} oneItem>
-      <StoryPromoComponent
-        item={items[0]}
+  );
+};
+
+TopStories.propTypes = {
+  items: arrayOf(shape(storyItem)).isRequired,
+  sectionNumber: number.isRequired,
+  firstSection: bool.isRequired,
+};
+
+const FeaturedTopStories = ({ items, sectionNumber, firstSection }) => {
+  const featuredColumns = [
+    { group0: 6, group1: 6, group2: 6, group3: 6, group4: 6, group5: 6 },
+    columns.normal,
+  ];
+  const MAX_ITEMS = 2;
+  return (
+    <MarginWrapper firstSection={firstSection}>
+      <StoryPromoUl>
+        <MainGridWrapper>
+          {items.slice(0, MAX_ITEMS).map((item, index) => (
+            <Grid item columns={featuredColumns[index]} key={item.id}>
+              <StoryPromoLi>
+                <StoryPromoComponent
+                  item={item}
+                  sectionNumber={sectionNumber}
+                  storyNumber={index}
+                  displayImage={index < 9}
+                  leading={index === 0}
+                />
+              </StoryPromoLi>
+            </Grid>
+          ))}
+        </MainGridWrapper>
+      </StoryPromoUl>
+    </MarginWrapper>
+  );
+};
+
+FeaturedTopStories.propTypes = {
+  items: arrayOf(shape(storyItem)).isRequired,
+  sectionNumber: number.isRequired,
+  firstSection: bool.isRequired,
+};
+
+const MainGridWrapper = ({ children }) => (
+  <Grid
+    enableGelGutters
+    columns={{
+      group0: 6,
+      group1: 6,
+      group2: 6,
+      group3: 6,
+      group4: 8,
+      group5: 8,
+    }}
+  >
+    {children}
+  </Grid>
+);
+
+MainGridWrapper.propTypes = {
+  children: node.isRequired,
+};
+
+const StoryPromoRenderer = ({
+  items,
+  firstSection,
+  sectionNumber,
+  groupType,
+}) => {
+  if (items.length === 1) {
+    return (
+      <MarginWrapper firstSection={firstSection} oneItem>
+        <MainGridWrapper>
+          <Grid item columns={columns.fullWidth}>
+            <StoryPromoComponent
+              item={items[0]}
+              sectionNumber={sectionNumber}
+              storyNumber={0}
+            />
+          </Grid>
+        </MainGridWrapper>
+      </MarginWrapper>
+    );
+  }
+
+  const Components = {
+    'top-stories': TopStories,
+    'featured-site-top-stories': FeaturedTopStories,
+  };
+
+  if (groupType in Components) {
+    const Component = Components[groupType];
+    return (
+      <Component
+        items={items}
         sectionNumber={sectionNumber}
-        storyNumber={0}
+        firstSection={firstSection}
       />
+    );
+  }
+
+  if (items.length < 4) {
+    return <div> we cannot show a slice with {items.length} items </div>;
+  }
+  const elements = items.length > 10 ? 10 : items.length;
+  let remainder = elements % 4;
+  if (remainder > 2) {
+    // eslint-disable-next-line no-param-reassign
+    items = items.slice(0, 6);
+    remainder = 2;
+  }
+  const groups = {
+    0: columns.normal,
+    1: columns.fullWidth,
+    2: { group0: 6, group1: 6, group2: 6, group3: 6, group4: 6, group5: 6 },
+  };
+
+  return (
+    <MarginWrapper firstSection={firstSection}>
+      <StoryPromoUl>
+        <MainGridWrapper>
+          {items.slice(0, 10).map((item, index) => (
+            <Grid
+              item
+              columns={index === 0 ? groups[remainder] : columns.normal}
+              key={item.id}
+            >
+              <StoryPromoLi>
+                <StoryPromoComponent
+                  item={item}
+                  sectionNumber={sectionNumber}
+                  storyNumber={index}
+                  leading={remainder === 2 && index === 0}
+                  topStory={remainder === 1 && index === 0}
+                />
+              </StoryPromoLi>
+            </Grid>
+          ))}
+        </MainGridWrapper>
+      </StoryPromoUl>
     </MarginWrapper>
   );
 };
@@ -115,6 +306,7 @@ StoryPromoRenderer.propTypes = {
   items: arrayOf(shape(storyItem)).isRequired,
   firstSection: bool.isRequired,
   sectionNumber: number.isRequired,
+  groupType: string.isRequired,
 };
 
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
@@ -165,6 +357,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
           items={items}
           firstSection={isFirstSection}
           sectionNumber={sectionNumber}
+          groupType={group.type}
         />
       )}
     </section>

@@ -1,15 +1,26 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import styled from 'styled-components';
 import path from 'ramda/src/path';
+import Grid from '@bbc/psammead-grid';
+import { GEL_GROUP_4_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
-import { Grid, GridItemConstrainedLargeWithTopMargin } from '#lib/styledGrid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
+
+const FrontPageWrapper = styled.div`
+  padding-bottom: 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  @media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+    padding: 0 1rem;
+  }
+`;
 
 const FrontPageMain = ({ frontPageData }) => {
   const {
@@ -48,17 +59,39 @@ const FrontPageMain = ({ frontPageData }) => {
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
-        <Grid>
-          <GridItemConstrainedLargeWithTopMargin>
-            {groups.map((group, index) => (
-              <FrontPageSection
-                key={group.title}
-                group={group}
-                sectionNumber={index}
-              />
-            ))}
-          </GridItemConstrainedLargeWithTopMargin>
-        </Grid>
+        <FrontPageWrapper>
+          <Grid
+            enableGelGutters
+            columns={{
+              group0: 8,
+              group1: 8,
+              group2: 8,
+              group3: 8,
+              group4: 8,
+              group5: 8,
+            }}
+          >
+            <Grid
+              item
+              columns={{
+                group0: 8,
+                group1: 8,
+                group2: 8,
+                group3: 8,
+                group4: 8,
+                group5: 8,
+              }}
+            >
+              {groups.map((group, index) => (
+                <FrontPageSection
+                  key={group.title}
+                  group={group}
+                  sectionNumber={index}
+                />
+              ))}
+            </Grid>
+          </Grid>
+        </FrontPageWrapper>
       </main>
     </>
   );
