@@ -1,4 +1,5 @@
 import { CPSMediaBlock, optimoVideoBlock } from './blocks/media/fixtures';
+import { CPSVersionBlock, optimoVersionBlock } from './blocks/version/fixtures';
 import convertToOptimoBlocks from '.';
 import { optimoText } from './utils/helpers';
 
@@ -24,6 +25,7 @@ describe('convertToOptimoBlocks', () => {
             type: 'paragraph',
           },
           CPSMediaBlock,
+          CPSVersionBlock,
         ],
       },
     };
@@ -91,6 +93,7 @@ describe('convertToOptimoBlocks', () => {
               },
             },
             optimoVideoBlock,
+            optimoVersionBlock,
           ],
         },
       },
