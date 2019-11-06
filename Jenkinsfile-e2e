@@ -25,7 +25,7 @@ node {
     )
     timeout(time: 240, unit: 'MINUTES') {
         withEnv([
-            'CI=true',
+            'CI=true'
         ]) {
             cleanWs() // Clean the workspace
 
