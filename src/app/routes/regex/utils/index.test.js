@@ -1,6 +1,6 @@
 import * as regexGenerators from '.';
 
-describe('regex utils', () => {
+describe('regex utils snapshots', () => {
   Object.keys(regexGenerators).forEach(funcName => {
     it(`should create expected regex from ${funcName}`, () => {
       expect(
