@@ -6,7 +6,7 @@ import { headlineModelPropTypes } from '#models/propTypes/headline';
 
 const OffScreenHeadline = props => <VisuallyHiddenText as="h1" {...props} />;
 
-const HeadingsContainer = ({ blocks }) => {
+const OffScreenHeadlineContainer = ({ blocks }) => {
   const { text } = path(['0', 'model', 'blocks', '0', 'model'], blocks);
 
   const id = 'content'; // Used for the skiplink
@@ -18,10 +18,10 @@ const HeadingsContainer = ({ blocks }) => {
   );
 };
 
-HeadingsContainer.propTypes = {
+OffScreenHeadlineContainer.propTypes = {
   ...headlineModelPropTypes,
 };
 
-HeadingsContainer.defaultProps = textDefaultPropTypes;
+OffScreenHeadlineContainer.defaultProps = textDefaultPropTypes;
 
-export default HeadingsContainer;
+export default OffScreenHeadlineContainer;
