@@ -68,7 +68,6 @@ exports[`OnScreenHeadline with headline data should render correctly 1`] = `
   <strong
     aria-hidden="true"
     class="c1"
-    tabindex="-1"
   >
     This is a headline!
   </strong>
@@ -143,7 +142,6 @@ exports[`OnScreenHeadline with plain text headline should render <strong> contai
   <strong
     aria-hidden="true"
     class="c1"
-    tabindex="-1"
   >
     Plain headline
   </strong>

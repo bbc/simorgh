@@ -16,37 +16,33 @@ const getHeadlineBlocks = json => {
   };
 };
 
-const splitBlocksByvideo = blocks => {
-  if (!blocks || blocks.length < 1) {
-    return {};
-  }
-
-  const videoIndexPlusOne =
-    blocks.findIndex(({ type }) => type === 'video') + 1;
-
-  const videoBlock = blocks.slice(0, videoIndexPlusOne);
-  const mainBlocks = blocks.slice(videoIndexPlusOne, blocks.length);
-
-  return { videoBlock, mainBlocks };
-};
+const firstBlockIsVideo = blocks => path(['0', 'type'], blocks) === 'video';
 
 const insertHeadlineBlocks = originalJson => {
   const json = deepClone(originalJson);
   const { headlineBlock, offScreenHeadlineBlock } = getHeadlineBlocks(json);
+  const blocks = path(['content', 'model', 'blocks'], json);
 
-  if (path(['content', 'model', 'blocks'], json)) {
-    const { videoBlock, mainBlocks } = splitBlocksByvideo(
-      json.content.model.blocks,
-    );
+  if (!blocks) {
+    return json;
+  }
 
-    if (videoBlock) {
-      json.content.model.blocks = [
-        offScreenHeadlineBlock,
-        ...videoBlock,
-        headlineBlock,
-        ...mainBlocks,
-      ];
-    }
+  if (firstBlockIsVideo(blocks)) {
+    const videoBlock = blocks.slice(0, 1);
+    const mainBlocks = blocks.slice(1, blocks.length);
+
+    json.content.model.blocks = [
+      offScreenHeadlineBlock,
+      ...videoBlock,
+      headlineBlock,
+      ...mainBlocks,
+    ];
+  } else {
+    json.content.model.blocks = [
+      offScreenHeadlineBlock,
+      headlineBlock,
+      ...blocks,
+    ];
   }
 
   return json;
