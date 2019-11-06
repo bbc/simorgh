@@ -9,7 +9,7 @@ import OffScreenHeadlineContainer from '.';
 import { textBlock } from '#models/blocks';
 import blocksSingleFragment from '../Headings/testHelpers';
 
-const getId = enzymeWrapper => enzymeWrapper[0].children[0].attribs.id;
+const getId = enzymeWrapper => enzymeWrapper[0].attribs.id;
 
 describe('OffScreenHeadline', () => {
   describe('with no data', () => {
@@ -45,6 +45,7 @@ describe('OffScreenHeadline', () => {
         const headlineHeading = render(
           <OffScreenHeadlineContainer {...data} />,
         );
+
         expect(getId(headlineHeading)).toBe('content');
       });
     });
