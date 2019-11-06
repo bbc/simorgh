@@ -88,6 +88,35 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             }
           });
         });
+
+        // This test is being temporarily throttled to the service 'news'.
+        if (service === 'news') {
+          it('plays media when a user clicks play', () => {
+            cy.window().then(win => {
+              const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+              if (media && media.type === 'video') {
+                cy.get(
+                  'div[class^="StyledVideoContainer"] img[class^="StyledImg"]',
+                )
+                  .click()
+                  .should('not.exist')
+                  .then(() => {
+                    cy.get('iframe[class^="StyledIframe"]').then($iframe => {
+                      cy.wrap($iframe.prop('contentWindow'), {
+                        // `timeout` only applies to the methods chained below.
+                        // `its()` benefits from this, and will wait up to 8s
+                        // for the mediaPlayer instance to become available.
+                        timeout: 8000,
+                      })
+                        .its('embeddedMedia.playerInstances.mediaPlayer')
+                        .invoke('currentTime')
+                        .should('be.gt', 0);
+                    });
+                  });
+              }
+            });
+          });
+        }
       });
     }
   });
