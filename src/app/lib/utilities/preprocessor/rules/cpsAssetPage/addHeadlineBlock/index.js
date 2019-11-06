@@ -12,7 +12,7 @@ const getHeadlineBlocks = json => {
 
   return {
     offScreenHeadlineBlock: getOffScreenHeadlineBlock(headlineText),
-    headlineBlock: getOnScreenHeadlineBlock(headlineText),
+    onScreenHeadlineBlock: getOnScreenHeadlineBlock(headlineText),
   };
 };
 
@@ -20,7 +20,9 @@ const firstBlockIsVideo = blocks => path(['0', 'type'], blocks) === 'video';
 
 const insertHeadlineBlocks = originalJson => {
   const json = deepClone(originalJson);
-  const { headlineBlock, offScreenHeadlineBlock } = getHeadlineBlocks(json);
+  const { onScreenHeadlineBlock, offScreenHeadlineBlock } = getHeadlineBlocks(
+    json,
+  );
   const blocks = path(['content', 'model', 'blocks'], json);
 
   if (!blocks) {
@@ -34,13 +36,13 @@ const insertHeadlineBlocks = originalJson => {
     json.content.model.blocks = [
       offScreenHeadlineBlock,
       ...videoBlock,
-      headlineBlock,
+      onScreenHeadlineBlock,
       ...mainBlocks,
     ];
   } else {
     json.content.model.blocks = [
       offScreenHeadlineBlock,
-      headlineBlock,
+      onScreenHeadlineBlock,
       ...blocks,
     ];
   }
