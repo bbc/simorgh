@@ -63,7 +63,7 @@ const insertTimestampBlock = (originalJson, timestampBlock) => {
 const splitBlocksByHeadline = blocks => {
   const headlineIndexPlusOne =
     blocks.findIndex(
-      ({ type }) => type === 'headline' || type === 'fauxHeadline',
+      ({ type }) => ['headline', 'fauxHeadline'].includes(type),
     ) + 1;
 
   const headlineBlocks = blocks.slice(0, headlineIndexPlusOne);
