@@ -26,12 +26,7 @@ const OnScreenHeadlineContainer = ({ blocks }) => {
 
   return (
     <GridItemConstrainedLarge>
-      <OnScreenHeadline
-        script={script}
-        service={service}
-        tabIndex="-1"
-        aria-hidden="true"
-      >
+      <OnScreenHeadline script={script} service={service} aria-hidden="true">
         {renderText()}
       </OnScreenHeadline>
     </GridItemConstrainedLarge>
