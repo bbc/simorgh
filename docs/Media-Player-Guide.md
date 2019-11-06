@@ -23,20 +23,20 @@ We need to support different types of media, most of which have varied settings.
 
 ### Canonical
 
-**Optimo Articles:** 
+##### Optimo Articles: 
 `https://www.bbc.com/ws/av-embeds/articles/{{asset_id}}/{{vpid}}/{{lang}}`
-**CPS Articles:** 
+##### CPS Articles: 
 `https://www.bbc.com/ws/av-embeds/cps/{{service}}/{{asset_id}}/{{vpid}}/{{lang}}`
-**Live Radio:** 
+##### Live Radio: 
 `https://www.bbc.com/ws/av-embeds/media/{{service_id}}/liveradio/{{lang}}`
 
 ### AMP
 
-**Optimo Articles:** 
+##### Optimo Articles: 
 `https://www.bbc.com/ws/av-embeds/articles/{{asset_id}}/{{vpid}}/{{lang}}/amp`
-**CPS Articles:** 
+##### CPS Articles: 
 `https://www.bbc.com/ws/av-embeds/cps/{{service}}/{{asset_id}}/{{vpid}}/{{lang}}/amp`
-**Live Radio:** 
+##### Live Radio: 
 `https://www.bbc.com/ws/av-embeds/media/{{service_id}}/liveradio/{{lang}}/amp`
 
 ## Media Player Component 
