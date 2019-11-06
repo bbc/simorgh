@@ -24,12 +24,12 @@ FrontPageContainer.defaultProps = {
 };
 
 const EnhancedFrontPageContainer = compose(
+  withVariant,
   withContexts,
   withPageWrapper,
   withLoading,
   withError,
   withData,
-  withVariant,
 )(FrontPageContainer);
 
 export default EnhancedFrontPageContainer;

@@ -24,12 +24,12 @@ ArticleContainer.defaultProps = {
 };
 
 const EnhancedArticleContainer = compose(
+  withVariant,
   withContexts,
   withPageWrapper,
   withLoading,
   withError,
   withData,
-  withVariant,
 )(ArticleContainer);
 
 export default EnhancedArticleContainer;
