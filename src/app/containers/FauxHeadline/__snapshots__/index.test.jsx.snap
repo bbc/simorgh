@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OnScreenHeadline with headline data should render correctly 1`] = `
+exports[`FauxHeadline with headline data should render correctly 1`] = `
 .c1 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -74,7 +74,7 @@ exports[`OnScreenHeadline with headline data should render correctly 1`] = `
 </div>
 `;
 
-exports[`OnScreenHeadline with plain text headline should render <strong> containing correct text 1`] = `
+exports[`FauxHeadline with plain text headline should render <strong> containing correct text 1`] = `
 .c1 {
   font-size: 1.75rem;
   line-height: 2rem;

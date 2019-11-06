@@ -5,24 +5,21 @@ import {
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
 import { latin } from '@bbc/gel-foundations/scripts';
-import OnScreenHeadlineContainer from '.';
+import FauxHeadlineContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { textBlock } from '#models/blocks';
 import blocksSingleFragment from '../Headings/testHelpers';
 
-const OnScreenHeadlineContainerWithContext = data => (
+const FauxHeadlineContainerWithContext = data => (
   <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
-    <OnScreenHeadlineContainer {...data} />
+    <FauxHeadlineContainer {...data} />
   </ServiceContext.Provider>
 );
 
-describe('OnScreenHeadline', () => {
+describe('FauxHeadline', () => {
   describe('with no data', () => {
     suppressPropWarnings(['blocks', 'supplied']);
-    isNull(
-      'should not render anything',
-      OnScreenHeadlineContainerWithContext(),
-    );
+    isNull('should not render anything', FauxHeadlineContainerWithContext());
   });
 
   describe('with headline data', () => {
@@ -31,7 +28,7 @@ describe('OnScreenHeadline', () => {
     };
     shouldMatchSnapshot(
       'should render correctly',
-      OnScreenHeadlineContainerWithContext(data),
+      FauxHeadlineContainerWithContext(data),
     );
   });
 
@@ -43,7 +40,7 @@ describe('OnScreenHeadline', () => {
 
       shouldMatchSnapshot(
         'should render <strong> containing correct text',
-        OnScreenHeadlineContainerWithContext(data),
+        FauxHeadlineContainerWithContext(data),
       );
     });
   });

@@ -5,18 +5,18 @@ import {
   isNull,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
-import OffScreenHeadlineContainer from '.';
+import VisuallyHiddenHeadlineContainer from '.';
 import { textBlock } from '#models/blocks';
 import blocksSingleFragment from '../Headings/testHelpers';
 
 const getId = enzymeWrapper => enzymeWrapper[0].attribs.id;
 
-describe('OffScreenHeadline', () => {
+describe('VisuallyHiddenHeadline', () => {
   describe('with no data', () => {
     suppressPropWarnings(['blocks', 'supplied']);
     isNull(
       'should not render anything',
-      <OffScreenHeadlineContainer data={{}} />,
+      <VisuallyHiddenHeadlineContainer data={{}} />,
     );
   });
 
@@ -26,7 +26,7 @@ describe('OffScreenHeadline', () => {
     };
     shouldMatchSnapshot(
       'should render correctly',
-      <OffScreenHeadlineContainer {...data} />,
+      <VisuallyHiddenHeadlineContainer {...data} />,
     );
   });
 
@@ -38,12 +38,12 @@ describe('OffScreenHeadline', () => {
 
       shouldMatchSnapshot(
         'should render h1 containing correct text',
-        <OffScreenHeadlineContainer {...data} />,
+        <VisuallyHiddenHeadlineContainer {...data} />,
       );
 
       it('should have an id for the skiplink with value "content"', () => {
         const headlineHeading = render(
-          <OffScreenHeadlineContainer {...data} />,
+          <VisuallyHiddenHeadlineContainer {...data} />,
         );
 
         expect(getId(headlineHeading)).toBe('content');

@@ -31,7 +31,7 @@ const input = {
 
 describe('addHeadlineBlock', () => {
   describe('when on MAP asset type', () => {
-    it('should add an offScreenHeadline block as the first block and an onScreenHeadline block after the video block', async () => {
+    it('should add an visuallyHiddenHeadline block as the first block and an fauxHeadline block after the video block', async () => {
       const expected = {
         metadata: { type: 'MAP' },
         promo: {

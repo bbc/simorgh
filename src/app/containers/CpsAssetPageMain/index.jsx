@@ -13,8 +13,8 @@ import MediaPlayer from '../CpsAssetMediaPlayer';
 import Blocks from '../Blocks';
 import ATIAnalytics from '../ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
-import onScreenHeadline from '../OnScreenHeadline';
-import offScreenHeadline from '../OffScreenHeadline';
+import fauxHeadline from '../FauxHeadline';
+import visuallyHiddenHeadline from '../VisuallyHiddenHeadline';
 
 const CpsAssetPageMain = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -24,8 +24,8 @@ const CpsAssetPageMain = ({ pageData }) => {
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
 
   const componentsToRender = {
-    onScreenHeadline,
-    offScreenHeadline,
+    fauxHeadline,
+    visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
     text,

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OffScreenHeadline with headline data should render correctly 1`] = `
+exports[`VisuallyHiddenHeadline with headline data should render correctly 1`] = `
 .c0 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -22,7 +22,7 @@ exports[`OffScreenHeadline with headline data should render correctly 1`] = `
 </h1>
 `;
 
-exports[`OffScreenHeadline with plain text headline should render h1 containing correct text 1`] = `
+exports[`VisuallyHiddenHeadline with plain text headline should render h1 containing correct text 1`] = `
 .c0 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);

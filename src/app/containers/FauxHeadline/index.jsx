@@ -8,9 +8,9 @@ import Blocks from '../Blocks';
 import { GridItemConstrainedLarge } from '#lib/styledGrid';
 
 // missing CSS 'display: block;' in psammead branch `explicitly-set-h1-styles-display-and-font-weight`
-const OnScreenHeadline = props => <Headline as="strong" {...props} />;
+const FauxHeadline = props => <Headline as="strong" {...props} />;
 
-const OnScreenHeadlineContainer = ({ blocks }) => {
+const FauxHeadlineContainer = ({ blocks }) => {
   const { script, service } = useContext(ServiceContext);
 
   const arrayOfFragments = blocks[0].model.blocks[0].model.blocks;
@@ -26,17 +26,17 @@ const OnScreenHeadlineContainer = ({ blocks }) => {
 
   return (
     <GridItemConstrainedLarge>
-      <OnScreenHeadline script={script} service={service} aria-hidden="true">
+      <FauxHeadline script={script} service={service} aria-hidden="true">
         {renderText()}
-      </OnScreenHeadline>
+      </FauxHeadline>
     </GridItemConstrainedLarge>
   );
 };
 
-OnScreenHeadlineContainer.propTypes = {
+FauxHeadlineContainer.propTypes = {
   ...headlineModelPropTypes,
 };
 
-OnScreenHeadlineContainer.defaultProps = textDefaultPropTypes;
+FauxHeadlineContainer.defaultProps = textDefaultPropTypes;
 
-export default OnScreenHeadlineContainer;
+export default FauxHeadlineContainer;

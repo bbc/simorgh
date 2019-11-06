@@ -55,7 +55,7 @@ export const getOnScreenHeadlineBlock = headlineText => ({
       },
     ],
   },
-  type: 'onScreenHeadline',
+  type: 'fauxHeadline',
 });
 
 export const getOffScreenHeadlineBlock = headlineText => ({
@@ -85,5 +85,5 @@ export const getOffScreenHeadlineBlock = headlineText => ({
       },
     ],
   },
-  type: 'offScreenHeadline',
+  type: 'visuallyHiddenHeadline',
 });

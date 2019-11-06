@@ -4,9 +4,11 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
 
-const OffScreenHeadline = props => <VisuallyHiddenText as="h1" {...props} />;
+const VisuallyHiddenHeadline = props => (
+  <VisuallyHiddenText as="h1" {...props} />
+);
 
-const OffScreenHeadlineContainer = ({ blocks }) => {
+const VisuallyHiddenHeadlineContainer = ({ blocks }) => {
   const { text } = path(['0', 'model', 'blocks', '0', 'model'], blocks);
 
   if (!text) {
@@ -16,16 +18,16 @@ const OffScreenHeadlineContainer = ({ blocks }) => {
   const id = 'content'; // Used for the skiplink
 
   return (
-    <OffScreenHeadline id={id} tabIndex="-1">
+    <VisuallyHiddenHeadline id={id} tabIndex="-1">
       {text}
-    </OffScreenHeadline>
+    </VisuallyHiddenHeadline>
   );
 };
 
-OffScreenHeadlineContainer.propTypes = {
+VisuallyHiddenHeadlineContainer.propTypes = {
   ...headlineModelPropTypes,
 };
 
-OffScreenHeadlineContainer.defaultProps = textDefaultPropTypes;
+VisuallyHiddenHeadlineContainer.defaultProps = textDefaultPropTypes;
 
-export default OffScreenHeadlineContainer;
+export default VisuallyHiddenHeadlineContainer;
