@@ -1,50 +1,51 @@
-import { createFetchWithCircuitBreaker } from '.';
+import { createFetchCircuitBreaker } from '.';
 
-let cbFetch;
+const successFetchResponse = JSON.stringify({ data: 'something' });
 
-describe('cbFetch', () => {
+let fetchCircuitBreaker;
+
+describe('fetchCircuitBreaker', () => {
   beforeEach(() => {
     fetch.resetMocks();
-    cbFetch = createFetchWithCircuitBreaker();
+    fetchCircuitBreaker = createFetchCircuitBreaker();
   });
 
-  it('should make request when circuit is open', async () => {
-    fetch.mockResponseOnce(JSON.stringify({ data: 'something' }));
-    const response = await cbFetch('example.com');
+  it('should make request when circuit is closed', async () => {
+    fetch.mockResponse(successFetchResponse);
+    const response = await fetchCircuitBreaker('https://success.com');
     const json = await response.json();
     expect(json.data).toEqual('something');
     expect(fetch).toHaveBeenCalled();
   });
 
-  it('should close circuit after failed requests exceed threshold', async () => {
+  it('should have circuit breakers for various hosts', async () => {
+    const successHost = 'https://success.com';
+    const failureHost = 'https://failure.com';
     fetch.mockReject(Error('timeout'));
-    await expect(cbFetch('example.com')).rejects.toThrow('timeout');
-    await expect(cbFetch('example.com')).rejects.toThrow('timeout');
-    await expect(cbFetch('example.com')).rejects.toThrow('timeout');
-    await expect(cbFetch('example.com')).rejects.toThrow('timeout');
-    await expect(cbFetch('example.com')).rejects.toThrow(
-      'Client side rate limiting applied.',
+    await expect(fetchCircuitBreaker(failureHost)).rejects.toThrow('timeout');
+    await expect(fetchCircuitBreaker(failureHost)).rejects.toThrow(
+      'Breaker is open',
     );
-    await expect(cbFetch('example.com')).rejects.toThrow(
-      'Client side rate limiting applied.',
+    await expect(fetchCircuitBreaker(`${failureHost}/path`)).rejects.toThrow(
+      'Breaker is open',
     );
-  });
-
-  it('should reopen circuit after timeout time', async () => {
-    fetch.mockReject(Error('timeout'));
-    await expect(cbFetch('example.com')).rejects.toThrow('timeout');
-    await expect(cbFetch('example.com')).rejects.toThrow('timeout');
-    await expect(cbFetch('example.com')).rejects.toThrow('timeout');
-    await expect(cbFetch('example.com')).rejects.toThrow('timeout');
-    await expect(cbFetch('example.com')).rejects.toThrow(
-      'Client side rate limiting applied.',
+    fetch.mockResponse(successFetchResponse);
+    await expect(fetchCircuitBreaker(failureHost)).rejects.toThrow(
+      'Breaker is open',
     );
-
-    fetch.mockResponse(JSON.stringify({ data: 'something' }));
-    await new Promise(resolve => setTimeout(resolve, 600));
-    const response = await cbFetch('example.com');
+    await expect(fetchCircuitBreaker(successHost)).resolves.toBeDefined();
+    const response = await fetchCircuitBreaker(successHost);
     const json = await response.json();
     expect(json.data).toEqual('something');
-    expect(fetch).toHaveBeenCalled();
+  });
+
+  it('should check if host is available after timeout', async () => {
+    const host = 'https://example.com';
+    fetch.mockReject(Error('timeout'));
+    await expect(fetchCircuitBreaker(host)).rejects.toThrow('timeout');
+    await expect(fetchCircuitBreaker(host)).rejects.toThrow('Breaker is open');
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    fetch.mockResponse(successFetchResponse);
+    await expect(fetchCircuitBreaker(host)).resolves.toBeDefined();
   });
 });
