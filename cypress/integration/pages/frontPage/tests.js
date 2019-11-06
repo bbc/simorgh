@@ -6,6 +6,9 @@ const serviceHasIndexAlsos = service => service === 'thai';
 // Limiting to one service for now
 const serviceHasPublishedPromo = service => service === 'persian';
 
+// Temporary limiting to one service
+const serviceHasUsefulLinks = service => service === 'kyrgyz';
+
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
@@ -174,6 +177,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
             },
           );
         });
+
         it('should contain Useful Links if usefulLinks block data exists', () => {
           cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
             ({ body }) => {
@@ -210,6 +214,18 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                 //  We include the hasStrapline as we don't render Useful Links
                 //  if we don't receive a strapline in the data
                 cy.get('[aria-labelledby="Useful-links"]').should('be.visible');
+
+                if (serviceHasUsefulLinks(service)) {
+                  cy.get('div[data-e2e=useful-links')
+                    .eq(0)
+                    .within(() => {
+                      cy.get('a')
+                        .eq(0)
+                        .then($el => {
+                          expect(usefulLinksItems).includes($el.text());
+                        });
+                    });
+                }
               } else {
                 cy.get('[aria-labelledby="Useful-links"]').should(
                   'not.be.visible',
