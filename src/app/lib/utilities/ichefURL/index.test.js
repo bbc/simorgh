@@ -13,7 +13,7 @@ describe('getIchefURL', () => {
     expect(getIChefURL(input)).toEqual(expectedOutput);
   });
 
-  it('builds a valid img url based on the scr url we pass', () => {
+  it('builds ichef img url with originCode mpv', () => {
     const locator = 'ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg';
     const originCode = 'mpv';
     const expectedOutput =
