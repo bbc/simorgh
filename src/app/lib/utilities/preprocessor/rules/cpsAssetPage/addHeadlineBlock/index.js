@@ -38,14 +38,11 @@ const insertHeadlineBlocks = originalJson => {
   }
 
   if (type === 'MAP' && firstBlockIsVideo(blocks)) {
-    const videoBlock = blocks.slice(0, 1);
-    const mainBlocks = blocks.slice(1, blocks.length);
-
     json.content.model.blocks = [
       offScreenHeadlineBlock,
-      ...videoBlock,
+      blocks.shift(),
       onScreenHeadlineBlock,
-      ...mainBlocks,
+      ...blocks,
     ];
   } else {
     json.content.model.blocks = [headlineBlock, ...blocks];
