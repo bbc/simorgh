@@ -283,16 +283,16 @@ const services = {
     pageTypes: {
       articles: {
         path:
-          Cypress.env('APP_ENV') === 'live'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : '/cymrufyw/articles/c06p32z9x2mo',
+            : '/cymrufyw/erthyglau/c06p32z9x2mo',
         smoke: false,
       },
       errorPage404: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : '/cymrufyw/articles/c123456abcdo',
+            : '/cymrufyw/erthyglau/c123456abcdo',
         smoke: false,
       },
       frontPage: {
@@ -723,16 +723,16 @@ const services = {
     pageTypes: {
       articles: {
         path:
-          Cypress.env('APP_ENV') === 'live'
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : '/naidheachdan/articles/c18q7nedn2ko',
+            : '/naidheachdan/sgeulachdan/c18q7nedn2ko',
         smoke: false,
       },
       errorPage404: {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : '/naidheachdan/articles/c123456abcdo',
+            : '/naidheachdan/sgeulachdan/c123456abcdo',
         smoke: false,
       },
       frontPage: {
