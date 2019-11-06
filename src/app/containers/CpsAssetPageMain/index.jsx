@@ -26,6 +26,7 @@ const CpsAssetPageMain = ({ pageData }) => {
   const componentsToRender = {
     onScreenHeadline,
     offScreenHeadline,
+    headline: headings,
     subheadline: headings,
     text,
     image,
