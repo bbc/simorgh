@@ -33,11 +33,11 @@ node {
                 try {
                     Simorgh.checkout("${params.BRANCH}", 'simorgh')
                     Simorgh.installNodeModules()
-                    stage ('Localhost Tests') {
-                        Simorgh.runLocalAndProductionTests()
+                    stage ('Live E2Es') {
+                        Simorgh.runE2Es('live', false)
                     }
                 } finally {
-                    Simorgh.e2esPostBuildSteps('local')
+                    Simorgh.e2esPostBuildSteps('live')
                 }
             }
         }
