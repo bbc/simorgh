@@ -89,7 +89,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           });
         });
 
-        // See https://github.com/bbc/simorgh/pull/4352 for more information.
         if (service === 'news') {
           it('plays media when a user clicks play', () => {
             cy.window().then(win => {
