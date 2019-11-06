@@ -2,8 +2,8 @@ import pathOr from 'ramda/src/pathOr';
 import deepClone from 'ramda/src/clone';
 import path from 'ramda/src/path';
 import {
-  getOffScreenHeadlineBlock,
-  getOnScreenHeadlineBlock,
+  getVisuallyHiddenHeadlineBlock,
+  getFauxHeadlineBlock,
   getHeadlineBlock,
 } from './models';
 
@@ -15,8 +15,8 @@ const getHeadlineBlocks = json => {
   }
 
   return {
-    offScreenHeadlineBlock: getOffScreenHeadlineBlock(headlineText),
-    onScreenHeadlineBlock: getOnScreenHeadlineBlock(headlineText),
+    visuallyHiddenHeadlineBlock: getVisuallyHiddenHeadlineBlock(headlineText),
+    fauxHeadlineBlock: getFauxHeadlineBlock(headlineText),
     headlineBlock: getHeadlineBlock(headlineText),
   };
 };
@@ -27,8 +27,8 @@ const insertHeadlineBlocks = originalJson => {
   const json = deepClone(originalJson);
   const type = path(['metadata', 'type'], json);
   const {
-    onScreenHeadlineBlock,
-    offScreenHeadlineBlock,
+    fauxHeadlineBlock,
+    visuallyHiddenHeadlineBlock,
     headlineBlock,
   } = getHeadlineBlocks(json);
   const blocks = path(['content', 'model', 'blocks'], json);
@@ -39,9 +39,9 @@ const insertHeadlineBlocks = originalJson => {
 
   if (type === 'MAP' && firstBlockIsVideo(blocks)) {
     json.content.model.blocks = [
-      offScreenHeadlineBlock,
+      visuallyHiddenHeadlineBlock,
       blocks.shift(),
-      onScreenHeadlineBlock,
+      fauxHeadlineBlock,
       ...blocks,
     ];
   } else {

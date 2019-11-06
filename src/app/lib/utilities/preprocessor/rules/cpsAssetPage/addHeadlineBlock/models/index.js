@@ -28,7 +28,7 @@ export const getHeadlineBlock = headlineText => ({
   type: 'headline',
 });
 
-export const getOnScreenHeadlineBlock = headlineText => ({
+export const getFauxHeadlineBlock = headlineText => ({
   model: {
     blocks: [
       {
@@ -58,7 +58,7 @@ export const getOnScreenHeadlineBlock = headlineText => ({
   type: 'fauxHeadline',
 });
 
-export const getOffScreenHeadlineBlock = headlineText => ({
+export const getVisuallyHiddenHeadlineBlock = headlineText => ({
   model: {
     blocks: [
       {
