@@ -21,23 +21,14 @@ To render a media player we have built bespoke endpoints outside of Simorgh that
 
 We need to support different types of media, most of which have varied settings. To ease and simplify the configurations of each differing media type, we have configured separate endpoints per type of media, so that we can send as little as possible in the request:
 
-### Canonical
-
-##### Optimo Articles: 
-`https://www.bbc.com/ws/av-embeds/articles/{{asset_id}}/{{vpid}}/{{lang}}`
-##### CPS Articles: 
-`https://www.bbc.com/ws/av-embeds/cps/{{service}}/{{asset_id}}/{{vpid}}/{{lang}}`
-##### Live Radio: 
-`https://www.bbc.com/ws/av-embeds/media/{{service_id}}/liveradio/{{lang}}`
-
-### AMP
-
-##### Optimo Articles: 
-`https://www.bbc.com/ws/av-embeds/articles/{{asset_id}}/{{vpid}}/{{lang}}/amp`
-##### CPS Articles: 
-`https://www.bbc.com/ws/av-embeds/cps/{{service}}/{{asset_id}}/{{vpid}}/{{lang}}/amp`
-##### Live Radio: 
-`https://www.bbc.com/ws/av-embeds/media/{{service_id}}/liveradio/{{lang}}/amp`
+| Type | AMP | Example URL |
+|------|-----|-------------|
+|Optimo|No| `https://www.bbc.com/ws/av-embeds/articles/{{asset_id}}/{{vpid}}/{{lang}}` |
+|Optimo|Yes| `https://www.bbc.com/ws/av-embeds/articles/{{asset_id}}/{{vpid}}/{{lang}}/amp` |
+|CPS|No| `https://www.bbc.com/ws/av-embeds/cps/{{service}}/{{asset_id}}/{{vpid}}/{{lang}}` |
+|CPS|Yes| `https://www.bbc.com/ws/av-embeds/cps/{{service}}/{{asset_id}}/{{vpid}}/{{lang}}/amp` |
+|Live Radio|No| `https://www.bbc.com/ws/av-embeds/media/{{service_id}}/liveradio/{{lang}}` |
+|Live Radio|Yes| `https://www.bbc.com/ws/av-embeds/media/{{service_id}}/liveradio/{{lang}}/amp` |
 
 ## Media Player Component 
 In Simorgh, we have a container called `MediaPlayer` that imports the [`@bbc/psammead-media-player`](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-media-player) component. 
