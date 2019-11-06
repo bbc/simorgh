@@ -80,9 +80,13 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
             title="Media player"
           >
             <amp-img
+              alt=""
+              attribution=""
+              height="16"
               layout="fill"
               placeholder="true"
               src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+              width="9"
             />
           </amp-iframe>
         </div>
@@ -278,7 +282,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
               </time>
             </button>
             <img
-              alt="Image Alt"
+              alt=""
               class="c10"
               src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
             />
