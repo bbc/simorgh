@@ -21,4 +21,10 @@ describe('getIchefURL', () => {
 
     expect(getIChefURL({ locator, originCode })).toEqual(expectedOutput);
   });
+
+  it('return img url pips', () => {
+    const locator = 'urn:bbc:pips:pid:p054n8j6';
+    const originCode = 'pips';
+    expect(getIChefURL({ locator, originCode })).toEqual(locator);
+  });
 });

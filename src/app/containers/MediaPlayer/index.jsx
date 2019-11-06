@@ -43,7 +43,7 @@ const MediaPlayerContainer = ({
     return null;
   }
 
-  const imageBlock = path(
+  const { originCode, locator, width: resolution } = path(
     ['model', 'blocks', 1, 'model', 'blocks', 0, 'model'],
     aresMediaBlock,
   );
@@ -76,7 +76,7 @@ const MediaPlayerContainer = ({
     return null; // this should be the holding image with an error overlay
   }
 
-  const placeholderSrc = getIChefURL(imageBlock);
+  const placeholderSrc = getIChefURL({ originCode, locator, resolution });
   const embedSource = embedUrl({
     requestUrl: `${assetId}/${versionId}/${lang}`,
     type: assetType,
