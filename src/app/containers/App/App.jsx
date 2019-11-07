@@ -31,16 +31,20 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   const isInitialMount = useRef(true);
 
   useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-    } else {
-      // Only update on subsequent page renders
-      const contentElem = document.getElementById('content');
+    if (!isInitialMount.current && state.loading === false) {
+      const contentElem = document.querySelector('h1#content');
 
       if (contentElem) {
         contentElem.focus();
       }
+    }
+  }, [state.loading]);
 
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+    } else {
+      // Only update on subsequent page renders
       const {
         service: nextService,
         variant: nextVariant,
