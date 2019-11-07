@@ -1,6 +1,10 @@
 import path from 'ramda/src/path';
 import pathToRegexp from 'path-to-regexp';
-import { getVariant, variantSanitiser } from '#lib/utilities/variantHandler';
+import {
+  getVariant,
+  variantSanitiser,
+  variants,
+} from '#lib/utilities/variantHandler';
 import { getPreferredVariant } from '#app/contexts/UserContext/cookies';
 
 const getVariantRedirectUrl = (props, service, variant) => {
@@ -9,7 +13,6 @@ const getVariantRedirectUrl = (props, service, variant) => {
     service,
     variant: variantSanitiser(variant),
   });
-  const redirectVariant = cookieVariant || defaultVariant;
 
   if (!props) return null;
 
@@ -19,10 +22,18 @@ const getVariantRedirectUrl = (props, service, variant) => {
 
   const pathTo = pathToRegexp.compile(match.path);
 
-  if (
-    (cookieVariant && cookieVariant !== defaultVariant) ||
-    (!variant && defaultVariant !== 'default')
-  ) {
+  const isCookieVariantRedirect =
+    cookieVariant &&
+    cookieVariant !== defaultVariant &&
+    variants.includes(cookieVariant);
+
+  const isUrlVariantRedirect = !variant && defaultVariant !== 'default';
+
+  const redirectVariant = isCookieVariantRedirect
+    ? cookieVariant
+    : defaultVariant;
+
+  if (isCookieVariantRedirect || isUrlVariantRedirect) {
     return pathTo(
       {
         ...match.params,
