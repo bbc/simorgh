@@ -1,4 +1,4 @@
-const getPlaceholderSrc = src => {
+const buildPlaceholderSrc = src => {
   const parts = src.split('/');
   const [domain, media, imgService, width, ...extraParts] = parts;
   const definedWidth = width.replace('$width', '512');
@@ -21,7 +21,7 @@ const getIChefURL = ({ originCode, locator, resolution }) => {
   }
 
   if (originCode === 'mpv') {
-    return getPlaceholderSrc(locator);
+    return buildPlaceholderSrc(locator);
   }
 
   return `https://ichef.bbci.co.uk/news/${resolution}/${originCode}/${locator}`;
