@@ -89,6 +89,24 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           });
         });
 
+        it('should render a visible guidance message', () => {
+          cy.window().then(win => {
+            const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+            if (media && media.type === 'video') {
+              cy.get('div[class^="StyledVideoContainer"]')
+                .within(() => {
+                  cy.get('div[class^="StyledGuidance"]');
+                })
+                .should('to.have.descendants', 'svg')
+                .within(() => {
+                  cy.get('strong');
+                })
+                .should('be.visible')
+                .should('not.be.empty');
+            }
+          });
+        });
+
         // This test is being temporarily throttled to the service 'news'.
         if (service === 'news') {
           it('plays media when a user clicks play', () => {
