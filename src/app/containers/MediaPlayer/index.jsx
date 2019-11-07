@@ -10,7 +10,8 @@ import {
 import Caption from '../Caption';
 import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
-import getPlaceholderSrc from './helpers/placeholder';
+import getPlaceholderSrc from '#lib/utilities/srcSet/placeholder';
+import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import formatDuration from '#lib/utilities/formatDuration';
 import useToggle from '../Toggle/useToggle';
@@ -21,6 +22,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 
+const DEFAULT_WIDTH = 512;
 const MediaPlayerContainer = ({
   blocks,
   assetId,
@@ -81,7 +83,9 @@ const MediaPlayerContainer = ({
     return null; // this should be the holding image with an error overlay
   }
 
-  const placeholderSrc = getPlaceholderSrc(imageUrl);
+  const placeholderSrc = getPlaceholderSrc(imageUrl, DEFAULT_WIDTH);
+  const placeholderSrcset = getPlaceholderSrcSet(imageUrl);
+
   const embedSource = embedUrl({
     requestUrl: `${assetId}/${versionId}/${lang}`,
     type: assetType,
@@ -100,13 +104,15 @@ const MediaPlayerContainer = ({
       {isAmp ? (
         <AmpMediaPlayer
           src={embedSource}
-          title={iframeTitle}
           placeholderSrc={placeholderSrc}
+          placeholderSrcset={placeholderSrcset}
+          title={iframeTitle}
         />
       ) : (
         <CanonicalMediaPlayer
           src={embedSource}
           placeholderSrc={showPlaceholder ? placeholderSrc : null}
+          placeholderSrcset={placeholderSrcset}
           showPlaceholder={showPlaceholder}
           title={iframeTitle}
           service={service}
