@@ -37,7 +37,7 @@ const generateImageBlock = block => {
         {
           type: 'rawImage',
           model: {
-            copyrightHolder: block.image.copyrightHolder,
+            copyrightHolder: path(['image', 'copyrightHolder'], block),
             locator: path(['image', 'href'], block]),
           },
         },
