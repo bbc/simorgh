@@ -1,5 +1,5 @@
 import convertParagraph from '.';
-import { optimoText } from '../../utils/helpers';
+import { optimoTextWithParagraph } from '../../utils/helpers';
 
 describe('convertParagraph', () => {
   it('should convert a plain_text paragraph to Optimo format', async () => {
@@ -8,7 +8,7 @@ describe('convertParagraph', () => {
       markupType: 'plain_text',
       type: 'paragraph',
     };
-    const expected = optimoText([
+    const expected = optimoTextWithParagraph([
       {
         fragments: [
           {
@@ -29,7 +29,7 @@ describe('convertParagraph', () => {
       markupType: 'candy_xml',
       type: 'paragraph',
     };
-    const expected = optimoText([
+    const expected = optimoTextWithParagraph([
       {
         fragments: [
           {
