@@ -10,7 +10,7 @@ const generateVideoBlock = block => {
       format: block.format === 'video' ? 'audio_video' : block.format,
       title: block.caption,
       imageCopyright: path(['image', 'copyrightHolder'], block),
-      imageUrl: block.image.href,
+      imageUrl: path(['image', 'href',] block),
       synopses: {
         short: block.caption,
         medium: block.caption,
