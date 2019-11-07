@@ -20,6 +20,7 @@ const CpsAssetPageMain = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
+  const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
   const assetUri = path(['locators', 'assetUri'], metadata);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
 
@@ -30,7 +31,7 @@ const CpsAssetPageMain = ({ pageData }) => {
     subheadline: headings,
     text,
     image,
-    timestamp,
+    timestamp: allowDateStamp ? timestamp : undefined,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };
 

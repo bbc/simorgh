@@ -1,10 +1,12 @@
-import getIchefUrl from './ichefUrl';
+import buildIChefUrl from '#lib/utilities/ichefURL';
 
-const createSrcset = (
+const DEFAULT_RESOLUTIONS = [240, 320, 480, 624, 800];
+
+export const createSrcset = (
   originCode,
   locator,
   originalImageWidth,
-  resolutions = [240, 320, 480, 624, 800],
+  resolutions = DEFAULT_RESOLUTIONS,
 ) => {
   if (originCode === 'pips') {
     return null;
@@ -23,10 +25,13 @@ const createSrcset = (
 
   const urls = requiredResolutions.map(
     resolution =>
-      `${getIchefUrl(originCode, locator, resolution)} ${resolution}w`,
+      `${buildIChefUrl({ originCode, locator, resolution })} ${resolution}w`,
   );
 
   return urls.join(', ');
 };
-
-export default createSrcset;
+export const getPlaceholderSrcSet = ({ originCode, locator }) =>
+  DEFAULT_RESOLUTIONS.map(
+    resolution =>
+      `${buildIChefUrl({ originCode, locator, resolution })} ${resolution}w`,
+  ).join(', ');
