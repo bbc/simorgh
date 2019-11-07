@@ -9,7 +9,7 @@ const generateVideoBlock = block => {
       ...pick(['embedding', 'id', 'subType', 'live'], block),
       format: block.format === 'video' ? 'audio_video' : block.format,
       title: block.caption,
-      imageCopyright: block.image.copyrightHolder,
+      imageCopyright: path(['image', 'copyrightHolder'], block),
       imageUrl: block.image.href,
       synopses: {
         short: block.caption,
