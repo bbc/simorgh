@@ -7,10 +7,17 @@ import withContexts from '../PageHandlers/withContexts';
 import withPageWrapper from '../PageHandlers/withPageWrapper';
 import withLoading from '../PageHandlers/withLoading';
 
-const ErrorContainer = ({ status }) => <ErrorMain status={status} />;
+const ErrorContainer = ({ status, errorCode }) => (
+  <ErrorMain status={errorCode || status} />
+);
 
 ErrorContainer.propTypes = {
   status: number.isRequired,
+  errorCode: number,
+};
+
+ErrorContainer.defaultProps = {
+  errorCode: null,
 };
 
 const EnhancedErrorContainer = compose(
