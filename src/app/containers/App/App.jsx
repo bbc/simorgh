@@ -11,6 +11,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     isAmp,
     variant,
     id,
+    errorCode,
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
@@ -26,6 +27,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     pageType,
     error,
     loading: false,
+    errorCode,
   });
 
   const isInitialMount = useRef(true);
@@ -63,6 +65,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         pageType: route.pageType,
         loading: true,
         error: null,
+        errorCode: null,
       });
 
       route.getInitialData(location.pathname).then(data =>
