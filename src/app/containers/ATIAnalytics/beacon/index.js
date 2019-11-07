@@ -12,6 +12,7 @@ export const sendEventBeacon = async ({
     ...params,
     element,
     componentName,
+    componentInfo,
   };
   const viewProps = {
     ...impressionProps,
