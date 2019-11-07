@@ -1,10 +1,13 @@
 import getIchefUrl from './ichefUrl';
+import getPlaceholderSrc from './placeholder';
 
-const createSrcset = (
+const DEFAULT_RESOLUTIONS = [240, 320, 480, 624, 800];
+
+export const createSrcset = (
   originCode,
   locator,
   originalImageWidth,
-  resolutions = [240, 320, 480, 624, 800],
+  resolutions = DEFAULT_RESOLUTIONS,
 ) => {
   if (originCode === 'pips') {
     return null;
@@ -29,4 +32,7 @@ const createSrcset = (
   return urls.join(', ');
 };
 
-export default createSrcset;
+export const getPlaceholderSrcSet = src =>
+  DEFAULT_RESOLUTIONS.map(
+    resolution => `${getPlaceholderSrc(src, resolution)} ${resolution}w`,
+  ).join(', ');

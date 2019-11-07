@@ -7,8 +7,8 @@ import {
   GridItemConstrainedMedium,
   GridItemConstrainedSmall,
 } from '#lib/styledGrid';
-import createSrcset from './helpers/srcSet';
-import getIChefURL from './helpers/ichefUrl';
+import { createSrcset } from '#lib/utilities/srcSet';
+import getIChefURL from '#lib/utilities/srcSet/ichefUrl';
 import urlWithPageAnchor from '#lib/utilities/pageAnchor';
 
 const DEFAULT_IMAGE_RES = 640;

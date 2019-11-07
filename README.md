@@ -105,9 +105,6 @@ When adding a new page type there are several parts required.
 
 - This should be done for each service using the page type.
 - [Fixture data example](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/data/igbo/frontpage/index.json)
-- Gotcha's:
-  - The value in the test "should call readScenario for every file in the /data directory" will need to be updated in `dataValidator/helpers/dataLoader/asyncValidateDir.test.js` for each fixture you add.
-  - The new page type should be added to `ignoreDirectories` in `dataValidator/helpers/dataLoader/readScenario.js`
 
 #### 2) Serving the fixture data on local development
 
