@@ -1,6 +1,6 @@
 import { CPSMediaBlock, optimoVideoBlock } from './blocks/media/fixtures';
 import convertToOptimoBlocks from '.';
-import { optimoText } from './utils/helpers';
+import { optimoTextWithParagraph } from './utils/helpers';
 
 describe('convertToOptimoBlocks', () => {
   it('should convert CPS data into Optimo format', async () => {
@@ -32,7 +32,7 @@ describe('convertToOptimoBlocks', () => {
       content: {
         model: {
           blocks: [
-            optimoText([
+            optimoTextWithParagraph([
               {
                 fragments: [
                   {
@@ -47,7 +47,7 @@ describe('convertToOptimoBlocks', () => {
                 text: 'Paragraph containing bold text',
               },
             ]),
-            optimoText([
+            optimoTextWithParagraph([
               {
                 fragments: [
                   {
@@ -115,7 +115,7 @@ describe('convertToOptimoBlocks', () => {
       content: {
         model: {
           blocks: [
-            optimoText([
+            optimoTextWithParagraph([
               {
                 fragments: [
                   {
@@ -150,7 +150,7 @@ describe('convertToOptimoBlocks', () => {
       content: {
         model: {
           blocks: [
-            optimoText([
+            optimoTextWithParagraph([
               {
                 fragments: [
                   {

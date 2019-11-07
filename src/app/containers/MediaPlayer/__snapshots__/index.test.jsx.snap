@@ -143,6 +143,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
             alt=""
             class="c9"
             src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+            srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
           />
         </div>
       </div>
@@ -234,6 +235,7 @@ exports[`MediaPlayer Renders the AMP player when platform is AMP 1`] = `
             layout="fill"
             placeholder="true"
             src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+            srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
             width="9"
           />
         </amp-iframe>
@@ -345,6 +347,7 @@ exports[`MediaPlayer Renders the AMP player with a caption 1`] = `
             layout="fill"
             placeholder="true"
             src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+            srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
             width="9"
           />
         </amp-iframe>
@@ -559,6 +562,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
             alt=""
             class="c9"
             src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+            srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
           />
         </div>
       </div>
