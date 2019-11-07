@@ -10,9 +10,10 @@ import {
 import Caption from '../Caption';
 import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
+import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import formatDuration from '#lib/utilities/formatDuration';
-import getIChefURL from '#lib/utilities/ichefURL';
+import buildIChefURL from '#lib/utilities/ichefURL';
 import useToggle from '../Toggle/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -43,7 +44,7 @@ const MediaPlayerContainer = ({
     return null;
   }
 
-  const { originCode, locator, width: resolution } = path(
+  const { originCode, locator } = path(
     ['model', 'blocks', 1, 'model', 'blocks', 0, 'model'],
     aresMediaBlock,
   );
@@ -76,7 +77,8 @@ const MediaPlayerContainer = ({
     return null; // this should be the holding image with an error overlay
   }
 
-  const placeholderSrc = getIChefURL({ originCode, locator, resolution });
+  const placeholderSrcset = getPlaceholderSrcSet({ originCode, locator });
+  const placeholderSrc = buildIChefURL({ originCode, locator });
   const embedSource = embedUrl({
     requestUrl: `${assetId}/${versionId}/${lang}`,
     type: assetType,
@@ -95,13 +97,15 @@ const MediaPlayerContainer = ({
       {isAmp ? (
         <AmpMediaPlayer
           src={embedSource}
-          title={iframeTitle}
           placeholderSrc={placeholderSrc}
+          placeholderSrcset={placeholderSrcset}
+          title={iframeTitle}
         />
       ) : (
         <CanonicalMediaPlayer
           src={embedSource}
           placeholderSrc={showPlaceholder ? placeholderSrc : null}
+          placeholderSrcset={placeholderSrcset}
           showPlaceholder={showPlaceholder}
           title={iframeTitle}
           service={service}

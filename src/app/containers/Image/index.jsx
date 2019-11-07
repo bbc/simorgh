@@ -7,8 +7,8 @@ import {
   GridItemConstrainedMedium,
   GridItemConstrainedSmall,
 } from '#lib/styledGrid';
-import createSrcset from './helpers/srcSet';
-import getIChefURL from '#lib/utilities/ichefURL';
+import { createSrcset } from '#lib/utilities/srcSet';
+import buildIChefURL from '#lib/utilities/ichefURL';
 import urlWithPageAnchor from '#lib/utilities/pageAnchor';
 
 const DEFAULT_IMAGE_RES = 640;
@@ -50,7 +50,7 @@ const ImageContainer = ({ blocks, position }) => {
   const altText = getText(altTextBlock);
   const copyright = getCopyright(copyrightHolder);
   const ratio = (height / width) * 100;
-  const rawImageSrc = getIChefURL({
+  const rawImageSrc = buildIChefURL({
     originCode,
     locator,
     resolution: DEFAULT_IMAGE_RES,

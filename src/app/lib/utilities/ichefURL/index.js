@@ -1,7 +1,7 @@
-const buildPlaceholderSrc = src => {
+const buildPlaceholderSrc = (src, resolution) => {
   const parts = src.split('/');
   const [domain, media, imgService, width, ...extraParts] = parts;
-  const definedWidth = width.replace('$width', '512');
+  const definedWidth = width.replace('$width', resolution);
   const domainWithProtocol = `https://${domain}`;
 
   const newUrl = [
@@ -15,16 +15,22 @@ const buildPlaceholderSrc = src => {
   return newUrl.join('/');
 };
 
-const getIChefURL = ({ originCode, locator, resolution }) => {
+const DEFAULT_RESOLUTION = '512';
+
+const buildIChefURL = ({
+  originCode,
+  locator,
+  resolution = DEFAULT_RESOLUTION,
+}) => {
   if (originCode === 'pips') {
     return locator;
   }
 
   if (originCode === 'mpv') {
-    return buildPlaceholderSrc(locator);
+    return buildPlaceholderSrc(locator, resolution);
   }
 
   return `https://ichef.bbci.co.uk/news/${resolution}/${originCode}/${locator}`;
 };
 
-export default getIChefURL;
+export default buildIChefURL;
