@@ -29,3 +29,7 @@ export const cpsAssetPageDataPath = `${cpsAssetPagePath}.json`;
 
 export const radioAndTvPath = getRadioAndTVRegex(allServices);
 export const radioAndTvDataPath = `${radioAndTvPath}.json`;
+
+const serviceRegex = Object.keys(services).join('|');
+const errorCodeRegex = '404|500';
+export const errorPageRegexPath = `/:service(${serviceRegex})/:errorCode(${errorCodeRegex})`;
