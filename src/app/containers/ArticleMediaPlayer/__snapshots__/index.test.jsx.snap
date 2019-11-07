@@ -97,7 +97,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 `;
 
 exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = `
-.c8 {
+.c14 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -106,13 +106,22 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   height: 0.75rem;
 }
 
-.c10 {
+.c8 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 1rem;
+}
+
+.c16 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c6 {
+.c12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -124,7 +133,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   margin: 0;
 }
 
-.c4 {
+.c10 {
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -142,14 +151,14 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   width: 5rem;
 }
 
-.c4:hover,
-.c4:focus {
+.c10:hover,
+.c10:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.c7 > svg {
+.c13 > svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -157,9 +166,49 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   width: 1.5rem;
 }
 
-.c9 {
+.c15 {
   display: block;
   margin-top: 0.5rem;
+}
+
+.c4 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+}
+
+.c5 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(34,34,34,0.75);
+  color: #FFFFFF;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.c9 {
+  padding-left: 0.25rem;
+  font-weight: normal;
+}
+
+.c7 > svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c3 {
@@ -171,13 +220,13 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   height: 100%;
 }
 
-.c5 {
+.c11 {
   position: absolute;
   bottom: 0;
 }
 
-.c2:hover .c5,
-.c2:focus .c5 {
+.c2:hover .c11,
+.c2:focus .c11 {
   background-color: #B80000;
 }
 
@@ -189,6 +238,12 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 
 .c0 {
   grid-column: 1 / span 6;
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.875rem;
+  }
 }
 
 @media (max-width:25rem) {
@@ -249,20 +304,53 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
           <div
             class="c2 c3"
           >
+            <div
+              class="c4"
+            >
+              <div
+                class="c5"
+              >
+                <div
+                  class="c6"
+                >
+                  <div
+                    aria-hidden="true"
+                    class="c7"
+                  >
+                    <svg
+                      class="c8"
+                      focusable="false"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      width="32"
+                    >
+                      <path
+                        d="M32,16A16,16,0,1,1,16,0,16,16,0,0,1,32,16Zm-8.6-.8H16.6v3.1h2.9c-.2,1.5-1.6,2.4-3.7,2.4s-3.7-2.4-3.7-4.7,1-4.7,3.7-4.7,3,.8,3.2,2.2h4.2c-.4-4-3.9-5.8-7.2-5.8-4.8,0-8,3.7-8,8.3s3.1,8.3,8,8.3a5.4,5.4,0,0,0,4.5-2.1l.2,1.7h2.7Z"
+                      />
+                    </svg>
+                  </div>
+                  <strong
+                    class="c9"
+                  >
+                    Contains strong language and adult humour.
+                  </strong>
+                </div>
+              </div>
+            </div>
             <button
-              class="c4 c5"
+              class="c10 c11"
             >
               <span
-                class="c6"
+                class="c12"
               >
                 Play video, "Five things ants can teach us about management", 3,11
               </span>
               <div
                 aria-hidden="true"
-                class="c7"
+                class="c13"
               >
                 <svg
-                  class="c8"
+                  class="c14"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 32 32"
@@ -275,7 +363,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
               </div>
               <time
                 aria-hidden="true"
-                class="c9"
+                class="c15"
                 datetime="PT3M11S"
               >
                 3:11
@@ -283,7 +371,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
             </button>
             <img
               alt=""
-              class="c10"
+              class="c16"
               src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
             />
           </div>
