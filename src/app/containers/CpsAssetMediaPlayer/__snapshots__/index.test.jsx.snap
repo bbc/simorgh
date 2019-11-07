@@ -71,9 +71,13 @@ exports[`MediaPlayer render the amp player 1`] = `
             title="Media player"
           >
             <amp-img
+              alt=""
+              attribution=""
+              height="16"
               layout="fill"
               placeholder="true"
               src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+              width="9"
             />
           </amp-iframe>
         </div>
