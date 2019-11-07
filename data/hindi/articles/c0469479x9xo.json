@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Hindi",
     "language": "hi",
-    "lastUpdated": 1562942213629,
+    "lastUpdated": 1572879665979,
     "firstPublished": 1562942209748,
     "lastPublished": 1562942209748,
     "options": {},
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL",
+                        "text": "यह इस परीक्षण लेख का शीर्षक है",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL",
+                              "text": "यह इस परीक्षण लेख का शीर्षक है",
                               "attributes": []
                             }
                           }
@@ -58,78 +65,303 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "यह परीक्षण छवि, कॉपीराइट बीबीसी, फ्रांस का नक्शा दिखाता है। छवि पहले तीन ब्लॉकों में है और इसका शीर्षक है।",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "यह परीक्षण छवि, कॉपीराइट बीबीसी, फ्रांस का नक्शा दिखाता है। छवि पहले तीन ब्लॉकों में है और इसका शीर्षक है।",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "यह परीक्षण छवि, कॉपीराइट बीबीसी, फ्रांस का नक्शा दिखाता है। छवि पहले तीन ब्लॉकों में है और इसका शीर्षक है।",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "यह परीक्षण छवि, कॉपीराइट बीबीसी, फ्रांस का नक्शा दिखाता है। छवि पहले तीन ब्लॉकों में है और इसका शीर्षक है।",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "83a7/test/2d0fbac0-fcb0-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "क्रिकेट विश्व कप अपने अंतिम पड़ाव पर पहुंच गया है. खिताबी जंग के लिए आखिरी दो टीमों का नाम तय हो चुका है.",
+                  "text": "यह एक टेक्स्ट ब्लॉक है, जिसमें बीबीसी वेदर होमपेज के लिए एक यूआरएल लिंक है।",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "क्रिकेट विश्व कप अपने अंतिम पड़ाव पर पहुंच गया है. खिताबी जंग के लिए आखिरी दो टीमों का नाम तय हो चुका है.",
+                        "text": "यह एक टेक्स्ट ब्लॉक है, जिसमें बीबीसी वेदर होमपेज के लिए एक ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "यूआरएल लिंक है।",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "यूआरएल लिंक है।",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p019qd7g",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "यह एक वीडियो ब्लॉक है जिसमें एक परीक्षण फ़ाइल है",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "यह एक वीडियो ब्लॉक है जिसमें एक परीक्षण फ़ाइल है",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "मेज़बान इंग्लैंड और न्यूज़ीलैंड की टीमें रविवार को लॉर्ड्स के मैदान में विश्वकप फ़ाइनल खेलेंगी.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p019qd7g",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "मेज़बान इंग्लैंड और न्यूज़ीलैंड की टीमें रविवार को लॉर्ड्स के मैदान में विश्वकप फ़ाइनल खेलेंगी.",
-                        "attributes": []
+                        "id": "p019qd7g",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Test asset with square image",
+                        "synopses": {
+                          "short": "test asset"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019qd93.jpg",
+                        "embedding": false,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p019qd7k",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 16,
+                            "durationISO8601": "PT16S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1493293493000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 900,
+                              "width": 900,
+                              "copyrightHolder": "Sony",
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019qd93.jpg",
+                              "originCode": "mpv"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "यह एक सबहेडलाइन ब्लॉक है\r",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "यह एक सबहेडलाइन ब्लॉक है\r",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "यह एक सबहेडलाइन ब्लॉक है\r",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "यह एक सबहेडलाइन ब्लॉक है\r",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "rawImage",
                 "model": {
-                  "text": "पहले सेमीफ़ाइनल में न्यूज़ीलैंड ने भारत को मात दी. वहीं गुरुवार को खेले गए दूसरे सेमीफ़ाइनल मैच में इंग्लैंड ने ऑस्ट्रेलिया पर आसान जीत दर्ज की.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "पहले सेमीफ़ाइनल में न्यूज़ीलैंड ने भारत को मात दी. वहीं गुरुवार को खेले गए दूसरे सेमीफ़ाइनल मैच में इंग्लैंड ने ऑस्ट्रेलिया पर आसान जीत दर्ज की.",
-                        "attributes": []
-                      }
-                    }
-                  ]
+                  "width": 800,
+                  "height": 450,
+                  "locator": "4cc0/test/28ef1980-fcb1-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
                 }
-              },
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "फिलहाल इंग्लैंड और न्यूज़ीलैंड के समर्थक अपनी-अपनी टीमों के फ़ाइनल में पहुंचने का जश्न मना रहे हैं.",
+                  "text": "यह परीक्षण लेख बनाया गया है ताकि हम अपनी वेबसाइट पर परीक्षण चला सकें।.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "फिलहाल इंग्लैंड और न्यूज़ीलैंड के समर्थक अपनी-अपनी टीमों के फ़ाइनल में पहुंचने का जश्न मना रहे हैं.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "लेकिन इंग्लैंड से कोसों दूर पाकिस्तान में भी इन दोनों टीमों के फ़ाइनल में पहुंचने पर खुशी मनाई जा रही है.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "लेकिन इंग्लैंड से कोसों दूर पाकिस्तान में भी इन दोनों टीमों के फ़ाइनल में पहुंचने पर खुशी मनाई जा रही है.",
+                        "text": "यह परीक्षण लेख बनाया गया है ताकि हम अपनी वेबसाइट पर परीक्षण चला सकें।.",
                         "attributes": []
                       }
                     }
