@@ -5,7 +5,6 @@ import RadioPage from '../containers/RadioPage';
 import CpsAssetPage from '../containers/CpsAssetPage';
 import ErrorPage from '../containers/Error';
 import getInitialData from './getInitialData';
-import withVariant from '../containers/PageHandlers/withVariant';
 import {
   articleRegexPath,
   frontpageRegexPath,
@@ -23,14 +22,14 @@ const routes = [
   {
     path: articleRegexPath,
     exact: true,
-    component: withVariant(Article),
+    component: Article,
     getInitialData,
     pageType: 'article',
   },
   {
     path: frontpageRegexPath,
     exact: true,
-    component: withVariant(FrontPage),
+    component: FrontPage,
     getInitialData,
     pageType: 'frontPage',
   },
