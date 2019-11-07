@@ -9,18 +9,18 @@ const WithVariant = Component => {
 
     const redirectPath = getVariantRedirectUrl(props, service, variant);
 
-    if (redirectPath) {
-      return (
-        <Redirect
-          to={{
-            ...location,
-            pathname: redirectPath,
-          }}
-        />
-      );
+    if (!redirectPath) {
+      return <Component {...props} />;
     }
 
-    return <Component {...props} />;
+    return (
+      <Redirect
+        to={{
+          ...location,
+          pathname: redirectPath,
+        }}
+      />
+    );
   };
 
   return VariantContainer;
