@@ -7,7 +7,7 @@ const serviceHasIndexAlsos = service => service === 'thai';
 const serviceHasPublishedPromo = service => service === 'persian';
 
 // Temporary limiting to one service
-const serviceHasUsefulLinks = service => service === 'kyrgyz';
+// const shouldDisplayUsefulLinks = () => {};
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
@@ -172,7 +172,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           );
         });
 
-        it('should contain Useful Links if usefulLinks block data exists', () => {
+        it('should contain Useful Links if valid usefulLinks block data exists', () => {
           cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
             ({ body }) => {
               const pageData = body.content.groups;
@@ -207,19 +207,16 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               if (isValidUsefulLinks) {
                 //  We include the hasStrapline as we don't render Useful Links
                 //  if we don't receive a strapline in the data
-                cy.get('[aria-labelledby="Useful-links"]').should('be.visible');
+                cy.get('div[data-e2e=useful-links]').should('be.visible');
 
-                if (serviceHasUsefulLinks(service)) {
-                  cy.get('div[data-e2e=useful-links')
-                    .eq(0)
-                    .within(() => {
-                      cy.get('a')
-                        .eq(0)
-                        .then($el => {
-                          expect(usefulLinksItems).includes($el.text());
-                        });
-                    });
-                }
+                cy.get('div[data-e2e=useful-links]')
+                  .eq(0)
+                  .within(() => {
+                    cy.get('[data-e2e="useful-link-item"]').should(
+                      'have.length',
+                      isValidUsefulLinks,
+                    );
+                  });
               } else {
                 cy.get('[aria-labelledby="Useful-links"]').should(
                   'not.be.visible',
