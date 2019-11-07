@@ -1,7 +1,7 @@
-const getPlaceholderSrc = src => {
+const getPlaceholderSrc = (src, imageWidth) => {
   const parts = src.split('/');
   const [domain, media, imgService, width, ...extraParts] = parts;
-  const definedWidth = width.replace('$width', '512');
+  const definedWidth = width.replace('$width', imageWidth);
   const domainWithProtocol = `https://${domain}`;
 
   const newUrl = [
