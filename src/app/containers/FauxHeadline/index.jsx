@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import path from 'ramda/src/path';
 import { Headline } from '@bbc/psammead-headings';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -13,7 +14,10 @@ const FauxHeadline = props => <Headline as="strong" {...props} />;
 const FauxHeadlineContainer = ({ blocks }) => {
   const { script, service } = useContext(ServiceContext);
 
-  const arrayOfFragments = blocks[0].model.blocks[0].model.blocks;
+  const arrayOfFragments = path(
+    ['0', 'model', 'blocks', '0', 'model', 'blocks'],
+    blocks,
+  );
 
   if (!arrayOfFragments || !Array.isArray(arrayOfFragments)) {
     return null;

@@ -23,9 +23,8 @@ describe('FauxHeadline', () => {
   });
 
   describe('with headline data', () => {
-    const data = {
-      ...textBlock('This is a headline!'),
-    };
+    const data = textBlock('This is a headline!');
+
     shouldMatchSnapshot(
       'should render correctly',
       FauxHeadlineContainerWithContext(data),
