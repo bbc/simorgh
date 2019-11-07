@@ -24,19 +24,23 @@ export const captionBlock = {
                   {
                     model: { attributes: [], text: 'image caption' },
                     type: 'fragment',
+                    id: null,
                   },
                 ],
                 text: 'image caption',
               },
               type: 'paragraph',
+              id: null,
             },
           ],
         },
         type: 'text',
+        id: null,
       },
     ],
   },
   type: 'caption',
+  id: null,
 };
 
 export const altTextBlock = {
@@ -51,19 +55,23 @@ export const altTextBlock = {
                   {
                     model: { attributes: [], text: 'alt text' },
                     type: 'fragment',
+                    id: null,
                   },
                 ],
                 text: 'alt text',
               },
               type: 'paragraph',
+              id: null,
             },
           ],
         },
         type: 'text',
+        id: null,
       },
     ],
   },
   type: 'altText',
+  id: null,
 };
 
 export const rawImageBlock = {
