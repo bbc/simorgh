@@ -79,7 +79,11 @@ const MediaPlayerContainer = ({
   }
 
   const placeholderSrcset = getPlaceholderSrcSet({ originCode, locator });
-  const placeholderSrc = buildIChefURL({ originCode, locator });
+  const placeholderSrc = buildIChefURL({
+    originCode,
+    locator,
+    resolution: DEFAULT_WIDTH,
+  });
   const embedSource = embedUrl({
     requestUrl: `${assetId}/${versionId}/${lang}`,
     type: assetType,

@@ -15,13 +15,7 @@ const buildPlaceholderSrc = (src, resolution) => {
   return newUrl.join('/');
 };
 
-const DEFAULT_RESOLUTION = '512';
-
-const buildIChefURL = ({
-  originCode,
-  locator,
-  resolution = DEFAULT_RESOLUTION,
-}) => {
+const buildIChefURL = ({ originCode, locator, resolution }) => {
   if (originCode === 'pips') {
     return locator;
   }
