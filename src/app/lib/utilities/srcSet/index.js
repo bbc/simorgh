@@ -30,7 +30,6 @@ export const createSrcset = (
 
   return urls.join(', ');
 };
-
 export const getPlaceholderSrcSet = ({ originCode, locator }) =>
   DEFAULT_RESOLUTIONS.map(
     resolution =>

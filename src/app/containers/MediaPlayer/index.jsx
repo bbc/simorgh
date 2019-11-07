@@ -22,6 +22,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 
+const DEFAULT_WIDTH = 512;
 const MediaPlayerContainer = ({
   blocks,
   assetId,
