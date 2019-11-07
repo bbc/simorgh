@@ -8,13 +8,17 @@ import { sendEventBeacon } from '../ATIAnalytics/beacon';
 
 const ConsentBanner = () => {
   const { useClickTracker } = useContext(EventContext);
-  const { platform } = useContext(RequestContext);
+  const { platform, statsDestination } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
 
   useClickTracker('[data-cookie-banner]', event => {
     const eventData = event.srcElement.dataset.cookieBanner;
+
     const props = {
       service,
+      statsDestination,
+      platform,
+      pageIdentifier: `${service}.page`,
     };
 
     sendEventBeacon({
