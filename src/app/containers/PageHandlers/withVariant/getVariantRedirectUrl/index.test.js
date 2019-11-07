@@ -131,6 +131,30 @@ describe('getVariantRedirectUrl', () => {
         });
       });
     });
+
+    describe('invalid variant in cookie', () => {
+      serviceNames.forEach(service => {
+        const selectedVariant = 'xyz';
+        const defaultVariant = getVariant({ service });
+        describe(`visit /${service}`, () => {
+          it(`should redirect to /${service}/${defaultVariant}`, () => {
+            Cookie.set(`ckps_${service}`, selectedVariant);
+            const params = {
+              service,
+              variant: null,
+            };
+            const props = {
+              match: {
+                path: frontpageRegexPath,
+                params,
+              },
+            };
+            const redirectUrl = getVariantRedirectUrl(props, params.service);
+            expect(redirectUrl).toEqual(`/${service}/${defaultVariant}`);
+          });
+        });
+      });
+    });
   });
 
   describe('article', () => {
@@ -246,6 +270,34 @@ describe('getVariantRedirectUrl', () => {
             );
             expect(redirectUrl).toEqual(
               `/${service}/${local}/${id}/${selectedVariant}`,
+            );
+          });
+        });
+      });
+    });
+
+    describe('invalid variant in cookie', () => {
+      serviceNames.forEach(service => {
+        const selectedVariant = 'xyz';
+        const defaultVariant = getVariant({ service });
+        describe(`visit /${service}/${local}/${id}`, () => {
+          it(`should redirect to /${service}/${local}/${id}/${defaultVariant}`, () => {
+            Cookie.set(`ckps_${service}`, selectedVariant);
+            const params = {
+              id,
+              local,
+              service,
+              variant: null,
+            };
+            const props = {
+              match: {
+                path: articleRegexPath,
+                params,
+              },
+            };
+            const redirectUrl = getVariantRedirectUrl(props, params.service);
+            expect(redirectUrl).toEqual(
+              `/${service}/${local}/${id}/${defaultVariant}`,
             );
           });
         });
