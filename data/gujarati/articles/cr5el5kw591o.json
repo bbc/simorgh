@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Gujarati",
     "language": "gu",
-    "lastUpdated": 1562942804995,
+    "lastUpdated": 1572880058493,
     "firstPublished": 1562942802532,
     "lastPublished": 1562942802532,
     "options": {},
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "SacredGames2 : એ ગુજરાતી જેમણે 'સેક્રેડ ગેમ્સ'ના સિમ્બૉલ્સ બનાવ્યા છે",
+                        "text": "આ આ પરીક્ષણ લેખની મુખ્ય મથાળા છે",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "SacredGames2 : એ ગુજરાતી જેમણે 'સેક્રેડ ગેમ્સ'ના સિમ્બૉલ્સ બનાવ્યા છે",
+                              "text": "આ આ પરીક્ષણ લેખની મુખ્ય મથાળા છે",
                               "attributes": []
                             }
                           }
@@ -58,93 +65,313 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ક પિરાઇટ બીબીસીની આ પરીક્ષણ છબી, ફ્રાન્સનો નકશો બતાવે છે. છબી પ્રથમ ત્રણ બ્લોક્સની છે અને તેમાં કtionપ્શન છે.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ક પિરાઇટ બીબીસીની આ પરીક્ષણ છબી, ફ્રાન્સનો નકશો બતાવે છે. છબી પ્રથમ ત્રણ બ્લોક્સની છે અને તેમાં કtionપ્શન છે.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ક પિરાઇટ બીબીસીની આ પરીક્ષણ છબી, ફ્રાન્સનો નકશો બતાવે છે. છબી પ્રથમ ત્રણ બ્લોક્સની છે અને તેમાં કtionપ્શન છે.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ક પિરાઇટ બીબીસીની આ પરીક્ષણ છબી, ફ્રાન્સનો નકશો બતાવે છે. છબી પ્રથમ ત્રણ બ્લોક્સની છે અને તેમાં કtionપ્શન છે.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "4808/test/9d6cf4a0-fcbe-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "'સબ મર જાયેંગે... સિર્ફ ત્રિવેદી બચેગા...' ગણેશ ગાયતોંડેના આ ડાયલૉગમાં ફાઇનલી ત્રિવેદી કોણે હશે તેના રહસ્ય પરથી 15 ઑગસ્ટના રોજ પડદો ઊઠી જશે, કારણ કે 'સેક્રેડ ગેમ્સ-2' આવી રહી છે.",
+                  "text": "આ એક ટેક્સ્ટ બ્લ છે, જેમાં બીબીસી હવામાન હોમપેજ પર લિંક શામેલ છે.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "'સબ મર જાયેંગે... સિર્ફ ત્રિવેદી બચેગા...' ગણેશ ગાયતોંડેના આ ડાયલૉગમાં ફાઇનલી ત્રિવેદી કોણે હશે તેના રહસ્ય પરથી 15 ઑગસ્ટના રોજ પડદો ઊઠી જશે, કારણ કે 'સેક્રેડ ગેમ્સ-2' આવી રહી છે.",
+                        "text": "આ એક ટેક્સ્ટ બ્લ છે, જેમાં બીબીસી હવામાન હોમપેજ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": " પર લિંક શામેલ છે",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": " પર લિંક શામેલ છે",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ".",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01djw2m",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "નવા જંકશનથી ચાઇનીઝ સુપરહિગવે વપરાશકર્તાઓ આશ્ચર્યચકિત થયા",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "નવા જંકશનથી ચાઇનીઝ સુપરહિગવે વપરાશકર્તાઓ આશ્ચર્યચકિત થયા",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "આજે જ 'સેક્રેડ ગેમ્સ-2'નું ટ્રેલર લૉન્ચ કરવામાં આવ્યું. નવા ચહેરાઓ અને નવા રહસ્યોને ઉજાગર કરતી આ સિરીઝ 15 ઑગસ્ટના રોજ નેટફ્લિક્સ પર આવી જશે.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p01djw2m",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "આજે જ 'સેક્રેડ ગેમ્સ-2'નું ટ્રેલર લૉન્ચ કરવામાં આવ્યું. નવા ચહેરાઓ અને નવા રહસ્યોને ઉજાગર કરતી આ સિરીઝ 15 ઑગસ્ટના રોજ નેટફ્લિક્સ પર આવી જશે.",
-                        "attributes": []
+                        "id": "p01djw2m",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Motorists amazed by new China highway",
+                        "synopses": {
+                          "short": "Chinese superhighway users amazed by new junction",
+                          "medium": "The motorists got their first glimpse of the new road system earlier.",
+                          "long": "A new $450m Chinese highway opened earlier, giving Shanghai motorists their first glimpse of the future of road travel.\n\nMany were left confused."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01djw9d.jpg",
+                        "embedding": false,
+                        "advertising": true,
+                        "caption": "The road was funded by foreign investors in China",
+                        "versions": [
+                          {
+                            "versionId": "p01djw2p",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 28,
+                            "durationISO8601": "PT28S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1507025738000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 720,
+                              "width": 1280,
+                              "copyrightHolder": "BBC",
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
+                              "originCode": "mpv"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "\rઆ એક સબહેડલાઇન છે",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "\rઆ એક સબહેડલાઇન છે",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "\rઆ એક સબહેડલાઇન છે",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "\rઆ એક સબહેડલાઇન છે",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "rawImage",
                 "model": {
-                  "text": "'સેક્રેડ ગેમ્સ' નેટફ્લિક્સ પર રજૂ થયેલી ભારતની પહેલી વેબસિરીઝ છે જેમાં એક માસૂમ બાળકના બાળપણની 'હત્યા'થી લઈને સમાજમાં સાંપ્રદાયિકતાનું ઝેર ભળતા જ મરતી માનવતાની વાત દર્શાવામાં આવી છે.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "'સેક્રેડ ગેમ્સ' નેટફ્લિક્સ પર રજૂ થયેલી ભારતની પહેલી વેબસિરીઝ છે જેમાં એક માસૂમ બાળકના બાળપણની 'હત્યા'થી લઈને સમાજમાં સાંપ્રદાયિકતાનું ઝેર ભળતા જ મરતી માનવતાની વાત દર્શાવામાં આવી છે.",
-                        "attributes": []
-                      }
-                    }
-                  ]
+                  "width": 800,
+                  "height": 450,
+                  "locator": "af07/test/40758ef0-fcbf-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
                 }
-              },
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "સાથે જ તેમાં 'લવ, સેક્સ ઔર ધોખા'ના તડકાથી લઈને ક્યારેય ન સૂતા શહેર તરીકે ઓળખાતા મુંબઈને ધ્વસ્ત કરી દેવાના કાવતરાની વાત દર્શાવવામાં આવી છે.",
+                  "text": "આ પરીક્ષણ લેખ બનાવવામાં આવ્યો છે જેથી આપણે અમારી વેબસાઇટ પર ચલાવી શકીએ.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "સાથે જ તેમાં 'લવ, સેક્સ ઔર ધોખા'ના તડકાથી લઈને ક્યારેય ન સૂતા શહેર તરીકે ઓળખાતા મુંબઈને ધ્વસ્ત કરી દેવાના કાવતરાની વાત દર્શાવવામાં આવી છે.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "આ સિરીઝના દરેક એપિસોડના નામમાં હિંદુ માઇથૉલૉજીની છાપ જોવા મળે છે જેને યુનિક રીતે સિમ્બૉલ્સમાં દર્શાવવામાં આવ્યા છે.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "આ સિરીઝના દરેક એપિસોડના નામમાં હિંદુ માઇથૉલૉજીની છાપ જોવા મળે છે જેને યુનિક રીતે સિમ્બૉલ્સમાં દર્શાવવામાં આવ્યા છે.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "આ સિમ્બૉલ્સ પાછળ એક ગુજરાતીનું દિમાગ છે.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "આ સિમ્બૉલ્સ પાછળ એક ગુજરાતીનું દિમાગ છે.",
+                        "text": "આ પરીક્ષણ લેખ બનાવવામાં આવ્યો છે જેથી આપણે અમારી વેબસાઇટ પર ચલાવી શકીએ.",
                         "attributes": []
                       }
                     }
