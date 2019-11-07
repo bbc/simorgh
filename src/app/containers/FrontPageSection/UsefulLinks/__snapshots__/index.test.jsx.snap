@@ -94,6 +94,7 @@ exports[`Useful links should render multiple correctly 1`] = `
     >
       <a
         class="c3"
+        data-e2e="useful-link-item"
         href="https://www.bbc.com/igbo/egwuregwu-49946491"
       >
         Ethiopia: Ndị uweojii agba gbuola ndị mmadụ
@@ -105,6 +106,7 @@ exports[`Useful links should render multiple correctly 1`] = `
     >
       <a
         class="c3"
+        data-e2e="useful-link-item"
         href="https://www.bbc.com/igbo/egwuregwu-49946491"
       >
         Onye isi ala ndị New Zealand dị ime
@@ -116,6 +118,7 @@ exports[`Useful links should render multiple correctly 1`] = `
     >
       <a
         class="c3"
+        data-e2e="useful-link-item"
         href="https://www.bbc.com/igbo/egwuregwu-49946491"
       >
         Egbuola ndị na-eme ngagharị iwe na Congo
@@ -127,6 +130,7 @@ exports[`Useful links should render multiple correctly 1`] = `
     >
       <a
         class="c3"
+        data-e2e="useful-link-item"
         href="https://www.bbc.com/igbo/egwuregwu-49946491"
       >
         CHAN: Naịjirịa na Guinea nọ na ịrụ Group C
@@ -138,6 +142,7 @@ exports[`Useful links should render multiple correctly 1`] = `
     >
       <a
         class="c3"
+        data-e2e="useful-link-item"
         href="https://www.bbc.com/igbo/egwuregwu-49946491"
       >
         Yabasị a na-achụ TB ọsọ
@@ -201,6 +206,7 @@ exports[`Useful links should render one correctly 1`] = `
 >
   <a
     class="c1"
+    data-e2e="useful-link-item"
     href="https://www.bbc.com/igbo/egwuregwu-49946491"
   >
     Ethiopia: Ndị uweojii agba gbuola ndị mmadụ
