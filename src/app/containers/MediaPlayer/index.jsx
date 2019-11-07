@@ -10,10 +10,10 @@ import {
 import Caption from '../Caption';
 import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
-import getPlaceholderSrc from '#lib/utilities/srcSet/placeholder';
 import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import formatDuration from '#lib/utilities/formatDuration';
+import buildIChefURL from '#lib/utilities/ichefURL';
 import useToggle from '../Toggle/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -45,8 +45,8 @@ const MediaPlayerContainer = ({
     return null;
   }
 
-  const imageUrl = path(
-    ['model', 'blocks', 1, 'model', 'blocks', 0, 'model', 'locator'],
+  const { originCode, locator } = path(
+    ['model', 'blocks', 1, 'model', 'blocks', 0, 'model'],
     aresMediaBlock,
   );
   const versionId = path(
@@ -83,9 +83,12 @@ const MediaPlayerContainer = ({
     return null; // this should be the holding image with an error overlay
   }
 
-  const placeholderSrc = getPlaceholderSrc(imageUrl, DEFAULT_WIDTH);
-  const placeholderSrcset = getPlaceholderSrcSet(imageUrl);
-
+  const placeholderSrcset = getPlaceholderSrcSet({ originCode, locator });
+  const placeholderSrc = buildIChefURL({
+    originCode,
+    locator,
+    resolution: DEFAULT_WIDTH,
+  });
   const embedSource = embedUrl({
     requestUrl: `${assetId}/${versionId}/${lang}`,
     type: assetType,
