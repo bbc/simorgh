@@ -50,6 +50,11 @@ export const service = {
       currentPage: 'Ojú ewé to wà yìí',
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
       relatedContent: 'Àwọn afíkun lórí ìròyìn yìí',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -157,10 +162,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/yoruba/institutional-48528718',
-          text: 'Ìdí tí ẹ fi le è nígbàagbọ́ nínú ìròyìn BBC',
-        },
-        {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'Ìlànà Lílò',
         },
@@ -191,7 +192,10 @@ export const service = {
         title: 'Ìròyìn',
         url: '/yoruba',
       },
-      { title: 'Eré ìdárayá', url: '/yoruba/ere_idaraya' },
+      {
+        title: 'Eré ìdárayá',
+        url: '/yoruba/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592',
+      },
       {
         title: 'Fídíò',
         url: '/yoruba/media/video',

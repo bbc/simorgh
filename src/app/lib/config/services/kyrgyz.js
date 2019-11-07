@@ -8,7 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `ky`,
-    articleAuthor: `https://www.facebook.com/bbckyrgyz`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Жаңылоо',
     atiAnalyticsAppName: 'news-kyrgyz',
     atiAnalyticsProducerId: '58',
@@ -48,6 +48,11 @@ export const service = {
       currentPage: 'Ачылып турган баракча',
       skipLinkText: 'Сайтка өтүү',
       relatedContent: 'Тема боюнча башка макалалар',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -159,10 +164,6 @@ export const service = {
         text: 'Башка интернет сайттардын мазмуну боюнча биздин позиция.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/kyrgyz/institutional-49677275',
-          text: 'Эмнеге BBC News ишенсе болот?',
-        },
         {
           href: 'https://www.bbc.com/kyrgyz/institutional-38157280',
           text: 'Колдонуу эрежелери',

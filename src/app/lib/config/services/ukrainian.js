@@ -48,6 +48,11 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'Перейти до змісту',
       relatedContent: 'Related content',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -153,10 +158,6 @@ export const service = {
         text: 'Read about our approach to external linking.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
-        },
         {
           href: 'https://www.bbc.com/terms',
           text: 'Terms of Use',

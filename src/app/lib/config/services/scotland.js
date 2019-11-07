@@ -56,6 +56,11 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
       relatedContent: 'Related content',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -148,7 +153,6 @@ export const service = {
       lastUpdated: 'Last updated: ',
     },
     footer: {
-      trustProjectLink: {},
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text: 'Read about our approach to external linking.',

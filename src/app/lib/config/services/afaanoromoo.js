@@ -49,6 +49,11 @@ export const service = {
       currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
       relatedContent: 'Odeessa kana irratti dabalata',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -150,10 +155,6 @@ export const service = {
         text: 'Gara geessituu alaatti akkaataa itti hojjennu dubbisi.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/afaanoromoo/institutional-49281861',
-          text: 'BBC News maaliif amanuu dandeessa',
-        },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'Haala itti fayyadamaa',

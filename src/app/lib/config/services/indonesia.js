@@ -25,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Keterangan, ',
     imageCopyrightOffscreenText: 'Sumber gambar, ',
     locale: `id-ID`,
-    datetimeLocale: `id-id`,
+    datetimeLocale: `id`,
     service: 'indonesia',
     serviceName: 'Indonesia',
     themeColor: `${C_POSTBOX}`,
@@ -48,6 +48,11 @@ export const service = {
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',
       relatedContent: 'Berita terkait',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -150,10 +155,6 @@ export const service = {
         text: 'Baca tentang peraturan baru terkait link eksternal.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/indonesia/institutional-49283175',
-          text: 'Alasan Anda dapat mempercayai BBC News',
-        },
         {
           href: 'https://www.bbc.com/indonesia/institutional-37818421',
           text: 'Peraturan Penggunaan',

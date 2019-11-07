@@ -8,7 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `pa`,
-    articleAuthor: `https://www.facebook.com/bbcnewspunjabi`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ਅਪਡੇਟ',
     atiAnalyticsAppName: 'news-punjabi',
     atiAnalyticsProducerId: '73',
@@ -27,7 +27,7 @@ export const service = {
     locale: `pa-IN`,
     datetimeLocale: `pa-in`,
     service: 'punjabi',
-    serviceName: 'News ਪੰਜਾਬੀ',
+    serviceName: 'Punjabi',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewspunjabi',
     twitterSite: '@bbcnewspunjabi',
@@ -48,6 +48,11 @@ export const service = {
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
       relatedContent: 'Related content',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -151,7 +156,7 @@ export const service = {
       },
       {
         title: 'ਭਾਰਤ',
-        url: '/punjabi/india',
+        url: '/punjabi/topics/5a08f030-710f-4168-acee-67294a90fc75',
       },
       {
         title: 'ਕੌਮਾਂਤਰੀ',
@@ -168,10 +173,6 @@ export const service = {
         text: 'ਬਾਹਰੀ ਲਿੰਕਿੰਗ ਲਈ ਸਾਡੇ ਤਰੀਕੇ ਬਾਰੇ ਪੜ੍ਹੋ',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/punjabi/institutional-49282853',
-          text: "ਤੁਸੀਂ ਬੀਬੀਸੀ 'ਤੇ ਕਿਉਂ ਵਿਸ਼ਵਾਸ਼ ਕਰ ਸਕਦੇ ਹੋ",
-        },
         {
           href: 'https://www.bbc.com/terms',
           text: 'ਵਰਤੋ ਦੀਆਂ ਸ਼ਰਤਾਂ',

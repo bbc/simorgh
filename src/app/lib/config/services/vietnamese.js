@@ -26,7 +26,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Chụp lại, ',
     imageCopyrightOffscreenText: 'Nguồn hình ảnh, ',
     locale: `vi-VN`,
-    datetimeLocale: `vi-vn`,
+    datetimeLocale: `vi`,
     service: 'vietnamese',
     serviceName: 'Tiếng Việt',
     themeColor: `${C_POSTBOX}`,
@@ -49,6 +49,11 @@ export const service = {
       currentPage: 'Trang hiện nay',
       skipLinkText: 'Bỏ qua để xem nội dung',
       relatedContent: 'Tin liên quan',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -147,10 +152,6 @@ export const service = {
         text: 'Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/vietnamese/institutional-49283563',
-          text: 'Tại sao bạn có thể tin tưởng BBC News',
-        },
         {
           href: 'https://www.bbc.com/vietnamese/institutional-37622991',
           text: 'Điều khoản sử dụng',

@@ -48,6 +48,11 @@ export const service = {
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -156,10 +161,6 @@ export const service = {
         text: 'Karanta hanyoyin da muke bi dangane da adireshin waje.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/hausa/game-da-mu-49283501',
-          text: 'Me yasa za ka aminta da BBC',
-        },
         {
           href: 'https://www.bbc.com/hausa/game-da-mu-37377086',
           text: 'Sharudan yin amfani',

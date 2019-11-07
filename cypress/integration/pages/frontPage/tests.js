@@ -3,6 +3,8 @@ import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
 // Limiting to only one service
 const serviceHasIndexAlsos = service => service === 'thai';
+// Limiting to one service for now
+const serviceHasPublishedPromo = service => service === 'persian';
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
@@ -92,6 +94,38 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           });
         });
 
+        if (
+          serviceHasPublishedPromo(service) &&
+          Cypress.env('APP_ENV') !== 'local'
+        ) {
+          it('individual promo should link to corresponding article pages and back navigation should link to frontpage', () => {
+            let currentURL = null;
+            cy.get('h3')
+              .eq(3)
+              .within(() => {
+                cy.get('a')
+                  .should('have.attr', 'href')
+                  .then(href => {
+                    cy.request({
+                      url: href,
+                      failOnStatusCode: false,
+                    }).then(resp => {
+                      expect(resp.status).to.not.equal(404);
+                    });
+                  });
+              });
+
+            cy.url().then(url => {
+              currentURL = url;
+              cy.get('h3')
+                .eq(3)
+                .click();
+              cy.go('back');
+              cy.url().should('eq', currentURL);
+            });
+          });
+        }
+
         it('should contain Index Alsos if relatedItems block exists, but only within topstories block', () => {
           cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
             ({ body }) => {
@@ -130,6 +164,50 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                       'not.exist',
                     );
                   });
+              }
+            },
+          );
+        });
+        it('should contain Useful Links if usefulLinks block data exists', () => {
+          cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
+            ({ body }) => {
+              const pageData = body.content.groups;
+              const usefulLinks = pageData.find(data => {
+                return data.type === 'useful-links';
+              });
+
+              const contentTypes = [
+                'Text',
+                'Feature',
+                'Audio',
+                'Video',
+                'Gallery',
+                'Guide',
+              ];
+
+              let usefulLinksItems = [];
+              if (usefulLinks) {
+                usefulLinksItems = usefulLinks.items.filter(item => {
+                  return (
+                    item.assetTypeCode === 'PRO' &&
+                    contentTypes.includes(item.contentType)
+                  );
+                });
+              }
+
+              const isValidUsefulLinks =
+                usefulLinks &&
+                'strapline' in usefulLinks &&
+                usefulLinksItems.length;
+
+              if (isValidUsefulLinks) {
+                //  We include the hasStrapline as we don't render Useful Links
+                //  if we don't receive a strapline in the data
+                cy.get('[aria-labelledby="Useful-links"]').should('be.visible');
+              } else {
+                cy.get('[aria-labelledby="Useful-links"]').should(
+                  'not.be.visible',
+                );
               }
             },
           );

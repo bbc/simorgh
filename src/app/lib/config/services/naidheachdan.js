@@ -57,6 +57,11 @@ export const service = {
       currentPage: 'An duilleag seo',
       skipLinkText: 'Air adhart',
       relatedContent: 'Co-cheangailte',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -162,10 +167,6 @@ export const service = {
           'Leugh mun fheallsanachd againn mu cheangaileachan dhan taobh a-muigh',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Carson as urrainear earbsa a chur sa BhBC',
-        },
         {
           href: 'https://www.bbc.com/terms',
           text: 'Teirmean Cleachdaidh',

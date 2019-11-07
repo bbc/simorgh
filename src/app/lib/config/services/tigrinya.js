@@ -52,6 +52,11 @@ export const service = {
       currentPage: 'ህሉው ገጽ',
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽል',
       relatedContent: 'ተዛማዲ ትሕዝቶ',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -147,10 +152,6 @@ export const service = {
         text: 'ንናይ ደገ ርከብ ብዝምልከት፡ ናትና ኣረኣእያ እንታይ ከምዝመስል ኣንብቡ።',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/tigrinya/institutional-49283259',
-          text: 'ን BBC News ንምንታይ ክትኣምንዎ ከምዘለኩም',
-        },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'ውዕሊ ኣጠቓቕማ',

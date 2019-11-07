@@ -50,6 +50,11 @@ export const service = {
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       relatedContent: 'อ่านข่าวนี้เพิ่มเติม',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -181,10 +186,6 @@ export const service = {
         text: 'นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/thai/institutional-49281839',
-          text: 'ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้',
-        },
         {
           href: 'https://www.bbc.com/thai/institutional-38403477',
           text: 'เงื่อนไขการใช้งานของ BBC',

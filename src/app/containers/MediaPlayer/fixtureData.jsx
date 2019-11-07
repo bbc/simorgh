@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, shape, bool, arrayOf, object } from 'prop-types';
+import { string, shape, arrayOf, object, bool } from 'prop-types';
 import { singleTextBlock } from '#models/blocks';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -8,13 +8,7 @@ import MediaPlayerContainer from '.';
 
 const captionBlock = {
   model: {
-    blocks: [
-      {
-        model: {
-          blocks: [singleTextBlock('Caption')],
-        },
-      },
-    ],
+    blocks: [singleTextBlock('Media Player With Caption')],
   },
   type: 'caption',
 };
@@ -289,7 +283,7 @@ const missingVpidBlocks = [
   },
 ];
 
-const defaultToggles = {
+export const defaultToggles = {
   local: {
     mediaPlayer: {
       enabled: true,
@@ -319,7 +313,9 @@ const GenerateFixtureData = ({
   platform,
   toggleState,
   blocks,
-  placeholder,
+  assetType,
+  assetId,
+  showPlaceholder,
 }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
@@ -334,7 +330,12 @@ const GenerateFixtureData = ({
       <ToggleContext.Provider
         value={{ toggleState, toggleDispatch: jest.fn() }}
       >
-        <MediaPlayerContainer blocks={blocks} placeholder={placeholder} />
+        <MediaPlayerContainer
+          blocks={blocks}
+          assetId={assetId}
+          assetType={assetType}
+          showPlaceholder={showPlaceholder}
+        />
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
@@ -344,35 +345,53 @@ GenerateFixtureData.propTypes = {
   platform: string.isRequired,
   toggleState: shape({}),
   blocks: arrayOf(object).isRequired,
-  placeholder: bool,
+  assetType: string.isRequired,
+  assetId: string.isRequired,
+  showPlaceholder: bool.isRequired,
 };
 
 GenerateFixtureData.defaultProps = {
   toggleState: defaultToggles,
-  placeholder: true,
 };
 
-export const VideoCanonical = (
+export const VideoCanonicalWithPlaceholder = (
   <GenerateFixtureData
     platform="canonical"
     blocks={[validAresMediaVideoBlock]}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
+  />
+);
+
+export const VideoCanonicalNoPlaceholder = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={[validAresMediaVideoBlock]}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder={false}
   />
 );
 
 export const VideoAmp = (
-  <GenerateFixtureData platform="amp" blocks={[validAresMediaVideoBlock]} />
-);
-
-export const VideoCanonicalNoPlaceHolder = (
   <GenerateFixtureData
-    platform="canonical"
+    platform="amp"
     blocks={[validAresMediaVideoBlock]}
-    placeholder={false}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
   />
 );
 
 export const VideoCanonicalNoVersionId = (
-  <GenerateFixtureData platform="canonical" blocks={missingVpidBlocks} />
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={missingVpidBlocks}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
+  />
 );
 
 export const VideoCanonicalToggledOff = (
@@ -380,5 +399,28 @@ export const VideoCanonicalToggledOff = (
     platform="canonical"
     blocks={[validAresMediaVideoBlock]}
     toggleState={toggleStateOff}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
+  />
+);
+
+export const VideoCanonicalWithCaption = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={validVideoWithCaptionBlock}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
+  />
+);
+
+export const VideoAmpWithCaption = (
+  <GenerateFixtureData
+    platform="amp"
+    blocks={validVideoWithCaptionBlock}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
   />
 );

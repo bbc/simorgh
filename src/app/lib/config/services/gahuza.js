@@ -48,6 +48,11 @@ export const service = {
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
       relatedContent: 'Ibindi bisa n’ibi',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -154,10 +159,6 @@ export const service = {
         text: "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
       },
       links: [
-        {
-          href: 'https://www.bbc.com/gahuza/institutional-49283343',
-          text: 'Igituma ushobora kwizera BBC News',
-        },
         {
           href: 'https://www.bbc.com/gahuza/institutional-35754053',
           text: 'Ingingo zo gukoresha urubuga',

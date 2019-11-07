@@ -52,6 +52,11 @@ export const service = {
       currentPage: 'መነሻ ገፅ',
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -147,10 +152,6 @@ export const service = {
         text: 'ስለ ውጪ ሊንኮች ያለን አቀራረብ',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/amharic/institutional-49283133',
-          text: 'ቢቢሲን ለምን ማመን እንደሚገባዎ',
-        },
         {
           href: 'https://www.bbc.com/usingthebbc/terms/',
           text: 'የአጠቃቀም ደንብ',

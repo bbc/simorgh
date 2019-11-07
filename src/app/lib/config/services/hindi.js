@@ -8,7 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `hi`,
-    articleAuthor: `https://www.facebook.com/bbchindi`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-hindi',
     atiAnalyticsProducerId: '52',
@@ -27,7 +27,7 @@ export const service = {
     locale: `hi-IN`,
     datetimeLocale: `hi`,
     service: 'hindi',
-    serviceName: 'News हिंदी',
+    serviceName: 'Hindi',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbchindi',
     twitterSite: '@bbchindi',
@@ -49,6 +49,11 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'सामग्री को स्किप करें',
       relatedContent: 'Related content',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -159,10 +164,6 @@ export const service = {
         text: 'Read about our approach to external linking.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
-        },
         {
           href: 'https://www.bbc.com/terms',
           text: 'Terms of Use',

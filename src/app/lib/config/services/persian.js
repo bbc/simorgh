@@ -54,6 +54,11 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '۴۰۴',
@@ -172,10 +177,6 @@ export const service = {
         text: 'سیاست ما درباره لینک دادن به سایت های دیگر.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟',
-        },
         {
           href: 'https://www.bbc.com/persian/institutional-37474133',
           text: 'شرایط استفاده',

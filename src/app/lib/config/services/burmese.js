@@ -26,7 +26,7 @@ export const service = {
     defaultCaptionOffscreenText: 'Caption, ',
     imageCopyrightOffscreenText: 'Image source, ',
     locale: `my-MM`,
-    datetimeLocale: `my-mm`,
+    datetimeLocale: `my`,
     service: 'burmese',
     serviceName: 'မြန်မာ',
     themeColor: `${C_POSTBOX}`,
@@ -50,6 +50,11 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားပါ',
       relatedContent: 'Related content',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -161,10 +166,6 @@ export const service = {
         text: 'Read about our approach to external linking.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
-        },
         {
           href: 'https://www.bbc.com/terms',
           text: 'Terms of Use',

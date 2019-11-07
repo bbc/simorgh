@@ -57,6 +57,11 @@ export const service = {
       currentPage: 'Y dudalen bresennol',
       skipLinkText: `Neidio i'r cynnwys`,
       relatedContent: 'Cynnwys perthnasol',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -158,10 +163,6 @@ export const service = {
         text: "Sut ry'n ni'n defnyddio dolenni allanol.",
       },
       links: [
-        {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Pam y gallwch ymddiried yn BBC Cymru Fyw',
-        },
         {
           href: 'https://www.bbc.com/usingthebbc/terms/cy/',
           text: 'Telerau Defnyddio',

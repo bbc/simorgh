@@ -48,6 +48,11 @@ export const service = {
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
       relatedContent: 'Lire plus',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -162,10 +167,6 @@ export const service = {
         text: 'Découvrez notre approche en matière de liens externes.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/afrique/institutionelles-49283281',
-          text: 'Pourquoi vous pouvez faire confiance à BBC News',
-        },
         {
           href: 'https://www.bbc.com/afrique/institutionelles-36826639',
           text: "Conditions d'utilisation",

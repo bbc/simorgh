@@ -1,6 +1,7 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
+import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockByType, getBlockData } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
@@ -11,6 +12,9 @@ const serviceHasCaption = service => service === 'news';
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
 const serviceHasTimestamp = service => ['news', 'urdu'].includes(service);
+
+// TODO: Remove once we have inline link on article pages linking to another article page
+const serviceHasInlineLink = service => service === 'news';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -118,16 +122,16 @@ export const testsThatFollowSmokeTestConfig = ({
 
               cy.get('figure')
                 .eq(0)
-                .then($fig => {
-                  if ($fig.find('p').length > 0) {
-                    cy.get('figure p')
-                      .eq(0)
-                      .should('contain', copyrightHolder);
-                  } else {
+                .within(() => {
+                  if (copyrightHolder === 'BBC') {
                     // If an image has a BBC copyright, the copyright holder (<p>) does not appear on images.
                     // This is why we're asserting the value. If the copyright does not appear and is not
                     // 'BBC' then it is clear there is an error with this component.
-                    expect(copyrightHolder).to.eq('BBC');
+                    cy.get('p[class^="Copyright"]').should('not.exist');
+                  } else {
+                    cy.get('p[class^="Copyright"]')
+                      .should('be.visible')
+                      .and('contain', copyrightHolder);
                   }
                 });
             },
@@ -144,6 +148,26 @@ export const testsThatFollowSmokeTestConfig = ({
           },
         );
       });
+
+      if (
+        serviceHasInlineLink(service) &&
+        (Cypress.env('APP_ENV') === 'local' ||
+          Cypress.env('APP_ENV') === 'test')
+      ) {
+        it('should have an inlink link to an article page', () => {
+          cy.get('[class^="InlineLink"]')
+            .eq(1)
+            .should('have.attr', 'href')
+            .then(href => {
+              cy.request({
+                url: href,
+                failOnStatusCode: false,
+              }).then(resp => {
+                expect(resp.status).to.not.equal(404);
+              });
+            });
+        });
+      }
 
       if (serviceHasTimestamp(service)) {
         it('should render a timestamp', () => {
@@ -164,6 +188,40 @@ export const testsThatFollowSmokeTestConfig = ({
               }
             },
           );
+        });
+      }
+
+      // `appToggles` tells us whether a feature is toggled on or off in the current environment.
+      if (appToggles.mediaPlayer.enabled) {
+        describe('Media Player', () => {
+          it('should have a visible caption beneath a mediaplayer', () => {
+            cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+              ({ body }) => {
+                const media = getBlockData('video', body);
+                if (media) {
+                  const captionBlock = getBlockByType(
+                    media.model.blocks,
+                    'caption',
+                  );
+
+                  if (captionBlock) {
+                    const {
+                      text,
+                    } = captionBlock.model.blocks[0].model.blocks[0].model;
+
+                    cy.get('figcaption')
+                      .eq(1)
+                      .within(() => {
+                        cy.get('p')
+                          .eq(0)
+                          .should('be.visible')
+                          .should('contain', text);
+                      });
+                  }
+                }
+              },
+            );
+          });
         });
       }
     });

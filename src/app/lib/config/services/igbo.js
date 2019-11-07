@@ -52,6 +52,11 @@ export const service = {
       currentPage: 'Peegi ị nọ ugbua',
       skipLinkText: 'Wụga n’ọdịnaya',
       relatedContent: "Ihe ndị ọzọ n'akụkọ a",
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         home: 'Akụkọ',
         currentPage: 'Current page',
@@ -156,7 +161,7 @@ export const service = {
       },
       {
         title: 'Egwuregwu',
-        url: '/igbo/egwuregwu',
+        url: '/igbo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592',
       },
       {
         title: 'Ihe nkiri',
@@ -177,10 +182,6 @@ export const service = {
         text: 'Usoro anyị maka njikọ dị na mpụga.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/igbo/institutional-48529074',
-          text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
-        },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms',
           text: 'Usoro Ojiji',

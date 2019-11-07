@@ -52,6 +52,11 @@ export const service = {
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
       relatedContent: 'المزيد حول هذه القصة',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -161,10 +166,6 @@ export const service = {
         text: 'سياستنا بخصوص الروابط الخارجية.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/arabic/institutional-49283069',
-          text: 'لماذا يمكنك الإعتماد على أخبار بي بي سي',
-        },
         {
           href: 'https://www.bbc.com/arabic/institutional-37731351',
           text: 'شروط الاستخدام',

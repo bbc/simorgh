@@ -25,7 +25,7 @@ export const service = {
     defaultCaptionOffscreenText: '설명 ',
     imageCopyrightOffscreenText: '사진 출처 ',
     locale: `ko-KO`,
-    datetimeLocale: `ko-ko`,
+    datetimeLocale: `ko`,
     service: 'korean',
     serviceName: 'News 코리아',
     themeColor: `${C_POSTBOX}`,
@@ -48,6 +48,11 @@ export const service = {
       currentPage: '현재 페이지',
       skipLinkText: '내용으로 건너뛰기',
       relatedContent: '관련 기사 더 보기',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -145,10 +150,6 @@ export const service = {
         text: '외부 콘텐츠 링크에 대한 본사 정책 보기.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/korean/institutional-49283197',
-          text: 'BBC News를 신뢰할 수 있는 이유',
-        },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: '이용 약관',

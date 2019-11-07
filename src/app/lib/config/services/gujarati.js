@@ -8,7 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `gu`,
-    articleAuthor: `https://www.facebook.com/bbcnewsgujarati`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news-gujarati',
     atiAnalyticsProducerId: '50',
@@ -27,7 +27,7 @@ export const service = {
     locale: `gu-IN`,
     datetimeLocale: `gu`,
     service: 'gujarati',
-    serviceName: 'News ગુજરાતી',
+    serviceName: 'Gujarati',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsgujarati',
     twitterSite: '@bbcnewsgujarati',
@@ -48,6 +48,11 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'સામગ્રી પર જાઓ',
       relatedContent: 'Related content',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -154,10 +159,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
-        },
-        {
           href: 'https://www.bbc.com/terms',
           text: 'Terms of Use',
         },
@@ -194,7 +195,7 @@ export const service = {
       },
       {
         title: 'ભારત',
-        url: '/gujarati/india',
+        url: '/gujarati/topics/5a08f030-710f-4168-acee-67294a90fc75',
       },
       {
         title: 'આંતરરાષ્ટ્રીય',

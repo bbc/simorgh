@@ -53,6 +53,11 @@ export const service = {
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
       relatedContent: 'اسی بارے میں',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -151,10 +156,6 @@ export const service = {
         text: 'بیرونی لنکس کے بارے میں ہماری پالیسی.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/urdu/institutional-49282935',
-          text: 'جانیے کہ آپ بی بی سی نیوز پر کیوں اعتماد کر سکتے ہیں',
-        },
         {
           href: 'https://www.bbc.com/urdu/institutional-37588278',
           text: 'استعمال کے ضوابط',

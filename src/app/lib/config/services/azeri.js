@@ -48,6 +48,11 @@ export const service = {
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -149,10 +154,6 @@ export const service = {
         text: 'Bizim kənar keçidlərə dair yanaşmamız barədə oxuyun.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/azeri/institutional-49283479',
-          text: 'BBC News-a niyə etibar etməlisiniz',
-        },
         {
           href: 'https://www.bbc.com/azeri/institutional-37131047',
           text: 'İstifadə qaydaları',

@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
 
 def dockerRegistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
-def nodeImageVersion = "10.16.3"
-def nodeImage = "${dockerRegistry}/bbc-news/node-10-lts:${nodeImageVersion}"
+def nodeImageVersion = "12.13.0"
+def nodeImage = "${dockerRegistry}/bbc-news/node-12-lts:${nodeImageVersion}"
 
 def appGitCommit = ""
 def appGitCommitAuthor = ""
@@ -255,11 +255,11 @@ pipeline {
       agent any
       steps {
         // This stage triggers the B/G deployment when merging Simorgh
-        build(
-          job: 'simorgh-blue-green/add-alb-updater-lambda',
-          propagate: false,
-          wait: false
-        )
+        // build(
+        //   job: 'simorgh-blue-green/add-alb-updater-lambda',
+        //   propagate: false,
+        //   wait: false
+        // )
         unstash 'simorgh'
         build(
           job: 'simorgh-infrastructure-test/latest',

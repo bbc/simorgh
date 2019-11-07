@@ -1,11 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line
 import { withKnobs } from '@storybook/addon-knobs';
-import { dirDecorator } from '@bbc/psammead-storybook-helpers';
+import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import MediaPlayerContainer from '.';
 import { validVideoWithCaptionBlock } from './fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
 const defaultToggles = {
@@ -19,7 +20,7 @@ const defaultToggles = {
 storiesOf('Containers|Media Player/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
-  .addDecorator(dirDecorator)
+  .addDecorator(withServicesKnob())
   .add('default', ({ service }) => {
     return (
       <RequestContextProvider
@@ -30,9 +31,11 @@ storiesOf('Containers|Media Player/Canonical', module)
         pageType="article"
         bbcOrigin="https://www.test.bbc.com"
       >
-        <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
-          <MediaPlayerContainer blocks={validVideoWithCaptionBlock} />
-        </ToggleContext.Provider>
+        <ServiceContextProvider service="news">
+          <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
+            <MediaPlayerContainer blocks={validVideoWithCaptionBlock} />
+          </ToggleContext.Provider>
+        </ServiceContextProvider>
       </RequestContextProvider>
     );
   });
@@ -40,7 +43,7 @@ storiesOf('Containers|Media Player/Canonical', module)
 storiesOf('Containers|Media Player/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
-  .addDecorator(dirDecorator)
+  .addDecorator(withServicesKnob())
   .addDecorator(AmpDecorator)
   .add('default', ({ service }) => {
     return (
@@ -52,9 +55,11 @@ storiesOf('Containers|Media Player/AMP', module)
         pageType="article"
         bbcOrigin="https://www.test.bbc.com"
       >
-        <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
-          <MediaPlayerContainer blocks={validVideoWithCaptionBlock} />
-        </ToggleContext.Provider>
+        <ServiceContextProvider service="news">
+          <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
+            <MediaPlayerContainer blocks={validVideoWithCaptionBlock} />
+          </ToggleContext.Provider>
+        </ServiceContextProvider>
       </RequestContextProvider>
     );
   });

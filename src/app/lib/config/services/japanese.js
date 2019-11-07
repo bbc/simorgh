@@ -26,7 +26,7 @@ export const service = {
     defaultCaptionOffscreenText: 'キャプション ',
     imageCopyrightOffscreenText: '画像提供 ',
     locale: `ja-JP`,
-    datetimeLocale: `ja-jp`,
+    datetimeLocale: `ja`,
     service: 'japanese',
     serviceName: 'ニュース',
     themeColor: `${C_POSTBOX}`,
@@ -49,6 +49,11 @@ export const service = {
       currentPage: '現在のページ',
       skipLinkText: 'コンテンツへ移動',
       relatedContent: '関連コンテンツ',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -148,10 +153,6 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/japanese/help-49677253',
-          text: 'BBCニュースが信頼できる理由',
-        },
-        {
           href: 'https://www.bbc.com/japanese/help/terms',
           text: '利用条件',
         },
@@ -180,11 +181,6 @@ export const service = {
       {
         title: 'ホーム',
         url: '/japanese',
-      },
-      {
-        title: 'ラグビーW杯',
-        url:
-          'https://www.bbc.com/japanese/topics/ef55ff8e-8d36-4473-9f11-3ba9fa9ac787',
       },
       {
         title: '日本',

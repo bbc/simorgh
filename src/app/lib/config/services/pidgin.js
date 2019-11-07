@@ -52,6 +52,11 @@ export const service = {
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
       relatedContent: 'Another thing we de for inside dis tori',
+      mediaAssetPage: {
+        mediaPlayer: 'Media player',
+        audioPlayer: 'Audio player',
+        videoPlayer: 'Video player',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -173,7 +178,7 @@ export const service = {
       },
       {
         title: 'Sport',
-        url: '/pidgin/sport',
+        url: '/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592',
       },
       {
         title: 'Entertainment',
@@ -194,10 +199,6 @@ export const service = {
         text: 'De way wey we de take go external link.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/pidgin/institutional-48528766',
-          text: 'Why you fit trust BBC News',
-        },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'How dem dey take use am',
