@@ -7,6 +7,7 @@ const config = {
     atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
     chartbeatEnabled: false,
     avEmbedBaseUrl: 'https://www.bbc.com',
+    standaloneErrorPages: false,
   },
   test: {
     baseUrl: 'https://www.test.bbc.com',
@@ -16,6 +17,7 @@ const config = {
     atiUrl: 'https://logws1363.ati-host.net?',
     chartbeatEnabled: true,
     avEmbedBaseUrl: 'https://www.test.bbc.com',
+    standaloneErrorPages: false,
   },
   local: {
     baseUrl: 'http://localhost:7080',
@@ -25,6 +27,7 @@ const config = {
     atiUrl: 'https://logws1363.ati-host.net?',
     chartbeatEnabled: false,
     avEmbedBaseUrl: 'https://www.test.bbc.com',
+    standaloneErrorPages: true,
   },
 };
 
