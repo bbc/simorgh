@@ -49,7 +49,7 @@ const routes = [
     pageType: 'MAP',
   },
   {
-    path: errorPageRegexPath,
+    path: errorPagePath,
     exact: true,
     component: ErrorPage,
     getInitialData: () => Promise.resolve({ status: 200 }),
