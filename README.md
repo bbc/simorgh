@@ -10,7 +10,7 @@
 
 The BBC websites are being rebuilt from the bottom up as ReactJS based Single Page Applications, that will (eventually) also be fully fledged Progressive Web Apps. This application also builds Accelerated Mobile Pages for every regular HTML page that it renders.
 
-Simorgh will be used across the BBC World Service News websites ([some are already live](https://github.com/bbc/simorgh/wiki/Simorgh-Pages)), with tens of millions of users, and growing very fast.
+Simorgh will be used across the BBC World Service News websites ([some are already live](https://github.com/bbc/simorgh/wiki/Simorgh-Pages)), with tens of millions of users, and growing very fast..
 
 We lean heavily on the component library called [Psammead](https://github.com/bbc/psammead/) that we also maintain. This library is also open source and used even more widely across the BBC.
 
