@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Telugu",
     "language": "te",
-    "lastUpdated": 1562942622162,
+    "lastUpdated": 1572879993926,
     "firstPublished": 1562942618861,
     "lastPublished": 1562942618861,
     "options": {},
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Telugu"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "డక్‌వర్త్ లూయీస్: క్రికెట్ మ్యాచ్‌లో వర్షం పడితే ఫలితం తేల్చేది వీళ్లే... అసలు ఇది ఎలా పుట్టింది?",
+                        "text": "ఈ పరీక్షా వ్యాసం యొక్క శీర్షిక ఇది",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "డక్‌వర్త్ లూయీస్: క్రికెట్ మ్యాచ్‌లో వర్షం పడితే ఫలితం తేల్చేది వీళ్లే... అసలు ఇది ఎలా పుట్టింది?",
+                              "text": "ఈ పరీక్షా వ్యాసం యొక్క శీర్షిక ఇది",
                               "attributes": []
                             }
                           }
@@ -58,108 +65,313 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "b931/test/574551d0-fcbd-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "అది 1992. సిడ్నీ మైదానంలో ఇంగ్లండ్-దక్షిణాఫ్రికా మధ్య సెమీపైనల్ జరుగుతోంది. 252 పరుగుల టార్గెట్ చేధించేందుకు దక్షిణాఫ్రికా బ్యాటింగ్ చేస్తోంది. విజయం కోసం 13 బంతుల్లో 22 పరుగులు చేయాలి.",
+                  "text": "ఇది టెక్స్ట్ బ్లాక్, ఇది BBC వాతావరణ హోమ్‌పేజీకి లింక్‌ను కలిగి ఉంది.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "అది 1992. సిడ్నీ మైదానంలో ఇంగ్లండ్-దక్షిణాఫ్రికా మధ్య సెమీపైనల్ జరుగుతోంది. 252 పరుగుల టార్గెట్ చేధించేందుకు దక్షిణాఫ్రికా బ్యాటింగ్ చేస్తోంది. విజయం కోసం 13 బంతుల్లో 22 పరుగులు చేయాలి.",
+                        "text": "ఇది టెక్స్ట్ బ్లాక్, ఇది ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "BBC వాతావరణ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "BBC వాతావరణ",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " హోమ్‌పేజీకి లింక్‌ను కలిగి ఉంది.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01djw2m",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "చైనీస్ సూపర్ హైవే యూజర్లు కొత్త జంక్షన్ చూసి ఆశ్చర్యపోయారు",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "చైనీస్ సూపర్ హైవే యూజర్లు కొత్త జంక్షన్ చూసి ఆశ్చర్యపోయారు",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "అప్పుడే వర్షం వల్ల మ్యాచ్‌కు అంతరాయం కలిగింది.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p01djw2m",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "అప్పుడే వర్షం వల్ల మ్యాచ్‌కు అంతరాయం కలిగింది.",
-                        "attributes": []
+                        "id": "p01djw2m",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Motorists amazed by new China highway",
+                        "synopses": {
+                          "short": "Chinese superhighway users amazed by new junction",
+                          "medium": "The motorists got their first glimpse of the new road system earlier.",
+                          "long": "A new $450m Chinese highway opened earlier, giving Shanghai motorists their first glimpse of the future of road travel.\n\nMany were left confused."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01djw9d.jpg",
+                        "embedding": false,
+                        "advertising": true,
+                        "caption": "The road was funded by foreign investors in China",
+                        "versions": [
+                          {
+                            "versionId": "p01djw2p",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 28,
+                            "durationISO8601": "PT28S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1507025738000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 720,
+                              "width": 1280,
+                              "copyrightHolder": "BBC",
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
+                              "originCode": "mpv"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "\rఇది ఉపశీర్షిక",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "\rఇది ఉపశీర్షిక",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "\rఇది ఉపశీర్షిక",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "\rఇది ఉపశీర్షిక",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "rawImage",
                 "model": {
-                  "text": "వర్షం ఆగిన తర్వాత 137 బంతుల్లో 22 పరుగుల లక్ష్యం అందుకోవాలని వచ్చిన దక్షిణాఫ్రికా బ్యాట్స్‌మెన్ స్కోరు బోర్డుపై 1 బంతికి 22 పరుగులు చేయాలని ఉండడంతో షాక్ అయ్యారు.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "వర్షం ఆగిన తర్వాత 137 బంతుల్లో 22 పరుగుల లక్ష్యం అందుకోవాలని వచ్చిన దక్షిణాఫ్రికా బ్యాట్స్‌మెన్ స్కోరు బోర్డుపై 1 బంతికి 22 పరుగులు చేయాలని ఉండడంతో షాక్ అయ్యారు.",
-                        "attributes": []
-                      }
-                    }
-                  ]
+                  "width": 800,
+                  "height": 450,
+                  "locator": "261c/test/b4446330-fcbd-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
                 }
-              },
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "పెవిలియన్‌లో ఉన్న దక్షిణాఫ్రికా ఆటగాళ్లు, స్టేడియంలోని అభిమానులు కన్నీళ్లతో ఉంటే, ఫైనల్ చేరిపోయామని ఇంగ్లండ్ అభిమానుల సంబరాలు మొదలయ్యాయి.",
+                  "text": "ఈ పరీక్షా వ్యాసం సృష్టించబడింది, తద్వారా మేము మా వెబ్‌సైట్‌లో పరీక్షలను అమలు చేయగలము.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "పెవిలియన్‌లో ఉన్న దక్షిణాఫ్రికా ఆటగాళ్లు, స్టేడియంలోని అభిమానులు కన్నీళ్లతో ఉంటే, ఫైనల్ చేరిపోయామని ఇంగ్లండ్ అభిమానుల సంబరాలు మొదలయ్యాయి.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "అప్పుడు ఉన్న సిస్టం లెక్కల ప్రకారం దక్షిణాఫ్రికా అసాధ్యమైన లక్ష్యాన్ని ఛేదించలేక ఓటమిపాలైంది.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "అప్పుడు ఉన్న సిస్టం లెక్కల ప్రకారం దక్షిణాఫ్రికా అసాధ్యమైన లక్ష్యాన్ని ఛేదించలేక ఓటమిపాలైంది.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "1992 సెమీఫైనల్లో ఏర్పడిన ఆ గందరగోళం తర్వాత వర్షం వల్ల అంతరాయం జరిగే మ్యాచ్‌ల ఫలితాలు పక్కాగా తేల్చేందుకు ఏదో ఒకటి చేయాలని ఐసీసీ నిర్ణయించింది.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "1992 సెమీఫైనల్లో ఏర్పడిన ఆ గందరగోళం తర్వాత వర్షం వల్ల అంతరాయం జరిగే మ్యాచ్‌ల ఫలితాలు పక్కాగా తేల్చేందుకు ఏదో ఒకటి చేయాలని ఐసీసీ నిర్ణయించింది.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "మ్యాచ్‌లో ఎన్ని పరుగులు చేయాలి అనే లెక్కలేయడానికి రాకెట్ సైన్స్ అవసరం లేదు. కానీ వర్షం వచ్చినప్పుడల్లా ఎవరు ఎన్ని పరుగులు చేస్తే గెలుస్తారు అనే లెక్కలు ప్రపంచవ్యాప్తంగా చాలామందిని చికాకుపెట్టాయి. ఇదే డక్‌వర్త్ లూయిస్‌ పద్ధతికి దారులు వేసింది.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "మ్యాచ్‌లో ఎన్ని పరుగులు చేయాలి అనే లెక్కలేయడానికి రాకెట్ సైన్స్ అవసరం లేదు. కానీ వర్షం వచ్చినప్పుడల్లా ఎవరు ఎన్ని పరుగులు చేస్తే గెలుస్తారు అనే లెక్కలు ప్రపంచవ్యాప్తంగా చాలామందిని చికాకుపెట్టాయి. ఇదే డక్‌వర్త్ లూయిస్‌ పద్ధతికి దారులు వేసింది.",
+                        "text": "ఈ పరీక్షా వ్యాసం సృష్టించబడింది, తద్వారా మేము మా వెబ్‌సైట్‌లో పరీక్షలను అమలు చేయగలము.",
                         "attributes": []
                       }
                     }

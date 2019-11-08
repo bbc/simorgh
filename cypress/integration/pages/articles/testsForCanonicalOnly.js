@@ -88,6 +88,56 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             }
           });
         });
+
+        // This test is being temporarily throttled to the service 'news'.
+        if (service === 'news') {
+          it('should have a visible play button and duration', () => {
+            cy.window().then(win => {
+              const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+              if (media) {
+                const aresMediaBlocks = media.model.blocks[1].model.blocks[0];
+                const { durationISO8601 } = aresMediaBlocks.model.versions[0];
+
+                cy.get('div[class^="StyledVideoContainer"]').within(() => {
+                  cy.get('button')
+                    .should('be.visible')
+                    .within(() => {
+                      cy.get('svg').should('be.visible');
+                      cy.get('time')
+                        .should('be.visible')
+                        .should('have.attr', 'datetime')
+                        .and('eq', durationISO8601);
+                    });
+                });
+              }
+            });
+          });
+          it('plays media when a user clicks play', () => {
+            cy.window().then(win => {
+              const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+              if (media && media.type === 'video') {
+                cy.get(
+                  'div[class^="StyledVideoContainer"] img[class^="StyledImg"]',
+                )
+                  .click()
+                  .should('not.exist')
+                  .then(() => {
+                    cy.get('iframe[class^="StyledIframe"]').then($iframe => {
+                      cy.wrap($iframe.prop('contentWindow'), {
+                        // `timeout` only applies to the methods chained below.
+                        // `its()` benefits from this, and will wait up to 8s
+                        // for the mediaPlayer instance to become available.
+                        timeout: 8000,
+                      })
+                        .its('embeddedMedia.playerInstances.mediaPlayer')
+                        .invoke('currentTime')
+                        .should('be.gt', 0);
+                    });
+                  });
+              }
+            });
+          });
+        }
       });
     }
   });
