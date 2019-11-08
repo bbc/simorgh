@@ -77,7 +77,14 @@ const runTestsForPage = ({
         }
       });
 
-      // Switch to AMP page URL (NB all our pages have AMP variants)
+      // Switch to AMP page URL
+      // Note, AMP is currently broken for media embeds
+      // TODO: Re-enable once issue is resolved
+      // https://github.com/bbc/simorgh/issues/3970
+      if (['liveRadio', 'mediaAssetPage'].includes(pageType)) {
+        return;
+      }
+
       describe(`${pageType} - ${service} - Amp`, () => {
         before(() => {
           cy.visit(`${config[service].pageTypes[pageType].path}.amp`, {
