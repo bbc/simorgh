@@ -91,6 +91,27 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
         // This test is being temporarily throttled to the service 'news'.
         if (service === 'news') {
+          it('should have a visible play button and duration', () => {
+            cy.window().then(win => {
+              const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+              if (media) {
+                const aresMediaBlocks = media.model.blocks[1].model.blocks[0];
+                const { durationISO8601 } = aresMediaBlocks.model.versions[0];
+
+                cy.get('div[class^="StyledVideoContainer"]').within(() => {
+                  cy.get('button')
+                    .should('be.visible')
+                    .within(() => {
+                      cy.get('svg').should('be.visible');
+                      cy.get('time')
+                        .should('be.visible')
+                        .should('have.attr', 'datetime')
+                        .and('eq', durationISO8601);
+                    });
+                });
+              }
+            });
+          });
           it('plays media when a user clicks play', () => {
             cy.window().then(win => {
               const media = getBlockData('video', win.SIMORGH_DATA.pageData);
