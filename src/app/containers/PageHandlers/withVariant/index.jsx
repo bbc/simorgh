@@ -1,3 +1,4 @@
+import pathOr from 'ramda/src/pathOr';
 import React from 'react';
 import { useParams, useLocation, Redirect } from 'react-router-dom';
 import getVariantRedirectUrl from './getVariantRedirectUrl';
@@ -7,7 +8,9 @@ const WithVariant = Component => {
     const { service, variant } = useParams();
     const location = useLocation();
 
-    const redirectPath = getVariantRedirectUrl(props, service, variant);
+    const match = pathOr({}, ['match'], props);
+
+    const redirectPath = getVariantRedirectUrl(match, service, variant);
 
     if (!redirectPath) {
       return <Component {...props} />;

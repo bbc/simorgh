@@ -45,7 +45,10 @@ describe('getVariantRedirectUrl', () => {
                 params,
               },
             };
-            const redirectUrl = getVariantRedirectUrl(props, params.service);
+            const redirectUrl = getVariantRedirectUrl(
+              props.match,
+              params.service,
+            );
             expect(redirectUrl).toEqual(`/${service}/${defaultVariant}`);
           });
         });
@@ -69,7 +72,7 @@ describe('getVariantRedirectUrl', () => {
               },
             };
             const redirectUrl = getVariantRedirectUrl(
-              props,
+              props.match,
               params.service,
               selectedVariant,
             );
@@ -96,7 +99,10 @@ describe('getVariantRedirectUrl', () => {
                 params,
               },
             };
-            const redirectUrl = getVariantRedirectUrl(props, params.service);
+            const redirectUrl = getVariantRedirectUrl(
+              props.match,
+              params.service,
+            );
             expect(redirectUrl).toEqual(`/${service}/${selectedVariant}`);
           });
         });
@@ -122,7 +128,7 @@ describe('getVariantRedirectUrl', () => {
               },
             };
             const redirectUrl = getVariantRedirectUrl(
-              props,
+              props.match,
               params.service,
               defaultVariant,
             );
@@ -149,7 +155,10 @@ describe('getVariantRedirectUrl', () => {
                 params,
               },
             };
-            const redirectUrl = getVariantRedirectUrl(props, params.service);
+            const redirectUrl = getVariantRedirectUrl(
+              props.match,
+              params.service,
+            );
             expect(redirectUrl).toEqual(`/${service}/${defaultVariant}`);
           });
         });
@@ -177,7 +186,10 @@ describe('getVariantRedirectUrl', () => {
                 params,
               },
             };
-            const redirectUrl = getVariantRedirectUrl(props, params.service);
+            const redirectUrl = getVariantRedirectUrl(
+              props.match,
+              params.service,
+            );
             expect(redirectUrl).toEqual(
               `/${service}/${local}/${id}/${defaultVariant}`,
             );
@@ -205,7 +217,7 @@ describe('getVariantRedirectUrl', () => {
               },
             };
             const redirectUrl = getVariantRedirectUrl(
-              props,
+              props.match,
               params.service,
               selectedVariant,
             );
@@ -234,7 +246,10 @@ describe('getVariantRedirectUrl', () => {
                 params,
               },
             };
-            const redirectUrl = getVariantRedirectUrl(props, params.service);
+            const redirectUrl = getVariantRedirectUrl(
+              props.match,
+              params.service,
+            );
             expect(redirectUrl).toEqual(
               `/${service}/${local}/${id}/${selectedVariant}`,
             );
@@ -264,7 +279,7 @@ describe('getVariantRedirectUrl', () => {
               },
             };
             const redirectUrl = getVariantRedirectUrl(
-              props,
+              props.match,
               params.service,
               defaultVariant,
             );
@@ -295,7 +310,10 @@ describe('getVariantRedirectUrl', () => {
                 params,
               },
             };
-            const redirectUrl = getVariantRedirectUrl(props, params.service);
+            const redirectUrl = getVariantRedirectUrl(
+              props.match,
+              params.service,
+            );
             expect(redirectUrl).toEqual(
               `/${service}/${local}/${id}/${defaultVariant}`,
             );
