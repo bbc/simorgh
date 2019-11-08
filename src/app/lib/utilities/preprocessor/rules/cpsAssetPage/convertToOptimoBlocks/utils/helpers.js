@@ -14,7 +14,7 @@ export const optimoParagraph = ({ fragments, text }) => ({
   },
 });
 
-export const optimoText = paragraphs => ({
+export const optimoTextWithParagraph = paragraphs => ({
   type: 'text',
   model: {
     blocks: paragraphs.map(optimoParagraph),
@@ -24,6 +24,41 @@ export const optimoText = paragraphs => ({
 export const optimoSubheadline = paragraphs => ({
   type: 'subheadline',
   model: {
-    blocks: [optimoText(paragraphs)],
+    blocks: [optimoTextWithParagraph(paragraphs)],
+  },
+});
+
+export const listItem = paragraphs => ({
+  type: 'listItem',
+  model: {
+    blocks: paragraphs.map(optimoParagraph),
+  },
+});
+
+export const unorderedList = listItems => ({
+  type: 'unorderedList',
+  model: {
+    blocks: listItems.map(listItem),
+  },
+});
+
+export const orderedList = listItems => ({
+  type: 'orderedList',
+  model: {
+    blocks: listItems.map(listItem),
+  },
+});
+
+export const optimoTextWithOrderedList = listItems => ({
+  type: 'text',
+  model: {
+    blocks: [orderedList(listItems)],
+  },
+});
+
+export const optimoTextWithUnorderedList = listItems => ({
+  type: 'text',
+  model: {
+    blocks: [unorderedList(listItems)],
   },
 });

@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Nepali",
     "language": "ne",
-    "lastUpdated": 1562942370542,
+    "lastUpdated": 1572879770725,
     "firstPublished": 1562942363761,
     "lastPublished": 1562942363761,
     "options": {},
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "नेपालकी प्रथम महिला प्रहरी चैतमाया डङ्‌गोलको सेवा अनुभव कस्तो",
+                        "text": "यो यस परीक्षण लेखको शिर्षक हो",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "नेपालकी प्रथम महिला प्रहरी चैतमाया डङ्‌गोलको सेवा अनुभव कस्तो",
+                              "text": "यो यस परीक्षण लेखको शिर्षक हो",
                               "attributes": []
                             }
                           }
@@ -58,63 +65,332 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "यस परीक्षण छवि, प्रतिलिपि अधिकार बीबीसी, फ्रान्स को नक्शा देखाउँदछ। छवि पहिलो तीन ब्लकमा छ र यो क्याप्शन छ।",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "यस परीक्षण छवि, प्रतिलिपि अधिकार बीबीसी, फ्रान्स को नक्शा देखाउँदछ। छवि पहिलो तीन ब्लकमा छ र यो क्याप्शन छ।",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "यस परीक्षण छवि, प्रतिलिपि अधिकार बीबीसी, फ्रान्स को नक्शा देखाउँदछ। छवि पहिलो तीन ब्लकमा छ र यो क्याप्शन छ।",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "यस परीक्षण छवि, प्रतिलिपि अधिकार बीबीसी, फ्रान्स को नक्शा देखाउँदछ। छवि पहिलो तीन ब्लकमा छ र यो क्याप्शन छ।",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "56ed/test/d63b8370-fcb7-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "हालै ८७ वर्ष लागेकी काठमाण्डूकी चैतमाया डङ्‌गोलले सपनामा पनि सोचेकी थिइनन् उनले सुरक्षा निकायमा ३२ वर्ष बिताउछु भनेर।",
+                  "text": "यो एक पाठ ब्लक हो, जसले बीबीसी मौसम होमपेजमा url लिंक समावेश गर्दछ।",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "हालै ८७ वर्ष लागेकी काठमाण्डूकी चैतमाया डङ्‌गोलले सपनामा पनि सोचेकी थिइनन् उनले सुरक्षा निकायमा ३२ वर्ष बिताउछु भनेर।",
+                        "text": "यो एक पाठ ब्लक हो, जसले बीबीसी मौसम होमपेजमा url लिंक ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "समावेश गर्दछ।",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "समावेश गर्दछ।",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p019qd7g",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": " भिडियो समावेश गर्ने एक भिडियो ब्लक हो",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": " भिडियो समावेश गर्ने एक भिडियो ब्लक हो",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "चावहिल गणेशस्थान नजिकै बस्ने व्यापारिक पृष्ठभूमिका कान्छा डङ्‌गोल र तरिमाया डङ्‌गोलकी जेठी छोरी चैतमायालाई प्रहरीमा जागिर लगाउनु परिवारको कुनै लालसा पनि थिएन।",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p019qd7g",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "चावहिल गणेशस्थान नजिकै बस्ने व्यापारिक पृष्ठभूमिका कान्छा डङ्‌गोल र तरिमाया डङ्‌गोलकी जेठी छोरी चैतमायालाई प्रहरीमा जागिर लगाउनु परिवारको कुनै लालसा पनि थिएन।",
-                        "attributes": []
+                        "id": "p019qd7g",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Test asset with square image",
+                        "synopses": {
+                          "short": "test asset"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019qd93.jpg",
+                        "embedding": false,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p019qd7k",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 16,
+                            "durationISO8601": "PT16S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1493293493000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 900,
+                              "width": 900,
+                              "copyrightHolder": "Sony",
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019qd93.jpg",
+                              "originCode": "mpv"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "यो उपशीर्षक हो",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "यो उपशीर्षक हो",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "यो उपशीर्षक हो",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "यो उपशीर्षक हो",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "altText",
                 "model": {
-                  "text": "तर उनको चाहना विपरित वि.स. २००८ सालतिर उनले एकाएक नेपाल प्रहरीमा जागिर खाइन्।",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "type": "text",
                       "model": {
-                        "text": "तर उनको चाहना विपरित वि.स. २००८ सालतिर उनले एकाएक नेपाल प्रहरीमा जागिर खाइन्।",
-                        "attributes": []
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "यो उपशीर्षक हो",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "यो उपशीर्षक हो",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
+                "type": "rawImage",
+                "model": {
+                  "width": 800,
+                  "height": 450,
+                  "locator": "9147/test/52a72ae0-fcb8-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
                 "type": "paragraph",
                 "model": {
-                  "text": "हाल उनी नेपालको प्रथम महिला प्रहरीका रूपमा परिचित छिन् र प्रहरी लगायतका विभिन्न संगठनले उनको सम्मान गर्दै आएका छन्।",
+                  "text": "यो परीक्षण लेख सिर्जना गरिएको छ ताकि हामी हाम्रो वेबसाइटमा परीक्षणहरू चलाउन सक्दछौं।",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "हाल उनी नेपालको प्रथम महिला प्रहरीका रूपमा परिचित छिन् र प्रहरी लगायतका विभिन्न संगठनले उनको सम्मान गर्दै आएका छन्।",
+                        "text": "यो परीक्षण लेख सिर्जना गरिएको छ ताकि हामी हाम्रो वेबसाइटमा परीक्षणहरू चलाउन सक्दछौं।",
                         "attributes": []
                       }
                     }
