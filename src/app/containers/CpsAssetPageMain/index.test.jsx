@@ -1,6 +1,8 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
+import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -27,6 +29,26 @@ const toggleState = {
     },
   },
 };
+
+// eslint-disable-next-line react/prop-types
+const createMediaAssetPage = ({ pageData }) => (
+  <StaticRouter>
+    <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
+      <ServiceContextProvider service="igbo">
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          isAmp={false}
+          pageType="MAP"
+          pathname="/pidgin/tori-49450859"
+          service="pidgin"
+          statusCode={200}
+        >
+          <CpsAssetPageMain service="pidgin" pageData={pageData} />
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ToggleContext.Provider>
+  </StaticRouter>
+);
 
 describe('CpsAssetPageMain', () => {
   it('should match snapshot for STY', async () => {
@@ -66,25 +88,24 @@ describe('CpsAssetPageMain', () => {
       cpsAssetPreprocessorRules,
     );
 
-    await matchSnapshotAsync(
-      <StaticRouter>
-        <ToggleContext.Provider
-          value={{ toggleState, toggleDispatch: jest.fn() }}
-        >
-          <ServiceContextProvider service="igbo">
-            <RequestContextProvider
-              bbcOrigin="https://www.test.bbc.co.uk"
-              isAmp={false}
-              pageType="MAP"
-              pathname="/pidgin/tori-49450859"
-              service="pidgin"
-              statusCode={200}
-            >
-              <CpsAssetPageMain service="pidgin" pageData={pageData} />
-            </RequestContextProvider>
-          </ServiceContextProvider>
-        </ToggleContext.Provider>
-      </StaticRouter>,
+    await matchSnapshotAsync(createMediaAssetPage({ pageData }));
+  });
+
+  it('should not show the timestamp when allowDataStamp is false', async () => {
+    const pageDataWithHiddenTimestamp = assocPath(
+      ['metadata', 'options', 'allowDateStamp'],
+      false,
+      await preprocessor(pidginPageData, cpsAssetPreprocessorRules),
     );
+
+    const { asFragment } = render(
+      createMediaAssetPage({
+        pageData: pageDataWithHiddenTimestamp,
+      }),
+    );
+
+    expect(document.querySelector('time')).toBeNull();
+    expect(document.querySelector('h1')).not.toBeNull();
+    expect(asFragment()).toMatchSnapshot();
   });
 });
