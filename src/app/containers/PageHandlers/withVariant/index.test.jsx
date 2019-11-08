@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { useParams, useLocation } from 'react-router-dom';
-import WithVariant from '.';
+import withVariant from '.';
 
 jest.mock('react-router-dom', () => ({
   useParams: jest.fn(),
@@ -11,9 +11,9 @@ jest.mock('react-router-dom', () => ({
 }));
 
 const Component = () => <h1>This is the BBC.</h1>;
-const WithVariantHOC = WithVariant(Component);
+const WithVariantHOC = withVariant(Component);
 
-function testServiceVariantRedirect({ service, variant, redirectTo }) {
+const testServiceVariantRedirect = ({ service, variant, redirectTo }) => {
   beforeEach(() => {
     useParams.mockReturnValue({
       service,
@@ -28,7 +28,7 @@ function testServiceVariantRedirect({ service, variant, redirectTo }) {
     redirectTo ? `should redirect to ${redirectTo}` : 'should not redirect',
     <WithVariantHOC />,
   );
-}
+};
 
 describe('WithVariant', () => {
   beforeEach(() => {
