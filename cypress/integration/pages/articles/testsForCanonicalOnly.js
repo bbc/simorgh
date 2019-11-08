@@ -89,23 +89,36 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           });
         });
 
-        it('should render a visible guidance message', () => {
-          cy.window().then(win => {
-            const media = getBlockData('video', win.SIMORGH_DATA.pageData);
-            if (media && media.type === 'video') {
+        if (service === 'news') {
+          it('should render a visible guidance message', () => {
+            cy.window().then(win => {
+              // Video with no guidance
+              const aresMedia =
+                win.SIMORGH_DATA.pageData.content.model.blocks[9].model
+                  .blocks[1];
+              // Video with guidance
+              const longWarning =
+                aresMedia.model.blocks[0].model.versions[0].warnings.long;
+
               cy.get('div[class^="StyledVideoContainer"]')
+                .eq(3)
                 .within(() => {
-                  cy.get('div[class^="StyledGuidance"]');
-                })
-                .should('to.have.descendants', 'svg')
-                .within(() => {
-                  cy.get('strong');
-                })
-                .should('be.visible')
-                .should('not.be.empty');
-            }
+                  if (longWarning) {
+                    cy.get('div[class^="StyledGuidance"]')
+                      .should('to.have.descendants', 'svg')
+                      .within(() => {
+                        cy.get('strong');
+                      })
+                      .should('be.visible')
+                      .should('not.be.empty')
+                      .and('contain', longWarning);
+                  } else {
+                    cy.get('strong').should('not.be.visible');
+                  }
+                });
+            });
           });
-        });
+        }
 
         // This test is being temporarily throttled to the service 'news'.
         if (service === 'news') {
