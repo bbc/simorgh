@@ -7,29 +7,27 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { EventContext } from '#contexts/EventContext';
 import { sendEventBeacon } from '../ATIAnalytics/beacon';
+import { buildATIClickParams } from '../ATIAnalytics/params';
 
 const NavigationContainer = () => {
   const { script, translations, navigation, service, dir } = useContext(
     ServiceContext,
   );
-  const { platform, statsDestination } = useContext(RequestContext);
 
   const { currentPage, skipLinkText } = translations;
 
   const { useClickTracker } = useContext(EventContext);
+  const params = buildATIClickParams(
+    useContext(RequestContext),
+    useContext(ServiceContext),
+  );
 
   useClickTracker('[data-navigation]', event => {
     const componentName = 'navigation';
     const eventData = event.srcElement.dataset[componentName];
-    const eventTrackingProps = {
-      service,
-      statsDestination,
-      platform,
-      pageIdentifier: `${service}.page`,
-    };
 
     sendEventBeacon({
-      ...eventTrackingProps,
+      ...params,
       element: event.target,
       componentName,
       type: 'click',

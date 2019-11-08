@@ -5,24 +5,21 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 import { sendEventBeacon } from '../ATIAnalytics/beacon';
+import { buildATIClickParams } from '../ATIAnalytics/params';
 
 const ConsentBanner = () => {
   const { useClickTracker } = useContext(EventContext);
-  const { platform, statsDestination } = useContext(RequestContext);
-  const { service } = useContext(ServiceContext);
+  const { platform } = useContext(RequestContext);
+  const params = buildATIClickParams(
+    useContext(RequestContext),
+    useContext(ServiceContext),
+  );
 
   useClickTracker('[data-cookie-banner]', event => {
     const eventData = event.srcElement.dataset.cookieBanner;
 
-    const props = {
-      service,
-      statsDestination,
-      platform,
-      pageIdentifier: `${service}.page`,
-    };
-
     sendEventBeacon({
-      ...props,
+      ...params,
       element: event.target,
       componentName: 'consent-banner',
       type: 'click',
