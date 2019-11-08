@@ -31,14 +31,18 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   });
 
   const isInitialMount = useRef(true);
+  const shouldSetFocus = useRef(false);
+  const focusContentEl = () => {
+    const contentEl = document.querySelector('h1#content');
+    if (contentEl) {
+      contentEl.focus();
+    }
+  };
 
   useEffect(() => {
-    if (!isInitialMount.current && state.loading === false) {
-      const contentElem = document.querySelector('h1#content');
-
-      if (contentElem) {
-        contentElem.focus();
-      }
+    if (shouldSetFocus.current) {
+      shouldSetFocus.current = false;
+      focusContentEl();
     }
   }, [state.loading]);
 
@@ -68,15 +72,20 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         errorCode: null,
       });
 
-      route.getInitialData(location.pathname).then(data =>
-        setState(prevState => ({
-          ...prevState,
-          loading: false,
-          pageData: path(['pageData'], data),
-          status: path(['status'], data),
-          error: path(['error'], data),
-        })),
-      );
+      route
+        .getInitialData(location.pathname)
+        .then(data =>
+          setState(prevState => ({
+            ...prevState,
+            loading: false,
+            pageData: path(['pageData'], data),
+            status: path(['status'], data),
+            error: path(['error'], data),
+          })),
+        )
+        .then(() => {
+          shouldSetFocus.current = true;
+        });
     }
   }, [routes, location.pathname]);
 
