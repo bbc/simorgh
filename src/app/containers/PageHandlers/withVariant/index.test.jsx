@@ -30,7 +30,7 @@ const testServiceVariantRedirect = ({ service, variant, redirectTo }) => {
   );
 };
 
-describe('WithVariant', () => {
+describe('withVariant', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
