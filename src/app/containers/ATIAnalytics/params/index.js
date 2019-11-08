@@ -38,7 +38,11 @@ export const buildATIUrl = (data, requestContext, serviceContext) => {
   return buildUrl(data, requestContext, serviceContext);
 };
 
-export const buildATIClickParams = (data, requestContext, serviceContext) => {
+export const buildATIClickParams = (
+  requestContext,
+  serviceContext,
+  data = '',
+) => {
   const buildParams = createBuilderFactory(
     requestContext,
     pageTypeParamBuilders,
