@@ -175,7 +175,7 @@
     "jsdom": "^15.2.1",
     "lint-staged": "^9.4.2",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "start-server-webpack-plugin": "^2.2.5",
     "storybook-chromatic": "^3.0.3",
