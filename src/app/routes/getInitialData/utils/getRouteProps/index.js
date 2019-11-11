@@ -15,6 +15,7 @@ const getRouteProps = (routes, url) => {
   const service = path(['service'], params);
   const variantPath = path(['variant'], params);
   const id = path(['id'], params);
+  const errorCode = path(['errorCode'], params);
 
   const variant = variantSanitiser(variantPath);
 
@@ -25,6 +26,7 @@ const getRouteProps = (routes, url) => {
     id,
     route,
     match,
+    errorCode: errorCode ? Number(errorCode) : errorCode,
   };
 };
 
