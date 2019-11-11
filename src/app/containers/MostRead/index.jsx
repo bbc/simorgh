@@ -15,12 +15,10 @@ const MostReadContainer = () => {
   console.log(localEndpoint);
 
   useEffect(() => {
-    async () => {
-      await axios.get(localEndpoint).then(response => {
-        setData(response.data);
-        console.log(response.data);
-      });
-    };
+    axios.get(localEndpoint).then(response => {
+      setData(response.data);
+      console.log(response.data);
+    });
   }, [localEndpoint]);
 
   return <div>{console.log(data)}</div>;
