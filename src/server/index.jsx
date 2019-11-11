@@ -49,7 +49,7 @@ class LoggerStream {
 
 const constructDataFilePath = ({ pageType, service, id, variant = '' }) => {
   const dataPath =
-    pageType === 'frontPage' || pageType === 'mostRead'
+    pageType === 'frontpage' || pageType === 'mostRead'
       ? `${variant || 'index'}.json`
       : `${id}${variant}.json`;
 
@@ -131,7 +131,7 @@ if (process.env.APP_ENV === 'local') {
       const { service, variant } = params;
 
       const dataFilePath = constructDataFilePath({
-        pageType: 'frontPage',
+        pageType: 'frontpage',
         service,
         variant,
       });
