@@ -72,8 +72,7 @@ const MediaPlayerContainer = ({
       aresMediaBlock,
     ),
     type: format === 'audio' ? 'audio' : 'video',
-    guidanceMessage: pathOr(
-      null,
+    guidanceMessage: path(
       ['model', 'blocks', 0, 'model', 'versions', 0, 'warnings', 'short'],
       aresMediaBlock,
     ),
