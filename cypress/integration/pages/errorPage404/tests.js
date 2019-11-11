@@ -102,28 +102,38 @@ export const testsThatFollowSmokeTestConfig = ({
         cy.get('html').should(
           'have.attr',
           'lang',
-          appConfig[service][variant].lang,
+          appConfig[config[service].name][variant].lang,
         );
       });
     });
     if (envConfig.standaloneErrorPages) {
       describe(`${service} error page routes`, () => {
         it(`/${service}/404 should have response code 200`, () => {
-          cy.testResponseCodeAndType(`/${service}/404`, 200, 'text/html');
-          cy.visit(`${service}/404`)
+          cy.testResponseCodeAndType(
+            `/${config[service].name}/404`,
+            200,
+            'text/html',
+          );
+          cy.visit(`${config[service].name}/404`)
             .get('[class^="StatusCode"]')
             .should(
               'contain',
-              appConfig[service][variant].translations.error[404].statusCode,
+              appConfig[config[service].name][variant].translations.error[404]
+                .statusCode,
             );
         });
         it(`/${service}/500 should have response code 200`, () => {
-          cy.testResponseCodeAndType(`/${service}/500`, 200, 'text/html');
-          cy.visit(`${service}/500`)
+          cy.testResponseCodeAndType(
+            `/${config[service].name}/500`,
+            200,
+            'text/html',
+          );
+          cy.visit(`${config[service].name}/500`)
             .get('[class^="StatusCode"]')
             .should(
               'contain',
-              appConfig[service][variant].translations.error[500].statusCode,
+              appConfig[config[service].name][variant].translations.error[500]
+                .statusCode,
             );
         });
       });
