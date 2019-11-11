@@ -17,7 +17,7 @@ import {
 } from '@bbc/psammead-styles/font-styles';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 
-const RightArrowSVG = ({ height = '44px', width = '44px' }) => (
+const RightArrowSVG = ({ height, width }) => (
   <svg
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -37,11 +37,14 @@ const RightArrowSVG = ({ height = '44px', width = '44px' }) => (
   </svg>
 );
 RightArrowSVG.propTypes = {
-  height: string.isRequired,
-  width: string.isRequired,
+  height: string,
+  width: string,
 };
-
-const LeftArrowSVG = ({ height = '44px', width = '44px' }) => (
+RightArrowSVG.defaultProps = {
+  height: '44px',
+  width: '44px',
+};
+const LeftArrowSVG = ({ height, width }) => (
   <svg
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -62,8 +65,12 @@ const LeftArrowSVG = ({ height = '44px', width = '44px' }) => (
 );
 
 LeftArrowSVG.propTypes = {
-  height: string.isRequired,
-  width: string.isRequired,
+  height: string,
+  width: string,
+};
+LeftArrowSVG.defaultProps = {
+  height: '44px',
+  width: '44px',
 };
 
 const OnwardJourneys = ({ onwardJourneysData, service, script }) => {
