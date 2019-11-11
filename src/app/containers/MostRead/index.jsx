@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { ServiceContext } from '#contexts/ServiceContext';
+import mostReadData from '#data/news/mostRead';
 
 const MostReadContainer = () => {
   const { service, variant } = useContext(ServiceContext);
@@ -14,8 +15,12 @@ const MostReadContainer = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios(localMostReadData);
-      setData(result.data);
+      try {
+        const result = await axios(localMostReadData);
+        setData(result.data);
+      } catch (error) {
+        setData(mostReadData);
+      }
     };
     fetchData();
   }, []);
