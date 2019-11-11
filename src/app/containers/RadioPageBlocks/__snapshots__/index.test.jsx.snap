@@ -8,6 +8,7 @@ exports[`Radio Page Blocks should match snapshot for AMP 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
 }
@@ -149,6 +150,7 @@ exports[`Radio Page Blocks should match snapshot for Canonical 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
 }

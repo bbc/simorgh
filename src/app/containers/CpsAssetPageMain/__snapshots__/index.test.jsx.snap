@@ -237,6 +237,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
 }
@@ -706,6 +707,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
 }
@@ -1548,7 +1550,6 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                This is introduction text, it should be bold by default, but also support 
             </b>
             <a
-              aria-label="inline links, Site na mpụta"
               class="c17"
               href="https://bbc.com/pidgin/23248703"
             >
@@ -1573,7 +1574,6 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
               </b>
             </i>
             <a
-              aria-label="a link, Site na mpụta"
               class="c17"
               href="https://bbc.com/pidgin/23248703"
             >
@@ -1589,7 +1589,6 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           >
             Feta the big cheese macaroni cheese. 
             <a
-              aria-label="Caerphilly danish fontina, Site na mpụta"
               class="c17"
               href="https://bbc.com/pidgin/23248703"
             >
@@ -1815,6 +1814,7 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
 }
