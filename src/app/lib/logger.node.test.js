@@ -1,6 +1,5 @@
 /* eslint-disable global-require */
 const fs = require('fs');
-const path = require('path');
 
 let winston;
 
@@ -9,56 +8,40 @@ describe('Logger node - for the server', () => {
     jest.clearAllMocks();
   });
 
-  const deleteFile = (logPath, logFile) => {
-    fs.unlink(path.join(logPath, logFile), () => {});
-  };
-
-  const deleteFolder = logPath => {
-    if (fs.existsSync(logPath)) {
-      deleteFile(logPath, 'app.log');
-      fs.rmdir(logPath, err => {
-        if (err) throw err;
-      });
-    }
-  };
-
   describe('Setting up logger', () => {
     beforeEach(() => {
       jest.resetModules();
     });
 
     describe('Folder creation', () => {
-      const logPath = path.join(__dirname, '../../..', 'log-temp');
-      const defaultLogPath = path.join(__dirname, '../../..', 'log');
-
       beforeEach(() => {
-        process.env.LOG_DIR = logPath;
-        deleteFolder(logPath);
-        deleteFolder(defaultLogPath);
+        process.env.LOG_DIR = 'log-temp';
         jest.resetModules();
         jest.resetAllMocks();
-      });
 
-      afterAll(() => {
-        deleteFolder(logPath);
-        deleteFolder(defaultLogPath);
+        fs.mkdirSync = jest.fn().mockImplementation(() => {
+          return undefined;
+        });
       });
 
       it('creates folder log-temp', () => {
         require('./logger.node');
 
-        expect(fs.existsSync(logPath)).toBe(true);
+        expect(fs.mkdirSync).toHaveBeenCalled();
       });
 
       it('creates default folder log when LOG_DIR isnt set', () => {
         delete process.env.LOG_DIR;
+        fs.existsSync = jest.fn();
         require('./logger.node');
 
-        expect(fs.existsSync(defaultLogPath)).toBe(true);
+        expect(fs.existsSync).toHaveBeenCalledWith('log');
       });
 
       it('does not create folder log-temp when it already exists', () => {
-        fs.mkdirSync(logPath);
+        fs.existsSync = jest.fn().mockImplementation(() => {
+          return true;
+        });
 
         jest.spyOn(fs, 'mkdirSync');
 
@@ -88,6 +71,9 @@ describe('Logger node - for the server', () => {
         winston.format.timestamp.mockImplementation(() => 'Timestamp Mock');
         winston.format.printf.mockImplementation(() => 'Printf Mock');
         winston.format.combine.mockImplementation(() => 'Combine Mock');
+
+        fs.existsSync = jest.fn();
+        fs.mkdirSync = jest.fn();
       });
 
       it('sets up file transport when LOG_DIR is set ', () => {
