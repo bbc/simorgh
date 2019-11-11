@@ -10,6 +10,7 @@ import {
   frontpageSwRegexPath,
   cpsAssetPageRegexPath,
   cpsAssetPageDataRegexPath,
+  mostReadDataRegexPath,
   radioAndTvRegexPathsArray,
 } from './index';
 
@@ -183,6 +184,19 @@ describe('frontpageManifestRegexPath', () => {
     '/news/trad/sw.js',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontpageManifestRegexPath);
+});
+
+describe('mostReadDataRegexPath', () => {
+  const validRoutes = ['/news/most_read.json', '/zhongwen/most_read/simp.json'];
+  shouldMatchValidRoutes(validRoutes, mostReadDataRegexPath);
+
+  const invalidRoutes = [
+    '/foobar/most_read.json',
+    '/foobar/most_read',
+    '/foobar/most_read.js',
+    '/news/trad/most_read.json',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, mostReadDataRegexPath);
 });
 
 jest.mock('../config', () => ({
