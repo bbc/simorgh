@@ -199,7 +199,7 @@ describe('mostReadDataRegexPath', () => {
   shouldNotMatchInvalidRoutes(invalidRoutes, mostReadDataRegexPath);
 });
 
-jest.mock('../config/servicesWithRadioOrTv', () => ({
+jest.mock('../config', () => ({
   gujarati: ['bbc_gujarati_tv'],
   hausa: ['bbc_hausa_radio', 'bbc_afrique_tv'],
   indonesia: ['bbc_indonesian_radio'],
