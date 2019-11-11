@@ -163,14 +163,14 @@ const OnwardJourneys = ({ onwardJourneysData, service, script }) => {
         </Arrows>
         <TabsList>
           {onwardJourneysData.map(topic => (
-            <Tab>{topic.name}</Tab>
+            <Tab key={topic.name}>{topic.name}</Tab>
           ))}
           <Tab />
         </TabsList>
       </Carousel>
       <CardList>
         {visibleRecords.map(record => (
-          <CardLink href={record.url}>
+          <CardLink href={record.url} key={record.headline}>
             <Card>
               <HeadingWrapper>
                 <CardHeadline>{record.headline}</CardHeadline>
