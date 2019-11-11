@@ -217,14 +217,6 @@ describe('mostReadDataRegexPath', () => {
   shouldNotMatchInvalidRoutes(invalidRoutes, mostReadDataRegexPath);
 });
 
-jest.mock('../config', () => ({
-  gujarati: ['bbc_gujarati_tv'],
-  hausa: ['bbc_hausa_radio', 'bbc_afrique_tv'],
-  indonesia: ['bbc_indonesian_radio'],
-  marathi: ['bbc_marathi_tv'],
-  persian: ['bbc_persian_radio', 'bbc_dari_radio', 'bbc_persian_tv'],
-}));
-
 describe('radioAndTvRegexPathsArray', () => {
   describe('should return an array of regexs for the radio config', () => {
     const validRoutes = [
@@ -238,8 +230,6 @@ describe('radioAndTvRegexPathsArray', () => {
     shouldMatchValidRoutes(validRoutes, radioAndTvPath);
 
     const invalidRoutes = [
-      '/hausa/bbc_persian_radio/liveradio',
-      '/persian/bbc_hausa_radio/abcd1234.amp',
       '/hausa/bbc_hausa_radio/',
       '/hausa/bbc_hausa_radio/.amp',
       '/foobar/bbc_hausa_radio/liveradio',
