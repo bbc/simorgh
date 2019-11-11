@@ -145,13 +145,15 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               }
             });
           });
+
           it('plays media when a user clicks play', () => {
             cy.window().then(win => {
               const media = getBlockData('video', win.SIMORGH_DATA.pageData);
               if (media && media.type === 'video') {
-                cy.get(
-                  'div[class^="StyledVideoContainer"] button[class*="StyledPlayButton"]',
-                )
+                cy.get('div[class^="StyledVideoContainer"]')
+                  .within(() => {
+                    cy.get('button');
+                  })
                   .click()
                   .should('not.exist')
                   .then(() => {
