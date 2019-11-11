@@ -11,7 +11,6 @@ describe('MostReadContainer', () => {
   );
 
   it('test data returns as expected', () => {
-    console.l;
     expect('khoa').toEqual('khoa');
   });
 });
