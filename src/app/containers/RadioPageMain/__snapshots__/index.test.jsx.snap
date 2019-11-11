@@ -449,16 +449,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   padding: 2rem 0;
 }
 
-.c7 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  overflow: hidden;
-}
-
 .c6 {
   height: 165px;
   position: relative;
@@ -482,6 +472,16 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+}
+
+.c7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
 }
 
 @media (max-width:37.4375rem) {
