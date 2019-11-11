@@ -1,4 +1,5 @@
 import pathOr from 'ramda/src/pathOr';
+import { blockContainingText } from '#app/models/blocks';
 
 const addHeadingToSTY = jsonRaw => {
   const headlineText = pathOr(
@@ -11,35 +12,7 @@ const addHeadingToSTY = jsonRaw => {
     return jsonRaw;
   }
 
-  const newBlock = {
-    model: {
-      blocks: [
-        {
-          model: {
-            blocks: [
-              {
-                model: {
-                  blocks: [
-                    {
-                      model: {
-                        attributes: [],
-                        text: headlineText,
-                      },
-                      type: 'fragment',
-                    },
-                  ],
-                  text: headlineText,
-                },
-                type: 'paragraph',
-              },
-            ],
-          },
-          type: 'text',
-        },
-      ],
-    },
-    type: 'headline',
-  };
+  const newBlock = blockContainingText('headline', headlineText);
 
   return {
     ...jsonRaw,
