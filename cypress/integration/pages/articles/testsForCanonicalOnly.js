@@ -22,16 +22,18 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       cy.get('html').should('not.have.attr', 'amp');
     });
 
-    describe('Chartbeat', () => {
-      if (envConfig.chartbeatEnabled) {
-        it('should have a script with src value set to chartbeat source', () => {
-          cy.hasScriptWithChartbeatSrc();
-        });
-        it('should have chartbeat config set to window object', () => {
-          cy.hasGlobalChartbeatConfig();
-        });
-      }
-    });
+    if (appToggles.chartbeatAnalytics.enabled) {
+      describe('Chartbeat', () => {
+        if (envConfig.chartbeatEnabled) {
+          it('should have a script with src value set to chartbeat source', () => {
+            cy.hasScriptWithChartbeatSrc();
+          });
+          it('should have chartbeat config set to window object', () => {
+            cy.hasGlobalChartbeatConfig();
+          });
+        }
+      });
+    }
 
     it('should include ampHTML tag', () => {
       cy.get('head link[rel="amphtml"]').should(

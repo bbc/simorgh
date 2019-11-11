@@ -918,7 +918,7 @@ const services = {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : '/pidgin/tori-49450859',
+            : '/pidgin/23248703',
         smoke: true,
       },
     },
