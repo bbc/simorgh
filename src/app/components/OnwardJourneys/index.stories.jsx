@@ -1,31 +1,8 @@
-import React, { useContext } from 'react';
-import path from 'ramda/src/path';
+import React from 'react';
+import { storiesOf } from '@storybook/react';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { articleDataPropTypes } from '#models/propTypes/article';
-import ArticleMetadata from '../ArticleMetadata';
-import { ServiceContext } from '#contexts/ServiceContext';
-import headings from '../Headings';
-import text from '../Text';
-import image from '../Image';
-import Blocks from '../Blocks';
-import timestamp from '../ArticleTimestamp';
-import { GhostGrid } from '#lib/styledGrid';
-import ATIAnalytics from '../ATIAnalytics';
-import ChartbeatAnalytics from '../ChartbeatAnalytics';
-import articleMediaPlayer from '../ArticleMediaPlayer';
-import LinkedData from '../LinkedData';
-import {
-  getArticleId,
-  getHeadline,
-  getSummary,
-  getFirstPublished,
-  getLastPublished,
-  getAboutTags,
-  getArticleSection,
-  getMentions,
-  getLang,
-} from './utils';
-import OnwardJourneys from '../../components/OnwardJourneys';
+import notes from '../README.md';
+import OnwardJourneys from './index';
 
 const onwardJourneysData = [
   {
@@ -491,66 +468,14 @@ const onwardJourneysData = [
   },
 ];
 
-const componentsToRender = {
-  headline: headings,
-  subheadline: headings,
-  audio: articleMediaPlayer,
-  video: articleMediaPlayer,
-  text,
-  image,
-  timestamp,
-};
-
-const ArticleMain = ({ articleData: data }) => {
-  const { articleAuthor } = useContext(ServiceContext);
-  const headline = getHeadline(data);
-  const description = getSummary(data) || getHeadline(data);
-  const firstPublished = getFirstPublished(data);
-  const lastPublished = getLastPublished(data);
-  const aboutTags = getAboutTags(data);
-
-  return (
-    <>
-      <ATIAnalytics data={data} />
-      <ChartbeatAnalytics data={data} />
-      <ArticleMetadata
-        articleId={getArticleId(data)}
-        title={headline}
-        author={articleAuthor}
-        firstPublished={firstPublished}
-        lastPublished={lastPublished}
-        section={getArticleSection(data)}
-        aboutTags={aboutTags}
-        mentionsTags={getMentions(data)}
-        lang={getLang(data)}
-        description={description}
-      />
-      <LinkedData
-        showAuthor
-        type="Article"
-        seoTitle={headline}
-        headline={headline}
-        datePublished={firstPublished}
-        dateModified={lastPublished}
-        aboutTags={aboutTags}
-      />
-      <main role="main">
-        <GhostGrid>
-          <Blocks
-            blocks={path(['content', 'model', 'blocks'], data)}
-            componentsToRender={componentsToRender}
-          />
-        </GhostGrid>
-      </main>
-      <OnwardJourneys
-        onwardJourneysData={onwardJourneysData}
-        service="news"
-        script={latin}
-      />
-    </>
-  );
-};
-ArticleMain.propTypes = {
-  articleData: articleDataPropTypes.isRequired,
-};
-export default ArticleMain;
+storiesOf('Components|OnwardJourneys', module).add(
+  'default',
+  () => (
+    <OnwardJourneys
+      onwardJourneysData={onwardJourneysData}
+      service="news"
+      script={latin}
+    />
+  ),
+  { notes },
+);

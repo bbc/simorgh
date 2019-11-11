@@ -12,6 +12,7 @@ const variantRegex = '/simp|/trad|/cyr|/lat';
 const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
 const errorCodeRegex = '404|500';
 const mostRead = 'most_read';
+const onwardJourneys = 'onward_journeys';
 
 export const articleRegexPath = `/:service(${serviceRegex})/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 
@@ -30,6 +31,8 @@ export const frontpageManifestRegexPath = `/:service(${serviceRegex})/manifest.j
 export const frontpageSwRegexPath = `/:service(${serviceRegex})/sw.js`;
 
 export const mostReadDataRegexPath = `/:service(${serviceRegex})/${mostRead}:variant(${variantRegex})?.json`;
+
+export const onwardJourneysDataRegexPath = `/:service(${serviceRegex})/:id(${idRegex})/${onwardJourneys}.json`;
 
 export const radioAndTvRegexPathsArray = buildRadioAndTvRoutes(
   servicesWithRadioAndTv,

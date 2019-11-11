@@ -1,0 +1,738 @@
+{
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "#TeamTrees: YouTube stars boost tree-planting campaign to over $8m"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "text": "#TeamTrees: YouTube stars boost tree-planting campaign to over $8m"
+                      },
+                      "type": "paragraph"
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "type": "headline"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Beauty YouTuber Jeffree Star donated $50,000 to the campaign"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Beauty YouTuber Jeffree Star donated $50,000 to the campaign"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Jeffree Star standing against a pink fluffy background"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Jeffree Star standing against a pink fluffy background"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "altText"
+              },
+              {
+                "model": {
+                  "copyrightHolder": "Getty Images",
+                  "height": 371,
+                  "locator": "e66d/test/44565f40-0228-11ea-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 660
+                },
+                "type": "rawImage"
+              }
+            ]
+          },
+          "type": "image"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "A global tree-planting campaign led by YouTube stars has seen more than $8m (£6.2m) raised in just five days."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "A global tree-planting campaign led by YouTube stars has seen more than $8m (£6.2m) raised in just five days."
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Beauty YouTuber Jeffree Star and US entrepreneur Elon Musk are among those to have donated."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Beauty YouTuber Jeffree Star and US entrepreneur Elon Musk are among those to have donated."
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "The \"Team Trees\" project is aiming to plant 20 million trees around the globe by 2020, with each $1 donation \"planting\" one tree. "
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "The \"Team Trees\" project is aiming to plant 20 million trees around the globe by 2020, with each $1 donation \"planting\" one tree. "
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "The donations go to the Arbor Day Foundation, a US organisation dedicated to planting trees."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "The donations go to the Arbor Day Foundation, a US organisation dedicated to planting trees."
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "What is #TeamTrees?"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "text": "What is #TeamTrees?"
+                      },
+                      "type": "paragraph"
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "type": "subheadline"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "In May, a YouTuber called Jimmy Donaldson, known online as \"Mr Beast,\"  asked what he should do to celebrate his 20 millionth subscriber. One of his fans responded urging him to plant 20 million trees to represent each of his subscribers."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "In May, a YouTuber called Jimmy Donaldson, known online as \"Mr Beast,\"  asked what he should do to celebrate his 20 millionth subscriber. One of his fans responded urging him to plant 20 million trees to represent each of his subscribers."
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Since then, the YouTuber has collaborated with other content creators and the Arbor Day Foundation to create the #TeamTrees campaign. "
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Since then, the YouTuber has collaborated with other content creators and the Arbor Day Foundation to create the #TeamTrees campaign. "
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "The idea is simple - for each $1 donation, the Arbor Day Foundation will plant one tree. "
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "The idea is simple - for each $1 donation, the Arbor Day Foundation will plant one tree. "
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "The trees will reportedly be planted on every continent except Antarctica, and the kind of tree planted will be native to their surroundings. "
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "The trees will reportedly be planted on every continent except Antarctica, and the kind of tree planted will be native to their surroundings. "
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "Why trees? "
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "text": "Why trees? "
+                      },
+                      "type": "paragraph"
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "type": "subheadline"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Scientists say planting trees across the world is a cheap and easy solution to reducing carbon dioxide (CO2) levels, which is seen as a major factor in climate change. "
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Scientists say planting trees across the world is a cheap and easy solution to reducing carbon dioxide (CO2) levels, which is seen as a major factor in climate change. "
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "As trees grow, they absorb and store CO2 from the atmosphere, and emit oxygen. "
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "As trees grow, they absorb and store CO2 from the atmosphere, and emit oxygen. "
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "The Arbor Day Foundation says over their lifespan, "
+                      },
+                      "type": "fragment"
+                    },
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "100 million trees could absorb eight million tonnes of carbon"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "isExternal": true,
+                        "locator": "https://timefortrees.org/impact.cfm",
+                        "text": "100 million trees could absorb eight million tonnes of carbon"
+                      },
+                      "type": "urlLink"
+                    },
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": " - the equivalent of taking more than six millions cars off the road for a year. "
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "The Arbor Day Foundation says over their lifespan, 100 million trees could absorb eight million tonnes of carbon - the equivalent of taking more than six millions cars off the road for a year. "
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "Who's involved?"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "text": "Who's involved?"
+                      },
+                      "type": "paragraph"
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "type": "subheadline"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Over the past five days, the campaign has gained significant attention online."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Over the past five days, the campaign has gained significant attention online."
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Elon Musk, co-founder and CEO at Tesla, donated $1m to the project. He also changed his Twitter handle to \"Treelon.\""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Elon Musk, co-founder and CEO at Tesla, donated $1m to the project. He also changed his Twitter handle to \"Treelon.\""
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Elon Musk has changed his Twitter name to \"Treelon\""
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Elon Musk has changed his Twitter name to \"Treelon\""
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "caption"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "blocks": [
+                                {
+                                  "model": {
+                                    "attributes": [],
+                                    "text": "Elon Musk with his arms crossed, wearing a suit"
+                                  },
+                                  "type": "fragment"
+                                }
+                              ],
+                              "text": "Elon Musk with his arms crossed, wearing a suit"
+                            },
+                            "type": "paragraph"
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "altText"
+              },
+              {
+                "model": {
+                  "copyrightHolder": "Getty Images",
+                  "height": 351,
+                  "locator": "97ff/test/993adae0-0228-11ea-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 624
+                },
+                "type": "rawImage"
+              }
+            ]
+          },
+          "type": "image"
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "The name of Twitter CEO Jack Dorsey has also appeared on the campaign website's \"most trees\" leader board, pledging to plant 150,000 trees. "
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "The name of Twitter CEO Jack Dorsey has also appeared on the campaign website's \"most trees\" leader board, pledging to plant 150,000 trees. "
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "Beauty YouTuber Jeffree Star, who has over 16.4m subscribers, also donated $50,000 to the campaign. YouTube has promised to match the next million dollars of donations."
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "Beauty YouTuber Jeffree Star, who has over 16.4m subscribers, also donated $50,000 to the campaign. YouTube has promised to match the next million dollars of donations."
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "In a video announcing the launch of the project \"Mr Beast\" said: \"I personally haven't always been the most environmentally friendly. "
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "In a video announcing the launch of the project \"Mr Beast\" said: \"I personally haven't always been the most environmentally friendly. "
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "\"We only have one Earth, and it's important we take care of it. "
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "\"We only have one Earth, and it's important we take care of it. "
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "\"People just keep making fun of our generation for 'retweet activism' and not actually doing something. "
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "\"People just keep making fun of our generation for 'retweet activism' and not actually doing something. "
+                },
+                "type": "paragraph"
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": "\"This is your chance to make a difference... this is our chance to show the world we care.\""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": "\"This is your chance to make a difference... this is our chance to show the world we care.\""
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "analyticsLabels": {},
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "subheadline",
+      "urlLink"
+    ],
+    "createdBy": "News",
+    "firstPublished": 1573217171015,
+    "id": "urn:bbc:ares::article:c3md8w5yj80o",
+    "language": "en-gb",
+    "lastPublished": 1573217171015,
+    "lastUpdated": 1573218520508,
+    "locators": {
+      "canonicalUrl": "https://www.bbc.com/news/articles/c3md8w5yj80o",
+      "optimoUrn": "urn:bbc:optimo:asset:c3md8w5yj80o"
+    },
+    "options": {},
+    "passport": {
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "language": "en-gb"
+    },
+    "tags": {
+      "about": [
+        {
+          "thingId": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
+          "thingLabel": "Environment",
+          "thingSameAs": ["http://dbpedia.org/resource/Natural_environment"],
+          "thingType": ["Theme", "news:Theme", "Thing"],
+          "thingUri": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id"
+        },
+        {
+          "thingId": "656359ec-e64f-41fe-8537-737057b31198",
+          "thingLabel": "YouTubers",
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Category:YouTubers",
+            "http://www.wikidata.org/entity/Q17125263"
+          ],
+          "thingType": ["Theme", "Thing"],
+          "thingUri": "http://www.bbc.co.uk/things/656359ec-e64f-41fe-8537-737057b31198#id"
+        },
+        {
+          "thingId": "73a0d212-bc75-4d40-b930-6ef52e95b61e",
+          "thingLabel": "YouTube",
+          "thingSameAs": [
+            "http://dbpedia.org/resource/YouTube",
+            "http://www.wikidata.org/entity/Q866"
+          ],
+          "thingType": ["Organisation", "Thing"],
+          "thingUri": "http://www.bbc.co.uk/things/73a0d212-bc75-4d40-b930-6ef52e95b61e#id"
+        },
+        {
+          "thingId": "bc0b91dc-0475-486a-95c5-3f47194dd1eb",
+          "thingLabel": "Elon Musk",
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Elon_Musk",
+            "http://www.wikidata.org/entity/Q317521"
+          ],
+          "thingType": ["Person", "Thing"],
+          "thingUri": "http://www.bbc.co.uk/things/bc0b91dc-0475-486a-95c5-3f47194dd1eb#id"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "5fbc72ff-3412-41b8-a609-e29467f0caf6",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
+          "thingLabel": "Climate change",
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Climate_change",
+            "http://www.wikidata.org/entity/Q125928"
+          ],
+          "thingType": ["Theme", "Thing"],
+          "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+          "topicId": "cewm7erz56xt",
+          "topicName": "Climate change"
+        }
+      ]
+    },
+    "type": "article",
+    "version": "v1.1.2"
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "#TeamTrees: YouTube stars boost tree-planting campaign to over $8m"
+    },
+    "id": "urn:bbc:ares::article:c3md8w5yj80o",
+    "locators": {
+      "canonicalUrl": "https://www.bbc.com/news/articles/c3md8w5yj80o",
+      "optimoUrn": "urn:bbc:optimo:asset:c3md8w5yj80o"
+    },
+    "summary": "",
+    "timestamp": 1573217171015,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "site": {
+      "name": "News",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/news"
+    }
+  }
+}
