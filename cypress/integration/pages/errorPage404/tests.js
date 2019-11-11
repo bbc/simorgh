@@ -66,9 +66,12 @@ export const testsThatFollowSmokeTestConfig = ({
       it('should have correct title & description metadata', () => {
         /* Note that description & title tests for all other page types are in /pages/testsForAllPages.js */
         const description =
-          appConfig[service][variant].translations.error[404].title;
-        const { title } = appConfig[service][variant].translations.error[404];
-        const pageTitle = `${title} - ${appConfig[service][variant].brandName}`;
+          appConfig[config[service].name][variant].translations.error[404]
+            .title;
+        const { title } = appConfig[config[service].name][
+          variant
+        ].translations.error[404];
+        const pageTitle = `${title} - ${appConfig[config[service].name][variant].brandName}`;
 
         cy.get('head').within(() => {
           cy.title().should('eq', pageTitle);
