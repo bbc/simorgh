@@ -11,6 +11,7 @@ import {
   cpsAssetPagePath,
   cpsAssetPageDataPath,
   radioAndTvPath,
+  mostReadDataRegexPath,
 } from './index';
 
 jest.mock('#server/utilities/serviceConfigs', () => ({
@@ -201,6 +202,52 @@ describe('radioAndTvPath', () => {
     '/persian/bbc_abcdefg_radio/hijklmn', // live radio with a-z inside service id and for media id
   ];
   shouldMatchValidRoutes(validRoutes, radioAndTvPath);
+});
+
+describe('mostReadDataRegexPath', () => {
+  const validRoutes = ['/news/most_read.json', '/zhongwen/most_read/simp.json'];
+  shouldMatchValidRoutes(validRoutes, mostReadDataRegexPath);
+
+  const invalidRoutes = [
+    '/foobar/most_read.json',
+    '/foobar/most_read',
+    '/foobar/most_read.js',
+    '/news/trad/most_read.json',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, mostReadDataRegexPath);
+});
+
+jest.mock('../config', () => ({
+  gujarati: ['bbc_gujarati_tv'],
+  hausa: ['bbc_hausa_radio', 'bbc_afrique_tv'],
+  indonesia: ['bbc_indonesian_radio'],
+  marathi: ['bbc_marathi_tv'],
+  persian: ['bbc_persian_radio', 'bbc_dari_radio', 'bbc_persian_tv'],
+}));
+
+describe('radioAndTvRegexPathsArray', () => {
+  describe('should return an array of regexs for the radio config', () => {
+    const validRoutes = [
+      '/hausa/bbc_hausa_radio/liveradio',
+      '/indonesia/bbc_indonesian_radio/w34rfd4k',
+      '/persian/bbc_persian_radio/abcd1234',
+      '/persian/bbc_dari_radio/liveradio',
+      '/hausa/bbc_hausa_radio/liveradio.amp',
+      '/hausa/bbc_hausa_radio/abcd1234.amp',
+    ];
+    shouldMatchValidRoutes(validRoutes, radioAndTvPath);
+
+    const invalidRoutes = [
+      '/hausa/bbc_persian_radio/liveradio',
+      '/persian/bbc_hausa_radio/abcd1234.amp',
+      '/hausa/bbc_hausa_radio/',
+      '/hausa/bbc_hausa_radio/.amp',
+      '/foobar/bbc_hausa_radio/liveradio',
+      '/persian/foobar/liveradio',
+      '/persian/foobar/liveradio.amp',
+    ];
+    shouldNotMatchInvalidRoutes(invalidRoutes, radioAndTvPath);
+  });
 
   const invalidRoutes = [
     '/hausa/bbc_hausa_radio/', // live radio with no media id

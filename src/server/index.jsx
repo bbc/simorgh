@@ -15,6 +15,7 @@ import {
   frontPageSwPath,
   cpsAssetPageDataPath,
   radioAndTvDataPath,
+  mostReadDataRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
@@ -48,7 +49,7 @@ class LoggerStream {
 
 const constructDataFilePath = ({ pageType, service, id, variant = '' }) => {
   const dataPath =
-    pageType === 'frontPage'
+    pageType === 'frontpage' || pageType === 'mostRead'
       ? `${variant || 'index'}.json`
       : `${id}${variant}.json`;
 
@@ -131,6 +132,16 @@ if (process.env.APP_ENV === 'local') {
 
       const dataFilePath = constructDataFilePath({
         pageType: 'frontPage',
+        service,
+        variant,
+      });
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(mostReadDataRegexPath, async ({ params }, res, next) => {
+      const { service, variant } = params;
+      const dataFilePath = constructDataFilePath({
+        pageType: 'mostRead',
         service,
         variant,
       });
