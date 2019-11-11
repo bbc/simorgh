@@ -172,7 +172,6 @@ const OnwardJourneys = ({ onwardJourneysData, service, script }) => {
           {onwardJourneysData.map(topic => (
             <Tab key={topic.name}>{topic.name}</Tab>
           ))}
-          <Tab />
         </TabsList>
       </Carousel>
       <CardList>
@@ -199,11 +198,12 @@ const OnwardJourneys = ({ onwardJourneysData, service, script }) => {
 };
 
 OnwardJourneys.propTypes = {
-  onwardJourneysData: arrayOf(
-    shape({ href: string.isRequired, name: string.isRequired }),
-  ).isRequired,
+  onwardJourneysData: arrayOf(shape({ href: string, name: string })),
   service: string.isRequired,
-  script: string.isRequired,
+  script: shape({}).isRequired,
+};
+OnwardJourneys.defaultProps = {
+  onwardJourneysData: [],
 };
 
 export default OnwardJourneys;

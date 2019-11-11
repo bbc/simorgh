@@ -33,6 +33,137 @@ exports[`should render a news article correctly 1`] = `
   margin: 0;
 }
 
+.c10 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c18 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+.c5 {
+  padding-top: calc(4 * 1rem);
+  padding-bottom: calc(2 * 1rem);
+  background-color: #F2F2F2;
+}
+
+.c16 {
+  padding: 0 1rem 0 1rem;
+  min-width: 20%;
+}
+
+.c11 {
+  padding: 1rem;
+}
+
+.c12 {
+  border: none;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  background-color: #F2F2F2;
+  padding: 0.5rem 1rem;
+}
+
+.c12:first-child {
+  background-color: #222222;
+  color: #FFFFFF;
+}
+
+.c7 {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.c8 {
+  position: absolute;
+  top: 6.5rem;
+  right: 20rem;
+}
+
+.c9 {
+  border: none;
+  background-color: #F2F2F2;
+}
+
+.c13 {
+  display: block;
+  list-style-type: none;
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.c15 {
+  background-color: #FFFFFF;
+  display: inline-block;
+  width: calc(20% - 4 * 0.5rem);
+  margin: 0 0.5rem 1rem 0.5rem;
+}
+
+.c14 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c17 {
+  color: #222222;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c19 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  margin: 1rem;
+}
+
+.c19:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c19:focus,
+.c19:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.c6 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  margin: 0 1rem;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c2 {
     font-size: 2rem;
@@ -173,6 +304,62 @@ exports[`should render a news article correctly 1`] = `
   .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -453,6 +640,266 @@ exports[`should render a news article correctly 1`] = `
           </div>
         </div>
       </main>
+      <div
+        class="c5"
+      >
+        <h2
+          class="c6"
+        >
+          More from the BBC
+        </h2>
+        <div
+          class="c7"
+        >
+          <div
+            class="c8"
+          >
+            <button
+              class="c9"
+              type="button"
+            >
+              <span
+                class="c10"
+              >
+                Scroll carousel left
+              </span>
+              <svg
+                enable-background="new 0 0 18 22"
+                height="44px"
+                version="1.1"
+                viewBox="0 0 44 44"
+                width="44px"
+                x="0px"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0px"
+              >
+                <g
+                  fill="#6e6e73"
+                  id="arrow-left"
+                >
+                  <rect
+                    fill="#6e6e73"
+                    height="44"
+                    width="44"
+                  />
+                  <rect
+                    fill="#f2f2f2"
+                    height="40"
+                    width="40"
+                    x="2"
+                    y="2"
+                  />
+                  <polygon
+                    points="13,22 31,33 31,28.1 20.9,22 31,15.9 31,11"
+                  />
+                </g>
+              </svg>
+            </button>
+            <button
+              class="c9"
+              type="button"
+            >
+              <span
+                class="c10"
+              >
+                Scroll carousel right
+              </span>
+              <svg
+                enable-background="new 0 0 44 44"
+                height="44px"
+                version="1.1"
+                viewBox="0 0 44 44"
+                width="44px"
+                x="0px"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0px"
+              >
+                <g
+                  fill="#222222"
+                  id="arrow-right"
+                >
+                  <rect
+                    fill="#222222"
+                    height="44"
+                    width="44"
+                  />
+                  <rect
+                    fill="#FFFFFF"
+                    height="40"
+                    width="40"
+                    x="2"
+                    y="2"
+                  />
+                  <polygon
+                    points="31,22 13,11 13,15.9 23.1,22 13,28.1 13,33"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="c11"
+          >
+            <button
+              class="c12"
+            >
+              Climate change
+            </button>
+            <button
+              class="c12"
+            >
+              Elon Musk
+            </button>
+            <button
+              class="c12"
+            >
+              Environment
+            </button>
+            <button
+              class="c12"
+            >
+              YouTube
+            </button>
+            <button
+              class="c12"
+            >
+              YouTubers
+            </button>
+          </div>
+        </div>
+        <ul
+          class="c13"
+        >
+          <a
+            class="c14"
+            href="https://www.bbc.co.uk/news/science-environment-50237551"
+          >
+            <li
+              class="c15"
+            >
+              <div
+                class="c16"
+              >
+                <h4
+                  class="c17"
+                >
+                  Climate change 'making mountaineering riskier'
+                </h4>
+              </div>
+              <img
+                alt="Mountaineers climbing the Alps"
+                class="c18"
+                src="http://c.files.bbci.co.uk/14A56/production/_109466548_crevasses.jpg"
+                width="100%"
+              />
+            </li>
+          </a>
+          <a
+            class="c14"
+            href="https://www.bbc.co.uk/news/uk-politics-50318521"
+          >
+            <li
+              class="c15"
+            >
+              <div
+                class="c16"
+              >
+                <h4
+                  class="c17"
+                >
+                  Corbyn plans 'green industrial revolution'
+                </h4>
+              </div>
+              <img
+                alt="Jeremy Corbyn"
+                class="c18"
+                src="http://c.files.bbci.co.uk/D615/production/_109550845_p07t5pvs.jpg"
+                width="100%"
+              />
+            </li>
+          </a>
+          <a
+            class="c14"
+            href="https://www.bbc.co.uk/news/uk-politics-50315720"
+          >
+            <li
+              class="c15"
+            >
+              <div
+                class="c16"
+              >
+                <h4
+                  class="c17"
+                >
+                  How would the Greens fund climate pledge?
+                </h4>
+              </div>
+              <img
+                alt="Wind turbines"
+                class="c18"
+                src="http://c.files.bbci.co.uk/AAAE/production/_109549634_gettyimages-976800330.jpg"
+                width="100%"
+              />
+            </li>
+          </a>
+          <a
+            class="c14"
+            href="https://www.bbc.co.uk/news/uk-politics-50317421"
+          >
+            <li
+              class="c15"
+            >
+              <div
+                class="c16"
+              >
+                <h4
+                  class="c17"
+                >
+                  Green Party: 'This must be the climate election'
+                </h4>
+              </div>
+              <img
+                alt="Sian Berry, Carla Denyer and Amelia Womack"
+                class="c18"
+                src="http://c.files.bbci.co.uk/036A/production/_109547800_p07t5lh8.jpg"
+                width="100%"
+              />
+            </li>
+          </a>
+          <a
+            class="c14"
+            href="https://www.bbc.co.uk/news/science-environment-50267017"
+          >
+            <li
+              class="c15"
+            >
+              <div
+                class="c16"
+              >
+                <h4
+                  class="c17"
+                >
+                  Nuclear fusion: 'A question of when, not if'
+                </h4>
+              </div>
+              <img
+                alt="fusion"
+                class="c18"
+                src="http://c.files.bbci.co.uk/5494/production/_109525612_gettyimages-1095967942.jpg"
+                width="100%"
+              />
+            </li>
+          </a>
+        </ul>
+        <a
+          class="c19"
+          href="https://www.bbc.co.uk/news/topics/cmj34zmwm1zt/climate-change"
+        >
+          Climate change
+        </a>
+      </div>
     </div>
   </body>
 </html>
@@ -708,6 +1155,137 @@ exports[`should render a persian article correctly 1`] = `
   margin: 0;
 }
 
+.c10 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c18 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+.c5 {
+  padding-top: calc(4 * 1rem);
+  padding-bottom: calc(2 * 1rem);
+  background-color: #F2F2F2;
+}
+
+.c16 {
+  padding: 0 1rem 0 1rem;
+  min-width: 20%;
+}
+
+.c11 {
+  padding: 1rem;
+}
+
+.c12 {
+  border: none;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  background-color: #F2F2F2;
+  padding: 0.5rem 1rem;
+}
+
+.c12:first-child {
+  background-color: #222222;
+  color: #FFFFFF;
+}
+
+.c7 {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.c8 {
+  position: absolute;
+  top: 6.5rem;
+  right: 20rem;
+}
+
+.c9 {
+  border: none;
+  background-color: #F2F2F2;
+}
+
+.c13 {
+  display: block;
+  list-style-type: none;
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.c15 {
+  background-color: #FFFFFF;
+  display: inline-block;
+  width: calc(20% - 4 * 0.5rem);
+  margin: 0 0.5rem 1rem 0.5rem;
+}
+
+.c14 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c17 {
+  color: #222222;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c19 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  margin: 1rem;
+}
+
+.c19:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c19:focus,
+.c19:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.c6 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  margin: 0 1rem;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c2 {
     font-size: 2.375rem;
@@ -851,6 +1429,62 @@ exports[`should render a persian article correctly 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
 <div>
       <noscript />
       <div>
@@ -884,13 +1518,490 @@ exports[`should render a persian article correctly 1`] = `
           </div>
         </div>
       </main>
+      <div
+        class="c5"
+      >
+        <h2
+          class="c6"
+        >
+          More from the BBC
+        </h2>
+        <div
+          class="c7"
+        >
+          <div
+            class="c8"
+          >
+            <button
+              class="c9"
+              type="button"
+            >
+              <span
+                class="c10"
+              >
+                Scroll carousel left
+              </span>
+              <svg
+                enable-background="new 0 0 18 22"
+                height="44px"
+                version="1.1"
+                viewBox="0 0 44 44"
+                width="44px"
+                x="0px"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0px"
+              >
+                <g
+                  fill="#6e6e73"
+                  id="arrow-left"
+                >
+                  <rect
+                    fill="#6e6e73"
+                    height="44"
+                    width="44"
+                  />
+                  <rect
+                    fill="#f2f2f2"
+                    height="40"
+                    width="40"
+                    x="2"
+                    y="2"
+                  />
+                  <polygon
+                    points="13,22 31,33 31,28.1 20.9,22 31,15.9 31,11"
+                  />
+                </g>
+              </svg>
+            </button>
+            <button
+              class="c9"
+              type="button"
+            >
+              <span
+                class="c10"
+              >
+                Scroll carousel right
+              </span>
+              <svg
+                enable-background="new 0 0 44 44"
+                height="44px"
+                version="1.1"
+                viewBox="0 0 44 44"
+                width="44px"
+                x="0px"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0px"
+              >
+                <g
+                  fill="#222222"
+                  id="arrow-right"
+                >
+                  <rect
+                    fill="#222222"
+                    height="44"
+                    width="44"
+                  />
+                  <rect
+                    fill="#FFFFFF"
+                    height="40"
+                    width="40"
+                    x="2"
+                    y="2"
+                  />
+                  <polygon
+                    points="31,22 13,11 13,15.9 23.1,22 13,28.1 13,33"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="c11"
+          >
+            <button
+              class="c12"
+            >
+              Climate change
+            </button>
+            <button
+              class="c12"
+            >
+              Elon Musk
+            </button>
+            <button
+              class="c12"
+            >
+              Environment
+            </button>
+            <button
+              class="c12"
+            >
+              YouTube
+            </button>
+            <button
+              class="c12"
+            >
+              YouTubers
+            </button>
+          </div>
+        </div>
+        <ul
+          class="c13"
+        >
+          <a
+            class="c14"
+            href="https://www.bbc.co.uk/news/science-environment-50237551"
+          >
+            <li
+              class="c15"
+            >
+              <div
+                class="c16"
+              >
+                <h4
+                  class="c17"
+                >
+                  Climate change 'making mountaineering riskier'
+                </h4>
+              </div>
+              <img
+                alt="Mountaineers climbing the Alps"
+                class="c18"
+                src="http://c.files.bbci.co.uk/14A56/production/_109466548_crevasses.jpg"
+                width="100%"
+              />
+            </li>
+          </a>
+          <a
+            class="c14"
+            href="https://www.bbc.co.uk/news/uk-politics-50318521"
+          >
+            <li
+              class="c15"
+            >
+              <div
+                class="c16"
+              >
+                <h4
+                  class="c17"
+                >
+                  Corbyn plans 'green industrial revolution'
+                </h4>
+              </div>
+              <img
+                alt="Jeremy Corbyn"
+                class="c18"
+                src="http://c.files.bbci.co.uk/D615/production/_109550845_p07t5pvs.jpg"
+                width="100%"
+              />
+            </li>
+          </a>
+          <a
+            class="c14"
+            href="https://www.bbc.co.uk/news/uk-politics-50315720"
+          >
+            <li
+              class="c15"
+            >
+              <div
+                class="c16"
+              >
+                <h4
+                  class="c17"
+                >
+                  How would the Greens fund climate pledge?
+                </h4>
+              </div>
+              <img
+                alt="Wind turbines"
+                class="c18"
+                src="http://c.files.bbci.co.uk/AAAE/production/_109549634_gettyimages-976800330.jpg"
+                width="100%"
+              />
+            </li>
+          </a>
+          <a
+            class="c14"
+            href="https://www.bbc.co.uk/news/uk-politics-50317421"
+          >
+            <li
+              class="c15"
+            >
+              <div
+                class="c16"
+              >
+                <h4
+                  class="c17"
+                >
+                  Green Party: 'This must be the climate election'
+                </h4>
+              </div>
+              <img
+                alt="Sian Berry, Carla Denyer and Amelia Womack"
+                class="c18"
+                src="http://c.files.bbci.co.uk/036A/production/_109547800_p07t5lh8.jpg"
+                width="100%"
+              />
+            </li>
+          </a>
+          <a
+            class="c14"
+            href="https://www.bbc.co.uk/news/science-environment-50267017"
+          >
+            <li
+              class="c15"
+            >
+              <div
+                class="c16"
+              >
+                <h4
+                  class="c17"
+                >
+                  Nuclear fusion: 'A question of when, not if'
+                </h4>
+              </div>
+              <img
+                alt="fusion"
+                class="c18"
+                src="http://c.files.bbci.co.uk/5494/production/_109525612_gettyimages-1095967942.jpg"
+                width="100%"
+              />
+            </li>
+          </a>
+        </ul>
+        <a
+          class="c19"
+          href="https://www.bbc.co.uk/news/topics/cmj34zmwm1zt/climate-change"
+        >
+          Climate change
+        </a>
+      </div>
     </div>
   </body>
 </html>
 `;
 
 exports[`should render a pidgin article correctly (with navigation) 1`] = `
-.c2 {
+<html
+  dir="ltr"
+  lang="pcm"
+>
+  <head>
+    <title>
+      Article Headline for SEO in Pidgin - BBC News Pidgin
+    </title>
+    <link
+      href="https://www.test.bbc.com/pathname"
+      rel="canonical"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/pathname.amp"
+      rel="amphtml"
+    />
+    <link
+      href="http://localhost:7080/pidgin/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="BBC News Pidgin"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News Pidgin"
+      name="application-name"
+    />
+    <meta
+      content="Article summary in Pidgin"
+      name="description"
+    />
+    <meta
+      content="100004154058350"
+      name="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      name="fb:app_id"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="Article summary in Pidgin"
+      name="og:description"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
+      name="og:image"
+    />
+    <meta
+      content="BBC News Pidgin"
+      name="og:image:alt"
+    />
+    <meta
+      content="pcm"
+      name="og:locale"
+    />
+    <meta
+      content="BBC News Pidgin"
+      name="og:site_name"
+    />
+    <meta
+      content="Article Headline for SEO in Pidgin - BBC News Pidgin"
+      name="og:title"
+    />
+    <meta
+      content="article"
+      name="og:type"
+    />
+    <meta
+      content="https://www.test.bbc.com/pathname"
+      name="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:creator"
+    />
+    <meta
+      content="Article summary in Pidgin"
+      name="twitter:description"
+    />
+    <meta
+      content="BBC News Pidgin"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:site"
+    />
+    <meta
+      content="Article Headline for SEO in Pidgin - BBC News Pidgin"
+      name="twitter:title"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
+      content="2018-01-01T13:00:00.000Z"
+      name="article:modified_time"
+    />
+    <meta
+      content="2018-01-01T12:01:00.000Z"
+      name="article:published_time"
+    />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Article Headline for SEO in Pidgin"},"headline":"Article Headline for SEO in Pidgin","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    .c2 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1252,393 +2363,7 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
   }
 }
 
-<html
-  dir="ltr"
-  lang="pcm"
->
-  <head>
-    <title>
-      Article Headline for SEO in Pidgin - BBC News Pidgin
-    </title>
-    <link
-      href="https://www.test.bbc.com/pathname"
-      hreflang="x-default"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.com/pathname"
-      hreflang="en"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pathname"
-      hreflang="en-gb"
-      rel="alternate"
-    />
-    <link
-      href="http://localhost:7080/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="http://localhost:7080/persian/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="https://www.test.bbc.com/pathname"
-      rel="canonical"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pathname.amp"
-      rel="amphtml"
-    />
-    <link
-      href="http://localhost:7080/pidgin/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      content="Royal Wedding 2018"
-      name="article:tag"
-    />
-    <meta
-      content="Duchess of Sussex"
-      name="article:tag"
-    />
-    <meta
-      content="Queen Victoria"
-      name="article:tag"
-    />
-    <meta
-      content="IE=edge"
-      http-equiv="X-UA-Compatible"
-    />
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      content="noodp,noydir"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      name="viewport"
-    />
-    <meta
-      content="BBC News Pidgin"
-      name="apple-mobile-web-app-title"
-    />
-    <meta
-      content="BBC News Pidgin"
-      name="application-name"
-    />
-    <meta
-      content="Article summary in Pidgin"
-      name="description"
-    />
-    <meta
-      content="100004154058350"
-      name="fb:admins"
-    />
-    <meta
-      content="1609039196070050"
-      name="fb:app_id"
-    />
-    <meta
-      content="yes"
-      name="mobile-web-app-capable"
-    />
-    <meta
-      content="#B80000"
-      name="msapplication-TileColor"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
-      name="msapplication-TileImage"
-    />
-    <meta
-      content="Article summary in Pidgin"
-      name="og:description"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
-      name="og:image"
-    />
-    <meta
-      content="BBC News Pidgin"
-      name="og:image:alt"
-    />
-    <meta
-      content="pcm"
-      name="og:locale"
-    />
-    <meta
-      content="BBC News Pidgin"
-      name="og:site_name"
-    />
-    <meta
-      content="Article Headline for SEO in Pidgin - BBC News Pidgin"
-      name="og:title"
-    />
-    <meta
-      content="article"
-      name="og:type"
-    />
-    <meta
-      content="https://www.test.bbc.com/pathname"
-      name="og:url"
-    />
-    <meta
-      content="summary_large_image"
-      name="twitter:card"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:creator"
-    />
-    <meta
-      content="Article summary in Pidgin"
-      name="twitter:description"
-    />
-    <meta
-      content="BBC News Pidgin"
-      name="twitter:image:alt"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
-      name="twitter:image:src"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:site"
-    />
-    <meta
-      content="Article Headline for SEO in Pidgin - BBC News Pidgin"
-      name="twitter:title"
-    />
-    <meta
-      content="https://www.facebook.com/bbcnews"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:published_time"
-    />
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}],"author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
-    </script>
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News فارسی","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"سرصفحه مقاله"},"headline":"سرصفحه مقاله","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News فارسی","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
-    </script>
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Article Headline for SEO in Pidgin"},"headline":"Article Headline for SEO in Pidgin","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
-    </script>
-  </head>
-  <body>
-    <div>
+<div>
       <noscript />
       <div>
         chartbeat
@@ -1798,9 +2523,6 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
             >
               YouTubers
             </button>
-            <button
-              class="c12"
-            />
           </div>
         </div>
         <ul
