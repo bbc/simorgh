@@ -27,7 +27,7 @@ describe('WithVariant', () => {
   });
 
   describe('service with no default variant', () => {
-    beforeEach(() => {
+    it('should not redirect', () => {
       const service = 'news';
 
       useParams.mockReturnValue({
@@ -36,11 +36,9 @@ describe('WithVariant', () => {
       useLocation.mockReturnValue({
         pathname: `/${service}`,
       });
-    });
 
-    const match = getMatchProps('news');
+      const match = getMatchProps('news');
 
-    it('should not redirect', () => {
       const history = createMemoryHistory();
 
       render(
@@ -54,7 +52,7 @@ describe('WithVariant', () => {
   });
 
   describe('service (ukchina) with default variant', () => {
-    beforeEach(() => {
+    it('should not redirect to ukchina/simp', () => {
       const service = 'ukchina';
 
       useParams.mockReturnValue({
@@ -63,11 +61,9 @@ describe('WithVariant', () => {
       useLocation.mockReturnValue({
         pathname: `/${service}`,
       });
-    });
 
-    const match = getMatchProps('ukchina');
+      const match = getMatchProps('ukchina');
 
-    it('should not redirect to ukchina/simp', () => {
       const history = createMemoryHistory();
 
       render(
@@ -81,7 +77,7 @@ describe('WithVariant', () => {
   });
 
   describe('service (zhongwen) with default variant', () => {
-    beforeEach(() => {
+    it('should not redirect to zhongwen/simp', () => {
       const service = 'zhongwen';
 
       useParams.mockReturnValue({
@@ -90,11 +86,9 @@ describe('WithVariant', () => {
       useLocation.mockReturnValue({
         pathname: `/${service}`,
       });
-    });
 
-    const match = getMatchProps('zhongwen');
+      const match = getMatchProps('zhongwen');
 
-    it('should not redirect to zhongwen/simp', () => {
       const history = createMemoryHistory();
 
       render(
@@ -108,7 +102,7 @@ describe('WithVariant', () => {
   });
 
   describe('service (serbian) with default variant', () => {
-    beforeEach(() => {
+    it('should not redirect to serbian/lat', () => {
       const service = 'serbian';
 
       useParams.mockReturnValue({
@@ -117,11 +111,9 @@ describe('WithVariant', () => {
       useLocation.mockReturnValue({
         pathname: `/${service}`,
       });
-    });
 
-    const match = getMatchProps('serbian');
+      const match = getMatchProps('serbian');
 
-    it('should not redirect to serbian/lat', () => {
       const history = createMemoryHistory();
 
       render(
