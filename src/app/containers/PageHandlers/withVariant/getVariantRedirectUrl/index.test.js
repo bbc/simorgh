@@ -3,7 +3,7 @@ import {
   getVariant,
   servicesWithVariants,
 } from '#lib/utilities/variantHandler';
-import { articleRegexPath, frontpageRegexPath } from '#app/routes/regex';
+import { articlePath, frontPagePath } from '#app/routes/regex';
 import getVariantRedirectUrl from './index';
 
 jest.mock('js-cookie', () => ({
@@ -41,7 +41,7 @@ describe('getVariantRedirectUrl', () => {
             };
             const props = {
               match: {
-                path: frontpageRegexPath,
+                path: frontPagePath,
                 params,
               },
             };
@@ -67,7 +67,7 @@ describe('getVariantRedirectUrl', () => {
             };
             const props = {
               match: {
-                path: frontpageRegexPath,
+                path: frontPagePath,
                 params,
               },
             };
@@ -94,7 +94,7 @@ describe('getVariantRedirectUrl', () => {
             };
             const props = {
               match: {
-                path: frontpageRegexPath,
+                path: frontPagePath,
                 params,
               },
             };
@@ -122,7 +122,7 @@ describe('getVariantRedirectUrl', () => {
             };
             const props = {
               match: {
-                path: frontpageRegexPath,
+                path: frontPagePath,
                 params,
               },
             };
@@ -149,7 +149,7 @@ describe('getVariantRedirectUrl', () => {
             };
             const props = {
               match: {
-                path: frontpageRegexPath,
+                path: frontPagePath,
                 params,
               },
             };
@@ -180,7 +180,7 @@ describe('getVariantRedirectUrl', () => {
             };
             const props = {
               match: {
-                path: articleRegexPath,
+                path: articlePath,
                 params,
               },
             };
@@ -210,7 +210,7 @@ describe('getVariantRedirectUrl', () => {
             };
             const props = {
               match: {
-                path: articleRegexPath,
+                path: articlePath,
                 params,
               },
             };
@@ -239,7 +239,7 @@ describe('getVariantRedirectUrl', () => {
             };
             const props = {
               match: {
-                path: articleRegexPath,
+                path: articlePath,
                 params,
               },
             };
@@ -271,7 +271,7 @@ describe('getVariantRedirectUrl', () => {
             };
             const props = {
               match: {
-                path: articleRegexPath,
+                path: articlePath,
                 params,
               },
             };
@@ -302,7 +302,7 @@ describe('getVariantRedirectUrl', () => {
             };
             const props = {
               match: {
-                path: articleRegexPath,
+                path: articlePath,
                 params,
               },
             };

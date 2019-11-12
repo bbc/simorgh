@@ -2,7 +2,7 @@ import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { useParams, useLocation } from 'react-router-dom';
 import WithVariant from '.';
-import { frontpageRegexPath } from '#app/routes/regex';
+import { frontPagePath } from '#app/routes/regex';
 
 jest.mock('react-router-dom', () => ({
   useParams: jest.fn(),
@@ -20,7 +20,7 @@ describe('WithVariant', () => {
   const WithVariantHOC = WithVariant(Component);
 
   const getMatchProps = (service, path = null) => ({
-    path: path || frontpageRegexPath,
+    path: path || frontPagePath,
     params: {
       service,
     },
