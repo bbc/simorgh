@@ -91,10 +91,11 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           });
         });
 
-        if (service === 'news') {
-          it('should render a visible guidance message', () => {
-            cy.window().then(win => {
-              const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+        it('should render a visible guidance message', () => {
+          cy.window().then(win => {
+            const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+
+            if (media) {
               const longGuidanceWarning =
                 media.model.blocks[1].model.blocks[0].model.versions[0].warnings
                   .long;
@@ -112,15 +113,12 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                       .and('contain', longGuidanceWarning);
                     // Check for video with no guidance message
                   } else {
-                    cy.get('div[class^="StyledGuidance"]').should(
-                      'not.have.value',
-                      'strong',
-                    );
+                    cy.get('div[class^="StyledGuidance"]').should('not.exist');
                   }
                 });
-            });
+            }
           });
-        }
+        });
 
         // This test is being temporarily throttled to the service 'news'.
         if (service === 'news') {
