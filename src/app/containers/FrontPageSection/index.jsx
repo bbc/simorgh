@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { bool, shape, number, arrayOf } from 'prop-types';
+import { bool, shape, number, arrayOf, node } from 'prop-types';
 import styled, { css } from 'styled-components';
 import Grid from '@bbc/psammead-grid';
 import {
@@ -93,18 +93,28 @@ const defaultColumns = {
   group3: 6,
 };
 
+const CommonGridWrapper = ({ children }) => (
+  <Grid
+    enableGelGutters
+    columns={{
+      ...defaultColumns,
+      group4: 8,
+      group5: 8,
+    }}
+  >
+    {children}
+  </Grid>
+);
+
+CommonGridWrapper.propTypes = {
+  children: node.isRequired,
+};
+
 const StoryPromoRenderer = ({ items, firstSection, sectionNumber }) => {
   if (items.length === 1) {
     return (
       <MarginWrapper firstSection={firstSection} oneItem>
-        <Grid
-          enableGelGutters
-          columns={{
-            ...defaultColumns,
-            group4: 8,
-            group5: 8,
-          }}
-        >
+        <CommonGridWrapper>
           <Grid
             item
             columns={{
@@ -119,7 +129,7 @@ const StoryPromoRenderer = ({ items, firstSection, sectionNumber }) => {
               storyNumber={0}
             />
           </Grid>
-        </Grid>
+        </CommonGridWrapper>
       </MarginWrapper>
     );
   }
@@ -127,14 +137,7 @@ const StoryPromoRenderer = ({ items, firstSection, sectionNumber }) => {
   return (
     <MarginWrapper firstSection={firstSection}>
       <StoryPromoUl>
-        <Grid
-          enableGelGutters
-          columns={{
-            ...defaultColumns,
-            group4: 8,
-            group5: 8,
-          }}
-        >
+        <CommonGridWrapper>
           {items.map((item, index) => (
             <Grid
               item
@@ -154,7 +157,7 @@ const StoryPromoRenderer = ({ items, firstSection, sectionNumber }) => {
               </StoryPromoLi>
             </Grid>
           ))}
-        </Grid>
+        </CommonGridWrapper>
       </StoryPromoUl>
     </MarginWrapper>
   );
