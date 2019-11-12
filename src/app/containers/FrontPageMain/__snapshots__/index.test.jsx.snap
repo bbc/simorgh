@@ -13,7 +13,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   margin: 0;
 }
 
-.c43 {
+.c45 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -22,7 +22,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 0.75rem;
 }
 
-.c33 {
+.c35 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -31,13 +31,17 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 0.75rem;
 }
 
-.c44 {
+.c46 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
   width: 1rem;
   height: 0.8125rem;
+}
+
+.c10 {
+  position: relative;
 }
 
 .c5 {
@@ -50,14 +54,14 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   flex-direction: column;
 }
 
-.c40 {
+.c42 {
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c40:focus,
-.c40:hover {
+.c42:focus,
+.c42:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -81,7 +85,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   align-items: baseline;
 }
 
-.c41 {
+.c43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -120,7 +124,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   align-items: center;
 }
 
-.c42 {
+.c44 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -159,7 +163,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   width: 1px;
 }
 
-.c38 {
+.c40 {
   position: relative;
   margin-top: 2rem;
 }
@@ -169,16 +173,16 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   padding: 0;
 }
 
-.c10 {
+.c12 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c10:first-child {
+.c12:first-child {
   padding-top: 0;
 }
 
-.c10:last-child {
+.c12:last-child {
   padding-bottom: 0;
   border: none;
 }
@@ -189,15 +193,15 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   padding: 0;
 }
 
-.c11 {
+.c13 {
   position: relative;
 }
 
-.c28 {
+.c30 {
   position: relative;
 }
 
-.c12 {
+.c14 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -205,35 +209,35 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   width: 100%;
 }
 
-.c29 {
+.c31 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c13 {
+.c15 {
   position: relative;
 }
 
-.c16 {
+.c18 {
   position: absolute;
   bottom: 0;
 }
 
-.c17 {
+.c19 {
   display: inline-block;
   vertical-align: top;
 }
 
-.c35 {
+.c37 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c18 {
+.c20 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -245,7 +249,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   display: inline;
 }
 
-.c36 {
+.c38 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -257,38 +261,38 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   display: inline;
 }
 
+.c23 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.c39 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
 .c21 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
-}
-
-.c37 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
-}
-
-.c19 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c19:before {
+.c21:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -300,17 +304,17 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   z-index: 1;
 }
 
-.c19:hover,
-.c19:focus {
+.c21:hover,
+.c21:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c19:visited {
+.c21:visited {
   color: #6E6E73;
 }
 
-.c20 {
+.c22 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -319,7 +323,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   margin-right: 0.5rem;
 }
 
-.c22 {
+.c24 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -329,7 +333,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   font-style: normal;
 }
 
-.c14 {
+.c16 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -342,7 +346,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c39 {
+.c41 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -355,13 +359,13 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c15 {
+.c17 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c31 {
+.c33 {
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
@@ -374,7 +378,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 2rem;
 }
 
-.c32 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -386,34 +390,34 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 100%;
 }
 
-.c34 {
+.c36 {
   vertical-align: middle;
   margin: 0 0.25rem;
 }
 
-.c23 {
+.c25 {
   position: relative;
   z-index: 2;
   padding: 1rem 0 0;
 }
 
-.c25 {
+.c27 {
   border-top: 1px solid #F2F2F2;
   padding: 0.5rem 0;
 }
 
-.c24 {
+.c26 {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.c27 {
+.c29 {
   display: inline;
   vertical-align: middle;
 }
 
-.c26 {
+.c28 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -424,13 +428,13 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   text-decoration: none;
 }
 
-.c26:hover,
-.c26:focus {
+.c28:hover,
+.c28:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c26:visited {
+.c28:visited {
   color: #6E6E73;
 }
 
@@ -438,6 +442,109 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   padding-bottom: 2rem;
   max-width: 80rem;
   margin: 0 auto;
+}
+
+@media (max-width:14.9375rem) {
+  .c10 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c10 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c10 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c10 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c10 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c10 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c10 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c11 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c11 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c11 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c11 {
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c11 {
+    margin: 0 0.5rem;
+    width: calc(25% - 1rem);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    margin: 0 0.5rem;
+    width: calc(25% - 1rem);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c11 {
+    display: block;
+  }
 }
 
 @media (min-width:37.5rem) {
@@ -450,7 +557,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:37.5rem) {
-  .c41 {
+  .c43 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -485,21 +592,21 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c42 {
+  .c44 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c42 {
+  .c44 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c42 {
+  .c44 {
     margin: 0;
   }
 }
@@ -526,37 +633,37 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:37.5rem) {
-  .c38 {
+  .c40 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c12 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c10 {
+  .c12 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10:first-child {
+  .c12:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c10:first-child {
+  .c12:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
+  .c13 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -564,7 +671,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c28 {
+  .c30 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -572,20 +679,20 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c14 {
     width: 50%;
     margin-bottom: 0;
   }
 }
 
 @media (min-width:80rem) {
-  .c12 {
+  .c14 {
     width: 33.33%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c12 {
+  .c14 {
     display: block;
     width: initial;
     grid-column: 1 / span 6;
@@ -593,14 +700,14 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:63rem) {
-  .c29 {
+  .c31 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c29 {
+  .c31 {
     display: block;
     width: initial;
     grid-column: 1 / span 2;
@@ -608,27 +715,27 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:25rem) {
-  .c30 {
+  .c32 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c19 {
     width: 50%;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c17 {
+  .c19 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c17 {
+  .c19 {
     display: block;
     width: initial;
     padding: initial;
@@ -637,13 +744,13 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:37.5rem) {
-  .c35 {
+  .c37 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c35 {
+  .c37 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -651,7 +758,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c35 {
+  .c37 {
     display: block;
     width: initial;
     padding: initial;
@@ -660,140 +767,140 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
+  .c20 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c20 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c20 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:62.9375rem) {
-  .c18 {
+  .c20 {
     font-size: 0.9375rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c36 {
+  .c38 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c36 {
+  .c38 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c36 {
+  .c38 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:62.9375rem) {
-  .c36 {
+  .c38 {
     font-size: 0.9375rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c21 {
+  .c23 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c21 {
+  .c23 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c21 {
+  .c23 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c37 {
+  .c39 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c37 {
+  .c39 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c37 {
+  .c39 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c37 {
+  .c39 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c24 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c24 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c31 {
+  .c33 {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c26 {
+  .c28 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c26 {
+  .c28 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -1088,15 +1195,17 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 class="c9"
                 role="list"
               >
-                <li
+                <div
                   class="c10"
-                  role="listitem"
+                  dir="ltr"
                 >
                   <div
                     class="c11"
+                    dir="ltr"
                   >
-                    <div
+                    <li
                       class="c12"
+                      role="listitem"
                     >
                       <div
                         class="c13"
@@ -1104,312 +1213,335 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                         <div
                           class="c14"
                         >
-                          <img
-                            alt="Senator Ahmad Lawan and Ali Ndume"
+                          <div
                             class="c15"
-                            sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
-                            src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
-                            srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 624w"
-                            width="976"
-                          />
-                        </div>
-                        <div
-                          class="c16"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="c17"
-                    >
-                      <h3
-                        class="c18"
-                      >
-                        <a
-                          class="c19"
-                          href="/pidgin/live/tori-48591362"
-                        >
-                          <span
-                            role="text"
-                          >
-                            <span
-                              aria-hidden="true"
-                              class="c20"
-                              dir="ltr"
-                            >
-                              LIVE
-                            </span>
-                            <span
-                              class="c0"
-                              lang="en-GB"
-                            >
-                              Live, 
-                            </span>
-                            Senators don begin vote for Senate President
-                          </span>
-                        </a>
-                      </h3>
-                      <p
-                        class="c21"
-                      >
-                        Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
-                      </p>
-                      <time
-                        class="c22"
-                        datetime="2019-06-11"
-                      >
-                        11 Juun 2019
-                      </time>
-                      <div
-                        class="c23"
-                        data-e2e="index-alsos"
-                      >
-                        <h4
-                          class="c0"
-                        >
-                          Ihe ndị ọzọ n'akụkọ a
-                        </h4>
-                        <ul
-                          class="c24"
-                          role="list"
-                        >
-                          <li
-                            class="c25"
-                            role="listitem"
-                          >
-                            <a
-                              class="c26"
-                              href="/pidgin/tori-48591361"
-                            >
-                              <span
-                                class="c27"
-                              >
-                                Who go lead di Ninth National Assembly?
-                              </span>
-                            </a>
-                          </li>
-                          <li
-                            class="c25"
-                            role="listitem"
-                          >
-                            <a
-                              class="c26"
-                              href="/pidgin/tori-47603701"
-                            >
-                              <span
-                                class="c27"
-                              >
-                                4 tins wey go determine who become di next Senate President, Speaker
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li
-                  class="c10"
-                  role="listitem"
-                >
-                  <div
-                    class="c28"
-                  >
-                    <div
-                      class="c29"
-                    >
-                      <div
-                        class="c13"
-                      >
-                        <div
-                          class="c14"
-                        >
-                          <div
-                            class="lazyload-placeholder"
-                          />
-                        </div>
-                        <div
-                          class="c30"
-                        >
-                          <div
-                            aria-hidden="true"
-                            class="c31"
                           >
                             <div
-                              class="c32"
+                              class="c16"
                             >
-                              <svg
-                                class="c33"
-                                focusable="false"
-                                height="12px"
-                                viewBox="0 0 13 12"
-                                width="13px"
-                              >
-                                <path
-                                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                                />
-                                <path
-                                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                                />
-                              </svg>
-                              <time
-                                class="c34"
-                                datetime="PT59S"
-                              >
-                                0:59
-                              </time>
+                              <img
+                                alt="Senator Ahmad Lawan and Ali Ndume"
+                                class="c17"
+                                sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
+                                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
+                                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 624w"
+                                width="976"
+                              />
                             </div>
+                            <div
+                              class="c18"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="c19"
+                        >
+                          <h3
+                            class="c20"
+                          >
+                            <a
+                              class="c21"
+                              href="/pidgin/live/tori-48591362"
+                            >
+                              <span
+                                role="text"
+                              >
+                                <span
+                                  aria-hidden="true"
+                                  class="c22"
+                                  dir="ltr"
+                                >
+                                  LIVE
+                                </span>
+                                <span
+                                  class="c0"
+                                  lang="en-GB"
+                                >
+                                  Live, 
+                                </span>
+                                Senators don begin vote for Senate President
+                              </span>
+                            </a>
+                          </h3>
+                          <p
+                            class="c23"
+                          >
+                            Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
+                          </p>
+                          <time
+                            class="c24"
+                            datetime="2019-06-11"
+                          >
+                            11 Juun 2019
+                          </time>
+                          <div
+                            class="c25"
+                            data-e2e="index-alsos"
+                          >
+                            <h4
+                              class="c0"
+                            >
+                              Ihe ndị ọzọ n'akụkọ a
+                            </h4>
+                            <ul
+                              class="c26"
+                              role="list"
+                            >
+                              <li
+                                class="c27"
+                                role="listitem"
+                              >
+                                <a
+                                  class="c28"
+                                  href="/pidgin/tori-48591361"
+                                >
+                                  <span
+                                    class="c29"
+                                  >
+                                    Who go lead di Ninth National Assembly?
+                                  </span>
+                                </a>
+                              </li>
+                              <li
+                                class="c27"
+                                role="listitem"
+                              >
+                                <a
+                                  class="c28"
+                                  href="/pidgin/tori-47603701"
+                                >
+                                  <span
+                                    class="c29"
+                                  >
+                                    4 tins wey go determine who become di next Senate President, Speaker
+                                  </span>
+                                </a>
+                              </li>
+                            </ul>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      class="c35"
+                    </li>
+                  </div>
+                  <div
+                    class="c11"
+                    dir="ltr"
+                  >
+                    <li
+                      class="c12"
+                      role="listitem"
                     >
-                      <h3
-                        class="c36"
+                      <div
+                        class="c30"
                       >
-                        <a
-                          class="c19"
-                          href="/pidgin/media-44221514"
+                        <div
+                          class="c31"
                         >
-                          <span
-                            role="text"
+                          <div
+                            class="c15"
                           >
-                            <span
-                              class="c0"
+                            <div
+                              class="c16"
                             >
-                              Ọdịyo
-                              , 
-                            </span>
-                            <span>
-                              BBC Pidgin Minute
-                            </span>
-                            <span
-                              class="c0"
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                            <div
+                              class="c32"
                             >
-                              , 0,59
-                            </span>
-                          </span>
-                        </a>
-                      </h3>
-                      <p
-                        class="c37"
-                      >
-                        All di local and world tori wey you suppose know in 60 seconds!
-                      </p>
-                      <time
-                        class="c22"
-                        datetime="2019-06-11"
-                      >
-                        11 Juun 2019
-                      </time>
-                    </div>
-                  </div>
-                </li>
-                <li
-                  class="c10"
-                  role="listitem"
-                >
-                  <div
-                    class="c28"
-                  >
-                    <div
-                      class="c29"
-                    >
-                      <div
-                        class="c13"
-                      >
-                        <div
-                          class="c14"
-                        >
-                          <div
-                            class="lazyload-placeholder"
-                          />
+                              <div
+                                aria-hidden="true"
+                                class="c33"
+                              >
+                                <div
+                                  class="c34"
+                                >
+                                  <svg
+                                    class="c35"
+                                    focusable="false"
+                                    height="12px"
+                                    viewBox="0 0 13 12"
+                                    width="13px"
+                                  >
+                                    <path
+                                      d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                                    />
+                                    <path
+                                      d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                                    />
+                                  </svg>
+                                  <time
+                                    class="c36"
+                                    datetime="PT59S"
+                                  >
+                                    0:59
+                                  </time>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                         <div
-                          class="c30"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="c35"
-                    >
-                      <h3
-                        class="c36"
-                      >
-                        <a
-                          class="c19"
-                          href="/pidgin/tori-48591366"
+                          class="c37"
                         >
-                          Majid Waris no get ‘sɛlɛ’ for Coach Kwesi Appiah en Black Stars Afcon squad
-                        </a>
-                      </h3>
-                      <p
-                        class="c37"
-                      >
-                        Major shocker wey come out be sey dem drop striker, Majeed Waris who dem replace plus U-23 striker, Kwabena Owusu.
-                      </p>
-                      <time
-                        class="c22"
-                        datetime="2019-06-11"
-                      >
-                        11 Juun 2019
-                      </time>
-                    </div>
+                          <h3
+                            class="c38"
+                          >
+                            <a
+                              class="c21"
+                              href="/pidgin/media-44221514"
+                            >
+                              <span
+                                role="text"
+                              >
+                                <span
+                                  class="c0"
+                                >
+                                  Ọdịyo
+                                  , 
+                                </span>
+                                <span>
+                                  BBC Pidgin Minute
+                                </span>
+                                <span
+                                  class="c0"
+                                >
+                                  , 0,59
+                                </span>
+                              </span>
+                            </a>
+                          </h3>
+                          <p
+                            class="c39"
+                          >
+                            All di local and world tori wey you suppose know in 60 seconds!
+                          </p>
+                          <time
+                            class="c24"
+                            datetime="2019-06-11"
+                          >
+                            11 Juun 2019
+                          </time>
+                        </div>
+                      </div>
+                    </li>
                   </div>
-                </li>
-                <li
-                  class="c10"
-                  role="listitem"
-                >
                   <div
-                    class="c28"
+                    class="c11"
+                    dir="ltr"
                   >
-                    <div
-                      class="c29"
+                    <li
+                      class="c12"
+                      role="listitem"
                     >
                       <div
-                        class="c13"
+                        class="c30"
                       >
                         <div
-                          class="c14"
+                          class="c31"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
+                            class="c15"
+                          >
+                            <div
+                              class="c16"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                            <div
+                              class="c32"
+                            />
+                          </div>
                         </div>
                         <div
-                          class="c30"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="c35"
-                    >
-                      <h3
-                        class="c36"
-                      >
-                        <a
-                          class="c19"
-                          href="/pidgin/tori-48579283"
+                          class="c37"
                         >
-                          Woman write exam 30 minutes afta she born
-                        </a>
-                      </h3>
-                      <p
-                        class="c37"
-                      >
-                        Di 21-year-old Ethiopian woman don take one of her secondary school leaving exams 30 minutes afta she born.
-                      </p>
-                      <time
-                        class="c22"
-                        datetime="2019-06-11"
-                      >
-                        11 Juun 2019
-                      </time>
-                    </div>
+                          <h3
+                            class="c38"
+                          >
+                            <a
+                              class="c21"
+                              href="/pidgin/tori-48591366"
+                            >
+                              Majid Waris no get ‘sɛlɛ’ for Coach Kwesi Appiah en Black Stars Afcon squad
+                            </a>
+                          </h3>
+                          <p
+                            class="c39"
+                          >
+                            Major shocker wey come out be sey dem drop striker, Majeed Waris who dem replace plus U-23 striker, Kwabena Owusu.
+                          </p>
+                          <time
+                            class="c24"
+                            datetime="2019-06-11"
+                          >
+                            11 Juun 2019
+                          </time>
+                        </div>
+                      </div>
+                    </li>
                   </div>
-                </li>
+                  <div
+                    class="c11"
+                    dir="ltr"
+                  >
+                    <li
+                      class="c12"
+                      role="listitem"
+                    >
+                      <div
+                        class="c30"
+                      >
+                        <div
+                          class="c31"
+                        >
+                          <div
+                            class="c15"
+                          >
+                            <div
+                              class="c16"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                            <div
+                              class="c32"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="c37"
+                        >
+                          <h3
+                            class="c38"
+                          >
+                            <a
+                              class="c21"
+                              href="/pidgin/tori-48579283"
+                            >
+                              Woman write exam 30 minutes afta she born
+                            </a>
+                          </h3>
+                          <p
+                            class="c39"
+                          >
+                            Di 21-year-old Ethiopian woman don take one of her secondary school leaving exams 30 minutes afta she born.
+                          </p>
+                          <time
+                            class="c24"
+                            datetime="2019-06-11"
+                          >
+                            11 Juun 2019
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                  </div>
+                </div>
               </ul>
             </div>
           </section>
@@ -1418,7 +1550,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             role="region"
           >
             <div
-              class="c38"
+              class="c40"
             >
               <div
                 class="c3"
@@ -1447,214 +1579,239 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               class="c9"
               role="list"
             >
-              <li
+              <div
                 class="c10"
-                role="listitem"
+                dir="ltr"
               >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/tori-48578550"
+                        class="c37"
                       >
-                        'Police need to use technology fight crime for Rivers'
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Di oil rich Rivers state for south south Nigeria dey battle insecurity including kidnappings, armed robbery and cultism.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-10"
-                    >
-                      10 Juun 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/tori-48578550"
+                          >
+                            'Police need to use technology fight crime for Rivers'
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Di oil rich Rivers state for south south Nigeria dey battle insecurity including kidnappings, armed robbery and cultism.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-10"
+                        >
+                          10 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/tori-48560300"
+                        class="c37"
                       >
-                        "I laik wen deh treat me as journalist and not blind man" - Somb Lingom
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Somb Lingom na tori pesin wey dey visually impaired for Cameroon wey dey helep oda pipo laik e for go school.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-08"
-                    >
-                      8 Juun 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/tori-48560300"
+                          >
+                            "I laik wen deh treat me as journalist and not blind man" - Somb Lingom
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Somb Lingom na tori pesin wey dey visually impaired for Cameroon wey dey helep oda pipo laik e for go school.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-08"
+                        >
+                          8 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/world-48553140"
+                        class="c37"
                       >
-                        One million new sex infections dey appear evri day - WHO
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      WHO say safe sex especially through condom and correct testing dey important to reduce di spread.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-07"
-                    >
-                      7 Juun 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/world-48553140"
+                          >
+                            One million new sex infections dey appear evri day - WHO
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          WHO say safe sex especially through condom and correct testing dey important to reduce di spread.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-07"
+                        >
+                          7 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c39"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c41"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/tori-48538424"
+                        class="c37"
                       >
-                        Why Kano State goment cancel popular traditional event
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Di 'Hawan Nassarawa' na popular annual event wey dem dey do for four days during di Salah, but dis year own don get k-leg.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-06"
-                    >
-                      6 Juun 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/tori-48538424"
+                          >
+                            Why Kano State goment cancel popular traditional event
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Di 'Hawan Nassarawa' na popular annual event wey dem dey do for four days during di Salah, but dis year own don get k-leg.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-06"
+                        >
+                          6 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
+              </div>
             </ul>
           </section>
           <section
@@ -1662,7 +1819,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             role="region"
           >
             <div
-              class="c38"
+              class="c40"
             >
               <div
                 class="c3"
@@ -1672,14 +1829,14 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               >
                 <a
                   aria-labelledby="Section-1"
-                  class="c40"
+                  class="c42"
                   href="https://www.bbc.com/pidgin/sport"
                 >
                   <div
                     class="c5"
                   >
                     <span
-                      class="c41"
+                      class="c43"
                       role="text"
                     >
                       <span
@@ -1691,7 +1848,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       </span>
                       <span
                         aria-hidden="true"
-                        class="c42"
+                        class="c44"
                         dir="ltr"
                       >
                         Lee ha niile
@@ -1705,162 +1862,182 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               class="c9"
               role="list"
             >
-              <li
+              <div
                 class="c10"
-                role="listitem"
+                dir="ltr"
               >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/sport-48578548"
+                        class="c37"
                       >
-                        Cameroon di lock horn wit Canada for first ever game
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Na de first taim weh Canada and Cameroon go jam for top international game for 2019 Fifa Women’s World Cup.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-10"
-                    >
-                      10 Juun 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/sport-48578548"
+                          >
+                            Cameroon di lock horn wit Canada for first ever game
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Na de first taim weh Canada and Cameroon go jam for top international game for 2019 Fifa Women’s World Cup.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-10"
+                        >
+                          10 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/sport-48574594"
+                        class="c37"
                       >
-                        Nadal don win number 12 French Open title
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Nadal win for di third straight year for Roland Garros wit 6-3 5-7 6-1 6-1 victory for di final.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-09"
-                    >
-                      9 Juun 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/sport-48574594"
+                          >
+                            Nadal don win number 12 French Open title
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Nadal win for di third straight year for Roland Garros wit 6-3 5-7 6-1 6-1 victory for di final.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-09"
+                        >
+                          9 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/sport-48574590"
+                        class="c37"
                       >
-                        Kelechi Iheanacho no follow as Nigeria release Afcon list
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Leicester City forward Kelechi Iheanacho and Semi Ajayi na di two players wey dem drop from di team.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-09"
-                    >
-                      9 Juun 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/sport-48574590"
+                          >
+                            Kelechi Iheanacho no follow as Nigeria release Afcon list
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Leicester City forward Kelechi Iheanacho and Semi Ajayi na di two players wey dem drop from di team.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-09"
+                        >
+                          9 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
+              </div>
             </ul>
           </section>
           <section
@@ -1868,7 +2045,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             role="region"
           >
             <div
-              class="c38"
+              class="c40"
             >
               <div
                 class="c3"
@@ -1897,486 +2074,516 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               class="c9"
               role="list"
             >
-              <li
+              <div
                 class="c10"
-                role="listitem"
+                dir="ltr"
               >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
-                      </div>
-                      <div
-                        class="c30"
-                      >
-                        <div
-                          aria-hidden="true"
-                          class="c31"
+                          class="c15"
                         >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                           <div
                             class="c32"
                           >
-                            <svg
-                              class="c43"
-                              focusable="false"
-                              height="12px"
-                              viewBox="0 0 32 32"
-                              width="12px"
+                            <div
+                              aria-hidden="true"
+                              class="c33"
                             >
-                              <polygon
-                                points="3,32 29,16 3,0"
-                              />
-                            </svg>
-                            <time
-                              class="c34"
-                              datetime="PT1M51S"
-                            >
-                              1:51
-                            </time>
+                              <div
+                                class="c34"
+                              >
+                                <svg
+                                  class="c45"
+                                  focusable="false"
+                                  height="12px"
+                                  viewBox="0 0 32 32"
+                                  width="12px"
+                                >
+                                  <polygon
+                                    points="3,32 29,16 3,0"
+                                  />
+                                </svg>
+                                <time
+                                  class="c36"
+                                  datetime="PT1M51S"
+                                >
+                                  1:51
+                                </time>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/tori-48591363"
+                      <div
+                        class="c37"
                       >
-                        <span
-                          role="text"
+                        <h3
+                          class="c38"
                         >
-                          <span
-                            class="c0"
+                          <a
+                            class="c21"
+                            href="/pidgin/tori-48591363"
                           >
-                            Vidio
-                            , 
-                          </span>
-                          <span>
-                            “If di spoon attract me, most times na to carry am enta studio” – Collins
-                          </span>
-                          <span
-                            class="c0"
-                          >
-                            , 1,51
-                          </span>
-                        </span>
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Dis artist no dey take eye see spoon, as no be to chop food be di only tin him dey use am do.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-11"
-                    >
-                      11 Juun 2019
-                    </time>
-                  </div>
+                            <span
+                              role="text"
+                            >
+                              <span
+                                class="c0"
+                              >
+                                Vidio
+                                , 
+                              </span>
+                              <span>
+                                “If di spoon attract me, most times na to carry am enta studio” – Collins
+                              </span>
+                              <span
+                                class="c0"
+                              >
+                                , 1,51
+                              </span>
+                            </span>
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Dis artist no dey take eye see spoon, as no be to chop food be di only tin him dey use am do.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-11"
+                        >
+                          11 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
-                      </div>
-                      <div
-                        class="c30"
-                      >
-                        <div
-                          aria-hidden="true"
-                          class="c31"
+                          class="c15"
                         >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                           <div
                             class="c32"
                           >
-                            <svg
-                              class="c43"
-                              focusable="false"
-                              height="12px"
-                              viewBox="0 0 32 32"
-                              width="12px"
+                            <div
+                              aria-hidden="true"
+                              class="c33"
                             >
-                              <polygon
-                                points="3,32 29,16 3,0"
-                              />
-                            </svg>
-                            <time
-                              class="c34"
-                              datetime="PT1M40S"
-                            >
-                              1:40
-                            </time>
+                              <div
+                                class="c34"
+                              >
+                                <svg
+                                  class="c45"
+                                  focusable="false"
+                                  height="12px"
+                                  viewBox="0 0 32 32"
+                                  width="12px"
+                                >
+                                  <polygon
+                                    points="3,32 29,16 3,0"
+                                  />
+                                </svg>
+                                <time
+                                  class="c36"
+                                  datetime="PT1M40S"
+                                >
+                                  1:40
+                                </time>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/media-48519295"
+                      <div
+                        class="c37"
                       >
-                        <span
-                          role="text"
+                        <h3
+                          class="c38"
                         >
-                          <span
-                            class="c0"
+                          <a
+                            class="c21"
+                            href="/pidgin/media-48519295"
                           >
-                            Vidio
-                            , 
-                          </span>
-                          <span>
-                            I realise my World Cup dream afta 14 years
-                          </span>
-                          <span
-                            class="c0"
-                          >
-                            , 1,40
-                          </span>
-                        </span>
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      South Africa captain Janine van Wyk dey lead di Bayana Bayana to go hustle for di Women’s World Cup for di first time ever!
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-06"
-                    >
-                      6 Juun 2019
-                    </time>
-                  </div>
+                            <span
+                              role="text"
+                            >
+                              <span
+                                class="c0"
+                              >
+                                Vidio
+                                , 
+                              </span>
+                              <span>
+                                I realise my World Cup dream afta 14 years
+                              </span>
+                              <span
+                                class="c0"
+                              >
+                                , 1,40
+                              </span>
+                            </span>
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          South Africa captain Janine van Wyk dey lead di Bayana Bayana to go hustle for di Women’s World Cup for di first time ever!
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-06"
+                        >
+                          6 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
-                      </div>
-                      <div
-                        class="c30"
-                      >
-                        <div
-                          aria-hidden="true"
-                          class="c31"
+                          class="c15"
                         >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                           <div
                             class="c32"
                           >
-                            <svg
-                              class="c43"
-                              focusable="false"
-                              height="12px"
-                              viewBox="0 0 32 32"
-                              width="12px"
+                            <div
+                              aria-hidden="true"
+                              class="c33"
                             >
-                              <polygon
-                                points="3,32 29,16 3,0"
-                              />
-                            </svg>
-                            <time
-                              class="c34"
-                              datetime="PT2M26S"
-                            >
-                              2:26
-                            </time>
+                              <div
+                                class="c34"
+                              >
+                                <svg
+                                  class="c45"
+                                  focusable="false"
+                                  height="12px"
+                                  viewBox="0 0 32 32"
+                                  width="12px"
+                                >
+                                  <polygon
+                                    points="3,32 29,16 3,0"
+                                  />
+                                </svg>
+                                <time
+                                  class="c36"
+                                  datetime="PT2M26S"
+                                >
+                                  2:26
+                                </time>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/media-48516777"
+                      <div
+                        class="c37"
                       >
-                        <span
-                          role="text"
+                        <h3
+                          class="c38"
                         >
-                          <span
-                            class="c0"
+                          <a
+                            class="c21"
+                            href="/pidgin/media-48516777"
                           >
-                            Vidio
-                            , 
-                          </span>
-                          <span>
-                            Henna Design di natural tattoo
-                          </span>
-                          <span
-                            class="c0"
-                          >
-                            , 2,26
-                          </span>
-                        </span>
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Weda na for religion or fashion, henna design na natural way to tattoo bodi witout any wahala.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-04"
-                    >
-                      4 Juun 2019
-                    </time>
-                  </div>
+                            <span
+                              role="text"
+                            >
+                              <span
+                                class="c0"
+                              >
+                                Vidio
+                                , 
+                              </span>
+                              <span>
+                                Henna Design di natural tattoo
+                              </span>
+                              <span
+                                class="c0"
+                              >
+                                , 2,26
+                              </span>
+                            </span>
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Weda na for religion or fashion, henna design na natural way to tattoo bodi witout any wahala.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-04"
+                        >
+                          4 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
-                      </div>
-                      <div
-                        class="c30"
-                      >
-                        <div
-                          aria-hidden="true"
-                          class="c31"
+                          class="c15"
                         >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                           <div
                             class="c32"
                           >
-                            <svg
-                              class="c43"
-                              focusable="false"
-                              height="12px"
-                              viewBox="0 0 32 32"
-                              width="12px"
+                            <div
+                              aria-hidden="true"
+                              class="c33"
                             >
-                              <polygon
-                                points="3,32 29,16 3,0"
-                              />
-                            </svg>
-                            <time
-                              class="c34"
-                              datetime="PT7M25S"
-                            >
-                              7:25
-                            </time>
+                              <div
+                                class="c34"
+                              >
+                                <svg
+                                  class="c45"
+                                  focusable="false"
+                                  height="12px"
+                                  viewBox="0 0 32 32"
+                                  width="12px"
+                                >
+                                  <polygon
+                                    points="3,32 29,16 3,0"
+                                  />
+                                </svg>
+                                <time
+                                  class="c36"
+                                  datetime="PT7M25S"
+                                >
+                                  7:25
+                                </time>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/tori-48567846"
+                      <div
+                        class="c37"
                       >
-                        <span
-                          role="text"
+                        <h3
+                          class="c38"
                         >
-                          <span
-                            class="c0"
+                          <a
+                            class="c21"
+                            href="/pidgin/tori-48567846"
                           >
-                            Vidio
-                            , 
-                          </span>
-                          <span>
-                            Di codeine investigation wey change Nigeria
-                          </span>
-                          <span
-                            class="c0"
-                          >
-                            , 7,25
-                          </span>
-                        </span>
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Africa Eye chook eye inside di abuse of codeine cough syrup wey turn many Nigerians to addict.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-08"
-                    >
-                      8 Juun 2019
-                    </time>
-                  </div>
+                            <span
+                              role="text"
+                            >
+                              <span
+                                class="c0"
+                              >
+                                Vidio
+                                , 
+                              </span>
+                              <span>
+                                Di codeine investigation wey change Nigeria
+                              </span>
+                              <span
+                                class="c0"
+                              >
+                                , 7,25
+                              </span>
+                            </span>
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Africa Eye chook eye inside di abuse of codeine cough syrup wey turn many Nigerians to addict.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-08"
+                        >
+                          8 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
-                      </div>
-                      <div
-                        class="c30"
-                      >
-                        <div
-                          aria-hidden="true"
-                          class="c31"
+                          class="c15"
                         >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                           <div
                             class="c32"
                           >
-                            <svg
-                              class="c43"
-                              focusable="false"
-                              height="12px"
-                              viewBox="0 0 32 32"
-                              width="12px"
+                            <div
+                              aria-hidden="true"
+                              class="c33"
                             >
-                              <polygon
-                                points="3,32 29,16 3,0"
-                              />
-                            </svg>
-                            <time
-                              class="c34"
-                              datetime="PT2M19S"
-                            >
-                              2:19
-                            </time>
+                              <div
+                                class="c34"
+                              >
+                                <svg
+                                  class="c45"
+                                  focusable="false"
+                                  height="12px"
+                                  viewBox="0 0 32 32"
+                                  width="12px"
+                                >
+                                  <polygon
+                                    points="3,32 29,16 3,0"
+                                  />
+                                </svg>
+                                <time
+                                  class="c36"
+                                  datetime="PT2M19S"
+                                >
+                                  2:19
+                                </time>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/media-48519287"
+                      <div
+                        class="c37"
                       >
-                        <span
-                          role="text"
+                        <h3
+                          class="c38"
                         >
-                          <span
-                            class="c0"
+                          <a
+                            class="c21"
+                            href="/pidgin/media-48519287"
                           >
-                            Vidio
-                            , 
-                          </span>
-                          <span>
-                            "Dance big pass how pipo dey take see am"
-                          </span>
-                          <span
-                            class="c0"
-                          >
-                            , 2,19
-                          </span>
-                        </span>
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Kaffy say if di goment know di importance of dance sef dem go put am for our curriculum.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-04"
-                    >
-                      4 Juun 2019
-                    </time>
-                  </div>
+                            <span
+                              role="text"
+                            >
+                              <span
+                                class="c0"
+                              >
+                                Vidio
+                                , 
+                              </span>
+                              <span>
+                                "Dance big pass how pipo dey take see am"
+                              </span>
+                              <span
+                                class="c0"
+                              >
+                                , 2,19
+                              </span>
+                            </span>
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Kaffy say if di goment know di importance of dance sef dem go put am for our curriculum.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-04"
+                        >
+                          4 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
+              </div>
             </ul>
           </section>
           <section
@@ -2384,7 +2591,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             role="region"
           >
             <div
-              class="c38"
+              class="c40"
             >
               <div
                 class="c3"
@@ -2413,266 +2620,296 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               class="c9"
               role="list"
             >
-              <li
+              <div
                 class="c10"
-                role="listitem"
+                dir="ltr"
               >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/tori-48586697"
+                        class="c37"
                       >
-                        Bandits for Nigeria north-west different from killer herdsmen - Police
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      On Monday, tori come out say bandits kill at least 25 pipo for Sokoto State, north-west Nigeria wia many attack don dey happun.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-10"
-                    >
-                      10 Juun 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/tori-48586697"
+                          >
+                            Bandits for Nigeria north-west different from killer herdsmen - Police
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          On Monday, tori come out say bandits kill at least 25 pipo for Sokoto State, north-west Nigeria wia many attack don dey happun.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-10"
+                        >
+                          10 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/world-48585358"
+                        class="c37"
                       >
-                        Justin Bieber wan fight Tom Cruise
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Di Canadian singer say if Tom Cruise no accept im challenge e go mean say im dey "fear am."
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-10"
-                    >
-                      10 Juun 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/world-48585358"
+                          >
+                            Justin Bieber wan fight Tom Cruise
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Di Canadian singer say if Tom Cruise no accept im challenge e go mean say im dey "fear am."
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-10"
+                        >
+                          10 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/tori-48585917"
+                        class="c37"
                       >
-                        Jaguda pipo kill 100 pipo for one village for Mali
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Di killing happun for one village for central Mali wia fight-fight between hunters and Fulani herders dey common.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-10"
-                    >
-                      10 Juun 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/tori-48585917"
+                          >
+                            Jaguda pipo kill 100 pipo for one village for Mali
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Di killing happun for one village for central Mali wia fight-fight between hunters and Fulani herders dey common.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-10"
+                        >
+                          10 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/tori-48578549"
+                        class="c37"
                       >
-                        UK, Canada alert nationals over kidnapping den terror threats for Ghana
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Ghana no record any attacks, but UK government advice dema nationals sey make dem make vigilant, especially for de northern border areas.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-10"
-                    >
-                      10 Juun 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/tori-48578549"
+                          >
+                            UK, Canada alert nationals over kidnapping den terror threats for Ghana
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Ghana no record any attacks, but UK government advice dema nationals sey make dem make vigilant, especially for de northern border areas.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-10"
+                        >
+                          10 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/tori-48578547"
+                        class="c37"
                       >
-                        Buhari don accept Onnoghen retirement
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Di former Chief Justice of Nigeria Walter Onnoghen enter kasala ontop accuse say im no declare im complete asset wen im enta office.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-06-10"
-                    >
-                      10 Juun 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/tori-48578547"
+                          >
+                            Buhari don accept Onnoghen retirement
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Di former Chief Justice of Nigeria Walter Onnoghen enter kasala ontop accuse say im no declare im complete asset wen im enta office.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-06-10"
+                        >
+                          10 Juun 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
+              </div>
             </ul>
           </section>
           <section
@@ -2680,7 +2917,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             role="region"
           >
             <div
-              class="c38"
+              class="c40"
             >
               <div
                 class="c3"
@@ -2709,318 +2946,353 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               class="c9"
               role="list"
             >
-              <li
+              <div
                 class="c10"
-                role="listitem"
+                dir="ltr"
               >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/tori-48421890"
+                        class="c37"
                       >
-                        Buhari no give speech afta e take oath
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Dis go be di first time since 1999 wey any Nigerian leader no go give speech after im inauguration.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-05-29"
-                    >
-                      29 Mee 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/tori-48421890"
+                          >
+                            Buhari no give speech afta e take oath
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Dis go be di first time since 1999 wey any Nigerian leader no go give speech after im inauguration.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-05-29"
+                        >
+                          29 Mee 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/tori-47685579"
+                        class="c37"
                       >
-                        PDP candidate Bala Muhammed dey lead wit 6376 votes for Bauchi state
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Afta collation of results for Bauchi state, North East Nigeria, di ruling All Progressive Congress candidate dey back.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-03-24"
-                    >
-                      24 Maachị 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/tori-47685579"
+                          >
+                            PDP candidate Bala Muhammed dey lead wit 6376 votes for Bauchi state
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Afta collation of results for Bauchi state, North East Nigeria, di ruling All Progressive Congress candidate dey back.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-03-24"
+                        >
+                          24 Maachị 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/tori-47685581"
+                        class="c37"
                       >
-                        INEC declare Ganduje winner of Kano govnorship election
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Small drama bin happun for di collation centre before dem announce di winner as some party agents and observers condemn di election process say wuru-wuru full inside.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-03-24"
-                    >
-                      24 Maachị 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/tori-47685581"
+                          >
+                            INEC declare Ganduje winner of Kano govnorship election
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Small drama bin happun for di collation centre before dem announce di winner as some party agents and observers condemn di election process say wuru-wuru full inside.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-03-24"
+                        >
+                          24 Maachị 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/tori-47674110"
+                        class="c37"
                       >
-                        PDP dey ask INEC to cancel Kano rerun
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      PDP chairmo for Kano Engr Rabiu Bichi tok say e dey necessary for INEC to cancel Saturday rerun.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-03-23"
-                    >
-                      23 Maachị 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/tori-47674110"
+                          >
+                            PDP dey ask INEC to cancel Kano rerun
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          PDP chairmo for Kano Engr Rabiu Bichi tok say e dey necessary for INEC to cancel Saturday rerun.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-03-23"
+                        >
+                          23 Maachị 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/tori-47654477"
+                        class="c37"
                       >
-                        'I ready to jam APC for appeal court'
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Osun Govnorship Election Tribunal on Friday declare PDP candidate Senator Ademola Adeleke winner.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-03-22"
-                    >
-                      22 Maachị 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/tori-47654477"
+                          >
+                            'I ready to jam APC for appeal court'
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Osun Govnorship Election Tribunal on Friday declare PDP candidate Senator Ademola Adeleke winner.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-03-22"
+                        >
+                          22 Maachị 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
                       </div>
                       <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="/pidgin/tori-47655879"
+                        class="c37"
                       >
-                        Kano elections get k-leg, reports of katakata everywia
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Areas for Kano State wey INEC don plan supplementary elections for never begin, and e no look like say e go happun at all because of kasala.
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-03-23"
-                    >
-                      23 Maachị 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="/pidgin/tori-47655879"
+                          >
+                            Kano elections get k-leg, reports of katakata everywia
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Areas for Kano State wey INEC don plan supplementary elections for never begin, and e no look like say e go happun at all because of kasala.
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-03-23"
+                        >
+                          23 Maachị 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
+              </div>
             </ul>
           </section>
           <section
@@ -3028,7 +3300,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             role="region"
           >
             <div
-              class="c38"
+              class="c40"
             >
               <div
                 class="c3"
@@ -3057,458 +3329,503 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               class="c9"
               role="list"
             >
-              <li
+              <div
                 class="c10"
-                role="listitem"
+                dir="ltr"
               >
                 <div
-                  class="c28"
+                  class="c11"
+                  dir="ltr"
                 >
-                  <div
-                    class="c29"
+                  <li
+                    class="c12"
+                    role="listitem"
                   >
                     <div
-                      class="c13"
+                      class="c30"
                     >
                       <div
-                        class="c14"
+                        class="c31"
                       >
                         <div
-                          class="lazyload-placeholder"
-                        />
-                      </div>
-                      <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="https://www.bbc.com/pidgin/sport-44416820"
-                      >
-                        Take dis predictor choose who go reach World Cup final
-                      </a>
-                    </h3>
-                    <time
-                      class="c22"
-                      datetime="2018-06-14"
-                    >
-                      14 Juun 2018
-                    </time>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
-                <div
-                  class="c28"
-                >
-                  <div
-                    class="c29"
-                  >
-                    <div
-                      class="c13"
-                    >
-                      <div
-                        class="c14"
-                      >
-                        <div
-                          class="lazyload-placeholder"
-                        />
-                      </div>
-                      <div
-                        class="c30"
-                      >
-                        <div
-                          aria-hidden="true"
-                          class="c31"
+                          class="c15"
                         >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="c37"
+                      >
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="https://www.bbc.com/pidgin/sport-44416820"
+                          >
+                            Take dis predictor choose who go reach World Cup final
+                          </a>
+                        </h3>
+                        <time
+                          class="c24"
+                          datetime="2018-06-14"
+                        >
+                          14 Juun 2018
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                </div>
+                <div
+                  class="c11"
+                  dir="ltr"
+                >
+                  <li
+                    class="c12"
+                    role="listitem"
+                  >
+                    <div
+                      class="c30"
+                    >
+                      <div
+                        class="c31"
+                      >
+                        <div
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                           <div
                             class="c32"
                           >
-                            <svg
+                            <div
+                              aria-hidden="true"
                               class="c33"
-                              focusable="false"
-                              height="12px"
-                              viewBox="0 0 13 12"
-                              width="13px"
                             >
-                              <path
-                                d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                              />
-                              <path
-                                d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                              />
-                            </svg>
+                              <div
+                                class="c34"
+                              >
+                                <svg
+                                  class="c35"
+                                  focusable="false"
+                                  height="12px"
+                                  viewBox="0 0 13 12"
+                                  width="13px"
+                                >
+                                  <path
+                                    d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                                  />
+                                  <path
+                                    d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="http://www.bbc.com/pidgin"
-                      >
-                        Audio promo
-                      </a>
-                    </h3>
-                    <p
-                      class="c37"
-                    >
-                      Summary
-                    </p>
-                    <time
-                      class="c22"
-                      datetime="2019-08-06"
-                    >
-                      6 Ọgọọst 2019
-                    </time>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
-                <div
-                  class="c28"
-                >
-                  <div
-                    class="c29"
-                  >
-                    <div
-                      class="c13"
-                    >
                       <div
-                        class="c14"
+                        class="c37"
                       >
-                        <div
-                          class="lazyload-placeholder"
-                        />
-                      </div>
-                      <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="https://www.bbc.com/pidgin/sport-44439411"
-                      >
-                        World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
-                      </a>
-                    </h3>
-                    <time
-                      class="c22"
-                      datetime="2018-06-14"
-                    >
-                      14 Juun 2018
-                    </time>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
-                <div
-                  class="c28"
-                >
-                  <div
-                    class="c29"
-                  >
-                    <div
-                      class="c13"
-                    >
-                      <div
-                        class="c14"
-                      >
-                        <div
-                          class="lazyload-placeholder"
-                        />
-                      </div>
-                      <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="https://www.bbc.com/pidgin/sport-44425543"
-                      >
-                        Select your best ever African 11 players for World Cup
-                      </a>
-                    </h3>
-                    <time
-                      class="c22"
-                      datetime="2018-06-14"
-                    >
-                      14 Juun 2018
-                    </time>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
-                <div
-                  class="c28"
-                >
-                  <div
-                    class="c29"
-                  >
-                    <div
-                      class="c13"
-                    >
-                      <div
-                        class="c14"
-                      >
-                        <div
-                          class="lazyload-placeholder"
-                        />
-                      </div>
-                      <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="https://www.bbc.com/pidgin/sport-44425543"
-                      >
-                        Select your best ever African 11 players for World Cup as a feature
-                      </a>
-                    </h3>
-                    <time
-                      class="c22"
-                      datetime="2018-06-14"
-                    >
-                      14 Juun 2018
-                    </time>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
-                <div
-                  class="c28"
-                >
-                  <div
-                    class="c29"
-                  >
-                    <div
-                      class="c13"
-                    >
-                      <div
-                        class="c14"
-                      >
-                        <div
-                          class="lazyload-placeholder"
-                        />
-                      </div>
-                      <div
-                        class="c30"
-                      >
-                        <div
-                          aria-hidden="true"
-                          class="c31"
+                        <h3
+                          class="c38"
                         >
+                          <a
+                            class="c21"
+                            href="http://www.bbc.com/pidgin"
+                          >
+                            Audio promo
+                          </a>
+                        </h3>
+                        <p
+                          class="c39"
+                        >
+                          Summary
+                        </p>
+                        <time
+                          class="c24"
+                          datetime="2019-08-06"
+                        >
+                          6 Ọgọọst 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                </div>
+                <div
+                  class="c11"
+                  dir="ltr"
+                >
+                  <li
+                    class="c12"
+                    role="listitem"
+                  >
+                    <div
+                      class="c30"
+                    >
+                      <div
+                        class="c31"
+                      >
+                        <div
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="c37"
+                      >
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="https://www.bbc.com/pidgin/sport-44439411"
+                          >
+                            World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
+                          </a>
+                        </h3>
+                        <time
+                          class="c24"
+                          datetime="2018-06-14"
+                        >
+                          14 Juun 2018
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                </div>
+                <div
+                  class="c11"
+                  dir="ltr"
+                >
+                  <li
+                    class="c12"
+                    role="listitem"
+                  >
+                    <div
+                      class="c30"
+                    >
+                      <div
+                        class="c31"
+                      >
+                        <div
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="c37"
+                      >
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="https://www.bbc.com/pidgin/sport-44425543"
+                          >
+                            Select your best ever African 11 players for World Cup
+                          </a>
+                        </h3>
+                        <time
+                          class="c24"
+                          datetime="2018-06-14"
+                        >
+                          14 Juun 2018
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                </div>
+                <div
+                  class="c11"
+                  dir="ltr"
+                >
+                  <li
+                    class="c12"
+                    role="listitem"
+                  >
+                    <div
+                      class="c30"
+                    >
+                      <div
+                        class="c31"
+                      >
+                        <div
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="c37"
+                      >
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="https://www.bbc.com/pidgin/sport-44425543"
+                          >
+                            Select your best ever African 11 players for World Cup as a feature
+                          </a>
+                        </h3>
+                        <time
+                          class="c24"
+                          datetime="2018-06-14"
+                        >
+                          14 Juun 2018
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                </div>
+                <div
+                  class="c11"
+                  dir="ltr"
+                >
+                  <li
+                    class="c12"
+                    role="listitem"
+                  >
+                    <div
+                      class="c30"
+                    >
+                      <div
+                        class="c31"
+                      >
+                        <div
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                           <div
                             class="c32"
                           >
-                            <svg
-                              class="c43"
-                              focusable="false"
-                              height="12px"
-                              viewBox="0 0 32 32"
-                              width="12px"
+                            <div
+                              aria-hidden="true"
+                              class="c33"
                             >
-                              <polygon
-                                points="3,32 29,16 3,0"
-                              />
-                            </svg>
+                              <div
+                                class="c34"
+                              >
+                                <svg
+                                  class="c45"
+                                  focusable="false"
+                                  height="12px"
+                                  viewBox="0 0 32 32"
+                                  width="12px"
+                                >
+                                  <polygon
+                                    points="3,32 29,16 3,0"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="https://www.bbc.com/pidgin/sport-44425543"
-                      >
-                        Select your best ever African 11 players for World Cup - Video
-                      </a>
-                    </h3>
-                    <time
-                      class="c22"
-                      datetime="2018-06-14"
-                    >
-                      14 Juun 2018
-                    </time>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
-                <div
-                  class="c28"
-                >
-                  <div
-                    class="c29"
-                  >
-                    <div
-                      class="c13"
-                    >
                       <div
-                        class="c14"
+                        class="c37"
                       >
-                        <div
-                          class="lazyload-placeholder"
-                        />
-                      </div>
-                      <div
-                        class="c30"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="https://www.bbc.com/pidgin/sport-44214129"
-                      >
-                        World Cup 2018: Di top stars wey no dey go World Cup
-                      </a>
-                    </h3>
-                    <time
-                      class="c22"
-                      datetime="2018-06-14"
-                    >
-                      14 Juun 2018
-                    </time>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="c10"
-                role="listitem"
-              >
-                <div
-                  class="c28"
-                >
-                  <div
-                    class="c29"
-                  >
-                    <div
-                      class="c13"
-                    >
-                      <div
-                        class="c14"
-                      >
-                        <div
-                          class="lazyload-placeholder"
-                        />
-                      </div>
-                      <div
-                        class="c30"
-                      >
-                        <div
-                          aria-hidden="true"
-                          class="c31"
+                        <h3
+                          class="c38"
                         >
+                          <a
+                            class="c21"
+                            href="https://www.bbc.com/pidgin/sport-44425543"
+                          >
+                            Select your best ever African 11 players for World Cup - Video
+                          </a>
+                        </h3>
+                        <time
+                          class="c24"
+                          datetime="2018-06-14"
+                        >
+                          14 Juun 2018
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                </div>
+                <div
+                  class="c11"
+                  dir="ltr"
+                >
+                  <li
+                    class="c12"
+                    role="listitem"
+                  >
+                    <div
+                      class="c30"
+                    >
+                      <div
+                        class="c31"
+                      >
+                        <div
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
+                          <div
+                            class="c32"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="c37"
+                      >
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="https://www.bbc.com/pidgin/sport-44214129"
+                          >
+                            World Cup 2018: Di top stars wey no dey go World Cup
+                          </a>
+                        </h3>
+                        <time
+                          class="c24"
+                          datetime="2018-06-14"
+                        >
+                          14 Juun 2018
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                </div>
+                <div
+                  class="c11"
+                  dir="ltr"
+                >
+                  <li
+                    class="c12"
+                    role="listitem"
+                  >
+                    <div
+                      class="c30"
+                    >
+                      <div
+                        class="c31"
+                      >
+                        <div
+                          class="c15"
+                        >
+                          <div
+                            class="c16"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                          </div>
                           <div
                             class="c32"
                           >
-                            <svg
-                              class="c44"
-                              focusable="false"
-                              height="13px"
-                              viewBox="0 0 32 26"
-                              width="16px"
+                            <div
+                              aria-hidden="true"
+                              class="c33"
                             >
-                              <path
-                                d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
-                              />
-                              <circle
-                                cx="20"
-                                cy="14.02"
-                                r="5.5"
-                              />
-                            </svg>
+                              <div
+                                class="c34"
+                              >
+                                <svg
+                                  class="c46"
+                                  focusable="false"
+                                  height="13px"
+                                  viewBox="0 0 32 26"
+                                  width="16px"
+                                >
+                                  <path
+                                    d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
+                                  />
+                                  <circle
+                                    cx="20"
+                                    cy="14.02"
+                                    r="5.5"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div
-                    class="c35"
-                  >
-                    <h3
-                      class="c36"
-                    >
-                      <a
-                        class="c19"
-                        href="http://www.bbc.com/azeri"
+                      <div
+                        class="c37"
                       >
-                        Gallery promo
-                      </a>
-                    </h3>
-                    <time
-                      class="c22"
-                      datetime="2019-08-07"
-                    >
-                      7 Ọgọọst 2019
-                    </time>
-                  </div>
+                        <h3
+                          class="c38"
+                        >
+                          <a
+                            class="c21"
+                            href="http://www.bbc.com/azeri"
+                          >
+                            Gallery promo
+                          </a>
+                        </h3>
+                        <time
+                          class="c24"
+                          datetime="2019-08-07"
+                        >
+                          7 Ọgọọst 2019
+                        </time>
+                      </div>
+                    </div>
+                  </li>
                 </div>
-              </li>
+              </div>
             </ul>
           </section>
         </div>

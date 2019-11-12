@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { bool, shape, number, arrayOf } from 'prop-types';
 import styled, { css } from 'styled-components';
+import Grid from '@bbc/psammead-grid';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -85,19 +86,45 @@ StoryPromoComponent.propTypes = {
   storyNumber: number.isRequired,
 };
 
+const defaultColumns = {
+  group0: 6,
+  group1: 6,
+  group2: 6,
+  group3: 6,
+};
+
 const StoryPromoRenderer = ({ items, firstSection, sectionNumber }) => {
   return items.length > 1 ? (
     <MarginWrapper firstSection={firstSection}>
       <StoryPromoUl>
-        {items.map((item, index) => (
-          <StoryPromoLi key={item.id}>
-            <StoryPromoComponent
-              item={item}
-              sectionNumber={sectionNumber}
-              storyNumber={index}
-            />
-          </StoryPromoLi>
-        ))}
+        <Grid
+          enableGelGutters
+          columns={{
+            ...defaultColumns,
+            group4: 8,
+            group5: 8,
+          }}
+        >
+          {items.map((item, index) => (
+            <Grid
+              item
+              columns={{
+                ...defaultColumns,
+                group4: 2,
+                group5: 2,
+              }}
+              key={item.id}
+            >
+              <StoryPromoLi>
+                <StoryPromoComponent
+                  item={item}
+                  sectionNumber={sectionNumber}
+                  storyNumber={index}
+                />
+              </StoryPromoLi>
+            </Grid>
+          ))}
+        </Grid>
       </StoryPromoUl>
     </MarginWrapper>
   ) : (
