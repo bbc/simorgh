@@ -88,7 +88,7 @@ LiveComponent.propTypes = {
   headline: element.isRequired,
 };
 
-const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
+const StoryPromo = ({ item, lazyLoadImage, topStory, displayImage }) => {
   const { script, datetimeLocale, service, timezone, dir } = useContext(
     ServiceContext,
   );
@@ -119,7 +119,12 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   const Info = (
     <>
       {headline && (
-        <Headline script={script} service={service} topStory={topStory}>
+        <Headline
+          script={script}
+          service={service}
+          topStory={topStory}
+          displayImage={displayImage}
+        >
           <Link href={url}>
             {isLive ? (
               <LiveComponent
@@ -179,6 +184,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
         <MediaIndicator item={item} topStory={topStory} service={service} />
       }
       topStory={topStory}
+      displayImage={displayImage}
     />
   );
 };
@@ -187,11 +193,13 @@ StoryPromo.propTypes = {
   item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
   lazyLoadImage: bool,
   topStory: bool,
+  displayImage: bool,
 };
 
 StoryPromo.defaultProps = {
   lazyLoadImage: true,
   topStory: false,
+  displayImage: true,
 };
 
 export default StoryPromo;

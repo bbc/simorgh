@@ -150,7 +150,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  display: inline;
 }
 
 .c26 {
@@ -162,7 +161,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  display: inline;
 }
 
 .c20 {
@@ -555,13 +553,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   }
 }
 
-@media (min-width:62.9375rem) {
-  .c18 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c26 {
     font-size: 1rem;
@@ -580,13 +571,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   .c26 {
     font-size: 1.25rem;
     line-height: 1.5rem;
-  }
-}
-
-@media (min-width:62.9375rem) {
-  .c26 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
   }
 }
 
@@ -945,7 +929,6 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  display: inline;
 }
 
 .c18 {
@@ -1266,13 +1249,6 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   .c16 {
     font-size: 1.25rem;
     line-height: 1.5rem;
-  }
-}
-
-@media (min-width:62.9375rem) {
-  .c16 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
   }
 }
 
@@ -1587,7 +1563,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  display: inline;
 }
 
 .c18 {
@@ -1891,13 +1866,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   }
 }
 
-@media (min-width:62.9375rem) {
-  .c16 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c18 {
     font-size: 0.9375rem;
@@ -2159,7 +2127,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  display: inline;
 }
 
 .c17 {
@@ -2465,13 +2432,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   .c15 {
     font-size: 1.25rem;
     line-height: 1.5rem;
-  }
-}
-
-@media (min-width:62.9375rem) {
-  .c15 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
   }
 }
 

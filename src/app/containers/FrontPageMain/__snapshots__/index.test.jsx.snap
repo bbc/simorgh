@@ -246,7 +246,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  display: inline;
 }
 
 .c38 {
@@ -258,7 +257,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  display: inline;
 }
 
 .c23 {
@@ -787,13 +785,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   }
 }
 
-@media (min-width:62.9375rem) {
-  .c20 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c38 {
     font-size: 1rem;
@@ -812,13 +803,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   .c38 {
     font-size: 1.25rem;
     line-height: 1.5rem;
-  }
-}
-
-@media (min-width:62.9375rem) {
-  .c38 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
   }
 }
 
