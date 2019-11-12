@@ -71,7 +71,7 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
   return children;
 };
 
-const StoryPromoComponent = ({ item, topStory, displayImage }) => {
+const StoryPromoComponent = ({ item, topStory, displayImage, isLeading }) => {
   const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
 
   return (
@@ -80,6 +80,7 @@ const StoryPromoComponent = ({ item, topStory, displayImage }) => {
       topStory={topStory}
       lazyLoadImage={lazyLoadImage}
       displayImage={displayImage}
+      isLeading={isLeading}
     />
   );
 };
@@ -88,10 +89,12 @@ StoryPromoComponent.propTypes = {
   item: shape(storyItem).isRequired,
   topStory: bool.isRequired,
   displayImage: bool,
+  isLeading: bool,
 };
 
 StoryPromoComponent.defaultProps = {
   displayImage: true,
+  isLeading: false,
 };
 
 const defaultColumns = {
@@ -175,6 +178,7 @@ const SectionStories = ({ items }) => {
               <StoryPromoComponent
                 item={item}
                 topStory={index === 0 && remainder === 1}
+                isLeading={index === 0 && remainder === 2}
               />
             </StoryPromoLi>
           </Grid>

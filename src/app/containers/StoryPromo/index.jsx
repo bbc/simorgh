@@ -6,6 +6,7 @@ import StoryPromoComponent, {
   Link,
   LiveLabel,
 } from '@bbc/psammead-story-promo';
+import LeadingStoryPromo from '@bbc/psammead-leading-story-promo';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
@@ -88,7 +89,13 @@ LiveComponent.propTypes = {
   headline: element.isRequired,
 };
 
-const StoryPromo = ({ item, lazyLoadImage, topStory, displayImage }) => {
+const StoryPromo = ({
+  item,
+  lazyLoadImage,
+  topStory,
+  displayImage,
+  isLeading,
+}) => {
   const { script, datetimeLocale, service, timezone, dir } = useContext(
     ServiceContext,
   );
@@ -176,7 +183,9 @@ const StoryPromo = ({ item, lazyLoadImage, topStory, displayImage }) => {
     />
   );
 
-  return (
+  return isLeading ? (
+    <LeadingStoryPromo image={Image} info={Info} />
+  ) : (
     <StoryPromoComponent
       image={Image}
       info={Info}
@@ -194,12 +203,14 @@ StoryPromo.propTypes = {
   lazyLoadImage: bool,
   topStory: bool,
   displayImage: bool,
+  isLeading: bool,
 };
 
 StoryPromo.defaultProps = {
   lazyLoadImage: true,
   topStory: false,
   displayImage: true,
+  isLeading: false,
 };
 
 export default StoryPromo;

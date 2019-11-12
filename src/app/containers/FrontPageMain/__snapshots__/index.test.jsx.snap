@@ -13,7 +13,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   margin: 0;
 }
 
-.c45 {
+.c48 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -22,7 +22,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 0.75rem;
 }
 
-.c48 {
+.c51 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -31,7 +31,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 0.75rem;
 }
 
-.c49 {
+.c52 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -321,6 +321,17 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   margin-right: 0.5rem;
 }
 
+.c45 {
+  display: inline-block;
+  width: 66.67%;
+}
+
+.c44 {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.33%;
+}
+
 .c24 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -363,7 +374,20 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   visibility: visible;
 }
 
-.c43 {
+.c46 {
+  padding: 0.5rem 0.25rem;
+  background-color: #FFFFFF;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #222222;
+  height: 2rem;
+}
+
+.c50 {
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
@@ -377,19 +401,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 .c47 {
-  padding: 0.5rem 0.25rem;
-  background-color: #FFFFFF;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  color: #222222;
-  height: 2rem;
-}
-
-.c44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -401,7 +412,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 100%;
 }
 
-.c46 {
+.c49 {
   vertical-align: middle;
   margin: 0 0.25rem;
 }
@@ -988,6 +999,26 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   }
 }
 
+@supports (grid-template-columns:fit-content(200px)) {
+  .c43 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 1rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c45 {
+    width: initial;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c44 {
+    width: 100%;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c24 {
     font-size: 0.875rem;
@@ -1003,7 +1034,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (max-width:24.9375rem) {
-  .c47 {
+  .c50 {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
@@ -1774,28 +1805,10 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     role="listitem"
                   >
                     <div
-                      class="c32"
+                      class="c43"
                     >
                       <div
-                        class="c33"
-                      >
-                        <div
-                          class="c15"
-                        >
-                          <div
-                            class="c16"
-                          >
-                            <div
-                              class="lazyload-placeholder"
-                            />
-                          </div>
-                          <div
-                            class="c34"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="c35"
+                        class="c44"
                       >
                         <h3
                           class="c36"
@@ -1818,6 +1831,17 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                         >
                           10 Juun 2019
                         </time>
+                      </div>
+                      <div
+                        class="c45"
+                      >
+                        <div
+                          class="c16"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -1954,13 +1978,13 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           >
                             <div
                               aria-hidden="true"
-                              class="c43"
+                              class="c46"
                             >
                               <div
-                                class="c44"
+                                class="c47"
                               >
                                 <svg
-                                  class="c45"
+                                  class="c48"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 32 32"
@@ -1971,7 +1995,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                                   />
                                 </svg>
                                 <time
-                                  class="c46"
+                                  class="c49"
                                   datetime="PT1M51S"
                                 >
                                   1:51
@@ -2055,13 +2079,13 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           >
                             <div
                               aria-hidden="true"
-                              class="c47"
+                              class="c50"
                             >
                               <div
-                                class="c44"
+                                class="c47"
                               >
                                 <svg
-                                  class="c45"
+                                  class="c48"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 32 32"
@@ -2072,7 +2096,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                                   />
                                 </svg>
                                 <time
-                                  class="c46"
+                                  class="c49"
                                   datetime="PT1M40S"
                                 >
                                   1:40
@@ -2156,13 +2180,13 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           >
                             <div
                               aria-hidden="true"
-                              class="c47"
+                              class="c50"
                             >
                               <div
-                                class="c44"
+                                class="c47"
                               >
                                 <svg
-                                  class="c45"
+                                  class="c48"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 32 32"
@@ -2173,7 +2197,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                                   />
                                 </svg>
                                 <time
-                                  class="c46"
+                                  class="c49"
                                   datetime="PT2M26S"
                                 >
                                   2:26
@@ -2257,13 +2281,13 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           >
                             <div
                               aria-hidden="true"
-                              class="c47"
+                              class="c50"
                             >
                               <div
-                                class="c44"
+                                class="c47"
                               >
                                 <svg
-                                  class="c45"
+                                  class="c48"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 32 32"
@@ -2274,7 +2298,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                                   />
                                 </svg>
                                 <time
-                                  class="c46"
+                                  class="c49"
                                   datetime="PT7M25S"
                                 >
                                   7:25
@@ -2358,13 +2382,13 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           >
                             <div
                               aria-hidden="true"
-                              class="c47"
+                              class="c50"
                             >
                               <div
-                                class="c44"
+                                class="c47"
                               >
                                 <svg
-                                  class="c45"
+                                  class="c48"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 32 32"
@@ -2375,7 +2399,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                                   />
                                 </svg>
                                 <time
-                                  class="c46"
+                                  class="c49"
                                   datetime="PT2M19S"
                                 >
                                   2:19
@@ -2811,28 +2835,10 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     role="listitem"
                   >
                     <div
-                      class="c32"
+                      class="c43"
                     >
                       <div
-                        class="c33"
-                      >
-                        <div
-                          class="c15"
-                        >
-                          <div
-                            class="c16"
-                          >
-                            <div
-                              class="lazyload-placeholder"
-                            />
-                          </div>
-                          <div
-                            class="c34"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="c35"
+                        class="c44"
                       >
                         <h3
                           class="c36"
@@ -2855,6 +2861,17 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                         >
                           29 Mee 2019
                         </time>
+                      </div>
+                      <div
+                        class="c45"
+                      >
+                        <div
+                          class="c16"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -3266,13 +3283,13 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           >
                             <div
                               aria-hidden="true"
-                              class="c47"
+                              class="c50"
                             >
                               <div
-                                class="c44"
+                                class="c47"
                               >
                                 <svg
-                                  class="c48"
+                                  class="c51"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 13 12"
@@ -3503,13 +3520,13 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           >
                             <div
                               aria-hidden="true"
-                              class="c47"
+                              class="c50"
                             >
                               <div
-                                class="c44"
+                                class="c47"
                               >
                                 <svg
-                                  class="c45"
+                                  class="c48"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 32 32"
@@ -3628,13 +3645,13 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           >
                             <div
                               aria-hidden="true"
-                              class="c47"
+                              class="c50"
                             >
                               <div
-                                class="c44"
+                                class="c47"
                               >
                                 <svg
-                                  class="c49"
+                                  class="c52"
                                   focusable="false"
                                   height="13px"
                                   viewBox="0 0 32 26"
