@@ -71,8 +71,7 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
   return children;
 };
 
-const StoryPromoComponent = ({ item, sectionNumber, storyNumber }) => {
-  const topStory = sectionNumber === 0 && storyNumber === 0;
+const StoryPromoComponent = ({ item, topStory }) => {
   const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
 
   return (
@@ -82,8 +81,7 @@ const StoryPromoComponent = ({ item, sectionNumber, storyNumber }) => {
 
 StoryPromoComponent.propTypes = {
   item: shape(storyItem).isRequired,
-  sectionNumber: number.isRequired,
-  storyNumber: number.isRequired,
+  topStory: bool.isRequired,
 };
 
 const defaultColumns = {
@@ -123,11 +121,7 @@ const StoryPromoRenderer = ({ items, firstSection, sectionNumber }) => {
               group5: 8,
             }}
           >
-            <StoryPromoComponent
-              item={items[0]}
-              sectionNumber={sectionNumber}
-              storyNumber={0}
-            />
+            <StoryPromoComponent item={items[0]} topStory />
           </Grid>
         </CommonGridWrapper>
       </MarginWrapper>
@@ -151,8 +145,7 @@ const StoryPromoRenderer = ({ items, firstSection, sectionNumber }) => {
               <StoryPromoLi>
                 <StoryPromoComponent
                   item={item}
-                  sectionNumber={sectionNumber}
-                  storyNumber={index}
+                  topStory={index === 0 && sectionNumber === 0}
                 />
               </StoryPromoLi>
             </Grid>
