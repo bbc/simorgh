@@ -82,7 +82,6 @@ exports[`Useful links should render multiple correctly 1`] = `
 
 <div
   class="c0"
-  data-e2e="useful-links"
 >
   <ul
     class="c1"
@@ -202,7 +201,6 @@ exports[`Useful links should render one correctly 1`] = `
 
 <div
   class="c0"
-  data-e2e="useful-links"
 >
   <a
     class="c1"
