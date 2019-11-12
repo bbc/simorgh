@@ -19,7 +19,6 @@ describe('Application', () => {
     const usesArticlePath = servicesUsingArticlePaths.includes(service);
 
     it(`should return a 200 status code for ${service}'s service worker`, () => {
-      console.log(config[service].name);
       cy.testResponseCodeAndType(
         usesArticlePath
           ? `/${config[service].name}/articles/sw.js`
