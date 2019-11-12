@@ -6,7 +6,7 @@ import {
 } from '#lib/utilities/variantHandler';
 import { getPreferredVariant } from '#app/contexts/UserContext/cookies';
 
-const getVariantRedirectUrl = ({ path, params }, service, variant) => {
+const getVariantRedirectUrl = ({ path, params, service, variant }) => {
   const cookieVariant = getPreferredVariant(service);
   const defaultVariant = getVariant({
     service,

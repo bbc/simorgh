@@ -10,7 +10,7 @@ const WithVariant = Component => {
 
     const match = pathOr({}, ['match'], props);
 
-    const redirectPath = getVariantRedirectUrl(match, service, variant);
+    const redirectPath = getVariantRedirectUrl({ ...match, service, variant });
 
     if (!redirectPath) {
       return <Component {...props} />;
