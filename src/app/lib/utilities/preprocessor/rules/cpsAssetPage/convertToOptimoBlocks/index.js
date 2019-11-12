@@ -3,6 +3,7 @@ import paragraph from './blocks/paragraph';
 import media from './blocks/media';
 import image from './blocks/image';
 import subheadline from './blocks/subheadline';
+import version from './blocks/version';
 
 const handleMissingType = block =>
   console.log(`Missing type field on block ${block.type}`); // eslint-disable-line no-console
@@ -14,6 +15,7 @@ const typesToConvert = {
   image,
   paragraph,
   media,
+  version,
 };
 
 const parseBlockByType = block => {
