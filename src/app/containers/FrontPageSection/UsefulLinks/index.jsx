@@ -43,7 +43,7 @@ const UsefulLinkWrapper = styled.div`
 
 const UsefulLinksComponent = ({ items, script, service }) => {
   return items.length > 1 ? (
-    <UsefulLinksWrapper data-e2e="useful-links">
+    <UsefulLinksWrapper>
       <UsefulLinksUl>
         {items.map((item, index) => {
           return (
@@ -63,7 +63,7 @@ const UsefulLinksComponent = ({ items, script, service }) => {
       </UsefulLinksUl>
     </UsefulLinksWrapper>
   ) : (
-    <UsefulLinkWrapper data-e2e="useful-links">
+    <UsefulLinkWrapper>
       <UsefulLink
         script={script}
         service={service}
