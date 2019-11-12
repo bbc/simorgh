@@ -226,11 +226,11 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   grid-column: 1 / span 6;
 }
 
-.c4 {
+.c8 {
   grid-column: 1 / span 6;
 }
 
-.c3 {
+.c7 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -241,7 +241,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   padding: 2rem 0;
 }
 
-.c5 {
+.c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -252,11 +252,11 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c5:last-child {
+.c9:last-child {
   padding-bottom: 1rem;
 }
 
-.c9 {
+.c10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -267,7 +267,19 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   margin: 0;
 }
 
-.c8 {
+.c2 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c5 {
   position: absolute;
   top: 0;
   left: 0;
@@ -277,13 +289,13 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   overflow: hidden;
 }
 
-.c7 {
+.c4 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c6 {
+.c3 {
   margin-bottom: 1.5rem;
 }
 
@@ -367,148 +379,148 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c2 {
+  .c6 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
+  .c6 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c2 {
+  .c6 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c2 {
+  .c6 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c6 {
     padding: 0 1rem;
   }
 }
 
 @media (max-width:25rem) {
-  .c4 {
+  .c8 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
+  .c8 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c8 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c4 {
+  .c8 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c4 {
+  .c8 {
     grid-column: 2 / span 4;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c4 {
+  .c8 {
     max-width: initial;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c7 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c7 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c7 {
     padding: 2.5rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c9 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c9 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c6 {
+  .c3 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c6 {
+  .c3 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c6 {
+  .c3 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c6 {
+  .c3 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c6 {
+  .c3 {
     padding: 0 1rem;
   }
 }
@@ -529,28 +541,49 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
             Test MAP to MAP inline link
           </a>
         </div>
-        <div
+        <h1
           class="c2"
+          id="content"
+          tabindex="-1"
         >
-          <h1
-            class="c3"
-            id="content"
-            tabindex="-1"
+          Nigerian man Emeka Nelson don produce generator wey dey use only water
+        </h1>
+        <div
+          class="c3"
+        >
+          <div
+            class="c4"
           >
-            Nigerian man Emeka Nelson don produce generator wey dey use only water
-          </h1>
+            <iframe
+              allow="autoplay; fullscreen"
+              allowfullscreen=""
+              class="c5"
+              src="https://www.test.bbc.co.uk/ws/av-embeds/cps/pidgin/tori-49450859/p07lg239/ig"
+              title="Media player"
+            />
+          </div>
         </div>
         <div
-          class="c4"
+          class="c6"
+        >
+          <strong
+            aria-hidden="true"
+            class="c7"
+          >
+            Nigerian man Emeka Nelson don produce generator wey dey use only water
+          </strong>
+        </div>
+        <div
+          class="c8"
         >
           <time
-            class="c5"
+            class="c9"
             datetime="2019-08-23"
           >
             23 Ọgọọst 2019
           </time>
           <time
-            class="c5"
+            class="c9"
             datetime="2019-08-23"
           >
             Mgbe ikpeazụ e tinyere ya ozi ọhụrụ 
@@ -558,25 +591,10 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           </time>
         </div>
         <div
-          class="c6"
-        >
-          <div
-            class="c7"
-          >
-            <iframe
-              allow="autoplay; fullscreen"
-              allowfullscreen=""
-              class="c8"
-              src="https://www.test.bbc.co.uk/ws/av-embeds/cps/pidgin/tori-49450859/p07lg239/ig"
-              title="Media player"
-            />
-          </div>
-        </div>
-        <div
           class="c1"
         >
           <p
-            class="c9"
+            class="c10"
           >
             <b>
               As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
@@ -587,7 +605,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c9"
+            class="c10"
           >
             Wetin ginger Emeka na im friend wey smoke from generator kill.
           </p>
@@ -596,7 +614,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c9"
+            class="c10"
           >
             BBC carri waka go Awka Anambra state inside South-east Nigeria go see di ogbonge invention wey Nelson produce.
           </p>
@@ -605,7 +623,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c9"
+            class="c10"
           >
             Nelson wey no be certified engineer struggle to read for elementary school, work as house help for di age of 5, and no get any university education.
           </p>
@@ -614,7 +632,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c9"
+            class="c10"
           >
             Wen we go im house, e dey full with Structural drawings and designs wey e pin for wall and na so e dey take im time dey study di drawing.
           </p>
@@ -623,7 +641,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c9"
+            class="c10"
           >
             For 16 years, e dey focus to make im dream turn to something real-dat na to make generator wey go run on water.
           </p>
@@ -632,7 +650,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c9"
+            class="c10"
           >
             Most of di material wey Nelson take arrange im generator na from  scrap.
           </p>
@@ -641,7 +659,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c9"
+            class="c10"
           >
             Di first generator wey im do explode wen e test am. Dis come make am dey doubt di project but afta plenti years of struggle e come get am right.
           </p>
@@ -650,7 +668,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c9"
+            class="c10"
           >
             Nelson says im generator get maximum output capacity of 1,000 watts and di voltage dey fluctuate between 220 and 240.
           </p>
@@ -659,7 +677,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c9"
+            class="c10"
           >
             E say one litre of clean water fit power di generator for 6 hours, and e no go bring out smoke like oda generators, e dey environment friendly.
           </p>
@@ -668,7 +686,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c9"
+            class="c10"
           >
             Dis ogbonge inventor add say im dream na for di generator to dey for millions of homes all ova di world.
           </p>
@@ -1808,7 +1826,7 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
   grid-column: 1 / span 6;
 }
 
-.c3 {
+.c7 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1819,7 +1837,7 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
   padding: 2rem 0;
 }
 
-.c7 {
+.c8 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1830,7 +1848,19 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
   margin: 0;
 }
 
-.c6 {
+.c2 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c5 {
   position: absolute;
   top: 0;
   left: 0;
@@ -1840,13 +1870,13 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
   overflow: hidden;
 }
 
-.c5 {
+.c4 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c4 {
+.c3 {
   margin-bottom: 1.5rem;
 }
 
@@ -1930,95 +1960,95 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
 }
 
 @media (max-width:63rem) {
-  .c2 {
+  .c6 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
+  .c6 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c2 {
+  .c6 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c2 {
+  .c6 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c6 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c7 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c7 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c7 {
     padding: 2.5rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c7 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c4 {
+  .c3 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c4 {
+  .c3 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c4 {
+  .c3 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c4 {
+  .c3 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
+  .c3 {
     padding: 0 1rem;
   }
 }
@@ -2037,37 +2067,43 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
         Test MAP to MAP inline link
       </a>
     </div>
-    <div
+    <h1
       class="c2"
+      id="content"
+      tabindex="-1"
     >
-      <h1
-        class="c3"
-        id="content"
-        tabindex="-1"
-      >
-        Nigerian man Emeka Nelson don produce generator wey dey use only water
-      </h1>
-    </div>
+      Nigerian man Emeka Nelson don produce generator wey dey use only water
+    </h1>
     <div
-      class="c4"
+      class="c3"
     >
       <div
-        class="c5"
+        class="c4"
       >
         <iframe
           allow="autoplay; fullscreen"
           allowfullscreen=""
-          class="c6"
+          class="c5"
           src="https://www.test.bbc.co.uk/ws/av-embeds/cps/pidgin/tori-49450859/p07lg239/ig"
           title="Media player"
         />
       </div>
     </div>
     <div
+      class="c6"
+    >
+      <strong
+        aria-hidden="true"
+        class="c7"
+      >
+        Nigerian man Emeka Nelson don produce generator wey dey use only water
+      </strong>
+    </div>
+    <div
       class="c1"
     >
       <p
-        class="c7"
+        class="c8"
       >
         <b>
           As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
@@ -2078,7 +2114,7 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
       class="c1"
     >
       <p
-        class="c7"
+        class="c8"
       >
         Wetin ginger Emeka na im friend wey smoke from generator kill.
       </p>
@@ -2087,7 +2123,7 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
       class="c1"
     >
       <p
-        class="c7"
+        class="c8"
       >
         BBC carri waka go Awka Anambra state inside South-east Nigeria go see di ogbonge invention wey Nelson produce.
       </p>
@@ -2096,7 +2132,7 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
       class="c1"
     >
       <p
-        class="c7"
+        class="c8"
       >
         Nelson wey no be certified engineer struggle to read for elementary school, work as house help for di age of 5, and no get any university education.
       </p>
@@ -2105,7 +2141,7 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
       class="c1"
     >
       <p
-        class="c7"
+        class="c8"
       >
         Wen we go im house, e dey full with Structural drawings and designs wey e pin for wall and na so e dey take im time dey study di drawing.
       </p>
@@ -2114,7 +2150,7 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
       class="c1"
     >
       <p
-        class="c7"
+        class="c8"
       >
         For 16 years, e dey focus to make im dream turn to something real-dat na to make generator wey go run on water.
       </p>
@@ -2123,7 +2159,7 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
       class="c1"
     >
       <p
-        class="c7"
+        class="c8"
       >
         Most of di material wey Nelson take arrange im generator na from  scrap.
       </p>
@@ -2132,7 +2168,7 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
       class="c1"
     >
       <p
-        class="c7"
+        class="c8"
       >
         Di first generator wey im do explode wen e test am. Dis come make am dey doubt di project but afta plenti years of struggle e come get am right.
       </p>
@@ -2141,7 +2177,7 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
       class="c1"
     >
       <p
-        class="c7"
+        class="c8"
       >
         Nelson says im generator get maximum output capacity of 1,000 watts and di voltage dey fluctuate between 220 and 240.
       </p>
@@ -2150,7 +2186,7 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
       class="c1"
     >
       <p
-        class="c7"
+        class="c8"
       >
         E say one litre of clean water fit power di generator for 6 hours, and e no go bring out smoke like oda generators, e dey environment friendly.
       </p>
@@ -2159,7 +2195,7 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
       class="c1"
     >
       <p
-        class="c7"
+        class="c8"
       >
         Dis ogbonge inventor add say im dream na for di generator to dey for millions of homes all ova di world.
       </p>
