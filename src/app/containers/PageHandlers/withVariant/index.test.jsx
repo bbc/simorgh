@@ -1,6 +1,6 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { useParams, useLocation } from 'react-router-dom';
+import { render } from '@testing-library/react';
 import WithVariant from '.';
 import { frontPagePath } from '#app/routes/regex';
 
@@ -40,10 +40,11 @@ describe('WithVariant', () => {
 
     const match = getMatchProps('news');
 
-    shouldMatchSnapshot(
-      'should not redirect',
-      <WithVariantHOC match={match} />,
-    );
+    it('should not redirect', () => {
+      const { container } = render(<WithVariantHOC match={match} />);
+
+      expect(container.innerHTML).toEqual(`<h1>This is the BBC.</h1>`);
+    });
   });
 
   describe('service (ukchina) with default variant', () => {
@@ -60,10 +61,13 @@ describe('WithVariant', () => {
 
     const match = getMatchProps('ukchina');
 
-    shouldMatchSnapshot(
-      'should redirect to */trad',
-      <WithVariantHOC match={match} />,
-    );
+    it('should not redirect to ukchina/simp', () => {
+      const { container } = render(<WithVariantHOC match={match} />);
+
+      expect(container.innerHTML).toEqual(
+        `<p>You are going to /ukchina/simp</p>`,
+      );
+    });
   });
 
   describe('service (zhongwen) with default variant', () => {
@@ -80,10 +84,13 @@ describe('WithVariant', () => {
 
     const match = getMatchProps('zhongwen');
 
-    shouldMatchSnapshot(
-      'should redirect to */trad',
-      <WithVariantHOC match={match} />,
-    );
+    it('should not redirect to zhongwen/simp', () => {
+      const { container } = render(<WithVariantHOC match={match} />);
+
+      expect(container.innerHTML).toEqual(
+        `<p>You are going to /zhongwen/simp</p>`,
+      );
+    });
   });
 
   describe('service (serbian) with default variant', () => {
@@ -100,9 +107,12 @@ describe('WithVariant', () => {
 
     const match = getMatchProps('serbian');
 
-    shouldMatchSnapshot(
-      'should redirect to */lat',
-      <WithVariantHOC match={match} />,
-    );
+    it('should not redirect to serbian/lat', () => {
+      const { container } = render(<WithVariantHOC match={match} />);
+
+      expect(container.innerHTML).toEqual(
+        `<p>You are going to /serbian/lat</p>`,
+      );
+    });
   });
 });
