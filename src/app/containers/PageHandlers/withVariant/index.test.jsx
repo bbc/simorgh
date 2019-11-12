@@ -1,14 +1,14 @@
 import React from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams, useLocation, Router } from 'react-router-dom';
 import { render } from '@testing-library/react';
+import { createMemoryHistory } from 'history';
 import WithVariant from '.';
 import { frontPagePath } from '#app/routes/regex';
 
 jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
   useParams: jest.fn(),
   useLocation: jest.fn(),
-  // eslint-disable-next-line react/prop-types
-  Redirect: ({ to: { pathname } }) => <p>You are going to {pathname}</p>,
 }));
 
 describe('WithVariant', () => {
@@ -41,9 +41,15 @@ describe('WithVariant', () => {
     const match = getMatchProps('news');
 
     it('should not redirect', () => {
-      const { container } = render(<WithVariantHOC match={match} />);
+      const history = createMemoryHistory();
 
-      expect(container.innerHTML).toEqual(`<h1>This is the BBC.</h1>`);
+      render(
+        <Router history={history}>
+          <WithVariantHOC match={match} />
+        </Router>,
+      );
+
+      expect(history.location.pathname).toEqual('/');
     });
   });
 
@@ -62,11 +68,15 @@ describe('WithVariant', () => {
     const match = getMatchProps('ukchina');
 
     it('should not redirect to ukchina/simp', () => {
-      const { container } = render(<WithVariantHOC match={match} />);
+      const history = createMemoryHistory();
 
-      expect(container.innerHTML).toEqual(
-        `<p>You are going to /ukchina/simp</p>`,
+      render(
+        <Router history={history}>
+          <WithVariantHOC match={match} />
+        </Router>,
       );
+
+      expect(history.location.pathname).toEqual('/ukchina/simp');
     });
   });
 
@@ -85,11 +95,15 @@ describe('WithVariant', () => {
     const match = getMatchProps('zhongwen');
 
     it('should not redirect to zhongwen/simp', () => {
-      const { container } = render(<WithVariantHOC match={match} />);
+      const history = createMemoryHistory();
 
-      expect(container.innerHTML).toEqual(
-        `<p>You are going to /zhongwen/simp</p>`,
+      render(
+        <Router history={history}>
+          <WithVariantHOC match={match} />
+        </Router>,
       );
+
+      expect(history.location.pathname).toEqual('/zhongwen/simp');
     });
   });
 
@@ -108,11 +122,15 @@ describe('WithVariant', () => {
     const match = getMatchProps('serbian');
 
     it('should not redirect to serbian/lat', () => {
-      const { container } = render(<WithVariantHOC match={match} />);
+      const history = createMemoryHistory();
 
-      expect(container.innerHTML).toEqual(
-        `<p>You are going to /serbian/lat</p>`,
+      render(
+        <Router history={history}>
+          <WithVariantHOC match={match} />
+        </Router>,
       );
+
+      expect(history.location.pathname).toEqual('/serbian/lat');
     });
   });
 });
