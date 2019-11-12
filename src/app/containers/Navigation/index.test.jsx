@@ -13,10 +13,12 @@ jest.mock('react', () => {
 });
 
 const { useContext } = jest.requireMock('react');
+const useClickTracker = jest.fn();
 
 describe('Navigation Container', () => {
   beforeEach(() => {
     useContext.mockReturnValue(igboConfig.default);
+    useClickTracker();
   });
 
   afterEach(() => {
