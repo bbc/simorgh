@@ -94,7 +94,37 @@ const defaultColumns = {
 };
 
 const StoryPromoRenderer = ({ items, firstSection, sectionNumber }) => {
-  return items.length > 1 ? (
+  if (items.length === 1) {
+    return (
+      <MarginWrapper firstSection={firstSection} oneItem>
+        <Grid
+          enableGelGutters
+          columns={{
+            ...defaultColumns,
+            group4: 8,
+            group5: 8,
+          }}
+        >
+          <Grid
+            item
+            columns={{
+              ...defaultColumns,
+              group4: 8,
+              group5: 8,
+            }}
+          >
+            <StoryPromoComponent
+              item={items[0]}
+              sectionNumber={sectionNumber}
+              storyNumber={0}
+            />
+          </Grid>
+        </Grid>
+      </MarginWrapper>
+    );
+  }
+
+  return (
     <MarginWrapper firstSection={firstSection}>
       <StoryPromoUl>
         <Grid
@@ -126,14 +156,6 @@ const StoryPromoRenderer = ({ items, firstSection, sectionNumber }) => {
           ))}
         </Grid>
       </StoryPromoUl>
-    </MarginWrapper>
-  ) : (
-    <MarginWrapper firstSection={firstSection} oneItem>
-      <StoryPromoComponent
-        item={items[0]}
-        sectionNumber={sectionNumber}
-        storyNumber={0}
-      />
     </MarginWrapper>
   );
 };
