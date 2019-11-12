@@ -1,7 +1,15 @@
 import deepClone from 'ramda/src/clone';
 import addHeadlineBlock from '.';
+import {
+  getVisuallyHiddenHeadlineBlock,
+  getFauxHeadlineBlock,
+  getHeadlineBlock,
+} from './models';
 
 const input = {
+  metadata: {
+    type: 'MAP',
+  },
   promo: {
     headlines: {
       headline: 'i am a headline',
@@ -9,106 +17,109 @@ const input = {
   },
   content: {
     model: {
-      blocks: [{ foo: 'bar' }],
+      blocks: [
+        {
+          type: 'video',
+        },
+        {
+          type: 'foobar',
+        },
+      ],
     },
   },
 };
 
 describe('addHeadlineBlock', () => {
-  it('should add a headline block to the start if one is availible', async () => {
+  describe('when on MAP asset type', () => {
+    it('should add an visuallyHiddenHeadline block as the first block and an fauxHeadline block after the video block', async () => {
+      const expected = {
+        metadata: { type: 'MAP' },
+        promo: {
+          headlines: {
+            headline: 'i am a headline',
+          },
+        },
+        content: {
+          model: {
+            blocks: [
+              getVisuallyHiddenHeadlineBlock('i am a headline'),
+              {
+                type: 'video',
+              },
+              getFauxHeadlineBlock('i am a headline'),
+              {
+                type: 'foobar',
+              },
+            ],
+          },
+        },
+      };
+
+      expect(addHeadlineBlock(input)).toEqual(expected);
+    });
+
+    it('should add a headline block if no video block is present', () => {
+      const inputMissingVideoBlock = deepClone(input);
+      inputMissingVideoBlock.content.model.blocks.splice(0, 1);
+
+      const expected = {
+        metadata: { type: 'MAP' },
+        promo: { headlines: { headline: 'i am a headline' } },
+        content: {
+          model: {
+            blocks: [
+              getHeadlineBlock('i am a headline'),
+              {
+                type: 'foobar',
+              },
+            ],
+          },
+        },
+      };
+
+      expect(addHeadlineBlock(inputMissingVideoBlock)).toEqual(expected);
+    });
+  });
+
+  describe('when on STY asset type', () => {
+    it('should add a headline block if the first blocks is a video', () => {
+      const styInput = deepClone(input);
+      styInput.metadata.type = 'STY';
+
+      const expected = {
+        metadata: { type: 'STY' },
+        promo: { headlines: { headline: 'i am a headline' } },
+        content: {
+          model: {
+            blocks: [
+              getHeadlineBlock('i am a headline'),
+              {
+                type: 'video',
+              },
+              {
+                type: 'foobar',
+              },
+            ],
+          },
+        },
+      };
+
+      expect(addHeadlineBlock(styInput)).toEqual(expected);
+    });
+  });
+
+  it('should return json if blocks is not defined', () => {
+    const inputMissingBlocks = deepClone(input);
+    delete inputMissingBlocks.content.model.blocks;
+
     const expected = {
+      metadata: { type: 'MAP' },
       promo: { headlines: { headline: 'i am a headline' } },
       content: {
-        model: {
-          blocks: [
-            {
-              model: {
-                blocks: [
-                  {
-                    model: {
-                      blocks: [
-                        {
-                          model: {
-                            blocks: [
-                              {
-                                model: {
-                                  attributes: [],
-                                  text: 'i am a headline',
-                                },
-                                type: 'fragment',
-                              },
-                            ],
-                            text: 'i am a headline',
-                          },
-                          type: 'paragraph',
-                        },
-                      ],
-                    },
-                    type: 'text',
-                  },
-                ],
-              },
-              type: 'headline',
-            },
-            { foo: 'bar' },
-          ],
-        },
+        model: {},
       },
     };
 
-    expect(addHeadlineBlock(input)).toEqual(expected);
-  });
-
-  it('should add headline block if no blocks are found', () => {
-    const missingBlocks = deepClone(input);
-    delete missingBlocks.content.model.blocks;
-
-    const expected = {
-      promo: { headlines: { headline: 'i am a headline' } },
-      content: {
-        model: {
-          blocks: [
-            {
-              model: {
-                blocks: [
-                  {
-                    model: {
-                      blocks: [
-                        {
-                          model: {
-                            blocks: [
-                              {
-                                model: {
-                                  attributes: [],
-                                  text: 'i am a headline',
-                                },
-                                type: 'fragment',
-                              },
-                            ],
-                            text: 'i am a headline',
-                          },
-                          type: 'paragraph',
-                        },
-                      ],
-                    },
-                    type: 'text',
-                  },
-                ],
-              },
-              type: 'headline',
-            },
-          ],
-        },
-      },
-    };
-
-    expect(addHeadlineBlock(missingBlocks)).toEqual(expected);
-  });
-
-  it('should do nothing if no headline is availible', () => {
-    const missingHeadline = deepClone(input);
-    delete missingHeadline.promo.headlines.headline;
-
-    expect(addHeadlineBlock(missingHeadline)).toEqual(missingHeadline);
+    expect(addHeadlineBlock(inputMissingBlocks)).toEqual(expected);
   });
 });
