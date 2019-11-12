@@ -1,14 +1,14 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { useParams, useLocation } from 'react-router-dom';
+import { createMemoryHistory } from 'history';
+import { render } from '@testing-library/react';
+import { Router, useParams, useLocation } from 'react-router-dom';
 import WithVariant from '.';
 import { frontPagePath } from '#app/routes/regex';
 
 jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
   useParams: jest.fn(),
   useLocation: jest.fn(),
-  // eslint-disable-next-line react/prop-types
-  Redirect: ({ to: { pathname } }) => <p>You are going to {pathname}</p>,
 }));
 
 describe('WithVariant', () => {
@@ -27,7 +27,9 @@ describe('WithVariant', () => {
   });
 
   describe('service with no default variant', () => {
-    beforeEach(() => {
+    it('should not redirect', () => {
+      const history = createMemoryHistory();
+
       const service = 'news';
 
       useParams.mockReturnValue({
@@ -36,18 +38,22 @@ describe('WithVariant', () => {
       useLocation.mockReturnValue({
         pathname: `/${service}`,
       });
+
+      const match = getMatchProps('news');
+
+      render(
+        <Router history={history}>
+          <WithVariantHOC match={match} />
+        </Router>,
+      );
+      expect(history.location.pathname).toEqual('/');
     });
-
-    const match = getMatchProps('news');
-
-    shouldMatchSnapshot(
-      'should not redirect',
-      <WithVariantHOC match={match} />,
-    );
   });
 
   describe('service (ukchina) with default variant', () => {
-    beforeEach(() => {
+    it('should redirect to */trad', () => {
+      const history = createMemoryHistory();
+
       const service = 'ukchina';
 
       useParams.mockReturnValue({
@@ -56,18 +62,21 @@ describe('WithVariant', () => {
       useLocation.mockReturnValue({
         pathname: `/${service}`,
       });
+
+      const match = getMatchProps('ukchina');
+
+      render(
+        <Router history={history}>
+          <WithVariantHOC match={match} />
+        </Router>,
+      );
+      expect(history.location.pathname).toEqual('/ukchina/simp');
     });
-
-    const match = getMatchProps('ukchina');
-
-    shouldMatchSnapshot(
-      'should redirect to */trad',
-      <WithVariantHOC match={match} />,
-    );
   });
 
   describe('service (zhongwen) with default variant', () => {
-    beforeEach(() => {
+    it('should redirect to */trad', () => {
+      const history = createMemoryHistory();
       const service = 'zhongwen';
 
       useParams.mockReturnValue({
@@ -76,18 +85,21 @@ describe('WithVariant', () => {
       useLocation.mockReturnValue({
         pathname: `/${service}`,
       });
+
+      const match = getMatchProps('zhongwen');
+      render(
+        <Router history={history}>
+          <WithVariantHOC match={match} />
+        </Router>,
+      );
+      expect(history.location.pathname).toEqual('/zhongwen/simp');
     });
-
-    const match = getMatchProps('zhongwen');
-
-    shouldMatchSnapshot(
-      'should redirect to */trad',
-      <WithVariantHOC match={match} />,
-    );
   });
 
   describe('service (serbian) with default variant', () => {
-    beforeEach(() => {
+    it('should redirect to */lat', () => {
+      const history = createMemoryHistory();
+
       const service = 'serbian';
 
       useParams.mockReturnValue({
@@ -96,13 +108,14 @@ describe('WithVariant', () => {
       useLocation.mockReturnValue({
         pathname: `/${service}`,
       });
+
+      const match = getMatchProps('serbian');
+      render(
+        <Router history={history}>
+          <WithVariantHOC match={match} />
+        </Router>,
+      );
+      expect(history.location.pathname).toEqual('/serbian/lat');
     });
-
-    const match = getMatchProps('serbian');
-
-    shouldMatchSnapshot(
-      'should redirect to */lat',
-      <WithVariantHOC match={match} />,
-    );
   });
 });
