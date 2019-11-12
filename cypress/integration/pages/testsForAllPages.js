@@ -264,7 +264,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
     });
 
     describe('Header Tests', () => {
-      // debugger;
       const hasLocalisedName = appConfig[service]
         ? appConfig[service][variant].serviceLocalizedName !== undefined
         : appConfig[config[service].name][variant].serviceLocalizedName !==
