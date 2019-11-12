@@ -1,6 +1,8 @@
 /* eslint-disable global-require */
 const fs = require('fs');
 
+jest.mock('fs');
+
 let winston;
 
 describe('Logger node - for the server', () => {
