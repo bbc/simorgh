@@ -7,28 +7,20 @@ const serviceHasIndexAlsos = service => service === 'thai';
 const serviceHasPublishedPromo = service => service === 'persian';
 
 // Check for valid useful links
-const shouldDisplayUsefulLinks = pageData => {
+const isValidUsefulLinks = pageData => {
   let usefulLinksItems = [];
-  const contentTypes = [
-    'Text',
-    'Feature',
-    'Audio',
-    'Video',
-    'Gallery',
-    'Guide',
-  ];
   const usefulLinks = pageData.find(data => {
     return data.type === 'useful-links';
   });
 
   if (usefulLinks) {
     usefulLinksItems = usefulLinks.items.filter(item => {
-      return (
-        item.assetTypeCode === 'PRO' && contentTypes.includes(item.contentType)
-      );
+      return item.assetTypeCode === 'PRO' && item.contentType === 'Guide';
     });
   }
 
+  // We include a check for the strapline as we don't render Useful Links
+  // if we don't receive a strapline in the data
   return usefulLinks && 'strapline' in usefulLinks && usefulLinksItems.length;
 };
 
@@ -199,20 +191,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
             ({ body }) => {
               const pageData = body.content.groups;
-              if (shouldDisplayUsefulLinks(pageData)) {
-                // We include the hasStrapline in shouldDisplayUsefulLinks
-                // as we don't render Useful Links if we don't receive a
-                // strapline in the data
-                cy.get('div[data-e2e=useful-links]').should('be.visible');
-
-                cy.get('div[data-e2e=useful-links]')
-                  .eq(0)
-                  .within(() => {
-                    cy.get('[data-e2e="useful-link-item"]').should(
-                      'have.length.of.at.least',
-                      1,
-                    );
-                  });
+              if (isValidUsefulLinks(pageData)) {
+                cy.get('[data-e2e="useful-link-item"]')
+                  .should('have.length.of.at.least', 1)
+                  .should('be.visible');
               } else {
                 cy.get('[aria-labelledby="Useful-links"]').should(
                   'not.be.visible',
