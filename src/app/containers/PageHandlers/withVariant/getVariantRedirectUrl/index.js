@@ -7,13 +7,13 @@ import {
 import { getPreferredVariant } from '#app/contexts/UserContext/cookies';
 
 const getVariantRedirectUrl = ({ path, params, service, variant }) => {
+  if (!path) return null;
+
   const cookieVariant = getPreferredVariant(service);
   const defaultVariant = getVariant({
     service,
     variant: variantSanitiser(variant),
   });
-
-  if (!path) return null;
 
   const pathTo = pathToRegexp.compile(path);
 
