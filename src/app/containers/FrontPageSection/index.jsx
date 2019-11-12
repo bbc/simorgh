@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { bool, shape, number, arrayOf } from 'prop-types';
+import { bool, shape, number, arrayOf, string } from 'prop-types';
 import styled, { css } from 'styled-components';
 import Grid from '@bbc/psammead-grid';
 import {
@@ -146,7 +146,49 @@ TopStories.propTypes = {
   items: arrayOf(shape(storyItem)).isRequired,
 };
 
-const StoryPromoRenderer = ({ items, firstSection }) => {
+const SectionStories = ({ items }) => {
+  let remainder = items.length % 4;
+  let itemsToDisplay = items.length;
+  if (remainder > 2) {
+    itemsToDisplay = items.length - 1;
+    remainder = 2;
+  }
+
+  const topColumns = {
+    2: { ...defaultColumns, group4: 6, group5: 6 },
+    1: fullWidthStoryPromoColumns,
+    0: normalStoryPromoColumns,
+  };
+
+  return (
+    <StoryPromoUl>
+      <Grid enableGelGutters columns={fullWidthStoryPromoColumns}>
+        {items.slice(0, itemsToDisplay).map((item, index) => (
+          <Grid
+            item
+            columns={
+              index === 0 ? topColumns[remainder] : normalStoryPromoColumns
+            }
+            key={item.id}
+          >
+            <StoryPromoLi>
+              <StoryPromoComponent
+                item={item}
+                topStory={index === 0 && remainder === 1}
+              />
+            </StoryPromoLi>
+          </Grid>
+        ))}
+      </Grid>
+    </StoryPromoUl>
+  );
+};
+
+SectionStories.propTypes = {
+  items: arrayOf(shape(storyItem)).isRequired,
+};
+
+const StoryPromoRenderer = ({ items, firstSection, groupType }) => {
   if (items.length === 1) {
     return (
       <MarginWrapper firstSection={firstSection} oneItem>
@@ -159,9 +201,20 @@ const StoryPromoRenderer = ({ items, firstSection }) => {
     );
   }
 
+  const Components = {
+    'top-stories': TopStories,
+  };
+
+  let Component;
+  if (groupType in Components) {
+    Component = Components[groupType];
+  } else {
+    Component = SectionStories;
+  }
+
   return (
     <MarginWrapper firstSection={firstSection}>
-      <TopStories items={items} />
+      <Component items={items} />
     </MarginWrapper>
   );
 };
@@ -169,6 +222,7 @@ const StoryPromoRenderer = ({ items, firstSection }) => {
 StoryPromoRenderer.propTypes = {
   items: arrayOf(shape(storyItem)).isRequired,
   firstSection: bool.isRequired,
+  groupType: string.isRequired,
 };
 
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
@@ -218,7 +272,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
         <StoryPromoRenderer
           items={items}
           firstSection={isFirstSection}
-          sectionNumber={sectionNumber}
+          groupType={group.type}
         />
       )}
     </section>
