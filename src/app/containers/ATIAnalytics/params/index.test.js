@@ -115,9 +115,9 @@ describe('ATIAnalytics params', () => {
   describe('buildATIClickParams', () => {
     it('should return the right article params', () => {
       const params = buildATIClickParams(
-        article,
         { ...requestContext, pageType: 'article' },
         serviceContext,
+        article,
       );
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
@@ -142,9 +142,9 @@ describe('ATIAnalytics params', () => {
 
     it('should return the right frontPage params', () => {
       const params = buildATIClickParams(
-        frontPage,
         { ...requestContext, pageType: 'frontPage' },
         serviceContext,
+        frontPage,
       );
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
@@ -164,9 +164,9 @@ describe('ATIAnalytics params', () => {
 
     it('should return the right media params', () => {
       const params = buildATIClickParams(
-        media,
         { ...requestContext, pageType: 'media' },
         serviceContext,
+        media,
       );
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
