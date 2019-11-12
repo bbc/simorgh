@@ -19,13 +19,15 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   pageType,
 }) =>
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
-    describe('Chartbeat', () => {
-      if (envConfig.chartbeatEnabled) {
-        it('should have chartbeat config UID', () => {
-          cy.hasAmpChartbeatConfigUid();
-        });
-      }
-    });
+    if (appToggles.chartbeatAnalytics.enabled) {
+      describe('Chartbeat', () => {
+        if (envConfig.chartbeatEnabled) {
+          it('should have chartbeat config UID', () => {
+            cy.hasAmpChartbeatConfigUid();
+          });
+        }
+      });
+    }
 
     it('should contain an amp-img', () => {
       if (serviceHasFigure(service)) {
