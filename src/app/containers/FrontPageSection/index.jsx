@@ -104,10 +104,12 @@ const normalStoryPromoColumns = {
 };
 
 const TopStories = ({ items }) => {
+  const itemsToDisplay = items.length - ((items.length - 1) % 4);
+
   return (
     <StoryPromoUl>
       <Grid enableGelGutters columns={fullWidthStoryPromoColumns}>
-        {items.map((item, index) => (
+        {items.slice(0, itemsToDisplay).map((item, index) => (
           <Grid
             item
             columns={

@@ -308,8 +308,8 @@ describe('FrontPageSection Container', () => {
       expect(container.getElementsByTagName('h2')).toHaveLength(1);
       expect(container.getElementsByTagName('ul')).toHaveLength(1);
 
-      expect(container.getElementsByTagName('li')).toHaveLength(2);
-      expect(container.getElementsByTagName('h3')).toHaveLength(2);
+      expect(container.getElementsByTagName('li')).toHaveLength(1);
+      expect(container.getElementsByTagName('h3')).toHaveLength(1);
     });
 
     it('should render with a link when is a linking group', () => {
