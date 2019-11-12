@@ -94,13 +94,10 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         if (service === 'news') {
           it('should render a visible guidance message', () => {
             cy.window().then(win => {
-              const aresMedia = getBlockData(
-                'video',
-                win.SIMORGH_DATA.pageData,
-              );
+              const media = getBlockData('video', win.SIMORGH_DATA.pageData);
               const longGuidanceWarning =
-                aresMedia.model.blocks[1].model.blocks[0].model.versions[0]
-                  .warnings.long;
+                media.model.blocks[1].model.blocks[0].model.versions[0].warnings
+                  .long;
 
               cy.get('div[class^="StyledVideoContainer"]')
                 .eq(0)
@@ -108,16 +105,17 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                   // Check for video with guidance message
                   if (longGuidanceWarning) {
                     cy.get('div[class^="StyledGuidance"]')
-                      .should('to.have.descendants', 'svg')
                       .within(() => {
                         cy.get('strong');
                       })
                       .should('be.visible')
-                      .should('not.be.empty')
                       .and('contain', longGuidanceWarning);
                     // Check for video with no guidance message
                   } else {
-                    cy.get('strong').should('not.be.visible');
+                    cy.get('div[class^="StyledGuidance"]').should(
+                      'not.have.value',
+                      'strong',
+                    );
                   }
                 });
             });
