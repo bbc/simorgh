@@ -1,0 +1,436 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1`] = `
+.c7 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+
+.c2 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c3 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c3:hover,
+.c3:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3:visited {
+  color: #6E6E73;
+}
+
+.c0 {
+  background-color: #F2F2F2;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0.25rem;
+}
+
+.c6 > svg {
+  color: #FFFFFF;
+  fill: currentColor;
+}
+
+.c5 {
+  background-color: #222222;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 0.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c4 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding: 0 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.c1 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  margin: 0;
+  padding: 0.5rem 0.5rem;
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    display: none;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+<div
+  class="c0"
+  type="audio"
+>
+  <h3
+    class="c1"
+    type="audio"
+  >
+    <span
+      class="c2"
+    >
+      Listen 
+    </span>
+    <a
+      class="c3"
+      href="https://www.bbc.co.uk/news"
+    >
+      Test Radio Bul promo live
+    </a>
+  </h3>
+  <p
+    class="c4"
+    type="audio"
+  >
+    Test Radio summary
+  </p>
+  <div
+    aria-hidden="true"
+    class="c5"
+  >
+    <span
+      class="c6"
+    >
+      <svg
+        class="c7"
+        focusable="false"
+        height="12px"
+        viewBox="0 0 13 12"
+        width="13px"
+      >
+        <path
+          d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+        />
+        <path
+          d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+        />
+      </svg>
+    </span>
+    Listen
+  </div>
+</div>
+`;
+
+exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] = `
+.c8 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.c1 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+.c3 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c4 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c4:hover,
+.c4:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4:visited {
+  color: #6E6E73;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0.25rem;
+}
+
+.c7 > svg {
+  color: #FFFFFF;
+  fill: currentColor;
+}
+
+.c6 {
+  background-color: #222222;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 0.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c5 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+.c2 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    display: none;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+<div
+  class="c0"
+  type="video"
+>
+  <img
+    alt="Clinton"
+    class="c1"
+    src="http://b.files.bbci.co.uk/4917/test/_63711781_clinton.jpg"
+  />
+  <h3
+    class="c2"
+    type="video"
+  >
+    <span
+      class="c3"
+    >
+      Watch 
+    </span>
+    <a
+      class="c4"
+      href="https://www.bbc.co.uk/news"
+    >
+      Test TV Bul promo live
+    </a>
+  </h3>
+  <p
+    class="c5"
+    type="video"
+  >
+    Test TV Bul promo
+  </p>
+  <div
+    aria-hidden="true"
+    class="c6"
+  >
+    <span
+      class="c7"
+    >
+      <svg
+        class="c8"
+        focusable="false"
+        height="12px"
+        viewBox="0 0 32 32"
+        width="12px"
+      >
+        <polygon
+          points="3,32 29,16 3,0"
+        />
+      </svg>
+    </span>
+    Watch
+  </div>
+</div>
+`;
