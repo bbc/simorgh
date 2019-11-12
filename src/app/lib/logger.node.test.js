@@ -20,13 +20,12 @@ describe('Logger node - for the server', () => {
         process.env.LOG_DIR = 'log-temp';
         jest.resetModules();
         jest.resetAllMocks();
-
-        fs.mkdirSync = jest.fn().mockImplementation(() => {
-          return undefined;
-        });
       });
 
       it('creates folder log-temp', () => {
+        fs.existsSync.mockReturnValue(false);
+
+        // jest.spyOn(fs, 'mkdirSync');
         require('./logger.node');
 
         expect(fs.mkdirSync).toHaveBeenCalled();
@@ -35,16 +34,13 @@ describe('Logger node - for the server', () => {
       it('creates default folder log when LOG_DIR isnt set', () => {
         delete process.env.LOG_DIR;
         fs.existsSync = jest.fn();
+        jest.spyOn(fs, 'mkdirSync');
         require('./logger.node');
 
         expect(fs.existsSync).toHaveBeenCalledWith('log');
       });
 
       it('does not create folder log-temp when it already exists', () => {
-        fs.existsSync = jest.fn().mockImplementation(() => {
-          return true;
-        });
-
         jest.spyOn(fs, 'mkdirSync');
 
         require('./logger.node');
