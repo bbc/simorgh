@@ -1217,7 +1217,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       dir="ltr"
                       id="Top-stories"
                     >
-                      Top tori
+                      Top Stories
                     </span>
                   </span>
                 </div>
