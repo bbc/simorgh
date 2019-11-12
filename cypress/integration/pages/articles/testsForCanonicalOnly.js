@@ -118,9 +118,10 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             cy.window().then(win => {
               const media = getBlockData('video', win.SIMORGH_DATA.pageData);
               if (media && media.type === 'video') {
-                cy.get(
-                  'div[class^="StyledVideoContainer"] img[class^="StyledImg"]',
-                )
+                cy.get('div[class^="StyledVideoContainer"]')
+                  .within(() => {
+                    cy.get('button');
+                  })
                   .click()
                   .should('not.exist')
                   .then(() => {
