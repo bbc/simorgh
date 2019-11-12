@@ -71,17 +71,27 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
   return children;
 };
 
-const StoryPromoComponent = ({ item, topStory }) => {
+const StoryPromoComponent = ({ item, topStory, displayImage }) => {
   const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
 
   return (
-    <StoryPromo item={item} topStory={topStory} lazyLoadImage={lazyLoadImage} />
+    <StoryPromo
+      item={item}
+      topStory={topStory}
+      lazyLoadImage={lazyLoadImage}
+      displayImage={displayImage}
+    />
   );
 };
 
 StoryPromoComponent.propTypes = {
   item: shape(storyItem).isRequired,
   topStory: bool.isRequired,
+  displayImage: bool,
+};
+
+StoryPromoComponent.defaultProps = {
+  displayImage: true,
 };
 
 const defaultColumns = {
@@ -105,6 +115,7 @@ const normalStoryPromoColumns = {
 
 const TopStories = ({ items }) => {
   const itemsToDisplay = items.length - ((items.length - 1) % 4);
+  const imageDisplayThreshold = 9;
 
   return (
     <StoryPromoUl>
@@ -118,7 +129,11 @@ const TopStories = ({ items }) => {
             key={item.id}
           >
             <StoryPromoLi>
-              <StoryPromoComponent item={item} topStory={index === 0} />
+              <StoryPromoComponent
+                item={item}
+                topStory={index === 0}
+                displayImage={index < imageDisplayThreshold}
+              />
             </StoryPromoLi>
           </Grid>
         ))}
