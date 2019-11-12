@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { bool, shape, number, arrayOf, node } from 'prop-types';
+import { bool, shape, number, arrayOf } from 'prop-types';
 import styled, { css } from 'styled-components';
 import Grid from '@bbc/psammead-grid';
 import {
@@ -91,67 +91,60 @@ const defaultColumns = {
   group3: 6,
 };
 
-const CommonGridWrapper = ({ children }) => (
-  <Grid
-    enableGelGutters
-    columns={{
-      ...defaultColumns,
-      group4: 8,
-      group5: 8,
-    }}
-  >
-    {children}
-  </Grid>
-);
-
-CommonGridWrapper.propTypes = {
-  children: node.isRequired,
+const fullWidthStoryPromoColumns = {
+  ...defaultColumns,
+  group4: 8,
+  group5: 8,
 };
 
-const StoryPromoRenderer = ({ items, firstSection, sectionNumber }) => {
+const normalStoryPromoColumns = {
+  ...defaultColumns,
+  group4: 2,
+  group5: 2,
+};
+
+const TopStories = ({ items }) => {
+  return (
+    <StoryPromoUl>
+      <Grid enableGelGutters columns={fullWidthStoryPromoColumns}>
+        {items.map((item, index) => (
+          <Grid
+            item
+            columns={
+              index === 0 ? fullWidthStoryPromoColumns : normalStoryPromoColumns
+            }
+            key={item.id}
+          >
+            <StoryPromoLi>
+              <StoryPromoComponent item={item} topStory={index === 0} />
+            </StoryPromoLi>
+          </Grid>
+        ))}
+      </Grid>
+    </StoryPromoUl>
+  );
+};
+
+TopStories.propTypes = {
+  items: arrayOf(shape(storyItem)).isRequired,
+};
+
+const StoryPromoRenderer = ({ items, firstSection }) => {
   if (items.length === 1) {
     return (
       <MarginWrapper firstSection={firstSection} oneItem>
-        <CommonGridWrapper>
-          <Grid
-            item
-            columns={{
-              ...defaultColumns,
-              group4: 8,
-              group5: 8,
-            }}
-          >
+        <Grid enableGelGutters columns={fullWidthStoryPromoColumns}>
+          <Grid item columns={fullWidthStoryPromoColumns}>
             <StoryPromoComponent item={items[0]} topStory />
           </Grid>
-        </CommonGridWrapper>
+        </Grid>
       </MarginWrapper>
     );
   }
 
   return (
     <MarginWrapper firstSection={firstSection}>
-      <StoryPromoUl>
-        <CommonGridWrapper>
-          {items.map((item, index) => (
-            <Grid
-              item
-              columns={{
-                ...defaultColumns,
-                group4: 2,
-                group5: 2,
-              }}
-              key={item.id}
-            >
-              <StoryPromoLi>
-                <StoryPromoComponent
-                  item={item}
-                  topStory={index === 0 && sectionNumber === 0}
-                />
-              </StoryPromoLi>
-            </Grid>
-          ))}
-        </CommonGridWrapper>
-      </StoryPromoUl>
+      <TopStories items={items} />
     </MarginWrapper>
   );
 };
@@ -159,7 +152,6 @@ const StoryPromoRenderer = ({ items, firstSection, sectionNumber }) => {
 StoryPromoRenderer.propTypes = {
   items: arrayOf(shape(storyItem)).isRequired,
   firstSection: bool.isRequired,
-  sectionNumber: number.isRequired,
 };
 
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
