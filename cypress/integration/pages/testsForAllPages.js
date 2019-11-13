@@ -417,7 +417,7 @@ export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
               failOnStatusCode: false,
             }).then(resp => {
               if (resp.status !== 200) {
-                Cypress.log('testdebugging');
+                cy.log('testdebugging');
               }
             });
           });
