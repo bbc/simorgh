@@ -32,17 +32,14 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
 
   const isInitialMount = useRef(true);
   const shouldSetFocus = useRef(false);
-  const focusContentEl = () => {
-    const contentEl = document.querySelector('h1#content');
-    if (contentEl) {
-      contentEl.focus();
-    }
-  };
 
   useEffect(() => {
     if (shouldSetFocus.current) {
+      const contentEl = document.querySelector('h1#content');
+      if (contentEl) {
+        contentEl.focus();
+      }
       shouldSetFocus.current = false;
-      focusContentEl();
     }
   }, [state.loading]);
 
