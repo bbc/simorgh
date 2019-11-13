@@ -21,6 +21,21 @@ const AmpDecorator = storyFn => (
       <meta name="viewport" content="width=device-width,minimum-scale=1" />
       <style amp-boilerplate="">{AMP_SCRIPT}</style>
       <noscript>{`<style amp-boilerplate="">${AMP_NO_SCRIPT}</style>`}</noscript>
+      <script
+        async
+        custom-element="amp-list"
+        src="https://cdn.ampproject.org/v0/amp-list-0.1.js"
+      ></script>
+      <script
+        async
+        custom-template="amp-mustache"
+        src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"
+      ></script>
+      <script
+        async
+        custom-element="amp-bind"
+        src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+      ></script>
       {AMP_JS}
       {AMP_GEO_JS}
       {AMP_CONSENT_JS}
