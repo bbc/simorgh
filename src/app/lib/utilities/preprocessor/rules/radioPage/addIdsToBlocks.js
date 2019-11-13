@@ -8,10 +8,7 @@ const addIdToBlock = block => ({ ...block, uuid: uuid() });
 
 const getBlocks = path(['content', 'blocks']);
 
-const mapBlocks = pipe(
-  getBlocks,
-  map(addIdToBlock),
-);
+const mapBlocks = pipe(getBlocks, map(addIdToBlock));
 
 export default jsonRaw =>
   mergeDeepLeft(
