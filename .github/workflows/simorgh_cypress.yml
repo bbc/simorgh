@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Build Simorgh
-        build: npm run build
+        run: npm run build
       - name: Cypress run
         uses: cypress-io/github-action@v1
         with:
