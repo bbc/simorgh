@@ -8,20 +8,19 @@ const serviceHasPublishedPromo = service => service === 'persian';
 
 // Check for valid useful links
 const isValidUsefulLinks = pageData => {
-  let usefulLinksItems = [];
   const usefulLinks = pageData.find(data => {
     return data.type === 'useful-links';
   });
 
-  if (usefulLinks) {
-    usefulLinksItems = usefulLinks.items.filter(item => {
-      return item.assetTypeCode === 'PRO' && item.contentType === 'Guide';
-    });
-  }
-
   // We include a check for the strapline as we don't render Useful Links
   // if we don't receive a strapline in the data
-  return usefulLinks && 'strapline' in usefulLinks && usefulLinksItems.length;
+  if (usefulLinks && 'strapline' in usefulLinks) {
+    return usefulLinks.items.some(
+      item => item.assetTypeCode === 'PRO' && item.contentType === 'Guide',
+    );
+  }
+
+  return false;
 };
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
