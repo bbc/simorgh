@@ -43,18 +43,13 @@ const UsefulLinkWrapper = styled.div`
 
 const UsefulLinksComponent = ({ items, script, service }) => {
   return items.length > 1 ? (
-    <UsefulLinksWrapper>
+    <UsefulLinksWrapper data-e2e="useful-links">
       <UsefulLinksUl>
         {items.map((item, index) => {
           return (
             // eslint-disable-next-line react/no-array-index-key
             <UsefulLinksLi key={`${item.timestamp}${index}`}>
-              <UsefulLink
-                script={script}
-                service={service}
-                href={item.uri}
-                data-e2e="useful-link-item"
-              >
+              <UsefulLink script={script} service={service} href={item.uri}>
                 {item.name}
               </UsefulLink>
             </UsefulLinksLi>
@@ -63,13 +58,8 @@ const UsefulLinksComponent = ({ items, script, service }) => {
       </UsefulLinksUl>
     </UsefulLinksWrapper>
   ) : (
-    <UsefulLinkWrapper>
-      <UsefulLink
-        script={script}
-        service={service}
-        href={items[0].uri}
-        data-e2e="useful-link-item"
-      >
+    <UsefulLinkWrapper data-e2e="useful-links">
+      <UsefulLink script={script} service={service} href={items[0].uri}>
         {items[0].name}
       </UsefulLink>
     </UsefulLinkWrapper>

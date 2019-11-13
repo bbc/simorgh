@@ -198,9 +198,13 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
             ({ body }) => {
               const pageData = body.content.groups;
               if (isValidUsefulLinks(pageData)) {
-                cy.get('[data-e2e="useful-link-item"]')
-                  .should('have.length.of.at.least', 1)
-                  .should('be.visible');
+                cy.get('[data-e2e="useful-links"]')
+                  .eq(0)
+                  .within(() => {
+                    cy.get('a')
+                      .should('have.length.of.at.least', 1)
+                      .should('be.visible');
+                  });
               } else {
                 cy.get('[aria-labelledby="Useful-links"]').should(
                   'not.be.visible',
