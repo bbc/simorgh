@@ -237,6 +237,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
 }
@@ -279,16 +280,6 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   margin: 0;
 }
 
-.c5 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  overflow: hidden;
-}
-
 .c4 {
   padding-top: 56.25%;
   position: relative;
@@ -297,6 +288,16 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 
 .c3 {
   margin-bottom: 1.5rem;
+}
+
+.c5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
 }
 
 @media (max-width:37.4375rem) {
@@ -724,6 +725,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
 }
@@ -870,16 +872,6 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   transition: visibility 0.2s linear;
 }
 
-.c21 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  overflow: hidden;
-}
-
 .c20 {
   padding-top: 56.25%;
   position: relative;
@@ -888,6 +880,16 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 
 .c19 {
   margin-bottom: 1.5rem;
+}
+
+.c21 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
 }
 
 @media (max-width:37.4375rem) {
@@ -1566,7 +1568,6 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                This is introduction text, it should be bold by default, but also support 
             </b>
             <a
-              aria-label="inline links, Site na mpụta"
               class="c17"
               href="https://bbc.com/pidgin/23248703"
             >
@@ -1591,7 +1592,6 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
               </b>
             </i>
             <a
-              aria-label="a link, Site na mpụta"
               class="c17"
               href="https://bbc.com/pidgin/23248703"
             >
@@ -1607,7 +1607,6 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           >
             Feta the big cheese macaroni cheese. 
             <a
-              aria-label="Caerphilly danish fontina, Site na mpụta"
               class="c17"
               href="https://bbc.com/pidgin/23248703"
             >
@@ -1833,6 +1832,7 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
 }
@@ -1860,16 +1860,6 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
   margin: 0;
 }
 
-.c5 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  overflow: hidden;
-}
-
 .c4 {
   padding-top: 56.25%;
   position: relative;
@@ -1878,6 +1868,16 @@ exports[`CpsAssetPageMain should not show the timestamp when allowDataStamp is f
 
 .c3 {
   margin-bottom: 1.5rem;
+}
+
+.c5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
 }
 
 @media (max-width:37.4375rem) {
