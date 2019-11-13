@@ -5,6 +5,26 @@ jest.mock('fs');
 
 let winston;
 
+describe('Logger folder creation', () => {
+  it('creates folder log-temp', () => {
+    fs.existsSync.mockReturnValue(false);
+
+    require('./logger.node');
+
+    expect(fs.mkdirSync).toHaveBeenCalled();
+  });
+
+  it('creates default folder log when LOG_DIR isnt set', () => {
+    jest.resetModules();
+    process.env.LOG_DIR = '';
+    fs.existsSync.mockReturnValue(false);
+
+    require('./logger.node');
+
+    expect(fs.existsSync).toHaveBeenCalledWith('log');
+  });
+});
+
 describe('Logger node - for the server', () => {
   afterEach(() => {
     jest.clearAllMocks();
@@ -13,40 +33,6 @@ describe('Logger node - for the server', () => {
   describe('Setting up logger', () => {
     beforeEach(() => {
       jest.resetModules();
-    });
-
-    describe('Folder creation', () => {
-      beforeEach(() => {
-        process.env.LOG_DIR = 'log-temp';
-        jest.resetModules();
-        jest.resetAllMocks();
-      });
-
-      it('creates folder log-temp', () => {
-        fs.existsSync.mockReturnValue(false);
-
-        // jest.spyOn(fs, 'mkdirSync');
-        require('./logger.node');
-
-        expect(fs.mkdirSync).toHaveBeenCalled();
-      });
-
-      it('creates default folder log when LOG_DIR isnt set', () => {
-        delete process.env.LOG_DIR;
-        fs.existsSync = jest.fn();
-        jest.spyOn(fs, 'mkdirSync');
-        require('./logger.node');
-
-        expect(fs.existsSync).toHaveBeenCalledWith('log');
-      });
-
-      it('does not create folder log-temp when it already exists', () => {
-        jest.spyOn(fs, 'mkdirSync');
-
-        require('./logger.node');
-
-        expect(fs.mkdirSync).not.toHaveBeenCalled();
-      });
     });
 
     describe('Configuring Winston', () => {
