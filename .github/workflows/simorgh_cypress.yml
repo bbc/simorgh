@@ -17,13 +17,16 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install, build and test
+      - name: npm install, verify cypress
         run: |
           npm ci
           npx cypress verify
+      - name: Build Production App, Start Server
+        run: |
           npm run build
-          npm run start
-          npm run cypress
+          npm start
+      - name: Run Cypress
+          run: npm run cypress
         env:
           CI: true
-          CYPRESS+SMOKE: true
+          CYPRESS_SMOKE: true
