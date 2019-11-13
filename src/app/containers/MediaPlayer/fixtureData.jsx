@@ -8,7 +8,7 @@ import MediaPlayerContainer from '.';
 
 const captionBlock = {
   model: {
-    blocks: [singleTextBlock('Media Player With Caption')],
+    blocks: [singleTextBlock('Media Player With Caption', 'mock-id-1')],
   },
   type: 'caption',
 };
@@ -30,7 +30,7 @@ const imageBlock = {
       },
       {
         model: {
-          blocks: [singleTextBlock('Ants')],
+          blocks: [singleTextBlock('Ants', 'mock-id-2')],
         },
         type: 'altText',
       },
