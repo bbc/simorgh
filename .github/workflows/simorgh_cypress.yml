@@ -1,20 +1,29 @@
-name: Cypress Tests
+name: Simorgh CI - Cypress
 
 on: [push]
 
 jobs:
-  cypress-run:
+  build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
 
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Build Simorgh
-        run: npm run build
-      - name: Cypress run
-        uses: cypress-io/github-action@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
         with:
-          start: npm start
-          wait-on: http://localhost:7080/status
+          node-version: ${{ matrix.node-version }}
+      - name: npm install, build and test
+        run: |
+          npm ci
+          npx cypress verify
+          npm run build
+          npm start
+          npm run cypress
         env:
-          CYPRESS_SMOKE: true
+          CI: true
+          CYPRESS+SMOKE: true
