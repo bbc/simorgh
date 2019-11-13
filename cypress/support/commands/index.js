@@ -17,3 +17,7 @@ Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
     return false;
   });
 });
+
+Cypress.Commands.overwrite('log', (subject, message) =>
+  cy.task('log', message),
+);
