@@ -8,7 +8,6 @@ import { frontPagePath } from '#app/routes/regex';
 describe('WithVariant', () => {
   const Component = () => <h1>This is the BBC.</h1>;
   const ComponentWithVariantRedirect = WithVariant(Component);
-  const getCurrentPathname = h => h.entries[0].pathname;
   const getMatchProps = (service, path = null) => ({
     path: path || frontPagePath,
     params: {
@@ -26,7 +25,7 @@ describe('WithVariant', () => {
         initialEntries: [`/${service}`],
       });
 
-      expect(getCurrentPathname(history)).toEqual(`/${service}`);
+      expect(history.location.pathname).toEqual(`/${service}`);
 
       render(
         <Router history={history}>
@@ -50,7 +49,7 @@ describe('WithVariant', () => {
         initialEntries: [`/${service}`],
       });
 
-      expect(getCurrentPathname(history)).toEqual(`/${service}`);
+      expect(history.location.pathname).toEqual(`/${service}`);
 
       render(
         <Router history={history}>
@@ -74,7 +73,7 @@ describe('WithVariant', () => {
         initialEntries: [`/${service}`],
       });
 
-      expect(getCurrentPathname(history)).toEqual(`/${service}`);
+      expect(history.location.pathname).toEqual(`/${service}`);
 
       render(
         <Router history={history}>
@@ -98,7 +97,7 @@ describe('WithVariant', () => {
         initialEntries: [`/${service}`],
       });
 
-      expect(getCurrentPathname(history)).toEqual(`/${service}`);
+      expect(history.location.pathname).toEqual(`/${service}`);
 
       render(
         <Router history={history}>
