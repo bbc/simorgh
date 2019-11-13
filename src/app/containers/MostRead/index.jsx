@@ -5,7 +5,8 @@ import Amp from './index.amp';
 
 const MostReadContainer = () => {
   const { platform } = useContext(RequestContext);
-  return platform === 'amp' ? <Amp /> : <Canonical />;
+  return <Canonical />;
+  // return platform === 'amp' ? <Amp /> : <Canonical />;
 };
 
 export default MostReadContainer;
