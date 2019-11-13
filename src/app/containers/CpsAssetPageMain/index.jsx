@@ -13,20 +13,25 @@ import Blocks from '../Blocks';
 import ATIAnalytics from '../ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import Grid, { GelPageGrid } from '#app/components/Grid';
+import fauxHeadline from '../FauxHeadline';
+import visuallyHiddenHeadline from '../VisuallyHiddenHeadline';
 
 const CpsAssetPageMain = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
+  const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
   const assetUri = path(['locators', 'assetUri'], metadata);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
 
   const componentsToRender = {
+    fauxHeadline,
+    visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
     text,
     image,
-    timestamp,
+    timestamp: allowDateStamp ? timestamp : undefined,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };
 

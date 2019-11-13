@@ -1,5 +1,5 @@
 import routes from './index';
-import { cpsAssetPageRegexPath } from './regex';
+import { cpsAssetPagePath } from './regex';
 
 jest.mock('../containers/FrontPage', () => jest.fn());
 jest.mock('../containers/RadioPage', () => jest.fn());
@@ -35,9 +35,7 @@ describe('Routes', () => {
   });
 
   describe('CPS Assets', () => {
-    const cpsRoute = routes.filter(
-      route => route.path === cpsAssetPageRegexPath,
-    );
+    const cpsRoute = routes.filter(route => route.path === cpsAssetPagePath);
 
     const Component = cpsRoute[0].component;
 

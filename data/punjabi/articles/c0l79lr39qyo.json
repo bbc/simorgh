@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Punjabi",
     "language": "pa",
-    "lastUpdated": 1562942880824,
+    "lastUpdated": 1572880103007,
     "firstPublished": 1562942877468,
     "lastPublished": 1562942877468,
     "options": {},
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Punjabi"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "ਕੰਨ ਫੜਕੇ ਧੁੱਪ 'ਚ ਉੱਠਕ ਬੈਠਕ : ਬੱਚੇ ਕਹਿੰਦੇ ਸਜ਼ਾ ਵਾਂਗ ਹੈ ਤੇ ਸਕੂਲ ਵਾਲੇ ਕਹਿੰਦੇ 'ਦਿਮਾਗ ਤੇਜ਼' ਕਰਨ ਵਾਲਾ ਯੋਗਾ",
+                        "text": "ਇਹ ਇਸ ਪਰੀਖਿਆ ਲੇਖ ਦਾ ਸਿਰਲੇਖ ਹੈ",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "ਕੰਨ ਫੜਕੇ ਧੁੱਪ 'ਚ ਉੱਠਕ ਬੈਠਕ : ਬੱਚੇ ਕਹਿੰਦੇ ਸਜ਼ਾ ਵਾਂਗ ਹੈ ਤੇ ਸਕੂਲ ਵਾਲੇ ਕਹਿੰਦੇ 'ਦਿਮਾਗ ਤੇਜ਼' ਕਰਨ ਵਾਲਾ ਯੋਗਾ",
+                              "text": "ਇਹ ਇਸ ਪਰੀਖਿਆ ਲੇਖ ਦਾ ਸਿਰਲੇਖ ਹੈ",
                               "attributes": []
                             }
                           }
@@ -58,63 +65,306 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ਇਹ ਪਰੀਖਿਆ ਚਿੱਤਰ, ਕਾਪੀਰਾਈਟ ਬੀਬੀਸੀ, ਫਰਾਂਸ ਦਾ ਨਕਸ਼ਾ ਦਰਸਾਉਂਦਾ ਹੈ. ਚਿੱਤਰ ਪਹਿਲੇ ਤਿੰਨ ਬਲਾਕਾਂ ਵਿੱਚ ਹੈ ਅਤੇ ਇਸਦਾ ਸਿਰਲੇਖ ਹੈ.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ਇਹ ਪਰੀਖਿਆ ਚਿੱਤਰ, ਕਾਪੀਰਾਈਟ ਬੀਬੀਸੀ, ਫਰਾਂਸ ਦਾ ਨਕਸ਼ਾ ਦਰਸਾਉਂਦਾ ਹੈ. ਚਿੱਤਰ ਪਹਿਲੇ ਤਿੰਨ ਬਲਾਕਾਂ ਵਿੱਚ ਹੈ ਅਤੇ ਇਸਦਾ ਸਿਰਲੇਖ ਹੈ.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "\rਇਹ ਪਰੀਖਿਆ ਚਿੱਤਰ, ਕਾਪੀਰਾਈਟ ਬੀਬੀਸੀ, ਫਰਾਂਸ ਦਾ ਨਕਸ਼ਾ ਦਰਸਾਉਂਦਾ ਹੈ. ਚਿੱਤਰ ਪਹਿਲੇ ਤਿੰਨ ਬਲਾਕਾਂ ਵਿੱਚ ਹੈ ਅਤੇ ਇਸਦਾ ਸਿਰਲੇਖ ਹੈ.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "\rਇਹ ਪਰੀਖਿਆ ਚਿੱਤਰ, ਕਾਪੀਰਾਈਟ ਬੀਬੀਸੀ, ਫਰਾਂਸ ਦਾ ਨਕਸ਼ਾ ਦਰਸਾਉਂਦਾ ਹੈ. ਚਿੱਤਰ ਪਹਿਲੇ ਤਿੰਨ ਬਲਾਕਾਂ ਵਿੱਚ ਹੈ ਅਤੇ ਇਸਦਾ ਸਿਰਲੇਖ ਹੈ.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "4d4a/test/5143a9a0-fcc0-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "ਗਰਮੀਆਂ ਦੀਆਂ ਛੁੱਟੀਆਂ ਕੱਟ ਕੇ ਆਏ ਇਨ੍ਹਾਂ ਬੱਚਿਆਂ ਕੋਲੋਂ ਸਵੇਰ ਦੀ ਪ੍ਰਾਰਥਨਾ ਤੋਂ ਬਾਅਦ ਸੂਰਜ ਹੇਠਾਂ ਖੜ੍ਹੇ ਕਰਕੇ ਕੰਨਾਂ ਨੂੰ ਫੜ ਕੇ ਉਠਕ-ਬੈਠਕ ਮਾਰਨ ਲਈ ਕਿਹਾ ਜਾਂਦਾ ਹੈ।",
+                  "text": "ਇਹ ਇੱਕ ਟੈਕਸਟ ਬਲਾਕ ਹੈ, ਜਿਸ ਵਿੱਚ ਬੀਬੀਸੀ ਮੌਸਮ ਦੇ ਮੁੱਖ ਪੰਨੇ ਦਾ url ਲਿੰਕ ਹੈ.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "ਗਰਮੀਆਂ ਦੀਆਂ ਛੁੱਟੀਆਂ ਕੱਟ ਕੇ ਆਏ ਇਨ੍ਹਾਂ ਬੱਚਿਆਂ ਕੋਲੋਂ ਸਵੇਰ ਦੀ ਪ੍ਰਾਰਥਨਾ ਤੋਂ ਬਾਅਦ ਸੂਰਜ ਹੇਠਾਂ ਖੜ੍ਹੇ ਕਰਕੇ ਕੰਨਾਂ ਨੂੰ ਫੜ ਕੇ ਉਠਕ-ਬੈਠਕ ਮਾਰਨ ਲਈ ਕਿਹਾ ਜਾਂਦਾ ਹੈ।",
+                        "text": "ਇਹ ਇੱਕ ਟੈਕਸਟ ਬਲਾਕ ਹੈ, ਜਿਸ ਵਿੱਚ ਬੀਬੀਸੀ ਮੌਸਮ ਦੇ ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "ਮੁੱਖ ਪੰਨੇ ਦਾ url ਲਿੰਕ ਹੈ.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "ਮੁੱਖ ਪੰਨੇ ਦਾ url ਲਿੰਕ ਹੈ.",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01djw2m",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ਚੀਨੀ ਸੁਪਰਹਾਈਵੇ ਯੂਜ਼ਰ ਨਵੇਂ ਜੰਕਸ਼ਨ ਤੋਂ ਹੈਰਾਨ ਹਨ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ਚੀਨੀ ਸੁਪਰਹਾਈਵੇ ਯੂਜ਼ਰ ਨਵੇਂ ਜੰਕਸ਼ਨ ਤੋਂ ਹੈਰਾਨ ਹਨ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "ਨਹੀਂ, ਅਜਿਹਾ ਕਿਸੇ ਸਜ਼ਾ ਕਰਕੇ ਨਹੀਂ ਬਲਕਿ ਇਸ ਨੂੰ 'ਸੁਪਰ ਯੋਗਾ ਫਾਰ ਬ੍ਰੇਨ' ਦੱਸਿਆ ਜਾ ਰਿਹਾ ਹੈ।",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p01djw2m",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "ਨਹੀਂ, ਅਜਿਹਾ ਕਿਸੇ ਸਜ਼ਾ ਕਰਕੇ ਨਹੀਂ ਬਲਕਿ ਇਸ ਨੂੰ 'ਸੁਪਰ ਯੋਗਾ ਫਾਰ ਬ੍ਰੇਨ' ਦੱਸਿਆ ਜਾ ਰਿਹਾ ਹੈ।",
-                        "attributes": []
+                        "id": "p01djw2m",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Motorists amazed by new China highway",
+                        "synopses": {
+                          "short": "Chinese superhighway users amazed by new junction",
+                          "medium": "The motorists got their first glimpse of the new road system earlier.",
+                          "long": "A new $450m Chinese highway opened earlier, giving Shanghai motorists their first glimpse of the future of road travel.\n\nMany were left confused."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01djw9d.jpg",
+                        "embedding": false,
+                        "advertising": true,
+                        "caption": "The road was funded by foreign investors in China",
+                        "versions": [
+                          {
+                            "versionId": "p01djw2p",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 28,
+                            "durationISO8601": "PT28S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1507025738000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1280,
+                              "height": 720,
+                              "copyrightHolder": "BBC",
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
+                              "originCode": "mpv"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "ਇਹ ਇਕ ਉਪ ਸਿਰਲੇਖ ਹੈ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "ਇਹ ਇਕ ਉਪ ਸਿਰਲੇਖ ਹੈ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ਇਹ ਇਕ ਉਪ ਸਿਰਲੇਖ ਹੈ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ਇਹ ਇਕ ਉਪ ਸਿਰਲੇਖ ਹੈ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "rawImage",
                 "model": {
-                  "text": "ਹਰਿਆਣਾ ਦੇ ਜ਼ਿਲ੍ਹਾ ਭਿਵਾਨੀ ਦੇ ਸਕੂਲ ਸਰਵਪੱਲੀ ਰਾਧਾਕ੍ਰਿਸ਼ਨਨ ਸਕੂਲ ਵਿੱਚ ਛੁੱਟੀਆਂ ਤੋਂ ਬਾਅਦ ਬੱਚਿਆਂ ਨੂੰ ਇਹ ਯੋਗਾ ਕਰਵਾਇਆ ਜਾ ਰਿਹਾ ਹੈ।",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "ਹਰਿਆਣਾ ਦੇ ਜ਼ਿਲ੍ਹਾ ਭਿਵਾਨੀ ਦੇ ਸਕੂਲ ਸਰਵਪੱਲੀ ਰਾਧਾਕ੍ਰਿਸ਼ਨਨ ਸਕੂਲ ਵਿੱਚ ਛੁੱਟੀਆਂ ਤੋਂ ਬਾਅਦ ਬੱਚਿਆਂ ਨੂੰ ਇਹ ਯੋਗਾ ਕਰਵਾਇਆ ਜਾ ਰਿਹਾ ਹੈ।",
-                        "attributes": []
-                      }
-                    }
-                  ]
+                  "width": 800,
+                  "height": 450,
+                  "locator": "790c/test/15ecd100-fcc1-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
                 }
-              },
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "ਇਸ ਦੇ ਪਿੱਛੇ ਤਰਕ ਹੈ ਕਿ ਇਸ ਨਾਲ ਦਿਮਾਗ਼ੀ ਸ਼ਕਤੀ ਅਤੇ ਧਿਆਨ ਕੇਂਦਰਿਤ ਕਰਨ ਦੀ ਸ਼ਕਤੀ 'ਚ ਵਾਧਾ ਹੁੰਦਾ ਹੈ।",
+                  "text": "ਇਹ ਟੈਸਟ ਲੇਖ ਬਣਾਇਆ ਗਿਆ ਹੈ ਤਾਂ ਜੋ ਅਸੀਂ ਆਪਣੀ ਵੈਬਸਾਈਟ ਤੇ ਟੈਸਟ ਚਲਾ ਸਕੀਏ.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "ਇਸ ਦੇ ਪਿੱਛੇ ਤਰਕ ਹੈ ਕਿ ਇਸ ਨਾਲ ਦਿਮਾਗ਼ੀ ਸ਼ਕਤੀ ਅਤੇ ਧਿਆਨ ਕੇਂਦਰਿਤ ਕਰਨ ਦੀ ਸ਼ਕਤੀ 'ਚ ਵਾਧਾ ਹੁੰਦਾ ਹੈ।",
+                        "text": "ਇਹ ਟੈਸਟ ਲੇਖ ਬਣਾਇਆ ਗਿਆ ਹੈ ਤਾਂ ਜੋ ਅਸੀਂ ਆਪਣੀ ਵੈਬਸਾਈਟ ਤੇ ਟੈਸਟ ਚਲਾ ਸਕੀਏ.",
                         "attributes": []
                       }
                     }
