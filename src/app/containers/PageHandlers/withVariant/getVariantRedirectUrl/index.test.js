@@ -10,7 +10,6 @@ const serviceNames = Object.keys(servicesWithVariants);
 
 describe('getVariantRedirectUrl', () => {
   afterEach(() => {
-    jest.clearAllMocks();
     document.cookie = '';
   });
 
