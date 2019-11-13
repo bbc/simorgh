@@ -3,6 +3,7 @@ import { string, bool } from 'prop-types';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
+import Figure from '@bbc/psammead-figure';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
@@ -101,7 +102,7 @@ const MediaPlayerContainer = ({
   );
 
   return (
-    <>
+    <Figure>
       <Metadata aresMediaBlock={aresMediaBlock} />
       {isAmp ? (
         <AmpMediaPlayer
@@ -122,7 +123,7 @@ const MediaPlayerContainer = ({
         />
       )}
       {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
-    </>
+    </Figure>
   );
 };
 
