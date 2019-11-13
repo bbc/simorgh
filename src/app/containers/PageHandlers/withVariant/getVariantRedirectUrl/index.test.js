@@ -6,27 +6,12 @@ import {
 import { articlePath, frontPagePath } from '#app/routes/regex';
 import getVariantRedirectUrl from './index';
 
-jest.mock('js-cookie', () => ({
-  cookies: {},
-  get(key) {
-    return this.cookies[key];
-  },
-  set(key, value) {
-    this.cookies[key] = value;
-    return this;
-  },
-  reset() {
-    this.cookies = {};
-    return this;
-  },
-}));
-
 const serviceNames = Object.keys(servicesWithVariants);
 
 describe('getVariantRedirectUrl', () => {
   afterEach(() => {
     jest.clearAllMocks();
-    Cookie.reset();
+    document.cookie = '';
   });
 
   describe('frontPage', () => {
