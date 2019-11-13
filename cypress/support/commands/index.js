@@ -19,4 +19,8 @@ if (envConfig.alwaysCheckForFallback) {
       return false;
     });
   });
-}
+});
+
+Cypress.Commands.overwrite('log', (subject, message) =>
+  cy.task('log', message),
+);
