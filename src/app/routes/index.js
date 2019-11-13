@@ -6,11 +6,11 @@ import CpsAssetPage from '../containers/CpsAssetPage';
 import ErrorPage from '../containers/Error';
 import getInitialData from './getInitialData';
 import {
-  articleRegexPath,
-  frontpageRegexPath,
-  cpsAssetPageRegexPath,
-  errorPageRegexPath,
-  radioAndTvRegexPathsArray,
+  articlePath,
+  frontPagePath,
+  cpsAssetPagePath,
+  errorPagePath,
+  radioAndTvPath,
 } from './regex';
 
 const CpsAsset = props => {
@@ -21,35 +21,35 @@ const CpsAsset = props => {
 
 const routes = [
   {
-    path: articleRegexPath,
+    path: articlePath,
     exact: true,
     component: Article,
     getInitialData,
     pageType: 'article',
   },
   {
-    path: frontpageRegexPath,
+    path: frontPagePath,
     exact: true,
     component: FrontPage,
     getInitialData,
     pageType: 'frontPage',
   },
   {
-    path: radioAndTvRegexPathsArray,
+    path: radioAndTvPath,
     exact: true,
     component: RadioPage,
     getInitialData,
     pageType: 'media',
   },
   {
-    path: cpsAssetPageRegexPath,
+    path: cpsAssetPagePath,
     exact: true,
     component: CpsAsset,
     getInitialData,
     pageType: 'MAP',
   },
   {
-    path: errorPageRegexPath,
+    path: errorPagePath,
     exact: true,
     component: ErrorPage,
     getInitialData: () => Promise.resolve({ status: 200 }),

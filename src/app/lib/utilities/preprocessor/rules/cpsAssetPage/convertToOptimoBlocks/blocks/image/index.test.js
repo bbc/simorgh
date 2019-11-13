@@ -15,7 +15,6 @@ describe('convertImage', () => {
       },
       type: 'image',
     };
-
     expect(convertImage(cpsImageBlock)).toEqual(expected);
   });
 
