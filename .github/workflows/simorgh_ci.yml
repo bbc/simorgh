@@ -22,5 +22,6 @@ jobs:
         npm ci
         npx apache2-license-checker
         npm test
+        npm run test:ci
       env:
         CI: true
