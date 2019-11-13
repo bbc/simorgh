@@ -9,10 +9,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+      - name: Build Simorgh
+        build: npm run build
       - name: Cypress run
         uses: cypress-io/github-action@v1
         with:
-          start: npm run build && npm start
-          wait-on: http://localhost:7080
+          start: npm start
+          wait-on: http://localhost:7080/status
         env:
           CYPRESS_SMOKE: true
