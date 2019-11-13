@@ -13,3 +13,4 @@ jobs:
         with:
           build: npm build
           start: npm start
+          wait-on: http://localhost:7080
