@@ -9,7 +9,7 @@ const stories = storiesOf('Containers|MostRead', module).addParameters({
   chromatic: { disable: true },
 });
 
-stories.add('amp', () => (
+stories.addDecorator(AmpDecorator).add('amp', () => (
   <ServiceContextProvider service="news" variant="lat">
     <MostReadContainer />
   </ServiceContextProvider>
