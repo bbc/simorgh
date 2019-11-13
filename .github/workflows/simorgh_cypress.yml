@@ -21,9 +21,8 @@ jobs:
         run: |
           npm ci
           npx cypress verify
-      - name: Build Production App, Start Server
-        run: |
-          npm build
+      - name: Build Production App
+        run: npm run build
       - name: Run Cypress
         run: npm run start && npm run cypress
         env:
