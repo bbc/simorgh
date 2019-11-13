@@ -1,44 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react';
-import axios from 'axios';
-import { ServiceContext } from '#contexts/ServiceContext';
-import mostReadData from '#data/news/mostRead';
+import React, { useContext } from 'react';
+import { RequestContext } from '#contexts/RequestContext';
+import Canonical from './index.canonical';
+import Amp from './index.amp';
 
 const MostReadContainer = () => {
-  const { service, variant } = useContext(ServiceContext);
-
-  const [data, setData] = useState({ records: [] });
-  // const [promos, setPromos] = useState([]);
-
-  const localMostReadData = variant
-    ? `http://localhost:7080/${service}/most_read/${variant}.json`
-    : `http://localhost:7080/news/most_read.json`;
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await axios(localMostReadData);
-        setData(result.data);
-      } catch (error) {
-        setData(mostReadData);
-      }
-    };
-    fetchData();
-  }, []);
-
-  return (
-    <div>
-      <p>Generated: {data.generated}</p>
-      <ul>
-        {data.records.slice(0, 10).map(record => (
-          <li key={record.id}>
-            <p>{record.promo.timestamp}</p>
-            <p>{record.promo.headlines.headline}</p>
-            <p>{record.promo.locators.assetUri}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+  const { platform } = useContext(RequestContext);
+  return <Amp />;
+  // return platform === 'amp' ? <Amp /> : <Canonical />;
 };
 
 export default MostReadContainer;

@@ -1,17 +1,25 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import MostReadContainer from '.';
+import { RequestContextProvider } from '#contexts/RequestContext';
 
 describe('MostReadContainer', () => {
   const { container } = render(
-    <ServiceContextProvider service="serbian" variant="lat">
+    <RequestContextProvider
+      bbcOrigin="https://www.test.bbc.co.uk"
+      id="c0000000000o"
+      isAmp={false}
+      pageType="article"
+      service="serbian"
+      statusCode={200}
+      pathname="/serbian"
+      variant="lat"
+    >
       <MostReadContainer />
-    </ServiceContextProvider>,
+    </RequestContextProvider>,
   );
 
   it('test data returns as expected', () => {
-    console.log(container);
     expect('khoa').toEqual('khoa');
   });
 });
