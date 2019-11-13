@@ -22,7 +22,7 @@ jobs:
           npm ci
           npx cypress verify
           npm run build
-          npm start
+          npm run start
           npm run cypress
         env:
           CI: true
