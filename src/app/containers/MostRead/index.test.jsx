@@ -46,6 +46,6 @@ describe('MostReadContainer', () => {
     expect(container.querySelector('p').textContent).toBe(
       `Generated: ${newsMostReadData.generated}`,
     );
-    console.log(container.querySelector('p'));
+    expect(container.querySelectorAll('ul').length).toEqual(10);
   });
 });
