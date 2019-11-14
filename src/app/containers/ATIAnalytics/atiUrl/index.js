@@ -231,7 +231,7 @@ export const buildATIEventTrackUrl = ({
       value: getClickInfo(element, {
         service,
         componentName,
-        label: componentInfo || '',
+        componentInfo,
         type: type || '',
       }),
     },
