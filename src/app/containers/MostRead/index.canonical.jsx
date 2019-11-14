@@ -21,7 +21,10 @@ const Canonical = () => {
   };
 
   useEffect(() => {
-    const fetchCanoncialData = pathname => fetch(pathname).then(handleResponse);
+    const fetchCanoncialData = pathname =>
+      fetch(pathname)
+        .then(handleResponse)
+        .catch(error => console.log(error));
     fetchCanoncialData(localMostReadData);
   }, []);
 
