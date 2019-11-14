@@ -256,7 +256,7 @@ pipeline {
       steps {
         // This stage triggers the B/G deployment when merging Simorgh
         build(
-          job: 'simorgh-blue-green',
+          job: 'simorgh-blue-green/latest',
           propagate: false,
           wait: false
         )
