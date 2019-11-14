@@ -123,56 +123,36 @@ const normalStoryPromoColumns = {
   group5: 2,
 };
 
-const TopStories = ({ items, isFirstSection }) => {
+const getTopStoryLayout = items => {
   /* We display 1 top story + 4 regular story promos.The top story spans the whole width
      We need to be sure that we have 4 story promos on a row.
      This means that we have to subtract 1(top-story) from the number of items and then divide the result by 4
      If the number of items was 6: (6-1) % 4 = 1
      To get the number of items that would fit (1 + 4 regular story promos) we subtract the above result from
      the number of items: 6 - 1 = 5. 5 is the number of items that fit the combination.
-   */
-  const itemsToDisplay = items.length - ((items.length - 1) % 4);
+     */
+  const remainder = (items.length - 1) % 4;
+  const itemsToDisplay = items.length - remainder;
   // Maximum items to display should be capped to 13 since we are squashing topstories in the preprocessor rules
-  const MAX_ITEMS = itemsToDisplay > 13 ? 13 : itemsToDisplay;
-  const imageDisplayThreshold = 9;
+  const maxItems = itemsToDisplay > 13 ? 13 : itemsToDisplay;
 
-  return (
-    <StoryPromoUl>
-      <Grid enableGelGutters columns={fullWidthStoryPromoColumns}>
-        {items.slice(0, MAX_ITEMS).map((item, index) => (
-          <Grid
-            item
-            columns={
-              index === 0 ? fullWidthStoryPromoColumns : normalStoryPromoColumns
-            }
-            key={item.id}
-          >
-            <StoryPromoLi>
-              <StoryPromoComponent
-                item={item}
-                topStory={index === 0}
-                displayImage={index < imageDisplayThreshold}
-                isFirstSection={isFirstSection}
-              />
-            </StoryPromoLi>
-          </Grid>
-        ))}
-        ;
-      </Grid>
-    </StoryPromoUl>
-  );
+  return {
+    isLeadingStory: () => false,
+    isTopStory: index => index === 0,
+    itemsToDisplay: maxItems,
+    imageDisplayThreshold: 9,
+    columns: index =>
+      index === 0 ? fullWidthStoryPromoColumns : normalStoryPromoColumns,
+  };
 };
 
-TopStories.propTypes = {
-  items: arrayOf(shape(storyItem)).isRequired,
-  isFirstSection: bool,
-};
+const getSectionLayout = items => {
+  const topColumns = {
+    2: { ...defaultColumns, group4: 6, group5: 6 },
+    1: fullWidthStoryPromoColumns,
+    0: normalStoryPromoColumns,
+  };
 
-TopStories.defaultProps = {
-  isFirstSection: false,
-};
-
-const SectionStories = ({ items, isFirstSection }) => {
   /* We check if the number of items is divisible by four
      If the number of items is divisible by 4 then the storypromo should span 2 columns
      If the remainder is 1 we the story promo should span the whole width
@@ -185,45 +165,53 @@ const SectionStories = ({ items, isFirstSection }) => {
     remainder = 2;
   }
 
-  const topColumns = {
-    2: { ...defaultColumns, group4: 6, group5: 6 },
-    1: fullWidthStoryPromoColumns,
-    0: normalStoryPromoColumns,
+  return {
+    isLeadingStory: index => index === 0 && remainder === 2,
+    isTopStory: index => index === 0 && remainder === 1,
+    itemsToDisplay,
+    imageDisplayThreshold: items.length,
+    columns: index =>
+      index === 0 ? topColumns[remainder] : normalStoryPromoColumns,
   };
+};
+
+const renderStoryPromoList = (groupType, items, isFirstSection) => {
+  const {
+    itemsToDisplay,
+    imageDisplayThreshold,
+    isTopStory,
+    isLeadingStory,
+    columns,
+  } =
+    groupType === 'top-stories'
+      ? getTopStoryLayout(items)
+      : getSectionLayout(items);
 
   return (
     <StoryPromoUl>
       <Grid enableGelGutters columns={fullWidthStoryPromoColumns}>
-        {items.slice(0, itemsToDisplay).map((item, index) => (
-          <Grid
-            item
-            columns={
-              index === 0 ? topColumns[remainder] : normalStoryPromoColumns
-            }
-            key={item.id}
-          >
-            <StoryPromoLi>
-              <StoryPromoComponent
-                item={item}
-                topStory={index === 0 && remainder === 1}
-                isLeading={index === 0 && remainder === 2}
-                isFirstSection={isFirstSection}
-              />
-            </StoryPromoLi>
-          </Grid>
-        ))}
+        {items.slice(0, itemsToDisplay).map((item, index) => {
+          const topStory = isTopStory(index);
+          const displayImage = index < imageDisplayThreshold;
+          const isLeading = isLeadingStory(index);
+          const groups = columns(index);
+          return (
+            <Grid item columns={groups} key={item.id}>
+              <StoryPromoLi>
+                <StoryPromoComponent
+                  item={item}
+                  topStory={topStory}
+                  displayImage={displayImage}
+                  isFirstSection={isFirstSection}
+                  isLeading={isLeading}
+                />
+              </StoryPromoLi>
+            </Grid>
+          );
+        })}
       </Grid>
     </StoryPromoUl>
   );
-};
-
-SectionStories.propTypes = {
-  items: arrayOf(shape(storyItem)).isRequired,
-  isFirstSection: bool,
-};
-
-SectionStories.defaultProps = {
-  isFirstSection: false,
 };
 
 const StoryPromoRenderer = ({ items, isFirstSection, groupType }) => {
@@ -243,10 +231,9 @@ const StoryPromoRenderer = ({ items, isFirstSection, groupType }) => {
     );
   }
 
-  const Component = groupType === 'top-stories' ? TopStories : SectionStories;
   return (
     <MarginWrapper isFirstSection={isFirstSection}>
-      <Component items={items} isFirstSection={isFirstSection} />
+      {renderStoryPromoList(groupType, items, isFirstSection)}
     </MarginWrapper>
   );
 };

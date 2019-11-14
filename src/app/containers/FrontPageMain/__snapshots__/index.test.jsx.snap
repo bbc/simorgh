@@ -1471,7 +1471,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       </div>
                     </li>
                   </div>
-                  ;
                 </div>
               </ul>
             </div>
