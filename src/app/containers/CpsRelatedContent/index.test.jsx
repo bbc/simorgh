@@ -27,7 +27,7 @@ const renderRelatedContent = ({ content }) => {
 };
 
 describe('CpsRelatedContent', () => {
-  it('should do something', () => {
+  it('should render Story Promo components when given appropriate data', () => {
     const promos = path(
       ['relatedContent', 'groups', 0, 'promos'],
       pidginPageData,
