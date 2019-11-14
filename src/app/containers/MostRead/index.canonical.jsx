@@ -5,7 +5,8 @@ import { ServiceContext } from '#contexts/ServiceContext';
 const Canonical = () => {
   const { variant } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
-  const [data, setData] = useState({ records: [] });
+  const [promos, setPromo] = useState([]);
+  const [data, setData] = useState({});
 
   const localMostReadData = variant
     ? `http://localhost:7080/${service}/most_read/${variant}.json`
@@ -13,6 +14,7 @@ const Canonical = () => {
 
   const handleResponse = async response => {
     const mostReadData = await response.json();
+    setPromo(mostReadData.records.slice(0, 10));
     setData(mostReadData);
   };
 
@@ -28,11 +30,11 @@ const Canonical = () => {
   return (
     <div>
       <p>Generated: {data.generated}</p>
-      {data.records.slice(0, 10).map(record => (
-        <ul key={record.id}>
-          <li>{record.promo.timestamp}</li>
-          <li>{record.promo.headlines.headline}</li>
-          <li>{record.promo.locators.assetUri}</li>
+      {promos.map(promo => (
+        <ul key={promo.id}>
+          <li>{promo.promo.timestamp}</li>
+          <li>{promo.promo.headlines.headline}</li>
+          <li>{promo.promo.locators.assetUri}</li>
         </ul>
       ))}
     </div>
