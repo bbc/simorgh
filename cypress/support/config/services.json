@@ -1,0 +1,316 @@
+{
+  "arabic": {
+    "article": {
+      "path": "https://www.stage.bbc.com/arabic/articles/c69dvq19k63o",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/arabic/articles/c123456abcdo",
+      "smoke": false
+    }
+  },
+  "news": {
+    "article": {
+      "path": "https://www.stage.bbc.com/news/articles/cn7k01xp8kxo",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/news/articles/cxvxrj8tvppo",
+      "smoke": false
+    }
+  },
+  "pashto": {
+    "article": {
+      "path": "https://www.stage.bbc.com/pashto/articles/cng0e8v85eko",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/pashto/articles/c123456abcdo",
+      "smoke": false
+    }
+  },
+  "persian": {
+    "article": {
+      "path": "https://www.stage.bbc.com/persian/articles/c4vlle3q337o",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/persian/articles/cxvxrj8tvppo",
+      "smoke": false
+    }
+  },
+  "urdu": {
+    "article": {
+      "path": "https://www.stage.bbc.com/urdu/articles/cx621klkm1ro",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/urdu/articles/c123456abcdo",
+      "smoke": false
+    }
+  },
+  "afaanoromoo": {
+    "article": {
+      "path": "https://www.stage.bbc.com/afaanoromoo/articles/c4g19kgl85ko",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/afaanoromoo/articles/c123456abcdo",
+      "smoke": false
+    },
+    "liveRadio": {
+      "path": "https://www.stage.bbc.com/afaanoromoo/bbc_afaanoromoo_radio/liveradio",
+      "smoke": false
+    }
+  },
+  "afrique": {
+    "article": {
+      "path": "https://www.stage.bbc.com/afrique/articles/cz216x22106o",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/afrique/articles/c123456abcdo",
+      "smoke": false
+    }
+  },
+  "azeri": {
+    "article": {
+      "path": "https://www.stage.bbc.com/azeri/articles/c5k08pqnzexo",
+      "smoke": false
+    },
+    "frontPage": {
+      "path": "https://www.stage.bbc.com/azeri",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/azeri/articles/c123456abcdo",
+      "smoke": false
+    }
+  },
+  "gahuza": {
+    "article": {
+      "path": "https://www.stage.bbc.com/gahuza/articles/cey23zx8wx8o",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/gahuza/articles/c123456abcdo",
+      "smoke": false
+    }
+  },
+  "hausa": {
+    "article": {
+      "path": "https://www.stage.bbc.com/hausa/articles/c2nr6xqmnewo",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/hausa/articles/c123456abcdo",
+      "smoke": false
+    }
+  },
+  "igbo": {
+    "article": {
+      "path": "https://www.stage.bbc.com/igbo/articles/cr1lw620ygjo",
+      "smoke": false
+    },
+    "frontPage": {
+      "path": "https://www.stage.bbc.com/igbo",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/igbo/articles/cxvxrj8tvppo",
+      "smoke": false
+    },
+    "liveRadio": {
+      "path": "https://www.stage.bbc.com/igbo/bbc_igbo_radio",
+      "smoke": false
+    },
+    "mediaAssetPage": {
+      "path": "https://www.stage.bbc.com/igbo/media-42986440",
+      "smoke": false
+    }
+  },
+  "indonesia": {
+    "article": {
+      "path": "https://www.stage.bbc.com/indonesia/articles/c0q2zq8pzvzo",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/indonesia/articles/c123456abcdo",
+      "smoke": false
+    },
+    "liveRadio": {
+      "path": "https://www.stage.bbc.com/indonesia/bbc_indonesian_radio/liveradio",
+      "smoke": false
+    }
+  },
+  "kyrgyz": {
+    "article": {
+      "path": "https://www.stage.bbc.com/kyrgyz/articles/c3xd4xg3rm9o",
+      "smoke": false
+    },
+    "frontPage": {
+      "path": "https://www.stage.bbc.com/kyrgyz",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/kyrgyz/articles/c123456abcdo",
+      "smoke": false
+    }
+  },
+  "mundo": {
+    "article": {
+      "path": "https://www.stage.bbc.com/mundo/articles/c45965g63xno",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/mundo/articles/c123456abcdo",
+      "smoke": false
+    }
+  },
+  "pidgin": {
+    "article": {
+      "path": "https://www.stage.bbc.com/pidgin/articles/cwl08rd38l6o",
+      "smoke": false
+    },
+    "frontPage": {
+      "path": "https://www.stage.bbc.com/pidgin",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/pidgin/articles/cxvxrj8tvppo",
+      "smoke": false
+    },
+    "liveRadio": {
+      "path": "https://www.stage.bbc.com/pidgin/bbc_pidgin_radio",
+      "smoke": false
+    },
+    "mediaAssetPage": {
+      "path": "https://www.stage.bbc.com/pidgin/23248703",
+      "smoke": false
+    }
+  },
+  "russian": {
+    "article": {
+      "path": "https://www.stage.bbc.com/russian/articles/ck7pz7re3zgo",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/russian/articles/c123456abcdo",
+      "smoke": false
+    }
+  },
+  "scotland": {
+    "article": {
+      "path": "https://www.stage.bbc.com/scotland/articles/czwj5l0n210o",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/scotland/articles/cabcdefghijo",
+      "smoke": false
+    }
+  },
+  "somali": {
+    "article": {
+      "path": "https://www.stage.bbc.com/somali/articles/cgn6emk3jm8o",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/somali/articles/c123456abcdo",
+      "smoke": false
+    }
+  },
+  "swahili": {
+    "article": {
+      "path": "https://www.stage.bbc.com/swahili/articles/czjqge2jwn2o",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/swahili/articles/c123456abcdo",
+      "smoke": false
+    }
+  },
+  "turkce": {
+    "article": {
+      "path": "https://www.stage.bbc.com/turkce/articles/cr2d32lwww2o",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/turkce/articles/c123456abcdo",
+      "smoke": false
+    }
+  },
+  "vietnamese": {
+    "article": {
+      "path": "https://www.stage.bbc.com/vietnamese/articles/c3y59g5zm19o",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/vietnamese/articles/c123456abcdo",
+      "smoke": false
+    }
+  },
+  "yoruba": {
+    "article": {
+      "path": "https://www.stage.bbc.com/yoruba/articles/clw06m0nj8qo",
+      "smoke": false
+    },
+    "frontPage": {
+      "path": "https://www.stage.bbc.com/yoruba",
+      "smoke": false
+    },
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/yoruba/articles/cxvxrj8tvppo",
+      "smoke": false
+    },
+    "liveRadio": {
+      "path": "https://www.stage.bbc.com/yoruba/bbc_yoruba_radio",
+      "smoke": false
+    },
+    "mediaAssetPage": {
+      "path": "https://www.stage.bbc.com/yoruba/media-42985961",
+      "smoke": false
+    }
+  },
+  "japanese": {
+    "frontPage": {
+      "path": "https://www.stage.bbc.com/japanese",
+      "smoke": false
+    }
+  },
+  "punjabi": {
+    "frontPage": {
+      "path": "https://www.stage.bbc.com/punjabi",
+      "smoke": false
+    }
+  },
+  "thai": {
+    "frontPage": {
+      "path": "https://www.stage.bbc.com/thai",
+      "smoke": false
+    }
+  },
+  "portuguese": {
+    "errorPage404": {
+      "path": "https://www.stage.bbc.com/portuguese/articles/cxvxrj8tvppo",
+      "smoke": false
+    }
+  },
+  "amharic": {
+    "liveRadio": {
+      "path": "https://www.stage.bbc.com/amharic/bbc_amharic_radio/liveradio",
+      "smoke": false
+    }
+  },
+  "korean": {
+    "liveRadio": {
+      "path": "https://www.stage.bbc.com/korean/bbc_korean_radio/liveradio",
+      "smoke": false
+    }
+  },
+  "tigrinya": {
+    "liveRadio": {
+      "path": "https://www.stage.bbc.com/tigrinya/bbc_tigrinya_radio/liveradio",
+      "smoke": false
+    }
+  }
+}

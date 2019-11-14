@@ -9,6 +9,16 @@ const config = {
     avEmbedBaseUrl: 'https://www.bbc.com',
     standaloneErrorPages: false,
   },
+  stage: {
+    baseUrl: 'https://www.stage.bbc.com',
+    dataUrl: 'https://www.stage.bbc.com',
+    assetUrl: 'https://news.stage.files.bbci.co.uk/include/articles/public',
+    assetOrigin: 'https://news.stage.files.bbci.co.uk',
+    atiUrl: 'https://logws1363.ati-host.net?',
+    chartbeatEnabled: true,
+    avEmbedBaseUrl: 'https://www.stage.bbc.com',
+    standaloneErrorPages: false,
+  },
   test: {
     baseUrl: 'https://www.test.bbc.com',
     dataUrl: 'https://www.test.bbc.com',
