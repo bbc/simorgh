@@ -102,28 +102,30 @@ const MediaPlayerContainer = ({
   );
 
   return (
-    <Figure>
+    <>
       <Metadata aresMediaBlock={aresMediaBlock} />
-      {isAmp ? (
-        <AmpMediaPlayer
-          src={embedSource}
-          placeholderSrc={placeholderSrc}
-          placeholderSrcset={placeholderSrcset}
-          title={iframeTitle}
-        />
-      ) : (
-        <CanonicalMediaPlayer
-          src={embedSource}
-          placeholderSrc={showPlaceholder ? placeholderSrc : null}
-          placeholderSrcset={placeholderSrcset}
-          showPlaceholder={showPlaceholder}
-          title={iframeTitle}
-          service={service}
-          mediaInfo={mediaInfo}
-        />
-      )}
-      {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
-    </Figure>
+      <Figure>
+        {isAmp ? (
+          <AmpMediaPlayer
+            src={embedSource}
+            placeholderSrc={placeholderSrc}
+            placeholderSrcset={placeholderSrcset}
+            title={iframeTitle}
+          />
+        ) : (
+          <CanonicalMediaPlayer
+            src={embedSource}
+            placeholderSrc={showPlaceholder ? placeholderSrc : null}
+            placeholderSrcset={placeholderSrcset}
+            showPlaceholder={showPlaceholder}
+            title={iframeTitle}
+            service={service}
+            mediaInfo={mediaInfo}
+          />
+        )}
+        {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
+      </Figure>
+    </>
   );
 };
 
