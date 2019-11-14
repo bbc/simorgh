@@ -1,16 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
+import React, { useEffect, useState } from 'react';
 
-const Canonical = () => {
-  const { variant } = useContext(RequestContext);
-  const { service } = useContext(ServiceContext);
+const Canonical = ({ endpoint }) => {
   const [promos, setPromo] = useState([]);
   const [data, setData] = useState({});
-
-  const localMostReadData = variant
-    ? `http://localhost:7080/${service}/most_read/${variant}.json`
-    : `http://localhost:7080/${service}/most_read.json`;
 
   const handleResponse = async response => {
     const mostReadData = await response.json();
@@ -20,12 +12,12 @@ const Canonical = () => {
 
   useEffect(() => {
     const fetchMostReadData = pathname =>
-      fetch(pathname)
+      fetch(pathname, { mode: 'no-cors' })
         .then(handleResponse)
         .catch(error => console.log(error)); // eslint-disable-line no-console
 
-    fetchMostReadData(localMostReadData);
-  }, [localMostReadData]);
+    fetchMostReadData(endpoint);
+  }, [endpoint]);
 
   return (
     <div>
