@@ -1,71 +1,38 @@
 /* eslint-disable global-require */
 const fs = require('fs');
-const path = require('path');
+
+jest.mock('fs');
 
 let winston;
+
+describe('Logger folder creation', () => {
+  it('creates folder log-temp', () => {
+    fs.existsSync.mockReturnValue(false);
+
+    require('./logger.node');
+
+    expect(fs.mkdirSync).toHaveBeenCalled();
+  });
+
+  it('creates default folder log when LOG_DIR isnt set', () => {
+    jest.resetModules();
+    process.env.LOG_DIR = '';
+    fs.existsSync.mockReturnValue(false);
+
+    require('./logger.node');
+
+    expect(fs.existsSync).toHaveBeenCalledWith('log');
+  });
+});
 
 describe('Logger node - for the server', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  const deleteFile = (logPath, logFile) => {
-    fs.unlink(path.join(logPath, logFile), () => {});
-  };
-
-  const deleteFolder = logPath => {
-    if (fs.existsSync(logPath)) {
-      deleteFile(logPath, 'app.log');
-      fs.rmdir(logPath, err => {
-        if (err) throw err;
-      });
-    }
-  };
-
   describe('Setting up logger', () => {
     beforeEach(() => {
       jest.resetModules();
-    });
-
-    describe('Folder creation', () => {
-      const logPath = path.join(__dirname, '../../..', 'log-temp');
-      const defaultLogPath = path.join(__dirname, '../../..', 'log');
-
-      beforeEach(() => {
-        process.env.LOG_DIR = logPath;
-        deleteFolder(logPath);
-        deleteFolder(defaultLogPath);
-        jest.resetModules();
-        jest.resetAllMocks();
-      });
-
-      afterAll(() => {
-        deleteFolder(logPath);
-        deleteFolder(defaultLogPath);
-      });
-
-      it('creates folder log-temp', () => {
-        require('./logger.node');
-
-        expect(fs.existsSync(logPath)).toBe(true);
-      });
-
-      it('creates default folder log when LOG_DIR isnt set', () => {
-        delete process.env.LOG_DIR;
-        require('./logger.node');
-
-        expect(fs.existsSync(defaultLogPath)).toBe(true);
-      });
-
-      it('does not create folder log-temp when it already exists', () => {
-        fs.mkdirSync(logPath);
-
-        jest.spyOn(fs, 'mkdirSync');
-
-        require('./logger.node');
-
-        expect(fs.mkdirSync).not.toHaveBeenCalled();
-      });
     });
 
     describe('Configuring Winston', () => {
@@ -88,6 +55,9 @@ describe('Logger node - for the server', () => {
         winston.format.timestamp.mockImplementation(() => 'Timestamp Mock');
         winston.format.printf.mockImplementation(() => 'Printf Mock');
         winston.format.combine.mockImplementation(() => 'Combine Mock');
+
+        fs.existsSync = jest.fn();
+        fs.mkdirSync = jest.fn();
       });
 
       it('sets up file transport when LOG_DIR is set ', () => {

@@ -1,14 +1,11 @@
 import convertParagraph from '../paragraph';
+import { blockBase } from '#app/models/blocks';
 
 const convertToSubheadline = async block => {
   const innerParagraph = await convertParagraph(block);
-
-  return {
-    type: 'subheadline',
-    model: {
-      blocks: [innerParagraph],
-    },
-  };
+  return blockBase('subheadline', {
+    blocks: [innerParagraph],
+  });
 };
 
 export default convertToSubheadline;

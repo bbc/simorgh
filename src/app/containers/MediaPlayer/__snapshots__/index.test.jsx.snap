@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MediaPlayer Calls the canonical placeholder when platform is canonical and showPlaceholder is true 1`] = `
-.c13 {
+.c9 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -10,22 +10,13 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   height: 0.75rem;
 }
 
-.c7 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 1rem;
-  height: 1rem;
-}
-
-.c15 {
+.c11 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c11 {
+.c7 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -37,7 +28,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   margin: 0;
 }
 
-.c9 {
+.c5 {
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -55,14 +46,14 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   width: 5rem;
 }
 
-.c9:hover,
-.c9:focus {
+.c5:hover,
+.c5:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.c12 > svg {
+.c8 > svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -70,7 +61,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   width: 1.5rem;
 }
 
-.c14 {
+.c10 {
   display: block;
   margin-top: 0.5rem;
 }
@@ -81,38 +72,16 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.125rem;
-}
-
-.c4 {
   width: 100%;
   height: 100%;
   position: absolute;
   background-color: rgba(34,34,34,0.75);
   color: #FFFFFF;
+  padding: 0.5rem;
 }
 
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 1rem;
-}
-
-.c8 {
-  padding-left: 0.25rem;
+.c4 {
   font-weight: normal;
-}
-
-.c6 > svg {
-  color: #FFFFFF;
-  fill: currentColor;
-  height: 1.5rem;
-  width: 1.5rem;
 }
 
 .c2 {
@@ -124,13 +93,13 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   height: 100%;
 }
 
-.c10 {
+.c6 {
   position: absolute;
   bottom: 0;
 }
 
-.c1:hover .c10,
-.c1:focus .c10 {
+.c1:hover .c6,
+.c1:focus .c6 {
   background-color: #B80000;
 }
 
@@ -143,6 +112,12 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
 @media (min-width:37.5rem) {
   .c3 {
     font-size: 0.875rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c3 {
+    padding: 1rem;
   }
 }
 
@@ -165,50 +140,26 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
           <div
             class="c3"
           >
-            <div
+            <strong
               class="c4"
             >
-              <div
-                class="c5"
-              >
-                <div
-                  aria-hidden="true"
-                  class="c6"
-                >
-                  <svg
-                    class="c7"
-                    focusable="false"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    width="32"
-                  >
-                    <path
-                      d="M32,16A16,16,0,1,1,16,0,16,16,0,0,1,32,16Zm-8.6-.8H16.6v3.1h2.9c-.2,1.5-1.6,2.4-3.7,2.4s-3.7-2.4-3.7-4.7,1-4.7,3.7-4.7,3,.8,3.2,2.2h4.2c-.4-4-3.9-5.8-7.2-5.8-4.8,0-8,3.7-8,8.3s3.1,8.3,8,8.3a5.4,5.4,0,0,0,4.5-2.1l.2,1.7h2.7Z"
-                    />
-                  </svg>
-                </div>
-                <strong
-                  class="c8"
-                >
-                  Contains strong language and adult humour.
-                </strong>
-              </div>
-            </div>
+              Contains strong language and adult humour.
+            </strong>
           </div>
           <button
-            class="c9 c10"
+            class="c5 c6"
           >
             <span
-              class="c11"
+              class="c7"
             >
               Play video, "Five things ants can teach us about management", 3,11
             </span>
             <div
               aria-hidden="true"
-              class="c12"
+              class="c8"
             >
               <svg
-                class="c13"
+                class="c9"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 32 32"
@@ -221,7 +172,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
             </div>
             <time
               aria-hidden="true"
-              class="c14"
+              class="c10"
               datetime="PT3M11S"
             >
               3:11
@@ -229,7 +180,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
           </button>
           <img
             alt=""
-            class="c15"
+            class="c11"
             src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
             srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
           />
@@ -250,19 +201,19 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
     </script>
   </head>
   <body>
-    .c1 {
+    .c0 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c1 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border: 0;
-  overflow: hidden;
-}
-
-.c0 {
-  padding-top: 56.25%;
-  position: relative;
   overflow: hidden;
 }
 
@@ -467,7 +418,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
     </script>
   </head>
   <body>
-    .c13 {
+    .c9 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -476,22 +427,13 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   height: 0.75rem;
 }
 
-.c7 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 1rem;
-  height: 1rem;
-}
-
-.c15 {
+.c11 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c11 {
+.c7 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -503,7 +445,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   margin: 0;
 }
 
-.c9 {
+.c5 {
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -521,14 +463,14 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   width: 5rem;
 }
 
-.c9:hover,
-.c9:focus {
+.c5:hover,
+.c5:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.c12 > svg {
+.c8 > svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -536,7 +478,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   width: 1.5rem;
 }
 
-.c14 {
+.c10 {
   display: block;
   margin-top: 0.5rem;
 }
@@ -547,38 +489,16 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.125rem;
-}
-
-.c4 {
   width: 100%;
   height: 100%;
   position: absolute;
   background-color: rgba(34,34,34,0.75);
   color: #FFFFFF;
+  padding: 0.5rem;
 }
 
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 1rem;
-}
-
-.c8 {
-  padding-left: 0.25rem;
+.c4 {
   font-weight: normal;
-}
-
-.c6 > svg {
-  color: #FFFFFF;
-  fill: currentColor;
-  height: 1.5rem;
-  width: 1.5rem;
 }
 
 .c2 {
@@ -590,13 +510,13 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   height: 100%;
 }
 
-.c10 {
+.c6 {
   position: absolute;
   bottom: 0;
 }
 
-.c1:hover .c10,
-.c1:focus .c10 {
+.c1:hover .c6,
+.c1:focus .c6 {
   background-color: #B80000;
 }
 
@@ -606,7 +526,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   overflow: hidden;
 }
 
-.c16 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -617,16 +537,16 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   width: 100%;
 }
 
-.c16 > p {
+.c12 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c16 > p:last-child {
+.c12 > p:last-child {
   padding-bottom: 0;
 }
 
-.c16 i {
+.c12 i {
   font-style: normal;
 }
 
@@ -636,28 +556,34 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   }
 }
 
+@media (min-width:25rem) {
+  .c3 {
+    padding: 1rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 {
+  .c12 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c16 {
+  .c12 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c16 {
+  .c12 {
     padding: 0.5rem 0 0;
   }
 }
@@ -672,50 +598,26 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
           <div
             class="c3"
           >
-            <div
+            <strong
               class="c4"
             >
-              <div
-                class="c5"
-              >
-                <div
-                  aria-hidden="true"
-                  class="c6"
-                >
-                  <svg
-                    class="c7"
-                    focusable="false"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    width="32"
-                  >
-                    <path
-                      d="M32,16A16,16,0,1,1,16,0,16,16,0,0,1,32,16Zm-8.6-.8H16.6v3.1h2.9c-.2,1.5-1.6,2.4-3.7,2.4s-3.7-2.4-3.7-4.7,1-4.7,3.7-4.7,3,.8,3.2,2.2h4.2c-.4-4-3.9-5.8-7.2-5.8-4.8,0-8,3.7-8,8.3s3.1,8.3,8,8.3a5.4,5.4,0,0,0,4.5-2.1l.2,1.7h2.7Z"
-                    />
-                  </svg>
-                </div>
-                <strong
-                  class="c8"
-                >
-                  Contains strong language and adult humour.
-                </strong>
-              </div>
-            </div>
+              Contains strong language and adult humour.
+            </strong>
           </div>
           <button
-            class="c9 c10"
+            class="c5 c6"
           >
             <span
-              class="c11"
+              class="c7"
             >
               Play video, "Five things ants can teach us about management", 3,11
             </span>
             <div
               aria-hidden="true"
-              class="c12"
+              class="c8"
             >
               <svg
-                class="c13"
+                class="c9"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 32 32"
@@ -728,7 +630,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
             </div>
             <time
               aria-hidden="true"
-              class="c14"
+              class="c10"
               datetime="PT3M11S"
             >
               3:11
@@ -736,17 +638,17 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
           </button>
           <img
             alt=""
-            class="c15"
+            class="c11"
             src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
             srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
           />
         </div>
       </div>
       <figcaption
-        class="c16"
+        class="c12"
       >
         <span
-          class="c11"
+          class="c7"
         >
           Video caption, 
         </span>
