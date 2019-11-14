@@ -243,17 +243,7 @@ const StoryPromoRenderer = ({ items, isFirstSection, groupType }) => {
     );
   }
 
-  const Components = {
-    'top-stories': TopStories,
-  };
-
-  let Component;
-  if (groupType in Components) {
-    Component = Components[groupType];
-  } else {
-    Component = SectionStories;
-  }
-
+  const Component = groupType === 'top-stories' ? TopStories : SectionStories;
   return (
     <MarginWrapper isFirstSection={isFirstSection}>
       <Component items={items} isFirstSection={isFirstSection} />
