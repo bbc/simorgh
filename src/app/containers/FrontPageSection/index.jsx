@@ -54,9 +54,9 @@ const TopMargin = styled.div`
 `;
 
 // eslint-disable-next-line react/prop-types
-const MarginWrapper = ({ firstSection, oneItem, children }) => {
+const MarginWrapper = ({ isFirstSection, oneItem, children }) => {
   // Conditionally add a `margin-top` to the `children`.
-  if (firstSection) {
+  if (isFirstSection) {
     return (
       <FirstSectionTopMargin oneItem={oneItem}>
         {children}
@@ -71,9 +71,14 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
   return children;
 };
 
-const StoryPromoComponent = ({ item, topStory, displayImage, isLeading }) => {
-  const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
-
+const StoryPromoComponent = ({
+  item,
+  topStory,
+  displayImage,
+  isLeading,
+  isFirstSection,
+}) => {
+  const lazyLoadImage = !(topStory && isFirstSection); // don't lazy load image if it is a top story
   return (
     <StoryPromo
       item={item}
@@ -90,11 +95,13 @@ StoryPromoComponent.propTypes = {
   topStory: bool.isRequired,
   displayImage: bool,
   isLeading: bool,
+  isFirstSection: bool,
 };
 
 StoryPromoComponent.defaultProps = {
   displayImage: true,
   isLeading: false,
+  isFirstSection: false,
 };
 
 const defaultColumns = {
@@ -116,7 +123,7 @@ const normalStoryPromoColumns = {
   group5: 2,
 };
 
-const TopStories = ({ items }) => {
+const TopStories = ({ items, isFirstSection }) => {
   const itemsToDisplay = items.length - ((items.length - 1) % 4);
   const imageDisplayThreshold = 9;
 
@@ -136,10 +143,12 @@ const TopStories = ({ items }) => {
                 item={item}
                 topStory={index === 0}
                 displayImage={index < imageDisplayThreshold}
+                isFirstSection={isFirstSection}
               />
             </StoryPromoLi>
           </Grid>
         ))}
+        ;
       </Grid>
     </StoryPromoUl>
   );
@@ -147,9 +156,14 @@ const TopStories = ({ items }) => {
 
 TopStories.propTypes = {
   items: arrayOf(shape(storyItem)).isRequired,
+  isFirstSection: bool,
 };
 
-const SectionStories = ({ items }) => {
+TopStories.defaultProps = {
+  isFirstSection: false,
+};
+
+const SectionStories = ({ items, isFirstSection }) => {
   let remainder = items.length % 4;
   let itemsToDisplay = items.length;
   if (remainder > 2) {
@@ -179,6 +193,7 @@ const SectionStories = ({ items }) => {
                 item={item}
                 topStory={index === 0 && remainder === 1}
                 isLeading={index === 0 && remainder === 2}
+                isFirstSection={isFirstSection}
               />
             </StoryPromoLi>
           </Grid>
@@ -190,15 +205,24 @@ const SectionStories = ({ items }) => {
 
 SectionStories.propTypes = {
   items: arrayOf(shape(storyItem)).isRequired,
+  isFirstSection: bool,
 };
 
-const StoryPromoRenderer = ({ items, firstSection, groupType }) => {
+SectionStories.defaultProps = {
+  isFirstSection: false,
+};
+
+const StoryPromoRenderer = ({ items, isFirstSection, groupType }) => {
   if (items.length === 1) {
     return (
-      <MarginWrapper firstSection={firstSection} oneItem>
+      <MarginWrapper isFirstSection={isFirstSection} oneItem>
         <Grid enableGelGutters columns={fullWidthStoryPromoColumns}>
           <Grid item columns={fullWidthStoryPromoColumns}>
-            <StoryPromoComponent item={items[0]} topStory />
+            <StoryPromoComponent
+              item={items[0]}
+              topStory
+              isFirstSection={isFirstSection}
+            />
           </Grid>
         </Grid>
       </MarginWrapper>
@@ -217,15 +241,15 @@ const StoryPromoRenderer = ({ items, firstSection, groupType }) => {
   }
 
   return (
-    <MarginWrapper firstSection={firstSection}>
-      <Component items={items} />
+    <MarginWrapper isFirstSection={isFirstSection}>
+      <Component items={items} isFirstSection={isFirstSection} />
     </MarginWrapper>
   );
 };
 
 StoryPromoRenderer.propTypes = {
   items: arrayOf(shape(storyItem)).isRequired,
-  firstSection: bool.isRequired,
+  isFirstSection: bool.isRequired,
   groupType: string.isRequired,
 };
 
@@ -275,7 +299,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
       ) : (
         <StoryPromoRenderer
           items={items}
-          firstSection={isFirstSection}
+          isFirstSection={isFirstSection}
           groupType={group.type}
         />
       )}

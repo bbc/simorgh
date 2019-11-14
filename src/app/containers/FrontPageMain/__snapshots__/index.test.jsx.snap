@@ -1471,6 +1471,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       </div>
                     </li>
                   </div>
+                  ;
                 </div>
               </ul>
             </div>
@@ -1964,13 +1965,8 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           <div
                             class="c16"
                           >
-                            <img
-                              alt="Abiniro Collins na spoon artist"
-                              class="c17"
-                              sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
-                              src="https://ichef.bbci.co.uk/news/660/cpsprodpb/10DE4/production/_107329096_p07csxwm.jpg"
-                              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/10DE4/production/_107329096_p07csxwm.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/10DE4/production/_107329096_p07csxwm.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/10DE4/production/_107329096_p07csxwm.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/10DE4/production/_107329096_p07csxwm.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/10DE4/production/_107329096_p07csxwm.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/10DE4/production/_107329096_p07csxwm.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/10DE4/production/_107329096_p07csxwm.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/10DE4/production/_107329096_p07csxwm.jpg 624w"
-                              width="976"
+                            <div
+                              class="lazyload-placeholder"
                             />
                           </div>
                           <div
@@ -2515,13 +2511,8 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           <div
                             class="c16"
                           >
-                            <img
-                              alt="Herdsmen"
-                              class="c17"
-                              sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
-                              src="https://ichef.bbci.co.uk/news/660/cpsprodpb/F386/production/_107324326_herdsmen.jpg"
-                              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/F386/production/_107324326_herdsmen.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/F386/production/_107324326_herdsmen.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/F386/production/_107324326_herdsmen.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/F386/production/_107324326_herdsmen.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/F386/production/_107324326_herdsmen.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F386/production/_107324326_herdsmen.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/F386/production/_107324326_herdsmen.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/F386/production/_107324326_herdsmen.jpg 624w"
-                              width="976"
+                            <div
+                              class="lazyload-placeholder"
                             />
                           </div>
                           <div

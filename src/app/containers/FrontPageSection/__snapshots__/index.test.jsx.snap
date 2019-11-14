@@ -97,31 +97,35 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   padding: 0;
 }
 
-.c20 {
+.c11 {
   position: relative;
 }
 
-.c21 {
+.c12 {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 33.33%;
-}
-
-.c22 {
-  position: relative;
-}
-
-.c24 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
 }
 
 .c13 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
+  position: relative;
+}
+
+.c16 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c17 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.c18 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -130,7 +134,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   padding-bottom: 0.5rem;
 }
 
-.c15 {
+.c20 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -142,14 +146,14 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   padding-top: 0.5rem;
 }
 
-.c14 {
+.c19 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c14:before {
+.c19:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -161,28 +165,17 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   z-index: 1;
 }
 
-.c14:hover,
-.c14:focus {
+.c19:hover,
+.c19:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c14:visited {
+.c19:visited {
   color: #6E6E73;
 }
 
-.c17 {
-  display: inline-block;
-  width: 66.67%;
-}
-
-.c12 {
-  display: inline-block;
-  vertical-align: top;
-  width: 33.33%;
-}
-
-.c16 {
+.c21 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -192,7 +185,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   font-style: normal;
 }
 
-.c18 {
+.c14 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -203,6 +196,12 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   padding-bottom: 56.25%;
   width: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c15 {
+  display: block;
+  width: 100%;
+  visibility: visible;
 }
 
 @media (min-width:37.5rem) {
@@ -343,7 +342,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 @media (min-width:63rem) and (max-width:80rem) {
   .c9 {
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
+    width: calc(100% - 1rem);
     display: inline-block;
     vertical-align: top;
   }
@@ -351,48 +350,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 
 @media (min-width:80rem) {
   .c9 {
-    margin: 0 0.5rem;
-    width: calc(75% - 1rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c9 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c19 {
-    margin: 0 0.25rem;
-    width: calc(100% - 0.5rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c19 {
-    margin: 0 0.25rem;
-    width: calc(100% - 0.5rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c19 {
-    margin: 0 0.25rem;
-    width: calc(100% - 0.5rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c19 {
     margin: 0 0.5rem;
     width: calc(100% - 1rem);
     display: inline-block;
@@ -400,26 +357,8 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
-  .c19 {
-    margin: 0 0.5rem;
-    width: calc(25% - 1rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    margin: 0 0.5rem;
-    width: calc(25% - 1rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
 @supports (display:grid) {
-  .c19 {
+  .c9 {
     display: block;
   }
 }
@@ -449,136 +388,107 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c20 {
+  .c11 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
   }
 }
 
-@media (min-width:63rem) {
-  .c21 {
-    display: block;
-    width: 100%;
+@media (min-width:37.5rem) {
+  .c12 {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:80rem) {
+  .c12 {
+    width: 33.33%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c21 {
+  .c12 {
     display: block;
     width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
-@media (min-width:25rem) {
-  .c23 {
-    position: absolute;
-    bottom: 0;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c24 {
+  .c17 {
+    width: 50%;
     padding: 0 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .c24 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
+@media (min-width:80rem) {
+  .c17 {
+    width: 66.67%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c24 {
+  .c17 {
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 3 / span 4;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+  .c18 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+  .c18 {
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+  .c18 {
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
+  .c20 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c20 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c15 {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c20 {
     display: none;
     visibility: hidden;
-  }
-}
-
-@media (min-width:63rem) {
-  .c15 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 1rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c17 {
-    width: initial;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c12 {
-    width: 100%;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 {
+  .c21 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c21 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -645,91 +555,46 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
               <div
                 class="c12"
               >
-                <h3
+                <div
                   class="c13"
                 >
-                  <a
+                  <div
                     class="c14"
+                  >
+                    <img
+                      alt="Image Alt text 1"
+                      class="c15"
+                      sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
+                      src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
+                      srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image1.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image1.jpg 624w"
+                      width="2048"
+                    />
+                  </div>
+                  <div
+                    class="c16"
+                  />
+                </div>
+              </div>
+              <div
+                class="c17"
+              >
+                <h3
+                  class="c18"
+                >
+                  <a
+                    class="c19"
                     href="https://www.bbc.co.uk"
                   >
                     Top Story 1 headline
                   </a>
                 </h3>
                 <p
-                  class="c15"
+                  class="c20"
                 >
                   Summary text 1
                 </p>
                 <time
-                  class="c16"
-                  datetime="1970-01-19"
-                >
-                  19 January 1970
-                </time>
-              </div>
-              <div
-                class="c17"
-              >
-                <div
-                  class="c18"
-                >
-                  <div
-                    class="lazyload-placeholder"
-                  />
-                </div>
-              </div>
-            </div>
-          </li>
-        </div>
-        <div
-          class="c19"
-          dir="ltr"
-        >
-          <li
-            class="c10"
-            role="listitem"
-          >
-            <div
-              class="c20"
-            >
-              <div
-                class="c21"
-              >
-                <div
-                  class="c22"
-                >
-                  <div
-                    class="c18"
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                  <div
-                    class="c23"
-                  />
-                </div>
-              </div>
-              <div
-                class="c24"
-              >
-                <h3
-                  class="c13"
-                >
-                  <a
-                    class="c14"
-                    href="https://www.bbc.co.uk"
-                  >
-                    Top Story 2 headline
-                  </a>
-                </h3>
-                <p
-                  class="c15"
-                >
-                  Summary text 2
-                </p>
-                <time
-                  class="c16"
+                  class="c21"
                   datetime="1970-01-19"
                 >
                   19 January 1970
@@ -738,6 +603,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
             </div>
           </li>
         </div>
+        ;
       </div>
     </ul>
   </div>
@@ -833,31 +699,35 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   padding: 0;
 }
 
-.c19 {
+.c10 {
   position: relative;
 }
 
-.c20 {
+.c11 {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 33.33%;
-}
-
-.c21 {
-  position: relative;
-}
-
-.c23 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
 }
 
 .c12 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
+  position: relative;
+}
+
+.c14 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c15 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.c16 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -866,7 +736,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   padding-bottom: 0.5rem;
 }
 
-.c14 {
+.c18 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -878,14 +748,14 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   padding-top: 0.5rem;
 }
 
-.c13 {
+.c17 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c13:before {
+.c17:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -897,28 +767,17 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   z-index: 1;
 }
 
-.c13:hover,
-.c13:focus {
+.c17:hover,
+.c17:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c13:visited {
+.c17:visited {
   color: #6E6E73;
 }
 
-.c16 {
-  display: inline-block;
-  width: 66.67%;
-}
-
-.c11 {
-  display: inline-block;
-  vertical-align: top;
-  width: 33.33%;
-}
-
-.c15 {
+.c19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -928,7 +787,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   font-style: normal;
 }
 
-.c17 {
+.c13 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1079,7 +938,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 @media (min-width:63rem) and (max-width:80rem) {
   .c8 {
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
+    width: calc(100% - 1rem);
     display: inline-block;
     vertical-align: top;
   }
@@ -1087,48 +946,6 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:80rem) {
   .c8 {
-    margin: 0 0.5rem;
-    width: calc(75% - 1rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c8 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c18 {
-    margin: 0 0.25rem;
-    width: calc(100% - 0.5rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c18 {
-    margin: 0 0.25rem;
-    width: calc(100% - 0.5rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c18 {
-    margin: 0 0.25rem;
-    width: calc(100% - 0.5rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c18 {
     margin: 0 0.5rem;
     width: calc(100% - 1rem);
     display: inline-block;
@@ -1136,26 +953,8 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
-  .c18 {
-    margin: 0 0.5rem;
-    width: calc(25% - 1rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c18 {
-    margin: 0 0.5rem;
-    width: calc(25% - 1rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
 @supports (display:grid) {
-  .c18 {
+  .c8 {
     display: block;
   }
 }
@@ -1185,136 +984,107 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c19 {
+  .c10 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
   }
 }
 
-@media (min-width:63rem) {
-  .c20 {
-    display: block;
-    width: 100%;
+@media (min-width:37.5rem) {
+  .c11 {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    width: 33.33%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c20 {
+  .c11 {
     display: block;
     width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
-@media (min-width:25rem) {
-  .c22 {
-    position: absolute;
-    bottom: 0;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c15 {
+    width: 50%;
     padding: 0 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .c23 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
+@media (min-width:80rem) {
+  .c15 {
+    width: 66.67%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c23 {
+  .c15 {
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 3 / span 4;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+  .c16 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+  .c16 {
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+  .c16 {
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
+  .c18 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c18 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c14 {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c18 {
     display: none;
     visibility: hidden;
-  }
-}
-
-@media (min-width:63rem) {
-  .c14 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c10 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 1rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c16 {
-    width: initial;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
-    width: 100%;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
+  .c19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -1372,91 +1142,41 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
             <div
               class="c11"
             >
-              <h3
+              <div
                 class="c12"
               >
-                <a
+                <div
                   class="c13"
-                  href="https://www.bbc.co.uk"
-                >
-                  Top Story 1 headline
-                </a>
-              </h3>
-              <p
-                class="c14"
-              >
-                Summary text 1
-              </p>
-              <time
-                class="c15"
-                datetime="1970-01-19"
-              >
-                19 January 1970
-              </time>
-            </div>
-            <div
-              class="c16"
-            >
-              <div
-                class="c17"
-              >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-            </div>
-          </div>
-        </li>
-      </div>
-      <div
-        class="c18"
-        dir="ltr"
-      >
-        <li
-          class="c9"
-          role="listitem"
-        >
-          <div
-            class="c19"
-          >
-            <div
-              class="c20"
-            >
-              <div
-                class="c21"
-              >
-                <div
-                  class="c17"
                 >
                   <div
                     class="lazyload-placeholder"
                   />
                 </div>
                 <div
-                  class="c22"
+                  class="c14"
                 />
               </div>
             </div>
             <div
-              class="c23"
+              class="c15"
             >
               <h3
-                class="c12"
+                class="c16"
               >
                 <a
-                  class="c13"
+                  class="c17"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 2 headline
+                  Top Story 1 headline
                 </a>
               </h3>
               <p
-                class="c14"
+                class="c18"
               >
-                Summary text 2
+                Summary text 1
               </p>
               <time
-                class="c15"
+                class="c19"
                 datetime="1970-01-19"
               >
                 19 January 1970
@@ -1465,6 +1185,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
           </div>
         </li>
       </div>
+      ;
     </div>
   </ul>
 </section>
@@ -2115,31 +1836,35 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   padding: 0;
 }
 
-.c18 {
+.c9 {
   position: relative;
 }
 
-.c19 {
+.c10 {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 33.33%;
-}
-
-.c20 {
-  position: relative;
-}
-
-.c22 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
 }
 
 .c11 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
+  position: relative;
+}
+
+.c13 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c14 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.c15 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -2148,7 +1873,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   padding-bottom: 0.5rem;
 }
 
-.c13 {
+.c17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2160,14 +1885,14 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   padding-top: 0.5rem;
 }
 
-.c12 {
+.c16 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c12:before {
+.c16:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2179,28 +1904,17 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   z-index: 1;
 }
 
-.c12:hover,
-.c12:focus {
+.c16:hover,
+.c16:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c12:visited {
+.c16:visited {
   color: #6E6E73;
 }
 
-.c15 {
-  display: inline-block;
-  width: 66.67%;
-}
-
-.c10 {
-  display: inline-block;
-  vertical-align: top;
-  width: 33.33%;
-}
-
-.c14 {
+.c18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -2210,7 +1924,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   font-style: normal;
 }
 
-.c16 {
+.c12 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -2346,7 +2060,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 @media (min-width:63rem) and (max-width:80rem) {
   .c7 {
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
+    width: calc(100% - 1rem);
     display: inline-block;
     vertical-align: top;
   }
@@ -2354,48 +2068,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 
 @media (min-width:80rem) {
   .c7 {
-    margin: 0 0.5rem;
-    width: calc(75% - 1rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c7 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c17 {
-    margin: 0 0.25rem;
-    width: calc(100% - 0.5rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c17 {
-    margin: 0 0.25rem;
-    width: calc(100% - 0.5rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c17 {
-    margin: 0 0.25rem;
-    width: calc(100% - 0.5rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c17 {
     margin: 0 0.5rem;
     width: calc(100% - 1rem);
     display: inline-block;
@@ -2403,26 +2075,8 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
-  .c17 {
-    margin: 0 0.5rem;
-    width: calc(25% - 1rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c17 {
-    margin: 0 0.5rem;
-    width: calc(25% - 1rem);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
 @supports (display:grid) {
-  .c17 {
+  .c7 {
     display: block;
   }
 }
@@ -2452,136 +2106,107 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c18 {
+  .c9 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
   }
 }
 
-@media (min-width:63rem) {
-  .c19 {
-    display: block;
-    width: 100%;
+@media (min-width:37.5rem) {
+  .c10 {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:80rem) {
+  .c10 {
+    width: 33.33%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c19 {
+  .c10 {
     display: block;
     width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
-@media (min-width:25rem) {
-  .c21 {
-    position: absolute;
-    bottom: 0;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c14 {
+    width: 50%;
     padding: 0 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .c22 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
+@media (min-width:80rem) {
+  .c14 {
+    width: 66.67%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c22 {
+  .c14 {
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 3 / span 4;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+  .c15 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+  .c15 {
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+  .c15 {
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c17 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c17 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c13 {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c17 {
     display: none;
     visibility: hidden;
-  }
-}
-
-@media (min-width:63rem) {
-  .c13 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c9 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 1rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c15 {
-    width: initial;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c10 {
-    width: 100%;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
+  .c18 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c18 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -2636,91 +2261,41 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
             <div
               class="c10"
             >
-              <h3
+              <div
                 class="c11"
               >
-                <a
+                <div
                   class="c12"
-                  href="https://www.bbc.co.uk"
-                >
-                  Top Story 1 headline
-                </a>
-              </h3>
-              <p
-                class="c13"
-              >
-                Summary text 1
-              </p>
-              <time
-                class="c14"
-                datetime="1970-01-19"
-              >
-                19 January 1970
-              </time>
-            </div>
-            <div
-              class="c15"
-            >
-              <div
-                class="c16"
-              >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-            </div>
-          </div>
-        </li>
-      </div>
-      <div
-        class="c17"
-        dir="ltr"
-      >
-        <li
-          class="c8"
-          role="listitem"
-        >
-          <div
-            class="c18"
-          >
-            <div
-              class="c19"
-            >
-              <div
-                class="c20"
-              >
-                <div
-                  class="c16"
                 >
                   <div
                     class="lazyload-placeholder"
                   />
                 </div>
                 <div
-                  class="c21"
+                  class="c13"
                 />
               </div>
             </div>
             <div
-              class="c22"
+              class="c14"
             >
               <h3
-                class="c11"
+                class="c15"
               >
                 <a
-                  class="c12"
+                  class="c16"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 2 headline
+                  Top Story 1 headline
                 </a>
               </h3>
               <p
-                class="c13"
+                class="c17"
               >
-                Summary text 2
+                Summary text 1
               </p>
               <time
-                class="c14"
+                class="c18"
                 datetime="1970-01-19"
               >
                 19 January 1970
@@ -2729,6 +2304,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
           </div>
         </li>
       </div>
+      ;
     </div>
   </ul>
 </section>

@@ -8,7 +8,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 const React = jest.requireActual('react');
 
 const group = {
-  type: 'responsive-top-stories',
+  type: 'top-stories',
   title: 'Top Stories',
   items: [
     {
@@ -54,7 +54,7 @@ const group = {
 };
 
 const groupWithLink = {
-  type: 'responsive-top-stories-with-links',
+  type: 'top-stories',
   title: 'Top Stories',
   items: [
     {
@@ -150,7 +150,7 @@ const hasNoStrapline = {
 };
 
 const hasNoItems = {
-  type: 'responsive-top-stories',
+  type: 'top-stories',
   title: 'Top Stories',
   items: [],
   strapline: {
@@ -159,7 +159,7 @@ const hasNoItems = {
 };
 
 const hasOneItem = {
-  type: 'responsive-top-stories',
+  type: 'top-stories',
   title: 'Top Stories',
   items: [
     {
