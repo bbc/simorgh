@@ -33,6 +33,7 @@ const CpsAssetPageMain = ({ pageData }) => {
     image,
     timestamp: allowDateStamp ? timestamp : undefined,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
+    version: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };
 
   return (
