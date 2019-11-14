@@ -13,19 +13,21 @@ const Canonical = () => {
 
   const handleResponse = async response => {
     const mostReadData = await response.json();
-    try {
-      setData(mostReadData);
-    } catch (error) {
-      console.log(error);
-    }
+    setData(mostReadData);
   };
 
   useEffect(() => {
-    const fetchCanoncialData = pathname =>
+    const fetchCanonicalData = pathname =>
       fetch(pathname)
         .then(handleResponse)
         .catch(error => console.log(error));
-    fetchCanoncialData(localMostReadData);
+
+    try {
+      fetchCanonicalData(localMostReadData);
+    } catch (error) {
+      // TO-DO: how should we handle failed data response
+      console.log(error);
+    }
   }, []);
 
   return (
