@@ -255,11 +255,11 @@ pipeline {
       agent any
       steps {
         // This stage triggers the B/G deployment when merging Simorgh
-        // build(
-        //   job: 'simorgh-blue-green/add-alb-updater-lambda',
-        //   propagate: false,
-        //   wait: false
-        // )
+        build(
+          job: 'simorgh-blue-green',
+          propagate: false,
+          wait: false
+        )
         unstash 'simorgh'
         build(
           job: 'simorgh-infrastructure-test/latest',
