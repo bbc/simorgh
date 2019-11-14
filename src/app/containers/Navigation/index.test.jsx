@@ -2,37 +2,34 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import NavigationContainer from './index';
-import { service as igboConfig } from '#lib/config/services/igbo';
-
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useContext: jest.fn(),
-  };
-});
-
-const { useContext } = jest.requireMock('react');
+import { EventContextProvider } from '#app/contexts/EventContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 describe('Navigation Container', () => {
-  beforeEach(() => {
-    useContext.mockReturnValue(igboConfig.default);
-  });
-
   afterEach(() => {
-    useContext.mockReset();
+    jest.clearAllMocks();
   });
 
   describe('snapshots', () => {
     shouldMatchSnapshot(
       'should render a Navigation with igbo links correctly',
-      <NavigationContainer />,
+      <ServiceContextProvider service="igbo">
+        <EventContextProvider>
+          <NavigationContainer />
+        </EventContextProvider>
+      </ServiceContextProvider>,
     );
   });
 
   describe('assertions', () => {
     it('should render a Navigation with a Skip to content link, linking to #content', () => {
-      const { container } = render(<NavigationContainer />);
+      const { container } = render(
+        <ServiceContextProvider service="igbo">
+          <EventContextProvider>
+            <NavigationContainer />
+          </EventContextProvider>
+        </ServiceContextProvider>,
+      );
 
       const skipLink = container.querySelector('a');
       const skipLinkHref = skipLink.getAttribute('href');
