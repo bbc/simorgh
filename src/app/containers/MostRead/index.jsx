@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import Canonical from './index.canonical';
-import Amp from './index.amp';
+import Canonical from './Canonical';
+import Amp from './Amp';
 
 const MostReadContainer = () => {
   const { platform, variant } = useContext(RequestContext);

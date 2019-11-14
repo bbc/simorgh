@@ -15,7 +15,7 @@ const renderMostReadContainer = async ({ service, variant = null }) =>
       <RequestContextProvider
         bbcOrigin={`http://localhost:7080/${service}/articles/c0000000000o`}
         id="c0000000000o"
-        isAmp={false}
+        isAmp
         pageType="article"
         service={service}
         statusCode={200}
@@ -30,7 +30,7 @@ const renderMostReadContainer = async ({ service, variant = null }) =>
     );
   });
 
-describe('MostReadContainer', () => {
+describe('MostReadContainerAmp', () => {
   beforeAll(() => {
     container = null;
     container = document.createElement('div');
@@ -41,18 +41,12 @@ describe('MostReadContainer', () => {
   it('test data returns as expected on canonical for News', async () => {
     fetch.mockResponse(JSON.stringify(newsMostReadData));
     await renderMostReadContainer({ service: 'news' });
-    expect(container.querySelector('p').textConent).toEqual(
-      `Last Updated: ${newsMostReadData.lastRecordTimeStamp}`,
-    );
     expect(container.querySelectorAll('ul').length).toEqual(10);
   });
 
   it('test data returns as expected on canonical for Zhongwen Simp', async () => {
     fetch.mockResponse(JSON.stringify(zhongwenSimpMostReadData));
     await renderMostReadContainer({ service: 'zhongwen', variant: 'simp' });
-    expect(container.querySelector('p').textContent).toEqual(
-      `Last Updated: ${zhongwenSimpMostReadData.lastRecordTimeStamp}`,
-    );
     expect(container.querySelectorAll('ul').length).toEqual(10);
   });
 });

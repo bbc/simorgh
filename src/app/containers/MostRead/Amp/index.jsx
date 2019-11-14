@@ -43,6 +43,7 @@ const AMPMostRead = ({ endpoint }) => (
     >
       <template
         type="amp-mustache"
+        /* eslint-disable-next-line react/no-danger */
         dangerouslySetInnerHTML={{
           __html: `<ul key={{id}}>
           <li>{{promo.timestamp}}</li>
