@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CpsRelatedContent should do something 1`] = `
+exports[`CpsRelatedContent should render Story Promo components when given appropriate data 1`] = `
 <DocumentFragment>
   <div
     aria-labelledby="related-content-heading"
