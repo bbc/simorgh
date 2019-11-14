@@ -179,8 +179,7 @@ export const getClickInfo = (
   elem,
   { service, componentName, componentInfo, type },
 ) => {
-  const cleanCompInfo = componentInfo.split('/').join('-');
-  const format = `PAR=container-${componentName}::name~CHD=${cleanCompInfo.toLowerCase()}`;
+  const format = `PAR=container-${componentName}::name~CHD=${componentInfo.toLowerCase()}`;
   const url = (elem && elem.href) || '/';
 
   return `PUB-[${service}-${componentName}]-[=${type}]-[]-[${format}]-[]-[]-[]-[${url}]`;
