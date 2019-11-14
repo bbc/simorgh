@@ -9,9 +9,9 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemConstrainedLarge } from '#lib/styledGrid';
 import StoryPromo from '../StoryPromo';
 
-// This is required as the psammead section label component uses negative z-indices
+// z-index needs explicitly set as the psammead section label component uses negative z-indices
 const Wrapper = styled(GridItemConstrainedLarge)`
-  z-index: 1;
+  z-index: 0;
 `;
 
 const isValidItem = item => {
@@ -45,6 +45,9 @@ const CpsRelatedContent = ({ content }) => {
 };
 
 CpsRelatedContent.propTypes = {
+  // We Reuse the front page story item blocks
+  // Both pages use CPS, so the data schema is the same
+  // This can be found under CPS ARES payloads: relatedContent.groups[0].promos
   content: arrayOf(shape(storyItem)),
 };
 
