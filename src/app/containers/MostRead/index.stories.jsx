@@ -21,8 +21,25 @@ stories.add('Canonical Most Read', () => (
     pathname={`/news`}
     variant={null}
   >
-    <ServiceContextProvider service="news" variant="lat">
+    <ServiceContextProvider service="news" variant={null}>
       <CanonicalMostReadContainer endpoint="/most_read.json" />
+    </ServiceContextProvider>
+  </RequestContextProvider>
+));
+
+stories.addDecorator(AmpDecorator).add('Amp Most Read', () => (
+  <RequestContextProvider
+    bbcOrigin={`http://localhost:7080/new/articles/c0000000000o`}
+    id="c0000000000o"
+    isAmp={true}
+    pageType="article"
+    service="news"
+    statusCode={200}
+    pathname={`/news`}
+    variant={null}
+  >
+    <ServiceContextProvider service="news" variant={null}>
+      <AMPMostReadContainer endpoint="/most_read.json" />
     </ServiceContextProvider>
   </RequestContextProvider>
 ));

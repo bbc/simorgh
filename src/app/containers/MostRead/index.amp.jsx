@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { string } from 'prop-types';
 
 const AMP_LIST = (
   <script
@@ -26,7 +27,7 @@ const AMP_BIND = (
 );
 
 const AMPMostRead = ({ endpoint }) => (
-  <div>
+  <>
     <Helmet htmlAttributes={{ amp: '' }}>
       {AMP_LIST}
       {AMP_MUSTACHE}
@@ -35,17 +36,27 @@ const AMPMostRead = ({ endpoint }) => (
     <amp-list
       layout="fixed-height"
       height="100"
-      src="https://amp.dev/static/samples/json/examples.json"
+      src={endpoint}
       binding="no"
+      items="records"
+      max-items={10}
     >
       <template
         type="amp-mustache"
         dangerouslySetInnerHTML={{
-          __html: `<div><a href="{{url}}">{{title}}</a></div>`,
+          __html: `<ul key={{id}}>
+          <li>{{promo.timestamp}}</li>
+          <li>{{promo.headlines.headline}}</li>
+          <li>{{promo.locators.assetUri}}</li>
+          </ul>`,
         }}
       />
     </amp-list>
-  </div>
+  </>
 );
+
+AMPMostRead.propTypes = {
+  endpoint: string.isRequired,
+};
 
 export default AMPMostRead;

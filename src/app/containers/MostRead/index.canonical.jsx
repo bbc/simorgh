@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { string } from 'prop-types';
 
-const Canonical = ({ endpoint }) => {
+const CanonicalMostRead = ({ endpoint }) => {
   const [promos, setPromo] = useState([]);
   const [data, setData] = useState({});
 
@@ -33,4 +34,8 @@ const Canonical = ({ endpoint }) => {
   );
 };
 
-export default Canonical;
+CanonicalMostRead.propTypes = {
+  endpoint: string.isRequired,
+};
+
+export default CanonicalMostRead;
