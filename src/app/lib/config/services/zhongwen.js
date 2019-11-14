@@ -136,6 +136,12 @@ const baseServiceConfig = {
         subtitle:
           'BBC中文部提供的国际新闻、分析和资讯、时事和专题内容。可收听或浏览香港电台FM电台广播及网站',
       },
+      listen: 'Listen',
+      watch: 'Watch',
+      liveLabel: 'LIVE',
+      previousRadioShow: 'Previous radio show',
+      nextRadioShow: 'Next radio show',
+      duration: 'Duration',
     },
   },
   brandSVG,

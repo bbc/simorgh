@@ -141,6 +141,12 @@ export const service = {
           subtitle:
             'ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua',
         },
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'LIVE',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,

@@ -150,6 +150,12 @@ export const service = {
           subtitle:
             'Cash éco vous propose chaque jour un résumé de l’actualité économique et financière.',
         },
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'LIVE',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
