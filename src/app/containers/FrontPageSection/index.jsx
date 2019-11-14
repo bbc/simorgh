@@ -124,6 +124,13 @@ const normalStoryPromoColumns = {
 };
 
 const TopStories = ({ items, isFirstSection }) => {
+  /* We display 1 top story + 4 regular story promos.The top story spans the whole width
+     We need to be sure that we have 4 story promos on a row.
+     This means that we have to subtract 1(top-story) from the number of items and then divide the result by 4
+     If the number of items was 6: (6-1) % 4 = 1
+     To get the number of items that would fit (1 + 4 regular story promos) we subtract the above result from
+     the number of items: 6 - 1 = 5. 5 is the number of items that fit the combination.
+   */
   const itemsToDisplay = items.length - ((items.length - 1) % 4);
   const imageDisplayThreshold = 9;
 
@@ -164,6 +171,11 @@ TopStories.defaultProps = {
 };
 
 const SectionStories = ({ items, isFirstSection }) => {
+  /* We check if the number of items is divisible by four
+     If the number of items is divisible by 4 then the storypromo should span 2 columns
+     If the remainder is 1 we the story promo should span the whole width
+     If the remainder is 2 then we should have two stories on the row with one being a leading story promo
+  */
   let remainder = items.length % 4;
   let itemsToDisplay = items.length;
   if (remainder > 2) {
