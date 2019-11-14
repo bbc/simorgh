@@ -21,7 +21,11 @@ const persianServiceContextStub = {
   service: 'persian',
 };
 
-const captionBlock = blockContainingText('caption', 'Some caption text...');
+const captionBlock = blockContainingText(
+  'caption',
+  'Some caption text...',
+  'mocked-id',
+);
 
 const captionBlock3Paragraphs = {
   model: {
