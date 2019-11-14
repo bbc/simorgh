@@ -603,7 +603,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
             </div>
           </li>
         </div>
-        ;
       </div>
     </ul>
   </div>
@@ -1185,7 +1184,6 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
           </div>
         </li>
       </div>
-      ;
     </div>
   </ul>
 </section>
@@ -2304,7 +2302,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
           </div>
         </li>
       </div>
-      ;
     </div>
   </ul>
 </section>
