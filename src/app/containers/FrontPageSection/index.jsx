@@ -132,12 +132,14 @@ const TopStories = ({ items, isFirstSection }) => {
      the number of items: 6 - 1 = 5. 5 is the number of items that fit the combination.
    */
   const itemsToDisplay = items.length - ((items.length - 1) % 4);
+  // Maximum items to display should be capped to 13 since we are squashing topstories in the preprocessor rules
+  const MAX_ITEMS = itemsToDisplay > 13 ? 13 : itemsToDisplay;
   const imageDisplayThreshold = 9;
 
   return (
     <StoryPromoUl>
       <Grid enableGelGutters columns={fullWidthStoryPromoColumns}>
-        {items.slice(0, itemsToDisplay).map((item, index) => (
+        {items.slice(0, MAX_ITEMS).map((item, index) => (
           <Grid
             item
             columns={
