@@ -22,10 +22,10 @@ const Canonical = () => {
     const fetchMostReadData = pathname =>
       fetch(pathname)
         .then(handleResponse)
-        .catch(error => console.log(error));
+        .catch(error => console.log(error)); // eslint-disable-line no-console
 
     fetchMostReadData(localMostReadData);
-  }, []);
+  }, [localMostReadData]);
 
   return (
     <div>
