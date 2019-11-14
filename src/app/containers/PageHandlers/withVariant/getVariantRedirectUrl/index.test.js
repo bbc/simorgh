@@ -122,11 +122,11 @@ describe('getVariantRedirectUrl', () => {
 
     describe('invalid variant in cookie', () => {
       serviceNames.forEach(service => {
-        const selectedVariant = 'xyz';
+        const invalidSecondaryVariant = 'xyz';
         const defaultVariant = getVariant({ service });
         describe(`visit /${service}`, () => {
           it(`should redirect to /${service}/${defaultVariant}`, () => {
-            Cookie.set(`ckps_${service}`, selectedVariant);
+            Cookie.set(`ckps_${service}`, invalidSecondaryVariant);
             const params = {
               service,
               variant: null,
@@ -273,11 +273,11 @@ describe('getVariantRedirectUrl', () => {
 
     describe('invalid variant in cookie', () => {
       serviceNames.forEach(service => {
-        const selectedVariant = 'xyz';
+        const invalidSecondaryVariant = 'xyz';
         const defaultVariant = getVariant({ service });
         describe(`visit /${service}/${local}/${id}`, () => {
           it(`should redirect to /${service}/${local}/${id}/${defaultVariant}`, () => {
-            Cookie.set(`ckps_${service}`, selectedVariant);
+            Cookie.set(`ckps_${service}`, invalidSecondaryVariant);
             const params = {
               id,
               local,
