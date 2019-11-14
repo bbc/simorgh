@@ -17,17 +17,12 @@ const Canonical = () => {
   };
 
   useEffect(() => {
-    const fetchCanonicalData = pathname =>
+    const fetchMostReadData = pathname =>
       fetch(pathname)
         .then(handleResponse)
         .catch(error => console.log(error));
 
-    try {
-      fetchCanonicalData(localMostReadData);
-    } catch (error) {
-      // TO-DO: how should we handle failed data response
-      console.log(error);
-    }
+    fetchMostReadData(localMostReadData);
   }, []);
 
   return (
