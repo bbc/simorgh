@@ -7,7 +7,6 @@ import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
 import Blocks from '../Blocks';
-import MostRead from '../MostRead';
 import timestamp from '../ArticleTimestamp';
 import { GhostGrid } from '#lib/styledGrid';
 import ATIAnalytics from '../ATIAnalytics';
@@ -46,7 +45,6 @@ const ArticleMain = ({ articleData: data }) => {
 
   return (
     <>
-      <MostRead />
       <ATIAnalytics data={data} />
       <ChartbeatAnalytics data={data} />
       <ArticleMetadata
