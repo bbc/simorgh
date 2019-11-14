@@ -1,7 +1,8 @@
 import convertParagraph from '../paragraph';
+import { orderedListType, unorderedListType } from '#app/models/blocks';
 
 const convertToList = async block => {
-  const type = block.numbered ? 'orderedList' : 'unorderedList';
+  const type = block.numbered ? orderedListType : unorderedListType;
 
   const listItemBlocks = await Promise.all(
     block.items.map(async item => {
