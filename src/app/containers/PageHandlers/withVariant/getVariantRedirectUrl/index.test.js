@@ -68,10 +68,10 @@ describe('getVariantRedirectUrl', () => {
     describe('variant in cookie, and no variant in url', () => {
       serviceNames.forEach(service => {
         const variants = servicesWithVariants[service];
-        const selectedVariant = variants[variants.length - 1];
+        const [, secondaryVariant] = variants;
         describe(`visit /${service}`, () => {
-          it(`should redirect to /${service}/${selectedVariant}`, () => {
-            Cookie.set(`ckps_${service}`, selectedVariant);
+          it(`should redirect to /${service}/${secondaryVariant}`, () => {
+            Cookie.set(`ckps_${service}`, secondaryVariant);
             const params = {
               service,
               variant: null,
@@ -86,7 +86,7 @@ describe('getVariantRedirectUrl', () => {
               ...props.match,
               ...params,
             });
-            expect(redirectUrl).toEqual(`/${service}/${selectedVariant}`);
+            expect(redirectUrl).toEqual(`/${service}/${secondaryVariant}`);
           });
         });
       });
@@ -95,11 +95,11 @@ describe('getVariantRedirectUrl', () => {
     describe('variant in cookie, and variant in url', () => {
       serviceNames.forEach(service => {
         const variants = servicesWithVariants[service];
-        const selectedVariant = variants[variants.length - 1];
+        const [, secondaryVariant] = variants;
         const defaultVariant = getVariant({ service });
         describe(`visit /${service}/${defaultVariant}`, () => {
-          it(`should redirect to /${service}/${selectedVariant}`, () => {
-            Cookie.set(`ckps_${service}`, selectedVariant);
+          it(`should redirect to /${service}/${secondaryVariant}`, () => {
+            Cookie.set(`ckps_${service}`, secondaryVariant);
             const params = {
               service,
               variant: defaultVariant,
@@ -114,7 +114,7 @@ describe('getVariantRedirectUrl', () => {
               ...props.match,
               ...params,
             });
-            expect(redirectUrl).toEqual(`/${service}/${selectedVariant}`);
+            expect(redirectUrl).toEqual(`/${service}/${secondaryVariant}`);
           });
         });
       });
@@ -211,10 +211,10 @@ describe('getVariantRedirectUrl', () => {
     describe('variant in cookie, and no variant in url', () => {
       serviceNames.forEach(service => {
         const variants = servicesWithVariants[service];
-        const selectedVariant = variants[variants.length - 1];
+        const [, secondaryVariant] = variants;
         describe(`visit /${service}/${local}/${id}`, () => {
-          it(`should redirect to /${service}/${local}/${id}/${selectedVariant}`, () => {
-            Cookie.set(`ckps_${service}`, selectedVariant);
+          it(`should redirect to /${service}/${local}/${id}/${secondaryVariant}`, () => {
+            Cookie.set(`ckps_${service}`, secondaryVariant);
             const params = {
               id,
               local,
@@ -232,7 +232,7 @@ describe('getVariantRedirectUrl', () => {
               ...params,
             });
             expect(redirectUrl).toEqual(
-              `/${service}/${local}/${id}/${selectedVariant}`,
+              `/${service}/${local}/${id}/${secondaryVariant}`,
             );
           });
         });
@@ -242,11 +242,11 @@ describe('getVariantRedirectUrl', () => {
     describe('variant in cookie, and variant in url', () => {
       serviceNames.forEach(service => {
         const variants = servicesWithVariants[service];
-        const selectedVariant = variants[variants.length - 1];
+        const [, secondaryVariant] = variants;
         const defaultVariant = getVariant({ service });
         describe(`visit /${service}/${local}/${id}/${defaultVariant}`, () => {
-          it(`should redirect to /${service}/${local}/${id}/${selectedVariant}`, () => {
-            Cookie.set(`ckps_${service}`, selectedVariant);
+          it(`should redirect to /${service}/${local}/${id}/${secondaryVariant}`, () => {
+            Cookie.set(`ckps_${service}`, secondaryVariant);
             const params = {
               id,
               local,
@@ -264,7 +264,7 @@ describe('getVariantRedirectUrl', () => {
               ...params,
             });
             expect(redirectUrl).toEqual(
-              `/${service}/${local}/${id}/${selectedVariant}`,
+              `/${service}/${local}/${id}/${secondaryVariant}`,
             );
           });
         });
