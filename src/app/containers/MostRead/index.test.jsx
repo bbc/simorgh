@@ -51,7 +51,7 @@ describe('MostReadContainer', () => {
     fetch.mockResponse(JSON.stringify(zhongwenSimpMostReadData));
     await renderMostReadContainer({ service: 'zhongwen', variant: 'simp' });
     expect(container.querySelector('p').textContent).toEqual(
-      `Last Updated:: ${zhongwenSimpMostReadData.lastRecordTimeStamp}`,
+      `Last Updated: ${zhongwenSimpMostReadData.lastRecordTimeStamp}`,
     );
     expect(container.querySelectorAll('ul').length).toEqual(10);
   });
