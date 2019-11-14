@@ -28,15 +28,13 @@ const Canonical = () => {
   return (
     <div>
       <p>Generated: {data.generated}</p>
-      <ul>
-        {data.records.slice(0, 10).map(record => (
-          <li key={record.id}>
-            <p>{record.promo.timestamp}</p>
-            <p>{record.promo.headlines.headline}</p>
-            <p>{record.promo.locators.assetUri}</p>
-          </li>
-        ))}
-      </ul>
+      {data.records.slice(0, 10).map(record => (
+        <ul key={record.id}>
+          <li>{record.promo.timestamp}</li>
+          <li>{record.promo.headlines.headline}</li>
+          <li>{record.promo.locators.assetUri}</li>
+        </ul>
+      ))}
     </div>
   );
 };
