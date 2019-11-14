@@ -42,12 +42,12 @@ describe('getVariantRedirectUrl', () => {
     describe('empty cookie, and with variant specified in url', () => {
       serviceNames.forEach(service => {
         const variants = servicesWithVariants[service];
-        const selectedVariant = variants[variants.length - 1];
-        describe(`visit /${service}/${selectedVariant}`, () => {
+        const [, secondaryVariant] = variants;
+        describe(`visit /${service}/${secondaryVariant}`, () => {
           it(`should return null`, () => {
             const params = {
               service,
-              variant: selectedVariant,
+              variant: secondaryVariant,
             };
             const props = {
               match: {
@@ -183,14 +183,14 @@ describe('getVariantRedirectUrl', () => {
     describe('empty cookie, and with variant specified in url', () => {
       serviceNames.forEach(service => {
         const variants = servicesWithVariants[service];
-        const selectedVariant = variants[variants.length - 1];
-        describe(`visit /${service}/${local}/${id}/${selectedVariant}`, () => {
+        const [, secondaryVariant] = variants;
+        describe(`visit /${service}/${local}/${id}/${secondaryVariant}`, () => {
           it(`should return null`, () => {
             const params = {
               id,
               local,
               service,
-              variant: selectedVariant,
+              variant: secondaryVariant,
             };
             const props = {
               match: {

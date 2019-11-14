@@ -18,9 +18,7 @@ describe('WithVariant', () => {
   describe('service with no default variant', () => {
     it('should not redirect', () => {
       const service = 'news';
-
       const match = getMatchProps(service);
-
       const history = createMemoryHistory({
         initialEntries: [`/${service}`],
       });
@@ -42,9 +40,7 @@ describe('WithVariant', () => {
   describe('service (ukchina) with default variant', () => {
     it('should redirect to ukchina/simp', () => {
       const service = 'ukchina';
-
       const match = getMatchProps(service);
-
       const history = createMemoryHistory({
         initialEntries: [`/${service}`],
       });
@@ -66,9 +62,7 @@ describe('WithVariant', () => {
   describe('service (zhongwen) with default variant', () => {
     it('should redirect to zhongwen/simp', () => {
       const service = 'zhongwen';
-
       const match = getMatchProps(service);
-
       const history = createMemoryHistory({
         initialEntries: [`/${service}`],
       });
@@ -90,9 +84,7 @@ describe('WithVariant', () => {
   describe('service (serbian) with default variant', () => {
     it('should redirect to serbian/lat', () => {
       const service = 'serbian';
-
       const match = getMatchProps(service);
-
       const history = createMemoryHistory({
         initialEntries: [`/${service}`],
       });

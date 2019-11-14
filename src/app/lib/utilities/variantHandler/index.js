@@ -1,4 +1,5 @@
 export const servicesWithVariants = {
+  // the first element in the array is the default variant
   serbian: ['lat', 'cyr'],
   ukchina: ['simp', 'trad'],
   zhongwen: ['simp', 'trad'],
