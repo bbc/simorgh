@@ -429,28 +429,15 @@ describe('getAtiUrl', () => {
 describe('getClickInfo', () => {
   const params = {
     service: 'service',
-    component: 'component',
-    label: 'label',
+    componentName: 'component',
+    componentInfo: 'info',
     type: 'type',
   };
 
   it('should return url section', () => {
     expect(getClickInfo({}, params)).toEqual(
-      'PUB-[service-component]-[=type]-[label]-[PAR=container-component::name~CHD=brand-top]-[]-[]-[]-[/]',
+      'PUB-[service-component]-[=type]-[]-[PAR=container-component::name~CHD=info]-[]-[]-[]-[/]',
     );
-  });
-
-  it('should include elem.dataset.info in output', () => {
-    expect(
-      getClickInfo(
-        {
-          dataset: {
-            info: 'data-info-attr',
-          },
-        },
-        params,
-      ),
-    ).toContain('data-info-attr');
   });
 
   it('should include elem.href in output', () => {

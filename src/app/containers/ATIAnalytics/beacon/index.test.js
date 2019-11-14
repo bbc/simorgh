@@ -18,9 +18,9 @@ describe('beacon', () => {
       sendEventBeacon({
         element: document.createElement('div'),
         type: 'click',
-        label: 'test',
         service: 'service',
-        component: 'component',
+        componentName: 'component',
+        componentInfo: 'test',
       });
       expect(sendBeaconSpy).toHaveBeenCalledTimes(2);
       expect(sendBeaconSpy.mock.calls).toEqual([
@@ -31,7 +31,8 @@ describe('beacon', () => {
             're=1024x768',
             'hl=00-00-00',
             'lng=en-US',
-            'ati=PUB-[service-component]-[=]-[]-[PAR=container-component::name~CHD=brand-top]-[]-[]-[]-[/]',
+            'ati=PUB-[service-component]-[=]-[]-[PAR=container-component::name~CHD=test]-[]-[]-[]-[/]',
+            'type=AT',
           ].join('&')}`,
         ],
         [
@@ -41,7 +42,8 @@ describe('beacon', () => {
             're=1024x768',
             'hl=00-00-00',
             'lng=en-US',
-            'ati=PUB-[service-component]-[=click]-[test]-[PAR=container-component::name~CHD=brand-top]-[]-[]-[]-[/]',
+            'ati=PUB-[service-component]-[=click]-[]-[PAR=container-component::name~CHD=test]-[]-[]-[]-[/]',
+            'type=AT',
           ].join('&')}`,
         ],
       ]);
@@ -54,7 +56,8 @@ describe('beacon', () => {
         element: document.createElement('div'),
         type: 'click',
         service: 'service',
-        component: 'component',
+        componentName: 'component',
+        componentInfo: 'info',
       });
       expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
       expect(sendBeaconSpy.mock.calls).toEqual([
@@ -65,7 +68,8 @@ describe('beacon', () => {
             're=1024x768',
             'hl=00-00-00',
             'lng=en-US',
-            'ati=PUB-[service-component]-[=viewed]-[]-[PAR=container-component::name~CHD=brand-top]-[]-[]-[]-[/]',
+            'ati=PUB-[service-component]-[=viewed]-[]-[PAR=container-component::name~CHD=info]-[]-[]-[]-[/]',
+            'type=AT',
           ].join('&')}`,
         ],
       ]);
