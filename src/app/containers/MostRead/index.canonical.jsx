@@ -22,7 +22,7 @@ const CanonicalMostRead = ({ endpoint }) => {
 
   return (
     <div>
-      <p>Generated: {data.generated}</p>
+      <p>Last Updated: {data.lastRecordTimeStamp}</p>
       {promos.map(promo => (
         <ul key={promo.id}>
           <li>{promo.promo.timestamp}</li>

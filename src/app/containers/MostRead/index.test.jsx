@@ -41,8 +41,8 @@ describe('MostReadContainer', () => {
   it('test data returns as expected on canonical for News', async () => {
     fetch.mockResponse(JSON.stringify(newsMostReadData));
     await renderMostReadContainer({ service: 'news' });
-    expect(container.querySelector('p').textContent).toEqual(
-      `Generated: ${newsMostReadData.generated}`,
+    expect(container.querySelector('p').textConent).toEqual(
+      `Last Updated: ${newsMostReadData.lastRecordTimeStamp}`,
     );
     expect(container.querySelectorAll('ul').length).toEqual(10);
   });
@@ -51,7 +51,7 @@ describe('MostReadContainer', () => {
     fetch.mockResponse(JSON.stringify(zhongwenSimpMostReadData));
     await renderMostReadContainer({ service: 'zhongwen', variant: 'simp' });
     expect(container.querySelector('p').textContent).toEqual(
-      `Generated: ${zhongwenSimpMostReadData.generated}`,
+      `Last Updated:: ${zhongwenSimpMostReadData.lastRecordTimeStamp}`,
     );
     expect(container.querySelectorAll('ul').length).toEqual(10);
   });
