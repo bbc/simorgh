@@ -6,6 +6,8 @@ import { getBlockData } from './helpers';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = service => service === 'news';
 
+// const serviceHasInlineLink = service => service === 'news';
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
@@ -42,6 +44,18 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         `${window.location.origin}${config[service].pageTypes.articles.path}.amp`,
       );
     });
+
+    // if (
+    //   serviceHasInlineLink(service) &&
+    //   (Cypress.env('APP_ENV') === 'local' || Cypress.env('APP_ENV') === 'test')
+    // ) {
+    //   it.only('should focus on `h1#content` when user navigates to articles subsequently', () => {
+    //     cy.get('main a[href*="/articles/"]').click();
+    //     // cy.wait(3000);
+
+    //     cy.focused().should('have.id', 'content');
+    //   });
+    // }
 
     if (serviceHasCaption(service)) {
       it('should have a visible image without a caption that is lazyloaded and has a noscript fallback image', () => {
