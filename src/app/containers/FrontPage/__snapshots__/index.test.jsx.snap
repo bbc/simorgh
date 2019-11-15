@@ -2,22 +2,26 @@
 
 exports[`FrontPageContainer Component Composing the Front Page Container using the page handlers should compose frontPageContainer with the Page Handler in the correct order 1`] = `
 <div
-  id="ContextsContainer"
+  id="VariantContainer"
 >
   <div
-    id="PageWrapperContainer"
+    id="ContextsContainer"
   >
     <div
-      id="LoadingContainer"
+      id="PageWrapperContainer"
     >
       <div
-        id="ErrorContainer"
+        id="LoadingContainer"
       >
         <div
-          id="DataContainer"
+          id="ErrorContainer"
         >
-          <div>
-            FrontPageMain
+          <div
+            id="DataContainer"
+          >
+            <div>
+              FrontPageMain
+            </div>
           </div>
         </div>
       </div>

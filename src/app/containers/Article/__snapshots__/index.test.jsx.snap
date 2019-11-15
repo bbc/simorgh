@@ -2,19 +2,23 @@
 
 exports[`ArticleContainer Component Composing the Article Container using the page handlers should compose articleContainer with the Page Handler in the correct order 1`] = `
 <div
-  id="PageWrapperContainer"
+  id="VariantContainer"
 >
   <div
-    id="LoadingContainer"
+    id="PageWrapperContainer"
   >
     <div
-      id="ErrorContainer"
+      id="LoadingContainer"
     >
       <div
-        id="DataContainer"
+        id="ErrorContainer"
       >
-        <div>
-          ArticleMain
+        <div
+          id="DataContainer"
+        >
+          <div>
+            ArticleMain
+          </div>
         </div>
       </div>
     </div>
