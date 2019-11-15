@@ -8,7 +8,7 @@ exports[`regex utils snapshots should create expected regex from getArticleSwReg
 
 exports[`regex utils snapshots should create expected regex from getCpsAssetRegex 1`] = `"/:service(news|persian|igbo)/:assetUri([a-z-_]{0,}[0-9]{8,}):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
 
-exports[`regex utils snapshots should create expected regex from getErrorPageRegex 1`] = `"/:service(news|persian|igbo)/:errorCode(404|500)"`;
+exports[`regex utils snapshots should create expected regex from getErrorPageRegex 1`] = `"/:service(news|persian|igbo)/:errorCode(404|500):variant(/simp|/trad|/cyr|/lat)?"`;
 
 exports[`regex utils snapshots should create expected regex from getFrontPageRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
 
