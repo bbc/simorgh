@@ -51,5 +51,5 @@ export const getRadioAndTVRegex = services => {
 
 export const getErrorPageRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:errorCode(${errorCodeRegex})`;
+  return `/:service(${serviceRegex})/:errorCode(${errorCodeRegex}):variant(${variantRegex})?`;
 };

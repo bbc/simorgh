@@ -131,7 +131,7 @@ describe('CpsAssetPageMain', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should not show the timestamp when allowDataStamp is false', async () => {
+  it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
     const pageDataWithHiddenTimestamp = assocPath(
       ['metadata', 'options', 'allowDateStamp'],
       false,
@@ -144,7 +144,7 @@ describe('CpsAssetPageMain', () => {
       }),
     );
 
-    expect(document.querySelector('time')).toBeNull();
+    expect(document.querySelector('time[class^=PopOut]')).toBeNull();
     expect(document.querySelector('h1')).not.toBeNull();
     expect(asFragment()).toMatchSnapshot();
   });
