@@ -46,7 +46,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     if (serviceHasCaption(config[service].name)) {
       it('should have a visible image without a caption that is lazyloaded and has a noscript fallback image', () => {
         cy.get('figure')
-          .eq(2)
+          .eq(1)
           .within(() => {
             cy.get('div div div div').should(
               'have.class',
@@ -56,7 +56,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           .scrollIntoView();
 
         cy.get('figure')
-          .eq(2)
+          .eq(1)
           .should('be.visible')
           .should('to.have.descendants', 'img')
           .should('not.to.have.descendants', 'figcaption')

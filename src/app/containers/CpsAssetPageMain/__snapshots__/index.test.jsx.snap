@@ -18,11 +18,11 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
   grid-column-gap: 1rem;
 }
 
-.c9 {
+.c8 {
   grid-column: 1 / span 6;
 }
 
-.c8 {
+.c7 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -34,7 +34,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
   padding: 2rem 0;
 }
 
-.c12 {
+.c11 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -42,7 +42,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
   font-weight: inherit;
 }
 
-.c10 {
+.c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -53,11 +53,11 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c10:last-child {
+.c9:last-child {
   padding-bottom: 1rem;
 }
 
-.c11 {
+.c10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -68,25 +68,25 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
   margin: 0;
 }
 
-.c13 {
+.c12 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c13:visited {
+.c12:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c13:focus,
-.c13:hover {
+.c12:focus,
+.c12:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c4 {
+.c14 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -131,7 +131,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c5 {
+.c4 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
@@ -141,7 +141,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
   margin-bottom: 1.5rem;
 }
 
-.c6 {
+.c5 {
   position: absolute;
   top: 0;
   left: 0;
@@ -231,49 +231,49 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c7 {
+  .c6 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c7 {
+  .c6 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c7 {
+  .c6 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c7 {
+  .c6 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c7 {
+  .c6 {
     padding: 0 1rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c14 {
+  .c13 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c14 {
+  .c13 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c14 {
+  .c13 {
     grid-column: 6 / span 12;
   }
 }
@@ -339,87 +339,87 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
 }
 
 @media (max-width:25rem) {
-  .c9 {
+  .c8 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c9 {
+  .c8 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c8 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c9 {
+  .c8 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c9 {
+  .c8 {
     grid-column: 2 / span 4;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c9 {
+  .c8 {
     max-width: initial;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
+  .c7 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     padding: 2.5rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c9 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -479,43 +479,39 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
     <div
       class="c3"
     >
-      <figure
+      <div
         class="c4"
       >
-        <div
+        <iframe
+          allow="autoplay; fullscreen"
+          allowfullscreen=""
           class="c5"
-        >
-          <iframe
-            allow="autoplay; fullscreen"
-            allowfullscreen=""
-            class="c6"
-            src="https://www.test.bbc.co.uk/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/ig"
-            title="Media player"
-          />
-        </div>
-      </figure>
+          src="https://www.test.bbc.co.uk/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/ig"
+          title="Media player"
+        />
+      </div>
     </div>
     <div
-      class="c7"
+      class="c6"
     >
       <strong
         aria-hidden="true"
-        class="c8"
+        class="c7"
       >
         Ўзбек деҳқонининг косаси нега оқармайдиshort
       </strong>
     </div>
     <div
-      class="c9"
+      class="c8"
     >
       <time
-        class="c10"
+        class="c9"
         datetime="2019-09-13"
       >
         13 Septemba 2019
       </time>
       <time
-        class="c10"
+        class="c9"
         datetime="2019-11-06"
       >
         Mgbe ikpeazụ e tinyere ya ozi ọhụrụ 6 Nọvemba 2019
@@ -525,7 +521,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         <b>
           Ўзбек деҳқонининг косаси нега оқармайди
@@ -536,7 +532,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         <b>
           Ўзбек деҳқонининг косаси нега оқармайди
@@ -550,17 +546,17 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         <i
-          class="c12"
+          class="c11"
         >
           <b>
             Ўзбек деҳқонининг косаси нега оқармайди
           </b>
         </i>
         <i
-          class="c12"
+          class="c11"
         >
           <b>
              heading
@@ -572,7 +568,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         <b>
           Ўзбек деҳқонининг косаси нега оқармайди
@@ -586,11 +582,11 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Шу йил апрел ойида Ўзбекистон Президенти Ислом 
         <a
-          class="c13"
+          class="c12"
           href="https://bbc.com/uzbek"
         >
           Каримов ўзининг
@@ -602,7 +598,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб 
         <b>
@@ -615,7 +611,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..
       </p>
@@ -624,7 +620,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?
       </p>
@@ -633,7 +629,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.
       </p>
@@ -642,16 +638,16 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         "Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга 
       </p>
     </div>
     <div
-      class="c14"
+      class="c13"
     >
       <figure
-        class="c4"
+        class="c14"
       >
         <div
           class="c15"
@@ -693,7 +689,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Ўзбек деҳқонининг косаси нега оқармайди transmission info 
       </p>
@@ -702,7 +698,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Ўзбек деҳқонининг косаси нега оқармайди footer 
       </p>
@@ -937,11 +933,11 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   grid-column: 1 / span 6;
 }
 
-.c9 {
+.c8 {
   grid-column: 1 / span 6;
 }
 
-.c8 {
+.c7 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -953,7 +949,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   padding: 2rem 0;
 }
 
-.c10 {
+.c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -964,11 +960,11 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c10:last-child {
+.c9:last-child {
   padding-bottom: 1rem;
 }
 
-.c30 {
+.c29 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -978,7 +974,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   font-style: normal;
 }
 
-.c11 {
+.c10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -987,12 +983,6 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-.c4 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
 }
 
 .c2 {
@@ -1007,7 +997,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   margin: 0;
 }
 
-.c24 {
+.c23 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1020,7 +1010,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c5 {
+.c4 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
@@ -1030,7 +1020,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   margin-bottom: 1.5rem;
 }
 
-.c16 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1040,7 +1030,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   flex-direction: column;
 }
 
-.c17 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1059,7 +1049,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   align-items: baseline;
 }
 
-.c18 {
+.c17 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1079,57 +1069,57 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   align-items: center;
 }
 
-.c14 {
+.c13 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c13 {
+.c12 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c15 {
+.c14 {
   margin: 0;
   padding: 0;
 }
 
-.c20 {
+.c19 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c20:first-child {
+.c19:first-child {
   padding-top: 0;
 }
 
-.c20:last-child {
+.c19:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c19 {
+.c18 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c21 {
+.c20 {
   position: relative;
 }
 
-.c22 {
+.c21 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c23 {
+.c22 {
   position: relative;
 }
 
-.c27 {
+.c26 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1140,7 +1130,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c29 {
+.c28 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1151,21 +1141,21 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c26 {
+.c25 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c28 {
+.c27 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c28:before {
+.c27:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1177,21 +1167,21 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   z-index: 1;
 }
 
-.c28:hover,
-.c28:focus {
+.c27:hover,
+.c27:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c28:visited {
+.c27:visited {
   color: #6E6E73;
 }
 
-.c12 {
+.c11 {
   z-index: 0;
 }
 
-.c6 {
+.c5 {
   position: absolute;
   top: 0;
   left: 0;
@@ -1281,131 +1271,131 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c7 {
+  .c6 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c7 {
+  .c6 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c7 {
+  .c6 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c7 {
+  .c6 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c7 {
+  .c6 {
     padding: 0 1rem;
   }
 }
 
 @media (max-width:25rem) {
-  .c9 {
+  .c8 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c9 {
+  .c8 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c8 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c9 {
+  .c8 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c9 {
+  .c8 {
     grid-column: 2 / span 4;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c9 {
+  .c8 {
     max-width: initial;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
+  .c7 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     padding: 2.5rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c9 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c30 {
+  .c29 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c29 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -1442,7 +1432,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c16 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1451,39 +1441,39 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
+  .c17 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c17 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c17 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c17 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c14 {
+  .c13 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c13 {
     position: absolute;
     left: 0;
     right: 0;
@@ -1492,37 +1482,37 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c12 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c19 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c20 {
+  .c19 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20:first-child {
+  .c19:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c20:first-child {
+  .c19:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c21 {
+  .c20 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -1530,13 +1520,13 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c22 {
+  .c21 {
     width: 33.33%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c22 {
+  .c21 {
     display: block;
     width: initial;
     grid-column: 1 / span 2;
@@ -1544,68 +1534,68 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c25 {
+  .c24 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c27 {
+  .c26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c26 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c29 {
+  .c28 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c28 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c29 {
+  .c28 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c26 {
+  .c25 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c26 {
+  .c25 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c26 {
+  .c25 {
     display: block;
     width: initial;
     padding: initial;
@@ -1614,31 +1604,31 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c12 {
+  .c11 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c12 {
+  .c11 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c12 {
+  .c11 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c12 {
+  .c11 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c12 {
+  .c11 {
     padding: 0 1rem;
   }
 }
@@ -1669,43 +1659,39 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
         <div
           class="c3"
         >
-          <figure
+          <div
             class="c4"
           >
-            <div
+            <iframe
+              allow="autoplay; fullscreen"
+              allowfullscreen=""
               class="c5"
-            >
-              <iframe
-                allow="autoplay; fullscreen"
-                allowfullscreen=""
-                class="c6"
-                src="https://www.test.bbc.co.uk/ws/av-embeds/cps/pidgin/tori-49450859/p07lg239/ig"
-                title="Media player"
-              />
-            </div>
-          </figure>
+              src="https://www.test.bbc.co.uk/ws/av-embeds/cps/pidgin/tori-49450859/p07lg239/ig"
+              title="Media player"
+            />
+          </div>
         </div>
         <div
-          class="c7"
+          class="c6"
         >
           <strong
             aria-hidden="true"
-            class="c8"
+            class="c7"
           >
             Nigerian man Emeka Nelson don produce generator wey dey use only water
           </strong>
         </div>
         <div
-          class="c9"
+          class="c8"
         >
           <time
-            class="c10"
+            class="c9"
             datetime="2019-08-23"
           >
             23 Ọgọọst 2019
           </time>
           <time
-            class="c10"
+            class="c9"
             datetime="2019-08-23"
           >
             Mgbe ikpeazụ e tinyere ya ozi ọhụrụ 
@@ -1716,7 +1702,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c11"
+            class="c10"
           >
             <b>
               As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
@@ -1727,7 +1713,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c11"
+            class="c10"
           >
             Wetin ginger Emeka na im friend wey smoke from generator kill.
           </p>
@@ -1736,7 +1722,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c11"
+            class="c10"
           >
             BBC carri waka go Awka Anambra state inside South-east Nigeria go see di ogbonge invention wey Nelson produce.
           </p>
@@ -1745,7 +1731,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c11"
+            class="c10"
           >
             Nelson wey no be certified engineer struggle to read for elementary school, work as house help for di age of 5, and no get any university education.
           </p>
@@ -1754,7 +1740,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c11"
+            class="c10"
           >
             Wen we go im house, e dey full with Structural drawings and designs wey e pin for wall and na so e dey take im time dey study di drawing.
           </p>
@@ -1763,7 +1749,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c11"
+            class="c10"
           >
             For 16 years, e dey focus to make im dream turn to something real-dat na to make generator wey go run on water.
           </p>
@@ -1772,7 +1758,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c11"
+            class="c10"
           >
             Most of di material wey Nelson take arrange im generator na from  scrap.
           </p>
@@ -1781,7 +1767,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c11"
+            class="c10"
           >
             Di first generator wey im do explode wen e test am. Dis come make am dey doubt di project but afta plenti years of struggle e come get am right.
           </p>
@@ -1790,7 +1776,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c11"
+            class="c10"
           >
             Nelson says im generator get maximum output capacity of 1,000 watts and di voltage dey fluctuate between 220 and 240.
           </p>
@@ -1799,7 +1785,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c11"
+            class="c10"
           >
             E say one litre of clean water fit power di generator for 6 hours, and e no go bring out smoke like oda generators, e dey environment friendly.
           </p>
@@ -1808,32 +1794,32 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
           class="c1"
         >
           <p
-            class="c11"
+            class="c10"
           >
             Dis ogbonge inventor add say im dream na for di generator to dey for millions of homes all ova di world.
           </p>
         </div>
         <div
           aria-labelledby="related-content-heading"
-          class="c12"
+          class="c11"
         >
           <div
-            class="c13"
+            class="c12"
           >
             <div
-              class="c14"
+              class="c13"
             />
             <h2
-              class="c15"
+              class="c14"
             >
               <div
-                class="c16"
+                class="c15"
               >
                 <span
-                  class="c17"
+                  class="c16"
                 >
                   <span
-                    class="c18"
+                    class="c17"
                     dir="ltr"
                     id="related-content-heading"
                   >
@@ -1844,42 +1830,42 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
             </h2>
           </div>
           <ul
-            class="c19"
+            class="c18"
             role="list"
           >
             <li
-              class="c20"
+              class="c19"
               role="listitem"
             >
               <div
-                class="c21"
+                class="c20"
               >
                 <div
-                  class="c22"
+                  class="c21"
                 >
                   <div
-                    class="c23"
+                    class="c22"
                   >
                     <div
-                      class="c24"
+                      class="c23"
                     >
                       <div
                         class="lazyload-placeholder"
                       />
                     </div>
                     <div
-                      class="c25"
+                      class="c24"
                     />
                   </div>
                 </div>
                 <div
-                  class="c26"
+                  class="c25"
                 >
                   <h3
-                    class="c27"
+                    class="c26"
                   >
                     <a
-                      class="c28"
+                      class="c27"
                       href="/pidgin/44508901"
                     >
                       <span
@@ -1897,12 +1883,12 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
                     </a>
                   </h3>
                   <p
-                    class="c29"
+                    class="c28"
                   >
                     James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
                   </p>
                   <time
-                    class="c30"
+                    class="c29"
                     datetime="1970-01-18"
                   >
                     18 Jenụwarị 1970
@@ -1911,50 +1897,50 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
               </div>
             </li>
             <li
-              class="c20"
+              class="c19"
               role="listitem"
             >
               <div
-                class="c21"
+                class="c20"
               >
                 <div
-                  class="c22"
+                  class="c21"
                 >
                   <div
-                    class="c23"
+                    class="c22"
                   >
                     <div
-                      class="c24"
+                      class="c23"
                     >
                       <div
                         class="lazyload-placeholder"
                       />
                     </div>
                     <div
-                      class="c25"
+                      class="c24"
                     />
                   </div>
                 </div>
                 <div
-                  class="c26"
+                  class="c25"
                 >
                   <h3
-                    class="c27"
+                    class="c26"
                   >
                     <a
-                      class="c28"
+                      class="c27"
                       href="/pidgin/tori-46975713"
                     >
                       How light companies dey use estimated billing show Nigerians pepper
                     </a>
                   </h3>
                   <p
-                    class="c29"
+                    class="c28"
                   >
                     Lawmakers for Nigeria wan make am crime for light companies to use guesswork give customer estimated bill.
                   </p>
                   <time
-                    class="c30"
+                    class="c29"
                     datetime="1970-01-18"
                   >
                     18 Jenụwarị 1970
@@ -1963,50 +1949,50 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
               </div>
             </li>
             <li
-              class="c20"
+              class="c19"
               role="listitem"
             >
               <div
-                class="c21"
+                class="c20"
               >
                 <div
-                  class="c22"
+                  class="c21"
                 >
                   <div
-                    class="c23"
+                    class="c22"
                   >
                     <div
-                      class="c24"
+                      class="c23"
                     >
                       <div
                         class="lazyload-placeholder"
                       />
                     </div>
                     <div
-                      class="c25"
+                      class="c24"
                     />
                   </div>
                 </div>
                 <div
-                  class="c26"
+                  class="c25"
                 >
                   <h3
-                    class="c27"
+                    class="c26"
                   >
                     <a
-                      class="c28"
+                      class="c27"
                       href="/pidgin/tori-42494678"
                     >
                       Nigeria: Wetin 5,222 megawatts electric fit do?
                     </a>
                   </h3>
                   <p
-                    class="c29"
+                    class="c28"
                   >
                     Di Transmission Company of Nigeria and di vice-president office carry tori come outside say electric power wey di country produce don increase pass before as e reach 5,222 megawatts dis December.
                   </p>
                   <time
-                    class="c30"
+                    class="c29"
                     datetime="1970-01-18"
                   >
                     18 Jenụwarị 1970
@@ -3203,21 +3189,17 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
         <div
           class="c19"
         >
-          <figure
-            class="c5"
+          <div
+            class="c20"
           >
-            <div
-              class="c20"
-            >
-              <iframe
-                allow="autoplay; fullscreen"
-                allowfullscreen=""
-                class="c21"
-                src="https://www.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"
-                title="Media player"
-              />
-            </div>
-          </figure>
+            <iframe
+              allow="autoplay; fullscreen"
+              allowfullscreen=""
+              class="c21"
+              src="https://www.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"
+              title="Media player"
+            />
+          </div>
         </div>
         <div
           class="c1"
@@ -3348,7 +3330,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   grid-column: 1 / span 6;
 }
 
-.c8 {
+.c7 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3360,7 +3342,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   padding: 2rem 0;
 }
 
-.c28 {
+.c27 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -3370,7 +3352,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   font-style: normal;
 }
 
-.c9 {
+.c8 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3379,12 +3361,6 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-.c4 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
 }
 
 .c2 {
@@ -3399,7 +3375,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   margin: 0;
 }
 
-.c22 {
+.c21 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -3412,7 +3388,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c5 {
+.c4 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
@@ -3422,7 +3398,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   margin-bottom: 1.5rem;
 }
 
-.c14 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3432,7 +3408,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   flex-direction: column;
 }
 
-.c15 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3451,7 +3427,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   align-items: baseline;
 }
 
-.c16 {
+.c15 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3471,57 +3447,57 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   align-items: center;
 }
 
-.c12 {
+.c11 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c11 {
+.c10 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c13 {
+.c12 {
   margin: 0;
   padding: 0;
 }
 
-.c18 {
+.c17 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c18:first-child {
+.c17:first-child {
   padding-top: 0;
 }
 
-.c18:last-child {
+.c17:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c17 {
+.c16 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c19 {
+.c18 {
   position: relative;
 }
 
-.c20 {
+.c19 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c21 {
+.c20 {
   position: relative;
 }
 
-.c25 {
+.c24 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3532,7 +3508,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   padding-bottom: 0.5rem;
 }
 
-.c27 {
+.c26 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3543,21 +3519,21 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   padding-bottom: 0.5rem;
 }
 
-.c24 {
+.c23 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c26 {
+.c25 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c26:before {
+.c25:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -3569,21 +3545,21 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   z-index: 1;
 }
 
-.c26:hover,
-.c26:focus {
+.c25:hover,
+.c25:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c26:visited {
+.c25:visited {
   color: #6E6E73;
 }
 
-.c10 {
+.c9 {
   z-index: 0;
 }
 
-.c6 {
+.c5 {
   position: absolute;
   top: 0;
   left: 0;
@@ -3673,78 +3649,78 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 @media (max-width:63rem) {
-  .c7 {
+  .c6 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c7 {
+  .c6 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c7 {
+  .c6 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c7 {
+  .c6 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c7 {
+  .c6 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
+  .c7 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     padding: 2.5rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c28 {
+  .c27 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c28 {
+  .c27 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -3781,7 +3757,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c14 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -3790,39 +3766,39 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 {
+  .c15 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c15 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c15 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c15 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c12 {
+  .c11 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c11 {
     position: absolute;
     left: 0;
     right: 0;
@@ -3831,37 +3807,37 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c10 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c17 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c18 {
+  .c17 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18:first-child {
+  .c17:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c18:first-child {
+  .c17:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c19 {
+  .c18 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -3869,13 +3845,13 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 @media (min-width:80rem) {
-  .c20 {
+  .c19 {
     width: 33.33%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c20 {
+  .c19 {
     display: block;
     width: initial;
     grid-column: 1 / span 2;
@@ -3883,68 +3859,68 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 @media (min-width:25rem) {
-  .c23 {
+  .c22 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c25 {
+  .c24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c24 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c27 {
+  .c26 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c26 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c27 {
+  .c26 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c24 {
+  .c23 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c24 {
+  .c23 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c24 {
+  .c23 {
     display: block;
     width: initial;
     padding: initial;
@@ -3953,31 +3929,31 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 @media (max-width:63rem) {
-  .c10 {
+  .c9 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c10 {
+  .c9 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c10 {
+  .c9 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c10 {
+  .c9 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c10 {
+  .c9 {
     padding: 0 1rem;
   }
 }
@@ -4006,28 +3982,24 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
     <div
       class="c3"
     >
-      <figure
+      <div
         class="c4"
       >
-        <div
+        <iframe
+          allow="autoplay; fullscreen"
+          allowfullscreen=""
           class="c5"
-        >
-          <iframe
-            allow="autoplay; fullscreen"
-            allowfullscreen=""
-            class="c6"
-            src="https://www.test.bbc.co.uk/ws/av-embeds/cps/pidgin/tori-49450859/p07lg239/ig"
-            title="Media player"
-          />
-        </div>
-      </figure>
+          src="https://www.test.bbc.co.uk/ws/av-embeds/cps/pidgin/tori-49450859/p07lg239/ig"
+          title="Media player"
+        />
+      </div>
     </div>
     <div
-      class="c7"
+      class="c6"
     >
       <strong
         aria-hidden="true"
-        class="c8"
+        class="c7"
       >
         Nigerian man Emeka Nelson don produce generator wey dey use only water
       </strong>
@@ -4036,7 +4008,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c1"
     >
       <p
-        class="c9"
+        class="c8"
       >
         <b>
           As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
@@ -4047,7 +4019,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c1"
     >
       <p
-        class="c9"
+        class="c8"
       >
         Wetin ginger Emeka na im friend wey smoke from generator kill.
       </p>
@@ -4056,7 +4028,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c1"
     >
       <p
-        class="c9"
+        class="c8"
       >
         BBC carri waka go Awka Anambra state inside South-east Nigeria go see di ogbonge invention wey Nelson produce.
       </p>
@@ -4065,7 +4037,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c1"
     >
       <p
-        class="c9"
+        class="c8"
       >
         Nelson wey no be certified engineer struggle to read for elementary school, work as house help for di age of 5, and no get any university education.
       </p>
@@ -4074,7 +4046,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c1"
     >
       <p
-        class="c9"
+        class="c8"
       >
         Wen we go im house, e dey full with Structural drawings and designs wey e pin for wall and na so e dey take im time dey study di drawing.
       </p>
@@ -4083,7 +4055,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c1"
     >
       <p
-        class="c9"
+        class="c8"
       >
         For 16 years, e dey focus to make im dream turn to something real-dat na to make generator wey go run on water.
       </p>
@@ -4092,7 +4064,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c1"
     >
       <p
-        class="c9"
+        class="c8"
       >
         Most of di material wey Nelson take arrange im generator na from  scrap.
       </p>
@@ -4101,7 +4073,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c1"
     >
       <p
-        class="c9"
+        class="c8"
       >
         Di first generator wey im do explode wen e test am. Dis come make am dey doubt di project but afta plenti years of struggle e come get am right.
       </p>
@@ -4110,7 +4082,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c1"
     >
       <p
-        class="c9"
+        class="c8"
       >
         Nelson says im generator get maximum output capacity of 1,000 watts and di voltage dey fluctuate between 220 and 240.
       </p>
@@ -4119,7 +4091,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c1"
     >
       <p
-        class="c9"
+        class="c8"
       >
         E say one litre of clean water fit power di generator for 6 hours, and e no go bring out smoke like oda generators, e dey environment friendly.
       </p>
@@ -4128,32 +4100,32 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c1"
     >
       <p
-        class="c9"
+        class="c8"
       >
         Dis ogbonge inventor add say im dream na for di generator to dey for millions of homes all ova di world.
       </p>
     </div>
     <div
       aria-labelledby="related-content-heading"
-      class="c10"
+      class="c9"
     >
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         />
         <h2
-          class="c13"
+          class="c12"
         >
           <div
-            class="c14"
+            class="c13"
           >
             <span
-              class="c15"
+              class="c14"
             >
               <span
-                class="c16"
+                class="c15"
                 dir="ltr"
                 id="related-content-heading"
               >
@@ -4164,42 +4136,42 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
         </h2>
       </div>
       <ul
-        class="c17"
+        class="c16"
         role="list"
       >
         <li
-          class="c18"
+          class="c17"
           role="listitem"
         >
           <div
-            class="c19"
+            class="c18"
           >
             <div
-              class="c20"
+              class="c19"
             >
               <div
-                class="c21"
+                class="c20"
               >
                 <div
-                  class="c22"
+                  class="c21"
                 >
                   <div
                     class="lazyload-placeholder"
                   />
                 </div>
                 <div
-                  class="c23"
+                  class="c22"
                 />
               </div>
             </div>
             <div
-              class="c24"
+              class="c23"
             >
               <h3
-                class="c25"
+                class="c24"
               >
                 <a
-                  class="c26"
+                  class="c25"
                   href="/pidgin/44508901"
                 >
                   <span
@@ -4217,12 +4189,12 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
                 </a>
               </h3>
               <p
-                class="c27"
+                class="c26"
               >
                 James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
               </p>
               <time
-                class="c28"
+                class="c27"
                 datetime="1970-01-18"
               >
                 18 Jenụwarị 1970
@@ -4231,50 +4203,50 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
           </div>
         </li>
         <li
-          class="c18"
+          class="c17"
           role="listitem"
         >
           <div
-            class="c19"
+            class="c18"
           >
             <div
-              class="c20"
+              class="c19"
             >
               <div
-                class="c21"
+                class="c20"
               >
                 <div
-                  class="c22"
+                  class="c21"
                 >
                   <div
                     class="lazyload-placeholder"
                   />
                 </div>
                 <div
-                  class="c23"
+                  class="c22"
                 />
               </div>
             </div>
             <div
-              class="c24"
+              class="c23"
             >
               <h3
-                class="c25"
+                class="c24"
               >
                 <a
-                  class="c26"
+                  class="c25"
                   href="/pidgin/tori-46975713"
                 >
                   How light companies dey use estimated billing show Nigerians pepper
                 </a>
               </h3>
               <p
-                class="c27"
+                class="c26"
               >
                 Lawmakers for Nigeria wan make am crime for light companies to use guesswork give customer estimated bill.
               </p>
               <time
-                class="c28"
+                class="c27"
                 datetime="1970-01-18"
               >
                 18 Jenụwarị 1970
@@ -4283,50 +4255,50 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
           </div>
         </li>
         <li
-          class="c18"
+          class="c17"
           role="listitem"
         >
           <div
-            class="c19"
+            class="c18"
           >
             <div
-              class="c20"
+              class="c19"
             >
               <div
-                class="c21"
+                class="c20"
               >
                 <div
-                  class="c22"
+                  class="c21"
                 >
                   <div
                     class="lazyload-placeholder"
                   />
                 </div>
                 <div
-                  class="c23"
+                  class="c22"
                 />
               </div>
             </div>
             <div
-              class="c24"
+              class="c23"
             >
               <h3
-                class="c25"
+                class="c24"
               >
                 <a
-                  class="c26"
+                  class="c25"
                   href="/pidgin/tori-42494678"
                 >
                   Nigeria: Wetin 5,222 megawatts electric fit do?
                 </a>
               </h3>
               <p
-                class="c27"
+                class="c26"
               >
                 Di Transmission Company of Nigeria and di vice-president office carry tori come outside say electric power wey di country produce don increase pass before as e reach 5,222 megawatts dis December.
               </p>
               <time
-                class="c28"
+                class="c27"
                 datetime="1970-01-18"
               >
                 18 Jenụwarị 1970
