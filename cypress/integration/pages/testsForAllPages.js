@@ -390,7 +390,8 @@ export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
               failOnStatusCode: false,
             }).then(resp => {
               if (resp.status === 200) {
-                cy.log('testdebugging');
+                cy.log('testdebug');
+                console.log('testdebugging');
               }
             });
           });
