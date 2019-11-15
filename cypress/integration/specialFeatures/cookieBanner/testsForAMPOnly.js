@@ -7,16 +7,8 @@ import describeForEuOnly from '../../../support/helpers/describeForEuOnly';
 const serviceFilter = service =>
   Cypress.env('SMOKE') ? ['news', 'thai'].includes(service) : service;
 
-const filterPageTypes = (service, pageType) => {
-  // Note, AMP is currently broken for media embeds
-  // TODO: Re-enable once issue is resolved
-  // https://github.com/bbc/simorgh/issues/3970
-  if (['liveRadio', 'mediaAssetPage'].includes(pageType)) {
-    return false;
-  }
-
-  return config[service].pageTypes[pageType].path !== undefined;
-};
+const filterPageTypes = (service, pageType) =>
+  config[service].pageTypes[pageType].path !== undefined;
 
 const getPrivacyBanner = (service, variant) =>
   cy.contains(
