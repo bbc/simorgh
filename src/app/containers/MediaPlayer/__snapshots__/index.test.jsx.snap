@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MediaPlayer Calls the canonical placeholder when platform is canonical and showPlaceholder is true 1`] = `
-.c10 {
+.c9 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -10,19 +10,13 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   height: 0.75rem;
 }
 
-.c0 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-.c12 {
+.c11 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c8 {
+.c7 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -34,7 +28,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   margin: 0;
 }
 
-.c6 {
+.c5 {
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -52,14 +46,14 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   width: 5rem;
 }
 
-.c6:hover,
-.c6:focus {
+.c5:hover,
+.c5:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.c9 > svg {
+.c8 > svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -67,12 +61,12 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   width: 1.5rem;
 }
 
-.c11 {
+.c10 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.c4 {
+.c3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -86,11 +80,11 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   padding: 0.5rem;
 }
 
-.c5 {
+.c4 {
   font-weight: normal;
 }
 
-.c3 {
+.c2 {
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -99,30 +93,30 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   height: 100%;
 }
 
-.c7 {
+.c6 {
   position: absolute;
   bottom: 0;
 }
 
-.c2:hover .c7,
-.c2:focus .c7 {
+.c1:hover .c6,
+.c1:focus .c6 {
   background-color: #B80000;
 }
 
-.c1 {
+.c0 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 0.875rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c4 {
+  .c3 {
     padding: 1rem;
   }
 }
@@ -137,65 +131,61 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   </head>
   <body>
     <div>
-      <figure
+      <div
         class="c0"
       >
         <div
-          class="c1"
+          class="c1 c2"
         >
           <div
-            class="c2 c3"
+            class="c3"
           >
-            <div
+            <strong
               class="c4"
             >
-              <strong
-                class="c5"
-              >
-                Contains strong language and adult humour.
-              </strong>
-            </div>
-            <button
-              class="c6 c7"
-            >
-              <span
-                class="c8"
-              >
-                Play video, "Five things ants can teach us about management", 3,11
-              </span>
-              <div
-                aria-hidden="true"
-                class="c9"
-              >
-                <svg
-                  class="c10"
-                  focusable="false"
-                  height="12px"
-                  viewBox="0 0 32 32"
-                  width="12px"
-                >
-                  <polygon
-                    points="3,32 29,16 3,0"
-                  />
-                </svg>
-              </div>
-              <time
-                aria-hidden="true"
-                class="c11"
-                datetime="PT3M11S"
-              >
-                3:11
-              </time>
-            </button>
-            <img
-              alt=""
-              class="c12"
-              src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-              srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
-            />
+              Contains strong language and adult humour.
+            </strong>
           </div>
+          <button
+            class="c5 c6"
+          >
+            <span
+              class="c7"
+            >
+              Play video, "Five things ants can teach us about management", 3,11
+            </span>
+            <div
+              aria-hidden="true"
+              class="c8"
+            >
+              <svg
+                class="c9"
+                focusable="false"
+                height="12px"
+                viewBox="0 0 32 32"
+                width="12px"
+              >
+                <polygon
+                  points="3,32 29,16 3,0"
+                />
+              </svg>
+            </div>
+            <time
+              aria-hidden="true"
+              class="c10"
+              datetime="PT3M11S"
+            >
+              3:11
+            </time>
+          </button>
+          <img
+            alt=""
+            class="c11"
+            src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+            srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+          />
         </div>
-      </figure>
+      </div>
     </div>
   </body>
 </html>
@@ -212,18 +202,12 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
   </head>
   <body>
     .c0 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-.c1 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c2 {
+.c1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -234,21 +218,17 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
 }
 
 <div>
-      <figure
+      <div
         class="c0"
       >
-        <div
+        <iframe
+          allow="autoplay; fullscreen"
+          allowfullscreen=""
           class="c1"
-        >
-          <iframe
-            allow="autoplay; fullscreen"
-            allowfullscreen=""
-            class="c2"
-            src="https://www.test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"
-            title="Media player"
-          />
-        </div>
-      </figure>
+          src="https://www.test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"
+          title="Media player"
+        />
+      </div>
     </div>
   </body>
 </html>
@@ -270,45 +250,35 @@ exports[`MediaPlayer Renders the AMP player when platform is AMP 1`] = `
   </head>
   <body>
     .c0 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-.c1 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
 <div>
-      <figure
+      <div
         class="c0"
       >
-        <div
-          class="c1"
+        <amp-iframe
+          allowfullscreen="allowfullscreen"
+          frameborder="0"
+          layout="fill"
+          sandbox="allow-scripts allow-same-origin"
+          src="https://www.test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB/amp"
+          title="Media player"
         >
-          <amp-iframe
-            allowfullscreen="allowfullscreen"
-            frameborder="0"
+          <amp-img
+            alt=""
+            attribution=""
+            height="16"
             layout="fill"
-            sandbox="allow-scripts allow-same-origin"
-            src="https://www.test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB/amp"
-            title="Media player"
-          >
-            <amp-img
-              alt=""
-              attribution=""
-              height="16"
-              layout="fill"
-              placeholder="true"
-              src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-              srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
-              width="9"
-            />
-          </amp-iframe>
-        </div>
-      </figure>
+            placeholder="true"
+            src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+            srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+            width="9"
+          />
+        </amp-iframe>
+      </div>
     </div>
   </body>
 </html>
@@ -329,13 +299,7 @@ exports[`MediaPlayer Renders the AMP player with a caption 1`] = `
     />
   </head>
   <body>
-    .c0 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-.c3 {
+    .c2 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -347,13 +311,13 @@ exports[`MediaPlayer Renders the AMP player with a caption 1`] = `
   margin: 0;
 }
 
-.c1 {
+.c0 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c2 {
+.c1 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -364,85 +328,81 @@ exports[`MediaPlayer Renders the AMP player with a caption 1`] = `
   width: 100%;
 }
 
-.c2 > p {
+.c1 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c2 > p:last-child {
+.c1 > p:last-child {
   padding-bottom: 0;
 }
 
-.c2 i {
+.c1 i {
   font-style: normal;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c1 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c1 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c1 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c2 {
+  .c1 {
     padding: 0.5rem 0 0;
   }
 }
 
 <div>
-      <figure
+      <div
         class="c0"
       >
-        <div
-          class="c1"
+        <amp-iframe
+          allowfullscreen="allowfullscreen"
+          frameborder="0"
+          layout="fill"
+          sandbox="allow-scripts allow-same-origin"
+          src="https://www.test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB/amp"
+          title="Media player"
         >
-          <amp-iframe
-            allowfullscreen="allowfullscreen"
-            frameborder="0"
+          <amp-img
+            alt=""
+            attribution=""
+            height="16"
             layout="fill"
-            sandbox="allow-scripts allow-same-origin"
-            src="https://www.test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB/amp"
-            title="Media player"
-          >
-            <amp-img
-              alt=""
-              attribution=""
-              height="16"
-              layout="fill"
-              placeholder="true"
-              src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-              srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
-              width="9"
-            />
-          </amp-iframe>
-        </div>
-        <figcaption
+            placeholder="true"
+            src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+            srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+            width="9"
+          />
+        </amp-iframe>
+      </div>
+      <figcaption
+        class="c1"
+      >
+        <span
           class="c2"
         >
-          <span
-            class="c3"
-          >
-            Video caption, 
-          </span>
-          <p>
-            Media Player With Caption
-          </p>
-        </figcaption>
-      </figure>
+          Video caption, 
+        </span>
+        <p>
+          Media Player With Caption
+        </p>
+      </figcaption>
     </div>
   </body>
 </html>
@@ -458,7 +418,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
     </script>
   </head>
   <body>
-    .c10 {
+    .c9 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -467,19 +427,13 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   height: 0.75rem;
 }
 
-.c0 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-.c12 {
+.c11 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c8 {
+.c7 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -491,7 +445,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   margin: 0;
 }
 
-.c6 {
+.c5 {
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -509,14 +463,14 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   width: 5rem;
 }
 
-.c6:hover,
-.c6:focus {
+.c5:hover,
+.c5:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.c9 > svg {
+.c8 > svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -524,12 +478,12 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   width: 1.5rem;
 }
 
-.c11 {
+.c10 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.c4 {
+.c3 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -543,11 +497,11 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   padding: 0.5rem;
 }
 
-.c5 {
+.c4 {
   font-weight: normal;
 }
 
-.c3 {
+.c2 {
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -556,23 +510,23 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   height: 100%;
 }
 
-.c7 {
+.c6 {
   position: absolute;
   bottom: 0;
 }
 
-.c2:hover .c7,
-.c2:focus .c7 {
+.c1:hover .c6,
+.c1:focus .c6 {
   background-color: #B80000;
 }
 
-.c1 {
+.c0 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c13 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -583,129 +537,125 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   width: 100%;
 }
 
-.c13 > p {
+.c12 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c13 > p:last-child {
+.c12 > p:last-child {
   padding-bottom: 0;
 }
 
-.c13 i {
+.c12 i {
   font-style: normal;
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 0.875rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c4 {
+  .c3 {
     padding: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c12 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c13 {
+  .c12 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c13 {
+  .c12 {
     padding: 0.5rem 0 0;
   }
 }
 
 <div>
-      <figure
+      <div
         class="c0"
       >
         <div
-          class="c1"
+          class="c1 c2"
         >
           <div
-            class="c2 c3"
+            class="c3"
           >
-            <div
+            <strong
               class="c4"
             >
-              <strong
-                class="c5"
-              >
-                Contains strong language and adult humour.
-              </strong>
-            </div>
-            <button
-              class="c6 c7"
-            >
-              <span
-                class="c8"
-              >
-                Play video, "Five things ants can teach us about management", 3,11
-              </span>
-              <div
-                aria-hidden="true"
-                class="c9"
-              >
-                <svg
-                  class="c10"
-                  focusable="false"
-                  height="12px"
-                  viewBox="0 0 32 32"
-                  width="12px"
-                >
-                  <polygon
-                    points="3,32 29,16 3,0"
-                  />
-                </svg>
-              </div>
-              <time
-                aria-hidden="true"
-                class="c11"
-                datetime="PT3M11S"
-              >
-                3:11
-              </time>
-            </button>
-            <img
-              alt=""
-              class="c12"
-              src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-              srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
-            />
+              Contains strong language and adult humour.
+            </strong>
           </div>
-        </div>
-        <figcaption
-          class="c13"
-        >
-          <span
-            class="c8"
+          <button
+            class="c5 c6"
           >
-            Video caption, 
-          </span>
-          <p>
-            Media Player With Caption
-          </p>
-        </figcaption>
-      </figure>
+            <span
+              class="c7"
+            >
+              Play video, "Five things ants can teach us about management", 3,11
+            </span>
+            <div
+              aria-hidden="true"
+              class="c8"
+            >
+              <svg
+                class="c9"
+                focusable="false"
+                height="12px"
+                viewBox="0 0 32 32"
+                width="12px"
+              >
+                <polygon
+                  points="3,32 29,16 3,0"
+                />
+              </svg>
+            </div>
+            <time
+              aria-hidden="true"
+              class="c10"
+              datetime="PT3M11S"
+            >
+              3:11
+            </time>
+          </button>
+          <img
+            alt=""
+            class="c11"
+            src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+            srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+          />
+        </div>
+      </div>
+      <figcaption
+        class="c12"
+      >
+        <span
+          class="c7"
+        >
+          Video caption, 
+        </span>
+        <p>
+          Media Player With Caption
+        </p>
+      </figcaption>
     </div>
   </body>
 </html>
