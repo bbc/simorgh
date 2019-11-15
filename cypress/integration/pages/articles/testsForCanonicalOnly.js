@@ -43,7 +43,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       );
     });
 
-    if (serviceHasCaption(config[service].name)) {
+    if (serviceHasCaption(service)) {
       it('should have a visible image without a caption that is lazyloaded and has a noscript fallback image', () => {
         cy.get('figure')
           .eq(1)
