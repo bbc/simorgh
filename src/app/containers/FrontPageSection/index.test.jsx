@@ -206,6 +206,14 @@ const usefulLinks = {
       timestamp: 1569321103000,
       type: 'link',
     },
+    {
+      name: 'CHAN: Naịjirịa na Guinea nọ na ịrụ Group C',
+      uri: 'https://www.bbc.com/igbo/egwuregwu-49946491',
+      contentType: 'Link',
+      assetTypeCode: 'PRO',
+      timestamp: 1569321103000,
+      type: 'link',
+    },
   ],
   strapline: {
     name: 'Useful links',
