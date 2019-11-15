@@ -127,8 +127,6 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const items = pathOr(null, ['items'], group);
   const seeAll = pathOr(null, ['seeAll'], translations);
   const isFirstSection = sectionNumber === 0;
-  const getUsefulLinkItems = groupItems =>
-    groupItems.filter(({ contentType }) => contentType === 'Guide');
 
   // The current implementation of SectionLabel *requires* a strapline to be
   // present in order to render. It is currently *not possible* to render a
@@ -141,10 +139,23 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
     return null;
   }
 
-  let usefulLinkItems = [];
-  if (group.semanticGroupName === 'Useful links') {
-    usefulLinkItems = getUsefulLinkItems(items);
-  }
+  const renderUsefulLinks = groupItems => {
+    const usefulLinkItems = groupItems.filter(
+      ({ contentType }) => contentType === 'Guide',
+    );
+
+    if (usefulLinkItems.length) {
+      return (
+        <UsefulLinksComponent
+          items={usefulLinkItems}
+          script={script}
+          service={service}
+        />
+      );
+    }
+
+    return null;
+  };
 
   return (
     // jsx-a11y considers `role="region"` on a <section> to be redundant.
@@ -165,12 +176,8 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
       >
         {group.strapline.name}
       </SectionLabel>
-      {group.semanticGroupName === 'Useful links' && usefulLinkItems.length ? (
-        <UsefulLinksComponent
-          items={usefulLinkItems}
-          script={script}
-          service={service}
-        />
+      {group.semanticGroupName === 'Useful links' ? (
+        renderUsefulLinks(items)
       ) : (
         <StoryPromoRenderer
           items={items}
