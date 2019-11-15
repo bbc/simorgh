@@ -85,29 +85,30 @@ export const service = {
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title:
+            'Биз шахсий ҳаёт махфийлиги ва Куки(Cookies)га оид сиёсатимизни янгиладик',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Биз шахсий ҳаёт махфийлиги ва Куки(Cookie)га оид сиёсатимизга айрим муҳим ўзгаришларни киритдик. Ва бу нарса сиз ва сизнинг маълумотингиз учун нимани англатиши ҳақида сизни бохабар этиш истагидамиз.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Биз шахсий ҳаёт махфийлиги ва Куки(Cookie)га оид сиёсатимизга айрим муҳим ўзгаришларни киритдик. Ва бу нарса сиз ва сизнинг маълумотингиз учун нимани англатиши ҳақида сизни бохабар этиш истагидамиз.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
-          accept: 'OK',
-          reject: "Find out what's changed",
+          accept: 'Маъқул',
+          reject: 'Нималар ўзгарди?',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'Кукис(Cookies)га рози эканингизни билдиринг',
           description: {
             uk: {
               first: 'We use ',
