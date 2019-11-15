@@ -165,7 +165,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
       >
         {group.strapline.name}
       </SectionLabel>
-      {usefulLinkItems.length ? (
+      {group.semanticGroupName === 'Useful links' && usefulLinkItems.length ? (
         <UsefulLinksComponent
           items={usefulLinkItems}
           script={script}
