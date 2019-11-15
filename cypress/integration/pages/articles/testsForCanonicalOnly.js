@@ -91,6 +91,35 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           });
         });
 
+        it('should render a visible guidance message', () => {
+          cy.window().then(win => {
+            const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+
+            if (media) {
+              const longGuidanceWarning =
+                media.model.blocks[1].model.blocks[0].model.versions[0].warnings
+                  .long;
+
+              cy.get('div[class^="StyledVideoContainer"]')
+                .eq(0)
+                .within(() => {
+                  // Check for video with guidance message
+                  if (longGuidanceWarning) {
+                    cy.get('div[class^="StyledPlaceholder"]')
+                      .within(() => {
+                        cy.get('strong');
+                      })
+                      .should('be.visible')
+                      .and('contain', longGuidanceWarning);
+                    // Check for video with no guidance message
+                  } else {
+                    cy.get('div[class^="StyledGuidance"]').should('not.exist');
+                  }
+                });
+            }
+          });
+        });
+
         // This test is being temporarily throttled to the service 'news'.
         if (service === 'news') {
           it('should have a visible play button and duration', () => {
@@ -114,6 +143,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               }
             });
           });
+
           it('plays media when a user clicks play', () => {
             cy.window().then(win => {
               const media = getBlockData('video', win.SIMORGH_DATA.pageData);
