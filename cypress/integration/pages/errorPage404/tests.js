@@ -71,7 +71,9 @@ export const testsThatFollowSmokeTestConfig = ({
         const { title } = appConfig[config[service].name][
           variant
         ].translations.error[404];
-        const pageTitle = `${title} - ${appConfig[config[service].name][variant].brandName}`;
+        const pageTitle = `${title} - ${
+          appConfig[config[service].name][variant].brandName
+        }`;
 
         cy.get('head').within(() => {
           cy.title().should('eq', pageTitle);

@@ -146,7 +146,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                           .eq(0)
                           .then($el => {
                             expect($el.text()).includes(
-                              `${appConfig[config[service].name].default.translations.relatedContent}`,
+                              `${
+                                appConfig[config[service].name].default
+                                  .translations.relatedContent
+                              }`,
                             );
                           });
 

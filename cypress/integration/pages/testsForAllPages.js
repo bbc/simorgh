@@ -193,7 +193,9 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     title = '';
                 }
                 /* Note that if updating these, also do the same for errorPage404/tests.js */
-                const pageTitle = `${title} - ${appConfig[config[service].name][variant].brandName}`;
+                const pageTitle = `${title} - ${
+                  appConfig[config[service].name][variant].brandName
+                }`;
 
                 cy.get('head').within(() => {
                   cy.title().should('eq', pageTitle);
@@ -273,7 +275,9 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         cy.get('header a').should(
           'contain',
           hasLocalisedName
-            ? `${appConfig[config[service].name][variant].product}, ${appConfig[config[service].name][variant].serviceLocalizedName}`
+            ? `${appConfig[config[service].name][variant].product}, ${
+                appConfig[config[service].name][variant].serviceLocalizedName
+              }`
             : appConfig[config[service].name][variant].product,
         );
       });
@@ -366,7 +370,9 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             'contain',
             appConfig[config[service].name][variant].serviceLocalizedName !==
               undefined
-              ? `${appConfig[config[service].name][variant].product}, ${appConfig[config[service].name][variant].serviceLocalizedName}`
+              ? `${appConfig[config[service].name][variant].product}, ${
+                  appConfig[config[service].name][variant].serviceLocalizedName
+                }`
               : appConfig[config[service].name][variant].product,
           );
       });
