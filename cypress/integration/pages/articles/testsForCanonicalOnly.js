@@ -50,7 +50,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       serviceHasInlineLink(service) &&
       (Cypress.env('APP_ENV') === 'local' || Cypress.env('APP_ENV') === 'test')
     ) {
-      describe.only('Focus', () => {
+      describe('Focus', () => {
         describe('Navigation between articles from different services', () => {
           it('should always focus on `h1#content` when user navigates to previously visited articles using the `back` and `forward` button', () => {
             cy.get('main a[href*="/articles/"]').click();
