@@ -65,29 +65,17 @@ const AMPMostRead = ({ endpoint }) => {
             <p>lastRecordTimeStamp: {{lastRecordTimeStamp}}</p>
             <p>generated: {{generated}}</p>
             <p>firstRecordTimeStamp: {{firstRecordTimeStamp}}
-            <p>TotalRecords: {{totalRecords}}</P>`,
+            <p>TotalRecords: {{totalRecords}}</p>  
+            <ul>
+            {{#records}}
+              <li>{{promo.timestamp}}</li>
+              <li>{{promo.headlines.headline}}</li>
+              <li>{{promo.promo.locators.assetUri}}</li>
+            {{/records}}
+           </ul>`,
           }}
         />
       </section>
-      <amp-list
-        layout="fixed-height"
-        height="100"
-        src={endpoint}
-        binding="no"
-        items="records"
-        max-items={10}
-      >
-        <template
-          type="amp-mustache"
-          dangerouslySetInnerHTML={{
-            __html: `<ul key={{id}}>
-          <li>{{promo.timestamp}}</li>
-          <li>{{promo.headlines.headline}}</li>
-          <li>{{promo.locators.assetUri}}</li>
-          </ul>`,
-          }}
-        />
-      </amp-list>
     </>
   );
 };
