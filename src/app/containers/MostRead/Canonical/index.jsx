@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { string } from 'prop-types';
-
-const CanonicalMostRead = ({ endpoint }) => {
+// import MostReadList from '/Users/phank01/BBC/git/simorgh/node_modules/@bbc/psammead-most-read/dist/list.js';
+const CanonicalMostRead = ({ endpoint, script }) => {
   const [promos, setPromo] = useState([]);
   const [data, setData] = useState({});
 
@@ -9,6 +9,15 @@ const CanonicalMostRead = ({ endpoint }) => {
     const mostReadData = await response.json();
     setPromo(mostReadData.records.slice(0, 10));
     setData(mostReadData);
+
+    // let testing = [];
+    // mostReadData.records.slice(0, 10).forEach(promo => {
+    //   testing.push({
+    //     title: promo.promo.headlines.headline,
+    //     link: 'bbc.co.uk',
+    //   });
+    // });
+    // setPromo(testing);
   };
 
   useEffect(() => {
@@ -22,6 +31,8 @@ const CanonicalMostRead = ({ endpoint }) => {
 
   return (
     <div>
+      {/* <MostReadList items={promos} service="news" script={script} dir="ltr" /> */}
+
       <p>Last Updated: {data.lastRecordTimeStamp}</p>
       {promos.map(promo => (
         <ul key={promo.id}>

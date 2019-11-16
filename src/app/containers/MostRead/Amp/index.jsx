@@ -26,24 +26,48 @@ const AMP_BIND = (
   />
 );
 
-const AMPMostRead = ({ endpoint }) => (
+const AmpMostRead = ({ endpoint }) => (
   <>
     <Helmet htmlAttributes={{ amp: '' }}>
       {AMP_LIST}
       {AMP_MUSTACHE}
       {AMP_BIND}
+      <script
+        async
+        custom-element="amp-access"
+        src="https://cdn.ampproject.org/v0/amp-access-0.1.js"
+      ></script>
+      <script id="amp-access" src={endpoint} type="application/json"></script>
     </Helmet>
+
     <amp-list
       layout="fixed-height"
       height="100"
       src={endpoint}
+      single-item
       binding="no"
-      items="records"
       max-items={10}
     >
       <template
         type="amp-mustache"
-        /* eslint-disable-next-line react/no-danger */
+        dangerouslySetInnerHTML={{
+          __html: `<ul key={{id}}>
+          <li>{{lastRecordTimeStamp}}</li>
+          </ul>`,
+        }}
+      />
+    </amp-list>
+
+    <amp-list
+      layout="fixed-height"
+      height="100"
+      src={endpoint}
+      items="records"
+      binding="no"
+      max-items={10}
+    >
+      <template
+        type="amp-mustache"
         dangerouslySetInnerHTML={{
           __html: `<ul key={{id}}>
           <li>{{promo.timestamp}}</li>
@@ -56,8 +80,8 @@ const AMPMostRead = ({ endpoint }) => (
   </>
 );
 
-AMPMostRead.propTypes = {
+AmpMostRead.propTypes = {
   endpoint: string.isRequired,
 };
 
-export default AMPMostRead;
+export default AmpMostRead;

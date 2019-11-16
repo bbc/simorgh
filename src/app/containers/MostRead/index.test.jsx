@@ -9,13 +9,17 @@ import zhongwenSimpMostReadData from '#data/zhongwen/mostRead/simp';
 
 let container;
 
-const renderMostReadContainer = async ({ service, variant = null }) =>
+const renderMostReadContainer = async ({
+  service,
+  variant = null,
+  isAmp = false,
+}) =>
   act(async () => {
     ReactDOM.render(
       <RequestContextProvider
         bbcOrigin={`http://localhost:7080/${service}/articles/c0000000000o`}
         id="c0000000000o"
-        isAmp={false}
+        isAmp={isAmp}
         pageType="article"
         service={service}
         statusCode={200}
@@ -23,8 +27,7 @@ const renderMostReadContainer = async ({ service, variant = null }) =>
         variant={variant}
       >
         <ServiceContextProvider service={service} variant={variant}>
-          <MostReadContainer endpoint="http://localhost:7080/news/most_read.json" />
-          ,
+          <MostReadContainer />,
         </ServiceContextProvider>
       </RequestContextProvider>,
       container,
@@ -32,7 +35,7 @@ const renderMostReadContainer = async ({ service, variant = null }) =>
   });
 
 describe('MostReadContainerCanonical', () => {
-  beforeEach(() => {
+  beforeAll(() => {
     container = null;
     container = document.createElement('div');
     document.body.appendChild(container);
@@ -42,6 +45,7 @@ describe('MostReadContainerCanonical', () => {
   it('test data returns as expected on canonical for News', async () => {
     fetch.mockResponse(JSON.stringify(newsMostReadData));
     await renderMostReadContainer({ service: 'news' });
+    console.log(container.querySelector('p').textContent);
     expect(container.querySelector('p').textContent).toEqual(
       `Last Updated: ${newsMostReadData.lastRecordTimeStamp}`,
     );
@@ -54,6 +58,33 @@ describe('MostReadContainerCanonical', () => {
     expect(container.querySelector('p').textContent).toEqual(
       `Last Updated: ${zhongwenSimpMostReadData.lastRecordTimeStamp}`,
     );
+    expect(container.querySelectorAll('ul').length).toEqual(10);
+  });
+});
+
+describe('MostReadContainerAmp', () => {
+  beforeAll(() => {
+    container = null;
+    container = document.createElement('div');
+    document.body.appendChild(container);
+    fetch.resetMocks();
+  });
+
+  it('test data returns as expected on canonical for News', async () => {
+    fetch.mockResponse(JSON.stringify(newsMostReadData));
+    await renderMostReadContainer({ service: 'news', isAmp: true });
+
+    expect(container.querySelectorAll('ul').length).toEqual(10);
+  });
+
+  it('test data returns as expected on canonical for Zhongwen Simp', async () => {
+    fetch.mockResponse(JSON.stringify(zhongwenSimpMostReadData));
+    await renderMostReadContainer({
+      service: 'zhongwen',
+      variant: 'simp',
+      isAmp: true,
+    });
+
     expect(container.querySelectorAll('ul').length).toEqual(10);
   });
 });
