@@ -3,7 +3,6 @@ import { string, bool } from 'prop-types';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import Figure from '@bbc/psammead-figure';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
@@ -104,27 +103,25 @@ const MediaPlayerContainer = ({
   return (
     <>
       <Metadata aresMediaBlock={aresMediaBlock} />
-      <Figure>
-        {isAmp ? (
-          <AmpMediaPlayer
-            src={embedSource}
-            placeholderSrc={placeholderSrc}
-            placeholderSrcset={placeholderSrcset}
-            title={iframeTitle}
-          />
-        ) : (
-          <CanonicalMediaPlayer
-            src={embedSource}
-            placeholderSrc={showPlaceholder ? placeholderSrc : null}
-            placeholderSrcset={placeholderSrcset}
-            showPlaceholder={showPlaceholder}
-            title={iframeTitle}
-            service={service}
-            mediaInfo={mediaInfo}
-          />
-        )}
-        {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
-      </Figure>
+      {isAmp ? (
+        <AmpMediaPlayer
+          src={embedSource}
+          placeholderSrc={placeholderSrc}
+          placeholderSrcset={placeholderSrcset}
+          title={iframeTitle}
+        />
+      ) : (
+        <CanonicalMediaPlayer
+          src={embedSource}
+          placeholderSrc={showPlaceholder ? placeholderSrc : null}
+          placeholderSrcset={placeholderSrcset}
+          showPlaceholder={showPlaceholder}
+          title={iframeTitle}
+          service={service}
+          mediaInfo={mediaInfo}
+        />
+      )}
+      {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
     </>
   );
 };
