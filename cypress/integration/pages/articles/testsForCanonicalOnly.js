@@ -6,7 +6,8 @@ import { getBlockData } from './helpers';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = service => service === 'news';
 
-// const serviceHasInlineLink = service => service === 'news';
+// TODO: Remove once we have inline link on article pages linking to another article page
+const serviceHasInlineLink = service => service === 'news';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -45,17 +46,53 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       );
     });
 
-    // if (
-    //   serviceHasInlineLink(service) &&
-    //   (Cypress.env('APP_ENV') === 'local' || Cypress.env('APP_ENV') === 'test')
-    // ) {
-    //   it.only('should focus on `h1#content` when user navigates to articles subsequently', () => {
-    //     cy.get('main a[href*="/articles/"]').click();
-    //     // cy.wait(3000);
+    if (
+      serviceHasInlineLink(service) &&
+      (Cypress.env('APP_ENV') === 'local' || Cypress.env('APP_ENV') === 'test')
+    ) {
+      describe.only('Focus', () => {
+        describe('Navigation between articles from different services', () => {
+          it('should always focus on `h1#content` when user navigates to previously visited articles using the `back` and `forward` button', () => {
+            cy.get('main a[href*="/articles/"]').click();
+            cy.go('back');
+            cy.focused().should('have.id', 'content');
+            cy.go('forward');
+            cy.focused().should('have.id', 'content');
+          });
+        });
 
-    //     cy.focused().should('have.id', 'content');
-    //   });
-    // }
+        describe('Navigating between articles from the same service', () => {
+          beforeEach(() => {
+            cy.visit('/news/articles/c0g992jmmkko', {
+              failOnStatusCode: !pageType.includes('error'),
+            });
+          });
+          it('should not focus on `h1#content` on initial load of a service', () => {
+            cy.focused().should('not.have.id', 'content');
+          });
+
+          it('should focus on `h1#content` when user navigates to another article of the same service', () => {
+            cy.get('main a[href*="/articles/"]').click();
+
+            cy.focused().should('have.id', 'content');
+          });
+
+          it('should always focus on `h1#content` when user navigates by clicking on articles of the same service', () => {
+            cy.get('main a[href*="/articles/"]').click();
+            cy.focused().should('have.id', 'content');
+            cy.get('main a[href*="/articles/"]').click();
+            cy.focused().should('have.id', 'content');
+          });
+
+          it('should always focus on `h1#content` when user navigates by clicking on articles of the same service', () => {
+            cy.get('main a[href*="/articles/"]').click();
+            cy.focused().should('have.id', 'content');
+            cy.get('main a[href*="/articles/"]').click();
+            cy.focused().should('have.id', 'content');
+          });
+        });
+      });
+    }
 
     if (serviceHasCaption(service)) {
       it('should have a visible image without a caption that is lazyloaded and has a noscript fallback image', () => {
