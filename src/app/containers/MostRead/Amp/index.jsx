@@ -26,62 +26,74 @@ const AMP_BIND = (
   />
 );
 
-const AmpMostRead = ({ endpoint }) => (
-  <>
-    <Helmet htmlAttributes={{ amp: '' }}>
-      {AMP_LIST}
-      {AMP_MUSTACHE}
-      {AMP_BIND}
-      <script
-        async
-        custom-element="amp-access"
-        src="https://cdn.ampproject.org/v0/amp-access-0.1.js"
-      ></script>
-      <script id="amp-access" src={endpoint} type="application/json"></script>
-    </Helmet>
+const AMP_ACCESS = (
+  <script
+    async
+    custom-element="amp-access"
+    src="https://cdn.ampproject.org/v0/amp-access-0.1.js"
+  />
+);
 
-    <amp-list
-      layout="fixed-height"
-      height="100"
-      src={endpoint}
-      single-item
-      binding="no"
-      max-items={10}
-    >
-      <template
-        type="amp-mustache"
-        dangerouslySetInnerHTML={{
-          __html: `<ul key={{id}}>
-          <li>{{lastRecordTimeStamp}}</li>
-          </ul>`,
-        }}
-      />
-    </amp-list>
+const AMP_ACCESS_DATA = endpoint => ({
+  authorization: endpoint,
+  noPingback: true,
+});
 
-    <amp-list
-      layout="fixed-height"
-      height="100"
-      src={endpoint}
-      items="records"
-      binding="no"
-      max-items={10}
-    >
-      <template
-        type="amp-mustache"
-        dangerouslySetInnerHTML={{
-          __html: `<ul key={{id}}>
+const AMP_ACCESS_FETCH = endpoint => (
+  <script id="amp-access" type="application/json">
+    {JSON.stringify(AMP_ACCESS_DATA(endpoint))}
+  </script>
+);
+
+const AMPMostRead = ({ endpoint }) => {
+  return (
+    <>
+      <Helmet htmlAttributes={{ amp: '' }}>
+        {AMP_LIST}
+        {AMP_MUSTACHE}
+        {AMP_BIND}
+        {AMP_ACCESS}
+        {AMP_ACCESS_FETCH(endpoint)}
+      </Helmet>
+      <section amp-access="totalRecords > 0">
+        <h2>totalRecods exists and is available</h2>
+        <template
+          amp-access-template="true"
+          type="amp-mustache"
+          dangerouslySetInnerHTML={{
+            __html: `
+            <p>lastRecordTimeStamp: {{lastRecordTimeStamp}}</p>
+            <p>generated: {{generated}}</p>
+            <p>firstRecordTimeStamp: {{firstRecordTimeStamp}}
+            <p>TotalRecords: {{totalRecords}}</P>`,
+          }}
+        />
+      </section>
+      <amp-list
+        layout="fixed-height"
+        height="100"
+        src={endpoint}
+        binding="no"
+        items="records"
+        max-items={10}
+      >
+        <template
+          type="amp-mustache"
+          dangerouslySetInnerHTML={{
+            __html: `<ul key={{id}}>
           <li>{{promo.timestamp}}</li>
           <li>{{promo.headlines.headline}}</li>
           <li>{{promo.locators.assetUri}}</li>
           </ul>`,
-        }}
-      />
-    </amp-list>
-  </>
-);
+          }}
+        />
+      </amp-list>
+    </>
+  );
+};
 
-AmpMostRead.propTypes = {
+AMPMostRead.propTypes = {
   endpoint: string.isRequired,
 };
 
-export default AmpMostRead;
+export default AMPMostRead;
