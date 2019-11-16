@@ -83,13 +83,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             cy.get('main a[href*="/articles/"]').click();
             cy.focused().should('have.id', 'content');
           });
-
-          it('should always focus on `h1#content` when user navigates by clicking on articles of the same service', () => {
-            cy.get('main a[href*="/articles/"]').click();
-            cy.focused().should('have.id', 'content');
-            cy.get('main a[href*="/articles/"]').click();
-            cy.focused().should('have.id', 'content');
-          });
         });
       });
     }
