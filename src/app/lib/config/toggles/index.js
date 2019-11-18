@@ -41,20 +41,20 @@ const toggles = {
       enabled: false,
     },
   },
-  stage: {
-    chartbeatAnalytics: {
-      enabled: false,
-    },
-    mediaPlayer: {
-      enabled: false,
-    },
-    mpulse: {
-      enabled: true,
-    },
-    navOnArticles: {
-      enabled: false,
-    },
-  },
+  // stage: {
+  //   chartbeatAnalytics: {
+  //     enabled: false,
+  //   },
+  //   mediaPlayer: {
+  //     enabled: false,
+  //   },
+  //   mpulse: {
+  //     enabled: true,
+  //   },
+  //   navOnArticles: {
+  //     enabled: false,
+  //   },
+  // },
 };
 
 export default toggles;
