@@ -223,6 +223,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
 }
@@ -512,9 +513,13 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
                     title="Audio player"
                   >
                     <amp-img
+                      alt=""
+                      attribution=""
+                      height="16"
                       layout="fill"
                       placeholder="true"
                       src="http://localhost:7080/images/amp_audio_placeholder.png"
+                      width="9"
                     />
                   </amp-iframe>
                 </div>
@@ -544,18 +549,9 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
-}
-
-.c9 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  overflow: hidden;
 }
 
 .c8 {
@@ -581,6 +577,16 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+}
+
+.c9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
 }
 
 @media (max-width:14.9375rem) {

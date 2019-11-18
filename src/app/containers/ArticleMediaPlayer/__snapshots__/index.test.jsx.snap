@@ -88,9 +88,14 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
               title="Media player"
             >
               <amp-img
+                alt=""
+                attribution=""
+                height="16"
                 layout="fill"
                 placeholder="true"
                 src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                width="9"
               />
             </amp-iframe>
           </div>
@@ -102,7 +107,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 `;
 
 exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = `
-.c8 {
+.c10 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -111,13 +116,13 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   height: 0.75rem;
 }
 
-.c10 {
+.c12 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c6 {
+.c8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -129,7 +134,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   margin: 0;
 }
 
-.c4 {
+.c6 {
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -147,14 +152,14 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   width: 5rem;
 }
 
-.c4:hover,
-.c4:focus {
+.c6:hover,
+.c6:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.c7 > svg {
+.c9 > svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -162,9 +167,27 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   width: 1.5rem;
 }
 
-.c9 {
+.c11 {
   display: block;
   margin-top: 0.5rem;
+}
+
+.c4 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(34,34,34,0.75);
+  color: #FFFFFF;
+  padding: 0.5rem;
+}
+
+.c5 {
+  font-weight: normal;
 }
 
 .c3 {
@@ -176,13 +199,13 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   height: 100%;
 }
 
-.c5 {
+.c7 {
   position: absolute;
   bottom: 0;
 }
 
-.c2:hover .c5,
-.c2:focus .c5 {
+.c2:hover .c7,
+.c2:focus .c7 {
   background-color: #B80000;
 }
 
@@ -194,6 +217,18 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 
 .c0 {
   position: relative;
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c4 {
+    padding: 1rem;
+  }
 }
 
 @media (max-width:14.9375rem) {
@@ -262,20 +297,29 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
             <div
               class="c2 c3"
             >
+              <div
+                class="c4"
+              >
+                <strong
+                  class="c5"
+                >
+                  Contains strong language and adult humour.
+                </strong>
+              </div>
               <button
-                class="c4 c5"
+                class="c6 c7"
               >
                 <span
-                  class="c6"
+                  class="c8"
                 >
                   Play video, "Five things ants can teach us about management", 3,11
                 </span>
                 <div
                   aria-hidden="true"
-                  class="c7"
+                  class="c9"
                 >
                   <svg
-                    class="c8"
+                    class="c10"
                     focusable="false"
                     height="12px"
                     viewBox="0 0 32 32"
@@ -288,16 +332,17 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
                 </div>
                 <time
                   aria-hidden="true"
-                  class="c9"
+                  class="c11"
                   datetime="PT3M11S"
                 >
                   3:11
                 </time>
               </button>
               <img
-                alt="Image Alt"
-                class="c10"
+                alt=""
+                class="c12"
                 src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
               />
             </div>
           </div>

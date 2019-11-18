@@ -24,6 +24,7 @@ exports[`should render a news article correctly 1`] = `
   font-weight: 500;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
 }
@@ -781,6 +782,7 @@ exports[`should render a persian article correctly 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
 }
@@ -1294,6 +1296,7 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
 }
