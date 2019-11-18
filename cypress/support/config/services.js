@@ -1,6 +1,6 @@
 const services = {
   arabic: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -13,21 +13,21 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   news: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -40,21 +40,21 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   pashto: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -67,21 +67,21 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   persian: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -94,21 +94,21 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   urdu: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -121,21 +121,21 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   afaanoromoo: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -148,7 +148,7 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
@@ -156,13 +156,13 @@ const services = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   afrique: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -175,21 +175,21 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   azeri: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -206,17 +206,17 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   gahuza: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -229,21 +229,21 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   hausa: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -256,21 +256,21 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   igbo: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -297,7 +297,7 @@ const services = {
     },
   },
   indonesia: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -310,7 +310,7 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
@@ -318,13 +318,13 @@ const services = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   kyrgyz: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -341,17 +341,17 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   mundo: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -364,21 +364,21 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   pidgin: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -405,7 +405,7 @@ const services = {
     },
   },
   russian: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -418,21 +418,21 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   scotland: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -445,21 +445,21 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   somali: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -472,21 +472,21 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   swahili: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -499,21 +499,21 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   turkce: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -526,21 +526,21 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   vietnamese: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -553,21 +553,21 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   yoruba: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
@@ -594,16 +594,16 @@ const services = {
     },
   },
   japanese: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
       articles: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       errorPage404: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       frontPage: {
@@ -611,26 +611,26 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   punjabi: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
       articles: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       errorPage404: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       frontPage: {
@@ -638,26 +638,26 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   thai: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
       articles: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       errorPage404: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       frontPage: {
@@ -665,22 +665,22 @@ const services = {
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   portuguese: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
       articles: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       errorPage404: {
@@ -688,34 +688,34 @@ const services = {
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   amharic: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
       articles: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       errorPage404: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
@@ -723,26 +723,26 @@ const services = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   korean: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
       articles: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       errorPage404: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
@@ -750,26 +750,26 @@ const services = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
   },
   tigrinya: {
-    font: 'undefined',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
       articles: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       errorPage404: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       frontPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
       liveRadio: {
@@ -777,7 +777,7 @@ const services = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: 'undefined',
+        path: undefined,
         smoke: false,
       },
     },
