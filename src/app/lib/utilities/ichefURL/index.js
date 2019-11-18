@@ -20,6 +20,10 @@ const buildIChefURL = ({ originCode, locator, resolution }) => {
     return locator;
   }
 
+  if (originCode === 'mcs' || originCode === 'tmcs') {
+    return `https://bbc.co.uk/${locator}`;
+  }
+
   if (originCode === 'mpv') {
     return buildPlaceholderSrc(locator, resolution);
   }
