@@ -20,8 +20,12 @@ const filterUnknownContentTypes = data => {
         const isValidItemType = whitelist.includes(itemType);
         const isValidContentType =
           itemType !== 'PRO' || contentTypes.includes(item.contentType);
+
         const isValidGroupType =
-          group.type !== 'useful-links' || itemType === 'PRO';
+          group.type === 'useful-links'
+            ? item.assetTypeCode === 'PRO' && item.contentType === 'Guide'
+            : group.type !== 'useful-links' || itemType === 'PRO';
+
         return isValidItemType && isValidContentType && isValidGroupType;
       });
     }
