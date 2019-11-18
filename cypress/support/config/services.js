@@ -287,13 +287,7 @@ const services = {
             : '/cymrufyw/erthyglau/c123456abcdo',
         smoke: false,
       },
-      frontPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/cymrufyw',
-        smoke: false,
-      },
+      frontPage: {},
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
     },
@@ -715,10 +709,7 @@ const services = {
             : '/naidheachdan/sgeulachdan/c123456abcdo',
         smoke: false,
       },
-      frontPage: {
-        path: Cypress.env('APP_ENV') === 'live' ? undefined : '/naidheachdan',
-        smoke: false,
-      },
+      frontPage: {},
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
     },
