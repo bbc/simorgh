@@ -139,24 +139,6 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
     return null;
   }
 
-  const renderUsefulLinks = groupItems => {
-    const usefulLinkItems = groupItems.filter(
-      ({ contentType }) => contentType === 'Guide',
-    );
-
-    if (usefulLinkItems.length) {
-      return (
-        <UsefulLinksComponent
-          items={usefulLinkItems}
-          script={script}
-          service={service}
-        />
-      );
-    }
-
-    return null;
-  };
-
   return (
     // jsx-a11y considers `role="region"` on a <section> to be redundant.
     // (<section> tags *should* imply `role="region"`)
@@ -177,7 +159,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
         {group.strapline.name}
       </SectionLabel>
       {group.semanticGroupName === 'Useful links' ? (
-        renderUsefulLinks(items)
+        <UsefulLinksComponent items={items} script={script} service={service} />
       ) : (
         <StoryPromoRenderer
           items={items}
