@@ -1,89 +1,22 @@
+import { singleTextBlock } from '#app/models/blocks';
+
 export const getHeadlineBlock = headlineText => ({
   model: {
-    blocks: [
-      {
-        model: {
-          blocks: [
-            {
-              model: {
-                blocks: [
-                  {
-                    model: {
-                      attributes: [],
-                      text: headlineText,
-                    },
-                    type: 'fragment',
-                  },
-                ],
-                text: headlineText,
-              },
-              type: 'paragraph',
-            },
-          ],
-        },
-        type: 'text',
-      },
-    ],
+    blocks: [singleTextBlock(headlineText)],
   },
   type: 'headline',
 });
 
 export const getFauxHeadlineBlock = headlineText => ({
   model: {
-    blocks: [
-      {
-        model: {
-          blocks: [
-            {
-              model: {
-                blocks: [
-                  {
-                    model: {
-                      attributes: [],
-                      text: headlineText,
-                    },
-                    type: 'fragment',
-                  },
-                ],
-                text: headlineText,
-              },
-              type: 'paragraph',
-            },
-          ],
-        },
-        type: 'text',
-      },
-    ],
+    blocks: [singleTextBlock(headlineText)],
   },
   type: 'fauxHeadline',
 });
 
 export const getVisuallyHiddenHeadlineBlock = headlineText => ({
   model: {
-    blocks: [
-      {
-        model: {
-          blocks: [
-            {
-              model: {
-                blocks: [
-                  {
-                    model: {
-                      attributes: [],
-                      text: headlineText,
-                    },
-                    type: 'fragment',
-                  },
-                ],
-                text: headlineText,
-              },
-              type: 'paragraph',
-            },
-          ],
-        },
-        type: 'text',
-      },
-    ],
+    blocks: [singleTextBlock(headlineText)],
   },
   type: 'visuallyHiddenHeadline',
 });

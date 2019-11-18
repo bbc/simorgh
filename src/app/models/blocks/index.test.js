@@ -8,6 +8,7 @@ import {
   blockArrayModel,
   imageBlock,
   rawImageModel,
+  simpleListBlock,
 } from '.';
 
 const testModel = {
@@ -18,6 +19,71 @@ const testModel = {
 const rawBlock = type => ({
   type,
   model: testModel,
+});
+
+const listBlock = type => ({
+  type: 'text',
+  model: {
+    type,
+    model: {
+      blocks: [
+        {
+          type: 'listItem',
+          model: {
+            type: 'paragraph',
+            model: {
+              text: 'List item 1',
+              blocks: [
+                {
+                  type: 'fragment',
+                  model: {
+                    text: 'List item 1',
+                    attributes: [],
+                  },
+                },
+              ],
+            },
+          },
+        },
+        {
+          type: 'listItem',
+          model: {
+            type: 'paragraph',
+            model: {
+              text: 'List item 2',
+              blocks: [
+                {
+                  type: 'fragment',
+                  model: {
+                    text: 'List item 2',
+                    attributes: [],
+                  },
+                },
+              ],
+            },
+          },
+        },
+        {
+          type: 'listItem',
+          model: {
+            type: 'paragraph',
+            model: {
+              text: 'List item 3',
+              blocks: [
+                {
+                  type: 'fragment',
+                  model: {
+                    text: 'List item 3',
+                    attributes: [],
+                  },
+                },
+              ],
+            },
+          },
+        },
+      ],
+    },
+  },
 });
 
 describe('Block Containing Text', () => {
@@ -59,6 +125,25 @@ describe('Block Containing Text', () => {
     const block = blockContainingText('TheType', 'hello', 'testId');
 
     expect(block).toEqual(testJson);
+  });
+
+  test('generates unordered list block json', () => {
+    const expectedBlock = listBlock('unorderedList');
+    const block = simpleListBlock([
+      'List item 1',
+      'List item 2',
+      'List item 3',
+    ]);
+    expect(block).toEqual(expectedBlock);
+  });
+
+  test('generates ordered list block json', () => {
+    const expectedBlock = listBlock('orderedList');
+    const block = simpleListBlock(
+      ['List item 1', 'List item 2', 'List item 3'],
+      true,
+    );
+    expect(block).toEqual(expectedBlock);
   });
 });
 

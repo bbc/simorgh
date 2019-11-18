@@ -4,6 +4,7 @@ import compose from 'ramda/src/compose';
 import articlePropTypes from '#models/propTypes/article';
 import ArticleMain from '../ArticleMain';
 
+import withVariant from '../PageHandlers/withVariant';
 import withContexts from '../PageHandlers/withContexts';
 import withPageWrapper from '../PageHandlers/withPageWrapper';
 import withError from '../PageHandlers/withError';
@@ -23,6 +24,7 @@ ArticleContainer.defaultProps = {
 };
 
 const EnhancedArticleContainer = compose(
+  withVariant,
   withContexts,
   withPageWrapper,
   withLoading,
