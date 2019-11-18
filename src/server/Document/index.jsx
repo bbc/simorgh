@@ -26,6 +26,8 @@ const renderDocument = async ({
 
   const extractor = new ChunkExtractor({ statsFile });
 
+  const context = {};
+
   const app = renderToString(
     extractor.collectChunks(
       sheet.collectStyles(
@@ -34,13 +36,18 @@ const renderDocument = async ({
           routes={routes}
           data={data}
           bbcOrigin={bbcOrigin}
-          context={{}}
+          context={context}
           service={service}
           isAmp={isAmp}
         />,
       ),
     ),
   );
+
+  if (context.url) {
+    // https://alligator.io/react/react-router-ssr/
+    return context;
+  }
 
   const scripts = extractor.getScriptElements({
     crossOrigin: 'anonymous',
