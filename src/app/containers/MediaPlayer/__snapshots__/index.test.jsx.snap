@@ -76,12 +76,15 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   height: 100%;
   position: absolute;
   background-color: rgba(34,34,34,0.75);
+  border: 0.0625rem solid transparent;
   color: #FFFFFF;
-  padding: 0.5rem;
 }
 
 .c4 {
+  display: block;
   font-weight: normal;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .c2 {
@@ -115,8 +118,20 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   }
 }
 
-@media (min-width:25rem) {
+@media screen and (-ms-high-contrast:active) {
   .c3 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c4 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c4 {
     padding: 1rem;
   }
 }
@@ -493,12 +508,15 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   height: 100%;
   position: absolute;
   background-color: rgba(34,34,34,0.75);
+  border: 0.0625rem solid transparent;
   color: #FFFFFF;
-  padding: 0.5rem;
 }
 
 .c4 {
+  display: block;
   font-weight: normal;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .c2 {
@@ -556,8 +574,20 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media screen and (-ms-high-contrast:active) {
   .c3 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c4 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c4 {
     padding: 1rem;
   }
 }
