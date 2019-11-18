@@ -11,8 +11,11 @@ import text from '../Text';
 import image from '../Image';
 import MediaPlayer from '../CpsAssetMediaPlayer';
 import Blocks from '../Blocks';
+import CpsRelatedContent from '../CpsRelatedContent';
 import ATIAnalytics from '../ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import fauxHeadline from '../FauxHeadline';
+import visuallyHiddenHeadline from '../VisuallyHiddenHeadline';
 
 const CpsAssetPageMain = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -21,14 +24,22 @@ const CpsAssetPageMain = ({ pageData }) => {
   const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
   const assetUri = path(['locators', 'assetUri'], metadata);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
+  const relatedContent = pathOr(
+    [],
+    ['relatedContent', 'groups', 0, 'promos'],
+    pageData,
+  );
 
   const componentsToRender = {
+    fauxHeadline,
+    visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
     text,
     image,
     timestamp: allowDateStamp ? timestamp : undefined,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
+    version: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };
 
   return (
@@ -48,6 +59,7 @@ const CpsAssetPageMain = ({ pageData }) => {
           </Link>
         </GridItemConstrainedMedium>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+        <CpsRelatedContent content={relatedContent} />
       </GhostGrid>
     </>
   );

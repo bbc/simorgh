@@ -15,7 +15,7 @@ const toggles = {
   },
   test: {
     chartbeatAnalytics: {
-      enabled: true,
+      enabled: false,
     },
     mediaPlayer: {
       enabled: true,

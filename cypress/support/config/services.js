@@ -597,7 +597,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? undefined
+            ? '/kyrgyz/articles/c414v42gy75o'
             : '/kyrgyz/articles/c3xd4xg3rm9o',
         smoke: false,
       },
@@ -893,7 +893,7 @@ const services = {
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : '/pidgin/tori-49450859',
+            : '/pidgin/23248703',
         smoke: true,
       },
     },
@@ -971,7 +971,7 @@ const services = {
       articles: {
         path:
           Cypress.env('APP_ENV') === 'live'
-            ? undefined
+            ? '/russian/articles/c6ygxgl53w9o'
             : '/russian/articles/ck7pz7re3zgo',
         smoke: false,
       },
