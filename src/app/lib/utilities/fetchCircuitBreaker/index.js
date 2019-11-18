@@ -18,7 +18,9 @@ export function createFetchCircuitBreaker() {
       circuitBreaker = circuitBreakers[host];
     }
 
-    return circuitBreaker.fire(url, options);
+    return !options
+      ? circuitBreaker.fire(url)
+      : circuitBreaker.fire(url, options);
   };
 }
 
