@@ -14,6 +14,12 @@ const NavigationContainer = () => {
     ServiceContext,
   );
   const eventTrackingProps = buildATIClickParams(
+    {
+      metadata: {
+        id: 'id',
+        language: 'lang',
+      },
+    },
     useContext(RequestContext),
     useContext(ServiceContext),
   );
