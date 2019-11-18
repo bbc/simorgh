@@ -389,7 +389,7 @@ export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
               url,
               failOnStatusCode: false,
             }).then(resp => {
-              expect(resp.status).to.not.equal(200, `Received 200 for ${url}`);
+              expect(resp.status).to.not.equal(404, `Received 404 for ${url}`);
             });
           });
         });
@@ -401,7 +401,7 @@ export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
               url,
               failOnStatusCode: false,
             }).then(resp => {
-              expect(resp.status).to.not.equal(404);
+              expect(resp.status).to.not.equal(404, `Received 404 for ${url}`);
             });
           });
         });
