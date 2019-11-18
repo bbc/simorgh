@@ -20,7 +20,14 @@ const isOnSimorgh = ({ url, env, pageType, path }) => {
         throw new Error(`${url}, could not find window.SIMORGH_DATA`);
       }
 
-      return { isSimorgh: true, env, pageType, url, service: getService(path) };
+      return {
+        isSimorgh: true,
+        env,
+        pageType,
+        url,
+        service: getService(path),
+        path,
+      };
     })
     .catch(() => {
       return false;

@@ -10,7 +10,7 @@ const mapUrls = require('./pageTypes/map');
 // const pglUrls = require('./pageTypes/pgl');
 
 const pageTypes = {
-  article: articleUrls,
+  articles: articleUrls,
   frontPage: frontpageUrls,
   errorPage404: errorPageUrls,
   liveRadio: liveradioUrls,
@@ -59,10 +59,36 @@ const func = async () => {
   fresults.forEach(value => {
     // eslint-disable-next-line no-prototype-builtins
     if (!serviceList.hasOwnProperty(value.service)) {
-      serviceList[value.service] = {};
+      serviceList[value.service] = {
+        font: 'undefined',
+        isWorldService: true,
+        variant: 'default',
+        pageTypes: {
+          articles: {
+            path: 'undefined',
+            smoke: false,
+          },
+          errorPage404: {
+            path: 'undefined',
+            smoke: false,
+          },
+          frontPage: {
+            path: 'undefined',
+            smoke: false,
+          },
+          liveRadio: {
+            path: 'undefined',
+            smoke: false,
+          },
+          mediaAssetPage: {
+            path: 'undefined',
+            smoke: false,
+          },
+        },
+      };
     }
-    serviceList[value.service][value.pageType] = {
-      path: value.url,
+    serviceList[value.service].pageTypes[value.pageType] = {
+      path: value.path,
       smoke: false,
     };
   });
