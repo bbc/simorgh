@@ -112,21 +112,21 @@ describe('ArticleTimestamp helper functions', () => {
     });
 
     it(`should return date and time with timezone format when firstPublished is today`, () => {
-      const firstPublished = timestampGenerator({ hours: 4 });
+      const firstPublished = timestampGenerator({ days: 0 });
       expect(formatType({ firstPublished })).toBe(dateFormats.dateTimeTimezone);
     });
 
     it(`should return date format when lastPublished and firstPublished are not on the same day`, () => {
-      const firstPublished = timestampGenerator({ hours: 50 });
-      const lastPublished = timestampGenerator({ hours: 20 });
+      const firstPublished = timestampGenerator({ days: 4 });
+      const lastPublished = timestampGenerator({ days: 2 });
       expect(formatType({ firstPublished, lastPublished })).toBe(
         dateFormats.date,
       );
     });
 
     it(`should return date and time with timezone format when firstPublished and lastPublished are on the same day and today`, () => {
-      const firstPublished = timestampGenerator({ hours: 4 });
-      const lastPublished = timestampGenerator({ hours: 2 });
+      const firstPublished = timestampGenerator({ hours: 0 });
+      const lastPublished = timestampGenerator({ days: 0 });
       expect(formatType({ firstPublished, lastPublished })).toBe(
         dateFormats.dateTimeTimezone,
       );
