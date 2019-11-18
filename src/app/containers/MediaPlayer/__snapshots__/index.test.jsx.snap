@@ -82,12 +82,15 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   height: 100%;
   position: absolute;
   background-color: rgba(34,34,34,0.75);
+  border: 0.0625rem solid transparent;
   color: #FFFFFF;
-  padding: 0.5rem;
 }
 
 .c5 {
+  display: block;
   font-weight: normal;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .c3 {
@@ -121,8 +124,20 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   }
 }
 
-@media (min-width:25rem) {
+@media screen and (-ms-high-contrast:active) {
   .c4 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c5 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c5 {
     padding: 1rem;
   }
 }
@@ -150,6 +165,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
               class="c4"
             >
               <strong
+                aria-hidden="true"
                 class="c5"
               >
                 Contains strong language and adult humour.
@@ -161,7 +177,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
               <span
                 class="c8"
               >
-                Play video, "Five things ants can teach us about management", 3,11
+                Contains strong language and adult humour. Play video, "Five things ants can teach us about management", 3,11
               </span>
               <div
                 aria-hidden="true"
@@ -539,12 +555,15 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   height: 100%;
   position: absolute;
   background-color: rgba(34,34,34,0.75);
+  border: 0.0625rem solid transparent;
   color: #FFFFFF;
-  padding: 0.5rem;
 }
 
 .c5 {
+  display: block;
   font-weight: normal;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .c3 {
@@ -602,8 +621,20 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
   }
 }
 
-@media (min-width:25rem) {
+@media screen and (-ms-high-contrast:active) {
   .c4 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c5 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c5 {
     padding: 1rem;
   }
 }
@@ -648,6 +679,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
               class="c4"
             >
               <strong
+                aria-hidden="true"
                 class="c5"
               >
                 Contains strong language and adult humour.
@@ -659,7 +691,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
               <span
                 class="c8"
               >
-                Play video, "Five things ants can teach us about management", 3,11
+                Contains strong language and adult humour. Play video, "Five things ants can teach us about management", 3,11
               </span>
               <div
                 aria-hidden="true"
