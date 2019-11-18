@@ -102,7 +102,7 @@
     "moment-timezone": "^0.5.27",
     "morgan": "^1.9.1",
     "ora": "^4.0.3",
-    "path-to-regexp": "^5.0.0",
+    "path-to-regexp": "^3.1.0",
     "polyfill-crypto.getrandomvalues": "1.0.0",
     "ramda": "^0.26.1",
     "react": "^16.12.0",
