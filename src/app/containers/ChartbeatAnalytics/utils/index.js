@@ -95,7 +95,7 @@ export const getConfig = ({
       type,
       useCanonical,
       path: currentPath,
-      virtualReferrer: `${origin}/referrer`,
+      virtualReferrer: referrer,
     }),
     ...(cookie && { idSync: { bbc_hid: cookie } }),
   };

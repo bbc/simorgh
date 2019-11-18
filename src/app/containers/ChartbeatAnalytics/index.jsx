@@ -28,6 +28,7 @@ const ChartbeatAnalytics = ({ data }) => {
           env,
           service,
           origin,
+          previousPath,
         }),
       );
     }
