@@ -1,8 +1,8 @@
-import 'isomorphic-fetch';
 import path from 'ramda/src/path';
 import nodeLogger from '#lib/logger.node';
 import preprocess from '#lib/utilities/preprocessor';
 import onClient from '#lib/utilities/onClient';
+import fetchCircuitBreaker from '#lib/utilities/fetchCircuitBreaker';
 import getBaseUrl from './utils/getBaseUrl';
 import getPreprocessorRules from './utils/getPreprocessorRules';
 
@@ -60,7 +60,7 @@ const handleError = error => {
 };
 
 const fetchData = pathname =>
-  fetch(getUrl(pathname)) // Remove .amp at the end of pathnames for AMP pages.
+  fetchCircuitBreaker(getUrl(pathname)) // Remove .amp at the end of pathnames for AMP pages.
     .then(handleResponse)
     .then(checkForError(getUrl(pathname)))
     .catch(handleError);
