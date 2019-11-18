@@ -43,10 +43,16 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       );
     });
 
-    if (serviceHasCaption(config[service].name)) {
+    // Have the test toggle between if mediaPlayer is enabled on live or not
+    let imageIndex = 1;
+    if (appToggles.mediaPlayer.enabled) {
+      imageIndex = 2;
+    }
+
+    if (serviceHasCaption(service)) {
       it('should have a visible image without a caption that is lazyloaded and has a noscript fallback image', () => {
         cy.get('figure')
-          .eq(1)
+          .eq(imageIndex)
           .within(() => {
             cy.get('div div div div').should(
               'have.class',
@@ -56,7 +62,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           .scrollIntoView();
 
         cy.get('figure')
-          .eq(1)
+          .eq(imageIndex)
           .should('be.visible')
           .should('to.have.descendants', 'img')
           .should('not.to.have.descendants', 'figcaption')

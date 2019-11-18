@@ -42,14 +42,10 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       });
 
-      const variantService = appConfig[service]
-        ? appConfig[service][variant]
-        : appConfig[config[service].name][variant];
-
-      it(`should display a ${variantService.translations.error[404].statusCode} error message on screen`, () => {
+      it(`should display a ${appConfig[service][variant].translations.error[404].statusCode} error message on screen`, () => {
         cy.get('h1').should(
           'contain',
-          `${variantService.translations.error[404].title}`,
+          `${appConfig[service][variant].translations.error[404].title}`,
         );
       });
 
@@ -58,7 +54,7 @@ export const testsThatFollowSmokeTestConfig = ({
           cy.get('a').should(
             'have.attr',
             'href',
-            `${variantService.translations.error[404].callToActionLinkUrl}`,
+            `${appConfig[service][variant].translations.error[404].callToActionLinkUrl}`,
           );
         });
       });
@@ -66,14 +62,9 @@ export const testsThatFollowSmokeTestConfig = ({
       it('should have correct title & description metadata', () => {
         /* Note that description & title tests for all other page types are in /pages/testsForAllPages.js */
         const description =
-          appConfig[config[service].name][variant].translations.error[404]
-            .title;
-        const { title } = appConfig[config[service].name][
-          variant
-        ].translations.error[404];
-        const pageTitle = `${title} - ${
-          appConfig[config[service].name][variant].brandName
-        }`;
+          appConfig[service][variant].translations.error[404].title;
+        const { title } = appConfig[service][variant].translations.error[404];
+        const pageTitle = `${title} - ${appConfig[service][variant].brandName}`;
 
         cy.get('head').within(() => {
           cy.title().should('eq', pageTitle);
@@ -104,38 +95,28 @@ export const testsThatFollowSmokeTestConfig = ({
         cy.get('html').should(
           'have.attr',
           'lang',
-          appConfig[config[service].name][variant].lang,
+          appConfig[service][variant].lang,
         );
       });
     });
     if (envConfig.standaloneErrorPages) {
       describe(`${service} error page routes`, () => {
         it(`/${service}/404 should have response code 200`, () => {
-          cy.testResponseCodeAndType(
-            `/${config[service].name}/404`,
-            200,
-            'text/html',
-          );
-          cy.visit(`${config[service].name}/404`)
+          cy.testResponseCodeAndType(`/${service}/404`, 200, 'text/html');
+          cy.visit(`${service}/404`)
             .get('[class^="StatusCode"]')
             .should(
               'contain',
-              appConfig[config[service].name][variant].translations.error[404]
-                .statusCode,
+              appConfig[service][variant].translations.error[404].statusCode,
             );
         });
         it(`/${service}/500 should have response code 200`, () => {
-          cy.testResponseCodeAndType(
-            `/${config[service].name}/500`,
-            200,
-            'text/html',
-          );
-          cy.visit(`${config[service].name}/500`)
+          cy.testResponseCodeAndType(`/${service}/500`, 200, 'text/html');
+          cy.visit(`${service}/500`)
             .get('[class^="StatusCode"]')
             .should(
               'contain',
-              appConfig[config[service].name][variant].translations.error[500]
-                .statusCode,
+              appConfig[service][variant].translations.error[500].statusCode,
             );
         });
       });
