@@ -8,6 +8,7 @@ const config = {
     chartbeatEnabled: false,
     avEmbedBaseUrl: 'https://www.bbc.com',
     standaloneErrorPages: false,
+    alwaysCheckForFallback: true,
   },
   stage: {
     baseUrl: 'https://www.stage.bbc.com',
@@ -28,6 +29,7 @@ const config = {
     chartbeatEnabled: true,
     avEmbedBaseUrl: 'https://www.test.bbc.com',
     standaloneErrorPages: false,
+    alwaysCheckForFallback: true,
   },
   local: {
     baseUrl: 'http://localhost:7080',
@@ -38,6 +40,7 @@ const config = {
     chartbeatEnabled: false,
     avEmbedBaseUrl: 'https://www.test.bbc.com',
     standaloneErrorPages: true,
+    alwaysCheckForFallback: false,
   },
 };
 
