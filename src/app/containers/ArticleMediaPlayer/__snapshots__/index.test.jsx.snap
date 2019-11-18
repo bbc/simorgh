@@ -173,15 +173,12 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   height: 100%;
   position: absolute;
   background-color: rgba(34,34,34,0.75);
-  border: 0.0625rem solid transparent;
   color: #FFFFFF;
+  padding: 0.5rem;
 }
 
 .c5 {
-  display: block;
   font-weight: normal;
-  padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
 }
 
 .c3 {
@@ -219,20 +216,8 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   }
 }
 
-@media screen and (-ms-high-contrast:active) {
-  .c4 {
-    background-color: transparent;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c5 {
-    background-color: window;
-  }
-}
-
 @media (min-width:25rem) {
-  .c5 {
+  .c4 {
     padding: 1rem;
   }
 }
