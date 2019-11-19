@@ -4,10 +4,10 @@ This directory contains code for logging events to ATI Analytics.
 
 ## Logging Click Events
 For logging click events you will need four things:
-* `useClickTracker` used to track a component to be tracked. This should be done by using `data-attributes` used in the component. This data attribute should also contain value for building the component info object, e.g. `data-navigation=‘Akuko_0’`
-* to compose the tracking URL via `buildATIClickParams` which uses [RequestContext](~../../contexts/RequestContext/index.jsx~) and [ServiceContext](~../../contexts/ServiceContext/index.jsx~).
-* to get all the component information by using `getComponentInfo`
-* `sendEventBeacon`  for sending the two events - ‘click’ and ‘view’.
+* [useClickTracker](https://github.com/bbc/simorgh/blob/latest/src/app/contexts/EventContext/index.jsx) used to track a component to be tracked. This should be done by using `data-attributes` used in the component. This data attribute should also contain value for building the component info object, e.g. `data-navigation=‘Akuko_0’`
+* to compose the tracking URL via [buildATIClickParams](https://github.com/bbc/simorgh/blob/latest/src/app/containers/ATIAnalytics/params/index.js#L41) which uses [RequestContext](https://github.com/bbc/simorgh/blob/latest/src/app/contexts/RequestContext/index.jsx) and [ServiceContext](https://github.com/bbc/simorgh/blob/latest/src/app/contexts/ServiceContext/index.jsx).
+* to get all the component information by using [getComponentInfo](https://github.com/bbc/simorgh/blob/latest/src/app/lib/analyticsUtils/index.js)
+* [sendEventBeacon](https://github.com/bbc/simorgh/blob/latest/src/app/containers/ATIAnalytics/beacon/index.js) for sending the two events - ‘click’ and ‘view’.
 
 ## How to set up tracking for a component
 In the container for the component you’re trying to track,  import `EventContext`, and use `useClickTracker` as such:
@@ -21,7 +21,7 @@ const componentContainer = () => {
 
 	useClickTracker('[data-attr]’, event => {
 		// `sendEventBeacon` will go here
-	}
+	});
 }
 ```
 
@@ -47,7 +47,7 @@ const componentContainer = () => {
 
 	useClickTracker('[data-attr]’, event => {
 		// `sendEventBeacon` will go here
-	}
+	});
 }
 ```
 
@@ -85,7 +85,7 @@ const componentContainer = () => {
 		const componentInfo = getComponentInfo(event, ‘navigation’, componentData);
 
 		// `sendEventBeacon` will go here
-	}
+	});
 }
 ```
 
@@ -124,7 +124,7 @@ const componentContainer = () => {
 	      componentInfo,
 	      …eventTrackingProps,
 	    });
-	}
+	});
 }
 ```
 
