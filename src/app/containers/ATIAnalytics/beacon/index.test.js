@@ -1,4 +1,4 @@
-import { sendEventBeacon, sendViewBeacon } from '.';
+import { sendEventBeacon } from '.';
 import * as sendBeacon from '#lib/analyticsUtils/sendBeacon';
 import * as analyticsUtils from '#lib/analyticsUtils';
 
@@ -40,36 +40,10 @@ describe('beacon', () => {
             're=1024x768',
             'hl=00-00-00',
             'lng=en-US',
-            'ati=PUB-[service-component]-[=]-[creation-label]-[PAR=container-component::name~CHD=child]-[]-[]-[]-[https://bbc.com]',
-            'type=AT',
-          ].join('&')}`,
-        ],
-        [
-          `https://foobar.com?${[
-            's=598285',
-            'r=0x0x24x24',
-            're=1024x768',
-            'hl=00-00-00',
-            'lng=en-US',
             'ati=PUB-[service-component]-[=click]-[creation-label]-[PAR=container-component::name~CHD=child]-[]-[]-[]-[https://bbc.com]',
             'type=AT',
           ].join('&')}`,
         ],
-      ]);
-    });
-  });
-
-  describe('view', () => {
-    it('should called sendBeacon exactly once', () => {
-      sendViewBeacon({
-        element: document.createElement('div'),
-        type: 'click',
-        service: 'service',
-        componentName: 'component',
-        componentInfo,
-      });
-      expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
-      expect(sendBeaconSpy.mock.calls).toEqual([
         [
           `https://foobar.com?${[
             's=598285',
@@ -77,7 +51,7 @@ describe('beacon', () => {
             're=1024x768',
             'hl=00-00-00',
             'lng=en-US',
-            'ati=PUB-[service-component]-[=viewed]-[creation-label]-[PAR=container-component::name~CHD=child]-[]-[]-[]-[https://bbc.com]',
+            'ati=PUB-[service-component]-[=view]-[creation-label]-[PAR=container-component::name~CHD=child]-[]-[]-[]-[https://bbc.com]',
             'type=AT',
           ].join('&')}`,
         ],
