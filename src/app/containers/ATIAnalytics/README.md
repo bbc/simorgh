@@ -4,9 +4,9 @@ This directory contains code for logging events to ATI Analytics.
 
 ## Logging Click Events
 For logging click events you will need four things:
-* to get all the component information by using `getComponentInfo`
-* to compose the tracking URL via `buildATIClickParams` which uses [RequestContext](~../../contexts/RequestContext/index.jsx~) and [ServiceContext](~../../contexts/ServiceContext/index.jsx~).
 * `useClickTracker` used to track a component to be tracked. This should be done by using `data-attributes` used in the component. This data attribute should also contain value for building the component info object, e.g. `data-navigation=‘Akuko_0’`
+* to compose the tracking URL via `buildATIClickParams` which uses [RequestContext](~../../contexts/RequestContext/index.jsx~) and [ServiceContext](~../../contexts/ServiceContext/index.jsx~).
+* to get all the component information by using `getComponentInfo`
 * `sendEventBeacon`  for sending the two events - ‘click’ and ‘view’.
 
 ## How to set up tracking for a component
