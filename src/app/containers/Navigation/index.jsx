@@ -8,6 +8,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import { EventContext } from '#contexts/EventContext';
 import { sendEventBeacon } from '../ATIAnalytics/beacon';
 import { buildATIClickParams } from '../ATIAnalytics/params';
+import { getComponentInfo } from '../../lib/analyticsUtils/index';
 
 const NavigationContainer = () => {
   const { script, translations, navigation, service, dir } = useContext(
@@ -30,13 +31,20 @@ const NavigationContainer = () => {
   useClickTracker('[data-navigation]', event => {
     const componentName = 'navigation';
     const eventData = event.srcElement.dataset[componentName];
+    const componentDataSplit = eventData.split('_');
+    const componentData = {
+      creationLabel: componentDataSplit[0],
+      child: componentDataSplit[1],
+    };
+
+    const componentInfo = getComponentInfo(event, componentName, componentData);
 
     sendEventBeacon({
       ...eventTrackingProps,
       element: event.target,
       componentName,
       type: 'click',
-      componentInfo: `${componentName}-${eventData}`,
+      componentInfo,
     });
   });
 

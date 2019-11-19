@@ -179,8 +179,29 @@ export const getClickInfo = (
   elem,
   { service, componentName, componentInfo, type },
 ) => {
-  const format = `PAR=container-${componentName}::name~CHD=${componentInfo.toLowerCase()}`;
-  const url = (elem && elem.href) || '/';
+  const campaignId = `${service}-${componentName}`;
+  const creationLabel = pathOr('', ['creationLabel'], componentInfo);
+  const url = pathOr('', ['url'], componentInfo);
+  const adId = pathOr('', ['adId'], componentInfo);
+  const format = componentInfo.format
+    ? `PAR=${componentInfo.format.parent}::name~CHD=${componentInfo.format.child}`
+    : '';
 
-  return `PUB-[${service}-${componentName}]-[=${type}]-[]-[${format}]-[]-[]-[]-[${url}]`;
+  return `PUB-[${campaignId}]-[=${type}]-[${creationLabel}]-[${format}]-[]-[]-[${adId}]-[${url}]`;
+};
+
+export const getComponentInfo = (event, componentName, componentData) => {
+  const creationLabel = componentData.creationLabel
+    ? `${componentName}-${componentData.creationLabel}`
+    : componentName;
+
+  return {
+    creationLabel,
+    url: event.target.href,
+    adId: pathOr('', ['adId'], componentData),
+    format: {
+      parent: `container-${componentName}`,
+      child: pathOr('', ['child'], componentData),
+    },
+  };
 };

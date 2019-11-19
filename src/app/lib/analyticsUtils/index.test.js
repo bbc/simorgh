@@ -22,6 +22,7 @@ const {
   getProducer,
   getAtiUrl,
   getClickInfo,
+  getComponentInfo,
 } = require('./index');
 
 let locServeCookieValue;
@@ -430,25 +431,62 @@ describe('getClickInfo', () => {
   const params = {
     service: 'service',
     componentName: 'component',
-    componentInfo: 'info',
+    componentInfo: {
+      creationLabel: 'creationLabel',
+      url: 'url.com',
+      format: {
+        parent: 'container-component',
+        child: 'child',
+      },
+    },
     type: 'type',
   };
 
   it('should return url section', () => {
     expect(getClickInfo({}, params)).toEqual(
-      'PUB-[service-component]-[=type]-[]-[PAR=container-component::name~CHD=info]-[]-[]-[]-[/]',
+      'PUB-[service-component]-[=type]-[creationLabel]-[PAR=container-component::name~CHD=child]-[]-[]-[]-[url.com]',
     );
   });
 
   it('should include elem.href in output', () => {
-    expect(
-      getClickInfo(
-        {
-          href: 'http://foobar.com',
-        },
-        params,
-      ),
-    ).toContain('[http://foobar.com]');
+    expect(getClickInfo({ target: { href: 'url.com' } }, params)).toContain(
+      '[url.com]',
+    );
+  });
+});
+
+describe('getComponentInfo', () => {
+  const event = { target: { href: 'url.com' } };
+  const props = { creationLabel: 'prop1', child: 'prop2' };
+
+  it('should return a componentInfo object', () => {
+    const result = {
+      creationLabel: 'component-prop1',
+      adId: '',
+      url: 'url.com',
+      format: {
+        parent: 'container-component',
+        child: 'prop2',
+      },
+    };
+
+    expect(getComponentInfo(event, 'component', props)).toEqual(result);
+  });
+
+  it('should return an object with adId if value included in props', () => {
+    props.adId = 'ad-id';
+
+    const result = {
+      creationLabel: 'component-prop1',
+      adId: 'ad-id',
+      url: 'url.com',
+      format: {
+        parent: 'container-component',
+        child: 'prop2',
+      },
+    };
+
+    expect(getComponentInfo(event, 'component', props)).toEqual(result);
   });
 });
 
