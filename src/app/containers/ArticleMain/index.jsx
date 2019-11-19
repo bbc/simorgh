@@ -3,7 +3,6 @@ import path from 'ramda/src/path';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '../ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { GelPageGrid } from '#app/components/Grid';
 import headings from '../Headings';
 import text from '../Text';
 import image from '../Image';
@@ -68,25 +67,12 @@ const ArticleMain = ({ articleData: data }) => {
         dateModified={lastPublished}
         aboutTags={aboutTags}
       />
-      <GelPageGrid
-        forwardedAs="main"
-        role="main"
-        columns={{
-          group0: 6,
-          group1: 6,
-          group2: 6,
-          group3: 6,
-          group4: 8,
-          group5: 20,
-        }}
-        enableGelGutters
-        enableGelMargins
-      >
+      <main role="main">
         <Blocks
           blocks={path(['content', 'model', 'blocks'], data)}
           componentsToRender={componentsToRender}
         />
-      </GelPageGrid>
+      </main>
     </>
   );
 };

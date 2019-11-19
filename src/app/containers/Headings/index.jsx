@@ -7,7 +7,7 @@ import { headlineModelPropTypes } from '#models/propTypes/headline';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import Grid from '#app/components/Grid';
+import Grid, { ArticlePageGrid } from '#app/components/Grid';
 
 const Headings = {
   headline: Headline,
@@ -61,22 +61,31 @@ const HeadingsContainer = ({ blocks, type }) => {
   const id = type === 'headline' ? headingId : subHeadingId;
 
   return (
-    <Grid
-      item
-      startOffset={{
-        group0: 1,
-        group1: 1,
-        group2: 1,
-        group3: 1,
-        group4: 2,
-        group5: 5,
-      }}
-      columns={layouts[type]}
-    >
-      <Heading script={script} service={service} id={id} tabIndex="-1">
-        {renderText()}
-      </Heading>
-    </Grid>
+    <ArticlePageGrid>
+      <Grid
+        enableGelMargins
+        item
+        startOffset={{
+          group0: 1,
+          group1: 1,
+          group2: 1,
+          group3: 1,
+          group4: 2,
+          group5: 5,
+        }}
+        columns={layouts[type]}
+        margins={{
+          group0: true,
+          group1: true,
+          group2: true,
+          group3: true,
+        }}
+      >
+        <Heading script={script} service={service} id={id} tabIndex="-1">
+          {renderText()}
+        </Heading>
+      </Grid>
+    </ArticlePageGrid>
   );
 };
 

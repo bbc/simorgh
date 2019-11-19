@@ -35,7 +35,6 @@ const RadioPageMain = ({ pageData }) => {
           group5: 20,
         }}
         enableGelGutters
-        enableGelMargins
       >
         <Grid
           item
@@ -55,6 +54,7 @@ const RadioPageMain = ({ pageData }) => {
             group4: 6,
             group5: 12,
           }}
+          margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
           <RadioPageBlocks blocks={blocks} />
         </Grid>

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { number } from 'prop-types';
 import Timestamp from '@bbc/psammead-timestamp-container';
-import Grid from '#app/components/Grid';
+import Grid, { ArticlePageGrid } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { formatDateNumeric } from './timeFormats';
 import {
@@ -54,30 +54,32 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
   }
    */
   return (
-    <Grid
-      item
-      columns={{
-        group0: 6,
-        group1: 6,
-        group2: 4,
-        group3: 5,
-        group4: 4,
-        group5: 8,
-      }}
-      startOffset={{
-        group0: 1,
-        group1: 1,
-        group2: 1,
-        group3: 1,
-        group4: 3,
-        group5: 1,
-      }}
-    >
-      <Timestamp {...timestampProps} {...firstPublishedProps} />
-      {firstPublished !== lastPublished && (
-        <Timestamp {...timestampProps} {...lastPublishedProps} />
-      )}
-    </Grid>
+    <ArticlePageGrid>
+      <Grid
+        item
+        columns={{
+          group0: 6,
+          group1: 6,
+          group2: 4,
+          group3: 5,
+          group4: 4,
+          group5: 8,
+        }}
+        margins={{
+          group0: true,
+          group1: true,
+          group2: true,
+          group3: true,
+          group4: false,
+          group5: false,
+        }}
+      >
+        <Timestamp {...timestampProps} {...firstPublishedProps} />
+        {firstPublished !== lastPublished && (
+          <Timestamp {...timestampProps} {...lastPublishedProps} />
+        )}
+      </Grid>
+    </ArticlePageGrid>
   );
 };
 

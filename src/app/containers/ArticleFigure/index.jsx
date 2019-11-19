@@ -4,7 +4,7 @@ import Figure from '@bbc/psammead-figure';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
-import Grid from '#app/components/Grid';
+import Grid, { ArticlePageGrid } from '#app/components/Grid';
 
 const renderCopyright = copyright =>
   copyright && <Copyright>{copyright}</Copyright>;
@@ -34,33 +34,6 @@ const ArticleFigure = ({
   if (height > width) {
     imageOrientation = 'portrait';
   }
-
-  const figureLayouts = {
-    landscape: {
-      group0: 6,
-      group1: 6,
-      group2: 6,
-      group3: 6,
-      group4: 6,
-      group5: 12,
-    },
-    square: {
-      group0: 5,
-      group1: 5,
-      group2: 5,
-      group3: 5,
-      group4: 5,
-      group5: 10,
-    },
-    portrait: {
-      group0: 6,
-      group1: 6,
-      group2: 4,
-      group3: 5,
-      group4: 4,
-      group5: 8,
-    },
-  };
 
   const imageLayouts = {
     landscape: {
@@ -118,10 +91,38 @@ const ArticleFigure = ({
 
   const caption = renderCaption(captionBlock, type);
 
+  const margins = {
+    landscape: {}, // uses default value for 'margins'
+    square: {
+      group0: true,
+      group1: true,
+      group2: true,
+      group3: true,
+    },
+    portrait: {
+      group0: true,
+      group1: true,
+      group2: true,
+      group3: true,
+    },
+  };
+  const startOffset = {
+    group0: 1,
+    group1: 1,
+    group2: 1,
+    group3: 1,
+    group4: 2,
+    group5: 5,
+  };
   return (
     <Figure>
-      <Grid columns={figureLayouts[imageOrientation]}>
-        <Grid item columns={imageLayouts[imageOrientation]}>
+      <ArticlePageGrid dir="ltr">
+        <Grid
+          item
+          columns={imageLayouts[imageOrientation]}
+          margins={margins[imageOrientation]}
+          startOffset={startOffset}
+        >
           <ImageWithPlaceholder
             ratio={ratio}
             alt={alt}
@@ -137,11 +138,15 @@ const ArticleFigure = ({
           </ImageWithPlaceholder>
         </Grid>
         {caption && (
-          <Grid item columns={captionLayouts[imageOrientation]}>
+          <Grid
+            item
+            columns={captionLayouts[imageOrientation]}
+            startOffset={startOffset}
+          >
             {caption}
           </Grid>
         )}
-      </Grid>
+      </ArticlePageGrid>
     </Figure>
   );
 };
