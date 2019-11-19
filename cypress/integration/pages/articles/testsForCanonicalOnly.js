@@ -1,7 +1,7 @@
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
 import appToggles from '../../../support/helpers/useAppToggles';
-import { getBlockData } from './helpers';
+import { getBlockData, getBlockByType } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = service => service === 'news';
@@ -43,39 +43,61 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       );
     });
 
-    // Have the test toggle between if mediaPlayer is enabled on live or not
-    let imageIndex = 1;
-    if (appToggles.mediaPlayer.enabled) {
-      imageIndex = 2;
-    }
-
     if (serviceHasCaption(service)) {
-      it('should have a visible image without a caption that is lazyloaded and has a noscript fallback image', () => {
-        cy.get('figure')
-          .eq(imageIndex)
-          .within(() => {
-            cy.get('div div div div').should(
-              'have.class',
-              'lazyload-placeholder',
+      describe('Image with placeholder', () => {
+        it('should have a visible image that is not lazyloaded', () => {
+          cy.get('div[class^="ImagePlaceholder"]')
+            .eq(0)
+            .within(() => {
+              cy.get('div[class^="lazyload-placeholder"]').should('not.exist');
+            });
+        });
+
+        it('should have a visible image that is lazyloaded and has a noscript fallback image', () => {
+          cy.get('div[class^="ImagePlaceholder"]')
+            .eq(1)
+            .scrollIntoView()
+            .should('be.visible')
+            .within(() => {
+              cy.get('noscript').contains('<img ');
+              cy.get('div[class^="lazyload-placeholder"]').should('exist');
+            });
+        });
+
+        it('should have an image with a caption', () => {
+          cy.window().then(win => {
+            const imagewithPlaceholder = getBlockData(
+              'image',
+              win.SIMORGH_DATA.pageData,
             );
-          })
-          .scrollIntoView();
 
-        cy.get('figure')
-          .eq(imageIndex)
-          .should('be.visible')
-          .should('to.have.descendants', 'img')
-          .should('not.to.have.descendants', 'figcaption')
+            if (imagewithPlaceholder) {
+              const captionBlock = getBlockByType(
+                imagewithPlaceholder.model.blocks,
+                'caption',
+              );
 
-          // NB: If this test starts failing unexpectedly it's a good sign that the dom is being
-          // cleared during hydration. React won't render noscript tags on the client so if they
-          // get cleared during hydration, the following render wont re-add them.
-          // See https://github.com/facebook/react/issues/11423#issuecomment-341751071 or
-          // https://github.com/bbc/simorgh/pull/1872 for more infomation.
-          .within(() => {
-            cy.get('noscript').contains('<img ');
-            cy.get('div div').should('not.have.class', 'lazyload-placeholder');
+              if (captionBlock) {
+                const {
+                  text,
+                } = captionBlock.model.blocks[0].model.blocks[0].model;
+
+                cy.get('figcaption')
+                  .eq(0)
+                  .should('be.visible')
+                  .and('contain', text);
+
+                // check for image with no caption
+              } else {
+                cy.get('figure')
+                  .eq(0)
+                  .within(() => {
+                    cy.get('figcaption').should('not.exist');
+                  });
+              }
+            }
           });
+        });
       });
     }
 
