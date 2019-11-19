@@ -40,11 +40,11 @@ const NavigationContainer = () => {
     const componentInfo = getComponentInfo(event, componentName, componentData);
 
     sendEventBeacon({
-      ...eventTrackingProps,
       element: event.target,
       componentName,
       type: 'click',
       componentInfo,
+      ...eventTrackingProps,
     });
   });
 
