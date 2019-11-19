@@ -16,21 +16,20 @@ const ChartbeatAnalytics = ({ data }) => {
   );
   const isAmpAndEnabled = platform === 'amp' && enabled;
   const isCanonicalAndEnabled = platform === 'canonical' && enabled;
+  const chartbeatConfig = getConfig({
+    platform,
+    pageType,
+    data,
+    brandName,
+    env,
+    service,
+    origin,
+    previousPath,
+  });
 
   useEffect(() => {
     if (isCanonicalAndEnabled) {
-      sendCanonicalChartbeatBeacon(
-        getConfig({
-          platform,
-          pageType,
-          data,
-          brandName,
-          env,
-          service,
-          origin,
-          previousPath,
-        }),
-      );
+      sendCanonicalChartbeatBeacon(chartbeatConfig);
     }
   }, [
     brandName,
@@ -45,20 +44,7 @@ const ChartbeatAnalytics = ({ data }) => {
   ]);
 
   return (
-    isAmpAndEnabled && (
-      <AmpChartbeatBeacon
-        chartbeatConfig={getConfig({
-          platform,
-          pageType,
-          data,
-          brandName,
-          env,
-          service,
-          origin,
-          previousPath,
-        })}
-      />
-    )
+    isAmpAndEnabled && <AmpChartbeatBeacon chartbeatConfig={chartbeatConfig} />
   );
 };
 
