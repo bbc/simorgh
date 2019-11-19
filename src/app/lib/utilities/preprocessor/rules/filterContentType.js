@@ -20,7 +20,6 @@ const filterUnknownContentTypes = data => {
         const isValidItemType = whitelist.includes(itemType);
         const isValidContentType =
           itemType !== 'PRO' || contentTypes.includes(item.contentType);
-
         const isValidGroupType =
           group.type === 'useful-links'
             ? item.assetTypeCode === 'PRO' && item.contentType === 'Guide'
