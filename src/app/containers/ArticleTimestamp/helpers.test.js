@@ -104,7 +104,7 @@ describe('ArticleTimestamp helper functions', () => {
   describe('formatType', () => {
     const realDateNow = Date.now.bind(global.Date);
     beforeEach(() => {
-      const dateNowStub = jest.fn(() => 1574165447078);
+      const dateNowStub = jest.fn(() => 1574165447078); // 19 November 2019, 10:47.07
       global.Date.now = dateNowStub;
     });
     afterEach(() => {
