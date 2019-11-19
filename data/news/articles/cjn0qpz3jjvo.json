@@ -142,9 +142,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -158,9 +156,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -234,9 +230,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -250,9 +244,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -326,9 +318,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -342,9 +332,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -418,9 +406,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -434,9 +420,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -510,9 +494,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -526,9 +508,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -661,9 +641,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -677,9 +655,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -753,9 +729,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -769,9 +743,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -845,9 +817,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -861,9 +831,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -937,9 +905,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -953,9 +919,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -1029,9 +993,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -1045,9 +1007,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -1233,9 +1193,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -1249,9 +1207,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -1325,9 +1281,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -1341,9 +1295,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -1417,9 +1369,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -1433,9 +1383,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -1509,9 +1457,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -1525,9 +1471,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -1601,9 +1545,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -1617,9 +1559,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -1759,9 +1699,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -1775,9 +1713,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -1851,9 +1787,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -1867,9 +1801,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -1943,9 +1875,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -1959,9 +1889,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -2035,9 +1963,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -2051,9 +1977,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -2127,9 +2051,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -2143,9 +2065,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -2256,9 +2176,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -2272,9 +2190,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -2348,9 +2264,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -2364,9 +2278,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -2440,9 +2352,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -2456,9 +2366,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -2532,9 +2440,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -2548,9 +2454,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -2624,9 +2528,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -2640,9 +2542,7 @@
                             "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": {
-                          "destinations": []
-                        }
+                        "syndication": { "destinations": [] }
                       }
                     },
                     {
@@ -2723,9 +2623,7 @@
     }
   },
   "promo": {
-    "headlines": {
-      "seoHeadline": "AV test article "
-    },
+    "headlines": { "seoHeadline": "AV test article " },
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:cjn0qpz3jjvo",
       "canonicalUrl": "https://www.bbc.com/news/articles/cjn0qpz3jjvo"

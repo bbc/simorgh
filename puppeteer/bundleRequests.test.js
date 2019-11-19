@@ -35,7 +35,7 @@ describe('Js bundle requests', () => {
     Object.keys(config[service].pageTypes)
       .filter(
         pageType =>
-          shouldSmokeTest(pageType, config[service].name) &&
+          shouldSmokeTest(pageType, service) &&
           config[service].pageTypes[pageType].path !== undefined,
       )
       .forEach(pageType => {
@@ -59,7 +59,7 @@ describe('Js bundle requests', () => {
               .forEach(url => {
                 expect(url).toMatch(
                   new RegExp(
-                    `(\\/static\\/js\\/(main|vendor|${config[service].name})-\\w+\\.\\w+\\.js)`,
+                    `(\\/static\\/js\\/(main|vendor|${service})-\\w+\\.\\w+\\.js)`,
                     'g',
                   ),
                 );
@@ -70,7 +70,7 @@ describe('Js bundle requests', () => {
             const serviceMatches = requests.filter(url =>
               url.match(
                 new RegExp(
-                  `(\\/static\\/js\\/${config[service].name}-\\w+\\.\\w+\\.js)`,
+                  `(\\/static\\/js\\/${service}-\\w+\\.\\w+\\.js)`,
                   'g',
                 ),
               ),
