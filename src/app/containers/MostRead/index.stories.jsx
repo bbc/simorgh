@@ -1,44 +1,45 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs';
+import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import AMPMostReadContainer from './Amp';
 import CanonicalMostReadContainer from './Canonical';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
-const renderMostReadContainer = (container, isAmp) => (
+const renderMostReadContainer = (container, service, isAmp) => (
   <RequestContextProvider
-    bbcOrigin="/new/articles/c0000000000o"
+    bbcOrigin={`/${service}/articles/c0000000000o`}
     id="c0000000000o"
     isAmp={isAmp}
     pageType="article"
-    service="news"
+    service={service}
     statusCode={200}
-    pathname="/news"
+    pathname={`/${service}`}
     variant={null}
   >
-    <ServiceContextProvider service="news" variant={null}>
+    <ServiceContextProvider service={service} variant={null}>
       {container}
     </ServiceContextProvider>
   </RequestContextProvider>
 );
 
-const stories = storiesOf('Containers|MostRead', module).addParameters({
-  chromatic: { disable: true },
+const stories = storiesOf('Containers|MostRead', module)
+  .addDecorator(withKnobs)
+  .addDecorator(withServicesKnob())
+  .addParameters({
+    chromatic: { disable: true },
+  });
+
+stories.add('Canonical Most Read', ({ service }) => {
+  console.log('service', service);
+  const container = <CanonicalMostReadContainer endpoint="/most_read.json" />;
+  return renderMostReadContainer(container, service, false);
 });
 
-stories.add('Canonical Most Read', () =>
-  renderMostReadContainer(
-    <CanonicalMostReadContainer endpoint="/most_read.json" />,
-    false,
-  ),
-);
-
-stories
-  .addDecorator(AmpDecorator)
-  .add('Amp Most Read', () =>
-    renderMostReadContainer(
-      <AMPMostReadContainer endpoint="/most_read.json" />,
-      true,
-    ),
-  );
+stories.addDecorator(AmpDecorator).add('Amp Most Read', ({ service }) => {
+  console.log('service', service);
+  const container = <AMPMostReadContainer endpoint="/most_read.json" />;
+  return renderMostReadContainer(container, service, true);
+});

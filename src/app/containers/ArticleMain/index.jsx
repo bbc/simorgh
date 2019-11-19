@@ -47,7 +47,6 @@ const ArticleMain = ({ articleData: data }) => {
 
   return (
     <>
-      <MostRead />
       <ATIAnalytics data={data} />
       <ChartbeatAnalytics data={data} />
       <ArticleMetadata
@@ -78,6 +77,7 @@ const ArticleMain = ({ articleData: data }) => {
             componentsToRender={componentsToRender}
           />
         </GhostGrid>
+        <MostRead />
       </main>
     </>
   );
