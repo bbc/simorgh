@@ -1,38 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { string } from 'prop-types';
-
-const AMP_LIST = (
-  <script
-    async
-    custom-element="amp-list"
-    src="https://cdn.ampproject.org/v0/amp-list-0.1.js"
-  />
-);
-
-const AMP_MUSTACHE = (
-  <script
-    async
-    custom-template="amp-mustache"
-    src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"
-  />
-);
-
-const AMP_BIND = (
-  <script
-    async
-    custom-element="amp-bind"
-    src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
-  />
-);
-
-const AMP_ACCESS = (
-  <script
-    async
-    custom-element="amp-access"
-    src="https://cdn.ampproject.org/v0/amp-access-0.1.js"
-  />
-);
+import {
+  AMP_LIST_JS,
+  AMP_MUSTACHE_JS,
+  AMP_BIND_JS,
+  AMP_ACCESS_JS,
+} from '@bbc/psammead-assets/amp-boilerplate';
 
 const AMP_ACCESS_DATA = endpoint => ({
   authorization: endpoint,
@@ -49,10 +23,10 @@ const AMPMostRead = ({ endpoint }) => {
   return (
     <>
       <Helmet htmlAttributes={{ amp: '' }}>
-        {AMP_LIST}
-        {AMP_MUSTACHE}
-        {AMP_BIND}
-        {AMP_ACCESS}
+        {AMP_LIST_JS}
+        {AMP_MUSTACHE_JS}
+        {AMP_BIND_JS}
+        {AMP_ACCESS_JS}
         {AMP_ACCESS_FETCH(endpoint)}
       </Helmet>
       <section amp-access="totalRecords > 0">
