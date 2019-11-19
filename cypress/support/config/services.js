@@ -1,22 +1,10 @@
-const envEquals = (appEnv, target) => {
-  if (appEnv === target) {
-    return true;
-  }
+const isLive = appEnv => appEnv === 'live';
 
-  return false;
-};
-
-const isLive = appEnv => {
-  return envEquals(appEnv, 'live');
-};
-
-const isTest = appEnv => {
-  return envEquals(appEnv, 'test');
-};
+const isTest = appEnv => appEnv === 'test';
 
 const serviceMapper = appEnv => {
   if (appEnv === 'stage') {
-    return 'live';
+    return 'test';
   }
 
   return appEnv;
