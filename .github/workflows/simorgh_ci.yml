@@ -1,4 +1,4 @@
-name: Simorgh CI
+name: Simorgh CI - Unit Tests
 
 on: [push]
 
