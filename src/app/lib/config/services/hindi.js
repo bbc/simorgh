@@ -177,6 +177,10 @@ export const service = {
           text: 'इस्तेमाल की शर्तें',
         },
         {
+          href: 'https://www.bbc.com/hindi/institutional-37343168',
+          text: 'बीबीसी के बारे में',
+        },
+        {
           href: 'https://www.bbc.com/privacy/',
           text: 'निजता की नीति',
         },
