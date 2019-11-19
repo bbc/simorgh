@@ -172,23 +172,23 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/aboutthebbc',
-          text: 'BBC વિશે',
+          text: 'બીબીસી વિશે',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
-          text: 'ગોપનીયતા નીતિ',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
+          text: 'પ્રાઇવસી પૉલિસી',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: 'કુકીઝ',
         },
         {
           href: 'https://www.bbc.com/gujarati/institutional-42224948',
-          text: 'BBC નો સંપર્ક કરો',
+          text: 'બીબીસીનો સંપર્ક કરો',
         },
       ],
       copyrightText:
-        ' BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
+        ' 2019 BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
     },
     fonts: [],
     timezone: 'Asia/Kolkata',
