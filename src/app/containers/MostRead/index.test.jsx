@@ -9,11 +9,12 @@ import zhongwenSimpMostReadData from '#data/zhongwen/mostRead/simp';
 
 let container;
 
-const renderMostReadContainer = async ({
-  service,
-  variant = null,
-  isAmp = false,
-}) =>
+const services = {
+  news: { variant: null, data: newsMostReadData },
+  zhongwen: { variant: 'simp', data: zhongwenSimpMostReadData },
+};
+
+const renderMostReadContainer = async ({ isAmp, service, variant = null }) =>
   act(async () => {
     ReactDOM.render(
       <RequestContextProvider
@@ -27,7 +28,9 @@ const renderMostReadContainer = async ({
         variant={variant}
       >
         <ServiceContextProvider service={service} variant={variant}>
-          <MostReadContainer />,
+          <MostReadContainer
+            endpoint={`http://localhost:7080/${service}/most_read.json`}
+          />
         </ServiceContextProvider>
       </RequestContextProvider>,
       container,
@@ -35,56 +38,54 @@ const renderMostReadContainer = async ({
   });
 
 describe('MostReadContainerCanonical', () => {
-  beforeAll(() => {
-    container = null;
+  beforeEach(() => {
     container = document.createElement('div');
     document.body.appendChild(container);
+  });
+
+  afterEach(() => {
+    container = null;
     fetch.resetMocks();
   });
 
-  it('test data returns as expected on canonical for News', async () => {
-    fetch.mockResponse(JSON.stringify(newsMostReadData));
-    await renderMostReadContainer({ service: 'news' });
-    console.log(container.querySelector('p').textContent);
-    expect(container.querySelector('p').textContent).toEqual(
-      `Last Updated: ${newsMostReadData.lastRecordTimeStamp}`,
-    );
-    expect(container.querySelectorAll('ul').length).toEqual(10);
-  });
+  Object.keys(services).map(service =>
+    it(`test data returns as expected on canonical for ${service}`, async () => {
+      const { variant, data: mostReadData } = services[service];
+      const paragraphText = `Last Updated: ${mostReadData.lastRecordTimeStamp}`;
 
-  it('test data returns as expected on canonical for Zhongwen Simp', async () => {
-    fetch.mockResponse(JSON.stringify(zhongwenSimpMostReadData));
-    await renderMostReadContainer({ service: 'zhongwen', variant: 'simp' });
-    expect(container.querySelector('p').textContent).toEqual(
-      `Last Updated: ${zhongwenSimpMostReadData.lastRecordTimeStamp}`,
-    );
-    expect(container.querySelectorAll('ul').length).toEqual(10);
-  });
+      fetch.mockResponse(JSON.stringify(mostReadData));
+      await renderMostReadContainer({ isAmp: false, service, variant });
+
+      expect(container.querySelector('p').textContent).toEqual(paragraphText);
+      expect(container.querySelectorAll('ul').length).toEqual(10);
+    }),
+  );
 });
 
 describe('MostReadContainerAmp', () => {
-  beforeAll(() => {
-    container = null;
+  beforeEach(() => {
     container = document.createElement('div');
     document.body.appendChild(container);
+  });
+
+  afterEach(() => {
+    container = null;
     fetch.resetMocks();
   });
 
-  it('test data returns as expected on canonical for News', async () => {
-    fetch.mockResponse(JSON.stringify(newsMostReadData));
-    await renderMostReadContainer({ service: 'news', isAmp: true });
+  Object.keys(services).map(service =>
+    it(`test data returns as expected on canonical for AMP - ${service}`, async () => {
+      const { variant, data: mostReadData } = services[service];
+      // const paragraphText = `Last Updated: ${mostReadData.lastRecordTimeStamp}`;
 
-    expect(container.querySelectorAll('ul').length).toEqual(10);
-  });
+      fetch.mockResponse(JSON.stringify(mostReadData));
+      await renderMostReadContainer({ isAmp: true, service, variant });
 
-  it('test data returns as expected on canonical for Zhongwen Simp', async () => {
-    fetch.mockResponse(JSON.stringify(zhongwenSimpMostReadData));
-    await renderMostReadContainer({
-      service: 'zhongwen',
-      variant: 'simp',
-      isAmp: true,
-    });
+      // eslint-disable-next-line no-console
+      console.log(container.innerHTML);
 
-    expect(container.querySelectorAll('ul').length).toEqual(10);
-  });
+      // expect(container.querySelectorAll('amp-list').length).toEqual(1);
+      // expect(container.querySelectorAll('ul').length).toEqual(10);
+    }),
+  );
 });
