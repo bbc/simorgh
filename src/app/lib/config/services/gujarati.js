@@ -187,8 +187,7 @@ export const service = {
           text: 'બીબીસીનો સંપર્ક કરો',
         },
       ],
-      copyrightText:
-        ' 2019 BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
+      copyrightText: 'BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
     },
     fonts: [],
     timezone: 'Asia/Kolkata',

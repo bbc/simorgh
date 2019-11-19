@@ -191,8 +191,7 @@ export const service = {
           text: 'বিবিসির সঙ্গে যোগাযোগ করুন',
         },
       ],
-      copyrightText:
-        ' © ২০১৯ বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
+      copyrightText: 'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
     },
     fonts: [F_SHONAR_BANGLA_BOLD, F_SHONAR_BANGLA_REGULAR],
     timezone: 'Asia/Dhaka',
