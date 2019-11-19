@@ -43,6 +43,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       );
     });
 
+    // Have the test toggle between if mediaPlayer is enabled on live or not
     let imageIndex = 1;
     if (appToggles.mediaPlayer.enabled) {
       imageIndex = 2;

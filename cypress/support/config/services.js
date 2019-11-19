@@ -1,6 +1,5 @@
 const services = {
   afaanoromoo: {
-    name: 'afaanoromoo',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -37,7 +36,6 @@ const services = {
     },
   },
   afrique: {
-    name: 'afrique',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -79,7 +77,6 @@ const services = {
     },
   },
   amharic: {
-    name: 'amharic',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -116,7 +113,6 @@ const services = {
     },
   },
   arabic: {
-    name: 'arabic',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -158,7 +154,6 @@ const services = {
     },
   },
   azeri: {
-    name: 'azeri',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -192,7 +187,6 @@ const services = {
     },
   },
   bengali: {
-    name: 'bengali',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -234,7 +228,6 @@ const services = {
     },
   },
   burmese: {
-    name: 'burmese',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -276,7 +269,6 @@ const services = {
     },
   },
   cymrufyw: {
-    name: 'cymrufyw',
     font: 'Reith',
     isWorldService: false,
     variant: 'default',
@@ -301,7 +293,6 @@ const services = {
     },
   },
   gahuza: {
-    name: 'gahuza',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -343,7 +334,6 @@ const services = {
     },
   },
   gujarati: {
-    name: 'gujarati',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -377,7 +367,6 @@ const services = {
     },
   },
   hausa: {
-    name: 'hausa',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -419,7 +408,6 @@ const services = {
     },
   },
   hindi: {
-    name: 'hindi',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -461,7 +449,6 @@ const services = {
     },
   },
   igbo: {
-    name: 'igbo',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -492,7 +479,6 @@ const services = {
     },
   },
   indonesia: {
-    name: 'indonesia',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -529,7 +515,6 @@ const services = {
     },
   },
   japanese: {
-    name: 'japanese',
     font: undefined,
     isWorldService: false,
     variant: 'default',
@@ -563,7 +548,6 @@ const services = {
     },
   },
   korean: {
-    name: 'korean',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -600,7 +584,6 @@ const services = {
     },
   },
   kyrgyz: {
-    name: 'kyrgyz',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -642,7 +625,6 @@ const services = {
     },
   },
   marathi: {
-    name: 'marathi',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -676,7 +658,6 @@ const services = {
     },
   },
   mundo: {
-    name: 'mundo',
     font: 'Reith',
     isWorldService: true,
     variant: 'default',
@@ -710,7 +691,6 @@ const services = {
     },
   },
   naidheachdan: {
-    name: 'naidheachdan',
     font: 'Reith',
     isWorldService: false,
     variant: 'default',
@@ -735,7 +715,6 @@ const services = {
     },
   },
   nepali: {
-    name: 'nepali',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -777,7 +756,6 @@ const services = {
     },
   },
   news: {
-    name: 'news',
     font: 'Reith',
     isWorldService: false,
     variant: 'default',
@@ -802,7 +780,6 @@ const services = {
     },
   },
   pashto: {
-    name: 'pashto',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -844,7 +821,6 @@ const services = {
     },
   },
   persian: {
-    name: 'persian',
     font: 'Nassim',
     isWorldService: true,
     variant: 'default',
@@ -884,7 +860,6 @@ const services = {
     },
   },
   pidgin: {
-    name: 'pidgin',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -915,7 +890,6 @@ const services = {
     },
   },
   portuguese: {
-    name: 'portuguese',
     font: 'Reith',
     isWorldService: true,
     variant: 'default',
@@ -949,7 +923,6 @@ const services = {
     },
   },
   punjabi: {
-    name: 'punjabi',
     font: undefined,
     variant: 'default',
     pageTypes: {
@@ -982,7 +955,6 @@ const services = {
     },
   },
   russian: {
-    name: 'russian',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1016,7 +988,6 @@ const services = {
     },
   },
   scotland: {
-    name: 'scotland',
     font: undefined,
     isWorldService: false,
     variant: 'default',
@@ -1040,45 +1011,7 @@ const services = {
       mediaAssetPage: { path: undefined, smoke: false },
     },
   },
-  serbianCyr: {
-    name: 'serbian',
-    font: undefined,
-    isWorldService: true,
-    variant: 'cyr',
-    pageTypes: {
-      articles: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/serbian/articles/c805k05kr73o/cyr',
-        smoke: true,
-      },
-      errorPage404: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/serbian/articles/cabcdefghijo/cyr',
-        smoke: true,
-      },
-      frontPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/serbian/cyr',
-        smoke: true,
-      },
-      liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/serbian/srbija-49427344/cyr',
-        smoke: false,
-      },
-    },
-  },
-  serbianLat: {
-    name: 'serbian',
+  serbian: {
     font: undefined,
     isWorldService: true,
     variant: 'lat',
@@ -1115,7 +1048,6 @@ const services = {
     },
   },
   sinhala: {
-    name: 'sinhala',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1157,7 +1089,6 @@ const services = {
     },
   },
   somali: {
-    name: 'somali',
     font: undefined,
     variant: 'default',
     pageTypes: {
@@ -1198,7 +1129,6 @@ const services = {
     },
   },
   sport: {
-    name: 'sport',
     font: undefined,
     variant: 'default',
     pageTypes: {
@@ -1210,7 +1140,6 @@ const services = {
     },
   },
   swahili: {
-    name: 'swahili',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1252,7 +1181,6 @@ const services = {
     },
   },
   tamil: {
-    name: 'tamil',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1294,7 +1222,6 @@ const services = {
     },
   },
   telugu: {
-    name: 'telugu',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1328,7 +1255,6 @@ const services = {
     },
   },
   thai: {
-    name: 'thai',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1362,7 +1288,6 @@ const services = {
     },
   },
   tigrinya: {
-    name: 'tigrinya',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1399,7 +1324,6 @@ const services = {
     },
   },
   turkce: {
-    name: 'turkce',
     font: 'Reith',
     isWorldService: true,
     variant: 'default',
@@ -1432,8 +1356,7 @@ const services = {
       },
     },
   },
-  ukchinaSimp: {
-    name: 'ukchina',
+  ukchina: {
     font: undefined,
     isWorldService: true,
     variant: 'simp',
@@ -1469,45 +1392,7 @@ const services = {
       },
     },
   },
-  ukchinaTrad: {
-    name: 'ukchina',
-    font: undefined,
-    isWorldService: true,
-    variant: 'trad',
-    pageTypes: {
-      articles: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/ukchina/articles/c0e8weny66ko/trad',
-        smoke: true,
-      },
-      errorPage404: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/ukchina/articles/cabcdefghijo/trad',
-        smoke: true,
-      },
-      frontPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/ukchina/trad',
-        smoke: true,
-      },
-      liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/ukchina/49375846/trad',
-        smoke: false,
-      },
-    },
-  },
   ukrainian: {
-    name: 'ukrainian',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1541,7 +1426,6 @@ const services = {
     },
   },
   urdu: {
-    name: 'urdu',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1583,7 +1467,6 @@ const services = {
     },
   },
   uzbek: {
-    name: 'uzbek',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1625,7 +1508,6 @@ const services = {
     },
   },
   vietnamese: {
-    name: 'vietnamese',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1659,7 +1541,6 @@ const services = {
     },
   },
   yoruba: {
-    name: 'yoruba',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1689,8 +1570,7 @@ const services = {
       },
     },
   },
-  zhongwenSimp: {
-    name: 'zhongwen',
+  zhongwen: {
     font: undefined,
     isWorldService: true,
     variant: 'simp',
@@ -1722,43 +1602,6 @@ const services = {
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
             : '/zhongwen/chinese-news-49631219/simp',
-        smoke: false,
-      },
-    },
-  },
-  zhongwenTrad: {
-    name: 'zhongwen',
-    font: undefined,
-    isWorldService: true,
-    variant: 'trad',
-    pageTypes: {
-      articles: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/zhongwen/articles/c3xd4x9prgyo/trad',
-        smoke: true,
-      },
-      errorPage404: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/zhongwen/articles/cabcdefghijo/trad',
-        smoke: true,
-      },
-      frontPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/zhongwen/trad',
-        smoke: true,
-      },
-      liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/zhongwen/chinese-news-49631219/trad',
         smoke: false,
       },
     },
