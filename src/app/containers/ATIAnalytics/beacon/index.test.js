@@ -9,6 +9,15 @@ describe('beacon', () => {
   const atiBaseUrl = 'https://foobar.com?';
   process.env.SIMORGH_ATI_BASE_URL = atiBaseUrl;
 
+  const componentInfo = {
+    creationLabel: 'creation-label',
+    url: 'https://bbc.com',
+    format: {
+      parent: 'container-component',
+      child: 'child',
+    },
+  };
+
   afterEach(() => {
     jest.clearAllMocks();
   });
@@ -20,14 +29,7 @@ describe('beacon', () => {
         type: 'click',
         service: 'service',
         componentName: 'component',
-        componentInfo: {
-          creationLabel: 'creation-label',
-          url: 'https://bbc.com',
-          format: {
-            parent: 'container-component',
-            child: 'child',
-          },
-        },
+        componentInfo,
       });
       expect(sendBeaconSpy).toHaveBeenCalledTimes(2);
       expect(sendBeaconSpy.mock.calls).toEqual([
@@ -64,14 +66,7 @@ describe('beacon', () => {
         type: 'click',
         service: 'service',
         componentName: 'component',
-        componentInfo: {
-          creationLabel: 'creation-label',
-          url: 'https://bbc.com',
-          format: {
-            parent: 'container-component',
-            child: 'child',
-          },
-        },
+        componentInfo,
       });
       expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
       expect(sendBeaconSpy.mock.calls).toEqual([
