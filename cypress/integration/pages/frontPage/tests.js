@@ -112,7 +112,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         });
 
         if (
-          serviceHasPublishedPromo(service) &&
+          serviceHasPublishedPromo(config[service].name) &&
           Cypress.env('APP_ENV') !== 'local'
         ) {
           it('individual promo should link to corresponding article pages and back navigation should link to frontpage', () => {
@@ -149,7 +149,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               const topstories = body.content.groups[0].items[0];
               const relatedItemsExists = 'relatedItems' in topstories;
 
-              if (relatedItemsExists && serviceHasIndexAlsos(service)) {
+              if (
+                relatedItemsExists &&
+                serviceHasIndexAlsos(config[service].name)
+              ) {
                 cy.get('[aria-labelledby="Top-stories"]')
                   .eq(0)
                   .within(() => {
@@ -160,7 +163,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                           .eq(0)
                           .then($el => {
                             expect($el.text()).includes(
-                              `${appConfig[service].default.translations.relatedContent}`,
+                              `${
+                                appConfig[config[service].name].default
+                                  .translations.relatedContent
+                              }`,
                             );
                           });
 

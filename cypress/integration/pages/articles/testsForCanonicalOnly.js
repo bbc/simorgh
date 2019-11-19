@@ -43,13 +43,11 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       );
     });
 
-    // Have the test toggle between if mediaPlayer is enabled on live on not
     let imageIndex = 1;
     if (appToggles.mediaPlayer.enabled) {
       imageIndex = 2;
     }
-
-    if (serviceHasCaption(service)) {
+    if (serviceHasCaption(config[service].name)) {
       it('should have a visible image without a caption that is lazyloaded and has a noscript fallback image', () => {
         cy.get('figure')
           .eq(imageIndex)
