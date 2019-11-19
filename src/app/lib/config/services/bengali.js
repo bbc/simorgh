@@ -167,7 +167,7 @@ export const service = {
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'বাইরের লিংক সম্পর্কে বিবিসির দৃষ্টিভঙ্গি সম্বন্ধে পড়ুন।',
+        text: 'বাইরের লিংক সম্পর্কে বিবিসির দৃষ্টিভঙ্গি সম্বন্ধে পড়ুন।',
       },
       links: [
         {
@@ -192,7 +192,7 @@ export const service = {
         },
       ],
       copyrightText:
-        ' বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
+        ' © ২০১৯ বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
     },
     fonts: [F_SHONAR_BANGLA_BOLD, F_SHONAR_BANGLA_REGULAR],
     timezone: 'Asia/Dhaka',
