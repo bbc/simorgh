@@ -20,7 +20,14 @@ describe('beacon', () => {
         type: 'click',
         service: 'service',
         componentName: 'component',
-        componentInfo: 'test',
+        componentInfo: {
+          creationLabel: 'creation-label',
+          url: 'https://bbc.com',
+          format: {
+            parent: 'container-component',
+            child: 'child',
+          },
+        },
       });
       expect(sendBeaconSpy).toHaveBeenCalledTimes(2);
       expect(sendBeaconSpy.mock.calls).toEqual([
@@ -31,7 +38,7 @@ describe('beacon', () => {
             're=1024x768',
             'hl=00-00-00',
             'lng=en-US',
-            'ati=PUB-[service-component]-[=]-[]-[PAR=container-component::name~CHD=test]-[]-[]-[]-[/]',
+            'ati=PUB-[service-component]-[=]-[creation-label]-[PAR=container-component::name~CHD=child]-[]-[]-[]-[https://bbc.com]',
             'type=AT',
           ].join('&')}`,
         ],
@@ -42,7 +49,7 @@ describe('beacon', () => {
             're=1024x768',
             'hl=00-00-00',
             'lng=en-US',
-            'ati=PUB-[service-component]-[=click]-[]-[PAR=container-component::name~CHD=test]-[]-[]-[]-[/]',
+            'ati=PUB-[service-component]-[=click]-[creation-label]-[PAR=container-component::name~CHD=child]-[]-[]-[]-[https://bbc.com]',
             'type=AT',
           ].join('&')}`,
         ],
@@ -57,7 +64,14 @@ describe('beacon', () => {
         type: 'click',
         service: 'service',
         componentName: 'component',
-        componentInfo: 'info',
+        componentInfo: {
+          creationLabel: 'creation-label',
+          url: 'https://bbc.com',
+          format: {
+            parent: 'container-component',
+            child: 'child',
+          },
+        },
       });
       expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
       expect(sendBeaconSpy.mock.calls).toEqual([
@@ -68,7 +82,7 @@ describe('beacon', () => {
             're=1024x768',
             'hl=00-00-00',
             'lng=en-US',
-            'ati=PUB-[service-component]-[=viewed]-[]-[PAR=container-component::name~CHD=info]-[]-[]-[]-[/]',
+            'ati=PUB-[service-component]-[=viewed]-[creation-label]-[PAR=container-component::name~CHD=child]-[]-[]-[]-[https://bbc.com]',
             'type=AT',
           ].join('&')}`,
         ],
