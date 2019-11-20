@@ -70,23 +70,19 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               'image',
               win.SIMORGH_DATA.pageData,
             );
-
             if (imagewithPlaceholder) {
               const captionBlock = getBlockByType(
                 imagewithPlaceholder.model.blocks,
                 'caption',
               );
-
               if (captionBlock) {
                 const {
                   text,
                 } = captionBlock.model.blocks[0].model.blocks[0].model;
-
                 cy.get('figcaption')
                   .eq(0)
                   .should('be.visible')
                   .and('contain', text);
-
                 // check for image with no caption
               } else {
                 cy.get('figure')
