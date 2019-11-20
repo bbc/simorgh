@@ -29,7 +29,7 @@ node {
                 Simorgh.checkout("${params.BRANCH}", 'simorgh')
                 Simorgh.installNodeModules()
                 stage ('Localhost Tests') {
-                    sh script: "npm run build && CYPRESS_SMOKE=${smoke} CYPRESS_ONLY_SERVICE=persian npm run test:ci;"
+                    sh script: "npm run build && CYPRESS_ONLY_SERVICE=persian npm run test:ci;"
                 }
             }
         }
