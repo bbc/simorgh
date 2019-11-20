@@ -147,7 +147,7 @@ export const service = {
         video: 'Video',
         listen: 'Listen',
         watch: 'Watch',
-        liveLabel: 'LIVE',
+        liveLabel: 'CANLI',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -169,11 +169,11 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/turkce/kurumsal-36765772',
           text: 'Kullanım koşulları',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/turkce/kurumsal-36765774',
           text: 'Gizlilik politikası',
         },
         {
@@ -181,7 +181,7 @@ export const service = {
           text: 'Çerezler',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/turkce/kurumsal-36767474',
           text: "BBC'yle temas kurun",
         },
       ],
