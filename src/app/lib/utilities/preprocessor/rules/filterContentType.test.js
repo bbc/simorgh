@@ -82,6 +82,24 @@ const FeatureAssetType = {
   assetTypeCode: 'PRO',
 };
 
+const usefulLinksItems = [
+  {
+    name: 'Ethiopia: Ndị uweojii agba gbuola ndị mmadụ',
+    contentType: 'Link',
+    assetTypeCode: 'PRO',
+  },
+  {
+    name: 'Onye isi ala ndị New Zealand dị ime',
+    contentType: 'Guide',
+    assetTypeCode: 'PRO',
+  },
+  {
+    name: 'Yabasị a na-achụ TB ọsọ',
+    contentType: 'Text',
+    assetTypeCode: 'PRO',
+  },
+];
+
 describe('filterUnknownContentTypes', () => {
   it('should no-op when no groups', () => {
     const data = {
@@ -468,6 +486,39 @@ describe('filterUnknownContentTypes', () => {
 
     it('should handle "real" data', () => {
       expect(filterUnknownContentTypes(azeriFixtureData)).toMatchSnapshot();
+    });
+  });
+
+  describe('filters usefulLinks', () => {
+    it('should remove usefulLink items with contentType !== Guide', () => {
+      const data = {
+        content: {
+          groups: [
+            {
+              type: 'useful-links',
+              items: usefulLinksItems,
+            },
+          ],
+        },
+      };
+      const expected = {
+        content: {
+          groups: [
+            {
+              type: 'useful-links',
+              items: [
+                {
+                  name: 'Onye isi ala ndị New Zealand dị ime',
+                  contentType: 'Guide',
+                  assetTypeCode: 'PRO',
+                },
+              ],
+            },
+          ],
+        },
+      };
+
+      expect(filterUnknownContentTypes(data)).toEqual(expected);
     });
   });
 });
