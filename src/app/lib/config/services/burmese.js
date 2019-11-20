@@ -88,11 +88,12 @@ export const service = {
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title:
+            'ကုိယ္ေရးအခ်က္အလက္လုံၿခဳံမႈႏွင့္ ကြတ္ကီးအသုံးျပဳမႈ မူဝါဒမ်ား အသစ္ျပင္ဆင္ထားပါသည္။',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'ကုိယ္ေရးအခ်က္အလက္လုံၿခဳံမႈႏွင့္ ကြတ္ကီးအသုံးျပဳမႈ မူဝါဒမ်ားတြင္ အေရးႀကီးေသာ အေျပာင္းအလဲအခ်ိဳ႕ျပဳလုပ္ထားသျဖင့္ သုံးစြဲသူမ်ားအေပၚ သက္ေရာက္မႈကို အသိေပးလိုပါသည္။',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -105,18 +106,19 @@ export const service = {
               linkUrl: null,
             },
           },
-          accept: 'OK',
-          reject: "Find out what's changed",
+          accept: 'ေကာင္းပါၿပီ။',
+          reject: 'ဘာေတြေျပာင္းလဲသြားသလဲ ၾကည့္ရန္',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'ကြတ္ကီးမ်ားအသုံးျပဳမႈကို သေဘာတူမတူ ေျပာပါ။',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
+              first:
+                'ပရိသတ္မ်ား အြန္လိုင္းတြင္ အေကာင္းဆုံးသုံးႏိုင္ရန္ မိမိတို့',
+              linkText: ' ႏွင့္ ကြတ္ကီးမ်ား',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                'ကို အသုံးျပဳပါသည္။ ယင္းကြတ္ကီးမ်ား အားလုံးကို သေဘာတူမတူ ေျပာျပပါ။',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -129,8 +131,8 @@ export const service = {
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'သေဘာတူပါသည္။',
+          reject: 'သေဘာမတူပါ၊ ဆက္တင္ကို သြားၾကည့္လိုပါသည္။ ',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
