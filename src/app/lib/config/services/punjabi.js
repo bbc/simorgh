@@ -172,7 +172,7 @@ export const service = {
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/punjabi/institutional-49282853',
-        text: "ਤੁਸੀਂ ਬੀਬੀਸੀ 'ਤੇ ਕਿਉਂ ਵਿਸ਼ਵਾਸ਼ ਕਰ ਸਕਦੇ ਹੋ",
+        text: "ਤੁਸੀਂ ਬੀਬੀਸੀ 'ਤੇ ਕਿਉਂ ਵਿਸ਼ਵਾਸ਼ ਕਰ ਸਕਦੇ ਹੋ",
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
