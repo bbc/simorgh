@@ -179,7 +179,7 @@ export const service = {
           text: 'कुकीज',
         },
         {
-          href: 'bbc.com/marathi/institutional-42227676',
+          href: 'https://www.bbc.com/marathi/institutional-42227676',
           text: 'बीबीसीला संपर्क करा',
         },
       ],
