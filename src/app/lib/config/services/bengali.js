@@ -91,11 +91,11 @@ export const service = {
       },
       consentBanner: {
         privacy: {
-          title: 'আমরা আমাদের প্রিভেসি এবং কুকি বিষয়ক নীতিমালা আপডেট করেছি।',
+          title: 'আমরা আমাদের প্রিভেসি এবং কুকি বিষয়ক নীতিমালা আপডেট করেছি।',
           description: {
             uk: {
               first:
-                'আমাদের প্রিভেসি এবং কুকি নীতিমালায় আমরা কিছু গুরুত্বপূর্ণ পরিবর্তন এনেছি।  আপনার এবং আপনার ব্যবহৃত ডেটার জন্য এই পরিবর্তনের অর্থ কী সেটা আমরা আপনাকে জানাতে চাই।',
+                'আমাদের প্রিভেসি এবং কুকি নীতিমালায় আমরা কিছু গুরুত্বপূর্ণ পরিবর্তন এনেছি।  আপনার এবং আপনার ব্যবহৃত ডেটার জন্য এই পরিবর্তনের অর্থ কী সেটা আমরা আপনাকে জানাতে চাই।',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -109,7 +109,7 @@ export const service = {
             },
           },
           accept: 'ঠিক আছে।',
-          reject: 'কী পরিবর্তন হয়েছে দেখুন।',
+          reject: 'কী পরিবর্তন হয়েছে দেখুন।',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
@@ -119,7 +119,7 @@ export const service = {
               first: 'আমরা ',
               linkText: 'কুকি',
               last:
-                ' ব্যবহার করি যাতে অনলাইনে আপনার বিচরণ স্বচ্ছন্দ হয়।সবগুলো কুকি ব্যবহারের জন্য আপনি সম্মতি দিচ্ছেন কিনা জানান।',
+                ' ব্যবহার করি যাতে অনলাইনে আপনার বিচরণ স্বচ্ছন্দ হয়।সবগুলো কুকি ব্যবহারের জন্য আপনি সম্মতি দিচ্ছেন কিনা জানান।',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -133,7 +133,7 @@ export const service = {
             },
           },
           accept: 'হ্যাঁ, আমি সম্মতি দিচ্ছি।',
-          reject: 'না, আমাকে সেটিং-এ ফেরত নিয়ে যান।',
+          reject: 'না, আমাকে সেটিং-এ ফেরত নিয়ে যান।',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
