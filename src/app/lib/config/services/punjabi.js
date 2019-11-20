@@ -47,7 +47,7 @@ export const service = {
       home: 'ਹੋਮ ਪੇਜ',
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
-      relatedContent: 'Related content',
+      relatedContent: 'ਇਸ ਖ਼ਬਰ ਬਾਰੇ ਹੋਰ',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -136,7 +136,7 @@ export const service = {
         video: 'ਵੀਡੀਓ',
         listen: 'Listen',
         watch: 'Watch',
-        liveLabel: 'LIVE',
+        liveLabel: 'ਸਿੱਧਾ ਪ੍ਰਸਾਰਣ',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
