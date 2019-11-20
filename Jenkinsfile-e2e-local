@@ -30,10 +30,8 @@ node {
                     Simorgh.checkout("${params.BRANCH}", 'simorgh')
                     Simorgh.installNodeModules()
                     stage ('Localhost Tests') {
-                        Simorgh.runLocalAndProductionTests()
+                        sh script: "npm run build && CYPRESS_SMOKE=${smoke} npm run test:ci;"
                     }
-                } finally {
-                    Simorgh.e2esPostBuildSteps('local')
                 }
             }
         }
