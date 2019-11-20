@@ -100,7 +100,7 @@ export const service = {
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'ကုိယ္ေရးအခ်က္အလက္လုံၿခဳံမႈႏွင့္ ကြတ္ကီးအသုံးျပဳမႈ မူဝါဒမ်ားတြင္ အေရးႀကီးေသာ အေျပာင္းအလဲအခ်ိဳ႕ျပဳလုပ္ထားသျဖင့္ သုံးစြဲသူမ်ားအေပၚ သက္ေရာက္မႈကို အသိေပးလိုပါသည္။',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -153,7 +153,7 @@ export const service = {
         },
         listen: 'Listen',
         watch: 'Watch',
-        liveLabel: 'LIVE',
+        liveLabel: 'တိုက်ရိုက်ထုတ်လွှင့်မှု',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -161,8 +161,8 @@ export const service = {
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: 'အဖတ္အမ်ားဆုံး',
+      lastUpdated: 'ေနာက္ဆုံးအသစ္တင္ခ်ိန္: ',
     },
     footer: {
       trustProjectLink: {
