@@ -6,9 +6,6 @@ import { getBlockData } from './helpers';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = service => service === 'news';
 
-// TODO: Remove once we have inline link on article pages linking to another article page
-const serviceHasInlineLink = service => service === 'news';
-
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
@@ -47,41 +44,25 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     });
 
     if (
-      serviceHasInlineLink(service) &&
-      (Cypress.env('APP_ENV') === 'local' || Cypress.env('APP_ENV') === 'test')
+      Cypress.env('APP_ENV') === 'local' ||
+      Cypress.env('APP_ENV') === 'test'
     ) {
-      describe('Focus', () => {
-        describe.only('Navigation between articles from different services', () => {
-          it('should not focus on `h1#content` when user navigates to an article', () => {
-            cy.get('main a[href*="/articles/"]').click();
-            cy.get('h1#content').should('not.be.focused');
-            cy.go('back');
-          });
-
-          it('should always focus on `h1#content` when user navigates to previously visited articles using the `back` and `forward` button', () => {
-            cy.get('main a[href*="/articles/"]').click();
-            cy.go('back');
-            cy.focused().should('have.id', 'content');
-            cy.go('forward');
-            cy.focused().should('have.id', 'content');
+      describe.only('Focus', () => {
+        beforeEach(() => {
+          // visit an article that has an inline link to another article of the same service
+          cy.visit('/news/articles/c0g992jmmkko', {
+            failOnStatusCode: !pageType.includes('error'),
           });
         });
 
-        describe('Navigating between articles from the same service', () => {
-          beforeEach(() => {
-            cy.visit('/news/articles/c0g992jmmkko', {
-              failOnStatusCode: !pageType.includes('error'),
-            });
-          });
-          it('should not focus on `h1#content` on initial load of a service', () => {
-            cy.focused().should('not.have.id', 'content');
-          });
+        it('should not focus on `h1#content` on initial load of a service', () => {
+          cy.focused().should('not.have.id', 'content');
+        });
 
-          it('should focus on `h1#content` when user navigates to another article of the same service', () => {
-            cy.get('main a[href*="/articles/"]').click();
+        it('should focus on `h1#content` when user navigates to another article of the same service', () => {
+          cy.get('main a[href*="/articles/"]').click();
 
-            cy.focused().should('have.id', 'content');
-          });
+          cy.focused().should('have.id', 'content');
         });
       });
     }
