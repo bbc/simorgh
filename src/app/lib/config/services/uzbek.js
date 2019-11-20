@@ -162,7 +162,7 @@ export const service = {
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        text: 'Нега сиз Би-би-сига ишонишингиз мумкин?',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
@@ -171,15 +171,15 @@ export const service = {
       links: [
         {
           href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          text: 'Фойдаланиш шартлари',
         },
         {
           href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          text: 'Шахсий ҳаёт махфийлиги сиёсати',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: 'Куки(Cookies)',
         },
         {
           href: 'https://www.bbc.com/contact/',
