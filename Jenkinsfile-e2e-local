@@ -1,9 +1,6 @@
 #!/usr/bin/env groovy
 library 'Simorgh'
 
-// Run latest every 3 hours
-def cron_string = env.BRANCH_NAME == "latest" ? "0 */3 * * *" : ""
-
 def stageHasFailed = false;
 
 node {
@@ -15,10 +12,9 @@ node {
                     artifactDaysToKeepStr: '10'
                 )
             ),
-            pipelineTriggers([cron(cron_string)]),
             parameters(
                 [
-                    string(defaultValue: 'latest', name: 'BRANCH')
+                    string(defaultValue: 'nicer-e2e-reports', name: 'BRANCH')
                 ]
             )
         ]
