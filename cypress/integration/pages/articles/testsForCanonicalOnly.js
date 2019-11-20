@@ -48,6 +48,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         it('should have a visible image that is not lazyloaded', () => {
           cy.get('div[class^="ImagePlaceholder"]')
             .eq(0)
+            .should('be.visible')
+            .should('to.have.descendants', 'img')
             .within(() => {
               cy.get('div[class^="lazyload-placeholder"]').should('not.exist');
             });
