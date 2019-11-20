@@ -175,11 +175,15 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/tamil/institutional-37286680',
           text: 'பயன்பாட்டு விதி',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/tamil/institutional-37286682',
+          text: 'பிபிசி பற்றி',
+        },
+        {
+          href: 'https://www.bbc.com/tamil/institutional-37286684',
           text: 'தனியுரிமை கொள்கை',
         },
         {
@@ -187,7 +191,7 @@ export const service = {
           text: 'குக்கிகள்',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/tamil/institutional-37288738',
           text: 'பிபிசி-யை தொடர்பு கொள்க',
         },
       ],
