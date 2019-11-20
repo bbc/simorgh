@@ -72,12 +72,13 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             const {
               model: { blocks },
             } = model.blocks && getBlockByType(model.blocks, 'caption');
-            const { text } = blocks && blocks[0].model.blocks[0].model;
-            if (text) {
+            const { text: captionText } =
+              blocks && blocks[0].model.blocks[0].model;
+            if (captionText) {
               cy.get('figcaption')
                 .eq(0)
                 .should('be.visible')
-                .and('contain', text);
+                .and('contain', captionText);
             } else {
               // check for image with no caption
               cy.get('figure')
