@@ -26,12 +26,10 @@ node {
             cleanWs() // Clean the workspace
 
             docker.image(Simorgh.nodeDockerImage()).inside('--ipc host') {
-                try {
-                    Simorgh.checkout("${params.BRANCH}", 'simorgh')
-                    Simorgh.installNodeModules()
-                    stage ('Localhost Tests') {
-                        sh script: "npm run build && CYPRESS_SMOKE=${smoke} CYPRESS_ONLY_SERVICE=persian npm run test:ci;"
-                    }
+                Simorgh.checkout("${params.BRANCH}", 'simorgh')
+                Simorgh.installNodeModules()
+                stage ('Localhost Tests') {
+                    sh script: "npm run build && CYPRESS_SMOKE=${smoke} CYPRESS_ONLY_SERVICE=persian npm run test:ci;"
                 }
             }
         }
