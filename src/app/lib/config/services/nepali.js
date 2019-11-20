@@ -171,6 +171,10 @@ export const service = {
           text: 'प्रयोगका सर्तहरू',
         },
         {
+          href: 'https://www.bbc.com/nepali/institutional-38157766',
+          text: 'बीबीसीको बारेमा',
+        },
+        {
           href: 'https://www.bbc.com/privacy/',
           text: 'गोपनीयता नीति',
         },
