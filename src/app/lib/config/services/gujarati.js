@@ -49,9 +49,9 @@ export const service = {
       skipLinkText: 'સામગ્રી પર જાઓ',
       relatedContent: 'સંબંધિત સમાચાર',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'મીડિયા પ્લેયર',
+        audioPlayer: 'ઓડિયો પ્લેયર',
+        videoPlayer: 'વીડિયો પ્લેયર',
       },
       error: {
         404: {
