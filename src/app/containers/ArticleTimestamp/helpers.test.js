@@ -102,6 +102,14 @@ describe('ArticleTimestamp helper functions', () => {
   });
 
   describe('formatType', () => {
+    const realDateNow = Date.now.bind(global.Date);
+    beforeEach(() => {
+      const dateNowStub = jest.fn(() => 1574165447078); // 19 November 2019, 10:47.07
+      global.Date.now = dateNowStub;
+    });
+    afterEach(() => {
+      global.Date.now = realDateNow;
+    });
     const dateFormats = {
       date: 'D MMMM YYYY',
       dateTimeTimezone: 'D MMMM YYYY, HH:mm z',
@@ -117,8 +125,8 @@ describe('ArticleTimestamp helper functions', () => {
     });
 
     it(`should return date format when lastPublished and firstPublished are not on the same day`, () => {
-      const firstPublished = timestampGenerator({ hours: 50 });
-      const lastPublished = timestampGenerator({ hours: 20 });
+      const firstPublished = timestampGenerator({ days: 4 });
+      const lastPublished = timestampGenerator({ days: 2 });
       expect(formatType({ firstPublished, lastPublished })).toBe(
         dateFormats.date,
       );
