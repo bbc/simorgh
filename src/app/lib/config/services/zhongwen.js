@@ -43,7 +43,7 @@ const baseServiceConfig = {
     home: 'Home',
     currentPage: 'Current page',
     skipLinkText: 'Skip to content',
-    relatedContent: 'Related content',
+    relatedContent: '更多有关此项报道的内容',
     mediaAssetPage: {
       mediaPlayer: 'Media player',
       audioPlayer: 'Audio player',
