@@ -60,9 +60,9 @@ export const service = {
           message:
             'Бунга сабаб Сиз веб саҳифа адресини нотўғри ёзган бўлишингиз мумкин. Илтимос, текшириб қайтадан ёзинг',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'url манзилини яна бир бор текшириб кўринг',
+            'Браузерингиздаги "янгилаш" тугмасини босинг',
+            'Ушбу саҳифани Би-би-сининг қидирув панелидан излаб кўринг',
           ],
           callToActionFirst: 'Alternatively, please visit the ',
           callToActionLinkText: 'BBC Бош саҳифа',
@@ -74,8 +74,8 @@ export const service = {
           title: '500- Хато',
           message: 'Муаммо пайдо бўлди. Илтимос, саҳифани янгиланг',
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            'Браузерингиздаги "янгилаш" тугмасини босинг',
+            'Яна бироз фурсатдан кейин ҳаракат қилиб кўринг',
           ],
           callToActionFirst: 'Alternatively, please visit the ',
           callToActionLinkText: 'BBC Бош саҳифа',
@@ -111,24 +111,24 @@ export const service = {
           title: 'Кукис(Cookies)га рози эканингизни билдиринг',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
+              first: 'Биз ',
+              linkText: 'кукидан',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' сизга янада яхшироқ онлайн имконият бериш мақсадида фойдаланамиз. Марҳамат қилиб ушбу барча кукиларга розилигингизни билдиринг.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
-              linkText: 'cookies',
+              first: 'Биз ва бизнинг ҳамкорларимиз',
+              linkText: 'кукисга',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ', сингари технологиядан фойдаланамиз ва уларни сизга янада яхшироқ онлайн маҳсулот тақдим этиш, контентни ва ҳамда сизга кўрсатилаётган рекламани айнан сизга мослаш мақсадида тўплаймиз. Агар рози бўлсангиз, марҳамат қилиб буни бизга маълум қилинг!',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'Ҳа, мен розиман',
+          reject: 'Йўқ, мени ўзгартириш саҳифасига етакланг',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
