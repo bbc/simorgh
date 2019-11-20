@@ -66,31 +66,23 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
         it('should have an image with a caption', () => {
           cy.window().then(win => {
-            const imagewithPlaceholder = getBlockData(
-              'image',
-              win.SIMORGH_DATA.pageData,
-            );
-            if (imagewithPlaceholder) {
-              const captionBlock = getBlockByType(
-                imagewithPlaceholder.model.blocks,
-                'caption',
-              );
-              if (captionBlock) {
-                const {
-                  text,
-                } = captionBlock.model.blocks[0].model.blocks[0].model;
-                cy.get('figcaption')
-                  .eq(0)
-                  .should('be.visible')
-                  .and('contain', text);
-                // check for image with no caption
-              } else {
-                cy.get('figure')
-                  .eq(0)
-                  .within(() => {
-                    cy.get('figcaption').should('not.exist');
-                  });
-              }
+            const { model } = getBlockData('image', win.SIMORGH_DATA.pageData);
+            const {
+              model: { blocks },
+            } = model.blocks && getBlockByType(model.blocks, 'caption');
+            const { text } = blocks && blocks[0].model.blocks[0].model;
+            if (text) {
+              cy.get('figcaption')
+                .eq(0)
+                .should('be.visible')
+                .and('contain', text);
+            } else {
+              // check for image with no caption
+              cy.get('figure')
+                .eq(0)
+                .within(() => {
+                  cy.get('figcaption').should('not.exist');
+                });
             }
           });
         });
