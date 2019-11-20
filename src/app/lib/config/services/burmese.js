@@ -123,10 +123,10 @@ export const service = {
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
-              linkText: 'cookies',
+              first: 'ဘီဘီစီႏွင့္ ပါတနာမ်ားသည္ ',
+              linkText: ' ႏွင့္ ကြတ္ကီးမ်ား ',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ', သုံးေသာ နည္းပညာမ်ားျဖင့္ ပရိသတ္မ်ား အြန္လိုင္းတြင္ အေကာင္းဆုံးၾကည့္ႏိုင္ရန္၊ မိမိတို့ ၾကည့္လိုသည့္ အေၾကာင္းအရာမ်ားၾကည့္ႏိုင္ရန္၊ မိမိတို႔ႏွင့္ ကိုက္ညီမည့္ ေၾကာ္ျငာမ်ားကိုသာ ရရွိရန္ အသုံးျပဳသူ၏ သုံးစြဲပုံေဒတာမ်ားကို ေကာက္ယူပါသည္။ ယင္းသုိ႔ အသုံးျပဳမႈကို သေဘာတူမတူ ေျပာျပပါ။ ',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
