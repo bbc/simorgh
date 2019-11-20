@@ -25,7 +25,7 @@ export const processBlock = _block => {
   const block = _block;
 
   if (path(['text'], block)) {
-    // escape quotes in all text
+    // handle special characters in all text
     block.text = parseReplacements(block.text);
 
     // make introductions bold
