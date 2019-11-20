@@ -49,9 +49,9 @@ export const service = {
       skipLinkText: 'Саҳифага ўтиш',
       relatedContent: 'Тема боюнча башка макалалар',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'Медиа плейер',
+        audioPlayer: 'Аудио плейер',
+        videoPlayer: 'Видео плейер',
       },
       error: {
         404: {
