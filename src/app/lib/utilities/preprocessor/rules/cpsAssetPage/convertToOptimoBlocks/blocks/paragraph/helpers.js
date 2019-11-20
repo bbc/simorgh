@@ -3,16 +3,23 @@ import path from 'ramda/src/path';
 
 const boldWrap = text => `<bold>${text}</bold>`;
 
-const replacements = {
-  '&quot;': '"',
-  '&amp;': '&',
-  '&lt;': '<',
-  '&gt;': '>',
+// CPS encodes some known special characters into HTML entities
+// This function reverses that process, to prepare the text for rendering
+const parseReplacements = (
+  text,
+  replacements = {
+    '&quot;': '"',
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+  },
+) => {
+  const replacementsRegex = new RegExp(
+    Object.keys(replacements).join('|'),
+    'gi',
+  );
+  return text.replace(replacementsRegex, match => replacements[match]);
 };
-const replacementsRegex = new RegExp(Object.keys(replacements).join('|'), 'gi');
-
-const parseReplacements = text =>
-  text.replace(replacementsRegex, match => replacements[match]);
 
 export const processBlock = _block => {
   const block = _block;
