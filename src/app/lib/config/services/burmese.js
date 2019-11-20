@@ -167,28 +167,29 @@ export const service = {
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        text: 'ဘီဘီစီကို ဘာေၾကာင့္ ယုံၾကည္ႏိုင္သလဲ။',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text:
+          'ျပင္ပဝက္ဆိုက္မ်ားကို လင့္ ထည့္ေပးျခင္းႏွင့္ ပတ္သက္ေသာ ဘီဘီစီလုပ္ထုံးလုပ္နည္းကို ဖတ္ရန္။',
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          href: 'https://www.bbc.com/burmese/institutional-37574842',
+          text: 'အသုံးျပဳရန္စည္းမ်ဥ္း',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          href: 'https://www.bbc.com/burmese/institutional-37577521',
+          text: 'ကိုယ္ေရးအခ်က္အလက္လုံၿခဳံမႈ မူဝါဒ',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: 'ကြတ္ကီး',
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          href: 'https://www.bbc.com/burmese/institutional-37577525',
+          text: 'ဘီီဘီစီကို ဆက္သြယ္ရန္',
         },
       ],
       copyrightText:
