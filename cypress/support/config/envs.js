@@ -25,7 +25,7 @@ const config = {
     baseUrl: 'https://www.stage.bbc.com',
     dataUrl: 'https://www.stage.bbc.com',
     assetUrl: 'https://news.test.files.bbci.co.uk/include/articles/public',
-    assetOrigin: 'https://test.stage.files.bbci.co.uk',
+    assetOrigin: 'https://news.test.files.bbci.co.uk',
     atiUrl: 'https://logws1363.ati-host.net?',
     chartbeatEnabled: true,
     avEmbedBaseUrl: 'https://www.test.bbc.com',
