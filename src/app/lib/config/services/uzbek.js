@@ -9,7 +9,7 @@ export const service = {
   default: {
     lang: `uz-Cyrl`,
     articleAuthor: `https://www.facebook.com/#!/bbcuzbek`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Янгиланди',
     atiAnalyticsAppName: 'news-uzbek',
     atiAnalyticsProducerId: '96',
     brandName: "BBC News O'zbek",
@@ -18,11 +18,11 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png',
     defaultImageAltText: "BBC News O'zbek",
     dir: `ltr`,
-    externalLinkText: ', external',
+    externalLinkText: ', ташқи',
     imageCaptionOffscreenText: 'Сүрөттүн түшүндүрмөсү, ',
     videoCaptionOffscreenText: 'Видеонун түшүндүрмөсү, ',
     audioCaptionOffscreenText: 'Аудионун түшүндүрмөсү, ',
-    defaultCaptionOffscreenText: 'Caption, ',
+    defaultCaptionOffscreenText: 'Сурат тагсўзи, ',
     imageCopyrightOffscreenText: 'Сүрөттүн булагы, ',
     locale: `uz-UZ`,
     datetimeLocale: `uz`,
@@ -64,9 +64,9 @@ export const service = {
             'Браузерингиздаги "янгилаш" тугмасини босинг',
             'Ушбу саҳифани Би-би-сининг қидирув панелидан излаб кўринг',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
+          callToActionFirst: 'Бунга муқобил ',
           callToActionLinkText: 'BBC Бош саҳифа',
-          callToActionLast: '',
+          callToActionLast: 'бош саҳифасига киринг',
           callToActionLinkUrl: 'https://www.bbc.com/uzbek',
         },
         500: {
@@ -77,9 +77,9 @@ export const service = {
             'Браузерингиздаги "янгилаш" тугмасини босинг',
             'Яна бироз фурсатдан кейин ҳаракат қилиб кўринг',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
+          callToActionFirst: 'Бунга муқобил ',
           callToActionLinkText: 'BBC Бош саҳифа',
-          callToActionLast: '',
+          callToActionLast: 'бош саҳифасига киринг',
           callToActionLinkUrl: 'https://www.bbc.com/uzbek',
         },
       },
@@ -156,8 +156,8 @@ export const service = {
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: 'Энг кўп ўқилган',
+      lastUpdated: 'Сўнгги янгиланиш: ',
     },
     footer: {
       trustProjectLink: {
@@ -166,15 +166,16 @@ export const service = {
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text:
+          'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/uzbek/institutional-36824297',
           text: 'Фойдаланиш шартлари',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/uzbek/institutional-36824300',
           text: 'Шахсий ҳаёт махфийлиги сиёсати',
         },
         {
@@ -182,11 +183,11 @@ export const service = {
           text: 'Куки(Cookies)',
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          href: 'https://www.bbc.com/uzbek/institutional-36826360',
+          text: 'Би-би-си билан боғланиш',
         },
       ],
-      copyrightText: 'BBC. BBC ташқи интернет саҳифалар учун масъул эмас',
+      copyrightText: 'BBC. Би-би-си ташқи сайтлар мазмуни учун масъул эмас.',
     },
     fonts: [],
     timezone: 'GMT',
