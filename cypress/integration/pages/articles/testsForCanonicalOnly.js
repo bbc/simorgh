@@ -51,7 +51,13 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       (Cypress.env('APP_ENV') === 'local' || Cypress.env('APP_ENV') === 'test')
     ) {
       describe('Focus', () => {
-        describe('Navigation between articles from different services', () => {
+        describe.only('Navigation between articles from different services', () => {
+          it('should not focus on `h1#content` when user navigates to an article', () => {
+            cy.get('main a[href*="/articles/"]').click();
+            cy.get('h1#content').should('not.be.focused');
+            cy.go('back');
+          });
+
           it('should always focus on `h1#content` when user navigates to previously visited articles using the `back` and `forward` button', () => {
             cy.get('main a[href*="/articles/"]').click();
             cy.go('back');
@@ -76,15 +82,9 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
             cy.focused().should('have.id', 'content');
           });
-
-          it('should always focus on `h1#content` when user navigates by clicking on articles of the same service', () => {
-            cy.get('main a[href*="/articles/"]').click();
-            cy.focused().should('have.id', 'content');
-            cy.get('main a[href*="/articles/"]').click();
-            cy.focused().should('have.id', 'content');
-          });
         });
       });
+    }
     // Have the test toggle between if mediaPlayer is enabled on live or not
     let imageIndex = 1;
     if (appToggles.mediaPlayer.enabled) {
