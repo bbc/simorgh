@@ -7,7 +7,6 @@ import { ToggleContext } from '#contexts/ToggleContext';
 const envMapping = {
   local: 'local',
   test: 'test',
-  stage: 'test',
   live: 'live',
 };
 
