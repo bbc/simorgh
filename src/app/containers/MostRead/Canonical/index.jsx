@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { string } from 'prop-types';
-import nodeLogger from '#lib/logger.node';
+import webLogger from '#lib/logger.web';
 
-const logger = nodeLogger(__filename);
+const logger = webLogger();
 
 const CanonicalMostRead = ({ endpoint }) => {
   const [promos, setPromo] = useState([]);
