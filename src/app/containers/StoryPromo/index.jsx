@@ -9,10 +9,9 @@ import StoryPromoComponent, {
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
-
+import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { createSrcset } from '#lib/utilities/srcSet';
 import getOriginCode from './imageSrcHelpers/originCode';
@@ -25,7 +24,8 @@ import IndexAlsos from './IndexAlsos';
 
 const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   if (!imageValues) {
-    return <ImagePlaceholder ratio={65.626} />;
+    const landscapeRatio = (9 / 16) * 100;
+    return <ImagePlaceholder ratio={landscapeRatio} />;
   }
 
   const { height, width, path } = imageValues;
