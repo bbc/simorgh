@@ -145,7 +145,7 @@ export const service = {
         },
         listen: 'ऐका',
         watch: 'पाहा',
-        liveLabel: 'LIVE',
+        liveLabel: 'थेट',
         previousRadioShow: 'यापूर्वीचा रेडिओ शो',
         nextRadioShow: 'पुढचा रेडिओ शो',
         duration: 'वेळ',

@@ -146,7 +146,7 @@ export const service = {
         },
         listen: 'Listen',
         watch: 'Watch',
-        liveLabel: 'LIVE',
+        liveLabel: 'KAI TSAYE',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
