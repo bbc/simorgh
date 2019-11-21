@@ -147,7 +147,7 @@ export const service = {
         video: 'Video',
         listen: 'Listen',
         watch: 'Watch',
-        liveLabel: 'LIVE',
+        liveLabel: 'EN VIVO',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -169,11 +169,15 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/mundo/institucional-36400005',
           text: 'Términos de uso',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/mundo/institucional-36400007',
+          text: 'Sobre la BBC',
+        },
+        {
+          href: 'https://www.bbc.com/mundo/institucional-36400009',
           text: 'Política de privacidad',
         },
         {
@@ -181,7 +185,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/mundo/institucional-36400011',
           text: 'Contacta a la BBC',
         },
       ],
