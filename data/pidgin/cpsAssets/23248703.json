@@ -1,58 +1,513 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:pidgin/23248703",
-    "locators": {
-      "assetUri": "/pidgin/23248703",
-      "cpsUrn": "urn:bbc:content:assetUri:pidgin/23248703",
-      "curie": "http://www.bbc.co.uk/asset/5679389a-3ea6-0b40-9de4-f4d33d6bcd9f"
-    },
-    "type": "MAP",
-    "createdBy": "pidgin-v6",
-    "language": "pcm",
-    "lastUpdated": 1573487990396,
-    "firstPublished": 1568388704000,
-    "lastPublished": 1573225647000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": false,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "pidgin.media_asset.23248703.page",
-      "cps_asset_id": "23248703"
-    },
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
-        "categoryName": "Opinion"
+  "content": {
+    "blocks": [
+      {
+        "advertising": true,
+        "caption": "short",
+        "embedding": true,
+        "format": "video",
+        "id": "p01kx42s",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
+        "subType": "clip",
+        "synopses": {
+          "short": "short"
+        },
+        "title": "alt-text world service clip",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1545304011000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "duration": 5,
+            "durationISO8601": "PT5S",
+            "types": [
+              "Original"
+            ],
+            "versionId": "p01kx42v",
+            "warnings": {}
+          }
+        ]
       },
-      "campaigns": [
-        {
-          "campaignId": "5ad8625ac93a9f000eecb253",
-          "campaignName": "Inspire me"
-        },
-        {
-          "campaignId": "5ad86285c93a9f000eecb256",
-          "campaignName": "Give me perspective"
-        },
-        {
-          "campaignId": "5ad86291c93a9f000eecb257",
-          "campaignName": "Keep me on trend"
-        }
-      ],
-      "taggings": []
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "This is an introduction in bold. &amp; &lt; &gt;",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "This is a heading & < >",
+        "type": "heading"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "This is a subheading & < >",
+        "type": "subheading"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "This is a crosshead & < >",
+        "type": "crosshead"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "This is regular paragraph text. &quot;Lorem ipsum dolor sit amet&quot;, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Bulleted list:",
+        "type": "paragraph"
+      },
+      {
+        "items": [
+          {
+            "markupType": "candy_xml",
+            "meta": [
+              {
+                "headlines": {
+                  "headline": "Lorem ipsum dolor sit amet, consectetur",
+                  "overtyped": "<Media Asset Page>",
+                  "shortHeadline": "Lorem ipsum dolor sit amet, consectetur"
+                },
+                "id": "urn:bbc:ares::asset:afrique/23248423",
+                "locators": {
+                  "href": "http://www.bbc.com/afrique/23248423"
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": []
+                },
+                "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "timestamp": 1568218735000,
+                "type": "cps"
+              }
+            ],
+            "text": "<itemMeta>afrique/23248423</itemMeta>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "meta": [
+              {
+                "headlines": {
+                  "headline": "Lorem ipsum dolor sit amet, consectetur",
+                  "overtyped": "<Media Asset Page>",
+                  "shortHeadline": "Lorem ipsum dolor sit amet, consectetur"
+                },
+                "id": "urn:bbc:ares::asset:afrique/23248423",
+                "locators": {
+                  "href": "http://www.bbc.com/afrique/23248423"
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": []
+                },
+                "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "timestamp": 1568218735000,
+                "type": "cps"
+              }
+            ],
+            "text": "<itemMeta>afrique/23248423</itemMeta>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "meta": [
+              {
+                "headlines": {
+                  "headline": "Lorem ipsum dolor sit amet, consectetur",
+                  "overtyped": "<Media Asset Page>",
+                  "shortHeadline": "Lorem ipsum dolor sit amet, consectetur"
+                },
+                "id": "urn:bbc:ares::asset:afrique/23248423",
+                "locators": {
+                  "href": "http://www.bbc.com/afrique/23248423"
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": []
+                },
+                "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "timestamp": 1568218735000,
+                "type": "cps"
+              }
+            ],
+            "text": "<itemMeta>afrique/23248423</itemMeta>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
+            "type": "listItem"
+          }
+        ],
+        "numbered": false,
+        "type": "list"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Numbered list:",
+        "type": "paragraph"
+      },
+      {
+        "items": [
+          {
+            "markupType": "candy_xml",
+            "meta": [
+              {
+                "headlines": {
+                  "headline": "Lorem ipsum dolor sit amet, consectetur",
+                  "overtyped": "<Media Asset Page>",
+                  "shortHeadline": "Lorem ipsum dolor sit amet, consectetur"
+                },
+                "id": "urn:bbc:ares::asset:afrique/23248423",
+                "locators": {
+                  "href": "http://www.bbc.com/afrique/23248423"
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": []
+                },
+                "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "timestamp": 1568218735000,
+                "type": "cps"
+              }
+            ],
+            "text": "<itemMeta>afrique/23248423</itemMeta>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "meta": [
+              {
+                "headlines": {
+                  "headline": "Lorem ipsum dolor sit amet, consectetur",
+                  "overtyped": "<Media Asset Page>",
+                  "shortHeadline": "Lorem ipsum dolor sit amet, consectetur"
+                },
+                "id": "urn:bbc:ares::asset:afrique/23248423",
+                "locators": {
+                  "href": "http://www.bbc.com/afrique/23248423"
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": []
+                },
+                "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "timestamp": 1568218735000,
+                "type": "cps"
+              }
+            ],
+            "text": "<itemMeta>afrique/23248423</itemMeta>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "meta": [
+              {
+                "headlines": {
+                  "headline": "Lorem ipsum dolor sit amet, consectetur",
+                  "overtyped": "<Media Asset Page>",
+                  "shortHeadline": "Lorem ipsum dolor sit amet, consectetur"
+                },
+                "id": "urn:bbc:ares::asset:afrique/23248423",
+                "locators": {
+                  "href": "http://www.bbc.com/afrique/23248423"
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": []
+                },
+                "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "timestamp": 1568218735000,
+                "type": "cps"
+              }
+            ],
+            "text": "<itemMeta>afrique/23248423</itemMeta>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
+            "type": "listItem"
+          }
+        ],
+        "numbered": true,
+        "type": "list"
+      },
+      {
+        "markupType": "candy_xml",
+        "role": "transmission-info",
+        "text": "Lorem ipsum dolor sit amet, <bold>consectetur</bold> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<bold> ullamco laboris nisi ut aliquip </bold>ex ea commodo consequat. Duis aute irure dolor in reprehenderit<italic> in voluptate velit esse cillum </italic>dolore &quot;eu fugiat nulla&quot; pariatur. <link><caption>Excepteur</caption><altText>this is a link</altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/></link> sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Testing special characters: !&quot;£$%^&amp;*()_+=-{}[]:@~;'#&lt;&gt;?,./\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Table:",
+        "type": "paragraph"
+      },
+      {
+        "height": 2,
+        "rows": [
+          [
+            {
+              "cellType": "cell",
+              "content": [
+                {
+                  "markupType": "candy_xml",
+                  "text": "<bold>Table cell 1</bold>",
+                  "type": "paragraph"
+                }
+              ]
+            },
+            {
+              "cellType": "cell",
+              "content": [
+                {
+                  "markupType": "candy_xml",
+                  "text": "<bold>Table cell 2</bold>",
+                  "type": "paragraph"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "cellType": "cell",
+              "content": [
+                {
+                  "markupType": "plain_text",
+                  "text": "Table cell 3",
+                  "type": "paragraph"
+                }
+              ]
+            },
+            {
+              "cellType": "cell",
+              "content": [
+                {
+                  "markupType": "plain_text",
+                  "text": "Table cell 4",
+                  "type": "paragraph"
+                }
+              ]
+            }
+          ]
+        ],
+        "type": "table",
+        "width": 2
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Social media embed:",
+        "type": "paragraph"
+      },
+      {
+        "href": "https://twitter.com/BBCNews/status/1191709709654511616",
+        "source": "twitter",
+        "type": "social_embed"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Quote box:",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "quoteSource": "BBC",
+        "quoteSourceTitle": "test quote",
+        "text": "Interesting quote",
+        "type": "quote"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Correspondent quote box:",
+        "type": "paragraph"
+      },
+      {
+        "elements": [
+          {
+            "markupType": "plain_text",
+            "quoteSource": "BBC",
+            "quoteSourceTitle": "test correspondent quote",
+            "text": "Correspondent quote box",
+            "type": "quote"
+          },
+          {
+            "type": "generic",
+            "xml": "<byline title=\"Somali Academic\" name=\"Abdi Samatar\"><person origin-code=\"MCS\" thumbnail=\"http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/130BA/test/_63701087_correspondent_brand_image.jpg\"><name>Abdi Samatar</name><function>Somali Academic</function></person></byline>"
+          }
+        ],
+        "size": "wide",
+        "type": "pullOut"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Fact box:",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "­",
+        "type": "paragraph"
+      },
+      {
+        "elements": [
+          {
+            "items": [
+              {
+                "markupType": "plain_text",
+                "text": "fact 1",
+                "type": "listItem"
+              },
+              {
+                "markupType": "plain_text",
+                "text": "fact 2",
+                "type": "listItem"
+              },
+              {
+                "markupType": "plain_text",
+                "text": "fact 3",
+                "type": "listItem"
+              }
+            ],
+            "numbered": false,
+            "type": "list"
+          }
+        ],
+        "size": "wide",
+        "type": "pullOut"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "Lorem ipsum<link><caption> dolor sit amet</caption><altText>dolor sit amet poop poop </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/></link>, consectetur adipiscing elit",
+        "type": "paragraph"
+      },
+      {
+        "altText": "psammead",
+        "caption": "Psammead was named after the mythical sand creature",
+        "copyrightHolder": "Google",
+        "height": 576,
+        "href": "http://b.files.bbci.co.uk/5426/test/_63724512_psammead-closeup.jpg",
+        "id": "63724512",
+        "path": "/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 1024
+      },
+      {
+        "altText": "butterfly",
+        "caption": "A pretty little butterfly & < >",
+        "copyrightHolder": "Butterfly person",
+        "height": 360,
+        "href": "http://b.files.bbci.co.uk/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg",
+        "id": "63724501",
+        "path": "/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 640
+      },
+      {
+        "items": [
+          {
+            "markupType": "plain_text",
+            "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "v3 draft",
+            "type": "listItem"
+          }
+        ],
+        "numbered": false,
+        "type": "list"
+      },
+      {
+        "markupType": "plain_text",
+        "role": "transmission-info",
+        "text": "This is transmission info ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "role": "footer",
+        "text": "This is the footer ",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "pidgin.media_asset.23248703.page",
+      "cps_asset_id": "23248703",
+      "cps_asset_type": "map"
     },
-    "tags": {},
-    "version": "v1.1.2",
     "blockTypes": [
       "media",
       "paragraph",
@@ -66,413 +521,32 @@
       "pullOut",
       "image"
     ],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01kx42s",
-        "subType": "clip",
-        "format": "video",
-        "title": "alt-text world service clip",
-        "synopses": {
-          "short": "short"
-        },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "short",
-        "versions": [
-          {
-            "versionId": "p01kx42v",
-            "types": [
-              "Original"
-            ],
-            "duration": 5,
-            "durationISO8601": "PT5S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1545304011000
-          }
-        ],
-        "type": "media"
-      },
-      {
-        "text": "This is an introduction in bold. ",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "This is a heading ",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "This is a subheading ",
-        "markupType": "plain_text",
-        "type": "subheading"
-      },
-      {
-        "text": "This is a crosshead ",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "text": "This is regular paragraph text. &quot;Lorem ipsum dolor sit amet&quot;, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "numbered": false,
-        "items": [
-          {
-            "text": "<itemMeta>afrique/23248423</itemMeta>",
-            "meta": [
-              {
-                "headlines": {
-                  "shortHeadline": "Lorem ipsum dolor sit amet, consectetur",
-                  "headline": "Lorem ipsum dolor sit amet, consectetur",
-                  "overtyped": "<Media Asset Page>"
-                },
-                "locators": {
-                  "href": "http://www.bbc.com/afrique/23248423"
-                },
-                "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                "timestamp": 1568218735000,
-                "passport": {
-                  "category": {
-                    "categoryId": "",
-                    "categoryName": ""
-                  },
-                  "taggings": []
-                },
-                "id": "urn:bbc:ares::asset:afrique/23248423",
-                "type": "cps"
-              }
-            ],
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<itemMeta>afrique/23248423</itemMeta>",
-            "meta": [
-              {
-                "headlines": {
-                  "shortHeadline": "Lorem ipsum dolor sit amet, consectetur",
-                  "headline": "Lorem ipsum dolor sit amet, consectetur",
-                  "overtyped": "<Media Asset Page>"
-                },
-                "locators": {
-                  "href": "http://www.bbc.com/afrique/23248423"
-                },
-                "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                "timestamp": 1568218735000,
-                "passport": {
-                  "category": {
-                    "categoryId": "",
-                    "categoryName": ""
-                  },
-                  "taggings": []
-                },
-                "id": "urn:bbc:ares::asset:afrique/23248423",
-                "type": "cps"
-              }
-            ],
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<itemMeta>afrique/23248423</itemMeta>",
-            "meta": [
-              {
-                "headlines": {
-                  "shortHeadline": "Lorem ipsum dolor sit amet, consectetur",
-                  "headline": "Lorem ipsum dolor sit amet, consectetur",
-                  "overtyped": "<Media Asset Page>"
-                },
-                "locators": {
-                  "href": "http://www.bbc.com/afrique/23248423"
-                },
-                "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                "timestamp": 1568218735000,
-                "passport": {
-                  "category": {
-                    "categoryId": "",
-                    "categoryName": ""
-                  },
-                  "taggings": []
-                },
-                "id": "urn:bbc:ares::asset:afrique/23248423",
-                "type": "cps"
-              }
-            ],
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/><url href=\"https://bbc.com/pidgin\" platform=\"enhancedmobile\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          }
-        ],
-        "type": "list"
-      },
-      {
-        "text": "Lorem ipsum dolor sit amet, <bold>consectetur</bold> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<bold> ullamco laboris nisi ut aliquip </bold>ex ea commodo consequat. Duis aute irure dolor in reprehenderit<italic> in voluptate velit esse cillum </italic>dolore &quot;eu fugiat nulla&quot; pariatur. <link><caption>Excepteur</caption><altText>this is a link</altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/></link> sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "role": "transmission-info",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Testing special characters: !&quot;£$%^&amp;*()_+=-{}[]:@~;'#&lt;&gt;?,./\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Table:",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "rows": [
-          [
-            {
-              "content": [
-                {
-                  "text": "<bold>Table cell 1</bold>",
-                  "markupType": "candy_xml",
-                  "type": "paragraph"
-                }
-              ],
-              "cellType": "cell"
-            },
-            {
-              "content": [
-                {
-                  "text": "<bold>Table cell 2</bold>",
-                  "markupType": "candy_xml",
-                  "type": "paragraph"
-                }
-              ],
-              "cellType": "cell"
-            }
-          ],
-          [
-            {
-              "content": [
-                {
-                  "text": "Table cell 3",
-                  "markupType": "plain_text",
-                  "type": "paragraph"
-                }
-              ],
-              "cellType": "cell"
-            },
-            {
-              "content": [
-                {
-                  "text": "Table cell 4",
-                  "markupType": "plain_text",
-                  "type": "paragraph"
-                }
-              ],
-              "cellType": "cell"
-            }
-          ]
-        ],
-        "height": 2,
-        "width": 2,
-        "type": "table"
-      },
-      {
-        "text": "Social media embed:",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "href": "https://twitter.com/BBCNews/status/1191709709654511616",
-        "source": "twitter",
-        "type": "social_embed"
-      },
-      {
-        "text": "Quote box:",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Interesting quote",
-        "quoteSource": "BBC",
-        "quoteSourceTitle": "test quote",
-        "markupType": "plain_text",
-        "type": "quote"
-      },
-      {
-        "text": "Correspondent quote box:",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "size": "wide",
-        "elements": [
-          {
-            "text": "Correspondent quote box",
-            "quoteSource": "BBC",
-            "quoteSourceTitle": "test correspondent quote",
-            "markupType": "plain_text",
-            "type": "quote"
-          },
-          {
-            "xml": "<byline title=\"Somali Academic\" name=\"Abdi Samatar\"><person origin-code=\"MCS\" thumbnail=\"http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/130BA/test/_63701087_correspondent_brand_image.jpg\"><name>Abdi Samatar</name><function>Somali Academic</function></person></byline>",
-            "type": "generic"
-          }
-        ],
-        "type": "pullOut"
-      },
-      {
-        "text": "Fact box:",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "­",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "size": "wide",
-        "elements": [
-          {
-            "numbered": false,
-            "items": [
-              {
-                "text": "fact 1",
-                "markupType": "plain_text",
-                "type": "listItem"
-              },
-              {
-                "text": "fact 2",
-                "markupType": "plain_text",
-                "type": "listItem"
-              },
-              {
-                "text": "fact 3",
-                "markupType": "plain_text",
-                "type": "listItem"
-              }
-            ],
-            "type": "list"
-          }
-        ],
-        "type": "pullOut"
-      },
-      {
-        "text": "Lorem ipsum<link><caption> dolor sit amet</caption><altText>dolor sit amet poop poop </altText><url href=\"https://bbc.com/pidgin\" platform=\"highweb\"/></link>, consectetur adipiscing elit",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "id": "63724512",
-        "subType": "body",
-        "href": "http://b.files.bbci.co.uk/5426/test/_63724512_psammead-closeup.jpg",
-        "path": "/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg",
-        "height": 576,
-        "width": 1024,
-        "altText": "psammead",
-        "caption": "Psammead was named after the mythical sand creature",
-        "copyrightHolder": "Google",
-        "positionHint": "full-width",
-        "type": "image"
-      },
-      {
-        "id": "63724501",
-        "subType": "body",
-        "href": "http://b.files.bbci.co.uk/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg",
-        "path": "/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg",
-        "height": 360,
-        "width": 640,
-        "altText": "butterfly",
-        "caption": "A pretty little butterfly",
-        "copyrightHolder": "Butterfly person",
-        "positionHint": "full-width",
-        "type": "image"
-      },
-      {
-        "numbered": false,
-        "items": [
-          {
-            "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
-            "markupType": "plain_text",
-            "type": "listItem"
-          },
-          {
-            "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
-            "markupType": "plain_text",
-            "type": "listItem"
-          },
-          {
-            "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
-            "markupType": "plain_text",
-            "type": "listItem"
-          },
-          {
-            "text": "v3 draft",
-            "markupType": "plain_text",
-            "type": "listItem"
-          }
-        ],
-        "type": "list"
-      },
-      {
-        "text": "This is transmission info ",
-        "role": "transmission-info",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "This is the footer ",
-        "role": "footer",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "First CPS Media Asset Pages Appear on Heloo",
-      "headline": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew"
-    },
+    "createdBy": "pidgin-v6",
+    "firstPublished": 1568388704000,
+    "id": "urn:bbc:ares::asset:pidgin/23248703",
+    "includeComments": false,
+    "language": "pcm",
+    "lastPublished": 1574252665000,
+    "lastUpdated": 1574252675611,
     "locators": {
       "assetUri": "/pidgin/23248703",
       "cpsUrn": "urn:bbc:content:assetUri:pidgin/23248703",
       "curie": "http://www.bbc.co.uk/asset/5679389a-3ea6-0b40-9de4-f4d33d6bcd9f"
     },
-    "summary": "This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components.",
-    "timestamp": 1573487990396,
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": false,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
     "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
-        "categoryName": "Opinion"
-      },
       "campaigns": [
         {
           "campaignId": "5ad8625ac93a9f000eecb253",
@@ -487,74 +561,116 @@
           "campaignName": "Keep me on trend"
         }
       ],
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+        "categoryName": "Opinion"
+      },
       "taggings": []
     },
+    "tags": {},
+    "type": "MAP",
+    "version": "v1.1.3"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+      "shortHeadline": "First CPS Media Asset Pages Appear on Heloo"
+    },
+    "id": "urn:bbc:ares::asset:pidgin/23248703",
+    "indexImage": {
+      "altText": "connectionAltText",
+      "copyrightHolder": "BBC",
+      "height": 360,
+      "href": "http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg",
+      "id": "63721682",
+      "path": "/cpsdevpb/6FC4/test/_63721682_p01kx435.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 640
+    },
+    "locators": {
+      "assetUri": "/pidgin/23248703",
+      "cpsUrn": "urn:bbc:content:assetUri:pidgin/23248703",
+      "curie": "http://www.bbc.co.uk/asset/5679389a-3ea6-0b40-9de4-f4d33d6bcd9f"
+    },
     "media": {
-      "id": "p01kx42s",
-      "subType": "clip",
+      "advertising": true,
+      "caption": "short",
+      "embedding": true,
       "format": "video",
-      "title": "alt-text world service clip",
+      "id": "p01kx42s",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
+      "subType": "clip",
       "synopses": {
         "short": "short"
       },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "short",
+      "title": "alt-text world service clip",
+      "type": "media",
       "versions": [
         {
-          "versionId": "p01kx42v",
+          "availableFrom": 1545304011000,
+          "availableTerritories": {
+            "nonUk": true,
+            "uk": true,
+            "world": false
+          },
+          "duration": 5,
+          "durationISO8601": "PT5S",
           "types": [
             "Original"
           ],
-          "duration": 5,
-          "durationISO8601": "PT5S",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true,
-            "world": false
-          },
-          "availableFrom": 1545304011000
+          "versionId": "p01kx42v",
+          "warnings": {}
+        }
+      ]
+    },
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5ad8625ac93a9f000eecb253",
+          "campaignName": "Inspire me"
+        },
+        {
+          "campaignId": "5ad86285c93a9f000eecb256",
+          "campaignName": "Give me perspective"
+        },
+        {
+          "campaignId": "5ad86291c93a9f000eecb257",
+          "campaignName": "Keep me on trend"
         }
       ],
-      "type": "media"
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+        "categoryName": "Opinion"
+      },
+      "taggings": []
     },
-    "indexImage": {
-      "id": "63721682",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg",
-      "path": "/cpsdevpb/6FC4/test/_63721682_p01kx435.jpg",
-      "height": 360,
-      "width": 640,
-      "altText": "connectionAltText",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:pidgin/23248703",
+    "summary": "This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components.",
+    "timestamp": 1574252675611,
     "type": "cps"
   },
   "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Domot",
-      "uri": "/pidgin/front_page",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC Pidgin",
-      "uri": "/pidgin",
-      "type": "simple"
-    },
     "groups": [
       {
-        "type": "see-alsos",
         "promos": [
           {
+            "cpsType": "STY",
             "headlines": {
-              "shortHeadline": "Anambra Church: Police Arrest 3",
-              "headline": "Police Arrest 3 ontop Anambra Church Attack"
+              "headline": "Police Arrest 3 ontop Anambra Church Attack",
+              "shortHeadline": "Anambra Church: Police Arrest 3"
+            },
+            "id": "urn:bbc:ares::asset:pidgin/tori-23145776",
+            "indexImage": {
+              "altText": "One gun enter St. Phillips Church for Ozubulu, Anambra and shoot and kill 11 people, injure 18 others",
+              "caption": "Di attack happen for inside St. Philip Catholic Chirch Ozubulu",
+              "copyrightHolder": "BBC",
+              "height": 351,
+              "href": "http://b.files.bbci.co.uk/5C06/test/_63585532_ozubuluchurch.jpg",
+              "id": "63585532",
+              "path": "/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 624
             },
             "locators": {
               "assetUri": "/pidgin/tori-23145776",
@@ -562,26 +678,26 @@
             },
             "summary": "Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp",
             "timestamp": 1502217403000,
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "63585532",
-              "subType": "index",
-              "href": "http://b.files.bbci.co.uk/5C06/test/_63585532_ozubuluchurch.jpg",
-              "path": "/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg",
-              "height": 351,
-              "width": 624,
-              "altText": "One gun enter St. Phillips Church for Ozubulu, Anambra and shoot and kill 11 people, injure 18 others",
-              "caption": "Di attack happen for inside St. Philip Catholic Chirch Ozubulu",
-              "copyrightHolder": "BBC",
-              "type": "image"
-            },
-            "id": "urn:bbc:ares::asset:pidgin/tori-23145776",
             "type": "cps"
           },
           {
+            "cpsType": "STY",
             "headlines": {
-              "shortHeadline": "Lagos don carry 'gay' men go court",
-              "headline": "Lagos 'Gay' men Appear for Court, say Dem no dey Guilty"
+              "headline": "Lagos 'Gay' men Appear for Court, say Dem no dey Guilty",
+              "shortHeadline": "Lagos don carry 'gay' men go court"
+            },
+            "id": "urn:bbc:ares::asset:pidgin/tori-23143754",
+            "indexImage": {
+              "altText": "Two homosexual men",
+              "caption": "Homosexuality dey illegal for Nigeria",
+              "copyrightHolder": "AFP",
+              "height": 351,
+              "href": "http://b.files.bbci.co.uk/13644/test/_63582497_black-gay.jpg",
+              "id": "63582497",
+              "path": "/cpsdevpb/13644/test/_63582497_black-gay.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 624
             },
             "locators": {
               "assetUri": "/pidgin/tori-23143754",
@@ -589,100 +705,99 @@
             },
             "summary": "The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.",
             "timestamp": 1502195579000,
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "63582497",
-              "subType": "index",
-              "href": "http://b.files.bbci.co.uk/13644/test/_63582497_black-gay.jpg",
-              "path": "/cpsdevpb/13644/test/_63582497_black-gay.jpg",
-              "height": 351,
-              "width": 624,
-              "altText": "Two homosexual men",
-              "caption": "Homosexuality dey illegal for Nigeria",
-              "copyrightHolder": "AFP",
-              "type": "image"
-            },
-            "id": "urn:bbc:ares::asset:pidgin/tori-23143754",
             "type": "cps"
           },
           {
+            "cpsType": "PGL",
             "headlines": {
-              "shortHeadline": "Kenya Decides 2017 in Pictures",
-              "headline": "Kenya Elections Pictures: 8 August 2017"
+              "headline": "Kenya Elections Pictures: 8 August 2017",
+              "shortHeadline": "Kenya Decides 2017 in Pictures"
             },
+            "id": "urn:bbc:ares::asset:pidgin/23146654",
             "locators": {
               "assetUri": "/pidgin/23146654",
               "cpsUrn": "urn:bbc:content:assetUri:/pidgin/23146654"
             },
             "summary": "This na some of the picture wey our eye see as Kenya people go vote for election today",
             "timestamp": 1502222360000,
-            "cpsType": "PGL",
-            "id": "urn:bbc:ares::asset:pidgin/23146654",
             "type": "cps"
           },
           {
+            "cpsType": "MAP",
             "headlines": {
-              "shortHeadline": "BBC News Pidgin One Minute News",
-              "headline": "BBC News Pidgin One Minute News"
+              "headline": "BBC News Pidgin One Minute News",
+              "shortHeadline": "BBC News Pidgin One Minute News"
+            },
+            "id": "urn:bbc:ares::asset:pidgin/media-23147054",
+            "indexImage": {
+              "altText": "BBC MInute",
+              "caption": "BBC Pidgin minute",
+              "copyrightHolder": "BBC",
+              "height": 576,
+              "href": "http://b.files.bbci.co.uk/B7E8/test/_63708074_mediaitem63708073.png",
+              "id": "63708074",
+              "path": "/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png",
+              "subType": "index",
+              "type": "image",
+              "width": 1024
             },
             "locators": {
               "assetUri": "/pidgin/media-23147054",
               "cpsUrn": "urn:bbc:content:assetUri:/pidgin/media-23147054"
             },
-            "summary": "All di local and world tori wey you suppose know in 60 seconds!",
-            "timestamp": 1502963087000,
-            "cpsType": "MAP",
             "media": {
-              "id": "p01cqycr",
-              "subType": "clip",
-              "format": "audio",
-              "title": "BBC News Piding One Minute News",
-              "synopses": {
-                "short": "The Wold's most interesting stories",
-                "medium": "The Wold's most interesting stories",
-                "long": "The Wold's most interesting stories"
-              },
-              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cqz13.jpg",
-              "embedding": false,
               "advertising": true,
               "caption": "The Wold's most interesting stories",
+              "embedding": false,
+              "format": "audio",
+              "id": "p01cqycr",
+              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cqz13.jpg",
+              "subType": "clip",
+              "synopses": {
+                "long": "The Wold's most interesting stories",
+                "medium": "The Wold's most interesting stories",
+                "short": "The Wold's most interesting stories"
+              },
+              "title": "BBC News Piding One Minute News",
+              "type": "media",
               "versions": [
                 {
-                  "versionId": "p01cqyct",
+                  "availableFrom": 1502288512000,
+                  "availableTerritories": {
+                    "nonUk": true,
+                    "uk": true,
+                    "world": false
+                  },
+                  "duration": 15,
+                  "durationISO8601": "PT15S",
                   "types": [
                     "Original"
                   ],
-                  "duration": 15,
-                  "durationISO8601": "PT15S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
-                  },
-                  "availableFrom": 1502288512000
+                  "versionId": "p01cqyct",
+                  "warnings": {}
                 }
-              ],
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "63708074",
-              "subType": "index",
-              "href": "http://b.files.bbci.co.uk/B7E8/test/_63708074_mediaitem63708073.png",
-              "path": "/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png",
-              "height": 576,
-              "width": 1024,
-              "altText": "BBC MInute",
-              "caption": "BBC Pidgin minute",
-              "copyrightHolder": "BBC",
-              "type": "image"
+              ]
             },
             "mediaType": "Audio",
-            "id": "urn:bbc:ares::asset:pidgin/media-23147054",
+            "summary": "All di local and world tori wey you suppose know in 60 seconds!",
+            "timestamp": 1502963087000,
             "type": "cps"
           }
-        ]
+        ],
+        "type": "see-alsos"
       }
-    ]
+    ],
+    "section": {
+      "name": "Domot",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/pidgin/front_page"
+    },
+    "site": {
+      "name": "BBC Pidgin",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/pidgin"
+    }
   }
 }
