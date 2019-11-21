@@ -13,7 +13,6 @@ import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
 import articleMediaPlayer from '../ArticleMediaPlayer';
 import LinkedData from '../LinkedData';
-
 import {
   getArticleId,
   getHeadline,
