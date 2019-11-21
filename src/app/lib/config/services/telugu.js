@@ -146,7 +146,7 @@ export const service = {
         },
         listen: 'వినండి',
         watch: 'చూడండి',
-        liveLabel: 'LIVE',
+        liveLabel: 'లైవ్',
         previousRadioShow: 'ఇంతకు ముందు రేడియో షో',
         nextRadioShow: 'తర్వాత రేడియో షో',
         duration: 'వ్యవధి',
