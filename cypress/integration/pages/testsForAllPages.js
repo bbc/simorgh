@@ -20,7 +20,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
         const resources = [envConfig.assetOrigin, 'https://ichef.bbci.co.uk'];
-        const serviceConfig = appConfig[service];
+        const serviceConfig = appConfig[config[service].name];
         const { fonts } = serviceConfig[variant || 'default'];
         if (fonts && fonts.length > 0) {
           resources.push(
@@ -90,17 +90,17 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             cy.get('meta[name="og:image"]').should(
               'have.attr',
               'content',
-              appConfig[service][variant].defaultImage,
+              appConfig[config[service].name][variant].defaultImage,
             );
             cy.get('meta[name="og:image:alt"]').should(
               'have.attr',
               'content',
-              appConfig[service][variant].defaultImageAltText,
+              appConfig[config[service].name][variant].defaultImageAltText,
             );
             cy.get('meta[name="og:locale"]').should(
               'have.attr',
               'content',
-              appConfig[service][variant].locale,
+              appConfig[config[service].name][variant].locale,
             );
             cy.get('meta[name="og:type"]').should(
               'have.attr',
@@ -115,7 +115,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             cy.get('meta[name="og:site_name"]').should(
               'have.attr',
               'content',
-              appConfig[service][variant].brandName,
+              appConfig[config[service].name][variant].brandName,
             );
             cy.get('meta[name="twitter:card"]').should(
               'have.attr',
@@ -125,22 +125,22 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             cy.get('meta[name="twitter:creator"]').should(
               'have.attr',
               'content',
-              appConfig[service][variant].twitterCreator,
+              appConfig[config[service].name][variant].twitterCreator,
             );
             cy.get('meta[name="twitter:image:alt"]').should(
               'have.attr',
               'content',
-              appConfig[service][variant].defaultImageAltText,
+              appConfig[config[service].name][variant].defaultImageAltText,
             );
             cy.get('meta[name="twitter:image:src"]').should(
               'have.attr',
               'content',
-              appConfig[service][variant].defaultImage,
+              appConfig[config[service].name][variant].defaultImage,
             );
             cy.get('meta[name="twitter:site"]').should(
               'have.attr',
               'content',
-              appConfig[service][variant].twitterSite,
+              appConfig[config[service].name][variant].twitterSite,
             );
             cy.get('link[rel="apple-touch-icon"]').each(link => {
               const url = link.attr('href');
@@ -177,7 +177,8 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     break;
                   case 'frontPage':
                     description = body.metadata.summary;
-                    title = appConfig[service][variant].frontPageTitle;
+                    title =
+                      appConfig[config[service].name][variant].frontPageTitle;
                     break;
                   case 'liveRadio':
                     description = body.promo.summary;
@@ -192,7 +193,9 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     title = '';
                 }
                 /* Note that if updating these, also do the same for errorPage404/tests.js */
-                const pageTitle = `${title} - ${appConfig[service][variant].brandName}`;
+                const pageTitle = `${title} - ${
+                  appConfig[config[service].name][variant].brandName
+                }`;
 
                 cy.get('head').within(() => {
                   cy.title().should('eq', pageTitle);
@@ -225,43 +228,56 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
       /* End of block (pageType !== 'errorPage404') */
 
       it('should have dir matching service config', () => {
-        cy.get('html').and('have.attr', 'dir', appConfig[service][variant].dir);
+        cy.get('html').and(
+          'have.attr',
+          'dir',
+          appConfig[config[service].name][variant].dir,
+        );
       });
     });
 
     describeForEuOnly('Consent Banners', () => {
       it('have correct translations', () => {
         cy.contains(
-          appConfig[service][variant].translations.consentBanner.privacy.title,
+          appConfig[config[service].name][variant].translations.consentBanner
+            .privacy.title,
         );
         cy.contains(
-          appConfig[service][variant].translations.consentBanner.privacy.reject,
+          appConfig[config[service].name][variant].translations.consentBanner
+            .privacy.reject,
         );
         cy.contains(
-          appConfig[service][variant].translations.consentBanner.privacy.accept,
+          appConfig[config[service].name][variant].translations.consentBanner
+            .privacy.accept,
         ).click();
         cy.contains(
-          appConfig[service][variant].translations.consentBanner.cookie.title,
+          appConfig[config[service].name][variant].translations.consentBanner
+            .cookie.title,
         );
         cy.contains(
-          appConfig[service][variant].translations.consentBanner.cookie.reject,
+          appConfig[config[service].name][variant].translations.consentBanner
+            .cookie.reject,
         );
         cy.contains(
-          appConfig[service][variant].translations.consentBanner.cookie.accept,
+          appConfig[config[service].name][variant].translations.consentBanner
+            .cookie.accept,
         );
       });
     });
 
     describe('Header Tests', () => {
       const hasLocalisedName =
-        appConfig[service][variant].serviceLocalizedName !== undefined;
+        appConfig[config[service].name][variant].serviceLocalizedName !==
+        undefined;
 
       it('should render the BBC News branding', () => {
         cy.get('header a').should(
           'contain',
           hasLocalisedName
-            ? `${appConfig[service][variant].product}, ${appConfig[service][variant].serviceLocalizedName}`
-            : appConfig[service][variant].product,
+            ? `${appConfig[config[service].name][variant].product}, ${
+                appConfig[config[service].name][variant].serviceLocalizedName
+              }`
+            : appConfig[config[service].name][variant].product,
         );
       });
 
@@ -294,12 +310,12 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           .children()
           .should('have.lengthOf', 1)
           .children()
-          .should('have.attr', 'href', `/${service}`)
+          .should('have.attr', 'href', `/${config[service].name}`)
           .find('svg')
           .should('be.visible');
       });
 
-      if (appConfig[service][variant].navigation) {
+      if (appConfig[config[service].name][variant].navigation) {
         if (
           pageType !== 'articles' ||
           (pageType === 'articles' && useAppToggles.navOnArticles.enabled)
@@ -315,11 +331,11 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
               .should(
                 'have.attr',
                 'href',
-                appConfig[service][variant].navigation[0].url,
+                appConfig[config[service].name][variant].navigation[0].url,
               )
               .should(
                 'contain',
-                appConfig[service][variant].navigation[0].title,
+                appConfig[config[service].name][variant].navigation[0].title,
               );
             cy.get('h1')
               .should('have.lengthOf', 1)
@@ -336,7 +352,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             .should('have.length', 1)
             .should('have.attr', 'role', 'contentinfo')
             .find('a')
-            .should('have.attr', 'href', `/${service}`)
+            .should('have.attr', 'href', `/${config[service].name}`)
             .find('svg')
             .should('be.visible');
         });
@@ -347,16 +363,19 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           .eq(0)
           .should(
             'contain',
-            appConfig[service][variant].serviceLocalizedName !== undefined
-              ? `${appConfig[service][variant].product}, ${appConfig[service][variant].serviceLocalizedName}`
-              : appConfig[service][variant].product,
+            appConfig[config[service].name][variant].serviceLocalizedName !==
+              undefined
+              ? `${appConfig[config[service].name][variant].product}, ${
+                  appConfig[config[service].name][variant].serviceLocalizedName
+                }`
+              : appConfig[config[service].name][variant].product,
           );
       });
 
       it('should contain copyright text', () => {
         cy.get('footer p').should(
           'contain',
-          appConfig[service][variant].footer.copyrightText,
+          appConfig[config[service].name][variant].footer.copyrightText,
         );
       });
 
@@ -368,7 +387,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         cy.get('footer p')
           .children('a')
           .should('have.attr', 'href')
-          .and('contain', appConfig[service][variant].footer.externalLink.href);
+          .and(
+            'contain',
+            appConfig[config[service].name][variant].footer.externalLink.href,
+          );
       });
     });
   });
