@@ -149,7 +149,7 @@ export const service = {
         },
         listen: 'Listen',
         watch: 'Watch',
-        liveLabel: 'LIVE',
+        liveLabel: 'Moja kwa moja',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
