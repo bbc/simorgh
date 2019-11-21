@@ -25,13 +25,12 @@ export const processBlock = _block => {
   const block = _block;
 
   if (path(['text'], block)) {
-    // handle special characters in all text
-    block.text = parseReplacements(block.text);
-
     // make introductions bold
     if (block.role === 'introduction') {
       block.text = boldWrap(block.text);
       block.markupType = 'candy_xml';
+    } else {
+      block.text = parseReplacements(block.text);
     }
   }
 
