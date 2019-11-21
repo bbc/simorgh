@@ -145,6 +145,12 @@ export const service = {
           title: 'Placeholder title',
           subtitle: 'Placeholder subtitle',
         },
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'AS E DE HAPPEN',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     mostRead: {
@@ -191,7 +197,7 @@ export const service = {
     ],
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/pidgin/institutional-48528766',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'Why you fit trust BBC News',
       },
       externalLink: {
