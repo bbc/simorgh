@@ -66,7 +66,7 @@ const MediaPlayerContainer = ({
 
   const mediaInfo = {
     title: path(['model', 'blocks', 0, 'model', 'title'], aresMediaBlock),
-    duration: formatDuration(duration),
+    duration: formatDuration(duration, ':', true),
     durationSpoken: formatDuration(duration, ','),
     datetime: path(
       ['model', 'blocks', 0, 'model', 'versions', 0, 'durationISO8601'],
