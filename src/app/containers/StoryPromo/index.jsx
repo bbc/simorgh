@@ -10,6 +10,7 @@ import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
+import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -24,7 +25,7 @@ import IndexAlsos from './IndexAlsos';
 
 const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   if (!imageValues) {
-    return null;
+    return <ImagePlaceholder ratio={65.626} />;
   }
 
   const { height, width, path } = imageValues;
