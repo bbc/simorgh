@@ -43,6 +43,13 @@ const ChartbeatAnalytics = ({ data }) => {
     isCanonicalAndEnabled,
   ]);
 
+  useEffect(() => {
+    console.log('Chartbeat mounted');
+    return () => {
+      console.log('Chartbeat unmounted');
+    };
+  }, []);
+
   return (
     isAmpAndEnabled && (
       <AmpChartbeatBeacon

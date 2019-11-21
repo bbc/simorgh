@@ -3,6 +3,7 @@ import { element, string, number } from 'prop-types';
 import { pageDataPropType } from '../../../models/propTypes/data';
 import ErrorMain from '../../ErrorMain';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import ChartbeatAnalytics from '../../ChartbeatAnalytics';
 import shouldRender from './shouldRender';
 
 const WithData = Component => {
@@ -15,7 +16,12 @@ const WithData = Component => {
     } = shouldRender({ pageData, status }, service, passportHomes);
 
     if (hasData200StatusAndCorrectService) {
-      return <Component pageData={pageData} {...props} />;
+      return (
+        <>
+          <Component pageData={pageData} {...props} />
+          <ChartbeatAnalytics data={pageData} />
+        </>
+      );
     }
 
     return <ErrorMain status={statusCode} />;

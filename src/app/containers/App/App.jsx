@@ -33,6 +33,13 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   const isInitialMount = useRef(true);
 
   useEffect(() => {
+    console.log('App mounted');
+    return () => {
+      console.log('App unmounted');
+    };
+  }, []);
+
+  useEffect(() => {
     if (isInitialMount.current) {
       isInitialMount.current = false;
     } else {

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import path from 'ramda/src/path';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '../ArticleMetadata';
@@ -42,6 +42,13 @@ const ArticleMain = ({ articleData: data }) => {
   const firstPublished = getFirstPublished(data);
   const lastPublished = getLastPublished(data);
   const aboutTags = getAboutTags(data);
+
+  useEffect(() => {
+    console.log('article mounted');
+    return () => {
+      console.log('article unmounted');
+    };
+  }, []);
 
   return (
     <>
