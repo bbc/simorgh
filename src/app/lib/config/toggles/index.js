@@ -27,6 +27,20 @@ const toggles = {
       enabled: true,
     },
   },
+  stage: {
+    chartbeatAnalytics: {
+      enabled: false,
+    },
+    mediaPlayer: {
+      enabled: true,
+    },
+    mpulse: {
+      enabled: true,
+    },
+    navOnArticles: {
+      enabled: true,
+    },
+  },
   live: {
     chartbeatAnalytics: {
       enabled: false,
