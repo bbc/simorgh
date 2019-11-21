@@ -171,7 +171,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/russian/institutional-50098149',
         text: 'Почему BBC News заслуживает доверия',
       },
       externalLink: {

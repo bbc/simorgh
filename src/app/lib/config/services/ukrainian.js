@@ -158,8 +158,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href:
-          'https://www.https://www.bbc.com/ukrainian/institutional-50170368',
+        href: 'https://www.bbc.com/ukrainian/institutional-50170368',
         text: 'Чому BBC заслуговує на довіру',
       },
       externalLink: {

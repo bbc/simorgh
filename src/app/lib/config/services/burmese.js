@@ -166,7 +166,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/burmese/institutional-50288575',
         text: 'ဘီဘီစီကို ဘာေၾကာင့္ ယုံၾကည္ႏိုင္သလဲ။',
       },
       externalLink: {
