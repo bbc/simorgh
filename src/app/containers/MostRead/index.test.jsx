@@ -28,9 +28,7 @@ const renderMostReadContainer = async ({ isAmp, service, variant = null }) =>
         variant={variant}
       >
         <ServiceContextProvider service={service} variant={variant}>
-          <MostReadContainer
-            endpoint={`http://localhost:7080/${service}/most_read.json`}
-          />
+          <MostReadContainer />
         </ServiceContextProvider>
       </RequestContextProvider>,
       container,
