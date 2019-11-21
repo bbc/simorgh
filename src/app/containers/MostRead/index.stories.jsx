@@ -2,13 +2,13 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import AMPMostReadContainer from './Amp';
-import CanonicalMostReadContainer from './Canonical';
+import MostReadContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
-const renderMostReadContainer = (container, service, isAmp) => (
+const staticMostReadURL = '/most_read.json';
+
+const renderMostReadContainer = (service, isAmp) => (
   <RequestContextProvider
     bbcOrigin={`/${service}/articles/c0000000000o`}
     id="c0000000000o"
@@ -20,7 +20,7 @@ const renderMostReadContainer = (container, service, isAmp) => (
     variant={null}
   >
     <ServiceContextProvider service={service} variant={null}>
-      {container}
+      <MostReadContainer endpoint={staticMostReadURL} />;
     </ServiceContextProvider>
   </RequestContextProvider>
 );
@@ -33,13 +33,5 @@ const stories = storiesOf('Containers|MostRead', module)
   });
 
 stories.add('Canonical Most Read', ({ service }) => {
-  console.log('service', service);
-  const container = <CanonicalMostReadContainer endpoint="/most_read.json" />;
-  return renderMostReadContainer(container, service, false);
-});
-
-stories.addDecorator(AmpDecorator).add('Amp Most Read', ({ service }) => {
-  console.log('service', service);
-  const container = <AMPMostReadContainer endpoint="/most_read.json" />;
-  return renderMostReadContainer(container, service, true);
+  return renderMostReadContainer(service, false);
 });

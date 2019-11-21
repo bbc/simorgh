@@ -1,22 +1,35 @@
 import React, { useContext } from 'react';
+import { string } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Canonical from './Canonical';
-import Amp from './Amp';
 
-const MostReadContainer = () => {
-  const { platform, variant } = useContext(RequestContext);
+const getLocalMostReadEndpoint = (service, variant) => {
+  const localhostURL = 'http://localhost:7080';
+  const localServiceURL = `${localhostURL}/${service}`;
+
+  return variant
+    ? `${localServiceURL}/most_read/${variant}.json`
+    : `${localServiceURL}/most_read.json`;
+};
+
+const MostReadContainer = ({ endpoint }) => {
+  const { variant } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
 
-  const localMostReadData = variant
-    ? `http://localhost:7080/${service}/most_read/${variant}.json`
-    : `http://localhost:7080/${service}/most_read.json`;
-
-  return platform === 'amp' ? (
-    <Amp endpoint={localMostReadData} />
-  ) : (
-    <Canonical endpoint={localMostReadData} />
+  return (
+    <Canonical
+      endpoint={endpoint || getLocalMostReadEndpoint(service, variant)}
+    />
   );
+};
+
+MostReadContainer.defaultProps = {
+  endpoint: null,
+};
+
+MostReadContainer.propTypes = {
+  endpoint: string,
 };
 
 export default MostReadContainer;

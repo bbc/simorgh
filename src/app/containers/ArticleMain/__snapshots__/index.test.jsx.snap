@@ -453,9 +453,6 @@ exports[`should render a news article correctly 1`] = `
             </p>
           </div>
         </div>
-        <p>
-          Last Updated: 
-        </p>
       </main>
     </div>
   </body>
@@ -888,9 +885,6 @@ exports[`should render a persian article correctly 1`] = `
             </p>
           </div>
         </div>
-        <p>
-          Last Updated: 
-        </p>
       </main>
     </div>
   </body>
@@ -1323,9 +1317,6 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
             </p>
           </div>
         </div>
-        <p>
-          Last Updated: 
-        </p>
       </main>
     </div>
   </body>

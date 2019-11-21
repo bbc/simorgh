@@ -61,31 +61,3 @@ describe('MostReadContainerCanonical', () => {
     }),
   );
 });
-
-describe('MostReadContainerAmp', () => {
-  beforeEach(() => {
-    container = document.createElement('div');
-    document.body.appendChild(container);
-  });
-
-  afterEach(() => {
-    container = null;
-    fetch.resetMocks();
-  });
-
-  Object.keys(services).map(service =>
-    it(`test data returns as expected on canonical for AMP - ${service}`, async () => {
-      const { variant, data: mostReadData } = services[service];
-      // const paragraphText = `Last Updated: ${mostReadData.lastRecordTimeStamp}`;
-
-      fetch.mockResponse(JSON.stringify(mostReadData));
-      await renderMostReadContainer({ isAmp: true, service, variant });
-
-      // eslint-disable-next-line no-console
-      console.log(container.innerHTML);
-
-      // expect(container.querySelectorAll('amp-list').length).toEqual(1);
-      // expect(container.querySelectorAll('ul').length).toEqual(10);
-    }),
-  );
-});

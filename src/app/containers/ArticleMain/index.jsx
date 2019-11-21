@@ -13,7 +13,6 @@ import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
 import articleMediaPlayer from '../ArticleMediaPlayer';
 import LinkedData from '../LinkedData';
-import MostRead from '../MostRead';
 
 import {
   getArticleId,
@@ -77,7 +76,6 @@ const ArticleMain = ({ articleData: data }) => {
             componentsToRender={componentsToRender}
           />
         </GhostGrid>
-        <MostRead />
       </main>
     </>
   );
