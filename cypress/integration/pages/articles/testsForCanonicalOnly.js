@@ -71,7 +71,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             const { model } = getBlockData('image', win.SIMORGH_DATA.pageData);
             const {
               model: { blocks },
-            } = model.blocks && getBlockByType(model.blocks, 'caption');
+            } =
+              model && model.blocks && getBlockByType(model.blocks, 'caption');
             const { text: captionText } =
               blocks && blocks[0].model.blocks[0].model;
             if (captionText) {
