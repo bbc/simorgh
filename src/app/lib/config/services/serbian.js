@@ -163,6 +163,10 @@ const baseServiceConfig = {
         text: 'Правила коришћења',
       },
       {
+        href: 'https://www.bbc.co.uk/aboutthebbc/',
+        text: 'О ББЦ-ју',
+      },
+      {
         href: 'https://www.bbc.com/privacy/',
         text: 'Правила приватности',
       },
