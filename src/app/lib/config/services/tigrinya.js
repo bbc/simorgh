@@ -137,7 +137,7 @@ export const service = {
         video: 'ቪድዮ',
         listen: 'Listen',
         watch: 'Watch',
-        liveLabel: 'LIVE',
+        liveLabel: 'ቀጥታ ስርጭት',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
