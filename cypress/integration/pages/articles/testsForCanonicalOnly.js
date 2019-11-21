@@ -43,29 +43,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       );
     });
 
-    if (
-      Cypress.env('APP_ENV') === 'local' ||
-      Cypress.env('APP_ENV') === 'test'
-    ) {
-      describe.only('Focus', () => {
-        beforeEach(() => {
-          // visit an article that has an inline link to another article of the same service
-          cy.visit('/news/articles/c0g992jmmkko', {
-            failOnStatusCode: !pageType.includes('error'),
-          });
-        });
-
-        it('should not focus on `h1#content` on initial load of a service', () => {
-          cy.focused().should('not.have.id', 'content');
-        });
-
-        it('should focus on `h1#content` when user navigates to another article of the same service', () => {
-          cy.get('main a[href*="/articles/"]').click();
-
-          cy.focused().should('have.id', 'content');
-        });
-      });
-    }
     // Have the test toggle between if mediaPlayer is enabled on live or not
     let imageIndex = 1;
     if (appToggles.mediaPlayer.enabled) {
