@@ -6,7 +6,7 @@ import MostReadContainer from './Canonical';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
-const staticMostReadURL = '/most_read.json';
+const staticMostReadURL = service => `/data/${service}/mostRead/index.json`;
 
 const renderMostReadContainer = (service, isAmp) => (
   <RequestContextProvider
@@ -20,7 +20,7 @@ const renderMostReadContainer = (service, isAmp) => (
     variant={null}
   >
     <ServiceContextProvider service={service} variant={null}>
-      <MostReadContainer endpoint={staticMostReadURL} />;
+      <MostReadContainer endpoint={staticMostReadURL(service)} />;
     </ServiceContextProvider>
   </RequestContextProvider>
 );
@@ -33,5 +33,6 @@ const stories = storiesOf('Containers|MostRead', module)
   });
 
 stories.add('Canonical Most Read', ({ service }) => {
+  console.log(service);
   return renderMostReadContainer(service, false);
 });
