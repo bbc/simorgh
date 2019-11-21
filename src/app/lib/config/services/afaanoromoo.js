@@ -138,6 +138,12 @@ export const service = {
         audio: 'Sagalee',
         photogallery: 'Kuusaa suuraa',
         video: 'Viidiyoo',
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'JIRADHU',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -147,7 +153,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/afaanoromoo/institutional-49281861',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'BBC News maaliif amanuu dandeessa',
       },
       externalLink: {
