@@ -33,6 +33,5 @@ const stories = storiesOf('Containers|MostRead', module)
   });
 
 stories.add('Canonical Most Read', ({ service }) => {
-  console.log(service);
   return renderMostReadContainer(service, false);
 });
