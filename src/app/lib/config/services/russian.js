@@ -57,9 +57,9 @@ export const service = {
       skipLinkText: 'Перейти к содержанию',
       relatedContent: 'Related content',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'Медиа плеер',
+        audioPlayer: 'Аудио плеер',
+        videoPlayer: 'Видео плеер',
       },
       error: {
         404: {
@@ -180,11 +180,15 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/russian/institutional-36515745',
           text: 'Правила использования',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/russian/institutional-36515748',
+          text: 'О Би-би-си',
+        },
+        {
+          href: 'https://www.bbc.com/russian/institutional-36517234',
           text: 'Личные данные',
         },
         {
@@ -192,7 +196,7 @@ export const service = {
           text: 'Кукис',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/russian/institutional-36517237',
           text: 'Связаться с Би-би-си',
         },
       ],
