@@ -149,7 +149,7 @@ export const service = {
         video: 'Vídeo',
         listen: 'Listen',
         watch: 'Watch',
-        liveLabel: 'LIVE',
+        liveLabel: 'AO VIVO',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -171,11 +171,15 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/portuguese/institutional-36202448',
           text: 'Termos de Uso',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/portuguese/institutional-36202452',
+          text: 'Sobre a BBC',
+        },
+        {
+          href: 'https://www.bbc.com/portuguese/institutional-36202454',
           text: 'Política de privacidade',
         },
         {
@@ -183,7 +187,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/portuguese/institutional-36202456',
           text: 'Fale com a BBC',
         },
       ],
