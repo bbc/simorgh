@@ -145,7 +145,7 @@ export const service = {
         },
         listen: 'સાંભળો',
         watch: 'જુઓ',
-        liveLabel: 'LIVE',
+        liveLabel: 'પેરેંટલ માર્ગદર્શન લૉક ચાલુ કરો',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
