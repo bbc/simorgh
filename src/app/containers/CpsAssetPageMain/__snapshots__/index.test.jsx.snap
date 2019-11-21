@@ -712,7 +712,222 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
 `;
 
 exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
-.c0 {
+<html
+  dir="ltr"
+  lang="pcm"
+>
+  <head>
+    <title>
+      Nigerian man Emeka Nelson don produce generator wey dey use only water - BBC News Ìgbò
+    </title>
+    <link
+      href="https://www.test.bbc.com/pidgin/tori-49450859"
+      rel="canonical"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/pidgin/tori-49450859"
+      hreflang="ig"
+      rel="alternate"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/pidgin/tori-49450859.amp"
+      rel="amphtml"
+    />
+    <link
+      href="http://localhost:7080/igbo/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="BBC News Ìgbò"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News Ìgbò"
+      name="application-name"
+    />
+    <meta
+      content="Emeka Nelson don find di solution to di light palava wey dey worry for Nigeria nad oda parts of Africa as im produce generator wey dey run on water."
+      name="description"
+    />
+    <meta
+      content="100004154058350"
+      name="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      name="fb:app_id"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="Emeka Nelson don find di solution to di light palava wey dey worry for Nigeria nad oda parts of Africa as im produce generator wey dey run on water."
+      name="og:description"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"
+      name="og:image"
+    />
+    <meta
+      content="BBC News Ìgbò"
+      name="og:image:alt"
+    />
+    <meta
+      content="ig"
+      name="og:locale"
+    />
+    <meta
+      content="BBC News Ìgbò"
+      name="og:site_name"
+    />
+    <meta
+      content="Nigerian man Emeka Nelson don produce generator wey dey use only water - BBC News Ìgbò"
+      name="og:title"
+    />
+    <meta
+      content="website"
+      name="og:type"
+    />
+    <meta
+      content="https://www.test.bbc.com/pidgin/tori-49450859"
+      name="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:creator"
+    />
+    <meta
+      content="Emeka Nelson don find di solution to di light palava wey dey worry for Nigeria nad oda parts of Africa as im produce generator wey dey run on water."
+      name="twitter:description"
+    />
+    <meta
+      content="BBC News Ìgbò"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:site"
+    />
+    <meta
+      content="Nigerian man Emeka Nelson don produce generator wey dey use only water - BBC News Ìgbò"
+      name="twitter:title"
+    />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pidgin/tori-49450859","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/tori-49450859","name":"Nigerian man Emeka Nelson don produce generator wey dey use only water"}}
+    </script>
+    <script
+      type="application/ld+json"
+    >
+      {"video":{"@list":[{"@type":"VideoObject","name":"Nigerian man produce generator wey dey run on water","description":"Nigerian man produce generator wey dey run on water","duration":139,"thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p07lgnlf.jpg","uploadDate":1566573314}]}}
+    </script>
+  </head>
+  <body>
+    .c0 {
   margin: 0 auto;
   background: #FDFDFD;
   padding-bottom: 2rem;
@@ -1428,241 +1643,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   }
 }
 
-<html
-  dir="ltr"
-  lang="pcm"
->
-  <head>
-    <title>
-      Nigerian man Emeka Nelson don produce generator wey dey use only water - BBC News Ìgbò
-    </title>
-    <link
-      href="https://www.test.bbc.co.uk/igbo/afirika-23252735"
-      hreflang="ig"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/igbo/afirika-23252735.amp"
-      rel="amphtml"
-    />
-    <link
-      href="https://www.test.bbc.com/pidgin/tori-49450859"
-      rel="canonical"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pidgin/tori-49450859"
-      hreflang="ig"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pidgin/tori-49450859.amp"
-      rel="amphtml"
-    />
-    <link
-      href="http://localhost:7080/igbo/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      content="IE=edge"
-      http-equiv="X-UA-Compatible"
-    />
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      content="noodp,noydir"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      name="viewport"
-    />
-    <meta
-      content="BBC News Ìgbò"
-      name="apple-mobile-web-app-title"
-    />
-    <meta
-      content="BBC News Ìgbò"
-      name="application-name"
-    />
-    <meta
-      content="Emeka Nelson don find di solution to di light palava wey dey worry for Nigeria nad oda parts of Africa as im produce generator wey dey run on water."
-      name="description"
-    />
-    <meta
-      content="100004154058350"
-      name="fb:admins"
-    />
-    <meta
-      content="1609039196070050"
-      name="fb:app_id"
-    />
-    <meta
-      content="yes"
-      name="mobile-web-app-capable"
-    />
-    <meta
-      content="#B80000"
-      name="msapplication-TileColor"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-144x144.png"
-      name="msapplication-TileImage"
-    />
-    <meta
-      content="Emeka Nelson don find di solution to di light palava wey dey worry for Nigeria nad oda parts of Africa as im produce generator wey dey run on water."
-      name="og:description"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"
-      name="og:image"
-    />
-    <meta
-      content="BBC News Ìgbò"
-      name="og:image:alt"
-    />
-    <meta
-      content="ig"
-      name="og:locale"
-    />
-    <meta
-      content="BBC News Ìgbò"
-      name="og:site_name"
-    />
-    <meta
-      content="Nigerian man Emeka Nelson don produce generator wey dey use only water - BBC News Ìgbò"
-      name="og:title"
-    />
-    <meta
-      content="website"
-      name="og:type"
-    />
-    <meta
-      content="https://www.test.bbc.com/pidgin/tori-49450859"
-      name="og:url"
-    />
-    <meta
-      content="summary_large_image"
-      name="twitter:card"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:creator"
-    />
-    <meta
-      content="Emeka Nelson don find di solution to di light palava wey dey worry for Nigeria nad oda parts of Africa as im produce generator wey dey run on water."
-      name="twitter:description"
-    />
-    <meta
-      content="BBC News Ìgbò"
-      name="twitter:image:alt"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"
-      name="twitter:image:src"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:site"
-    />
-    <meta
-      content="Nigerian man Emeka Nelson don produce generator wey dey use only water - BBC News Ìgbò"
-      name="twitter:title"
-    />
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/igbo/afirika-23252735","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/igbo/afirika-23252735","name":"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?"}}
-    </script>
-    <script
-      type="application/ld+json"
-    >
-      {"video":{"@list":[{"@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":1961,"thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":1559819809000}]}}
-    </script>
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pidgin/tori-49450859","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/tori-49450859","name":"Nigerian man Emeka Nelson don produce generator wey dey use only water"}}
-    </script>
-    <script
-      type="application/ld+json"
-    >
-      {"video":{"@list":[{"@type":"VideoObject","name":"Nigerian man produce generator wey dey run on water","description":"Nigerian man produce generator wey dey run on water","duration":139,"thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p07lgnlf.jpg","uploadDate":1566573314}]}}
-    </script>
-  </head>
-  <body>
-    <div>
+<div>
       <noscript />
       <main
         class="c0"
@@ -2289,6 +2270,20 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   padding: 0;
 }
 
+.c31 {
+  border-bottom: 0.0625rem solid #F2F2F2;
+  padding: 0.5rem 0 1rem;
+}
+
+.c31:first-child {
+  padding-top: 0;
+}
+
+.c31:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
 .c30 {
   list-style-type: none;
   margin: 0;
@@ -2712,6 +2707,30 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) {
   .c24 {
     margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c31 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c31 {
+    padding: 1.5rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c31:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c31:first-child {
+    padding-top: 1.5rem;
   }
 }
 
@@ -3346,7 +3365,12 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           <ul
             class="c30"
             role="list"
-          />
+          >
+            <li
+              class="c31"
+              role="listitem"
+            />
+          </ul>
         </div>
       </main>
     </div>
