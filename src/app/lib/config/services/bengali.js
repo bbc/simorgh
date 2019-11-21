@@ -162,7 +162,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/bengali/institutional-50409861',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'বিবিসির ওপর কেন আপনি আস্থা রাখতে পারেন',
       },
       externalLink: {
@@ -191,7 +191,8 @@ export const service = {
           text: 'বিবিসির সঙ্গে যোগাযোগ করুন',
         },
       ],
-      copyrightText: 'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
+      copyrightText:
+        'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
     },
     fonts: [F_SHONAR_BANGLA_BOLD, F_SHONAR_BANGLA_REGULAR],
     timezone: 'Asia/Dhaka',

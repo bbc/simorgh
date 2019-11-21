@@ -150,7 +150,7 @@ const baseServiceConfig = {
   },
   footer: {
     trustProjectLink: {
-      href: 'https://www.bbc.com/serbian/lat/institutional-50173730',
+      href: 'https://www.bbc.com/news/help-41670342',
       text: 'Зашто ББЦ заслужује ваше поверење',
     },
     externalLink: {

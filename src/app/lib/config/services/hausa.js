@@ -159,7 +159,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/hausa/game-da-mu-49283501',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'Me yasa za ka aminta da BBC',
       },
       externalLink: {

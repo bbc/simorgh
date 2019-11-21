@@ -158,7 +158,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/nepali/institutional-50318130',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'बीबीसीको विश्वसनीयता',
       },
       externalLink: {

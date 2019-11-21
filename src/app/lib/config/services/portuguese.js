@@ -162,7 +162,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/portuguese/institutional-50054434',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'Por que você pode confiar na BBC',
       },
       externalLink: {

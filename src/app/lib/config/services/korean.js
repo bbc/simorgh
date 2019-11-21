@@ -148,7 +148,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/korean/institutional-49283197',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'BBC News를 신뢰할 수 있는 이유',
       },
       externalLink: {

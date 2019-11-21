@@ -152,7 +152,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/indonesia/institutional-49283175',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'Alasan Anda dapat mempercayai BBC News',
       },
       externalLink: {
