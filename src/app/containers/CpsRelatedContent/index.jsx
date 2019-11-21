@@ -31,7 +31,7 @@ const CpsRelatedContent = ({ content }) => {
 
       <StoryPromoUl>
         {content.map(item => (
-          <StoryPromoLi key={item.uri}>
+          <StoryPromoLi key={item.id || item.uri}>
             <StoryPromo item={item} />
           </StoryPromoLi>
         ))}
