@@ -72,8 +72,7 @@ describe('CanonicalChartbeatAnalytics', () => {
       />,
     );
 
-    // inline link to Page B
-    wrapper.setProps({
+    const pageBConfig = {
       chartbeatConfig: {
         domain: 'test-domain',
         type: 'article',
@@ -84,10 +83,9 @@ describe('CanonicalChartbeatAnalytics', () => {
         title: 'Page B',
         uid: 123,
       },
-    });
+    };
 
-    // inline link to Page C
-    wrapper.setProps({
+    const pageCConfig = {
       chartbeatConfig: {
         domain: 'test-domain',
         type: 'article',
@@ -98,21 +96,16 @@ describe('CanonicalChartbeatAnalytics', () => {
         title: 'Page C',
         uid: 123,
       },
-    });
+    };
+
+    // inline link to Page B
+    wrapper.setProps(pageBConfig);
+
+    // inline link to Page C
+    wrapper.setProps(pageCConfig);
 
     // press back, return to Page B
-    wrapper.setProps({
-      chartbeatConfig: {
-        domain: 'test-domain',
-        type: 'article',
-        sections: 'section1 section2',
-        chartbeatUID: 1111,
-        useCanonical: true,
-        virtualReferrer: '/page-A',
-        title: 'Page B',
-        uid: 123,
-      },
-    });
+    wrapper.setProps(pageBConfig);
 
     const [
       [firstCall],
