@@ -3,10 +3,12 @@ import {
   getCookiePolicy,
   getPreferredVariant,
   personalisationEnabled,
+  setPreferredVariant,
 } from '.';
 
 jest.mock('js-cookie', () => ({
   get: jest.fn(),
+  set: jest.fn(),
 }));
 
 describe('UserContext cookies', () => {
@@ -44,6 +46,20 @@ describe('UserContext cookies', () => {
     it('should return cookie value from js-cookie', () => {
       Cookie.get.mockReturnValue('trad');
       expect(getPreferredVariant('zhongwen')).toEqual('trad');
+    });
+  });
+
+  describe('setPreferredVariant', () => {
+    it('should not set invalid service or variant', () => {
+      setPreferredVariant('news', '');
+      expect(Cookie.set).not.toHaveBeenCalled();
+      setPreferredVariant('');
+      expect(Cookie.set).not.toHaveBeenCalled();
+    });
+
+    it('should set preferred variant', () => {
+      setPreferredVariant('serbian', 'lat');
+      expect(Cookie.set).toHaveBeenCalledWith('ckps_serbian', 'lat');
     });
   });
 

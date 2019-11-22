@@ -6,11 +6,20 @@ export const getCookiePolicy = () => {
   return Cookie.get(POLICY_COOKIE) || '000';
 };
 
+const getPreferredVariantCookie = service => `ckps_${service}`;
+
 export const getPreferredVariant = service => {
   if (!service) return null;
-  const VARIANT_COOKIE = `ckps_${service}`;
 
-  return Cookie.get(VARIANT_COOKIE);
+  const cookie = getPreferredVariantCookie(service);
+  return Cookie.get(cookie);
+};
+
+export const setPreferredVariant = (service, variant) => {
+  if (!service || !variant) return;
+
+  const cookie = getPreferredVariantCookie(service);
+  Cookie.set(cookie, variant);
 };
 
 export const personalisationEnabled = cookiePolicy =>

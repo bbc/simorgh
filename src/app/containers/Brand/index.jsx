@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import Brand from '@bbc/psammead-brand';
 import { bool } from 'prop-types';
+import { latin } from '@bbc/gel-foundations/scripts';
+import ScriptLink from '@bbc/psammead-script-link';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const BrandContainer = props => {
@@ -17,6 +19,16 @@ const BrandContainer = props => {
   const svgRatio = brandSVG && brandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
+  const scriptLink = (
+    <ScriptLink
+      script={latin}
+      service={service}
+      href="https://www.bbc.com/serbian/cyr"
+      variant="cyr"
+    >
+      Cyr
+    </ScriptLink>
+  );
 
   return (
     <Brand
@@ -29,6 +41,7 @@ const BrandContainer = props => {
       maxWidth={maxWidth}
       svg={brandSVG}
       url={`/${service}`}
+      scriptLink={scriptLink}
       {...props}
     />
   );
