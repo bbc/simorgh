@@ -41,7 +41,6 @@ const ChartbeatAnalytics = ({ data }) => {
     service,
     sendCanonicalChartbeatBeacon,
     isCanonicalAndEnabled,
-    chartbeatConfig,
   ]);
 
   return (
