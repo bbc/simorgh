@@ -54,7 +54,7 @@ export const testsThatFollowSmokeTestConfig = ({
             const headlineData = getBlockData('headline', body);
             cy.get('h1').should(
               'contain',
-              headlineData.model.blocks[0].model.blocks[0].model.text,
+              headlineData.model.blocks[0].model.blocks[0].model.text + ' blah',
             );
           },
         );
