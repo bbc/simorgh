@@ -85,7 +85,7 @@ describe('CpsAssetPageMain', () => {
     );
   });
 
-  it('should render MAPs', async () => {
+  it('should render MAP with paragraph text', async () => {
     const pageData = await preprocessor(
       pidginPageData,
       cpsAssetPreprocessorRules,
