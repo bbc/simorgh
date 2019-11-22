@@ -1,10 +1,6 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
-const getParagraphText = blocks =>
-  blocks.find(el => el.type === 'paragraph' && el.markupType === 'plain_text')
-    .text;
-
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
@@ -22,16 +18,6 @@ export const testsThatFollowSmokeTestConfig = ({
       cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
         ({ body }) => {
           cy.get('h1').should('contain', body.promo.headlines.headline);
-        },
-      );
-    });
-
-    it('should render a paragraph, which contains/displays styled text', () => {
-      cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-        ({ body }) => {
-          const text = getParagraphText(body.content.blocks);
-
-          cy.get('p').should('contain', text.replace(/&.*;/g, ''));
         },
       );
     });

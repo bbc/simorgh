@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { getByText } from '@testing-library/dom';
 import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import assocPath from 'ramda/src/assocPath';
@@ -84,13 +85,21 @@ describe('CpsAssetPageMain', () => {
     );
   });
 
-  it('should match snapshot for MAP', async () => {
+  it('should render MAPs', async () => {
     const pageData = await preprocessor(
       pidginPageData,
       cpsAssetPreprocessorRules,
     );
 
-    await matchSnapshotAsync(createMediaAssetPage({ pageData }));
+    const paragraphText = path(
+      ['content', 'blocks', '1', 'text'],
+      pidginPageData,
+    );
+
+    const { asFragment } = render(createMediaAssetPage({ pageData }));
+
+    expect(getByText(document.body, paragraphText)).not.toBeNull();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should correctly handle live streams', async () => {
