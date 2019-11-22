@@ -2270,6 +2270,20 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   padding: 0;
 }
 
+.c31 {
+  border-bottom: 0.0625rem solid #F2F2F2;
+  padding: 0.5rem 0 1rem;
+}
+
+.c31:first-child {
+  padding-top: 0;
+}
+
+.c31:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
 .c30 {
   list-style-type: none;
   margin: 0;
@@ -2693,6 +2707,30 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) {
   .c24 {
     margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c31 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c31 {
+    padding: 1.5rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c31:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c31:first-child {
+    padding-top: 1.5rem;
   }
 }
 
@@ -3327,7 +3365,12 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           <ul
             class="c30"
             role="list"
-          />
+          >
+            <li
+              class="c31"
+              role="listitem"
+            />
+          </ul>
         </div>
       </main>
     </div>
