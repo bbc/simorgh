@@ -31,7 +31,7 @@ export const testsThatFollowSmokeTestConfig = ({
         ({ body }) => {
           const text = getParagraphText(body.content.blocks);
 
-          cy.get('p').should('contain', text);
+          cy.get('p').should('contain', text.replace(/&.*;/g, ''));
         },
       );
     });

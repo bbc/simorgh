@@ -6,6 +6,23 @@ const serviceHasIndexAlsos = service => service === 'thai';
 // Limiting to one service for now
 const serviceHasPublishedPromo = service => service === 'persian';
 
+// Check for valid useful links
+const isValidUsefulLinks = pageData => {
+  const usefulLinks = pageData.find(data => {
+    return data.type === 'useful-links';
+  });
+
+  // We include a check for the strapline as we don't render Useful Links
+  // if we don't receive a strapline in the data
+  if (usefulLinks && 'strapline' in usefulLinks) {
+    return usefulLinks.items.some(
+      item => item.assetTypeCode === 'PRO' && item.contentType === 'Guide',
+    );
+  }
+
+  return false;
+};
+
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
@@ -168,42 +185,19 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
             },
           );
         });
-        it('should contain Useful Links if usefulLinks block data exists', () => {
+
+        it('should contain Useful Links if valid usefulLinks block data exists', () => {
           cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
             ({ body }) => {
               const pageData = body.content.groups;
-              const usefulLinks = pageData.find(data => {
-                return data.type === 'useful-links';
-              });
-
-              const contentTypes = [
-                'Text',
-                'Feature',
-                'Audio',
-                'Video',
-                'Gallery',
-                'Guide',
-              ];
-
-              let usefulLinksItems = [];
-              if (usefulLinks) {
-                usefulLinksItems = usefulLinks.items.filter(item => {
-                  return (
-                    item.assetTypeCode === 'PRO' &&
-                    contentTypes.includes(item.contentType)
-                  );
-                });
-              }
-
-              const isValidUsefulLinks =
-                usefulLinks &&
-                'strapline' in usefulLinks &&
-                usefulLinksItems.length;
-
-              if (isValidUsefulLinks) {
-                //  We include the hasStrapline as we don't render Useful Links
-                //  if we don't receive a strapline in the data
-                cy.get('[aria-labelledby="Useful-links"]').should('be.visible');
+              if (isValidUsefulLinks(pageData)) {
+                cy.get('[data-e2e="useful-links"]')
+                  .eq(0)
+                  .within(() => {
+                    cy.get('a')
+                      .should('have.length.of.at.least', 1)
+                      .should('be.visible');
+                  });
               } else {
                 cy.get('[aria-labelledby="Useful-links"]').should(
                   'not.be.visible',
