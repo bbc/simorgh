@@ -45,8 +45,12 @@ const renderDocument = async ({
   );
 
   if (context.url) {
-    // https://alligator.io/react/react-router-ssr/
-    return context;
+    /**
+     * React Router automatically adds an url property with the
+     * redirected url to the context object when a Redirect component
+     * is used - https://alligator.io/react/react-router-ssr/
+     */
+    return { redirectUrl: context.url, html: null };
   }
 
   const scripts = extractor.getScriptElements({
@@ -69,7 +73,7 @@ const renderDocument = async ({
     />,
   );
 
-  return `<!doctype html>${doc}`;
+  return { html: `<!doctype html>${doc}`, redirectUrl: null };
 };
 
 export default renderDocument;

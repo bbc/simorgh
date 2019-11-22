@@ -229,10 +229,12 @@ server
         variant,
       });
 
-      if (typeof result === 'object' && result.url) {
-        res.redirect(301, result.url);
+      if (result.redirectUrl) {
+        res.redirect(301, result.redirectUrl);
+      } else if (result.html) {
+        res.status(status).send(result.html);
       } else {
-        res.status(status).send(result);
+        throw new Error('unknown result');
       }
     } catch ({ message, status }) {
       // Return an internal server error for any uncaught errors
