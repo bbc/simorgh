@@ -33,7 +33,8 @@
       "tags": {},
       "version": "v1.0.7",
       "blockTypes": [
-        "media"
+        "media",
+        "paragraph"
       ],
       "includeComments": false
     },
@@ -67,7 +68,12 @@
             }
           ],
           "type": "media"
-        }
+        },
+        {
+          "text": "Plain Text Paragraph",
+          "markupType": "plain_text",
+          "type": "paragraph"
+      }
       ]
     },
     "promo": {
