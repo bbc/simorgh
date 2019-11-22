@@ -1,22 +1,24 @@
-import { blockOfTypesAndModel } from '../general';
-import { textModelPropTypes } from '../text';
+import { blockOfTypesAndModel, blocksWithTypes } from '../general';
+import { paragraphBlockPropTypes } from '../paragraph';
 
-export const listItemBlockPropTypes = blockOfTypesAndModel(
+export const listItemModelPropTypes = blockOfTypesAndModel(
   ['listItem'],
-  textModelPropTypes,
+  paragraphBlockPropTypes,
 );
 
-export const unorderedListBlockPropTypes = blockOfTypesAndModel(
-  ['unorderedList'],
-  listItemBlockPropTypes,
-);
+export const listItemBlockPropTypes = blocksWithTypes([listItemModelPropTypes]);
 
-export const orderedListBlockPropTypes = blockOfTypesAndModel(
-  ['orderedList'],
-  listItemBlockPropTypes,
-);
+// export const unorderedListBlockPropTypes = blockOfTypesAndModel(
+//   ['unorderedList'],
+//   listItemBlockPropTypes,
+// );
 
-export const listBlockPropTypes = blockOfTypesAndModel(
-  ['unorderedList', 'orderedList'],
-  listItemBlockPropTypes,
-);
+// export const orderedListBlockPropTypes = blockOfTypesAndModel(
+//   ['orderedList'],
+//   listItemBlockPropTypes,
+// );
+
+// export const listBlockPropTypes = blockOfTypesAndModel(
+//   ['unorderedList', 'orderedList'],
+//   listItemBlockPropTypes,
+// );

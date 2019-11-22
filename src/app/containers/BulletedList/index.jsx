@@ -3,7 +3,7 @@ import BulletedList from '@bbc/psammead-bulleted-list';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';
 import listItem from '../BulletedListItem';
-import { listBlockPropTypes } from '#models/propTypes/list';
+import { listItemBlockPropTypes } from '#models/propTypes/list';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 
 const componentsToRender = { listItem };
@@ -20,6 +20,8 @@ const BulletedListContainer = ({ blocks }) => {
   );
 };
 
-BulletedListContainer.propTypes = { ...listBlockPropTypes };
+BulletedListContainer.propTypes = {
+  ...listItemBlockPropTypes,
+};
 
 export default BulletedListContainer;

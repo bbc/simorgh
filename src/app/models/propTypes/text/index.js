@@ -1,5 +1,10 @@
-import { blockOfTypesAndModel, blocksWithTypes } from '../general';
+import {
+  blockOfTypesAndModel,
+  blocksWithTypes,
+  arrayOfSpecificBlocks,
+} from '../general';
 import { paragraphBlockPropTypes } from '../paragraph';
+// import { listBlockPropTypes } from '../list';
 
 export const textModelPropTypes = blocksWithTypes([
   paragraphBlockPropTypes.isRequired,
@@ -11,5 +16,5 @@ export const textModelDefaultProps = {
 
 export const textBlockPropTypes = blockOfTypesAndModel(
   ['text'],
-  textModelPropTypes,
+  arrayOfSpecificBlocks(textModelPropTypes),
 );
