@@ -13,6 +13,10 @@ jest.mock('react', () => {
   };
 });
 
+jest.mock('#contexts/UserContext/usePreferredVariant', () =>
+  jest.fn().mockImplementation(() => ['cyr', jest.fn()]),
+);
+
 jest.mock('./cookies', () => ({
   getCookiePolicy: jest.fn(),
   personalisationEnabled: jest.fn(),
@@ -56,6 +60,8 @@ describe('UserContext', () => {
       personalisationEnabled: true,
       updateCookiePolicy: expect.any(Function),
       sendCanonicalChartbeatBeacon: expect.any(Function),
+      preferredVariant: 'cyr',
+      setPreferredVariant: expect.any(Function),
     });
     expect(mockChartbeat).toHaveBeenCalledTimes(1);
     expect(mockChartbeat).toHaveBeenCalledWith(

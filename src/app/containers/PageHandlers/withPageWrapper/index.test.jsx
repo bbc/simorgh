@@ -6,6 +6,10 @@ import { UserContextProvider } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import WithPageWrapper from '.';
 
+jest.mock('#contexts/UserContext/usePreferredVariant', () =>
+  jest.fn().mockImplementation(() => [null, jest.fn()]),
+);
+
 const dataProps = {
   isAmp: false,
   service: 'news',

@@ -3,6 +3,10 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import CpsAssetPage from '.';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 
+jest.mock('#contexts/UserContext/usePreferredVariant', () =>
+  jest.fn().mockImplementation(() => [null, jest.fn()]),
+);
+
 const cpsAssetScaffoldProps = {
   isAmp: false,
   pageType: 'MAP',
