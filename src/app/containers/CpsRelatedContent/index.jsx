@@ -14,10 +14,6 @@ const Wrapper = styled(GridItemConstrainedLarge)`
   z-index: 0;
 `;
 
-const isValidItem = item => {
-  return !!item.indexImage;
-};
-
 const CpsRelatedContent = ({ content }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   if (!content.length) return null;
@@ -34,8 +30,8 @@ const CpsRelatedContent = ({ content }) => {
       </SectionLabel>
 
       <StoryPromoUl>
-        {content.filter(isValidItem).map(item => (
-          <StoryPromoLi key={item.id}>
+        {content.map(item => (
+          <StoryPromoLi key={item.id || item.uri}>
             <StoryPromo item={item} />
           </StoryPromoLi>
         ))}
