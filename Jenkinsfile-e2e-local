@@ -36,7 +36,7 @@ node {
 
                         def messageColour = 'warning'
                         def channel = '#simorgh-alarms-jamesdonoh-test'
-                        def message = 'I am a test message'
+                        def message = '@here I am a test message'
                         slackSend(channel: channel, color: messageColour, message: message)
                     }
                 }
