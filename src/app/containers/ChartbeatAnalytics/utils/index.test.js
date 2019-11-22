@@ -283,7 +283,7 @@ describe('Chartbeat utilities', () => {
         type: 'Index',
         uid: 50924,
         useCanonical: true,
-        virtualReferrer: 'test.bbc.com/referrer',
+        virtualReferrer: 'test.bbc.com/previous-path',
       };
 
       expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);

@@ -135,6 +135,12 @@ export const service = {
         audio: 'ድምፂ',
         photogallery: 'ስእልታት',
         video: 'ቪድዮ',
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'ቀጥታ ስርጭት',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -144,7 +150,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/tigrinya/institutional-49283259',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'ን BBC News ንምንታይ ክትኣምንዎ ከምዘለኩም',
       },
       externalLink: {
