@@ -51,9 +51,9 @@ export const service = {
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       relatedContent: 'อ่านข่าวนี้เพิ่มเติม',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'มีเดีย เพลเยอร์',
+        audioPlayer: 'ออดิโอ เพลเยอร์',
+        videoPlayer: 'วิดีโอ เพลเยอร์',
       },
       error: {
         404: {
@@ -139,6 +139,12 @@ export const service = {
         audio: 'เสียง',
         photogallery: 'แกลเลอรีภาพ',
         video: 'วิดีโอ',
+        listen: 'ฟัง',
+        watch: 'ดูู',
+        liveLabel: 'สด',
+        previousRadioShow: 'รายการวิทยุก่อนหน้า',
+        nextRadioShow: 'รายการวิทยุถัดไป',
+        duration: 'ความยาว',
       },
     },
     brandSVG,
@@ -178,7 +184,7 @@ export const service = {
     ],
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/thai/institutional-49281839',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้',
       },
       externalLink: {
