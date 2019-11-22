@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { getByText } from '@testing-library/dom';
+import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import assocPath from 'ramda/src/assocPath';
@@ -96,9 +96,11 @@ describe('CpsAssetPageMain', () => {
       pidginPageData,
     );
 
-    const { asFragment } = render(createMediaAssetPage({ pageData }));
+    const { asFragment, getByText } = render(
+      createMediaAssetPage({ pageData }),
+    );
 
-    expect(getByText(document.body, paragraphText)).not.toBeNull();
+    expect(getByText(paragraphText)).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
   });
 
