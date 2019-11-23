@@ -1,5 +1,4 @@
 import React from 'react';
-import { checkPropTypes } from 'prop-types';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
 import BulletedListContainer from './index';
@@ -35,7 +34,7 @@ describe('BulletedListContainer', () => {
           },
         },
         {
-          id: 'mock-id-1',
+          id: 'mock-id-2',
           type: 'listItem',
           model: {
             blocks: [
@@ -60,7 +59,7 @@ describe('BulletedListContainer', () => {
           },
         },
         {
-          id: 'mock-id-1',
+          id: 'mock-id-3',
           type: 'listItem',
           model: {
             blocks: [

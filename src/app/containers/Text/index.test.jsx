@@ -32,6 +32,14 @@ describe('TextContainer', () => {
       },
     });
 
+    const listItemBlock = (id = null, listBlocks) => ({
+      id,
+      type: 'listItem',
+      model: {
+        blocks: listBlocks.map(blocks => paragraphBlock(id, blocks)),
+      },
+    });
+
     const listBlock = (id = null, blocks, type = 'unorderedList') => ({
       id,
       type,
@@ -58,8 +66,8 @@ describe('TextContainer', () => {
           fragmentBlock('mock-id-5.1', 'This is a 5th paragraph block.'),
         ]),
         listBlock('mock-id-6', [
-          paragraphBlock('mock-id-6.1', [
-            fragmentBlock('mock-id-6.1.1', 'This is a list item'),
+          listItemBlock('mock-id-6.1', [
+            [fragmentBlock('mock-id-6.1.1', 'This is a list item')],
           ]),
         ]),
       ],
