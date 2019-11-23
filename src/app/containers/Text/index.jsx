@@ -4,7 +4,11 @@ import unorderedList from '../BulletedList';
 import Blocks from '../Blocks';
 import { textModelPropTypes } from '#models/propTypes/text';
 
-const componentsToRender = { paragraph, unorderedList };
+const componentsToRender = {
+  paragraph,
+  unorderedList,
+  orderedList: unorderedList,
+};
 
 const TextContainer = ({ blocks }) => {
   if (!blocks) return null;
