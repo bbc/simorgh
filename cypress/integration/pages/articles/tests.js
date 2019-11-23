@@ -19,7 +19,7 @@ const serviceHasInlineLink = service => service === 'news';
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
-  describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {});
+  //describe(`Running testsToAlwaysRun for ${service} ${pageType}`, () => {});
 };
 
 // For testing feastures that may differ across services but share a common logic e.g. translated strings.
@@ -28,7 +28,7 @@ export const testsThatFollowSmokeTestConfig = ({
   pageType,
   variant,
 }) => {
-  describe(`Running tests for ${service} ${pageType}`, () => {
+  describe(service, () => {
     describe(`Metadata`, () => {
       // Here we should only have metadata tests that are unique to articles pages
       it('should have the correct articles metadata', () => {

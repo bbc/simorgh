@@ -9,7 +9,7 @@ const serviceHasCaption = service => service === 'news';
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
-  describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service} ${pageType}`, () => {});
+  //describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service} ${pageType}`, () => {});
 };
 
 // For testing feastures that may differ across services but share a common logic e.g. translated strings.
@@ -17,7 +17,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
 }) =>
-  describe(`Canonical Tests for ${service} ${pageType}`, () => {
+  describe(service, () => {
     it('should not have an AMP attribute on the main article', () => {
       cy.get('html').should('not.have.attr', 'amp');
     });
@@ -200,5 +200,5 @@ export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({
   service,
   pageType,
 }) => {
-  describe(`No testsToNeverSmokeTestForCanonicalOnly to run for ${service} ${pageType}`, () => {});
+  //describe(`No testsToNeverSmokeTestForCanonicalOnly to run for ${service} ${pageType}`, () => {});
 };

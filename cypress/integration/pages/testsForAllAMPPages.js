@@ -11,7 +11,7 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
   service,
   pageType,
 }) => {
-  describe(`Running testsForAllAMPPages for ${service} ${pageType}`, () => {
+  describe(service, () => {
     if (pageType !== 'errorPage404') {
       it('should have an AMP attribute on the page', () => {
         cy.get('html').should('have.attr', 'amp');

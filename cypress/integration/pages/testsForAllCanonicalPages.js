@@ -15,7 +15,7 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
   pageType,
 }) => {
   if (pageType !== 'errorPage404') {
-    describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
+    describe(service, () => {
       if (Cypress.env('SMOKE')) {
         describe('ATI', () => {
           it('should have a noscript img tag with the ati url', () => {
