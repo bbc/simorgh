@@ -13,7 +13,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
   grid-column: 1 / span 6;
 }
 
-.c15 {
+.c17 {
   display: grid;
   grid-column-gap: 1rem;
 }
@@ -86,6 +86,27 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
   color: #B80000;
 }
 
+.c14 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  list-style-type: none;
+}
+
+.c14 > li::before {
+  content: ' ';
+  display: inline-block;
+  width: 2rem;
+  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  margin-left: -2rem;
+}
+
+.c15 {
+  display: inline-block;
+}
+
 .c4 {
   margin: 0;
   padding-bottom: 1.5rem;
@@ -104,7 +125,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
   margin: 0;
 }
 
-.c18 {
+.c20 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -118,7 +139,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
   left: 0;
 }
 
-.c17 {
+.c19 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -261,79 +282,79 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c14 {
+  .c16 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c14 {
+  .c16 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c14 {
+  .c16 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c16 {
+  .c18 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c16 {
+  .c18 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c16 {
+  .c18 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c16 {
+  .c18 {
     grid-column: 1 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c19 {
+  .c21 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c19 {
+  .c21 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c19 {
+  .c21 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c19 {
+  .c21 {
     grid-column: 1 / span 10;
   }
 }
 
 @media (max-width:80rem) {
-  .c15 {
+  .c17 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c15 {
+  .c17 {
     grid-template-columns: repeat(12,1fr);
   }
 }
@@ -420,6 +441,20 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
 
 @media (min-width:37.5rem) {
   .c11 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -648,26 +683,186 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
       </p>
     </div>
     <div
-      class="c14"
+      class="c1"
+    >
+      <ul
+        class="c14"
+        dir="ltr"
+      >
+        <li>
+          <div
+            class="c15"
+          >
+            <div
+              class="c1"
+            >
+              <p
+                class="c11"
+              >
+                Ўзбек деҳқонининг косаси нега оқармайди
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div
+            class="c15"
+          >
+            <div
+              class="c1"
+            >
+              <p
+                class="c11"
+              >
+                Ўзбек деҳқонининг косаси нега оқармайди
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div
+            class="c15"
+          >
+            <div
+              class="c1"
+            >
+              <p
+                class="c11"
+              >
+                <b>
+                  Ўзбек деҳқонининг косаси нега оқармайди
+                </b>
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div
+            class="c15"
+          >
+            <div
+              class="c1"
+            >
+              <p
+                class="c11"
+              >
+                Ўзбек деҳқонининг косаси нега оқармайди
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="c1"
+    >
+      <ul
+        class="c14"
+        dir="ltr"
+      >
+        <li>
+          <div
+            class="c15"
+          >
+            <div
+              class="c1"
+            >
+              <p
+                class="c11"
+              >
+                <a
+                  class="c13"
+                  href="https://bbc.com/uzbek"
+                >
+                  Ўзбек деҳқонининг косаси нега оқармайди
+                </a>
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div
+            class="c15"
+          >
+            <div
+              class="c1"
+            >
+              <p
+                class="c11"
+              >
+                <a
+                  class="c13"
+                  href="https://bbc.com/uzbek"
+                >
+                  Ўзбек деҳқонининг косаси нега оқармайди
+                </a>
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div
+            class="c15"
+          >
+            <div
+              class="c1"
+            >
+              <p
+                class="c11"
+              >
+                <a
+                  class="c13"
+                  href="https://bbc.com/uzbek"
+                >
+                  Ўзбек деҳқонининг косаси нега оқармайди
+                </a>
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div
+            class="c15"
+          >
+            <div
+              class="c1"
+            >
+              <p
+                class="c11"
+              >
+                <a
+                  class="c13"
+                  href="https://bbc.com/uzbek"
+                >
+                  Ўзбек деҳқонининг косаси нега оқармайди
+                </a>
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="c16"
     >
       <figure
         class="c4"
       >
         <div
-          class="c15"
+          class="c17"
         >
           <div
-            class="c16"
+            class="c18"
           >
             <div
-              class="c17"
+              class="c19"
             >
               <div
                 class="lazyload-placeholder"
               />
               <noscript />
               <p
-                class="c18"
+                class="c20"
                 role="text"
               >
                 <span
@@ -684,7 +879,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
             </div>
           </div>
           <div
-            class="c19"
+            class="c21"
           />
         </div>
       </figure>
@@ -968,7 +1163,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   padding-bottom: 1rem;
 }
 
-.c30 {
+.c32 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -989,6 +1184,27 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   margin: 0;
 }
 
+.c12 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  list-style-type: none;
+}
+
+.c12 > li::before {
+  content: ' ';
+  display: inline-block;
+  width: 2rem;
+  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  margin-left: -2rem;
+}
+
+.c13 {
+  display: inline-block;
+}
+
 .c4 {
   margin: 0;
   padding-bottom: 1.5rem;
@@ -1007,7 +1223,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   margin: 0;
 }
 
-.c24 {
+.c26 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1030,7 +1246,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   margin-bottom: 1.5rem;
 }
 
-.c16 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1040,7 +1256,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   flex-direction: column;
 }
 
-.c17 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1059,7 +1275,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   align-items: baseline;
 }
 
-.c18 {
+.c20 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1079,57 +1295,57 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   align-items: center;
 }
 
-.c14 {
+.c16 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c13 {
+.c15 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c15 {
+.c17 {
   margin: 0;
   padding: 0;
 }
 
-.c20 {
+.c22 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c20:first-child {
+.c22:first-child {
   padding-top: 0;
 }
 
-.c20:last-child {
+.c22:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c19 {
+.c21 {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.c21 {
-  position: relative;
-}
-
-.c22 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 33.33%;
 }
 
 .c23 {
   position: relative;
 }
 
-.c27 {
+.c24 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c25 {
+  position: relative;
+}
+
+.c29 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1140,7 +1356,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c29 {
+.c31 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1151,21 +1367,21 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c26 {
+.c28 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c28 {
+.c30 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c28:before {
+.c30:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1177,17 +1393,17 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   z-index: 1;
 }
 
-.c28:hover,
-.c28:focus {
+.c30:hover,
+.c30:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c28:visited {
+.c30:visited {
   color: #6E6E73;
 }
 
-.c12 {
+.c14 {
   z-index: 0;
 }
 
@@ -1384,14 +1600,14 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c30 {
+  .c32 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c32 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -1411,6 +1627,20 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
 @media (max-width:63rem) {
   .c3 {
     grid-column: 1 / span 6;
@@ -1442,7 +1672,7 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c19 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1451,39 +1681,39 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
+  .c20 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c20 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c20 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c20 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c14 {
+  .c16 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c16 {
     position: absolute;
     left: 0;
     right: 0;
@@ -1492,37 +1722,37 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c15 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c22 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c20 {
+  .c22 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20:first-child {
+  .c22:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c20:first-child {
+  .c22:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c21 {
+  .c23 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -1530,13 +1760,13 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c22 {
+  .c24 {
     width: 33.33%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c22 {
+  .c24 {
     display: block;
     width: initial;
     grid-column: 1 / span 2;
@@ -1544,68 +1774,68 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c25 {
+  .c27 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c27 {
+  .c29 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c29 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c29 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c29 {
+  .c31 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c31 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c29 {
+  .c31 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c26 {
+  .c28 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c26 {
+  .c28 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c26 {
+  .c28 {
     display: block;
     width: initial;
     padding: initial;
@@ -1614,31 +1844,31 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c12 {
+  .c14 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c12 {
+  .c14 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c12 {
+  .c14 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c12 {
+  .c14 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c12 {
+  .c14 {
     padding: 0 1rem;
   }
 }
@@ -1735,6 +1965,45 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
         <div
           class="c1"
         >
+          <ul
+            class="c12"
+            dir="ltr"
+          >
+            <li>
+              <div
+                class="c13"
+              >
+                <div
+                  class="c1"
+                >
+                  <p
+                    class="c11"
+                  >
+                    pidgin/tori-46975713
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                class="c13"
+              >
+                <div
+                  class="c1"
+                >
+                  <p
+                    class="c11"
+                  >
+                    pidgin/tori-42494678
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="c1"
+        >
           <p
             class="c11"
           >
@@ -1815,25 +2084,25 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
         </div>
         <div
           aria-labelledby="related-content-heading"
-          class="c12"
+          class="c14"
         >
           <div
-            class="c13"
+            class="c15"
           >
             <div
-              class="c14"
+              class="c16"
             />
             <h2
-              class="c15"
+              class="c17"
             >
               <div
-                class="c16"
+                class="c18"
               >
                 <span
-                  class="c17"
+                  class="c19"
                 >
                   <span
-                    class="c18"
+                    class="c20"
                     dir="ltr"
                     id="related-content-heading"
                   >
@@ -1844,42 +2113,42 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
             </h2>
           </div>
           <ul
-            class="c19"
+            class="c21"
             role="list"
           >
             <li
-              class="c20"
+              class="c22"
               role="listitem"
             >
               <div
-                class="c21"
+                class="c23"
               >
                 <div
-                  class="c22"
+                  class="c24"
                 >
                   <div
-                    class="c23"
+                    class="c25"
                   >
                     <div
-                      class="c24"
+                      class="c26"
                     >
                       <div
                         class="lazyload-placeholder"
                       />
                     </div>
                     <div
-                      class="c25"
+                      class="c27"
                     />
                   </div>
                 </div>
                 <div
-                  class="c26"
+                  class="c28"
                 >
                   <h3
-                    class="c27"
+                    class="c29"
                   >
                     <a
-                      class="c28"
+                      class="c30"
                       href="/pidgin/44508901"
                     >
                       <span
@@ -1897,12 +2166,12 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
                     </a>
                   </h3>
                   <p
-                    class="c29"
+                    class="c31"
                   >
                     James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
                   </p>
                   <time
-                    class="c30"
+                    class="c32"
                     datetime="1970-01-18"
                   >
                     18 Jenụwarị 1970
@@ -1911,50 +2180,50 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
               </div>
             </li>
             <li
-              class="c20"
+              class="c22"
               role="listitem"
             >
               <div
-                class="c21"
+                class="c23"
               >
                 <div
-                  class="c22"
+                  class="c24"
                 >
                   <div
-                    class="c23"
+                    class="c25"
                   >
                     <div
-                      class="c24"
+                      class="c26"
                     >
                       <div
                         class="lazyload-placeholder"
                       />
                     </div>
                     <div
-                      class="c25"
+                      class="c27"
                     />
                   </div>
                 </div>
                 <div
-                  class="c26"
+                  class="c28"
                 >
                   <h3
-                    class="c27"
+                    class="c29"
                   >
                     <a
-                      class="c28"
+                      class="c30"
                       href="/pidgin/tori-46975713"
                     >
                       How light companies dey use estimated billing show Nigerians pepper
                     </a>
                   </h3>
                   <p
-                    class="c29"
+                    class="c31"
                   >
                     Lawmakers for Nigeria wan make am crime for light companies to use guesswork give customer estimated bill.
                   </p>
                   <time
-                    class="c30"
+                    class="c32"
                     datetime="1970-01-18"
                   >
                     18 Jenụwarị 1970
@@ -1963,50 +2232,50 @@ exports[`CpsAssetPageMain should match snapshot for MAP 1`] = `
               </div>
             </li>
             <li
-              class="c20"
+              class="c22"
               role="listitem"
             >
               <div
-                class="c21"
+                class="c23"
               >
                 <div
-                  class="c22"
+                  class="c24"
                 >
                   <div
-                    class="c23"
+                    class="c25"
                   >
                     <div
-                      class="c24"
+                      class="c26"
                     >
                       <div
                         class="lazyload-placeholder"
                       />
                     </div>
                     <div
-                      class="c25"
+                      class="c27"
                     />
                   </div>
                 </div>
                 <div
-                  class="c26"
+                  class="c28"
                 >
                   <h3
-                    class="c27"
+                    class="c29"
                   >
                     <a
-                      class="c28"
+                      class="c30"
                       href="/pidgin/tori-42494678"
                     >
                       Nigeria: Wetin 5,222 megawatts electric fit do?
                     </a>
                   </h3>
                   <p
-                    class="c29"
+                    class="c31"
                   >
                     Di Transmission Company of Nigeria and di vice-president office carry tori come outside say electric power wey di country produce don increase pass before as e reach 5,222 megawatts dis December.
                   </p>
                   <time
-                    class="c30"
+                    class="c32"
                     datetime="1970-01-18"
                   >
                     18 Jenụwarị 1970
@@ -2054,7 +2323,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   padding: 2rem 0;
 }
 
-.c22 {
+.c24 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2115,6 +2384,27 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 .c17:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
+}
+
+.c19 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  list-style-type: none;
+}
+
+.c19 > li::before {
+  content: ' ';
+  display: inline-block;
+  width: 2rem;
+  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  margin-left: -2rem;
+}
+
+.c20 {
+  display: inline-block;
 }
 
 .c5 {
@@ -2196,17 +2486,17 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   transition: visibility 0.2s linear;
 }
 
-.c20 {
+.c22 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c19 {
+.c21 {
   margin-bottom: 1.5rem;
 }
 
-.c27 {
+.c29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2216,7 +2506,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.c28 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2235,7 +2525,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   align-items: baseline;
 }
 
-.c29 {
+.c31 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2255,32 +2545,32 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   align-items: center;
 }
 
-.c25 {
+.c27 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c24 {
+.c26 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c26 {
+.c28 {
   margin: 0;
   padding: 0;
 }
 
-.c30 {
+.c32 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c23 {
+.c25 {
   z-index: 0;
 }
 
-.c21 {
+.c23 {
   position: absolute;
   top: 0;
   left: 0;
@@ -2537,21 +2827,21 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c24 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c24 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c24 {
     padding-top: 2rem;
   }
 }
@@ -2585,6 +2875,20 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c13 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
@@ -2611,37 +2915,37 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c19 {
+  .c21 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c19 {
+  .c21 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c19 {
+  .c21 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c19 {
+  .c21 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c19 {
+  .c21 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c28 {
+  .c30 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -2650,39 +2954,39 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c29 {
+  .c31 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c31 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c31 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c31 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c25 {
+  .c27 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c27 {
     position: absolute;
     left: 0;
     right: 0;
@@ -2691,37 +2995,37 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c24 {
+  .c26 {
     margin-top: 1.5rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c23 {
+  .c25 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c23 {
+  .c25 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c23 {
+  .c25 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c23 {
+  .c25 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c23 {
+  .c25 {
     padding: 0 1rem;
   }
 }
@@ -3086,6 +3390,88 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
         <div
           class="c1"
         >
+          <ul
+            class="c19"
+            dir="ltr"
+          >
+            <li>
+              <div
+                class="c20"
+              >
+                <div
+                  class="c1"
+                >
+                  <p
+                    class="c16"
+                  >
+                    This is a unordered list
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                class="c20"
+              >
+                <div
+                  class="c1"
+                >
+                  <p
+                    class="c16"
+                  >
+                    It can have 
+                    <b>
+                      bold text
+                    </b>
+                     in it
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                class="c20"
+              >
+                <div
+                  class="c1"
+                >
+                  <p
+                    class="c16"
+                  >
+                    <a
+                      class="c17"
+                      href="https://bbc.com/pidgin/23248703"
+                    >
+                      It can also have links
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                class="c20"
+              >
+                <div
+                  class="c1"
+                >
+                  <p
+                    class="c16"
+                  >
+                    <i
+                      class="c18"
+                    >
+                      It can even have italic text in it!
+                    </i>
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="c1"
+        >
           <p
             class="c16"
           >
@@ -3201,18 +3587,18 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </p>
         </div>
         <div
-          class="c19"
+          class="c21"
         >
           <figure
             class="c5"
           >
             <div
-              class="c20"
+              class="c22"
             >
               <iframe
                 allow="autoplay; fullscreen"
                 allowfullscreen=""
-                class="c21"
+                class="c23"
                 src="https://www.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"
                 title="Media player"
               />
@@ -3223,7 +3609,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <h2
-            class="c22"
+            class="c24"
             id="This-is-a-heading"
             tabindex="-1"
           >
@@ -3234,7 +3620,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <h2
-            class="c22"
+            class="c24"
             id="This-is-a-subheading"
             tabindex="-1"
           >
@@ -3254,7 +3640,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <h2
-            class="c22"
+            class="c24"
             id="This-is-a-crosshead"
             tabindex="-1"
           >
@@ -3296,25 +3682,25 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
         </div>
         <div
           aria-labelledby="related-content-heading"
-          class="c23"
+          class="c25"
         >
           <div
-            class="c24"
+            class="c26"
           >
             <div
-              class="c25"
+              class="c27"
             />
             <h2
-              class="c26"
+              class="c28"
             >
               <div
-                class="c27"
+                class="c29"
               >
                 <span
-                  class="c28"
+                  class="c30"
                 >
                   <span
-                    class="c29"
+                    class="c31"
                     dir="ltr"
                     id="related-content-heading"
                   >
@@ -3325,7 +3711,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
             </h2>
           </div>
           <ul
-            class="c30"
+            class="c32"
             role="list"
           />
         </div>
