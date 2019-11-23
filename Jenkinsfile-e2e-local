@@ -39,7 +39,7 @@ node {
                     } finally {
                         junit 'cypress/results/**/*.xml'
 
-                        def message = "@here ${env.JOB_NAME} ${env.JOB} finally"
+                        def message = "@here ${env.JOB_NAME} finally block ran"
                         slackSend(channel: channel, color: 'warning', message: message)
                     }
                 }
