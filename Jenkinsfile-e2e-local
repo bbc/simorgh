@@ -40,6 +40,7 @@ node {
                         // throw
                     } finally {
                         try {
+                            // NB junit will set status to UNSTABLE if it finds test failures
                             junit 'cypress/results/**/*.xml'
                         } finally {
                             def message = "@here ${env.JOB_NAME} finally block ran - status is ${currentBuild.result}"
