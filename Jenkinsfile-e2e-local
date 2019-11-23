@@ -35,7 +35,7 @@ node {
                         // catch (FlowInterruptedException interruptEx) {
 
                         def message = e.toString()
-                        slackSend(channel: channel, color: 'danger', message: message)
+                        slackSend(channel: channel, color: 'danger', message: "Exception: ${message} - status is ${currentBuild.result}")
                     } finally {
                         try {
                             junit 'cypress/results/**/*.xml'
