@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Blocks from '../Blocks';
 import paragraph from '../Paragraph';
-import { paragraphBlockPropTypes } from '#models/propTypes/paragraph';
+import { listItemPropTypes } from '#models/propTypes/list';
 
 const componentsToRender = { paragraph };
 
@@ -20,6 +20,6 @@ const BulletedListItemContainer = ({ blocks }) => {
   );
 };
 
-BulletedListItemContainer.propTypes = { ...paragraphBlockPropTypes };
+BulletedListItemContainer.propTypes = { ...listItemPropTypes };
 
 export default BulletedListItemContainer;

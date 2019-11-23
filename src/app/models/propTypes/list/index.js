@@ -1,24 +1,34 @@
-import { blockOfTypesAndModel, blocksWithTypes } from '../general';
+import {
+  blockOfTypesAndModel,
+  blocksWithTypes,
+  arrayOfSpecificBlocks,
+} from '../general';
 import { paragraphBlockPropTypes } from '../paragraph';
+
+export const listItemPropTypes = blocksWithTypes([
+  paragraphBlockPropTypes.isRequired,
+]);
 
 export const listItemModelPropTypes = blockOfTypesAndModel(
   ['listItem'],
-  paragraphBlockPropTypes,
+  arrayOfSpecificBlocks(paragraphBlockPropTypes),
 );
 
-export const listItemBlockPropTypes = blocksWithTypes([listItemModelPropTypes]);
+export const listPropTypes = blocksWithTypes([
+  listItemModelPropTypes.isRequired,
+]);
 
-// export const unorderedListBlockPropTypes = blockOfTypesAndModel(
-//   ['unorderedList'],
-//   listItemBlockPropTypes,
-// );
+export const unorderedListBlockPropTypes = blockOfTypesAndModel(
+  ['unorderedList'],
+  arrayOfSpecificBlocks(listPropTypes),
+);
 
-// export const orderedListBlockPropTypes = blockOfTypesAndModel(
-//   ['orderedList'],
-//   listItemBlockPropTypes,
-// );
+export const orderedListBlockPropTypes = blockOfTypesAndModel(
+  ['orderedList'],
+  arrayOfSpecificBlocks(listPropTypes),
+);
 
-// export const listBlockPropTypes = blockOfTypesAndModel(
-//   ['unorderedList', 'orderedList'],
-//   listItemBlockPropTypes,
-// );
+export const listBlockPropTypes = blockOfTypesAndModel(
+  ['unorderedList', 'orderedList'],
+  arrayOfSpecificBlocks(listPropTypes),
+);
