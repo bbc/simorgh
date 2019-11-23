@@ -36,11 +36,13 @@ node {
 
                         def message = e.toString()
                         slackSend(channel: channel, color: 'danger', message: "Exception: ${message} - status is ${currentBuild.result}")
+
+                        // throw
                     } finally {
                         try {
                             junit 'cypress/results/**/*.xml'
                         } finally {
-                            def message = "@here ${env.JOB_NAME} finally block ran"
+                            def message = "@here ${env.JOB_NAME} finally block ran - status is ${currentBuild.result}"
                             slackSend(channel: channel, color: 'warning', message: message)
                         }
                     }
