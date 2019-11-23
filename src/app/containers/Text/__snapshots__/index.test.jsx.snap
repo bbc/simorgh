@@ -174,5 +174,29 @@ exports[`TextContainer with data should render correctly 1`] = `
       </li>
     </ul>
   </div>
+  <div
+    class="c0"
+  >
+    <ul
+      class="c2"
+      dir="ltr"
+    >
+      <li>
+        <div
+          class="c3"
+        >
+          <div
+            class="c0"
+          >
+            <p
+              class="c1"
+            >
+              This is a list item
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
