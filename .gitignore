@@ -7,6 +7,7 @@ reports/*
 !reports/.keep
 log
 cypress/screenshots
+cypress/results
 pack
 storybook_dist
 simorgh.report.html
