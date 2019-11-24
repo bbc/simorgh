@@ -14,7 +14,7 @@ node {
             ),
             parameters(
                 [
-                    string(defaultValue: 'latest', name: 'BRANCH')
+                    string(defaultValue: 'e2e-reports-integration', name: 'BRANCH')
                 ]
             )
         ]
