@@ -18,7 +18,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   service,
   pageType,
 }) =>
-  describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
+  describe(service, () => {
     if (appToggles.chartbeatAnalytics.enabled) {
       describe('Chartbeat', () => {
         if (envConfig.chartbeatEnabled) {

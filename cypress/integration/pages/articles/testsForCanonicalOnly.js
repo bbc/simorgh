@@ -17,7 +17,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
 }) =>
-  describe(`Canonical Tests for ${service} ${pageType}`, () => {
+  describe(service, () => {
     it('should not have an AMP attribute on the main article', () => {
       cy.get('html').should('not.have.attr', 'amp');
     });

@@ -28,7 +28,7 @@ export const testsThatFollowSmokeTestConfig = ({
   pageType,
   variant,
 }) => {
-  describe(`Running tests for ${service} ${pageType}`, () => {
+  describe(service, () => {
     describe(`Metadata`, () => {
       // Here we should only have metadata tests that are unique to articles pages
       it('should have the correct articles metadata', () => {

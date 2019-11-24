@@ -16,7 +16,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
   pageType,
   variant,
 }) => {
-  describe(`Running testsForAllPages for ${service} ${pageType}`, () => {
+  describe(service, () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
         const resources = [envConfig.assetOrigin, 'https://ichef.bbci.co.uk'];
