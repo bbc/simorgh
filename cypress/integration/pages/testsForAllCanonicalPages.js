@@ -61,12 +61,10 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
               expect(matches).to.equal(1);
             });
         });
-      });
-    });
 
-    describe(`Canonical Tests`, () => {
-      it('should not have an AMP attribute on the page', () => {
-        cy.get('html').should('not.have.attr', 'amp');
+        it('should not have an AMP attribute on the page', () => {
+          cy.get('html').should('not.have.attr', 'amp');
+        });
       });
     });
   }
