@@ -37,10 +37,8 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
         });
 
         if (Cypress.env('SMOKE')) {
-          describe('ATI', () => {
-            it('should have an amp-analytics tag with the ati url', () => {
-              cy.hasAmpAnalyticsAtiUrl(envConfig.atiUrl);
-            });
+          it('should have an amp-analytics tag with the ati url', () => {
+            cy.hasAmpAnalyticsAtiUrl(envConfig.atiUrl);
           });
         }
       }
