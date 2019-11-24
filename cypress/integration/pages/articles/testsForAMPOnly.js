@@ -29,15 +29,17 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       });
     }
 
-    it('should contain an amp-img', () => {
-      if (serviceHasFigure(service)) {
-        cy.get('figure')
-          .eq(0)
-          .should('be.visible')
-          .within(() => {
-            cy.get('amp-img').should('be.visible');
-          });
-      }
+    describe('General', () => {
+      it('should contain an amp-img', () => {
+        if (serviceHasFigure(service)) {
+          cy.get('figure')
+            .eq(0)
+            .should('be.visible')
+            .within(() => {
+              cy.get('amp-img').should('be.visible');
+            });
+        }
+      });
     });
 
     // `appToggles` tells us whether a feature is toggled on or off in the current environment.
