@@ -43,7 +43,7 @@ node {
                             // NB junit will set status to UNSTABLE if it finds test failures
                             // Also by default will throw an exception if it can't find results
                             // NB remove allowEmpty once all jobs must output results
-                            junit allowEmptyResults: true, testResults: 'cypress/results/**/*.xml'
+                            junit allowEmptyResults: false, testResults: 'cypress/results/**/*.xml'
                         } finally {
                             def message = "@here ${env.JOB_NAME} finally block ran - status is ${currentBuild.result}"
                             slackSend(channel: channel, color: 'warning', message: message)
