@@ -135,6 +135,12 @@ export const service = {
         audio: 'ድምጽ',
         photogallery: 'የፎቶ መድብሎች',
         video: 'ቪዲዮ',
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'ቀጥታ ስርጭት',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -144,7 +150,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/amharic/institutional-49283133',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'ቢቢሲን ለምን ማመን እንደሚገባዎ',
       },
       externalLink: {

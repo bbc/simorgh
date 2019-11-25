@@ -163,6 +163,17 @@ const featureLinkItem = {
   type: 'link',
 };
 
+const itemWithoutImage = {
+  headlines: {
+    headline: 'A headline',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  summary: 'Summary text',
+  timestamp: 1556795033000,
+};
+
 const indexAlsosItem = {
   headlines: {
     headline: 'A headline',
@@ -196,6 +207,7 @@ const fixtures = {
   'audio with no duration': audioItemNoDuration,
   standardLink: standardLinkItem,
   featureLink: featureLinkItem,
+  'item without an image': itemWithoutImage,
 };
 
 // eslint-disable-next-line react/prop-types
