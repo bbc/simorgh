@@ -2058,174 +2058,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
             <li
               class="c31"
               role="listitem"
-<<<<<<< HEAD
-            >
-              <div
-                class="c21"
-              >
-                <div
-                  class="c22"
-                >
-                  <div
-                    class="c23"
-                  >
-                    <div
-                      class="c24"
-                    >
-                      <div
-                        class="lazyload-placeholder"
-                      />
-                    </div>
-                    <div
-                      class="c25"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="c26"
-                >
-                  <h3
-                    class="c27"
-                  >
-                    <a
-                      class="c28"
-                      href="/pidgin/44508901?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                    >
-                      <span
-                        role="text"
-                      >
-                        <span
-                          class="c2"
-                        >
-                          , 
-                        </span>
-                        <span>
-                          Meet boys who dey convert cassava to electricity
-                        </span>
-                      </span>
-                    </a>
-                  </h3>
-                  <p
-                    class="c29"
-                  >
-                    James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
-                  </p>
-                  <time
-                    class="c30"
-                    datetime="1970-01-18"
-                  >
-                    18 Jenụwarị 1970
-                  </time>
-                </div>
-              </div>
-            </li>
-            <li
-              class="c20"
-              role="listitem"
-            >
-              <div
-                class="c21"
-              >
-                <div
-                  class="c22"
-                >
-                  <div
-                    class="c23"
-                  >
-                    <div
-                      class="c24"
-                    >
-                      <div
-                        class="lazyload-placeholder"
-                      />
-                    </div>
-                    <div
-                      class="c25"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="c26"
-                >
-                  <h3
-                    class="c27"
-                  >
-                    <a
-                      class="c28"
-                      href="/pidgin/tori-46975713?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                    >
-                      How light companies dey use estimated billing show Nigerians pepper
-                    </a>
-                  </h3>
-                  <p
-                    class="c29"
-                  >
-                    Lawmakers for Nigeria wan make am crime for light companies to use guesswork give customer estimated bill.
-                  </p>
-                  <time
-                    class="c30"
-                    datetime="1970-01-18"
-                  >
-                    18 Jenụwarị 1970
-                  </time>
-                </div>
-              </div>
-            </li>
-            <li
-              class="c20"
-              role="listitem"
-            >
-              <div
-                class="c21"
-              >
-                <div
-                  class="c22"
-                >
-                  <div
-                    class="c23"
-                  >
-                    <div
-                      class="c24"
-                    >
-                      <div
-                        class="lazyload-placeholder"
-                      />
-                    </div>
-                    <div
-                      class="c25"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="c26"
-                >
-                  <h3
-                    class="c27"
-                  >
-                    <a
-                      class="c28"
-                      href="/pidgin/tori-42494678?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                    >
-                      Nigeria: Wetin 5,222 megawatts electric fit do?
-                    </a>
-                  </h3>
-                  <p
-                    class="c29"
-                  >
-                    Di Transmission Company of Nigeria and di vice-president office carry tori come outside say electric power wey di country produce don increase pass before as e reach 5,222 megawatts dis December.
-                  </p>
-                  <time
-                    class="c30"
-                    datetime="1970-01-18"
-                  >
-                    18 Jenụwarị 1970
-                  </time>
-                </div>
-              </div>
-            </li>
-=======
             />
->>>>>>> latest
           </ul>
         </div>
       </main>
@@ -3099,7 +2932,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
               >
                 <a
                   class="c26"
-                  href="/pidgin/44508901"
+                  href="/pidgin/44508901?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
                   <span
                     role="text"
@@ -3162,7 +2995,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
               >
                 <a
                   class="c26"
-                  href="/pidgin/tori-46975713"
+                  href="/pidgin/tori-46975713?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
                   How light companies dey use estimated billing show Nigerians pepper
                 </a>
@@ -3214,7 +3047,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
               >
                 <a
                   class="c26"
-                  href="/pidgin/tori-42494678"
+                  href="/pidgin/tori-42494678?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
                   Nigeria: Wetin 5,222 megawatts electric fit do?
                 </a>
@@ -4191,13 +4024,8 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
                 class="c27"
               >
                 <a
-<<<<<<< HEAD
-                  class="c26"
-                  href="/pidgin/44508901?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-=======
                   class="c28"
-                  href="/pidgin/44508901"
->>>>>>> latest
+                  href="/pidgin/44508901?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
                   <span
                     role="text"
@@ -4259,13 +4087,8 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
                 class="c27"
               >
                 <a
-<<<<<<< HEAD
-                  class="c26"
-                  href="/pidgin/tori-46975713?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-=======
                   class="c28"
-                  href="/pidgin/tori-46975713"
->>>>>>> latest
+                  href="/pidgin/tori-46975713?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
                   How light companies dey use estimated billing show Nigerians pepper
                 </a>
@@ -4316,13 +4139,8 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
                 class="c27"
               >
                 <a
-<<<<<<< HEAD
-                  class="c26"
-                  href="/pidgin/tori-42494678?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-=======
                   class="c28"
-                  href="/pidgin/tori-42494678"
->>>>>>> latest
+                  href="/pidgin/tori-42494678?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
                   Nigeria: Wetin 5,222 megawatts electric fit do?
                 </a>
