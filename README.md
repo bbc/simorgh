@@ -67,11 +67,19 @@ This process is repeated for each block within an article, ultimately rendering 
 
 Each render is passed through a set of HOC's (Higher Order Components) to enhance the page, these HOC's are;
 
+- withVariant
 - withContexts
 - withPageWrapper
 - withLoading
 - withError
 - withData
+
+#### withVariant
+
+The variant HOC ensures that services that have variants (e.g. `simp`, `lat`) always redirects to a url that renders the appropriate variant.
+
+- If a user navigates to a url without providing the variant, and variant is set in cookie, the cookie variant page is rendered. Otherwise, the default variant page is rendered
+- If a user navigates to a url with a variant, and variant is set in cookie, the cookie variant page is rendered. Otherwise, the requested variant page is rendered.
 
 #### withContexts
 
