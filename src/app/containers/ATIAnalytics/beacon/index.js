@@ -2,7 +2,6 @@ import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { buildATIEventTrackUrl } from '../atiUrl';
 
 export const sendEventBeacon = async ({
-  element,
   componentName,
   type,
   componentInfo,
@@ -10,7 +9,6 @@ export const sendEventBeacon = async ({
 }) => {
   const eventProps = {
     ...params,
-    element,
     componentName,
     componentInfo,
     type,

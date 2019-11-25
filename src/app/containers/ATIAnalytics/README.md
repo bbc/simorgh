@@ -118,7 +118,6 @@ const componentContainer = () => {
 		const componentInfo = getComponentInfo(event, 'navigation', componentData);
 
 		sendEventBeacon({
-	      element: event.target,
 	     'navigation',
 	      type: 'click',
 	      componentInfo,

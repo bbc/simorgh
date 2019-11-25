@@ -123,7 +123,6 @@ describe('buildATIEventTrackUrl', () => {
         service: 'service',
         platform: 'platform',
         statsDestination: 'statsDestination',
-        element: 'element',
         componentName: 'component',
         componentInfo: {
           creationLabel: 'creation-label',

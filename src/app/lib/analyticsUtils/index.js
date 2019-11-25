@@ -175,10 +175,12 @@ export const getAtiUrl = (data = []) => {
   return parsedAtiValues.join('&');
 };
 
-export const getClickInfo = (
-  elem,
-  { service, componentName, componentInfo, type },
-) => {
+export const getClickInfo = ({
+  service,
+  componentName,
+  componentInfo,
+  type,
+}) => {
   const campaignId = `${service}-${componentName}`;
   const creationLabel = pathOr('', ['creationLabel'], componentInfo);
   const url = pathOr('', ['url'], componentInfo);

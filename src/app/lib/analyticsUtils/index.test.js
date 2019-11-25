@@ -443,15 +443,13 @@ describe('getClickInfo', () => {
   };
 
   it('should return url section', () => {
-    expect(getClickInfo({}, params)).toEqual(
+    expect(getClickInfo(params)).toEqual(
       'PUB-[service-component]-[=type]-[creationLabel]-[PAR=container-component::name~CHD=child]-[]-[]-[]-[url.com]',
     );
   });
 
   it('should include elem.href in output', () => {
-    expect(getClickInfo({ target: { href: 'url.com' } }, params)).toContain(
-      '[url.com]',
-    );
+    expect(getClickInfo(params)).toContain('[url.com]');
   });
 });
 

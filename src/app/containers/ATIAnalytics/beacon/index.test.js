@@ -25,7 +25,6 @@ describe('beacon', () => {
   describe('event', () => {
     it('should call sendBeacon exactly twice', () => {
       sendEventBeacon({
-        element: document.createElement('div'),
         type: 'click',
         service: 'service',
         componentName: 'component',

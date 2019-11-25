@@ -177,7 +177,6 @@ export const buildATIEventTrackUrl = ({
   service,
   platform,
   statsDestination,
-  element,
   componentName,
   componentInfo,
   type,
@@ -228,7 +227,7 @@ export const buildATIEventTrackUrl = ({
     {
       key: 'ati',
       description: 'event publisher',
-      value: getClickInfo(element, {
+      value: getClickInfo({
         service,
         componentName,
         componentInfo,
