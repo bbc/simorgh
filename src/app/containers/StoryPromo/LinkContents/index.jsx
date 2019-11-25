@@ -36,7 +36,6 @@ const LinkContents = ({ item }) => {
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
 
-  // hilariously, this works. according to moment, null seconds == 0 seconds!
   const separator = ',';
   const duration = moment.duration(rawDuration, 'seconds');
   const durationString = formatDuration({ duration, separator });
