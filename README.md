@@ -280,20 +280,31 @@ We have [Jest](https://facebook.github.io/jest) unit tests that can be run with 
 
 #### Main application
 
-We use [Cypress](https://www.cypress.io/) for our end-to-end tests. For running the tests locally, run this single command:
+We use [Cypress](https://www.cypress.io/) for our end-to-end tests. To run the [smoke tests](https://github.com/bbc/simorgh/tree/latest/cypress/integration#how-our-cypress-tests-work) locally, run this single command:
 
 ```
 npm run test:e2e
 ```
 
 It will spin up a production server on port 7080 and run the Cypress tests against that.
-For running tests using interactive, run:
+To run the smoke tests interactively, run:
 
 ```
 npm run test:e2e:interactive
 ```
 
 This loads a user interface which easily allows for individual tests to be run alongside a visual stream of the browser, as the tests run.
+
+#### Environment variables
+
+There are several environment variables you can use with our test suite, which are:
+| Envionment variable | Effect | Possible values |
+|---------------------|--------|-----------------|
+| CYPRESS_ONLY_SERVICE | Restricts to running only the specified service | A single service i.e. `CYPRESS_ONLY_SERVICE=urdu` |
+| CYPRESS_APP_ENV | Runs the tests in a specific environment | `test`, `local`, `live` |
+| CYPRESS_SMOKE | Runs only smoke tests if true | boolean |
+| CYPRESS_UK | See [running e2es in the UK against Live](https://github.com/bbc/simorgh/#running-e2e-in-the-uk-against-live) | boolean |
+| CYPRESS_SKIP_EU | See [running e2es outside EU](https://github.com/bbc/simorgh/#running-e2e-outside-eu) | boolean |
 
 #### Limiting scope of runs
 
