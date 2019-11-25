@@ -160,6 +160,12 @@ export const service = {
           subtitle:
             'برنامه خبری-تحلیلی یک ساعته که تصویری روشن و ساده از رویدادهای پیچیده جهان ارائه می‌کند.',
         },
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'زنده',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
