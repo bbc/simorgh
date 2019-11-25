@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import CanonicalChartbeatAnalytics from '.';
 
@@ -55,21 +55,22 @@ describe('CanonicalChartbeatAnalytics', () => {
     />,
   );
 
-  shouldMatchSnapshot(
-    'should not re-render helment wrapper when config changes to Page B',
-    (() => {
-      const wrapper = mount(
-        <CanonicalChartbeatAnalytics
-          chartbeatConfig={pageAConfig}
-          chartbeatSource="//chartbeat.js"
-        />,
-      );
+  (() => {
+    const wrapper = shallow(
+      <CanonicalChartbeatAnalytics
+        chartbeatConfig={pageAConfig}
+        chartbeatSource="//chartbeat.js"
+      />,
+    );
 
-      wrapper.setProps(pageBConfig);
-      const renderedComponent = wrapper.getDOMNode();
-      return renderedComponent;
-    })(),
-  );
+    wrapper.setProps(pageBConfig);
+    const renderedComponent = wrapper.getElement();
+
+    shouldMatchSnapshot(
+      'should not re-render helment wrapper when config changes to Page B',
+      renderedComponent,
+    );
+  })();
 
   it('should call the global virtualPage function when props change', () => {
     const wrapper = mount(
