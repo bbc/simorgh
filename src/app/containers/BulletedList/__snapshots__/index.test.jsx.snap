@@ -121,21 +121,6 @@ exports[`BulletedListContainer with data should render ltr correctly 1`] = `
           <p
             class="c3"
           >
-            Here is a list
-          </p>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div
-        class="c2"
-      >
-        <div
-          class="c0"
-        >
-          <p
-            class="c3"
-          >
             It is unordered
           </p>
         </div>
