@@ -24,7 +24,7 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
         });
       }
 
-      describe(`Canonical Tests`, () => {
+      describe('Bundles', () => {
         it('should only have expected bundle script tags', () => {
           cy.get('script[src]').each($p => {
             if ($p.attr('src').includes(envConfig.assetOrigin)) {
@@ -61,7 +61,9 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
               expect(matches).to.equal(1);
             });
         });
+      });
 
+      describe('Non-AMP', () => {
         it('should not have an AMP attribute on the page', () => {
           cy.get('html').should('not.have.attr', 'amp');
         });
