@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { shape } from 'prop-types';
 import compose from 'ramda/src/compose';
 import articlePropTypes from '#models/propTypes/article';
@@ -11,15 +11,9 @@ import withError from '../PageHandlers/withError';
 import withLoading from '../PageHandlers/withLoading';
 import withData from '../PageHandlers/withData';
 
-const ArticleContainer = ({ pageData }) => {
-  useEffect(() => {
-    console.log('ArticleContainer mounted');
-    return () => {
-      console.log('ArticleContainer unmounted');
-    };
-  }, []);
-  return <ArticleMain articleData={pageData} />;
-};
+const ArticleContainer = ({ pageData }) => (
+  <ArticleMain articleData={pageData} />
+);
 
 ArticleContainer.propTypes = {
   pageData: shape(articlePropTypes),

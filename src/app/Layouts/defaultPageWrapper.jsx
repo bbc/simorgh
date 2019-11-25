@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { node } from 'prop-types';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
 import HeaderContainer from '../containers/Header';
@@ -12,13 +12,6 @@ const PageWrapper = ({ children }) => {
   const { fonts: fontFunctions } = useContext(ServiceContext);
 
   const fonts = fontFunctions.map(getFonts => getFonts());
-
-  useEffect(() => {
-    console.log('Page Wrapper mounted');
-    return () => {
-      console.log('Page Wrapper unmounted');
-    };
-  }, []);
 
   return (
     <>

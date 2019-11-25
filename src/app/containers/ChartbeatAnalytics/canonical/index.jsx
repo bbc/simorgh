@@ -11,15 +11,13 @@ const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
     if (chartbeatConfigRef.current !== chartbeatConfig) {
       // eslint-disable-next-line no-unused-expressions
       window.pSUPERFLY && window.pSUPERFLY.virtualPage(chartbeatConfig);
-      console.log('rerender window.pSUPERFLY');
     }
   }, [chartbeatConfig, chartbeatConfigRef]);
 
   return (
-    chartbeatConfigRef.current === chartbeatConfig && (
-      <Helmet>
-        <script async type="text/javascript">
-          {`
+    <Helmet>
+      <script async type="text/javascript">
+        {`
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
           var config = ${JSON.stringify(chartbeatConfig)};
@@ -27,12 +25,10 @@ const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
             _sf_async_config[key] = config[key];
           }
         })();
-        console.log('IIFE')
       `}
-        </script>
-        <script async type="text/javascript" src={chartbeatSource} />
-      </Helmet>
-    )
+      </script>
+      <script async type="text/javascript" src={chartbeatSource} />
+    </Helmet>
   );
 };
 
