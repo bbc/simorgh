@@ -4,7 +4,7 @@ const lpad = s => s.toString().padStart(2, '0');
 const formatDuration = ({
   duration,
   separator = ':',
-  articlesPage = false,
+  isArticlesPage = false,
 }) => {
   const isOverAnHour = duration.asHours() >= 1;
 
@@ -13,7 +13,7 @@ const formatDuration = ({
   if (isOverAnHour) {
     out += Math.floor(duration.asHours()) + separator;
     out += lpad(duration.minutes()) + separator;
-  } else if (articlesPage) {
+  } else if (isArticlesPage) {
     out += lpad(duration.minutes()) + separator;
   } else {
     out += duration.minutes() + separator;
