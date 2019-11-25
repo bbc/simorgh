@@ -6,6 +6,7 @@ import {
 } from '@bbc/psammead-test-helpers';
 import TextContainer from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { paragraphBlock, fragmentBlock } from './fixtures';
 
 describe('TextContainer', () => {
   describe('with no data', () => {
@@ -14,40 +15,6 @@ describe('TextContainer', () => {
   });
 
   describe('with data', () => {
-    const fragmentBlock = (id = null, text, attributes = []) => ({
-      id,
-      type: 'fragment',
-      model: {
-        text,
-        attributes,
-      },
-    });
-
-    const paragraphBlock = (id = null, blocks) => ({
-      id,
-      type: 'paragraph',
-      model: {
-        id,
-        blocks,
-      },
-    });
-
-    const listItemBlock = (id = null, listBlocks) => ({
-      id,
-      type: 'listItem',
-      model: {
-        blocks: listBlocks.map(blocks => paragraphBlock(id, blocks)),
-      },
-    });
-
-    const listBlock = (id = null, blocks, type = 'unorderedList') => ({
-      id,
-      type,
-      model: {
-        blocks: [...blocks],
-      },
-    });
-
     const data = {
       blocks: [
         paragraphBlock('mock-id-1', [
@@ -64,11 +31,6 @@ describe('TextContainer', () => {
         ]),
         paragraphBlock('mock-id-5', [
           fragmentBlock('mock-id-5.1', 'This is a 5th paragraph block.'),
-        ]),
-        listBlock('mock-id-6', [
-          listItemBlock('mock-id-6.1', [
-            [fragmentBlock('mock-id-6.1.1', 'This is a list item')],
-          ]),
         ]),
       ],
     };
