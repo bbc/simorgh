@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BulletedListItemContainer with data should render other text correctly 1`] = `
+exports[`BulletedListItemContainer with data should render another text correctly 1`] = `
 .c2 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -83,7 +83,7 @@ exports[`BulletedListItemContainer with data should render other text correctly 
       <p
         class="c2"
       >
-        This is another sample text
+        It is unordered
       </p>
     </div>
   </div>
@@ -173,7 +173,7 @@ exports[`BulletedListItemContainer with data should render text correctly 1`] = 
       <p
         class="c2"
       >
-        This is a sample text
+        Here is a list
       </p>
     </div>
   </div>

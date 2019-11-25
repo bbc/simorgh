@@ -4,14 +4,30 @@ import {
   isNull,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
-import TextContainer from './index';
+import CpsTextContainer from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { paragraphBlock, fragmentBlock } from './fixtures';
+import { paragraphBlock, fragmentBlock } from '../Text/fixtures';
 
-describe('TextContainer', () => {
+const listItemBlock = (id = null, listBlocks) => ({
+  id,
+  type: 'listItem',
+  model: {
+    blocks: listBlocks.map(blocks => paragraphBlock(id, blocks)),
+  },
+});
+
+const listBlock = (id = null, blocks, type = 'unorderedList') => ({
+  id,
+  type,
+  model: {
+    blocks: [...blocks],
+  },
+});
+
+describe('CpsTextContainer', () => {
   describe('with no data', () => {
     suppressPropWarnings(['blocks', 'undefined']);
-    isNull('should return null', <TextContainer />);
+    isNull('should return null', <CpsTextContainer />);
   });
 
   describe('with data', () => {
@@ -32,13 +48,18 @@ describe('TextContainer', () => {
         paragraphBlock('mock-id-5', [
           fragmentBlock('mock-id-5.1', 'This is a 5th paragraph block.'),
         ]),
+        listBlock('mock-id-6', [
+          listItemBlock('mock-id-6.1', [
+            [fragmentBlock('mock-id-6.1.1', 'This is a list item')],
+          ]),
+        ]),
       ],
     };
 
     shouldMatchSnapshot(
       'should render correctly',
       <ServiceContextProvider service="news">
-        <TextContainer {...data} />
+        <CpsTextContainer {...data} />
       </ServiceContextProvider>,
     );
   });

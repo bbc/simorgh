@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import BulletedList from '@bbc/psammead-bulleted-list';
+import { arrayOf, shape, oneOf } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';
-import listItem from '../BulletedListItem';
+import listItem, { ListItemPropTypes } from '../BulletedListItem';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
-import { listPropTypes } from '#models/propTypes/list';
 
 const componentsToRender = { listItem };
 
@@ -20,6 +20,12 @@ const BulletedListContainer = ({ blocks }) => {
   );
 };
 
-BulletedListContainer.propTypes = { ...listPropTypes };
+export const ListPropTypes = {
+  blocks: arrayOf(
+    shape({ type: oneOf(['listItem']), model: shape(ListItemPropTypes) }),
+  ).isRequired,
+};
+
+BulletedListContainer.propTypes = { ...ListPropTypes };
 
 export default BulletedListContainer;
