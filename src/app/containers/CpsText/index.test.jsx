@@ -53,6 +53,15 @@ describe('CpsTextContainer', () => {
             [fragmentBlock('mock-id-6.1.1', 'This is a list item')],
           ]),
         ]),
+        listBlock(
+          'mock-id-7',
+          [
+            listItemBlock('mock-id-7.1', [
+              [fragmentBlock('mock-id-7.1.1', 'This is a list item')],
+            ]),
+          ],
+          'orderedList',
+        ),
       ],
     };
 
