@@ -23,7 +23,7 @@ const renderRelatedContent = ({
         service="pidgin"
         statusCode={200}
       >
-        <CpsRelatedContent content={content} env="live" />
+        <CpsRelatedContent content={content} />
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
