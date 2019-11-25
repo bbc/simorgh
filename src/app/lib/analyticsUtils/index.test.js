@@ -468,7 +468,9 @@ describe('getComponentInfo', () => {
       },
     };
 
-    expect(getComponentInfo(event, 'component', props)).toEqual(result);
+    expect(getComponentInfo(event.target.href, 'component', props)).toEqual(
+      result,
+    );
   });
 
   it('should return an object with adId if value included in props', () => {
@@ -484,7 +486,9 @@ describe('getComponentInfo', () => {
       },
     };
 
-    expect(getComponentInfo(event, 'component', props)).toEqual(result);
+    expect(getComponentInfo(event.target.href, 'component', props)).toEqual(
+      result,
+    );
   });
 });
 

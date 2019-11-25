@@ -51,7 +51,7 @@ const componentContainer = () => {
 }
 ```
 
-To get all the information about the component and the event, `getComponentInfo` will have to be used. This function takes in 3 parameters - event, name of the component, and component data.
+To get all the information about the component and the event, `getComponentInfo` will have to be used. This function takes in 3 parameters - the target's href, name of the component, and component data.
 Component data should be an object containing information obtained from the data attribute:
 `const eventData = event.srcElement.dataset[componentName];` 
 
@@ -82,7 +82,7 @@ const componentContainer = () => {
 	      child: componentDataSplit[1],
 	   };
 	
-		const componentInfo = getComponentInfo(event, 'navigation', componentData);
+		const componentInfo = getComponentInfo(event.target.href, 'navigation', componentData);
 
 		// `sendEventBeacon` will go here
 	});
@@ -115,7 +115,7 @@ const componentContainer = () => {
 		  child: componentDataSplit[1],
 		};
 		
-		const componentInfo = getComponentInfo(event, 'navigation', componentData);
+		const componentInfo = getComponentInfo(event.target.href, 'navigation', componentData);
 
 		sendEventBeacon({
 	     'navigation',

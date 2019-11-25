@@ -192,14 +192,14 @@ export const getClickInfo = ({
   return `PUB-[${campaignId}]-[=${type}]-[${creationLabel}]-[${format}]-[]-[]-[${adId}]-[${url}]`;
 };
 
-export const getComponentInfo = (event, componentName, componentData) => {
+export const getComponentInfo = (href, componentName, componentData) => {
   const creationLabel = componentData.creationLabel
     ? `${componentName}-${componentData.creationLabel}`
     : componentName;
 
   return {
     creationLabel,
-    url: event.target.href,
+    url: href,
     adId: pathOr('', ['adId'], componentData),
     format: {
       parent: `container-${componentName}`,
