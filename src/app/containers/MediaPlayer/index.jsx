@@ -121,6 +121,7 @@ const MediaPlayerContainer = ({
             title={iframeTitle}
             service={service}
             mediaInfo={mediaInfo}
+            noJsClassName="no-js"
           />
         )}
         {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
