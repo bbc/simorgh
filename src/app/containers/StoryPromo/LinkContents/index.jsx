@@ -37,8 +37,9 @@ const LinkContents = ({ item }) => {
   const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
 
   // hilariously, this works. according to moment, null seconds == 0 seconds!
+  const separator = ',';
   const duration = moment.duration(rawDuration, 'seconds');
-  const durationString = formatDuration(duration, ',');
+  const durationString = formatDuration({ duration, separator });
 
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.

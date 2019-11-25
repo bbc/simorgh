@@ -1,7 +1,11 @@
 /* eslint-disable prefer-template */
 const lpad = s => s.toString().padStart(2, '0');
 // the duration argument should be a moment duration!
-const formatDuration = (duration, separator = ':', articlesPage = false) => {
+const formatDuration = ({
+  duration,
+  separator = ':',
+  articlesPage = false,
+}) => {
   const isOverAnHour = duration.asHours() >= 1;
 
   let out = '';
