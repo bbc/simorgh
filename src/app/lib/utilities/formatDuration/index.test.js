@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-import formatDuration from '.';
+import formatDuration, { lpad } from '.';
 
 describe('formatDuration', () => {
   it('should handle 1:23:45', () => {
@@ -73,5 +73,16 @@ describe('formatDuration', () => {
     });
 
     expect(formatDuration({ duration, separator: ',' })).toBe('1,00,00');
+  });
+
+  it('should apply lpad if padMinutes is true', () => {
+    const duration = moment.duration({
+      minutes: 3,
+      seconds: 45,
+    });
+    const padMinutes = lpad(duration.minutes());
+    if (padMinutes) {
+      expect(formatDuration({ duration, padMinutes })).toBe('03:45');
+    }
   });
 });
