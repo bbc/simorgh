@@ -12,7 +12,7 @@ For logging click events you will need four things:
 ## How to set up tracking for a component
 In the container for the component you're trying to track,  import `EventContext`, and use `useClickTracker` as such:
 
-```
+```jsx
 import React, { useContext } from 'react';
 import { EventContext } from '#contexts/EventContext';
 
@@ -29,7 +29,7 @@ Provide `useClickTracker` with the data-attribute attached to the component to b
 
 If not done already, Request and Service Contexts will need to be imported to create the tracking URL. To do so, import `buildATIClickParams` and use it within the container to get props required for sending the event beacon.
 
-```
+```jsx
 import React, { useContext } from 'react';
 import { buildATIClickParams } from '../ATIAnalytics/params';
 import { EventContext } from '#contexts/EventContext';
@@ -59,7 +59,7 @@ The component data object should contain a value for `creationLabel`, `child`, a
 
 In the navigation example, these values were obtained by splitting the information provided via data attribute (in this example, data-attribute looks as such: `data-navigation='akuko_0'` - akuko is the label used for the first link in the nav, and 0 is the link index.
 
-```
+```jsx
 import React, { useContext } from 'react';
 import { buildATIClickParams } from '../ATIAnalytics/params';
 import { EventContext } from '#contexts/EventContext';
@@ -91,7 +91,7 @@ const componentContainer = () => {
 
 All this information can then be used to put together the event beacon.
 
-```
+```jsx
 import React, { useContext } from 'react';
 import { buildATIClickParams } from '../ATIAnalytics/params';
 import { EventContext } from '#contexts/EventContext';

@@ -1,9 +1,23 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
-const getParagraphText = blocks =>
-  blocks.find(el => el.type === 'paragraph' && el.markupType === 'plain_text')
-    .text;
+const getParagraphText = blocks => {
+  const textReplacements = {
+    '&quot;': '"',
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+  };
+
+  const replacementsRegex = new RegExp(
+    Object.keys(textReplacements).join('|'),
+    'gi',
+  );
+
+  return blocks
+    .find(el => el.type === 'paragraph' && el.markupType === 'plain_text')
+    .text.replace(replacementsRegex, match => textReplacements[match]);
+};
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
