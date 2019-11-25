@@ -280,7 +280,7 @@ We have [Jest](https://facebook.github.io/jest) unit tests that can be run with 
 
 #### Main application
 
-We use [Cypress](https://www.cypress.io/) for our end-to-end tests. To run the [smoke tests](https://github.com/bbc/simorgh/tree/latest/cypress/integration#how-our-cypress-tests-work) locally, run this single command:
+We use [Cypress](https://www.cypress.io/) for our end-to-end tests. To run the [smoke tests](https://github.com/bbc/simorgh/#smoke-tests) locally, run this single command:
 
 ```
 npm run test:e2e
@@ -298,13 +298,22 @@ This loads a user interface which easily allows for individual tests to be run a
 #### Environment variables
 
 There are several environment variables you can use with our test suite, which are:
-| Envionment variable | Effect | Possible values |
-|---------------------|--------|-----------------|
-| CYPRESS_ONLY_SERVICE | Restricts to running only the specified service | A single service i.e. `CYPRESS_ONLY_SERVICE=urdu` |
-| CYPRESS_APP_ENV | Runs the tests in a specific environment | `test`, `local`, `live` |
-| CYPRESS_SMOKE | Runs only smoke tests if true | boolean |
-| CYPRESS_UK | See [running e2es in the UK against Live](https://github.com/bbc/simorgh/#running-e2e-in-the-uk-against-live) | boolean |
-| CYPRESS_SKIP_EU | See [running e2es outside EU](https://github.com/bbc/simorgh/#running-e2e-outside-eu) | boolean |
+
+| Envionment variable  | Effect                                                                                                        | Possible values                                   |
+| -------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| CYPRESS_ONLY_SERVICE | Restricts to running only the specified service                                                               | A single service i.e. `CYPRESS_ONLY_SERVICE=urdu` |
+| CYPRESS_APP_ENV      | Runs the tests in a specific environment                                                                      | `test`, `local`, `live`                           |
+| CYPRESS_SMOKE        | Runs only smoke tests if true                                                                                 | boolean                                           |
+| CYPRESS_UK           | See [running e2es in the UK against Live](https://github.com/bbc/simorgh/#running-e2e-in-the-uk-against-live) | boolean                                           |
+| CYPRESS_SKIP_EU      | See [running e2es outside EU](https://github.com/bbc/simorgh/#running-e2e-outside-eu)                         | boolean                                           |
+
+These commands can be run in combination.
+
+#### Smoke tests
+
+The default way to run the e2e suite aka `npm run test:e2e` or `npm run test:e2e:interactive` runs a subset of our tests, otherwise know as _smoke tests_. To run the full suite:
+
+`CYPRESS_SMOKE=false npm run test:e2e`
 
 #### Limiting scope of runs
 
