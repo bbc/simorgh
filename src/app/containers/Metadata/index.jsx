@@ -10,6 +10,7 @@ import {
   getAppleTouchUrl,
   renderAlternateLinks,
 } from './utils';
+import onClient from '#lib/utilities/onClient';
 
 const ENGLISH_SERVICES = ['news'];
 const FACEBOOK_ADMIN_ID = 100004154058350;
@@ -83,6 +84,7 @@ const MetadataContainer = ({
   const htmlAttributes = {
     dir,
     lang,
+    className: onClient() ? 'js' : 'no-js',
     ...(isAmp && { amp: '' }), // empty value as this makes Helmet render 'amp' as per https://www.ampproject.org/docs/fundamentals/spec#ampd
   };
 

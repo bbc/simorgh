@@ -73,6 +73,15 @@ const Document = ({
           />
         )}
         {scriptsAllowed && scriptTags}
+        {scriptsAllowed && (
+          <script
+            type="text/javascript"
+            /* eslint-disable-next-line react/no-danger */
+            dangerouslySetInnerHTML={{
+              __html: `document.documentElement.className = document.documentElement.className.replace(/\\bno-js\\b/,'js');`,
+            }}
+          />
+        )}
       </body>
     </html>
   );
