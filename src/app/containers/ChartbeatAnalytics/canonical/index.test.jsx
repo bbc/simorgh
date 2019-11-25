@@ -55,7 +55,7 @@ describe('CanonicalChartbeatAnalytics', () => {
     />,
   );
 
-  (() => {
+  it('should not re-render helment wrapper when config changes to Page B', () => {
     const wrapper = shallow(
       <CanonicalChartbeatAnalytics
         chartbeatConfig={pageAConfig}
@@ -64,13 +64,14 @@ describe('CanonicalChartbeatAnalytics', () => {
     );
 
     wrapper.setProps(pageBConfig);
-    const renderedComponent = wrapper.getElement();
 
-    shouldMatchSnapshot(
-      'should not re-render helment wrapper when config changes to Page B',
-      renderedComponent,
-    );
-  })();
+    expect(
+      wrapper
+        .find('script')
+        .first()
+        .text(),
+    ).toMatch(/"title":"Page A"/);
+  });
 
   it('should call the global virtualPage function when props change', () => {
     const wrapper = mount(
