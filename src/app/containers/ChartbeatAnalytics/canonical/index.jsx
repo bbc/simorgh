@@ -10,9 +10,8 @@ const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
   const hasMounted = useRef(false);
 
   useEffect(() => {
-    if (hasMounted.current) {
-      // eslint-disable-next-line no-unused-expressions
-      window.pSUPERFLY && window.pSUPERFLY.virtualPage(chartbeatConfig);
+    if (hasMounted.current && window.pSUPERFLY) {
+      window.pSUPERFLY.virtualPage(chartbeatConfig);
     }
     hasMounted.current = true;
   }, [chartbeatConfig]);
