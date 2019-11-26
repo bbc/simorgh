@@ -10,11 +10,7 @@ const componentsToRender = { paragraph, unorderedList };
 const CpsTextContainer = ({ blocks }) => {
   if (!blocks) return null;
 
-  return (
-    <>
-      <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-    </>
-  );
+  return <Blocks blocks={blocks} componentsToRender={componentsToRender} />;
 };
 
 export const CpsTextPropTypes = {
