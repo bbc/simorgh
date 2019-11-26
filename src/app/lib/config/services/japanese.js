@@ -8,12 +8,12 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `ja`,
-    articleAuthor: `https://www.facebook.com/bbcnewsjapan/`,
+    articleAuthor: `https://www.facebook.com/bbcnews/`,
     articleTimestampPrefix: '更新',
     atiAnalyticsAppName: 'news-japanese',
     atiAnalyticsProducerId: '56',
     brandName: 'BBCニュース',
-    product: 'BBC',
+    product: 'BBC News',
     serviceLocalizedName: 'ニュース',
     defaultImage:
       'https://news.files.bbci.co.uk/ws/img/logos/twitter/bbc_japan_1024.png',
@@ -28,7 +28,7 @@ export const service = {
     locale: `ja-JP`,
     datetimeLocale: `ja`,
     service: 'japanese',
-    serviceName: 'ニュース',
+    serviceName: 'Japan',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsjapan',
     twitterSite: '@bbcnewsjapan',

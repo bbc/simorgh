@@ -10,7 +10,7 @@ export const service = {
     lang: `th`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: `th`,
-    articleAuthor: `https://www.facebook.com/BBCThai`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ปรับปรุงแล้ว',
     atiAnalyticsAppName: 'news-thai',
     atiAnalyticsProducerId: '90',
@@ -29,7 +29,7 @@ export const service = {
     locale: `th-TH`,
     datetimeLocale: 'th',
     service: 'thai',
-    serviceName: 'News ไทย',
+    serviceName: 'Thai',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbc_thailand',
     twitterSite: '@bbc_thailand',

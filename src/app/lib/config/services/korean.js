@@ -8,7 +8,7 @@ import 'moment/locale/ko';
 export const service = {
   default: {
     lang: `ko`,
-    articleAuthor: `https://www.facebook.com/bbcnewskorean`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: '최종 송고일',
     atiAnalyticsAppName: 'news-korean',
     atiAnalyticsProducerId: '57',
@@ -27,7 +27,7 @@ export const service = {
     locale: `ko-KO`,
     datetimeLocale: `ko`,
     service: 'korean',
-    serviceName: 'News 코리아',
+    serviceName: 'Korean',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcworld',
     twitterSite: '@bbcworld',
