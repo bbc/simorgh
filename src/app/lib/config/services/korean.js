@@ -21,7 +21,7 @@ export const service = {
     externalLinkText: ', 외부 사이트',
     imageCaptionOffscreenText: '사진 설명 ',
     videoCaptionOffscreenText: '동영상 설명 ',
-    audioCaptionOffscreenText: '오디오 설명',
+    audioCaptionOffscreenText: '오디오 설명 ',
     defaultCaptionOffscreenText: '설명 ',
     imageCopyrightOffscreenText: '사진 출처 ',
     locale: `ko-KO`,
