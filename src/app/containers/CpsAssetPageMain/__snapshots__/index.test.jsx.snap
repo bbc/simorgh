@@ -3318,7 +3318,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
               >
                 <a
                   class="c28"
-                  href="/pidgin/44508901"
+                  href="/pidgin/44508901?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
                   <span
                     role="text"
@@ -3381,7 +3381,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
               >
                 <a
                   class="c28"
-                  href="/pidgin/tori-46975713"
+                  href="/pidgin/tori-46975713?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
                   How light companies dey use estimated billing show Nigerians pepper
                 </a>
@@ -3433,7 +3433,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
               >
                 <a
                   class="c28"
-                  href="/pidgin/tori-42494678"
+                  href="/pidgin/tori-42494678?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
                   Nigeria: Wetin 5,222 megawatts electric fit do?
                 </a>
@@ -4485,7 +4485,7 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
               >
                 <a
                   class="c30"
-                  href="/pidgin/44508901"
+                  href="/pidgin/44508901?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
                   <span
                     role="text"
@@ -4548,7 +4548,7 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
               >
                 <a
                   class="c30"
-                  href="/pidgin/tori-46975713"
+                  href="/pidgin/tori-46975713?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
                   How light companies dey use estimated billing show Nigerians pepper
                 </a>
@@ -4600,7 +4600,7 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
               >
                 <a
                   class="c30"
-                  href="/pidgin/tori-42494678"
+                  href="/pidgin/tori-42494678?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
                   Nigeria: Wetin 5,222 megawatts electric fit do?
                 </a>
