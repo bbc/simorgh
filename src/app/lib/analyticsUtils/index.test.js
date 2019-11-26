@@ -21,7 +21,7 @@ const {
   sanitise,
   getProducer,
   getAtiUrl,
-  getClickInfo,
+  getEventInfo,
   getComponentInfo,
 } = require('./index');
 
@@ -427,7 +427,7 @@ describe('getAtiUrl', () => {
   });
 });
 
-describe('getClickInfo', () => {
+describe('getEventInfo', () => {
   const params = {
     service: 'service',
     componentName: 'component',
@@ -443,13 +443,13 @@ describe('getClickInfo', () => {
   };
 
   it('should return url section', () => {
-    expect(getClickInfo(params)).toEqual(
+    expect(getEventInfo(params)).toEqual(
       'PUB-[service-component]-[=type]-[creationLabel]-[PAR=container-component::name~CHD=child]-[]-[]-[]-[url.com]',
     );
   });
 
   it('should include elem.href in output', () => {
-    expect(getClickInfo(params)).toContain('[url.com]');
+    expect(getEventInfo(params)).toContain('[url.com]');
   });
 });
 

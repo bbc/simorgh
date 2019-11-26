@@ -11,7 +11,7 @@ import {
   isLocServeCookieSet,
   sanitise,
   getAtiUrl,
-  getClickInfo,
+  getEventInfo,
   getProducer,
 } from '#lib/analyticsUtils';
 
@@ -227,7 +227,7 @@ export const buildATIEventTrackUrl = ({
     {
       key: 'ati',
       description: 'event publisher',
-      value: getClickInfo({
+      value: getEventInfo({
         service,
         componentName,
         componentInfo,

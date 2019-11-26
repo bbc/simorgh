@@ -175,7 +175,7 @@ export const getAtiUrl = (data = []) => {
   return parsedAtiValues.join('&');
 };
 
-export const getClickInfo = ({
+export const getEventInfo = ({
   service,
   componentName,
   componentInfo,
