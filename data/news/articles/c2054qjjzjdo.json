@@ -1,0 +1,543 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c2054qjjzjdo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c2054qjjzjdo",
+      "canonicalUrl": "https://www.bbc.com/news/articles/c2054qjjzjdo"
+    },
+    "type": "article",
+    "createdBy": "News",
+    "language": "en-gb",
+    "lastUpdated": 1574336779687,
+    "firstPublished": 1574263957594,
+    "lastPublished": 1574263957594,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "passportId": "1c62e113-47ef-439d-bad0-f5315269502d",
+      "locator": "urn:bbc:optimo:asset:c2054qjjzjdo",
+      "availability": "AVAILABLE",
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.1.3",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "inline",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "video"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Test in-line blocks",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Test in-line blocks",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Lots of text in one language followed by text texte dans une autre langue. That's called an inline block.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Lots of text in one language followed by text ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "inline",
+                      "model": {
+                        "text": "texte dans une autre langue",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "texte dans une autre langue",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "language": "fr"
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ". That's called an inline block.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "And look, here's another inline block: \n202Bچرا می‌توانید به بی‌بی‌سی اطمینان کنید؟\n202C This time, the inline block was in Arabic.\n\n",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "And look, here's another inline block: ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "inline",
+                      "model": {
+                        "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "language": "fa"
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " This time, the inline block was in Arabic.\n\n",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "\n\n",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "\n\n",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This image caption has an inline block: \n202Bهذا هو كتلة مضمنة\n202C. See, what a lovely inline block.\n",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This image caption has an inline block: ",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "type": "inline",
+                                  "model": {
+                                    "text": "هذا هو كتلة مضمنة",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "هذا هو كتلة مضمنة",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "language": "ar"
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": ". See, what a lovely inline block.\n",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Europe",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Europe",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "5085/test/9f0a83b0-0c43-11ea-9752-f77801dab1ba.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is a media block caption. It also has an inline block: \n202Bهذا هو كتلة مضمنة\n202C. See, what a lovely inline block.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This is a media block caption. It also has an inline block: ",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "type": "inline",
+                                  "model": {
+                                    "text": "هذا هو كتلة مضمنة",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "هذا هو كتلة مضمنة",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "language": "ar"
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": ". See, what a lovely inline block.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true,
+                              "world": false
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Oh my gosh! Another image caption with an bloc en ligne. In French this time.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Oh my gosh! Another image caption with an ",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "type": "inline",
+                                  "model": {
+                                    "text": "bloc en ligne",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "bloc en ligne",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "language": "fr"
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": ". In French this time.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Map",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Map",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "1892/test/f9efe990-0c53-11ea-9752-f77801dab1ba.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Test in-line blocks"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c2054qjjzjdo",
+      "canonicalUrl": "https://www.bbc.com/news/articles/c2054qjjzjdo"
+    },
+    "summary": "",
+    "timestamp": 1574263957594,
+    "id": "urn:bbc:ares::article:c2054qjjzjdo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "News",
+      "uri": "/news",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
