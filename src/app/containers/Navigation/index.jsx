@@ -37,11 +37,11 @@ const NavigationContainer = () => {
       child: componentDataSplit[1],
     };
 
-    const componentInfo = getComponentInfo(
-      event.target.href,
+    const componentInfo = getComponentInfo({
+      url: event.target.href,
       componentName,
       componentData,
-    );
+    });
 
     sendEventBeacon({
       componentName,

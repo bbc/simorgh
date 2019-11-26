@@ -82,7 +82,11 @@ const componentContainer = () => {
 	      child: componentDataSplit[1],
 	   };
 	
-		const componentInfo = getComponentInfo(event.target.href, 'navigation', componentData);
+		const componentInfo = getComponentInfo({
+			url: event.target.href,
+			componentName: 'navigation',
+			componentData,
+		});
 
 		// `sendEventBeacon` will go here
 	});

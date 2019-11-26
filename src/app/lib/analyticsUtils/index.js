@@ -192,14 +192,14 @@ export const getEventInfo = ({
   return `PUB-[${campaignId}]-[=${type}]-[${creationLabel}]-[${format}]-[]-[]-[${adId}]-[${url}]`;
 };
 
-export const getComponentInfo = (href, componentName, componentData) => {
+export const getComponentInfo = ({ url, componentName, componentData }) => {
   const creationLabel = componentData.creationLabel
     ? `${componentName}-${componentData.creationLabel}`
     : componentName;
 
   return {
     creationLabel,
-    url: href,
+    url,
     adId: pathOr('', ['adId'], componentData),
     format: {
       parent: `container-${componentName}`,
