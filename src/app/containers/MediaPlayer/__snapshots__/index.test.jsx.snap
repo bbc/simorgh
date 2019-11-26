@@ -260,6 +260,7 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
             allow="autoplay; fullscreen"
             allowfullscreen=""
             class="c2"
+            scrolling="no"
             src="https://www.test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"
             title="Media player"
           />
@@ -309,6 +310,7 @@ exports[`MediaPlayer Renders the AMP player when platform is AMP 1`] = `
             frameborder="0"
             layout="fill"
             sandbox="allow-scripts allow-same-origin"
+            scrolling="no"
             src="https://www.test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB/amp"
             title="Media player"
           >
@@ -431,6 +433,7 @@ exports[`MediaPlayer Renders the AMP player with a caption 1`] = `
             frameborder="0"
             layout="fill"
             sandbox="allow-scripts allow-same-origin"
+            scrolling="no"
             src="https://www.test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB/amp"
             title="Media player"
           >
