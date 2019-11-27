@@ -181,7 +181,7 @@ export const getEventInfo = (
     service,
     componentName,
     componentInfo,
-    // The type of event ie 'click'
+    // The type of event eg 'click'
     type,
     // Details of any experimentation as defined by the BBC's event-tracking User Experience Keys
     variantTesting = '',
@@ -191,11 +191,11 @@ export const getEventInfo = (
 ) => {
   // Identifies the container the event is from
   const campaignId = `${service}-${componentName}`;
-  // The name of what caused the event (ie "navigation-home")
+  // The name of what caused the event (eg "navigation-home")
   const creationLabel = pathOr('', ['creationLabel'], componentInfo);
-  // The result of having done the action (ie the url the user is taken to)
+  // The result of having done the action (eg the url the user is taken to)
   const result = pathOr('', ['result'], componentInfo);
-  // The source of the event at a high level. Examples include an urn, or 'responsive_web;
+  // The source of the event at a high level. Examples include an urn, or 'responsive_web'
   const source = pathOr('responsive_web~news-simorgh', 'source', componentInfo);
 
   const elementPositioning = componentInfo.positioning
@@ -207,6 +207,20 @@ export const getEventInfo = (
   return `PUB-[${campaignId}]-[${creationLabel}~${type}]-[${variantTesting}]-[${metadata}]-[${pageIdentifier}]-[${userId}]-[${source}]-[${result}]`;
 };
 
+/**
+ * @param {
+ *   result: The result of having done the action (eg the url the user is taken to)
+ *   componentName: The name of the component that is doing the action
+ *   componenetData: {
+ *     source: The source of the event at a high level. Examples include an urn, or 'responsive_web'
+ *     child: The specific child of the data that is doing the action - eg button::1
+ *     creationLabel: The name of the action - eg navigation-home
+ *   }
+ * }
+ *
+ * @returns an object with the values required for the componentInfo argument of the
+ *          above function @getEventInfo
+ */
 export const getComponentInfo = ({ result, componentName, componentData }) => {
   const creationLabel = componentData.creationLabel
     ? `${componentName}-${componentData.creationLabel}`
