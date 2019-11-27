@@ -4,7 +4,7 @@ This directory contains code for logging events to ATI Analytics.
 
 ## Logging Click Events
 For logging click events you will need four things:
-* [useClickTracker](https://github.com/bbc/simorgh/blob/latest/src/app/contexts/EventContext/index.jsx) used to add click event to the to be tracked. This should be done by using `data-attributes` used in the component. This data attribute should also contain value for building the component info object, e.g. `data-navigation='Akuko_0'`
+* [useClickTracker](https://github.com/bbc/simorgh/blob/latest/src/app/contexts/EventContext/index.jsx) used to add click event to the to be tracked. This should be done by using `data-attributes` used in the component. This event handler also needs to get the component data ready for the `getComponentInfo` function, which can be done using other data attributes.
 * to compose the tracking URL via [buildATIClickParams](https://github.com/bbc/simorgh/blob/latest/src/app/containers/ATIAnalytics/params/index.js#L41) which uses [RequestContext](https://github.com/bbc/simorgh/blob/latest/src/app/contexts/RequestContext/index.jsx) and [ServiceContext](https://github.com/bbc/simorgh/blob/latest/src/app/contexts/ServiceContext/index.jsx).
 * to get all the component information by using [getComponentInfo](https://github.com/bbc/simorgh/blob/latest/src/app/lib/analyticsUtils/index.js)
 * [sendEventBeacon](https://github.com/bbc/simorgh/blob/latest/src/app/containers/ATIAnalytics/beacon/index.js) for sending the two events - 'click' and 'view'.
