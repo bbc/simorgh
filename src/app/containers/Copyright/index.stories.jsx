@@ -10,7 +10,7 @@ storiesOf('Containers|Copyright', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
-  .add('default', ({ service, variant = 'default' }) => {
+  .add('default', ({ service, variant }) => {
     const imageCaptionText =
       services[service][variant].imageCopyrightOffscreenText;
 
