@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BulletedListContainer with data should render ltr correctly 1`] = `
+exports[`BulletedListContainer should render ltr correctly 1`] = `
 .c1 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -145,7 +145,7 @@ exports[`BulletedListContainer with data should render ltr correctly 1`] = `
 </div>
 `;
 
-exports[`BulletedListContainer with data should render rtl correctly 1`] = `
+exports[`BulletedListContainer should render rtl correctly 1`] = `
 .c1 {
   font-size: 1.125rem;
   line-height: 1.75rem;

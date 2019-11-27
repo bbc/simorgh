@@ -6,23 +6,21 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { listItemA, listItemB } from '../BulletedList/fixtures';
 
 describe('BulletedListItemContainer', () => {
-  describe('with data', () => {
-    shouldMatchSnapshot(
-      'should render text correctly',
-      <ServiceContext.Provider
-        value={{ script: latin, service: 'news', dir: 'ltr' }}
-      >
-        <BulletedListItemContainer blocks={listItemA.model.blocks} />
-      </ServiceContext.Provider>,
-    );
+  shouldMatchSnapshot(
+    'should render text correctly',
+    <ServiceContext.Provider
+      value={{ script: latin, service: 'news', dir: 'ltr' }}
+    >
+      <BulletedListItemContainer blocks={listItemA.model.blocks} />
+    </ServiceContext.Provider>,
+  );
 
-    shouldMatchSnapshot(
-      'should render another text correctly',
-      <ServiceContext.Provider
-        value={{ script: latin, service: 'news', dir: 'ltr' }}
-      >
-        <BulletedListItemContainer blocks={listItemB.model.blocks} />
-      </ServiceContext.Provider>,
-    );
-  });
+  shouldMatchSnapshot(
+    'should render rtl text correctly',
+    <ServiceContext.Provider
+      value={{ script: latin, service: 'news', dir: 'rtl' }}
+    >
+      <BulletedListItemContainer blocks={listItemB.model.blocks} />
+    </ServiceContext.Provider>,
+  );
 });
