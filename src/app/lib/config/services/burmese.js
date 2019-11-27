@@ -9,7 +9,7 @@ import 'moment/locale/my';
 export const service = {
   default: {
     lang: `my`,
-    articleAuthor: `https://www.facebook.com/bbcburmese`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'အသစ္တင္ခ်ိန္',
     atiAnalyticsAppName: 'news-burmese',
     atiAnalyticsProducerId: '35',
@@ -28,7 +28,7 @@ export const service = {
     locale: `my-MM`,
     datetimeLocale: `my`,
     service: 'burmese',
-    serviceName: 'မြန်မာ',
+    serviceName: 'Burmese',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcburmese',
     twitterSite: '@bbcburmese',

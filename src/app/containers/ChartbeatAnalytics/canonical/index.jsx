@@ -1,18 +1,20 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Helmet from 'react-helmet';
 import { canonicalChartbeatPropTypes } from '../../../models/propTypes/chartbeatAnalytics';
 
 const chartbeatSource = '//static.chartbeat.com/js/chartbeat.js';
 
 const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
-  const chartbeatConfigRef = useRef(chartbeatConfig);
+  const [firstLoadConfig] = useState(chartbeatConfig);
+
+  const hasMounted = useRef(false);
 
   useEffect(() => {
-    if (chartbeatConfigRef.current !== chartbeatConfig) {
-      // eslint-disable-next-line no-unused-expressions
-      window.pSUPERFLY && window.pSUPERFLY.virtualPage(chartbeatConfig);
+    if (hasMounted.current && window.pSUPERFLY) {
+      window.pSUPERFLY.virtualPage(chartbeatConfig);
     }
-  }, [chartbeatConfig, chartbeatConfigRef]);
+    hasMounted.current = true;
+  }, [chartbeatConfig]);
 
   return (
     <Helmet>
@@ -20,7 +22,7 @@ const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
         {`
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = ${JSON.stringify(chartbeatConfig)};
+          var config = ${JSON.stringify(firstLoadConfig)};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }
