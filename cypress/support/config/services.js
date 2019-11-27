@@ -1194,10 +1194,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/thai/international-49514085',
+        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/thai/23122810',
         smoke: false,
       },
     },
