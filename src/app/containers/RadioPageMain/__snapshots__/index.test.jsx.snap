@@ -173,7 +173,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
       name="twitter:card"
     />
     <meta
-      content="@bbcnewsamharic"
+      content="@bbcnews"
       name="twitter:creator"
     />
     <meta
@@ -189,7 +189,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
       name="twitter:image:src"
     />
     <meta
-      content="@bbcnewsamharic"
+      content="@bbcnews"
       name="twitter:site"
     />
     <meta
@@ -777,7 +777,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       name="twitter:card"
     />
     <meta
-      content="@bbcnewsamharic"
+      content="@bbcnews"
       name="twitter:creator"
     />
     <meta
@@ -793,7 +793,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       name="twitter:image:src"
     />
     <meta
-      content="@bbcnewsamharic"
+      content="@bbcnews"
       name="twitter:site"
     />
     <meta
