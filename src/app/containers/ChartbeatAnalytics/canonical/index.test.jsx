@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import CanonicalChartbeatAnalytics from '.';
 
@@ -10,7 +10,7 @@ describe('CanonicalChartbeatAnalytics', () => {
 
   afterEach(jest.clearAllMocks);
 
-  const config = {
+  const pageAConfig = {
     domain: 'test-domain',
     type: 'article',
     sections: 'section1 section2',
@@ -21,18 +21,62 @@ describe('CanonicalChartbeatAnalytics', () => {
     uid: 123,
   };
 
+  const pageBConfig = {
+    chartbeatConfig: {
+      domain: 'test-domain',
+      type: 'article',
+      sections: 'section1 section2',
+      chartbeatUID: 1111,
+      useCanonical: true,
+      virtualReferrer: '/page-A',
+      title: 'Page B',
+      uid: 123,
+    },
+  };
+
+  const pageCConfig = {
+    chartbeatConfig: {
+      domain: 'test-domain',
+      type: 'article',
+      sections: 'section1 section2',
+      chartbeatUID: 1111,
+      useCanonical: true,
+      virtualReferrer: '/page-B',
+      title: 'Page C',
+      uid: 123,
+    },
+  };
+
   shouldMatchSnapshot(
     'should return the helmet wrapper with the script snippet',
     <CanonicalChartbeatAnalytics
-      chartbeatConfig={config}
+      chartbeatConfig={pageAConfig}
       chartbeatSource="//chartbeat.js"
     />,
   );
 
+  it('should not re-render helment wrapper when config changes to Page B', () => {
+    const wrapper = shallow(
+      <CanonicalChartbeatAnalytics
+        chartbeatConfig={pageAConfig}
+        chartbeatSource="//chartbeat.js"
+      />,
+    );
+
+    wrapper.setProps(pageBConfig);
+
+    expect(
+      wrapper
+        .find('script')
+        .first()
+        .text(),
+    ).toMatch(/"title":"Page A"/);
+  });
+
   it('should call the global virtualPage function when props change', () => {
     const wrapper = mount(
       <CanonicalChartbeatAnalytics
-        chartbeatConfig={config}
+        chartbeatConfig={pageAConfig}
         chartbeatSource="//chartbeat.js"
       />,
     );
@@ -67,36 +111,10 @@ describe('CanonicalChartbeatAnalytics', () => {
     // initial PWA load (Page A)
     const wrapper = mount(
       <CanonicalChartbeatAnalytics
-        chartbeatConfig={config}
+        chartbeatConfig={pageAConfig}
         chartbeatSource="//chartbeat.js"
       />,
     );
-
-    const pageBConfig = {
-      chartbeatConfig: {
-        domain: 'test-domain',
-        type: 'article',
-        sections: 'section1 section2',
-        chartbeatUID: 1111,
-        useCanonical: true,
-        virtualReferrer: '/page-A',
-        title: 'Page B',
-        uid: 123,
-      },
-    };
-
-    const pageCConfig = {
-      chartbeatConfig: {
-        domain: 'test-domain',
-        type: 'article',
-        sections: 'section1 section2',
-        chartbeatUID: 1111,
-        useCanonical: true,
-        virtualReferrer: '/page-B',
-        title: 'Page C',
-        uid: 123,
-      },
-    };
 
     // inline link to Page B
     wrapper.setProps(pageBConfig);
