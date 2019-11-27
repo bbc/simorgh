@@ -175,21 +175,23 @@ export const getAtiUrl = (data = []) => {
   return parsedAtiValues.join('&');
 };
 
-export const getEventInfo = ({
-  service,
-  componentName,
-  componentInfo,
-  type,
-}) => {
+export const getEventInfo = (
+  pageIdentifier,
+  { service, componentName, componentInfo, type, variantTesting, userId },
+) => {
   const campaignId = `${service}-${componentName}`;
   const creationLabel = pathOr('', ['creationLabel'], componentInfo);
   const url = pathOr('', ['url'], componentInfo);
-  const adId = pathOr('', ['adId'], componentInfo);
-  const format = componentInfo.format
-    ? `PAR=${componentInfo.format.parent}::name~CHD=${componentInfo.format.child}`
+  const elementPositioning = componentInfo.positioning
+    ? `PAR=${componentInfo.positioning.parent}::name~CHD=${componentInfo.positioning.child}`
     : '';
+  const metadata = elementPositioning;
+  const result = url;
+  const finalVariantTesting = variantTesting || '';
+  const finalUserId = userId || '';
 
-  return `PUB-[${campaignId}]-[=${type}]-[${creationLabel}]-[${format}]-[]-[]-[${adId}]-[${url}]`;
+  const atiParamString = `PUB-[${campaignId}]-[${creationLabel}~${type}]-[${finalVariantTesting}]-[${metadata}]-[${pageIdentifier}]-[${finalUserId}]-[responsive_web~news-simorgh]-[${result}]`;
+  return atiParamString;
 };
 
 export const getComponentInfo = ({ url, componentName, componentData }) => {
@@ -201,7 +203,7 @@ export const getComponentInfo = ({ url, componentName, componentData }) => {
     creationLabel,
     url,
     adId: pathOr('', ['adId'], componentData),
-    format: {
+    positioning: {
       parent: `container-${componentName}`,
       child: pathOr('', ['child'], componentData),
     },
