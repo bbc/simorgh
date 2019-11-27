@@ -304,8 +304,8 @@ There are several environment variables you can use with our test suite, which a
 | CYPRESS_ONLY_SERVICE | Restricts to running only the specified service                                                               | A single service i.e. `CYPRESS_ONLY_SERVICE=urdu` |
 | CYPRESS_APP_ENV      | Runs the tests in a specific environment                                                                      | `test`, `local`, `live`                           |
 | CYPRESS_SMOKE        | Runs only smoke tests if true                                                                                 | `true`, `false`                                          |
-| CYPRESS_UK           | See [running e2es in the UK against Live](https://github.com/bbc/simorgh/#running-e2e-in-the-uk-against-live) | boolean                                           |
-| CYPRESS_SKIP_EU      | See [running e2es outside EU](https://github.com/bbc/simorgh/#running-e2e-outside-eu)                         | boolean                                           |
+| CYPRESS_UK           | See [running e2es in the UK against Live](https://github.com/bbc/simorgh/#running-e2e-in-the-uk-against-live) | `true`, `false`                                           |
+| CYPRESS_SKIP_EU      | See [running e2es outside EU](https://github.com/bbc/simorgh/#running-e2e-outside-eu)                         | `true`, `false`                                           |
 
 These commands can be run in combination.
 
