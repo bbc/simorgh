@@ -6,21 +6,24 @@ import MostReadContainer from './Canonical';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
-const staticMostReadURL = service => `/data/${service}/mostRead/index.json`;
+const staticMostReadURL = (service, variant) =>
+  variant
+    ? `/data/${service}/mostRead/${variant}.json`
+    : `/data/${service}/mostRead/index.json`;
 
-const renderMostReadContainer = (service, isAmp) => (
+const renderMostReadContainer = (service, variant) => (
   <RequestContextProvider
     bbcOrigin={`/${service}/articles/c0000000000o`}
     id="c0000000000o"
-    isAmp={isAmp}
+    isAmp={false}
     pageType="article"
     service={service}
     statusCode={200}
     pathname={`/${service}`}
-    variant={null}
+    variant={variant}
   >
-    <ServiceContextProvider service={service} variant={null}>
-      <MostReadContainer endpoint={staticMostReadURL(service)} />;
+    <ServiceContextProvider service={service} variant={variant}>
+      <MostReadContainer endpoint={staticMostReadURL(service, variant)} />
     </ServiceContextProvider>
   </RequestContextProvider>
 );
@@ -32,6 +35,6 @@ const stories = storiesOf('Containers|MostRead', module)
     chromatic: { disable: true },
   });
 
-stories.add('Canonical Most Read', ({ service }) => {
-  return renderMostReadContainer(service, false);
+stories.add('Canonical Most Read', ({ service, variant }) => {
+  return renderMostReadContainer(service, variant);
 });
