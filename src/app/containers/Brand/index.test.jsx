@@ -30,3 +30,14 @@ describe(`BrandContainer`, () => {
     BrandContainerWithContext(newsServiceContextStub),
   );
 });
+
+describe('BrandContainer with variant', () => {
+  shouldMatchSnapshot(
+    'should render correctly',
+    BrandContainerWithContext({
+      ...newsServiceContextStub,
+      service: 'serbian',
+      variant: 'cyr',
+    }),
+  );
+});

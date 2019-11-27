@@ -1,4 +1,9 @@
-import { variantSanitiser, getVariant } from '.';
+import {
+  variantSanitiser,
+  getVariant,
+  servicesWithVariants,
+  getOtherVariant,
+} from '.';
 
 describe('variantSanitiser', () => {
   it('should remove leading slash', () => {
@@ -27,5 +32,21 @@ describe('getVariant', () => {
 
   it('should return "default" when service without variants is passed', () => {
     expect(getVariant({ service: 'news', variant: 'simp' })).toEqual('default');
+  });
+});
+
+describe('getOtherVariant', () => {
+  it('should have 2 variants for each service with variants', () => {
+    Object.keys(servicesWithVariants).forEach(service => {
+      expect(servicesWithVariants[service]).toHaveLength(2);
+    });
+  });
+
+  it('should get other variant', () => {
+    let otherVariant = getOtherVariant('serbian', 'lat');
+    expect(otherVariant).toBe('cyr');
+
+    otherVariant = getOtherVariant('ukchina', 'trad');
+    expect(otherVariant).toBe('simp');
   });
 });

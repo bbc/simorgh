@@ -21,3 +21,16 @@ export const getVariant = ({ service, variant }) => {
 
   return 'default';
 };
+
+export const getOtherVariant = (service, variant) => {
+  if (!service || !variant) return null;
+
+  const foundVariants = servicesWithVariants[service];
+  if (!foundVariants) return null;
+
+  const index = foundVariants.findIndex(
+    item => item === variantSanitiser(variant),
+  );
+  if (index === -1) return null;
+  return index === 0 ? foundVariants[1] : foundVariants[0];
+};
