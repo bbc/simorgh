@@ -51,11 +51,14 @@ const componentContainer = () => {
 }
 ```
 
-To get all the information about the component and the event, `getComponentInfo` will have to be used. This function takes in 3 parameters - the target's href, name of the component, and component data.
-Component data should be an object containing information obtained from the data attribute:
-`const eventData = event.srcElement.dataset[componentName];` 
+To get all the information about the component and the event, `getComponentInfo` will have to be used. This function takes in 3 parameters - the result, name of the component, and component data.
+Component data should be an object containing information obtained from data attributes.
+The result is a string of the result of having clicked, eg the url of the link or the name of the video being played.
 
-The component data object should contain a value for `creationLabel`, `child`, and optionally `adId`. These values will be used as part of the tracking URL.
+The component data object should contain a value for `creationLabel`, `child`, and optionally `source`. These values will be used as part of the tracking URL.
+- source: The source of the event at a high level. Examples include an urn, or 'responsive_web'
+- child: The specific child of the data that is doing the action - eg button::1
+- creationLabel: The name of the action - eg navigation-home
 
 In the navigation example, these values were obtained by using multiple data attributes.
 
@@ -77,7 +80,7 @@ const componentContainer = () => {
 	  useClickTracker('[data-navigation]', event => {
 		const componentName = 'navigation';
 		const componentData = {
-			containerLabel: event.srcElement.dataset.containerLabel,
+			containerLabel: event.srcElement.dataset.containerlabel,
 			child: event.srcElement.dataset.child,
 		}
 
@@ -113,7 +116,7 @@ const componentContainer = () => {
 	useClickTracker('[data-navigation]', event => {
 		const componentName = 'navigation';
 		const componentData = {
-			containerLabel: event.srcElement.dataset.containerLabel,
+			containerLabel: event.srcElement.dataset.containerlabel,
 			child: event.srcElement.dataset.child,
 		}
 
