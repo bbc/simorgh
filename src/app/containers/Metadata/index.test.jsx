@@ -8,9 +8,15 @@ import services from '#server/utilities/serviceConfigs';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import frontPageData from '#data/igbo/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
+import onClient from '#lib/utilities/onClient';
 
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
+
+let isOnClient = false;
+
+jest.mock('#lib/utilities/onClient', () => jest.fn());
+onClient.mockImplementation(() => isOnClient);
 
 const getArticleMetadataProps = data => ({
   title: data.promo.headlines.seoHeadline,
@@ -86,6 +92,21 @@ it('should render the dir and lang attribute', async () => {
 
   expect(htmlEl.getAttribute('dir')).toEqual('ltr');
   expect(htmlEl.getAttribute('lang')).toEqual('en-gb');
+});
+
+it('should render the classname attribute as no-js when onClient is false', async () => {
+  await renderMetadataToDocument();
+  const htmlEl = document.querySelector('html');
+
+  expect(htmlEl.getAttribute('classname')).toEqual('no-js');
+});
+
+it('should render the classname attribute as js when onClient is true', async () => {
+  isOnClient = true;
+  await renderMetadataToDocument();
+  const htmlEl = document.querySelector('html');
+
+  expect(htmlEl.getAttribute('classname')).toEqual('js');
 });
 
 it('should render the document title', async () => {
