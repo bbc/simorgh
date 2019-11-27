@@ -211,7 +211,7 @@ export const getEventInfo = (
  * @param {
  *   result: The result of having done the action (eg the url the user is taken to)
  *   componentName: The name of the component that is doing the action
- *   componenetData: {
+ *   componentData: {
  *     source: The source of the event at a high level. Examples include an urn, or 'responsive_web'
  *     child: The specific child of the data that is doing the action - eg button::1
  *     creationLabel: The name of the action - eg navigation-home
