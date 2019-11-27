@@ -7,7 +7,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 const staticMostReadURL = (service, variant) =>
-  variant
+  variant !== 'default'
     ? `/data/${service}/mostRead/${variant}.json`
     : `/data/${service}/mostRead/index.json`;
 
