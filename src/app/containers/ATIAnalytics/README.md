@@ -137,3 +137,18 @@ const componentContainer = () => {
 ```
 
 Now clicking on the nav links should register as a click event in the ATI Tag Inspector.
+
+## Tag Inspector
+
+This ATI system was set up for adverts but repurposed by the BBC for click tracking. Because of this, the names of the fields that are seen in the ATI Tag Inspector are not indicative of the BBC's use of those fields. Below is a table of the ATI label and the corresponding BBC label. In the Simorgh code, we only refer to the BBC label so that the only time discrepancy is seen is in the ATI system.
+
+| ATi label | BBC label | Usage notes |
+| --------- | --------- | ----------- |
+| camapaignId | container | |
+| creation | attribute | Made up of `label~type` |
+| variant | personalisation | Also used for tracking MVT and experimentation |
+| format | metadata | in the form "key1=value~key2=another_value" |
+| generalPlacement | placement | The page identifier |
+| detailedPlacement | account | 0 for not signed-in |
+| advertiserId | source | |
+| url | result | |
