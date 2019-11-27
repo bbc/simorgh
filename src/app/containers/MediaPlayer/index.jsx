@@ -63,9 +63,11 @@ const MediaPlayerContainer = ({
     aresMediaBlock,
   );
   const duration = moment.duration(rawDuration, 'seconds');
-  const durationSpokenPrefix = translations.media.duration
-    ? translations.media.duration
-    : 'Duration';
+  const durationSpokenPrefix = pathOr(
+    'Duration',
+    ['media', 'duration'],
+    translations,
+  );
 
   const mediaInfo = {
     title: path(['model', 'blocks', 0, 'model', 'title'], aresMediaBlock),
