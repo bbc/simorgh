@@ -124,10 +124,10 @@ const componentContainer = () => {
 		});
 
 		sendEventBeacon({
-	     'navigation',
+	     componentName,
 	      type: 'click',
 	      componentInfo,
-	      …eventTrackingProps,
+	      ...eventTrackingProps,
 	    });
 	});
 }

@@ -181,20 +181,28 @@ export const getEventInfo = (
     service,
     componentName,
     componentInfo,
+    // The type of event ie 'click'
     type,
+    // Details of any experimentation as defined by the BBC's event-tracking User Experience Keys
     variantTesting = '',
+    // The bbc id, 0 for not signed in
     userId = '',
   },
 ) => {
+  // Identifies the container the event is from
   const campaignId = `${service}-${componentName}`;
+  // The name of what caused the event (ie "navigation-home")
   const creationLabel = pathOr('', ['creationLabel'], componentInfo);
+  // The result of having done the action (ie the url the user is taken to)
   const result = pathOr('', ['result'], componentInfo);
-  // elementPositioning is a string of type
+  // The source of the event at a high level. Examples include an urn, or 'responsive_web;
+  const source = pathOr('responsive_web~news-simorgh', 'source', componentInfo);
+
   const elementPositioning = componentInfo.positioning
     ? `PAR=${componentInfo.positioning.parent}~CHD=${componentInfo.positioning.child}`
     : '';
+  // '~' joined 'key=value' pairs, as defined by the BBC's event-tracking Metadata Keys
   const metadata = elementPositioning;
-  const source = 'responsive_web~news-simorgh';
 
   return `PUB-[${campaignId}]-[${creationLabel}~${type}]-[${variantTesting}]-[${metadata}]-[${pageIdentifier}]-[${userId}]-[${source}]-[${result}]`;
 };
