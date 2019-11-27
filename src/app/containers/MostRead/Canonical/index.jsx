@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import 'isomorphic-fetch';
 import { string } from 'prop-types';
 import webLogger from '#lib/logger.web';
 
