@@ -3,6 +3,7 @@
 exports[`Radio Page Main should match snapshot for AMP 1`] = `
 <html
   amp=""
+  classname="js"
   dir="ltr"
   lang="am"
 >
@@ -602,6 +603,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 <html
+  classname="js"
   dir="ltr"
   lang="am"
 >
