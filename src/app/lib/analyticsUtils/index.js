@@ -189,8 +189,9 @@ export const getEventInfo = (
   const campaignId = `${service}-${componentName}`;
   const creationLabel = pathOr('', ['creationLabel'], componentInfo);
   const result = pathOr('', ['result'], componentInfo);
+  // elementPositioning is a string of type
   const elementPositioning = componentInfo.positioning
-    ? `PAR=${componentInfo.positioning.parent}::name~CHD=${componentInfo.positioning.child}`
+    ? `PAR=${componentInfo.positioning.parent}~CHD=${componentInfo.positioning.child}`
     : '';
   const metadata = elementPositioning;
   const source = 'responsive_web~news-simorgh';

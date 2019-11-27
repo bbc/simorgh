@@ -445,7 +445,7 @@ describe('getEventInfo', () => {
 
   it('should return url section', () => {
     expect(getEventInfo(pageIdentifier, params)).toEqual(
-      'PUB-[service-component]-[creationLabel~type]-[]-[PAR=container-component::name~CHD=child]-[page]-[]-[responsive_web~news-simorgh]-[url.com]',
+      'PUB-[service-component]-[creationLabel~type]-[]-[PAR=container-component~CHD=child]-[page]-[]-[responsive_web~news-simorgh]-[url.com]',
     );
   });
 
