@@ -434,7 +434,7 @@ describe('getEventInfo', () => {
     componentInfo: {
       creationLabel: 'creationLabel',
       url: 'url.com',
-      format: {
+      positioning: {
         parent: 'container-component',
         child: 'child',
       },
@@ -444,7 +444,7 @@ describe('getEventInfo', () => {
 
   it('should return url section', () => {
     expect(getEventInfo(params)).toEqual(
-      'PUB-[service-component]-[=type]-[creationLabel]-[PAR=container-component::name~CHD=child]-[]-[]-[]-[url.com]',
+      'PUB-[service-component]-[creationLabel~type]-[]-[PAR=container-component::name~CHD=child]-[]-[]-[responsive-web~news-simorgh]-[url.com]',
     );
   });
 
@@ -462,7 +462,7 @@ describe('getComponentInfo', () => {
       creationLabel: 'component-prop1',
       adId: '',
       url: 'url.com',
-      format: {
+      positioning: {
         parent: 'container-component',
         child: 'prop2',
       },
@@ -484,7 +484,7 @@ describe('getComponentInfo', () => {
       creationLabel: 'component-prop1',
       adId: 'ad-id',
       url: 'url.com',
-      format: {
+      positioning: {
         parent: 'container-component',
         child: 'prop2',
       },
