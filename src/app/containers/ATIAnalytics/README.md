@@ -82,7 +82,7 @@ const componentContainer = () => {
 		}
 
 		const componentInfo = getComponentInfo({
-			url: event.target.href,
+			result: event.target.href,
 			componentName,
 			componentData,
 		});
@@ -118,7 +118,7 @@ const componentContainer = () => {
 		}
 
 		const componentInfo = getComponentInfo({
-			url: event.target.href,
+			result: event.target.href,
 			componentName,
 			componentData,
 		});
