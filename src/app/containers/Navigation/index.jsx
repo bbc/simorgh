@@ -38,7 +38,7 @@ const NavigationContainer = () => {
     };
 
     const componentInfo = getComponentInfo({
-      url: event.target.href,
+      result: event.target.href,
       componentName,
       componentData,
     });

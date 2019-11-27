@@ -177,31 +177,35 @@ export const getAtiUrl = (data = []) => {
 
 export const getEventInfo = (
   pageIdentifier,
-  { service, componentName, componentInfo, type, variantTesting, userId },
+  {
+    service,
+    componentName,
+    componentInfo,
+    type,
+    variantTesting = '',
+    userId = '',
+  },
 ) => {
   const campaignId = `${service}-${componentName}`;
   const creationLabel = pathOr('', ['creationLabel'], componentInfo);
-  const url = pathOr('', ['url'], componentInfo);
+  const result = pathOr('', ['result'], componentInfo);
   const elementPositioning = componentInfo.positioning
     ? `PAR=${componentInfo.positioning.parent}::name~CHD=${componentInfo.positioning.child}`
     : '';
   const metadata = elementPositioning;
-  const result = url;
-  const finalVariantTesting = variantTesting || '';
-  const finalUserId = userId || '';
+  const source = 'responsive_web~news-simorgh';
 
-  const atiParamString = `PUB-[${campaignId}]-[${creationLabel}~${type}]-[${finalVariantTesting}]-[${metadata}]-[${pageIdentifier}]-[${finalUserId}]-[responsive_web~news-simorgh]-[${result}]`;
-  return atiParamString;
+  return `PUB-[${campaignId}]-[${creationLabel}~${type}]-[${variantTesting}]-[${metadata}]-[${pageIdentifier}]-[${userId}]-[${source}]-[${result}]`;
 };
 
-export const getComponentInfo = ({ url, componentName, componentData }) => {
+export const getComponentInfo = ({ result, componentName, componentData }) => {
   const creationLabel = componentData.creationLabel
     ? `${componentName}-${componentData.creationLabel}`
     : componentName;
 
   return {
     creationLabel,
-    url,
+    result,
     adId: pathOr('', ['adId'], componentData),
     positioning: {
       parent: `container-${componentName}`,

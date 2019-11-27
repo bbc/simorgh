@@ -433,7 +433,7 @@ describe('getEventInfo', () => {
     componentName: 'component',
     componentInfo: {
       creationLabel: 'creationLabel',
-      url: 'url.com',
+      result: 'url.com',
       positioning: {
         parent: 'container-component',
         child: 'child',
@@ -462,7 +462,7 @@ describe('getComponentInfo', () => {
     const result = {
       creationLabel: 'component-prop1',
       adId: '',
-      url: 'url.com',
+      result: 'url.com',
       positioning: {
         parent: 'container-component',
         child: 'prop2',
@@ -471,7 +471,7 @@ describe('getComponentInfo', () => {
 
     expect(
       getComponentInfo({
-        url: event.target.href,
+        result: event.target.href,
         componentName: 'component',
         componentData: props,
       }),
@@ -484,7 +484,7 @@ describe('getComponentInfo', () => {
     const result = {
       creationLabel: 'component-prop1',
       adId: 'ad-id',
-      url: 'url.com',
+      result: 'url.com',
       positioning: {
         parent: 'container-component',
         child: 'prop2',
@@ -493,7 +493,7 @@ describe('getComponentInfo', () => {
 
     expect(
       getComponentInfo({
-        url: event.target.href,
+        result: event.target.href,
         componentName: 'component',
         componentData: props,
       }),

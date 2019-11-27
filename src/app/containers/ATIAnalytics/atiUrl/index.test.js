@@ -126,8 +126,8 @@ describe('buildATIEventTrackUrl', () => {
         componentName: 'component',
         componentInfo: {
           creationLabel: 'creation-label',
-          url: 'https://foobar.com',
-          format: {
+          result: 'https://foobar.com',
+          positioning: {
             parent: 'container-component',
             child: 'child',
           },
@@ -142,7 +142,7 @@ describe('buildATIEventTrackUrl', () => {
         're=getBrowserViewPort',
         'hl=getCurrentTime',
         'lng=getDeviceLanguage',
-        'ati=PUB-[service-component]-[=type]-[creation-label]-[PAR=container-component::name~CHD=child]-[]-[]-[]-[https://foobar.com]',
+        'ati=PUB-[service-component]-[creation-label~type]-[]-[PAR=container-component::name~CHD=child]-[pageIdentifier]-[]-[responsive_web~news-simorgh]-[https://foobar.com]',
         'type=AT',
       ].join('&')}`,
     );

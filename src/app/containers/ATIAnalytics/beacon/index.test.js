@@ -11,8 +11,8 @@ describe('beacon', () => {
 
   const componentInfo = {
     creationLabel: 'creation-label',
-    url: 'https://bbc.com',
-    format: {
+    result: 'https://bbc.com',
+    positioning: {
       parent: 'container-component',
       child: 'child',
     },
@@ -29,28 +29,31 @@ describe('beacon', () => {
         service: 'service',
         componentName: 'component',
         componentInfo,
+        pageIdentifier: 'pageIdentifier',
       });
       expect(sendBeaconSpy).toHaveBeenCalledTimes(2);
       expect(sendBeaconSpy.mock.calls).toEqual([
         [
           `https://foobar.com?${[
             's=598285',
+            'p=pageIdentifier',
             'r=0x0x24x24',
             're=1024x768',
             'hl=00-00-00',
             'lng=en-US',
-            'ati=PUB-[service-component]-[=click]-[creation-label]-[PAR=container-component::name~CHD=child]-[]-[]-[]-[https://bbc.com]',
+            'ati=PUB-[service-component]-[creation-label~click]-[]-[PAR=container-component::name~CHD=child]-[pageIdentifier]-[]-[responsive_web~news-simorgh]-[https://bbc.com]',
             'type=AT',
           ].join('&')}`,
         ],
         [
           `https://foobar.com?${[
             's=598285',
+            'p=pageIdentifier',
             'r=0x0x24x24',
             're=1024x768',
             'hl=00-00-00',
             'lng=en-US',
-            'ati=PUB-[service-component]-[=view]-[creation-label]-[PAR=container-component::name~CHD=child]-[]-[]-[]-[https://bbc.com]',
+            'ati=PUB-[service-component]-[creation-label~view]-[]-[PAR=container-component::name~CHD=child]-[pageIdentifier]-[]-[responsive_web~news-simorgh]-[https://bbc.com]',
             'type=AT',
           ].join('&')}`,
         ],

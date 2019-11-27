@@ -179,6 +179,7 @@ export const buildATIEventTrackUrl = ({
   statsDestination,
   componentName,
   componentInfo,
+  metadata,
   type,
 }) => {
   const eventTrackingBeaconValues = [
@@ -231,6 +232,7 @@ export const buildATIEventTrackUrl = ({
         service,
         componentName,
         componentInfo,
+        metadata,
         type: type || '',
       }),
     },
