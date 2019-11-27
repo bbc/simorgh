@@ -215,7 +215,7 @@ export const getComponentInfo = ({ result, componentName, componentData }) => {
   return {
     creationLabel,
     result,
-    adId: pathOr('', ['adId'], componentData),
+    source: pathOr('', ['source'], componentData),
     positioning: {
       parent: `container-${componentName}`,
       child: pathOr('', ['child'], componentData),

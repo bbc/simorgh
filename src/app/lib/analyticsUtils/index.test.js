@@ -461,7 +461,7 @@ describe('getComponentInfo', () => {
   it('should return a componentInfo object', () => {
     const result = {
       creationLabel: 'component-prop1',
-      adId: '',
+      source: '',
       result: 'url.com',
       positioning: {
         parent: 'container-component',
@@ -479,11 +479,11 @@ describe('getComponentInfo', () => {
   });
 
   it('should return an object with adId if value included in props', () => {
-    props.adId = 'ad-id';
+    props.source = 'source';
 
     const result = {
       creationLabel: 'component-prop1',
-      adId: 'ad-id',
+      source: 'source',
       result: 'url.com',
       positioning: {
         parent: 'container-component',
