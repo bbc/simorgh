@@ -122,6 +122,7 @@ const MediaPlayerContainer = ({
             service={service}
             mediaInfo={mediaInfo}
             noJsClassName="no-js"
+            noJsMessage="This media cannot play in your browser. Please enable Javascript or use a different browser."
           />
         )}
         {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
