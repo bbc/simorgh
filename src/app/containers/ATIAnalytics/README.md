@@ -57,7 +57,7 @@ Component data should be an object containing information obtained from the data
 
 The component data object should contain a value for `creationLabel`, `child`, and optionally `adId`. These values will be used as part of the tracking URL.
 
-In the navigation example, these values were obtained by splitting the information provided via data attribute (in this example, data-attribute looks as such: `data-navigation='akuko_0'` - akuko is the label used for the first link in the nav, and 0 is the link index.
+In the navigation example, these values were obtained by using multiple data attributes.
 
 ```jsx
 import React, { useContext } from 'react';
@@ -74,17 +74,16 @@ const componentContainer = () => {
     	useContext(ServiceContext)
 	);
 
-	useClickTracker('[data-navigation]', event => {
-		const eventData = event.srcElement.dataset.navigation;
-		const componentDataSplit = eventData.split('_');
+	  useClickTracker('[data-navigation]', event => {
+		const componentName = 'navigation';
 		const componentData = {
-			creationLabel: componentDataSplit[0],
-	      child: componentDataSplit[1],
-	   };
-	
+			containerLabel: event.srcElement.dataset.containerLabel,
+			child: event.srcElement.dataset.child,
+		}
+
 		const componentInfo = getComponentInfo({
 			url: event.target.href,
-			componentName: 'navigation',
+			componentName,
 			componentData,
 		});
 
@@ -112,14 +111,17 @@ const componentContainer = () => {
 	);
 
 	useClickTracker('[data-navigation]', event => {
-		const eventData = event.srcElement.dataset.navigation;
-		const componentDataSplit = eventData.split('_');
+		const componentName = 'navigation';
 		const componentData = {
-			creationLabel: componentDataSplit[0],
-		  child: componentDataSplit[1],
-		};
-		
-		const componentInfo = getComponentInfo(event.target.href, 'navigation', componentData);
+			containerLabel: event.srcElement.dataset.containerLabel,
+			child: event.srcElement.dataset.child,
+		}
+
+		const componentInfo = getComponentInfo({
+			url: event.target.href,
+			componentName,
+			componentData,
+		});
 
 		sendEventBeacon({
 	     'navigation',
@@ -131,4 +133,4 @@ const componentContainer = () => {
 }
 ```
 
-Now clicking on the nav links should register as an event in the ATI Tag Inspector.
+Now clicking on the nav links should register as a click event in the ATI Tag Inspector.
