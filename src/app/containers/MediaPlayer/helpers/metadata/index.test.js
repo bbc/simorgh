@@ -1,9 +1,9 @@
-import mediaPlayerMetadata from '.';
+import { mediaPlayerMetadata } from '.';
 import {
   validAresMediaVideoBlock,
   validAresMediaAudioBlock,
-  missingAresMediaMetadataBlock,
-  multipleAresMetadataBlock,
+  // missingAresMediaMetadataBlock,
+  // multipleAresMetadataBlock,
 } from '../../fixtureData';
 
 describe('helper', () => {
