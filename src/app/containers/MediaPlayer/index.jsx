@@ -3,6 +3,7 @@ import { string, bool } from 'prop-types';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
+import Figure from '@bbc/psammead-figure';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
@@ -62,11 +63,20 @@ const MediaPlayerContainer = ({
     aresMediaBlock,
   );
   const duration = moment.duration(rawDuration, 'seconds');
+  const durationSpokenPrefix = pathOr(
+    'Duration',
+    ['media', 'duration'],
+    translations,
+  );
+  const separator = ',';
 
   const mediaInfo = {
     title: path(['model', 'blocks', 0, 'model', 'title'], aresMediaBlock),
-    duration: formatDuration(duration),
-    durationSpoken: formatDuration(duration, ','),
+    duration: formatDuration({ duration, padMinutes: true }),
+    durationSpoken: `${durationSpokenPrefix} ${formatDuration({
+      duration,
+      separator,
+    })}`,
     datetime: path(
       ['model', 'blocks', 0, 'model', 'versions', 0, 'durationISO8601'],
       aresMediaBlock,
@@ -103,25 +113,27 @@ const MediaPlayerContainer = ({
   return (
     <>
       <Metadata aresMediaBlock={aresMediaBlock} />
-      {isAmp ? (
-        <AmpMediaPlayer
-          src={embedSource}
-          placeholderSrc={placeholderSrc}
-          placeholderSrcset={placeholderSrcset}
-          title={iframeTitle}
-        />
-      ) : (
-        <CanonicalMediaPlayer
-          src={embedSource}
-          placeholderSrc={showPlaceholder ? placeholderSrc : null}
-          placeholderSrcset={placeholderSrcset}
-          showPlaceholder={showPlaceholder}
-          title={iframeTitle}
-          service={service}
-          mediaInfo={mediaInfo}
-        />
-      )}
-      {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
+      <Figure>
+        {isAmp ? (
+          <AmpMediaPlayer
+            src={embedSource}
+            placeholderSrc={placeholderSrc}
+            placeholderSrcset={placeholderSrcset}
+            title={iframeTitle}
+          />
+        ) : (
+          <CanonicalMediaPlayer
+            src={embedSource}
+            placeholderSrc={showPlaceholder ? placeholderSrc : null}
+            placeholderSrcset={placeholderSrcset}
+            showPlaceholder={showPlaceholder}
+            title={iframeTitle}
+            service={service}
+            mediaInfo={mediaInfo}
+          />
+        )}
+        {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
+      </Figure>
     </>
   );
 };

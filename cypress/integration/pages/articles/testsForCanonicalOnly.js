@@ -1,7 +1,7 @@
 import envConfig from '../../../support/config/envs';
 import config from '../../../support/config/services';
 import appToggles from '../../../support/helpers/useAppToggles';
-import { getBlockData } from './helpers';
+import { getBlockData, getBlockByType } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasCaption = service => service === 'news';
@@ -44,32 +44,52 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     });
 
     if (serviceHasCaption(service)) {
-      it('should have a visible image without a caption that is lazyloaded and has a noscript fallback image', () => {
-        cy.get('figure')
-          .eq(1)
-          .within(() => {
-            cy.get('div div div div').should(
-              'have.class',
-              'lazyload-placeholder',
-            );
-          })
-          .scrollIntoView();
+      describe('Image with placeholder', () => {
+        it('should have a visible image that is not lazyloaded', () => {
+          cy.get('div[class^="ImagePlaceholder"]')
+            .eq(0)
+            .should('be.visible')
+            .should('to.have.descendants', 'img')
+            .within(() => {
+              cy.get('div[class^="lazyload-placeholder"]').should('not.exist');
+            });
+        });
 
-        cy.get('figure')
-          .eq(1)
-          .should('be.visible')
-          .should('to.have.descendants', 'img')
-          .should('not.to.have.descendants', 'figcaption')
+        it('should have a visible image that is lazyloaded and has a noscript fallback image', () => {
+          cy.get('div[class^="ImagePlaceholder"]')
+            .eq(1)
+            .scrollIntoView()
+            .should('be.visible')
+            .within(() => {
+              cy.get('noscript').contains('<img ');
+              cy.get('div[class^="lazyload-placeholder"]').should('exist');
+            });
+        });
 
-          // NB: If this test starts failing unexpectedly it's a good sign that the dom is being
-          // cleared during hydration. React won't render noscript tags on the client so if they
-          // get cleared during hydration, the following render wont re-add them.
-          // See https://github.com/facebook/react/issues/11423#issuecomment-341751071 or
-          // https://github.com/bbc/simorgh/pull/1872 for more infomation.
-          .within(() => {
-            cy.get('noscript').contains('<img ');
-            cy.get('div div').should('not.have.class', 'lazyload-placeholder');
+        it('should have an image with a caption', () => {
+          cy.window().then(win => {
+            const { model } = getBlockData('image', win.SIMORGH_DATA.pageData);
+            const {
+              model: { blocks },
+            } =
+              model && model.blocks && getBlockByType(model.blocks, 'caption');
+            const { text: captionText } =
+              blocks && blocks[0].model.blocks[0].model;
+            if (captionText) {
+              cy.get('figcaption')
+                .eq(0)
+                .should('be.visible')
+                .and('contain', captionText);
+            } else {
+              // check for image with no caption
+              cy.get('figure')
+                .eq(0)
+                .within(() => {
+                  cy.get('figcaption').should('not.exist');
+                });
+            }
           });
+        });
       });
     }
 
@@ -87,6 +107,35 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                   .should('have.attr', 'src')
                   .should('not.be.empty');
               });
+            }
+          });
+        });
+
+        it('should render a visible guidance message', () => {
+          cy.window().then(win => {
+            const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+
+            if (media) {
+              const longGuidanceWarning =
+                media.model.blocks[1].model.blocks[0].model.versions[0].warnings
+                  .long;
+
+              cy.get('div[class^="StyledVideoContainer"]')
+                .eq(0)
+                .within(() => {
+                  // Check for video with guidance message
+                  if (longGuidanceWarning) {
+                    cy.get('div[class^="StyledPlaceholder"]')
+                      .within(() => {
+                        cy.get('strong');
+                      })
+                      .should('be.visible')
+                      .and('contain', longGuidanceWarning);
+                    // Check for video with no guidance message
+                  } else {
+                    cy.get('div[class^="StyledGuidance"]').should('not.exist');
+                  }
+                });
             }
           });
         });
@@ -114,6 +163,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               }
             });
           });
+
           it('plays media when a user clicks play', () => {
             cy.window().then(win => {
               const media = getBlockData('video', win.SIMORGH_DATA.pageData);

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { storiesOf } from '@storybook/react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import igboData from '#data/igbo/frontpage';
 import pidginData from '#data/pidgin/frontpage';
 import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
@@ -46,19 +47,23 @@ const stories = storiesOf('Pages|Front Page', module).addDecorator(story => (
 Object.keys(serviceDatasets).forEach(service => {
   stories.add(service, () => {
     return (
-      <DataWrapper service={service}>
-        {frontPageData => (
-          <FrontPage
-            pageData={frontPageData}
-            status={200}
-            service={service}
-            isAmp={false}
-            loading={false}
-            error={null}
-            pageType="frontPage"
-          />
-        )}
-      </DataWrapper>
+      <BrowserRouter>
+        <Route path="/:service">
+          <DataWrapper service={service}>
+            {frontPageData => (
+              <FrontPage
+                pageData={frontPageData}
+                status={200}
+                service={service}
+                isAmp={false}
+                loading={false}
+                error={null}
+                pageType="frontPage"
+              />
+            )}
+          </DataWrapper>
+        </Route>
+      </BrowserRouter>
     );
   });
 });
