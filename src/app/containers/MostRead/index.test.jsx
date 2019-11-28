@@ -78,7 +78,7 @@ describe('MostReadContainerCanonical', () => {
       expect(container.querySelectorAll('ul').length).toEqual(10);
     });
 
-    it(`${service} - should return empty string when mostRead toggle is disabled`, async () => {
+    it(`should return empty string when mostRead toggle is disabled - ${service}`, async () => {
       const { variant, data: mostReadData } = services[service];
 
       fetch.mockResponse(JSON.stringify(mostReadData));
