@@ -69,20 +69,16 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         errorCode: null,
       });
 
-      route
-        .getInitialData(location.pathname)
-        .then(data =>
-          setState(prevState => ({
-            ...prevState,
-            loading: false,
-            pageData: path(['pageData'], data),
-            status: path(['status'], data),
-            error: path(['error'], data),
-          })),
-        )
-        .then(() => {
-          shouldSetFocus.current = true;
-        });
+      route.getInitialData(location.pathname).then(data => {
+        shouldSetFocus.current = true;
+        setState(prevState => ({
+          ...prevState,
+          loading: false,
+          pageData: path(['pageData'], data),
+          status: path(['status'], data),
+          error: path(['error'], data),
+        }));
+      });
     }
   }, [routes, location.pathname]);
 
