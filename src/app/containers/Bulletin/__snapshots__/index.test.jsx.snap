@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1`] = `
-.c7 {
+.c10 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -11,6 +11,12 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 }
 
 .c2 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+.c6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -22,14 +28,14 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   margin: 0;
 }
 
-.c3 {
+.c5 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c3:before {
+.c5:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -41,21 +47,39 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   z-index: 1;
 }
 
-.c3:hover,
-.c3:focus {
+.c5:hover,
+.c5:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c3:visited {
+.c5:visited {
   color: #6E6E73;
 }
 
 .c0 {
+  position: relative;
+  background-color: #F2F2F2;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-column-gap: 1rem;
   background-color: #F2F2F2;
 }
 
-.c6 {
+.c1 {
+  vertical-align: top;
+  display: inline-block;
+  grid-column: 1 / span 6;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.c3 {
+  grid-column: 1 / span 6;
+  display: inline-block;
+  width: 100%;
+}
+
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -64,15 +88,15 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0 0.25rem;
+  padding-right: 0.5rem;
 }
 
-.c6 > svg {
+.c9 > svg {
   color: #FFFFFF;
   fill: currentColor;
 }
 
-.c5 {
+.c8 {
   background-color: #222222;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -80,7 +104,10 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #FFFFFF;
-  text-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0.75rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -92,7 +119,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   justify-content: center;
 }
 
-.c4 {
+.c7 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -104,120 +131,192 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   padding-bottom: 1rem;
 }
 
-.c1 {
+.c4 {
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
-    display: none;
+  .c1 {
+    grid-column: 1 / span 2;
+    width: 33.33%;
+    padding: 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c1 {
+    width: initial;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    grid-column: 3 / span 4;
+    width: 66.67%;
+    padding-left: 1rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c3 {
+    width: initial;
+    padding: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    display: inline-block;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c8 {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c7 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c7 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c7 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c4 {
+    padding: 0.5rem 0;
+  }
+}
+
 <div
   class="c0"
-  type="audio"
 >
-  <h3
-    class="c1"
-    type="audio"
-  >
-    <span
-      class="c2"
-    >
-      Listen 
-    </span>
-    <a
-      class="c3"
-      href="https://www.bbc.co.uk/news"
-    >
-      Test Radio Bul promo live
-    </a>
-  </h3>
-  <p
-    class="c4"
-    type="audio"
-  >
-    Test Radio summary
-  </p>
   <div
-    aria-hidden="true"
-    class="c5"
+    class="c1"
   >
-    <span
-      class="c6"
+    <img
+      alt="Clinton"
+      class="c2"
+      src="http://b.files.bbci.co.uk/4917/test/_63711781_clinton.jpg"
+    />
+  </div>
+  <div
+    class="c3"
+    dir="ltr"
+  >
+    <h3
+      class="c4"
+      dir="ltr"
     >
-      <svg
-        class="c7"
-        focusable="false"
-        height="12px"
-        viewBox="0 0 13 12"
-        width="13px"
+      <a
+        class="c5"
+        href="https://www.bbc.co.uk/news"
       >
-        <path
-          d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-        />
-        <path
-          d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-        />
-      </svg>
-    </span>
-    Listen
+        <span
+          role="text"
+        >
+          <span
+            class="c6"
+            lang="en-GB"
+          >
+            Listen,
+          </span>
+          <span>
+            Test Radio Bul promo live
+          </span>
+        </span>
+      </a>
+    </h3>
+    <p
+      class="c7"
+      type="audio"
+    >
+      Test Radio summary
+    </p>
+    <div
+      aria-hidden="true"
+      class="c8"
+      dir="ltr"
+    >
+      <span
+        class="c9"
+        dir="ltr"
+      >
+        <svg
+          class="c10"
+          focusable="false"
+          height="12px"
+          viewBox="0 0 13 12"
+          width="13px"
+        >
+          <path
+            d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+          />
+          <path
+            d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+          />
+        </svg>
+      </span>
+      Listen
+    </div>
   </div>
 </div>
 `;
 
 exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] = `
-.c8 {
+.c10 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -226,13 +325,13 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   height: 0.75rem;
 }
 
-.c1 {
+.c2 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c3 {
+.c6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -244,14 +343,14 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   margin: 0;
 }
 
-.c4 {
+.c5 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c4:before {
+.c5:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -263,17 +362,38 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   z-index: 1;
 }
 
-.c4:hover,
-.c4:focus {
+.c5:hover,
+.c5:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c4:visited {
+.c5:visited {
   color: #6E6E73;
 }
 
-.c7 {
+.c0 {
+  position: relative;
+  background-color: #F2F2F2;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-column-gap: 1rem;
+}
+
+.c1 {
+  vertical-align: top;
+  display: inline-block;
+  grid-column: 1 / span 6;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.c3 {
+  grid-column: 1 / span 6;
+  display: inline-block;
+  width: 100%;
+}
+
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -282,15 +402,15 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0 0.25rem;
+  padding-right: 0.5rem;
 }
 
-.c7 > svg {
+.c9 > svg {
   color: #FFFFFF;
   fill: currentColor;
 }
 
-.c6 {
+.c8 {
   background-color: #222222;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -298,7 +418,10 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #FFFFFF;
-  text-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0.75rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -310,7 +433,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   justify-content: center;
 }
 
-.c5 {
+.c7 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -318,119 +441,192 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   font-style: normal;
   color: #3F3F42;
   margin: 0;
+  padding: 0 0.5rem;
   padding-bottom: 1rem;
 }
 
-.c2 {
+.c4 {
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
-  padding: 0.5rem 0;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
 }
 
 @media (min-width:37.5rem) {
   .c0 {
-    display: none;
+    padding: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    grid-column: 1 / span 3;
+    width: 50%;
+    padding: 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c1 {
+    width: initial;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    grid-column: 4 / span 3;
+    width: 50%;
+    padding-left: 1rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c3 {
+    width: initial;
+    padding: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    display: inline-block;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c8 {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c7 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c7 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c7 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
+@media (min-width:37.5rem) {
+  .c4 {
+    padding: 0 0 0.5rem 0;
+  }
+}
+
 <div
   class="c0"
-  type="video"
 >
-  <img
-    alt="Clinton"
-    class="c1"
-    src="http://b.files.bbci.co.uk/4917/test/_63711781_clinton.jpg"
-  />
-  <h3
-    class="c2"
-    type="video"
-  >
-    <span
-      class="c3"
-    >
-      Watch 
-    </span>
-    <a
-      class="c4"
-      href="https://www.bbc.co.uk/news"
-    >
-      Test TV Bul promo live
-    </a>
-  </h3>
-  <p
-    class="c5"
-    type="video"
-  >
-    Test TV Bul promo
-  </p>
   <div
-    aria-hidden="true"
-    class="c6"
+    class="c1"
   >
-    <span
-      class="c7"
+    <img
+      alt="Clinton"
+      class="c2"
+      src="http://b.files.bbci.co.uk/4917/test/_63711781_clinton.jpg"
+    />
+  </div>
+  <div
+    class="c3"
+    dir="ltr"
+  >
+    <h3
+      class="c4"
+      dir="ltr"
     >
-      <svg
-        class="c8"
-        focusable="false"
-        height="12px"
-        viewBox="0 0 32 32"
-        width="12px"
+      <a
+        class="c5"
+        href="https://www.bbc.co.uk/news"
       >
-        <polygon
-          points="3,32 29,16 3,0"
-        />
-      </svg>
-    </span>
-    Watch
+        <span
+          role="text"
+        >
+          <span
+            class="c6"
+            lang="en-GB"
+          >
+            Watch,
+          </span>
+          <span>
+            Test TV Bul promo live
+          </span>
+        </span>
+      </a>
+    </h3>
+    <p
+      class="c7"
+      type="video"
+    >
+      Test TV Bul promo
+    </p>
+    <div
+      aria-hidden="true"
+      class="c8"
+      dir="ltr"
+    >
+      <span
+        class="c9"
+        dir="ltr"
+      >
+        <svg
+          class="c10"
+          focusable="false"
+          height="12px"
+          viewBox="0 0 32 32"
+          width="12px"
+        >
+          <polygon
+            points="3,32 29,16 3,0"
+          />
+        </svg>
+      </span>
+      Watch
+    </div>
   </div>
 </div>
 `;

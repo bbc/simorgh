@@ -8,7 +8,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 
 // eslint-disable-next-line react/prop-types
 const BulletinContainer = ({ item }) => {
-  const { script, service } = useContext(ServiceContext);
+  const { script, service, dir } = useContext(ServiceContext);
 
   const contentType = pathOr(null, ['contentType'], item);
   const isLive = pathOr(null, ['isLive'], item);
@@ -44,6 +44,7 @@ const BulletinContainer = ({ item }) => {
       summaryText={summary}
       ctaLink={ctaLink}
       ctaText={ctaText}
+      dir={dir}
     />
   );
 };

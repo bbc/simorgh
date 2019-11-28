@@ -59,4 +59,6 @@ storiesOf('Containers|Bulletin/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
   .add('TV Bulletin', () => getAmpBulletin(tvFixture))
-  .add('Radio Bulletin', () => getAmpBulletin(audioFixture));
+  .add('TV Bulletin - Live', () => getAmpBulletin(liveTvFixture))
+  .add('Radio Bulletin', () => getAmpBulletin(audioFixture))
+  .add('Radio Bulletin - Live', () => getAmpBulletin(audioLiveFixture));
