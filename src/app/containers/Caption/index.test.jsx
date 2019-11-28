@@ -68,10 +68,22 @@ const persianLink = inlineLinkBlock(
 
 const inlinePersianBlock = inlineSpanBlock([persianLink], 'fa', persianText);
 
-const blocksWithInline = [
-  fragmentBlock('This is some text.', ['bold']),
-  inlinePersianBlock,
-];
+const blocksWithInline = {
+  model: {
+    blocks: [
+      {
+        model: {
+          blocks: [
+            fragmentBlock('This is some text.', ['bold']),
+            inlinePersianBlock,
+          ],
+        },
+        type: 'text',
+      },
+    ],
+  },
+  type: 'caption',
+};
 
 const captionBlock3Paragraphs = {
   model: {
@@ -153,7 +165,7 @@ shouldMatchSnapshot(
 );
 
 shouldMatchSnapshot(
-  'should render caption with mutiple paragraphs',
+  'should render caption with multiple paragraphs',
   CaptionWithContext(
     captionBlock3Paragraphs,
     newsServiceContextStub,
@@ -163,7 +175,7 @@ shouldMatchSnapshot(
 
 shouldMatchSnapshot(
   'should render correctly with inline block',
-  CaptionWithContext(blocksWithInline),
+  CaptionWithContext(blocksWithInline, newsServiceContextStub, 'caption'),
 );
 
 describe('with offscreen text', () => {
