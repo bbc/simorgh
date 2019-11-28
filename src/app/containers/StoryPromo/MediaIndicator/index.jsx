@@ -52,7 +52,7 @@ const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
 
   if (rawDuration) {
     const duration = moment.duration(rawDuration, 'seconds');
-    const durationString = formatDuration(duration);
+    const durationString = formatDuration({ duration });
     const isoDuration = duration.toISOString();
     return (
       <MediaIndicatorComp
