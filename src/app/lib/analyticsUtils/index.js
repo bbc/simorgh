@@ -194,12 +194,12 @@ export const getEventInfo = (
     componentName,
     componentInfo,
     type,
-    variantTesting = '',
+    personalisation = '',
     userId = '',
   },
 ) => {
   // Identifies the container the event is from
-  const campaignId = `${service}-${componentName}`;
+  const container = `${service}-${componentName}`;
   // The name of what caused the event (eg "navigation-home")
   const creationLabel = pathOr('', ['creationLabel'], componentInfo);
   // The result of having done the action (eg the url the user is taken to)
@@ -214,7 +214,7 @@ export const getEventInfo = (
   // Currently we only use the element positioning metadata in our tracking
   const metadata = elementPositioning;
 
-  return `PUB-[${campaignId}]-[${creationLabel}~${type}]-[${variantTesting}]-[${metadata}]-[${pageIdentifier}]-[${userId}]-[${source}]-[${result}]`;
+  return `PUB-[${container}]-[${creationLabel}~${type}]-[${personalisation}]-[${metadata}]-[${pageIdentifier}]-[${userId}]-[${source}]-[${result}]`;
 };
 
 /**
