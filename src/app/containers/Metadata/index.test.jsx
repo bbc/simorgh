@@ -8,6 +8,12 @@ import services from '#server/utilities/serviceConfigs';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import frontPageData from '#data/igbo/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
+import onClient from '#lib/utilities/onClient';
+
+let isOnClient = true;
+
+jest.mock('#lib/utilities/onClient', () => jest.fn());
+onClient.mockImplementation(() => isOnClient);
 
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
@@ -477,3 +483,22 @@ shouldMatchSnapshot(
     openGraphType="website"
   />,
 );
+
+describe('MetadataContainer', () => {
+  afterEach(() => {
+    isOnClient = true;
+  });
+
+  it('should render the classname attribute as js when onClient is true', async () => {
+    await renderMetadataToDocument();
+    const htmlEl = document.querySelector('html');
+    expect(htmlEl.getAttribute('classname')).toEqual('js');
+  });
+
+  it('should render the classname attribute as no-js when onClient is false', async () => {
+    isOnClient = false;
+    await renderMetadataToDocument();
+    const htmlEl = document.querySelector('html');
+    expect(htmlEl.getAttribute('classname')).toEqual('no-js');
+  });
+});
