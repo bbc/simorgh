@@ -138,7 +138,7 @@ export const getAtUserId = () => {
     val = uuid();
   }
 
-  Cookie.set(cookieName, { val }, { expires });
+  Cookie.set(cookieName, { val }, { expires, path: '/' });
 
   return val;
 };
