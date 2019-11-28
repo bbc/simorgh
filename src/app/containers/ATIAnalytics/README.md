@@ -19,13 +19,13 @@ import { EventContext } from '#contexts/EventContext';
 const componentContainer = () => {
 	const { useClickTracker } = useContext(EventContext);
 
-	useClickTracker('[data-attr]', event => {
+	useClickTracker('[data-navigation]', event => {
 		// `sendEventBeacon` will go here
 	});
 }
 ```
 
-Provide `useClickTracker` with the data-attribute attached to the component to be tracked, e.g. for Navigation component that would be `data-navigation`. This data attribute should be set in the component's container and passed down to the Psammead component.
+Provide `useClickTracker` with the data-attribute attached to the component to be tracked, e.g. for Navigation component that would be `data-navigation`. This data attribute should be set in the component's container and passed down to the Psammead component, as shown in the example below on the `li` item.
 
 If not done already, Request and Service Contexts will need to be imported to create the tracking URL. To do so, import `buildATIClickParams` and use it within the container to get props required for sending the event beacon.
 
@@ -36,7 +36,7 @@ import { EventContext } from '#contexts/EventContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const componentContainer = () => {
+const componentContainer = (navigationItems) => {
 	const { useClickTracker } = useContext(EventContext);
 	const eventTrackingProps = buildATIClickParams(
 		{},
@@ -45,9 +45,24 @@ const componentContainer = () => {
 	);
 
 
-	useClickTracker('[data-attr]', event => {
+	useClickTracker('[data-navigation]', event => {
 		// `sendEventBeacon` will go here
 	});
+
+	return (
+		<div className="navigation">
+			<ul className="navigation_list">
+				{navigationItems.map(item => (
+					<li
+						key={item.title}
+						data-navigation
+					>
+						{item.title}
+					</li>
+				))}
+			</ul>
+		</div>
+	);
 }
 ```
 
@@ -60,7 +75,7 @@ The component data object should contain a value for `creationLabel`, `child`, a
 - child: The specific child of the data that is doing the action - eg button::1
 - creationLabel: The name of the action - eg navigation-home
 
-In the navigation example, these values were obtained by using multiple data attributes.
+In the navigation example, these values were obtained by using multiple data attributes on the navigation's `li` item.
 
 ```jsx
 import React, { useContext } from 'react';
@@ -91,6 +106,23 @@ const componentContainer = () => {
 		});
 
 		// `sendEventBeacon` will go here
+
+		return (
+			<div className="navigation">
+				<ul className="navigation_list">
+					{navigationItems.map((item, index) => (
+						<li
+							key={item.title}
+							data-navigation
+							data-containerlabel={`navigation-${item.title}`}
+							data-child={index}
+						>
+							{item.title}
+						</li>
+					))}
+				</ul>
+			</div>
+		);
 	});
 }
 ```
@@ -132,6 +164,23 @@ const componentContainer = () => {
 			componentInfo,
 			...eventTrackingProps,
 		});
+
+		return (
+			<div className="navigation">
+				<ul className="navigation_list">
+					{navigationItems.map((item, index) => (
+						<li
+							key={item.title}
+							data-navigation
+							data-containerlabel={`navigation-${item.title}`}
+							data-child={index}
+						>
+							{item.title}
+						</li>
+					))}
+				</ul>
+			</div>
+		);
 	});
 }
 ```
