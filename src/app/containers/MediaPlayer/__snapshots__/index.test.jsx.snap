@@ -200,7 +200,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
                 class="c11"
                 datetime="PT3M11S"
               >
-                3:11
+                03:11
               </time>
             </button>
             <img
@@ -717,7 +717,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
                 class="c11"
                 datetime="PT3M11S"
               >
-                3:11
+                03:11
               </time>
             </button>
             <img
