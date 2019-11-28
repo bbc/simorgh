@@ -470,17 +470,27 @@ describe('getAtUserId', () => {
 
   it('should return AT user id when found', () => {
     Cookie.getJSON = jest.fn().mockReturnValue({ val: 'uuid' });
+
     const id = getAtUserId();
     expect(id).toEqual('uuid');
   });
 
   it('should return null if AT user id not found', () => {
+    Cookie.set = jest.fn();
     Cookie.getJSON = jest.fn().mockReturnValue(null);
-    let id = getAtUserId();
-    expect(id).toBeNull();
+    const val = '00000000-1111-aaaa-bbbb-1234567890ab';
 
-    Cookie.getJSON = jest.fn().mockReturnValue({});
+    let id = getAtUserId();
+    expect(id).not.toBeNull();
+    expect(id).toHaveLength(val.length);
+    expect(Cookie.set).toHaveBeenCalledWith(
+      'atuserid',
+      { val: id },
+      { expires: 395 },
+    );
+
+    Cookie.getJSON = jest.fn().mockReturnValue({ val });
     id = getAtUserId();
-    expect(id).toBeNull();
+    expect(id).toBe(val);
   });
 });
