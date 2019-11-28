@@ -475,7 +475,7 @@ describe('getAtUserId', () => {
     expect(id).toEqual('uuid');
   });
 
-  it('should return null if AT user id not found', () => {
+  it('should create new user id if cookie does not exist', () => {
     Cookie.set = jest.fn();
     Cookie.getJSON = jest.fn().mockReturnValue(null);
     const val = '00000000-1111-aaaa-bbbb-1234567890ab';
