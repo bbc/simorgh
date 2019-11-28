@@ -482,6 +482,7 @@ describe('getAtUserId', () => {
 
     let id = getAtUserId();
     expect(id).not.toBeNull();
+    expect(id).not.toBe(val);
     expect(id).toHaveLength(val.length);
     expect(Cookie.set).toHaveBeenCalledWith(
       'atuserid',
