@@ -132,7 +132,7 @@ export const getAtUserId = () => {
   const cookieName = 'atuserid';
   const cookie = Cookie.getJSON(cookieName);
   let val = pathOr(null, ['val'], cookie);
-  const expires = 395; // expires in 13 months (365 + 30 days)
+  const expires = 397; // expires in 13 months
 
   if (!cookie || !val) {
     val = uuid();

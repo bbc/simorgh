@@ -487,7 +487,7 @@ describe('getAtUserId', () => {
     expect(Cookie.set).toHaveBeenCalledWith(
       'atuserid',
       { val: id },
-      { expires: 395, path: '/' },
+      { expires: 397, path: '/' },
     );
 
     Cookie.getJSON = jest.fn().mockReturnValue({ val });
