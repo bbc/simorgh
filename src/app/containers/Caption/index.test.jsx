@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from 'uuid';
 import { render } from '@testing-library/react';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
@@ -26,6 +27,51 @@ const captionBlock = blockContainingText(
   'Some caption text...',
   'mocked-id',
 );
+
+const fragmentBlock = (text, attributes = []) => ({
+  type: 'fragment',
+  id: uuid(),
+  model: {
+    text,
+    attributes,
+  },
+});
+
+const inlineLinkBlock = (text, locator, blocks, isExternal) => ({
+  type: 'urlLink',
+  id: uuid(),
+  model: {
+    text,
+    locator,
+    blocks,
+    isExternal,
+  },
+});
+
+const inlineSpanBlock = (blocks, language, text) => ({
+  type: 'inline',
+  id: uuid,
+  model: {
+    blocks,
+    language,
+    text,
+  },
+});
+
+const persianText = 'چیسربرگر';
+const persianLink = inlineLinkBlock(
+  persianText,
+  'https://google.com',
+  [fragmentBlock(persianText)],
+  true,
+);
+
+const inlinePersianBlock = inlineSpanBlock([persianLink], 'fa', persianText);
+
+const blocksWithInline = [
+  fragmentBlock('This is some text.', ['bold']),
+  inlinePersianBlock,
+];
 
 const captionBlock3Paragraphs = {
   model: {
@@ -113,6 +159,11 @@ shouldMatchSnapshot(
     newsServiceContextStub,
     'caption',
   ),
+);
+
+shouldMatchSnapshot(
+  'should render correctly with inline block',
+  CaptionWithContext(blocksWithInline),
 );
 
 describe('with offscreen text', () => {
