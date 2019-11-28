@@ -70,10 +70,10 @@ To get all the information about the component and the event, `getComponentInfo`
 Component data should be an object containing information obtained from data attributes.
 The result is a string of the result of having clicked, eg the url of the link or the name of the video being played.
 
-The component data object should contain a value for `creationLabel`, `child`, and optionally `source`. These values will be used as part of the tracking URL.
+The component data object should contain a value for `actionLabel`, `child`, and optionally `source`. These values will be used as part of the tracking URL.
 - source: The source of the event at a high level. Examples include an urn, or 'responsive_web'
 - child: The specific child of the data that is doing the action - eg button::1
-- creationLabel: The name of the action - eg navigation-home
+- actionLabel: The name of the action - eg navigation-home
 
 In the navigation example, these values were obtained by using multiple data attributes on the navigation's `li` item.
 
@@ -189,12 +189,12 @@ Now clicking on the nav links should register as a click event in the ATI Tag In
 
 ## Tag Inspector
 
-This ATI system was set up for adverts but repurposed by the BBC for click tracking. Because of this, the names of the fields that are seen in the ATI Tag Inspector are not indicative of the BBC's use of those fields. Below is a table of the ATI label and the corresponding BBC label. In the Simorgh code, we only refer to the BBC label so that the only time discrepancy is seen is in the ATI system.
+This ATI system was set up for adverts but repurposed by the BBC for click tracking. Because of this, the names of the fields that are seen in the ATI Tag Inspector are not indicative of the BBC's use of those fields. Below is a table of the ATI label and the corresponding BBC label. In the Simorgh code, we only refer to the BBC label so that the only time discrepancy is seen is in the ATI system. The one exception is with creation/attribute, which has been referred to as `action` in code as this is more representative of the meaning.
 
 | ATi label | BBC label | Usage notes |
 | --------- | --------- | ----------- |
 | camapaignId | container | |
-| creation | attribute | Made up of `label~type` |
+| creation | attribute | Made up of `label~type`. This has been referred to as both creation and attribute as well as action internally. |
 | variant | personalisation | Also used for tracking MVT and experimentation |
 | format | metadata | in the form "key1=value~key2=another_value" |
 | generalPlacement | placement | The page identifier |

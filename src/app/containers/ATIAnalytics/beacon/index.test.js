@@ -10,7 +10,7 @@ describe('beacon', () => {
   process.env.SIMORGH_ATI_BASE_URL = atiBaseUrl;
 
   const componentInfo = {
-    creationLabel: 'creation-label',
+    actionLabel: 'creation-label',
     result: 'https://bbc.com',
     positioning: {
       parent: 'container-component',

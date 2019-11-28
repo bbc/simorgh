@@ -432,7 +432,7 @@ describe('getEventInfo', () => {
     service: 'service',
     componentName: 'component',
     componentInfo: {
-      creationLabel: 'creationLabel',
+      actionLabel: 'actionLabel',
       result: 'url.com',
       positioning: {
         parent: 'container-component',
@@ -445,7 +445,7 @@ describe('getEventInfo', () => {
 
   it('should return url section', () => {
     expect(getEventInfo(pageIdentifier, params)).toEqual(
-      'PUB-[service-component]-[creationLabel~type]-[]-[PAR=container-component~CHD=child]-[page]-[]-[responsive_web~news-simorgh]-[url.com]',
+      'PUB-[service-component]-[actionLabel~type]-[]-[PAR=container-component~CHD=child]-[page]-[]-[responsive_web~news-simorgh]-[url.com]',
     );
   });
 
@@ -456,11 +456,11 @@ describe('getEventInfo', () => {
 
 describe('getComponentInfo', () => {
   const event = { target: { href: 'url.com' } };
-  const props = { creationLabel: 'prop1', child: 'prop2' };
+  const props = { actionLabel: 'prop1', child: 'prop2' };
 
   it('should return a componentInfo object', () => {
     const result = {
-      creationLabel: 'component-prop1',
+      actionLabel: 'component-prop1',
       source: '',
       result: 'url.com',
       positioning: {
@@ -482,7 +482,7 @@ describe('getComponentInfo', () => {
     props.source = 'source';
 
     const result = {
-      creationLabel: 'component-prop1',
+      actionLabel: 'component-prop1',
       source: 'source',
       result: 'url.com',
       positioning: {

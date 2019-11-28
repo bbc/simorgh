@@ -125,7 +125,7 @@ describe('buildATIEventTrackUrl', () => {
         statsDestination: 'statsDestination',
         componentName: 'component',
         componentInfo: {
-          creationLabel: 'creation-label',
+          actionLabel: 'creation-label',
           result: 'https://foobar.com',
           positioning: {
             parent: 'container-component',

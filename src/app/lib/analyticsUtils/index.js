@@ -201,7 +201,7 @@ export const getEventInfo = (
   // Identifies the container the event is from
   const container = `${service}-${componentName}`;
   // The name of what caused the event (eg "navigation-home")
-  const creationLabel = pathOr('', ['creationLabel'], componentInfo);
+  const actionLabel = pathOr('', ['actionLabel'], componentInfo);
   // The result of having done the action (eg the url the user is taken to)
   const result = pathOr('', ['result'], componentInfo);
   // The source of the event at a high level. Examples include an urn, or 'responsive_web'
@@ -214,7 +214,7 @@ export const getEventInfo = (
   // Currently we only use the element positioning metadata in our tracking
   const metadata = elementPositioning;
 
-  return `PUB-[${container}]-[${creationLabel}~${type}]-[${personalisation}]-[${metadata}]-[${pageIdentifier}]-[${userId}]-[${source}]-[${result}]`;
+  return `PUB-[${container}]-[${actionLabel}~${type}]-[${personalisation}]-[${metadata}]-[${pageIdentifier}]-[${userId}]-[${source}]-[${result}]`;
 };
 
 /**
@@ -224,7 +224,7 @@ export const getEventInfo = (
  *   componentData: {
  *     source: The source of the event at a high level. Examples include an urn, or 'responsive_web'
  *     child: The specific child of the data that is doing the action - eg button::1
- *     creationLabel: The name of the action - eg navigation-home
+ *     actionLabel: The name of the action - eg navigation-home
  *   }
  * }
  *
@@ -232,12 +232,12 @@ export const getEventInfo = (
  *          above function @getEventInfo
  */
 export const getComponentInfo = ({ result, componentName, componentData }) => {
-  const creationLabel = componentData.creationLabel
-    ? `${componentName}-${componentData.creationLabel}`
+  const actionLabel = componentData.actionLabel
+    ? `${componentName}-${componentData.actionLabel}`
     : componentName;
 
   return {
-    creationLabel,
+    actionLabel,
     result,
     source: pathOr('', ['source'], componentData),
     positioning: {
