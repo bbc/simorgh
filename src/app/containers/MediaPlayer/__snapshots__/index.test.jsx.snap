@@ -177,7 +177,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
               <span
                 class="c8"
               >
-                Contains strong language and adult humour. Play video, "Five things ants can teach us about management", 3,11
+                Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
               </span>
               <div
                 aria-hidden="true"
@@ -694,7 +694,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
               <span
                 class="c8"
               >
-                Contains strong language and adult humour. Play video, "Five things ants can teach us about management", 3,11
+                Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
               </span>
               <div
                 aria-hidden="true"
