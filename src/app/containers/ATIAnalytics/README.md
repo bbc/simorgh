@@ -41,7 +41,7 @@ const componentContainer = () => {
 	const eventTrackingProps = buildATIClickParams(
 		{},
 		useContext(RequestContext),
-    	useContext(ServiceContext)
+		useContext(ServiceContext)
 	);
 
 
@@ -74,7 +74,7 @@ const componentContainer = () => {
 	const eventTrackingProps = buildATIClickParams(
 		{},
 		useContext(RequestContext),
-    	useContext(ServiceContext)
+		useContext(ServiceContext)
 	);
 
 	  useClickTracker('[data-navigation]', event => {
@@ -110,7 +110,7 @@ const componentContainer = () => {
 	const eventTrackingProps = buildATIClickParams(
 		{},
 		useContext(RequestContext),
-    	useContext(ServiceContext)
+		useContext(ServiceContext)
 	);
 
 	useClickTracker('[data-navigation]', event => {
@@ -127,11 +127,11 @@ const componentContainer = () => {
 		});
 
 		sendEventBeacon({
-	     componentName,
-	      type: 'click',
-	      componentInfo,
-	      ...eventTrackingProps,
-	    });
+			componentName,
+			type: 'click',
+			componentInfo,
+			...eventTrackingProps,
+		});
 	});
 }
 ```
