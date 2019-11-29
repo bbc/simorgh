@@ -1,6 +1,7 @@
 import { buildATIUrl, buildATIClickParams } from '.';
 import * as analyticsUtils from '#lib/analyticsUtils';
 
+analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
 analyticsUtils.getPublishedDatetime = jest
   .fn()
