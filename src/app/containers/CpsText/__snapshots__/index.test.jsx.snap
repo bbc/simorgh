@@ -183,8 +183,11 @@ exports[`CpsTextContainer with data should render correctly 1`] = `
     <ul
       class="c2"
       dir="ltr"
+      role="list"
     >
-      <li>
+      <li
+        role="listitem"
+      >
         <div
           class="c3"
         >

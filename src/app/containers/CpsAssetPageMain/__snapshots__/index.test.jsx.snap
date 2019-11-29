@@ -2263,8 +2263,11 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           <ul
             class="c19"
             dir="ltr"
+            role="list"
           >
-            <li>
+            <li
+              role="listitem"
+            >
               <div
                 class="c20"
               >
@@ -2279,7 +2282,9 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                 </div>
               </div>
             </li>
-            <li>
+            <li
+              role="listitem"
+            >
               <div
                 class="c20"
               >
@@ -2298,7 +2303,9 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                 </div>
               </div>
             </li>
-            <li>
+            <li
+              role="listitem"
+            >
               <div
                 class="c20"
               >
@@ -2318,7 +2325,9 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                 </div>
               </div>
             </li>
-            <li>
+            <li
+              role="listitem"
+            >
               <div
                 class="c20"
               >
