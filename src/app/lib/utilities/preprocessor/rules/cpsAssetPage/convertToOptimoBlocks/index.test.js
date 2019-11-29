@@ -2,7 +2,9 @@ import { CPSMediaBlock, optimoVideoBlock } from './blocks/media/fixtures';
 import { CPSVersionBlock, optimoVersionBlock } from './blocks/version/fixtures';
 import {
   CPSUnorderedListBlock,
+  CPSOrderedListBlock,
   optimoUnorderedListBlock,
+  optimoOrderedListBlock,
 } from './blocks/list/fixtures';
 import convertToOptimoBlocks from '.';
 import { optimoTextWithParagraph } from './utils/helpers';
@@ -31,6 +33,7 @@ describe('convertToOptimoBlocks', () => {
           CPSMediaBlock,
           CPSVersionBlock,
           CPSUnorderedListBlock,
+          CPSOrderedListBlock,
         ],
       },
     };
@@ -100,6 +103,7 @@ describe('convertToOptimoBlocks', () => {
             optimoVideoBlock,
             optimoVersionBlock,
             optimoUnorderedListBlock,
+            optimoOrderedListBlock,
           ],
         },
       },

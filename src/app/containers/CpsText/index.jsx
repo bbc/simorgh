@@ -5,7 +5,11 @@ import unorderedList, { ListPropTypes } from '../BulletedList';
 import { ParagraphPropTypes } from '../BulletedListItem';
 import Blocks from '../Blocks';
 
-const componentsToRender = { paragraph, unorderedList };
+const componentsToRender = {
+  paragraph,
+  unorderedList,
+  orderedList: unorderedList,
+};
 
 const CpsTextContainer = ({ blocks }) => {
   if (!blocks) return null;

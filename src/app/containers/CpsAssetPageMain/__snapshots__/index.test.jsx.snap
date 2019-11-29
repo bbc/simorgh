@@ -2260,6 +2260,88 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
         <div
           class="c1"
         >
+          <ul
+            class="c19"
+            dir="ltr"
+          >
+            <li>
+              <div
+                class="c20"
+              >
+                <div
+                  class="c1"
+                >
+                  <p
+                    class="c16"
+                  >
+                    This is a ordered list
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                class="c20"
+              >
+                <div
+                  class="c1"
+                >
+                  <p
+                    class="c16"
+                  >
+                    It can have 
+                    <b>
+                      bold text
+                    </b>
+                     in it
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                class="c20"
+              >
+                <div
+                  class="c1"
+                >
+                  <p
+                    class="c16"
+                  >
+                    <a
+                      class="c17"
+                      href="https://bbc.com/pidgin/23248703"
+                    >
+                      It can also have links
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                class="c20"
+              >
+                <div
+                  class="c1"
+                >
+                  <p
+                    class="c16"
+                  >
+                    <i
+                      class="c18"
+                    >
+                      It can even have italic text in it!
+                    </i>
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="c1"
+        >
           <p
             class="c16"
           >
