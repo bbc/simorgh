@@ -95,7 +95,7 @@ const componentContainer = () => {
 	  useClickTracker('[data-navigation]', event => {
 		const componentName = 'navigation';
 		const componentData = {
-			containerLabel: event.srcElement.dataset.containerlabel,
+			actionLabel: event.srcElement.dataset.actionlabel,
 			child: event.srcElement.dataset.child,
 		}
 
@@ -114,7 +114,7 @@ const componentContainer = () => {
 						<li
 							key={item.title}
 							data-navigation
-							data-containerlabel={`navigation-${item.title}`}
+							data-actionlabel={`navigation-${item.title}`}
 							data-child={index}
 						>
 							{item.title}
@@ -148,7 +148,7 @@ const componentContainer = () => {
 	useClickTracker('[data-navigation]', event => {
 		const componentName = 'navigation';
 		const componentData = {
-			containerLabel: event.srcElement.dataset.containerlabel,
+			actionLabel: event.srcElement.dataset.actionlabel,
 			child: event.srcElement.dataset.child,
 		}
 
@@ -172,7 +172,7 @@ const componentContainer = () => {
 						<li
 							key={item.title}
 							data-navigation
-							data-containerlabel={`navigation-${item.title}`}
+							data-actionlabel={`navigation-${item.title}`}
 							data-child={index}
 						>
 							{item.title}
@@ -193,7 +193,7 @@ This ATI system was set up for adverts but repurposed by the BBC for click track
 
 | ATi label | BBC label | Usage notes |
 | --------- | --------- | ----------- |
-| camapaignId | container | |
+| campaignId | container | |
 | creation | attribute | Made up of `label~type`. This has been referred to as both creation and attribute as well as action internally. |
 | variant | personalisation | Also used for tracking MVT and experimentation |
 | format | metadata | in the form "key1=value~key2=another_value" |
