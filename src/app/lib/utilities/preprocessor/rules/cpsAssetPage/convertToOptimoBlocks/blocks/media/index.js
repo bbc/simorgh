@@ -1,5 +1,6 @@
 import pick from 'ramda/src/pick';
 import path from 'ramda/src/path';
+import is from 'ramda/src/is';
 
 const generateVideoBlock = block => {
   const generatedBlock = {
@@ -30,6 +31,8 @@ const generateVideoBlock = block => {
 };
 
 const generateImageBlock = block => {
+  if (!is(String, block.imageUrl)) return {};
+
   return {
     type: 'image',
     model: {
@@ -38,7 +41,8 @@ const generateImageBlock = block => {
           type: 'rawImage',
           model: {
             copyrightHolder: block.imageCopyright,
-            locator: block.imageUrl,
+            locator: `https://${block.imageUrl.replace('$recipe', '1024x576')}`,
+            originCode: 'pips',
           },
         },
       ],
