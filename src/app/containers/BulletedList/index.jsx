@@ -13,7 +13,7 @@ const BulletedListContainer = ({ blocks }) => {
 
   return (
     <GridItemConstrainedMedium>
-      <BulletedList script={script} service={service} dir={dir}>
+      <BulletedList role="list" script={script} service={service} dir={dir}>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </BulletedList>
     </GridItemConstrainedMedium>

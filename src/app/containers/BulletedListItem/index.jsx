@@ -12,7 +12,8 @@ const Wrapper = styled.div`
 
 const BulletedListItemContainer = ({ blocks }) => {
   return (
-    <li>
+    // eslint-disable-next-line jsx-a11y/no-redundant-roles
+    <li role="listitem">
       <Wrapper>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </Wrapper>
