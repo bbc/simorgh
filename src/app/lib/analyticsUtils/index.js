@@ -205,7 +205,11 @@ export const getEventInfo = (
   // The result of having done the action (eg the url the user is taken to)
   const result = pathOr('', ['result'], componentInfo);
   // The source of the event at a high level. Examples include an urn, or 'responsive_web'
-  const source = pathOr('responsive_web~news-simorgh', 'source', componentInfo);
+  const source = pathOr(
+    'responsive_web~news-simorgh',
+    ['source'],
+    componentInfo,
+  );
 
   const elementPositioning = componentInfo.positioning
     ? `PAR=${componentInfo.positioning.parent}~CHD=${componentInfo.positioning.child}`
