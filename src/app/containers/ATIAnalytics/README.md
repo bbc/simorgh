@@ -71,7 +71,7 @@ Component data should be an object containing information obtained from data att
 The result is a string of the result of having clicked, eg the url of the link or the name of the video being played.
 
 The component data object should contain a value for `actionLabel`, `child`, and optionally `source`. These values will be used as part of the tracking URL.
-- source: The source of the event at a high level. Examples include an urn, or 'responsive_web'
+- source: The source of the event at a high level. Examples include an urn, or 'responsive_web'. By default this is set to `responsive_web~news-simorgh`
 - child: The specific child of the data that is doing the action - eg button::1
 - actionLabel: The name of the action - eg navigation-home
 
@@ -97,6 +97,7 @@ const componentContainer = () => {
 		const componentData = {
 			actionLabel: event.srcElement.dataset.actionlabel,
 			child: event.srcElement.dataset.child,
+			// source is set by default to 'responsive_web~news-simorgh'
 		}
 
 		const componentInfo = getComponentInfo({
@@ -150,6 +151,7 @@ const componentContainer = () => {
 		const componentData = {
 			actionLabel: event.srcElement.dataset.actionlabel,
 			child: event.srcElement.dataset.child,
+			// source is set by default to 'responsive_web~news-simorgh'
 		}
 
 		const componentInfo = getComponentInfo({
