@@ -3,6 +3,7 @@ import Navigation, {
   NavigationUl,
   NavigationLi,
 } from '@bbc/psammead-navigation';
+import { CanonicalScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const NavigationContainer = () => {
@@ -23,25 +24,27 @@ const NavigationContainer = () => {
       service={service}
       dir={dir}
     >
-      <NavigationUl>
-        {navigation.map((item, index) => {
-          const { title, url } = item;
-          const active = index === 0;
+      <CanonicalScrollableNavigation>
+        <NavigationUl>
+          {navigation.map((item, index) => {
+            const { title, url } = item;
+            const active = index === 0;
 
-          return (
-            <NavigationLi
-              key={title}
-              url={url}
-              script={script}
-              active={active}
-              currentPageText={currentPage}
-              service={service}
-            >
-              {title}
-            </NavigationLi>
-          );
-        })}
-      </NavigationUl>
+            return (
+              <NavigationLi
+                key={title}
+                url={url}
+                script={script}
+                active={active}
+                currentPageText={currentPage}
+                service={service}
+              >
+                {title}
+              </NavigationLi>
+            );
+          })}
+        </NavigationUl>
+      </CanonicalScrollableNavigation>
     </Navigation>
   );
 };
