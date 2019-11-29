@@ -4,6 +4,10 @@ import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import FooterContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
 
+jest.mock('react-router-dom', () => ({
+  useParams: jest.fn().mockReturnValue({}),
+}));
+
 const RealDate = Date;
 
 const contextStub = {

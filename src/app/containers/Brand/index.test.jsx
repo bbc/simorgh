@@ -5,6 +5,10 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import BrandContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
 
+jest.mock('react-router-dom', () => ({
+  useParams: jest.fn().mockReturnValue({}),
+}));
+
 const newsServiceContextStub = {
   product: 'BBC News',
   service: 'news',
@@ -37,7 +41,6 @@ describe('BrandContainer with variant', () => {
     BrandContainerWithContext({
       ...newsServiceContextStub,
       service: 'serbian',
-      variant: 'cyr',
     }),
   );
 });

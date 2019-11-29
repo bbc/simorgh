@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useParams } from 'react-router-dom';
 import Brand from '@bbc/psammead-brand';
 import { bool } from 'prop-types';
 import { latin } from '@bbc/gel-foundations/scripts';
@@ -13,7 +14,6 @@ const BrandContainer = props => {
     serviceLocalizedName,
     brandSVG,
     service,
-    variant,
     theming,
   } = useContext(ServiceContext);
   const { brandBackgroundColour, brandLogoColour } = theming;
@@ -22,8 +22,9 @@ const BrandContainer = props => {
   const svgRatio = brandSVG && brandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
-  const otherVariant = getOtherVariant(service, variant);
   let scriptLink;
+  const { variant } = useParams();
+  const otherVariant = getOtherVariant(service, variant);
   if (otherVariant) {
     scriptLink = (
       <ScriptLink
