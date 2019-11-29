@@ -1,4 +1,5 @@
 import Cookie from 'js-cookie';
+import uuid from 'uuid/v4';
 import pathOr from 'ramda/src/pathOr';
 import onClient from '../utilities/onClient';
 
@@ -126,12 +127,20 @@ export const getReferrer = (platform, origin, previousPath) => {
 };
 
 export const getAtUserId = () => {
-  if (onClient()) {
-    const atuserid = Cookie.getJSON('atuserid');
-    return pathOr(null, ['val'], atuserid);
+  if (!onClient()) return null;
+
+  const cookieName = 'atuserid';
+  const cookie = Cookie.getJSON(cookieName);
+  let val = pathOr(null, ['val'], cookie);
+  const expires = 397; // expires in 13 months
+
+  if (!cookie || !val) {
+    val = uuid();
   }
 
-  return null;
+  Cookie.set(cookieName, { val }, { expires, path: '/' });
+
+  return val;
 };
 
 export const sanitise = initialString =>
