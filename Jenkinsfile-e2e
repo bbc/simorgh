@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-library 'Simorgh'
+library 'Simorgh@simorgh-legacy-test'
 
 // Run latest every 3 hours
 def cron_string = env.BRANCH_NAME == "latest" ? "0 */3 * * *" : ""
@@ -16,7 +16,7 @@ node {
             pipelineTriggers([cron(cron_string)]),
             parameters(
                 [
-                    string(defaultValue: 'latest', name: 'BRANCH')
+                    string(defaultValue: '', name: 'BRANCH')
                 ]
             )
         ]
@@ -26,16 +26,20 @@ node {
             'CI=true'
         ]) {
             cleanWs() // Clean the workspace
+            echo params.BRANCH
+            def hashToCheckout = params.BRANCH == '' ? Simorgh.getLiveCommitHash() : params.BRANCH
 
             docker.image(Simorgh.nodeDockerImage()).inside('--ipc host') {
                 try {
-                    Simorgh.checkout("${params.BRANCH}", 'simorgh')
+                    Simorgh.checkout("${hashToCheckout}", 'simorgh')
                     Simorgh.installNodeModules()
                     stage ('Live E2Es') {
+                        echo "e2e's running againt commit: ${hashToCheckout}"
                         Simorgh.runE2Es('live', false)
                     }
                 } finally {
-                    Simorgh.e2esPostBuildSteps('live')
+                    echo "completed"
+                    // Simorgh.e2esPostBuildSteps('live')
                 }
             }
         }
