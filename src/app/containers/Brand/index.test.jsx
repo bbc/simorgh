@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
@@ -36,6 +37,7 @@ describe(`BrandContainer`, () => {
 });
 
 describe('BrandContainer with variant', () => {
+  useParams.mockReturnValue({ variant: 'cyr' });
   shouldMatchSnapshot(
     'should render correctly',
     BrandContainerWithContext({
