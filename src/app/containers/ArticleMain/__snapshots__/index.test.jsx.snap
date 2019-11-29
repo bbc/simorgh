@@ -1,23 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render a news article correctly 1`] = `
-.c1 {
-  position: relative;
-}
-
 .c3 {
-  position: relative;
-}
-
-.c5 {
-  position: relative;
-}
-
-.c2 {
-  margin: 0 auto;
-}
-
-.c4 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -29,7 +13,11 @@ exports[`should render a news article correctly 1`] = `
   padding: 2rem 0;
 }
 
-.c6 {
+.c0 {
+  position: relative;
+}
+
+.c5 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -40,216 +28,224 @@ exports[`should render a news article correctly 1`] = `
   margin: 0;
 }
 
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c3 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c3 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .c3 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c5 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c5 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .c5 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    padding: 0;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    max-width: 80rem;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     padding: 2.5rem 0;
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c0 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c4 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c4 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c4 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c4 {
+    margin: 0 0.5rem;
+    width: calc(83.33333333333333% - 1rem);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c4 {
+    margin: 0 0.5rem;
+    width: calc(62.5% - 1rem);
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    margin: 0 0.5rem;
+    width: calc(50% - 1rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c4 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(75% - 1rem);
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(60% - 1rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -504,38 +500,42 @@ exports[`should render a news article correctly 1`] = `
       <div>
         chartbeat
       </div>
-      <div
-        class="c0"
+      <main
+        role="main"
       >
-        <main
-          class="c1 c2"
+        <div
+          class="c0 c1"
           dir="ltr"
-          role="main"
         >
           <div
-            class="c3"
+            class="c2"
             dir="ltr"
           >
             <h1
-              class="c4"
+              class="c3"
               id="content"
               tabindex="-1"
             >
               Article Headline
             </h1>
           </div>
+        </div>
+        <div
+          class="c0 c1"
+          dir="ltr"
+        >
           <div
-            class="c5"
+            class="c4"
             dir="ltr"
           >
             <p
-              class="c6"
+              class="c5"
             >
               A paragraph.
             </p>
           </div>
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>
@@ -550,6 +550,87 @@ exports[`should render a persian article correctly 1`] = `
     <title>
       سرصفحه مقاله - BBC News فارسی
     </title>
+    <link
+      href="https://www.test.bbc.com/pathname"
+      hreflang="x-default"
+      rel="alternate"
+    />
+    <link
+      href="https://www.test.bbc.com/pathname"
+      hreflang="en"
+      rel="alternate"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/pathname"
+      hreflang="en-gb"
+      rel="alternate"
+    />
+    <link
+      href="http://localhost:7080/news/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
     <link
       href="https://www.test.bbc.com/pathname"
       rel="canonical"
@@ -628,6 +709,18 @@ exports[`should render a persian article correctly 1`] = `
       href="/favicon.ico"
       rel="shortcut icon"
       type="image/x-icon"
+    />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
     />
     <meta
       content="IE=edge"
@@ -755,27 +848,16 @@ exports[`should render a persian article correctly 1`] = `
     <script
       type="application/ld+json"
     >
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}],"author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
+    </script>
+    <script
+      type="application/ld+json"
+    >
       {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News فارسی","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"سرصفحه مقاله"},"headline":"سرصفحه مقاله","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News فارسی","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
     </script>
   </head>
   <body>
-    .c1 {
-  position: relative;
-}
-
-.c3 {
-  position: relative;
-}
-
-.c5 {
-  position: relative;
-}
-
-.c2 {
-  margin: 0 auto;
-}
-
-.c4 {
+    .c3 {
   font-size: 2rem;
   line-height: 2.625rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -787,7 +869,11 @@ exports[`should render a persian article correctly 1`] = `
   padding: 2rem 0;
 }
 
-.c6 {
+.c0 {
+  position: relative;
+}
+
+.c5 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -798,216 +884,224 @@ exports[`should render a persian article correctly 1`] = `
   margin: 0;
 }
 
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c3 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c3 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .c3 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c5 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c5 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .c5 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    padding: 0;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    max-width: 80rem;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     padding: 2.5rem 0;
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c0 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c4 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c4 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c4 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c4 {
+    margin: 0 0.5rem;
+    width: calc(83.33333333333333% - 1rem);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c4 {
+    margin: 0 0.5rem;
+    width: calc(62.5% - 1rem);
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    margin: 0 0.5rem;
+    width: calc(50% - 1rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c4 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(75% - 1rem);
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(60% - 1rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c5 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c5 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
@@ -1018,38 +1112,42 @@ exports[`should render a persian article correctly 1`] = `
       <div>
         chartbeat
       </div>
-      <div
-        class="c0"
+      <main
+        role="main"
       >
-        <main
-          class="c1 c2"
+        <div
+          class="c0 c1"
           dir="ltr"
-          role="main"
         >
           <div
-            class="c3"
+            class="c2"
             dir="ltr"
           >
             <h1
-              class="c4"
+              class="c3"
               id="content"
               tabindex="-1"
             >
               سرصفحه مقاله
             </h1>
           </div>
+        </div>
+        <div
+          class="c0 c1"
+          dir="ltr"
+        >
           <div
-            class="c5"
+            class="c4"
             dir="ltr"
           >
             <p
-              class="c6"
+              class="c5"
             >
               یک پاراگراف.
             </p>
           </div>
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>
@@ -1064,6 +1162,87 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
     <title>
       Article Headline for SEO in Pidgin - BBC News Pidgin
     </title>
+    <link
+      href="https://www.test.bbc.com/pathname"
+      hreflang="x-default"
+      rel="alternate"
+    />
+    <link
+      href="https://www.test.bbc.com/pathname"
+      hreflang="en"
+      rel="alternate"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/pathname"
+      hreflang="en-gb"
+      rel="alternate"
+    />
+    <link
+      href="http://localhost:7080/news/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
     <link
       href="https://www.test.bbc.com/pathname"
       rel="canonical"
@@ -1142,6 +1321,18 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
       href="/favicon.ico"
       rel="shortcut icon"
       type="image/x-icon"
+    />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
     />
     <meta
       content="IE=edge"
@@ -1269,27 +1460,16 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
     <script
       type="application/ld+json"
     >
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}],"author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
+    </script>
+    <script
+      type="application/ld+json"
+    >
       {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Article Headline for SEO in Pidgin"},"headline":"Article Headline for SEO in Pidgin","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
     </script>
   </head>
   <body>
-    .c1 {
-  position: relative;
-}
-
-.c3 {
-  position: relative;
-}
-
-.c5 {
-  position: relative;
-}
-
-.c2 {
-  margin: 0 auto;
-}
-
-.c4 {
+    .c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1301,7 +1481,11 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
   padding: 2rem 0;
 }
 
-.c6 {
+.c0 {
+  position: relative;
+}
+
+.c5 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1312,216 +1496,224 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
   margin: 0;
 }
 
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c3 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c3 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c3 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display:grid) {
-  .c3 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c5 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c5 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .c5 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    padding: 0;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    max-width: 80rem;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c3 {
     padding: 2.5rem 0;
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c0 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c4 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c4 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c4 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c4 {
+    margin: 0 0.5rem;
+    width: calc(83.33333333333333% - 1rem);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c4 {
+    margin: 0 0.5rem;
+    width: calc(62.5% - 1rem);
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    margin: 0 0.5rem;
+    width: calc(50% - 1rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c4 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(75% - 1rem);
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(60% - 1rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -1532,38 +1724,42 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
       <div>
         chartbeat
       </div>
-      <div
-        class="c0"
+      <main
+        role="main"
       >
-        <main
-          class="c1 c2"
+        <div
+          class="c0 c1"
           dir="ltr"
-          role="main"
         >
           <div
-            class="c3"
+            class="c2"
             dir="ltr"
           >
             <h1
-              class="c4"
+              class="c3"
               id="content"
               tabindex="-1"
             >
               Article Headline in Pidgin
             </h1>
           </div>
+        </div>
+        <div
+          class="c0 c1"
+          dir="ltr"
+        >
           <div
-            class="c5"
+            class="c4"
             dir="ltr"
           >
             <p
-              class="c6"
+              class="c5"
             >
               A paragraph in Pidgin.
             </p>
           </div>
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>

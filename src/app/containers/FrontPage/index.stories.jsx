@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Router, Route } from 'react-router-dom';
-import { createMemoryHistory } from 'history';
+import { BrowserRouter, Route } from 'react-router-dom';
 import igboData from '#data/igbo/frontpage';
 import pidginData from '#data/pidgin/frontpage';
 import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
@@ -47,11 +46,8 @@ const stories = storiesOf('Pages|Front Page', module).addDecorator(story => (
 
 Object.keys(serviceDatasets).forEach(service => {
   stories.add(service, () => {
-    const history = createMemoryHistory({
-      initialEntries: [`/${service}`],
-    });
     return (
-      <Router history={history}>
+      <BrowserRouter>
         <Route path="/:service">
           <DataWrapper service={service}>
             {frontPageData => (
@@ -67,7 +63,7 @@ Object.keys(serviceDatasets).forEach(service => {
             )}
           </DataWrapper>
         </Route>
-      </Router>
+      </BrowserRouter>
     );
   });
 });

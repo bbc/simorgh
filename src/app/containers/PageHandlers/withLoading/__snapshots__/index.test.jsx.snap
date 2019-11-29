@@ -11,10 +11,6 @@ exports[`withLoading HOC and the loading prop set to true should return the load
   position: relative;
 }
 
-.c2 {
-  margin: 0 auto;
-}
-
 @media (max-width:14.9375rem) {
   .c1 {
     margin: 0 -0.25rem;
@@ -168,12 +164,14 @@ exports[`withLoading HOC and the loading prop set to true should return the load
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    margin: 0 auto;
     max-width: 80rem;
   }
 }

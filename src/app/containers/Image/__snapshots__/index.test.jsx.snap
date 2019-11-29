@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image with data should render a lazyload container instead of an image if the image is after the 3rd block 1`] = `
-.c1 {
+.c0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -20,58 +20,48 @@ exports[`Image with data should render a lazyload container instead of an image 
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c0 {
-  position: relative;
-}
-
-.c2 {
+.c1 {
   position: relative;
 }
 
 @media (max-width:14.9375rem) {
-  .c0 {
-    margin-left: 0%;
+  .c1 {
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c0 {
-    margin-left: 0%;
+  .c1 {
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c0 {
-    margin-left: 0%;
+  .c1 {
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
-    margin-left: 0%;
+  .c1 {
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    margin-left: 20%;
+  .c1 {
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    margin-left: 40%;
+  .c1 {
+    margin: 0 -0.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
-    display: block;
-  }
-}
-
-@supports (display:grid) {
-  .c2 {
+  .c1 {
     display: grid;
     position: initial;
   }
@@ -79,7 +69,9 @@ exports[`Image with data should render a lazyload container instead of an image 
 
 @media (max-width:14.9375rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -87,7 +79,9 @@ exports[`Image with data should render a lazyload container instead of an image 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -95,7 +89,9 @@ exports[`Image with data should render a lazyload container instead of an image 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -103,7 +99,9 @@ exports[`Image with data should render a lazyload container instead of an image 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem - 0%);
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -111,7 +109,9 @@ exports[`Image with data should render a lazyload container instead of an image 
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.5rem;
+    width: calc(75% - 1rem);
+    margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
   }
@@ -119,7 +119,9 @@ exports[`Image with data should render a lazyload container instead of an image 
 
 @media (min-width:80rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.5rem;
+    width: calc(60% - 1rem);
+    margin-left: 20%;
     display: inline-block;
     vertical-align: top;
   }
@@ -131,35 +133,44 @@ exports[`Image with data should render a lazyload container instead of an image 
   }
 }
 
-<div
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+<figure
   class="c0"
-  dir="ltr"
 >
-  <figure
-    class="c1"
+  <div
+    class="c1 c2"
+    dir="ltr"
   >
     <div
-      class="c2"
+      class="c3"
       dir="ltr"
     >
       <div
-        class="c3"
-        dir="ltr"
+        class="c4"
       >
         <div
-          class="c4"
-        >
-          <div
-            class="lazyload-placeholder"
-          />
-          <noscript>
-            &lt;img srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w" alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17." src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png" width="640" class=""/&gt;
-          </noscript>
-        </div>
+          class="lazyload-placeholder"
+        />
+        <noscript>
+          &lt;img srcSet="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w" alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17." src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png" width="640" class=""/&gt;
+        </noscript>
       </div>
     </div>
-  </figure>
-</div>
+  </div>
+</figure>
 `;
 
 exports[`Image with data should render an image with alt text 1`] = `
@@ -336,7 +347,7 @@ exports[`Image with data should render an image with alt text 1`] = `
 `;
 
 exports[`Image with data should render an image with alt text and caption 1`] = `
-.c1 {
+.c0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -401,11 +412,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   transition: visibility 0.2s linear;
 }
 
-.c0 {
-  position: relative;
-}
-
-.c2 {
+.c1 {
   position: relative;
 }
 
@@ -436,49 +443,43 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 }
 
 @media (max-width:14.9375rem) {
-  .c0 {
-    margin-left: 0%;
+  .c1 {
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c0 {
-    margin-left: 0%;
+  .c1 {
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c0 {
-    margin-left: 0%;
+  .c1 {
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
-    margin-left: 0%;
+  .c1 {
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    margin-left: 20%;
+  .c1 {
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    margin-left: 40%;
+  .c1 {
+    margin: 0 -0.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
-    display: block;
-  }
-}
-
-@supports (display:grid) {
-  .c2 {
+  .c1 {
     display: grid;
     position: initial;
   }
@@ -486,7 +487,9 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 
 @media (max-width:14.9375rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -494,7 +497,9 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -502,7 +507,9 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -510,7 +517,9 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem - 0%);
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -518,7 +527,9 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.5rem;
+    width: calc(75% - 1rem);
+    margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
   }
@@ -526,7 +537,9 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 
 @media (min-width:80rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.5rem;
+    width: calc(60% - 1rem);
+    margin-left: 20%;
     display: inline-block;
     vertical-align: top;
   }
@@ -538,267 +551,287 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 }
 
-<div
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+<figure
   class="c0"
-  dir="ltr"
 >
-  <figure
-    class="c1"
+  <div
+    class="c1 c2"
+    dir="ltr"
   >
     <div
-      class="c2"
+      class="c3"
       dir="ltr"
     >
       <div
-        class="c3"
-        dir="ltr"
+        class="c4"
       >
-        <div
-          class="c4"
-        >
-          <img
-            alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-            class="c5"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-            srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
-            width="640"
-          />
-        </div>
+        <img
+          alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+          class="c5"
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+          srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
+          width="640"
+        />
       </div>
-      <div
-        class="c3"
-        dir="ltr"
+    </div>
+    <div
+      class="c3"
+      dir="ltr"
+    >
+      <figcaption
+        class="c6"
       >
-        <figcaption
+        <span
+          class="c7"
+        >
+          Image caption, 
+        </span>
+        <p>
+          Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme
+        </p>
+      </figcaption>
+    </div>
+  </div>
+</figure>
+`;
+
+exports[`Image with data should render an image with alt text and offscreen copyright 1`] = `
+.c0 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.c7 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c6 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  background-color: rgba(34,34,34,0.75);
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 0.25rem 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+}
+
+.c4 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 65.625%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c5 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+  -webkit-animation: eMLfYp 0.2s linear;
+  animation: eMLfYp 0.2s linear;
+  -webkit-transition: visibility 0.2s linear;
+  transition: visibility 0.2s linear;
+}
+
+.c1 {
+  position: relative;
+}
+
+@media (max-width:14.9375rem) {
+  .c1 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    margin: 0 -0.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 -0.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c3 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c3 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c3 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c3 {
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    margin: 0 0.5rem;
+    width: calc(75% - 1rem);
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    margin: 0 0.5rem;
+    width: calc(60% - 1rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c3 {
+    display: block;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+<figure
+  class="c0"
+>
+  <div
+    class="c1 c2"
+    dir="ltr"
+  >
+    <div
+      class="c3"
+      dir="ltr"
+    >
+      <div
+        class="c4"
+      >
+        <img
+          alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+          class="c5"
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+          srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
+          width="640"
+        />
+        <p
           class="c6"
+          role="text"
         >
           <span
             class="c7"
           >
-            Image caption, 
+            Image source, 
           </span>
-          <p>
-            Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme
-          </p>
-        </figcaption>
+          Getty images
+        </p>
       </div>
     </div>
-  </figure>
-</div>
-`;
-
-exports[`Image with data should render an image with alt text and offscreen copyright 1`] = `
-.c1 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-.c7 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c6 {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  background-color: rgba(34,34,34,0.75);
-  text-transform: uppercase;
-  color: #FFFFFF;
-  padding: 0.25rem 0.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  position: absolute;
-  bottom: 0;
-  margin: 0;
-  left: 0;
-}
-
-.c4 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #ECEAE7;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  padding-bottom: 65.625%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-.c5 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-  -webkit-animation: eMLfYp 0.2s linear;
-  animation: eMLfYp 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
-}
-
-.c0 {
-  position: relative;
-}
-
-.c2 {
-  position: relative;
-}
-
-@media (max-width:14.9375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: block;
-  }
-}
-
-@supports (display:grid) {
-  .c2 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c3 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c3 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c3 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c3 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c3 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c3 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c3 {
-    display: block;
-  }
-}
-
-<div
-  class="c0"
-  dir="ltr"
->
-  <figure
-    class="c1"
-  >
-    <div
-      class="c2"
-      dir="ltr"
-    >
-      <div
-        class="c3"
-        dir="ltr"
-      >
-        <div
-          class="c4"
-        >
-          <img
-            alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-            class="c5"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-            srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
-            width="640"
-          />
-          <p
-            class="c6"
-            role="text"
-          >
-            <span
-              class="c7"
-            >
-              Image source, 
-            </span>
-            Getty images
-          </p>
-        </div>
-      </div>
-    </div>
-  </figure>
-</div>
+  </div>
+</figure>
 `;
 
 exports[`Image with data should render an image with other originCode - this would be a broken image 1`] = `
-.c1 {
+.c0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -853,58 +886,48 @@ exports[`Image with data should render an image with other originCode - this wou
   transition: visibility 0.2s linear;
 }
 
-.c0 {
-  position: relative;
-}
-
-.c2 {
+.c1 {
   position: relative;
 }
 
 @media (max-width:14.9375rem) {
-  .c0 {
-    margin-left: 0%;
+  .c1 {
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c0 {
-    margin-left: 0%;
+  .c1 {
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c0 {
-    margin-left: 0%;
+  .c1 {
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
-    margin-left: 0%;
+  .c1 {
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    margin-left: 20%;
+  .c1 {
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    margin-left: 40%;
+  .c1 {
+    margin: 0 -0.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
-    display: block;
-  }
-}
-
-@supports (display:grid) {
-  .c2 {
+  .c1 {
     display: grid;
     position: initial;
   }
@@ -912,7 +935,9 @@ exports[`Image with data should render an image with other originCode - this wou
 
 @media (max-width:14.9375rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -920,7 +945,9 @@ exports[`Image with data should render an image with other originCode - this wou
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -928,7 +955,9 @@ exports[`Image with data should render an image with other originCode - this wou
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -936,7 +965,9 @@ exports[`Image with data should render an image with other originCode - this wou
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem - 0%);
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -944,7 +975,9 @@ exports[`Image with data should render an image with other originCode - this wou
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.5rem;
+    width: calc(75% - 1rem);
+    margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
   }
@@ -952,7 +985,9 @@ exports[`Image with data should render an image with other originCode - this wou
 
 @media (min-width:80rem) {
   .c3 {
-    width: calc(100%);
+    margin: 0 0.5rem;
+    width: calc(60% - 1rem);
+    margin-left: 20%;
     display: inline-block;
     vertical-align: top;
   }
@@ -964,45 +999,54 @@ exports[`Image with data should render an image with other originCode - this wou
   }
 }
 
-<div
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+<figure
   class="c0"
-  dir="ltr"
 >
-  <figure
-    class="c1"
+  <div
+    class="c1 c2"
+    dir="ltr"
   >
     <div
-      class="c2"
+      class="c3"
       dir="ltr"
     >
       <div
-        class="c3"
-        dir="ltr"
+        class="c4"
       >
-        <div
-          class="c4"
+        <img
+          alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+          class="c5"
+          src="https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+          srcset="https://ichef.bbci.co.uk/news/240/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
+          width="640"
+        />
+        <p
+          class="c6"
+          role="text"
         >
-          <img
-            alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-            class="c5"
-            src="https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-            srcset="https://ichef.bbci.co.uk/news/240/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
-            width="640"
-          />
-          <p
-            class="c6"
-            role="text"
+          <span
+            class="c7"
           >
-            <span
-              class="c7"
-            >
-              Image source, 
-            </span>
-            Getty images
-          </p>
-        </div>
+            Image source, 
+          </span>
+          Getty images
+        </p>
       </div>
     </div>
-  </figure>
-</div>
+  </div>
+</figure>
 `;

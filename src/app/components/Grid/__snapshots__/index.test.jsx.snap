@@ -5,10 +5,6 @@ exports[`Grid should render GelPageGrid with columns 1`] = `
   position: relative;
 }
 
-.c1 {
-  margin: 0 auto;
-}
-
 @supports (display:grid) {
   .c0 {
     display: grid;
@@ -72,12 +68,14 @@ exports[`Grid should render GelPageGrid with columns 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c1 {
+    margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c1 {
+    margin: 0 auto;
     max-width: 80rem;
   }
 }

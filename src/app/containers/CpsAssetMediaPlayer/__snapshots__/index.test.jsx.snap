@@ -16,6 +16,12 @@ exports[`MediaPlayer render the amp player 1`] = `
   </head>
   <body>
     .c2 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.c3 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
@@ -122,29 +128,33 @@ exports[`MediaPlayer render the amp player 1`] = `
           class="c1"
           dir="ltr"
         >
-          <div
+          <figure
             class="c2"
           >
-            <amp-iframe
-              allowfullscreen="allowfullscreen"
-              frameborder="0"
-              layout="fill"
-              sandbox="allow-scripts allow-same-origin"
-              src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"
-              title="Media player"
+            <div
+              class="c3"
             >
-              <amp-img
-                alt=""
-                attribution=""
-                height="16"
+              <amp-iframe
+                allowfullscreen="allowfullscreen"
+                frameborder="0"
                 layout="fill"
-                placeholder="true"
-                src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-                srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
-                width="9"
-              />
-            </amp-iframe>
-          </div>
+                sandbox="allow-scripts allow-same-origin"
+                src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"
+                title="Media player"
+              >
+                <amp-img
+                  alt=""
+                  attribution=""
+                  height="16"
+                  layout="fill"
+                  placeholder="true"
+                  src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                  srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                  width="9"
+                />
+              </amp-iframe>
+            </div>
+          </figure>
         </div>
       </div>
     </div>
@@ -154,6 +164,12 @@ exports[`MediaPlayer render the amp player 1`] = `
 
 exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 .c2 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.c3 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
@@ -167,7 +183,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
   position: relative;
 }
 
-.c3 {
+.c4 {
   position: absolute;
   top: 0;
   left: 0;
@@ -279,17 +295,21 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
           class="c1"
           dir="ltr"
         >
-          <div
+          <figure
             class="c2"
           >
-            <iframe
-              allow="autoplay; fullscreen"
-              allowfullscreen=""
+            <div
               class="c3"
-              src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"
-              title="Media player"
-            />
-          </div>
+            >
+              <iframe
+                allow="autoplay; fullscreen"
+                allowfullscreen=""
+                class="c4"
+                src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"
+                title="Media player"
+              />
+            </div>
+          </figure>
         </div>
       </div>
     </div>

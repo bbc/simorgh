@@ -5,10 +5,6 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   position: relative;
 }
 
-.c2 {
-  margin: 0 auto;
-}
-
 .c8 {
   color: #222222;
   border-bottom: 1px solid #B80000;
@@ -216,12 +212,14 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    margin: 0 auto;
     max-width: 80rem;
   }
 }
@@ -444,10 +442,6 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   position: relative;
 }
 
-.c2 {
-  margin: 0 auto;
-}
-
 .c8 {
   color: #222222;
   border-bottom: 1px solid #B80000;
@@ -655,12 +649,14 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    margin: 0 auto;
     max-width: 80rem;
   }
 }
@@ -833,10 +829,6 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   position: relative;
 }
 
-.c2 {
-  margin: 0 auto;
-}
-
 .c8 {
   color: #222222;
   border-bottom: 1px solid #B80000;
@@ -1044,12 +1036,14 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    margin: 0 auto;
     max-width: 80rem;
   }
 }
@@ -1215,10 +1209,6 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   <body>
     .c1 {
   position: relative;
-}
-
-.c2 {
-  margin: 0 auto;
 }
 
 .c8 {
@@ -1428,12 +1418,14 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    margin: 0 auto;
     max-width: 80rem;
   }
 }
@@ -1599,10 +1591,6 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   <body>
     .c1 {
   position: relative;
-}
-
-.c2 {
-  margin: 0 auto;
 }
 
 .c8 {
@@ -1812,12 +1800,14 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    margin: 0 auto;
     max-width: 80rem;
   }
 }

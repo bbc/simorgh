@@ -94,7 +94,7 @@ exports[`Headings with headline data should render correctly 1`] = `
 `;
 
 exports[`Headings with plain text headline should render h1 containing correct text 1`] = `
-.c1 {
+.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -111,83 +111,169 @@ exports[`Headings with plain text headline should render h1 containing correct t
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
-    margin-left: 16.666666666666668%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin: 0 -0.5rem;
   }
 }
 
 @supports (display:grid) {
   .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(75% - 1rem);
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(60% - 1rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
     display: block;
   }
 }
 
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 <div
-  class="c0"
+  class="c0 c1"
   dir="ltr"
 >
-  <h1
-    class="c1"
-    id="content"
-    tabindex="-1"
+  <div
+    class="c2"
+    dir="ltr"
   >
-    Plain headline
-  </h1>
+    <h1
+      class="c3"
+      id="content"
+      tabindex="-1"
+    >
+      Plain headline
+    </h1>
+  </div>
 </div>
 `;
 
 exports[`Headings with plain text subheadline should render h2 containing correct text 1`] = `
-.c1 {
+.c3 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -203,83 +289,169 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .c3 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     padding-top: 2rem;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
-    margin-left: 20%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    margin-left: 40%;
+    margin: 0 -0.5rem;
   }
 }
 
 @supports (display:grid) {
   .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(83.33333333333333% - 1rem);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(62.5% - 1rem);
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(50% - 1rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
     display: block;
   }
 }
 
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 <div
-  class="c0"
+  class="c0 c1"
   dir="ltr"
 >
-  <h2
-    class="c1"
-    id="Plain-subheadline"
-    tabindex="-1"
+  <div
+    class="c2"
+    dir="ltr"
   >
-    Plain subheadline
-  </h2>
+    <h2
+      class="c3"
+      id="Plain-subheadline"
+      tabindex="-1"
+    >
+      Plain subheadline
+    </h2>
+  </div>
 </div>
 `;
 
 exports[`Headings with rich text headline with bold text should render h1 with <b> tag 1`] = `
-.c1 {
+.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -296,85 +468,171 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
-    margin-left: 16.666666666666668%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin: 0 -0.5rem;
   }
 }
 
 @supports (display:grid) {
   .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(75% - 1rem);
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(60% - 1rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
     display: block;
   }
 }
 
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 <div
-  class="c0"
+  class="c0 c1"
   dir="ltr"
 >
-  <h1
-    class="c1"
-    id="content"
-    tabindex="-1"
+  <div
+    class="c2"
+    dir="ltr"
   >
-    <b>
-      All is bold
-    </b>
-  </h1>
+    <h1
+      class="c3"
+      id="content"
+      tabindex="-1"
+    >
+      <b>
+        All is bold
+      </b>
+    </h1>
+  </div>
 </div>
 `;
 
 exports[`Headings with rich text headline with italic text should render h1 with <i> tag 1`] = `
-.c1 {
+.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -386,7 +644,7 @@ exports[`Headings with rich text headline with italic text should render h1 with
   padding: 2rem 0;
 }
 
-.c2 {
+.c4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -399,87 +657,173 @@ exports[`Headings with rich text headline with italic text should render h1 with
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
-    margin-left: 16.666666666666668%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin: 0 -0.5rem;
   }
 }
 
 @supports (display:grid) {
   .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(75% - 1rem);
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(60% - 1rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
     display: block;
   }
 }
 
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 <div
-  class="c0"
+  class="c0 c1"
   dir="ltr"
 >
-  <h1
-    class="c1"
-    id="content"
-    tabindex="-1"
+  <div
+    class="c2"
+    dir="ltr"
   >
-    <i
-      class="c2"
+    <h1
+      class="c3"
+      id="content"
+      tabindex="-1"
     >
-      All is italic
-    </i>
-  </h1>
+      <i
+        class="c4"
+      >
+        All is italic
+      </i>
+    </h1>
+  </div>
 </div>
 `;
 
 exports[`Headings with rich text should render headline with bold & italic text should render h1 with <i><b> tags 1`] = `
-.c1 {
+.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -491,7 +835,7 @@ exports[`Headings with rich text should render headline with bold & italic text 
   padding: 2rem 0;
 }
 
-.c2 {
+.c4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -504,89 +848,175 @@ exports[`Headings with rich text should render headline with bold & italic text 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
-    margin-left: 16.666666666666668%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin: 0 -0.5rem;
   }
 }
 
 @supports (display:grid) {
   .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(75% - 1rem);
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(60% - 1rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
     display: block;
   }
 }
 
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 <div
-  class="c0"
+  class="c0 c1"
   dir="ltr"
 >
-  <h1
-    class="c1"
-    id="content"
-    tabindex="-1"
+  <div
+    class="c2"
+    dir="ltr"
   >
-    <i
-      class="c2"
+    <h1
+      class="c3"
+      id="content"
+      tabindex="-1"
     >
-      <b>
-        All is bold and italic
-      </b>
-    </i>
-  </h1>
+      <i
+        class="c4"
+      >
+        <b>
+          All is bold and italic
+        </b>
+      </i>
+    </h1>
+  </div>
 </div>
 `;
 
 exports[`Headings with rich text should render headline with italic & bold text should render h1 with <b><i> tags 1`] = `
-.c1 {
+.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -598,7 +1028,7 @@ exports[`Headings with rich text should render headline with italic & bold text 
   padding: 2rem 0;
 }
 
-.c2 {
+.c4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -611,89 +1041,175 @@ exports[`Headings with rich text should render headline with italic & bold text 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
-    margin-left: 16.666666666666668%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin: 0 -0.5rem;
   }
 }
 
 @supports (display:grid) {
   .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(75% - 1rem);
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(60% - 1rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
     display: block;
   }
 }
 
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 <div
-  class="c0"
+  class="c0 c1"
   dir="ltr"
 >
-  <h1
-    class="c1"
-    id="content"
-    tabindex="-1"
+  <div
+    class="c2"
+    dir="ltr"
   >
-    <b>
-      <i
-        class="c2"
-      >
-        All is italic and bold
-      </i>
-    </b>
-  </h1>
+    <h1
+      class="c3"
+      id="content"
+      tabindex="-1"
+    >
+      <b>
+        <i
+          class="c4"
+        >
+          All is italic and bold
+        </i>
+      </b>
+    </h1>
+  </div>
 </div>
 `;
 
 exports[`Headings with rich text with different attributes should render headline with only middle of text italic should render correctly 1`] = `
-.c1 {
+.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -705,7 +1221,7 @@ exports[`Headings with rich text with different attributes should render headlin
   padding: 2rem 0;
 }
 
-.c2 {
+.c4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -718,89 +1234,175 @@ exports[`Headings with rich text with different attributes should render headlin
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
-    margin-left: 16.666666666666668%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    margin-left: 33.333333333333336%;
+    margin: 0 -0.5rem;
   }
 }
 
 @supports (display:grid) {
   .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(100% - 1rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(75% - 1rem);
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(60% - 1rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
     display: block;
   }
 }
 
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 <div
-  class="c0"
+  class="c0 c1"
   dir="ltr"
 >
-  <h1
-    class="c1"
-    id="content"
-    tabindex="-1"
+  <div
+    class="c2"
+    dir="ltr"
   >
-    This is 
-    <i
-      class="c2"
+    <h1
+      class="c3"
+      id="content"
+      tabindex="-1"
     >
-      very
-    </i>
-     important
-  </h1>
+      This is 
+      <i
+        class="c4"
+      >
+        very
+      </i>
+       important
+    </h1>
+  </div>
 </div>
 `;
 
 exports[`Headings with subheadline data should render correctly 1`] = `
-.c1 {
+.c3 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -816,77 +1418,163 @@ exports[`Headings with subheadline data should render correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .c3 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     padding-top: 2rem;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.25rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
-    margin-left: 0%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
-    margin-left: 20%;
+    margin: 0 -0.5rem;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    margin-left: 40%;
+    margin: 0 -0.5rem;
   }
 }
 
 @supports (display:grid) {
   .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    margin: 0 0.25rem;
+    width: calc(100% - 0.5rem - 0%);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(83.33333333333333% - 1rem);
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(62.5% - 1rem);
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 0.5rem;
+    width: calc(50% - 1rem);
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
     display: block;
   }
 }
 
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 <div
-  class="c0"
+  class="c0 c1"
   dir="ltr"
 >
-  <h2
-    class="c1"
-    id="This-is-a-subheadline"
-    tabindex="-1"
+  <div
+    class="c2"
+    dir="ltr"
   >
-    This is a subheadline
-  </h2>
+    <h2
+      class="c3"
+      id="This-is-a-subheadline"
+      tabindex="-1"
+    >
+      This is a subheadline
+    </h2>
+  </div>
 </div>
 `;
