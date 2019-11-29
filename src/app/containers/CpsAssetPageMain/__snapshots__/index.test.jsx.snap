@@ -2371,6 +2371,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                 allow="autoplay; fullscreen"
                 allowfullscreen=""
                 class="c23"
+                scrolling="no"
                 src="https://www.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"
                 title="Media player"
               />
