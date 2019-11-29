@@ -5,6 +5,7 @@ import unorderedList, { ListPropTypes } from '../BulletedList';
 import { ParagraphPropTypes } from '../BulletedListItem';
 import Blocks from '../Blocks';
 
+// Render orderedLists as unorderedLists for now.
 const componentsToRender = {
   paragraph,
   unorderedList,
