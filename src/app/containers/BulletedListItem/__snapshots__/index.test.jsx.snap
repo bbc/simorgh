@@ -73,7 +73,9 @@ exports[`BulletedListItemContainer should render rtl text correctly 1`] = `
   }
 }
 
-<li>
+<li
+  role="listitem"
+>
   <div
     class="c0"
   >
@@ -163,7 +165,9 @@ exports[`BulletedListItemContainer should render text correctly 1`] = `
   }
 }
 
-<li>
+<li
+  role="listitem"
+>
   <div
     class="c0"
   >

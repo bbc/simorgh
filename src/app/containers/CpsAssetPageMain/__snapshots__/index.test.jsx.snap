@@ -688,8 +688,11 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
       <ul
         class="c14"
         dir="ltr"
+        role="list"
       >
-        <li>
+        <li
+          role="listitem"
+        >
           <div
             class="c15"
           >
@@ -704,7 +707,9 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
             </div>
           </div>
         </li>
-        <li>
+        <li
+          role="listitem"
+        >
           <div
             class="c15"
           >
@@ -719,7 +724,9 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
             </div>
           </div>
         </li>
-        <li>
+        <li
+          role="listitem"
+        >
           <div
             class="c15"
           >
@@ -736,7 +743,9 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
             </div>
           </div>
         </li>
-        <li>
+        <li
+          role="listitem"
+        >
           <div
             class="c15"
           >
@@ -759,8 +768,11 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
       <ul
         class="c14"
         dir="ltr"
+        role="list"
       >
-        <li>
+        <li
+          role="listitem"
+        >
           <div
             class="c15"
           >
@@ -780,7 +792,9 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
             </div>
           </div>
         </li>
-        <li>
+        <li
+          role="listitem"
+        >
           <div
             class="c15"
           >
@@ -800,7 +814,9 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
             </div>
           </div>
         </li>
-        <li>
+        <li
+          role="listitem"
+        >
           <div
             class="c15"
           >
@@ -820,7 +836,9 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
             </div>
           </div>
         </li>
-        <li>
+        <li
+          role="listitem"
+        >
           <div
             class="c15"
           >
@@ -2046,8 +2064,11 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           <ul
             class="c19"
             dir="ltr"
+            role="list"
           >
-            <li>
+            <li
+              role="listitem"
+            >
               <div
                 class="c20"
               >
@@ -2062,7 +2083,9 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                 </div>
               </div>
             </li>
-            <li>
+            <li
+              role="listitem"
+            >
               <div
                 class="c20"
               >
@@ -2081,7 +2104,9 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                 </div>
               </div>
             </li>
-            <li>
+            <li
+              role="listitem"
+            >
               <div
                 class="c20"
               >
@@ -2101,7 +2126,9 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                 </div>
               </div>
             </li>
-            <li>
+            <li
+              role="listitem"
+            >
               <div
                 class="c20"
               >
@@ -3137,8 +3164,11 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       <ul
         class="c10"
         dir="ltr"
+        role="list"
       >
-        <li>
+        <li
+          role="listitem"
+        >
           <div
             class="c11"
           >
@@ -3153,7 +3183,9 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
             </div>
           </div>
         </li>
-        <li>
+        <li
+          role="listitem"
+        >
           <div
             class="c11"
           >
@@ -4304,8 +4336,11 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
       <ul
         class="c12"
         dir="ltr"
+        role="list"
       >
-        <li>
+        <li
+          role="listitem"
+        >
           <div
             class="c13"
           >
@@ -4320,7 +4355,9 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
             </div>
           </div>
         </li>
-        <li>
+        <li
+          role="listitem"
+        >
           <div
             class="c13"
           >

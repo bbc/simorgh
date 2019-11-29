@@ -110,8 +110,11 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
   <ul
     class="c1"
     dir="ltr"
+    role="list"
   >
-    <li>
+    <li
+      role="listitem"
+    >
       <div
         class="c2"
       >
@@ -126,7 +129,9 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
         </div>
       </div>
     </li>
-    <li>
+    <li
+      role="listitem"
+    >
       <div
         class="c2"
       >
@@ -255,8 +260,11 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
   <ul
     class="c1"
     dir="rtl"
+    role="list"
   >
-    <li>
+    <li
+      role="listitem"
+    >
       <div
         class="c2"
       >
@@ -271,7 +279,9 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
         </div>
       </div>
     </li>
-    <li>
+    <li
+      role="listitem"
+    >
       <div
         class="c2"
       >
