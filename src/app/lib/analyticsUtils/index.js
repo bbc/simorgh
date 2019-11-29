@@ -196,11 +196,9 @@ export const getClickInfo = (elem, { service, component, label, type }) => {
 };
 
 export const getLibraryVersion = platform => {
-  if (platform === 'amp') {
+  if (platform === 'amp' || onClient()) {
     return 'simorgh';
   }
-  if (onClient()) {
-    return 'simorgh';
-  }
+
   return 'simorgh-nojs';
 };
