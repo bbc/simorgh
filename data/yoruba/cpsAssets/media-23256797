@@ -1,0 +1,324 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": true,
+        "caption": "short",
+        "embedding": true,
+        "format": "video",
+        "id": "p01kx42s",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
+        "subType": "clip",
+        "synopses": {
+          "short": "short"
+        },
+        "title": "alt-text world service clip",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1545304011000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "duration": 5,
+            "durationISO8601": "PT5S",
+            "types": [
+              "Original"
+            ],
+            "versionId": "p01kx42v",
+            "warnings": {}
+          }
+        ]
+      },
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "Ko ko koo, &quot;lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa&quot;.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<bold>Ọjọgbọn Wole Soyinka ni ṣe loun jẹ ọkan lara awọn to n da ile iwosan silẹ lati ran eeyan lọwọ fun itọju iru aisan bayii, lalai mọ pe iso n run lara tirẹ gan - O ni arun jẹjẹrẹ gbẹdun abẹ.</bold><bold> (heading)</bold>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Ọjọgbọn Wole Soyinka ni ṣe loun jẹ ọkan lara awọn to n da ile iwosan silẹ lati ran eeyan lọwọ fun itọju iru aisan bayii, lalai mọ pe iso n run lara tirẹ gan - O ni arun jẹjẹrẹ gbẹdun abẹ. (subheading)",
+        "type": "heading"
+      },
+      {
+        "items": [
+          {
+            "markupType": "plain_text",
+            "text": "Ǹjẹ́ o nímọ̀ nípa agogo inú ara rẹ? (numbered list)",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "nìyàn 26,000 ni àìsàn jẹjẹrẹ ń pa lóòjọ́",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "Wo àwọn ọtí ẹlẹ́rìndòdò tó ń fa àrùn jẹjẹrẹ...",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "82% ọkùnrin ní kó mọ̀ pé òun ní àìsàn jẹjẹrẹ asẹtọ ní Naijiria",
+            "type": "listItem"
+          }
+        ],
+        "numbered": true,
+        "type": "list"
+      },
+      {
+        "items": [
+          {
+            "markupType": "plain_text",
+            "text": "Ǹjẹ́ o nímọ̀ nípa agogo inú ara rẹ? (bulleted list)",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "nìyàn 26,000 ni àìsàn jẹjẹrẹ ń pa lóòjọ́",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "Wo àwọn ọtí ẹlẹ́rìndòdò tó ń fa àrùn jẹjẹrẹ...",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "82% ọkùnrin ní kó mọ̀ pé òun ní àìsàn jẹjẹrẹ asẹtọ ní Naijiria",
+            "type": "listItem"
+          }
+        ],
+        "numbered": false,
+        "type": "list"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<bold>Wole Soyinka ni &quot;mo kọ́kọ́ wò ó pé ṣe mo máa tètè fa orí yẹn ni àbí mo fẹ́ kí àrùn yẹn fá a fún mi&quot;.</bold>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<italic>Wole Soyinka ni &quot;mo kọ́kọ́ wò ó pé ṣe mo máa tètè fa orí yẹn ni àbí mo fẹ́ kí àrùn yẹn fá a fún mi&quot;.</italic>",
+        "type": "paragraph"
+      },
+      {
+        "altText": "test image",
+        "copyrightHolder": "BBC",
+        "height": 360,
+        "href": "http://b.files.bbci.co.uk/7DA2/test/_63726123_test66.jpg",
+        "id": "63726123",
+        "path": "/cpsdevpb/7DA2/test/_63726123_test66.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 640
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "yoruba.embedded_media.media_asset.23256797.page",
+      "cps_asset_id": "23256797",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": [
+      "media",
+      "paragraph",
+      "heading",
+      "list",
+      "image"
+    ],
+    "createdBy": "yoruba-v6",
+    "firstPublished": 1574857137000,
+    "id": "urn:bbc:ares::asset:yoruba/media-23256797",
+    "includeComments": false,
+    "language": "yo",
+    "lastPublished": 1574857444000,
+    "lastUpdated": 1574857452772,
+    "locators": {
+      "assetUri": "/yoruba/media-23256797",
+      "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-23256797",
+      "curie": "http://www.bbc.co.uk/asset/f223ae29-a0a9-d64a-ba6b-fbc0f7b481a3"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "type": "MAP",
+    "version": "v1.1.3"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ",
+      "shortHeadline": "Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ"
+    },
+    "id": "urn:bbc:ares::asset:yoruba/media-23256797",
+    "indexImage": {
+      "altText": "connectionAltText",
+      "copyrightHolder": "BBC",
+      "height": 576,
+      "href": "http://b.files.bbci.co.uk/A4B2/test/_63726124_p01kx435.jpg",
+      "id": "63726124",
+      "path": "/cpsdevpb/A4B2/test/_63726124_p01kx435.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 1024
+    },
+    "locators": {
+      "assetUri": "/yoruba/media-23256797",
+      "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-23256797",
+      "curie": "http://www.bbc.co.uk/asset/f223ae29-a0a9-d64a-ba6b-fbc0f7b481a3"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "short",
+      "embedding": true,
+      "format": "video",
+      "id": "p01kx42s",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
+      "subType": "clip",
+      "synopses": {
+        "short": "short"
+      },
+      "title": "alt-text world service clip",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1545304011000,
+          "availableTerritories": {
+            "nonUk": true,
+            "uk": true,
+            "world": false
+          },
+          "duration": 5,
+          "durationISO8601": "PT5S",
+          "types": [
+            "Original"
+          ],
+          "versionId": "p01kx42v",
+          "warnings": {}
+        }
+      ]
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ",
+    "timestamp": 1574857452772,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [
+      {
+        "promos": [
+          {
+            "cpsType": "PGL",
+            "headlines": {
+              "headline": "tẸ́st in prọ́Ọ̀gerssẹ́ẹ̀ 1",
+              "shortHeadline": "tẹ̀st in prọ́ọ̀gerssẹ́ẹ̀ 1 - UpdỌ́tẸ̀d"
+            },
+            "id": "urn:bbc:ares::asset:yoruba/23167372",
+            "locators": {
+              "assetUri": "/yoruba/23167372",
+              "cpsUrn": "urn:bbc:content:assetUri:/yoruba/23167372"
+            },
+            "summary": "tẸ̀st summary, plẹ̀asẹ̀ ignỌ̀rẹ́",
+            "timestamp": 1511785444000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "MAP",
+            "headlines": {
+              "headline": "Njẹ o ti lọ se iforukọsilẹ pẹlu ajọ INEC fun kaadi ididbo rẹ?",
+              "shortHeadline": "Nibo ni ajọ INEC ba iforukosilẹ fun kaadi idibo de?"
+            },
+            "id": "urn:bbc:ares::asset:yoruba/23183994",
+            "indexImage": {
+              "altText": "Keyframe #2",
+              "copyrightHolder": "BBC",
+              "height": 576,
+              "href": "http://b.files.bbci.co.uk/1DD3/test/_63653670_p01g417p.jpg",
+              "id": "63653670",
+              "path": "/cpsdevpb/1DD3/test/_63653670_p01g417p.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 1024
+            },
+            "locators": {
+              "assetUri": "/yoruba/23183994",
+              "cpsUrn": "urn:bbc:content:assetUri:/yoruba/23183994"
+            },
+            "media": {
+              "advertising": true,
+              "caption": "Njẹ o ti lọ se iforukọsilẹ pẹlu ajọ INEC fun kaadi ididbo rẹ?",
+              "embedding": true,
+              "format": "video",
+              "id": "p01g40g1",
+              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01g417p.jpg",
+              "subType": "clip",
+              "synopses": {
+                "medium": "Ajọ INEC n tẹsiju ninu pinpin kaadi ididbo",
+                "short": "Njẹ o ti lọ se iforukọsilẹ pẹlu ajọ INEC fun kaadi ididbo rẹ?"
+              },
+              "title": "Nibo ni ajọ INEC ba iforukosilẹ fun kaadi idibo de?",
+              "type": "media",
+              "versions": [
+                {
+                  "availableFrom": 1517042350000,
+                  "availableTerritories": {
+                    "nonUk": true,
+                    "uk": true,
+                    "world": false
+                  },
+                  "duration": 152,
+                  "durationISO8601": "PT2M32S",
+                  "types": [
+                    "Original"
+                  ],
+                  "versionId": "p01g40g8",
+                  "warnings": {}
+                }
+              ]
+            },
+            "mediaType": "Video",
+            "summary": "Ajọ INEC n tẹsiju ninu pinpin kaadi ididbo",
+            "timestamp": 1517043146000,
+            "type": "cps"
+          }
+        ],
+        "type": "see-alsos"
+      }
+    ],
+    "section": {
+      "name": "Media",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/yoruba/media"
+    },
+    "site": {
+      "name": "BBC News Yorùbá",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/yoruba"
+    }
+  }
+}
