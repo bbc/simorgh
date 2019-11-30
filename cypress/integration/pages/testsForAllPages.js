@@ -16,7 +16,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
   pageType,
   variant,
 }) => {
-  describe(`Running testsForAllPages for ${service} ${pageType}`, () => {
+  describe(service, () => {
     describe(`Metadata`, () => {
       it('should have resource hints', () => {
         const resources = [envConfig.assetOrigin, 'https://ichef.bbci.co.uk'];
@@ -330,16 +330,14 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
     });
 
     describe('Footer Tests', () => {
-      describe('footer tests', () => {
-        it('should have a visible footer', () => {
-          cy.get('footer')
-            .should('have.length', 1)
-            .should('have.attr', 'role', 'contentinfo')
-            .find('a')
-            .should('have.attr', 'href', `/${service}`)
-            .find('svg')
-            .should('be.visible');
-        });
+      it('should have a visible footer', () => {
+        cy.get('footer')
+          .should('have.length', 1)
+          .should('have.attr', 'role', 'contentinfo')
+          .find('a')
+          .should('have.attr', 'href', `/${service}`)
+          .find('svg')
+          .should('be.visible');
       });
 
       it('should render the BBC branding', () => {

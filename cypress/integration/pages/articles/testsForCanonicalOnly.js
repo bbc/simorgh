@@ -17,9 +17,19 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
 }) =>
-  describe(`Canonical Tests for ${service} ${pageType}`, () => {
-    it('should not have an AMP attribute on the main article', () => {
-      cy.get('html').should('not.have.attr', 'amp');
+  describe(service, () => {
+    describe('Non-AMP', () => {
+      it('should not have an AMP attribute on the main article', () => {
+        cy.get('html').should('not.have.attr', 'amp');
+      });
+
+      it('should include ampHTML tag', () => {
+        cy.get('head link[rel="amphtml"]').should(
+          'have.attr',
+          'href',
+          `${window.location.origin}${config[service].pageTypes.articles.path}.amp`,
+        );
+      });  
     });
 
     if (appToggles.chartbeatAnalytics.enabled) {
@@ -34,14 +44,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         }
       });
     }
-
-    it('should include ampHTML tag', () => {
-      cy.get('head link[rel="amphtml"]').should(
-        'have.attr',
-        'href',
-        `${window.location.origin}${config[service].pageTypes.articles.path}.amp`,
-      );
-    });
 
     if (serviceHasCaption(service)) {
       describe('Image with placeholder', () => {

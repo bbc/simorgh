@@ -11,28 +11,30 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
   service,
   pageType,
 }) => {
-  describe(`Running testsForAllAMPPages for ${service} ${pageType}`, () => {
+  describe(service, () => {
     if (pageType !== 'errorPage404') {
-      it('should have an AMP attribute on the page', () => {
-        cy.get('html').should('have.attr', 'amp');
-      });
-
-      it('should load the core AMP scripts in the head', () => {
-        const ampScripts = [
-          'https://cdn.ampproject.org/v0.js',
-          'https://cdn.ampproject.org/v0/amp-geo-0.1.js',
-          'https://cdn.ampproject.org/v0/amp-consent-0.1.js',
-          'https://cdn.ampproject.org/v0/amp-analytics-0.1.js',
-        ];
-
-        ampScripts.forEach(script => {
-          cy.get(`head > script[src="${script}"]`);
+      describe('General', () => {
+        it('should have an AMP attribute on the page', () => {
+          cy.get('html').should('have.attr', 'amp');
         });
-      });
 
-      it('should include AMP elements with JSON configuration in the body', () => {
-        cy.get('body amp-geo > script[type="application/json"]');
-        cy.get('body amp-consent > script[type="application/json"]');
+        it('should load the core AMP scripts in the head', () => {
+          const ampScripts = [
+            'https://cdn.ampproject.org/v0.js',
+            'https://cdn.ampproject.org/v0/amp-geo-0.1.js',
+            'https://cdn.ampproject.org/v0/amp-consent-0.1.js',
+            'https://cdn.ampproject.org/v0/amp-analytics-0.1.js',
+          ];
+
+          ampScripts.forEach(script => {
+            cy.get(`head > script[src="${script}"]`);
+          });
+        });
+
+        it('should include AMP elements with JSON configuration in the body', () => {
+          cy.get('body amp-geo > script[type="application/json"]');
+          cy.get('body amp-consent > script[type="application/json"]');
+        });
       });
 
       if (Cypress.env('SMOKE')) {

@@ -28,7 +28,7 @@ export const testsThatFollowSmokeTestConfig = ({
   pageType,
   variant,
 }) => {
-  describe(`Running tests for ${service} ${pageType}`, () => {
+  describe(service, () => {
     describe(`Metadata`, () => {
       // Here we should only have metadata tests that are unique to articles pages
       it('should have the correct articles metadata', () => {
@@ -190,41 +190,41 @@ export const testsThatFollowSmokeTestConfig = ({
           );
         });
       }
-
-      // `appToggles` tells us whether a feature is toggled on or off in the current environment.
-      if (appToggles.mediaPlayer.enabled) {
-        describe('Media Player', () => {
-          it('should have a visible caption beneath a mediaplayer', () => {
-            cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-              ({ body }) => {
-                const media = getBlockData('video', body);
-                if (media) {
-                  const captionBlock = getBlockByType(
-                    media.model.blocks,
-                    'caption',
-                  );
-
-                  if (captionBlock) {
-                    const {
-                      text,
-                    } = captionBlock.model.blocks[0].model.blocks[0].model;
-
-                    cy.get('figcaption')
-                      .eq(1)
-                      .within(() => {
-                        cy.get('p')
-                          .eq(0)
-                          .should('be.visible')
-                          .should('contain', text);
-                      });
-                  }
-                }
-              },
-            );
-          });
-        });
-      }
     });
+
+    // `appToggles` tells us whether a feature is toggled on or off in the current environment.
+    if (appToggles.mediaPlayer.enabled) {
+      describe('Media Player', () => {
+        it('should have a visible caption beneath a mediaplayer', () => {
+          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+            ({ body }) => {
+              const media = getBlockData('video', body);
+              if (media) {
+                const captionBlock = getBlockByType(
+                  media.model.blocks,
+                  'caption',
+                );
+
+                if (captionBlock) {
+                  const {
+                    text,
+                  } = captionBlock.model.blocks[0].model.blocks[0].model;
+
+                  cy.get('figcaption')
+                    .eq(1)
+                    .within(() => {
+                      cy.get('p')
+                        .eq(0)
+                        .should('be.visible')
+                        .should('contain', text);
+                    });
+                }
+              }
+            },
+          );
+        });
+      });
+    }
   });
 };
 
