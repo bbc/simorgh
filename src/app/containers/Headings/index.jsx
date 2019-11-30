@@ -63,7 +63,6 @@ const HeadingsContainer = ({ blocks, type }) => {
   return (
     <ArticlePageGrid>
       <Grid
-        enableGelMargins
         item
         startOffset={{
           group0: 1,

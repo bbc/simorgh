@@ -18,7 +18,6 @@ const WithLoading = Component => {
           group5: 20,
         }}
         enableGelGutters
-        enableGelMargins
       >
         <Grid
           item

@@ -16,7 +16,6 @@ const ParagraphContainer = ({ blocks }) => {
   return (
     <ArticlePageGrid>
       <Grid
-        enableGelMargins
         item
         startOffset={{
           group0: 1,

@@ -56,7 +56,6 @@ const FrontPageMain = ({ frontPageData }) => {
           group5: 20,
         }}
         enableGelGutters
-        enableGelMargins
       >
         <Grid
           item

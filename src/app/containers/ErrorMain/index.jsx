@@ -67,7 +67,6 @@ const ErrorMain = ({ status }) => {
           group5: 20,
         }}
         enableGelGutters
-        enableGelMargins
       >
         <Grid
           item
