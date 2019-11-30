@@ -13,7 +13,7 @@ exports[`BulletedListItemContainer should render rtl text correctly 1`] = `
 }
 
 .c1 {
-  position: relative;
+  display: inline;
 }
 
 .c0 {
@@ -34,42 +34,6 @@ exports[`BulletedListItemContainer should render rtl text correctly 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
 @supports (display:grid) {
   .c1 {
     display: grid;
@@ -79,8 +43,9 @@ exports[`BulletedListItemContainer should render rtl text correctly 1`] = `
 
 @media (max-width:14.9375rem) {
   .c3 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -89,8 +54,9 @@ exports[`BulletedListItemContainer should render rtl text correctly 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -99,8 +65,9 @@ exports[`BulletedListItemContainer should render rtl text correctly 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -109,8 +76,9 @@ exports[`BulletedListItemContainer should render rtl text correctly 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    padding: 0 1rem;
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
     margin: 0 0.5rem;
-    width: calc(83.33333333333333% - 1rem);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -119,8 +87,8 @@ exports[`BulletedListItemContainer should render rtl text correctly 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
     margin: 0 0.5rem;
-    width: calc(62.5% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -129,8 +97,8 @@ exports[`BulletedListItemContainer should render rtl text correctly 1`] = `
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
     margin: 0 0.5rem;
-    width: calc(50% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -183,7 +151,7 @@ exports[`BulletedListItemContainer should render rtl text correctly 1`] = `
 `;
 
 exports[`BulletedListItemContainer should render text correctly 1`] = `
-.c2 {
+.c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -195,7 +163,7 @@ exports[`BulletedListItemContainer should render text correctly 1`] = `
 }
 
 .c1 {
-  grid-column: 1 / span 6;
+  display: inline;
 }
 
 .c0 {
@@ -203,55 +171,107 @@ exports[`BulletedListItemContainer should render text correctly 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
   .c1 {
-    max-width: initial;
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c3 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c3 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c3 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c3 {
+    padding: 0 1rem;
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c3 {
+    display: block;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 80rem;
   }
 }
 
@@ -262,13 +282,19 @@ exports[`BulletedListItemContainer should render text correctly 1`] = `
     class="c0"
   >
     <div
-      class="c1"
+      class="c1 c2"
+      dir="ltr"
     >
-      <p
-        class="c2"
+      <div
+        class="c3"
+        dir="ltr"
       >
-        Here is a list
-      </p>
+        <p
+          class="c4"
+        >
+          Here is a list
+        </p>
+      </div>
     </div>
   </div>
 </li>

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FauxHeadline with headline data should render correctly 1`] = `
-.c1 {
+.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -14,86 +14,140 @@ exports[`FauxHeadline with headline data should render correctly 1`] = `
 }
 
 .c0 {
-  position: relative;
+  display: inline;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     padding: 2.5rem 0;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
   .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
     display: block;
   }
 }
 
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 <div
-  class="c0"
+  class="c0 c1"
   dir="ltr"
 >
-  <strong
-    aria-hidden="true"
-    class="c1"
+  <div
+    class="c2"
+    dir="ltr"
   >
-    This is a headline!
-  </strong>
+    <strong
+      aria-hidden="true"
+      class="c3"
+    >
+      This is a headline!
+    </strong>
+  </div>
 </div>
 `;
 
 exports[`FauxHeadline with plain text headline should render <strong> containing correct text 1`] = `
-.c1 {
+.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -106,80 +160,134 @@ exports[`FauxHeadline with plain text headline should render <strong> containing
 }
 
 .c0 {
-  position: relative;
+  display: inline;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     padding: 2.5rem 0;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display:grid) {
   .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
     display: block;
   }
 }
 
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 <div
-  class="c0"
+  class="c0 c1"
   dir="ltr"
 >
-  <strong
-    aria-hidden="true"
-    class="c1"
+  <div
+    class="c2"
+    dir="ltr"
   >
-    Plain headline
-  </strong>
+    <strong
+      aria-hidden="true"
+      class="c3"
+    >
+      Plain headline
+    </strong>
+  </div>
 </div>
 `;

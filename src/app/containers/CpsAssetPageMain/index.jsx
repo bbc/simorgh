@@ -13,7 +13,6 @@ import Blocks from '../Blocks';
 import CpsRelatedContent from '../CpsRelatedContent';
 import ATIAnalytics from '../ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
-import Grid, { GelPageGrid } from '#app/components/Grid';
 import fauxHeadline from '../FauxHeadline';
 import visuallyHiddenHeadline from '../VisuallyHiddenHeadline';
 
@@ -52,46 +51,13 @@ const CpsAssetPageMain = ({ pageData }) => {
       />
       <LinkedData type="Article" seoTitle={title} />
       <ATIAnalytics data={pageData} />
-      <GelPageGrid
-        forwardedAs="main"
-        role="main"
-        columns={{
-          group0: 6,
-          group1: 6,
-          group2: 6,
-          group3: 6,
-          group4: 8,
-          group5: 20,
-        }}
-        enableGelGutters
-        enableGelMargins
-      >
-        <Grid
-          item
-          startOffset={{
-            group0: 1,
-            group1: 1,
-            group2: 1,
-            group3: 1,
-            group4: 2,
-            group5: 5,
-          }}
-          columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 5,
-            group4: 5,
-            group5: 10,
-          }}
-        >
-          <Link to="/pidgin/23248703" data-e2e="cpsAssetDummyLink">
-            Test MAP to MAP inline link
-          </Link>
-          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-        </Grid>
-        <CpsRelatedContent content={relatedContent} />
-      </GelPageGrid>
+      <main>
+        <Link to="/pidgin/23248703" data-e2e="cpsAssetDummyLink">
+          Test MAP to MAP inline link
+        </Link>
+        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+      </main>
+      <CpsRelatedContent content={relatedContent} />
     </>
   );
 };

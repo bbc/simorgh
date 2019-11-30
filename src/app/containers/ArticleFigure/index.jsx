@@ -116,7 +116,7 @@ const ArticleFigure = ({
   };
   return (
     <Figure>
-      <ArticlePageGrid dir="ltr">
+      <ArticlePageGrid>
         <Grid
           item
           columns={imageLayouts[imageOrientation]}

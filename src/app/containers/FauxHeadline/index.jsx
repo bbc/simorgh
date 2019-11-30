@@ -6,7 +6,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
-import Grid from '#app/components/Grid';
+import Grid, { ArticlePageGrid } from '#app/components/Grid';
 
 // missing CSS 'display: block;' in psammead branch `explicitly-set-h1-styles-display-and-font-weight`
 const FauxHeadline = props => <Headline as="strong" {...props} />;
@@ -29,29 +29,37 @@ const FauxHeadlineContainer = ({ blocks }) => {
   );
 
   return (
-    <Grid
-      item
-      startOffset={{
-        group0: 1,
-        group1: 1,
-        group2: 1,
-        group3: 1,
-        group4: 2,
-        group5: 5,
-      }}
-      columns={{
-        group0: 6,
-        group1: 6,
-        group2: 6,
-        group3: 6,
-        group4: 6,
-        group5: 12,
-      }}
-    >
-      <FauxHeadline script={script} service={service} aria-hidden="true">
-        {renderText()}
-      </FauxHeadline>
-    </Grid>
+    <ArticlePageGrid>
+      <Grid
+        item
+        startOffset={{
+          group0: 1,
+          group1: 1,
+          group2: 1,
+          group3: 1,
+          group4: 2,
+          group5: 5,
+        }}
+        columns={{
+          group0: 6,
+          group1: 6,
+          group2: 6,
+          group3: 6,
+          group4: 6,
+          group5: 12,
+        }}
+        margins={{
+          group0: true,
+          group1: true,
+          group2: true,
+          group3: true,
+        }}
+      >
+        <FauxHeadline script={script} service={service} aria-hidden="true">
+          {renderText()}
+        </FauxHeadline>
+      </Grid>
+    </ArticlePageGrid>
   );
 };
 

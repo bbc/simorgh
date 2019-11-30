@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ParagraphContainer should render correctly 1`] = `
-.c1 {
+.c3 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -12,7 +12,7 @@ exports[`ParagraphContainer should render correctly 1`] = `
   margin: 0;
 }
 
-.c3 {
+.c5 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -20,109 +20,163 @@ exports[`ParagraphContainer should render correctly 1`] = `
   font-weight: inherit;
 }
 
-.c2 {
+.c4 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c2:visited {
+.c4:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c2:focus,
-.c2:hover {
+.c4:focus,
+.c4:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
 .c0 {
-  position: relative;
+  display: inline;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .c3 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c3 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-@media (max-width:14.9375rem) {
+@supports (display:grid) {
   .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c0 {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c0 {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    margin-left: 20%;
+  .c2 {
+    width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    margin-left: 40%;
+  .c2 {
+    width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
+  .c2 {
     display: block;
   }
 }
 
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 <div
-  class="c0"
+  class="c0 c1"
   dir="ltr"
 >
-  <p
-    class="c1"
+  <div
+    class="c2"
+    dir="ltr"
   >
-    <b>
-      This is some text.
-    </b>
-    <a
-      class="c2"
-      href="/bbc-test"
+    <p
+      class="c3"
     >
-      Some text
       <b>
-         for the 
+        This is some text.
       </b>
-      <i
-        class="c3"
+      <a
+        class="c4"
+        href="/bbc-test"
       >
-         link!
-      </i>
-    </a>
-  </p>
+        Some text
+        <b>
+           for the 
+        </b>
+        <i
+          class="c5"
+        >
+           link!
+        </i>
+      </a>
+    </p>
+  </div>
 </div>
 `;
 
@@ -162,7 +216,7 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 }
 
 .c0 {
-  position: relative;
+  display: inline;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -179,42 +233,6 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c0 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c0 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c0 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    margin: 0 -0.5rem;
-  }
-}
-
 @supports (display:grid) {
   .c0 {
     display: grid;
@@ -224,8 +242,9 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 
 @media (max-width:14.9375rem) {
   .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -234,8 +253,9 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -244,8 +264,9 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -254,8 +275,9 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    padding: 0 1rem;
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
     margin: 0 0.5rem;
-    width: calc(83.33333333333333% - 1rem);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -264,8 +286,8 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
     margin: 0 0.5rem;
-    width: calc(62.5% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -274,8 +296,8 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
     margin: 0 0.5rem;
-    width: calc(50% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;

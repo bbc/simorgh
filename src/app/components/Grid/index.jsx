@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, oneOf } from 'prop-types';
+import { node } from 'prop-types';
 import styled, { css } from 'styled-components';
 import Grid from '@bbc/psammead-grid';
 import {
@@ -41,9 +41,8 @@ export const GridMaxWidthGroup4 = styled(Grid)`
 
 export default Grid;
 
-export const ArticlePageGrid = ({ children, dir }) => (
+export const ArticlePageGrid = ({ children }) => (
   <GelPageGrid
-    dir={dir}
     columns={{
       group0: 6,
       group1: 6,
@@ -60,8 +59,4 @@ export const ArticlePageGrid = ({ children, dir }) => (
 
 ArticlePageGrid.propTypes = {
   children: node.isRequired,
-  dir: oneOf[('ltr', 'rtl')],
-};
-ArticlePageGrid.defaultProps = {
-  dir: 'ltr',
 };

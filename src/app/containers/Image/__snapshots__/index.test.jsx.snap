@@ -21,43 +21,7 @@ exports[`Image with data should render a lazyload container instead of an image 
 }
 
 .c1 {
-  position: relative;
-}
-
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
+  display: inline;
 }
 
 @supports (display:grid) {
@@ -69,8 +33,8 @@ exports[`Image with data should render a lazyload container instead of an image 
 
 @media (max-width:14.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -79,8 +43,8 @@ exports[`Image with data should render a lazyload container instead of an image 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -89,8 +53,8 @@ exports[`Image with data should render a lazyload container instead of an image 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -99,8 +63,8 @@ exports[`Image with data should render a lazyload container instead of an image 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -109,8 +73,8 @@ exports[`Image with data should render a lazyload container instead of an image 
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -119,8 +83,8 @@ exports[`Image with data should render a lazyload container instead of an image 
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -174,7 +138,7 @@ exports[`Image with data should render a lazyload container instead of an image 
 `;
 
 exports[`Image with data should render an image with alt text 1`] = `
-.c1 {
+.c0 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -203,58 +167,12 @@ exports[`Image with data should render an image with alt text 1`] = `
   transition: visibility 0.2s linear;
 }
 
-.c0 {
-  position: relative;
-}
-
-.c2 {
-  position: relative;
-}
-
-@media (max-width:14.9375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    margin-left: 40%;
-  }
+.c1 {
+  display: inline;
 }
 
 @supports (display:grid) {
-  .c0 {
-    display: block;
-  }
-}
-
-@supports (display:grid) {
-  .c2 {
+  .c1 {
     display: grid;
     position: initial;
   }
@@ -262,7 +180,9 @@ exports[`Image with data should render an image with alt text 1`] = `
 
 @media (max-width:14.9375rem) {
   .c3 {
-    width: calc(100%);
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -270,7 +190,9 @@ exports[`Image with data should render an image with alt text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
-    width: calc(100%);
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -278,7 +200,9 @@ exports[`Image with data should render an image with alt text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
-    width: calc(100%);
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -286,7 +210,9 @@ exports[`Image with data should render an image with alt text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
-    width: calc(100%);
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -294,7 +220,9 @@ exports[`Image with data should render an image with alt text 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
-    width: calc(100%);
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
   }
@@ -302,7 +230,9 @@ exports[`Image with data should render an image with alt text 1`] = `
 
 @media (min-width:80rem) {
   .c3 {
-    width: calc(100%);
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
     display: inline-block;
     vertical-align: top;
   }
@@ -314,36 +244,45 @@ exports[`Image with data should render an image with alt text 1`] = `
   }
 }
 
-<div
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+<figure
   class="c0"
-  dir="ltr"
 >
-  <figure
-    class="c1"
+  <div
+    class="c1 c2"
+    dir="ltr"
   >
     <div
-      class="c2"
+      class="c3"
       dir="ltr"
     >
       <div
-        class="c3"
-        dir="ltr"
+        class="c4"
       >
-        <div
-          class="c4"
-        >
-          <img
-            alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-            class="c5"
-            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
-            srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
-            width="640"
-          />
-        </div>
+        <img
+          alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
+          class="c5"
+          src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
+          srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
+          width="640"
+        />
       </div>
     </div>
-  </figure>
-</div>
+  </div>
+</figure>
 `;
 
 exports[`Image with data should render an image with alt text and caption 1`] = `
@@ -413,7 +352,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 }
 
 .c1 {
-  position: relative;
+  display: inline;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -442,42 +381,6 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
 @supports (display:grid) {
   .c1 {
     display: grid;
@@ -487,8 +390,8 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 
 @media (max-width:14.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -497,8 +400,8 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -507,8 +410,8 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -517,8 +420,8 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -527,8 +430,8 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -537,8 +440,8 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -666,43 +569,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
 }
 
 .c1 {
-  position: relative;
-}
-
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
+  display: inline;
 }
 
 @supports (display:grid) {
@@ -714,8 +581,8 @@ exports[`Image with data should render an image with alt text and offscreen copy
 
 @media (max-width:14.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -724,8 +591,8 @@ exports[`Image with data should render an image with alt text and offscreen copy
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -734,8 +601,8 @@ exports[`Image with data should render an image with alt text and offscreen copy
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -744,8 +611,8 @@ exports[`Image with data should render an image with alt text and offscreen copy
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -754,8 +621,8 @@ exports[`Image with data should render an image with alt text and offscreen copy
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -764,8 +631,8 @@ exports[`Image with data should render an image with alt text and offscreen copy
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -887,43 +754,7 @@ exports[`Image with data should render an image with other originCode - this wou
 }
 
 .c1 {
-  position: relative;
-}
-
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
+  display: inline;
 }
 
 @supports (display:grid) {
@@ -935,8 +766,8 @@ exports[`Image with data should render an image with other originCode - this wou
 
 @media (max-width:14.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -945,8 +776,8 @@ exports[`Image with data should render an image with other originCode - this wou
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -955,8 +786,8 @@ exports[`Image with data should render an image with other originCode - this wou
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -965,8 +796,8 @@ exports[`Image with data should render an image with other originCode - this wou
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -975,8 +806,8 @@ exports[`Image with data should render an image with other originCode - this wou
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -985,8 +816,8 @@ exports[`Image with data should render an image with other originCode - this wou
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;

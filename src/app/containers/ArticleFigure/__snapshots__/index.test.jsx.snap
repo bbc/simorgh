@@ -21,43 +21,7 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 }
 
 .c1 {
-  position: relative;
-}
-
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
+  display: inline;
 }
 
 @supports (display:grid) {
@@ -69,8 +33,8 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (max-width:14.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -79,8 +43,8 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -89,8 +53,8 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -99,8 +63,8 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -109,8 +73,8 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -119,8 +83,8 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -194,43 +158,7 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 }
 
 .c1 {
-  position: relative;
-}
-
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
+  display: inline;
 }
 
 @supports (display:grid) {
@@ -242,8 +170,8 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (max-width:14.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -252,8 +180,8 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -262,8 +190,8 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -272,8 +200,8 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -282,8 +210,8 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -292,8 +220,8 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -419,7 +347,7 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 }
 
 .c1 {
-  position: relative;
+  display: inline;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -448,42 +376,6 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
 @supports (display:grid) {
   .c1 {
     display: grid;
@@ -493,8 +385,8 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (max-width:14.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -503,8 +395,8 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -513,8 +405,8 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -523,8 +415,8 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -533,8 +425,8 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -543,8 +435,8 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -684,7 +576,7 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 }
 
 .c1 {
-  position: relative;
+  display: inline;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -713,42 +605,6 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
 @supports (display:grid) {
   .c1 {
     display: grid;
@@ -758,8 +614,8 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (max-width:14.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -768,8 +624,8 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -778,8 +634,8 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -788,8 +644,8 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -798,8 +654,8 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -808,8 +664,8 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -956,7 +812,7 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 }
 
 .c1 {
-  position: relative;
+  display: inline;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -985,42 +841,6 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
 @supports (display:grid) {
   .c1 {
     display: grid;
@@ -1030,8 +850,8 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (max-width:14.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1040,8 +860,8 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1050,8 +870,8 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1060,8 +880,8 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1070,8 +890,8 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -1080,8 +900,8 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -1207,43 +1027,7 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 }
 
 .c1 {
-  position: relative;
-}
-
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
+  display: inline;
 }
 
 @supports (display:grid) {
@@ -1255,8 +1039,8 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (max-width:14.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1265,8 +1049,8 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1275,8 +1059,8 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1285,8 +1069,8 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1295,8 +1079,8 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -1305,8 +1089,8 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -1399,43 +1183,7 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 }
 
 .c1 {
-  position: relative;
-}
-
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
+  display: inline;
 }
 
 @supports (display:grid) {
@@ -1447,8 +1195,9 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (max-width:14.9375rem) {
   .c3 {
+    padding: 0 0.5rem;
+    width: calc(4/6*(100% - 6 * 0.5rem) + 3 * 0.5rem );
     margin: 0 0.25rem;
-    width: calc(66.66666666666667% - 0.5rem);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1457,8 +1206,9 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    padding: 0 0.5rem;
+    width: calc(4/6*(100% - 6 * 0.5rem) + 3 * 0.5rem );
     margin: 0 0.25rem;
-    width: calc(66.66666666666667% - 0.5rem);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1467,8 +1217,9 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    padding: 0 1rem;
+    width: calc(4/6*(100% - 6 * 0.5rem) + 3 * 0.5rem );
     margin: 0 0.25rem;
-    width: calc(66.66666666666667% - 0.5rem);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1477,8 +1228,9 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    padding: 0 1rem;
+    width: calc(4/6*(100% - 6 * 1rem) + 3 * 1rem );
     margin: 0 0.5rem;
-    width: calc(66.66666666666667% - 1rem);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1487,8 +1239,8 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
     margin: 0 0.5rem;
-    width: calc(50% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -1497,8 +1249,8 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(8/20*(100% - 20 * 1rem) + 7 * 1rem );
     margin: 0 0.5rem;
-    width: calc(40% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -1578,43 +1330,7 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 }
 
 .c1 {
-  position: relative;
-}
-
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
+  display: inline;
 }
 
 @supports (display:grid) {
@@ -1626,8 +1342,9 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (max-width:14.9375rem) {
   .c3 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1636,8 +1353,9 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1646,8 +1364,9 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1656,8 +1375,9 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1666,8 +1386,8 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -1676,8 +1396,8 @@ exports[`ArticleFigure should render an image and caption for a square with nest
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -1757,43 +1477,7 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 }
 
 .c1 {
-  position: relative;
-}
-
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
+  display: inline;
 }
 
 @supports (display:grid) {
@@ -1805,8 +1489,8 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (max-width:14.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1815,8 +1499,8 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1825,8 +1509,8 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1835,8 +1519,8 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1845,8 +1529,8 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -1855,8 +1539,8 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -1986,7 +1670,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 }
 
 .c1 {
-  position: relative;
+  display: inline;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -2015,42 +1699,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
 @supports (display:grid) {
   .c1 {
     display: grid;
@@ -2060,8 +1708,8 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (max-width:14.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2070,8 +1718,8 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2080,8 +1728,8 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2090,8 +1738,8 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2100,8 +1748,8 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -2110,8 +1758,8 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -2255,7 +1903,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 }
 
 .c1 {
-  position: relative;
+  display: inline;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -2284,42 +1932,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
 @supports (display:grid) {
   .c1 {
     display: grid;
@@ -2329,8 +1941,8 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (max-width:14.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2339,8 +1951,8 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2349,8 +1961,8 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2359,8 +1971,8 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2369,8 +1981,8 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -2379,8 +1991,8 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -2531,7 +2143,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
 }
 
 .c1 {
-  position: relative;
+  display: inline;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -2560,42 +2172,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
 @supports (display:grid) {
   .c1 {
     display: grid;
@@ -2605,8 +2181,8 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (max-width:14.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2615,8 +2191,8 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2625,8 +2201,8 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2635,8 +2211,8 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2645,8 +2221,8 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -2655,8 +2231,8 @@ exports[`ArticleFigure should render an image with caption text with inline link
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -2786,43 +2362,7 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 }
 
 .c1 {
-  position: relative;
-}
-
-@media (max-width:14.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c1 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    margin: 0 -0.5rem;
-  }
+  display: inline;
 }
 
 @supports (display:grid) {
@@ -2834,8 +2374,8 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (max-width:14.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2844,8 +2384,8 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2854,8 +2394,8 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2864,8 +2404,8 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -2874,8 +2414,8 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c3 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -2884,8 +2424,8 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
 
 @media (min-width:80rem) {
   .c3 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;

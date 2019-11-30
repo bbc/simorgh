@@ -14,7 +14,7 @@ exports[`should render a news article correctly 1`] = `
 }
 
 .c0 {
-  position: relative;
+  display: inline;
 }
 
 .c5 {
@@ -48,42 +48,6 @@ exports[`should render a news article correctly 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c0 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c0 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c0 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    margin: 0 -0.5rem;
-  }
-}
-
 @supports (display:grid) {
   .c0 {
     display: grid;
@@ -92,9 +56,10 @@ exports[`should render a news article correctly 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .c4 {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -102,9 +67,10 @@ exports[`should render a news article correctly 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c4 {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -112,9 +78,10 @@ exports[`should render a news article correctly 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -122,9 +89,10 @@ exports[`should render a news article correctly 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c4 {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(83.33333333333333% - 1rem);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -132,9 +100,9 @@ exports[`should render a news article correctly 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c4 {
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(62.5% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -142,9 +110,9 @@ exports[`should render a news article correctly 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c4 {
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(50% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -152,15 +120,16 @@ exports[`should render a news article correctly 1`] = `
 }
 
 @supports (display:grid) {
-  .c4 {
+  .c2 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c2 {
+  .c4 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -168,9 +137,10 @@ exports[`should render a news article correctly 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
+  .c4 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -178,9 +148,10 @@ exports[`should render a news article correctly 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c4 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -188,9 +159,10 @@ exports[`should render a news article correctly 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c4 {
+    padding: 0 1rem;
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -198,9 +170,9 @@ exports[`should render a news article correctly 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
+  .c4 {
+    width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -208,9 +180,9 @@ exports[`should render a news article correctly 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c2 {
+  .c4 {
+    width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -218,7 +190,7 @@ exports[`should render a news article correctly 1`] = `
 }
 
 @supports (display:grid) {
-  .c2 {
+  .c4 {
     display: block;
   }
 }
@@ -552,87 +524,6 @@ exports[`should render a persian article correctly 1`] = `
     </title>
     <link
       href="https://www.test.bbc.com/pathname"
-      hreflang="x-default"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.com/pathname"
-      hreflang="en"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pathname"
-      hreflang="en-gb"
-      rel="alternate"
-    />
-    <link
-      href="http://localhost:7080/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="https://www.test.bbc.com/pathname"
       rel="canonical"
     />
     <link
@@ -709,18 +600,6 @@ exports[`should render a persian article correctly 1`] = `
       href="/favicon.ico"
       rel="shortcut icon"
       type="image/x-icon"
-    />
-    <meta
-      content="Royal Wedding 2018"
-      name="article:tag"
-    />
-    <meta
-      content="Duchess of Sussex"
-      name="article:tag"
-    />
-    <meta
-      content="Queen Victoria"
-      name="article:tag"
     />
     <meta
       content="IE=edge"
@@ -848,11 +727,6 @@ exports[`should render a persian article correctly 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}],"author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
-    </script>
-    <script
-      type="application/ld+json"
-    >
       {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News فارسی","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"سرصفحه مقاله"},"headline":"سرصفحه مقاله","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News فارسی","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
     </script>
   </head>
@@ -870,7 +744,7 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 .c0 {
-  position: relative;
+  display: inline;
 }
 
 .c5 {
@@ -904,42 +778,6 @@ exports[`should render a persian article correctly 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c0 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c0 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c0 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    margin: 0 -0.5rem;
-  }
-}
-
 @supports (display:grid) {
   .c0 {
     display: grid;
@@ -948,9 +786,10 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .c4 {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -958,9 +797,10 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c4 {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -968,9 +808,10 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -978,9 +819,10 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c4 {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(83.33333333333333% - 1rem);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -988,9 +830,9 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c4 {
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(62.5% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -998,9 +840,9 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c4 {
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(50% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -1008,15 +850,16 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 @supports (display:grid) {
-  .c4 {
+  .c2 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c2 {
+  .c4 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1024,9 +867,10 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
+  .c4 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1034,9 +878,10 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c4 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1044,9 +889,10 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c4 {
+    padding: 0 1rem;
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1054,9 +900,9 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
+  .c4 {
+    width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -1064,9 +910,9 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c2 {
+  .c4 {
+    width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -1074,7 +920,7 @@ exports[`should render a persian article correctly 1`] = `
 }
 
 @supports (display:grid) {
-  .c2 {
+  .c4 {
     display: block;
   }
 }
@@ -1164,87 +1010,6 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
     </title>
     <link
       href="https://www.test.bbc.com/pathname"
-      hreflang="x-default"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.com/pathname"
-      hreflang="en"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pathname"
-      hreflang="en-gb"
-      rel="alternate"
-    />
-    <link
-      href="http://localhost:7080/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="https://www.test.bbc.com/pathname"
       rel="canonical"
     />
     <link
@@ -1321,18 +1086,6 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
       href="/favicon.ico"
       rel="shortcut icon"
       type="image/x-icon"
-    />
-    <meta
-      content="Royal Wedding 2018"
-      name="article:tag"
-    />
-    <meta
-      content="Duchess of Sussex"
-      name="article:tag"
-    />
-    <meta
-      content="Queen Victoria"
-      name="article:tag"
     />
     <meta
       content="IE=edge"
@@ -1460,11 +1213,6 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}],"author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
-    </script>
-    <script
-      type="application/ld+json"
-    >
       {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Article Headline for SEO in Pidgin"},"headline":"Article Headline for SEO in Pidgin","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
     </script>
   </head>
@@ -1482,7 +1230,7 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 .c0 {
-  position: relative;
+  display: inline;
 }
 
 .c5 {
@@ -1516,42 +1264,6 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c0 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c0 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c0 {
-    margin: 0 -0.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c0 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    margin: 0 -0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    margin: 0 -0.5rem;
-  }
-}
-
 @supports (display:grid) {
   .c0 {
     display: grid;
@@ -1560,9 +1272,10 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .c4 {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1570,9 +1283,10 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c4 {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1580,9 +1294,10 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1590,9 +1305,10 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c4 {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    width: calc(83.33333333333333% - 1rem);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1600,9 +1316,9 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c4 {
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    width: calc(62.5% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -1610,9 +1326,9 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c4 {
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    width: calc(50% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -1620,15 +1336,16 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 @supports (display:grid) {
-  .c4 {
+  .c2 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c2 {
+  .c4 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1636,9 +1353,10 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
+  .c4 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1646,9 +1364,10 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c4 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    width: calc(100% - 0.5rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1656,9 +1375,10 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c4 {
+    padding: 0 1rem;
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
     margin: 0 0.5rem;
-    width: calc(100% - 1rem - 0%);
     margin-left: 0%;
     display: inline-block;
     vertical-align: top;
@@ -1666,9 +1386,9 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
+  .c4 {
+    width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
     margin: 0 0.5rem;
-    width: calc(75% - 1rem);
     margin-left: 12.5%;
     display: inline-block;
     vertical-align: top;
@@ -1676,9 +1396,9 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c2 {
+  .c4 {
+    width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
     margin: 0 0.5rem;
-    width: calc(60% - 1rem);
     margin-left: 20%;
     display: inline-block;
     vertical-align: top;
@@ -1686,7 +1406,7 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 }
 
 @supports (display:grid) {
-  .c2 {
+  .c4 {
     display: block;
   }
 }

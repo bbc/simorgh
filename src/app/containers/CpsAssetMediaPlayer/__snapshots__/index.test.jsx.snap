@@ -28,11 +28,11 @@ exports[`MediaPlayer render the amp player 1`] = `
 }
 
 .c0 {
-  position: relative;
+  display: inline;
 }
 
 .c1 {
-  position: relative;
+  display: inline;
 }
 
 @media (max-width:14.9375rem) {
@@ -176,11 +176,11 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 }
 
 .c0 {
-  position: relative;
+  display: inline;
 }
 
 .c1 {
-  position: relative;
+  display: inline;
 }
 
 .c4 {

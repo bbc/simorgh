@@ -2,7 +2,7 @@
 
 exports[`Grid should render GelPageGrid with columns 1`] = `
 .c0 {
-  position: relative;
+  display: inline;
 }
 
 @supports (display:grid) {
@@ -97,7 +97,7 @@ exports[`Grid should render GelPageGrid with columns 1`] = `
 
 exports[`Grid should render Grid with columns 1`] = `
 .c0 {
-  position: relative;
+  display: inline;
 }
 
 @supports (display:grid) {
@@ -178,7 +178,7 @@ exports[`Grid should render Grid with columns 1`] = `
 
 exports[`Grid should render GridMaxWidthGroup4 with columns 1`] = `
 .c0 {
-  position: relative;
+  display: inline;
 }
 
 .c1 {
