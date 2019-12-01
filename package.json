@@ -83,7 +83,7 @@
     "@bbc/psammead-story-promo-list": "^2.1.20",
     "@bbc/psammead-styles": "^4.1.0",
     "@bbc/psammead-timestamp-container": "^2.6.10",
-    "@bbc/psammead-useful-links": "^1.0.7",
+    "@bbc/psammead-useful-links": "^1.0.9",
     "@bbc/psammead-visually-hidden-text": "^1.2.3",
     "@loadable/component": "^5.10.3",
     "@loadable/server": "^5.10.3",
