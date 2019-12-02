@@ -5,7 +5,7 @@ export const servicesWithVariants = {
   zhongwen: ['simp', 'trad'],
 };
 
-export const variants = ['simp', 'trad', 'lat', 'cyr'];
+export const variants = ['simp', 'trad', 'lat', 'cyr', 'default'];
 
 // Remove leading slash from variant
 export const variantSanitiser = variant => variant && variant.replace('/', '');
