@@ -81,6 +81,7 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
             skin="audio"
             service={service}
             mediaInfo={mediaInfo}
+            noJsMessage="This media cannot play in your browser. Please enable Javascript or use a different browser."
           />
         )}
       </MediaPlayerInnerWrapper>
