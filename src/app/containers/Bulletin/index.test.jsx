@@ -1,8 +1,8 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { service as newsConfig } from '#lib/config/services/news';
-import BulletinContainer from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import BulletinContainer from '.';
 
 const tvBulletinItem = {
   name: 'Test TV Bul promo live',
@@ -23,6 +23,11 @@ const tvBulletinItem = {
   assetTypeCode: 'PRO',
   timestamp: 1565085977000,
   type: 'link',
+};
+
+const liveTvBulletinItem = {
+  ...tvBulletinItem,
+  isLive: true,
 };
 
 const radioBulletinItem = {
@@ -46,38 +51,49 @@ const radioBulletinItem = {
   type: 'link',
 };
 
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useContext: jest.fn(),
-  };
-});
+const liveRadioBulletinItem = {
+  ...radioBulletinItem,
+  isLive: true,
+};
 
-const { useContext } = jest.requireMock('react');
+const BulletinWithContext = item => (
+  <ServiceContextProvider service="igbo">
+    <BulletinContainer item={item} />
+  </ServiceContextProvider>
+);
 
 describe('Bulletin Container', () => {
   describe('snapshots', () => {
-    beforeEach(() => {
-      useContext.mockReturnValue(newsConfig.default);
-    });
-
-    afterEach(() => {
-      useContext.mockReset();
-    });
-
     shouldMatchSnapshot(
       'should render a TV bulletin correctly',
-      <ServiceContextProvider service="igbo">
-        <BulletinContainer item={tvBulletinItem} />
-      </ServiceContextProvider>,
+      BulletinWithContext(tvBulletinItem),
+    );
+
+    shouldMatchSnapshot(
+      'should render a Live TV bulletin correctly',
+      BulletinWithContext(liveTvBulletinItem),
     );
 
     shouldMatchSnapshot(
       'should render a Radio bulletin correctly',
-      <ServiceContextProvider service="igbo">
-        <BulletinContainer item={radioBulletinItem} />
-      </ServiceContextProvider>,
+      BulletinWithContext(radioBulletinItem),
     );
+
+    shouldMatchSnapshot(
+      'should render a Live Radio bulletin correctly',
+      BulletinWithContext(liveRadioBulletinItem),
+    );
+  });
+
+  describe('assertion tests', () => {
+    it('should render the LIVE offscreen text', () => {
+      const { container } = render(BulletinWithContext(liveTvBulletinItem));
+
+      const h3 = container.querySelector('h3');
+      const span = h3.getElementsByTagName('span')[2];
+      expect(span.getAttribute('aria-hidden')).toBeDefined();
+      expect(span.getAttribute('aria-hidden')).toEqual('true');
+      expect(span.textContent).toEqual('LIVE');
+    });
   });
 });

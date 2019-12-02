@@ -6,7 +6,6 @@ import Bulletin from '@bbc/psammead-bulletin';
 import { tvBulletinItem, radioBulletinItem } from '#models/propTypes/bulletin';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-// eslint-disable-next-line react/prop-types
 const BulletinContainer = ({ item }) => {
   const { script, service, dir } = useContext(ServiceContext);
 
@@ -19,15 +18,9 @@ const BulletinContainer = ({ item }) => {
   const imageAlt = pathOr(null, ['indexImage', 'altText'], item);
   const bulletinImage = <Image src={imageSrc} alt={imageAlt} />;
 
-  let ctaText;
-  let type;
-  if (contentType === 'TVBulletin') {
-    type = 'video';
-    ctaText = 'Watch';
-  } else {
-    type = 'audio';
-    ctaText = 'Listen';
-  }
+  const ctaText = contentType === 'TVBulletin' ? 'Watch' : 'Listen';
+  const type = contentType === 'TVBulletin' ? 'video' : 'audio';
+  const offScreenText = isLive ? `${ctaText} LIVE` : ctaText;
 
   if (!headline || !ctaLink) {
     return null;
@@ -35,7 +28,7 @@ const BulletinContainer = ({ item }) => {
 
   return (
     <Bulletin
-      image={bulletinImage}
+      image={imageSrc && bulletinImage}
       type={type}
       isLive={isLive}
       script={script}
@@ -44,6 +37,7 @@ const BulletinContainer = ({ item }) => {
       summaryText={summary}
       ctaLink={ctaLink}
       ctaText={ctaText}
+      offScreenText={offScreenText}
       dir={dir}
     />
   );
