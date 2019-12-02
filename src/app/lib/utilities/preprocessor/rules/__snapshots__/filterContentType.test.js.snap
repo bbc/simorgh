@@ -5060,7 +5060,7 @@ Object {
               "width": 320,
             },
             "isLive": true,
-            "name": "LIVE Igbo radio bulletin",
+            "name": "Igbo radio bulletin",
             "summary": "This is an Igbo radio bulletin promo, using a CPS promo for a Radio Bulletin with the LIVE button checked",
             "timestamp": 1573483531000,
             "type": "link",
@@ -6233,6 +6233,9 @@ Object {
           },
         ],
         "semanticGroupName": "AV stories live",
+        "strapline": Object {
+          "name": "AV stories live",
+        },
         "title": "AV stories live",
         "type": "av-live-streams",
       },
