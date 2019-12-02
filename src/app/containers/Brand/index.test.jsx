@@ -1,14 +1,10 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import BrandContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
-
-jest.mock('react-router-dom', () => ({
-  useParams: jest.fn().mockReturnValue({}),
-}));
+import { RequestContext } from '#contexts/RequestContext';
 
 const newsServiceContextStub = {
   product: 'BBC News',
@@ -23,9 +19,11 @@ const newsServiceContextStub = {
   },
 };
 
-const BrandContainerWithContext = context => (
-  <ServiceContext.Provider value={context}>
-    <BrandContainer />
+const BrandContainerWithContext = (serviceContext, requestContext = {}) => (
+  <ServiceContext.Provider value={serviceContext}>
+    <RequestContext.Provider value={requestContext}>
+      <BrandContainer />
+    </RequestContext.Provider>
   </ServiceContext.Provider>
 );
 
@@ -37,12 +35,14 @@ describe(`BrandContainer`, () => {
 });
 
 describe('BrandContainer with variant', () => {
-  useParams.mockReturnValue({ variant: 'cyr' });
   shouldMatchSnapshot(
     'should render correctly',
-    BrandContainerWithContext({
-      ...newsServiceContextStub,
-      service: 'serbian',
-    }),
+    BrandContainerWithContext(
+      {
+        ...newsServiceContextStub,
+        service: 'serbian',
+      },
+      { variant: 'cyr' },
+    ),
   );
 });

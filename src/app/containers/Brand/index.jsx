@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { useParams } from 'react-router-dom';
 import Brand from '@bbc/psammead-brand';
 import { bool } from 'prop-types';
 import { latin } from '@bbc/gel-foundations/scripts';
 import ScriptLink from '@bbc/psammead-script-link';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import { getOtherVariant } from '#lib/utilities/variantHandler';
 
 const BrandContainer = props => {
@@ -16,14 +16,14 @@ const BrandContainer = props => {
     service,
     theming,
   } = useContext(ServiceContext);
+  const { variant } = useContext(RequestContext);
   const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
   const svgRatio = brandSVG && brandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
-  let scriptLink;
-  const { variant } = useParams();
+  let scriptLink = null;
   const otherVariant = getOtherVariant(service, variant);
   if (otherVariant) {
     scriptLink = (

@@ -17,10 +17,6 @@ jest.mock('../containers/ServiceWorker', () => () => (
   <p>I am the ServiceWorker component</p>
 ));
 
-jest.mock('react-router-dom', () => ({
-  useParams: jest.fn().mockReturnValue({}),
-}));
-
 describe('defaultPageWrapper', () => {
   const propsWithChildren = {
     children: <h2>Child element</h2>,

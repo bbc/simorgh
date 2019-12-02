@@ -7,10 +7,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 
-jest.mock('react-router-dom', () => ({
-  useParams: jest.fn().mockReturnValue({}),
-}));
-
 const defaultToggleState = {
   test: {
     navOnArticles: {
