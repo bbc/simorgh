@@ -10,15 +10,25 @@ jest.mock('react-router-dom', () => ({
 }));
 jest.mock('./App', () => jest.fn(() => <>Mocked App component</>));
 
+const bbcHeaders = {
+  'bbc-origin': 'https://www.bbc.com',
+  'bbc-country': undefined,
+};
+
 const renderClientApp = () =>
-  render(<ClientApp data="someData!" routes={['someRoute']} />);
+  render(
+    <ClientApp
+      data={{ headers: bbcHeaders, text: 'someData!' }}
+      routes={['someRoute']}
+    />,
+  );
 
 const renderServerApp = () =>
   render(
     <ServerApp
       data="somePassedData"
       routes={['someRoute']}
-      bbcOrigin="https://www.bbc.com"
+      headers={bbcHeaders}
     />,
   );
 
@@ -26,7 +36,11 @@ describe('ClientApp', () => {
   it('App should be called with the correct props', () => {
     renderClientApp();
     expect(App).toHaveBeenCalledWith(
-      { initialData: 'someData!', routes: ['someRoute'] },
+      {
+        headers: bbcHeaders,
+        initialData: { headers: bbcHeaders, text: 'someData!' },
+        routes: ['someRoute'],
+      },
       {},
     );
   });
@@ -38,7 +52,7 @@ describe('ClientApp', () => {
     expect(ReactRouter.BrowserRouter).toHaveBeenCalledWith(
       {
         children: expect.anything(),
-        data: 'someData!',
+        data: { headers: bbcHeaders, text: 'someData!' },
         routes: ['someRoute'],
       },
       {},
@@ -59,7 +73,7 @@ describe('ServerApp', () => {
       {
         initialData: 'somePassedData',
         routes: ['someRoute'],
-        bbcOrigin: 'https://www.bbc.com',
+        headers: bbcHeaders,
       },
       {},
     );
@@ -74,7 +88,7 @@ describe('ServerApp', () => {
         children: expect.anything(),
         data: 'somePassedData',
         routes: ['someRoute'],
-        bbcOrigin: 'https://www.bbc.com',
+        headers: bbcHeaders,
       },
       {},
     );
