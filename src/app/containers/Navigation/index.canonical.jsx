@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navigation from '@bbc/psammead-navigation';
 import { node, string, shape } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
@@ -13,6 +13,8 @@ const CanonicalNavigationContainer = ({
   scrollableListItems,
   dropdownListItems,
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <Navigation
       script={script}
@@ -22,14 +24,15 @@ const CanonicalNavigationContainer = ({
     >
       <CanonicalMenuButton
         announcedText="Menu"
-        isOpen
-        onOpen={() => {}}
-        onClose={() => {}}
+        isOpen={isOpen}
+        onOpen={() => setIsOpen(true)}
+        onClose={() => setIsOpen(false)}
       />
-      {dropdownListItems}
-      <CanonicalScrollableNavigation dir={dir}>
-        {scrollableListItems}
-      </CanonicalScrollableNavigation>
+      {isOpen ? dropdownListItems :
+        <CanonicalScrollableNavigation dir={dir}>
+          {scrollableListItems}
+        </CanonicalScrollableNavigation>
+      }
     </Navigation>
   );
 };
