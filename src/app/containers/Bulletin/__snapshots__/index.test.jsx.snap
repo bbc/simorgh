@@ -107,6 +107,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 
 .c9 {
   background-color: #B80000;
+  border: 0.0625rem solid transparent;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -437,6 +438,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 
 .c9 {
   background-color: #B80000;
+  border: 0.0625rem solid transparent;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -761,6 +763,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 
 .c8 {
   background-color: #222222;
+  border: 0.0625rem solid transparent;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1075,6 +1078,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 
 .c8 {
   background-color: #222222;
+  border: 0.0625rem solid transparent;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
