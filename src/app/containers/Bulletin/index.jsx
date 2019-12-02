@@ -21,13 +21,15 @@ const BulletinContainer = ({ item }) => {
   const imageAlt = pathOr(null, ['indexImage', 'altText'], item);
   const bulletinImage = <Image src={imageSrc} alt={imageAlt} />;
 
-  const watchText = pathOr('Watch', ['media', 'watch'], translations);
-  const listenText = pathOr('Listen', ['media', 'listen'], translations);
   const contentType = pathOr(null, ['contentType'], item);
-  const ctaText = contentType === 'TVBulletin' ? watchText : listenText;
   const type = contentType === 'TVBulletin' ? 'video' : 'audio';
 
+  const watchText = pathOr('Watch', ['media', 'watch'], translations);
+  const listenText = pathOr('Listen', ['media', 'listen'], translations);
+  const ctaText = contentType === 'TVBulletin' ? watchText : listenText;
+
   const isLive = pathOr(null, ['isLive'], item);
+  const playCtaText = isLive ? `${ctaText} Live` : ctaText;
   const offScreenText = isLive ? `${ctaText} LIVE` : ctaText;
 
   return (
@@ -40,7 +42,7 @@ const BulletinContainer = ({ item }) => {
       headlineText={headline}
       summaryText={summary}
       ctaLink={ctaLink}
-      ctaText={ctaText}
+      ctaText={playCtaText}
       offScreenText={offScreenText}
       dir={dir}
     />
