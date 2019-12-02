@@ -15,6 +15,7 @@ const Document = ({
   assetOrigins,
   app,
   data,
+  headers,
   styleTags,
   helmet,
   isAmp,
@@ -25,7 +26,10 @@ const Document = ({
   const title = helmet.title.toComponent();
   const links = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
-  const serialisedData = JSON.stringify(data);
+  const serialisedData = JSON.stringify({
+    ...data,
+    headers,
+  });
   const scriptsAllowed = !isAmp;
   const scriptTags = (
     <>
