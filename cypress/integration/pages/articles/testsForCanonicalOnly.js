@@ -190,6 +190,27 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               }
             });
           });
+          it('should have subtitles set to enabled by default', () => {
+            cy.window().then(win => {
+              const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+              if (media && media.type === 'video') {
+                cy.get('div[class^="StyledVideoContainer"]').then(() => {
+                  cy.get('iframe[class^="StyledIframe"]').then($iframe => {
+                    cy.wrap($iframe.prop('contentWindow'), {
+                      // `timeout` only applies to the methods chained below.
+                      // `its()` benefits from this, and will wait up to 8s
+                      // for the mediaPlayer instance to become available.
+                      timeout: 8000,
+                    })
+                      .its(
+                        'embeddedMedia.playerInstances.mediaPlayer._settings.ui.subtitles.enabled',
+                      )
+                      .should('eq', true);
+                  });
+                });
+              }
+            });
+          });
         }
       });
     }
