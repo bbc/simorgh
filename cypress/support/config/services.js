@@ -38,10 +38,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/afaanoromoo/oduu-49490954',
+        path: undefined,
         smoke: false,
       },
     },
@@ -76,10 +73,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/afrique/monde-49500638',
+        path: undefined,
         smoke: false,
       },
     },
@@ -109,10 +103,7 @@ const genServices = appEnv => ({
         smoke: true,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/amharic/news-49562667',
+        path: undefined,
         smoke: false,
       },
     },
@@ -147,10 +138,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/arabic/media-49580542',
+        path: undefined,
         smoke: false,
       },
     },
@@ -179,10 +167,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/azeri/region-49364777',
+        path: undefined,
         smoke: false,
       },
     },
@@ -215,10 +200,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/bengali/news-49579870',
+        path: undefined,
         smoke: false,
       },
     },
@@ -251,10 +233,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/burmese/media-49571787',
+        path: undefined,
         smoke: false,
       },
     },
@@ -313,10 +292,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/gahuza/amakuru-49534170',
+        path: undefined,
         smoke: false,
       },
     },
@@ -343,10 +319,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/gujarati/media-49502679',
+        path: undefined,
         smoke: false,
       },
     },
@@ -381,10 +354,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/hausa/labarai-49513456',
+        path: undefined,
         smoke: false,
       },
     },
@@ -417,10 +387,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/hindi/media-49583110',
+        path: undefined,
         smoke: false,
       },
     },
@@ -447,7 +414,7 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
-          isLive(appEnv) || isTest(appEnv) ? undefined : '/igbo/media-42986440',
+          isLive(appEnv) || isTest(appEnv) ? undefined : '/igbo/media-23256786',
         smoke: false,
       },
     },
@@ -479,10 +446,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/indonesia/media-49591990',
+        path: undefined,
         smoke: false,
       },
     },
@@ -509,10 +473,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/japanese/video-49589128',
+        path: isLive(appEnv) ? undefined : '/japanese/video-23248670',
         smoke: false,
       },
     },
@@ -542,10 +503,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/korean/media-49590387',
+        path: isLive(appEnv) ? undefined : '/korean/media-23248686',
         smoke: false,
       },
     },
@@ -580,10 +538,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/kyrgyz/sapar-tv-48695523',
+        path: undefined,
         smoke: false,
       },
     },
@@ -610,10 +565,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/marathi/india-48062804',
+        path: undefined,
         smoke: false,
       },
     },
@@ -642,10 +594,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/mundo/noticias-49546078',
+        path: undefined,
         smoke: false,
       },
     },
@@ -702,10 +651,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/nepali/news-49613544',
+        path: undefined,
         smoke: false,
       },
     },
@@ -763,10 +709,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/pashto/afghanistan-49628873',
+        path: undefined,
         smoke: false,
       },
     },
@@ -801,10 +744,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/persian/world-49653162',
+        path: undefined,
         smoke: false,
       },
     },
@@ -859,10 +799,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/portuguese/geral-49602758',
+        path: undefined,
         smoke: false,
       },
     },
@@ -888,10 +825,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/punjabi/international-49567825',
+        path: isLive(appEnv) ? undefined : '/punjabi/media-23248705',
         smoke: false,
       },
     },
@@ -920,10 +854,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/russian/media-49281069',
+        path: undefined,
         smoke: false,
       },
     },
@@ -976,10 +907,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/serbian/srbija-49427344/lat',
+        path: undefined,
         smoke: false,
       },
     },
@@ -1012,10 +940,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/sinhala/sri-lanka-49411205',
+        path: isLive(appEnv) ? undefined : '/sinhala/23248970',
         smoke: false,
       },
     },
@@ -1049,10 +974,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/somali/media-48870869',
+        path: undefined,
         smoke: false,
       },
     },
@@ -1098,10 +1020,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/swahili/dira-tv-49602132',
+        path: undefined,
         smoke: false,
       },
     },
@@ -1134,10 +1053,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/tamil/science-49626264',
+        path: undefined,
         smoke: false,
       },
     },
@@ -1164,10 +1080,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/telugu/india-49647976',
+        path: undefined,
         smoke: false,
       },
     },
@@ -1194,7 +1107,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/thai/23122810',
+        path: isLive(appEnv) ? undefined : '/thai/thailand-23248713',
         smoke: false,
       },
     },
@@ -1224,10 +1137,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/tigrinya/news-49562338',
+        path: undefined,
         smoke: false,
       },
     },
@@ -1256,10 +1166,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/turkce/haberler-dunya-49655644',
+        path: undefined,
         smoke: false,
       },
     },
@@ -1289,10 +1196,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/ukchina/49375846/simp',
+        path: undefined,
         smoke: false,
       },
     },
@@ -1319,10 +1223,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/ukrainian/media-49656852',
+        path: undefined,
         smoke: false,
       },
     },
@@ -1357,10 +1258,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/urdu/pakistan-49644768',
+        path: undefined,
         smoke: false,
       },
     },
@@ -1393,10 +1291,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/uzbek/sport-23248721',
+        path: isLive(appEnv) ? undefined : '/uzbek/sport-23248721',
         smoke: false,
       },
     },
@@ -1425,10 +1320,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/vietnamese/media-49614583',
+        path: undefined,
         smoke: false,
       },
     },
@@ -1457,7 +1349,7 @@ const genServices = appEnv => ({
         path:
           isLive(appEnv) || isTest(appEnv)
             ? undefined
-            : '/yoruba/media-42985961',
+            : '/yoruba/media-23256797',
         smoke: false,
       },
     },
@@ -1487,10 +1379,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/zhongwen/chinese-news-49631219/simp',
+        path: undefined,
         smoke: false,
       },
     },

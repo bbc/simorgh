@@ -7,7 +7,7 @@ import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
 import headings from '../Headings';
 import timestamp from '../ArticleTimestamp';
-import text from '../Text';
+import text from '../CpsText';
 import image from '../Image';
 import MediaPlayer from '../CpsAssetMediaPlayer';
 import Blocks from '../Blocks';
