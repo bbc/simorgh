@@ -45,7 +45,7 @@ const Navigation = () => {
   );
 
   const dropdownListItems = (
-    <Dropdown>
+    <Dropdown id="dropdown-menu">
       <DropdownUl>
         {navigation.map((item, index) => {
           const { title, url } = item;
@@ -59,6 +59,7 @@ const Navigation = () => {
               active={active}
               currentPageText={currentPage}
               service={service}
+              dir={dir}
             >
               {title}
             </DropdownLi>

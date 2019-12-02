@@ -27,12 +27,15 @@ const CanonicalNavigationContainer = ({
         isOpen={isOpen}
         onOpen={() => setIsOpen(true)}
         onClose={() => setIsOpen(false)}
+        dir={dir}
       />
-      {isOpen ? dropdownListItems :
+      {isOpen ? (
+        dropdownListItems
+      ) : (
         <CanonicalScrollableNavigation dir={dir}>
           {scrollableListItems}
         </CanonicalScrollableNavigation>
-      }
+      )}
     </Navigation>
   );
 };

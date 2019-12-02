@@ -20,7 +20,11 @@ const AmpNavigationContainer = ({
       service={service}
       dir={dir}
     >
-      <AmpMenuButton announcedText="Menu" onToggle="" />
+      <AmpMenuButton
+        announcedText="Menu"
+        onToggle="dropdown-menu.toggleVisibility"
+        dir={dir}
+      />
       {dropdownListItems}
       <AmpScrollableNavigation dir={dir}>
         {scrollableListItems}
