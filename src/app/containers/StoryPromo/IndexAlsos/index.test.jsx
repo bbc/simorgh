@@ -3,7 +3,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { service as hausaConfig } from '#lib/config/services/hausa';
 import relatedItems from './relatedItems';
-import IndexAlsos from '.';
+import IndexAlsosContainer from '.';
 
 jest.mock('react', () => {
   const original = jest.requireActual('react');
@@ -25,11 +25,19 @@ describe('Index Alsos', () => {
 
   shouldMatchSnapshot(
     'should render multiple correctly',
-    <IndexAlsos alsoItems={relatedItems} script={latin} service="news" />,
+    <IndexAlsosContainer
+      alsoItems={relatedItems}
+      script={latin}
+      service="news"
+    />,
   );
 
   shouldMatchSnapshot(
     'should render one correctly',
-    <IndexAlsos alsoItems={[relatedItems[0]]} script={latin} service="news" />,
+    <IndexAlsosContainer
+      alsoItems={[relatedItems[0]]}
+      script={latin}
+      service="news"
+    />,
   );
 });

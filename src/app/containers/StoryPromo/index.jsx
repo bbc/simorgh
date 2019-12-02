@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { shape, bool, string, element, oneOfType } from 'prop-types';
-import StoryPromoComponent, {
+import StoryPromo, {
   Headline,
   Summary,
   Link,
@@ -20,7 +20,7 @@ import getLocator from './imageSrcHelpers/locator';
 import LinkContents from './LinkContents';
 import MediaIndicator from './MediaIndicator';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
-import IndexAlsos from './IndexAlsos';
+import IndexAlsosContainer from './IndexAlsos';
 
 const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   if (!imageValues) {
@@ -89,7 +89,7 @@ LiveComponent.propTypes = {
   headline: element.isRequired,
 };
 
-const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
+const StoryPromoContainer = ({ item, lazyLoadImage, topStory }) => {
   const { script, datetimeLocale, service, timezone, dir } = useContext(
     ServiceContext,
   );
@@ -153,7 +153,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
         />
       )}
       {topStory && relatedItems && (
-        <IndexAlsos
+        <IndexAlsosContainer
           alsoItems={relatedItems}
           script={script}
           service={service}
@@ -173,7 +173,7 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   );
 
   return (
-    <StoryPromoComponent
+    <StoryPromo
       image={Image}
       info={Info}
       mediaIndicator={
@@ -184,15 +184,15 @@ const StoryPromo = ({ item, lazyLoadImage, topStory }) => {
   );
 };
 
-StoryPromo.propTypes = {
+StoryPromoContainer.propTypes = {
   item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
   lazyLoadImage: bool,
   topStory: bool,
 };
 
-StoryPromo.defaultProps = {
+StoryPromoContainer.defaultProps = {
   lazyLoadImage: true,
   topStory: false,
 };
 
-export default StoryPromo;
+export default StoryPromoContainer;
