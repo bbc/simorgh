@@ -5,8 +5,8 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import BulletinContainer from '.';
 
 const tvBulletinItem = {
-  name: 'Test TV Bul promo live',
-  summary: 'Test TV Bul promo',
+  name: 'Test TV Bulletin promo',
+  summary: 'Test TV summary',
   indexImage: {
     id: '63711781',
     subType: 'index',
@@ -31,7 +31,7 @@ const liveTvBulletinItem = {
 };
 
 const radioBulletinItem = {
-  name: 'Test Radio Bul promo live',
+  name: 'Test Radio Bulletin promo',
   summary: 'Test Radio summary',
   indexImage: {
     id: '63711781',
@@ -88,9 +88,8 @@ describe('Bulletin Container', () => {
   describe('assertion tests', () => {
     it('should render the LIVE offscreen text', () => {
       const { container } = render(BulletinWithContext(liveTvBulletinItem));
+      const span = container.getElementsByTagName('span')[2];
 
-      const h3 = container.querySelector('h3');
-      const span = h3.getElementsByTagName('span')[2];
       expect(span.getAttribute('aria-hidden')).toBeDefined();
       expect(span.getAttribute('aria-hidden')).toEqual('true');
       expect(span.textContent).toEqual('LIVE');

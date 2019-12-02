@@ -76,6 +76,48 @@ const GalleryAssetType = {
   type: 'link',
 };
 
+const TVBulletinAssetType = {
+  name: 'Test TV Bulletin promo',
+  summary: 'Test TV summary',
+  indexImage: {
+    id: '63711781',
+    subType: 'index',
+    href: 'http://b.files.bbci.co.uk/4917/test/_63711781_clinton.jpg',
+    path: '/cpsdevpb/4917/test/_63711781_clinton.jpg',
+    height: 371,
+    width: 660,
+    altText: 'Clinton',
+    caption: 'Clinton',
+    copyrightHolder: 'BBC',
+  },
+  uri: 'https://www.bbc.co.uk/news',
+  contentType: 'TVBulletin',
+  assetTypeCode: 'PRO',
+  timestamp: 1565085977000,
+  type: 'link',
+};
+
+const RadioBulletinAssetType = {
+  name: 'Test Radio Bulletin promo',
+  summary: 'Test Radio summary',
+  indexImage: {
+    id: '63711781',
+    subType: 'index',
+    href: 'http://b.files.bbci.co.uk/4917/test/_63711781_clinton.jpg',
+    path: '/cpsdevpb/4917/test/_63711781_clinton.jpg',
+    height: 371,
+    width: 660,
+    altText: 'Clinton',
+    caption: 'Clinton',
+    copyrightHolder: 'BBC',
+  },
+  uri: 'https://www.bbc.co.uk/news',
+  contentType: 'RadioBulletin',
+  assetTypeCode: 'PRO',
+  timestamp: 1571655919000,
+  type: 'link',
+};
+
 const FeatureAssetType = {
   name: 'Test feature link promo',
   contentType: 'Feature',
@@ -391,6 +433,8 @@ describe('filterUnknownContentTypes', () => {
             AudioAssetType,
             VideoAssetType,
             GalleryAssetType,
+            TVBulletinAssetType,
+            RadioBulletinAssetType,
           ],
         },
       };
@@ -402,6 +446,8 @@ describe('filterUnknownContentTypes', () => {
             AudioAssetType,
             VideoAssetType,
             GalleryAssetType,
+            TVBulletinAssetType,
+            RadioBulletinAssetType,
           ],
         },
       };
@@ -466,6 +512,8 @@ describe('filterUnknownContentTypes', () => {
                 TextAssetType,
                 AudioAssetType,
                 FeatureAssetType,
+                TVBulletinAssetType,
+                RadioBulletinAssetType,
               ],
             },
           ],
@@ -475,7 +523,13 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             {
-              items: [TextAssetType, AudioAssetType, FeatureAssetType],
+              items: [
+                TextAssetType,
+                AudioAssetType,
+                FeatureAssetType,
+                TVBulletinAssetType,
+                RadioBulletinAssetType,
+              ],
             },
           ],
         },

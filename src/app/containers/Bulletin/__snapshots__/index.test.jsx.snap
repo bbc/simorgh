@@ -290,7 +290,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
             LIVE
           </span>
           <span>
-            Test Radio Bul promo live
+            Test Radio Bulletin promo
           </span>
         </span>
       </a>
@@ -625,7 +625,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
             LIVE
           </span>
           <span>
-            Test TV Bul promo live
+            Test TV Bulletin promo
           </span>
         </span>
       </a>
@@ -634,7 +634,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
       class="c8"
       type="video"
     >
-      Test TV Bul promo
+      Test TV summary
     </p>
     <div
       aria-hidden="true"
@@ -937,7 +937,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
             Listen,
           </span>
           <span>
-            Test Radio Bul promo live
+            Test Radio Bulletin promo
           </span>
         </span>
       </a>
@@ -1256,7 +1256,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
             Watch,
           </span>
           <span>
-            Test TV Bul promo live
+            Test TV Bulletin promo
           </span>
         </span>
       </a>
@@ -1265,7 +1265,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
       class="c7"
       type="video"
     >
-      Test TV Bul promo
+      Test TV summary
     </p>
     <div
       aria-hidden="true"
