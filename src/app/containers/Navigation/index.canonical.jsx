@@ -1,22 +1,18 @@
-import React, { useContext } from 'react';
-import Navigation, {
-  NavigationUl,
-  NavigationLi,
-} from '@bbc/psammead-navigation';
+import React from 'react';
+import Navigation from '@bbc/psammead-navigation';
+import { node, string, shape } from 'prop-types';
+import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { CanonicalScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { CanonicalMenuButton } from '@bbc/psammead-navigation/dropdown';
 
-const CanonicalNavigationContainer = () => {
-  const { script, translations, navigation, service, dir } = useContext(
-    ServiceContext,
-  );
-
-  const { currentPage, skipLinkText } = translations;
-
-  if (!navigation || navigation.length === 0) {
-    return null;
-  }
-
+const CanonicalNavigationContainer = ({
+  script,
+  service,
+  skipLinkText,
+  dir,
+  scrollableListItems,
+  dropdownListItems,
+}) => {
   return (
     <Navigation
       script={script}
@@ -24,29 +20,27 @@ const CanonicalNavigationContainer = () => {
       service={service}
       dir={dir}
     >
+      <CanonicalMenuButton
+        announcedText="Menu"
+        isOpen
+        onOpen={() => {}}
+        onClose={() => {}}
+      />
+      {dropdownListItems}
       <CanonicalScrollableNavigation dir={dir}>
-        <NavigationUl>
-          {navigation.map((item, index) => {
-            const { title, url } = item;
-            const active = index === 0;
-
-            return (
-              <NavigationLi
-                key={title}
-                url={url}
-                script={script}
-                active={active}
-                currentPageText={currentPage}
-                service={service}
-              >
-                {title}
-              </NavigationLi>
-            );
-          })}
-        </NavigationUl>
+        {scrollableListItems}
       </CanonicalScrollableNavigation>
     </Navigation>
   );
+};
+
+CanonicalNavigationContainer.propTypes = {
+  service: string.isRequired,
+  dir: string.isRequired,
+  script: shape(scriptPropType).isRequired,
+  skipLinkText: string.isRequired,
+  scrollableListItems: node.isRequired,
+  dropdownListItems: node.isRequired,
 };
 
 export default CanonicalNavigationContainer;
