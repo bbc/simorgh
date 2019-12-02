@@ -10,9 +10,9 @@ storiesOf('Containers|Copyright', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
-  .add('default', ({ service }) => {
+  .add('default', ({ service, variant }) => {
     const imageCaptionText =
-      services[service].imageCopyrightOffscreenText || 'Image source, ';
+      services[service][variant].imageCopyrightOffscreenText;
 
     const serviceContextStub = {
       imageCaptionOffscreenText: imageCaptionText,
