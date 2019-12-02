@@ -6225,7 +6225,7 @@ Object {
               "width": 320,
             },
             "isLive": true,
-            "name": "LIVE Igbo TV bulletin",
+            "name": "Igbo TV bulletin",
             "summary": "This is an Igbo TV bulletin promo, using a CPS promo for a TV Bulletin with the LIVE button checked",
             "timestamp": 1573483578000,
             "type": "link",
