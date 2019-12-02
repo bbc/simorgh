@@ -75,23 +75,19 @@ const renderPromo = (item, index, firstSection) => {
   const isBulletin =
     item.contentType === 'TVBulletin' || item.contentType === 'RadioBulletin';
 
-  if (isBulletin && !topStory) {
+  if (isBulletin) {
     return <BulletinContainer item={item} />;
   }
 
-  if (!isBulletin) {
-    const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
+  const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
 
-    return (
-      <StoryPromoContainer
-        item={item}
-        topStory={topStory}
-        lazyLoadImage={lazyLoadImage}
-      />
-    );
-  }
-
-  return null;
+  return (
+    <StoryPromoContainer
+      item={item}
+      topStory={topStory}
+      lazyLoadImage={lazyLoadImage}
+    />
+  );
 };
 
 const sectionBody = (group, items, script, service, isFirstSection) => {
