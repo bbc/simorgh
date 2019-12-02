@@ -87,7 +87,8 @@ export const optimoVideoBlock = {
                     model: {
                       copyrightHolder: 'BBC',
                       locator:
-                        'ichef.bbci.co.uk/images/ic/$recipe/p07jl8g4.jpg',
+                        'https://ichef.bbci.co.uk/images/ic/1024x576/p07jl8g4.jpg',
+                      originCode: 'pips',
                     },
                   },
                 ],
