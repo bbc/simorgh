@@ -151,11 +151,6 @@ exports[`Document Component should render correctly 1`] = `
     <div>
       <!--&lt;![endif]-->
     </div>
-    <script
-      type="text/javascript"
-    >
-      document.documentElement.className = document.documentElement.className.replace(/\\bno-js\\b/,'js');
-    </script>
   </body>
 </html>
 `;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
@@ -27,6 +27,13 @@ const Document = ({
   const headScript = helmet.script.toComponent();
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !isAmp;
+
+  useEffect(() => {
+    document.documentElement.className = document.documentElement.className.replace(
+      /\\bno-js\\b/,
+      'js',
+    );
+  }, []);
   const scriptTags = (
     <>
       <IfAboveIE9>{scripts}</IfAboveIE9>
@@ -73,15 +80,6 @@ const Document = ({
           />
         )}
         {scriptsAllowed && scriptTags}
-        {scriptsAllowed && (
-          <script
-            type="text/javascript"
-            /* eslint-disable-next-line react/no-danger */
-            dangerouslySetInnerHTML={{
-              __html: `document.documentElement.className = document.documentElement.className.replace(/\\bno-js\\b/,'js');`,
-            }}
-          />
-        )}
       </body>
     </html>
   );

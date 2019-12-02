@@ -2,7 +2,7 @@
 
 exports[`should match snapshot for News & International 1`] = `
 <html
-  classname="js"
+  class="js"
   dir="ltr"
   lang="en-gb"
 >
@@ -248,7 +248,7 @@ exports[`should match snapshot for News & International 1`] = `
 
 exports[`should match snapshot for Persian News & UK origin 1`] = `
 <html
-  classname="js"
+  class="js"
   dir="rtl"
   lang="fa"
 >

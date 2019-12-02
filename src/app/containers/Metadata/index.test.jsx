@@ -492,13 +492,13 @@ describe('MetadataContainer', () => {
   it('should render the classname attribute as js when onClient is true', async () => {
     await renderMetadataToDocument();
     const htmlEl = document.querySelector('html');
-    expect(htmlEl.getAttribute('classname')).toEqual('js');
+    expect(htmlEl.getAttribute('class')).toEqual('js');
   });
 
   it('should render the classname attribute as no-js when onClient is false', async () => {
     isOnClient = false;
     await renderMetadataToDocument();
     const htmlEl = document.querySelector('html');
-    expect(htmlEl.getAttribute('classname')).toEqual('no-js');
+    expect(htmlEl.getAttribute('class')).toEqual('no-js');
   });
 });

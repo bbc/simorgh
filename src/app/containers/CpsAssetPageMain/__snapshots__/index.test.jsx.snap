@@ -1454,7 +1454,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 <html
-  classname="js"
+  class="js"
   dir="ltr"
   lang="ig"
 >
