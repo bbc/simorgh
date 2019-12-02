@@ -281,7 +281,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
             class="c6"
             lang="en-GB"
           >
-            Listen LIVE,
+            Listen Live,
           </span>
           <span
             aria-hidden="true"
@@ -617,7 +617,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
             class="c6"
             lang="en-GB"
           >
-            Watch LIVE,
+            Watch Live,
           </span>
           <span
             aria-hidden="true"

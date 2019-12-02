@@ -30,7 +30,7 @@ const BulletinContainer = ({ item }) => {
 
   const isLive = pathOr(null, ['isLive'], item);
   const playCtaText = isLive ? `${ctaText} Live` : ctaText;
-  const offScreenText = isLive ? `${ctaText} LIVE` : ctaText;
+  const offScreenText = isLive ? `${ctaText} Live` : ctaText;
 
   return (
     <Bulletin
