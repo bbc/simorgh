@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
@@ -28,12 +28,6 @@ const Document = ({
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !isAmp;
 
-  useEffect(() => {
-    document.documentElement.className = document.documentElement.className.replace(
-      /\\bno-js\\b/,
-      'js',
-    );
-  }, []);
   const scriptTags = (
     <>
       <IfAboveIE9>{scripts}</IfAboveIE9>
