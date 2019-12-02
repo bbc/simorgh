@@ -7,7 +7,7 @@ import { tvBulletinItem, radioBulletinItem } from '#models/propTypes/bulletin';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const BulletinContainer = ({ item }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { script, service, dir, translations } = useContext(ServiceContext);
 
   const contentType = pathOr(null, ['contentType'], item);
   const isLive = pathOr(null, ['isLive'], item);
@@ -18,7 +18,10 @@ const BulletinContainer = ({ item }) => {
   const imageAlt = pathOr(null, ['indexImage', 'altText'], item);
   const bulletinImage = <Image src={imageSrc} alt={imageAlt} />;
 
-  const ctaText = contentType === 'TVBulletin' ? 'Watch' : 'Listen';
+  const watchText = pathOr('Watch', ['media', 'watch'], translations);
+  const listenText = pathOr('Listen', ['media', 'listen'], translations);
+
+  const ctaText = contentType === 'TVBulletin' ? watchText : listenText;
   const type = contentType === 'TVBulletin' ? 'video' : 'audio';
   const offScreenText = isLive ? `${ctaText} LIVE` : ctaText;
 
