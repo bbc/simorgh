@@ -110,6 +110,8 @@ const MediaPlayerContainer = ({
     translations,
   );
 
+  const nojsMessage = `This ${mediaInfo.type}  cannot play in your browser. Please enable Javascript or try a different browser.`;
+
   return (
     <>
       <Metadata aresMediaBlock={aresMediaBlock} />
@@ -130,6 +132,8 @@ const MediaPlayerContainer = ({
             title={iframeTitle}
             service={service}
             mediaInfo={mediaInfo}
+            nojsMessage={nojsMessage}
+            noJsClassName="no-js"
           />
         )}
         {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
