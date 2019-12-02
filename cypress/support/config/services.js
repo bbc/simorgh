@@ -208,7 +208,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/bengali/articles/c6p3yp5zzmeo',
+        path: isLive(appEnv)
+          ? '/bengali/articles/cv90149zq1eo'
+          : '/bengali/articles/c6p3yp5zzmeo',
         smoke: false,
       },
       errorPage404: {
@@ -333,7 +335,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/gujarati/articles/cr5el5kw591o',
+        path: isLive(appEnv)
+          ? '/gujarati/articles/c2rnxj48elwo'
+          : '/gujarati/articles/cr5el5kw591o',
         smoke: false,
       },
       errorPage404: {
@@ -395,7 +399,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/hindi/articles/c0469479x9xo',
+        path: isLive(appEnv)
+          ? '/hindi/articles/cd80y3ezl8go'
+          : '/hindi/articles/c0469479x9xo',
         smoke: false,
       },
       errorPage404: {
@@ -579,7 +585,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/marathi/articles/cp47g4myxz7o',
+        path: isLive(appEnv)
+          ? '/marathi/articles/cvjxwvn04yjo'
+          : '/marathi/articles/cp47g4myxz7o',
         smoke: false,
       },
       errorPage404: {
@@ -659,7 +667,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/nepali/articles/cl90j9m3mn6o',
+        path: isLive(appEnv)
+          ? '/nepali/articles/c16ljg1v008o'
+          : '/nepali/articles/cl90j9m3mn6o',
         smoke: false,
       },
       errorPage404: {
@@ -839,7 +849,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/punjabi/articles/c0l79lr39qyo',
+        path: isLive(appEnv)
+          ? '/punjabi/articles/c39p51156lyo'
+          : '/punjabi/articles/c0l79lr39qyo',
         smoke: false,
       },
       errorPage404: {
@@ -948,7 +960,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/sinhala/articles/c45w255zlexo',
+        path: isLive(appEnv)
+          ? '/sinhala/articles/cldr38jnwd2o'
+          : '/sinhala/articles/c45w255zlexo',
         smoke: false,
       },
       errorPage404: {
@@ -1061,7 +1075,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/tamil/articles/cwl08ll3me8o',
+        path: isLive(appEnv)
+          ? '/tamil/articles/cvr4752gr13o'
+          : '/tamil/articles/cwl08ll3me8o',
         smoke: false,
       },
       errorPage404: {
@@ -1094,7 +1110,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/telugu/articles/cq0y4008d4vo',
+        path: isLive(appEnv)
+          ? '/telugu/articles/c1x76pey3x3o'
+          : '/telugu/articles/cq0y4008d4vo',
         smoke: false,
       },
       errorPage404: {
