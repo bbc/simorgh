@@ -22,6 +22,7 @@ const {
   getProducer,
   getAtiUrl,
   getClickInfo,
+  getLibraryVersion,
 } = require('./index');
 
 let locServeCookieValue;
@@ -493,5 +494,44 @@ describe('getAtUserId', () => {
     Cookie.getJSON = jest.fn().mockReturnValue({ val });
     id = getAtUserId();
     expect(id).toBe(val);
+  });
+});
+
+describe('getLibraryVersion', () => {
+  describe('For amp pages and canonical pages using client-side Javascript', () => {
+    const libraryVersionScenarios = [
+      {
+        platform: 'amp',
+        expected: 'simorgh',
+        summary: 'should return `simorgh` for amp',
+      },
+      {
+        platform: 'canonical',
+        expected: 'simorgh',
+        summary: 'should return `simorgh` for canonical',
+      },
+    ];
+
+    libraryVersionScenarios.forEach(({ platform, expected, summary }) => {
+      it(summary, () => {
+        const libraryVersion = getLibraryVersion(platform);
+        expect(libraryVersion).toEqual(expected);
+      });
+    });
+  });
+
+  describe('For canonical non-js pages', () => {
+    beforeEach(() => {
+      isOnClient = false;
+    });
+
+    afterEach(() => {
+      isOnClient = true;
+    });
+
+    it('should return `simorgh-nojs` when on non-js page', () => {
+      const libraryVersion = getLibraryVersion();
+      expect(libraryVersion).toEqual('simorgh-nojs');
+    });
   });
 });
