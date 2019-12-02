@@ -29,7 +29,6 @@ const BulletinContainer = ({ item }) => {
   const ctaText = contentType === 'TVBulletin' ? watchText : listenText;
 
   const isLive = pathOr(null, ['isLive'], item);
-  const playCtaText = isLive ? `${ctaText} Live` : ctaText;
   const offScreenText = isLive ? `${ctaText} Live` : ctaText;
 
   return (
@@ -42,7 +41,7 @@ const BulletinContainer = ({ item }) => {
       headlineText={headline}
       summaryText={summary}
       ctaLink={ctaLink}
-      ctaText={playCtaText}
+      ctaText={ctaText}
       offScreenText={offScreenText}
       dir={dir}
     />

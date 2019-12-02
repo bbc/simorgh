@@ -326,7 +326,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
           />
         </svg>
       </span>
-      Listen Live
+      Listen
     </div>
   </div>
 </div>
@@ -659,7 +659,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
           />
         </svg>
       </span>
-      Watch Live
+      Watch
     </div>
   </div>
 </div>
