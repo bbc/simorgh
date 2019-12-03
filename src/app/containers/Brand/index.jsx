@@ -30,8 +30,7 @@ const BrandContainer = props => {
       <ScriptLink
         script={latin}
         service={service}
-        href={pathname}
-        variant={otherVariant}
+        href={pathname.replace(`/${otherVariant}`)}
       >
         <span aria-hidden>{otherVariant.toUpperCase()}</span>
         <VisuallyHiddenText>Use {otherVariant} variant</VisuallyHiddenText>

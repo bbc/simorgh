@@ -2,10 +2,6 @@ import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ArticleContainer from './index';
 
-jest.mock('#contexts/UserContext/usePreferredVariant', () =>
-  jest.fn().mockImplementation(() => [null, jest.fn()]),
-);
-
 // explicitly ignore console.log errors for Article/index:getInitialProps() error logging
 global.console.log = jest.fn();
 

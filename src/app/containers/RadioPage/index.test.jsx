@@ -3,10 +3,6 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import RadioPage from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 
-jest.mock('#contexts/UserContext/usePreferredVariant', () =>
-  jest.fn().mockImplementation(() => ['cyr', jest.fn()]),
-);
-
 const liveRadioScaffoldProps = {
   isAmp: false,
   pageType: 'media',

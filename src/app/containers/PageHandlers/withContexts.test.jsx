@@ -13,10 +13,6 @@ import { UserContext } from '#contexts/UserContext';
 
 jest.mock('#contexts/RequestContext/getOriginContext', () => jest.fn());
 
-jest.mock('#contexts/UserContext/usePreferredVariant', () =>
-  jest.fn().mockImplementation(() => ['cyr', jest.fn()]),
-);
-
 getOriginContext.mockImplementation(origin => ({
   isUK: true,
   origin,
