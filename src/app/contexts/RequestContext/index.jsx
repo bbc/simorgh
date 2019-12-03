@@ -24,10 +24,11 @@ export const RequestContextProvider = ({
   variant,
 }) => {
   const origin = getOriginContext(bbcOrigin);
+  const isUK = !isNotUK(bbcCountry);
   const env = getEnv(origin);
   const platform = isAmp ? 'amp' : 'canonical';
   const statsDestination = getStatsDestination({
-    isNotUK: isNotUK(bbcCountry),
+    isUK,
     env,
     service,
   });
@@ -40,7 +41,7 @@ export const RequestContextProvider = ({
   const value = {
     env,
     id,
-    isUK: !isNotUK(bbcCountry),
+    isUK,
     origin,
     pageType,
     platform,

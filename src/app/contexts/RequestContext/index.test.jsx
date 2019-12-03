@@ -87,7 +87,7 @@ describe('RequestContext', () => {
 
     expect(getStatsDestination.default).toHaveBeenCalledWith({
       env: 'getEnv',
-      isNotUK: false,
+      isUK: true,
       service: 'service',
     });
 
