@@ -16,18 +16,18 @@ const WithVariant = Component => {
     // If no variant in path and service has a default variant which isn't 'default'.
     if (!sanitizedVariant && defaultVariant && defaultVariant !== 'default') {
       const preferredVariant = getPreferredVariant(service);
-      const usedVariant = preferredVariant || defaultVariant;
       return (
         <Redirect
           to={{
             ...location,
-            pathname: `${location.pathname}/${usedVariant}`,
+            pathname: `${location.pathname}/${preferredVariant ||
+              defaultVariant}`,
           }}
         />
       );
     }
 
-    if (variant) setPreferredVariant(service, variant);
+    if (variant) setPreferredVariant(service, sanitizedVariant);
 
     return <Component {...props} />;
   };

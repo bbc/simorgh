@@ -47,6 +47,7 @@ export const RequestContextProvider = ({
     statusCode,
     previousPath,
     variant,
+    pathname,
     ...getMetaUrls(origin, pathname),
   };
 

@@ -70,6 +70,7 @@ const expectedOutput = {
   ampUkLink: 'ampUkLink',
   canonicalNonUkLink: 'canonicalNonUkLink',
   ampNonUkLink: 'ampNonUkLink',
+  pathname: '/current-path',
 };
 
 describe('RequestContext', () => {

@@ -35,14 +35,16 @@ describe(`BrandContainer`, () => {
 });
 
 describe('BrandContainer with variant', () => {
+  const service = 'serbian';
+  const variant = 'cyr';
   shouldMatchSnapshot(
     'should render correctly',
     BrandContainerWithContext(
       {
         ...newsServiceContextStub,
-        service: 'serbian',
+        service,
       },
-      { variant: 'cyr' },
+      { variant, pathname: `/${service}/${variant}` },
     ),
   );
 });

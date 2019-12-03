@@ -16,21 +16,22 @@ const BrandContainer = props => {
     service,
     theming,
   } = useContext(ServiceContext);
-  const { variant, pageType, pathname } = useContext(RequestContext);
+  const { variant, pathname } = useContext(RequestContext);
   const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
   const svgRatio = brandSVG && brandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
+
   let scriptLink = null;
   const otherVariant = getOtherVariant(service, variant);
-  if (otherVariant && (pageType === 'article' || pageType === 'frontPage')) {
+  if (otherVariant) {
     scriptLink = (
       <ScriptLink
         script={latin}
         service={service}
-        href={pathname.replace(`/${otherVariant}`)}
+        href={pathname.replace(`/${variant}`, `/${otherVariant}`)}
       >
         <span aria-hidden>{otherVariant.toUpperCase()}</span>
         <VisuallyHiddenText>Use {otherVariant} variant</VisuallyHiddenText>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { useParams, useLocation } from 'react-router-dom';
+import { getPreferredVariant } from '#contexts/UserContext/cookies';
 import withVariant from '.';
 
 jest.mock('react-router-dom', () => ({
@@ -8,6 +9,11 @@ jest.mock('react-router-dom', () => ({
   useLocation: jest.fn(),
   // eslint-disable-next-line react/prop-types
   Redirect: ({ to: { pathname } }) => <p>You are going to {pathname}</p>,
+}));
+
+jest.mock('#contexts/UserContext/cookies', () => ({
+  getPreferredVariant: jest.fn(),
+  setPreferredVariant: jest.fn(),
 }));
 
 const Component = () => <h1>This is the BBC.</h1>;
@@ -35,30 +41,48 @@ describe('withVariant', () => {
     jest.clearAllMocks();
   });
 
-  describe('service with no default variant', () => {
-    testServiceVariantRedirect({
-      service: 'news',
+  describe('navigating to page without variant', () => {
+    describe('service with no default variant', () => {
+      testServiceVariantRedirect({
+        service: 'news',
+      });
+    });
+
+    describe('service (ukchina) with default variant', () => {
+      testServiceVariantRedirect({
+        service: 'ukchina',
+        redirectTo: '/ukchina/trad',
+      });
+    });
+
+    describe('service (zhongwen) with default variant', () => {
+      testServiceVariantRedirect({
+        service: 'zhongwen',
+        redirectTo: '/zhongwen/trad',
+      });
+    });
+
+    describe('service (serbian) with default variant', () => {
+      testServiceVariantRedirect({
+        service: 'serbian',
+        redirectTo: '/serbian/lat',
+      });
+    });
+
+    describe('service (serbian) with preferred variant', () => {
+      getPreferredVariant.mockReturnValue('cyr');
+      testServiceVariantRedirect({
+        service: 'serbian',
+        redirectTo: '/serbian/cyr',
+      });
     });
   });
 
-  describe('service (ukchina) with default variant', () => {
-    testServiceVariantRedirect({
-      service: 'ukchina',
-      redirectTo: '/ukchina/trad',
-    });
-  });
-
-  describe('service (zhongwen) with default variant', () => {
-    testServiceVariantRedirect({
-      service: 'zhongwen',
-      redirectTo: '/zhongwen/trad',
-    });
-  });
-
-  describe('service (serbian) with default variant', () => {
+  describe('navigating to page with variant', () => {
+    getPreferredVariant.mockReturnValue('lat');
     testServiceVariantRedirect({
       service: 'serbian',
-      redirectTo: '/serbian/lat',
+      variant: '/cyr',
     });
   });
 });
