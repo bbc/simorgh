@@ -39,6 +39,7 @@ const generateImageBlock = block => {
           model: {
             copyrightHolder: path(['image', 'copyrightHolder'], block),
             locator: path(['image', 'href'], block),
+            originCode: 'pips',
           },
         },
       ],
