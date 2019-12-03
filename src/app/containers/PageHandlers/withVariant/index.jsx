@@ -1,50 +1,30 @@
-import PropTypes from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
 import React from 'react';
 import { useParams, useLocation, Redirect } from 'react-router-dom';
-import getVariantRedirectUrl from './getVariantRedirectUrl';
+import { variantSanitiser, getVariant } from '#lib/utilities/variantHandler';
 
 const WithVariant = Component => {
   const VariantContainer = props => {
     const { service, variant } = useParams();
     const location = useLocation();
+    const defaultVariant = getVariant({ service, variant });
+    const sanitizedVariant = variantSanitiser(variant);
 
-    const { path, params } = pathOr({}, ['match'], props);
-
-    const redirectPath = getVariantRedirectUrl({
-      path,
-      params,
-      service,
-      variant,
-    });
-
-    if (!redirectPath) {
-      return <Component {...props} />;
+    // If no variant in path and service has a default variant which isn't 'default'.
+    if (!sanitizedVariant && defaultVariant && defaultVariant !== 'default') {
+      return (
+        <Redirect
+          to={{
+            ...location,
+            pathname: `${location.pathname}/${defaultVariant}`,
+          }}
+        />
+      );
     }
 
-    return (
-      <Redirect
-        to={{
-          ...location,
-          pathname: redirectPath,
-        }}
-      />
-    );
+    return <Component {...props} />;
   };
 
   return VariantContainer;
-};
-
-WithVariant.propTypes = {
-  match: PropTypes.shape({
-    path: PropTypes.string,
-    params: PropTypes.shape({
-      service: PropTypes.node,
-      variant: PropTypes.node,
-      local: PropTypes.node,
-      id: PropTypes.node,
-    }).isRequired,
-  }).isRequired,
 };
 
 export default WithVariant;
