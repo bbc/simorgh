@@ -69,6 +69,10 @@ const escapedText = text => {
   return text.replace(replacementsRegex, match => textReplacements[match]);
 };
 
+const getBlockTextAtIndex = (index, originalPageData) => {
+  return path(['content', 'blocks', index, 'text'], originalPageData);
+};
+
 describe('CpsAssetPageMain', () => {
   it('should match snapshot for STY', async () => {
     const pageData = await preprocessor(
@@ -94,10 +98,7 @@ describe('CpsAssetPageMain', () => {
     });
 
     it('with paragraph', () => {
-      const paragraphText = path(
-        ['content', 'blocks', 3, 'text'],
-        pidginPageData,
-      );
+      const paragraphText = getBlockTextAtIndex(3, pidginPageData);
 
       expect(getByText(escapedText(paragraphText))).toBeInTheDocument();
       expect(asFragment()).toMatchSnapshot();
@@ -116,6 +117,10 @@ describe('CpsAssetPageMain', () => {
 
     describe('AV player', () => {
       let liveStreamSource;
+
+      const getLiveStreamBlock = processedPageData => {
+        return path(['content', 'model', 'blocks', 1], processedPageData);
+      };
 
       const getLiveStreamSource = liveStreamBlock => {
         return path(
@@ -137,10 +142,7 @@ describe('CpsAssetPageMain', () => {
 
       it('with version (live audio stream)', async () => {
         pageData = await preprocessor(uzbekPageData, cpsAssetPreprocessorRules);
-        const liveStreamBlock = path(
-          ['content', 'model', 'blocks', 1],
-          pageData,
-        );
+        const liveStreamBlock = getLiveStreamBlock(pageData);
         liveStreamSource = getLiveStreamSource(liveStreamBlock);
         expect(liveStreamBlock.type).toBe('version');
 
@@ -153,10 +155,7 @@ describe('CpsAssetPageMain', () => {
       });
 
       it('with video', () => {
-        const liveStreamBlock = path(
-          ['content', 'model', 'blocks', 1],
-          pageData,
-        );
+        const liveStreamBlock = getLiveStreamBlock(pageData);
         liveStreamSource = getLiveStreamSource(liveStreamBlock);
         expect(liveStreamBlock.type).toBe('video');
 
@@ -170,26 +169,24 @@ describe('CpsAssetPageMain', () => {
     describe('heading', () => {
       let headingText;
 
+      const getBlockAtIndex = (index, processedPageData) => {
+        return path(['content', 'model', 'blocks', index], processedPageData);
+      };
+
       beforeAll(() => {
-        headingText = path(['content', 'blocks', 2, 'text'], pidginPageData);
+        headingText = getBlockTextAtIndex(2, pidginPageData);
         expect(asFragment()).toMatchSnapshot();
       });
 
       it('as faux headline', () => {
-        const fauxHeadlineBlock = path(
-          ['content', 'model', 'blocks', 2],
-          pageData,
-        );
+        const fauxHeadlineBlock = getBlockAtIndex(2, pageData);
 
         expect(fauxHeadlineBlock.type).toBe('fauxHeadline');
         expect(getByText(escapedText(headingText))).toBeInTheDocument();
       });
 
       it('as visually hidden headline', () => {
-        const hiddenHeadline = path(
-          ['content', 'model', 'blocks', 0],
-          pageData,
-        );
+        const hiddenHeadline = getBlockAtIndex(0, pageData);
 
         expect(hiddenHeadline.type).toBe('visuallyHiddenHeadline');
         expect(getByText(escapedText(headingText))).toBeInTheDocument();
@@ -197,20 +194,14 @@ describe('CpsAssetPageMain', () => {
     });
 
     it('with sub heading', () => {
-      const subHeadingText = path(
-        ['content', 'blocks', 3, 'text'],
-        pidginPageData,
-      );
+      const subHeadingText = getBlockTextAtIndex(3, pidginPageData);
 
       expect(getByText(escapedText(subHeadingText))).toBeInTheDocument();
       expect(asFragment()).toMatchSnapshot();
     });
 
     it('with crosshead', () => {
-      const crossHeadText = path(
-        ['content', 'blocks', 4, 'text'],
-        pidginPageData,
-      );
+      const crossHeadText = getBlockTextAtIndex(4, pidginPageData);
 
       expect(getByText(escapedText(crossHeadText))).toBeInTheDocument();
       expect(asFragment()).toMatchSnapshot();
