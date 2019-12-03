@@ -84,7 +84,7 @@ describe('CpsAssetPageMain', () => {
     await matchSnapshotAsync(page);
   });
 
-  describe('should render MAP', () => {
+  describe('MAP', () => {
     let pageData;
     let asFragment;
     let getByText;
@@ -97,14 +97,14 @@ describe('CpsAssetPageMain', () => {
       ));
     });
 
-    it('with paragraph', () => {
-      const paragraphText = getBlockTextAtIndex(3, pidginPageData);
+    it('should render paragraph', () => {
+      const paragraphText = getBlockTextAtIndex(1, pidginPageData);
 
       expect(getByText(escapedText(paragraphText))).toBeInTheDocument();
       expect(asFragment()).toMatchSnapshot();
     });
 
-    it('with image', () => {
+    it('should render image', () => {
       const imageCaption = path(
         ['content', 'blocks', 25, 'caption'],
         pidginPageData,
@@ -140,7 +140,7 @@ describe('CpsAssetPageMain', () => {
         );
       };
 
-      it('with version (live audio stream)', async () => {
+      it('should render version (live audio stream)', async () => {
         pageData = await preprocessor(uzbekPageData, cpsAssetPreprocessorRules);
         const liveStreamBlock = getLiveStreamBlock(pageData);
         liveStreamSource = getLiveStreamSource(liveStreamBlock);
@@ -154,7 +154,7 @@ describe('CpsAssetPageMain', () => {
         expect(asFragment()).toMatchSnapshot();
       });
 
-      it('with video', () => {
+      it('should render video', () => {
         const liveStreamBlock = getLiveStreamBlock(pageData);
         liveStreamSource = getLiveStreamSource(liveStreamBlock);
         expect(liveStreamBlock.type).toBe('video');
@@ -173,19 +173,19 @@ describe('CpsAssetPageMain', () => {
         return path(['content', 'model', 'blocks', index], processedPageData);
       };
 
-      beforeAll(() => {
+      beforeEach(() => {
         headingText = getBlockTextAtIndex(2, pidginPageData);
         expect(asFragment()).toMatchSnapshot();
       });
 
-      it('as faux headline', () => {
+      it('should render faux headline', () => {
         const fauxHeadlineBlock = getBlockAtIndex(2, pageData);
 
         expect(fauxHeadlineBlock.type).toBe('fauxHeadline');
         expect(getByText(escapedText(headingText))).toBeInTheDocument();
       });
 
-      it('as visually hidden headline', () => {
+      it('should render visually hidden headline', () => {
         const hiddenHeadline = getBlockAtIndex(0, pageData);
 
         expect(hiddenHeadline.type).toBe('visuallyHiddenHeadline');
@@ -193,21 +193,21 @@ describe('CpsAssetPageMain', () => {
       });
     });
 
-    it('with sub heading', () => {
+    it('should render sub heading', () => {
       const subHeadingText = getBlockTextAtIndex(3, pidginPageData);
 
       expect(getByText(escapedText(subHeadingText))).toBeInTheDocument();
       expect(asFragment()).toMatchSnapshot();
     });
 
-    it('with crosshead', () => {
+    it('should render crosshead', () => {
       const crossHeadText = getBlockTextAtIndex(4, pidginPageData);
 
       expect(getByText(escapedText(crossHeadText))).toBeInTheDocument();
       expect(asFragment()).toMatchSnapshot();
     });
 
-    it('with timestamp', () => {
+    it('should render timestamp', () => {
       expect(document.querySelector('div[class^=PopOut]')).not.toBeNull();
     });
   });
