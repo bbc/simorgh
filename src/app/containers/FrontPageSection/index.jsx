@@ -72,14 +72,14 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
 
 const renderPromo = (item, index, firstSection) => {
   const topStory = firstSection && index === 0;
+  const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
+
   const isBulletin =
     item.contentType === 'TVBulletin' || item.contentType === 'RadioBulletin';
 
   if (isBulletin) {
-    return <BulletinContainer item={item} />;
+    return <BulletinContainer item={item} lazyLoadImage={lazyLoadImage} />;
   }
-
-  const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
 
   return (
     <StoryPromoContainer

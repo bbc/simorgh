@@ -1,21 +1,23 @@
-import { string, shape } from 'prop-types';
+import { shape, string, number } from 'prop-types';
+
+export const itemImage = {
+  path: string,
+  height: number,
+  width: number,
+  altText: string,
+  copyrightHolder: string,
+};
 
 export const tvBulletinItem = {
   name: string.isRequired,
   summary: string,
-  indexImage: shape({
-    href: string.isRequired,
-    altText: string.isRequired,
-  }),
+  indexImage: shape(itemImage),
   uri: string.isRequired,
 };
 
 export const radioBulletinItem = {
   name: string.isRequired,
   summary: string,
-  indexImage: shape({
-    href: string.isRequired,
-    altText: string.isRequired,
-  }),
+  indexImage: shape(itemImage),
   uri: string.isRequired,
 };
