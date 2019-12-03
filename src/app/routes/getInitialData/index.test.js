@@ -6,7 +6,7 @@ jest.mock('#lib/utilities/preprocessor', () => jest.fn());
 preprocess.mockImplementation(data => data);
 
 const fetchData = require('./index').default;
-const { getUrl } = require('./index');
+const { logger, getUrl } = require('./index');
 
 describe('fetchData', () => {
   const mockSuccessfulResponse = {
@@ -50,7 +50,7 @@ describe('fetchData', () => {
     jest.clearAllMocks();
   });
 
-  describe('Succesful fetch', () => {
+  describe('Successful fetch', () => {
     it('should call fetch with correct url', async () => {
       await callfetchData({});
 
@@ -294,7 +294,9 @@ describe('fetchData', () => {
 
   describe('Request returns 200 status code, but invalid JSON', () => {
     it('should return a 502 error code', async () => {
-      const response = await callfetchData({ mockFetch: mockFetchInvalidJSON });
+      const response = await callfetchData({
+        mockFetch: mockFetchInvalidJSON,
+      });
 
       expect(preprocess).not.toHaveBeenCalled();
 
@@ -345,28 +347,39 @@ describe('fetchData', () => {
       );
     });
 
-    it('should append renderer_env query string if it is `int`', () => {
+    it('should append renderer_env query string if it is the only parameter', () => {
       expect(getUrl('/test/article?renderer_env=int')).toEqual(
         'http://localhost/test/article.json?renderer_env=int',
       );
     });
 
-    it('should append renderer_env query string if it is `test`', () => {
-      expect(getUrl('/test/article?renderer_env=test')).toEqual(
-        'http://localhost/test/article.json?renderer_env=test',
+    it('should append renderer_env query string if it is the first parameter in the list', () => {
+      expect(
+        getUrl('/test/article?renderer_env=test&another_param=bob'),
+      ).toEqual(
+        'http://localhost/test/article.json?renderer_env=test&another_param=bob',
       );
     });
 
-    it('should append renderer_env query string if it is `live`', () => {
-      expect(getUrl('/test/article?renderer_env=live')).toEqual(
-        'http://localhost/test/article.json?renderer_env=live',
+    it('should append renderer_env query string if it is not the first parameter in the list', () => {
+      expect(getUrl('/test/article?first_param=bob&renderer_env=live')).toEqual(
+        'http://localhost/test/article.json?first_param=bob&renderer_env=live',
       );
     });
 
-    it('should not append renderer_env query string if it is invalid', () => {
-      expect(getUrl('/test/article?renderer_env=bob')).toEqual(
-        'http://localhost/test/article.json',
+    it('should append renderer_env query string case insensitive', () => {
+      expect(getUrl('/test/article?first_param=bob&rendERER_env=LiVe')).toEqual(
+        'http://localhost/test/article.json?first_param=bob&renderer_env=live',
       );
+    });
+
+    it('should log invalid value for renderer_env query string', () => {
+      const loggerSpy = jest.spyOn(logger, 'warn');
+      getUrl('/test/article?renderer_env=bob');
+      expect(loggerSpy).toHaveBeenCalledWith(
+        'Invalid parameter value [renderer_env=bob]. Usage: renderer_env=int|test|live',
+      );
+      loggerSpy.mockRestore();
     });
   });
 });

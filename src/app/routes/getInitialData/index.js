@@ -6,11 +6,10 @@ import onClient from '#lib/utilities/onClient';
 import getBaseUrl from './utils/getBaseUrl';
 import getPreprocessorRules from './utils/getPreprocessorRules';
 
-const logger = nodeLogger(__filename);
+export const logger = nodeLogger(__filename);
 const STATUS_CODE_OK = 200;
 const STATUS_CODE_BAD_GATEWAY = 502;
 const STATUS_CODE_NOT_FOUND = 404;
-const RENDERER_ENV = 'renderer_env';
 const upstreamStatusCodesToPropagate = [STATUS_CODE_OK, STATUS_CODE_NOT_FOUND];
 const validRendererEnvironments = ['int', 'test', 'live'];
 
@@ -20,28 +19,34 @@ const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)
   : process.env.SIMORGH_BASE_URL;
 
+// eslint-disable-next-line consistent-return
 export const getUrl = pathname => {
-  const index = pathname.indexOf(RENDERER_ENV) + 1;
-  let environment;
-  let finalPath = pathname;
-  let renderer = '';
+  if (pathname) {
+    const regex = /renderer_env=(.*)&?/i;
+    const [match, environment] = pathname.match(regex) || [];
+    let finalPath = pathname;
+    let params =
+      pathname.lastIndexOf('?') > 0
+        ? pathname.substring(pathname.lastIndexOf('?'))
+        : '';
 
-  if (index > 0) {
-    environment = pathname.substring(index + RENDERER_ENV.length);
+    if (params) {
+      finalPath = pathname.substring(0, pathname.indexOf(params));
 
-    if (validRendererEnvironments.includes(environment)) {
-      renderer = `?${RENDERER_ENV}=${environment}`;
-    } else {
-      logger.warn(
-        `Invalid renderer environment - value should be one of ${validRendererEnvironments}`,
-      );
+      if (match) {
+        params = params.replace(match, match.toLowerCase());
+        if (!validRendererEnvironments.includes(environment.toLowerCase())) {
+          logger.warn(
+            `Invalid parameter value [${match}]. Usage: renderer_env=${validRendererEnvironments.join(
+              '|',
+            )}`,
+          );
+        }
+      }
     }
 
-    // Remove the ? preceding the renderer_env string
-    finalPath = pathname.substring(0, index - 2);
+    return `${baseUrl}${finalPath.replace(ampRegex, '')}.json${params}`;
   }
-
-  return `${baseUrl}${finalPath.replace(ampRegex, '')}.json${renderer}`;
 };
 
 const handleResponse = async response => {
