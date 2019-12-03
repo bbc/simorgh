@@ -1238,7 +1238,7 @@ exports[`should match for WS Media liveradio 1`] = `
       name="twitter:card"
     />
     <meta
-      content="@bbcworld"
+      content="@bbcnews"
       name="twitter:creator"
     />
     <meta
@@ -1254,7 +1254,7 @@ exports[`should match for WS Media liveradio 1`] = `
       name="twitter:image:src"
     />
     <meta
-      content="@bbcworld"
+      content="@bbcnews"
       name="twitter:site"
     />
     <meta

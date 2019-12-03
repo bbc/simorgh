@@ -68,6 +68,7 @@ export const optimoVersionBlock = {
                       copyrightHolder: 'BBC',
                       locator:
                         'http://b.files.bbci.co.uk/15E0C/test/_63721698_p01kx435.jpg',
+                      originCode: 'pips',
                     },
                   },
                 ],
