@@ -25,6 +25,8 @@ import {
   getLang,
 } from './utils';
 
+import AmpScript from '../AmpScript';
+
 const componentsToRender = {
   headline: headings,
   subheadline: headings,
@@ -70,10 +72,12 @@ const ArticleMain = ({ articleData: data }) => {
       />
       <main role="main">
         <GhostGrid>
-          <Blocks
+          {/* scriptSrc = file name in the /data/amp-script/ */}
+          <AmpScript scriptSrc="test.js" data-ampdevmode="tue" />{' '}
+          {/* <Blocks
             blocks={path(['content', 'model', 'blocks'], data)}
             componentsToRender={componentsToRender}
-          />
+          /> */}
         </GhostGrid>
       </main>
     </>
