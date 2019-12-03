@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { UserContext } from '../../contexts/UserContext';
 import { RequestContext } from '../../contexts/RequestContext';
@@ -17,24 +17,24 @@ const ChartbeatAnalytics = ({ data }) => {
   const isAmpAndEnabled = platform === 'amp' && enabled;
   const isCanonicalAndEnabled = platform === 'canonical' && enabled;
 
-  const chartbeatConfig = useMemo(() => {
-    return getConfig({
-      platform,
-      pageType,
-      data,
-      brandName,
-      env,
-      service,
-      origin,
-      previousPath,
-    });
-  }, [platform, pageType, data, brandName, env, service, origin, previousPath]);
+  const configDependencies = {
+    platform,
+    pageType,
+    data,
+    brandName,
+    env,
+    service,
+    origin,
+    previousPath,
+  };
+
+  const chartbeatConfig = getConfig(configDependencies);
 
   useEffect(() => {
     if (isCanonicalAndEnabled) {
       sendCanonicalChartbeatBeacon(chartbeatConfig);
     }
-  }, [chartbeatConfig, sendCanonicalChartbeatBeacon, isCanonicalAndEnabled]);
+  }, [...Object.values(configDependencies), isCanonicalAndEnabled]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     isAmpAndEnabled && <AmpChartbeatBeacon chartbeatConfig={chartbeatConfig} />
