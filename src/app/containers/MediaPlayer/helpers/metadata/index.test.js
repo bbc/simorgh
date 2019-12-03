@@ -19,14 +19,15 @@ describe('helper', () => {
   describe('mediaPlayerMetadata', () => {
     it('returns correct video metadata', () => {
       const aresMediaBlocks = validAresMediaVideoBlock.model.blocks;
-      const metadata = mediaPlayerMetadata(aresMediaBlocks);
+      const metadata = mediaPlayerMetadata(aresMediaBlocks, embedSource);
       const output = {
         '@context': 'http://schema.org',
         '@type': 'VideoObject',
         description:
           'They may be tiny, but us humans could learn a thing or two from ants.',
         duration: 'PT3M11S',
-        embedURL: null,
+        embedURL:
+          'https://www.test.bbc.com/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6mtv/en-GB',
         name: 'Five things ants can teach us about management',
         thumbnailUrl:
           'https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg',
@@ -37,13 +38,14 @@ describe('helper', () => {
 
     it('returns correct audio metadata', () => {
       const aresMediaBlocks = validAresMediaAudioBlock.model.blocks;
-      const metadata = mediaPlayerMetadata(aresMediaBlocks);
+      const metadata = mediaPlayerMetadata(aresMediaBlocks, embedSource);
       const output = {
         '@context': 'http://schema.org',
         '@type': 'AudioObject',
         description: 'Some audio from a supermarket checkout in Birmingham',
         duration: 'PT2M7S',
-        embedURL: null,
+        embedURL:
+          'https://www.test.bbc.com/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6mtv/en-GB',
         name: 'Birmingham checkout',
         thumbnailUrl:
           'https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mt2kt.jpg',
