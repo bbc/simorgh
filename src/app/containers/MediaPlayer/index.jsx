@@ -110,7 +110,7 @@ const MediaPlayerContainer = ({
     translations,
   );
 
-  const nojsMessage = `This ${mediaInfo.type}  cannot play in your browser. Please enable Javascript or try a different browser.`;
+  const noJsMessage = `This ${mediaInfo.type}  cannot play in your browser. Please enable Javascript or try a different browser.`;
 
   return (
     <>
@@ -132,7 +132,7 @@ const MediaPlayerContainer = ({
             title={iframeTitle}
             service={service}
             mediaInfo={mediaInfo}
-            nojsMessage={nojsMessage}
+            noJsMessage={noJsMessage}
             noJsClassName="no-js"
           />
         )}

@@ -109,7 +109,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 `;
 
 exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = `
-.c11 {
+.c12 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -124,13 +124,13 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   width: 100%;
 }
 
-.c13 {
+.c14 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c9 {
+.c10 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -142,7 +142,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   margin: 0;
 }
 
-.c7 {
+.c8 {
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -160,14 +160,14 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   width: 5rem;
 }
 
-.c7:hover,
-.c7:focus {
+.c8:hover,
+.c8:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.c10 > svg {
+.c11 > svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -175,7 +175,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   width: 1.5rem;
 }
 
-.c12 {
+.c13 {
   display: block;
   margin-top: 0.5rem;
 }
@@ -189,9 +189,17 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: rgba(34,34,34,0.75);
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
+  background-color: rgba(34,34,34,0.75);
+}
+
+.no-js .c5 {
+  background-color: rgba(34,34,34,0.75);
+}
+
+.no-js .c5 .guidance-message {
+  display: none;
 }
 
 .c6 {
@@ -199,6 +207,11 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   font-weight: normal;
   padding: 0.5rem;
   border-bottom: 0.0625rem solid transparent;
+}
+
+.c7 {
+  position: absolute;
+  bottom: 0;
 }
 
 .c4 {
@@ -210,13 +223,17 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   height: 100%;
 }
 
-.c8 {
+.c9 {
   position: absolute;
   bottom: 0;
 }
 
-.c3:hover .c8,
-.c3:focus .c8 {
+.no-js .c9 {
+  display: none;
+}
+
+.c3:hover .c9,
+.c3:focus .c9 {
   background-color: #B80000;
 }
 
@@ -238,6 +255,12 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 
 @media screen and (-ms-high-contrast:active) {
   .c5 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .no-js .c5 {
     background-color: transparent;
   }
 }
@@ -320,25 +343,28 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
               >
                 <strong
                   aria-hidden="true"
-                  class="c6"
+                  class="c6 guidance-message"
                 >
                   Contains strong language and adult humour.
                 </strong>
+                <noscript
+                  class="c7"
+                />
               </div>
               <button
-                class="c7 c8"
+                class="c8 c9"
               >
                 <span
-                  class="c9"
+                  class="c10"
                 >
                   Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
                 </span>
                 <div
                   aria-hidden="true"
-                  class="c10"
+                  class="c11"
                 >
                   <svg
-                    class="c11"
+                    class="c12"
                     focusable="false"
                     height="12px"
                     viewBox="0 0 32 32"
@@ -351,7 +377,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
                 </div>
                 <time
                   aria-hidden="true"
-                  class="c12"
+                  class="c13"
                   datetime="PT3M11S"
                 >
                   03:11
@@ -359,7 +385,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
               </button>
               <img
                 alt=""
-                class="c13"
+                class="c14"
                 src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
                 srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
               />
