@@ -86,6 +86,16 @@ describe('getDestination', () => {
       summary: 'should return for test Scotland',
     },
     {
+      statsDestination: 'BBC_ARCHIVE_PS',
+      expected: 605565,
+      summary: 'should return for live Scotland',
+    },
+    {
+      statsDestination: 'BBC_ARCHIVE_PS_TEST',
+      expected: 605566,
+      summary: 'should return for test Scotland',
+    },
+    {
       statsDestination: undefined,
       expected: 598285,
       summary: 'should return for live uk statsDestination is undefined',
