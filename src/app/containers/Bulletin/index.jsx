@@ -78,7 +78,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
   );
 
   const contentType = pathOr(null, ['contentType'], item);
-  const type = contentType === 'TVBulletin' ? 'video' : 'audio';
+  const mediaType = contentType === 'TVBulletin' ? 'video' : 'audio';
 
   const watchText = pathOr('Watch', ['media', 'watch'], translations);
   const listenText = pathOr('Listen', ['media', 'listen'], translations);
@@ -90,7 +90,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
   return (
     <Bulletin
       image={imageValues && Image}
-      type={type}
+      mediaType={mediaType}
       isLive={isLive}
       script={script}
       service={service}
