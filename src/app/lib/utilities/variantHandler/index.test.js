@@ -16,8 +16,8 @@ describe('getVariant', () => {
   });
 
   it('should return variant if service has variant and inputs variant has leading slash', () => {
-    expect(getVariant({ service: 'ukchina', variant: '/simp' })).toEqual(
-      'simp',
+    expect(getVariant({ service: 'ukchina', variant: '/trad' })).toEqual(
+      'trad',
     );
   });
 
