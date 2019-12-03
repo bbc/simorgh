@@ -9,6 +9,7 @@ import { service as afaanoromoo } from '../../../app/lib/config/services/afaanor
 import { service as afrique } from '../../../app/lib/config/services/afrique';
 import { service as amharic } from '../../../app/lib/config/services/amharic';
 import { service as arabic } from '../../../app/lib/config/services/arabic';
+import { service as archive } from '../../../app/lib/config/services/archive';
 import { service as azeri } from '../../../app/lib/config/services/azeri';
 import { service as bengali } from '../../../app/lib/config/services/bengali';
 import { service as burmese } from '../../../app/lib/config/services/burmese';
@@ -56,6 +57,7 @@ export default {
   afrique,
   amharic,
   arabic,
+  archive,
   azeri,
   bengali,
   burmese,
