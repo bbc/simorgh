@@ -48,7 +48,7 @@ const bannerTextWithContext = (message, topLevelDomain, country) => (
 describe('Consent Banner Text', () => {
   shouldMatchSnapshot(
     'should correctly render banner text in the UK',
-    bannerTextWithContext(bannerMessaging, 'co.uk', 'uk'),
+    bannerTextWithContext(bannerMessaging, 'co.uk', 'gb'),
   );
 
   shouldMatchSnapshot(
@@ -58,7 +58,7 @@ describe('Consent Banner Text', () => {
 
   shouldMatchSnapshot(
     'should correctly render banner text with a link in the UK',
-    bannerTextWithContext(bannerWithLinkMessaging, 'co.uk', 'uk'),
+    bannerTextWithContext(bannerWithLinkMessaging, 'co.uk', 'gb'),
   );
 
   shouldMatchSnapshot(

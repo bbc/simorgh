@@ -21,7 +21,9 @@ describe('isNotUK', () => {
 
   it('should return false', () => {
     expect(isNotUK('gb')).toEqual(false);
-    expect(isNotUK('uk')).toEqual(false);
+    expect(isNotUK('im')).toEqual(false);
+    expect(isNotUK('je')).toEqual(false);
+    expect(isNotUK('gg')).toEqual(false);
   });
 
   it('should return true', () => {

@@ -1,4 +1,6 @@
 const isNotUK = bbcCountry =>
-  bbcCountry ? !['gb', 'uk'].includes(bbcCountry.toLowerCase()) : true;
+  bbcCountry
+    ? !['GB', 'IM', 'JE', 'GG'].includes(bbcCountry.toUpperCase())
+    : true;
 
 export default isNotUK;
