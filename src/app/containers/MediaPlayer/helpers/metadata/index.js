@@ -27,13 +27,14 @@ export const getMetadata = aresMetadataBlock => {
     '@type': getType(aresMetadataBlock),
     name: path(['model', 'title'], aresMetadataBlock),
     description: path(['model', 'synopses', 'short'], aresMetadataBlock),
-    duration: path(
+    duration: pathOr(
+      null,
       ['model', 'versions', [0], 'durationISO8601'],
       aresMetadataBlock,
     ),
     thumbnailUrl: getThumbnailUri(aresMetadataBlock),
     uploadDate: getUploadDate(aresMetadataBlock),
-    embedURL: path(['embedSource'], aresMetadataBlock),
+    embedURL: pathOr(null, ['embedSource'], aresMetadataBlock),
   };
 };
 
