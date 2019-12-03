@@ -1,9 +1,10 @@
+import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 
 const DEFAULT_IMAGE_RES = '1024x576';
 
 export const getThumbnailUri = aresMetadataBlock => {
-  const imageUrl = pathOr(null, ['model', 'imageUrl'], aresMetadataBlock);
+  const imageUrl = path(['model', 'imageUrl'], aresMetadataBlock);
   return `https://${imageUrl.replace('$recipe', DEFAULT_IMAGE_RES)}`;
 };
 export const getUploadDate = aresMetadataBlock => {
@@ -16,7 +17,7 @@ export const getUploadDate = aresMetadataBlock => {
 };
 
 export const getType = aresMetadataBlock => {
-  const format = pathOr(null, ['model', 'format'], aresMetadataBlock);
+  const format = path(['model', 'format'], aresMetadataBlock);
   return format === 'audio' ? 'AudioObject' : 'VideoObject';
 };
 
@@ -24,20 +25,15 @@ export const getMetadata = aresMetadataBlock => {
   return {
     '@context': 'http://schema.org',
     '@type': getType(aresMetadataBlock),
-    name: pathOr(null, ['model', 'title'], aresMetadataBlock),
-    description: pathOr(
-      null,
-      ['model', 'synopses', 'short'],
-      aresMetadataBlock,
-    ),
-    duration: pathOr(
-      null,
+    name: path(['model', 'title'], aresMetadataBlock),
+    description: path(['model', 'synopses', 'short'], aresMetadataBlock),
+    duration: path(
       ['model', 'versions', [0], 'durationISO8601'],
       aresMetadataBlock,
     ),
     thumbnailUrl: getThumbnailUri(aresMetadataBlock),
     uploadDate: getUploadDate(aresMetadataBlock),
-    embedURL: pathOr(null, ['embedSource'], aresMetadataBlock),
+    embedURL: path(['embedSource'], aresMetadataBlock),
   };
 };
 
