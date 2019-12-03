@@ -21,6 +21,7 @@ const ContextWrap = ({ pageType, platform, children }) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
+      bbcCountry="uk"
       id="c0000000000o"
       isAmp={platform === 'amp'}
       pageType={pageType}
