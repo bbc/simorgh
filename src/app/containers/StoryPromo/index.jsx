@@ -14,8 +14,8 @@ import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { createSrcset } from '#lib/utilities/srcSet';
-import getOriginCode from './imageSrcHelpers/originCode';
-import getLocator from './imageSrcHelpers/locator';
+import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
+import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 
 import LinkContents from './LinkContents';
 import MediaIndicator from './MediaIndicator';
