@@ -143,6 +143,36 @@ const genServices = appEnv => ({
       },
     },
   },
+  archive: {
+    font: 'Reith',
+    isWorldService: false,
+    variant: 'default',
+    pageTypes: {
+      articles: {
+        path: isLive(appEnv) ? undefined : '/archive/articles/cqv9w00mgjpo',
+        smoke: false,
+      },
+      errorPage404: {
+        path:
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/archive/articles/c123456abcdo',
+        smoke: false,
+      },
+      frontPage: {
+        path: undefined,
+        smoke: false,
+      },
+      liveRadio: {
+        path: undefined,
+        smoke: false,
+      },
+      mediaAssetPage: {
+        path: undefined,
+        smoke: false,
+      },
+    },
+  },
   azeri: {
     font: undefined,
     isWorldService: true,
