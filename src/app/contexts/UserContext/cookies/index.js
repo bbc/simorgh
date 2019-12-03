@@ -6,7 +6,7 @@ export const getCookiePolicy = () => {
   return Cookie.get(POLICY_COOKIE) || '000';
 };
 
-const getPreferredVariantCookie = service => `ckps_${service}`;
+export const getPreferredVariantCookie = service => `ckps_${service}`;
 
 export const getPreferredVariant = service => {
   if (!service) return null;
