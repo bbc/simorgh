@@ -5,6 +5,7 @@ const loadableConfig = {
   afrique: loadable(() => import('./afrique.js')),
   amharic: loadable(() => import('./amharic.js')),
   arabic: loadable(() => import('./arabic.js')),
+  archive: loadable(() => import('./archive.js')),
   azeri: loadable(() => import('./azeri.js')),
   bengali: loadable(() => import('./bengali.js')),
   burmese: loadable(() => import('./burmese.js')),
