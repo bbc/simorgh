@@ -35,6 +35,10 @@ const GenerateMediaPlayer = ({
 );
 
 describe('MediaPlayer', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://www.test.bbc.com';
+  });
+
   shouldMatchSnapshot(
     'Calls the canonical media player, with a placeholder',
     <GenerateMediaPlayer

@@ -54,6 +54,10 @@ const createMediaAssetPage = ({ pageData }) => (
 );
 
 describe('CpsAssetPageMain', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://www.test.bbc.co.uk';
+  });
+
   it('should match snapshot for STY', async () => {
     const pageData = await preprocessor(
       igboPageData,
