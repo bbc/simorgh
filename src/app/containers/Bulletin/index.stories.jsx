@@ -13,7 +13,8 @@ const bulletinFixture = type =>
     .find(
       item =>
         pathOr(null, ['assetTypeCode'], item) === 'PRO' &&
-        pathOr(null, ['contentType'], item) === type,
+        pathOr(null, ['contentType'], item) === type &&
+        !pathOr(null, ['isLive'], item),
     );
 
 const liveBulletinFixture = type =>
