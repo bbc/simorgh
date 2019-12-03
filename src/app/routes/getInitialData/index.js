@@ -10,7 +10,9 @@ const logger = nodeLogger(__filename);
 const STATUS_CODE_OK = 200;
 const STATUS_CODE_BAD_GATEWAY = 502;
 const STATUS_CODE_NOT_FOUND = 404;
+const RENDERER_ENV = 'renderer_env';
 const upstreamStatusCodesToPropagate = [STATUS_CODE_OK, STATUS_CODE_NOT_FOUND];
+const validRendererEnvironments = ['int', 'test', 'live'];
 
 const ampRegex = /(.amp)$/;
 
@@ -18,7 +20,29 @@ const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)
   : process.env.SIMORGH_BASE_URL;
 
-const getUrl = pathname => `${baseUrl}${pathname.replace(ampRegex, '')}.json`;
+export const getUrl = pathname => {
+  const index = pathname.indexOf(RENDERER_ENV) + 1;
+  let environment;
+  let finalPath = pathname;
+  let renderer = '';
+
+  if (index > 0) {
+    environment = pathname.substring(index + RENDERER_ENV.length);
+
+    if (validRendererEnvironments.includes(environment)) {
+      renderer = `?${RENDERER_ENV}=${environment}`;
+    } else {
+      logger.warn(
+        `Invalid renderer environment - value should be one of ${validRendererEnvironments}`,
+      );
+    }
+
+    // Remove the ? preceding the renderer_env string
+    finalPath = pathname.substring(0, index - 2);
+  }
+
+  return `${baseUrl}${finalPath.replace(ampRegex, '')}.json${renderer}`;
+};
 
 const handleResponse = async response => {
   const { status } = response;

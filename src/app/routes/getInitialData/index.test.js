@@ -6,6 +6,7 @@ jest.mock('#lib/utilities/preprocessor', () => jest.fn());
 preprocess.mockImplementation(data => data);
 
 const fetchData = require('./index').default;
+const { getUrl } = require('./index');
 
 describe('fetchData', () => {
   const mockSuccessfulResponse = {
@@ -334,6 +335,38 @@ describe('fetchData', () => {
         status: 502,
         error: Error(),
       });
+    });
+  });
+
+  describe('getUrl', () => {
+    it('should not append renderer_env query string if it does not exist', () => {
+      expect(getUrl('/test/article')).toEqual(
+        'http://localhost/test/article.json',
+      );
+    });
+
+    it('should append renderer_env query string if it is `int`', () => {
+      expect(getUrl('/test/article?renderer_env=int')).toEqual(
+        'http://localhost/test/article.json?renderer_env=int',
+      );
+    });
+
+    it('should append renderer_env query string if it is `test`', () => {
+      expect(getUrl('/test/article?renderer_env=test')).toEqual(
+        'http://localhost/test/article.json?renderer_env=test',
+      );
+    });
+
+    it('should append renderer_env query string if it is `live`', () => {
+      expect(getUrl('/test/article?renderer_env=live')).toEqual(
+        'http://localhost/test/article.json?renderer_env=live',
+      );
+    });
+
+    it('should not append renderer_env query string if it is invalid', () => {
+      expect(getUrl('/test/article?renderer_env=bob')).toEqual(
+        'http://localhost/test/article.json',
+      );
     });
   });
 });
