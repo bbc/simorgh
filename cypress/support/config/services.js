@@ -148,6 +148,7 @@ const genServices = appEnv => ({
     },
   },
   archive: {
+    name: 'archive',
     font: 'Reith',
     isWorldService: false,
     variant: 'default',

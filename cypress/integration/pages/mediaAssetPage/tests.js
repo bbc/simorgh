@@ -66,7 +66,7 @@ export const testsThatFollowSmokeTestConfig = ({
               .eq(1)
               .should(
                 'contain',
-                appConfig[service][variant].articleTimestampPrefix,
+                appConfig[config[service].name][variant].articleTimestampPrefix,
               );
           }
         },
