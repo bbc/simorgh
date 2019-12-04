@@ -6,6 +6,18 @@ import {
   setPreferredVariant,
 } from '#contexts/UserContext/cookies';
 
+const redirect = (location, service, defaultVariant) => {
+  const preferredVariant = getPreferredVariant(service);
+  return (
+    <Redirect
+      to={{
+        ...location,
+        pathname: `${location.pathname}/${preferredVariant || defaultVariant}`,
+      }}
+    />
+  );
+};
+
 const WithVariant = Component => {
   const VariantContainer = props => {
     const { service, variant } = useParams();
@@ -15,16 +27,7 @@ const WithVariant = Component => {
 
     // If no variant in path and service has a default variant which isn't 'default'.
     if (!sanitizedVariant && defaultVariant && defaultVariant !== 'default') {
-      const preferredVariant = getPreferredVariant(service);
-      return (
-        <Redirect
-          to={{
-            ...location,
-            pathname: `${location.pathname}/${preferredVariant ||
-              defaultVariant}`,
-          }}
-        />
-      );
+      return redirect(location, service, defaultVariant);
     }
 
     if (variant) setPreferredVariant(service, sanitizedVariant);
