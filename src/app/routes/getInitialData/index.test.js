@@ -6,7 +6,7 @@ jest.mock('#lib/utilities/preprocessor', () => jest.fn());
 preprocess.mockImplementation(data => data);
 
 const fetchData = require('./index').default;
-const { logger, getUrl } = require('./index');
+const { getUrl, validateRendererEnvironment } = require('./index');
 
 describe('fetchData', () => {
   const mockSuccessfulResponse = {
@@ -339,47 +339,102 @@ describe('fetchData', () => {
       });
     });
   });
+});
 
-  describe('getUrl', () => {
-    it('should not append renderer_env query string if it does not exist', () => {
-      expect(getUrl('/test/article')).toEqual(
-        'http://localhost/test/article.json',
-      );
-    });
+describe('getUrl', () => {
+  it('should return empty string when pathname empty', () => {
+    expect(getUrl('')).toEqual('');
+  });
 
-    it('should append renderer_env query string if it is the only parameter', () => {
-      expect(getUrl('/test/article?renderer_env=int')).toEqual(
-        'http://localhost/test/article.json?renderer_env=int',
-      );
-    });
+  it('should return empty string when pathname null', () => {
+    expect(getUrl(null)).toEqual('');
+  });
 
-    it('should append renderer_env query string if it is the first parameter in the list', () => {
-      expect(
-        getUrl('/test/article?renderer_env=test&another_param=bob'),
-      ).toEqual(
-        'http://localhost/test/article.json?renderer_env=test&another_param=bob',
-      );
-    });
+  it('should return empty string when pathname undefined', () => {
+    expect(getUrl(undefined)).toEqual('');
+  });
 
-    it('should append renderer_env query string if it is not the first parameter in the list', () => {
-      expect(getUrl('/test/article?first_param=bob&renderer_env=live')).toEqual(
-        'http://localhost/test/article.json?first_param=bob&renderer_env=live',
-      );
-    });
+  it('should return url', () => {
+    expect(getUrl('/test/article')).toEqual(
+      'http://localhost/test/article.json',
+    );
+  });
 
-    it('should append renderer_env query string case insensitive', () => {
-      expect(getUrl('/test/article?first_param=bob&rendERER_env=LiVe')).toEqual(
-        'http://localhost/test/article.json?first_param=bob&renderer_env=live',
-      );
-    });
+  it('should remove .amp from url', () => {
+    expect(getUrl('/test/article.amp')).toEqual(
+      'http://localhost/test/article.json',
+    );
+  });
 
-    it('should log invalid value for renderer_env query string', () => {
-      const loggerSpy = jest.spyOn(logger, 'warn');
-      getUrl('/test/article?renderer_env=bob');
-      expect(loggerSpy).toHaveBeenCalledWith(
-        'Invalid parameter value [renderer_env=bob]. Usage: renderer_env=int|test|live',
-      );
-      loggerSpy.mockRestore();
-    });
+  it('should remove .amp from url with params', () => {});
+  expect(getUrl('/test/article.amp?param=test')).toEqual(
+    'http://localhost/test/article.json?param=test',
+  );
+
+  it('should append single query string parameter', () => {
+    expect(getUrl('/test/article?param=test')).toEqual(
+      'http://localhost/test/article.json?param=test',
+    );
+  });
+
+  it('should append multiple query string parameters', () => {
+    expect(getUrl('/test/article?first=1&second=2')).toEqual(
+      'http://localhost/test/article.json?first=1&second=2',
+    );
+  });
+
+  it('should append renderer_env query string', () => {
+    expect(getUrl('/test/article?renderer_env=test')).toEqual(
+      'http://localhost/test/article.json?renderer_env=test',
+    );
+  });
+
+  it('should append renderer_env query string case insensitive', () => {
+    expect(getUrl('/test/article?renderer_env=LIVE')).toEqual(
+      'http://localhost/test/article.json?renderer_env=live',
+    );
+  });
+});
+
+describe('validateRendererEnvironment', () => {
+  it('should not log message if environment is test', () => {
+    validateRendererEnvironment('test');
+    expect(loggerMock.warn).not.toHaveBeenCalled();
+  });
+  it('should not log message if environment is live', () => {
+    validateRendererEnvironment('live');
+    expect(loggerMock.warn).not.toHaveBeenCalled();
+  });
+  it('should not log message if environment is valid - case insenstive', () => {
+    validateRendererEnvironment('TeSt');
+    expect(loggerMock.warn).not.toHaveBeenCalled();
+  });
+
+  it('should log message if renderer_env query string is empty', () => {
+    validateRendererEnvironment('');
+    expect(loggerMock.warn).toHaveBeenCalledWith(
+      'Invalid parameter value []. Usage: renderer_env=test|live',
+    );
+  });
+
+  it('should log message if renderer_env query string is null', () => {
+    validateRendererEnvironment(null);
+    expect(loggerMock.warn).toHaveBeenCalledWith(
+      'Invalid parameter value [null]. Usage: renderer_env=test|live',
+    );
+  });
+
+  it('should log message if renderer_env query string is undefined', () => {
+    validateRendererEnvironment(undefined);
+    expect(loggerMock.warn).toHaveBeenCalledWith(
+      'Invalid parameter value [undefined]. Usage: renderer_env=test|live',
+    );
+  });
+
+  it('should log message if renderer_env query string is invalid', () => {
+    validateRendererEnvironment('bob');
+    expect(loggerMock.warn).toHaveBeenCalledWith(
+      'Invalid parameter value [bob]. Usage: renderer_env=test|live',
+    );
   });
 });
