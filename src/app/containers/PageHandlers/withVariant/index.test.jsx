@@ -1,81 +1,97 @@
 import React from 'react';
 import { Router, Route } from 'react-router-dom';
+import Cookie from 'js-cookie';
 import { render } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
-import { frontPagePath } from '#app/routes/regex';
-import * as Cookies from '#contexts/UserContext/cookies';
 import withVariant from '.';
+import { frontPagePath } from '#app/routes/regex';
 
-const Component = () => <h1>This is the BBC.</h1>;
-const ComponentWithVariantRedirect = withVariant(Component);
-
-const testWithVariant = ({ service, expectedPath }) => {
-  const history = createMemoryHistory({
+const createHistory = service =>
+  createMemoryHistory({
     initialEntries: [`/${service}`],
   });
+// eslint-disable-next-line react/prop-types
+const TestRouter = ({ history, children }) => (
+  <Router history={history}>
+    <Route path={frontPagePath}>{children}</Route>
+  </Router>
+);
+const EnhancedComponent = withVariant(() => <div />);
+const deleteAllCookies = () => Object.keys(Cookie.get()).forEach(Cookie.remove);
 
-  expect(history.location.pathname).toEqual(`/${service}`);
+afterEach(deleteAllCookies);
 
-  render(
-    <Router history={history}>
-      <Route path={frontPagePath}>
-        <ComponentWithVariantRedirect />
-      </Route>
-    </Router>,
-  );
+describe('service with no default variant', () => {
+  it('should not redirect', () => {
+    const service = 'news';
+    const history = createHistory(service);
 
-  expect(history.location.pathname).toEqual(expectedPath);
-};
+    render(
+      <TestRouter history={history}>
+        <EnhancedComponent />
+      </TestRouter>,
+    );
 
-describe('WithVariant', () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-    Cookies.getPreferredVariant = jest.fn();
-    Cookies.setPreferredVariant = jest.fn();
+    expect(history.location.pathname).toEqual('/news');
+    expect(Cookie.get(`ckps_${service}`)).toBeUndefined();
+  });
+});
+
+describe('service (ukchina) with cookie variant', () => {
+  it('should redirect to ukchina/simp and set preferred variant cookie', () => {
+    const service = 'ukchina';
+    const history = createHistory(service);
+    Cookie.set(`ckps_${service}`, 'simp');
+
+    render(
+      <TestRouter history={history}>
+        <EnhancedComponent />
+      </TestRouter>,
+    );
+
+    expect(history.location.pathname).toEqual('/ukchina/simp');
+    expect(Cookie.get(`ckps_${service}`)).toEqual('simp');
+  });
+});
+
+describe('services with default variant', () => {
+  it('should redirect to ukchina/trad', () => {
+    const service = 'ukchina';
+    const history = createHistory(service);
+
+    render(
+      <TestRouter history={history}>
+        <EnhancedComponent />
+      </TestRouter>,
+    );
+
+    expect(history.location.pathname).toEqual('/ukchina/trad');
+    expect(Cookie.get(`ckps_${service}`)).toEqual('trad');
   });
 
-  describe('service with no default variant', () => {
-    it('should not redirect', () => {
-      const service = 'news';
-      const expectedPath = '/news';
+  it('should redirect to zhongwen/trad', () => {
+    const service = 'zhongwen';
+    const history = createHistory(service);
 
-      testWithVariant({ service, expectedPath });
+    render(
+      <TestRouter history={history}>
+        <EnhancedComponent />
+      </TestRouter>,
+    );
 
-      expect(Cookies.getPreferredVariant).not.toHaveBeenCalled();
-      expect(Cookies.setPreferredVariant).not.toHaveBeenCalled();
-    });
+    expect(history.location.pathname).toEqual('/zhongwen/trad');
   });
 
-  describe('service (ukchina) with cookie variant', () => {
-    it('should redirect to ukchina/simp and set preferred variant cookie', () => {
-      const service = 'ukchina';
-      const expectedPath = '/ukchina/simp';
-      Cookies.getPreferredVariant.mockReturnValue('simp');
+  it('should redirect to serbian/lat', () => {
+    const service = 'serbian';
+    const history = createHistory(service);
 
-      testWithVariant({ service, expectedPath });
+    render(
+      <TestRouter history={history}>
+        <EnhancedComponent />
+      </TestRouter>,
+    );
 
-      expect(Cookies.getPreferredVariant).toHaveBeenCalledWith(service);
-      expect(Cookies.setPreferredVariant).toHaveBeenCalledWith(service, 'simp');
-    });
-  });
-
-  describe('services with default variant', () => {
-    it('should redirect to ukchina/trad', () => {
-      const service = 'ukchina';
-      const expectedPath = '/ukchina/trad';
-
-      testWithVariant({ service, expectedPath });
-
-      expect(Cookies.getPreferredVariant).toHaveBeenCalled();
-      expect(Cookies.setPreferredVariant).toHaveBeenCalledWith(service, 'trad');
-    });
-
-    it('should redirect to zhongwen/trad', () => {
-      testWithVariant({ service: 'zhongwen', expectedPath: '/zhongwen/trad' });
-    });
-
-    it('should redirect to serbian/lat', () => {
-      testWithVariant({ service: 'serbian', expectedPath: '/serbian/lat' });
-    });
+    expect(history.location.pathname).toEqual('/serbian/lat');
   });
 });
