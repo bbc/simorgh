@@ -6,12 +6,13 @@ import onClient from '#lib/utilities/onClient';
 import getBaseUrl from './utils/getBaseUrl';
 import getPreprocessorRules from './utils/getPreprocessorRules';
 
-export const logger = nodeLogger(__filename);
+const qs = require('querystringify');
+
+const logger = nodeLogger(__filename);
 const STATUS_CODE_OK = 200;
 const STATUS_CODE_BAD_GATEWAY = 502;
 const STATUS_CODE_NOT_FOUND = 404;
 const upstreamStatusCodesToPropagate = [STATUS_CODE_OK, STATUS_CODE_NOT_FOUND];
-const validRendererEnvironments = ['int', 'test', 'live'];
 
 const ampRegex = /(.amp)$/;
 
@@ -19,34 +20,46 @@ const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)
   : process.env.SIMORGH_BASE_URL;
 
-// eslint-disable-next-line consistent-return
-export const getUrl = pathname => {
-  if (pathname) {
-    const regex = /renderer_env=(.*)&?/i;
-    const [match, environment] = pathname.match(regex) || [];
-    let finalPath = pathname;
-    let params =
-      pathname.lastIndexOf('?') > 0
-        ? pathname.substring(pathname.lastIndexOf('?'))
-        : '';
+export const validateRendererEnvironment = environment => {
+  const validRendererEnvironments = ['test', 'live'];
 
-    if (params) {
-      finalPath = pathname.substring(0, pathname.indexOf(params));
-
-      if (match) {
-        params = params.replace(match, match.toLowerCase());
-        if (!validRendererEnvironments.includes(environment.toLowerCase())) {
-          logger.warn(
-            `Invalid parameter value [${match}]. Usage: renderer_env=${validRendererEnvironments.join(
-              '|',
-            )}`,
-          );
-        }
-      }
-    }
-
-    return `${baseUrl}${finalPath.replace(ampRegex, '')}.json${params}`;
+  if (
+    !(
+      environment &&
+      validRendererEnvironments.includes(environment.toLowerCase())
+    )
+  ) {
+    logger.warn(
+      `Invalid parameter value [${environment}]. Usage: renderer_env=${validRendererEnvironments.join(
+        '|',
+      )}`,
+    );
   }
+};
+
+const getPathFromUrl = url => {
+  return url.split(/[?]/)[0];
+};
+
+const checkAndAppendParams = pathname => {
+  const url = getPathFromUrl(pathname);
+  const params = qs.parse(pathname.substring(url.length));
+
+  if (params && params.renderer_env) {
+    params.renderer_env = params.renderer_env.toLowerCase();
+    validateRendererEnvironment(params.renderer_env);
+  }
+
+  return `${baseUrl}${url.replace(ampRegex, '')}.json${qs.stringify(
+    params,
+    true,
+  )}`;
+};
+
+export const getUrl = pathname => {
+  if (!pathname) return '';
+
+  return checkAndAppendParams(pathname);
 };
 
 const handleResponse = async response => {
