@@ -18,7 +18,7 @@ const redirect = (location, service, defaultVariant) => {
   );
 };
 
-const WithVariant = Component => {
+const withVariant = Component => {
   const VariantContainer = props => {
     const { service, variant } = useParams();
     const location = useLocation();
@@ -38,4 +38,4 @@ const WithVariant = Component => {
   return VariantContainer;
 };
 
-export default WithVariant;
+export default withVariant;
