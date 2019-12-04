@@ -1,4 +1,5 @@
 import Cookie from 'js-cookie';
+import uuid from 'uuid/v4';
 import pathOr from 'ramda/src/pathOr';
 import onClient from '../utilities/onClient';
 
@@ -16,6 +17,8 @@ export const getDestination = statsDestination => {
     WS_NEWS_LANGUAGES_TEST: 598343,
     PLACEHOLDER: 598295,
     PLACEHOLDER_TEST: 598297,
+    BBC_ARCHIVE_PS: 605565,
+    BBC_ARCHIVE_PS_TEST: 605566,
   };
 
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
@@ -126,12 +129,20 @@ export const getReferrer = (platform, origin, previousPath) => {
 };
 
 export const getAtUserId = () => {
-  if (onClient()) {
-    const atuserid = Cookie.getJSON('atuserid');
-    return pathOr(null, ['val'], atuserid);
+  if (!onClient()) return null;
+
+  const cookieName = 'atuserid';
+  const cookie = Cookie.getJSON(cookieName);
+  let val = pathOr(null, ['val'], cookie);
+  const expires = 397; // expires in 13 months
+
+  if (!cookie || !val) {
+    val = uuid();
   }
 
-  return null;
+  Cookie.set(cookieName, { val }, { expires, path: '/' });
+
+  return val;
 };
 
 export const sanitise = initialString =>
