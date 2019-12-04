@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render a news article correctly 1`] = `
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c3 {
+  grid-column: 1 / span 6;
+}
+
 .c2 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -13,14 +23,8 @@ exports[`should render a news article correctly 1`] = `
   padding: 2rem 0;
 }
 
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c3 {
-  grid-column: 1 / span 6;
+.c2:focus {
+  outline: none;
 }
 
 .c4 {
@@ -32,26 +36,6 @@ exports[`should render a news article correctly 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 2.5rem 0;
-  }
 }
 
 @media (max-width:37.4375rem) {
@@ -160,6 +144,26 @@ exports[`should render a news article correctly 1`] = `
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c1 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
   }
 }
 
@@ -677,7 +681,17 @@ exports[`should render a persian article correctly 1`] = `
     </script>
   </head>
   <body>
-    .c2 {
+    .c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c3 {
+  grid-column: 1 / span 6;
+}
+
+.c2 {
   font-size: 2rem;
   line-height: 2.625rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -689,14 +703,8 @@ exports[`should render a persian article correctly 1`] = `
   padding: 2rem 0;
 }
 
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c3 {
-  grid-column: 1 / span 6;
+.c2:focus {
+  outline: none;
 }
 
 .c4 {
@@ -708,26 +716,6 @@ exports[`should render a persian article correctly 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 2.375rem;
-    line-height: 2.875rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 2.75rem;
-    line-height: 3.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 2.5rem 0;
-  }
 }
 
 @media (max-width:37.4375rem) {
@@ -836,6 +824,26 @@ exports[`should render a persian article correctly 1`] = `
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c1 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
   }
 }
 
@@ -1109,7 +1117,17 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
     </script>
   </head>
   <body>
-    .c2 {
+    .c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c3 {
+  grid-column: 1 / span 6;
+}
+
+.c2 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1121,14 +1139,8 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
   padding: 2rem 0;
 }
 
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c3 {
-  grid-column: 1 / span 6;
+.c2:focus {
+  outline: none;
 }
 
 .c4 {
@@ -1140,26 +1152,6 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    padding: 2.5rem 0;
-  }
 }
 
 @media (max-width:37.4375rem) {
@@ -1268,6 +1260,26 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c1 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
   }
 }
 
