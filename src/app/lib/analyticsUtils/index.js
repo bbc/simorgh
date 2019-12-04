@@ -262,10 +262,6 @@ export const getComponentInfo = ({ result, componentName, componentData }) => {
   };
 };
 
-export const getLibraryVersion = platform => {
-  if (platform === 'amp' || onClient()) {
-    return 'simorgh';
-  }
-
-  return 'simorgh-nojs';
+export const getLibraryVersion = () => {
+  return 'simorgh';
 };
