@@ -405,7 +405,7 @@ describe('validateRendererEnvironment', () => {
     validateRendererEnvironment('live');
     expect(loggerMock.warn).not.toHaveBeenCalled();
   });
-  it('should not log message if environment is valid - case insenstive', () => {
+  it('should not log message if environment is valid - case insensitive', () => {
     validateRendererEnvironment('TeSt');
     expect(loggerMock.warn).not.toHaveBeenCalled();
   });
