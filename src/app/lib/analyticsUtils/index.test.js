@@ -545,28 +545,20 @@ describe('getAtUserId', () => {
 
 describe('getLibraryVersion', () => {
   describe('For amp pages and canonical pages using client-side Javascript', () => {
-    const libraryVersionScenarios = [
-      {
-        platform: 'amp',
-        expected: 'simorgh',
-        summary: 'should return `simorgh` for amp',
-      },
-      {
-        platform: 'canonical',
-        expected: 'simorgh',
-        summary: 'should return `simorgh` for canonical',
-      },
-    ];
+    it('should return `simorgh` for amp', () => {
+      const platform = 'amp';
+      const libraryVersion = getLibraryVersion(platform);
+      expect(libraryVersion).toEqual('simorgh');
+    });
 
-    libraryVersionScenarios.forEach(({ platform, expected, summary }) => {
-      it(summary, () => {
-        const libraryVersion = getLibraryVersion(platform);
-        expect(libraryVersion).toEqual(expected);
-      });
+    it('should return `simorgh` for canonical', () => {
+      const platform = 'canonical';
+      const libraryVersion = getLibraryVersion(platform);
+      expect(libraryVersion).toEqual('simorgh');
     });
   });
 
-  describe('For canonical non-js pages', () => {
+  describe('For canonical pages without client-side Javascript', () => {
     beforeEach(() => {
       isOnClient = false;
     });
