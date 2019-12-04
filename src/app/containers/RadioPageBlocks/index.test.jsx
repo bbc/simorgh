@@ -17,6 +17,10 @@ const serviceContextMock = {
 };
 
 describe('Radio Page Blocks', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
+  });
+
   it('should match snapshot for Canonical', async () => {
     const pageData = await preprocessor(
       amharicPageData,
