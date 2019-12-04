@@ -30,7 +30,7 @@ const withVariant = Component => {
       return redirect(location, service, defaultVariant);
     }
 
-    if (variant) setPreferredVariant(service, sanitizedVariant);
+    if (sanitizedVariant) setPreferredVariant(service, sanitizedVariant);
 
     return <Component {...props} />;
   };
