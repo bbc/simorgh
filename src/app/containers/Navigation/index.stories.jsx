@@ -23,7 +23,12 @@ storiesOf('Containers|Navigation/AMP', module)
   .addDecorator(withServicesKnob())
   .addDecorator(AmpDecorator)
   .add(`default`, ({ service, variant }) => (
-    <RequestContextProvider platform="amp" isAmp>
+    <RequestContextProvider
+      isAmp
+      service={service}
+      pageType="frontPage"
+      pathname="/pathname"
+    >
       <ServiceContextProvider service={service} variant={variant}>
         <Navigation />
       </ServiceContextProvider>
