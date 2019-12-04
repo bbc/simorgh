@@ -525,7 +525,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
             allowfullscreen=""
             class="c6"
             scrolling="no"
-            src="https://www.test.bbc.co.uk/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/ig"
+            src="https://embed-host.bbc.com/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/ig"
             title="Media player"
           />
         </div>
@@ -2372,7 +2372,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                 allowfullscreen=""
                 class="c23"
                 scrolling="no"
-                src="https://www.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"
+                src="https://embed-host.bbc.com/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"
                 title="Media player"
               />
             </div>
@@ -3216,7 +3216,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
             allowfullscreen=""
             class="c6"
             scrolling="no"
-            src="https://www.test.bbc.co.uk/ws/av-embeds/cps/pidgin/tori-49450859/p07lg239/ig"
+            src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/tori-49450859/p07lg239/ig"
             title="Media player"
           />
         </div>
@@ -4373,7 +4373,7 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
             allowfullscreen=""
             class="c6"
             scrolling="no"
-            src="https://www.test.bbc.co.uk/ws/av-embeds/cps/pidgin/tori-49450859/p07lg239/ig"
+            src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/tori-49450859/p07lg239/ig"
             title="Media player"
           />
         </div>
