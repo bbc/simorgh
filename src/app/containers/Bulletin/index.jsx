@@ -57,6 +57,7 @@ BulletinImage.defaultProps = {
     height: '',
     width: '',
     altText: '',
+    copyrightHolder: '',
   }),
 };
 
