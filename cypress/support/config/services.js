@@ -151,7 +151,7 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/archive/articles/cqv9w00mgjpo',
+        path: undefined,
         smoke: false,
       },
       errorPage404: {
