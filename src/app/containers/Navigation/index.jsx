@@ -6,12 +6,13 @@ import {
   DropdownLi,
 } from '@bbc/psammead-navigation/dropdown';
 import { ServiceContext } from '#contexts/ServiceContext';
-import Canonical from './index.canonical';
 import { RequestContext } from '#contexts/RequestContext';
+import Canonical from './index.canonical';
 import Amp from './index.amp';
 
 const Navigation = () => {
   const { platform } = useContext(RequestContext);
+  const isAmp = platform === 'amp';
 
   const { script, translations, navigation, service, dir } = useContext(
     ServiceContext,
@@ -69,7 +70,7 @@ const Navigation = () => {
     </Dropdown>
   );
 
-  return platform === 'amp' ? (
+  return isAmp ? (
     <Amp
       scrollableListItems={scrollableListItems}
       dropdownListItems={dropdownListItems}
