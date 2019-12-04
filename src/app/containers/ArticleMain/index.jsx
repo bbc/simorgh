@@ -20,6 +20,8 @@ const ArticleMain = ({ articleData: data }) => {
         sandbox="allow-forms" // allows form input like buttons
         src={`http://localhost:7080/amp-script/testingFetch.js`}
       >
+        <button>user interact with me</button>
+
         {/* Root Div for react app to render into */}
         <div id="root">
           phan<button>user interact with me</button>
