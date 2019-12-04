@@ -21,7 +21,10 @@ const ArticleMain = ({ articleData: data }) => {
         src={`http://localhost:7080/amp-script/testingFetch.js`}
       >
         {/* Root Div for react app to render into */}
-        <div id="root">phan</div>
+        <div id="root">
+          phan<button>user interact with me</button>
+        </div>
+        <button>user interact with me</button>
       </amp-script>
     </>
   );
