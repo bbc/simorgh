@@ -21,7 +21,8 @@ const {
   sanitise,
   getProducer,
   getAtiUrl,
-  getClickInfo,
+  getEventInfo,
+  getComponentInfo,
 } = require('./index');
 
 let locServeCookieValue;
@@ -436,42 +437,77 @@ describe('getAtiUrl', () => {
   });
 });
 
-describe('getClickInfo', () => {
+describe('getEventInfo', () => {
   const params = {
     service: 'service',
-    component: 'component',
-    label: 'label',
+    componentName: 'component',
+    componentInfo: {
+      actionLabel: 'actionLabel',
+      result: 'url.com',
+      positioning: {
+        parent: 'container-component',
+        child: 'child',
+      },
+    },
     type: 'type',
   };
+  const pageIdentifier = 'page';
 
   it('should return url section', () => {
-    expect(getClickInfo({}, params)).toEqual(
-      'PUB-[service-component]-[=type]-[label]-[PAR=container-component::name~CHD=brand-top]-[]-[]-[]-[/]',
+    expect(getEventInfo(pageIdentifier, params)).toEqual(
+      'PUB-[service-component]-[actionLabel~type]-[]-[PAR=container-component~CHD=child]-[page]-[]-[responsive_web~news-simorgh]-[url.com]',
     );
   });
 
-  it('should include elem.dataset.info in output', () => {
+  it('should include elem.href in output', () => {
+    expect(getEventInfo(pageIdentifier, params)).toContain('[url.com]');
+  });
+});
+
+describe('getComponentInfo', () => {
+  const event = { target: { href: 'url.com' } };
+  const props = { actionLabel: 'prop1', child: 'prop2' };
+
+  it('should return a componentInfo object', () => {
+    const result = {
+      actionLabel: 'component-prop1',
+      source: '',
+      result: 'url.com',
+      positioning: {
+        parent: 'container-component',
+        child: 'prop2',
+      },
+    };
+
     expect(
-      getClickInfo(
-        {
-          dataset: {
-            info: 'data-info-attr',
-          },
-        },
-        params,
-      ),
-    ).toContain('data-info-attr');
+      getComponentInfo({
+        result: event.target.href,
+        componentName: 'component',
+        componentData: props,
+      }),
+    ).toEqual(result);
   });
 
-  it('should include elem.href in output', () => {
+  it('should return an object with adId if value included in props', () => {
+    props.source = 'source';
+
+    const result = {
+      actionLabel: 'component-prop1',
+      source: 'source',
+      result: 'url.com',
+      positioning: {
+        parent: 'container-component',
+        child: 'prop2',
+      },
+    };
+
     expect(
-      getClickInfo(
-        {
-          href: 'http://foobar.com',
-        },
-        params,
-      ),
-    ).toContain('[http://foobar.com]');
+      getComponentInfo({
+        result: event.target.href,
+        componentName: 'component',
+        componentData: props,
+      }),
+    ).toEqual(result);
   });
 });
 

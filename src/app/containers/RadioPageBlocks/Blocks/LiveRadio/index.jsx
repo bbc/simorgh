@@ -29,7 +29,7 @@ const MediaPlayerInnerWrapper = styled.div`
 `;
 
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
-  const { platform, origin } = useContext(RequestContext);
+  const { platform } = useContext(RequestContext);
   const { liveRadio, lang, translations, service } = useContext(ServiceContext);
 
   const isAmp = platform === 'amp';
@@ -47,7 +47,6 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
     requestUrl: `${serviceId}/${id}/${lang}`,
     type: 'media',
     isAmp,
-    origin,
   });
 
   const iframeTitle = pathOr(
