@@ -1,23 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
+import { BulletedListItem } from '@bbc/psammead-bulleted-list';
 import { arrayOf, shape, string, oneOfType, bool, oneOf } from 'prop-types';
 import Blocks from '../Blocks';
-import paragraph from '../Paragraph';
+import fragment from '../Fragment';
+import InlineLink from '../InlineLink';
+import inline from '../InlineContainer';
 
-const componentsToRender = { paragraph };
-
-const Wrapper = styled.div`
-  display: inline-block;
-`;
+const componentsToRender = { fragment, urlLink: InlineLink, inline };
 
 const BulletedListItemContainer = ({ blocks }) => {
+  const contentBlocks = blocks.map(block => block.model.blocks).flat();
   return (
-    // eslint-disable-next-line jsx-a11y/no-redundant-roles
-    <li role="listitem">
-      <Wrapper>
-        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </Wrapper>
-    </li>
+    <BulletedListItem>
+      <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
+    </BulletedListItem>
   );
 };
 
