@@ -115,6 +115,7 @@ if (process.env.APP_ENV === 'local') {
         redirect: false,
       }),
     )
+    .use('/amp-script', express.static('data/amp-script'))
     .get(articleDataPath, async ({ params }, res, next) => {
       const { service, id, variant } = params;
 
