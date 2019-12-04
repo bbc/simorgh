@@ -856,7 +856,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 <html
-  class="js"
   dir="ltr"
   lang="pcm"
 >
