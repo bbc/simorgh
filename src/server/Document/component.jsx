@@ -27,7 +27,6 @@ const Document = ({
   const headScript = helmet.script.toComponent();
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !isAmp;
-
   const scriptTags = (
     <>
       <IfAboveIE9>{scripts}</IfAboveIE9>
