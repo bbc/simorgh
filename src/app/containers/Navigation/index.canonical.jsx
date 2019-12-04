@@ -29,6 +29,7 @@ const CanonicalNavigationContainer = ({
         onOpen={() => setIsOpen(true)}
         onClose={() => setIsOpen(false)}
         dir={dir}
+        script={script}
       />
       {isOpen ? (
         dropdownListItems

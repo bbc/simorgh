@@ -25,6 +25,7 @@ const AmpNavigationContainer = ({
         announcedText={menuAnnouncedText}
         onToggle="dropdown-menu.toggleVisibility"
         dir={dir}
+        script={script}
       />
       {dropdownListItems}
       <AmpScrollableNavigation dir={dir}>
