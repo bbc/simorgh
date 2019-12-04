@@ -24,20 +24,17 @@ const BrandContainer = props => {
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
 
-  let scriptLink = null;
   const otherVariant = getOtherVariant(service, variant);
-  if (otherVariant) {
-    scriptLink = (
-      <ScriptLink
-        script={latin}
-        service={service}
-        href={pathname.replace(`/${variant}`, `/${otherVariant}`)}
-      >
-        <span aria-hidden>{otherVariant.toUpperCase()}</span>
-        <VisuallyHiddenText>Use {otherVariant} variant</VisuallyHiddenText>
-      </ScriptLink>
-    );
-  }
+  const scriptLink = otherVariant && (
+    <ScriptLink
+      script={latin}
+      service={service}
+      href={pathname.replace(`/${variant}`, `/${otherVariant}`)}
+    >
+      <span aria-hidden>{otherVariant.toUpperCase()}</span>
+      <VisuallyHiddenText>Use {otherVariant} variant</VisuallyHiddenText>
+    </ScriptLink>
+  );
 
   return (
     <Brand
