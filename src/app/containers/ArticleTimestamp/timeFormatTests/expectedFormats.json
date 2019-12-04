@@ -39,6 +39,16 @@
       "exact date and time with timezone": "12 يوليو/ تموز 2019، 12:55 GMT"
     }
   },
+  "archive": {
+    "default": {
+      "one minute ago": "1 minute ago",
+      "five minutes ago": "5 minutes ago",
+      "one hour ago": "1 hour ago",
+      "five hours ago": "5 hours ago",
+      "exact date": "10 October 2018",
+      "exact date and time with timezone": "12 July 2019, 13:55 BST"
+    }
+  },
   "azeri": {
     "default": {
       "one minute ago": "bir dəqiqə əvvəl",
