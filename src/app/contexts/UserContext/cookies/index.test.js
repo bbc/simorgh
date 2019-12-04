@@ -6,11 +6,6 @@ import {
   setPreferredVariant,
 } from '.';
 
-jest.mock('js-cookie', () => ({
-  get: jest.fn(),
-  set: jest.fn(),
-}));
-
 describe('UserContext cookies', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -39,6 +34,7 @@ describe('UserContext cookies', () => {
   });
 
   describe('getPreferredVariant', () => {
+    Cookie.get = jest.fn();
     it('should return null if service is null', () => {
       expect(getPreferredVariant()).toEqual(null);
     });
@@ -50,6 +46,7 @@ describe('UserContext cookies', () => {
   });
 
   describe('setPreferredVariant', () => {
+    Cookie.set = jest.fn();
     it('should not set invalid service or variant', () => {
       setPreferredVariant('news', '');
       expect(Cookie.set).not.toHaveBeenCalled();
