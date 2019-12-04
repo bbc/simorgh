@@ -44,7 +44,7 @@ describe('Metadata', () => {
 
   const embedSource =
     'https://www.test.bbc.com/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6mtv/en-GB';
-  // const aresMediaBlock = getMetadataBlock(blocks) || { model: {} };
+
   shouldMatchSnapshot(
     'should render Metadata correctly when aresMedia has no metadata block ',
     <Metadata
