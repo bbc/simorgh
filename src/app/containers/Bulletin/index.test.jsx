@@ -78,7 +78,21 @@ describe('Bulletin Container', () => {
   });
 
   describe('assertion tests', () => {
-    it('should render the LIVE offscreen text', () => {
+    it('should render the Live TV offscreen text', () => {
+      const { container } = render(BulletinWithContext(liveTvBulletinItem));
+      const span = container.getElementsByTagName('span')[1];
+
+      expect(span.textContent).toEqual('Watch Live,');
+    });
+
+    it('should render the Live Radio offscreen text', () => {
+      const { container } = render(BulletinWithContext(liveRadioBulletinItem));
+      const span = container.getElementsByTagName('span')[1];
+
+      expect(span.textContent).toEqual('Listen Live,');
+    });
+
+    it('should render the LIVE label', () => {
       const { container } = render(BulletinWithContext(liveTvBulletinItem));
       const span = container.getElementsByTagName('span')[2];
 
