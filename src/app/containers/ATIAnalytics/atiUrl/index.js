@@ -11,7 +11,7 @@ import {
   isLocServeCookieSet,
   sanitise,
   getAtiUrl,
-  getClickInfo,
+  getEventInfo,
   getProducer,
 } from '#lib/analyticsUtils';
 
@@ -184,9 +184,8 @@ export const buildATIEventTrackUrl = ({
   service,
   platform,
   statsDestination,
-  element,
-  component,
-  label,
+  componentName,
+  componentInfo,
   type,
 }) => {
   const eventTrackingBeaconValues = [
@@ -235,16 +234,16 @@ export const buildATIEventTrackUrl = ({
     {
       key: 'ati',
       description: 'event publisher',
-      value: getClickInfo(element, {
+      value: getEventInfo(pageIdentifier, {
         service,
-        component,
-        label: label || '',
+        componentName,
+        componentInfo,
         type: type || '',
       }),
     },
   ];
 
-  return (
-    process.env.SIMORGH_ATI_BASE_URL + getAtiUrl(eventTrackingBeaconValues)
-  );
+  return `${process.env.SIMORGH_ATI_BASE_URL}${getAtiUrl(
+    eventTrackingBeaconValues,
+  )}&type=AT`;
 };
