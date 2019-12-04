@@ -46,18 +46,6 @@ describe('WithVariant', () => {
     });
   });
 
-  describe('service (ukchina) with default variant', () => {
-    it('should redirect to ukchina/trad', () => {
-      const service = 'ukchina';
-      const expectedPath = '/ukchina/trad';
-
-      testWithVariant({ service, expectedPath });
-
-      expect(Cookies.getPreferredVariant).toHaveBeenCalled();
-      expect(Cookies.setPreferredVariant).toHaveBeenCalledWith(service, 'trad');
-    });
-  });
-
   describe('service (ukchina) with cookie variant', () => {
     it('should redirect to ukchina/simp and set preferred variant cookie', () => {
       const service = 'ukchina';
@@ -71,21 +59,23 @@ describe('WithVariant', () => {
     });
   });
 
-  describe('service (zhongwen) with default variant', () => {
-    it('should redirect to zhongwen/trad', () => {
-      const service = 'zhongwen';
-      const expectedPath = '/zhongwen/trad';
+  describe('services with default variant', () => {
+    it('should redirect to ukchina/trad', () => {
+      const service = 'ukchina';
+      const expectedPath = '/ukchina/trad';
 
       testWithVariant({ service, expectedPath });
+
+      expect(Cookies.getPreferredVariant).toHaveBeenCalled();
+      expect(Cookies.setPreferredVariant).toHaveBeenCalledWith(service, 'trad');
     });
-  });
 
-  describe('service (serbian) with default variant', () => {
+    it('should redirect to zhongwen/trad', () => {
+      testWithVariant({ service: 'zhongwen', expectedPath: '/zhongwen/trad' });
+    });
+
     it('should redirect to serbian/lat', () => {
-      const service = 'serbian';
-      const expectedPath = '/serbian/lat';
-
-      testWithVariant({ service, expectedPath });
+      testWithVariant({ service: 'serbian', expectedPath: '/serbian/lat' });
     });
   });
 });
