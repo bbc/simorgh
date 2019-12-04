@@ -17,6 +17,8 @@ export const getDestination = statsDestination => {
     WS_NEWS_LANGUAGES_TEST: 598343,
     PLACEHOLDER: 598295,
     PLACEHOLDER_TEST: 598297,
+    BBC_ARCHIVE_PS: 605565,
+    BBC_ARCHIVE_PS_TEST: 605566,
   };
 
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
