@@ -4,7 +4,6 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import BrandContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
 
 const newsServiceContextStub = {
   product: 'BBC News',
@@ -19,11 +18,9 @@ const newsServiceContextStub = {
   },
 };
 
-const BrandContainerWithContext = (serviceContext, requestContext = {}) => (
-  <ServiceContext.Provider value={serviceContext}>
-    <RequestContext.Provider value={requestContext}>
-      <BrandContainer />
-    </RequestContext.Provider>
+const BrandContainerWithContext = context => (
+  <ServiceContext.Provider value={context}>
+    <BrandContainer />
   </ServiceContext.Provider>
 );
 
@@ -31,20 +28,5 @@ describe(`BrandContainer`, () => {
   shouldMatchSnapshot(
     'should render correctly',
     BrandContainerWithContext(newsServiceContextStub),
-  );
-});
-
-describe('BrandContainer with variant', () => {
-  const service = 'serbian';
-  const variant = 'cyr';
-  shouldMatchSnapshot(
-    'should render correctly',
-    BrandContainerWithContext(
-      {
-        ...newsServiceContextStub,
-        service,
-      },
-      { variant, pathname: `/${service}/${variant}` },
-    ),
   );
 });
