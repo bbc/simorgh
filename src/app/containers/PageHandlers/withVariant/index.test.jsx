@@ -2,94 +2,90 @@ import React from 'react';
 import { Router, Route } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
-import WithVariant from '.';
 import { frontPagePath } from '#app/routes/regex';
+import * as Cookies from '#contexts/UserContext/cookies';
+import withVariant from '.';
+
+const Component = () => <h1>This is the BBC.</h1>;
+const ComponentWithVariantRedirect = withVariant(Component);
+
+const testWithVariant = ({ service, expectedPath }) => {
+  const history = createMemoryHistory({
+    initialEntries: [`/${service}`],
+  });
+
+  expect(history.location.pathname).toEqual(`/${service}`);
+
+  render(
+    <Router history={history}>
+      <Route path={frontPagePath}>
+        <ComponentWithVariantRedirect />
+      </Route>
+    </Router>,
+  );
+
+  expect(history.location.pathname).toEqual(expectedPath);
+};
 
 describe('WithVariant', () => {
-  const Component = () => <h1>This is the BBC.</h1>;
-  const ComponentWithVariantRedirect = WithVariant(Component);
+  beforeEach(() => {
+    jest.clearAllMocks();
+    Cookies.getPreferredVariant = jest.fn();
+    Cookies.setPreferredVariant = jest.fn();
+  });
 
   describe('service with no default variant', () => {
     it('should not redirect', () => {
       const service = 'news';
-      const history = createMemoryHistory({
-        initialEntries: [`/${service}`],
-      });
+      const expectedPath = '/news';
 
-      expect(history.location.pathname).toEqual(`/${service}`);
+      testWithVariant({ service, expectedPath });
 
-      render(
-        <Router history={history}>
-          <Route path={frontPagePath}>
-            <ComponentWithVariantRedirect />
-          </Route>
-        </Router>,
-      );
-
-      expect(history.location.pathname).toEqual('/news');
+      expect(Cookies.getPreferredVariant).not.toHaveBeenCalled();
+      expect(Cookies.setPreferredVariant).not.toHaveBeenCalled();
     });
   });
 
   describe('service (ukchina) with default variant', () => {
     it('should redirect to ukchina/trad', () => {
       const service = 'ukchina';
-      const history = createMemoryHistory({
-        initialEntries: [`/${service}`],
-      });
+      const expectedPath = '/ukchina/trad';
 
-      expect(history.location.pathname).toEqual(`/${service}`);
+      testWithVariant({ service, expectedPath });
 
-      render(
-        <Router history={history}>
-          <Route path={frontPagePath}>
-            <ComponentWithVariantRedirect />
-          </Route>
-        </Router>,
-      );
+      expect(Cookies.getPreferredVariant).toHaveBeenCalled();
+      expect(Cookies.setPreferredVariant).toHaveBeenCalledWith(service, 'trad');
+    });
+  });
 
-      expect(history.location.pathname).toEqual('/ukchina/trad');
+  describe('service (ukchina) with cookie variant', () => {
+    it('should redirect to ukchina/simp and set preferred variant cookie', () => {
+      const service = 'ukchina';
+      const expectedPath = '/ukchina/simp';
+      Cookies.getPreferredVariant.mockReturnValue('simp');
+
+      testWithVariant({ service, expectedPath });
+
+      expect(Cookies.getPreferredVariant).toHaveBeenCalledWith(service);
+      expect(Cookies.setPreferredVariant).toHaveBeenCalledWith(service, 'simp');
     });
   });
 
   describe('service (zhongwen) with default variant', () => {
     it('should redirect to zhongwen/trad', () => {
       const service = 'zhongwen';
-      const history = createMemoryHistory({
-        initialEntries: [`/${service}`],
-      });
+      const expectedPath = '/zhongwen/trad';
 
-      expect(history.location.pathname).toEqual(`/${service}`);
-
-      render(
-        <Router history={history}>
-          <Route path={frontPagePath}>
-            <ComponentWithVariantRedirect />
-          </Route>
-        </Router>,
-      );
-
-      expect(history.location.pathname).toEqual('/zhongwen/trad');
+      testWithVariant({ service, expectedPath });
     });
   });
 
   describe('service (serbian) with default variant', () => {
     it('should redirect to serbian/lat', () => {
       const service = 'serbian';
-      const history = createMemoryHistory({
-        initialEntries: [`/${service}`],
-      });
+      const expectedPath = '/serbian/lat';
 
-      expect(history.location.pathname).toEqual(`/${service}`);
-
-      render(
-        <Router history={history}>
-          <Route path={frontPagePath}>
-            <ComponentWithVariantRedirect />
-          </Route>
-        </Router>,
-      );
-
-      expect(history.location.pathname).toEqual('/serbian/lat');
+      testWithVariant({ service, expectedPath });
     });
   });
 });
