@@ -28,7 +28,7 @@ const config = {
     assetOrigin: 'https://news.test.files.bbci.co.uk',
     atiUrl: 'https://logws1363.ati-host.net?',
     chartbeatEnabled: true,
-    avEmbedBaseUrl: 'https://polling.test.stage.bbc.co.uk',
+    avEmbedBaseUrl: 'https://polling.bbc.co.uk',
     standaloneErrorPages: false,
     alwaysCheckForFallback: true,
   },
