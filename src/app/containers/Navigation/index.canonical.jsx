@@ -10,6 +10,7 @@ const CanonicalNavigationContainer = ({
   service,
   skipLinkText,
   dir,
+  menuAnnouncedText,
   scrollableListItems,
   dropdownListItems,
 }) => {
@@ -24,7 +25,7 @@ const CanonicalNavigationContainer = ({
       isOpen={isOpen}
     >
       <CanonicalMenuButton
-        announcedText="Menu"
+        announcedText={menuAnnouncedText}
         isOpen={isOpen}
         onOpen={() => setIsOpen(true)}
         onClose={() => setIsOpen(false)}
@@ -49,6 +50,7 @@ CanonicalNavigationContainer.propTypes = {
   skipLinkText: string.isRequired,
   scrollableListItems: node.isRequired,
   dropdownListItems: node.isRequired,
+  menuAnnouncedText: string.isRequired,
 };
 
 export default CanonicalNavigationContainer;

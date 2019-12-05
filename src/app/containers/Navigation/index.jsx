@@ -6,17 +6,18 @@ import {
   DropdownLi,
 } from '@bbc/psammead-navigation/dropdown';
 import { ServiceContext } from '#contexts/ServiceContext';
-import Canonical from './index.canonical';
 import { RequestContext } from '#contexts/RequestContext';
+import Canonical from './index.canonical';
 import Amp from './index.amp';
 
 const Navigation = () => {
   const { platform } = useContext(RequestContext);
+  const isAmp = platform === 'amp';
 
   const { script, translations, navigation, service, dir } = useContext(
     ServiceContext,
   );
-  const { currentPage, skipLinkText } = translations;
+  const { currentPage, skipLinkText, home } = translations; // Should replace home with menu after we get translations
 
   if (!navigation || navigation.length === 0) {
     return null;
@@ -69,11 +70,12 @@ const Navigation = () => {
     </Dropdown>
   );
 
-  return platform === 'amp' ? (
+  return isAmp ? (
     <Amp
       scrollableListItems={scrollableListItems}
       dropdownListItems={dropdownListItems}
       skipLinkText={skipLinkText}
+      menuAnnouncedText={home}
       dir={dir}
       script={script}
       service={service}
@@ -83,6 +85,7 @@ const Navigation = () => {
       scrollableListItems={scrollableListItems}
       dropdownListItems={dropdownListItems}
       skipLinkText={skipLinkText}
+      menuAnnouncedText={home}
       dir={dir}
       script={script}
       service={service}

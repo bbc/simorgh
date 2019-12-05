@@ -10,6 +10,7 @@ const AmpNavigationContainer = ({
   service,
   skipLinkText,
   dir,
+  menuAnnouncedText,
   scrollableListItems,
   dropdownListItems,
 }) => {
@@ -21,9 +22,10 @@ const AmpNavigationContainer = ({
       dir={dir}
     >
       <AmpMenuButton
-        announcedText="Menu"
+        announcedText={menuAnnouncedText}
         onToggle="dropdown-menu.toggleVisibility"
         dir={dir}
+        script={script}
       />
       {dropdownListItems}
       <AmpScrollableNavigation dir={dir}>
@@ -40,6 +42,7 @@ AmpNavigationContainer.propTypes = {
   skipLinkText: string.isRequired,
   scrollableListItems: node.isRequired,
   dropdownListItems: node.isRequired,
+  menuAnnouncedText: string.isRequired,
 };
 
 export default AmpNavigationContainer;
