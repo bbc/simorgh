@@ -34,7 +34,7 @@ const ChartbeatAnalytics = ({ data }) => {
     if (isCanonicalAndEnabled) {
       sendCanonicalChartbeatBeacon(chartbeatConfig);
     }
-  }, [...Object.values(configDependencies), isCanonicalAndEnabled]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [data, isCanonicalAndEnabled]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     isAmpAndEnabled && <AmpChartbeatBeacon chartbeatConfig={chartbeatConfig} />
