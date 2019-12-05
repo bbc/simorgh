@@ -7,13 +7,20 @@ import { AmpMenuButton } from '@bbc/psammead-navigation/dropdown';
 
 const AmpNavigationContainer = ({
   script,
+  service,
+  skipLinkText,
   dir,
   menuAnnouncedText,
   scrollableListItems,
   dropdownListItems,
 }) => {
   return (
-    <Navigation dir={dir}>
+    <Navigation
+      script={script}
+      skipLinkText={skipLinkText}
+      service={service}
+      dir={dir}
+    >
       <AmpMenuButton
         announcedText={menuAnnouncedText}
         onToggle="tap:dropdown-menu.toggleVisibility"
@@ -29,8 +36,10 @@ const AmpNavigationContainer = ({
 };
 
 AmpNavigationContainer.propTypes = {
+  service: string.isRequired,
   dir: string.isRequired,
   script: shape(scriptPropType).isRequired,
+  skipLinkText: string.isRequired,
   scrollableListItems: node.isRequired,
   dropdownListItems: node.isRequired,
   menuAnnouncedText: string.isRequired,
