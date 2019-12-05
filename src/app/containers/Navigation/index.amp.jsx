@@ -23,7 +23,7 @@ const AmpNavigationContainer = ({
     >
       <AmpMenuButton
         announcedText={menuAnnouncedText}
-        onToggle="dropdown-menu.toggleVisibility"
+        onToggle="tap:dropdown-menu.toggleVisibility"
         dir={dir}
         script={script}
       />
