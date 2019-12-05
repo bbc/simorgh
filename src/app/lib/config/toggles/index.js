@@ -52,7 +52,7 @@ const toggles = {
   },
   live: {
     chartbeatAnalytics: {
-      enabled: false,
+      enabled: true,
     },
     mediaPlayer: {
       enabled: false,
