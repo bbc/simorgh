@@ -1,9 +1,6 @@
 import { buildATIPageTrackPath } from '../../atiUrl';
 
-import {
-  getPublishedDatetime,
-  getLibraryVersion,
-} from '../../../../lib/analyticsUtils';
+import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
 import {
   getLanguage,
   getContentId,
@@ -34,7 +31,6 @@ export const buildArticleATIParams = (
     producerId: atiAnalyticsProducerId,
     timePublished: getPublishedDatetime('firstPublished', articleData),
     timeUpdated: getPublishedDatetime('lastPublished', articleData),
-    libraryVersion: getLibraryVersion(),
     isUK,
     platform,
     service,
