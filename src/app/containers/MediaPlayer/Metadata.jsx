@@ -1,10 +1,17 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { shape } from 'prop-types';
-import mediaPlayerMetadata from './helpers/metadata';
+import pathOr from 'ramda/src/pathOr';
+import { shape, string } from 'prop-types';
+import { mediaPlayerMetadata } from './helpers/metadata';
 
-const Metadata = ({ aresMediaBlock }) => {
-  const metadata = mediaPlayerMetadata(aresMediaBlock);
+const Metadata = ({ aresMediaBlock, embedSource }) => {
+  const aresMediaBlocks = pathOr(null, ['model', 'blocks'], aresMediaBlock);
+
+  if (!aresMediaBlocks || aresMediaBlocks.length < 1) {
+    return null;
+  }
+
+  const metadata = mediaPlayerMetadata(aresMediaBlocks, embedSource);
 
   return (
     <Helmet>
@@ -19,6 +26,7 @@ Metadata.propTypes = {
   aresMediaBlock: shape({
     model: shape({}).isRequired,
   }).isRequired,
+  embedSource: string.isRequired,
 };
 
 export default Metadata;
