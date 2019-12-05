@@ -1,11 +1,14 @@
 {
   "metadata": {
     "id": "urn:bbc:ares::article:cdd6p3r9g7jo",
-    "locators": { "optimoUrn": "urn:bbc:optimo:asset:cdd6p3r9g7jo" },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cdd6p3r9g7jo",
+      "canonicalUrl": "https://www.bbc.com/japanese/articles/cdd6p3r9g7jo"
+    },
     "type": "article",
     "createdBy": "Japanese",
     "language": "ja",
-    "lastUpdated": 1574945459434,
+    "lastUpdated": 1575558194135,
     "firstPublished": 1574854693250,
     "lastPublished": 1574854693250,
     "options": {},
@@ -13,6 +16,7 @@
     "passport": {
       "language": "ja",
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Japanese",
+      "passportId": "0b575826-1478-40bb-957b-799dfd7fbd84",
       "locator": "urn:bbc:optimo:asset:cdd6p3r9g7jo",
       "availability": "AVAILABLE",
       "taggings": []
@@ -175,7 +179,10 @@
                     },
                     {
                       "type": "fragment",
-                      "model": { "text": "。", "attributes": [] }
+                      "model": {
+                        "text": "。",
+                        "attributes": []
+                      }
                     }
                   ]
                 }
@@ -186,7 +193,7 @@
         {
           "type": "video",
           "model": {
-            "locator": "urn:bbc:pips:pid:p018jnq2",
+            "locator": "urn:bbc:pips:pid:p01k6msm",
             "blocks": [
               {
                 "type": "caption",
@@ -222,33 +229,43 @@
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "urn:bbc:ares::clip:p018jnq2",
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
                       "type": "aresMediaMetadata",
                       "model": {
-                        "id": "p018jnq2",
+                        "id": "p01k6msm",
                         "subType": "clip",
                         "format": "audio_video",
-                        "title": "Mobile replace standard media",
-                        "synopses": { "short": "jupiter" },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p018jnq2.jpg",
-                        "embedding": false,
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
                         "advertising": true,
                         "versions": [
                           {
-                            "versionId": "p018mrs9",
-                            "types": ["Editorial"],
-                            "duration": 17,
-                            "durationISO8601": "PT17S",
-                            "warnings": {},
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
                             "availableTerritories": {
                               "uk": true,
                               "nonUk": true,
                               "world": false
                             },
-                            "availableFrom": 1487926930000
+                            "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": { "destinations": [] }
+                        "syndication": {
+                          "destinations": []
+                        }
                       }
                     },
                     {
@@ -258,11 +275,11 @@
                           {
                             "type": "rawImage",
                             "model": {
-                              "width": 1000,
-                              "height": 667,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9pn.jpg",
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
                               "originCode": "mpv",
-                              "copyrightHolder": "Fushimi Inari-taisha"
+                              "copyrightHolder": "BBC"
                             }
                           },
                           {
@@ -276,12 +293,12 @@
                                       {
                                         "type": "paragraph",
                                         "model": {
-                                          "text": "Ø¦[Â» Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙÙØ«Ø³Ù",
+                                          "text": "Ants",
                                           "blocks": [
                                             {
                                               "type": "fragment",
                                               "model": {
-                                                "text": "Ø¦[Â» Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙÙØ«Ø³Ù",
+                                                "text": "Ants",
                                                 "attributes": []
                                               }
                                             }
@@ -411,7 +428,10 @@
                   "blocks": [
                     {
                       "type": "fragment",
-                      "model": { "text": "", "attributes": [] }
+                      "model": {
+                        "text": "",
+                        "attributes": []
+                      }
                     }
                   ]
                 }
@@ -423,8 +443,12 @@
     }
   },
   "promo": {
-    "headlines": { "seoHeadline": "これは、このテスト記事の見出しです" },
-    "locators": { "optimoUrn": "urn:bbc:optimo:asset:cdd6p3r9g7jo" },
+    "headlines": {
+      "seoHeadline": "これは、このテスト記事の見出しです"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cdd6p3r9g7jo"
+    },
     "summary": "",
     "timestamp": 1574854693250,
     "id": "urn:bbc:ares::article:cdd6p3r9g7jo",

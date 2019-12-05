@@ -1,11 +1,14 @@
 {
   "metadata": {
     "id": "urn:bbc:ares::article:cn0exdy1jzvo",
-    "locators": { "optimoUrn": "urn:bbc:optimo:asset:cn0exdy1jzvo" },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cn0exdy1jzvo",
+      "canonicalUrl": "https://www.bbc.com/burmese/articles/cn0exdy1jzvo"
+    },
     "type": "article",
     "createdBy": "Burmese",
     "language": "my",
-    "lastUpdated": 1574945072294,
+    "lastUpdated": 1575558020204,
     "firstPublished": 1574852713454,
     "lastPublished": 1574852713454,
     "options": {},
@@ -183,7 +186,7 @@
         {
           "type": "video",
           "model": {
-            "locator": "urn:bbc:pips:pid:p01ccs84",
+            "locator": "urn:bbc:pips:pid:p01k6msm",
             "blocks": [
               {
                 "type": "caption",
@@ -219,33 +222,43 @@
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "urn:bbc:ares::clip:p01ccs84",
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
                       "type": "aresMediaMetadata",
                       "model": {
-                        "id": "p01ccs84",
+                        "id": "p01k6msm",
                         "subType": "clip",
                         "format": "audio_video",
-                        "title": "Test video",
-                        "synopses": { "short": "test" },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p01ccs84.jpg",
-                        "embedding": false,
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
                         "advertising": true,
                         "versions": [
                           {
-                            "versionId": "p01ccs86",
-                            "types": ["Original"],
-                            "duration": 29,
-                            "durationISO8601": "PT29S",
-                            "warnings": {},
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
                             "availableTerritories": {
                               "uk": true,
                               "nonUk": true,
                               "world": false
                             },
-                            "availableFrom": 1500456924000
+                            "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": { "destinations": [] }
+                        "syndication": {
+                          "destinations": []
+                        }
                       }
                     },
                     {
@@ -255,11 +268,11 @@
                           {
                             "type": "rawImage",
                             "model": {
-                              "width": 1000,
-                              "height": 667,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9pn.jpg",
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
                               "originCode": "mpv",
-                              "copyrightHolder": "Fushimi Inari-taisha"
+                              "copyrightHolder": "BBC"
                             }
                           },
                           {
@@ -273,12 +286,12 @@
                                       {
                                         "type": "paragraph",
                                         "model": {
-                                          "text": "Ø¦[Â» Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙÙØ«Ø³Ù",
+                                          "text": "Ants",
                                           "blocks": [
                                             {
                                               "type": "fragment",
                                               "model": {
-                                                "text": "Ø¦[Â» Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙÙØ«Ø³Ù",
+                                                "text": "Ants",
                                                 "attributes": []
                                               }
                                             }
@@ -401,8 +414,12 @@
     }
   },
   "promo": {
-    "headlines": { "seoHeadline": "ဒါကဒီစမ်းသပ်မှုဆောင်းပါး၏ခေါင်းစဉ်ဖြစ်သည်" },
-    "locators": { "optimoUrn": "urn:bbc:optimo:asset:cn0exdy1jzvo" },
+    "headlines": {
+      "seoHeadline": "ဒါကဒီစမ်းသပ်မှုဆောင်းပါး၏ခေါင်းစဉ်ဖြစ်သည်"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cn0exdy1jzvo"
+    },
     "summary": "",
     "timestamp": 1574852713454,
     "id": "urn:bbc:ares::article:cn0exdy1jzvo",

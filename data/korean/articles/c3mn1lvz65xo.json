@@ -1,11 +1,14 @@
 {
   "metadata": {
     "id": "urn:bbc:ares::article:c3mn1lvz65xo",
-    "locators": { "optimoUrn": "urn:bbc:optimo:asset:c3mn1lvz65xo" },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c3mn1lvz65xo",
+      "canonicalUrl": "https://www.bbc.com/korean/articles/c3mn1lvz65xo"
+    },
     "type": "article",
     "createdBy": "Korean",
     "language": "ko",
-    "lastUpdated": 1574945545062,
+    "lastUpdated": 1575558253480,
     "firstPublished": 1574855147209,
     "lastPublished": 1574855147209,
     "options": {},
@@ -152,7 +155,10 @@
                   "blocks": [
                     {
                       "type": "fragment",
-                      "model": { "text": "이것은 ", "attributes": [] }
+                      "model": {
+                        "text": "이것은 ",
+                        "attributes": []
+                      }
                     },
                     {
                       "type": "urlLink",
@@ -187,7 +193,7 @@
         {
           "type": "video",
           "model": {
-            "locator": "urn:bbc:pips:pid:p018jnq2",
+            "locator": "urn:bbc:pips:pid:p01k6msm",
             "blocks": [
               {
                 "type": "caption",
@@ -223,33 +229,43 @@
                 "model": {
                   "blocks": [
                     {
-                      "blockId": "urn:bbc:ares::clip:p018jnq2",
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
                       "type": "aresMediaMetadata",
                       "model": {
-                        "id": "p018jnq2",
+                        "id": "p01k6msm",
                         "subType": "clip",
                         "format": "audio_video",
-                        "title": "Mobile replace standard media",
-                        "synopses": { "short": "jupiter" },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p018jnq2.jpg",
-                        "embedding": false,
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
                         "advertising": true,
                         "versions": [
                           {
-                            "versionId": "p018mrs9",
-                            "types": ["Editorial"],
-                            "duration": 17,
-                            "durationISO8601": "PT17S",
-                            "warnings": {},
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
                             "availableTerritories": {
                               "uk": true,
                               "nonUk": true,
                               "world": false
                             },
-                            "availableFrom": 1487926930000
+                            "availableFrom": 1540218932000
                           }
                         ],
-                        "syndication": { "destinations": [] }
+                        "syndication": {
+                          "destinations": []
+                        }
                       }
                     },
                     {
@@ -259,11 +275,11 @@
                           {
                             "type": "rawImage",
                             "model": {
-                              "width": 1000,
-                              "height": 667,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9pn.jpg",
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
                               "originCode": "mpv",
-                              "copyrightHolder": "Fushimi Inari-taisha"
+                              "copyrightHolder": "BBC"
                             }
                           },
                           {
@@ -277,12 +293,12 @@
                                       {
                                         "type": "paragraph",
                                         "model": {
-                                          "text": "Ø¦[Â» Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙÙØ«Ø³Ù",
+                                          "text": "Ants",
                                           "blocks": [
                                             {
                                               "type": "fragment",
                                               "model": {
-                                                "text": "Ø¦[Â» Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙÙØ«Ø³Ù",
+                                                "text": "Ants",
                                                 "attributes": []
                                               }
                                             }
@@ -405,8 +421,12 @@
     }
   },
   "promo": {
-    "headlines": { "seoHeadline": "이것이이 테스트 기사의 헤드 라인입니다." },
-    "locators": { "optimoUrn": "urn:bbc:optimo:asset:c3mn1lvz65xo" },
+    "headlines": {
+      "seoHeadline": "이것이이 테스트 기사의 헤드 라인입니다."
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c3mn1lvz65xo"
+    },
     "summary": "",
     "timestamp": 1574855147209,
     "id": "urn:bbc:ares::article:c3mn1lvz65xo",
