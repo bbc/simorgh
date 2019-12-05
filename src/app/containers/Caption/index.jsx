@@ -7,9 +7,13 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';
-import inline from '../InlineContainer';
+import Inline from '../InlineContainer';
 
-const componentsToRender = { fragment: Fragment, urlLink: InlineLink, inline };
+const componentsToRender = {
+  fragment: Fragment,
+  urlLink: InlineLink,
+  inline: Inline,
+};
 
 const chooseOffscreenText = (
   mediaType,
