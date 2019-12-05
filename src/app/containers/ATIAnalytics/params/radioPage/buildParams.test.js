@@ -6,6 +6,7 @@ analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
 analyticsUtils.getPublishedDatetime = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
+analyticsUtils.getLibraryVersion = jest.fn().mockReturnValue('simorgh');
 
 const radio = {
   metadata: {
@@ -41,6 +42,7 @@ const validURLParams = {
   pageTitle: 'pageTitle',
   producerId: serviceContext.atiAnalyticsProducerId,
   statsDestination: requestContext.statsDestination,
+  libraryVersion: analyticsUtils.getLibraryVersion(),
   platform: requestContext.platform,
   service: 'service',
 };
@@ -70,6 +72,7 @@ describe('buildRadioATIUrl', () => {
         'x4=[language]',
         'x5=[http://localhost/]',
         'x7=[player-live]',
+        'x8=[simorgh]',
         'x9=[pageTitle]',
       ].join('&'),
     );
