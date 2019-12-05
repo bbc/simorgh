@@ -148,6 +148,8 @@ const testRenderedData = ({
 
   expect(renderDocumentSpy).toHaveBeenCalledWith(expectedProps);
 
+  expect(getRouteProps).toHaveBeenCalledWith(routes, url.split('?')[0]);
+
   expect(text).toEqual(
     '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   );
