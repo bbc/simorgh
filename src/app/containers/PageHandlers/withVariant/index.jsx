@@ -24,7 +24,7 @@ const withVariant = Component => {
     const location = useLocation();
     const defaultVariant = getVariant({ service, variant });
     const sanitizedVariant = variantSanitiser(variant);
-    const isNotDefaultVariant = defaultVariant && defaultVariant !== 'default';
+    const isNotDefaultVariant = defaultVariant !== 'default';
 
     if (!sanitizedVariant && isNotDefaultVariant) {
       return redirect(location, service, defaultVariant);
