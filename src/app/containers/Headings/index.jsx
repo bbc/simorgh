@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
+import styled from 'styled-components';
 import { Headline, SubHeading } from '@bbc/psammead-headings';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -12,8 +13,14 @@ import {
   GridItemConstrainedLarge,
 } from '#lib/styledGrid';
 
+const StyledHeadline = styled(Headline)`
+  :focus {
+    outline: none;
+  }
+`;
+
 const Headings = {
-  headline: Headline,
+  headline: StyledHeadline,
   subheadline: SubHeading,
 };
 
