@@ -233,6 +233,7 @@ export const service = {
         url: 'http://www.bbc.co.uk/ukchina/simp',
       },
     ],
+    navigationSection: '分类',
   },
   trad: {
     ...baseServiceConfig,
@@ -284,6 +285,7 @@ export const service = {
         url: 'http://www.bbc.co.uk/ukchina/trad',
       },
     ],
+    navigationSection: '分類',
   },
 };
 

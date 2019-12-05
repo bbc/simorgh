@@ -268,6 +268,7 @@ export const service = {
         url: '/arabic/in_depth',
       },
     ],
+    navigationSection: 'أقسام',
   },
 };
 

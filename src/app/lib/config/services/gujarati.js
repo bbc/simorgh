@@ -213,6 +213,7 @@ export const service = {
         url: '/gujarati/international',
       },
     ],
+    navigationSection: 'વિભાગો',
   },
 };
 

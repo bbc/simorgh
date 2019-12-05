@@ -235,6 +235,7 @@ export const service = {
         url: '/burmese/media/photogalleries',
       },
     ],
+    navigationSection: 'ကဏ္ဍများ',
   },
 };
 

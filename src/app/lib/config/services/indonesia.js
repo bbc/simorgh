@@ -236,6 +236,7 @@ export const service = {
         url: '/indonesia/bahasa_inggris',
       },
     ],
+    navigationSection: 'Kategori',
     timezone: 'Asia/Jakarta',
   },
 };

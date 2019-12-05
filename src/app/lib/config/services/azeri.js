@@ -216,6 +216,7 @@ export const service = {
         url: '/azeri/media/video',
       },
     ],
+    navigationSection: 'Bölümlər',
   },
 };
 

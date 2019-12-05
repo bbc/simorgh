@@ -204,6 +204,7 @@ export const service = {
         url: '/afaanoromoo/popular/read',
       },
     ],
+    navigationSection: 'Kutaawwan',
     timezone: 'Africa/Addis_Ababa',
     liveRadio: {
       externalIdOverrides: { bbc_oromo_radio: 'bbc_afaanoromoo_radio' },

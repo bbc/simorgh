@@ -222,6 +222,7 @@ export const service = {
         url: '/swahili/media/photogalleries',
       },
     ],
+    navigationSection: 'Yaliyomo',
   },
 };
 

@@ -241,6 +241,7 @@ export const service = {
         url: '/uzbek/media/photogalleries',
       },
     ],
+    navigationSection: 'Бўлимлар',
   },
 };
 

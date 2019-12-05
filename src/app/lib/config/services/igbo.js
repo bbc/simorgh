@@ -209,6 +209,7 @@ export const service = {
           text: 'Kpọtụrụ BBC',
         },
       ],
+      navigationSection: 'Ngalaba',
       copyrightText:
         'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
     },

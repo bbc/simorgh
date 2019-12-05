@@ -235,6 +235,7 @@ export const service = {
         url: '/kyrgyz/blog',
       },
     ],
+    navigationSection: 'Бөлүмдөр',
   },
 };
 

@@ -212,6 +212,7 @@ export const service = {
         url: '/gahuza/media/video',
       },
     ],
+    navigationSection: 'Imice',
   },
 };
 

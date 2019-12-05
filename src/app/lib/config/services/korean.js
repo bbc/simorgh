@@ -199,6 +199,7 @@ export const service = {
         url: '/korean/popular/read',
       },
     ],
+    navigationSection: '섹션',
     timezone: 'Asia/Seoul',
   },
 };

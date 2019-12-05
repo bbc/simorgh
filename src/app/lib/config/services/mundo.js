@@ -251,6 +251,7 @@ export const service = {
         url: '/mundo/noticias-43826245',
       },
     ],
+    navigationSection: 'Secciones',
   },
 };
 

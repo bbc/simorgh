@@ -249,6 +249,7 @@ export const service = {
         url: '/afrique/nos_emissions/radio',
       },
     ],
+    navigationSection: 'Rubriques',
   },
 };
 

@@ -254,6 +254,7 @@ export const service = {
         url: '/russian/learning-english-41003378',
       },
     ],
+    navigationSection: 'Разделы',
   },
 };
 

@@ -262,6 +262,7 @@ export const service = {
         url: '/ukrainian/learning_english',
       },
     ],
+    navigationSection: 'Розділи',
   },
 };
 

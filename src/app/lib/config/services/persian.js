@@ -282,6 +282,7 @@ export const service = {
         url: '/persian/learningenglish',
       },
     ],
+    navigationSection: 'صفحه ها',
   },
 };
 

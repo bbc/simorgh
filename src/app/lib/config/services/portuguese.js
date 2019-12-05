@@ -249,6 +249,7 @@ export const service = {
         url: '/portuguese/media/video',
       },
     ],
+    navigationSection: 'Seções',
   },
 };
 
