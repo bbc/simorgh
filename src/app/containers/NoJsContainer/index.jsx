@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
-import onClient from '#lib/utilities/onClient';
 
 const NoJsContainer = () => {
-  const htmlAttributes = {
-    class: onClient() ? 'js' : 'no-js',
-  };
-  return <Helmet htmlAttributes={htmlAttributes} />;
+  const [htmlClassName, setHtmlClassName] = useState('no-js');
+
+  useEffect(() => {
+    setHtmlClassName('js');
+  }, []);
+
+  return (
+    <Helmet
+      htmlAttributes={{
+        class: htmlClassName,
+      }}
+    />
+  );
 };
 
 export default NoJsContainer;
