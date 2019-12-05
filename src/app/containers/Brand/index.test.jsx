@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
@@ -29,4 +30,17 @@ describe(`BrandContainer`, () => {
     'should render correctly',
     BrandContainerWithContext(newsServiceContextStub),
   );
+
+  describe('assertions', () => {
+    it('should render a Brand with a Skip to content link, linking to #content', () => {
+      const { container } = render(
+        BrandContainerWithContext(newsServiceContextStub),
+      );
+
+      const skipLink = container.querySelectorAll('a')[1];
+      const skipLinkHref = skipLink.getAttribute('href');
+
+      expect(skipLinkHref).toBe('#content');
+    });
+  });
 });
