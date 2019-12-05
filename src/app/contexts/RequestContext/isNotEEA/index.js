@@ -1,3 +1,5 @@
+// eea => https://en.wikipedia.org/wiki/European_Economic_Area
+
 const eea = [
   'AT',
   'AX',
