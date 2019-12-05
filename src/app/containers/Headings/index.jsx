@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
+import styled from 'styled-components';
 import { Headline, SubHeading } from '@bbc/psammead-headings';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -9,8 +10,14 @@ import Blocks from '../Blocks';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import Grid, { ArticlePageGrid } from '#app/components/Grid';
 
+const StyledHeadline = styled(Headline)`
+  :focus {
+    outline: none;
+  }
+`;
+
 const Headings = {
-  headline: Headline,
+  headline: StyledHeadline,
   subheadline: SubHeading,
 };
 

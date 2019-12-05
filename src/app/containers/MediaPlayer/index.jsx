@@ -131,7 +131,7 @@ const MediaPlayerContainer = ({
         group5: 10,
       }}
     >
-      <Metadata aresMediaBlock={aresMediaBlock} />
+      <Metadata aresMediaBlock={aresMediaBlock} embedSource={embedSource} />
       <Figure>
         {isAmp ? (
           <AmpMediaPlayer
