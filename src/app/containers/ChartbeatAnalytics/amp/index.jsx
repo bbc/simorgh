@@ -3,7 +3,6 @@ import { ampChartbeatPropTypes } from '../../../models/propTypes/chartbeatAnalyt
 
 const chartbeatAmpConfigOptions = options => ({
   vars: options,
-  triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
 });
 
 const JsonInlinedScript = data => (
