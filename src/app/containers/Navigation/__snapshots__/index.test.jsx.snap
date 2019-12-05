@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Navigation Container snapshots should render a Navigation with igbo links correctly 1`] = `
-.c8 {
+.c10 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -11,6 +11,42 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   position: absolute;
   width: 1px;
   margin: 0;
+}
+
+.c3 {
+  color: #fff;
+  fill: currentColor;
+}
+
+.c2 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.c2:hover,
+.c2:focus {
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.c2:hover::after,
+.c2:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c2 svg {
+  vertical-align: middle;
 }
 
 .c1 {
@@ -19,63 +55,14 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   margin: 0 auto;
 }
 
-.c2 {
-  position: absolute;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  padding: 0.75rem 0.5rem;
-  background-color: #ffffff;
-  border: 0.1875rem solid #000;
-  color: #333;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c2:focus {
-  -webkit-clip-path: none;
-  clip-path: none;
-  -webkit-clip: auto;
-  clip: auto;
-  height: auto;
-  width: auto;
-  top: -3rem;
-  left: 0.5rem;
-}
-
-.c3 {
+.c5 {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
-  overflow: hidden;
 }
 
-.c5 {
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-}
-
-.c5::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 80rem;
-  border-bottom: 0.0625rem solid #eab3b3;
-  z-index: -1;
-}
-
-.c6 {
+.c8 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -89,7 +76,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   padding: 0.75rem 1rem;
 }
 
-.c6:hover::after {
+.c8:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -99,7 +86,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c6:focus::after {
+.c8:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -110,7 +97,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   border: 0.25rem solid #FFFFFF;
 }
 
-.c9 {
+.c11 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -124,7 +111,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   padding: 0.75rem 1rem;
 }
 
-.c9:hover::after {
+.c11:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -133,7 +120,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c9:focus::after {
+.c11:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -144,7 +131,13 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   border: 0.25rem solid #FFFFFF;
 }
 
-.c7::after {
+.c7 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.c9::after {
   content: '';
   position: absolute;
   left: 0;
@@ -154,76 +147,123 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
 }
 
 .c0 {
+  position: relative;
   background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
 }
 
-.c0 .c4::after {
+.c0 .c6::after {
   left: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width:37.5rem) {
   .c2 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) {
+  .c2 {
+    height: 2.75rem;
+    width: 2.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2:focus {
-    top: -4rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2:focus {
-    left: 0;
+  .c5 {
+    overflow: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c6 {
+  .c8 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c9 {
+  .c11 {
     padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c7:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c4 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c4::-webkit-scrollbar {
+    display: none;
+  }
+
+  .c4:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
   }
 }
 
@@ -235,72 +275,95 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   <div
     class="c1"
   >
-    <a
+    <button
+      aria-expanded="false"
+      aria-label="Akụkọ"
       class="c2"
-      href="#content"
+      dir="ltr"
+      type="button"
     >
-      Wụga n’ọdịnaya
-    </a>
-    <ul
-      class="c3"
-      role="list"
-    >
-      <li
-        class="c4 c5"
-        role="listitem"
+      <svg
+        aria-hidden="true"
+        class="c3"
+        focusable="false"
+        height="2.75rem"
+        viewBox="0 0 44 44"
+        width="2.75rem"
       >
-        <a
-          class="c6"
-          href="/igbo"
+        <path
+          d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+        />
+      </svg>
+    </button>
+    <div
+      class="c4"
+      dir="ltr"
+    >
+      <ul
+        class="c5"
+        role="list"
+      >
+        <li
+          class="c6 c7"
+          dir="ltr"
+          role="listitem"
         >
-          <span
-            class="c7"
-            role="text"
+          <a
+            class="c8"
+            href="/igbo"
           >
             <span
-              class="c8"
+              class="c9"
+              role="text"
             >
-              Peegi ị nọ ugbua
-              , 
+              <span
+                class="c10"
+              >
+                Peegi ị nọ ugbua
+                , 
+              </span>
+              Akụkọ
             </span>
-            Akụkọ
-          </span>
-        </a>
-      </li>
-      <li
-        class="c4 c5"
-        role="listitem"
-      >
-        <a
-          class="c9"
-          href="/igbo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+          </a>
+        </li>
+        <li
+          class="c6 c7"
+          dir="ltr"
+          role="listitem"
         >
-          Egwuregwu
-        </a>
-      </li>
-      <li
-        class="c4 c5"
-        role="listitem"
-      >
-        <a
-          class="c9"
-          href="/igbo/media/video"
+          <a
+            class="c11"
+            href="/igbo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+          >
+            Egwuregwu
+          </a>
+        </li>
+        <li
+          class="c6 c7"
+          dir="ltr"
+          role="listitem"
         >
-          Ihe nkiri
-        </a>
-      </li>
-      <li
-        class="c4 c5"
-        role="listitem"
-      >
-        <a
-          class="c9"
-          href="/igbo/popular/read"
+          <a
+            class="c11"
+            href="/igbo/media/video"
+          >
+            Ihe nkiri
+          </a>
+        </li>
+        <li
+          class="c6 c7"
+          dir="ltr"
+          role="listitem"
         >
-          Nke ka ewuewu
-        </a>
-      </li>
-    </ul>
+          <a
+            class="c11"
+            href="/igbo/popular/read"
+          >
+            Nke ka ewuewu
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 `;

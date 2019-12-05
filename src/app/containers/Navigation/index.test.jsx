@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import NavigationContainer from './index';
 import { service as igboConfig } from '#lib/config/services/igbo';
@@ -23,21 +22,19 @@ describe('Navigation Container', () => {
     useContext.mockReset();
   });
 
+  window.matchMedia = jest.fn().mockImplementation(query => {
+    return {
+      matches: false,
+      media: query,
+      addListener: jest.fn(),
+      removeListener: jest.fn(),
+    };
+  });
+
   describe('snapshots', () => {
     shouldMatchSnapshot(
       'should render a Navigation with igbo links correctly',
       <NavigationContainer />,
     );
-  });
-
-  describe('assertions', () => {
-    it('should render a Navigation with a Skip to content link, linking to #content', () => {
-      const { container } = render(<NavigationContainer />);
-
-      const skipLink = container.querySelector('a');
-      const skipLinkHref = skipLink.getAttribute('href');
-
-      expect(skipLinkHref).toBe('#content');
-    });
   });
 });

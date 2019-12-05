@@ -50,6 +50,13 @@ HeaderContainerWithContext.propTypes = {
 };
 
 describe(`Header`, () => {
+  window.matchMedia = jest.fn().mockImplementation(() => {
+    return {
+      matches: false,
+      addListener: jest.fn(),
+      removeListener: jest.fn(),
+    };
+  });
   shouldMatchSnapshot(
     'should render correctly for news article',
     HeaderContainerWithContext({
