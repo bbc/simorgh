@@ -10,10 +10,6 @@ import {
 } from './fixtureData';
 
 describe('MediaPlayer', () => {
-  beforeEach(() => {
-    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
-  });
-
   shouldMatchSnapshot(
     'Calls the canonical placeholder when platform is canonical and showPlaceholder is true',
     VideoCanonicalWithPlaceholder,
