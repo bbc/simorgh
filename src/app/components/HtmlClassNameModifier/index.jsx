@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
 
-const NoJsContainer = () => {
+const HtmlClassNameModifier = () => {
   const [htmlClassName, setHtmlClassName] = useState('no-js');
 
   useEffect(() => {
@@ -17,4 +17,4 @@ const NoJsContainer = () => {
   );
 };
 
-export default NoJsContainer;
+export default HtmlClassNameModifier;
