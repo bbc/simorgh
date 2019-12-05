@@ -7,8 +7,6 @@ import { CanonicalMenuButton } from '@bbc/psammead-navigation/dropdown';
 
 const CanonicalNavigationContainer = ({
   script,
-  service,
-  skipLinkText,
   dir,
   menuAnnouncedText,
   scrollableListItems,
@@ -17,13 +15,7 @@ const CanonicalNavigationContainer = ({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Navigation
-      script={script}
-      skipLinkText={skipLinkText}
-      service={service}
-      dir={dir}
-      isOpen={isOpen}
-    >
+    <Navigation dir={dir} isOpen={isOpen}>
       <CanonicalMenuButton
         announcedText={menuAnnouncedText}
         isOpen={isOpen}
@@ -44,10 +36,8 @@ const CanonicalNavigationContainer = ({
 };
 
 CanonicalNavigationContainer.propTypes = {
-  service: string.isRequired,
   dir: string.isRequired,
   script: shape(scriptPropType).isRequired,
-  skipLinkText: string.isRequired,
   scrollableListItems: node.isRequired,
   dropdownListItems: node.isRequired,
   menuAnnouncedText: string.isRequired,
