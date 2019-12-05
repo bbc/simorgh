@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoJsContainer should return a mounted component with the html class attribute as js 1`] = `
+<NoJsContainer>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    htmlAttributes={
+      Object {
+        "class": "js",
+      }
+    }
+  >
+    <SideEffect(NullComponent)
+      defer={true}
+      encodeSpecialCharacters={true}
+      htmlAttributes={
+        Object {
+          "class": "js",
+        }
+      }
+    >
+      <NullComponent
+        defer={true}
+        encodeSpecialCharacters={true}
+        htmlAttributes={
+          Object {
+            "class": "js",
+          }
+        }
+      />
+    </SideEffect(NullComponent)>
+  </HelmetWrapper>
+</NoJsContainer>
+`;
