@@ -258,8 +258,40 @@
                           {
                             "type": "rawImage",
                             "model": {
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/legacy/clip/p018jnq2.jpg",
-                              "originCode": "mpv"
+                              "width": 1000,
+                              "height": 667,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9pn.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "Fushimi Inari-taisha"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ø¦[Â» Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙÙØ«Ø³Ù",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ø¦[Â» Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙÙØ«Ø³Ù",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
