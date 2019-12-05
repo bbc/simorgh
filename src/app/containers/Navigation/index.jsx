@@ -37,6 +37,7 @@ const Navigation = () => {
             active={active}
             currentPageText={currentPage}
             service={service}
+            dir={dir}
           >
             {title}
           </NavigationLi>
