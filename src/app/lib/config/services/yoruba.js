@@ -211,6 +211,7 @@ export const service = {
         url: '/yoruba/popular/read',
       },
     ],
+    navigationSection: 'Àwọn abala',
   },
 };
 

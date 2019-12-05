@@ -230,6 +230,7 @@ export const service = {
         url: '/news/technology',
       },
     ],
+    navigationSection: 'Sections',
   },
 };
 

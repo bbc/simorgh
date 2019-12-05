@@ -216,6 +216,7 @@ export const service = {
         url: '/news/scotland',
       },
     ],
+    navigationSection: 'Earrannan',
   },
 };
 
