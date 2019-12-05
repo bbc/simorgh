@@ -209,7 +209,7 @@ server
   )
   .get('/*', cspInjectFun, async ({ url, headers, path: urlPath }, res) => {
     try {
-      const { service, isAmp, route, variant } = getRouteProps(routes, url);
+      const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
       const data = await route.getInitialData(urlPath);
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
