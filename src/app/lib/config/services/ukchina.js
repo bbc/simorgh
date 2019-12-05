@@ -212,6 +212,7 @@ export const service = {
         url: '/ukchina/simp/media/photogalleries',
       },
     ],
+    navigationSection: '分类',
   },
   trad: {
     ...baseServiceConfig,
@@ -247,6 +248,7 @@ export const service = {
         url: '/ukchina/trad/media/photogalleries',
       },
     ],
+    navigationSection: '分類',
   },
 };
 
