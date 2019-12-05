@@ -182,6 +182,7 @@ export const service = {
         url: '/thai/popular/read',
       },
     ],
+    navigationSection: 'หมวดข่าว',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',

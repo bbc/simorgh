@@ -169,6 +169,7 @@ export const service = {
         url: '/punjabi/international',
       },
     ],
+    navigationSection: 'ਸੈਕਸ਼ਨਜ਼',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',

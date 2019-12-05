@@ -221,6 +221,7 @@ export const service = {
         url: 'https://www.bbcworldnews-japan.com/',
       },
     ],
+    navigationSection: 'ジャンル',
   },
 };
 
