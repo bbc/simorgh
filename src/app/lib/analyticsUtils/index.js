@@ -261,7 +261,3 @@ export const getComponentInfo = ({ result, componentName, componentData }) => {
     },
   };
 };
-
-export const getLibraryVersion = () => {
-  return 'simorgh';
-};
