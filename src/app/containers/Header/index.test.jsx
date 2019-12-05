@@ -50,70 +50,35 @@ HeaderContainerWithContext.propTypes = {
 };
 
 describe(`Header`, () => {
-  describe('with hamburger menu', () => {
-    window.matchMedia = jest.fn().mockImplementation(() => {
-      return {
-        matches: true,
-        addListener: jest.fn(),
-        removeListener: jest.fn(),
-      };
-    });
-    shouldMatchSnapshot(
-      'should render correctly for news article',
-      HeaderContainerWithContext({
-        pageType: 'article',
-        service: 'news',
-        serviceContext: pidginServiceConfig.default,
-      }),
-    );
-    shouldMatchSnapshot(
-      'should render correctly for WS frontPage',
-      HeaderContainerWithContext({
-        pageType: 'frontPage',
-        service: 'pidgin',
-        serviceContext: pidginServiceConfig.default,
-      }),
-    );
-    shouldMatchSnapshot(
-      'should render correctly for WS radio page',
-      HeaderContainerWithContext({
-        pageType: 'media',
-        service: 'pidgin',
-        serviceContext: pidginServiceConfig.default,
-      }),
-    );
+  window.matchMedia = jest.fn().mockImplementation(() => {
+    return {
+      matches: false,
+      addListener: jest.fn(),
+      removeListener: jest.fn(),
+    };
   });
-  describe('without hamburger menu', () => {
-    window.matchMedia = jest.fn().mockImplementation(() => {
-      return {
-        matches: false,
-        addListener: jest.fn(),
-        removeListener: jest.fn(),
-      };
-    });
-    shouldMatchSnapshot(
-      'should render correctly for news article',
-      HeaderContainerWithContext({
-        pageType: 'article',
-        service: 'news',
-        serviceContext: pidginServiceConfig.default,
-      }),
-    );
-    shouldMatchSnapshot(
-      'should render correctly for WS frontPage',
-      HeaderContainerWithContext({
-        pageType: 'frontPage',
-        service: 'pidgin',
-        serviceContext: pidginServiceConfig.default,
-      }),
-    );
-    shouldMatchSnapshot(
-      'should render correctly for WS radio page',
-      HeaderContainerWithContext({
-        pageType: 'media',
-        service: 'pidgin',
-        serviceContext: pidginServiceConfig.default,
-      }),
-    );
-  });
+  shouldMatchSnapshot(
+    'should render correctly for news article',
+    HeaderContainerWithContext({
+      pageType: 'article',
+      service: 'news',
+      serviceContext: pidginServiceConfig.default,
+    }),
+  );
+  shouldMatchSnapshot(
+    'should render correctly for WS frontPage',
+    HeaderContainerWithContext({
+      pageType: 'frontPage',
+      service: 'pidgin',
+      serviceContext: pidginServiceConfig.default,
+    }),
+  );
+  shouldMatchSnapshot(
+    'should render correctly for WS radio page',
+    HeaderContainerWithContext({
+      pageType: 'media',
+      service: 'pidgin',
+      serviceContext: pidginServiceConfig.default,
+    }),
+  );
 });

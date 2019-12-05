@@ -22,37 +22,19 @@ describe('Navigation Container', () => {
     useContext.mockReset();
   });
 
-  describe('with hamburger menu', () => {
-    window.matchMedia = jest.fn().mockImplementation(query => {
-      return {
-        matches: query === '(max-width: 600px)',
-        addListener: jest.fn(),
-        removeListener: jest.fn(),
-      };
-    });
-
-    describe('snapshots', () => {
-      shouldMatchSnapshot(
-        'should render a Navigation with igbo links correctly',
-        <NavigationContainer />,
-      );
-    });
+  window.matchMedia = jest.fn().mockImplementation(query => {
+    return {
+      matches: false,
+      media: query,
+      addListener: jest.fn(),
+      removeListener: jest.fn(),
+    };
   });
 
-  describe('without hamburger menu', () => {
-    window.matchMedia = jest.fn().mockImplementation(query => {
-      return {
-        matches: query === '(max-width: 600px)',
-        addListener: jest.fn(),
-        removeListener: jest.fn(),
-      };
-    });
-
-    describe('snapshots', () => {
-      shouldMatchSnapshot(
-        'should render a Navigation with igbo links correctly',
-        <NavigationContainer />,
-      );
-    });
+  describe('snapshots', () => {
+    shouldMatchSnapshot(
+      'should render a Navigation with igbo links correctly',
+      <NavigationContainer />,
+    );
   });
 });
