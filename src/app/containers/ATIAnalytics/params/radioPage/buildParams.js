@@ -1,6 +1,5 @@
 import path from 'ramda/src/path';
 import { buildATIPageTrackPath } from '../../atiUrl';
-import { getLibraryVersion } from '../../../../lib/analyticsUtils';
 
 export const buildRadioATIParams = (
   pageData,
@@ -24,7 +23,6 @@ export const buildRadioATIParams = (
     pageIdentifier: path(['analyticsLabels', 'pageIdentifier'], metadata),
     pageTitle: path(['analyticsLabels', 'pageTitle'], metadata),
     producerId: atiAnalyticsProducerId,
-    libraryVersion: getLibraryVersion(),
     statsDestination,
     platform,
     service,
