@@ -34,7 +34,7 @@ export const buildArticleATIParams = (
     producerId: atiAnalyticsProducerId,
     timePublished: getPublishedDatetime('firstPublished', articleData),
     timeUpdated: getPublishedDatetime('lastPublished', articleData),
-    libraryVersion: getLibraryVersion(platform),
+    libraryVersion: getLibraryVersion(),
     isUK,
     platform,
     service,

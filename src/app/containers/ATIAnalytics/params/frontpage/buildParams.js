@@ -33,7 +33,7 @@ export const buildFrontPageATIParams = (
     producerId: atiAnalyticsProducerId,
     timePublished: getPublishedDatetime('firstPublished', frontpageData),
     timeUpdated: getPublishedDatetime('lastPublished', frontpageData),
-    libraryVersion: getLibraryVersion(platform),
+    libraryVersion: getLibraryVersion(),
     platform,
     service,
     statsDestination,

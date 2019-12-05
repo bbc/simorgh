@@ -35,7 +35,7 @@ const validURLParams = {
   timePublished: analyticsUtils.getPublishedDatetime(),
   timeUpdated: analyticsUtils.getPublishedDatetime(),
   service: 'service',
-  libraryVersion: analyticsUtils.getLibraryVersion(requestContext.platform),
+  libraryVersion: analyticsUtils.getLibraryVersion(),
   ...requestContext,
 };
 

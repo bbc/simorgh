@@ -33,7 +33,7 @@ const validURLParams = {
   producerId: serviceContext.atiAnalyticsProducerId,
   timePublished: analyticsUtils.getPublishedDatetime(),
   timeUpdated: analyticsUtils.getPublishedDatetime(),
-  libraryVersion: analyticsUtils.getLibraryVersion(requestContext.platform),
+  libraryVersion: analyticsUtils.getLibraryVersion(),
   platform: requestContext.platform,
   service: 'service',
   statsDestination: requestContext.statsDestination,

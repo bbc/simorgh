@@ -24,7 +24,7 @@ export const buildRadioATIParams = (
     pageIdentifier: path(['analyticsLabels', 'pageIdentifier'], metadata),
     pageTitle: path(['analyticsLabels', 'pageTitle'], metadata),
     producerId: atiAnalyticsProducerId,
-    libraryVersion: getLibraryVersion(platform),
+    libraryVersion: getLibraryVersion(),
     statsDestination,
     platform,
     service,

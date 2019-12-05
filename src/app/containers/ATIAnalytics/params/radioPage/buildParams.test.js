@@ -42,7 +42,7 @@ const validURLParams = {
   pageTitle: 'pageTitle',
   producerId: serviceContext.atiAnalyticsProducerId,
   statsDestination: requestContext.statsDestination,
-  libraryVersion: analyticsUtils.getLibraryVersion(requestContext.platform),
+  libraryVersion: analyticsUtils.getLibraryVersion(),
   platform: requestContext.platform,
   service: 'service',
 };

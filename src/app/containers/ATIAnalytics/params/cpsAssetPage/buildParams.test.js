@@ -40,7 +40,7 @@ const expectation = {
   categoryName: 'News',
   producerId: serviceContext.atiAnalyticsProducerId,
   statsDestination: requestContext.statsDestination,
-  libraryVersion: analyticsUtils.getLibraryVersion(requestContext.platform),
+  libraryVersion: analyticsUtils.getLibraryVersion(),
   platform: requestContext.platform,
   service: 'service',
   timePublished: analyticsUtils.getPublishedDatetime(),

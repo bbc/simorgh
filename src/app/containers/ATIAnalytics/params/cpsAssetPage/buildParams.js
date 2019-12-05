@@ -39,7 +39,7 @@ export const buildCpsAssetPageATIParams = (
     categoryName: path(['passport', 'category', 'categoryName'], metadata),
     campaigns: path(['passport', 'campaigns'], metadata),
     producerId: atiAnalyticsProducerId,
-    libraryVersion: getLibraryVersion(platform),
+    libraryVersion: getLibraryVersion(),
     statsDestination,
     platform,
     service,
