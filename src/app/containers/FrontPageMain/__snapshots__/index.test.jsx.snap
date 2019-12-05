@@ -320,16 +320,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   margin-right: 0.5rem;
 }
 
-.c23 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .c15 {
   position: relative;
   height: 0;
@@ -360,6 +350,16 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   display: block;
   width: 100%;
   visibility: visible;
+}
+
+.c23 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c31 {
