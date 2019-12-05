@@ -28,18 +28,24 @@ const isValidUsefulLinks = pageData => {
 
 const isValidRadioBulletin = pageData => {
   return pageData.some(group => {
-    return group.items.some(
+    const hasStrapline = 'strapline' in group;
+    const hasRadioBulletin = group.items.some(
       item =>
         item.assetTypeCode === 'PRO' && item.contentType === 'RadioBulletin',
     );
+
+    return hasStrapline && hasRadioBulletin;
   });
 };
 
 const isValidTvBulletin = pageData => {
   return pageData.some(group => {
-    return group.items.some(
+    const hasStrapline = 'strapline' in group;
+    const hasTvBulletin = group.items.some(
       item => item.assetTypeCode === 'PRO' && item.contentType === 'TVBulletin',
     );
+
+    return hasStrapline && hasTvBulletin;
   });
 };
 
