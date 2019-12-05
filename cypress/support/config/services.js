@@ -84,7 +84,7 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/amharic/articles/c3rykrrvy19o',
+        path: isLive(appEnv) ? undefined : '/amharic/articles/czqverekrldo',
         smoke: false,
       },
       errorPage404: {
@@ -243,7 +243,7 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/burmese/articles/c3w1kwwmm5yo',
+        path: isLive(appEnv) ? undefined : '/burmese/articles/cn0exdy1jzvo',
         smoke: false,
       },
       errorPage404: {
@@ -493,7 +493,7 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/japanese/articles/c693w95w0mko',
+        path: isLive(appEnv) ? undefined : '/japanese/articles/cdd6p3r9g7jo',
         smoke: false,
       },
       errorPage404: {
@@ -520,7 +520,7 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/korean/articles/cpv9kv2yzk6o',
+        path: isLive(appEnv) ? undefined : '/korean/articles/c3mn1lvz65xo',
         smoke: false,
       },
       errorPage404: {
@@ -1139,7 +1139,7 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/thai/articles/c3qxeqm7ldjo',
+        path: isLive(appEnv) ? undefined : '/thai/articles/c442rl3md0eo',
         smoke: false,
       },
       errorPage404: {
@@ -1166,7 +1166,7 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/tigrinya/articles/c12g32eldk6o',
+        path: isLive(appEnv) ? undefined : '/tigrinya/articles/ck62z3rjwdeo',
         smoke: false,
       },
       errorPage404: {

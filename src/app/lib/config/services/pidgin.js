@@ -195,6 +195,7 @@ export const service = {
         url: '/pidgin/popular/read',
       },
     ],
+    navigationSection: 'Plenti seshon',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
