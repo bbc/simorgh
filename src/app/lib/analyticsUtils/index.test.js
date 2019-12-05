@@ -21,7 +21,6 @@ const {
   sanitise,
   getProducer,
   getAtiUrl,
-  getLibraryVersion,
   getEventInfo,
   getComponentInfo,
 } = require('./index');
@@ -540,12 +539,5 @@ describe('getAtUserId', () => {
     Cookie.getJSON = jest.fn().mockReturnValue({ val });
     id = getAtUserId();
     expect(id).toBe(val);
-  });
-});
-
-describe('getLibraryVersion', () => {
-  it('should return `simorgh`', () => {
-    const libraryVersion = getLibraryVersion();
-    expect(libraryVersion).toEqual('simorgh');
   });
 });

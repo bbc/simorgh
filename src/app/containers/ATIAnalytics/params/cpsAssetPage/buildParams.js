@@ -1,9 +1,6 @@
 import path from 'ramda/src/path';
 import { buildATIPageTrackPath } from '../../atiUrl';
-import {
-  getPublishedDatetime,
-  getLibraryVersion,
-} from '../../../../lib/analyticsUtils';
+import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
 
 export const buildCpsAssetPageATIParams = (
   pageData,
@@ -39,7 +36,6 @@ export const buildCpsAssetPageATIParams = (
     categoryName: path(['passport', 'category', 'categoryName'], metadata),
     campaigns: path(['passport', 'campaigns'], metadata),
     producerId: atiAnalyticsProducerId,
-    libraryVersion: getLibraryVersion(),
     statsDestination,
     platform,
     service,

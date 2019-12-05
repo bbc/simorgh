@@ -32,7 +32,6 @@ export const buildATIPageTrackPath = ({
   pageIdentifier,
   pageTitle,
   producerId,
-  libraryVersion,
   platform,
   statsDestination,
   timePublished,
@@ -118,12 +117,6 @@ export const buildATIPageTrackPath = ({
       wrap: true,
     },
     { key: 'x7', description: 'content type', value: contentType, wrap: true },
-    {
-      key: 'x8',
-      description: 'library version',
-      value: libraryVersion,
-      wrap: true,
-    },
     {
       key: 'x9',
       description: 'page title',
