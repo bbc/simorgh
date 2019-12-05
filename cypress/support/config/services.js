@@ -811,7 +811,7 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path: isLive(appEnv) || isTest(appEnv) ? undefined : '/pidgin/23248703',
-        smoke: true,
+        smoke: false,
       },
     },
   },
@@ -1340,7 +1340,7 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: isLive(appEnv) ? undefined : '/uzbek/sport-23248721',
-        smoke: false,
+        smoke: true,
       },
     },
   },
