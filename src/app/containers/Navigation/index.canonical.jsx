@@ -21,6 +21,7 @@ const CanonicalNavigationContainer = ({
       skipLinkText={skipLinkText}
       service={service}
       dir={dir}
+      isOpen={isOpen}
     >
       <CanonicalMenuButton
         announcedText="Menu"
@@ -28,6 +29,7 @@ const CanonicalNavigationContainer = ({
         onOpen={() => setIsOpen(true)}
         onClose={() => setIsOpen(false)}
         dir={dir}
+        script={script}
       />
       {isOpen ? (
         dropdownListItems
