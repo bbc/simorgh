@@ -23,11 +23,28 @@ const isValidUsefulLinks = pageData => {
   return false;
 };
 
+const isValidRadioBulletin = pageData => {
+  return pageData.some(group => {
+    return group.items.some(
+      item =>
+        item.assetTypeCode === 'PRO' && item.contentType === 'RadioBulletin',
+    );
+  });
+};
+
+const isValidTvBulletin = pageData => {
+  return pageData.some(group => {
+    return group.items.some(
+      item => item.assetTypeCode === 'PRO' && item.contentType === 'TVBulletin',
+    );
+  });
+};
+
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
 
-// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+// For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
   describe(`Tests for ${service} ${pageType}`, () => {
     describe('Frontpage body', () => {
@@ -202,6 +219,36 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                 cy.get('[aria-labelledby="Useful-links"]').should(
                   'not.be.visible',
                 );
+              }
+            },
+          );
+        });
+
+        it('should contain Radio Bulletin if a promo of type RadioBulletin is in the feed', () => {
+          cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
+            ({ body }) => {
+              const pageData = body.content.groups;
+              if (isValidRadioBulletin(pageData)) {
+                cy.get('[class^="RadioBulletin"]')
+                  .eq(0)
+                  .should('be.visible');
+              } else {
+                cy.get('[class^="RadioBulletin"').should('not.be.visible');
+              }
+            },
+          );
+        });
+
+        it('should contain TV Bulletin if a promo of type TVBulletin is in the feed', () => {
+          cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
+            ({ body }) => {
+              const pageData = body.content.groups;
+              if (isValidTvBulletin(pageData)) {
+                cy.get('[class^="TVBulletin"]')
+                  .eq(0)
+                  .should('be.visible');
+              } else {
+                cy.get('[class^="TVBulletin"').should('not.be.visible');
               }
             },
           );

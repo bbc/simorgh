@@ -90,7 +90,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
 
   return (
     <Bulletin
-      image={imageValues && Image}
+      image={Image}
       mediaType={mediaType}
       isLive={isLive}
       script={script}
