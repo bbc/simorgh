@@ -74,15 +74,21 @@ const blocksWithInline = {
       {
         model: {
           blocks: [
-            fragmentBlock('This is some text.', ['bold']),
-            inlinePersianBlock,
+            {
+              model: {
+                blocks: [
+                  fragmentBlock('This is some text.', ['bold']),
+                  inlinePersianBlock,
+                ],
+              },
+              type: 'text',
+            },
           ],
         },
-        type: 'text',
+        type: 'caption',
       },
     ],
   },
-  type: 'caption',
 };
 
 const captionBlock3Paragraphs = {
