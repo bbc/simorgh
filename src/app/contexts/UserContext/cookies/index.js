@@ -6,19 +6,19 @@ export const getCookiePolicy = () => {
   return Cookie.get(POLICY_COOKIE) || '000';
 };
 
-export const getPreferredVariantCookie = service => `ckps_${service}`;
+export const getPreferredVariantCookieName = service => `ckps_${service}`;
 
-export const getPreferredVariant = service => {
+export const getPreferredVariantCookie = service => {
   if (!service) return null;
 
-  const cookie = getPreferredVariantCookie(service);
+  const cookie = getPreferredVariantCookieName(service);
   return Cookie.get(cookie);
 };
 
-export const setPreferredVariant = (service, variant) => {
+export const setPreferredVariantCookie = (service, variant) => {
   if (!service || !variant) return;
 
-  const cookie = getPreferredVariantCookie(service);
+  const cookie = getPreferredVariantCookieName(service);
   Cookie.set(cookie, variant);
 };
 

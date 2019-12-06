@@ -2,8 +2,8 @@ import React from 'react';
 import { useParams, useLocation, Redirect } from 'react-router-dom';
 import { variantSanitiser, getVariant } from '#lib/utilities/variantHandler';
 import {
-  getPreferredVariant,
-  setPreferredVariant,
+  getPreferredVariantCookie,
+  setPreferredVariantCookie,
 } from '#contexts/UserContext/cookies';
 
 const redirect = (location, variant) => {
@@ -23,7 +23,7 @@ const withVariant = Component => {
     const location = useLocation();
     const defaultVariant = getVariant({ service, variant });
     const sanitizedVariant = variantSanitiser(variant);
-    const preferredVariant = getPreferredVariant(service);
+    const preferredVariant = getPreferredVariantCookie(service);
     const isNotDefaultVariant = defaultVariant !== 'default';
 
     if (!sanitizedVariant && preferredVariant) {
@@ -34,7 +34,7 @@ const withVariant = Component => {
       return redirect(location, defaultVariant);
     }
 
-    if (sanitizedVariant) setPreferredVariant(service, sanitizedVariant);
+    if (sanitizedVariant) setPreferredVariantCookie(service, sanitizedVariant);
 
     return <Component {...props} />;
   };

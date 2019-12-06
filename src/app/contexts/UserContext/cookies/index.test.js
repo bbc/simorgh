@@ -1,9 +1,9 @@
 import Cookie from 'js-cookie';
 import {
   getCookiePolicy,
-  getPreferredVariant,
+  getPreferredVariantCookie,
   personalisationEnabled,
-  setPreferredVariant,
+  setPreferredVariantCookie,
 } from '.';
 
 describe('UserContext cookies', () => {
@@ -36,26 +36,26 @@ describe('UserContext cookies', () => {
   describe('getPreferredVariant', () => {
     Cookie.get = jest.fn();
     it('should return null if service is null', () => {
-      expect(getPreferredVariant()).toEqual(null);
+      expect(getPreferredVariantCookie()).toEqual(null);
     });
 
     it('should return cookie value from js-cookie', () => {
       Cookie.get.mockReturnValue('trad');
-      expect(getPreferredVariant('zhongwen')).toEqual('trad');
+      expect(getPreferredVariantCookie('zhongwen')).toEqual('trad');
     });
   });
 
   describe('setPreferredVariant', () => {
     Cookie.set = jest.fn();
     it('should not set invalid service or variant', () => {
-      setPreferredVariant('news', '');
+      setPreferredVariantCookie('news', '');
       expect(Cookie.set).not.toHaveBeenCalled();
-      setPreferredVariant('');
+      setPreferredVariantCookie('');
       expect(Cookie.set).not.toHaveBeenCalled();
     });
 
     it('should set preferred variant', () => {
-      setPreferredVariant('serbian', 'lat');
+      setPreferredVariantCookie('serbian', 'lat');
       expect(Cookie.set).toHaveBeenCalledWith('ckps_serbian', 'lat');
     });
   });
