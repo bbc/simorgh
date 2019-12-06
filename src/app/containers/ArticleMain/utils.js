@@ -4,7 +4,13 @@ const getISOStringDate = date => new Date(date).toISOString();
 
 export const getArticleId = path(['metadata', 'id']);
 
-export const getHeadline = path(['promo', 'headlines', 'seoHeadline']);
+const getHeadlineType = (type, articleData) => {
+  return path(['promo', 'headlines', type], articleData);
+};
+
+export const getHeadline = articleData =>
+  getHeadlineType('seoHeadline', articleData) ||
+  getHeadlineType('headline', articleData);
 
 export const getSummary = path(['promo', 'summary']);
 

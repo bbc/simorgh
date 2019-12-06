@@ -1,5 +1,19 @@
 import { blockContainingText, singleTextBlock } from '#models/blocks';
 
+const optimoHeadlines = (seoHeadline, promoHeadline) => {
+  return {
+    seoHeadline,
+    promoHeadline,
+  };
+};
+
+const cpsHeadlines = (headline, shortHeadline) => {
+  return {
+    headline,
+    shortHeadline,
+  };
+};
+
 const articleDataBuilder = (
   id,
   createdBy,
@@ -7,8 +21,7 @@ const articleDataBuilder = (
   home,
   headlineText,
   paragraphText,
-  seoHeadline,
-  promoHeadline,
+  headlines,
   summary,
   things,
 ) => ({
@@ -41,10 +54,7 @@ const articleDataBuilder = (
   },
   promo: {
     id: `urn:bbc:ares::article:${id}`,
-    headlines: {
-      seoHeadline,
-      promoHeadline,
-    },
+    headlines: { ...headlines },
     locators: {
       optimoUrn: `urn:bbc:optimo:asset:${id}`,
     },
@@ -104,8 +114,19 @@ export const articleDataNews = articleDataBuilder(
   'http://www.bbc.co.uk/ontologies/passport/home/News',
   'Article Headline',
   'A paragraph.',
-  'Article Headline for SEO',
-  'Article Headline for Promo',
+  optimoHeadlines('Article Headline for SEO', 'Article Headline for Promo'),
+  'Article summary.',
+  presetThings,
+);
+
+export const cpsArticleDataNews = articleDataBuilder(
+  '123456789',
+  'News',
+  'en-gb',
+  'http://www.bbc.co.uk/ontologies/passport/home/News',
+  'CPS Article Headline',
+  'A paragraph.',
+  cpsHeadlines('CPS Article Headline for SEO', 'CPS Article Short Headline'),
   'Article summary.',
   presetThings,
 );
@@ -117,8 +138,7 @@ export const articleDataPersian = articleDataBuilder(
   'http://www.bbc.co.uk/ontologies/passport/home/Persian',
   'سرصفحه مقاله',
   'یک پاراگراف.',
-  'سرصفحه مقاله',
-  'سرصفحه مقاله برای ارتقاء',
+  optimoHeadlines('سرصفحه مقاله', 'سرصفحه مقاله برای ارتقاء'),
   'خلاصه مقاله',
   emptyThings,
 );
@@ -130,8 +150,10 @@ export const articleDataPidgin = articleDataBuilder(
   'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
   'Article Headline in Pidgin',
   'A paragraph in Pidgin.',
-  'Article Headline for SEO in Pidgin',
-  'Article Headline for Promo in Pidgin',
+  optimoHeadlines(
+    'Article Headline for SEO in Pidgin',
+    'Article Headline for Promo in Pidgin',
+  ),
   'Article summary in Pidgin',
   emptyThings,
 );

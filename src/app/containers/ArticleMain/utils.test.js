@@ -1,3 +1,4 @@
+import path from 'ramda/src/path';
 import {
   getHeadline,
   getFirstPublished,
@@ -7,14 +8,23 @@ import {
   getMentions,
   getLang,
 } from './utils';
-import { articleDataNews } from '../Article/fixtureData';
+import { articleDataNews, cpsArticleDataNews } from '../Article/fixtureData';
 
 describe('ArticleMain utils', () => {
-  it('getHeadline › it should return the correct value', () => {
-    const actual = getHeadline(articleDataNews);
-    const expected = 'Article Headline for SEO';
+  describe('getHeadline', () => {
+    it('should return seoHeadline for Optimo asset', () => {
+      const actual = getHeadline(articleDataNews);
+      const expected = 'Article Headline for SEO';
 
-    expect(actual).toEqual(expected);
+      expect(actual).toEqual(expected);
+    });
+
+    it('should return headline for CPS asset', () => {
+      const actual = getHeadline(cpsArticleDataNews);
+      const expected = 'CPS Article Headline for SEO';
+
+      expect(actual).toEqual(expected);
+    });
   });
 
   it('getFirstPublished › it should return the correct value', () => {
