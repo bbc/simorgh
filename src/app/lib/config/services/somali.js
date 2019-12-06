@@ -237,6 +237,7 @@ export const service = {
         url: '/somali/media/photogalleries',
       },
     ],
+    navigationSection: 'Qaybaha',
   },
 };
 

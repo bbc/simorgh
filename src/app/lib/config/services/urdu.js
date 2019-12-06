@@ -235,6 +235,7 @@ export const service = {
         url: '/urdu/media/photogalleries',
       },
     ],
+    navigationSection: 'سیکشن',
   },
 };
 

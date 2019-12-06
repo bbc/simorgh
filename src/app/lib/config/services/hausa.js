@@ -227,6 +227,7 @@ export const service = {
         url: '/hausa/media/photogalleries',
       },
     ],
+    navigationSection: 'Sassa',
   },
 };
 
