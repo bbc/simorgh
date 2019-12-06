@@ -142,7 +142,7 @@ describe('buildATIEventTrackUrl', () => {
         're=getBrowserViewPort',
         'hl=getCurrentTime',
         'lng=getDeviceLanguage',
-        'ati=PUB-[service-component]-[creation-label~type]-[]-[PAR=container-component~CHD=child]-[pageIdentifier]-[]-[responsive_web~news-simorgh]-[https://foobar.com]',
+        'atc=PUB-[service-component]-[creation-label~type]-[]-[PAR=container-component~CHD=child]-[pageIdentifier]-[]-[responsive_web~news-simorgh]-[https://foobar.com]',
         'type=AT',
       ].join('&')}`,
     );
