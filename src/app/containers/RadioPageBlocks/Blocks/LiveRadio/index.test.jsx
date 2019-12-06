@@ -11,6 +11,10 @@ import LiveRadio from '.';
 const origin = 'http://localhost:7080';
 
 describe('MediaPageBlocks LiveRadio', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
+  });
+
   shouldMatchSnapshot(
     'should render correctly for canonical',
     <RequestContext.Provider value={{ platform: 'canonical', origin }}>

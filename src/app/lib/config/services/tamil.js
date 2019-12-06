@@ -250,6 +250,7 @@ export const service = {
         url: '/tamil/media-38734063',
       },
     ],
+    navigationSection: 'பிரிவுகள்',
   },
 };
 

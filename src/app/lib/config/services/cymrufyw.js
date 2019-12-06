@@ -236,6 +236,7 @@ export const service = {
         url: '/news/wales',
       },
     ],
+    navigationSection: 'Adrannau',
   },
 };
 
