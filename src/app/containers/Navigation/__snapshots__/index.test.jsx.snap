@@ -22,8 +22,8 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   position: relative;
   padding: 0;
   margin: 0;
-  border: 0;
   background-color: transparent;
+  border: 0;
   float: left;
   height: 2.75rem;
   width: 2.75rem;
@@ -277,7 +277,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   >
     <button
       aria-expanded="false"
-      aria-label="Akụkọ"
+      aria-label="Ngalaba"
       class="c2"
       dir="ltr"
       type="button"

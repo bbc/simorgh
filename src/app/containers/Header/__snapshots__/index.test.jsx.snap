@@ -60,8 +60,8 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   position: relative;
   padding: 0;
   margin: 0;
-  border: 0;
   background-color: transparent;
+  border: 0;
   float: left;
   height: 2.75rem;
   width: 2.75rem;
@@ -622,7 +622,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
     >
       <button
         aria-expanded="false"
-        aria-label="Home"
+        aria-label="Plenti seshon"
         class="c14"
         dir="ltr"
         type="button"
@@ -835,8 +835,8 @@ exports[`Header should render correctly for WS radio page 1`] = `
   position: relative;
   padding: 0;
   margin: 0;
-  border: 0;
   background-color: transparent;
+  border: 0;
   float: left;
   height: 2.75rem;
   width: 2.75rem;
@@ -1397,7 +1397,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
     >
       <button
         aria-expanded="false"
-        aria-label="Home"
+        aria-label="Plenti seshon"
         class="c14"
         dir="ltr"
         type="button"
@@ -1610,8 +1610,8 @@ exports[`Header should render correctly for news article 1`] = `
   position: relative;
   padding: 0;
   margin: 0;
-  border: 0;
   background-color: transparent;
+  border: 0;
   float: left;
   height: 2.75rem;
   width: 2.75rem;
@@ -2164,7 +2164,7 @@ exports[`Header should render correctly for news article 1`] = `
     >
       <button
         aria-expanded="false"
-        aria-label="Home"
+        aria-label="Plenti seshon"
         class="c14"
         dir="ltr"
         type="button"

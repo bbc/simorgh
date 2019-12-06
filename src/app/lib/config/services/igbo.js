@@ -178,6 +178,7 @@ export const service = {
         url: '/igbo/popular/read',
       },
     ],
+    navigationSection: 'Ngalaba',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
@@ -209,7 +210,6 @@ export const service = {
           text: 'Kpọtụrụ BBC',
         },
       ],
-      navigationSection: 'Ngalaba',
       copyrightText:
         'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
     },
