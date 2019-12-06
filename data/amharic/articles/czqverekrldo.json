@@ -1,0 +1,437 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:czqverekrldo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:czqverekrldo",
+      "canonicalUrl": "https://www.bbc.com/amharic/articles/czqverekrldo"
+    },
+    "type": "article",
+    "createdBy": "Amharic",
+    "language": "am",
+    "lastUpdated": 1575558156762,
+    "firstPublished": 1574854374815,
+    "lastPublished": 1574854374815,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "am",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
+      "passportId": "ce483189-6897-4cd8-80d4-ead49e2aeb1f",
+      "locator": "urn:bbc:optimo:asset:czqverekrldo",
+      "availability": "AVAILABLE",
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.1.3",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "የዚህ የሙከራ ጽሑፍ ርዕስ ይህ ነው",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "የዚህ የሙከራ ጽሑፍ ርዕስ ይህ ነው",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ይህ የሙከራ ምስል የቅጂ መብት ቢቢሲ የፈረንሳይን ካርታ ያሳያል ፡፡ ምስሉ በመጀመሪያዎቹ ሦስት ብሎኮች ውስጥ የሚገኝ ሲሆን ይህ መግለጫ ጽሑፍ አለው ፡፡",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ይህ የሙከራ ምስል የቅጂ መብት ቢቢሲ የፈረንሳይን ካርታ ያሳያል ፡፡ ምስሉ በመጀመሪያዎቹ ሦስት ብሎኮች ውስጥ የሚገኝ ሲሆን ይህ መግለጫ ጽሑፍ አለው ፡፡",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ይህ የሙከራ ምስል የቅጂ መብት ቢቢሲ የፈረንሳይን ካርታ ያሳያል ፡፡ ምስሉ በመጀመሪያዎቹ ሦስት ብሎኮች ውስጥ የሚገኝ ሲሆን ይህ መግለጫ ጽሑፍ አለው ፡፡",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ይህ የሙከራ ምስል የቅጂ መብት ቢቢሲ የፈረንሳይን ካርታ ያሳያል ፡፡ ምስሉ በመጀመሪያዎቹ ሦስት ብሎኮች ውስጥ የሚገኝ ሲሆን ይህ መግለጫ ጽሑፍ አለው ፡፡",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "6ed8/test/cfebd050-1108-11ea-acaa-cd607a38aea4.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ይህ ለቢቢሲ የአየር ሁኔታ መነሻ ገጽ የዩ.አር.ኤል አገናኝ የያዘ የጽሑፍ ማገጃ ነው።",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ይህ ለቢቢሲ የአየር ሁኔታ መነሻ ገጽ የዩ.አር.ኤል አገናኝ ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "የያዘ የጽሑፍ ማገጃ ነው።",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "የያዘ የጽሑፍ ማገጃ ነው።",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ይህ ንዑስ ርዕስ ነው",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ይህ ንዑስ ርዕስ ነው",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true,
+                              "world": false
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "ይህ ንዑስ ርዕስ ነው",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "ይህ ንዑስ ርዕስ ነው",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ይህ ንዑስ ርዕስ ነው",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ይህ ንዑስ ርዕስ ነው",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 800,
+                  "height": 450,
+                  "locator": "2a49/test/2a2d2140-1109-11ea-acaa-cd607a38aea4.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ይህ የሙከራ ጽሑፍ በራስ-ሰር የመጨረሻ-መጨረሻ-ሙከራዎችን በእኛ ድር ጣቢያ ላይ ማካሄድ እንድንችል ተፈጥሯል።",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ይህ የሙከራ ጽሑፍ በራስ-ሰር የመጨረሻ-መጨረሻ-ሙከራዎችን በእኛ ድር ጣቢያ ላይ ማካሄድ እንድንችል ተፈጥሯል።",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "የዚህ የሙከራ ጽሑፍ ርዕስ ይህ ነው"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:czqverekrldo"
+    },
+    "summary": "",
+    "timestamp": 1574854374815,
+    "id": "urn:bbc:ares::article:czqverekrldo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Amharic",
+      "uri": "/amharic",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

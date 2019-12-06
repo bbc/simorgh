@@ -215,6 +215,7 @@ export const service = {
         url: '/telugu/international',
       },
     ],
+    navigationSection: 'విభాగాలు',
   },
 };
 

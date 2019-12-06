@@ -15337,18 +15337,6 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   grid-column: 1 / span 6;
 }
 
-.c3 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-}
-
 .c24 {
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -15366,6 +15354,22 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   font-style: italic;
   font-family: inherit;
   font-weight: inherit;
+}
+
+.c3 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c3:focus {
+  outline: none;
 }
 
 .c15 {
@@ -15847,26 +15851,6 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c24 {
     font-size: 1.5rem;
     line-height: 1.75rem;
@@ -15883,6 +15867,26 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) {
   .c24 {
     padding-top: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    padding: 2.5rem 0;
   }
 }
 
