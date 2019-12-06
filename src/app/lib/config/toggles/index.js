@@ -55,7 +55,7 @@ const toggles = {
       enabled: true,
     },
     mediaPlayer: {
-      enabled: false,
+      enabled: true,
     },
     mpulse: {
       enabled: true,
