@@ -27,9 +27,8 @@ node {
         ]) {
             cleanWs() // Clean the workspace
             
-            // def hashToCheckout = params.BRANCH == '' ? Simorgh.getLiveCommitHash() : params.BRANCH
             stage('Get hash')
-                def hashToCheckout = Simorgh.getLiveCommitHash()
+                def hashToCheckout = params.BRANCH == '' ? Simorgh.getLiveCommitHash() : params.BRANCH
                 echo hashToCheckout
             
             docker.image(Simorgh.nodeDockerImage()).inside('--ipc host') {
