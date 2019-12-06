@@ -28,12 +28,13 @@ node {
             cleanWs() // Clean the workspace
             
             // def hashToCheckout = params.BRANCH == '' ? Simorgh.getLiveCommitHash() : params.BRANCH
-            def hashToCheckout = Simorgh.getLiveCommitHash()
-            echo hashToCheckout
+            stage('Get hash')
+                def hashToCheckout = Simorgh.getLiveCommitHash()
+                echo hashToCheckout
             
             docker.image(Simorgh.nodeDockerImage()).inside('--ipc host') {
                 try {
-                    Simorgh.checkout("${params.BRANCH}", 'simorgh')
+                    Simorgh.checkout("${hashToCheckout}", 'simorgh')
                     Simorgh.installNodeModules()
                     stage ('Live E2Es') {
                         Simorgh.runE2Es('live', false)
