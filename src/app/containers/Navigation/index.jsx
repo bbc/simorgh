@@ -45,8 +45,10 @@ const Navigation = () => {
     </NavigationUl>
   );
 
+  // toggleElement is what the Amp onToggle will toggle
+  const toggleElement = 'dropdown-menu';
   const dropdownListItems = (
-    <Dropdown id="dropdown-menu">
+    <Dropdown id={toggleElement} hidden={isAmp}>
       <DropdownUl>
         {navigation.map((item, index) => {
           const { title, url } = item;
@@ -79,6 +81,7 @@ const Navigation = () => {
       dir={dir}
       script={script}
       service={service}
+      toggleElement={toggleElement}
     />
   ) : (
     <Canonical
