@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Grid, { GelPageGrid, GridMaxWidthGroup4 } from '.';
+import Grid, { GridMaxWidthGroup4 } from '.';
 
 const outerGridProps = {
   columns: {
@@ -42,24 +42,6 @@ storiesOf('Components|Grid', module)
           <p>Test</p>
         </Grid>
       </Grid>
-    );
-  })
-  .add('GelPageGrid', () => {
-    return (
-      <GelPageGrid {...outerGridProps}>
-        <Grid {...gridItemProps}>
-          <p>Test</p>
-        </Grid>
-      </GelPageGrid>
-    );
-  })
-  .add('GelPageGrid forwardedAs Main', () => {
-    return (
-      <GelPageGrid forwardedAs="main" role="main" {...outerGridProps}>
-        <Grid {...gridItemProps}>
-          <p>Test</p>
-        </Grid>
-      </GelPageGrid>
     );
   })
   .add('GridMaxWidthGroup4', () => {

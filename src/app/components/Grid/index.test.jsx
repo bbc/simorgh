@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import Grid, { GelPageGrid, GridMaxWidthGroup4 } from '.';
+import Grid, { GridMaxWidthGroup4 } from '.';
 
 const outerGridProps = {
   columns: {
@@ -33,15 +33,6 @@ describe('Grid', () => {
         <p>Test</p>
       </Grid>
     </Grid>,
-  );
-
-  shouldMatchSnapshot(
-    'should render GelPageGrid with columns',
-    <GelPageGrid {...outerGridProps}>
-      <Grid {...gridItemProps}>
-        <p>Test</p>
-      </Grid>
-    </GelPageGrid>,
   );
 
   shouldMatchSnapshot(
