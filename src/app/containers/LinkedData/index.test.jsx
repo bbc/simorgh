@@ -1,4 +1,5 @@
 import React from 'react';
+import assocPath from 'ramda/src/assocPath';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -76,4 +77,17 @@ describe('LinkData', () => {
       <LinkData {...propsForArticle} />
     </Context>,
   );
+
+  describe('author', () => {
+    const articleProps = assocPath(['showAuthor'], false, propsForArticle);
+    it('should default showAuthor prop to true', () => {
+      expect(LinkData.defaultProps.showAuthor).toBe(true);
+    });
+    shouldMatchSnapshot(
+      'should be excluded from article when showAuthor is false',
+      <Context>
+        <LinkData {...articleProps} />
+      </Context>,
+    );
+  });
 });
