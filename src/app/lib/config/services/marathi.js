@@ -210,6 +210,7 @@ export const service = {
         url: '/marathi/international',
       },
     ],
+    navigationSection: 'विभाग',
   },
 };
 
