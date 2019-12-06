@@ -230,8 +230,8 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
 
         it('should contain Radio Bulletin if a promo of type RadioBulletin is in the feed', () => {
           cy.request(serviceJsonPath(service)).then(({ body }) => {
-            const processData = applySquashTopstories(body);
-            const { groups } = processData.content;
+            const pageData = applySquashTopstories(body);
+            const { groups } = pageData.content;
 
             if (isValidRadioBulletin(groups)) {
               cy.get('[class^="RadioBulletin"]')
@@ -245,8 +245,8 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
 
         it('should contain TV Bulletin if a promo of type TVBulletin is in the feed', () => {
           cy.request(serviceJsonPath(service)).then(({ body }) => {
-            const processData = applySquashTopstories(body);
-            const { groups } = processData.content;
+            const pageData = applySquashTopstories(body);
+            const { groups } = pageData.content;
 
             if (isValidTvBulletin(groups)) {
               cy.get('[class^="TVBulletin"]')
