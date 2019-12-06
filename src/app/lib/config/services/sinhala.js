@@ -225,6 +225,7 @@ export const service = {
         url: '/sinhala/media/video',
       },
     ],
+    navigationSection: 'අංශ',
   },
 };
 
