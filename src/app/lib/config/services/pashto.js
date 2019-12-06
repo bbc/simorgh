@@ -240,6 +240,7 @@ export const service = {
         url: '/pashto/columns',
       },
     ],
+    navigationSection: 'برخې',
   },
 };
 

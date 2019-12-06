@@ -214,6 +214,7 @@ export const service = {
         url: '/nepali/media/video',
       },
     ],
+    navigationSection: 'सूची',
   },
 };
 
