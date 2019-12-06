@@ -17,29 +17,25 @@ const redirect = (location, variant) => {
   );
 };
 
-const withVariant = Component => {
-  const VariantContainer = props => {
-    const { service, variant } = useParams();
-    const location = useLocation();
-    const defaultVariant = getVariant({ service, variant });
-    const sanitizedVariant = variantSanitiser(variant);
-    const preferredVariant = getPreferredVariantCookie(service);
-    const isNotDefaultVariant = defaultVariant !== 'default';
+const withVariant = Component => props => {
+  const { service, variant } = useParams();
+  const location = useLocation();
+  const defaultVariant = getVariant({ service, variant });
+  const sanitizedVariant = variantSanitiser(variant);
+  const cookieVariant = getPreferredVariantCookie(service);
+  const isNotDefaultVariant = defaultVariant !== 'default';
 
-    if (!sanitizedVariant && preferredVariant) {
-      return redirect(location, preferredVariant);
-    }
+  if (!sanitizedVariant && cookieVariant) {
+    return redirect(location, cookieVariant);
+  }
 
-    if (!sanitizedVariant && isNotDefaultVariant) {
-      return redirect(location, defaultVariant);
-    }
+  if (!sanitizedVariant && isNotDefaultVariant) {
+    return redirect(location, defaultVariant);
+  }
 
-    if (sanitizedVariant) setPreferredVariantCookie(service, sanitizedVariant);
+  if (sanitizedVariant) setPreferredVariantCookie(service, sanitizedVariant);
 
-    return <Component {...props} />;
-  };
-
-  return VariantContainer;
+  return <Component {...props} />;
 };
 
 export default withVariant;
