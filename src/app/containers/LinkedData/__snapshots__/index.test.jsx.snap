@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LinkData author should be excluded from article when showAuthor is false 1`] = `
+exports[`LinkedData author should be excluded from article when showAuthor is false 1`] = `
 <html>
   <head>
     <script
@@ -15,7 +15,7 @@ exports[`LinkData author should be excluded from article when showAuthor is fals
 </html>
 `;
 
-exports[`LinkData should correctly render linked data for article pages for service with no trust project markup 1`] = `
+exports[`LinkedData should correctly render linked data for article pages for service with no trust project markup 1`] = `
 <html>
   <head>
     <script
@@ -30,7 +30,7 @@ exports[`LinkData should correctly render linked data for article pages for serv
 </html>
 `;
 
-exports[`LinkData should correctly render linked data for articles 1`] = `
+exports[`LinkedData should correctly render linked data for articles 1`] = `
 <html>
   <head>
     <script
@@ -45,7 +45,7 @@ exports[`LinkData should correctly render linked data for articles 1`] = `
 </html>
 `;
 
-exports[`LinkData should correctly render linked data for front pages 1`] = `
+exports[`LinkedData should correctly render linked data for front pages 1`] = `
 <html>
   <head>
     <script
@@ -60,7 +60,7 @@ exports[`LinkData should correctly render linked data for front pages 1`] = `
 </html>
 `;
 
-exports[`LinkData should correctly render linked data for radio pages 1`] = `
+exports[`LinkedData should correctly render linked data for radio pages 1`] = `
 <html>
   <head>
     <script
