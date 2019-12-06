@@ -11,7 +11,6 @@ analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
 analyticsUtils.getPublishedDatetime = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
-analyticsUtils.getLibraryVersion = jest.fn().mockReturnValue('simorgh');
 
 // Fixtures
 const requestContext = {
@@ -40,7 +39,7 @@ const expectation = {
   categoryName: 'News',
   producerId: serviceContext.atiAnalyticsProducerId,
   statsDestination: requestContext.statsDestination,
-  libraryVersion: analyticsUtils.getLibraryVersion(),
+  libraryVersion: analyticsUtils.LIBRARY_VERSION,
   platform: requestContext.platform,
   service: 'service',
   timePublished: analyticsUtils.getPublishedDatetime(),

@@ -6,7 +6,6 @@ analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
 analyticsUtils.getPublishedDatetime = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
-analyticsUtils.getLibraryVersion = jest.fn().mockReturnValue('simorgh');
 
 const requestContext = {
   platform: 'platform',

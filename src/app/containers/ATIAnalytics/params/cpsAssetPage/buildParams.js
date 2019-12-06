@@ -2,7 +2,7 @@ import path from 'ramda/src/path';
 import { buildATIPageTrackPath } from '../../atiUrl';
 import {
   getPublishedDatetime,
-  getLibraryVersion,
+  LIBRARY_VERSION,
 } from '../../../../lib/analyticsUtils';
 
 export const buildCpsAssetPageATIParams = (
@@ -39,7 +39,7 @@ export const buildCpsAssetPageATIParams = (
     categoryName: path(['passport', 'category', 'categoryName'], metadata),
     campaigns: path(['passport', 'campaigns'], metadata),
     producerId: atiAnalyticsProducerId,
-    libraryVersion: getLibraryVersion(),
+    libraryVersion: LIBRARY_VERSION,
     statsDestination,
     platform,
     service,
