@@ -36,10 +36,10 @@ const getRedirectUrl = (path, params, variant) => {
 const withVariant = Component => props => {
   const { service, variant } = useParams();
   const location = useLocation();
-  const defaultVariant = getVariant({ service, variant });
-  const sanitizedVariant = variantSanitiser(variant);
-  const cookieVariant = getPreferredVariantCookie(service);
-  const isNotDefaultVariant = defaultVariant !== 'default';
+  const defaultServiceVariant = getVariant({ service, variant });
+  const sanitizedVariantFromRoute = variantSanitiser(variant);
+  const preferredCookieVariant = getPreferredVariantCookie(service);
+  const serviceHasVariants = defaultServiceVariant !== 'default';
   const { path } = pathOr({}, ['match'], props);
 
   const getRedirectUrlFromVariant = variantOverride =>
@@ -52,15 +52,23 @@ const withVariant = Component => props => {
       variantOverride,
     );
 
-  if (sanitizedVariant && cookieVariant && sanitizedVariant !== cookieVariant) {
-    return redirect(location, getRedirectUrlFromVariant(cookieVariant));
+  if (
+    sanitizedVariantFromRoute &&
+    preferredCookieVariant &&
+    sanitizedVariantFromRoute !== preferredCookieVariant
+  ) {
+    return redirect(
+      location,
+      getRedirectUrlFromVariant(preferredCookieVariant),
+    );
   }
 
-  if (!sanitizedVariant && isNotDefaultVariant) {
-    return redirect(location, getRedirectUrlFromVariant(defaultVariant));
+  if (!sanitizedVariantFromRoute && serviceHasVariants) {
+    return redirect(location, getRedirectUrlFromVariant(defaultServiceVariant));
   }
 
-  if (sanitizedVariant) setPreferredVariantCookie(service, sanitizedVariant);
+  if (sanitizedVariantFromRoute)
+    setPreferredVariantCookie(service, sanitizedVariantFromRoute);
 
   return <Component {...props} />;
 };
