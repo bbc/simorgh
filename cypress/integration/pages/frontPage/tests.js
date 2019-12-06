@@ -1,5 +1,6 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
+import applySquashTopstories from '../../../../src/app/lib/utilities/preprocessor/rules/topstories';
 
 const serviceJsonPath = service =>
   `${config[service].pageTypes.frontPage.path}.json`;
@@ -229,8 +230,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
 
         it('should contain Radio Bulletin if a promo of type RadioBulletin is in the feed', () => {
           cy.request(serviceJsonPath(service)).then(({ body }) => {
-            const pageData = body.content.groups;
-            if (isValidRadioBulletin(pageData)) {
+            const processData = applySquashTopstories(body);
+            const { groups } = processData.content;
+
+            if (isValidRadioBulletin(groups)) {
               cy.get('[class^="RadioBulletin"]')
                 .eq(0)
                 .should('be.visible');
@@ -242,8 +245,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
 
         it('should contain TV Bulletin if a promo of type TVBulletin is in the feed', () => {
           cy.request(serviceJsonPath(service)).then(({ body }) => {
-            const pageData = body.content.groups;
-            if (isValidTvBulletin(pageData)) {
+            const processData = applySquashTopstories(body);
+            const { groups } = processData.content;
+
+            if (isValidTvBulletin(groups)) {
               cy.get('[class^="TVBulletin"]')
                 .eq(0)
                 .should('be.visible');
