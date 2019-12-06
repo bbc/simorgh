@@ -16,6 +16,12 @@ const TestRouter = ({ history, children }) => (
     <Route path={frontPagePath}>{children}</Route>
   </Router>
 );
+const getMatchProps = (service, path = null) => ({
+  path: path || frontPagePath,
+  params: {
+    service,
+  },
+});
 const EnhancedComponent = withVariant(() => <div />);
 const deleteAllCookies = () => Object.keys(Cookie.get()).forEach(Cookie.remove);
 
@@ -24,11 +30,12 @@ afterEach(deleteAllCookies);
 describe('service with no default variant', () => {
   it('should not redirect', () => {
     const service = 'news';
+    const match = getMatchProps(service);
     const history = createHistory(service);
 
     render(
       <TestRouter history={history}>
-        <EnhancedComponent />
+        <EnhancedComponent match={match} />
       </TestRouter>,
     );
 
@@ -40,12 +47,13 @@ describe('service with no default variant', () => {
 describe('service (ukchina) with cookie variant', () => {
   it('should redirect to ukchina/simp and set preferred variant cookie', () => {
     const service = 'ukchina';
+    const match = getMatchProps(service);
     const history = createHistory(service);
     Cookie.set(`ckps_${service}`, 'simp');
 
     render(
       <TestRouter history={history}>
-        <EnhancedComponent />
+        <EnhancedComponent match={match} />
       </TestRouter>,
     );
 
@@ -57,11 +65,12 @@ describe('service (ukchina) with cookie variant', () => {
 describe('services with default variant', () => {
   it('should redirect to ukchina/trad', () => {
     const service = 'ukchina';
+    const match = getMatchProps(service);
     const history = createHistory(service);
 
     render(
       <TestRouter history={history}>
-        <EnhancedComponent />
+        <EnhancedComponent match={match} />
       </TestRouter>,
     );
 
@@ -71,11 +80,12 @@ describe('services with default variant', () => {
 
   it('should redirect to zhongwen/trad', () => {
     const service = 'zhongwen';
+    const match = getMatchProps(service);
     const history = createHistory(service);
 
     render(
       <TestRouter history={history}>
-        <EnhancedComponent />
+        <EnhancedComponent match={match} />
       </TestRouter>,
     );
 
@@ -84,11 +94,12 @@ describe('services with default variant', () => {
 
   it('should redirect to serbian/lat', () => {
     const service = 'serbian';
+    const match = getMatchProps(service);
     const history = createHistory(service);
 
     render(
       <TestRouter history={history}>
-        <EnhancedComponent />
+        <EnhancedComponent match={match} />
       </TestRouter>,
     );
 
