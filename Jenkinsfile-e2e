@@ -34,7 +34,9 @@ node {
             
             docker.image(Simorgh.nodeDockerImage()).inside('--ipc host') {
                 try {
-                    Simorgh.checkout("${hashToCheckout}", 'simorgh')
+                    Simorgh.checkout('latest', 'simorgh')
+                    Simorgh.checkoutToRevision("${hashToCheckout}", 'simorgh')
+
                     Simorgh.installNodeModules()
                     stage ('Live E2Es') {
                         Simorgh.runE2Es('live', false)
