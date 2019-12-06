@@ -8,7 +8,11 @@ import {
   getMentions,
   getLang,
 } from './utils';
-import { articleDataNews, cpsArticleDataNews } from '../Article/fixtureData';
+import {
+  articleDataNews,
+  cpsArticleDataNews,
+  unknownArticleDataNews,
+} from '../Article/fixtureData';
 
 describe('ArticleMain utils', () => {
   describe('getHeadline', () => {
@@ -24,6 +28,12 @@ describe('ArticleMain utils', () => {
       const expected = 'CPS Article Headline for SEO';
 
       expect(actual).toEqual(expected);
+    });
+
+    it('should return null for asset with unknown headline', () => {
+      const actual = getHeadline(unknownArticleDataNews);
+
+      expect(actual).toEqual(null);
     });
   });
 

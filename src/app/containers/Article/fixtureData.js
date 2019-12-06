@@ -14,6 +14,12 @@ const cpsHeadlines = (headline, shortHeadline) => {
   };
 };
 
+const unknownHeadlines = unknown => {
+  return {
+    unknown,
+  };
+};
+
 const articleDataBuilder = (
   id,
   createdBy,
@@ -120,14 +126,26 @@ export const articleDataNews = articleDataBuilder(
 );
 
 export const cpsArticleDataNews = articleDataBuilder(
-  '123456789',
+  'c1234567890o',
   'News',
   'en-gb',
   'http://www.bbc.co.uk/ontologies/passport/home/News',
   'CPS Article Headline',
   'A paragraph.',
   cpsHeadlines('CPS Article Headline for SEO', 'CPS Article Short Headline'),
-  'Article summary.',
+  'CPS Article summary.',
+  presetThings,
+);
+
+export const unknownArticleDataNews = articleDataBuilder(
+  'c9876543210o',
+  'News',
+  'en-gb',
+  'http://www.bbc.co.uk/ontologies/passport/home/News',
+  'Unknown Article Headline',
+  'A paragraph.',
+  unknownHeadlines('Unknown Article Headline for SEO'),
+  'Unknown Article summary.',
   presetThings,
 );
 
