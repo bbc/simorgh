@@ -231,6 +231,7 @@ export const service = {
         url: '/vietnamese/media/video',
       },
     ],
+    navigationSection: 'Mục',
   },
 };
 

@@ -218,6 +218,7 @@ export const service = {
         url: '/bengali/media/photogalleries',
       },
     ],
+    navigationSection: 'সেকশন',
   },
 };
 
