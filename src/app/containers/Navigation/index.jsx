@@ -14,10 +14,15 @@ const Navigation = () => {
   const { platform } = useContext(RequestContext);
   const isAmp = platform === 'amp';
 
-  const { script, translations, navigation, service, dir } = useContext(
-    ServiceContext,
-  );
-  const { currentPage, skipLinkText, home } = translations; // Should replace home with menu after we get translations
+  const {
+    script,
+    translations,
+    navigation,
+    service,
+    dir,
+    navigationSection,
+  } = useContext(ServiceContext);
+  const { currentPage, skipLinkText } = translations;
 
   if (!navigation || navigation.length === 0) {
     return null;
@@ -76,7 +81,7 @@ const Navigation = () => {
       scrollableListItems={scrollableListItems}
       dropdownListItems={dropdownListItems}
       skipLinkText={skipLinkText}
-      menuAnnouncedText={home}
+      menuAnnouncedText={navigationSection}
       dir={dir}
       script={script}
       service={service}
@@ -86,7 +91,7 @@ const Navigation = () => {
       scrollableListItems={scrollableListItems}
       dropdownListItems={dropdownListItems}
       skipLinkText={skipLinkText}
-      menuAnnouncedText={home}
+      menuAnnouncedText={navigationSection}
       dir={dir}
       script={script}
       service={service}
