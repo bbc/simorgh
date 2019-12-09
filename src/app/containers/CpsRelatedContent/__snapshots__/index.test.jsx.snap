@@ -2,416 +2,426 @@
 
 exports[`CpsRelatedContent should render Story Promo components in Live environment 1`] = `
 <DocumentFragment>
-  <div
+  <aside
     aria-labelledby="related-content-heading"
-    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 cGQhRq"
+    class="GhostGrid-sc-12lwanc-1 gfRQD"
+    role="complementary"
   >
     <div
-      class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 cGQhRq"
     >
       <div
-        class="Bar-sc-1x4gwjz-0 qaAlR"
-      />
-      <h2
-        class="Heading-sc-1x4gwjz-2 eZofTG"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
       >
         <div
-          class="FlexColumn-wx5kdp-0 dgpsiS"
+          class="Bar-sc-1x4gwjz-0 qaAlR"
+        />
+        <h2
+          class="Heading-sc-1x4gwjz-2 eZofTG"
         >
-          <span
-            class="FlexRow-wx5kdp-2 dVBNyZ"
+          <div
+            class="FlexColumn-wx5kdp-0 dgpsiS"
           >
             <span
-              class="Title-wx5kdp-4 jiurmA"
-              dir="ltr"
-              id="related-content-heading"
+              class="FlexRow-wx5kdp-2 dVBNyZ"
             >
-              Another thing we de for inside dis tori
+              <span
+                class="Title-wx5kdp-4 jiurmA"
+                dir="ltr"
+                id="related-content-heading"
+              >
+                Another thing we de for inside dis tori
+              </span>
             </span>
-          </span>
-        </div>
-      </h2>
-    </div>
-    <ul
-      class="StoryPromoUl-sc-171lqjd-1 isCYWc"
-      role="list"
-    >
-      <li
-        class="StoryPromoLi-sc-171lqjd-0 diwbBz"
-        role="listitem"
+          </div>
+        </h2>
+      </div>
+      <ul
+        class="StoryPromoUl-sc-171lqjd-1 isCYWc"
+        role="list"
       >
-        <div
-          class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
+        <li
+          class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+          role="listitem"
         >
           <div
-            class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
+            class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
           >
             <div
-              class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
+              class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
             >
               <div
-                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
               >
                 <div
-                  class="lazyload-placeholder"
+                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                 />
               </div>
-              <div
-                class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
-              />
             </div>
-          </div>
-          <div
-            class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
-          >
-            <h3
-              class="Headline-sc-1dvfmi3-4 cWuUJx"
+            <div
+              class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
             >
-              <a
-                class="Link-sc-1dvfmi3-7 iSHpco"
-                href="/pidgin/44508901"
+              <h3
+                class="Headline-sc-1dvfmi3-4 cWuUJx"
               >
-                <span
-                  role="text"
+                <a
+                  class="Link-sc-1dvfmi3-7 iSHpco"
+                  href="/pidgin/44508901"
                 >
                   <span
-                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                    role="text"
                   >
-                    , 
+                    <span
+                      class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                    >
+                      , 
+                    </span>
+                    <span>
+                      Meet boys who dey convert cassava to electricity
+                    </span>
                   </span>
-                  <span>
-                    Meet boys who dey convert cassava to electricity
-                  </span>
-                </span>
-              </a>
-            </h3>
-            <p
-              class="Summary-sc-1dvfmi3-5 itgvLR"
-            >
-              James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
-            </p>
-            <time
-              class="StyledTimestamp-um718p-0 kVWTyt"
-              datetime="1970-01-18"
-            >
-              18th January 1970
-            </time>
-          </div>
-        </div>
-      </li>
-      <li
-        class="StoryPromoLi-sc-171lqjd-0 diwbBz"
-        role="listitem"
-      >
-        <div
-          class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
-        >
-          <div
-            class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
-          >
-            <div
-              class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
-            >
-              <div
-                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                </a>
+              </h3>
+              <p
+                class="Summary-sc-1dvfmi3-5 itgvLR"
               >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-              <div
-                class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
-              />
+                James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
+              </p>
+              <time
+                class="StyledTimestamp-um718p-0 kVWTyt"
+                datetime="1970-01-18"
+              >
+                18th January 1970
+              </time>
             </div>
           </div>
-          <div
-            class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
-          >
-            <h3
-              class="Headline-sc-1dvfmi3-4 cWuUJx"
-            >
-              <a
-                class="Link-sc-1dvfmi3-7 iSHpco"
-                href="/pidgin/tori-46975713"
-              >
-                How light companies dey use estimated billing show Nigerians pepper
-              </a>
-            </h3>
-            <p
-              class="Summary-sc-1dvfmi3-5 itgvLR"
-            >
-              Lawmakers for Nigeria wan make am crime for light companies to use guesswork give customer estimated bill.
-            </p>
-            <time
-              class="StyledTimestamp-um718p-0 kVWTyt"
-              datetime="1970-01-18"
-            >
-              18th January 1970
-            </time>
-          </div>
-        </div>
-      </li>
-      <li
-        class="StoryPromoLi-sc-171lqjd-0 diwbBz"
-        role="listitem"
-      >
-        <div
-          class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
+        </li>
+        <li
+          class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+          role="listitem"
         >
           <div
-            class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
+            class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
           >
             <div
-              class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
+              class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
             >
               <div
-                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
               >
                 <div
-                  class="lazyload-placeholder"
+                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                 />
               </div>
-              <div
-                class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
-              />
+            </div>
+            <div
+              class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
+            >
+              <h3
+                class="Headline-sc-1dvfmi3-4 cWuUJx"
+              >
+                <a
+                  class="Link-sc-1dvfmi3-7 iSHpco"
+                  href="/pidgin/tori-46975713"
+                >
+                  How light companies dey use estimated billing show Nigerians pepper
+                </a>
+              </h3>
+              <p
+                class="Summary-sc-1dvfmi3-5 itgvLR"
+              >
+                Lawmakers for Nigeria wan make am crime for light companies to use guesswork give customer estimated bill.
+              </p>
+              <time
+                class="StyledTimestamp-um718p-0 kVWTyt"
+                datetime="1970-01-18"
+              >
+                18th January 1970
+              </time>
             </div>
           </div>
+        </li>
+        <li
+          class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+          role="listitem"
+        >
           <div
-            class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
+            class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
           >
-            <h3
-              class="Headline-sc-1dvfmi3-4 cWuUJx"
+            <div
+              class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
             >
-              <a
-                class="Link-sc-1dvfmi3-7 iSHpco"
-                href="/pidgin/tori-42494678"
+              <div
+                class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
               >
-                Nigeria: Wetin 5,222 megawatts electric fit do?
-              </a>
-            </h3>
-            <p
-              class="Summary-sc-1dvfmi3-5 itgvLR"
+                <div
+                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
+                />
+              </div>
+            </div>
+            <div
+              class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
             >
-              Di Transmission Company of Nigeria and di vice-president office carry tori come outside say electric power wey di country produce don increase pass before as e reach 5,222 megawatts dis December.
-            </p>
-            <time
-              class="StyledTimestamp-um718p-0 kVWTyt"
-              datetime="1970-01-18"
-            >
-              18th January 1970
-            </time>
+              <h3
+                class="Headline-sc-1dvfmi3-4 cWuUJx"
+              >
+                <a
+                  class="Link-sc-1dvfmi3-7 iSHpco"
+                  href="/pidgin/tori-42494678"
+                >
+                  Nigeria: Wetin 5,222 megawatts electric fit do?
+                </a>
+              </h3>
+              <p
+                class="Summary-sc-1dvfmi3-5 itgvLR"
+              >
+                Di Transmission Company of Nigeria and di vice-president office carry tori come outside say electric power wey di country produce don increase pass before as e reach 5,222 megawatts dis December.
+              </p>
+              <time
+                class="StyledTimestamp-um718p-0 kVWTyt"
+                datetime="1970-01-18"
+              >
+                18th January 1970
+              </time>
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
-  </div>
+        </li>
+      </ul>
+    </div>
+  </aside>
 </DocumentFragment>
 `;
 
 exports[`CpsRelatedContent should render Story Promo components when given appropriate data 1`] = `
 <DocumentFragment>
-  <div
+  <aside
     aria-labelledby="related-content-heading"
-    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 cGQhRq"
+    class="GhostGrid-sc-12lwanc-1 gfRQD"
+    role="complementary"
   >
     <div
-      class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 cGQhRq"
     >
       <div
-        class="Bar-sc-1x4gwjz-0 qaAlR"
-      />
-      <h2
-        class="Heading-sc-1x4gwjz-2 eZofTG"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
       >
         <div
-          class="FlexColumn-wx5kdp-0 dgpsiS"
+          class="Bar-sc-1x4gwjz-0 qaAlR"
+        />
+        <h2
+          class="Heading-sc-1x4gwjz-2 eZofTG"
         >
-          <span
-            class="FlexRow-wx5kdp-2 dVBNyZ"
+          <div
+            class="FlexColumn-wx5kdp-0 dgpsiS"
           >
             <span
-              class="Title-wx5kdp-4 jiurmA"
-              dir="ltr"
-              id="related-content-heading"
+              class="FlexRow-wx5kdp-2 dVBNyZ"
             >
-              Another thing we de for inside dis tori
+              <span
+                class="Title-wx5kdp-4 jiurmA"
+                dir="ltr"
+                id="related-content-heading"
+              >
+                Another thing we de for inside dis tori
+              </span>
             </span>
-          </span>
-        </div>
-      </h2>
-    </div>
-    <ul
-      class="StoryPromoUl-sc-171lqjd-1 isCYWc"
-      role="list"
-    >
-      <li
-        class="StoryPromoLi-sc-171lqjd-0 diwbBz"
-        role="listitem"
+          </div>
+        </h2>
+      </div>
+      <ul
+        class="StoryPromoUl-sc-171lqjd-1 isCYWc"
+        role="list"
       >
-        <div
-          class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
+        <li
+          class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+          role="listitem"
         >
           <div
-            class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
+            class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
           >
             <div
-              class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
+              class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
             >
               <div
-                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
               >
                 <div
-                  class="lazyload-placeholder"
+                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                 />
               </div>
-              <div
-                class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
-              />
             </div>
-          </div>
-          <div
-            class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
-          >
-            <h3
-              class="Headline-sc-1dvfmi3-4 cWuUJx"
+            <div
+              class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
             >
-              <a
-                class="Link-sc-1dvfmi3-7 iSHpco"
-                href="/pidgin/44508901?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+              <h3
+                class="Headline-sc-1dvfmi3-4 cWuUJx"
               >
-                <span
-                  role="text"
+                <a
+                  class="Link-sc-1dvfmi3-7 iSHpco"
+                  href="/pidgin/44508901?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
                   <span
-                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                    role="text"
                   >
-                    , 
+                    <span
+                      class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                    >
+                      , 
+                    </span>
+                    <span>
+                      Meet boys who dey convert cassava to electricity
+                    </span>
                   </span>
-                  <span>
-                    Meet boys who dey convert cassava to electricity
-                  </span>
-                </span>
-              </a>
-            </h3>
-            <p
-              class="Summary-sc-1dvfmi3-5 itgvLR"
-            >
-              James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
-            </p>
-            <time
-              class="StyledTimestamp-um718p-0 kVWTyt"
-              datetime="1970-01-18"
-            >
-              18th January 1970
-            </time>
-          </div>
-        </div>
-      </li>
-      <li
-        class="StoryPromoLi-sc-171lqjd-0 diwbBz"
-        role="listitem"
-      >
-        <div
-          class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
-        >
-          <div
-            class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
-          >
-            <div
-              class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
-            >
-              <div
-                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                </a>
+              </h3>
+              <p
+                class="Summary-sc-1dvfmi3-5 itgvLR"
               >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-              <div
-                class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
-              />
+                James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
+              </p>
+              <time
+                class="StyledTimestamp-um718p-0 kVWTyt"
+                datetime="1970-01-18"
+              >
+                18th January 1970
+              </time>
             </div>
           </div>
-          <div
-            class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
-          >
-            <h3
-              class="Headline-sc-1dvfmi3-4 cWuUJx"
-            >
-              <a
-                class="Link-sc-1dvfmi3-7 iSHpco"
-                href="/pidgin/tori-46975713?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-              >
-                How light companies dey use estimated billing show Nigerians pepper
-              </a>
-            </h3>
-            <p
-              class="Summary-sc-1dvfmi3-5 itgvLR"
-            >
-              Lawmakers for Nigeria wan make am crime for light companies to use guesswork give customer estimated bill.
-            </p>
-            <time
-              class="StyledTimestamp-um718p-0 kVWTyt"
-              datetime="1970-01-18"
-            >
-              18th January 1970
-            </time>
-          </div>
-        </div>
-      </li>
-      <li
-        class="StoryPromoLi-sc-171lqjd-0 diwbBz"
-        role="listitem"
-      >
-        <div
-          class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
+        </li>
+        <li
+          class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+          role="listitem"
         >
           <div
-            class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
+            class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
           >
             <div
-              class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
+              class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
             >
               <div
-                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
               >
                 <div
-                  class="lazyload-placeholder"
+                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                 />
               </div>
-              <div
-                class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
-              />
+            </div>
+            <div
+              class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
+            >
+              <h3
+                class="Headline-sc-1dvfmi3-4 cWuUJx"
+              >
+                <a
+                  class="Link-sc-1dvfmi3-7 iSHpco"
+                  href="/pidgin/tori-46975713?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  How light companies dey use estimated billing show Nigerians pepper
+                </a>
+              </h3>
+              <p
+                class="Summary-sc-1dvfmi3-5 itgvLR"
+              >
+                Lawmakers for Nigeria wan make am crime for light companies to use guesswork give customer estimated bill.
+              </p>
+              <time
+                class="StyledTimestamp-um718p-0 kVWTyt"
+                datetime="1970-01-18"
+              >
+                18th January 1970
+              </time>
             </div>
           </div>
+        </li>
+        <li
+          class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+          role="listitem"
+        >
           <div
-            class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
+            class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
           >
-            <h3
-              class="Headline-sc-1dvfmi3-4 cWuUJx"
+            <div
+              class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
             >
-              <a
-                class="Link-sc-1dvfmi3-7 iSHpco"
-                href="/pidgin/tori-42494678?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+              <div
+                class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
               >
-                Nigeria: Wetin 5,222 megawatts electric fit do?
-              </a>
-            </h3>
-            <p
-              class="Summary-sc-1dvfmi3-5 itgvLR"
+                <div
+                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
+                />
+              </div>
+            </div>
+            <div
+              class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
             >
-              Di Transmission Company of Nigeria and di vice-president office carry tori come outside say electric power wey di country produce don increase pass before as e reach 5,222 megawatts dis December.
-            </p>
-            <time
-              class="StyledTimestamp-um718p-0 kVWTyt"
-              datetime="1970-01-18"
-            >
-              18th January 1970
-            </time>
+              <h3
+                class="Headline-sc-1dvfmi3-4 cWuUJx"
+              >
+                <a
+                  class="Link-sc-1dvfmi3-7 iSHpco"
+                  href="/pidgin/tori-42494678?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  Nigeria: Wetin 5,222 megawatts electric fit do?
+                </a>
+              </h3>
+              <p
+                class="Summary-sc-1dvfmi3-5 itgvLR"
+              >
+                Di Transmission Company of Nigeria and di vice-president office carry tori come outside say electric power wey di country produce don increase pass before as e reach 5,222 megawatts dis December.
+              </p>
+              <time
+                class="StyledTimestamp-um718p-0 kVWTyt"
+                datetime="1970-01-18"
+              >
+                18th January 1970
+              </time>
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
-  </div>
+        </li>
+      </ul>
+    </div>
+  </aside>
 </DocumentFragment>
 `;
