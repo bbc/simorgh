@@ -1,12 +1,11 @@
 import 'isomorphic-fetch';
 import path from 'ramda/src/path';
+import Url from 'url-parse';
 import nodeLogger from '#lib/logger.node';
 import preprocess from '#lib/utilities/preprocessor';
 import onClient from '#lib/utilities/onClient';
 import getBaseUrl from './utils/getBaseUrl';
 import getPreprocessorRules from './utils/getPreprocessorRules';
-
-const qs = require('querystringify');
 
 const logger = nodeLogger(__filename);
 const STATUS_CODE_OK = 200;
@@ -20,46 +19,23 @@ const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)
   : process.env.SIMORGH_BASE_URL;
 
-export const validateRendererEnvironment = environment => {
-  const validRendererEnvironments = ['test', 'live'];
-
-  if (
-    !(
-      environment &&
-      validRendererEnvironments.includes(environment.toLowerCase())
-    )
-  ) {
-    logger.warn(
-      `Invalid parameter value [${environment}]. Usage: renderer_env=${validRendererEnvironments.join(
-        '|',
-      )}`,
-    );
-  }
+const getParams = pathname => {
+  const url = new Url(pathname);
+  return url.query;
 };
 
-const getPathFromUrl = url => {
-  return url.split(/[?]/)[0];
-};
-
-const checkAndAppendParams = pathname => {
-  const url = getPathFromUrl(pathname);
-  const params = qs.parse(pathname.substring(url.length));
-
-  if (params && params.renderer_env) {
-    params.renderer_env = params.renderer_env.toLowerCase();
-    validateRendererEnvironment(params.renderer_env);
-  }
-
-  return `${baseUrl}${url.replace(ampRegex, '')}.json${qs.stringify(
-    params,
-    true,
-  )}`;
+const getBasePath = pathname => {
+  const url = new Url(pathname);
+  return url.pathname;
 };
 
 export const getUrl = pathname => {
   if (!pathname) return '';
 
-  return checkAndAppendParams(pathname);
+  const params = getParams(pathname);
+  const basePath = getBasePath(pathname);
+
+  return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`;
 };
 
 const handleResponse = async response => {

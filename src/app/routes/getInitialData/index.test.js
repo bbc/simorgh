@@ -6,7 +6,7 @@ jest.mock('#lib/utilities/preprocessor', () => jest.fn());
 preprocess.mockImplementation(data => data);
 
 const fetchData = require('./index').default;
-const { getUrl, validateRendererEnvironment } = require('./index');
+const { getUrl } = require('./index');
 
 describe('fetchData', () => {
   const mockSuccessfulResponse = {
@@ -366,11 +366,6 @@ describe('getUrl', () => {
     );
   });
 
-  it('should remove .amp from url with params', () => {});
-  expect(getUrl('/test/article.amp?param=test')).toEqual(
-    'http://localhost/test/article.json?param=test',
-  );
-
   it('should append single query string parameter', () => {
     expect(getUrl('/test/article?param=test')).toEqual(
       'http://localhost/test/article.json?param=test',
@@ -383,58 +378,8 @@ describe('getUrl', () => {
     );
   });
 
-  it('should append renderer_env query string', () => {
-    expect(getUrl('/test/article?renderer_env=test')).toEqual(
-      'http://localhost/test/article.json?renderer_env=test',
-    );
-  });
-
-  it('should append renderer_env query string case insensitive', () => {
-    expect(getUrl('/test/article?renderer_env=LIVE')).toEqual(
-      'http://localhost/test/article.json?renderer_env=live',
-    );
-  });
-});
-
-describe('validateRendererEnvironment', () => {
-  it('should not log message if environment is test', () => {
-    validateRendererEnvironment('test');
-    expect(loggerMock.warn).not.toHaveBeenCalled();
-  });
-  it('should not log message if environment is live', () => {
-    validateRendererEnvironment('live');
-    expect(loggerMock.warn).not.toHaveBeenCalled();
-  });
-  it('should not log message if environment is valid - case insensitive', () => {
-    validateRendererEnvironment('TeSt');
-    expect(loggerMock.warn).not.toHaveBeenCalled();
-  });
-
-  it('should log message if renderer_env query string is empty', () => {
-    validateRendererEnvironment('');
-    expect(loggerMock.warn).toHaveBeenCalledWith(
-      'Invalid parameter value []. Usage: renderer_env=test|live',
-    );
-  });
-
-  it('should log message if renderer_env query string is null', () => {
-    validateRendererEnvironment(null);
-    expect(loggerMock.warn).toHaveBeenCalledWith(
-      'Invalid parameter value [null]. Usage: renderer_env=test|live',
-    );
-  });
-
-  it('should log message if renderer_env query string is undefined', () => {
-    validateRendererEnvironment(undefined);
-    expect(loggerMock.warn).toHaveBeenCalledWith(
-      'Invalid parameter value [undefined]. Usage: renderer_env=test|live',
-    );
-  });
-
-  it('should log message if renderer_env query string is invalid', () => {
-    validateRendererEnvironment('bob');
-    expect(loggerMock.warn).toHaveBeenCalledWith(
-      'Invalid parameter value [bob]. Usage: renderer_env=test|live',
-    );
-  });
+  it('should remove .amp from url with params', () => {});
+  expect(getUrl('/test/article.amp?param=test')).toEqual(
+    'http://localhost/test/article.json?param=test',
+  );
 });
