@@ -1,4 +1,3 @@
-import path from 'ramda/src/path';
 import {
   getHeadline,
   getFirstPublished,
