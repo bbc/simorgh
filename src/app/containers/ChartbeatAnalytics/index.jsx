@@ -16,7 +16,8 @@ const ChartbeatAnalytics = ({ data }) => {
   );
   const isAmpAndEnabled = platform === 'amp' && enabled;
   const isCanonicalAndEnabled = platform === 'canonical' && enabled;
-  const chartbeatConfig = getConfig({
+
+  const configDependencies = {
     platform,
     pageType,
     data,
@@ -25,23 +26,15 @@ const ChartbeatAnalytics = ({ data }) => {
     service,
     origin,
     previousPath,
-  });
+  };
+
+  const chartbeatConfig = getConfig(configDependencies);
 
   useEffect(() => {
     if (isCanonicalAndEnabled) {
       sendCanonicalChartbeatBeacon(chartbeatConfig);
     }
-  }, [
-    brandName,
-    data,
-    env,
-    origin,
-    pageType,
-    platform,
-    service,
-    sendCanonicalChartbeatBeacon,
-    isCanonicalAndEnabled,
-  ]);
+  }, [data, isCanonicalAndEnabled]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     isAmpAndEnabled && <AmpChartbeatBeacon chartbeatConfig={chartbeatConfig} />

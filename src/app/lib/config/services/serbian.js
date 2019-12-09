@@ -219,6 +219,7 @@ export const service = {
         url: '/serbian/lat/popular/read',
       },
     ],
+    navigationSection: 'Odeljci',
   },
   cyr: {
     ...baseServiceConfig,
@@ -252,6 +253,7 @@ export const service = {
         url: '/serbian/cyr/popular/read',
       },
     ],
+    navigationSection: 'Одељци',
   },
 };
 

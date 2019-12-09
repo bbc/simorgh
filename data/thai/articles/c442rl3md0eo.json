@@ -1,0 +1,436 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c442rl3md0eo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c442rl3md0eo",
+      "canonicalUrl": "https://www.bbc.com/thai/articles/c442rl3md0eo"
+    },
+    "type": "article",
+    "createdBy": "Thai",
+    "language": "th",
+    "lastUpdated": 1575558066658,
+    "firstPublished": 1574853287993,
+    "lastPublished": 1574853287993,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "th",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
+      "locator": "urn:bbc:optimo:asset:c442rl3md0eo",
+      "availability": "AVAILABLE",
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.1.3",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "นี่คือหัวข้อข่าวของบทความทดสอบนี้",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "นี่คือหัวข้อข่าวของบทความทดสอบนี้",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ภาพทดสอบลิขสิทธิ์บีบีซีนี้แสดงแผนที่ของฝรั่งเศส รูปภาพอยู่ในสามบล็อกแรกและมีคำบรรยายภาพนี้",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ภาพทดสอบลิขสิทธิ์บีบีซีนี้แสดงแผนที่ของฝรั่งเศส รูปภาพอยู่ในสามบล็อกแรกและมีคำบรรยายภาพนี้",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ภาพทดสอบลิขสิทธิ์บีบีซีนี้แสดงแผนที่ของฝรั่งเศส รูปภาพอยู่ในสามบล็อกแรกและมีคำบรรยายภาพนี้",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ภาพทดสอบลิขสิทธิ์บีบีซีนี้แสดงแผนที่ของฝรั่งเศส รูปภาพอยู่ในสามบล็อกแรกและมีคำบรรยายภาพนี้",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "d624/test/fc3ebc60-1105-11ea-acaa-cd607a38aea4.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "นี่คือบล็อกข้อความซึ่งมีลิงก์ ไปยังหน้าแรกของ ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "นี่คือบล็อกข้อความซึ่งมีลิงก์ ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "ไปยังหน้าแรกของ ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "ไปยังหน้าแรกของ ",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "นี่คือหัวข้อข่าวของบทความทดสอบนี้",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "นี่คือหัวข้อข่าวของบทความทดสอบนี้",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true,
+                              "world": false
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "นี่คือบล็อกหัวข้อย่อย",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "นี่คือบล็อกหัวข้อย่อย",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "นี่คือบล็อกหัวข้อย่อย",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "นี่คือบล็อกหัวข้อย่อย",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 800,
+                  "height": 450,
+                  "locator": "c83b/test/8b9168e0-1106-11ea-acaa-cd607a38aea4.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "บทความทดสอบนี้ถูกสร้างขึ้นเพื่อให้เราสามารถเรียกใช้การทดสอบแบบครบวงจรอัตโนมัติบนเว็บไซต์ของเรา",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "บทความทดสอบนี้ถูกสร้างขึ้นเพื่อให้เราสามารถเรียกใช้การทดสอบแบบครบวงจรอัตโนมัติบนเว็บไซต์ของเรา",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "นี่คือหัวข้อข่าวของบทความทดสอบนี้"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c442rl3md0eo"
+    },
+    "summary": "",
+    "timestamp": 1574853287993,
+    "id": "urn:bbc:ares::article:c442rl3md0eo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Thai",
+      "uri": "/thai",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

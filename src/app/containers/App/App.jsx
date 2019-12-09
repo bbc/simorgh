@@ -31,6 +31,17 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   });
 
   const isInitialMount = useRef(true);
+  const shouldSetFocus = useRef(false);
+
+  useEffect(() => {
+    if (shouldSetFocus.current) {
+      const contentEl = document.querySelector('h1#content');
+      if (contentEl) {
+        contentEl.focus();
+      }
+      shouldSetFocus.current = false;
+    }
+  }, [state.loading]);
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -58,15 +69,16 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         errorCode: null,
       });
 
-      route.getInitialData(location.pathname).then(data =>
+      route.getInitialData(location.pathname).then(data => {
+        shouldSetFocus.current = true;
         setState(prevState => ({
           ...prevState,
           loading: false,
           pageData: path(['pageData'], data),
           status: path(['status'], data),
           error: path(['error'], data),
-        })),
-      );
+        }));
+      });
     }
   }, [routes, location.pathname]);
 

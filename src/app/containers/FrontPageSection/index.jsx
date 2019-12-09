@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { bool, shape, number, arrayOf } from 'prop-types';
+import { bool, shape, number } from 'prop-types';
 import styled, { css } from 'styled-components';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -15,10 +15,10 @@ import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
 import pathOr from 'ramda/src/pathOr';
 import UsefulLinksComponent from './UsefulLinks';
+import BulletinContainer from '../Bulletin';
+import StoryPromoContainer from '../StoryPromo';
 import { ServiceContext } from '#contexts/ServiceContext';
-import StoryPromo from '../StoryPromo';
 import groupShape from '#models/propTypes/frontPageGroup';
-import { storyItem } from '#models/propTypes/storyItem';
 import idSanitiser from '#lib/utilities/idSanitiser';
 
 // Apply the right margin-top to the first section of the page when there is one or multiple items.
@@ -70,51 +70,48 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
   return children;
 };
 
-const StoryPromoComponent = ({ item, sectionNumber, storyNumber }) => {
-  const topStory = sectionNumber === 0 && storyNumber === 0;
+const renderPromo = (item, index, firstSection) => {
+  const topStory = firstSection && index === 0;
   const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
 
+  const isBulletin =
+    item.contentType === 'TVBulletin' || item.contentType === 'RadioBulletin';
+
+  if (isBulletin) {
+    return <BulletinContainer item={item} lazyLoadImage={lazyLoadImage} />;
+  }
+
   return (
-    <StoryPromo item={item} topStory={topStory} lazyLoadImage={lazyLoadImage} />
+    <StoryPromoContainer
+      item={item}
+      topStory={topStory}
+      lazyLoadImage={lazyLoadImage}
+    />
   );
 };
 
-StoryPromoComponent.propTypes = {
-  item: shape(storyItem).isRequired,
-  sectionNumber: number.isRequired,
-  storyNumber: number.isRequired,
-};
+const sectionBody = (group, items, script, service, isFirstSection) => {
+  if (group.semanticGroupName === 'Useful links') {
+    return (
+      <UsefulLinksComponent items={items} script={script} service={service} />
+    );
+  }
 
-const StoryPromoRenderer = ({ items, firstSection, sectionNumber }) => {
   return items.length > 1 ? (
-    <MarginWrapper firstSection={firstSection}>
+    <MarginWrapper firstSection={isFirstSection}>
       <StoryPromoUl>
         {items.map((item, index) => (
           <StoryPromoLi key={item.id}>
-            <StoryPromoComponent
-              item={item}
-              sectionNumber={sectionNumber}
-              storyNumber={index}
-            />
+            {renderPromo(item, index, isFirstSection)}
           </StoryPromoLi>
         ))}
       </StoryPromoUl>
     </MarginWrapper>
   ) : (
-    <MarginWrapper firstSection={firstSection} oneItem>
-      <StoryPromoComponent
-        item={items[0]}
-        sectionNumber={sectionNumber}
-        storyNumber={0}
-      />
+    <MarginWrapper firstSection={isFirstSection} oneItem>
+      {renderPromo(items[0], 0, isFirstSection)}
     </MarginWrapper>
   );
-};
-
-StoryPromoRenderer.propTypes = {
-  items: arrayOf(shape(storyItem)).isRequired,
-  firstSection: bool.isRequired,
-  sectionNumber: number.isRequired,
 };
 
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
@@ -158,15 +155,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
       >
         {group.strapline.name}
       </SectionLabel>
-      {group.semanticGroupName === 'Useful links' ? (
-        <UsefulLinksComponent items={items} script={script} service={service} />
-      ) : (
-        <StoryPromoRenderer
-          items={items}
-          firstSection={isFirstSection}
-          sectionNumber={sectionNumber}
-        />
-      )}
+      {sectionBody(group, items, script, service, isFirstSection)}
     </section>
   );
 };
