@@ -61,7 +61,7 @@
     "@bbc/psammead-amp-geo": "^1.1.2",
     "@bbc/psammead-assets": "^2.10.3",
     "@bbc/psammead-brand": "^5.0.11",
-    "@bbc/psammead-bulleted-list": "0.1.0-alpha.1",
+    "@bbc/psammead-bulleted-list": "0.2.0-alpha.2",
     "@bbc/psammead-calendars": "^2.0.2",
     "@bbc/psammead-caption": "^2.2.20",
     "@bbc/psammead-consent-banner": "^2.3.22",
