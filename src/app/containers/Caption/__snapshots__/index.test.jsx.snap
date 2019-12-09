@@ -154,7 +154,7 @@ exports[`should render caption text with example News offscreen text 1`] = `
 </figcaption>
 `;
 
-exports[`should render caption with mutiple paragraphs 1`] = `
+exports[`should render caption with multiple paragraphs 1`] = `
 .c1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -233,6 +233,120 @@ exports[`should render caption with mutiple paragraphs 1`] = `
   </p>
   <p>
     Paragraph 3
+  </p>
+</figcaption>
+`;
+
+exports[`should render correctly with inline block 1`] = `
+.c1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c0 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6E6E73;
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+}
+
+.c0 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c0 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c0 i {
+  font-style: normal;
+}
+
+.c3 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c3:focus,
+.c3:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.c2 {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding: 0.5rem 0 0;
+  }
+}
+
+<figcaption
+  class="c0"
+>
+  <span
+    class="c1"
+  >
+    Caption, 
+  </span>
+  <p>
+    <b>
+      This is some text.
+    </b>
+    <span
+      class="c2"
+      lang="fa"
+    >
+      <a
+        aria-label="چیسربرگرundefined"
+        class="c3"
+        href="https://google.com"
+      >
+        چیسربرگر
+      </a>
+    </span>
   </p>
 </figcaption>
 `;
