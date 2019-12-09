@@ -111,7 +111,7 @@ LinkedData.propTypes = {
 };
 
 LinkedData.defaultProps = {
-  showAuthor: true,
+  showAuthor: false,
   headline: undefined,
   datePublished: undefined,
   dateModified: undefined,

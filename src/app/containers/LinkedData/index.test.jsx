@@ -78,13 +78,14 @@ describe('LinkedData', () => {
     </Context>,
   );
 
-  describe('author', () => {
+  describe('showAuthor', () => {
     const articleProps = assocPath(['showAuthor'], false, propsForArticle);
-    it('should default showAuthor prop to true', () => {
-      expect(LinkedData.defaultProps.showAuthor).toBe(true);
+    it('should default to false', () => {
+      expect(LinkedData.defaultProps.showAuthor).toBe(false);
     });
+
     shouldMatchSnapshot(
-      'should be excluded from article when showAuthor is false',
+      'should exclude author from article when false',
       <Context>
         <LinkedData {...articleProps} />
       </Context>,
