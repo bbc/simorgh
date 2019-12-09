@@ -212,11 +212,11 @@
   "nepali": {
     "default": {
       "one minute ago": "१ मिनेट पहिले",
-      "five minutes ago": "5 मिनेट पहिले",
+      "five minutes ago": "५ मिनेट पहिले",
       "one hour ago": "१ घण्टा पहिले",
-      "five hours ago": "5 घण्टा पहिले",
-      "exact date": "10 अक्टोबर 2018",
-      "exact date and time with timezone": "12 जुलाई 2019, 18:40 +0545"
+      "five hours ago": "५ घण्टा पहिले",
+      "exact date": "१० अक्टोबर २०१८",
+      "exact date and time with timezone": "१२ जुलाई २०१९, १८:४० +०५४५"
     }
   },
   "news": {
