@@ -200,6 +200,7 @@ export const service = {
         url: '/amharic/popular/read',
       },
     ],
+    navigationSection: 'ክፍሎች',
     timezone: 'Africa/Addis_Ababa',
   },
 };

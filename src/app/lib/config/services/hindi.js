@@ -240,6 +240,7 @@ export const service = {
         url: '/hindi/in_depth',
       },
     ],
+    navigationSection: 'सेक्शन',
   },
 };
 
