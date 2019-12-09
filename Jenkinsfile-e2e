@@ -2,7 +2,7 @@
 library 'Simorgh'
 
 // Run latest every 3 hours
-def cron_string = env.BRANCH_NAME == "latest" ? "0 */3 * * *" : ""
+def cron_string = env.BRANCH_NAME == "latest" ? "0 0,6,9,12,15,18,21 * * *" : ""
 
 node {
     properties(
@@ -26,10 +26,16 @@ node {
             'CI=true'
         ]) {
             cleanWs() // Clean the workspace
-
+            
+            stage('Get hash')
+                def hashToCheckout = params.BRANCH == '' ? Simorgh.getLiveCommitHash() : params.BRANCH
+                echo hashToCheckout
+            
             docker.image(Simorgh.nodeDockerImage()).inside('--ipc host') {
                 try {
-                    Simorgh.checkout("${params.BRANCH}", 'simorgh')
+                    Simorgh.checkout('latest', 'simorgh')
+                    Simorgh.checkoutToRevision("${hashToCheckout}", 'simorgh')
+
                     Simorgh.installNodeModules()
                     stage ('Live E2Es') {
                         Simorgh.runE2Es('live', false)

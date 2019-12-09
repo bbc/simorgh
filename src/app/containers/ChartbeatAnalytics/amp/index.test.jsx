@@ -27,7 +27,6 @@ describe('AmpChartbeatAnalytics', () => {
 
     const expectedValue = {
       vars: config,
-      triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
     };
     act(() => {
       ReactDOM.render(
@@ -60,7 +59,6 @@ describe('AmpChartbeatAnalytics', () => {
 
     const expectedValue = {
       vars: config,
-      triggers: { trackPageview: { on: 'visible', request: 'pageview' } },
     };
     act(() => {
       ReactDOM.render(
