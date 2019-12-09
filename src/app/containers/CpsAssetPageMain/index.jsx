@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-boolean-value */
 import React from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -50,7 +51,7 @@ const CpsAssetPageMain = ({ pageData }) => {
         description={summary}
         openGraphType="website"
       />
-      <LinkedData type="Article" seoTitle={title} />
+      <LinkedData type="Article" seoTitle={title} showAuthor={true} />
       <ATIAnalytics data={pageData} />
       <GhostGrid as="main" role="main">
         <GridItemConstrainedMedium>
