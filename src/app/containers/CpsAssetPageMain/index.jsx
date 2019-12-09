@@ -16,6 +16,7 @@ import ATIAnalytics from '../ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '../FauxHeadline';
 import visuallyHiddenHeadline from '../VisuallyHiddenHeadline';
+import { getFirstPublished, getLastPublished } from '../ArticleMain/utils';
 
 const CpsAssetPageMain = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -29,6 +30,8 @@ const CpsAssetPageMain = ({ pageData }) => {
     ['relatedContent', 'groups', 0, 'promos'],
     pageData,
   );
+  const firstPublished = getFirstPublished(pageData);
+  const lastPublished = getLastPublished(pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -50,7 +53,12 @@ const CpsAssetPageMain = ({ pageData }) => {
         description={summary}
         openGraphType="website"
       />
-      <LinkedData type="Article" seoTitle={title} />
+      <LinkedData
+        type="Article"
+        seoTitle={title}
+        datePublished={firstPublished}
+        dateModified={lastPublished}
+      />
       <ATIAnalytics data={pageData} />
       <GhostGrid as="main" role="main">
         <GridItemConstrainedMedium>

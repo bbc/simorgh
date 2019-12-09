@@ -16836,7 +16836,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/igbo/afirika-23252735","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/igbo/afirika-23252735","name":"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?"}}
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/igbo/afirika-23252735","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/igbo/afirika-23252735","name":"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?"},"datePublished":"2019-10-23T12:18:59.000Z","dateModified":"2019-10-23T12:33:16.000Z"}
     </script>
     <script
       type="application/ld+json"
