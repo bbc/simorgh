@@ -40,6 +40,7 @@ const getBulletinPromo = (platform, service, item) => (
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       isAmp={platform === 'amp'}
+      pathname="/pathname"
       pageType="frontPage"
       service={service}
     >
