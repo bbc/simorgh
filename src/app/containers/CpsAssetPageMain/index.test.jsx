@@ -230,4 +230,15 @@ describe('CpsAssetPageMain', () => {
     expect(document.querySelector('div[class^=PopOut]')).toBeNull();
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('has a single "main" element, and a single "complementary" element (a11y)', async () => {
+    const pageData = await preprocessor(
+      pidginPageData,
+      cpsAssetPreprocessorRules,
+    );
+
+    render(createAssetPage({ pageData }, 'pidgin'));
+    expect(document.querySelectorAll(`[role='main']`).length).toBe(1);
+    expect(document.querySelectorAll(`[role='complementary']`).length).toBe(1);
+  });
 });
