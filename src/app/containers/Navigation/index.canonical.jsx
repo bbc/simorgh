@@ -27,8 +27,7 @@ const CanonicalNavigationContainer = ({
       <CanonicalMenuButton
         announcedText={menuAnnouncedText}
         isOpen={isOpen}
-        onOpen={() => setIsOpen(true)}
-        onClose={() => setIsOpen(false)}
+        onClick={() => setIsOpen(!isOpen)}
         dir={dir}
         script={script}
       />
