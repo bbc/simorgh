@@ -13,11 +13,11 @@ const AmpNavigationContainer = ({
   menuAnnouncedText,
   scrollableListItems,
   dropdownListItems,
-  toggleElement,
+  dropdownId,
 }) => {
-  // togglableElement is the 2nd element onToggle will toggle between.
-  // That is, onToggle will toggle between toggleElement and togglableElement
-  const togglableElement = 'scrollable-nav';
+  const scrollableId = 'scrollable-nav';
+  const navigationId = 'navigation-id';
+  const open = 'open';
 
   return (
     <Navigation
@@ -25,15 +25,21 @@ const AmpNavigationContainer = ({
       skipLinkText={skipLinkText}
       service={service}
       dir={dir}
+      id={navigationId}
+      ampOpenClass={open}
     >
       <AmpMenuButton
         announcedText={menuAnnouncedText}
-        onToggle={`${toggleElement}.toggleVisibility,${togglableElement}.toggleVisibility`}
+        onToggle={`
+          ${dropdownId}.toggleVisibility,
+          ${scrollableId}.toggleVisibility,
+          ${navigationId}.toggleClass(class=${open})
+        `}
         dir={dir}
         script={script}
       />
       {dropdownListItems}
-      <AmpScrollableNavigation dir={dir} id={togglableElement}>
+      <AmpScrollableNavigation dir={dir} id={scrollableId}>
         {scrollableListItems}
       </AmpScrollableNavigation>
     </Navigation>
@@ -48,7 +54,7 @@ AmpNavigationContainer.propTypes = {
   scrollableListItems: node.isRequired,
   dropdownListItems: node.isRequired,
   menuAnnouncedText: string.isRequired,
-  toggleElement: string.isRequired,
+  dropdownId: string.isRequired,
 };
 
 export default AmpNavigationContainer;
