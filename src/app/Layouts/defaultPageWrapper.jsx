@@ -7,7 +7,6 @@ import ManifestContainer from '../containers/Manifest';
 import ServiceWorkerContainer from '../containers/ServiceWorker';
 import MPulseBeacon from '../containers/MPulseBeacon';
 import { ServiceContext } from '../contexts/ServiceContext';
-import HtmlClassNameModifier from '../components/HtmlClassNameModifier';
 
 const PageWrapper = ({ children }) => {
   const { fonts: fontFunctions } = useContext(ServiceContext);
@@ -19,7 +18,6 @@ const PageWrapper = ({ children }) => {
       <GlobalStyles fonts={fonts} />
       <ServiceWorkerContainer />
       <ManifestContainer />
-      <HtmlClassNameModifier />
       <MPulseBeacon />
       <HeaderContainer />
       {children}

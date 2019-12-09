@@ -413,9 +413,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   }
 }
 
-<html
-  class="js"
->
+<html>
   <head>
     <link
       href="/news/articles/manifest.json"

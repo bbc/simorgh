@@ -34,7 +34,7 @@ const Document = ({
   );
 
   return (
-    <html lang="en-GB" {...htmlAttrs}>
+    <html lang="en-GB" className="no-js" {...htmlAttrs}>
       <head>
         {meta}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -73,6 +73,15 @@ const Document = ({
           />
         )}
         {scriptsAllowed && scriptTags}
+        {scriptsAllowed && (
+          <script
+            type="text/javascript"
+            /* eslint-disable-next-line react/no-danger */
+            dangerouslySetInnerHTML={{
+              __html: `document.documentElement.classList.remove("no-js");`,
+            }}
+          />
+        )}
       </body>
     </html>
   );
