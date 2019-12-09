@@ -16,7 +16,7 @@ node {
             pipelineTriggers([cron(cron_string)]),
             parameters(
                 [
-                    string(defaultValue: 'latest', name: 'BRANCH')
+                    string(defaultValue: '', name: 'BRANCH')
                 ]
             )
         ]
