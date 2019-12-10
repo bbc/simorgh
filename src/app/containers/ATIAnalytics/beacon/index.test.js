@@ -41,7 +41,7 @@ describe('beacon', () => {
             're=1024x768',
             'hl=00-00-00',
             'lng=en-US',
-            'ati=PUB-[service-component]-[creation-label~click]-[]-[PAR=container-component~CHD=child]-[pageIdentifier]-[]-[responsive_web~news-simorgh]-[https://bbc.com]',
+            'atc=PUB-[service-component]-[creation-label~click]-[]-[PAR=container-component~CHD=child]-[pageIdentifier]-[]-[responsive_web~news-simorgh]-[https://bbc.com]',
             'type=AT',
           ].join('&')}`,
         ],
