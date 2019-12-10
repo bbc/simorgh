@@ -367,6 +367,8 @@ describe('getUrl', () => {
   });
 
   describe('where application environment', () => {
+    const environment = process.env.APP_ENV;
+
     describe('is not live', () => {
       beforeEach(() => {
         process.env.APP_ENV = 'not-live';
@@ -421,7 +423,7 @@ describe('getUrl', () => {
     });
 
     afterAll(() => {
-      process.env.APP_ENV = undefined;
+      process.env.APP_ENV = environment;
     });
   });
 });
