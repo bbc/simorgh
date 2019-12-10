@@ -1,1723 +1,28 @@
 {
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "New Mega AV test article"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "New Mega AV test article"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "headline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Video, Clip, International and UK, Guidance, Subtitles"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Video, Clip, International and UK, Guidance, Subtitles"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "subheadline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Video, Clip, International and UK, Guidance, Subtitles"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Video, Clip, International and UK, Guidance, Subtitles"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01k6msm",
-                      "model": {
-                        "advertising": true,
-                        "embedding": true,
-                        "format": "audio_video",
-                        "id": "p01k6msm",
-                        "imageCopyright": "BBC",
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-                        "subType": "clip",
-                        "syndication": {
-                          "destinations": []
-                        },
-                        "synopses": {
-                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
-                        },
-                        "title": "Five things ants can teach us about management",
-                        "versions": [
-                          {
-                            "availableFrom": 1540218932000,
-                            "availableTerritories": {
-                              "nonUk": true,
-                              "uk": true
-                            },
-                            "duration": 191,
-                            "durationISO8601": "PT3M11S",
-                            "types": ["Original"],
-                            "versionId": "p01k6msp",
-                            "warnings": {
-                              "long": "Contains strong language and adult humour.",
-                              "short": "Contains strong language and adult humour."
-                            }
-                          }
-                        ]
-                      },
-                      "type": "aresMediaMetadata"
-                    },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "copyrightHolder": "BBC",
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
-                              "originCode": "mpv",
-                              "width": 1920
-                            },
-                            "type": "rawImage"
-                          },
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "model": {
-                                          "blocks": [
-                                            {
-                                              "model": {
-                                                "attributes": [],
-                                                "text": "Ants"
-                                              },
-                                              "type": "fragment"
-                                            }
-                                          ],
-                                          "text": "Ants"
-                                        },
-                                        "type": "paragraph"
-                                      }
-                                    ]
-                                  },
-                                  "type": "text"
-                                }
-                              ]
-                            },
-                            "type": "altText"
-                          }
-                        ]
-                      },
-                      "type": "image"
-                    }
-                  ]
-                },
-                "type": "aresMedia"
-              }
-            ],
-            "locator": "urn:bbc:pips:pid:p01k6msm"
-          },
-          "type": "video"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Clip, Video, UK-only, guidance, subtitles"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Clip, Video, UK-only, guidance, subtitles"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "subheadline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Clip, Video, UK-only, guidance, subtitles"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Clip, Video, UK-only, guidance, subtitles"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01kdbns",
-                      "model": {
-                        "advertising": true,
-                        "caption": "How do Germans remember the World Wars?",
-                        "embedding": true,
-                        "format": "audio_video",
-                        "id": "p01kdbns",
-                        "imageCopyright": "BBC",
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
-                        "subType": "clip",
-                        "syndication": {
-                          "destinations": []
-                        },
-                        "synopses": {
-                          "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
-                          "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?",
-                          "short": "Remembrance Day: How Germans remember the World Wars"
-                        },
-                        "title": "How Germans remember the World Wars",
-                        "versions": [
-                          {
-                            "availableFrom": 1541761851000,
-                            "availableTerritories": {
-                              "nonUk": false,
-                              "uk": true
-                            },
-                            "duration": 162,
-                            "durationISO8601": "PT2M42S",
-                            "types": ["Original"],
-                            "versionId": "p01kdbnv",
-                            "warnings": {
-                              "long": "Contains some strong language.",
-                              "short": "Contains some strong language."
-                            }
-                          }
-                        ]
-                      },
-                      "type": "aresMediaMetadata"
-                    },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "copyrightHolder": "BBC",
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kdbpk.jpg",
-                              "originCode": "mpv",
-                              "width": 1920
-                            },
-                            "type": "rawImage"
-                          },
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "model": {
-                                          "blocks": [
-                                            {
-                                              "model": {
-                                                "attributes": [],
-                                                "text": "Description of picture (ALT TEXT)"
-                                              },
-                                              "type": "fragment"
-                                            }
-                                          ],
-                                          "text": "Description of picture (ALT TEXT)"
-                                        },
-                                        "type": "paragraph"
-                                      }
-                                    ]
-                                  },
-                                  "type": "text"
-                                }
-                              ]
-                            },
-                            "type": "altText"
-                          }
-                        ]
-                      },
-                      "type": "image"
-                    }
-                  ]
-                },
-                "type": "aresMedia"
-              }
-            ],
-            "locator": "urn:bbc:pips:pid:p01kdbns"
-          },
-          "type": "video"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Video, Clip, International and UK, Guidance, no Subtitles"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Video, Clip, International and UK, Guidance, no Subtitles"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "subheadline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Video, Clip, International and UK, Guidance, no Subtitles"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Video, Clip, International and UK, Guidance, no Subtitles"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01kdbwr",
-                      "model": {
-                        "advertising": true,
-                        "caption": "How do Germans remember the World Wars?",
-                        "embedding": true,
-                        "format": "audio_video",
-                        "id": "p01kdbwr",
-                        "imageCopyright": "BBC",
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbxp.jpg",
-                        "subType": "clip",
-                        "syndication": {
-                          "destinations": []
-                        },
-                        "synopses": {
-                          "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
-                          "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?",
-                          "short": "Remembrance Day: How Germans remember the World Wars"
-                        },
-                        "title": "How Germans remember the World Wars (INT)",
-                        "versions": [
-                          {
-                            "availableFrom": 1541763741000,
-                            "availableTerritories": {
-                              "nonUk": true,
-                              "uk": true
-                            },
-                            "duration": 162,
-                            "durationISO8601": "PT2M42S",
-                            "types": ["Original"],
-                            "versionId": "p01kdbwt",
-                            "warnings": {
-                              "long": "Contains some violent scenes.",
-                              "short": "Contains some violence."
-                            }
-                          }
-                        ]
-                      },
-                      "type": "aresMediaMetadata"
-                    },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "copyrightHolder": "BBC",
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kdbxp.jpg",
-                              "originCode": "mpv",
-                              "width": 1920
-                            },
-                            "type": "rawImage"
-                          },
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "model": {
-                                          "blocks": [
-                                            {
-                                              "model": {
-                                                "attributes": [],
-                                                "text": "Literal description (ALT TEXT)"
-                                              },
-                                              "type": "fragment"
-                                            }
-                                          ],
-                                          "text": "Literal description (ALT TEXT)"
-                                        },
-                                        "type": "paragraph"
-                                      }
-                                    ]
-                                  },
-                                  "type": "text"
-                                }
-                              ]
-                            },
-                            "type": "altText"
-                          }
-                        ]
-                      },
-                      "type": "image"
-                    }
-                  ]
-                },
-                "type": "aresMedia"
-              }
-            ],
-            "locator": "urn:bbc:pips:pid:p01kdbwr"
-          },
-          "type": "video"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Video, Clip, International-only, no guidance, no subtitles"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Video, Clip, International-only, no guidance, no subtitles"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "subheadline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Video, Clip, International-only, no guidance, no subtitles"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Video, Clip, International-only, no guidance, no subtitles"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01kdbpz",
-                      "model": {
-                        "advertising": true,
-                        "caption": "Stephen Richardson had to have his leg amputated because of type 2 diabetes",
-                        "embedding": true,
-                        "format": "audio_video",
-                        "id": "p01kdbpz",
-                        "imageCopyright": "BBC",
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbs1.jpg",
-                        "subType": "clip",
-                        "syndication": {
-                          "destinations": []
-                        },
-                        "synopses": {
-                          "long": "Every week 170 people in the UK lose a limb because of diabetes. Around four million people in the UK are living with diabetes - and around 90% of them have type 2 diabetes, which is often linked to being overweight or inactive. Diabetes prescriptions are costing the NHS in England more than £1 billion a year, according to figures from NHS Digital. And a further 12 million people could be at risk of getting type 2 diabetes in the future. Stephen Richardson has told the BBC he blames himself for the loss of his limb.",
-                          "medium": "Stephen Richardson admits he ignored advice about diet and exercise.",
-                          "short": "Diabetes type 2: 'I blame myself for the loss of my leg'"
-                        },
-                        "title": "'I lost my leg to type 2 diabetes' (NON UK)",
-                        "versions": [
-                          {
-                            "availableFrom": 1541762499000,
-                            "availableTerritories": {
-                              "nonUk": true,
-                              "uk": false
-                            },
-                            "duration": 122,
-                            "durationISO8601": "PT2M2S",
-                            "types": ["Original"],
-                            "versionId": "p01kdbq2",
-                            "warnings": {}
-                          }
-                        ]
-                      },
-                      "type": "aresMediaMetadata"
-                    },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "copyrightHolder": "BBC",
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kdbs1.jpg",
-                              "originCode": "mpv",
-                              "width": 1920
-                            },
-                            "type": "rawImage"
-                          },
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "model": {
-                                          "blocks": [
-                                            {
-                                              "model": {
-                                                "attributes": [],
-                                                "text": "Description of picture (ALT TEXT)"
-                                              },
-                                              "type": "fragment"
-                                            }
-                                          ],
-                                          "text": "Description of picture (ALT TEXT)"
-                                        },
-                                        "type": "paragraph"
-                                      }
-                                    ]
-                                  },
-                                  "type": "text"
-                                }
-                              ]
-                            },
-                            "type": "altText"
-                          }
-                        ]
-                      },
-                      "type": "image"
-                    }
-                  ]
-                },
-                "type": "aresMedia"
-              }
-            ],
-            "locator": "urn:bbc:pips:pid:p01kdbpz"
-          },
-          "type": "video"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Audio, Clip, UK+Intl, Guidance"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Audio, Clip, UK+Intl, Guidance"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "subheadline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Audio, Clip, UK+Intl, Guidance"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Audio, Clip, UK+Intl, Guidance"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01m7d07",
-                      "model": {
-                        "advertising": false,
-                        "embedding": false,
-                        "format": "audio",
-                        "id": "p01m7d07",
-                        "imageCopyright": "Getty Images",
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
-                        "subType": "clip",
-                        "syndication": {
-                          "destinations": []
-                        },
-                        "synopses": {
-                          "short": "Some audio from a supermarket checkout in Birmingham"
-                        },
-                        "title": "Birmingham checkout",
-                        "versions": [
-                          {
-                            "availableFrom": 1555067395000,
-                            "availableTerritories": {
-                              "nonUk": true,
-                              "uk": true
-                            },
-                            "duration": 127,
-                            "durationISO8601": "PT2M7S",
-                            "types": ["Original"],
-                            "versionId": "p01m7d09",
-                            "warnings": {
-                              "long": "Contains some strong language.",
-                              "short": "Contains some strong language."
-                            }
-                          }
-                        ]
-                      },
-                      "type": "aresMediaMetadata"
-                    },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "copyrightHolder": "Getty Images",
-                              "height": 1152,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01mt2kt.jpg",
-                              "originCode": "mpv",
-                              "width": 2048
-                            },
-                            "type": "rawImage"
-                          },
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "model": {
-                                          "blocks": [
-                                            {
-                                              "model": {
-                                                "attributes": [],
-                                                "text": "England star Fran Kirby"
-                                              },
-                                              "type": "fragment"
-                                            }
-                                          ],
-                                          "text": "England star Fran Kirby"
-                                        },
-                                        "type": "paragraph"
-                                      }
-                                    ]
-                                  },
-                                  "type": "text"
-                                }
-                              ]
-                            },
-                            "type": "altText"
-                          }
-                        ]
-                      },
-                      "type": "image"
-                    }
-                  ]
-                },
-                "type": "aresMedia"
-              }
-            ],
-            "locator": "urn:bbc:pips:pid:p01m7d07"
-          },
-          "type": "audio"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Clip, Audio, UK-only, no guidance"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Clip, Audio, UK-only, no guidance"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "subheadline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Clip, Audio, UK-only, no guidance"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Clip, Audio, UK-only, no guidance"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01m7d3c",
-                      "model": {
-                        "advertising": false,
-                        "embedding": true,
-                        "format": "audio",
-                        "id": "p01m7d3c",
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mxt94.jpg",
-                        "subType": "clip",
-                        "syndication": {
-                          "destinations": []
-                        },
-                        "synopses": {
-                          "short": "This is some sound from a supermarket checkout in Birmingham"
-                        },
-                        "title": "Birmingham Checkout 2",
-                        "versions": [
-                          {
-                            "availableFrom": 1555067786000,
-                            "availableTerritories": {
-                              "nonUk": false,
-                              "uk": true
-                            },
-                            "duration": 127,
-                            "durationISO8601": "PT2M7S",
-                            "types": ["Original"],
-                            "versionId": "p01m7d3h",
-                            "warnings": {}
-                          }
-                        ]
-                      },
-                      "type": "aresMediaMetadata"
-                    },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "copyrightHolder": "BBC",
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01mxt94.jpg",
-                              "originCode": "mpv",
-                              "width": 1920
-                            },
-                            "type": "rawImage"
-                          }
-                        ]
-                      },
-                      "type": "image"
-                    }
-                  ]
-                },
-                "type": "aresMedia"
-              }
-            ],
-            "locator": "urn:bbc:pips:pid:p01m7d3c"
-          },
-          "type": "audio"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Clip, Audio, International-only, no guidance"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Clip, Audio, International-only, no guidance"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "subheadline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Clip, Audio, International-only, no guidance"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Clip, Audio, International-only, no guidance"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01m7d4m",
-                      "model": {
-                        "advertising": true,
-                        "embedding": true,
-                        "format": "audio",
-                        "id": "p01m7d4m",
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2ghz.jpg",
-                        "subType": "clip",
-                        "syndication": {
-                          "destinations": []
-                        },
-                        "synopses": {
-                          "short": "This is some audio from a supermarket checkout in Birmingham"
-                        },
-                        "title": "Birmingham Checkout 3",
-                        "versions": [
-                          {
-                            "availableFrom": 1555068044000,
-                            "availableTerritories": {
-                              "nonUk": true,
-                              "uk": false
-                            },
-                            "duration": 127,
-                            "durationISO8601": "PT2M7S",
-                            "types": ["Original"],
-                            "versionId": "p01m7d4p",
-                            "warnings": {}
-                          }
-                        ]
-                      },
-                      "type": "aresMediaMetadata"
-                    },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "copyrightHolder": "BBC",
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01n2ghz.jpg",
-                              "originCode": "mpv",
-                              "width": 1920
-                            },
-                            "type": "rawImage"
-                          }
-                        ]
-                      },
-                      "type": "image"
-                    }
-                  ]
-                },
-                "type": "aresMedia"
-              }
-            ],
-            "locator": "urn:bbc:pips:pid:p01m7d4m"
-          },
-          "type": "audio"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Video, Clip, Portrait, UK+Intl, no guidance"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Video, Clip, Portrait, UK+Intl, no guidance"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "subheadline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Video, Clip, Portrait, UK+Intl, no guidance"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Video, Clip, Portrait, UK+Intl, no guidance"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01n40vn",
-                      "model": {
-                        "advertising": true,
-                        "embedding": true,
-                        "format": "audio_video",
-                        "id": "p01n40vn",
-                        "imageCopyright": "BBC",
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n71w7.jpg",
-                        "subType": "clip",
-                        "syndication": {
-                          "destinations": []
-                        },
-                        "synopses": {
-                          "short": "A vertical video pretending to be a cat short synopsis"
-                        },
-                        "title": "A vertical video pretending to be a cat title",
-                        "versions": [
-                          {
-                            "availableFrom": 1563017501000,
-                            "availableTerritories": {
-                              "nonUk": true,
-                              "uk": true
-                            },
-                            "duration": 11,
-                            "durationISO8601": "PT11S",
-                            "types": ["Portrait"],
-                            "versionId": "p01n40vq",
-                            "warnings": {}
-                          }
-                        ]
-                      },
-                      "type": "aresMediaMetadata"
-                    },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "copyrightHolder": "BBC",
-                              "height": 633,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01n71w7.jpg",
-                              "originCode": "mpv",
-                              "width": 375
-                            },
-                            "type": "rawImage"
-                          },
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "model": {
-                                          "blocks": [
-                                            {
-                                              "model": {
-                                                "attributes": [],
-                                                "text": "Cat"
-                                              },
-                                              "type": "fragment"
-                                            }
-                                          ],
-                                          "text": "Cat"
-                                        },
-                                        "type": "paragraph"
-                                      }
-                                    ]
-                                  },
-                                  "type": "text"
-                                }
-                              ]
-                            },
-                            "type": "altText"
-                          }
-                        ]
-                      },
-                      "type": "image"
-                    }
-                  ]
-                },
-                "type": "aresMedia"
-              }
-            ],
-            "locator": "urn:bbc:pips:pid:p01n40vn"
-          },
-          "type": "video"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Audio, episode, UK only, warnings"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Audio, episode, UK only, warnings"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "subheadline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Audio, episode, UK only, warnings"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Audio, episode, UK only, warnings"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01n6y6z",
-                      "model": {
-                        "advertising": false,
-                        "embedding": false,
-                        "format": "audio",
-                        "id": "p01n6y6z",
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n6y7l.jpg",
-                        "subType": "episode",
-                        "syndication": {
-                          "destinations": []
-                        },
-                        "synopses": {
-                          "short": "Audio test for articles, UK only"
-                        },
-                        "title": "Audio test for articles, UK only",
-                        "versions": [
-                          {
-                            "availableFrom": 1563782700000,
-                            "availableTerritories": {
-                              "nonUk": false,
-                              "uk": true
-                            },
-                            "duration": 343,
-                            "durationISO8601": "PT5M43S",
-                            "types": ["Original"],
-                            "versionId": "p01n6yb1",
-                            "warnings": {}
-                          }
-                        ]
-                      },
-                      "type": "aresMediaMetadata"
-                    },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "copyrightHolder": "BBC",
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01n6y7l.jpg",
-                              "originCode": "mpv",
-                              "width": 1920
-                            },
-                            "type": "rawImage"
-                          }
-                        ]
-                      },
-                      "type": "image"
-                    }
-                  ]
-                },
-                "type": "aresMedia"
-              }
-            ],
-            "locator": "urn:bbc:pips:pid:p01n6y6z"
-          },
-          "type": "audio"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Video, Episode, UK only, subtitles, guidance"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Video, Episode, UK only, subtitles, guidance"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "subheadline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Video, Episode, UK only, subtitles, guidance"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Video, Episode, UK only, subtitles, guidance"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01n6yf9",
-                      "model": {
-                        "advertising": false,
-                        "embedding": false,
-                        "format": "audio_video",
-                        "id": "p01n6yf9",
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n6yfm.jpg",
-                        "subType": "episode",
-                        "syndication": {
-                          "destinations": []
-                        },
-                        "synopses": {
-                          "short": "Test video episode for articles, UK only"
-                        },
-                        "title": "Test video episode for articles, UK only",
-                        "versions": [
-                          {
-                            "availableFrom": 1563784020000,
-                            "availableTerritories": {
-                              "nonUk": false,
-                              "uk": true
-                            },
-                            "duration": 1652,
-                            "durationISO8601": "PT27M32S",
-                            "types": ["Original"],
-                            "versionId": "p01n6ygf",
-                            "warnings": {
-                              "long": "Contains very strong language and some violent scenes.",
-                              "short": "Contains very strong language and some violence."
-                            }
-                          }
-                        ]
-                      },
-                      "type": "aresMediaMetadata"
-                    },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "copyrightHolder": "BBC",
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01n6yfm.jpg",
-                              "originCode": "mpv",
-                              "width": 1920
-                            },
-                            "type": "rawImage"
-                          }
-                        ]
-                      },
-                      "type": "image"
-                    }
-                  ]
-                },
-                "type": "aresMedia"
-              }
-            ],
-            "locator": "urn:bbc:pips:pid:p01n6yf9"
-          },
-          "type": "video"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Audio, Episode, worldwide, guidance"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Audio, Episode, worldwide, guidance"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "subheadline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "blocks": [
-                                {
-                                  "model": {
-                                    "attributes": [],
-                                    "text": "Audio, Episode, worldwide, guidance"
-                                  },
-                                  "type": "fragment"
-                                }
-                              ],
-                              "text": "Audio, Episode, worldwide, guidance"
-                            },
-                            "type": "paragraph"
-                          }
-                        ]
-                      },
-                      "type": "text"
-                    }
-                  ]
-                },
-                "type": "caption"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01mbrvl",
-                      "model": {
-                        "advertising": false,
-                        "embedding": false,
-                        "format": "audio",
-                        "id": "p01mbrvl",
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/p01mbrvl.jpg",
-                        "subType": "episode",
-                        "syndication": {
-                          "destinations": []
-                        },
-                        "synopses": {
-                          "short": "This is a test asset created for the articles project"
-                        },
-                        "title": "Test audio episode for articles, worldwide",
-                        "versions": [
-                          {
-                            "availableTerritories": {
-                              "nonUk": false,
-                              "uk": false
-                            },
-                            "duration": 127,
-                            "durationISO8601": "PT2M7S",
-                            "types": ["Original"],
-                            "versionId": "p01mbrx4",
-                            "warnings": {}
-                          }
-                        ]
-                      },
-                      "type": "aresMediaMetadata"
-                    },
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "copyrightHolder": "BBC",
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/legacy/episode/p01mbrvl.jpg",
-                              "originCode": "mpv",
-                              "width": 1920
-                            },
-                            "type": "rawImage"
-                          }
-                        ]
-                      },
-                      "type": "image"
-                    }
-                  ]
-                },
-                "type": "aresMedia"
-              }
-            ],
-            "locator": "urn:bbc:pips:pid:p01mbrvl"
-          },
-          "type": "audio"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "Notes"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "text": "Notes"
-                      },
-                      "type": "paragraph"
-                    }
-                  ]
-                },
-                "type": "text"
-              }
-            ]
-          },
-          "type": "subheadline"
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": "Video episodes can only be UK"
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": "Video episodes can only be UK"
-                },
-                "type": "paragraph"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": "Episodes cannot be ex-UK only"
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": "Episodes cannot be ex-UK only"
-                },
-                "type": "paragraph"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": "Subtitles cannot be displayed for audio"
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": "Subtitles cannot be displayed for audio"
-                },
-                "type": "paragraph"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": "Episodes cannot be portrait"
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": "Episodes cannot be portrait"
-                },
-                "type": "paragraph"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": "Audio cannot be portrait"
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": "Audio cannot be portrait"
-                },
-                "type": "paragraph"
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": "Warnings will not display as they are not supported by MPV yet"
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": "Warnings will not display as they are not supported by MPV yet"
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
-        }
-      ]
-    }
-  },
   "metadata": {
+    "id": "urn:bbc:ares::article:c3wmq4d1y3wo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c3wmq4d1y3wo",
+      "canonicalUrl": "https://www.bbc.com/news/articles/c3wmq4d1y3wo"
+    },
+    "type": "article",
+    "createdBy": "News",
+    "language": "en-gb",
+    "lastUpdated": 1575566022013,
+    "firstPublished": 1559129664696,
+    "lastPublished": 1559129664696,
+    "options": {},
     "analyticsLabels": {},
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "passportId": "07d1d7fe-22fa-4285-98da-bda9a658d414",
+      "locator": "urn:bbc:optimo:asset:c3wmq4d1y3wo",
+      "availability": "AVAILABLE",
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.1.3",
     "blockTypes": [
       "headline",
       "text",
@@ -1726,47 +31,2322 @@
       "subheadline",
       "video",
       "caption",
+      "urlLink",
+      "inline",
       "audio"
-    ],
-    "createdBy": "News",
-    "firstPublished": 1559129664696,
-    "id": "urn:bbc:ares::article:c3wmq4d1y3wo",
-    "language": "en-gb",
-    "lastPublished": 1559129664696,
-    "lastUpdated": 1563869369768,
-    "locators": {
-      "canonicalUrl": "https://www.bbc.com/news/articles/c3wmq4d1y3wo",
-      "optimoUrn": "urn:bbc:optimo:asset:c3wmq4d1y3wo"
-    },
-    "options": {},
-    "passport": {
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-      "language": "en-gb"
-    },
-    "tags": {},
-    "type": "article",
-    "version": "v1.1.1"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "New Mega AV test article",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "New Mega AV test article",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Video, Clip, International and UK, Guidance, Subtitles",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Video, Clip, International and UK, Guidance, Subtitles",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Video, Clip, International and UK, Guidance, Subtitles",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Video, Clip, International and UK, Guidance, Subtitles",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true,
+                              "world": false
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Clip, Video, UK-only, guidance, no subtitles, caption with rich formatting",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Clip, Video, UK-only, guidance, no subtitles, caption with rich formatting",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01kdbns",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Clip, Video, UK-only, guidance, no subtitles.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Clip, Video, UK-only, guidance, no subtitles.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Multi-paragraph, rich formatting video caption, with links and with an inline block\n202B چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟. \n202C",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Multi-paragraph, rich ",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "formatting ",
+                                    "attributes": [
+                                      "bold"
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "video ",
+                                    "attributes": [
+                                      "italic"
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "caption, with ",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "links",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "links",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "locator": "https://www.bbc.co.uk/news",
+                                    "isExternal": false
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": " and with an inline block",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "type": "inline",
+                                  "model": {
+                                    "text": " چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟. ",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": " چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟. ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "language": "fa"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Special characters in a caption need to be tested too.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Special characters in a caption need to be tested too.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01kdbns",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01kdbns",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "How Germans remember the World Wars",
+                        "synopses": {
+                          "short": "Remembrance Day: How Germans remember the World Wars",
+                          "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+                          "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "caption": "How do Germans remember the World Wars?",
+                        "versions": [
+                          {
+                            "versionId": "p01kdbnv",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 162,
+                            "durationISO8601": "PT2M42S",
+                            "warnings": {
+                              "short": "Contains some strong language.",
+                              "long": "Contains some strong language."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": false,
+                              "world": false
+                            },
+                            "availableFrom": 1541761851000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kdbpk.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Description of picture (ALT TEXT)",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Description of picture (ALT TEXT)",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Note: subtitles are burnt on the video so are appearing, but there should be no subtitle control option.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Note:",
+                        "attributes": [
+                          "bold"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " subtitles are burnt on the video so are appearing, but there should be no subtitle control option.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Video, Clip, International and UK, Guidance, no Subtitles",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Video, Clip, International and UK, Guidance, no Subtitles",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01kdbwr",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Video, Clip, International and UK, Guidance, no Subtitles",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Video, Clip, International and UK, Guidance, no Subtitles",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01kdbwr",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01kdbwr",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "How Germans remember the World Wars (INT)",
+                        "synopses": {
+                          "short": "Remembrance Day: How Germans remember the World Wars",
+                          "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+                          "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbxp.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "caption": "How do Germans remember the World Wars?",
+                        "versions": [
+                          {
+                            "versionId": "p01kdbwt",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 162,
+                            "durationISO8601": "PT2M42S",
+                            "warnings": {
+                              "short": "Contains some violence.",
+                              "long": "Contains some violent scenes."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true,
+                              "world": false
+                            },
+                            "availableFrom": 1541763741000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kdbxp.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Literal description (ALT TEXT)",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Literal description (ALT TEXT)",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Note: subtitles are burnt on the video so are appearing, but there should be no subtitle control option.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Note:",
+                        "attributes": [
+                          "bold"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " subtitles are burnt on the video so are appearing, but there should be no subtitle control option.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Video, Clip, International-only, no guidance, no subtitles",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Video, Clip, International-only, no guidance, no subtitles",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01kdbpz",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Video, Clip, International-only, no guidance, no subtitles",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Video, Clip, International-only, no guidance, no subtitles",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01kdbpz",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01kdbpz",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "'I lost my leg to type 2 diabetes' (NON UK)",
+                        "synopses": {
+                          "short": "Diabetes type 2: 'I blame myself for the loss of my leg'",
+                          "long": "Every week 170 people in the UK lose a limb because of diabetes. Around four million people in the UK are living with diabetes - and around 90% of them have type 2 diabetes, which is often linked to being overweight or inactive. Diabetes prescriptions are costing the NHS in England more than £1 billion a year, according to figures from NHS Digital. And a further 12 million people could be at risk of getting type 2 diabetes in the future. Stephen Richardson has told the BBC he blames himself for the loss of his limb.",
+                          "medium": "Stephen Richardson admits he ignored advice about diet and exercise."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbs1.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "caption": "Stephen Richardson had to have his leg amputated because of type 2 diabetes",
+                        "versions": [
+                          {
+                            "versionId": "p01kdbq2",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 122,
+                            "durationISO8601": "PT2M2S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": false,
+                              "nonUk": true,
+                              "world": false
+                            },
+                            "availableFrom": 1541762499000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kdbs1.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Description of picture (ALT TEXT)",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Description of picture (ALT TEXT)",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Note: subtitles are burnt on the video so are appearing, but there should be no subtitle control option.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Note:",
+                        "attributes": [
+                          "bold"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " subtitles are burnt on the video so are appearing, but there should be no subtitle control option.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Audio, Clip, UK+Intl, Guidance",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Audio, Clip, UK+Intl, Guidance",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "audio",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01m7d07",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Audio, Clip, UK+Intl, Guidance",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Audio, Clip, UK+Intl, Guidance",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01m7d07",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01m7d07",
+                        "subType": "clip",
+                        "format": "audio",
+                        "title": "Birmingham checkout",
+                        "synopses": {
+                          "short": "Some audio from a supermarket checkout in Birmingham"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+                        "imageCopyright": "Getty Images",
+                        "embedding": false,
+                        "advertising": false,
+                        "versions": [
+                          {
+                            "versionId": "p01m7d09",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 127,
+                            "durationISO8601": "PT2M7S",
+                            "warnings": {
+                              "short": "Contains some strong language.",
+                              "long": "Contains some strong language."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true,
+                              "world": false
+                            },
+                            "availableFrom": 1555067395000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 2048,
+                              "height": 1152,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01mt2kt.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "Getty Images"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "England star Fran Kirby",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "England star Fran Kirby",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Clip, Audio, UK-only, no guidance",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Clip, Audio, UK-only, no guidance",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "audio",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01m7d3c",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Clip, Audio, UK-only, no guidance",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Clip, Audio, UK-only, no guidance",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01m7d3c",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01m7d3c",
+                        "subType": "clip",
+                        "format": "audio",
+                        "title": "Birmingham Checkout 2",
+                        "synopses": {
+                          "short": "This is some sound from a supermarket checkout in Birmingham"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2gbb.jpg",
+                        "imageCopyright": "AP",
+                        "embedding": true,
+                        "advertising": false,
+                        "versions": [
+                          {
+                            "versionId": "p01m7d3h",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 127,
+                            "durationISO8601": "PT2M7S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": false,
+                              "world": false
+                            },
+                            "availableFrom": 1555067786000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 574,
+                              "height": 323,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01n2gbb.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "AP"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Alt text",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Alt text",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Clip, Audio, International-only, no guidance",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Clip, Audio, International-only, no guidance",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "audio",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01m7d4m",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Clip, Audio, International-only, no guidance",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Clip, Audio, International-only, no guidance",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01m7d4m",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01m7d4m",
+                        "subType": "clip",
+                        "format": "audio",
+                        "title": "Birmingham Checkout 3",
+                        "synopses": {
+                          "short": "This is some tweaked audio from a supermarket checkout in Birmingham"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2gq7.jpg",
+                        "imageCopyright": "PA",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01m7d4p",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 127,
+                            "durationISO8601": "PT2M7S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": false,
+                              "nonUk": true,
+                              "world": false
+                            },
+                            "availableFrom": 1555068044000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 640,
+                              "height": 360,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01n2gq7.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "PA"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Westminster Abbey",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Westminster Abbey",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Video, Clip, Portrait, UK+Intl, no guidance",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Video, Clip, Portrait, UK+Intl, no guidance",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01n40vn",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Video, Clip, Portrait, UK+Intl, no guidance",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Video, Clip, Portrait, UK+Intl, no guidance",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01n40vn",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01n40vn",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "A vertical video pretending to be a cat title",
+                        "synopses": {
+                          "short": "A vertical video pretending to be a cat short synopsis"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n71w7.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01n40vq",
+                            "types": [
+                              "Portrait"
+                            ],
+                            "duration": 11,
+                            "durationISO8601": "PT11S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true,
+                              "world": false
+                            },
+                            "availableFrom": 1563017501000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 375,
+                              "height": 633,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01n71w7.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Cat",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Cat",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Audio, episode, UK only, guidance",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Audio, episode, UK only, guidance",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "audio",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01n6y6z",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Audio, episode, UK only, warnings",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Audio, episode, UK only, warnings",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01n6y6z",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01n6y6z",
+                        "subType": "episode",
+                        "format": "audio",
+                        "title": "Audio test for articles, UK only",
+                        "synopses": {
+                          "short": "Audio test for articles, UK only"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n6y7l.jpg",
+                        "embedding": false,
+                        "advertising": false,
+                        "versions": [
+                          {
+                            "versionId": "p01n6yb1",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 343,
+                            "durationISO8601": "PT5M43S",
+                            "warnings": {
+                              "short": "Contains some strong language.",
+                              "long": "Contains some strong language."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": false,
+                              "world": false
+                            },
+                            "availableFrom": 1563782700000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01n6y7l.jpg",
+                              "originCode": "mpv"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Video, Episode, UK only, subtitles, guidance",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Video, Episode, UK only, subtitles, guidance",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01n6yf9",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Video, Episode, UK only, subtitles, guidance",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Video, Episode, UK only, subtitles, guidance",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01n6yf9",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01n6yf9",
+                        "subType": "episode",
+                        "format": "audio_video",
+                        "title": "Test video episode for articles, UK only",
+                        "synopses": {
+                          "short": "Test video episode for articles, UK only"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n6yfm.jpg",
+                        "embedding": false,
+                        "advertising": false,
+                        "versions": [
+                          {
+                            "versionId": "p01n6ygf",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 1652,
+                            "durationISO8601": "PT27M32S",
+                            "warnings": {
+                              "short": "Contains very strong language and some violence.",
+                              "long": "Contains very strong language and some violent scenes."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": false,
+                              "world": false
+                            },
+                            "availableFrom": 1563784020000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01n6yfm.jpg",
+                              "originCode": "mpv"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Audio, Episode, worldwide, guidance",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Audio, Episode, worldwide, guidance",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "audio",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01mbrvl",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Audio, Episode, worldwide, guidance",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Audio, Episode, worldwide, guidance",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01mbrvl",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01mbrvl",
+                        "subType": "episode",
+                        "format": "audio",
+                        "title": "Test audio episode for articles, worldwide",
+                        "synopses": {
+                          "short": "This is a test asset created for the articles project"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2j2b.jpg",
+                        "embedding": false,
+                        "advertising": false,
+                        "versions": [
+                          {
+                            "versionId": "p01mbrx4",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 127,
+                            "durationISO8601": "PT2M7S",
+                            "warnings": {
+                              "short": "Contains strong language.",
+                              "long": "Contains strong language."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true,
+                              "world": false
+                            },
+                            "availableFrom": 1556298963000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01n2j2b.jpg",
+                              "originCode": "mpv"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Video, Clip, International + UK, no guidance, no subtitles, end date 28/08/2019 16:00",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Video, Clip, International + UK, no guidance, no subtitles, end date 28/08/2019 16:00",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01nl60m",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Stars arrive at Venice film festival preview",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Stars arrive at Venice film festival preview",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01nl60m",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01nl60m",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Venice film festival preview",
+                        "synopses": {
+                          "short": "Stars arrive at Venice film festival preview"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01nl639.jpg",
+                        "imageCopyright": "Reuters",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01nl60p",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true,
+                              "world": false
+                            },
+                            "availableUntil": 1567004595000,
+                            "availableFrom": 1566918195000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01nl639.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "Reuters"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Rolling out the red carpet",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Rolling out the red carpet",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Video, Clip, International + UK, no guidance, no subtitles, start date 20/12/19 08:00 ",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Video, Clip, International + UK, no guidance, no subtitles, start date 20/12/19 08:00 ",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01nl5y8",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Cuba: An island without fish?",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Cuba: An island without fish?",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01nl5y8",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01nl5y8",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "An island without fish?",
+                        "synopses": {
+                          "short": "Cuba: An island without fish?"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01nl63k.jpg",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01nl5yb",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true,
+                              "world": false
+                            },
+                            "availableFrom": 1575187200000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01nl63k.jpg",
+                              "originCode": "mpv"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Notes",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Notes",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Video episodes can only be UK",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Video episodes can only be UK",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Episodes cannot be ex-UK only",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Episodes cannot be ex-UK only",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Subtitles cannot be displayed for audio",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Subtitles cannot be displayed for audio",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Episodes cannot be portrait",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Episodes cannot be portrait",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Audio cannot be portrait",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Audio cannot be portrait",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Warnings will not display as they are not supported by MPV yet",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Warnings will not display as they are not supported by MPV yet",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
   },
   "promo": {
     "headlines": {
       "seoHeadline": "New Mega AV test article"
     },
-    "id": "urn:bbc:ares::article:c3wmq4d1y3wo",
     "locators": {
-      "canonicalUrl": "https://www.bbc.com/news/articles/c3wmq4d1y3wo",
-      "optimoUrn": "urn:bbc:optimo:asset:c3wmq4d1y3wo"
+      "optimoUrn": "urn:bbc:optimo:asset:c3wmq4d1y3wo",
+      "canonicalUrl": "https://www.bbc.com/news/articles/c3wmq4d1y3wo"
     },
     "summary": "",
     "timestamp": 1559129664696,
+    "id": "urn:bbc:ares::article:c3wmq4d1y3wo",
     "type": "cps"
   },
   "relatedContent": {
-    "groups": [],
     "site": {
-      "name": "News",
       "subType": "site",
-      "type": "simple",
-      "uri": "/news"
-    }
+      "name": "News",
+      "uri": "/news",
+      "type": "simple"
+    },
+    "groups": []
   }
 }
