@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { number } from 'prop-types';
+import { number, bool } from 'prop-types';
 import Timestamp from '@bbc/psammead-timestamp-container';
-import { PopOutGridItemMedium } from '#lib/styledGrid';
+import { PopOutGridItemMedium, GridItemConstrainedMedium } from '#lib/styledGrid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { formatDateNumeric } from './timeFormats';
 import {
@@ -11,7 +11,7 @@ import {
   isValidDateTime,
 } from './helpers';
 
-const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
+const ArticleTimestamp = ({ firstPublished, lastPublished, popOut }) => {
   const {
     articleTimestampPrefix,
     datetimeLocale,
@@ -46,19 +46,26 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
     prefix: articleTimestampPrefix,
   };
 
+  const Wrapper = popOut ? PopOutGridItemMedium : GridItemConstrainedMedium;
+
   return (
-    <PopOutGridItemMedium>
+    <Wrapper>
       <Timestamp {...timestampProps} {...firstPublishedProps} />
       {firstPublished !== lastPublished && (
         <Timestamp {...timestampProps} {...lastPublishedProps} />
       )}
-    </PopOutGridItemMedium>
+    </Wrapper>
   );
 };
 
 ArticleTimestamp.propTypes = {
   firstPublished: number.isRequired,
   lastPublished: number.isRequired,
+  popOut: bool,
+};
+
+ArticleTimestamp.defaultProps = {
+  popOut: true,
 };
 
 export default ArticleTimestamp;
