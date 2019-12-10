@@ -212,7 +212,7 @@ describe('CpsAssetPageMain', () => {
     });
 
     it('should render timestamp', () => {
-      expect(document.querySelector('div[class^=PopOut]')).not.toBeNull();
+      expect(document.querySelector('main time')).not.toBeNull();
     });
   });
 
@@ -227,7 +227,7 @@ describe('CpsAssetPageMain', () => {
       createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'pidgin'),
     );
 
-    expect(document.querySelector('div[class^=PopOut]')).toBeNull();
+    expect(document.querySelector('main time')).toBeNull();
     expect(asFragment()).toMatchSnapshot();
   });
 
