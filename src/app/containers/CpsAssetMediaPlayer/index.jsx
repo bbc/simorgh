@@ -1,13 +1,8 @@
 import React from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_QUAD
-} from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import { GEL_SPACING, GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
 
 import MediaPlayerContainer from '../MediaPlayer';
 import { GridItemConstrainedLarge } from '#lib/styledGrid';

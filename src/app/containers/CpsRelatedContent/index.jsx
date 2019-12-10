@@ -6,9 +6,7 @@ import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import path from 'ramda/src/path';
 import assocPath from 'ramda/src/assocPath';
 
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
