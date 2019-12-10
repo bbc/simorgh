@@ -135,7 +135,7 @@ const baseServiceConfig = {
       audio: 'Zvuk',
       photogallery: 'Galerija slika',
       video: 'Video',
-      listen: 'Слушај',
+      listen: 'Watch',
       watch: 'Гледајте',
       liveLabel: 'УЖИВО',
       previousRadioShow: 'Previous radio show',
