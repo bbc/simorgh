@@ -29,6 +29,13 @@ const itemColumns = {
   group5: 12,
 };
 
+const itemMargins = {
+  group0: true,
+  group1: true,
+  group2: true,
+  group3: true,
+};
+
 const startOffsets = {
   group0: 1,
   group1: 1,
@@ -69,25 +76,27 @@ const FrontPageMain = ({ frontPageData }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <FrontPageGrid
-        forwardedAs="main"
-        role="main"
-        columns={mainColumns}
-        enableGelGutters
-      >
-        <Grid item columns={itemColumns} startOffset={startOffsets}>
-          <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
-            {offScreenText}
-          </VisuallyHiddenText>
-          {groups.map((group, index) => (
-            <FrontPageSection
-              key={group.title}
-              group={group}
-              sectionNumber={index}
-            />
-          ))}
-        </Grid>
-      </FrontPageGrid>
+      <main role="main">
+        <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
+          {offScreenText}
+        </VisuallyHiddenText>
+        <FrontPageGrid columns={mainColumns} enableGelGutters>
+          <Grid
+            item
+            columns={itemColumns}
+            startOffset={startOffsets}
+            margins={itemMargins}
+          >
+            {groups.map((group, index) => (
+              <FrontPageSection
+                key={group.title}
+                group={group}
+                sectionNumber={index}
+              />
+            ))}
+          </Grid>
+        </FrontPageGrid>
+      </main>
     </>
   );
 };
