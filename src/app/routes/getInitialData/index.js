@@ -32,7 +32,12 @@ const getBasePath = pathname => {
 export const getUrl = pathname => {
   if (!pathname) return '';
 
-  const params = getParams(pathname);
+  let params = '';
+
+  if (process.env.APP_ENV !== 'live') {
+    params = getParams(pathname);
+  }
+
   const basePath = getBasePath(pathname);
 
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`;

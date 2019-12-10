@@ -366,20 +366,62 @@ describe('getUrl', () => {
     );
   });
 
-  it('should append single query string parameter', () => {
-    expect(getUrl('/test/article?param=test')).toEqual(
-      'http://localhost/test/article.json?param=test',
-    );
-  });
+  describe('where application environment', () => {
+    describe('is not live', () => {
+      beforeEach(() => {
+        process.env.APP_ENV = 'not-live';
+      });
 
-  it('should append multiple query string parameters', () => {
-    expect(getUrl('/test/article?first=1&second=2')).toEqual(
-      'http://localhost/test/article.json?first=1&second=2',
-    );
-  });
+      it('should append single query string parameter', () => {
+        expect(getUrl('/test/article?param=test')).toEqual(
+          'http://localhost/test/article.json?param=test',
+        );
+      });
 
-  it('should remove .amp from url with params', () => {});
-  expect(getUrl('/test/article.amp?param=test')).toEqual(
-    'http://localhost/test/article.json?param=test',
-  );
+      it('should append multiple query string parameters', () => {
+        expect(getUrl('/test/article?first=1&second=2')).toEqual(
+          'http://localhost/test/article.json?first=1&second=2',
+        );
+      });
+
+      it('should remove .amp from url with params', () => {});
+      expect(getUrl('/test/article.amp?param=test')).toEqual(
+        'http://localhost/test/article.json?param=test',
+      );
+    });
+
+    describe('is live', () => {
+      beforeEach(() => {
+        process.env.APP_ENV = 'live';
+      });
+
+      it('should remove single query string parameter from url', () => {
+        expect(getUrl('/test/article?param=test')).toEqual(
+          'http://localhost/test/article.json',
+        );
+      });
+
+      it('should remove multiple query string parameter from url', () => {
+        expect(getUrl('/test/article?first=1&second=2')).toEqual(
+          'http://localhost/test/article.json',
+        );
+      });
+
+      it('should remove .amp and single query string parameter from url', () => {
+        expect(getUrl('/test/article.amp?param=test')).toEqual(
+          'http://localhost/test/article.json',
+        );
+      });
+
+      it('should remove .amp and multiple query string parameters from url', () => {
+        expect(getUrl('/test/article.amp?first=1&second=2')).toEqual(
+          'http://localhost/test/article.json',
+        );
+      });
+    });
+
+    afterAll(() => {
+      process.env.APP_ENV = undefined;
+    });
+  });
 });
