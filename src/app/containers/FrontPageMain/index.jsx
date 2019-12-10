@@ -11,6 +11,33 @@ import LinkedData from '../LinkedData';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
 
+const mainColumns = {
+  group0: 6,
+  group1: 6,
+  group2: 6,
+  group3: 6,
+  group4: 8,
+  group5: 20,
+};
+
+const itemColumns = {
+  group0: 6,
+  group1: 6,
+  group2: 6,
+  group3: 6,
+  group4: 6,
+  group5: 12,
+};
+
+const startOffsets = {
+  group0: 1,
+  group1: 1,
+  group2: 1,
+  group3: 1,
+  group4: 2,
+  group5: 5,
+};
+
 const FrontPageMain = ({ frontPageData }) => {
   const {
     product,
@@ -45,35 +72,10 @@ const FrontPageMain = ({ frontPageData }) => {
       <FrontPageGrid
         forwardedAs="main"
         role="main"
-        columns={{
-          group0: 6,
-          group1: 6,
-          group2: 6,
-          group3: 6,
-          group4: 8,
-          group5: 20,
-        }}
+        columns={mainColumns}
         enableGelGutters
       >
-        <Grid
-          item
-          columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: 6,
-            group5: 12,
-          }}
-          startOffset={{
-            group0: 1,
-            group1: 1,
-            group2: 1,
-            group3: 1,
-            group4: 2,
-            group5: 5,
-          }}
-        >
+        <Grid item columns={itemColumns} startOffset={startOffsets}>
           <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
             {offScreenText}
           </VisuallyHiddenText>
