@@ -182,7 +182,6 @@ exports[`should render a news article correctly 1`] = `
 }
 
 <html
-  classname="no-js"
   dir="ltr"
   lang="en-gb"
 >
@@ -466,7 +465,6 @@ exports[`should render a news article correctly 1`] = `
 
 exports[`should render a persian article correctly 1`] = `
 <html
-  classname="no-js"
   dir="rtl"
   lang="fa"
 >
@@ -903,7 +901,6 @@ exports[`should render a persian article correctly 1`] = `
 
 exports[`should render a pidgin article correctly (with navigation) 1`] = `
 <html
-  classname="no-js"
   dir="ltr"
   lang="pcm"
 >

@@ -3,7 +3,6 @@
 exports[`should match for AMP News & UK origin 1`] = `
 <html
   amp=""
-  classname="no-js"
   dir="ltr"
   lang="en-gb"
 >
@@ -221,7 +220,6 @@ exports[`should match for AMP News & UK origin 1`] = `
 
 exports[`should match for Canonical News & international origin 1`] = `
 <html
-  classname="no-js"
   dir="ltr"
   lang="en-gb"
 >
@@ -444,7 +442,6 @@ exports[`should match for Canonical News & international origin 1`] = `
 exports[`should match for Persian News & UK origin 1`] = `
 <html
   amp=""
-  classname="no-js"
   dir="rtl"
   lang="fa"
 >
@@ -648,7 +645,6 @@ exports[`should match for Persian News & UK origin 1`] = `
 exports[`should match for Persian News & international origin 1`] = `
 <html
   amp=""
-  classname="no-js"
   dir="rtl"
   lang="fa"
 >
@@ -856,7 +852,6 @@ exports[`should match for Persian News & international origin 1`] = `
 exports[`should match for WS Frontpages 1`] = `
 <html
   amp=""
-  classname="no-js"
   dir="ltr"
   lang="ig"
 >
@@ -1069,7 +1064,6 @@ exports[`should match for WS Frontpages 1`] = `
 exports[`should match for WS Media liveradio 1`] = `
 <html
   amp=""
-  classname="no-js"
   dir="ltr"
   lang="ko"
 >

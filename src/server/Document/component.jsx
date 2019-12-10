@@ -27,6 +27,7 @@ const Document = ({
   const headScript = helmet.script.toComponent();
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !isAmp;
+  const noJsTag = !isAmp && { className: 'no-js' };
   const scriptTags = (
     <>
       <IfAboveIE9>{scripts}</IfAboveIE9>
@@ -34,7 +35,7 @@ const Document = ({
   );
 
   return (
-    <html lang="en-GB" {...htmlAttrs}>
+    <html lang="en-GB" {...noJsTag} {...htmlAttrs}>
       <head>
         {meta}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />

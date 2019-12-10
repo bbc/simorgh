@@ -83,7 +83,6 @@ const MetadataContainer = ({
   const htmlAttributes = {
     dir,
     lang,
-    ...(!isAmp && { className: 'no-js' }),
     ...(isAmp && { amp: '' }), // empty value as this makes Helmet render 'amp' as per https://www.ampproject.org/docs/fundamentals/spec#ampd
   };
 
