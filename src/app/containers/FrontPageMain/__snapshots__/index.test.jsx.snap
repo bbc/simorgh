@@ -14,7 +14,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 .c0 {
-  position: relative;
+  display: inline-block;
 }
 
 .c1 {
@@ -444,48 +444,60 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
     display: inline-block;
-    width: 100%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
     display: inline-block;
-    width: 75%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
     display: inline-block;
-    width: 60%;
     vertical-align: top;
   }
 }
@@ -1063,10 +1075,12 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
       </div>
       <main
         class="c0 c1"
+        dir="ltr"
         role="main"
       >
         <div
           class="c2"
+          dir="ltr"
         >
           <h1
             class="c3"

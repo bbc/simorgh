@@ -2,7 +2,7 @@
 
 exports[`Grid should render Grid with columns 1`] = `
 .c0 {
-  position: relative;
+  display: inline-block;
 }
 
 @supports (display:grid) {
@@ -14,48 +14,48 @@ exports[`Grid should render Grid with columns 1`] = `
 
 @media (max-width:14.9375rem) {
   .c1 {
+    width: calc(33.333333333333336%);
     display: inline-block;
-    width: 33.333333333333336%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c1 {
+    width: calc(33.333333333333336%);
     display: inline-block;
-    width: 33.333333333333336%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c1 {
+    width: calc(33.333333333333336%);
     display: inline-block;
-    width: 33.333333333333336%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c1 {
+    width: calc(33.333333333333336%);
     display: inline-block;
-    width: 33.333333333333336%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c1 {
+    width: calc(33.333333333333336%);
     display: inline-block;
-    width: 33.333333333333336%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c1 {
+    width: calc(33.333333333333336%);
     display: inline-block;
-    width: 33.333333333333336%;
     vertical-align: top;
   }
 }
@@ -68,9 +68,11 @@ exports[`Grid should render Grid with columns 1`] = `
 
 <div
   class="c0"
+  dir="ltr"
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <p>
       Test
@@ -81,7 +83,7 @@ exports[`Grid should render Grid with columns 1`] = `
 
 exports[`Grid should render GridMaxWidthGroup4 with columns 1`] = `
 .c0 {
-  position: relative;
+  display: inline-block;
 }
 
 .c1 {
@@ -97,48 +99,48 @@ exports[`Grid should render GridMaxWidthGroup4 with columns 1`] = `
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(33.333333333333336%);
     display: inline-block;
-    width: 33.333333333333336%;
     vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(33.333333333333336%);
     display: inline-block;
-    width: 33.333333333333336%;
     vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(33.333333333333336%);
     display: inline-block;
-    width: 33.333333333333336%;
     vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(33.333333333333336%);
     display: inline-block;
-    width: 33.333333333333336%;
     vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c2 {
+    width: calc(33.333333333333336%);
     display: inline-block;
-    width: 33.333333333333336%;
     vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(33.333333333333336%);
     display: inline-block;
-    width: 33.333333333333336%;
     vertical-align: top;
   }
 }
@@ -163,9 +165,11 @@ exports[`Grid should render GridMaxWidthGroup4 with columns 1`] = `
 
 <div
   class="c0 c1"
+  dir="ltr"
 >
   <div
     class="c2"
+    dir="ltr"
   >
     <p>
       Test
