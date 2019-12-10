@@ -51,7 +51,9 @@ const CpsAssetPageMain = ({ pageData }) => {
         lang={metadata.language}
         description={summary}
         openGraphType="website"
-      />
+      >
+        <meta name="article:published_time" content={firstPublished} />
+      </MetadataContainer>
       <LinkedData
         type="Article"
         seoTitle={title}

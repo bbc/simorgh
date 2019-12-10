@@ -16833,6 +16833,10 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
       content="STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk? - BBC News Ìgbò"
       name="twitter:title"
     />
+    <meta
+      content="2019-10-23T12:18:59.000Z"
+      name="article:published_time"
+    />
     <script
       type="application/ld+json"
     >
