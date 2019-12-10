@@ -2,7 +2,6 @@
 
 exports[`Document Component should render AMP version correctly 1`] = `
 <html
-  class="no-js"
   data-reactroot=""
   lang="test"
 >
@@ -85,7 +84,6 @@ exports[`Document Component should render AMP version correctly 1`] = `
 
 exports[`Document Component should render correctly 1`] = `
 <html
-  class="no-js"
   data-reactroot=""
   lang="test"
 >

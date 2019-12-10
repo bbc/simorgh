@@ -34,7 +34,7 @@ const Document = ({
   );
 
   return (
-    <html lang="en-GB" className="no-js" {...htmlAttrs}>
+    <html lang="en-GB" {...htmlAttrs}>
       <head>
         {meta}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />

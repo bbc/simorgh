@@ -109,7 +109,7 @@ const MediaPlayerContainer = ({
     translations,
   );
 
-  const noJsMessage = `This ${mediaInfo.type}  cannot play in your browser. Please enable Javascript or try a different browser.`;
+  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable Javascript or try a different browser.`;
 
   return (
     <>
