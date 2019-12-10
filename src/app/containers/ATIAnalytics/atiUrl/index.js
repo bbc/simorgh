@@ -188,6 +188,7 @@ export const buildATIEventTrackUrl = ({
   componentInfo,
   type,
 }) => {
+  const eventPublisher = type === 'view' ? 'ati' : 'atc';
   const eventTrackingBeaconValues = [
     {
       key: 's',
@@ -232,7 +233,7 @@ export const buildATIEventTrackUrl = ({
       wrap: false,
     },
     {
-      key: 'ati',
+      key: eventPublisher,
       description: 'event publisher',
       value: getEventInfo(pageIdentifier, {
         service,

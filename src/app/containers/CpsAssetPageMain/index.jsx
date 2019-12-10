@@ -59,8 +59,8 @@ const CpsAssetPageMain = ({ pageData }) => {
           </Link>
         </GridItemConstrainedMedium>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-        <CpsRelatedContent content={relatedContent} />
       </GhostGrid>
+      <CpsRelatedContent content={relatedContent} />
     </>
   );
 };
