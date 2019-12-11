@@ -27,7 +27,9 @@ const Document = ({
   const headScript = helmet.script.toComponent();
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !isAmp;
-  const noJsTag = !isAmp && { className: 'no-js' };
+
+  // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
+  const noJsHtmlAttrs = !isAmp && { className: 'no-js' };
   const scriptTags = (
     <>
       <IfAboveIE9>{scripts}</IfAboveIE9>
@@ -35,7 +37,7 @@ const Document = ({
   );
 
   return (
-    <html lang="en-GB" {...noJsTag} {...htmlAttrs}>
+    <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
         {meta}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
