@@ -1,7 +1,35 @@
 import React, { useContext } from 'react';
 import Brand from '@bbc/psammead-brand';
+import SkipLink from '@bbc/psammead-brand/skip-link';
+import ScriptLink from '@bbc/psammead-script-link';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { bool } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
+
+const renderScriptLink = (
+  script,
+  service,
+  variant,
+  url,
+  children,
+  offscreenText,
+) => (
+  <ScriptLink
+    script={script}
+    service={service}
+    href={url} // variant url
+    variant={variant}
+  >
+    <span aria-hidden>{children}</span> {/* Lat */}
+    <VisuallyHiddenText> {offscreenText} </VisuallyHiddenText>
+  </ScriptLink>
+);
+
+const renderSkipLink = (service, script) => (
+  <SkipLink service={service} script={script} href="#content">
+    Skip to content
+  </SkipLink>
+);
 
 const BrandContainer = props => {
   const {
@@ -10,6 +38,9 @@ const BrandContainer = props => {
     brandSVG,
     service,
     theming,
+    script,
+    scriptLinkVariant = null,
+    variantOffscreenText,
   } = useContext(ServiceContext);
   const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;
@@ -17,6 +48,16 @@ const BrandContainer = props => {
   const svgRatio = brandSVG && brandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
+  const scriptLink =
+    scriptLinkVariant &&
+    renderScriptLink(
+      script,
+      service,
+      scriptLinkVariant,
+      `/${service}/${scriptLinkVariant}`,
+      scriptLinkVariant,
+      variantOffscreenText,
+    );
 
   return (
     <Brand
@@ -29,6 +70,8 @@ const BrandContainer = props => {
       maxWidth={maxWidth}
       svg={brandSVG}
       url={`/${service}`}
+      scriptLink={scriptLink && scriptLink}
+      skipLink={renderSkipLink(service, script)}
       {...props}
     />
   );

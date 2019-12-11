@@ -187,7 +187,8 @@ export const service = {
     ...baseServiceConfig,
     lang: `zh-hans`,
     locale: `zh-hans`,
-    variant: '简',
+    scriptLinkVariant: '简',
+    variantOffscreenText: 'Simplified',
     navigation: [
       {
         title: '主页',
@@ -240,7 +241,8 @@ export const service = {
     ...baseServiceConfig,
     lang: `zh-hant`,
     locale: `zh-hant`,
-    variant: '繁',
+    scriptLinkVariant: '繁',
+    variantOffscreenText: 'Traditional',
     navigation: [
       {
         title: '主頁',
