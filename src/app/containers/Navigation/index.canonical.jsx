@@ -4,6 +4,7 @@ import { node, string, shape } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { CanonicalScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
 import { CanonicalMenuButton } from '@bbc/psammead-navigation/dropdown';
+import useMediaQuery from '#lib/utilities/useMediaQuery';
 
 const CanonicalNavigationContainer = ({
   script,
@@ -15,6 +16,14 @@ const CanonicalNavigationContainer = ({
   dropdownListItems,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrollable, setIsScrollable] = useState(false);
+
+  useMediaQuery('(max-width: 37.5rem)', event => {
+    setIsScrollable(event.matches);
+    if (!event.matches) {
+      setIsOpen(false);
+    }
+  });
 
   return (
     <Navigation
@@ -27,15 +36,14 @@ const CanonicalNavigationContainer = ({
       <CanonicalMenuButton
         announcedText={menuAnnouncedText}
         isOpen={isOpen}
-        onOpen={() => setIsOpen(true)}
-        onClose={() => setIsOpen(false)}
+        onClick={() => setIsOpen(!isOpen)}
         dir={dir}
         script={script}
       />
       {isOpen ? (
         dropdownListItems
       ) : (
-        <CanonicalScrollableNavigation dir={dir}>
+        <CanonicalScrollableNavigation dir={dir} isScrollable={isScrollable}>
           {scrollableListItems}
         </CanonicalScrollableNavigation>
       )}
