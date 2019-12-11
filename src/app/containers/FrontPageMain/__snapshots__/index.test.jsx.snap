@@ -13,10 +13,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   margin: 0;
 }
 
-.c1 {
-  display: inline-block;
-}
-
 .c2 {
   margin: 0 auto;
   padding-bottom: 2rem;

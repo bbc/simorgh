@@ -1,10 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Grid should render Grid with columns 1`] = `
-.c0 {
-  display: inline-block;
-}
-
 @supports (display:grid) {
   .c0 {
     display: grid;
@@ -82,10 +78,6 @@ exports[`Grid should render Grid with columns 1`] = `
 `;
 
 exports[`Grid should render GridMaxWidthGroup4 with columns 1`] = `
-.c0 {
-  display: inline-block;
-}
-
 .c1 {
   margin: 0 auto;
 }
