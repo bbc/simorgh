@@ -37,7 +37,7 @@ storiesOf('Components|Grid', module)
   })
   .add('Grid as Main', () => {
     return (
-      <Grid as="main" role="main" {...outerGridProps}>
+      <Grid forwardedAs="main" role="main" {...outerGridProps}>
         <Grid {...gridItemProps}>
           <p>Test</p>
         </Grid>
@@ -47,15 +47,6 @@ storiesOf('Components|Grid', module)
   .add('GridMaxWidthGroup4', () => {
     return (
       <GridMaxWidthGroup4 {...outerGridProps}>
-        <Grid {...gridItemProps}>
-          <p>Test</p>
-        </Grid>
-      </GridMaxWidthGroup4>
-    );
-  })
-  .add('GridMaxWidthGroup4 forwardedAs Main', () => {
-    return (
-      <GridMaxWidthGroup4 forwardedAs="main" role="main" {...outerGridProps}>
         <Grid {...gridItemProps}>
           <p>Test</p>
         </Grid>
