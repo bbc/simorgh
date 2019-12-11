@@ -4,6 +4,7 @@ import { node, string, shape } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { CanonicalScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
 import { CanonicalMenuButton } from '@bbc/psammead-navigation/dropdown';
+import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
 import useMediaQuery from '#lib/utilities/useMediaQuery';
 
 const CanonicalNavigationContainer = ({
@@ -18,7 +19,7 @@ const CanonicalNavigationContainer = ({
   const [isOpen, setIsOpen] = useState(false);
   const [isScrollable, setIsScrollable] = useState(false);
 
-  useMediaQuery('(max-width: 37.5rem)', event => {
+  useMediaQuery(`(max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX})`, event => {
     setIsScrollable(event.matches);
     if (!event.matches) {
       setIsOpen(false);
