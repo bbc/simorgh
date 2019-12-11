@@ -138,7 +138,7 @@ export const service = {
         photogallery: 'Foto-qalereya',
         video: 'Video',
         listen: 'Listen',
-        watch: 'Watch',
+        watch: 'İzləyin',
         liveLabel: 'CANLI',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
