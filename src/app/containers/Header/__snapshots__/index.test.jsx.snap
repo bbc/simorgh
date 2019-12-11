@@ -14,13 +14,29 @@ exports[`Header should render correctly for WS frontPage 1`] = `
 }
 
 .c7 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   max-width: 80rem;
   margin: 0 auto;
 }
 
 .c6 {
   background-color: #B80000;
-  height: 3.5rem;
+  min-height: 2.5rem;
   width: 100%;
   padding: 0 0.5rem;
 }
@@ -36,8 +52,8 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
-  padding-top: 1rem;
-  padding-bottom: 0.75rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
   height: 1.5rem;
   width: 100%;
   max-width: 14.880600000000001rem;
@@ -49,14 +65,48 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
 }
 
-.c15 {
+.c12 {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  background-color: #FFFFFF;
+  border: 0.1875rem solid #000;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c12:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+  -webkit-clip: auto;
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: 0.5rem;
+  left: 0;
+}
+
+.c16 {
   color: #fff;
   fill: currentColor;
 }
 
-.c14 {
+.c15 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -67,13 +117,13 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   width: 2.75rem;
 }
 
-.c14:hover,
-.c14:focus {
+.c15:hover,
+.c15:focus {
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.c14:hover::after,
-.c14:focus::after {
+.c15:hover::after,
+.c15:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -83,24 +133,24 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c14 svg {
+.c15 svg {
   vertical-align: middle;
 }
 
-.c13 {
+.c14 {
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c17 {
+.c18 {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
 }
 
-.c20 {
+.c21 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -114,7 +164,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c20:hover::after {
+.c21:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -124,7 +174,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c20:focus::after {
+.c21:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -135,7 +185,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c22 {
+.c23 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -149,7 +199,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c22:hover::after {
+.c23:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -158,7 +208,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c22:focus::after {
+.c23:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -169,13 +219,13 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c19 {
+.c20 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-.c21::after {
+.c22::after {
   content: '';
   position: absolute;
   left: 0;
@@ -184,13 +234,13 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c12 {
+.c13 {
   position: relative;
   background-color: #B80000;
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.c12 .c18::after {
+.c13 .c19::after {
   left: 0;
 }
 
@@ -284,17 +334,36 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   color: #FFFFFF;
 }
 
+@media (max-width:14.9375rem) {
+  .c7 {
+    display: block;
+  }
+}
+
 @media (min-width:25rem) {
   .c6 {
-    height: 5rem;
+    min-height: 3.25rem;
     padding: 0 1rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c9 {
+    display: block;
   }
 }
 
 @media (min-width:25rem) {
   .c10 {
-    padding-top: 1.75rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -304,74 +373,94 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
-  .c14 {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c12 {
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) {
-  .c14 {
+  .c15 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c18 {
     overflow: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c20 {
+  .c21 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c23 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c23 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c22 {
+  .c23 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c19:last-child {
+  .c20:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19::after {
+  .c20::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -382,7 +471,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c16 {
+  .c17 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: smooth;
@@ -397,11 +486,11 @@ exports[`Header should render correctly for WS frontPage 1`] = `
     -ms-overflow-style: none;
   }
 
-  .c16::-webkit-scrollbar {
+  .c17::-webkit-scrollbar {
     display: none;
   }
 
-  .c16:after {
+  .c17:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -610,26 +699,33 @@ exports[`Header should render correctly for WS frontPage 1`] = `
           Pidgin
         </span>
       </a>
+      <a
+        class="c12"
+        dir="ltr"
+        href="#content"
+      >
+        Skip to content
+      </a>
     </div>
   </div>
   <nav
-    class="c12"
+    class="c13"
     dir="ltr"
     role="navigation"
   >
     <div
-      class="c13"
+      class="c14"
     >
       <button
         aria-expanded="false"
         aria-label="Plenti seshon"
-        class="c14"
+        class="c15"
         dir="ltr"
         type="button"
       >
         <svg
           aria-hidden="true"
-          class="c15"
+          class="c16"
           focusable="false"
           height="2.75rem"
           viewBox="0 0 44 44"
@@ -641,24 +737,24 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         </svg>
       </button>
       <div
-        class="c16"
+        class="c17"
         dir="ltr"
       >
         <ul
-          class="c17"
+          class="c18"
           role="list"
         >
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c20"
+              class="c21"
               href="/pidgin"
             >
               <span
-                class="c21"
+                class="c22"
                 role="text"
               >
                 <span
@@ -672,96 +768,96 @@ exports[`Header should render correctly for WS frontPage 1`] = `
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
             >
               Nigeria
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
             >
               Africa
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/world"
             >
               World
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/media/video"
             >
               Video
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/media/audio"
             >
               Audio
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
             >
               Sport
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
             >
               Entertainment
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/popular/read"
             >
               Most popular
@@ -788,13 +884,29 @@ exports[`Header should render correctly for WS radio page 1`] = `
 }
 
 .c7 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   max-width: 80rem;
   margin: 0 auto;
 }
 
 .c6 {
   background-color: #B80000;
-  height: 3.5rem;
+  min-height: 2.5rem;
   width: 100%;
   padding: 0 0.5rem;
   border-bottom: 0.0625rem solid transparent;
@@ -811,8 +923,8 @@ exports[`Header should render correctly for WS radio page 1`] = `
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
-  padding-top: 1rem;
-  padding-bottom: 0.75rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
   height: 1.5rem;
   width: 100%;
   max-width: 14.880600000000001rem;
@@ -824,14 +936,48 @@ exports[`Header should render correctly for WS radio page 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
 }
 
-.c15 {
+.c12 {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  background-color: #FFFFFF;
+  border: 0.1875rem solid #000;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c12:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+  -webkit-clip: auto;
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: 0.5rem;
+  left: 0;
+}
+
+.c16 {
   color: #fff;
   fill: currentColor;
 }
 
-.c14 {
+.c15 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -842,13 +988,13 @@ exports[`Header should render correctly for WS radio page 1`] = `
   width: 2.75rem;
 }
 
-.c14:hover,
-.c14:focus {
+.c15:hover,
+.c15:focus {
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.c14:hover::after,
-.c14:focus::after {
+.c15:hover::after,
+.c15:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -858,24 +1004,24 @@ exports[`Header should render correctly for WS radio page 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c14 svg {
+.c15 svg {
   vertical-align: middle;
 }
 
-.c13 {
+.c14 {
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c17 {
+.c18 {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
 }
 
-.c20 {
+.c21 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -889,7 +1035,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c20:hover::after {
+.c21:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -899,7 +1045,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c20:focus::after {
+.c21:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -910,7 +1056,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c22 {
+.c23 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -924,7 +1070,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c22:hover::after {
+.c23:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -933,7 +1079,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c22:focus::after {
+.c23:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -944,13 +1090,13 @@ exports[`Header should render correctly for WS radio page 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c19 {
+.c20 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-.c21::after {
+.c22::after {
   content: '';
   position: absolute;
   left: 0;
@@ -959,13 +1105,13 @@ exports[`Header should render correctly for WS radio page 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c12 {
+.c13 {
   position: relative;
   background-color: #B80000;
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.c12 .c18::after {
+.c13 .c19::after {
   left: 0;
 }
 
@@ -1059,17 +1205,36 @@ exports[`Header should render correctly for WS radio page 1`] = `
   color: #FFFFFF;
 }
 
+@media (max-width:14.9375rem) {
+  .c7 {
+    display: block;
+  }
+}
+
 @media (min-width:25rem) {
   .c6 {
-    height: 5rem;
+    min-height: 3.25rem;
     padding: 0 1rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c9 {
+    display: block;
   }
 }
 
 @media (min-width:25rem) {
   .c10 {
-    padding-top: 1.75rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -1079,74 +1244,94 @@ exports[`Header should render correctly for WS radio page 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
-  .c14 {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c12 {
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) {
-  .c14 {
+  .c15 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c18 {
     overflow: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c20 {
+  .c21 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c23 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c23 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c22 {
+  .c23 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c19:last-child {
+  .c20:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19::after {
+  .c20::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -1157,7 +1342,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c16 {
+  .c17 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: smooth;
@@ -1172,11 +1357,11 @@ exports[`Header should render correctly for WS radio page 1`] = `
     -ms-overflow-style: none;
   }
 
-  .c16::-webkit-scrollbar {
+  .c17::-webkit-scrollbar {
     display: none;
   }
 
-  .c16:after {
+  .c17:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -1385,26 +1570,33 @@ exports[`Header should render correctly for WS radio page 1`] = `
           Pidgin
         </span>
       </a>
+      <a
+        class="c12"
+        dir="ltr"
+        href="#content"
+      >
+        Skip to content
+      </a>
     </div>
   </div>
   <nav
-    class="c12"
+    class="c13"
     dir="ltr"
     role="navigation"
   >
     <div
-      class="c13"
+      class="c14"
     >
       <button
         aria-expanded="false"
         aria-label="Plenti seshon"
-        class="c14"
+        class="c15"
         dir="ltr"
         type="button"
       >
         <svg
           aria-hidden="true"
-          class="c15"
+          class="c16"
           focusable="false"
           height="2.75rem"
           viewBox="0 0 44 44"
@@ -1416,24 +1608,24 @@ exports[`Header should render correctly for WS radio page 1`] = `
         </svg>
       </button>
       <div
-        class="c16"
+        class="c17"
         dir="ltr"
       >
         <ul
-          class="c17"
+          class="c18"
           role="list"
         >
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c20"
+              class="c21"
               href="/pidgin"
             >
               <span
-                class="c21"
+                class="c22"
                 role="text"
               >
                 <span
@@ -1447,96 +1639,96 @@ exports[`Header should render correctly for WS radio page 1`] = `
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
             >
               Nigeria
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
             >
               Africa
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/world"
             >
               World
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/media/video"
             >
               Video
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/media/audio"
             >
               Audio
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
             >
               Sport
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
             >
               Entertainment
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/popular/read"
             >
               Most popular
@@ -1563,13 +1755,29 @@ exports[`Header should render correctly for news article 1`] = `
 }
 
 .c7 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   max-width: 80rem;
   margin: 0 auto;
 }
 
 .c6 {
   background-color: #B80000;
-  height: 3.5rem;
+  min-height: 2.5rem;
   width: 100%;
   padding: 0 0.5rem;
   border-bottom: 0.0625rem solid transparent;
@@ -1586,8 +1794,8 @@ exports[`Header should render correctly for news article 1`] = `
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
-  padding-top: 1rem;
-  padding-bottom: 0.75rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
   height: 1.5rem;
   width: 100%;
   max-width: 14.880600000000001rem;
@@ -1599,14 +1807,48 @@ exports[`Header should render correctly for news article 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
 }
 
-.c15 {
+.c12 {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  background-color: #FFFFFF;
+  border: 0.1875rem solid #000;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c12:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+  -webkit-clip: auto;
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: 0.5rem;
+  left: 0;
+}
+
+.c16 {
   color: #fff;
   fill: currentColor;
 }
 
-.c14 {
+.c15 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -1617,13 +1859,13 @@ exports[`Header should render correctly for news article 1`] = `
   width: 2.75rem;
 }
 
-.c14:hover,
-.c14:focus {
+.c15:hover,
+.c15:focus {
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.c14:hover::after,
-.c14:focus::after {
+.c15:hover::after,
+.c15:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1633,24 +1875,24 @@ exports[`Header should render correctly for news article 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c14 svg {
+.c15 svg {
   vertical-align: middle;
 }
 
-.c13 {
+.c14 {
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c17 {
+.c18 {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
 }
 
-.c20 {
+.c21 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1664,7 +1906,7 @@ exports[`Header should render correctly for news article 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c20:hover::after {
+.c21:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1674,7 +1916,7 @@ exports[`Header should render correctly for news article 1`] = `
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c20:focus::after {
+.c21:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1685,7 +1927,7 @@ exports[`Header should render correctly for news article 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c22 {
+.c23 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1699,7 +1941,7 @@ exports[`Header should render correctly for news article 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c22:hover::after {
+.c23:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1708,7 +1950,7 @@ exports[`Header should render correctly for news article 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c22:focus::after {
+.c23:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1719,13 +1961,13 @@ exports[`Header should render correctly for news article 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c19 {
+.c20 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-.c21::after {
+.c22::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1734,13 +1976,13 @@ exports[`Header should render correctly for news article 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c12 {
+.c13 {
   position: relative;
   background-color: #B80000;
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.c12 .c18::after {
+.c13 .c19::after {
   left: 0;
 }
 
@@ -1834,17 +2076,36 @@ exports[`Header should render correctly for news article 1`] = `
   color: #FFFFFF;
 }
 
+@media (max-width:14.9375rem) {
+  .c7 {
+    display: block;
+  }
+}
+
 @media (min-width:25rem) {
   .c6 {
-    height: 5rem;
+    min-height: 3.25rem;
     padding: 0 1rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c9 {
+    display: block;
   }
 }
 
 @media (min-width:25rem) {
   .c10 {
-    padding-top: 1.75rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -1854,74 +2115,94 @@ exports[`Header should render correctly for news article 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
-  .c14 {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c12 {
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) {
-  .c14 {
+  .c15 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c18 {
     overflow: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c20 {
+  .c21 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c23 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c23 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c22 {
+  .c23 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c19:last-child {
+  .c20:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19::after {
+  .c20::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -1932,7 +2213,7 @@ exports[`Header should render correctly for news article 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c16 {
+  .c17 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: smooth;
@@ -1947,11 +2228,11 @@ exports[`Header should render correctly for news article 1`] = `
     -ms-overflow-style: none;
   }
 
-  .c16::-webkit-scrollbar {
+  .c17::-webkit-scrollbar {
     display: none;
   }
 
-  .c16:after {
+  .c17:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -2152,26 +2433,33 @@ exports[`Header should render correctly for news article 1`] = `
           Pidgin
         </span>
       </a>
+      <a
+        class="c12"
+        dir="ltr"
+        href="#content"
+      >
+        Skip to content
+      </a>
     </div>
   </div>
   <nav
-    class="c12"
+    class="c13"
     dir="ltr"
     role="navigation"
   >
     <div
-      class="c13"
+      class="c14"
     >
       <button
         aria-expanded="false"
         aria-label="Plenti seshon"
-        class="c14"
+        class="c15"
         dir="ltr"
         type="button"
       >
         <svg
           aria-hidden="true"
-          class="c15"
+          class="c16"
           focusable="false"
           height="2.75rem"
           viewBox="0 0 44 44"
@@ -2183,24 +2471,24 @@ exports[`Header should render correctly for news article 1`] = `
         </svg>
       </button>
       <div
-        class="c16"
+        class="c17"
         dir="ltr"
       >
         <ul
-          class="c17"
+          class="c18"
           role="list"
         >
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c20"
+              class="c21"
               href="/pidgin"
             >
               <span
-                class="c21"
+                class="c22"
                 role="text"
               >
                 <span
@@ -2214,96 +2502,96 @@ exports[`Header should render correctly for news article 1`] = `
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
             >
               Nigeria
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
             >
               Africa
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/world"
             >
               World
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/media/video"
             >
               Video
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/media/audio"
             >
               Audio
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
             >
               Sport
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
             >
               Entertainment
             </a>
           </li>
           <li
-            class="c18 c19"
+            class="c19 c20"
             dir="ltr"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c23"
               href="/pidgin/popular/read"
             >
               Most popular

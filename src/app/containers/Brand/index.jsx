@@ -14,13 +14,8 @@ const renderScriptLink = (
   children,
   offscreenText,
 ) => (
-  <ScriptLink
-    script={script}
-    service={service}
-    href={url} // variant url
-    variant={variant}
-  >
-    <span aria-hidden>{children}</span> {/* Lat */}
+  <ScriptLink script={script} service={service} href={url} variant={variant}>
+    <span aria-hidden>{children}</span>
     <VisuallyHiddenText> {offscreenText} </VisuallyHiddenText>
   </ScriptLink>
 );
