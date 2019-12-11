@@ -8,6 +8,7 @@ import {
   getManifestRegex,
   getCpsAssetRegex,
   getRadioAndTVRegex,
+  getNewsWrappedRegex,
   getErrorPageRegex,
 } from './utils';
 
@@ -33,6 +34,9 @@ export const cpsAssetPageDataPath = `${cpsAssetPagePath}.json`;
 
 export const radioAndTvPath = getRadioAndTVRegex(allServices);
 export const radioAndTvDataPath = `${radioAndTvPath}.json`;
+
+export const newsWrappedPath = getNewsWrappedRegex(allServices);
+export const newsWrappedDataPath = `${newsWrappedPath}.json`;
 
 export const errorPagePath = getErrorPageRegex(allServices);
 export const mostReadDataRegexPath = `/:service(${serviceRegex})/${mostRead}:variant(${variantRegex})?.json`;

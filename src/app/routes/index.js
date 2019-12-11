@@ -3,6 +3,7 @@ import Article from '../containers/Article';
 import FrontPage from '../containers/FrontPage';
 import RadioPage from '../containers/RadioPage';
 import CpsAssetPage from '../containers/CpsAssetPage';
+import NewsWrappedPage from '../containers/NewsWrapped';
 import ErrorPage from '../containers/Error';
 import getInitialData from './getInitialData';
 import {
@@ -10,6 +11,7 @@ import {
   frontPagePath,
   cpsAssetPagePath,
   errorPagePath,
+  newsWrappedPath,
   radioAndTvPath,
 } from './regex';
 
@@ -47,6 +49,13 @@ const routes = [
     component: CpsAsset,
     getInitialData,
     pageType: 'MAP',
+  },
+  {
+    path: newsWrappedPath,
+    exact: true,
+    component: NewsWrappedPage,
+    getInitialData,
+    pageType: 'test',
   },
   {
     path: errorPagePath,

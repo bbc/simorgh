@@ -63,7 +63,13 @@ const Document = ({
       <body>
         {/* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
         {/* eslint-disable-next-line react/no-danger */}
-        <div id="root" dangerouslySetInnerHTML={{ __html: app }} />
+        {isAmp ? (
+          <amp-story standalone>
+            <div id="root" dangerouslySetInnerHTML={{ __html: app }} />
+          </amp-story>
+        ) : (
+          <div id="root" dangerouslySetInnerHTML={{ __html: app }} />
+        )}
         {scriptsAllowed && (
           <script
             /* eslint-disable-next-line react/no-danger */
