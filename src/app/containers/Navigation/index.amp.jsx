@@ -4,16 +4,17 @@ import { node, string, shape } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { AmpScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
 import { AmpMenuButton } from '@bbc/psammead-navigation/dropdown';
+import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import styled from '@emotion/styled-base';
 
 const HIDDEN_CLASS_NAME = 'scrollable-hidden';
 const SCROLLABLE_ID = 'scrollable-nav';
 const NAVIGATION_ID = 'navigation-id';
 const OPEN_CLASS_NAME = 'open';
+
 const StyledAmpScrollableNavigation = styled(AmpScrollableNavigation)`
   &.${HIDDEN_CLASS_NAME} {
-    /* TODO: import from psammead-styles */
-    @media (max-width: 37.5rem) {
+    @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
       display: none;
       visibility: hidden;
     }
