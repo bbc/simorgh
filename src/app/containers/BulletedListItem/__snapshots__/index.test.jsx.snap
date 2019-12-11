@@ -1,185 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BulletedListItemContainer should render rtl text correctly 1`] = `
-.c2 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c1 {
-  grid-column: 1 / span 6;
-}
-
 .c0 {
-  display: inline-block;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
-  }
+  margin-bottom: 1rem;
 }
 
 <li
+  class="c0"
   role="listitem"
 >
-  <div
-    class="c0"
-  >
-    <div
-      class="c1"
-    >
-      <p
-        class="c2"
-      >
-        It is unordered
-      </p>
-    </div>
-  </div>
+  It is unordered
 </li>
 `;
 
 exports[`BulletedListItemContainer should render text correctly 1`] = `
-.c2 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c1 {
-  grid-column: 1 / span 6;
-}
-
 .c0 {
-  display: inline-block;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
-  }
+  margin-bottom: 1rem;
 }
 
 <li
+  class="c0"
   role="listitem"
 >
-  <div
-    class="c0"
-  >
-    <div
-      class="c1"
-    >
-      <p
-        class="c2"
-      >
-        Here is a list
-      </p>
-    </div>
-  </div>
+  Here is a list
 </li>
 `;
