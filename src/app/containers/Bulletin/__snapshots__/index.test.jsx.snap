@@ -290,7 +290,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
             class="c6"
             lang="en-GB"
           >
-            Listen Live,
+            Gee ntị Live,
           </span>
           <span
             aria-hidden="true"
@@ -334,7 +334,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
           />
         </svg>
       </span>
-      Listen
+      Gee ntị
     </div>
   </div>
 </div>
@@ -634,7 +634,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
             class="c6"
             lang="en-GB"
           >
-            Watch Live,
+            Lee Live,
           </span>
           <span
             aria-hidden="true"
@@ -675,7 +675,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
           />
         </svg>
       </span>
-      Watch
+      Lee
     </div>
   </div>
 </div>
@@ -962,7 +962,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
             class="c6"
             lang="en-GB"
           >
-            Listen,
+            Gee ntị,
           </span>
           <span>
             Test Radio Bulletin promo
@@ -999,7 +999,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
           />
         </svg>
       </span>
-      Listen
+      Gee ntị
     </div>
   </div>
 </div>
@@ -1290,7 +1290,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
             class="c6"
             lang="en-GB"
           >
-            Watch,
+            Lee,
           </span>
           <span>
             Test TV Bulletin promo
@@ -1324,7 +1324,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
           />
         </svg>
       </span>
-      Watch
+      Lee
     </div>
   </div>
 </div>
