@@ -17,6 +17,7 @@ import {
   layoutGridWrapper,
   layoutGridItemSmall,
   layoutGridItemMedium,
+  layoutGridItemMediumNoMargin,
   layoutGridItemLarge,
   layoutGridItemLargeNoMargin,
   nestedGridItemSmallCss,
@@ -44,6 +45,10 @@ export const GridItemConstrainedSmall = styled.div`
 
 export const GridItemConstrainedMedium = styled.div`
   ${layoutGridItemMedium};
+`;
+
+export const GridItemConstrainedMediumNoMargin = styled.div`
+  ${layoutGridItemMediumNoMargin};
 `;
 
 export const GridItemConstrainedLarge = styled.div`
