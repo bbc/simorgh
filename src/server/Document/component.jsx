@@ -77,6 +77,9 @@ const Document = ({
         {scriptsAllowed && (
           <script
             type="text/javascript"
+            // Justification:
+            // - we need this to be a blocking script that runs before the page first renders
+            // - the content is static text so there is no real XSS risk
             /* eslint-disable-next-line react/no-danger */
             dangerouslySetInnerHTML={{
               __html: `document.documentElement.classList.remove("no-js");`,
