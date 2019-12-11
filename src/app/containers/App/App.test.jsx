@@ -29,7 +29,7 @@ describe('App', () => {
   );
 
   const bbcOrigin = 'https://www.bbc.co.uk';
-  let bbcCountry;
+  const bbcCountry = 'GB';
 
   beforeAll(() => {
     wrapper = mount(
@@ -52,6 +52,7 @@ describe('App', () => {
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledTimes(1);
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith([], {
       bbcOrigin,
+      bbcCountry,
       pageData: initialData.pageData,
       error: undefined,
       isAmp: false,
@@ -107,6 +108,7 @@ describe('App', () => {
             [],
             {
               bbcOrigin,
+              bbcCountry,
               pageData: null,
               status: null,
               error: null,
@@ -128,6 +130,7 @@ describe('App', () => {
             [],
             {
               bbcOrigin,
+              bbcCountry,
               pageData: null,
               status: null,
               error,
@@ -167,6 +170,7 @@ describe('App', () => {
             [],
             {
               bbcOrigin,
+              bbcCountry,
               pageData: null,
               status: null,
               error: null,
@@ -188,6 +192,7 @@ describe('App', () => {
             [],
             {
               bbcOrigin,
+              bbcCountry,
               pageData: data.pageData,
               status: data.status,
               error: undefined,
