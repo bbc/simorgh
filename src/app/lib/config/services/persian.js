@@ -161,7 +161,7 @@ export const service = {
             'برنامه خبری-تحلیلی یک ساعته که تصویری روشن و ساده از رویدادهای پیچیده جهان ارائه می‌کند.',
         },
         listen: 'Listen',
-        watch: 'Watch',
+        watch: 'تماشا کنید',
         liveLabel: 'زنده',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
