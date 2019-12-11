@@ -6,7 +6,7 @@ This document gives a brief overview of how embedded media (audio and video) wor
 
 Simorgh is designed to be AMP-first and all features are built to work for both AMP and canonical page users. At the time of writing the only viable method of including the BBC's Standard Media Player (SMP) on an AMP page is using the [amp-iframe](https://amp.dev/documentation/components/amp-iframe/) element and a custom _embed endpoint_ to serve the player itself.
 
-To minimise the duplication that would arise from having two very different media player implementations it was decided use an iframe-based approach for both AMP and canonical pages. The responsibility for configuring and rendering the media player was therefore moved largely outside of Simorgh into `news-av-player`. This simplifies the code and helps to reduce the testing and maintenance burden of supporting media on both platforms.
+To minimise the duplication that would arise from having two very different media player implementations it was decided to use an iframe-based approach for both AMP and canonical pages. The responsibility for configuring and rendering the media player was therefore moved largely outside of Simorgh into `news-av-player`. This simplifies the code and helps to reduce the testing and maintenance burden of supporting media on both platforms.
 
 ## Placeholder
 
