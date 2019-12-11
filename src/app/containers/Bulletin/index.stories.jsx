@@ -1,5 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import { withKnobs } from '@storybook/addon-knobs';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -33,33 +35,51 @@ const audioFixture = bulletinFixture('RadioBulletin');
 const liveTvFixture = liveBulletinFixture('TVBulletin');
 const audioLiveFixture = liveBulletinFixture('RadioBulletin');
 
-const getBulletinPromo = platform => item => (
-  <ServiceContextProvider service="news">
+const getBulletinPromo = (platform, service, item) => (
+  <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       isAmp={platform === 'amp'}
+      pathname="/pathname"
       pageType="frontPage"
-      service="news"
+      service={service}
     >
       <BulletinContainer item={item} />
     </RequestContextProvider>
   </ServiceContextProvider>
 );
 
-const getCanonicalBulletin = getBulletinPromo('canonical');
-const getAmpBulletin = getBulletinPromo('amp');
+const getCanonicalBulletin = (service, item) =>
+  getBulletinPromo('canonical', service, item);
+
+const getAmpBulletin = (service, item) =>
+  getBulletinPromo('amp', service, item);
 
 storiesOf('Containers|Bulletin/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
-  .add('TV Bulletin', () => getCanonicalBulletin(tvFixture))
-  .add('TV Bulletin - Live', () => getCanonicalBulletin(liveTvFixture))
-  .add('Radio Bulletin', () => getCanonicalBulletin(audioFixture))
-  .add('Radio Bulletin - Live', () => getCanonicalBulletin(audioLiveFixture));
+  .addDecorator(withKnobs)
+  .addDecorator(withServicesKnob())
+  .add('TV Bulletin', ({ service }) => getCanonicalBulletin(service, tvFixture))
+  .add('TV Bulletin - Live', ({ service }) =>
+    getCanonicalBulletin(service, liveTvFixture),
+  )
+  .add('Radio Bulletin', ({ service }) =>
+    getCanonicalBulletin(service, audioFixture),
+  )
+  .add('Radio Bulletin - Live', ({ service }) =>
+    getCanonicalBulletin(service, audioLiveFixture),
+  );
 
 storiesOf('Containers|Bulletin/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
-  .add('TV Bulletin', () => getAmpBulletin(tvFixture))
-  .add('TV Bulletin - Live', () => getAmpBulletin(liveTvFixture))
-  .add('Radio Bulletin', () => getAmpBulletin(audioFixture))
-  .add('Radio Bulletin - Live', () => getAmpBulletin(audioLiveFixture));
+  .addDecorator(withKnobs)
+  .addDecorator(withServicesKnob())
+  .add('TV Bulletin', ({ service }) => getAmpBulletin(service, tvFixture))
+  .add('TV Bulletin - Live', ({ service }) =>
+    getAmpBulletin(service, liveTvFixture),
+  )
+  .add('Radio Bulletin', ({ service }) => getAmpBulletin(service, audioFixture))
+  .add('Radio Bulletin - Live', ({ service }) =>
+    getAmpBulletin(service, audioLiveFixture),
+  );
