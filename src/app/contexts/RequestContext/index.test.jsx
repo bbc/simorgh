@@ -132,5 +132,21 @@ describe('RequestContext', () => {
         platform: 'canonical',
       });
     });
+
+    it('should have isUK as false', () => {
+      render(
+        <RequestContextProvider
+          {...{ ...input, bbcCountry: 'ng' }}
+          isAmp={false}
+        >
+          <Component />
+        </RequestContextProvider>,
+      );
+
+      expect(React.useContext).toHaveReturnedWith({
+        ...{ ...expectedOutput, isUK: false },
+        platform: 'canonical',
+      });
+    });
   });
 });
