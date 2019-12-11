@@ -163,6 +163,11 @@ PopOutGridItemMedium.defaultProps = {
   gridSpan: 4,
 };
 
+GridItemConstrainedMediumNoMargin.defaultProps = {
+  gridColumnStart: 6,
+  gridSpan: 10,
+};
+
 GridItemConstrainedMedium.defaultProps = {
   gridColumnStart: 6,
   gridSpan: 10,
