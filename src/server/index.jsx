@@ -208,6 +208,8 @@ server
     },
   )
   .get('/*', cspInjectFun, async ({ url, headers, path: urlPath }, res) => {
+    logger.info(`URL: [${url}] Path: [${urlPath}]`);
+
     try {
       const { service, isAmp, route, variant } = getRouteProps(routes, url);
       const data = await route.getInitialData(urlPath);

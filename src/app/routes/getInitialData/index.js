@@ -18,7 +18,11 @@ const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)
   : process.env.SIMORGH_BASE_URL;
 
-const getUrl = pathname => `${baseUrl}${pathname.replace(ampRegex, '')}.json`;
+const getUrl = pathname => {
+  const url = `${baseUrl}${pathname.replace(ampRegex, '')}.json`;
+  logger.info(`Data: [${url}]`);
+  return url;
+};
 
 const handleResponse = async response => {
   const { status } = response;
@@ -59,10 +63,12 @@ const handleError = error => {
   return { error, status: STATUS_CODE_BAD_GATEWAY };
 };
 
-const fetchData = pathname =>
-  fetch(getUrl(pathname)) // Remove .amp at the end of pathnames for AMP pages.
+const fetchData = pathname => {
+  const url = getUrl(pathname);
+  return fetch(url) // Remove .amp at the end of pathnames for AMP pages.
     .then(handleResponse)
-    .then(checkForError(getUrl(pathname)))
+    .then(checkForError(url))
     .catch(handleError);
+};
 
 export default fetchData;
