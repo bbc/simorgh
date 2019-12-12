@@ -57,6 +57,7 @@ const CpsAssetPageMain = ({ pageData }) => {
       <LinkedData
         type="Article"
         seoTitle={title}
+        headline={title}
         datePublished={firstPublished}
       />
       <ATIAnalytics data={pageData} />
