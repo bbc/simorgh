@@ -208,7 +208,7 @@ server
     },
   )
   .get('/*', cspInjectFun, async ({ url, headers, path: urlPath }, res) => {
-    logger.info(`URL: [${url}] Path: [${urlPath}]`);
+    logger.info(`Path: [${urlPath}] URL: [${url}]`);
 
     try {
       const { service, isAmp, route, variant } = getRouteProps(routes, url);
