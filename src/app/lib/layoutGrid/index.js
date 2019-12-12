@@ -124,9 +124,7 @@ export const layoutGridItemLarge = css`
   ${gelGridMargin}
 `;
 
-export const layoutGridItemMedium = css`
-  ${gelGridMargin}
-
+export const layoutGridItemMediumNoMargin = css`
   grid-column: 1 / span 6;
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     ${({ padding = {} }) =>
@@ -152,6 +150,11 @@ export const layoutGridItemMedium = css`
   @supports (display: grid) {
     max-width: initial;
   }
+`;
+
+export const layoutGridItemMedium = css`
+  ${gelGridMargin}
+  ${layoutGridItemMediumNoMargin}
 `;
 
 export const layoutGridItemSmall = css`
