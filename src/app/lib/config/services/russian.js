@@ -55,7 +55,7 @@ export const service = {
       home: 'Главная',
       currentPage: 'Текущая страница',
       skipLinkText: 'Перейти к содержанию',
-      relatedContent: 'Related content',
+      relatedContent: 'Новости по теме',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плеер',
         audioPlayer: 'Аудио плеер',
