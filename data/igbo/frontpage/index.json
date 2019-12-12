@@ -286,38 +286,6 @@
             "type": "link"
           },
           {
-            "name": "Igbo radio bulletin",
-            "summary": "This is an Igbo radio bulletin promo, using a CPS promo for a Radio Bulletin with the LIVE button checked",
-            "indexImage": {
-              "id": "63725082",
-              "subType": "index",
-              "href": "http://b.files.bbci.co.uk/6D94/test/_63725082_mediaitem63725081.jpg",
-              "path": "/cpsdevpb/6D94/test/_63725082_mediaitem63725081.jpg",
-              "height": 261,
-              "width": 464,
-              "altText": "BBC Nkeji",
-              "caption": "BBC Nkeji",
-              "copyrightHolder": "BBC"
-            },
-            "indexThumbnail": {
-              "id": "63725084",
-              "subType": "index-thumbnail",
-              "href": "http://b.files.bbci.co.uk/BBB4/test/_63725084_mediaitem63725081.jpg",
-              "path": "/cpsdevpb/BBB4/test/_63725084_mediaitem63725081.jpg",
-              "height": 180,
-              "width": 320,
-              "altText": "BBC Nkeji",
-              "caption": "BBC Nkeji",
-              "copyrightHolder": "BBC"
-            },
-            "uri": "https://www.bbc.com/igbo/media-42986440",
-            "contentType": "RadioBulletin",
-            "assetTypeCode": "PRO",
-            "timestamp": 1573483531000,
-            "isLive": true,
-            "type": "link"
-          },
-          {
             "headlines": {
               "headline": "Nnamdi Kanu: \"Ndị gọọmenti na ndị soja ji ya\" - IPOB"
             },
@@ -363,6 +331,39 @@
             "id": "urn:bbc:ares::asset:igbo/23182806",
             "type": "cps"
           },
+          {
+            "name": "Igbo radio bulletin",
+            "summary": "This is an Igbo radio bulletin promo, using a CPS promo for a Radio Bulletin with the LIVE button checked",
+            "indexImage": {
+              "id": "63725082",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/6D94/test/_63725082_mediaitem63725081.jpg",
+              "path": "/cpsdevpb/6D94/test/_63725082_mediaitem63725081.jpg",
+              "height": 261,
+              "width": 464,
+              "altText": "BBC Nkeji",
+              "caption": "BBC Nkeji",
+              "copyrightHolder": "BBC"
+            },
+            "indexThumbnail": {
+              "id": "63725084",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/BBB4/test/_63725084_mediaitem63725081.jpg",
+              "path": "/cpsdevpb/BBB4/test/_63725084_mediaitem63725081.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "BBC Nkeji",
+              "caption": "BBC Nkeji",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.com/igbo/media-42986440",
+            "contentType": "RadioBulletin",
+            "assetTypeCode": "PRO",
+            "timestamp": 1573483531000,
+            "isLive": true,
+            "type": "link"
+          },
+
           {
             "headlines": {
               "headline": "Egbuola ndị na-eme ngagharị iwe na Congo"
