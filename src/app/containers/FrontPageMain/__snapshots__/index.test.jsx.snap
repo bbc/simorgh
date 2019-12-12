@@ -178,20 +178,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   padding: 0;
 }
 
-.c11 {
-  border-bottom: 0.0625rem solid #F2F2F2;
-  padding: 0.5rem 0 1rem;
-}
-
-.c11:first-child {
-  padding-top: 0;
-}
-
-.c11:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
 .c10 {
   list-style-type: none;
   margin: 0;
@@ -435,6 +421,20 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   color: #6E6E73;
 }
 
+.c11 {
+  border-bottom: 0.0625rem solid #F2F2F2;
+  padding: 0.5rem 0 1rem;
+}
+
+.c11:first-child {
+  padding-top: 0;
+}
+
+.c11:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
 @media (max-width:37.4375rem) {
   .c1 {
     grid-column-gap: 0.5rem;
@@ -605,30 +605,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 @media (min-width:37.5rem) {
   .c38 {
     margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c11 {
-    padding: 1.5rem 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11:first-child {
-    padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c11:first-child {
-    padding-top: 1.5rem;
   }
 }
 
@@ -852,6 +828,30 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 @media (min-width:37.5rem) {
   .c9 {
     margin-top: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c11 {
+    padding: 1.5rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c11:first-child {
+    padding-top: 1.5rem;
   }
 }
 
