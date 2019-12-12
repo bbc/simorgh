@@ -17,6 +17,7 @@ import {
   layoutGridWrapper,
   layoutGridItemSmall,
   layoutGridItemMedium,
+  layoutGridItemMediumNoMargin,
   layoutGridItemLarge,
   layoutGridItemLargeNoMargin,
   nestedGridItemSmallCss,
@@ -44,6 +45,10 @@ export const GridItemConstrainedSmall = styled.div`
 
 export const GridItemConstrainedMedium = styled.div`
   ${layoutGridItemMedium};
+`;
+
+export const GridItemConstrainedMediumNoMargin = styled.div`
+  ${layoutGridItemMediumNoMargin};
 `;
 
 export const GridItemConstrainedLarge = styled.div`
@@ -156,6 +161,11 @@ PopOutGridItemMedium.propTypes = {
 PopOutGridItemMedium.defaultProps = {
   gridColumnStart: 2,
   gridSpan: 4,
+};
+
+GridItemConstrainedMediumNoMargin.defaultProps = {
+  gridColumnStart: 6,
+  gridSpan: 10,
 };
 
 GridItemConstrainedMedium.defaultProps = {
