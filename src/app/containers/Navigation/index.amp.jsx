@@ -5,7 +5,7 @@ import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { AmpScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
 import { AmpMenuButton } from '@bbc/psammead-navigation/dropdown';
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
-import styled from '@emotion/styled-base';
+import styled from 'styled-components';
 
 const HIDDEN_CLASS_NAME = 'scrollable-hidden';
 const SCROLLABLE_ID = 'scrollable-nav';
