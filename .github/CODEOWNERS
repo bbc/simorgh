@@ -2,6 +2,5 @@
 # Protected files
 **/*webpack*    @benjaminhobbs @jamesdonoh @sareh @hindsc52 @jblaut @jroebu14 @craigkj
 /envConfig/     @benjaminhobbs @jamesdonoh @sareh @hindsc52 @jblaut @jroebu14 @craigkj
-/scripts/       @benjaminhobbs @jamesdonoh @sareh @hindsc52 @jblaut @jroebu14 @craigkj
 Jenkinsfile     @benjaminhobbs @jamesdonoh @sareh @hindsc52 @craigkj
 **/*CODEOWNERS* @bbc/simorgh-admins
