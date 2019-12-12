@@ -261,3 +261,5 @@ export const getComponentInfo = ({ result, componentName, componentData }) => {
     },
   };
 };
+
+export const LIBRARY_VERSION = 'simorgh';
