@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
 import styled, { css } from 'styled-components';
 import {
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
@@ -70,14 +72,26 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
   return children;
 };
 
+const StoryPromoListItem = styled(StoryPromoLi)`
+  ${({ isBulletin, isFirstPromo }) =>
+    isBulletin &&
+    css`
+      @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+        ${isFirstPromo
+          ? `padding-bottom: ${GEL_SPACING_TRPL};`
+          : `padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_TRPL};`}
+      }
+    `}
+`;
+
+const isBulletin = item =>
+  item.contentType === 'TVBulletin' || item.contentType === 'RadioBulletin';
+
 const renderPromo = (item, index, firstSection) => {
   const topStory = firstSection && index === 0;
   const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
 
-  const isBulletin =
-    item.contentType === 'TVBulletin' || item.contentType === 'RadioBulletin';
-
-  if (isBulletin) {
+  if (isBulletin(item)) {
     return <BulletinContainer item={item} lazyLoadImage={lazyLoadImage} />;
   }
 
@@ -100,11 +114,17 @@ const sectionBody = (group, items, script, service, isFirstSection) => {
   return items.length > 1 ? (
     <MarginWrapper firstSection={isFirstSection}>
       <StoryPromoUl>
-        {items.map((item, index) => (
-          <StoryPromoLi key={item.id}>
-            {renderPromo(item, index, isFirstSection)}
-          </StoryPromoLi>
-        ))}
+        {items.map((item, index) => {
+          return (
+            <StoryPromoListItem
+              key={item.id}
+              isFirstPromo={index === 0}
+              isBulletin={isBulletin(item)}
+            >
+              {renderPromo(item, index, isFirstSection)}
+            </StoryPromoListItem>
+          );
+        })}
       </StoryPromoUl>
     </MarginWrapper>
   ) : (
