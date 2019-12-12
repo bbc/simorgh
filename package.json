@@ -7,12 +7,12 @@
     "amp:validate": "wait-on http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/igbo.amp && amphtml-validator http://localhost:7080/korean/bbc_korean_radio/liveradio.amp",
     "bbcA11y": "wait-on -t 20000 http://localhost:7080/news/articles/cn7k01xp8kxo && bbc-a11y",
     "bbcA11y:ci": "wait-on -t 20000 http://localhost:7080/news/articles/cn7k01xp8kxo && xvfb-run -a bbc-a11y",
-    "build": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack && node ./scripts/bundleSize.js",
-    "build:live": "cp envConfig/live.env .env && NODE_ENV=production webpack",
-    "build:live:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/live.env > .env && NODE_ENV=production webpack",
+    "build": "rm -rf build && cp envConfig/local.env .env && cross-env NODE_ENV=production webpack && node ./scripts/bundleSize.js",
+    "build:live": "cp envConfig/live.env .env && cross-env NODE_ENV=production webpack",
+    "build:live:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/live.env > .env && cross-env NODE_ENV=production webpack",
     "build:storybook": "build-storybook -s .storybook/static -c .storybook -o storybook_dist",
-    "build:test": "cp envConfig/test.env .env && NODE_ENV=production webpack",
-    "build:test:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/test.env > .env && NODE_ENV=production webpack",
+    "build:test": "cp envConfig/test.env .env && cross-env NODE_ENV=production webpack",
+    "build:test:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/test.env > .env && cross-env NODE_ENV=production webpack",
     "cypress": "cypress run",
     "cypress:ci": "xvfb-run -a cypress run",
     "cypress:interactive": "cypress open",
@@ -20,7 +20,7 @@
     "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
     "lighthouse": "./scripts/lighthouseRun.sh",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
-    "start": "NODE_ENV=production node build/server.js",
+    "start": "cross-env NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -s .storybook/static -c .storybook",
     "test": "npm run test:lint && npm run test:dependencies && npm run test:unit && npm run build -- --hide-modules --colors && run-p --race start amp:validate",
     "test:ci": "npm run start & npm install --no-save cypress@3.4.1 bbc-a11y@latest npm-run-all@latest puppeteer@latest audit-ci@latest && run-p cypress:ci test:puppeteer && run-p bbcA11y:ci lighthouse && audit-ci --low",
@@ -31,8 +31,8 @@
     "test:puppeteer": "jest --env=jsdom --colors ./puppeteer",
     "test:unit": "jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"puppeteer\"",
     "test:unit:watch": "npm run test:unit -- --watch",
-    "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
-    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'"
+    "webpack:dev:client": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
+    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && cross-env NODE_ENV=development webpack --env.config='server'"
   },
   "husky": {
     "hooks": {
