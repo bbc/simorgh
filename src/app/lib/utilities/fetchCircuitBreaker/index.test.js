@@ -41,11 +41,12 @@ describe('fetchCircuitBreaker', () => {
   });
 
   it('should check if host is available after timeout', async () => {
+    jest.setTimeout(11000);
     const host = 'https://example.com';
     fetch.mockReject(Error('timeout'));
     await expect(fetchCircuitBreaker(host)).rejects.toThrow('timeout');
     await expect(fetchCircuitBreaker(host)).rejects.toThrow('Breaker is open');
-    await new Promise(resolve => setTimeout(resolve, 3000));
+    await new Promise(resolve => setTimeout(resolve, 10000));
     fetch.mockResponse(successFetchResponse);
     await expect(fetchCircuitBreaker(host)).resolves.toBeDefined();
   });

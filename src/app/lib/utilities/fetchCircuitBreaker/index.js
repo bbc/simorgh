@@ -11,8 +11,8 @@ export function createFetchCircuitBreaker() {
     if (!circuitBreaker) {
       const circuitBreakerOptions = {
         name: host,
-        timeout: 500,
-        resetTimeout: 3000,
+        timeout: 5000,
+        resetTimeout: 10000,
       };
       circuitBreakers[host] = new CircuitBreaker(fetch, circuitBreakerOptions);
       circuitBreaker = circuitBreakers[host];
