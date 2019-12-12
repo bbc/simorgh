@@ -160,6 +160,12 @@ export const service = {
           subtitle:
             'برنامه خبری-تحلیلی یک ساعته که تصویری روشن و ساده از رویدادهای پیچیده جهان ارائه می‌کند.',
         },
+        listen: 'Listen',
+        watch: 'تماشا کنید',
+        liveLabel: 'زنده',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -276,6 +282,7 @@ export const service = {
         url: '/persian/learningenglish',
       },
     ],
+    navigationSection: 'صفحه ها',
   },
 };
 

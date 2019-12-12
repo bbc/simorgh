@@ -144,6 +144,12 @@ export const service = {
           subtitle:
             "Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako.",
         },
+        listen: 'Listen',
+        watch: 'Kalla',
+        liveLabel: 'KAI TSAYE',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -153,7 +159,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/hausa/game-da-mu-49283501',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'Me yasa za ka aminta da BBC',
       },
       externalLink: {
@@ -221,6 +227,7 @@ export const service = {
         url: '/hausa/media/photogalleries',
       },
     ],
+    navigationSection: 'Sassa',
   },
 };
 

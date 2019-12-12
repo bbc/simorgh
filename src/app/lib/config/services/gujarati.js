@@ -9,7 +9,7 @@ export const service = {
   default: {
     lang: `gu`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'અપડેટેડ',
     atiAnalyticsAppName: 'news-gujarati',
     atiAnalyticsProducerId: '50',
     brandName: 'BBC News ગુજરાતી',
@@ -18,12 +18,12 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png',
     defaultImageAltText: 'BBC News ગુજરાતી',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', બહારની સામગ્રી ',
+    imageCaptionOffscreenText: 'ઇમેજ કૅપ્શન, ',
+    videoCaptionOffscreenText: 'વીડિયો કૅપ્શન, ',
+    audioCaptionOffscreenText: 'ઓડિયો કૅપ્શન, ',
+    defaultCaptionOffscreenText: 'કૅપ્શન, ',
+    imageCopyrightOffscreenText: 'ઇમેજ સ્રોત, ',
     locale: `gu-IN`,
     datetimeLocale: `gu`,
     service: 'gujarati',
@@ -43,140 +43,151 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
+      seeAll: 'વધુ વાંચો ',
       home: 'સમાચાર',
-      currentPage: 'Current page',
+      currentPage: 'વર્તમાન પેજ',
       skipLinkText: 'સામગ્રી પર જાઓ',
-      relatedContent: 'Related content',
+      relatedContent: 'સંબંધિત સમાચાર',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'મીડિયા પ્લેયર',
+        audioPlayer: 'ઓડિયો પ્લેયર',
+        videoPlayer: 'વીડિયો પ્લેયર',
       },
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Page not found',
+          title: 'પેજ મળ્યું નહીં',
           message:
-            'વેબએડ્રેસ લખવામાં ભૂલ હોવાથી આમ થયું છે. કૃપા કરી વેબએડ્રેસ અને સ્પેલિંગ ચકાસો',
+            'માફ કરશો, તમે જે શોધી રહ્યા છો તે પેજ દેખાડી રહ્યું નથી, કૃપા કરીને ફરી કોશિશ કરો.',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'URLની  ફરી તપાસ કરો',
+            'બ્રાઉઝરનું રિફ્રેશ બટન ફરી દબાવો',
+            'આ પેજને બીબીસી સર્ચ બાર ખોલીને શોધવાની કોશિશ કરો',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'BBC સમાચાર હોમ પેજ',
-          callToActionLast: '',
+          callToActionFirst: 'વિકલ્પના રૂપે અમારા હોમપેજ ',
+          callToActionLinkText: 'BBC News ગુજરાતી',
+          callToActionLast: ' પર જાઓ',
           callToActionLinkUrl: 'https://www.bbc.com/gujarati',
         },
         500: {
           statusCode: '500',
-          title: '500 - Error',
-          message: 'Page error, પેજ રિફ્રેશ કરો',
+          title: 'ઇન્ટરનલ સર્વર એરર',
+          message:
+            'માફ કરશો, તમે શોધી રહ્યા છો એ પેજ દર્શાવાઈ રહ્યું નથી. કૃપા કરી ફરી કોશિશ કરો',
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            'બ્રાઉઝરનું રિફ્રેશ બટન દબાવો',
+            'કેટલાક સમય બાદ કોશિશ કરો',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'BBC સમાચાર હોમ પેજ',
-          callToActionLast: '',
+          callToActionFirst: 'વિકલ્પના રૂપે અમારા હોમપેજ ',
+          callToActionLinkText: 'BBC News ગુજરાતી',
+          callToActionLast: ' પર જાઓ',
           callToActionLinkUrl: 'https://www.bbc.com/gujarati',
         },
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title: 'અમે અમારી ગોપનીયતા અને કુકીઝની નીતિને અપડેટ કરી છે',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'અમે અમારી કુકીઝ અને ગોપનીયતાની નીતિમાં મહત્ત્વના ફેરફારો કર્યા છે, તમારે એ જાણવું જોઈએ કે તેનાથી તમારા પર અને તમારા ડેટા પર શું અસર પડશે.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'અમે અમારી કુકીઝ અને ગોપનીયતાની નીતિમાં મહત્ત્વના ફેરફારો કર્યા છે, તમારે એ જાણવું જોઈએ કે તેનાથી તમારા પર અને તમારા ડેટા પર શું અસર પડશે.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
-          accept: 'OK',
-          reject: "Find out what's changed",
+          accept: 'ઓકે',
+          reject: 'જાણો, શું ફેરફારો થયા છે',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'અમને જણાવો કે તમે કુકીઝને લઈને સહમત છો',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
+              first: 'તમને સારી ઑનલાઇન સેવાઓ આપવા માટે અમે ',
+              linkText: 'કુકીઝ',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                'નો ઉપયોગ કરીએ છીએ. અમને જણાવો કે તમે આ તમામ કુકીઝથી સહમત છો.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
-              linkText: 'cookies',
+              first:
+                'અમે અને અમારા પાર્ટનર આ પ્રકારની કેટલીક ટેકનિકનો ઉપયોગ કરીએ છીએ ',
+              linkText: 'કુકીઝ',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ' નો ઉપયોગ કરીને અમે બ્રાઉઝિંગ ડેટા દ્વારા તમને સારી અને ખાસ પ્રકારની સેવાઓ આપીએ છીએ. જેનાથી અમને તમારા માટે ખાસ કન્ટેન્ટ અને યોગ્ય જાહેરાત દર્શાવવામાં મદદ મળે છે. અમને જણાવો કે તમે આ અંગે સહમત છો.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'હાં, હું સહમત છું',
+          reject: 'ના, મને સેટિંગ્સમાં લઈ જાવ',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
       media: {
-        audio: 'ઑડિયો',
-        photogallery: 'છબી ગૅલેરી',
+        audio: 'ઓડિયો',
+        photogallery: 'ફોટો ગૅલરી',
         video: 'વીડિયો',
         bbc_gujarati_tv: {
           title: 'સમાચાર',
           subtitle:
             'આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર.',
         },
+        listen: 'સાંભળો',
+        watch: 'જુઓ',
+        liveLabel: 'પેરેંટલ માર્ગદર્શન લૉક ચાલુ કરો',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: 'સૌથી વધારે વંચાયેલા સમાચાર',
+      lastUpdated: 'લાસ્ટ અપડેટ: ',
     },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        text: 'તમે બીબીસી પર ભરોસો કેમ કરી શકો',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: 'બહારની વેબસાઇટ્સની લિંક આપવા અંગેની અમારી નીતિ વિશે વાંચો.',
       },
       links: [
         {
           href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          text: 'ઉપયોગની શરતો',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          href: 'https://www.bbc.com/aboutthebbc',
+          text: 'બીબીસી વિશે',
+        },
+        {
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
+          text: 'પ્રાઇવસી પૉલિસી',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: 'કુકીઝ',
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          href: 'https://www.bbc.com/gujarati/institutional-42224948',
+          text: 'બીબીસીનો સંપર્ક કરો',
         },
       ],
-      copyrightText:
-        'BBC. એક્સટર્નલ વેબસાઇટ્સનાં કન્ટેન્ટ માટે BBC જવાબદાર નથી',
+      copyrightText: 'BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
     },
     fonts: [],
     timezone: 'Asia/Kolkata',
@@ -202,6 +213,7 @@ export const service = {
         url: '/gujarati/international',
       },
     ],
+    navigationSection: 'વિભાગો',
   },
 };
 

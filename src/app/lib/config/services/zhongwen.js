@@ -43,7 +43,7 @@ const baseServiceConfig = {
     home: 'Home',
     currentPage: 'Current page',
     skipLinkText: 'Skip to content',
-    relatedContent: 'Related content',
+    relatedContent: '更多有关此项报道的内容',
     mediaAssetPage: {
       mediaPlayer: 'Media player',
       audioPlayer: 'Audio player',
@@ -136,6 +136,12 @@ const baseServiceConfig = {
         subtitle:
           'BBC中文部提供的国际新闻、分析和资讯、时事和专题内容。可收听或浏览香港电台FM电台广播及网站',
       },
+      listen: 'Listen',
+      watch: 'Watch',
+      liveLabel: 'LIVE',
+      previousRadioShow: 'Previous radio show',
+      nextRadioShow: 'Next radio show',
+      duration: 'Duration',
     },
   },
   brandSVG,
@@ -227,6 +233,7 @@ export const service = {
         url: 'http://www.bbc.co.uk/ukchina/simp',
       },
     ],
+    navigationSection: '分类',
   },
   trad: {
     ...baseServiceConfig,
@@ -278,6 +285,7 @@ export const service = {
         url: 'http://www.bbc.co.uk/ukchina/trad',
       },
     ],
+    navigationSection: '分類',
   },
 };
 

@@ -9,7 +9,7 @@ export const service = {
   default: {
     lang: `mr`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'अपडेटेड',
     atiAnalyticsAppName: 'news-marathi',
     atiAnalyticsProducerId: '59',
     brandName: 'BBC News मराठी',
@@ -18,12 +18,12 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png',
     defaultImageAltText: 'BBC News मराठी',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', बाहेरचा मजकूर',
+    imageCaptionOffscreenText: 'फोटो कॅप्शन, ',
+    videoCaptionOffscreenText: 'व्हीडिओ कॅप्शन, ',
+    audioCaptionOffscreenText: 'ऑडिओ कॅप्शन, ',
+    defaultCaptionOffscreenText: 'कॅप्शन, ',
+    imageCopyrightOffscreenText: 'फफोटो स्रोत, ',
     locale: `mr-IN`,
     datetimeLocale: `mr`,
     service: 'marathi',
@@ -43,136 +43,144 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
+      seeAll: 'सर्व पाहा',
       home: 'बातम्या',
-      currentPage: 'Current page',
-      skipLinkText: 'सामग्रीवर जा',
-      relatedContent: 'Related content',
+      currentPage: 'सध्याचे पान',
+      skipLinkText: 'थेट मजकुरावर जा',
+      relatedContent: 'संबंधित मजकूर',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'मीडिया प्लेयर',
+        audioPlayer: 'ऑडिओ प्लेयर',
+        videoPlayer: 'व्हीडिओ प्लेयर',
       },
       error: {
         404: {
           statusCode: '404',
-          title: '404 - पृष्ठ आढळले नाही',
+          title: 'हे पृष्ठ सापडले नाही',
           message:
-            'कदाचित आपण वेब पत्त्यामध्ये चुकीने टाईप केल्याने असे होऊ शकते. कृपया पत्ता आणि शब्दलेखन तपासा.',
+            'माफ करा, तुम्ही शोधत असलेले पृष्ठ आम्हाला सापडले नाही. कृपया प्रयत्न करा:',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'तुमचं URL पुन्हा एकदा तपासा',
+            'तुमच्या ब्राऊझरमध्ये रिफ्रेश बटण दाबा',
+            'बीबीसीचं सर्च बार वापरून हे पृष्ठ शोधा',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'बीबीसी बातम्या मुख्यपृष्ठ',
-          callToActionLast: '',
+          callToActionFirst: 'किंवा, ',
+          callToActionLinkText: 'बीबीसी न्यूज मराठी]च्या',
+          callToActionLast: ' होमपेजला भेट द्या.',
           callToActionLinkUrl: 'https://www.bbc.com/marathi',
         },
         500: {
           statusCode: '500',
-          title: '500 - त्रुटी',
-          message: 'एक त्रुटी आली. कृपया पृष्ठ रीफ्रेश करा',
+          title: 'अंतर्गत सर्व्हरमध्ये बिघाड',
+          message:
+            'माफ करा, तुम्ही शोधत असलेलं पृष्ठ आम्हाला सापडले नाही. कृपया प्रयत्न करा:',
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            'तुमच्या ब्राऊझरमध्ये रिफ्रेश बटण दाबा',
+            'थोड्या वेळाने परत या',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'बीबीसी बातम्या मुख्यपृष्ठ',
-          callToActionLast: '',
+          callToActionFirst: 'किंवा, ',
+          callToActionLinkText: 'बीबीसी न्यूज मराठी]च्या',
+          callToActionLast: ' होमपेजला भेट द्या.',
           callToActionLinkUrl: 'https://www.bbc.com/marathi',
         },
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title:
+            'आम्ही आमचं गोपनीयतेचं आणि कुकीजच्या बाबतीतलं धोरण अपडेट केलं आहे',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'आम्ही आमच्या गोपनीयतेच्या आणि कुकीजच्या बाबतीतल्या धोरणांमध्ये काही महत्त्वपूर्ण बदल केले आहेत आणि आम्हाला वाटतं तुम्ही हे जाणून घ्यायला हवं की त्याचा तुमच्यावर काय परिणाम होऊ शकतो.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'आम्ही आमच्या गोपनीयतेच्या आणि कुकीजच्या बाबतीतल्या धोरणांमध्ये काही महत्त्वपूर्ण बदल केले आहेत आणि आम्हाला वाटतं तुम्ही हे जाणून घ्यायला हवं की त्याचा तुमच्यावर काय परिणाम होऊ शकतो.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
-          accept: 'OK',
-          reject: "Find out what's changed",
+          accept: 'ओके',
+          reject: 'पाहा नेमकं काय बदललंय',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'तुम्ही कुकीजच्या बाबतीत सहमत असल्याचं आम्हाला सांगा',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
+              first: 'आम्ही ',
+              linkText: 'कुकीज',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' वापरून तुमचा ऑनलाईन अनुभव सर्वोत्तम करण्याचा प्रयत्न करतो. सर्व कुकीजच्या बाबतीत तुमची सहमती असल्याचं आम्हाला कळवा.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
-              linkText: 'cookies',
+              first: 'आम्ही आणि आमचे सहयोगी ',
+              linkText: 'कुकीज',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                'सारखं तंत्रज्ञान वापरून तुमचा ब्राऊझिंग डेटा गोळा करत असतो, जेणेकरून तुमचा ऑनलाईन अनुभव सर्वोत्तम व्हावा आणि तुम्हाला खास तुमच्यासाठीचा मजकूर आणि अ‍ॅड दाखवता याव्यात. तुमची याला सहमती असल्याचं आम्हाला कळवा.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'हो, माझी सहमती आहे',
+          reject: 'नाही, मला सेटिंग्स दाखवा',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
       media: {
         audio: 'ऑडिओ',
-        photogallery: 'प्रतिमा गॅलरी',
-        video: 'व्हिडिओ',
+        photogallery: 'फोटो गॅलरी',
+        video: 'व्हीडिओ',
         bbc_marathi_tv: {
           title: 'BBC विश्व',
           subtitle:
             'मराठीतल्या पहिल्या डिजिटल बुलेटिनमध्ये पाहा देश-विदेशातल्या ताज्या बातम्या.',
         },
+        listen: 'ऐका',
+        watch: 'पाहा',
+        liveLabel: 'थेट',
+        previousRadioShow: 'यापूर्वीचा रेडिओ शो',
+        nextRadioShow: 'पुढचा रेडिओ शो',
+        duration: 'वेळ',
       },
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: 'सर्वाधिक वाचलेले',
+      lastUpdated: 'शेवटचा अपडेट: ',
     },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        text: 'तुम्ही बीबीसीवर विश्वास का ठेवू शकता',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: 'बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.',
       },
       links: [
         {
           href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          text: 'वापराच्या अटी',
         },
         {
           href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          text: 'गोपनीयता धोरण',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: 'कुकीज',
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          href: 'https://www.bbc.com/marathi/institutional-42227676',
+          text: 'बीबीसीला संपर्क करा',
         },
       ],
       copyrightText:
@@ -202,6 +210,7 @@ export const service = {
         url: '/marathi/international',
       },
     ],
+    navigationSection: 'विभाग',
   },
 };
 

@@ -135,6 +135,12 @@ export const service = {
         audio: 'Âm thanh',
         photogallery: 'Gallery hình ảnh',
         video: 'Video',
+        listen: 'Listen',
+        watch: 'Xem',
+        liveLabel: 'TRỰC TIẾP',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -144,7 +150,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/vietnamese/institutional-49283563',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'Tại sao bạn có thể tin tưởng BBC News',
       },
       externalLink: {
@@ -225,6 +231,7 @@ export const service = {
         url: '/vietnamese/media/video',
       },
     ],
+    navigationSection: 'Mục',
   },
 };
 

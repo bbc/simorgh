@@ -5,9 +5,16 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import RadioPageMain from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 import preprocessor from '#lib/utilities/preprocessor';
+import * as analyticsUtils from '#lib/analyticsUtils';
 import { radioPagePreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
 
+analyticsUtils.getAtUserId = jest.fn();
+
 describe('Radio Page Main', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
+  });
+
   it('should match snapshot for Canonical', async () => {
     const pageData = await preprocessor(
       amharicPageData,

@@ -149,6 +149,12 @@ export const service = {
           subtitle:
             'خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي',
         },
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'مباشر',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -158,7 +164,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/arabic/institutional-49283069',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'لماذا يمكنك الإعتماد على أخبار بي بي سي',
       },
       externalLink: {
@@ -262,6 +268,7 @@ export const service = {
         url: '/arabic/in_depth',
       },
     ],
+    navigationSection: 'أقسام',
   },
 };
 

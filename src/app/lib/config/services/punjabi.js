@@ -47,7 +47,7 @@ export const service = {
       home: 'ਹੋਮ ਪੇਜ',
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
-      relatedContent: 'Related content',
+      relatedContent: 'ਇਸ ਖ਼ਬਰ ਬਾਰੇ ਹੋਰ',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -134,6 +134,12 @@ export const service = {
         audio: 'ਔਡੀਓ',
         photogallery: 'ਫੋਟੋ ਗੈਲਰੀ',
         video: 'ਵੀਡੀਓ',
+        listen: 'ਸੁਣੋ',
+        watch: 'ਦੇਖੋ',
+        liveLabel: 'ਸਿੱਧਾ ਪ੍ਰਸਾਰਣ',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -163,10 +169,11 @@ export const service = {
         url: '/punjabi/international',
       },
     ],
+    navigationSection: 'ਸੈਕਸ਼ਨਜ਼',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/punjabi/institutional-49282853',
-        text: "ਤੁਸੀਂ ਬੀਬੀਸੀ 'ਤੇ ਕਿਉਂ ਵਿਸ਼ਵਾਸ਼ ਕਰ ਸਕਦੇ ਹੋ",
+        href: 'https://www.bbc.com/news/help-41670342',
+        text: "ਤੁਸੀਂ ਬੀਬੀਸੀ 'ਤੇ ਕਿਉਂ ਵਿਸ਼ਵਾਸ਼ ਕਰ ਸਕਦੇ ਹੋ",
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',

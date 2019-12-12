@@ -40,6 +40,10 @@ const GenerateMediaPlayer = ({
 );
 
 describe('MediaPlayer', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
+  });
+
   shouldMatchSnapshot(
     'render the canonical player without a placeholder',
     <GenerateMediaPlayer

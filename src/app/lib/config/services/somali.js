@@ -150,6 +150,12 @@ export const service = {
           subtitle:
             'Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka',
         },
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'TOOS',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -231,6 +237,7 @@ export const service = {
         url: '/somali/media/photogalleries',
       },
     ],
+    navigationSection: 'Qaybaha',
   },
 };
 

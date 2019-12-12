@@ -43,7 +43,7 @@ const baseServiceConfig = {
     home: 'Home',
     currentPage: 'Current page',
     skipLinkText: 'Skip to content',
-    relatedContent: 'Related content',
+    relatedContent: '更多有关此项报道的内容',
     mediaAssetPage: {
       mediaPlayer: 'Media player',
       audioPlayer: 'Audio player',
@@ -131,6 +131,12 @@ const baseServiceConfig = {
       audio: '音频',
       photogallery: '图辑',
       video: '视频',
+      listen: 'Listen',
+      watch: 'Watch',
+      liveLabel: 'LIVE',
+      previousRadioShow: 'Previous radio show',
+      nextRadioShow: 'Next radio show',
+      duration: 'Duration',
     },
   },
   brandSVG,
@@ -206,6 +212,7 @@ export const service = {
         url: '/ukchina/simp/media/photogalleries',
       },
     ],
+    navigationSection: '分类',
   },
   trad: {
     ...baseServiceConfig,
@@ -241,6 +248,7 @@ export const service = {
         url: '/ukchina/trad/media/photogalleries',
       },
     ],
+    navigationSection: '分類',
   },
 };
 

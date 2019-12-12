@@ -9,7 +9,7 @@ export const service = {
   default: {
     lang: `uz-Cyrl`,
     articleAuthor: `https://www.facebook.com/#!/bbcuzbek`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Янгиланди',
     atiAnalyticsAppName: 'news-uzbek',
     atiAnalyticsProducerId: '96',
     brandName: "BBC News O'zbek",
@@ -18,12 +18,12 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png',
     defaultImageAltText: "BBC News O'zbek",
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', ташқи',
+    imageCaptionOffscreenText: 'Сүрөттүн түшүндүрмөсү, ',
+    videoCaptionOffscreenText: 'Видеонун түшүндүрмөсү, ',
+    audioCaptionOffscreenText: 'Аудионун түшүндүрмөсү, ',
+    defaultCaptionOffscreenText: 'Сурат тагсўзи, ',
+    imageCopyrightOffscreenText: 'Сүрөттүн булагы, ',
     locale: `uz-UZ`,
     datetimeLocale: `uz`,
     service: 'uzbek',
@@ -43,15 +43,15 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
+      seeAll: 'Баарын көрүү',
       home: 'Бош саҳифа',
-      currentPage: 'Current page',
+      currentPage: 'Жорий саҳифа',
       skipLinkText: 'Саҳифага ўтиш',
-      relatedContent: 'Related content',
+      relatedContent: 'Тема боюнча башка макалалар',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'Медиа плейер',
+        audioPlayer: 'Аудио плейер',
+        videoPlayer: 'Видео плейер',
       },
       error: {
         404: {
@@ -60,13 +60,13 @@ export const service = {
           message:
             'Бунга сабаб Сиз веб саҳифа адресини нотўғри ёзган бўлишингиз мумкин. Илтимос, текшириб қайтадан ёзинг',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'url манзилини яна бир бор текшириб кўринг',
+            'Браузерингиздаги "янгилаш" тугмасини босинг',
+            'Ушбу саҳифани Би-би-сининг қидирув панелидан излаб кўринг',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
+          callToActionFirst: 'Бунга муқобил ',
           callToActionLinkText: 'BBC Бош саҳифа',
-          callToActionLast: '',
+          callToActionLast: 'бош саҳифасига киринг',
           callToActionLinkUrl: 'https://www.bbc.com/uzbek',
         },
         500: {
@@ -74,60 +74,61 @@ export const service = {
           title: '500- Хато',
           message: 'Муаммо пайдо бўлди. Илтимос, саҳифани янгиланг',
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            'Браузерингиздаги "янгилаш" тугмасини босинг',
+            'Яна бироз фурсатдан кейин ҳаракат қилиб кўринг',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
+          callToActionFirst: 'Бунга муқобил ',
           callToActionLinkText: 'BBC Бош саҳифа',
-          callToActionLast: '',
+          callToActionLast: 'бош саҳифасига киринг',
           callToActionLinkUrl: 'https://www.bbc.com/uzbek',
         },
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title:
+            'Биз шахсий ҳаёт махфийлиги ва Куки(Cookies)га оид сиёсатимизни янгиладик',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Биз шахсий ҳаёт махфийлиги ва Куки(Cookie)га оид сиёсатимизга айрим муҳим ўзгаришларни киритдик. Ва бу нарса сиз ва сизнинг маълумотингиз учун нимани англатиши ҳақида сизни бохабар этиш истагидамиз.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Биз шахсий ҳаёт махфийлиги ва Куки(Cookie)га оид сиёсатимизга айрим муҳим ўзгаришларни киритдик. Ва бу нарса сиз ва сизнинг маълумотингиз учун нимани англатиши ҳақида сизни бохабар этиш истагидамиз.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
-          accept: 'OK',
-          reject: "Find out what's changed",
+          accept: 'Маъқул',
+          reject: 'Нималар ўзгарди?',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'Кукис(Cookies)га рози эканингизни билдиринг',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
+              first: 'Биз ',
+              linkText: 'кукидан',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' сизга янада яхшироқ онлайн имконият бериш мақсадида фойдаланамиз. Марҳамат қилиб ушбу барча кукиларга розилигингизни билдиринг.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
-              linkText: 'cookies',
+              first: 'Биз ва бизнинг ҳамкорларимиз',
+              linkText: 'кукисга',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ', сингари технологиядан фойдаланамиз ва уларни сизга янада яхшироқ онлайн маҳсулот тақдим этиш, контентни ва ҳамда сизга кўрсатилаётган рекламани айнан сизга мослаш мақсадида тўплаймиз. Агар рози бўлсангиз, марҳамат қилиб буни бизга маълум қилинг!',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'Ҳа, мен розиман',
+          reject: 'Йўқ, мени ўзгартириш саҳифасига етакланг',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
@@ -145,41 +146,48 @@ export const service = {
           subtitle:
             'Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi',
         },
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'ЖОНЛИ ЭФИР',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: 'Энг кўп ўқилган',
+      lastUpdated: 'Сўнгги янгиланиш: ',
     },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        text: 'Нега сиз Би-би-сига ишонишингиз мумкин?',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text:
+          'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          href: 'https://www.bbc.com/uzbek/institutional-36824297',
+          text: 'Фойдаланиш шартлари',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          href: 'https://www.bbc.com/uzbek/institutional-36824300',
+          text: 'Шахсий ҳаёт махфийлиги сиёсати',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: 'Куки(Cookies)',
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          href: 'https://www.bbc.com/uzbek/institutional-36826360',
+          text: 'Би-би-си билан боғланиш',
         },
       ],
-      copyrightText: 'BBC. BBC ташқи интернет саҳифалар учун масъул эмас',
+      copyrightText: 'BBC. Би-би-си ташқи сайтлар мазмуни учун масъул эмас.',
     },
     fonts: [],
     timezone: 'GMT',
@@ -233,6 +241,7 @@ export const service = {
         url: '/uzbek/media/photogalleries',
       },
     ],
+    navigationSection: 'Бўлимлар',
   },
 };
 

@@ -67,11 +67,20 @@ This process is repeated for each block within an article, ultimately rendering 
 
 Each render is passed through a set of HOC's (Higher Order Components) to enhance the page, these HOC's are;
 
+- withVariant
 - withContexts
 - withPageWrapper
 - withLoading
 - withError
 - withData
+
+#### withVariant
+
+The variant HOC ensures that services that have variants (e.g. `simp`, `lat`) always redirects to a url that renders the appropriate variant.
+
+If a user navigates to a url without providing the variant, and variant is set in cookie, the cookie variant page is rendered. Otherwise, the default variant page is rendered
+
+If a user navigates to a url with a variant, and variant is set in cookie, the cookie variant page is rendered. Otherwise, the requested variant page is rendered.
 
 #### withContexts
 
@@ -280,20 +289,40 @@ We have [Jest](https://facebook.github.io/jest) unit tests that can be run with 
 
 #### Main application
 
-We use [Cypress](https://www.cypress.io/) for our end-to-end tests. For running the tests locally, run this single command:
+We use [Cypress](https://www.cypress.io/) for our end-to-end tests. To run the [smoke tests](https://github.com/bbc/simorgh/tree/latest/cypress/integration#how-our-cypress-tests-work) locally, run this single command:
 
 ```
 npm run test:e2e
 ```
 
 It will spin up a production server on port 7080 and run the Cypress tests against that.
-For running tests using interactive, run:
+To run the smoke tests interactively, run:
 
 ```
 npm run test:e2e:interactive
 ```
 
 This loads a user interface which easily allows for individual tests to be run alongside a visual stream of the browser, as the tests run.
+
+#### Environment variables
+
+There are several environment variables you can use with our test suite, which are:
+
+| Envionment variable  | Effect                                                                                                        | Possible values                                   |
+| -------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| CYPRESS_ONLY_SERVICE | Restricts to running only the specified service                                                               | A single service i.e. `CYPRESS_ONLY_SERVICE=urdu` |
+| CYPRESS_APP_ENV      | Runs the tests in a specific environment                                                                      | `test`, `local`, `live`                           |
+| CYPRESS_SMOKE        | Runs only smoke tests if true                                                                                 | `true`, `false`                                          |
+| CYPRESS_UK           | See [running e2es in the UK against Live](https://github.com/bbc/simorgh/#running-e2e-in-the-uk-against-live) | `true`, `false`                                           |
+| CYPRESS_SKIP_EU      | See [running e2es outside EU](https://github.com/bbc/simorgh/#running-e2e-outside-eu)                         | `true`, `false`                                           |
+
+These commands can be run in combination.
+
+#### Full suite of tests
+
+The default way to run the e2e suite aka `npm run test:e2e` or `npm run test:e2e:interactive` runs a subset of our tests, otherwise know as _smoke tests_. To run the full suite:
+
+`CYPRESS_SMOKE=false npm run test:e2e`
 
 #### Limiting scope of runs
 

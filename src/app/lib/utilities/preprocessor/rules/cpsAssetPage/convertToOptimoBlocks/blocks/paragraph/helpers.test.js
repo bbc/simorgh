@@ -37,15 +37,15 @@ describe('processBlock', () => {
     expect(processBlock(input)).toEqual(expected);
   });
 
-  it('should escape quotes for plain_text', () => {
+  it('should handle special characters for plain_text', () => {
     const input = {
-      text: 'Paragraph containing &quot;quote marks&quot;',
+      text: 'Paragraph containing special characters: &quot; &amp; &lt; &gt;',
       markupType: 'plain_text',
       type: 'paragraph',
     };
 
     const expected = {
-      text: 'Paragraph containing "quote marks"',
+      text: 'Paragraph containing special characters: " & < >',
       markupType: 'plain_text',
       type: 'paragraph',
     };
@@ -55,13 +55,13 @@ describe('processBlock', () => {
 
   it('should escape quotes for candy_xml', () => {
     const input = {
-      text: 'Paragraph containing <bold>&quot;quote marks&quot;</bold>',
+      text: 'Paragraph containing special characters: &quot; &amp; &lt; &gt;',
       markupType: 'candy_xml',
       type: 'paragraph',
     };
 
     const expected = {
-      text: 'Paragraph containing <bold>"quote marks"</bold>',
+      text: 'Paragraph containing special characters: " & < >',
       markupType: 'candy_xml',
       type: 'paragraph',
     };

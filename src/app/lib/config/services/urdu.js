@@ -139,6 +139,12 @@ export const service = {
         audio: 'آڈیو',
         photogallery: 'تصاویری گیلری',
         video: 'ویڈیو',
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'لائیو',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -148,7 +154,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/urdu/institutional-49282935',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'جانیے کہ آپ بی بی سی نیوز پر کیوں اعتماد کر سکتے ہیں',
       },
       externalLink: {
@@ -229,6 +235,7 @@ export const service = {
         url: '/urdu/media/photogalleries',
       },
     ],
+    navigationSection: 'سیکشن',
   },
 };
 

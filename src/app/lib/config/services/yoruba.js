@@ -144,6 +144,12 @@ export const service = {
           title: 'Placeholder title',
           subtitle: 'Placeholder subtitle',
         },
+        listen: 'Gbọ́',
+        watch: 'Wò',
+        liveLabel: 'NÍ YÀJÓYÀJÓ',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -153,7 +159,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/yoruba/institutional-48528718',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'Ìdí tí ẹ fi le è nígbàagbọ́ nínú ìròyìn BBC',
       },
       externalLink: {
@@ -205,6 +211,7 @@ export const service = {
         url: '/yoruba/popular/read',
       },
     ],
+    navigationSection: 'Àwọn abala',
   },
 };
 

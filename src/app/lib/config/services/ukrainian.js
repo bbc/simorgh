@@ -9,7 +9,7 @@ export const service = {
   default: {
     lang: `uk`,
     articleAuthor: `http://www.facebook.com/BBC.Ukrainian`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Оновлення даних',
     atiAnalyticsAppName: 'news-ukrainian',
     atiAnalyticsProducerId: '94',
     brandName: 'BBC News Україна',
@@ -18,12 +18,12 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',
     defaultImageAltText: 'BBC News Україна',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', зовнішнє посилання',
+    imageCaptionOffscreenText: 'Підпис до фото, ',
+    videoCaptionOffscreenText: 'Підпис до відео, ',
+    audioCaptionOffscreenText: 'Підпис до аудіо',
+    defaultCaptionOffscreenText: 'Підпис, ',
+    imageCopyrightOffscreenText: 'Автор фото, ',
     locale: `uk-UA`,
     datetimeLocale: `uk`,
     service: 'ukrainian',
@@ -43,15 +43,15 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
+      seeAll: 'Подивитись все',
       home: 'Головна',
-      currentPage: 'Current page',
+      currentPage: 'Поточна сторінка',
       skipLinkText: 'Перейти до змісту',
-      relatedContent: 'Related content',
+      relatedContent: 'Статті на цю ж тему',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'Медіаплеєр',
+        audioPlayer: 'Аудіоплеєр',
+        videoPlayer: 'Відеоплеєр',
       },
       error: {
         404: {
@@ -60,12 +60,12 @@ export const service = {
           message:
             'Можливо, ви ввели неправильну адресу. Будь ласка, перевірте адресу і написання.',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'Перевірте ще раз адресу посилання',
+            'Натисніть на кнопку "оновити" в браузері',
+            'Шукати сторінку в пошуковому вікні ВВС',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'Повернутися на головну',
+          callToActionFirst: 'Спробуйте зайти на головну сторінку ',
+          callToActionLinkText: 'ВВС News Україна',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/ukrainian',
         },
@@ -74,10 +74,10 @@ export const service = {
           title: '500 - Помилка',
           message: 'Сталася помилка. Будь ласка, перезавантажте сторінку.',
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            'Натиснути кнопку "оновити" у вашому браузері',
+            'Спробуйте пізніше',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
+          callToActionFirst: 'Спробуйте зайти на головну сторінку ',
           callToActionLinkText: 'Повернутися на головну',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/ukrainian',
@@ -85,49 +85,51 @@ export const service = {
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title:
+            'Ми оновили наші правила використання особистих даних і cookies',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Ми змінили правила використання особистих даних і cookies і хотіли б повідомити вам, що це означає для вас і ваших особистих даних.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Ми змінили правила використання особистих даних і cookies і хотіли б повідомити вам, що це означає для вас і ваших особистих даних.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
           accept: 'OK',
-          reject: "Find out what's changed",
+          reject: 'Подивитися, що змінилося',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'Повідомити, що ви погоджуєтесь з використанням cookies',
           description: {
             uk: {
-              first: 'We use ',
+              first: 'Ми використовуємо ',
               linkText: 'cookies',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' щоб вам було зручно користуватися сайтом. Повідомте нам, що ви погоджуєтесь з використанням цих cookies.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
+              first:
+                'Ми разом з нашими партнерами використовуємо технології, такі як ',
               linkText: 'cookies',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ', а також збираємо дані, щоб вам було зручно користуватися сайтом і щоб контент і реклама, яку ви бачите, відповідали вашим запитам. Будь ласка, повідомте, чи ви згодні.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'Так, згоден',
+          reject: 'Ні, мені потрібно переглянути налаштування',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
@@ -141,38 +143,44 @@ export const service = {
           subtitle:
             'ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua',
         },
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'LIVE',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: 'Найпопулярніше',
+      lastUpdated: 'Останнє оновлення: ',
     },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        text: 'Чому BBC заслуговує на довіру',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: 'Ознайомтеся з нашими правилами зовнішніх посилань.',
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          href: 'https://www.bbc.com/ukrainian/institutional-38144387',
+          text: 'Правила користування',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          href: 'https://www.bbc.com/ukrainian/institutional-38144827',
+          text: 'Особисті дані',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          href: 'https://www.bbc.com/ukrainian/institutional-38146278',
+          text: "Зв'язатися з BBC",
         },
       ],
       copyrightText:
@@ -254,6 +262,7 @@ export const service = {
         url: '/ukrainian/learning_english',
       },
     ],
+    navigationSection: 'Розділи',
   },
 };
 

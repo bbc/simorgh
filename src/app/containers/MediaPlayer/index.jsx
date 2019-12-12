@@ -30,7 +30,7 @@ const MediaPlayerContainer = ({
   assetType,
   showPlaceholder,
 }) => {
-  const { platform, origin } = useContext(RequestContext);
+  const { platform } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
   const isAmp = platform === 'amp';
@@ -63,11 +63,20 @@ const MediaPlayerContainer = ({
     aresMediaBlock,
   );
   const duration = moment.duration(rawDuration, 'seconds');
+  const durationSpokenPrefix = pathOr(
+    'Duration',
+    ['media', 'duration'],
+    translations,
+  );
+  const separator = ',';
 
   const mediaInfo = {
     title: path(['model', 'blocks', 0, 'model', 'title'], aresMediaBlock),
-    duration: formatDuration(duration),
-    durationSpoken: formatDuration(duration, ','),
+    duration: formatDuration({ duration, padMinutes: true }),
+    durationSpoken: `${durationSpokenPrefix} ${formatDuration({
+      duration,
+      separator,
+    })}`,
     datetime: path(
       ['model', 'blocks', 0, 'model', 'versions', 0, 'durationISO8601'],
       aresMediaBlock,
@@ -93,7 +102,6 @@ const MediaPlayerContainer = ({
     requestUrl: `${assetId}/${versionId}/${lang}`,
     type: assetType,
     isAmp,
-    origin,
   });
   const iframeTitle = pathOr(
     'Media player',
@@ -103,7 +111,7 @@ const MediaPlayerContainer = ({
 
   return (
     <>
-      <Metadata aresMediaBlock={aresMediaBlock} />
+      <Metadata aresMediaBlock={aresMediaBlock} embedSource={embedSource} />
       <Figure>
         {isAmp ? (
           <AmpMediaPlayer

@@ -147,6 +147,12 @@ export const service = {
         audio: 'Áudio',
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',
+        listen: 'Listen',
+        watch: 'Assista',
+        liveLabel: 'AO VIVO',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -165,11 +171,15 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/portuguese/institutional-36202448',
           text: 'Termos de Uso',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/portuguese/institutional-36202452',
+          text: 'Sobre a BBC',
+        },
+        {
+          href: 'https://www.bbc.com/portuguese/institutional-36202454',
           text: 'Política de privacidade',
         },
         {
@@ -177,7 +187,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/portuguese/institutional-36202456',
           text: 'Fale com a BBC',
         },
       ],
@@ -239,6 +249,7 @@ export const service = {
         url: '/portuguese/media/video',
       },
     ],
+    navigationSection: 'Seções',
   },
 };
 

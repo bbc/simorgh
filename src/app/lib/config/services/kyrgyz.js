@@ -147,6 +147,12 @@ export const service = {
           subtitle:
             'Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.',
         },
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'LIVE',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -156,7 +162,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/kyrgyz/institutional-49677275',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'Эмнеге BBC News ишенсе болот?',
       },
       externalLink: {
@@ -229,6 +235,7 @@ export const service = {
         url: '/kyrgyz/blog',
       },
     ],
+    navigationSection: 'Бөлүмдөр',
   },
 };
 

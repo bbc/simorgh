@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BulletedListItemContainer should render rtl text correctly 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+}
+
+<li
+  class="c0"
+  role="listitem"
+>
+  It is unordered
+</li>
+`;
+
+exports[`BulletedListItemContainer should render text correctly 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+}
+
+<li
+  class="c0"
+  role="listitem"
+>
+  Here is a list
+</li>
+`;

@@ -147,6 +147,12 @@ export const service = {
           subtitle:
             'Mitikasi Leo ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku.',
         },
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'Moja kwa moja',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -216,6 +222,7 @@ export const service = {
         url: '/swahili/media/photogalleries',
       },
     ],
+    navigationSection: 'Yaliyomo',
   },
 };
 

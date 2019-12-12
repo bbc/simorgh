@@ -9,11 +9,12 @@ storiesOf('Containers|Brand', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
-  .add('default', ({ service }) => {
+  .add('default', ({ service, variant }) => {
     // eslint-disable-next-line import/no-dynamic-require,global-require
     const serviceConfig = require(`../../lib/config/services/${service}`)
       .service;
-    const configVariant = serviceConfig.default;
+
+    const configVariant = serviceConfig[variant];
 
     return (
       <ServiceContextProvider service={service}>

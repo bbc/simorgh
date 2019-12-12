@@ -148,6 +148,12 @@ export const service = {
           title: 'Placeholder title',
           subtitle: 'Placeholder subtitle',
         },
+        listen: 'Gee ntị',
+        watch: 'Lee',
+        liveLabel: 'NA EME UGBU A',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     mostRead: {
@@ -174,7 +180,7 @@ export const service = {
     ],
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/igbo/institutional-48529074',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
       },
       externalLink: {
@@ -203,6 +209,7 @@ export const service = {
           text: 'Kpọtụrụ BBC',
         },
       ],
+      navigationSection: 'Ngalaba',
       copyrightText:
         'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
     },

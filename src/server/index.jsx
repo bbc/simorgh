@@ -219,17 +219,23 @@ server
 
       data.path = urlPath;
 
-      res.status(status).send(
-        await renderDocument({
-          bbcOrigin,
-          data,
-          isAmp,
-          routes,
-          service,
-          url,
-          variant,
-        }),
-      );
+      const result = await renderDocument({
+        bbcOrigin,
+        data,
+        isAmp,
+        routes,
+        service,
+        url,
+        variant,
+      });
+
+      if (result.redirectUrl) {
+        res.redirect(301, result.redirectUrl);
+      } else if (result.html) {
+        res.status(status).send(result.html);
+      } else {
+        throw new Error('unknown result');
+      }
     } catch ({ message, status }) {
       // Return an internal server error for any uncaught errors
       logger.error(`status: ${status || 500} - ${message}`);

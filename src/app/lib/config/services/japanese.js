@@ -8,18 +8,18 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `ja`,
-    articleAuthor: `https://www.facebook.com/bbcnewsjapan/`,
+    articleAuthor: `https://www.facebook.com/bbcnews/`,
     articleTimestampPrefix: '更新',
     atiAnalyticsAppName: 'news-japanese',
     atiAnalyticsProducerId: '56',
     brandName: 'BBCニュース',
-    product: 'BBC',
+    product: 'BBC News',
     serviceLocalizedName: 'ニュース',
     defaultImage:
-      'https://news.files.bbci.co.uk/ws/img/logos/twitter/bbc_japan_1024.png',
+      'https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBCニュース',
     dir: `ltr`,
-    externalLinkText: 'は外部ページです',
+    externalLinkText: ' は外部ページです',
     imageCaptionOffscreenText: '画像説明 ',
     videoCaptionOffscreenText: '動画説明 ',
     audioCaptionOffscreenText: '音声説明 ',
@@ -28,7 +28,7 @@ export const service = {
     locale: `ja-JP`,
     datetimeLocale: `ja`,
     service: 'japanese',
-    serviceName: 'ニュース',
+    serviceName: 'Japan',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsjapan',
     twitterSite: '@bbcnewsjapan',
@@ -57,7 +57,7 @@ export const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404 - ページが見つかりません',
+          title: 'ページが見つかりません',
           message:
             'お探しのページが見つかりません。こちらを開いてみてください:',
           solutions: [
@@ -72,7 +72,7 @@ export const service = {
         },
         500: {
           statusCode: '500',
-          title: '500 - 内部サーバーエラー',
+          title: '"内部サーバーエラー"',
           message:
             '申し訳ありません。お探しのページは現在開くことができません。こちらをお試しください:',
           solutions: ['ブラウザのページ更新ボタンを押す', '後でまた開く'],
@@ -135,6 +135,12 @@ export const service = {
         audio: '音声',
         photogallery: '写真ギャラリー',
         video: 'ビデオ',
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'LIVE',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -215,6 +221,7 @@ export const service = {
         url: 'https://www.bbcworldnews-japan.com/',
       },
     ],
+    navigationSection: 'ジャンル',
   },
 };
 

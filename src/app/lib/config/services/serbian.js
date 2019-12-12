@@ -11,7 +11,7 @@ import withContext from '../../../contexts/utils/withContext';
 
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/BBCNewsnasrpskom`,
-  articleTimestampPrefix: 'Updated',
+  articleTimestampPrefix: 'Ажурирано:',
   atiAnalyticsAppName: 'news-serbian',
   atiAnalyticsProducerId: '81',
   brandName: 'BBC News na srpskom',
@@ -20,12 +20,12 @@ const baseServiceConfig = {
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png',
   defaultImageAltText: 'BBC News na srpskom',
   dir: `ltr`,
-  externalLinkText: ', external',
-  imageCaptionOffscreenText: 'Image caption, ',
-  videoCaptionOffscreenText: 'Video caption, ',
-  audioCaptionOffscreenText: 'Audio caption',
-  defaultCaptionOffscreenText: 'Caption, ',
-  imageCopyrightOffscreenText: 'Image source, ',
+  externalLinkText: ', спољна страница',
+  imageCaptionOffscreenText: 'Потпис испод фотографије, ',
+  videoCaptionOffscreenText: 'Потпис испод видеа, ',
+  audioCaptionOffscreenText: 'Потпис испод аудио записа',
+  defaultCaptionOffscreenText: 'потпис [caption], ',
+  imageCopyrightOffscreenText: 'Аутор фотографије, ',
   service: 'serbian',
   serviceName: 'News na srpskom',
   themeColor: `${C_POSTBOX}`,
@@ -42,15 +42,15 @@ const baseServiceConfig = {
     brandLogoColour: `${C_WHITE}`,
   },
   translations: {
-    seeAll: 'See all',
-    home: 'Home',
-    currentPage: 'Current page',
-    skipLinkText: 'Skip to content',
-    relatedContent: 'Related content',
+    seeAll: 'Погледајте све',
+    home: 'Главна страница',
+    currentPage: 'Отворена страница',
+    skipLinkText: 'Пређите на садржај',
+    relatedContent: 'Повезано',
     mediaAssetPage: {
-      mediaPlayer: 'Media player',
-      audioPlayer: 'Audio player',
-      videoPlayer: 'Video player',
+      mediaPlayer: 'Медиа плејер',
+      audioPlayer: 'Аудио плејер',
+      videoPlayer: 'Видео плејер',
     },
     error: {
       404: {
@@ -59,12 +59,12 @@ const baseServiceConfig = {
         message:
           'Razlog može biti što ste veb-adresu uneli pogrešno. Proverite adresu i da li ima grešaka u kucanju.',
         solutions: [
-          'Double checking the url',
-          'Hitting the refresh button in your browser',
-          'Searching for this page using the BBC search bar',
+          'Проверите још једном интернет адресу',
+          'Притисните тастер за освежавање у вашем претраживачу',
+          'Потражите ову страницу користећи ББЦ поље за претрагу',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC News početna stranica',
+        callToActionFirst: 'Молимо вас да посетите славну страницу ',
+        callToActionLinkText: 'BBC News на српском',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/serbian',
       },
@@ -73,60 +73,60 @@ const baseServiceConfig = {
         title: '500 - Greška',
         message: 'Došlo je do greške. Osvežite stranicu',
         solutions: [
-          'Hitting the refresh button in your browser',
-          'Coming back again later',
+          'Притисните тастер за освежавање у вашем претраживачу',
+          'Посетите касније страницу',
         ],
-        callToActionFirst: 'Alternatively, please visit the ',
-        callToActionLinkText: 'BBC News početna stranica',
+        callToActionFirst: 'Молимо вас да посетите славну страницу ',
+        callToActionLinkText: 'BBC News на српском',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/serbian',
       },
     },
     consentBanner: {
       privacy: {
-        title: "We've updated our Privacy and Cookies Policy",
+        title: 'Освежили смо нашу политику приватности и колачића',
         description: {
           uk: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              'Увели смо важне промене у нашу политику приватности и колачића и хоћемо да знате шта то значи за вас и ваше податке',
             linkText: null,
             last: null,
             linkUrl: null,
           },
           international: {
             first:
-              "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+              'Увели смо важне промене у нашу политику приватности и колачића и хоћемо да знате шта то значи за вас и ваше податке',
             linkText: null,
             last: null,
             linkUrl: null,
           },
         },
         accept: 'OK',
-        reject: "Find out what's changed",
+        reject: 'Сазнајте шта се променило',
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
-        title: 'Let us know you agree to cookies',
+        title: 'Обавестите нас да ли се слажете са коришћењем колачића',
         description: {
           uk: {
-            first: 'We use ',
-            linkText: 'cookies',
+            first: 'Користимо ',
+            linkText: 'колачиће',
             last:
-              ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+              ' да бисмо вам пружили најбоље искуство на интернету. Молимо вас да нас обавестите да ли се слажете са употребом свих колачића.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
-            first: 'We and our partners use technologies, such as ',
-            linkText: 'cookies',
+            first: 'Ми и наши партнери користимо технологије, попут ',
+            linkText: 'колачића',
             last:
-              ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+              ', и прикупљамо податке претраживача да бисмо вам понудили најквалитетније искуство на интернету и персонализовали садржај и огласе који вам се приказују. Молимо вас да нас обавестите да ли се слажете.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
         },
-        accept: 'Yes, I agree',
-        reject: 'No, take me to settings',
+        accept: 'Да, слажем се',
+        reject: 'Не, вратите ме на подешавања',
         rejectUrl:
           'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
       },
@@ -135,17 +135,23 @@ const baseServiceConfig = {
       audio: 'Zvuk',
       photogallery: 'Galerija slika',
       video: 'Video',
+      listen: 'Listen',
+      watch: 'Watch',
+      liveLabel: 'УЖИВО',
+      previousRadioShow: 'Previous radio show',
+      nextRadioShow: 'Next radio show',
+      duration: 'Duration',
     },
   },
   brandSVG,
   mostRead: {
-    header: 'Most read',
-    lastUpdated: 'Last updated: ',
+    header: 'Најчитаније',
+    lastUpdated: 'Последњи пут ажурирано: ',
   },
   footer: {
     trustProjectLink: {
       href: 'https://www.bbc.com/news/help-41670342',
-      text: 'Why you can trust the BBC',
+      text: 'Зашто ББЦ заслужује ваше поверење',
     },
     externalLink: {
       href: 'https://www.bbc.co.uk/help/web/links/',
@@ -154,19 +160,23 @@ const baseServiceConfig = {
     links: [
       {
         href: 'https://www.bbc.com/terms',
-        text: 'Terms of Use',
+        text: 'Правила коришћења',
+      },
+      {
+        href: 'https://www.bbc.co.uk/aboutthebbc/',
+        text: 'О ББЦ-ју',
       },
       {
         href: 'https://www.bbc.com/privacy/',
-        text: 'Privacy Policy',
+        text: 'Правила приватности',
       },
       {
         href: 'https://www.bbc.com/usingthebbc/cookies/',
-        text: 'Cookies',
+        text: 'Колачићи',
       },
       {
-        href: 'https://www.bbc.com/contact/',
-        text: 'Contact the BBC',
+        href: 'https://www.bbc.com/serbian/cyr/institutional-43543431',
+        text: 'Контактирајте ББЦ',
       },
     ],
     copyrightText:
@@ -209,6 +219,7 @@ export const service = {
         url: '/serbian/lat/popular/read',
       },
     ],
+    navigationSection: 'Odeljci',
   },
   cyr: {
     ...baseServiceConfig,
@@ -242,6 +253,7 @@ export const service = {
         url: '/serbian/cyr/popular/read',
       },
     ],
+    navigationSection: 'Одељци',
   },
 };
 

@@ -137,6 +137,12 @@ export const service = {
         audio: 'Audio',
         photogallery: 'Galeri Foto',
         video: 'Video',
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'LANGSUNG',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -146,7 +152,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/indonesia/institutional-49283175',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'Alasan Anda dapat mempercayai BBC News',
       },
       externalLink: {
@@ -230,6 +236,7 @@ export const service = {
         url: '/indonesia/bahasa_inggris',
       },
     ],
+    navigationSection: 'Kategori',
     timezone: 'Asia/Jakarta',
   },
 };

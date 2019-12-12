@@ -10,7 +10,7 @@ exports[`CanonicalChartbeatAnalytics should return the helmet wrapper with the s
       
         (function(){
           var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"This is an article","uid":123};
+          var config = {"domain":"test-domain","type":"article","sections":"section1 section2","chartbeatUID":1111,"virtualReferrer":null,"useCanonical":true,"title":"Page A","uid":123};
           for (var key in config) {
             _sf_async_config[key] = config[key];
           }

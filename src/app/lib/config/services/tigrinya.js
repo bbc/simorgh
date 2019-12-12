@@ -12,7 +12,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `ti`,
-    articleAuthor: `https://www.facebook.com/bbcnewstigrinya`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ዝተመሓየሸ',
     atiAnalyticsAppName: 'news-tigrinya',
     atiAnalyticsProducerId: '91',
@@ -22,7 +22,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png',
     defaultImageAltText: 'BBC News ትግርኛ',
     dir: `ltr`,
-    externalLinkText: ' ደጋዊ',
+    externalLinkText: ', ደጋዊ',
     imageCaptionOffscreenText: 'መግለጺ ስእሊ, ',
     videoCaptionOffscreenText: 'መግለጺ ቪድዮ, ',
     audioCaptionOffscreenText: 'መግለጺ ድምጺ, ',
@@ -31,10 +31,10 @@ export const service = {
     locale: `ti-ET`,
     datetimeLocale: `ti`,
     service: 'tigrinya',
-    serviceName: 'News ትግርኛ',
+    serviceName: 'Tigrinya',
     themeColor: `${C_POSTBOX}`,
-    twitterCreator: '@bbcafrica',
-    twitterSite: '@bbcafrica',
+    twitterCreator: '@bbcnews',
+    twitterSite: '@bbcnews',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
@@ -135,6 +135,12 @@ export const service = {
         audio: 'ድምፂ',
         photogallery: 'ስእልታት',
         video: 'ቪድዮ',
+        listen: 'ናይ መወዳእታ ፍጻመታት',
+        watch: 'ተመልከት',
+        liveLabel: 'ቀጥታ ስርጭት',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -144,7 +150,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/tigrinya/institutional-49283259',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'ን BBC News ንምንታይ ክትኣምንዎ ከምዘለኩም',
       },
       externalLink: {
@@ -190,6 +196,7 @@ export const service = {
         url: '/tigrinya/popular/read',
       },
     ],
+    navigationSection: 'ክፍልታት',
     timezone: 'Africa/Addis_Ababa',
   },
 };

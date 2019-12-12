@@ -9,7 +9,7 @@ export const service = {
   default: {
     lang: `hi`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'अपडेटेड',
     atiAnalyticsAppName: 'news-hindi',
     atiAnalyticsProducerId: '52',
     brandName: 'BBC News हिंदी',
@@ -18,12 +18,12 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png',
     defaultImageAltText: 'BBC News हिंदी',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', बाहरी सामग्री',
+    imageCaptionOffscreenText: 'इमेज कैप्शन, ',
+    videoCaptionOffscreenText: 'वीडियो कैप्शन, ',
+    audioCaptionOffscreenText: 'ऑडियो कैप्शन, ',
+    defaultCaptionOffscreenText: 'कैप्शन, ',
+    imageCopyrightOffscreenText: 'इमेज स्रोत, ',
     locale: `hi-IN`,
     datetimeLocale: `hi`,
     service: 'hindi',
@@ -44,98 +44,100 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
+      seeAll: 'सब देखें',
       home: 'होम पेज',
-      currentPage: 'Current page',
+      currentPage: 'मौजूदा पन्ना',
       skipLinkText: 'सामग्री को स्किप करें',
-      relatedContent: 'Related content',
+      relatedContent: 'संबंधित समाचार',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'मीडिया प्लेयर',
+        audioPlayer: 'ऑडिया प्लेयर',
+        videoPlayer: 'वीडियो प्लेयर',
       },
       error: {
         404: {
           statusCode: '404',
-          title: '404 - पन्ना नहीं मिला',
+          title: 'पेज नहीं मिला',
           message:
-            'वेब एड्रेस गलत टाइप किए जाने के कारण ऐसा हो सकता है. कृपया वेबस एड्रेस और उसकी वर्तनी को जांचिए.',
+            'माफ़ी चाहते हैं, जो वह पन्ना नहीं दिखा पा रहे हैं जिसे आप ढूँढ रहे हैं. कृपया कोशिश करें:',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'URL को दोबारा जांचने की',
+            'ब्राउज़र का रिफ़्रेश बटन दबाएं',
+            'इस पेज को बीबीसी सर्च बार खोलकर खोजने की कोशिश करें',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'समाचार',
-          callToActionLast: '',
+          callToActionFirst: 'विकल्प के तौर पर हमारे ',
+          callToActionLinkText: 'होमपेज',
+          callToActionLast: 'पर जाएं',
           callToActionLinkUrl: 'https://www.bbc.com/hindi',
         },
         500: {
           statusCode: '500',
-          title: '500 - Error',
-          message: 'त्रुटि पाई गई. कृपया पन्ने को रिफ्रेश कीजिए.',
+          title: 'इंटरनल सर्वर एरर',
+          message:
+            'माफ़ी चाहते हैं, जो वह पन्ना नहीं दिखा पा रहे हैं जिसे आप ढूँढ रहे हैं. कृपया कोशिश करें:',
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            'ब्राउज़र का रिफ़्रेश बटन दबाएं',
+            'कुछ समय बाद कोशिश करें',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'समाचार',
-          callToActionLast: '',
+          callToActionFirst: 'विकल्प के तौर पर हमारे ',
+          callToActionLinkText: 'होमपेज',
+          callToActionLast: 'पर जाएं',
           callToActionLinkUrl: 'https://www.bbc.com/hindi',
         },
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title: 'हमने अपनी गोपनीयता और कुकीज़ की नीति को अपडेट किया है',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'हमने अपनी कुकीज़ और गोपनीयता की नीति में अहम बदलाव किए हैं, आपको जानना चाहिए कि इसका आप पर और आपके डेटा पर क्या असर होगा.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'हमने अपनी कुकीज़ और गोपनीयता की नीति में अहम बदलाव किए हैं, आपको जानना चाहिए कि इसका आप पर और आपके डेटा पर क्या असर होगा.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
-          accept: 'OK',
-          reject: "Find out what's changed",
+          accept: 'ओके',
+          reject: 'जानें कि क्या बदला है',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'हमें बताएं कि आप कुकीज़ को लेकर सहमत हैं',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
+              first: 'हम ',
+              linkText: 'कुकीज़',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                'का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
-              linkText: 'cookies',
+              first:
+                'हम और हमारे पार्टनर इस तरह की कुछ तकनीकों का इस्तेमाल करते हैं ',
+              linkText: 'कुकीज़',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ' का इस्तेमाल करके हम आपके ब्राउज़िंग डेटा की ज़रिए आपको बेहतर और ख़ास तौर पर आपके लिए सेवाएं देेते हैं. इससे हमें आपको सही कंटेंट और उपयुक्त विज्ञापन दिखाने में मदद मिलती है. हमें बताएं कि क्या आप इस पर राज़ी हैं.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'हां, मैं राज़ी हूं',
+          reject: 'नहीं, मुझे सेटिंग्स पर ले चलें',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
       media: {
-        audio: 'आडियो',
-        photogallery: 'तस्वीरें',
+        audio: 'ऑडियो',
+        photogallery: 'फ़ोटो गैलरी',
         video: 'वीडियो',
         bbc_hindi_radio: {
           title: 'बीबीसी हिंदी',
@@ -147,42 +149,52 @@ export const service = {
           subtitle:
             'बीबीसी दुनिया में देखिए ताज़ा अंतरराष्ट्रीय और क्षेत्रीय ख़बरें, उनका विश्लेषण और सोशल मीडिया की हलचल. साथ ही होंगी कई रोचक ख़बरें भी.',
         },
+        listen: 'Listen',
+        watch: 'देखिए',
+        liveLabel: 'लाइव',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: 'सबसे अधिक पढ़ी गईं',
+      lastUpdated: 'अंतिम अपडेट: ',
     },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        text: 'आप बीबीसी पर क्यों भरोसा कर सकते हैं',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: 'बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें.',
       },
       links: [
         {
           href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          text: 'इस्तेमाल की शर्तें',
+        },
+        {
+          href: 'https://www.bbc.com/hindi/institutional-37343168',
+          text: 'बीबीसी के बारे में',
         },
         {
           href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          text: 'निजता की नीति',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: 'कुकीज़',
         },
         {
           href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          text: 'बीबीसी से संपर्क करें',
         },
       ],
       copyrightText:
-        'बीबीसी। बीबीसी बाहरी इंटरनेट साइट की सामग्री के लिए ज़िम्मेदार नहीं है',
+        'BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है.',
     },
     fonts: [],
     timezone: 'Asia/Kolkata',
@@ -228,6 +240,7 @@ export const service = {
         url: '/hindi/in_depth',
       },
     ],
+    navigationSection: 'सेक्शन',
   },
 };
 
