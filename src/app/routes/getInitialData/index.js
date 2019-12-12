@@ -18,11 +18,7 @@ const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)
   : process.env.SIMORGH_BASE_URL;
 
-const getUrl = pathname => {
-  const url = `${baseUrl}${pathname.replace(ampRegex, '')}.json`;
-  logger.info(`Data: [${url}]`);
-  return url;
-};
+const getUrl = pathname => `${baseUrl}${pathname.replace(ampRegex, '')}.json`;
 
 const handleResponse = async response => {
   const { status } = response;
@@ -64,8 +60,10 @@ const handleError = error => {
 };
 
 const fetchData = pathname => {
-  const url = getUrl(pathname);
-  return fetch(url) // Remove .amp at the end of pathnames for AMP pages.
+  const url = getUrl(pathname); // Remove .amp at the end of pathnames for AMP pages.
+  logger.info(`DataRequest: [${url}]`);
+
+  return fetch(url)
     .then(handleResponse)
     .then(checkForError(url))
     .catch(handleError);
