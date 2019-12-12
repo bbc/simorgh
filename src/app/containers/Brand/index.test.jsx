@@ -3,6 +3,7 @@ import { render } from '@testing-library/react';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { latin } from '@bbc/gel-foundations/scripts';
 import BrandContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
 
@@ -19,6 +20,14 @@ const newsServiceContextStub = {
   },
 };
 
+const variantServiceContextStub = {
+  ...newsServiceContextStub,
+  script: latin,
+  variant: 'test',
+  scriptLinkText: 'Test',
+  scriptLinkOffscreenText: 'Test-variant',
+};
+
 const BrandContainerWithContext = context => (
   <ServiceContext.Provider value={context}>
     <BrandContainer />
@@ -29,6 +38,11 @@ describe(`BrandContainer`, () => {
   shouldMatchSnapshot(
     'should render correctly',
     BrandContainerWithContext(newsServiceContextStub),
+  );
+
+  shouldMatchSnapshot(
+    'should render script link correctly',
+    BrandContainerWithContext(variantServiceContextStub),
   );
 
   describe('assertions', () => {

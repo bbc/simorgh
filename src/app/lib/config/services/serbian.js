@@ -193,8 +193,9 @@ export const service = {
     locale: `sr-latn`,
     script: latinDiacritics,
     datetimeLocale: `sr`,
-    scriptLinkVariant: 'Lat',
-    variantOffscreenText: 'Latin',
+    scriptLinkText: 'Lat',
+    scriptLinkOffscreenText: 'Latin',
+    variant: 'lat',
     navigation: [
       {
         title: 'Početna strana',
@@ -229,8 +230,9 @@ export const service = {
     locale: `sr-cyrl`,
     script: cyrillicAndLatin,
     datetimeLocale: `sr-cyrl`,
-    scriptLinkVariant: 'Ћир',
-    variantOffscreenText: 'Cyrillic',
+    scriptLinkText: 'Ћир',
+    scriptLinkOffscreenText: 'Cyrillic',
+    variant: 'cyr',
     navigation: [
       {
         title: 'Почетна страна',
