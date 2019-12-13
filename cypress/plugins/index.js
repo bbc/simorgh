@@ -1,3 +1,4 @@
+const cucumber = require('cypress-cucumber-preprocessor').default;
 const envConfig = require('../support/config/envs');
 
 /* eslint-disable no-param-reassign */
@@ -13,6 +14,8 @@ module.exports = (on, config) => {
   console.log('UK:', config.env.UK);
   console.log('\n\n\n\n\n');
   /* eslint-enable no-console */
+
+  on('file:preprocessor', cucumber());
 
   return config;
 };
