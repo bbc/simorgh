@@ -5,14 +5,14 @@ import ScriptLink from '@bbc/psammead-script-link';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { bool } from 'prop-types';
 import {
-  getPreferredVariant,
+  // getPreferredVariant,
   setPreferredVariantCookie,
 } from '#contexts/UserContext/cookies';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const setCookie = (service, scriptLinkVariant) => {
-  const existingCookie = getPreferredVariant(service, scriptLinkVariant);
-  if (existingCookie) return null;
+  // const existingCookie = getPreferredVariant(service, scriptLinkVariant);
+  // if (existingCookie) return null;
   return setPreferredVariantCookie(service, scriptLinkVariant);
 };
 
