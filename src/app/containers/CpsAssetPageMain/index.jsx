@@ -50,7 +50,7 @@ const CpsAssetPageMain = ({ pageData }) => {
         description={summary}
         openGraphType="website"
       />
-      <LinkedData type="Article" seoTitle={title} />
+      <LinkedData type="Article" seoTitle={title} headline={title} />
       <ATIAnalytics data={pageData} />
       <GhostGrid as="main" role="main">
         <GridItemConstrainedMedium>
