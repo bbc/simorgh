@@ -23,7 +23,7 @@ const newsServiceContextStub = {
 const variantServiceContextStub = {
   ...newsServiceContextStub,
   script: latin,
-  variant: 'test',
+  scriptLinkVariant: 'test',
   scriptLinkText: 'Test',
   scriptLinkOffscreenText: 'Test-variant',
 };

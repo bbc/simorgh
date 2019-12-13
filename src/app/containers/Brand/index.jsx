@@ -36,7 +36,7 @@ const BrandContainer = props => {
     script,
     scriptLinkText,
     scriptLinkOffscreenText,
-    variant = null,
+    scriptLinkVariant = null,
   } = useContext(ServiceContext);
   const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;
@@ -45,12 +45,12 @@ const BrandContainer = props => {
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
   const scriptLink =
-    variant &&
+    scriptLinkVariant &&
     renderScriptLink(
       script,
       service,
-      variant,
-      `/${service}/${variant}`,
+      scriptLinkVariant,
+      `/${service}/${scriptLinkVariant}`,
       scriptLinkText,
       scriptLinkOffscreenText,
     );
@@ -66,7 +66,7 @@ const BrandContainer = props => {
       maxWidth={maxWidth}
       svg={brandSVG}
       url={`/${service}`}
-      scriptLink={scriptLink && scriptLink}
+      scriptLink={scriptLink}
       skipLink={renderSkipLink(service, script)}
       {...props}
     />
