@@ -101,11 +101,14 @@ describe('CpsAssetPageMain', () => {
       ));
     });
 
+    it('should render component', () => {
+      expect(asFragment()).toMatchSnapshot();
+    });
+
     it('should render paragraph', () => {
       const paragraphText = getBlockTextAtIndex(1, pidginPageData);
 
       expect(getByText(escapedText(paragraphText))).toBeInTheDocument();
-      expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render image', () => {
@@ -116,7 +119,6 @@ describe('CpsAssetPageMain', () => {
 
       // Images not rendered properly due to lazyload, therefore can only check caption text
       expect(getByText(escapedText(imageCaption))).toBeInTheDocument();
-      expect(asFragment()).toMatchSnapshot();
     });
 
     describe('AV player', () => {
@@ -166,7 +168,6 @@ describe('CpsAssetPageMain', () => {
         expect(
           document.querySelector(`iframe[src*=${liveStreamSource}]`),
         ).not.toBeNull();
-        expect(asFragment()).toMatchSnapshot();
       });
     });
 
@@ -177,9 +178,8 @@ describe('CpsAssetPageMain', () => {
         return path(['content', 'model', 'blocks', index], processedPageData);
       };
 
-      beforeEach(() => {
+      beforeAll(() => {
         headingText = getBlockTextAtIndex(2, pidginPageData);
-        expect(asFragment()).toMatchSnapshot();
       });
 
       it('should render faux headline', () => {
@@ -201,14 +201,12 @@ describe('CpsAssetPageMain', () => {
       const subHeadingText = getBlockTextAtIndex(3, pidginPageData);
 
       expect(getByText(escapedText(subHeadingText))).toBeInTheDocument();
-      expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render crosshead', () => {
       const crossHeadText = getBlockTextAtIndex(4, pidginPageData);
 
       expect(getByText(escapedText(crossHeadText))).toBeInTheDocument();
-      expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render timestamp', () => {
@@ -229,5 +227,16 @@ describe('CpsAssetPageMain', () => {
 
     expect(document.querySelector('div[class^=PopOut]')).toBeNull();
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('has a single "main" element, and a single "complementary" element (a11y)', async () => {
+    const pageData = await preprocessor(
+      pidginPageData,
+      cpsAssetPreprocessorRules,
+    );
+
+    render(createAssetPage({ pageData }, 'pidgin'));
+    expect(document.querySelectorAll(`[role='main']`).length).toBe(1);
+    expect(document.querySelectorAll(`[role='complementary']`).length).toBe(1);
   });
 });
