@@ -99,12 +99,12 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   content: ' ';
   display: inline-block;
   width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-left: -2rem;
 }
 
 .c15 {
-  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .c4 {
@@ -692,74 +692,30 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
         role="list"
       >
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                Ўзбек деҳқонининг косаси нега оқармайди
-              </p>
-            </div>
-          </div>
+          Ўзбек деҳқонининг косаси нега оқармайди
         </li>
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                Ўзбек деҳқонининг косаси нега оқармайди
-              </p>
-            </div>
-          </div>
+          Ўзбек деҳқонининг косаси нега оқармайди
         </li>
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <b>
-                  Ўзбек деҳқонининг косаси нега оқармайди
-                </b>
-              </p>
-            </div>
-          </div>
+          <b>
+            Ўзбек деҳқонининг косаси нега оқармайди
+          </b>
         </li>
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                Ўзбек деҳқонининг косаси нега оқармайди
-              </p>
-            </div>
-          </div>
+          Ўзбек деҳқонининг косаси нега оқармайди
         </li>
       </ul>
     </div>
@@ -772,92 +728,48 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
         role="list"
       >
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
+          <a
+            class="c13"
+            href="https://bbc.com/uzbek"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c13"
-                  href="https://bbc.com/uzbek"
-                >
-                  Ўзбек деҳқонининг косаси нега оқармайди
-                </a>
-              </p>
-            </div>
-          </div>
+            Ўзбек деҳқонининг косаси нега оқармайди
+          </a>
         </li>
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
+          <a
+            class="c13"
+            href="https://bbc.com/uzbek"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c13"
-                  href="https://bbc.com/uzbek"
-                >
-                  Ўзбек деҳқонининг косаси нега оқармайди
-                </a>
-              </p>
-            </div>
-          </div>
+            Ўзбек деҳқонининг косаси нега оқармайди
+          </a>
         </li>
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
+          <a
+            class="c13"
+            href="https://bbc.com/uzbek"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c13"
-                  href="https://bbc.com/uzbek"
-                >
-                  Ўзбек деҳқонининг косаси нега оқармайди
-                </a>
-              </p>
-            </div>
-          </div>
+            Ўзбек деҳқонининг косаси нега оқармайди
+          </a>
         </li>
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
+          <a
+            class="c13"
+            href="https://bbc.com/uzbek"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c13"
-                  href="https://bbc.com/uzbek"
-                >
-                  Ўзбек деҳқонининг косаси нега оқармайди
-                </a>
-              </p>
-            </div>
-          </div>
+            Ўзбек деҳқонининг косаси нега оқармайди
+          </a>
         </li>
       </ul>
     </div>
@@ -1035,12 +947,12 @@ exports[`CpsAssetPageMain MAP AV player should render video 1`] = `
   content: ' ';
   display: inline-block;
   width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-left: -2rem;
 }
 
 .c14 {
-  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .c4 {
@@ -1634,121 +1546,55 @@ exports[`CpsAssetPageMain MAP AV player should render video 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -1770,121 +1616,55 @@ exports[`CpsAssetPageMain MAP AV player should render video 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -2125,72 +1905,28 @@ exports[`CpsAssetPageMain MAP AV player should render video 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                v3 draft
-              </p>
-            </div>
-          </div>
+          v3 draft
         </li>
       </ul>
     </div>
@@ -3167,12 +2903,12 @@ exports[`CpsAssetPageMain MAP heading should render faux headline 1`] = `
   content: ' ';
   display: inline-block;
   width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-left: -2rem;
 }
 
 .c14 {
-  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .c4 {
@@ -3766,121 +3502,55 @@ exports[`CpsAssetPageMain MAP heading should render faux headline 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -3902,121 +3572,55 @@ exports[`CpsAssetPageMain MAP heading should render faux headline 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -4257,72 +3861,28 @@ exports[`CpsAssetPageMain MAP heading should render faux headline 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                v3 draft
-              </p>
-            </div>
-          </div>
+          v3 draft
         </li>
       </ul>
     </div>
@@ -5299,12 +4859,12 @@ exports[`CpsAssetPageMain MAP heading should render visually hidden headline 1`]
   content: ' ';
   display: inline-block;
   width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-left: -2rem;
 }
 
 .c14 {
-  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .c4 {
@@ -5898,121 +5458,55 @@ exports[`CpsAssetPageMain MAP heading should render visually hidden headline 1`]
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -6034,121 +5528,55 @@ exports[`CpsAssetPageMain MAP heading should render visually hidden headline 1`]
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -6389,72 +5817,28 @@ exports[`CpsAssetPageMain MAP heading should render visually hidden headline 1`]
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                v3 draft
-              </p>
-            </div>
-          </div>
+          v3 draft
         </li>
       </ul>
     </div>
@@ -7431,12 +6815,12 @@ exports[`CpsAssetPageMain MAP should render crosshead 1`] = `
   content: ' ';
   display: inline-block;
   width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-left: -2rem;
 }
 
 .c14 {
-  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .c4 {
@@ -8030,121 +7414,55 @@ exports[`CpsAssetPageMain MAP should render crosshead 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -8166,121 +7484,55 @@ exports[`CpsAssetPageMain MAP should render crosshead 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -8521,72 +7773,28 @@ exports[`CpsAssetPageMain MAP should render crosshead 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                v3 draft
-              </p>
-            </div>
-          </div>
+          v3 draft
         </li>
       </ul>
     </div>
@@ -9563,12 +8771,12 @@ exports[`CpsAssetPageMain MAP should render sub heading 1`] = `
   content: ' ';
   display: inline-block;
   width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-left: -2rem;
 }
 
 .c14 {
-  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .c4 {
@@ -10162,121 +9370,55 @@ exports[`CpsAssetPageMain MAP should render sub heading 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -10298,121 +9440,55 @@ exports[`CpsAssetPageMain MAP should render sub heading 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -10653,72 +9729,28 @@ exports[`CpsAssetPageMain MAP should render sub heading 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                v3 draft
-              </p>
-            </div>
-          </div>
+          v3 draft
         </li>
       </ul>
     </div>
@@ -11695,12 +10727,12 @@ exports[`CpsAssetPageMain MAP should render image 1`] = `
   content: ' ';
   display: inline-block;
   width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-left: -2rem;
 }
 
 .c14 {
-  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .c4 {
@@ -12294,121 +11326,55 @@ exports[`CpsAssetPageMain MAP should render image 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -12430,121 +11396,55 @@ exports[`CpsAssetPageMain MAP should render image 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -12785,72 +11685,28 @@ exports[`CpsAssetPageMain MAP should render image 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                v3 draft
-              </p>
-            </div>
-          </div>
+          v3 draft
         </li>
       </ul>
     </div>
@@ -13827,12 +12683,12 @@ exports[`CpsAssetPageMain MAP should render paragraph 1`] = `
   content: ' ';
   display: inline-block;
   width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-left: -2rem;
 }
 
 .c14 {
-  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .c4 {
@@ -14426,121 +13282,55 @@ exports[`CpsAssetPageMain MAP should render paragraph 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -14562,121 +13352,55 @@ exports[`CpsAssetPageMain MAP should render paragraph 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c15"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -14917,72 +13641,28 @@ exports[`CpsAssetPageMain MAP should render paragraph 1`] = `
         role="list"
       >
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c14"
           role="listitem"
         >
-          <div
-            class="c14"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                v3 draft
-              </p>
-            </div>
-          </div>
+          v3 draft
         </li>
       </ul>
     </div>
@@ -15961,12 +14641,12 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   content: ' ';
   display: inline-block;
   width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-left: -2rem;
 }
 
 .c20 {
-  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .c5 {
@@ -16836,7 +15516,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/igbo/afirika-23252735","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/igbo/afirika-23252735","name":"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?"}}
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/igbo/afirika-23252735","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/igbo/afirika-23252735","name":"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?"},"headline":"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?"}
     </script>
     <script
       type="application/ld+json"
@@ -16996,85 +15676,41 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
             role="list"
           >
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
-              >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    This is a unordered list
-                  </p>
-                </div>
-              </div>
+              This is a unordered list
             </li>
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
-              >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    It can have 
-                    <b>
-                      bold text
-                    </b>
-                     in it
-                  </p>
-                </div>
-              </div>
+              It can have 
+              <b>
+                bold text
+              </b>
+               in it
             </li>
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
+              <a
+                class="c17"
+                href="https://bbc.com/pidgin/23248703"
               >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    <a
-                      class="c17"
-                      href="https://bbc.com/pidgin/23248703"
-                    >
-                      It can also have links
-                    </a>
-                  </p>
-                </div>
-              </div>
+                It can also have links
+              </a>
             </li>
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
+              <i
+                class="c18"
               >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    <i
-                      class="c18"
-                    >
-                      It can even have italic text in it!
-                    </i>
-                  </p>
-                </div>
-              </div>
+                It can even have italic text in it!
+              </i>
             </li>
           </ul>
         </div>
@@ -17195,85 +15831,41 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
             role="list"
           >
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
-              >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    This is a ordered list
-                  </p>
-                </div>
-              </div>
+              This is a ordered list
             </li>
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
-              >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    It can have 
-                    <b>
-                      bold text
-                    </b>
-                     in it
-                  </p>
-                </div>
-              </div>
+              It can have 
+              <b>
+                bold text
+              </b>
+               in it
             </li>
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
+              <a
+                class="c17"
+                href="https://bbc.com/pidgin/23248703"
               >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    <a
-                      class="c17"
-                      href="https://bbc.com/pidgin/23248703"
-                    >
-                      It can also have links
-                    </a>
-                  </p>
-                </div>
-              </div>
+                It can also have links
+              </a>
             </li>
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
+              <i
+                class="c18"
               >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    <i
-                      class="c18"
-                    >
-                      It can even have italic text in it!
-                    </i>
-                  </p>
-                </div>
-              </div>
+                It can even have italic text in it!
+              </i>
             </li>
           </ul>
         </div>
@@ -17523,12 +16115,12 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   content: ' ';
   display: inline-block;
   width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-left: -2rem;
 }
 
 .c12 {
-  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .c4 {
@@ -18053,121 +16645,55 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
         role="list"
       >
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
+          <a
+            class="c13"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                <a
-                  class="c13"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
+          <a
+            class="c13"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                <a
-                  class="c13"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
+          <a
+            class="c13"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                <a
-                  class="c13"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -18189,121 +16715,55 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
         role="list"
       >
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                afrique/23248423
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
+          <a
+            class="c13"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                <a
-                  class="c13"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
+          <a
+            class="c13"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                <a
-                  class="c13"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
+          <a
+            class="c13"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                <a
-                  class="c13"
-                  href="https://bbc.com/pidgin"
-                >
-                  this is the link text
-                </a>
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -18544,72 +17004,28 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
         role="list"
       >
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
+          sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c12"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                v3 draft
-              </p>
-            </div>
-          </div>
+          v3 draft
         </li>
       </ul>
     </div>

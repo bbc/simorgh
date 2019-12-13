@@ -53,6 +53,10 @@ const Navigation = () => {
 
   const dropdownId = 'dropdown-menu';
   const dropdownListItems = (
+    // Hidden attribute is added if we're on amp because the amp toggleVisibility
+    // only works by adding and removing the hidden attribute on the target.
+    // Canonical on the other hand either renders or doesn't render the component
+    // so adding the hidden attribute would always hide it!
     <Dropdown id={dropdownId} hidden={isAmp}>
       <DropdownUl>
         {navigation.map((item, index) => {

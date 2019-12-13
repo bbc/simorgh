@@ -8,7 +8,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
     role="complementary"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 cGQhRq"
+      class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 cGQhRq"
     >
       <div
         class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
@@ -221,7 +221,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
     role="complementary"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 cGQhRq"
+      class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 cGQhRq"
     >
       <div
         class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
