@@ -1,13 +1,22 @@
 import { When, Then } from 'cypress-cucumber-preprocessor/steps';
 
-const AUDIO_SELECTOR = 'div[class^="StyledVideoContainer"]';
-When('I click the audio play button', () => {
+const AUDIO_SELECTOR = 'div[class^="StyledAudioContainer"]';
+
+const playAudio = () => {
   cy.get(AUDIO_SELECTOR).within(() => {
     cy.get('button').click();
   });
+};
+
+When('I click the audio play button', () => {
+  playAudio();
 });
 
-Then('the audio plays', () => {
+When('I click the radio play button', () => {
+  playAudio();
+});
+
+const assertAudioPlays = () => {
   cy.get('iframe[class^="StyledIframe"]').then($iframe => {
     cy.wrap($iframe.prop('contentWindow'), {
       // `timeout` only applies to the methods chained below.
@@ -19,4 +28,12 @@ Then('the audio plays', () => {
       .invoke('currentTime')
       .should('be.gt', 0);
   });
+};
+
+Then('the audio plays', () => {
+  assertAudioPlays();
+});
+
+Then('the radio plays', () => {
+  assertAudioPlays();
 });
