@@ -4,7 +4,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import Navigation from './index';
 
-describe('Consent Banner Container', () => {
+describe('Navigation Container', () => {
   window.matchMedia = jest.fn().mockImplementation(query => {
     return {
       matches: false,

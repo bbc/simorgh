@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Consent Banner Container should correctly render amp navigation 1`] = `
+exports[`Navigation Container should correctly render amp navigation 1`] = `
 .c3 {
   color: #fff;
   fill: currentColor;
@@ -605,7 +605,7 @@ exports[`Consent Banner Container should correctly render amp navigation 1`] = `
 </html>
 `;
 
-exports[`Consent Banner Container should correctly render canonical navigation 1`] = `
+exports[`Navigation Container should correctly render canonical navigation 1`] = `
 .c3 {
   color: #fff;
   fill: currentColor;

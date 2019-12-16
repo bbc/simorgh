@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshots should correctly render AMP navigation 1`] = `
+exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 .c3 {
   color: #fff;
   fill: currentColor;
@@ -149,7 +149,7 @@ exports[`Snapshots should correctly render AMP navigation 1`] = `
             data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
             dir="ltr"
             on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
-        dropdown.toggleVisibility,
+        dropdown-menu.toggleVisibility,
         scrollable-nav.toggleClass(class=scrollable-hidden),
         navigation-id.toggleClass(class=open)
       "
@@ -186,6 +186,8 @@ exports[`Snapshots should correctly render AMP navigation 1`] = `
           </button>
           <div
             data-testid="dropdown"
+            hidden=""
+            id="dropdown-menu"
           >
             Dropdown
           </div>
