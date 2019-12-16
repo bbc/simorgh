@@ -47,7 +47,7 @@ export const service = {
       home: 'Бош саҳифа',
       currentPage: 'Жорий саҳифа',
       skipLinkText: 'Саҳифага ўтиш',
-      relatedContent: 'Тема боюнча башка макалалар',
+      relatedContent: 'Бу мавзуда батафсилроқ',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плейер',
         audioPlayer: 'Аудио плейер',
