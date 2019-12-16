@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
@@ -46,6 +46,11 @@ describe(`BrandContainer`, () => {
   );
 
   describe('assertions', () => {
+    afterEach(() => {
+      document.cookie = '';
+      jest.clearAllMocks();
+    });
+
     it('should render a Brand with a Skip to content link, linking to #content', () => {
       const { container } = render(
         BrandContainerWithContext(newsServiceContextStub),
@@ -55,6 +60,21 @@ describe(`BrandContainer`, () => {
       const skipLinkHref = skipLink.getAttribute('href');
 
       expect(skipLinkHref).toBe('#content');
+    });
+
+    it('should update cookie to preffered variant when ScriptLink is clicked', () => {
+      document.cookie = '';
+
+      const { container } = render(
+        BrandContainerWithContext({
+          ...variantServiceContextStub,
+          scriptLinkVariant: 'cyr',
+        }),
+      );
+
+      const scriptLink = container.querySelector('a[data-variant="cyr"]');
+      fireEvent.click(scriptLink);
+      expect(document.cookie).toEqual('; ckps_news=cyr');
     });
   });
 });
