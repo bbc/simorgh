@@ -73,20 +73,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   padding: 0;
 }
 
-.c8 {
-  border-bottom: 0.0625rem solid #F2F2F2;
-  padding: 0.5rem 0 1rem;
-}
-
-.c8:first-child {
-  padding-top: 0;
-}
-
-.c8:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
 .c7 {
   list-style-type: none;
   margin: 0;
@@ -235,6 +221,20 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   font-style: normal;
 }
 
+.c8 {
+  border-bottom: 0.0625rem solid #F2F2F2;
+  padding: 0.5rem 0 1rem;
+}
+
+.c8:first-child {
+  padding-top: 0;
+}
+
+.c8:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
 @media (min-width:37.5rem) {
   .c4 {
     -webkit-align-items: stretch;
@@ -288,30 +288,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 @media (min-width:37.5rem) {
   .c0 {
     margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c8 {
-    padding: 1.5rem 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8:first-child {
-    padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c8:first-child {
-    padding-top: 1.5rem;
   }
 }
 
@@ -514,6 +490,30 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 @media (min-width:37.5rem) {
   .c6 {
     margin-top: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c8 {
+    padding: 1.5rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c8:first-child {
+    padding-top: 1.5rem;
   }
 }
 
@@ -733,20 +733,6 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   padding: 0;
 }
 
-.c7 {
-  border-bottom: 0.0625rem solid #F2F2F2;
-  padding: 0.5rem 0 1rem;
-}
-
-.c7:first-child {
-  padding-top: 0;
-}
-
-.c7:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
 .c6 {
   list-style-type: none;
   margin: 0;
@@ -849,6 +835,20 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   font-style: normal;
 }
 
+.c7 {
+  border-bottom: 0.0625rem solid #F2F2F2;
+  padding: 0.5rem 0 1rem;
+}
+
+.c7:first-child {
+  padding-top: 0;
+}
+
+.c7:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
 @media (min-width:37.5rem) {
   .c4 {
     -webkit-align-items: stretch;
@@ -902,30 +902,6 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 @media (min-width:37.5rem) {
   .c0 {
     margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c7 {
-    padding: 1.5rem 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7:first-child {
-    padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c7:first-child {
-    padding-top: 1.5rem;
   }
 }
 
@@ -1032,6 +1008,30 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   .c17 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c7 {
+    padding: 1.5rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c7:first-child {
+    padding-top: 1.5rem;
   }
 }
 
@@ -1685,20 +1685,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   padding: 0;
 }
 
-.c6 {
-  border-bottom: 0.0625rem solid #F2F2F2;
-  padding: 0.5rem 0 1rem;
-}
-
-.c6:first-child {
-  padding-top: 0;
-}
-
-.c6:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
 .c5 {
   list-style-type: none;
   margin: 0;
@@ -1801,6 +1787,20 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   font-style: normal;
 }
 
+.c6 {
+  border-bottom: 0.0625rem solid #F2F2F2;
+  padding: 0.5rem 0 1rem;
+}
+
+.c6:first-child {
+  padding-top: 0;
+}
+
+.c6:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
 @media (min-width:37.5rem) {
   .c3 {
     -webkit-align-items: stretch;
@@ -1839,30 +1839,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 @media (min-width:37.5rem) {
   .c0 {
     margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c6 {
-    padding: 1.5rem 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6:first-child {
-    padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c6:first-child {
-    padding-top: 1.5rem;
   }
 }
 
@@ -1969,6 +1945,30 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   .c16 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c6 {
+    padding: 1.5rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c6:first-child {
+    padding-top: 1.5rem;
   }
 }
 
