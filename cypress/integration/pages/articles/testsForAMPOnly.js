@@ -60,6 +60,62 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
         });
       });
     }
+    // This test is being temporarily throttled to the service 'news'.
+    if (service === 'news') {
+      it('should have a visible play button and duration', () => {
+        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+          ({ body }) => {
+            const media = getBlockData('video', body);
+            if (media) {
+              const aresMediaBlocks = media.model.blocks[1].model.blocks[0];
+              const { durationISO8601 } = aresMediaBlocks.model.versions[0];
+              cy.get('div[class^="StyledVideoContainer"]').within(() => {
+                cy.get('amp-img').within(() => {
+                  cy.get('button')
+                    .should('be.visible')
+                    .within(() => {
+                      cy.get('svg').should('be.visible');
+                      cy.get('time')
+                        .should('be.visible')
+                        .should('have.attr', 'datetime')
+                        .and('eq', durationISO8601);
+                    });
+                });
+              });
+            }
+          },
+        );
+      });
+    }
+    // it('should render a visible guidance message', () => {
+    //   cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+    //     ({ body }) => {
+    //       const media = getBlockData('video', body);
+    //       if (media) {
+    //         const longGuidanceWarning =
+    //           media.model.blocks[1].model.blocks[0].model.versions[0].warnings
+    //             .long;
+
+    //         cy.get('div[class^="StyledVideoContainer"]')
+    //           .eq(0)
+    //           .within(() => {
+    //             // Check for video with guidance message
+    //             if (longGuidanceWarning) {
+    //               cy.get('div[class^="StyledPlaceholder"]')
+    //                 .within(() => {
+    //                   cy.get('strong');
+    //                 })
+    //                 .should('be.visible')
+    //                 .and('contain', longGuidanceWarning);
+    //               // Check for video with no guidance message
+    //             } else {
+    //               cy.get('div[class^="StyledGuidance"]').should('not.exist');
+    //             }
+    //           });
+    //       }
+    //     },
+    //   );
+    // });
   });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
