@@ -10,7 +10,7 @@ export const service = {
   default: {
     lang: `my`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
-    articleTimestampPrefix: 'အသစ္တင္ခ်ိန္',
+    articleTimestampPrefix: 'အသစ်တင်ချိန်',
     atiAnalyticsAppName: 'news-burmese',
     atiAnalyticsProducerId: '35',
     brandName: 'BBC News မြန်မာ',
@@ -19,12 +19,12 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png',
     defaultImageAltText: 'BBC News မြန်မာ',
     dir: `ltr`,
-    externalLinkText: ', ျပင္ပစာမ်က္ႏွာ',
-    imageCaptionOffscreenText: 'ဓာတ္ပုံ ပုံစာ,',
+    externalLinkText: ', ပြင်ပစာမျက်နှာ',
+    imageCaptionOffscreenText: 'ဓာတ်ပုံ ပုံစာ, ',
     videoCaptionOffscreenText: 'ဗီဒီယို ပုံစာ, ',
-    audioCaptionOffscreenText: 'အသံဖိုင္ ပုံစာ, ',
+    audioCaptionOffscreenText: 'အသံဖိုင် ပုံစာ, ',
     defaultCaptionOffscreenText: 'ပုံစာ, ',
-    imageCopyrightOffscreenText: 'ဓာတ္ပုံ ရင္းျမစ္,',
+    imageCopyrightOffscreenText: 'ဓာတ်ပုံ ရင်းမြစ်, ',
     locale: `my-MM`,
     datetimeLocale: `my`,
     service: 'burmese',
@@ -45,94 +45,93 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'အားလုံးၾကည့္ရန္',
+      seeAll: 'အားလုံးကြည့်ရန်',
       home: 'ပင်မစာမျက်နှာ',
-      currentPage: 'လက္ရွိၾကည့္ေနေသာ စာမ်က္ႏွာ',
-      skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားပါ',
-      relatedContent: 'ဒီသတင္းနဲ႔ ပတ္သက္သမွ်',
+      currentPage: 'လက်ရှိကြည့်နေသော စာမျက်နှာ',
+      skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားရန်',
+      relatedContent: 'ဒီသတင်းနဲ့ ပတ်သက်သမျှ',
       mediaAssetPage: {
-        mediaPlayer: 'မီဒီယာ ပေလယာ',
-        audioPlayer: 'အသံဖိုင္ပေလယာ',
-        videoPlayer: 'ဗီဒီယို ပေလယာ',
+        mediaPlayer: 'မီဒီယာ ပလေယာ',
+        audioPlayer: 'အသံဖိုင်ပလေယာ',
+        videoPlayer: 'ဗီဒီယို ပလေယာ',
       },
       error: {
         404: {
-          statusCode: '404',
-          title: '404 - စာမျက်နှာ ရှာမတွေ့ပါ',
-          message:
-            'ဤသို့ဖြစ်ရခြင်းမှာ ဝက်ဘ်ဆိုက်လိပ်စာ မှားရိုက်မိခြင်းကြောင့် ဖြစ်နိုင်ပါသည်။ လိပ်စာနဲ့ စာလုံးပေါင်းကို ကျေးဇူးပြုပြီး ပြန်ကြည့်ပေးပါ။',
+          statusCode: '၄၀၄',
+          title: 'စာမျက်နှာကို မတွေ့ပါ။',
+          message: 'သင်ရှာနေသော စာမျက်နှာကို မတွေ့ရပါ။ ဒီမှာ ကြိုးစားကြည့်ပါ။',
           solutions: [
-            'စာမ််က္ႏွာ လင့္ လိပ္စာကို ထပ္စစ္ၾကည့္ေနပါသည္။',
-            'အသစ္ဖြင့္ရန္ ဘေရာင္ဆာမွ refresh ခလုတ္ကို ႏွိပ္ပါ။',
-            'ဘီဘီစီမွ ရွာေဖြေသာ ဘားကို သုံးၿပီး ယင္းစာမ်က္ႏွာကို ရွာရန္။',
+            'စာမျျက်နှာ လင့် လိပ်စာကို ထပ်စစ်ကြည့်နေပါသည်။',
+            'အသစ်ဖွင့်ရန် ဘရောင်ဆာမှ refresh ခလုတ်ကို နှိပ်ပါ။',
+            'ဘီဘီစီမှ ရှာဖွေသော ဘားကို သုံးပြီး ယင်းစာမျက်နှာကို ရှာရန်။',
           ],
-          callToActionFirst: 'သုိ႔မဟုတ္ပါက',
-          callToActionLinkText: 'ပင္မစာမ်က္ႏွာသို႔ သြားပါ။',
-          callToActionLast: '',
+          callToActionFirst: 'သို့မဟုတ်ပါက ',
+          callToActionLinkText: 'BBC News မြန်မာ',
+          callToActionLast: ' ပင်မစာမျက်နှာသို့ သွားပါ။',
           callToActionLinkUrl: 'https://www.bbc.com/burmese',
         },
         500: {
-          statusCode: '500',
-          title: '500 - အမှားနံပါတ်',
+          statusCode: '၅၀၀',
+          title: 'ဘီီဘီစီဆာဗာ၏ အမှား',
           message:
-            'မှားယွင်းမှု တစ်ခု ဖြစ်နေပါသည်။ ကျေးဇူးပြု၍ စာမျက်နှာကို နောက်တခေါက် ပြန်ဝင်ပါ။',
+            'သင်ရှာနေသော စာမျက်နှာကို လောလောဆယ် ရှာမတွေ့ပါ။ ဒီမှာ ကြိုးစားကြည့်ပါ။',
           solutions: [
-            'အသစ္ဖြင့္ရန္ ဘေရာင္ဆာမွ refresh ခလုတ္ကို ႏွိပ္ပါ။',
-            'ခဏေနလ်င္ ျပန္လာၾကည့္ပါ။',
+            'အသစ်ဖွင့်ရန် ဘရောင်ဆာမှ refresh ခလုတ်ကို နှိပ်ပါ။',
+            'ခဏနေလျင် ပြန်လာကြည့်ပါ။',
           ],
-          callToActionFirst: 'Alternatively, please visit the  ',
-          callToActionLinkText: 'ဘီဘီစီ ပင်မ စာမျက်နှာ',
-          callToActionLast: '',
+          callToActionFirst: 'သို့မဟုတ်ပါက ',
+          callToActionLinkText: 'BBC News မြန်မာ',
+          callToActionLast: ' ပင်မစာမျက်နှာသို့ သွားပါ။',
           callToActionLinkUrl: 'https://www.bbc.com/burmese',
         },
       },
       consentBanner: {
         privacy: {
           title:
-            'ကုိယ္ေရးအခ်က္အလက္လုံၿခဳံမႈႏွင့္ ကြတ္ကီးအသုံးျပဳမႈ မူဝါဒမ်ား အသစ္ျပင္ဆင္ထားပါသည္။',
+            'ကိုယ်ရေးအချက်အလက်လုံခြုံမှုနှင့် ကွတ်ကီးအသုံးပြုမှု မူဝါဒများ အသစ်ပြင်ဆင်ထားပါသည်။',
           description: {
             uk: {
               first:
-                'ကုိယ္ေရးအခ်က္အလက္လုံၿခဳံမႈႏွင့္ ကြတ္ကီးအသုံးျပဳမႈ မူဝါဒမ်ားတြင္ အေရးႀကီးေသာ အေျပာင္းအလဲအခ်ိဳ႕ျပဳလုပ္ထားသျဖင့္ သုံးစြဲသူမ်ားအေပၚ သက္ေရာက္မႈကို အသိေပးလိုပါသည္။',
+                'ကိုယ်ရေးအချက်အလက်လုံခြုံမှုနှင့် ကွတ်ကီးအသုံးပြုမှု မူဝါဒများတွင် အရေးကြီးသော အပြောင်းအလဲအချို့ပြုလုပ်ထားသဖြင့် သုံးစွဲသူများအပေါ် သက်ရောက်မှုကို အသိပေးလိုပါသည်။',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                'ကုိယ္ေရးအခ်က္အလက္လုံၿခဳံမႈႏွင့္ ကြတ္ကီးအသုံးျပဳမႈ မူဝါဒမ်ားတြင္ အေရးႀကီးေသာ အေျပာင္းအလဲအခ်ိဳ႕ျပဳလုပ္ထားသျဖင့္ သုံးစြဲသူမ်ားအေပၚ သက္ေရာက္မႈကို အသိေပးလိုပါသည္။',
+                'ကိုယ်ရေးအချက်အလက်လုံခြုံမှုနှင့် ကွတ်ကီးအသုံးပြုမှု မူဝါဒများတွင် အရေးကြီးသော အပြောင်းအလဲအချို့ပြုလုပ်ထားသဖြင့် သုံးစွဲသူများအပေါ် သက်ရောက်မှုကို အသိပေးလိုပါသည်။',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
-          accept: 'ေကာင္းပါၿပီ။',
-          reject: 'ဘာေတြေျပာင္းလဲသြားသလဲ ၾကည့္ရန္',
+          accept: 'ကောင်းပါပြီ။',
+          reject: 'ဘာတွေပြောင်းလဲသွားသလဲ ကြည့်ရန်',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'ကြတ္ကီးမ်ားအသုံးျပဳမႈကို သေဘာတူမတူ ေျပာပါ။',
+          title: 'ကွတ်ကီးများအသုံးပြုမှုကို သဘောတူမတူ ပြောပါ။',
           description: {
             uk: {
               first:
-                'ပရိသတ္မ်ား အြန္လိုင္းတြင္ အေကာင္းဆုံးသုံးႏိုင္ရန္ မိမိတို့',
-              linkText: ' ႏွင့္ ကြတ္ကီးမ်ား',
+                'ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးသုံးနိုင်ရန် မိမိတို့ ',
+              linkText: 'နှင့် ကွတ်ကီးများ',
               last:
-                'ကို အသုံးျပဳပါသည္။ ယင္းကြတ္ကီးမ်ား အားလုံးကို သေဘာတူမတူ ေျပာျပပါ။',
+                ' ကို အသုံးပြုပါသည်။ ယင်းကွတ်ကီးများ အားလုံးကို သဘောတူမတူ ပြောပြပါ။',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'ဘီဘီစီႏွင့္ ပါတနာမ်ားသည္ ',
-              linkText: ' ႏွင့္ ကြတ္ကီးမ်ား ',
+              first: 'ဘီဘီစီနှင့် ပါတနာများသည် ',
+              linkText: ' နှင့် ကွတ်ကီးများ ',
               last:
-                ', သုံးေသာ နည္းပညာမ်ားျဖင့္ ပရိသတ္မ်ား အြန္လိုင္းတြင္ အေကာင္းဆုံးၾကည့္ႏိုင္ရန္၊ မိမိတို့ ၾကည့္လိုသည့္ အေၾကာင္းအရာမ်ားၾကည့္ႏိုင္ရန္၊ မိမိတို႔ႏွင့္ ကိုက္ညီမည့္ ေၾကာ္ျငာမ်ားကိုသာ ရရွိရန္ အသုံးျပဳသူ၏ သုံးစြဲပုံေဒတာမ်ားကို ေကာက္ယူပါသည္။ ယင္းသုိ႔ အသုံးျပဳမႈကို သေဘာတူမတူ ေျပာျပပါ။ ',
+                ' သုံးသော နည်းပညာများဖြင့် ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးကြည့်နိုင်ရန်၊ မိမိတို့ ကြည့်လိုသည့် အကြောင်းအရာများကြည့်နိုင်ရန်၊ မိမိတို့နှင့် ကိုက်ညီမည့် ကြော်ငြာများကိုသာ ရရှိရန် အသုံးပြုသူ၏ သုံးစွဲပုံဒေတာများကို ကောက်ယူပါသည်။ ယင်းသို့ အသုံးပြုမှုကို သဘောတူမတူ ပြောပြပါ။',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'သေဘာတူပါသည္။',
-          reject: 'သေဘာမတူပါ၊ ဆက္တင္ကို သြားၾကည့္လိုပါသည္။ ',
+          accept: 'သဘောတူပါသည်။',
+          reject: 'သဘောမတူပါ၊ ဆက်တင်ကို သွားကြည့်လိုပါသည်။',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
@@ -153,7 +152,7 @@ export const service = {
         },
         listen: 'Listen',
         watch: 'Watch',
-        liveLabel: 'တိုက်ရိုက်ထုတ်လွှင့်မှု',
+        liveLabel: 'တိုကျရိုကျထုတျလှှငျ့မှု',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -161,39 +160,39 @@ export const service = {
     },
     brandSVG,
     mostRead: {
-      header: 'အဖတ္အမ်ားဆုံး',
-      lastUpdated: 'ေနာက္ဆုံးအသစ္တင္ခ်ိန္: ',
+      header: 'အဖတ်အများဆုံး',
+      lastUpdated: 'နောက်ဆုံးအသစ်တင်ချိန်: ',
     },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'ဘီဘီစီကို ဘာေၾကာင့္ ယုံၾကည္ႏိုင္သလဲ။',
+        text: 'ဘီဘီစီကို ဘာကြောင့် ယုံကြည်နိုင်သလဲ။',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
         text:
-          'ျပင္ပဝက္ဆိုက္မ်ားကို လင့္ ထည့္ေပးျခင္းႏွင့္ ပတ္သက္ေသာ ဘီဘီစီလုပ္ထုံးလုပ္နည္းကို ဖတ္ရန္။',
+          'ပြင်ပဝက်ဆိုက်များကို လင့် ထည့်ပေးခြင်းနှင့် ပတ်သက်သော ဘီဘီစီလုပ်ထုံးလုပ်နည်းကို ဖတ်ရန်။',
       },
       links: [
         {
           href: 'https://www.bbc.com/burmese/institutional-37574842',
-          text: 'အသုံးျပဳရန္စည္းမ်ဥ္း',
+          text: 'အသုံးပြုရန်စည်းမျဉ်း',
         },
         {
           href: 'https://www.bbc.com/burmese/institutional-37577521',
-          text: 'ကိုယ္ေရးအခ်က္အလက္လုံၿခဳံမႈ မူဝါဒ',
+          text: 'ကိုယ်ရေးအချက်အလက်လုံခြုံမှု မူဝါဒ',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'ကြတ္ကီး',
+          text: 'ကွတ်ကီး',
         },
         {
           href: 'https://www.bbc.com/burmese/institutional-37577525',
-          text: 'ဘီီဘီစီကို ဆက္သြယ္ရန္',
+          text: 'ဘီီဘီစီကို ဆက်သွယ်ရန်',
         },
       ],
       copyrightText:
-        'ပြဘီဘီစီ။ င်ပ ဝက်ဘ်ဆိုက်ပါ အကြောင်းအရာများအပေါ် ဘီဘီစီက တာဝန်မယူပါ။',
+        'BBC. ပြင်ပဝက်ဆိုက်များတွင် ပါဝင်သော အကြောင်းအရာများအတွက် ဘီဘီစီက တာဝန်မယူပါ။',
     },
     fonts: [F_PADAUK_BOLD, F_PADAUK_REGULAR],
     timezone: 'GMT',
