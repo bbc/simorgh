@@ -9,6 +9,14 @@ import {
   AMP_ANALYTICS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
 
+const AMP_ADS_JS = (
+  <script
+    async
+    custom-element="amp-ad"
+    src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+  />
+);
+
 /*
   Contains AMP required markup https://www.ampproject.org/docs/fundamentals/spec#required-markup
 */
@@ -25,6 +33,7 @@ const AmpDecorator = storyFn => (
       {AMP_GEO_JS}
       {AMP_CONSENT_JS}
       {AMP_ANALYTICS_JS}
+      {AMP_ADS_JS}
     </Helmet>
     {storyFn()}
   </div>

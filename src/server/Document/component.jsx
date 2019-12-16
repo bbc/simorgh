@@ -10,6 +10,14 @@ import {
 import ResourceHints from '#app/components/ResourceHints';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
 
+const AMP_ADS_JS = (
+  <script
+    async
+    custom-element="amp-ad"
+    src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+  />
+);
+
 /* eslint-disable react/prop-types */
 const Document = ({
   assetOrigins,
@@ -51,14 +59,15 @@ const Document = ({
             </noscript>
           </>
         )}
+        {AMP_JS}
         {isAmp && (
           <>
-            {AMP_JS}
             {AMP_GEO_JS}
             {AMP_CONSENT_JS}
             {AMP_ANALYTICS_JS}
           </>
         )}
+        {AMP_ADS_JS}
       </head>
       <body>
         {/* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
