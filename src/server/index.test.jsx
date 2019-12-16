@@ -9,6 +9,7 @@ import routes from '../app/routes';
 import { localBaseUrl } from '../testHelpers/config';
 import services from './utilities/serviceConfigs';
 import * as renderDocument from './Document';
+import loggerMock from '#testHelpers/loggerMock';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -57,11 +58,14 @@ const mockRouteProps = ({
   dataResponse,
   responseType,
   variant,
+  pageType = 'TestPageType',
 }) => {
   const getInitialData =
     responseType === 'reject'
       ? jest.fn().mockRejectedValueOnce(dataResponse)
       : jest.fn().mockResolvedValueOnce(dataResponse);
+
+  const routePageType = responseType === 'reject' ? 'error' : pageType;
 
   // Add a leading slash to match what is received from the application routing regex.
   const mockVariantParam = variant ? `/${variant}` : undefined;
@@ -70,7 +74,7 @@ const mockRouteProps = ({
     isAmp,
     service,
     variant,
-    route: { getInitialData },
+    route: { getInitialData, pageType: routePageType },
     match: {
       params: { id, service, variant: mockVariantParam },
     },
@@ -97,6 +101,7 @@ const testRenderedData = ({
   service,
   isAmp,
   successDataResponse,
+  pageType,
   variant,
 }) => async () => {
   const { text, status } = await makeRequest(url);
@@ -150,6 +155,8 @@ const testRenderedData = ({
 
   expect(getRouteProps).toHaveBeenCalledWith(routes, url.split('?')[0]);
 
+  expect(loggerMock.info).toHaveBeenNthCalledWith(2, `Page Type: ${pageType}`);
+
   expect(text).toEqual(
     '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   );
@@ -161,6 +168,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
   const serviceURL = `/${service}${
     variant ? `/${variant}` : ''
   }${extension}${queryString}`;
+  const pageType = 'FrontPage';
 
   describe(`${serviceURL}`, () => {
     const successDataResponse = {
@@ -169,6 +177,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
       service: 'someService',
       status: 200,
       variant,
+      pageType: 'FrontPage',
     };
 
     const notFoundDataResponse = {
@@ -177,6 +186,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
       service: 'someService',
       status: 404,
       variant,
+      pageType: 'error',
     };
 
     describe('Successful render', () => {
@@ -187,6 +197,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
             isAmp,
             dataResponse: successDataResponse,
             variant,
+            pageType,
           });
         });
 
@@ -196,6 +207,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
           isAmp,
           successDataResponse,
           variant,
+          pageType,
         };
 
         it('should respond with rendered data', testRenderedData(configs));
@@ -208,6 +220,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
             isAmp,
             dataResponse: notFoundDataResponse,
             variant,
+            pageType,
           });
         });
 
@@ -244,6 +257,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
 const testArticles = ({ platform, service, variant, queryString = '' }) => {
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
+  const pageType = 'Article';
 
   describe(`/${service}/articles/optimoID/${extension}${queryString}`, () => {
     const successDataResponse = {
@@ -272,6 +286,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
             isAmp,
             dataResponse: successDataResponse,
             variant,
+            pageType,
           });
         });
 
@@ -281,6 +296,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
           isAmp,
           successDataResponse,
           variant,
+          pageType,
         };
 
         it('should respond with rendered data', testRenderedData(configs));
@@ -294,6 +310,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
             isAmp,
             dataResponse: notFoundDataResponse,
             variant,
+            pageType,
           });
         });
 
@@ -316,6 +333,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
           dataResponse: Error('Error!'),
           responseType: 'reject',
           variant,
+          pageType: 'error',
         });
       });
 
@@ -337,6 +355,7 @@ const testCpsAssetPages = ({
 }) => {
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
+  const pageType = 'MAP';
 
   describe(`/${service}/${assetUri}${extension}${queryString}`, () => {
     const successDataResponse = {
@@ -364,6 +383,7 @@ const testCpsAssetPages = ({
             isAmp,
             dataResponse: successDataResponse,
             variant,
+            pageType,
           });
         });
 
@@ -373,6 +393,7 @@ const testCpsAssetPages = ({
           isAmp,
           successDataResponse,
           variant,
+          pageType,
         };
 
         it('should respond with rendered data', testRenderedData(configs));
@@ -386,6 +407,7 @@ const testCpsAssetPages = ({
             isAmp,
             dataResponse: notFoundDataResponse,
             variant,
+            pageType,
           });
         });
 
@@ -415,6 +437,10 @@ const testCpsAssetPages = ({
         const { status, text } = await makeRequest(articleURL);
         expect(status).toEqual(500);
         expect(text).toEqual('Error!');
+        expect(loggerMock.error).toHaveBeenNthCalledWith(
+          1,
+          `Page Type: error - no matching route found`,
+        );
       });
     });
   });
@@ -445,6 +471,7 @@ const testMediaPages = ({
 
     const extension = isAmp ? '.amp' : '';
     const mediaPageURL = `/${service}/${serviceId}/${mediaId}${extension}${queryString}`;
+    const pageType = 'LiveMediaPage';
 
     describe('Successful render', () => {
       describe('200 status code', () => {
@@ -453,6 +480,7 @@ const testMediaPages = ({
             service,
             isAmp,
             dataResponse: successDataResponse,
+            pageType,
           });
         });
 
@@ -461,6 +489,7 @@ const testMediaPages = ({
           service,
           isAmp,
           successDataResponse,
+          pageType,
         };
 
         it('should respond with rendered data', testRenderedData(configs));
@@ -473,6 +502,7 @@ const testMediaPages = ({
           service,
           isAmp,
           dataResponse: notFoundDataResponse,
+          pageType,
         });
       });
 
@@ -499,6 +529,10 @@ const testMediaPages = ({
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
         expect(text).toEqual('Error!');
+        expect(loggerMock.error).toHaveBeenNthCalledWith(
+          1,
+          `Page Type: error - no matching route found`,
+        );
       });
     });
   });
