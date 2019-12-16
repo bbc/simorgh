@@ -14,29 +14,18 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
   content: ' ';
   display: inline-block;
   width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-left: -2rem;
 }
 
-.c3 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
+.c2 {
+  margin-bottom: 1rem;
 }
 
 .c0 {
   grid-column: 1 / span 6;
 }
 
-.c2 {
-  display: inline-block;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 1rem;
@@ -46,20 +35,6 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
 
 @media (min-width:37.5rem) {
   .c1 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -113,38 +88,16 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
     role="list"
   >
     <li
+      class="c2"
       role="listitem"
     >
-      <div
-        class="c2"
-      >
-        <div
-          class="c0"
-        >
-          <p
-            class="c3"
-          >
-            It is unordered
-          </p>
-        </div>
-      </div>
+      It is unordered
     </li>
     <li
+      class="c2"
       role="listitem"
     >
-      <div
-        class="c2"
-      >
-        <div
-          class="c0"
-        >
-          <p
-            class="c3"
-          >
-            It has three list items
-          </p>
-        </div>
-      </div>
+      It has three list items
     </li>
   </ul>
 </div>
@@ -164,29 +117,18 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
   content: ' ';
   display: inline-block;
   width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-right: -2rem;
 }
 
-.c3 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
+.c2 {
+  margin-bottom: 1rem;
 }
 
 .c0 {
   grid-column: 1 / span 6;
 }
 
-.c2 {
-  display: inline-block;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 1.375rem;
@@ -196,20 +138,6 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
 
 @media (min-width:37.5rem) {
   .c1 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
@@ -263,38 +191,16 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
     role="list"
   >
     <li
+      class="c2"
       role="listitem"
     >
-      <div
-        class="c2"
-      >
-        <div
-          class="c0"
-        >
-          <p
-            class="c3"
-          >
-            It is unordered
-          </p>
-        </div>
-      </div>
+      It is unordered
     </li>
     <li
+      class="c2"
       role="listitem"
     >
-      <div
-        class="c2"
-      >
-        <div
-          class="c0"
-        >
-          <p
-            class="c3"
-          >
-            It has three list items
-          </p>
-        </div>
-      </div>
+      It has three list items
     </li>
   </ul>
 </div>

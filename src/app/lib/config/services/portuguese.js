@@ -148,7 +148,7 @@ export const service = {
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',
         listen: 'Listen',
-        watch: 'Watch',
+        watch: 'Assista',
         liveLabel: 'AO VIVO',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -249,6 +249,7 @@ export const service = {
         url: '/portuguese/media/video',
       },
     ],
+    navigationSection: 'Seções',
   },
 };
 

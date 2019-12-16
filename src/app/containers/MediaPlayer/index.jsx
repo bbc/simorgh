@@ -30,7 +30,7 @@ const MediaPlayerContainer = ({
   assetType,
   showPlaceholder,
 }) => {
-  const { platform, origin } = useContext(RequestContext);
+  const { platform } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
   const isAmp = platform === 'amp';
@@ -102,7 +102,6 @@ const MediaPlayerContainer = ({
     requestUrl: `${assetId}/${versionId}/${lang}`,
     type: assetType,
     isAmp,
-    origin,
   });
   const iframeTitle = pathOr(
     'Media player',
@@ -112,7 +111,7 @@ const MediaPlayerContainer = ({
 
   return (
     <>
-      <Metadata aresMediaBlock={aresMediaBlock} />
+      <Metadata aresMediaBlock={aresMediaBlock} embedSource={embedSource} />
       <Figure>
         {isAmp ? (
           <AmpMediaPlayer

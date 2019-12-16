@@ -135,8 +135,8 @@ export const service = {
         audio: 'ድምጽ',
         photogallery: 'የፎቶ መድብሎች',
         video: 'ቪዲዮ',
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'ያድምጡ',
+        watch: 'ተመልከት',
         liveLabel: 'ቀጥታ ስርጭት',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -200,6 +200,7 @@ export const service = {
         url: '/amharic/popular/read',
       },
     ],
+    navigationSection: 'ክፍሎች',
     timezone: 'Africa/Addis_Ababa',
   },
 };

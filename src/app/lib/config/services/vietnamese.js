@@ -136,7 +136,7 @@ export const service = {
         photogallery: 'Gallery hình ảnh',
         video: 'Video',
         listen: 'Listen',
-        watch: 'Watch',
+        watch: 'Xem',
         liveLabel: 'TRỰC TIẾP',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -231,6 +231,7 @@ export const service = {
         url: '/vietnamese/media/video',
       },
     ],
+    navigationSection: 'Mục',
   },
 };
 
