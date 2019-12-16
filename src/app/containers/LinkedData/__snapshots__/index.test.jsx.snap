@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LinkData should correctly render linked data for article pages for service with no trust project markup 1`] = `
+exports[`LinkedData should correctly render linked data for article pages for service with no trust project markup 1`] = `
 <html>
   <head>
     <script
@@ -15,7 +15,7 @@ exports[`LinkData should correctly render linked data for article pages for serv
 </html>
 `;
 
-exports[`LinkData should correctly render linked data for articles 1`] = `
+exports[`LinkedData should correctly render linked data for articles 1`] = `
 <html>
   <head>
     <script
@@ -30,7 +30,7 @@ exports[`LinkData should correctly render linked data for articles 1`] = `
 </html>
 `;
 
-exports[`LinkData should correctly render linked data for front pages 1`] = `
+exports[`LinkedData should correctly render linked data for front pages 1`] = `
 <html>
   <head>
     <script
@@ -45,13 +45,28 @@ exports[`LinkData should correctly render linked data for front pages 1`] = `
 </html>
 `;
 
-exports[`LinkData should correctly render linked data for radio pages 1`] = `
+exports[`LinkedData should correctly render linked data for radio pages 1`] = `
 <html>
   <head>
     <script
       type="application/ld+json"
     >
       {"@context":"http://schema.org","@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"BBC News Radio"}}
+    </script>
+  </head>
+  <body>
+    <div />
+  </body>
+</html>
+`;
+
+exports[`LinkedData showAuthor should exclude author from article when false 1`] = `
+<html>
+  <head>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Royal wedding 2018: Bouquet laid on tomb of unknown warrior"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z"}
     </script>
   </head>
   <body>

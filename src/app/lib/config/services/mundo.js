@@ -146,7 +146,7 @@ export const service = {
         photogallery: 'Galería de fotos',
         video: 'Video',
         listen: 'Listen',
-        watch: 'Watch',
+        watch: 'Vea',
         liveLabel: 'EN VIVO',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',

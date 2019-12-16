@@ -147,7 +147,7 @@ export const service = {
         photogallery: 'Oriel luniau',
         video: 'Fideo',
         listen: 'Listen',
-        watch: 'Watch',
+        watch: 'Gwylio',
         liveLabel: 'LIVE',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
