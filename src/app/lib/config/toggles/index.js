@@ -15,6 +15,9 @@ const toggles = {
     mostRead: {
       enabled: false,
     },
+    ampAds: {
+      enabled: true,
+    },
   },
   test: {
     chartbeatAnalytics: {
@@ -31,6 +34,9 @@ const toggles = {
     },
     mostRead: {
       enabled: false,
+    },
+    ampAds: {
+      enabled: true,
     },
   },
   stage: {
@@ -49,6 +55,9 @@ const toggles = {
     mostRead: {
       enabled: false,
     },
+    ampAds: {
+      enabled: true,
+    },
   },
   live: {
     chartbeatAnalytics: {
@@ -64,6 +73,9 @@ const toggles = {
       enabled: false,
     },
     mostRead: {
+      enabled: false,
+    },
+    ampAds: {
       enabled: false,
     },
   },
