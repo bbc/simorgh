@@ -4,33 +4,27 @@ import SkipLink from '@bbc/psammead-brand/skip-link';
 import ScriptLink from '@bbc/psammead-script-link';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { bool } from 'prop-types';
-import {
-  // getPreferredVariant,
-  setPreferredVariantCookie,
-} from '#contexts/UserContext/cookies';
+import { setPreferredVariantCookie } from '#contexts/UserContext/cookies';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const setCookie = (service, scriptLinkVariant) => {
-  // const existingCookie = getPreferredVariant(service, scriptLinkVariant);
-  // if (existingCookie) return null;
   return setPreferredVariantCookie(service, scriptLinkVariant);
 };
 
 const renderScriptLink = (
   script,
   service,
-  variant,
+  scriptLinkVariant,
   url,
   scriptLinkText,
   offscreenText,
-  onClick,
 ) => (
   <ScriptLink
     script={script}
     service={service}
     href={url}
-    variant={variant}
-    onClick={onClick}
+    variant={scriptLinkVariant}
+    onClick={() => setCookie(service, scriptLinkVariant)}
   >
     <span aria-hidden>{scriptLinkText}</span>
     <VisuallyHiddenText> {offscreenText} </VisuallyHiddenText>
@@ -70,7 +64,6 @@ const BrandContainer = props => {
       `/${service}/${scriptLinkVariant}`,
       scriptLinkText,
       scriptLinkOffscreenText,
-      setCookie(service, scriptLinkVariant),
     );
 
   return (
