@@ -145,8 +145,8 @@ export const service = {
           title: 'Placeholder title',
           subtitle: 'Placeholder subtitle',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Make you listen',
+        watch: 'Look',
         liveLabel: 'AS E DE HAPPEN',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -195,6 +195,7 @@ export const service = {
         url: '/pidgin/popular/read',
       },
     ],
+    navigationSection: 'Plenti seshon',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',

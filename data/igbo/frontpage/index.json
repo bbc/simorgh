@@ -9,9 +9,9 @@
     "type": "IDX",
     "createdBy": "igbo-v6",
     "language": "ig",
-    "lastUpdated": 1561382058565,
-    "firstPublished": 1508340675,
-    "lastPublished": 1561382049,
+    "lastUpdated": 1573563480960,
+    "firstPublished": 1508340675000,
+    "lastPublished": 1573563474000,
     "options": {
       "allowAdvertising": true
     },
@@ -21,13 +21,14 @@
       "cps_asset_type": "idx"
     },
     "tags": {},
-    "version": "v1.0.10",
+    "version": "v1.1.2",
     "blockTypes": [
       "responsive-top-stories",
       "responsive-cluster",
       "responsive-must-see",
       "responsive-inspire",
-      "responsive-in-depth"
+      "responsive-in-depth",
+      "av-live-streams"
     ],
     "title": "Ogbako",
     "summary": "BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji."
@@ -47,7 +48,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182501"
             },
             "summary": "DSS achọpụtala n'aka ndị ISS dị na mkpamkpa nke na-akpa na Naijirịa ugbua nke gosiri na ọbughị nanị ndị Fulani na-achụ ehị na-kpa arụa",
-            "timestamp": 1516605810000,
+            "timestamp": 1569404215000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63652794",
@@ -88,6 +89,53 @@
           },
           {
             "headlines": {
+              "headline": "Test m̀ịṅị̀ịọ́ụ̄ please ignore"
+            },
+            "locators": {
+              "assetUri": "/igbo/live/institutional-23162153",
+              "cpsUrn": "urn:bbc:content:assetUri:igbo/live/institutional-23162153"
+            },
+            "summary": "New Test m̀ịṅị̀ịọ́ụ̄ please ignore, test summary",
+            "timestamp": 1509636530000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              }
+            },
+            "cpsType": "LIV",
+            "indexImage": {
+              "id": "63598670",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/1E09/test/_63598670_2018_toyota_camry_le_02_low.jpg",
+              "path": "/cpsdevpb/1E09/test/_63598670_2018_toyota_camry_le_02_low.jpg",
+              "height": 295,
+              "width": 524,
+              "altText": "test",
+              "caption": "test",
+              "copyrightHolder": "BBC"
+            },
+            "commentary": {
+              "order": "descending",
+              "assetUUID": "71D8556D07F28940915710A332CCD28A",
+              "channels": {
+                "enhancedmobile": "bbc.cps.asset.23162154_EnhancedMobile",
+                "desktop": "bbc.cps.asset.23162154_HighWeb",
+                "highweb": "bbc.cps.asset.23162154_HighWeb",
+                "mobile": "bbc.cps.asset.23162154_EnhancedMobile"
+              }
+            },
+            "isLive": true,
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "id": "urn:bbc:ares::asset:igbo/live/institutional-23162153",
+            "type": "cps"
+          },
+          {
+            "headlines": {
               "headline": "Akụkọ BBC Igbo na Nkeji"
             },
             "locators": {
@@ -95,7 +143,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23183171"
             },
             "summary": "Akụkọ ihe na-eme n'ụwa niile",
-            "timestamp": 1516641902000,
+            "timestamp": 1516641903000,
             "cpsType": "MAP",
             "media": {
               "id": "p01g1tyl",
@@ -112,9 +160,7 @@
               "versions": [
                 {
                   "versionId": "p01g1tyr",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 58,
                   "durationISO8601": "PT58S",
                   "warnings": {},
@@ -122,7 +168,7 @@
                     "uk": true,
                     "nonUk": true
                   },
-                  "availableFrom": 1516641499
+                  "availableFrom": 1516641499000
                 }
               ]
             },
@@ -160,7 +206,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182895"
             },
             "summary": "Ndị uweojii gbara igwe ndị mmadụ egbe ebe ha n'ekwu okwu megidere Gọọmenti n'ihe mmemme otu okpukpere chi",
-            "timestamp": 1516567254000,
+            "timestamp": 1516567255000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63652644",
@@ -209,6 +255,37 @@
         "title": "Cluster 1",
         "items": [
           {
+            "name": "Igbo radio bulletin",
+            "summary": "This is an Igbo radio bulletin promo, using a CPS promo for a Radio Bulletin",
+            "indexImage": {
+              "id": "63725082",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/6D94/test/_63725082_mediaitem63725081.jpg",
+              "path": "/cpsdevpb/6D94/test/_63725082_mediaitem63725081.jpg",
+              "height": 261,
+              "width": 464,
+              "altText": "BBC Nkeji",
+              "caption": "BBC Nkeji",
+              "copyrightHolder": "BBC"
+            },
+            "indexThumbnail": {
+              "id": "63725084",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/BBB4/test/_63725084_mediaitem63725081.jpg",
+              "path": "/cpsdevpb/BBB4/test/_63725084_mediaitem63725081.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "BBC Nkeji",
+              "caption": "BBC Nkeji",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.com/igbo/media-42986440",
+            "contentType": "RadioBulletin",
+            "assetTypeCode": "PRO",
+            "timestamp": 1573482847000,
+            "type": "link"
+          },
+          {
             "headlines": {
               "headline": "Nnamdi Kanu: \"Ndị gọọmenti na ndị soja ji ya\" - IPOB"
             },
@@ -217,7 +294,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182806"
             },
             "summary": "Emma Powerful kwuru na gọọmenti etiti ji Nnamdi Kanu maka na ọ na-enye ha nsogbu.",
-            "timestamp": 1516531779000,
+            "timestamp": 1516531780000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63652475",
@@ -255,6 +332,39 @@
             "type": "cps"
           },
           {
+            "name": "Igbo radio bulletin",
+            "summary": "This is an Igbo radio bulletin promo, using a CPS promo for a Radio Bulletin with the LIVE button checked",
+            "indexImage": {
+              "id": "63725082",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/6D94/test/_63725082_mediaitem63725081.jpg",
+              "path": "/cpsdevpb/6D94/test/_63725082_mediaitem63725081.jpg",
+              "height": 261,
+              "width": 464,
+              "altText": "BBC Nkeji",
+              "caption": "BBC Nkeji",
+              "copyrightHolder": "BBC"
+            },
+            "indexThumbnail": {
+              "id": "63725084",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/BBB4/test/_63725084_mediaitem63725081.jpg",
+              "path": "/cpsdevpb/BBB4/test/_63725084_mediaitem63725081.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "BBC Nkeji",
+              "caption": "BBC Nkeji",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.com/igbo/media-42986440",
+            "contentType": "RadioBulletin",
+            "assetTypeCode": "PRO",
+            "timestamp": 1573483531000,
+            "isLive": true,
+            "type": "link"
+          },
+
+          {
             "headlines": {
               "headline": "Egbuola ndị na-eme ngagharị iwe na Congo"
             },
@@ -263,7 +373,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182881"
             },
             "summary": "Ịhe butere ngagharị iwe nke a bụ n'onye isi ala ha bụ President Joseph Kabila juru isi n'okwa ochịchị ritu mgbe oge ochịchị ya gafechara.",
-            "timestamp": 1516566938000,
+            "timestamp": 1516566939000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63652580",
@@ -309,7 +419,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182800"
             },
             "summary": "Otu Ohaneze ndị Igbo, otu Afenifere na ndị Miyetti Allah ajụla otu gọọmenti etiti kpokọbara iji dozie esemokwu ndị ọchụ ehi butere",
-            "timestamp": 1516524819000,
+            "timestamp": 1516524820000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63652464",
@@ -355,7 +465,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182765"
             },
             "summary": "Akụkọ na-apụta kwuru na ndị agha Afghanistan azọpụtala ịhe ruru mmadụ otu nari na iri n'isii n'ụlọ oriri nọ na Kabul ndị omekaome wakporo",
-            "timestamp": 1516473648000,
+            "timestamp": 1516473649000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63652384",
@@ -411,7 +521,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182930"
             },
             "summary": "Barcelona emerigo Real Betis na asọmpị La Liga",
-            "timestamp": 1516616034000,
+            "timestamp": 1516616035000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63652810",
@@ -457,7 +567,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182890"
             },
             "summary": "Agbu a ndị otu bọọlụ Arsenal na Dortmund ebidola mkparịta ụka maka azụma ahịa Aubameyang dịka ọ ga-abụ onye kacha oke ọnụ ahịa ndị Arsenal ga-azụ.",
-            "timestamp": 1516546303000,
+            "timestamp": 1516546304000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63652604",
@@ -492,7 +602,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182810"
             },
             "summary": "Onye nchikwa Arsenal ,Arsene wenger ekwuola na Alexis Sanchez ga-abanye Manchester United ma ọ buru na Henrikh Mkhitaryan bata otu Arsenal",
-            "timestamp": 1516523376000,
+            "timestamp": 1516523377000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63652456",
@@ -527,7 +637,13 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182766"
             },
             "summary": "Asọmpi Premier league ndị ụbọchị taa akwakọrọla ọnụ, a na wetara gi osi ga. ebe otu egwuregwu ndị ama ama nwetachara mmeri n'asọmpi ha.",
-            "timestamp": 1516479190000,
+            "timestamp": 1516479191000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              }
+            },
             "cpsType": "STY",
             "indexImage": {
               "id": "63652413",
@@ -562,7 +678,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182760"
             },
             "summary": "Onye ama ama n'egwuregwu teenisi bụ Novak Djokovic agafela na agba nke anọ n'ihe egwuregwu teenisi nke Australian Open.",
-            "timestamp": 1516453873000,
+            "timestamp": 1516453874000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63652259",
@@ -608,7 +724,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182710"
             },
             "summary": "Naịjirịa meriri Libya 1-0. Guinia meriri Equatorial Guinea 1-0 eji bụkọtara ndị isi na group C na CHAN",
-            "timestamp": 1516429672000,
+            "timestamp": 1516429673000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -670,7 +786,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182882"
             },
             "summary": "Nwanyị bụ nne Simi, onye ọbụụ abụ na Naịjirịa lụrụ di ọhụrụ, ọ gbara ihe karịrị afọ iri ise mgbe ọ lụrụ di ọ hụrụ ahụ.",
-            "timestamp": 1516566059000,
+            "timestamp": 1516566060000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63652635",
@@ -716,7 +832,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182888"
             },
             "summary": "Ndị ejidere tụnyere ụmụ ha nga agala ụlọ ịkpe maka mmegbu ha megburu ụmụaka ha ruru iri na atọ n'ọnụ ọgụgụ",
-            "timestamp": 1516566413000,
+            "timestamp": 1516566414000,
             "cpsType": "MAP",
             "media": {
               "id": "p01g18qd",
@@ -734,9 +850,7 @@
               "versions": [
                 {
                   "versionId": "p01g18qh",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 85,
                   "durationISO8601": "PT1M25S",
                   "warnings": {},
@@ -744,7 +858,7 @@
                     "uk": true,
                     "nonUk": true
                   },
-                  "availableFrom": 1516565568
+                  "availableFrom": 1516565568000
                 }
               ]
             },
@@ -781,7 +895,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182843"
             },
             "summary": "Jacinda Arden na dị ya Clarke sị na ọ dị ha oke mkpa ịbụ nne na nna.",
-            "timestamp": 1516541460000,
+            "timestamp": 1516541461000,
             "cpsType": "MAP",
             "media": {
               "id": "p01g16yr",
@@ -798,9 +912,7 @@
               "versions": [
                 {
                   "versionId": "p01g16yt",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 90,
                   "durationISO8601": "PT1M30S",
                   "warnings": {},
@@ -808,7 +920,7 @@
                     "uk": true,
                     "nonUk": true
                   },
-                  "availableFrom": 1516533965
+                  "availableFrom": 1516533965000
                 }
               ]
             },
@@ -856,7 +968,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182730"
             },
             "summary": "Ụfọdụ akụrụngwa dị otu ụdị yabasị a na-akpọ Persian shallot nwere ike inye aka kwalite ahụ ike na ihe na-aluso nje ọgụ.",
-            "timestamp": 1516432777000,
+            "timestamp": 1516432778000,
             "byline": {
               "name": "Chimezie Ucheagbo",
               "title": "BBC Igbo Service",
@@ -912,7 +1024,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182570"
             },
             "summary": "Igba akwụkwọ na ụka Katolik na-ewe oge na ọtụtụ ihe ndị ọzọ mana ndị isi ụka Katolik sịrị na ọ bụ iji gbadọ ndị na-anụ onwe ha ọfụma maka obibi di na nwunye.",
-            "timestamp": 1516392853000,
+            "timestamp": 1516392854000,
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
@@ -964,7 +1076,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182287"
             },
             "summary": "Aka akparala otu nwaanyị na-enye ụmụ nwaanyị-aga ọgwụ na-eko ha afọ ọ dị ka ha adị ime",
-            "timestamp": 1516305079000,
+            "timestamp": 1516305080000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63651765",
@@ -1009,7 +1121,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23177465"
             },
             "summary": "Azịza ọnụ onye DSP Omoni, Uweoji nke Rivers Steeti",
-            "timestamp": 1515333566000,
+            "timestamp": 1515333567000,
             "cpsType": "MAP",
             "media": {
               "id": "p01ftg81",
@@ -1026,9 +1138,7 @@
               "versions": [
                 {
                   "versionId": "p01ftg83",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 49,
                   "durationISO8601": "PT49S",
                   "warnings": {},
@@ -1036,7 +1146,7 @@
                     "uk": true,
                     "nonUk": true
                   },
-                  "availableFrom": 1515332979
+                  "availableFrom": 1515332979000
                 }
               ]
             },
@@ -1084,7 +1194,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23173771"
             },
             "summary": "'Kach' Nwa minista Ibe Kachikwu tinyere Sinetọ Dino Melaye n'ime ihe onyonyo egwu ọ gụrụ mana ọnaghị atọ ndi Naijurịa ọchị",
-            "timestamp": 1513780525000,
+            "timestamp": 1513780526000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63625503",
@@ -1119,7 +1229,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23174391"
             },
             "summary": "Ọkụ a tapiala nkwa ahịa karịrị nari nde Naira na Legọs",
-            "timestamp": 1513863811000,
+            "timestamp": 1513863812000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63626250",
@@ -1165,7 +1275,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182751"
             },
             "summary": "Ndị uwe ojii na Kaduna a gbapụtala mmadụ anọ ndị ọcha a tọọrọ na steeti ahụ n'ụbọchị 17 Jenuwarị, 2018.",
-            "timestamp": 1516461602000,
+            "timestamp": 1516461603000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63652343",
@@ -1211,7 +1321,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182764"
             },
             "summary": "Dịka ọtụtụ mmadụ na-agba ọsọ ndụ na mba syria ezutela ọnwa ha na mbere ede, dịka ha na-achọ ibanye Lebanon",
-            "timestamp": 1516476221000,
+            "timestamp": 1516476222000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63652397",
@@ -1257,7 +1367,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:igbo/23182711"
             },
             "summary": "Aisha Buhari, nwunye onye isi ala Naịjirịa, na-ewu ewu na twitter kamgbe unyaahụ maka na akara ya na twitter zigharịrị ozi ebe ndị sineti kwuru na dị ya anaghị achị nkeọma.",
-            "timestamp": 1516438148000,
+            "timestamp": 1516438149000,
             "cpsType": "STY",
             "indexImage": {
               "id": "63652217",
@@ -1301,55 +1411,78 @@
         "semanticGroupName": "Section 3"
       },
       {
-        "type": "useful-links",
-        "title": "Useful links",
+        "type": "av-live-streams",
+        "title": "AV stories live",
         "items": [
           {
-            "name": "Ethiopia: Ndị uweojii agba gbuola ndị mmadụ",
-            "uri": "https://www.bbc.com/igbo/egwuregwu-49946491",
-            "contentType": "Guide",
-            "assetTypeCode": "PRO",
-            "timestamp": 1569321103000,
-            "type": "link"
+            "name": "Igbo TV bulletin",
+            "summary": "This is an Igbo TV bulletin promo, using a CPS promo for a TV Bulletin",
+            "indexImage": {
+              "id": "63725091",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/4A6C/test/_63725091_e7badb45-9052-4554-87f6-b430cb6d48fb.jpg",
+              "path": "/cpsdevpb/4A6C/test/_63725091_e7badb45-9052-4554-87f6-b430cb6d48fb.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "NYSC from the Igbo site",
+              "caption": "NYSC from the Igbo site",
+              "copyrightHolder": "other"
             },
-            {
-              "name": "Onye isi ala ndị New Zealand dị ime",
-              "uri": "https://www.bbc.com/igbo/egwuregwu-49946491",
-              "contentType": "Guide",
-              "assetTypeCode": "PRO",
-              "timestamp": 1569321103000,
-              "type": "link"
-              },
-              {
-                "name": "Egbuola ndị na-eme ngagharị iwe na Congo",
-                "uri": "https://www.bbc.com/igbo/egwuregwu-49946491",
-                "contentType": "Guide",
-                "assetTypeCode": "PRO",
-                "timestamp": 1569321103000,
-                "type": "link"
-                },
-                {
-                  "name": "CHAN: Naịjirịa na Guinea nọ na ịrụ Group C",
-                  "uri": "https://www.bbc.com/igbo/egwuregwu-49946491",
-                  "contentType": "Guide",
-                  "assetTypeCode": "PRO",
-                  "timestamp": 1569321103000,
-                  "type": "link"
-                  },
-                  {
-                    "name": "Yabasị a na-achụ TB ọsọ",
-                    "uri": "https://www.bbc.com/igbo/egwuregwu-49946491",
-                    "contentType": "Guide",
-                    "assetTypeCode": "PRO",
-                    "timestamp": 1569321103000,
-                    "type": "link"
-                    }
+            "indexThumbnail": {
+              "id": "63725093",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/988C/test/_63725093_mediaitem63725091.jpg",
+              "path": "/cpsdevpb/988C/test/_63725093_mediaitem63725091.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "NYSC from the Igbo site",
+              "caption": "NYSC from the Igbo site",
+              "copyrightHolder": "other"
+            },
+            "uri": "https://www.bbc.com/igbo/media-42986440",
+            "contentType": "TVBulletin",
+            "assetTypeCode": "PRO",
+            "timestamp": 1573483162000,
+            "type": "link"
+          },
+          {
+            "name": "Igbo TV bulletin",
+            "summary": "This is an Igbo TV bulletin promo, using a CPS promo for a TV Bulletin with the LIVE button checked",
+            "indexImage": {
+              "id": "63725091",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/4A6C/test/_63725091_e7badb45-9052-4554-87f6-b430cb6d48fb.jpg",
+              "path": "/cpsdevpb/4A6C/test/_63725091_e7badb45-9052-4554-87f6-b430cb6d48fb.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "NYSC from the Igbo site",
+              "caption": "NYSC from the Igbo site",
+              "copyrightHolder": "other"
+            },
+            "indexThumbnail": {
+              "id": "63725093",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/988C/test/_63725093_mediaitem63725091.jpg",
+              "path": "/cpsdevpb/988C/test/_63725093_mediaitem63725091.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "NYSC from the Igbo site",
+              "caption": "NYSC from the Igbo site",
+              "copyrightHolder": "other"
+            },
+            "uri": "https://www.bbc.com/igbo/media-42986440",
+            "contentType": "TVBulletin",
+            "assetTypeCode": "PRO",
+            "timestamp": 1573483578000,
+            "isLive": true,
+            "type": "link"
+          }
         ],
+        "semanticGroupName": "AV stories live",
         "strapline": {
-            "name": "Useful links"
-        },
-        "semanticGroupName": "Useful links"
-    }
+          "name": "AV stories live"
+        }
+      }
     ]
   },
   "promo": {

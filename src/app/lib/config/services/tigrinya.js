@@ -135,8 +135,8 @@ export const service = {
         audio: 'ድምፂ',
         photogallery: 'ስእልታት',
         video: 'ቪድዮ',
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'ናይ መወዳእታ ፍጻመታት',
+        watch: 'ተመልከት',
         liveLabel: 'ቀጥታ ስርጭት',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -196,6 +196,7 @@ export const service = {
         url: '/tigrinya/popular/read',
       },
     ],
+    navigationSection: 'ክፍልታት',
     timezone: 'Africa/Addis_Ababa',
   },
 };

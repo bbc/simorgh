@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
+exports[`CpsAssetPageMain MAP AV player should render version (live audio stream) 1`] = `
 <DocumentFragment>
   <noscript />
   .c0 {
@@ -99,12 +99,12 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
   content: ' ';
   display: inline-block;
   width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-left: -2rem;
 }
 
 .c15 {
-  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .c4 {
@@ -525,8 +525,8 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
             allowfullscreen=""
             class="c6"
             scrolling="no"
-            src="https://www.test.bbc.co.uk/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/ig"
-            title="Media player"
+            src="https://embed-host.bbc.com/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
+            title="Медиа плейер"
           />
         </div>
       </figure>
@@ -548,13 +548,13 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
         class="c10"
         datetime="2019-09-13"
       >
-        13 Septemba 2019
+        13 сентябр 2019
       </time>
       <time
         class="c10"
         datetime="2019-11-06"
       >
-        Mgbe ikpeazụ e tinyere ya ozi ọhụrụ 6 Nọvemba 2019
+        Янгиланди 6 ноябр 2019
       </time>
     </div>
     <div
@@ -692,74 +692,30 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
         role="list"
       >
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                Ўзбек деҳқонининг косаси нега оқармайди
-              </p>
-            </div>
-          </div>
+          Ўзбек деҳқонининг косаси нега оқармайди
         </li>
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                Ўзбек деҳқонининг косаси нега оқармайди
-              </p>
-            </div>
-          </div>
+          Ўзбек деҳқонининг косаси нега оқармайди
         </li>
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <b>
-                  Ўзбек деҳқонининг косаси нега оқармайди
-                </b>
-              </p>
-            </div>
-          </div>
+          <b>
+            Ўзбек деҳқонининг косаси нега оқармайди
+          </b>
         </li>
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                Ўзбек деҳқонининг косаси нега оқармайди
-              </p>
-            </div>
-          </div>
+          Ўзбек деҳқонининг косаси нега оқармайди
         </li>
       </ul>
     </div>
@@ -772,92 +728,48 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
         role="list"
       >
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
+          <a
+            class="c13"
+            href="https://bbc.com/uzbek"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c13"
-                  href="https://bbc.com/uzbek"
-                >
-                  Ўзбек деҳқонининг косаси нега оқармайди
-                </a>
-              </p>
-            </div>
-          </div>
+            Ўзбек деҳқонининг косаси нега оқармайди
+          </a>
         </li>
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
+          <a
+            class="c13"
+            href="https://bbc.com/uzbek"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c13"
-                  href="https://bbc.com/uzbek"
-                >
-                  Ўзбек деҳқонининг косаси нега оқармайди
-                </a>
-              </p>
-            </div>
-          </div>
+            Ўзбек деҳқонининг косаси нега оқармайди
+          </a>
         </li>
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
+          <a
+            class="c13"
+            href="https://bbc.com/uzbek"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c13"
-                  href="https://bbc.com/uzbek"
-                >
-                  Ўзбек деҳқонининг косаси нега оқармайди
-                </a>
-              </p>
-            </div>
-          </div>
+            Ўзбек деҳқонининг косаси нега оқармайди
+          </a>
         </li>
         <li
+          class="c15"
           role="listitem"
         >
-          <div
-            class="c15"
+          <a
+            class="c13"
+            href="https://bbc.com/uzbek"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                <a
-                  class="c13"
-                  href="https://bbc.com/uzbek"
-                >
-                  Ўзбек деҳқонининг косаси нега оқармайди
-                </a>
-              </p>
-            </div>
-          </div>
+            Ўзбек деҳқонининг косаси нега оқармайди
+          </a>
         </li>
       </ul>
     </div>
@@ -887,7 +799,7 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
                 <span
                   class="c2"
                 >
-                  Ebe foto si 
+                  Сүрөттүн булагы, 
                 </span>
                 <span
                   lang="en-GB"
@@ -925,7 +837,1963 @@ exports[`CpsAssetPageMain should correctly handle live streams 1`] = `
 </DocumentFragment>
 `;
 
-exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
+exports[`CpsAssetPageMain MAP should render component 1`] = `
+<DocumentFragment>
+  <noscript />
+  .c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c1 {
+  grid-column: 1 / span 6;
+}
+
+.c18 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+.c9 {
+  grid-column: 1 / span 6;
+}
+
+.c8 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c12 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding: 1.5rem 0;
+}
+
+.c16 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.c10 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+.c10:last-child {
+  padding-bottom: 1rem;
+}
+
+.c11 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c15 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c15:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c15:focus,
+.c15:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.c13 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  list-style-type: none;
+}
+
+.c13 > li::before {
+  content: ' ';
+  display: inline-block;
+  width: 2rem;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
+  margin-left: -2rem;
+}
+
+.c14 {
+  margin-bottom: 1rem;
+}
+
+.c4 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.c2 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c21 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  background-color: rgba(34,34,34,0.75);
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 0.25rem 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+}
+
+.c23 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6E6E73;
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+}
+
+.c23 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c23 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c23 i {
+  font-style: normal;
+}
+
+.c20 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c5 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c3 {
+  margin-bottom: 1.5rem;
+}
+
+.c6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    max-width: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c7 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c7 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c7 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c7 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c7 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c17 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c17 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c17 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c19 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c19 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c19 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
+    grid-column: 1 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c22 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c22 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c22 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:80rem) {
+  .c22 {
+    grid-column: 1 / span 10;
+  }
+}
+
+@media (max-width:80rem) {
+  .c18 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c18 {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+@media (max-width:25rem) {
+  .c9 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c9 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c9 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c9 {
+    grid-column: 2 / span 4;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c9 {
+    max-width: initial;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c10 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c11 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c23 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c23 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c23 {
+    padding: 0.5rem 0 0;
+  }
+}
+
+@media (max-width:63rem) {
+  .c3 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c3 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
+<main
+    class="c0"
+    role="main"
+  >
+    <div
+      class="c1"
+    >
+      <a
+        data-e2e="cpsAssetDummyLink"
+        href="/pidgin/23248703"
+      >
+        Test MAP to MAP inline link
+      </a>
+    </div>
+    <h1
+      class="c2"
+      id="content"
+      tabindex="-1"
+    >
+      Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
+    </h1>
+    <div
+      class="c3"
+    >
+      <figure
+        class="c4"
+      >
+        <div
+          class="c5"
+        >
+          <iframe
+            allow="autoplay; fullscreen"
+            allowfullscreen=""
+            class="c6"
+            scrolling="no"
+            src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
+            title="Media player"
+          />
+        </div>
+      </figure>
+    </div>
+    <div
+      class="c7"
+    >
+      <strong
+        aria-hidden="true"
+        class="c8"
+      >
+        Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
+      </strong>
+    </div>
+    <div
+      class="c9"
+    >
+      <time
+        class="c10"
+        datetime="2019-09-13"
+      >
+        13 September 2019
+      </time>
+      <time
+        class="c10"
+        datetime="2019-11-20"
+      >
+        New Informate 20 November 2019
+      </time>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        <b>
+          This is an introduction in bold. & &lt; &gt;
+        </b>
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <h2
+        class="c12"
+        id="This-is-a-heading-<->"
+        tabindex="-1"
+      >
+        This is a heading & &lt; &gt;
+      </h2>
+    </div>
+    <div
+      class="c1"
+    >
+      <h2
+        class="c12"
+        id="This-is-a-subheading-<->"
+        tabindex="-1"
+      >
+        This is a subheading & &lt; &gt;
+      </h2>
+    </div>
+    <div
+      class="c1"
+    >
+      <h2
+        class="c12"
+        id="This-is-a-crosshead-<->"
+        tabindex="-1"
+      >
+        This is a crosshead & &lt; &gt;
+      </h2>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        Bulleted list:
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <ul
+        class="c13"
+        dir="ltr"
+        role="list"
+      >
+        <li
+          class="c14"
+          role="listitem"
+        >
+          afrique/23248423
+        </li>
+        <li
+          class="c14"
+          role="listitem"
+        >
+          afrique/23248423
+        </li>
+        <li
+          class="c14"
+          role="listitem"
+        >
+          afrique/23248423
+        </li>
+        <li
+          class="c14"
+          role="listitem"
+        >
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
+          >
+            this is the link text
+          </a>
+        </li>
+        <li
+          class="c14"
+          role="listitem"
+        >
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
+          >
+            this is the link text
+          </a>
+        </li>
+        <li
+          class="c14"
+          role="listitem"
+        >
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
+          >
+            this is the link text
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        Numbered list:
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <ul
+        class="c13"
+        dir="ltr"
+        role="list"
+      >
+        <li
+          class="c14"
+          role="listitem"
+        >
+          afrique/23248423
+        </li>
+        <li
+          class="c14"
+          role="listitem"
+        >
+          afrique/23248423
+        </li>
+        <li
+          class="c14"
+          role="listitem"
+        >
+          afrique/23248423
+        </li>
+        <li
+          class="c14"
+          role="listitem"
+        >
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
+          >
+            this is the link text
+          </a>
+        </li>
+        <li
+          class="c14"
+          role="listitem"
+        >
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
+          >
+            this is the link text
+          </a>
+        </li>
+        <li
+          class="c14"
+          role="listitem"
+        >
+          <a
+            class="c15"
+            href="https://bbc.com/pidgin"
+          >
+            this is the link text
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        Lorem ipsum dolor sit amet, 
+        <b>
+          consectetur
+        </b>
+         adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        <b>
+           ullamco laboris nisi ut aliquip 
+        </b>
+        ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        <i
+          class="c16"
+        >
+           in voluptate velit esse cillum 
+        </i>
+        dolore "eu fugiat nulla" pariatur. 
+        <a
+          class="c15"
+          href="https://bbc.com/pidgin"
+        >
+          Excepteur
+        </a>
+         sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        Testing special characters: !"£$%^&*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        Table:
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        Social media embed:
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        Quote box:
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        Correspondent quote box:
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        Fact box:
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        ­
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        Lorem ipsum
+        <a
+          class="c15"
+          href="https://bbc.com/pidgin"
+        >
+           dolor sit amet
+        </a>
+        , consectetur adipiscing elit
+      </p>
+    </div>
+    <div
+      class="c17"
+    >
+      <figure
+        class="c4"
+      >
+        <div
+          class="c18"
+        >
+          <div
+            class="c19"
+          >
+            <div
+              class="c20"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+              <noscript />
+              <p
+                class="c21"
+                role="text"
+              >
+                <span
+                  class="c2"
+                >
+                  Wia dis foto come from, 
+                </span>
+                <span
+                  lang="en-GB"
+                >
+                  Google
+                </span>
+              </p>
+            </div>
+          </div>
+          <div
+            class="c22"
+          >
+            <figcaption
+              class="c23"
+            >
+              <span
+                class="c2"
+              >
+                Wetin we call dis foto, 
+              </span>
+              <p>
+                Psammead was named after the mythical sand creature
+              </p>
+            </figcaption>
+          </div>
+        </div>
+      </figure>
+    </div>
+    <div
+      class="c17"
+    >
+      <figure
+        class="c4"
+      >
+        <div
+          class="c18"
+        >
+          <div
+            class="c19"
+          >
+            <div
+              class="c20"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+              <noscript />
+              <p
+                class="c21"
+                role="text"
+              >
+                <span
+                  class="c2"
+                >
+                  Wia dis foto come from, 
+                </span>
+                <span
+                  lang="en-GB"
+                >
+                  Butterfly person
+                </span>
+              </p>
+            </div>
+          </div>
+          <div
+            class="c22"
+          >
+            <figcaption
+              class="c23"
+            >
+              <span
+                class="c2"
+              >
+                Wetin we call dis foto, 
+              </span>
+              <p>
+                A pretty little butterfly & &lt; &gt;
+              </p>
+            </figcaption>
+          </div>
+        </div>
+      </figure>
+    </div>
+    <div
+      class="c1"
+    >
+      <ul
+        class="c13"
+        dir="ltr"
+        role="list"
+      >
+        <li
+          class="c14"
+          role="listitem"
+        >
+          sunt in culpa qui officia deserunt mollit anim id est laborum
+        </li>
+        <li
+          class="c14"
+          role="listitem"
+        >
+          sunt in culpa qui officia deserunt mollit anim id est laborum
+        </li>
+        <li
+          class="c14"
+          role="listitem"
+        >
+          sunt in culpa qui officia deserunt mollit anim id est laborum
+        </li>
+        <li
+          class="c14"
+          role="listitem"
+        >
+          v3 draft
+        </li>
+      </ul>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        This is transmission info 
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c11"
+      >
+        This is the footer 
+      </p>
+    </div>
+  </main>
+  .c24 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+
+.c22 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 0.8125rem;
+}
+
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c19 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c23 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c13 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c7 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FFFFFF;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c2 {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.c4 {
+  margin: 0;
+  padding: 0;
+}
+
+.c9 {
+  border-bottom: 0.0625rem solid #F2F2F2;
+  padding: 0.5rem 0 1rem;
+}
+
+.c9:first-child {
+  padding-top: 0;
+}
+
+.c9:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c8 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c10 {
+  position: relative;
+}
+
+.c11 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c12 {
+  position: relative;
+}
+
+.c16 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c18 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c15 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c17 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c17:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c17:hover,
+.c17:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c17:visited {
+  color: #6E6E73;
+}
+
+.c20 {
+  padding: 0.5rem 0.25rem;
+  background-color: #FFFFFF;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #222222;
+  height: 2rem;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c25 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+}
+
+.c1 {
+  z-index: 0;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c7 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c3 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    padding: 1.5rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9:first-child {
+    padding-top: 1.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c10 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    width: 33.33%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c11 {
+    display: block;
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:25rem) {
+  .c14 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c18 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c18 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c18 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c15 {
+    width: 66.67%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c15 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c20 {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+<aside
+    aria-labelledby="related-content-heading"
+    class="c0"
+    role="complementary"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <div
+          class="c3"
+        />
+        <h2
+          class="c4"
+        >
+          <div
+            class="c5"
+          >
+            <span
+              class="c6"
+            >
+              <span
+                class="c7"
+                dir="ltr"
+                id="related-content-heading"
+              >
+                Another thing we de for inside dis tori
+              </span>
+            </span>
+          </div>
+        </h2>
+      </div>
+      <ul
+        class="c8"
+        role="list"
+      >
+        <li
+          class="c9"
+          role="listitem"
+        >
+          <div
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="c14"
+                />
+              </div>
+            </div>
+            <div
+              class="c15"
+            >
+              <h3
+                class="c16"
+              >
+                <a
+                  class="c17"
+                  href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  Police Arrest 3 ontop Anambra Church Attack
+                </a>
+              </h3>
+              <p
+                class="c18"
+              >
+                Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
+              </p>
+              <time
+                class="c19"
+                datetime="2017-08-08"
+              >
+                8th August 2017
+              </time>
+            </div>
+          </div>
+        </li>
+        <li
+          class="c9"
+          role="listitem"
+        >
+          <div
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="c14"
+                />
+              </div>
+            </div>
+            <div
+              class="c15"
+            >
+              <h3
+                class="c16"
+              >
+                <a
+                  class="c17"
+                  href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
+                </a>
+              </h3>
+              <p
+                class="c18"
+              >
+                The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.
+              </p>
+              <time
+                class="c19"
+                datetime="2017-08-08"
+              >
+                8th August 2017
+              </time>
+            </div>
+          </div>
+        </li>
+        <li
+          class="c9"
+          role="listitem"
+        >
+          <div
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                />
+                <div
+                  class="c14"
+                >
+                  <div
+                    aria-hidden="true"
+                    class="c20"
+                  >
+                    <div
+                      class="c21"
+                    >
+                      <svg
+                        class="c22"
+                        focusable="false"
+                        height="13px"
+                        viewBox="0 0 32 26"
+                        width="16px"
+                      >
+                        <path
+                          d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
+                        />
+                        <circle
+                          cx="20"
+                          cy="14.02"
+                          r="5.5"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="c15"
+            >
+              <h3
+                class="c16"
+              >
+                <a
+                  class="c17"
+                  href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  <span
+                    role="text"
+                  >
+                    <span
+                      class="c23"
+                    >
+                      Image gallery, 
+                    </span>
+                    <span>
+                      Kenya Elections Pictures: 8 August 2017
+                    </span>
+                  </span>
+                </a>
+              </h3>
+              <p
+                class="c18"
+              >
+                This na some of the picture wey our eye see as Kenya people go vote for election today
+              </p>
+              <time
+                class="c19"
+                datetime="2017-08-08"
+              >
+                8th August 2017
+              </time>
+            </div>
+          </div>
+        </li>
+        <li
+          class="c9"
+          role="listitem"
+        >
+          <div
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="c14"
+                >
+                  <div
+                    aria-hidden="true"
+                    class="c20"
+                  >
+                    <div
+                      class="c21"
+                    >
+                      <svg
+                        class="c24"
+                        focusable="false"
+                        height="12px"
+                        viewBox="0 0 13 12"
+                        width="13px"
+                      >
+                        <path
+                          d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                        />
+                        <path
+                          d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                        />
+                      </svg>
+                      <time
+                        class="c25"
+                        datetime="PT15S"
+                      >
+                        0:15
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="c15"
+            >
+              <h3
+                class="c16"
+              >
+                <a
+                  class="c17"
+                  href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  <span
+                    role="text"
+                  >
+                    <span
+                      class="c23"
+                    >
+                      Audio, 
+                    </span>
+                    <span>
+                      BBC News Pidgin One Minute News
+                    </span>
+                    <span
+                      class="c23"
+                    >
+                      , 0,15
+                    </span>
+                  </span>
+                </a>
+              </h3>
+              <p
+                class="c18"
+              >
+                All di local and world tori wey you suppose know in 60 seconds!
+              </p>
+              <time
+                class="c19"
+                datetime="2017-08-17"
+              >
+                17th August 2017
+              </time>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </aside>
+</DocumentFragment>
+`;
+
+exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -945,18 +2813,6 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   grid-column: 1 / span 6;
 }
 
-.c3 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-}
-
 .c24 {
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -974,6 +2830,22 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   font-style: italic;
   font-family: inherit;
   font-weight: inherit;
+}
+
+.c3 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c3:focus {
+  outline: none;
 }
 
 .c15 {
@@ -1033,12 +2905,12 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   content: ' ';
   display: inline-block;
   width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-left: -2rem;
 }
 
 .c20 {
-  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .c5 {
@@ -1455,26 +3327,6 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c24 {
     font-size: 1.5rem;
     line-height: 1.75rem;
@@ -1491,6 +3343,26 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) {
   .c24 {
     padding-top: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    padding: 2.5rem 0;
   }
 }
 
@@ -1908,12 +3780,12 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/igbo/afirika-23252735","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/igbo/afirika-23252735","name":"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?"}}
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/igbo/afirika-23252735","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/igbo/afirika-23252735","name":"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?"},"headline":"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?","author":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
     </script>
     <script
       type="application/ld+json"
     >
-      {"video":{"@list":[{"@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":1961,"thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":1559819809000}]}}
+      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://embed-host.bbc.com/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"}
     </script>
   </head>
   <body>
@@ -2068,85 +3940,41 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
             role="list"
           >
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
-              >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    This is a unordered list
-                  </p>
-                </div>
-              </div>
+              This is a unordered list
             </li>
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
-              >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    It can have 
-                    <b>
-                      bold text
-                    </b>
-                     in it
-                  </p>
-                </div>
-              </div>
+              It can have 
+              <b>
+                bold text
+              </b>
+               in it
             </li>
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
+              <a
+                class="c17"
+                href="https://bbc.com/pidgin/23248703"
               >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    <a
-                      class="c17"
-                      href="https://bbc.com/pidgin/23248703"
-                    >
-                      It can also have links
-                    </a>
-                  </p>
-                </div>
-              </div>
+                It can also have links
+              </a>
             </li>
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
+              <i
+                class="c18"
               >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    <i
-                      class="c18"
-                    >
-                      It can even have italic text in it!
-                    </i>
-                  </p>
-                </div>
-              </div>
+                It can even have italic text in it!
+              </i>
             </li>
           </ul>
         </div>
@@ -2267,85 +4095,41 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
             role="list"
           >
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
-              >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    This is a ordered list
-                  </p>
-                </div>
-              </div>
+              This is a ordered list
             </li>
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
-              >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    It can have 
-                    <b>
-                      bold text
-                    </b>
-                     in it
-                  </p>
-                </div>
-              </div>
+              It can have 
+              <b>
+                bold text
+              </b>
+               in it
             </li>
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
+              <a
+                class="c17"
+                href="https://bbc.com/pidgin/23248703"
               >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    <a
-                      class="c17"
-                      href="https://bbc.com/pidgin/23248703"
-                    >
-                      It can also have links
-                    </a>
-                  </p>
-                </div>
-              </div>
+                It can also have links
+              </a>
             </li>
             <li
+              class="c20"
               role="listitem"
             >
-              <div
-                class="c20"
+              <i
+                class="c18"
               >
-                <div
-                  class="c1"
-                >
-                  <p
-                    class="c16"
-                  >
-                    <i
-                      class="c18"
-                    >
-                      It can even have italic text in it!
-                    </i>
-                  </p>
-                </div>
-              </div>
+                It can even have italic text in it!
+              </i>
             </li>
           </ul>
         </div>
@@ -2372,7 +4156,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                 allowfullscreen=""
                 class="c23"
                 scrolling="no"
-                src="https://www.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"
+                src="https://embed-host.bbc.com/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"
                 title="Media player"
               />
             </div>
@@ -2453,8 +4237,13 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
             Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
           </p>
         </div>
+      </main>
+      <aside
+        aria-labelledby="related-content-heading"
+        class="c0"
+        role="complementary"
+      >
         <div
-          aria-labelledby="related-content-heading"
           class="c25"
         >
           <div
@@ -2493,7 +4282,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
             />
           </ul>
         </div>
-      </main>
+      </aside>
     </div>
   </body>
 </html>
@@ -2512,6 +4301,11 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   grid-column: 1 / span 6;
 }
 
+.c16 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
 .c8 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -2524,14 +4318,23 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   padding: 2rem 0;
 }
 
-.c30 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
+.c10 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding: 1.5rem 0;
+}
+
+.c14 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
 }
 
 .c9 {
@@ -2545,7 +4348,25 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   margin: 0;
 }
 
-.c10 {
+.c13 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c13:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c13:focus,
+.c13:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.c11 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2554,16 +4375,16 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   list-style-type: none;
 }
 
-.c10 > li::before {
+.c11 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
   margin-left: -2rem;
 }
 
-.c11 {
-  display: inline-block;
+.c12 {
+  margin-bottom: 1rem;
 }
 
 .c4 {
@@ -2584,7 +4405,45 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   margin: 0;
 }
 
-.c24 {
+.c19 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  background-color: rgba(34,34,34,0.75);
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 0.25rem 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+}
+
+.c21 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6E6E73;
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+}
+
+.c21 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c21 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c21 i {
+  font-style: normal;
+}
+
+.c18 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -2605,167 +4464,6 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 
 .c3 {
   margin-bottom: 1.5rem;
-}
-
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c18 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FFFFFF;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c14 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c13 {
-  position: relative;
-  margin-top: 2rem;
-}
-
-.c15 {
-  margin: 0;
-  padding: 0;
-}
-
-.c20 {
-  border-bottom: 0.0625rem solid #F2F2F2;
-  padding: 0.5rem 0 1rem;
-}
-
-.c20:first-child {
-  padding-top: 0;
-}
-
-.c20:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
-.c19 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c21 {
-  position: relative;
-}
-
-.c22 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 33.33%;
-}
-
-.c23 {
-  position: relative;
-}
-
-.c27 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c29 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c26 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-.c28 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c28:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c28:hover,
-.c28:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c28:visited {
-  color: #6E6E73;
-}
-
-.c12 {
-  z-index: 0;
 }
 
 .c6 {
@@ -2887,6 +4585,84 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   }
 }
 
+@media (max-width:63rem) {
+  .c15 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c15 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c15 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c17 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c17 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c17 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c17 {
+    grid-column: 1 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c20 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c20 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c20 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:80rem) {
+  .c20 {
+    grid-column: 1 / span 10;
+  }
+}
+
+@media (max-width:80rem) {
+  .c16 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c16 {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c8 {
     font-size: 2rem;
@@ -2908,275 +4684,105 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c30 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c30 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c10 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (max-width:63rem) {
-  .c3 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c3 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c3 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c3 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c3 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c17 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c18 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
-    margin: 0;
+  .c10 {
+    font-size: 2rem;
+    line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
-    padding-right: 1rem;
+  .c10 {
+    padding-top: 2rem;
   }
 }
 
-@media screen and (-ms-high-contrast:active) {
-  .c14 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c9 {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
-    margin-top: 1.5rem;
+  .c9 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c11 {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
-    padding: 1rem 0 1rem;
+  .c11 {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
-@media (min-width:63rem) {
-  .c20 {
-    padding: 1.5rem 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c20:first-child {
-    padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c20:first-child {
-    padding-top: 1.5rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c21 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c22 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c22 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
-@media (min-width:25rem) {
-  .c25 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c27 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c27 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c27 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c29 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c21 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c29 {
-    display: none;
-    visibility: hidden;
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c21 {
+    padding: 0.5rem 1rem 0;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c26 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c26 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c26 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c21 {
+    padding: 0.5rem 0 0;
   }
 }
 
 @media (max-width:63rem) {
-  .c12 {
+  .c3 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c12 {
+  .c3 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c12 {
+  .c3 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c12 {
+  .c3 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c12 {
+  .c3 {
     padding: 0 1rem;
   }
 }
@@ -3200,7 +4806,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       id="content"
       tabindex="-1"
     >
-      Nigerian man Emeka Nelson don produce generator wey dey use only water
+      Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
     </h1>
     <div
       class="c3"
@@ -3216,7 +4822,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
             allowfullscreen=""
             class="c6"
             scrolling="no"
-            src="https://www.test.bbc.co.uk/ws/av-embeds/cps/pidgin/tori-49450859/p07lg239/ig"
+            src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
             title="Media player"
           />
         </div>
@@ -3229,7 +4835,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
         aria-hidden="true"
         class="c8"
       >
-        Nigerian man Emeka Nelson don produce generator wey dey use only water
+        Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
       </strong>
     </div>
     <div
@@ -3239,60 +4845,119 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
         class="c9"
       >
         <b>
-          As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
+          This is an introduction in bold. & &lt; &gt;
         </b>
       </p>
     </div>
     <div
       class="c1"
     >
+      <h2
+        class="c10"
+        id="This-is-a-heading-<->"
+        tabindex="-1"
+      >
+        This is a heading & &lt; &gt;
+      </h2>
+    </div>
+    <div
+      class="c1"
+    >
+      <h2
+        class="c10"
+        id="This-is-a-subheading-<->"
+        tabindex="-1"
+      >
+        This is a subheading & &lt; &gt;
+      </h2>
+    </div>
+    <div
+      class="c1"
+    >
+      <h2
+        class="c10"
+        id="This-is-a-crosshead-<->"
+        tabindex="-1"
+      >
+        This is a crosshead & &lt; &gt;
+      </h2>
+    </div>
+    <div
+      class="c1"
+    >
       <p
         class="c9"
       >
-        Wetin ginger Emeka na im friend wey smoke from generator kill.
+        This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c9"
+      >
+        Bulleted list:
       </p>
     </div>
     <div
       class="c1"
     >
       <ul
-        class="c10"
+        class="c11"
         dir="ltr"
         role="list"
       >
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c11"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                pidgin/tori-46975713
-              </p>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c11"
+          afrique/23248423
+        </li>
+        <li
+          class="c12"
+          role="listitem"
+        >
+          afrique/23248423
+        </li>
+        <li
+          class="c12"
+          role="listitem"
+        >
+          <a
+            class="c13"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c1"
-            >
-              <p
-                class="c9"
-              >
-                pidgin/tori-42494678
-              </p>
-            </div>
-          </div>
+            this is the link text
+          </a>
+        </li>
+        <li
+          class="c12"
+          role="listitem"
+        >
+          <a
+            class="c13"
+            href="https://bbc.com/pidgin"
+          >
+            this is the link text
+          </a>
+        </li>
+        <li
+          class="c12"
+          role="listitem"
+        >
+          <a
+            class="c13"
+            href="https://bbc.com/pidgin"
+          >
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
@@ -3302,333 +4967,376 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       <p
         class="c9"
       >
-        BBC carri waka go Awka Anambra state inside South-east Nigeria go see di ogbonge invention wey Nelson produce.
+        Numbered list:
       </p>
     </div>
     <div
       class="c1"
     >
-      <p
-        class="c9"
-      >
-        Nelson wey no be certified engineer struggle to read for elementary school, work as house help for di age of 5, and no get any university education.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c9"
-      >
-        Wen we go im house, e dey full with Structural drawings and designs wey e pin for wall and na so e dey take im time dey study di drawing.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c9"
-      >
-        For 16 years, e dey focus to make im dream turn to something real-dat na to make generator wey go run on water.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c9"
-      >
-        Most of di material wey Nelson take arrange im generator na from  scrap.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c9"
-      >
-        Di first generator wey im do explode wen e test am. Dis come make am dey doubt di project but afta plenti years of struggle e come get am right.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c9"
-      >
-        Nelson says im generator get maximum output capacity of 1,000 watts and di voltage dey fluctuate between 220 and 240.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c9"
-      >
-        E say one litre of clean water fit power di generator for 6 hours, and e no go bring out smoke like oda generators, e dey environment friendly.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c9"
-      >
-        Dis ogbonge inventor add say im dream na for di generator to dey for millions of homes all ova di world.
-      </p>
-    </div>
-    <div
-      aria-labelledby="related-content-heading"
-      class="c12"
-    >
-      <div
-        class="c13"
-      >
-        <div
-          class="c14"
-        />
-        <h2
-          class="c15"
-        >
-          <div
-            class="c16"
-          >
-            <span
-              class="c17"
-            >
-              <span
-                class="c18"
-                dir="ltr"
-                id="related-content-heading"
-              >
-                Ihe ndị ọzọ n'akụkọ a
-              </span>
-            </span>
-          </div>
-        </h2>
-      </div>
       <ul
-        class="c19"
+        class="c11"
+        dir="ltr"
         role="list"
       >
         <li
-          class="c20"
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c21"
-          >
-            <div
-              class="c22"
-            >
-              <div
-                class="c23"
-              >
-                <div
-                  class="c24"
-                >
-                  <div
-                    class="lazyload-placeholder"
-                  />
-                </div>
-                <div
-                  class="c25"
-                />
-              </div>
-            </div>
-            <div
-              class="c26"
-            >
-              <h3
-                class="c27"
-              >
-                <a
-                  class="c28"
-                  href="/pidgin/44508901?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                >
-                  <span
-                    role="text"
-                  >
-                    <span
-                      class="c2"
-                    >
-                      , 
-                    </span>
-                    <span>
-                      Meet boys who dey convert cassava to electricity
-                    </span>
-                  </span>
-                </a>
-              </h3>
-              <p
-                class="c29"
-              >
-                James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
-              </p>
-              <time
-                class="c30"
-                datetime="1970-01-18"
-              >
-                18 Jenụwarị 1970
-              </time>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
-          class="c20"
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c21"
-          >
-            <div
-              class="c22"
-            >
-              <div
-                class="c23"
-              >
-                <div
-                  class="c24"
-                >
-                  <div
-                    class="lazyload-placeholder"
-                  />
-                </div>
-                <div
-                  class="c25"
-                />
-              </div>
-            </div>
-            <div
-              class="c26"
-            >
-              <h3
-                class="c27"
-              >
-                <a
-                  class="c28"
-                  href="/pidgin/tori-46975713?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                >
-                  How light companies dey use estimated billing show Nigerians pepper
-                </a>
-              </h3>
-              <p
-                class="c29"
-              >
-                Lawmakers for Nigeria wan make am crime for light companies to use guesswork give customer estimated bill.
-              </p>
-              <time
-                class="c30"
-                datetime="1970-01-18"
-              >
-                18 Jenụwarị 1970
-              </time>
-            </div>
-          </div>
+          afrique/23248423
         </li>
         <li
-          class="c20"
+          class="c12"
           role="listitem"
         >
-          <div
-            class="c21"
+          afrique/23248423
+        </li>
+        <li
+          class="c12"
+          role="listitem"
+        >
+          <a
+            class="c13"
+            href="https://bbc.com/pidgin"
           >
-            <div
-              class="c22"
-            >
-              <div
-                class="c23"
-              >
-                <div
-                  class="c24"
-                >
-                  <div
-                    class="lazyload-placeholder"
-                  />
-                </div>
-                <div
-                  class="c25"
-                />
-              </div>
-            </div>
-            <div
-              class="c26"
-            >
-              <h3
-                class="c27"
-              >
-                <a
-                  class="c28"
-                  href="/pidgin/tori-42494678?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                >
-                  Nigeria: Wetin 5,222 megawatts electric fit do?
-                </a>
-              </h3>
-              <p
-                class="c29"
-              >
-                Di Transmission Company of Nigeria and di vice-president office carry tori come outside say electric power wey di country produce don increase pass before as e reach 5,222 megawatts dis December.
-              </p>
-              <time
-                class="c30"
-                datetime="1970-01-18"
-              >
-                18 Jenụwarị 1970
-              </time>
-            </div>
-          </div>
+            this is the link text
+          </a>
+        </li>
+        <li
+          class="c12"
+          role="listitem"
+        >
+          <a
+            class="c13"
+            href="https://bbc.com/pidgin"
+          >
+            this is the link text
+          </a>
+        </li>
+        <li
+          class="c12"
+          role="listitem"
+        >
+          <a
+            class="c13"
+            href="https://bbc.com/pidgin"
+          >
+            this is the link text
+          </a>
         </li>
       </ul>
     </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c9"
+      >
+        Lorem ipsum dolor sit amet, 
+        <b>
+          consectetur
+        </b>
+         adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        <b>
+           ullamco laboris nisi ut aliquip 
+        </b>
+        ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        <i
+          class="c14"
+        >
+           in voluptate velit esse cillum 
+        </i>
+        dolore "eu fugiat nulla" pariatur. 
+        <a
+          class="c13"
+          href="https://bbc.com/pidgin"
+        >
+          Excepteur
+        </a>
+         sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c9"
+      >
+        Testing special characters: !"£$%^&*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c9"
+      >
+        ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c9"
+      >
+        Table:
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c9"
+      >
+        Social media embed:
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c9"
+      >
+        Quote box:
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c9"
+      >
+        Correspondent quote box:
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c9"
+      >
+        Fact box:
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c9"
+      >
+        ­
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c9"
+      >
+        Lorem ipsum
+        <a
+          class="c13"
+          href="https://bbc.com/pidgin"
+        >
+           dolor sit amet
+        </a>
+        , consectetur adipiscing elit
+      </p>
+    </div>
+    <div
+      class="c15"
+    >
+      <figure
+        class="c4"
+      >
+        <div
+          class="c16"
+        >
+          <div
+            class="c17"
+          >
+            <div
+              class="c18"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+              <noscript />
+              <p
+                class="c19"
+                role="text"
+              >
+                <span
+                  class="c2"
+                >
+                  Wia dis foto come from, 
+                </span>
+                <span
+                  lang="en-GB"
+                >
+                  Google
+                </span>
+              </p>
+            </div>
+          </div>
+          <div
+            class="c20"
+          >
+            <figcaption
+              class="c21"
+            >
+              <span
+                class="c2"
+              >
+                Wetin we call dis foto, 
+              </span>
+              <p>
+                Psammead was named after the mythical sand creature
+              </p>
+            </figcaption>
+          </div>
+        </div>
+      </figure>
+    </div>
+    <div
+      class="c15"
+    >
+      <figure
+        class="c4"
+      >
+        <div
+          class="c16"
+        >
+          <div
+            class="c17"
+          >
+            <div
+              class="c18"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+              <noscript />
+              <p
+                class="c19"
+                role="text"
+              >
+                <span
+                  class="c2"
+                >
+                  Wia dis foto come from, 
+                </span>
+                <span
+                  lang="en-GB"
+                >
+                  Butterfly person
+                </span>
+              </p>
+            </div>
+          </div>
+          <div
+            class="c20"
+          >
+            <figcaption
+              class="c21"
+            >
+              <span
+                class="c2"
+              >
+                Wetin we call dis foto, 
+              </span>
+              <p>
+                A pretty little butterfly & &lt; &gt;
+              </p>
+            </figcaption>
+          </div>
+        </div>
+      </figure>
+    </div>
+    <div
+      class="c1"
+    >
+      <ul
+        class="c11"
+        dir="ltr"
+        role="list"
+      >
+        <li
+          class="c12"
+          role="listitem"
+        >
+          sunt in culpa qui officia deserunt mollit anim id est laborum
+        </li>
+        <li
+          class="c12"
+          role="listitem"
+        >
+          sunt in culpa qui officia deserunt mollit anim id est laborum
+        </li>
+        <li
+          class="c12"
+          role="listitem"
+        >
+          sunt in culpa qui officia deserunt mollit anim id est laborum
+        </li>
+        <li
+          class="c12"
+          role="listitem"
+        >
+          v3 draft
+        </li>
+      </ul>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c9"
+      >
+        This is transmission info 
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <p
+        class="c9"
+      >
+        This is the footer 
+      </p>
+    </div>
   </main>
-</DocumentFragment>
-`;
+  .c24 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
 
-exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
-<DocumentFragment>
-  <noscript />
-  .c0 {
+.c22 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 0.8125rem;
+}
+
+.c0 {
   margin: 0 auto;
   background: #FDFDFD;
   padding-bottom: 2rem;
 }
 
-.c1 {
-  grid-column: 1 / span 6;
-}
-
-.c9 {
-  grid-column: 1 / span 6;
-}
-
-.c8 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-.c10 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  padding-bottom: 0.25rem;
-}
-
-.c10:last-child {
-  padding-bottom: 1rem;
-}
-
-.c32 {
+.c19 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -3638,45 +5346,7 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
   font-style: normal;
 }
 
-.c11 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c12 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  list-style-type: none;
-}
-
-.c12 > li::before {
-  content: ' ';
-  display: inline-block;
-  width: 2rem;
-  background: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3'%3E%3C/circle%3E%3C/svg%3E") no-repeat center;
-  margin-left: -2rem;
-}
-
-.c13 {
-  display: inline-block;
-}
-
-.c4 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-.c2 {
+.c23 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -3688,7 +5358,7 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
   margin: 0;
 }
 
-.c26 {
+.c13 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -3702,16 +5372,6 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
 }
 
 .c5 {
-  padding-top: 56.25%;
-  position: relative;
-  overflow: hidden;
-}
-
-.c3 {
-  margin-bottom: 1.5rem;
-}
-
-.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3721,7 +5381,7 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
   flex-direction: column;
 }
 
-.c19 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3740,7 +5400,7 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
   align-items: baseline;
 }
 
-.c20 {
+.c7 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3760,57 +5420,57 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
   align-items: center;
 }
 
-.c16 {
+.c3 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c15 {
+.c2 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c17 {
+.c4 {
   margin: 0;
   padding: 0;
 }
 
-.c22 {
+.c9 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c22:first-child {
+.c9:first-child {
   padding-top: 0;
 }
 
-.c22:last-child {
+.c9:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c21 {
+.c8 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c23 {
+.c10 {
   position: relative;
 }
 
-.c24 {
+.c11 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c25 {
+.c12 {
   position: relative;
 }
 
-.c29 {
+.c16 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3821,7 +5481,7 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c31 {
+.c18 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3832,21 +5492,21 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c28 {
+.c15 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c30 {
+.c17 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c30:before {
+.c17:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -3858,28 +5518,48 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
   z-index: 1;
 }
 
-.c30:hover,
-.c30:focus {
+.c17:hover,
+.c17:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c30:visited {
+.c17:visited {
   color: #6E6E73;
 }
 
-.c14 {
-  z-index: 0;
+.c20 {
+  padding: 0.5rem 0.25rem;
+  background-color: #FFFFFF;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #222222;
+  height: 2rem;
 }
 
-.c6 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 100%;
-  border: 0;
-  overflow: hidden;
+}
+
+.c25 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+}
+
+.c1 {
+  z-index: 0;
 }
 
 @media (max-width:37.4375rem) {
@@ -3922,222 +5602,22 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
   }
 }
 
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c7 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c7 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c7 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c7 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c7 {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:25rem) {
-  .c9 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c9 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c9 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c9 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c9 {
-    max-width: initial;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c32 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c32 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (max-width:63rem) {
-  .c3 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c3 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c3 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c3 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c3 {
-    padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c19 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -4146,39 +5626,39 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
+  .c7 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c7 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c7 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c7 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c16 {
+  .c3 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c3 {
     position: absolute;
     left: 0;
     right: 0;
@@ -4187,37 +5667,37 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c2 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c9 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c22 {
+  .c9 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22:first-child {
+  .c9:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c22:first-child {
+  .c9:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c23 {
+  .c10 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -4225,13 +5705,13 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c24 {
+  .c11 {
     width: 33.33%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c24 {
+  .c11 {
     display: block;
     width: initial;
     grid-column: 1 / span 2;
@@ -4239,68 +5719,68 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c27 {
+  .c14 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c29 {
+  .c16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c16 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c31 {
+  .c18 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c18 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c31 {
+  .c18 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c28 {
+  .c15 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c28 {
+  .c15 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c28 {
+  .c15 {
     display: block;
     width: initial;
     padding: initial;
@@ -4308,451 +5788,370 @@ exports[`CpsAssetPageMain should render MAP with paragraph text 1`] = `
   }
 }
 
+@media (max-width:24.9375rem) {
+  .c20 {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
 @media (max-width:63rem) {
-  .c14 {
+  .c1 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c14 {
+  .c1 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c14 {
+  .c1 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c14 {
+  .c1 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c14 {
+  .c1 {
     padding: 0 1rem;
   }
 }
 
-<main
+<aside
+    aria-labelledby="related-content-heading"
     class="c0"
-    role="main"
+    role="complementary"
   >
     <div
       class="c1"
     >
-      <a
-        data-e2e="cpsAssetDummyLink"
-        href="/pidgin/23248703"
-      >
-        Test MAP to MAP inline link
-      </a>
-    </div>
-    <h1
-      class="c2"
-      id="content"
-      tabindex="-1"
-    >
-      Nigerian man Emeka Nelson don produce generator wey dey use only water
-    </h1>
-    <div
-      class="c3"
-    >
-      <figure
-        class="c4"
-      >
-        <div
-          class="c5"
-        >
-          <iframe
-            allow="autoplay; fullscreen"
-            allowfullscreen=""
-            class="c6"
-            scrolling="no"
-            src="https://www.test.bbc.co.uk/ws/av-embeds/cps/pidgin/tori-49450859/p07lg239/ig"
-            title="Media player"
-          />
-        </div>
-      </figure>
-    </div>
-    <div
-      class="c7"
-    >
-      <strong
-        aria-hidden="true"
-        class="c8"
-      >
-        Nigerian man Emeka Nelson don produce generator wey dey use only water
-      </strong>
-    </div>
-    <div
-      class="c9"
-    >
-      <time
-        class="c10"
-        datetime="2019-08-23"
-      >
-        23 Ọgọọst 2019
-      </time>
-      <time
-        class="c10"
-        datetime="2019-08-23"
-      >
-        Mgbe ikpeazụ e tinyere ya ozi ọhụrụ 23 Ọgọọst 2019
-      </time>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c11"
-      >
-        <b>
-          As Nigeria authorities still dey try to find solution to light mata, e be like say 26-year old Emeka Nelson don find di solution afta im produce generator wey go dey run on water
-        </b>
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c11"
-      >
-        Wetin ginger Emeka na im friend wey smoke from generator kill.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <ul
-        class="c12"
-        dir="ltr"
-        role="list"
-      >
-        <li
-          role="listitem"
-        >
-          <div
-            class="c13"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                pidgin/tori-46975713
-              </p>
-            </div>
-          </div>
-        </li>
-        <li
-          role="listitem"
-        >
-          <div
-            class="c13"
-          >
-            <div
-              class="c1"
-            >
-              <p
-                class="c11"
-              >
-                pidgin/tori-42494678
-              </p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c11"
-      >
-        BBC carri waka go Awka Anambra state inside South-east Nigeria go see di ogbonge invention wey Nelson produce.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c11"
-      >
-        Nelson wey no be certified engineer struggle to read for elementary school, work as house help for di age of 5, and no get any university education.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c11"
-      >
-        Wen we go im house, e dey full with Structural drawings and designs wey e pin for wall and na so e dey take im time dey study di drawing.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c11"
-      >
-        For 16 years, e dey focus to make im dream turn to something real-dat na to make generator wey go run on water.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c11"
-      >
-        Most of di material wey Nelson take arrange im generator na from  scrap.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c11"
-      >
-        Di first generator wey im do explode wen e test am. Dis come make am dey doubt di project but afta plenti years of struggle e come get am right.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c11"
-      >
-        Nelson says im generator get maximum output capacity of 1,000 watts and di voltage dey fluctuate between 220 and 240.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c11"
-      >
-        E say one litre of clean water fit power di generator for 6 hours, and e no go bring out smoke like oda generators, e dey environment friendly.
-      </p>
-    </div>
-    <div
-      class="c1"
-    >
-      <p
-        class="c11"
-      >
-        Dis ogbonge inventor add say im dream na for di generator to dey for millions of homes all ova di world.
-      </p>
-    </div>
-    <div
-      aria-labelledby="related-content-heading"
-      class="c14"
-    >
       <div
-        class="c15"
+        class="c2"
       >
         <div
-          class="c16"
+          class="c3"
         />
         <h2
-          class="c17"
+          class="c4"
         >
           <div
-            class="c18"
+            class="c5"
           >
             <span
-              class="c19"
+              class="c6"
             >
               <span
-                class="c20"
+                class="c7"
                 dir="ltr"
                 id="related-content-heading"
               >
-                Ihe ndị ọzọ n'akụkọ a
+                Another thing we de for inside dis tori
               </span>
             </span>
           </div>
         </h2>
       </div>
       <ul
-        class="c21"
+        class="c8"
         role="list"
       >
         <li
-          class="c22"
+          class="c9"
           role="listitem"
         >
           <div
-            class="c23"
+            class="c10"
           >
             <div
-              class="c24"
+              class="c11"
             >
               <div
-                class="c25"
+                class="c12"
               >
                 <div
-                  class="c26"
+                  class="c13"
                 >
                   <div
                     class="lazyload-placeholder"
                   />
                 </div>
                 <div
-                  class="c27"
+                  class="c14"
                 />
               </div>
             </div>
             <div
-              class="c28"
+              class="c15"
             >
               <h3
-                class="c29"
+                class="c16"
               >
                 <a
-                  class="c30"
-                  href="/pidgin/44508901?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                  class="c17"
+                  href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  Police Arrest 3 ontop Anambra Church Attack
+                </a>
+              </h3>
+              <p
+                class="c18"
+              >
+                Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
+              </p>
+              <time
+                class="c19"
+                datetime="2017-08-08"
+              >
+                8th August 2017
+              </time>
+            </div>
+          </div>
+        </li>
+        <li
+          class="c9"
+          role="listitem"
+        >
+          <div
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="c14"
+                />
+              </div>
+            </div>
+            <div
+              class="c15"
+            >
+              <h3
+                class="c16"
+              >
+                <a
+                  class="c17"
+                  href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
+                </a>
+              </h3>
+              <p
+                class="c18"
+              >
+                The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.
+              </p>
+              <time
+                class="c19"
+                datetime="2017-08-08"
+              >
+                8th August 2017
+              </time>
+            </div>
+          </div>
+        </li>
+        <li
+          class="c9"
+          role="listitem"
+        >
+          <div
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                />
+                <div
+                  class="c14"
+                >
+                  <div
+                    aria-hidden="true"
+                    class="c20"
+                  >
+                    <div
+                      class="c21"
+                    >
+                      <svg
+                        class="c22"
+                        focusable="false"
+                        height="13px"
+                        viewBox="0 0 32 26"
+                        width="16px"
+                      >
+                        <path
+                          d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
+                        />
+                        <circle
+                          cx="20"
+                          cy="14.02"
+                          r="5.5"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="c15"
+            >
+              <h3
+                class="c16"
+              >
+                <a
+                  class="c17"
+                  href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
                   <span
                     role="text"
                   >
                     <span
-                      class="c2"
+                      class="c23"
                     >
-                      , 
+                      Image gallery, 
                     </span>
                     <span>
-                      Meet boys who dey convert cassava to electricity
+                      Kenya Elections Pictures: 8 August 2017
                     </span>
                   </span>
                 </a>
               </h3>
               <p
-                class="c31"
+                class="c18"
               >
-                James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
+                This na some of the picture wey our eye see as Kenya people go vote for election today
               </p>
               <time
-                class="c32"
-                datetime="1970-01-18"
+                class="c19"
+                datetime="2017-08-08"
               >
-                18 Jenụwarị 1970
+                8th August 2017
               </time>
             </div>
           </div>
         </li>
         <li
-          class="c22"
+          class="c9"
           role="listitem"
         >
           <div
-            class="c23"
+            class="c10"
           >
             <div
-              class="c24"
+              class="c11"
             >
               <div
-                class="c25"
+                class="c12"
               >
                 <div
-                  class="c26"
+                  class="c13"
                 >
                   <div
                     class="lazyload-placeholder"
                   />
                 </div>
                 <div
-                  class="c27"
-                />
-              </div>
-            </div>
-            <div
-              class="c28"
-            >
-              <h3
-                class="c29"
-              >
-                <a
-                  class="c30"
-                  href="/pidgin/tori-46975713?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                >
-                  How light companies dey use estimated billing show Nigerians pepper
-                </a>
-              </h3>
-              <p
-                class="c31"
-              >
-                Lawmakers for Nigeria wan make am crime for light companies to use guesswork give customer estimated bill.
-              </p>
-              <time
-                class="c32"
-                datetime="1970-01-18"
-              >
-                18 Jenụwarị 1970
-              </time>
-            </div>
-          </div>
-        </li>
-        <li
-          class="c22"
-          role="listitem"
-        >
-          <div
-            class="c23"
-          >
-            <div
-              class="c24"
-            >
-              <div
-                class="c25"
-              >
-                <div
-                  class="c26"
+                  class="c14"
                 >
                   <div
-                    class="lazyload-placeholder"
-                  />
+                    aria-hidden="true"
+                    class="c20"
+                  >
+                    <div
+                      class="c21"
+                    >
+                      <svg
+                        class="c24"
+                        focusable="false"
+                        height="12px"
+                        viewBox="0 0 13 12"
+                        width="13px"
+                      >
+                        <path
+                          d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                        />
+                        <path
+                          d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                        />
+                      </svg>
+                      <time
+                        class="c25"
+                        datetime="PT15S"
+                      >
+                        0:15
+                      </time>
+                    </div>
+                  </div>
                 </div>
-                <div
-                  class="c27"
-                />
               </div>
             </div>
             <div
-              class="c28"
+              class="c15"
             >
               <h3
-                class="c29"
+                class="c16"
               >
                 <a
-                  class="c30"
-                  href="/pidgin/tori-42494678?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                  class="c17"
+                  href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
-                  Nigeria: Wetin 5,222 megawatts electric fit do?
+                  <span
+                    role="text"
+                  >
+                    <span
+                      class="c23"
+                    >
+                      Audio, 
+                    </span>
+                    <span>
+                      BBC News Pidgin One Minute News
+                    </span>
+                    <span
+                      class="c23"
+                    >
+                      , 0,15
+                    </span>
+                  </span>
                 </a>
               </h3>
               <p
-                class="c31"
+                class="c18"
               >
-                Di Transmission Company of Nigeria and di vice-president office carry tori come outside say electric power wey di country produce don increase pass before as e reach 5,222 megawatts dis December.
+                All di local and world tori wey you suppose know in 60 seconds!
               </p>
               <time
-                class="c32"
-                datetime="1970-01-18"
+                class="c19"
+                datetime="2017-08-17"
               >
-                18 Jenụwarị 1970
+                17th August 2017
               </time>
             </div>
           </div>
         </li>
       </ul>
     </div>
-  </main>
+  </aside>
 </DocumentFragment>
 `;

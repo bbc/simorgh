@@ -134,8 +134,8 @@ export const service = {
         audio: 'ਔਡੀਓ',
         photogallery: 'ਫੋਟੋ ਗੈਲਰੀ',
         video: 'ਵੀਡੀਓ',
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'ਸੁਣੋ',
+        watch: 'ਦੇਖੋ',
         liveLabel: 'ਸਿੱਧਾ ਪ੍ਰਸਾਰਣ',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -169,6 +169,7 @@ export const service = {
         url: '/punjabi/international',
       },
     ],
+    navigationSection: 'ਸੈਕਸ਼ਨਜ਼',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',

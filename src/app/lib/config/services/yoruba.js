@@ -144,8 +144,8 @@ export const service = {
           title: 'Placeholder title',
           subtitle: 'Placeholder subtitle',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Gbọ́',
+        watch: 'Wò',
         liveLabel: 'NÍ YÀJÓYÀJÓ',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -211,6 +211,7 @@ export const service = {
         url: '/yoruba/popular/read',
       },
     ],
+    navigationSection: 'Àwọn abala',
   },
 };
 

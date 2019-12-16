@@ -123,9 +123,15 @@ describe('buildATIEventTrackUrl', () => {
         service: 'service',
         platform: 'platform',
         statsDestination: 'statsDestination',
-        element: 'element',
-        component: 'component',
-        label: 'label',
+        componentName: 'component',
+        componentInfo: {
+          actionLabel: 'creation-label',
+          result: 'https://foobar.com',
+          positioning: {
+            parent: 'container-component',
+            child: 'child',
+          },
+        },
         type: 'type',
       }),
     ).toEqual(
@@ -136,7 +142,8 @@ describe('buildATIEventTrackUrl', () => {
         're=getBrowserViewPort',
         'hl=getCurrentTime',
         'lng=getDeviceLanguage',
-        'ati=PUB-[service-component]-[=type]-[label]-[PAR=container-component::name~CHD=brand-top]-[]-[]-[]-[/]',
+        'atc=PUB-[service-component]-[creation-label~type]-[]-[PAR=container-component~CHD=child]-[pageIdentifier]-[]-[responsive_web~news-simorgh]-[https://foobar.com]',
+        'type=AT',
       ].join('&')}`,
     );
   });
