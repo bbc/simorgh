@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CpsAssetPageMain MAP AV player should render version (live audio stream) 1`] = `
@@ -19261,3 +19262,5 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   </aside>
 </DocumentFragment>
 `;
+=======
+>>>>>>> 0b277197ad5e421057bbc9782195ba495ba5003f

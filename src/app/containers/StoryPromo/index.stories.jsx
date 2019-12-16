@@ -47,6 +47,7 @@ const getStoryPromo = platform => item => (
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
       isAmp={platform === 'amp'}
+      pathname="/pathname"
       pageType="article"
       service="news"
     >
