@@ -40,6 +40,14 @@ logger.debug(
   `Application outputting logs to directory "${process.env.LOG_DIR}"`,
 );
 
+const logRouteInfo = route => {
+  if (route.pageType === 'error') {
+    logger.error(`No route found`);
+  } else {
+    logger.info(`Page Type: ${route.pageType}`);
+  }
+};
+
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["write"] }] */
 class LoggerStream {
   write(message) {
@@ -212,6 +220,7 @@ server
 
     try {
       const { service, isAmp, route, variant } = getRouteProps(routes, url);
+      logRouteInfo(route);
       const data = await route.getInitialData(urlPath);
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
