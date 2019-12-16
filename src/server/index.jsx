@@ -41,10 +41,10 @@ logger.debug(
 );
 
 const logRouteInfo = route => {
+  logger.info(`Page Type: ${route.pageType}`);
+
   if (route.pageType === 'error') {
-    logger.error(`No route found`);
-  } else {
-    logger.info(`Page Type: ${route.pageType}`);
+    logger.error(`No matching route found`);
   }
 };
 
