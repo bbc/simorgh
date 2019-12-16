@@ -48,6 +48,7 @@ export const service = {
       currentPage: 'Поточна сторінка',
       skipLinkText: 'Перейти до змісту',
       relatedContent: 'Статті на цю ж тему',
+      sections: 'Розділи',
       mediaAssetPage: {
         mediaPlayer: 'Медіаплеєр',
         audioPlayer: 'Аудіоплеєр',
@@ -262,7 +263,6 @@ export const service = {
         url: '/ukrainian/learning_english',
       },
     ],
-    navigationSection: 'Розділи',
   },
 };
 

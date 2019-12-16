@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'मौजूदा पन्ना',
       skipLinkText: 'सामग्री को स्किप करें',
       relatedContent: 'संबंधित समाचार',
+      sections: 'सेक्शन',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिया प्लेयर',
@@ -240,7 +241,6 @@ export const service = {
         url: '/hindi/in_depth',
       },
     ],
-    navigationSection: 'सेक्शन',
   },
 };
 
