@@ -155,7 +155,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
 }
 
 .c3 {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .c3 figure {
@@ -451,9 +451,10 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:63rem) {
   .c3 {
     padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -1082,7 +1083,7 @@ exports[`CpsAssetPageMain MAP AV player should render video 1`] = `
 }
 
 .c3 {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .c3 figure {
@@ -1424,9 +1425,10 @@ exports[`CpsAssetPageMain MAP AV player should render video 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:63rem) {
   .c3 {
     padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -3188,7 +3190,7 @@ exports[`CpsAssetPageMain MAP heading should render faux headline 1`] = `
 }
 
 .c3 {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .c3 figure {
@@ -3530,9 +3532,10 @@ exports[`CpsAssetPageMain MAP heading should render faux headline 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:63rem) {
   .c3 {
     padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -5294,7 +5297,7 @@ exports[`CpsAssetPageMain MAP heading should render visually hidden headline 1`]
 }
 
 .c3 {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .c3 figure {
@@ -5636,9 +5639,10 @@ exports[`CpsAssetPageMain MAP heading should render visually hidden headline 1`]
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:63rem) {
   .c3 {
     padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -7400,7 +7404,7 @@ exports[`CpsAssetPageMain MAP should render crosshead 1`] = `
 }
 
 .c3 {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .c3 figure {
@@ -7742,9 +7746,10 @@ exports[`CpsAssetPageMain MAP should render crosshead 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:63rem) {
   .c3 {
     padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -9506,7 +9511,7 @@ exports[`CpsAssetPageMain MAP should render sub heading 1`] = `
 }
 
 .c3 {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .c3 figure {
@@ -9848,9 +9853,10 @@ exports[`CpsAssetPageMain MAP should render sub heading 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:63rem) {
   .c3 {
     padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -11612,7 +11618,7 @@ exports[`CpsAssetPageMain MAP should render image 1`] = `
 }
 
 .c3 {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .c3 figure {
@@ -11954,9 +11960,10 @@ exports[`CpsAssetPageMain MAP should render image 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:63rem) {
   .c3 {
     padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -13718,7 +13725,7 @@ exports[`CpsAssetPageMain MAP should render paragraph 1`] = `
 }
 
 .c3 {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .c3 figure {
@@ -14060,9 +14067,10 @@ exports[`CpsAssetPageMain MAP should render paragraph 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:63rem) {
   .c3 {
     padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -15836,7 +15844,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 .c20 {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .c20 figure {
@@ -16267,9 +16275,10 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:63rem) {
   .c20 {
     padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -17366,7 +17375,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 .c3 {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .c3 figure {
@@ -17694,9 +17703,10 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:63rem) {
   .c3 {
     padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
