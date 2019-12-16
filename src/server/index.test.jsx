@@ -177,7 +177,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
       service: 'someService',
       status: 200,
       variant,
-      pageType: 'FrontPage',
+      pageType,
     };
 
     const notFoundDataResponse = {
