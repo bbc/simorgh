@@ -49,7 +49,7 @@ exports[`Snapshots should correctly render AMP navigation 1`] = `
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.c0 .c5::after {
+.c0 .c6::after {
   left: 0;
 }
 
@@ -104,6 +104,13 @@ exports[`Snapshots should correctly render AMP navigation 1`] = `
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c5.scrollable-hidden {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -183,7 +190,7 @@ exports[`Snapshots should correctly render AMP navigation 1`] = `
             Dropdown
           </div>
           <div
-            class="c4 css-17pn7nj"
+            class="c4 c5"
             dir="ltr"
             id="scrollable-nav"
           >
