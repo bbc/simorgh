@@ -219,7 +219,7 @@ server
     logger.info(`Path: [${urlPath}] URL: [${url}]`);
 
     try {
-      const { service, isAmp, route, variant } = getRouteProps(routes, url);
+      const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
       logRouteInfo(route);
       const data = await route.getInitialData(urlPath);
       const { status } = data;
