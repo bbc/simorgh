@@ -28,14 +28,20 @@ describe('App', () => {
     <h1>{initialData.pageData}</h1>,
   );
 
+  const bbcOrigin = 'https://www.bbc.co.uk';
+  const bbcCountry = 'GB';
+
   beforeAll(() => {
     wrapper = mount(
       <App
         location={{ pathname: 'pathnameOne' }}
         routes={[]}
         initialData={initialData}
-        bbcOrigin="https://www.bbc.co.uk"
         history={history}
+        headers={{
+          'bbc-origin': bbcOrigin,
+          'bbc-country': bbcCountry,
+        }}
       />,
     );
   });
@@ -45,7 +51,8 @@ describe('App', () => {
     expect(route.getInitialData).not.toHaveBeenCalled();
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledTimes(1);
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith([], {
-      bbcOrigin: 'https://www.bbc.co.uk',
+      bbcOrigin,
+      bbcCountry,
       pageData: initialData.pageData,
       error: undefined,
       isAmp: false,
@@ -105,7 +112,8 @@ describe('App', () => {
             2,
             [],
             {
-              bbcOrigin: 'https://www.bbc.co.uk',
+              bbcOrigin,
+              bbcCountry,
               pageData: null,
               status: null,
               error: null,
@@ -126,7 +134,8 @@ describe('App', () => {
             3,
             [],
             {
-              bbcOrigin: 'https://www.bbc.co.uk',
+              bbcOrigin,
+              bbcCountry,
               pageData: null,
               status: null,
               error,
@@ -169,7 +178,8 @@ describe('App', () => {
             2,
             [],
             {
-              bbcOrigin: 'https://www.bbc.co.uk',
+              bbcOrigin,
+              bbcCountry,
               pageData: null,
               status: null,
               error: null,
@@ -190,7 +200,8 @@ describe('App', () => {
             3,
             [],
             {
-              bbcOrigin: 'https://www.bbc.co.uk',
+              bbcOrigin,
+              bbcCountry,
               pageData: data.pageData,
               status: data.status,
               error: undefined,

@@ -5,7 +5,7 @@ import path from 'ramda/src/path';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
 
-export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
+export const App = ({ routes, location, initialData, history, headers }) => {
   const {
     service,
     isAmp,
@@ -16,6 +16,9 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   } = getRouteProps(routes, location.pathname);
 
   const { pageData, status, error } = initialData;
+
+  const bbcOrigin = headers['bbc-origin'];
+  const bbcCountry = headers['bbc-country'];
 
   const [state, setState] = useState({
     pageData,
@@ -97,6 +100,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   return renderRoutes(routes, {
     ...state,
     bbcOrigin,
+    bbcCountry,
     pathname: location.pathname,
     previousPath,
   });
