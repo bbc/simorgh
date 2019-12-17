@@ -21,6 +21,7 @@ const ContextWrap = ({ pageType, platform, children }) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
+      bbcCountry="gb"
       id="c0000000000o"
       isAmp={platform === 'amp'}
       pageType={pageType}
@@ -60,6 +61,7 @@ describe('ATI Analytics Container', () => {
         'x4=[en-gb]',
         'x5=[http://localhost/]',
         'x7=[article]',
+        'x8=[simorgh]',
         'x9=[Article+Headline+for+SEO]',
         'x11=[1970-01-01T00:00:00.000Z]',
         'x12=[1970-01-01T00:00:00.000Z]',
@@ -96,6 +98,7 @@ describe('ATI Analytics Container', () => {
         `x5=[\${sourceUrl}]`,
         `x6=[\${documentReferrer}]`,
         'x7=[article]',
+        'x8=[simorgh]',
         'x9=[Article+Headline+for+SEO]',
         'x11=[1970-01-01T00:00:00.000Z]',
         'x12=[1970-01-01T00:00:00.000Z]',
@@ -132,6 +135,7 @@ describe('ATI Analytics Container', () => {
         'x3=[news]',
         'x5=[http://localhost/]',
         'x7=[index-home]',
+        'x8=[simorgh]',
         'x11=[1970-01-01T00:00:00.000Z]',
         'x12=[1970-01-01T00:00:00.000Z]',
       ].join('&');
@@ -163,6 +167,7 @@ describe('ATI Analytics Container', () => {
         `x5=[\${sourceUrl}]`,
         `x6=[\${documentReferrer}]`,
         'x7=[index-home]',
+        'x8=[simorgh]',
         'x11=[1970-01-01T00:00:00.000Z]',
         'x12=[1970-01-01T00:00:00.000Z]',
       ].join('&');

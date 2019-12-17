@@ -151,7 +151,7 @@ export const service = {
             'Cash éco vous propose chaque jour un résumé de l’actualité économique et financière.',
         },
         listen: 'Listen',
-        watch: 'Watch',
+        watch: 'Suivez',
         liveLabel: 'EN DIRECT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -249,6 +249,7 @@ export const service = {
         url: '/afrique/nos_emissions/radio',
       },
     ],
+    navigationSection: 'Rubriques',
   },
 };
 

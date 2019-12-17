@@ -145,7 +145,7 @@ export const service = {
             "Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako.",
         },
         listen: 'Listen',
-        watch: 'Watch',
+        watch: 'Kalla',
         liveLabel: 'KAI TSAYE',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -227,6 +227,7 @@ export const service = {
         url: '/hausa/media/photogalleries',
       },
     ],
+    navigationSection: 'Sassa',
   },
 };
 

@@ -151,7 +151,7 @@ export const service = {
             'د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.',
         },
         listen: 'Listen',
-        watch: 'Watch',
+        watch: 'و یې ګورئ',
         liveLabel: 'ژوندۍ',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -240,6 +240,7 @@ export const service = {
         url: '/pashto/columns',
       },
     ],
+    navigationSection: 'برخې',
   },
 };
 

@@ -178,20 +178,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   padding: 0;
 }
 
-.c11 {
-  border-bottom: 0.0625rem solid #F2F2F2;
-  padding: 0.5rem 0 1rem;
-}
-
-.c11:first-child {
-  padding-top: 0;
-}
-
-.c11:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
 .c10 {
   list-style-type: none;
   margin: 0;
@@ -320,16 +306,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   margin-right: 0.5rem;
 }
 
-.c23 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .c15 {
   position: relative;
   height: 0;
@@ -360,6 +336,16 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   display: block;
   width: 100%;
   visibility: visible;
+}
+
+.c23 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c31 {
@@ -433,6 +419,20 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 
 .c27:visited {
   color: #6E6E73;
+}
+
+.c11 {
+  border-bottom: 0.0625rem solid #F2F2F2;
+  padding: 0.5rem 0 1rem;
+}
+
+.c11:first-child {
+  padding-top: 0;
+}
+
+.c11:last-child {
+  padding-bottom: 0;
+  border: none;
 }
 
 @media (max-width:37.4375rem) {
@@ -605,30 +605,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 @media (min-width:37.5rem) {
   .c38 {
     margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c11 {
-    padding: 1.5rem 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11:first-child {
-    padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c11:first-child {
-    padding-top: 1.5rem;
   }
 }
 
@@ -852,6 +828,30 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 @media (min-width:37.5rem) {
   .c9 {
     margin-top: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c11 {
+    padding: 1.5rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c11:first-child {
+    padding-top: 1.5rem;
   }
 }
 

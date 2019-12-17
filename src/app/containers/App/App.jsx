@@ -5,7 +5,7 @@ import path from 'ramda/src/path';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
 
-export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
+export const App = ({ routes, location, initialData, history, headers }) => {
   const {
     service,
     isAmp,
@@ -16,6 +16,9 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   } = getRouteProps(routes, location.pathname);
 
   const { pageData, status, error } = initialData;
+
+  const bbcOrigin = headers['bbc-origin'];
+  const bbcCountry = headers['bbc-country'];
 
   const [state, setState] = useState({
     pageData,
@@ -31,6 +34,17 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   });
 
   const isInitialMount = useRef(true);
+  const shouldSetFocus = useRef(false);
+
+  useEffect(() => {
+    if (shouldSetFocus.current) {
+      const contentEl = document.querySelector('h1#content');
+      if (contentEl) {
+        contentEl.focus();
+      }
+      shouldSetFocus.current = false;
+    }
+  }, [state.loading]);
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -58,15 +72,16 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         errorCode: null,
       });
 
-      route.getInitialData(location.pathname).then(data =>
+      route.getInitialData(location.pathname).then(data => {
+        shouldSetFocus.current = true;
         setState(prevState => ({
           ...prevState,
           loading: false,
           pageData: path(['pageData'], data),
           status: path(['status'], data),
           error: path(['error'], data),
-        })),
-      );
+        }));
+      });
     }
   }, [routes, location.pathname]);
 
@@ -77,6 +92,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   return renderRoutes(routes, {
     ...state,
     bbcOrigin,
+    bbcCountry,
     pathname: location.pathname,
     previousPath,
   });

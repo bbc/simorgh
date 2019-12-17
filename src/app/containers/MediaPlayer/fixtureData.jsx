@@ -283,6 +283,45 @@ const missingVpidBlocks = [
   },
 ];
 
+export const validAresMetadataBlock = {
+  blockId: 'urn:bbc:ares::clip:p01k6msm',
+  model: {
+    advertising: true,
+    embedding: true,
+    format: 'audio_video',
+    id: 'p01k6msm',
+    imageCopyright: 'BBC',
+    imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+    subType: 'clip',
+    syndication: {
+      destinations: [],
+    },
+    synopses: {
+      short:
+        'They may be tiny, but us humans could learn a thing or two from ants.',
+    },
+    title: 'Five things ants can teach us about management',
+    versions: [
+      {
+        availableFrom: 1540218932000,
+        availableTerritories: {
+          nonUk: true,
+          uk: true,
+        },
+        duration: 191,
+        durationISO8601: 'PT3M11S',
+        types: ['Original'],
+        versionId: 'p01k6msp',
+        warnings: {
+          long: 'Contains strong language and adult humour.',
+          short: 'Contains strong language and adult humour.',
+        },
+      },
+    ],
+  },
+  type: 'aresMediaMetadata',
+};
+
 export const defaultToggles = {
   local: {
     mediaPlayer: {

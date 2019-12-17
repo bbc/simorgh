@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from 'uuid';
 import { render } from '@testing-library/react';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
@@ -26,6 +27,69 @@ const captionBlock = blockContainingText(
   'Some caption text...',
   'mocked-id',
 );
+
+const fragmentBlock = (text, attributes = []) => ({
+  type: 'fragment',
+  id: uuid(),
+  model: {
+    text,
+    attributes,
+  },
+});
+
+const inlineLinkBlock = (text, locator, blocks, isExternal) => ({
+  type: 'urlLink',
+  id: uuid(),
+  model: {
+    text,
+    locator,
+    blocks,
+    isExternal,
+  },
+});
+
+const inlineSpanBlock = (blocks, language, text) => ({
+  type: 'inline',
+  id: uuid,
+  model: {
+    blocks,
+    language,
+    text,
+  },
+});
+
+const persianText = 'چیسربرگر';
+const persianLink = inlineLinkBlock(
+  persianText,
+  'https://google.com',
+  [fragmentBlock(persianText)],
+  true,
+);
+
+const inlinePersianBlock = inlineSpanBlock([persianLink], 'fa', persianText);
+
+const blocksWithInline = {
+  model: {
+    blocks: [
+      {
+        model: {
+          blocks: [
+            {
+              model: {
+                blocks: [
+                  fragmentBlock('This is some text.', ['bold']),
+                  inlinePersianBlock,
+                ],
+              },
+              type: 'text',
+            },
+          ],
+        },
+        type: 'caption',
+      },
+    ],
+  },
+};
 
 const captionBlock3Paragraphs = {
   model: {
@@ -107,12 +171,17 @@ shouldMatchSnapshot(
 );
 
 shouldMatchSnapshot(
-  'should render caption with mutiple paragraphs',
+  'should render caption with multiple paragraphs',
   CaptionWithContext(
     captionBlock3Paragraphs,
     newsServiceContextStub,
     'caption',
   ),
+);
+
+shouldMatchSnapshot(
+  'should render correctly with inline block',
+  CaptionWithContext(blocksWithInline, newsServiceContextStub, 'caption'),
 );
 
 describe('with offscreen text', () => {

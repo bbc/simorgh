@@ -6,7 +6,7 @@ exports[`MediaPlayer render the amp player 1`] = `
     <script
       type="application/ld+json"
     >
-      {"video":{"@list":[{"@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":191,"thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":1540218932000}]}}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"}
     </script>
     <script
       async="true"
@@ -28,7 +28,11 @@ exports[`MediaPlayer render the amp player 1`] = `
 }
 
 .c0 {
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.c0 figure {
+  padding-bottom: 0;
 }
 
 @media (max-width:63rem) {
@@ -61,6 +65,13 @@ exports[`MediaPlayer render the amp player 1`] = `
   }
 }
 
+@media (min-width:63rem) {
+  .c0 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
+  }
+}
+
 <div>
       <div
         class="c0"
@@ -77,7 +88,7 @@ exports[`MediaPlayer render the amp player 1`] = `
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
               scrolling="no"
-              src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"
+              src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"
               title="Media player"
             >
               <amp-img
@@ -113,7 +124,11 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 }
 
 .c0 {
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.c0 figure {
+  padding-bottom: 0;
 }
 
 .c3 {
@@ -156,12 +171,19 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
   }
 }
 
+@media (min-width:63rem) {
+  .c0 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
+  }
+}
+
 <html>
   <head>
     <script
       type="application/ld+json"
     >
-      {"video":{"@list":[{"@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":191,"thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":1540218932000}]}}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"}
     </script>
   </head>
   <body>
@@ -180,7 +202,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
               allowfullscreen=""
               class="c3"
               scrolling="no"
-              src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"
+              src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"
               title="Media player"
             />
           </div>

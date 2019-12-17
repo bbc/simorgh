@@ -5,6 +5,7 @@ import {
   Grid,
   GridItemConstrainedSmall,
   GridItemConstrainedMedium,
+  GridItemConstrainedMediumNoMargin,
   GridItemConstrainedLarge,
   GridItemConstrainedLargeNoMargin,
   NestedGridItemSmall,
@@ -90,6 +91,42 @@ storiesOf('Grid Examples', module)
           <ColouredDiv colour={yellow}>5/5 or 10/10</ColouredDiv>
         </NestedGridItemMedium>
       </GridItemConstrainedMedium>
+    </Grid>
+  ))
+  .add('GridItemConstrainedMediumNoMargin', () => (
+    <Grid>
+      <GridItemConstrainedMediumNoMargin>
+        <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '1' }}>
+          <ColouredDiv colour={red}>1/5 or 1/10</ColouredDiv>
+        </NestedGridItemMedium>
+        <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '2' }}>
+          <ColouredDiv colour={orange}>2/5 or 2/10</ColouredDiv>
+        </NestedGridItemMedium>
+        <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '3' }}>
+          <ColouredDiv colour={yellow}>3/5 or 3/10</ColouredDiv>
+        </NestedGridItemMedium>
+        <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '4' }}>
+          <ColouredDiv colour={green}>4/5 or 4/10</ColouredDiv>
+        </NestedGridItemMedium>
+        <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '5' }}>
+          <ColouredDiv colour={blue}>5/5 or 5/10</ColouredDiv>
+        </NestedGridItemMedium>
+        <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '6' }}>
+          <ColouredDiv colour={violet}>5/5 or 6/10</ColouredDiv>
+        </NestedGridItemMedium>
+        <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '7' }}>
+          <ColouredDiv colour={indigo}>5/5 or 7/10</ColouredDiv>
+        </NestedGridItemMedium>
+        <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '8' }}>
+          <ColouredDiv colour={red}>5/5 or 8/10</ColouredDiv>
+        </NestedGridItemMedium>
+        <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '9' }}>
+          <ColouredDiv colour={orange}>5/5 or 9/10</ColouredDiv>
+        </NestedGridItemMedium>
+        <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '10' }}>
+          <ColouredDiv colour={yellow}>5/5 or 10/10</ColouredDiv>
+        </NestedGridItemMedium>
+      </GridItemConstrainedMediumNoMargin>
     </Grid>
   ))
   .add('GridItemConstrainedLarge', () => (

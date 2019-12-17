@@ -87,7 +87,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/amharic/articles/c3rykrrvy19o',
+        path: isLive(appEnv)
+          ? '/amharic/articles/c0lgxqknqkdo'
+          : '/amharic/articles/czqverekrldo',
         smoke: false,
       },
       errorPage404: {
@@ -154,7 +156,7 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/archive/articles/cqv9w00mgjpo',
+        path: undefined,
         smoke: false,
       },
       errorPage404: {
@@ -251,7 +253,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/burmese/articles/c3w1kwwmm5yo',
+        path: isLive(appEnv)
+          ? '/burmese/articles/c41px3vd4nxo'
+          : '/burmese/articles/cn0exdy1jzvo',
         smoke: false,
       },
       errorPage404: {
@@ -509,7 +513,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/japanese/articles/c693w95w0mko',
+        path: isLive(appEnv)
+          ? '/japanese/articles/cj4m7n5nrd8o'
+          : '/japanese/articles/cdd6p3r9g7jo',
         smoke: false,
       },
       errorPage404: {
@@ -537,7 +543,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/korean/articles/cpv9kv2yzk6o',
+        path: isLive(appEnv)
+          ? '/korean/articles/crym1243d97o'
+          : '/korean/articles/c3mn1lvz65xo',
         smoke: false,
       },
       errorPage404: {
@@ -837,7 +845,7 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path: isLive(appEnv) || isTest(appEnv) ? undefined : '/pidgin/23248703',
-        smoke: true,
+        smoke: false,
       },
     },
   },
@@ -1214,7 +1222,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/thai/articles/c3qxeqm7ldjo',
+        path: isLive(appEnv)
+          ? '/thai/articles/czx7w3zyme1o'
+          : '/thai/articles/c442rl3md0eo',
         smoke: false,
       },
       errorPage404: {
@@ -1242,7 +1252,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/tigrinya/articles/c12g32eldk6o',
+        path: isLive(appEnv)
+          ? '/tigrinya/articles/c3vq38ve33xo'
+          : '/tigrinya/articles/ck62z3rjwdeo',
         smoke: false,
       },
       errorPage404: {
@@ -1458,7 +1470,7 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: isLive(appEnv) ? undefined : '/uzbek/sport-23248721',
-        smoke: false,
+        smoke: true,
       },
     },
   },

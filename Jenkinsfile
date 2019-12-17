@@ -1,7 +1,8 @@
 #!/usr/bin/env groovy
+library 'Simorgh'
 
 def dockerRegistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
-def nodeImageVersion = "12.13.0"
+def nodeImageVersion = "12.13.0-sec"
 def nodeImage = "${dockerRegistry}/bbc-news/node-12-lts:${nodeImageVersion}"
 
 def appGitCommit = ""
@@ -192,11 +193,15 @@ pipeline {
             // Testing
             runProductionTests()
 
+            script {
+              getCommitInfo()
+              Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
+            }
+
             // Moving files necessary for production to `pack` directory.
             sh "./scripts/jenkinsProductionFiles.sh"
 
             script {
-              getCommitInfo()
               sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
             }
 
