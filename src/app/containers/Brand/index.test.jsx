@@ -18,6 +18,9 @@ const newsServiceContextStub = {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,
   },
+  translations: {
+    skipLinkText: 'Skip to content',
+  },
 };
 
 const variantServiceContextStub = {
@@ -26,6 +29,9 @@ const variantServiceContextStub = {
   scriptLinkVariant: 'test',
   scriptLinkText: 'Test',
   scriptLinkOffscreenText: 'Test-variant',
+  translations: {
+    skipLinkText: 'Skip to content',
+  },
 };
 
 const BrandContainerWithContext = context => (

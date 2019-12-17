@@ -22,14 +22,14 @@ const renderScriptLink = (
     variant={scriptLinkVariant}
     onClick={() => setPreferredVariantCookie(service, scriptLinkVariant)}
   >
-    <span aria-hidden>{scriptLinkText}</span>
+    <span aria-hidden="true">{scriptLinkText}</span>
     <VisuallyHiddenText> {offscreenText} </VisuallyHiddenText>
   </ScriptLink>
 );
 
-const renderSkipLink = (service, script) => (
+const renderSkipLink = (service, script, skipLinkText) => (
   <SkipLink service={service} script={script} href="#content">
-    Skip to content
+    {skipLinkText}
   </SkipLink>
 );
 
@@ -41,6 +41,7 @@ const BrandContainer = props => {
     service,
     theming,
     script,
+    translations,
     scriptLinkText,
     scriptLinkOffscreenText,
     scriptLinkVariant = null,
@@ -51,6 +52,7 @@ const BrandContainer = props => {
   const svgRatio = brandSVG && brandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
+  const { skipLinkText } = translations;
   const scriptLink =
     scriptLinkVariant &&
     renderScriptLink(
@@ -74,7 +76,7 @@ const BrandContainer = props => {
       svg={brandSVG}
       url={`/${service}`}
       scriptLink={scriptLink}
-      skipLink={renderSkipLink(service, script)}
+      skipLink={renderSkipLink(service, script, skipLinkText)}
       {...props}
     />
   );

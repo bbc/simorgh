@@ -704,7 +704,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         dir="ltr"
         href="#content"
       >
-        Skip to content
+        Waka go wetin de inside
       </a>
     </div>
   </div>
@@ -1575,7 +1575,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
         dir="ltr"
         href="#content"
       >
-        Skip to content
+        Waka go wetin de inside
       </a>
     </div>
   </div>
@@ -2438,7 +2438,7 @@ exports[`Header should render correctly for news article 1`] = `
         dir="ltr"
         href="#content"
       >
-        Skip to content
+        Waka go wetin de inside
       </a>
     </div>
   </div>
