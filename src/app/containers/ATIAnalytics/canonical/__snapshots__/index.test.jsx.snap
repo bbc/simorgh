@@ -2,6 +2,6 @@
 
 exports[`Canonical ATI Analytics should render a noscript image for non-JS users 1`] = `
 <noscript>
-  &lt;img height="1px" width="1px" alt="" style="position:absolute" src="https://foobar.com?key=value&amp;key2=value2"/&gt;
+  &lt;img height="1px" width="1px" alt="" style="position:absolute" src="https://foobar.com?key=value&amp;key2=value2&amp;x8=[simorgh-nojs]"/&gt;
 </noscript>
 `;

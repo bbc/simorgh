@@ -12,8 +12,8 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `si`,
-    articleAuthor: `https://www.facebook.com/BBCSinhala`,
-    articleTimestampPrefix: 'Updated',
+    articleAuthor: `https://www.facebook.com/bbcnews`,
+    articleTimestampPrefix: 'යාවත්කාලීනවී ඇත',
     atiAnalyticsAppName: 'news-sinhala',
     atiAnalyticsProducerId: '82',
     brandName: 'BBC News සිංහල',
@@ -22,16 +22,16 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png',
     defaultImageAltText: 'BBC News සිංහල',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', බාහිර',
+    imageCaptionOffscreenText: 'ඡායාරූප ශීර්ෂ වැකිය, ',
+    videoCaptionOffscreenText: 'වීඩියෝ ශීර්ෂ වැකිය, ',
+    audioCaptionOffscreenText: 'හඬ ශීර්ෂ වැකිය, ',
+    defaultCaptionOffscreenText: 'ශීර්ෂ වැකිය, ',
+    imageCopyrightOffscreenText: 'ඡායාරූප මූලාශ්‍රය, ',
     locale: `si-LK`,
     datetimeLocale: `si`,
     service: 'sinhala',
-    serviceName: 'News සිංහල',
+    serviceName: 'Sinhala',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcsinhala',
     twitterSite: '@bbcsinhala',
@@ -47,145 +47,147 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
+      seeAll: 'සියල්ල දැකගන්න',
       home: 'මුල් පිටුව',
-      currentPage: 'Current page',
+      currentPage: 'දැන් සිටින පිටුව',
       skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
-      relatedContent: 'Related content',
+      relatedContent: 'මේ පුවතට සම්බන්ධ තවත් විස්තර',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'මීඩියා ධාවකය',
+        audioPlayer: 'හඬ වාදකය',
+        videoPlayer: 'වීඩියෝ ධාවකය',
       },
       error: {
         404: {
           statusCode: '404',
-          title: '404 - පිටුව සොයා ගත නොහැක',
+          title: 'පිටුව සොයාගත නොහැක',
           message:
-            'ඔබ වෙබ් අඩවියේ නම වැරදියට සටහන් කළා විය හැකිය. කරුණාකර වෙබ් අඩවියේ නම යලිත් වරක් විමසන්න.',
+            'කණගාටුයි, ඔබ සොයන පිටුව ගෙන ඒමට අපට නොහැක. කරුණාකර උත්සාහ කරන්න:',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'url නැවත පරීක්ෂා කෙරෙමින් පවතී',
+            'ඔබේ බ්‍රවුසරයේ යළි පණගැන්වීම් බොත්තම තද කෙරෙමින් පවතී',
+            'බීබීසී සෙවුම් තුළින් මේ පිටුව සොයමින් පවතී',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'බීබීසී සිංහල මුල් පිටුව',
+          callToActionFirst: 'නොඑසේනම්, කරුණාකර මුල් පිටුවට පිවිසෙන්න ',
+          callToActionLinkText: 'BBC News සිංහල',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/sinhala',
         },
         500: {
           statusCode: '500',
-          title: '500 - වරදක්',
+          title: 'අභ්‍යන්තර සර්වරයේ දෝෂයකි',
           message:
-            'කිසියම් වරදක් සිදු වී තිබේ. කරුණාකර පිටුව යාවත්කාලීන කරන්න.',
+            'කණගාටුයි, ඔබ සොයන පිටුව ගෙන ඒමට දැනට අපට හැකියාවක් නැත. කරුණාකර උත්සාහ කරන්න:',
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            'ඔබේ බ්‍රවුසරයේ යළි පණගැන්වීම් බොත්තම තද කෙරෙමින් පවතී',
+            'යළි පසුව පැමිණෙනු ඇත',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'බීබීසී සිංහල මුල් පිටුව',
+          callToActionFirst: 'නොඑසේනම්, කරුණාකර මුල් පිටුවට පිවිසෙන්න ',
+          callToActionLinkText: 'BBC News සිංහල',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/sinhala',
         },
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title:
+            'පෞද්ගලිකත්වය (Privacy) හා කුකීස් (Cookies) පිළිබඳ අපගේ ප්‍රතිපත්තිය යාවත්කාලීන කර ඇත.',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'පෞද්ගලිකත්වය (Privacy) හා කුකීස් (Cookies) පිළිබඳ අපගේ ප්‍රතිපත්තියට එක්කර ඇති වැදගත් වෙනස්කම් ඔබට සහ ඔබගේ දත්තවලට අදාළවන්නේ කෙසේදැයි ඔබ දැනුවත්වීම අවශ්‍යය.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'පෞද්ගලිකත්වය (Privacy) හා කුකීස් (Cookies) පිළිබඳ අපගේ ප්‍රතිපත්තියට එක්කර ඇති වැදගත් වෙනස්කම් ඔබට සහ ඔබගේ දත්තවලට අදාළවන්නේ කෙසේදැයි ඔබ දැනුවත්වීම අවශ්‍යය.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
-          accept: 'OK',
-          reject: "Find out what's changed",
+          accept: 'හරි',
+          reject: 'වෙනස් කර ඇත්තේ මොනවාදැයි දැනගන්න',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'කුකීස් සමග එකඟවන්නේදැයි අපට දන්වන්න',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
+              first: 'අප කුකීස් ',
+              linkText: 'භාවිත කරන්නේ',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' හොඳම ඔන්ලයින් අත්දැකීම ඔබට ගෙන දීම සඳහාය. මේ කුකීස් සියල්ල සමග ඔබ එකඟදැයි කරුණාකර අපට දන්වන්න.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
-              linkText: 'cookies',
+              first: 'අප සහ අපේ හවුල්කරුවන් කුකීස් ',
+              linkText: 'වැනි තාක්ෂණය',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ' භාවිත කරමින් බ්‍රවුසිං දත්ත රැස්කරන්නේ ඔබට හොඳම ඔන්ලයින් අත්දැකීම ලබාදීම සහ ඔබට පෙනෙන අන්තර්ගතය හා වෙළෙඳ ප්‍රචාරණ ඔබටම සමීප කිරීම සඳහාය. මීට ඔබ එකඟ නම් කරුණාකර ඒ බව අපට දන්වන්න.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'ඔව්, මම එකඟයි',
+          reject: 'නැහැ, සැකසුම වෙත මා ගෙනයන්න',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
       media: {
-        audio: 'හඬපට',
-        photogallery: 'සේයා රූ ගැලරිය',
+        audio: 'හඬ',
+        photogallery: 'ඡායාරූප ගැලරිය ',
         video: 'වීඩියෝ',
         bbc_sinhala_tv: {
           title: 'බීබීසී සිංහල සංදේශය',
           subtitle:
             'බීබීසී සිංහල ඔස්සේ ශ්‍රී ලාංකීය, දකුණු ආසියාතික සහ ජාත්‍යන්තර පුවත්, විශ්ලේෂණ සහ ක්‍රීඩා පුවත්',
         },
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'සජීවී.',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: 'වැඩිපුරම කියැවූ',
+      lastUpdated: 'අවසන් යාවත්කාලීනවීම: ',
     },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        text: 'ඔබට බීබීසී විශ්වාස කළ හැක්කේ ඇයි',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: 'බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න.',
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
-        },
-        {
           href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          text: 'භාවිතයේ කොන්දේසි',
         },
         {
           href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          text: 'පෞද්ගලිකත්ව ප්‍රතිපත්තිය',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: 'කුකීස්',
         },
         {
           href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          text: 'බීබීසී අමතන්න',
         },
       ],
-      copyrightText:
-        'බීබීසී. වෙනත් අන්තර්ජාල අඩවිවල අන්තර්ගතය පිළිබඳව බීබීසීය වගකීමෙන් නොබැඳේ',
+      copyrightText: 'BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ.',
     },
     fonts: [F_ISKOOLA_POTA_BBC_BOLD, F_ISKOOLA_POTA_BBC_REGULAR],
     timezone: 'GMT',
@@ -223,6 +225,7 @@ export const service = {
         url: '/sinhala/media/video',
       },
     ],
+    navigationSection: 'අංශ',
   },
 };
 

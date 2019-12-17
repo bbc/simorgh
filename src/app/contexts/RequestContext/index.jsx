@@ -68,6 +68,7 @@ RequestContextProvider.propTypes = {
     'MAP',
     'FIX',
     'STY',
+    'PGL',
   ]).isRequired,
   service: string.isRequired,
   statusCode: number,

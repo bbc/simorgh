@@ -8,6 +8,7 @@ exports[`Radio Page Blocks should match snapshot for AMP 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
 }
@@ -120,13 +121,18 @@ exports[`Radio Page Blocks should match snapshot for AMP 1`] = `
               frameborder="0"
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
-              src="https://www.test.bbc.com/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
+              scrolling="no"
+              src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
               title="Audio player"
             >
               <amp-img
+                alt=""
+                attribution=""
+                height="16"
                 layout="fill"
                 placeholder="true"
                 src="http://localhost:7080/images/amp_audio_placeholder.png"
+                width="9"
               />
             </amp-iframe>
           </div>
@@ -145,18 +151,9 @@ exports[`Radio Page Blocks should match snapshot for Canonical 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
-}
-
-.c5 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  overflow: hidden;
 }
 
 .c4 {
@@ -182,6 +179,16 @@ exports[`Radio Page Blocks should match snapshot for Canonical 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+}
+
+.c5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -257,7 +264,8 @@ exports[`Radio Page Blocks should match snapshot for Canonical 1`] = `
           allow="autoplay; fullscreen"
           allowfullscreen=""
           class="c5"
-          src="https://www.test.bbc.com/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
+          scrolling="no"
+          src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
           title="Audio player"
         />
       </div>

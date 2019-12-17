@@ -3,7 +3,7 @@ import { string, shape, object, arrayOf } from 'prop-types';
 import path from 'ramda/src/path';
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
-import { Grid, GridItemConstrainedMedium } from '#lib/styledGrid';
+import { Grid, GridItemConstrainedLarge } from '#lib/styledGrid';
 import LinkedData from '../LinkedData';
 import RadioPageBlocks from '../RadioPageBlocks';
 
@@ -24,9 +24,9 @@ const RadioPageMain = ({ pageData }) => {
       <LinkedData type="RadioChannel" seoTitle={promo.name} />
 
       <Grid as="main" role="main">
-        <GridItemConstrainedMedium>
+        <GridItemConstrainedLarge>
           <RadioPageBlocks blocks={blocks} />
-        </GridItemConstrainedMedium>
+        </GridItemConstrainedLarge>
       </Grid>
     </>
   );

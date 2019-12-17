@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, shape, arrayOf, object } from 'prop-types';
+import { string, shape, arrayOf, object, bool } from 'prop-types';
 import { singleTextBlock } from '#models/blocks';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -8,7 +8,7 @@ import MediaPlayerContainer from '.';
 
 const captionBlock = {
   model: {
-    blocks: [singleTextBlock('Media Player With Caption')],
+    blocks: [singleTextBlock('Media Player With Caption', 'mock-id-1')],
   },
   type: 'caption',
 };
@@ -30,7 +30,7 @@ const imageBlock = {
       },
       {
         model: {
-          blocks: [singleTextBlock('Ants')],
+          blocks: [singleTextBlock('Ants', 'mock-id-2')],
         },
         type: 'altText',
       },
@@ -283,7 +283,46 @@ const missingVpidBlocks = [
   },
 ];
 
-const defaultToggles = {
+export const validAresMetadataBlock = {
+  blockId: 'urn:bbc:ares::clip:p01k6msm',
+  model: {
+    advertising: true,
+    embedding: true,
+    format: 'audio_video',
+    id: 'p01k6msm',
+    imageCopyright: 'BBC',
+    imageUrl: 'ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg',
+    subType: 'clip',
+    syndication: {
+      destinations: [],
+    },
+    synopses: {
+      short:
+        'They may be tiny, but us humans could learn a thing or two from ants.',
+    },
+    title: 'Five things ants can teach us about management',
+    versions: [
+      {
+        availableFrom: 1540218932000,
+        availableTerritories: {
+          nonUk: true,
+          uk: true,
+        },
+        duration: 191,
+        durationISO8601: 'PT3M11S',
+        types: ['Original'],
+        versionId: 'p01k6msp',
+        warnings: {
+          long: 'Contains strong language and adult humour.',
+          short: 'Contains strong language and adult humour.',
+        },
+      },
+    ],
+  },
+  type: 'aresMediaMetadata',
+};
+
+export const defaultToggles = {
   local: {
     mediaPlayer: {
       enabled: true,
@@ -309,7 +348,14 @@ const toggleStateOff = {
   },
 };
 
-const GenerateFixtureData = ({ platform, toggleState, blocks }) => (
+const GenerateFixtureData = ({
+  platform,
+  toggleState,
+  blocks,
+  assetType,
+  assetId,
+  showPlaceholder,
+}) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
     service="news"
@@ -323,7 +369,12 @@ const GenerateFixtureData = ({ platform, toggleState, blocks }) => (
       <ToggleContext.Provider
         value={{ toggleState, toggleDispatch: jest.fn() }}
       >
-        <MediaPlayerContainer blocks={blocks} />
+        <MediaPlayerContainer
+          blocks={blocks}
+          assetId={assetId}
+          assetType={assetType}
+          showPlaceholder={showPlaceholder}
+        />
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
@@ -333,25 +384,53 @@ GenerateFixtureData.propTypes = {
   platform: string.isRequired,
   toggleState: shape({}),
   blocks: arrayOf(object).isRequired,
+  assetType: string.isRequired,
+  assetId: string.isRequired,
+  showPlaceholder: bool.isRequired,
 };
 
 GenerateFixtureData.defaultProps = {
   toggleState: defaultToggles,
 };
 
-export const VideoCanonical = (
+export const VideoCanonicalWithPlaceholder = (
   <GenerateFixtureData
     platform="canonical"
     blocks={[validAresMediaVideoBlock]}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
+  />
+);
+
+export const VideoCanonicalNoPlaceholder = (
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={[validAresMediaVideoBlock]}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder={false}
   />
 );
 
 export const VideoAmp = (
-  <GenerateFixtureData platform="amp" blocks={[validAresMediaVideoBlock]} />
+  <GenerateFixtureData
+    platform="amp"
+    blocks={[validAresMediaVideoBlock]}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
+  />
 );
 
 export const VideoCanonicalNoVersionId = (
-  <GenerateFixtureData platform="canonical" blocks={missingVpidBlocks} />
+  <GenerateFixtureData
+    platform="canonical"
+    blocks={missingVpidBlocks}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
+  />
 );
 
 export const VideoCanonicalToggledOff = (
@@ -359,6 +438,9 @@ export const VideoCanonicalToggledOff = (
     platform="canonical"
     blocks={[validAresMediaVideoBlock]}
     toggleState={toggleStateOff}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
   />
 );
 
@@ -366,9 +448,18 @@ export const VideoCanonicalWithCaption = (
   <GenerateFixtureData
     platform="canonical"
     blocks={validVideoWithCaptionBlock}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
   />
 );
 
 export const VideoAmpWithCaption = (
-  <GenerateFixtureData platform="amp" blocks={validVideoWithCaptionBlock} />
+  <GenerateFixtureData
+    platform="amp"
+    blocks={validVideoWithCaptionBlock}
+    assetType="articles"
+    assetId="c123456789o"
+    showPlaceholder
+  />
 );

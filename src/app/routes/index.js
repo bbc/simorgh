@@ -4,15 +4,13 @@ import FrontPage from '../containers/FrontPage';
 import RadioPage from '../containers/RadioPage';
 import CpsAssetPage from '../containers/CpsAssetPage';
 import ErrorPage from '../containers/Error';
-import getArticleInitialData from './getInitialData/article';
-import getFrontpageInitialData from './getInitialData/frontpage';
-import getCpsAssetInitialData from './getInitialData/cpsAsset';
-import getRadioPageInitialData from './getInitialData/radioPage';
+import getInitialData from './getInitialData';
 import {
-  articleRegexPath,
-  frontpageRegexPath,
-  cpsAssetPageRegexPath,
-  radioAndTvRegexPathsArray,
+  articlePath,
+  frontPagePath,
+  cpsAssetPagePath,
+  errorPagePath,
+  radioAndTvPath,
 } from './regex';
 
 const CpsAsset = props => {
@@ -23,32 +21,39 @@ const CpsAsset = props => {
 
 const routes = [
   {
-    path: articleRegexPath,
+    path: articlePath,
     exact: true,
     component: Article,
-    getInitialData: getArticleInitialData,
+    getInitialData,
     pageType: 'article',
   },
   {
-    path: frontpageRegexPath,
+    path: frontPagePath,
     exact: true,
     component: FrontPage,
-    getInitialData: getFrontpageInitialData,
+    getInitialData,
     pageType: 'frontPage',
   },
   {
-    path: radioAndTvRegexPathsArray,
+    path: radioAndTvPath,
     exact: true,
     component: RadioPage,
-    getInitialData: getRadioPageInitialData,
+    getInitialData,
     pageType: 'media',
   },
   {
-    path: cpsAssetPageRegexPath,
+    path: cpsAssetPagePath,
     exact: true,
     component: CpsAsset,
-    getInitialData: getCpsAssetInitialData,
+    getInitialData,
     pageType: 'MAP',
+  },
+  {
+    path: errorPagePath,
+    exact: true,
+    component: ErrorPage,
+    getInitialData: () => Promise.resolve({ status: 200 }),
+    pageType: 'error',
   },
   {
     component: ErrorPage,

@@ -17,7 +17,7 @@ export const service = {
   default: {
     lang: `tr`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Güncelleme',
     atiAnalyticsAppName: 'news-turkce',
     atiAnalyticsProducerId: '92',
     brandName: 'BBC News Türkçe',
@@ -26,12 +26,12 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/turkce.png',
     defaultImageAltText: 'BBC News Türkçe',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', Dış Link',
+    imageCaptionOffscreenText: 'Fotoğraf altı yazısı, ',
+    videoCaptionOffscreenText: 'Video altyazısı, ',
+    audioCaptionOffscreenText: 'Ses dosyası altyazısı, ',
+    defaultCaptionOffscreenText: 'Altyazı, ',
+    imageCopyrightOffscreenText: 'Kaynak, ',
     locale: `tr-TR`,
     datetimeLocale: `tr-tr`,
     service: 'turkce',
@@ -51,11 +51,11 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
-      home: 'Haberler',
-      currentPage: 'Current page',
-      skipLinkText: 'Siteye gir',
-      relatedContent: 'Related content',
+      seeAll: 'Hepsini görüntüle',
+      home: 'Ana sayfa',
+      currentPage: 'Bulunduğunuz sayfa',
+      skipLinkText: 'İçeriğe götür',
+      relatedContent: 'İlgili haberler',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -64,126 +64,129 @@ export const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Sayfa bulunamadı',
+          title: 'Sayfa bulunamadı',
           message:
-            'Bunun sebebi, internet adresini yanlış yazmanız olabilir. Lütfen adresi ve nasıl yazıldığını kontrol edin.',
+            'Üzgünüz aradığınız sayfayı görüntüleyemiyoruz. Lütfen şunları deneyin:',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'URL uzantısına çift tıklayın',
+            'Tarayıcınızın yenile butonuna basın',
+            'BBC arama çubuğunu kullanarak bu sayfayı arayın',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'BBC Türkçe Haberler',
+          callToActionFirst: 'Alternatif olarak ana sayfaya dönün ',
+          callToActionLinkText: 'BBC News Türkçe',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/turkce',
         },
         500: {
           statusCode: '500',
-          title: '500 - Hata',
-          message: 'Bir hata oluştu. Lütfen sayfayı yeniden yükleyin.',
+          title: 'İç sunucu hatası',
+          message:
+            'Üzgünüz aradığınız sayfayı görüntüleyemiyoruz. Lütfen şunları deneyin:',
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            'Tarayıcınızın yenile butonuna basın',
+            'Daha sonra tekrar deneyin',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'BBC Türkçe Haberler',
+          callToActionFirst: 'Alternatif olarak ana sayfaya dönün ',
+          callToActionLinkText: 'BBC News Türkçe',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/turkce',
         },
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title: 'Gizlilik ve çerez politikamızı güncelledik',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Gizlilik ve çerez politikalarımız konusunda bazı önemli değişiklikler yaptık. Bu değişikliklerin ne olduğunu ve sizin için ne anlama geldiğini bilmenizi istiyoruz.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Gizlilik ve çerez politikalarımız konusunda bazı önemli değişiklikler yaptık. Bu değişikliklerin ne olduğunu ve sizin için ne anlama geldiğini bilmenizi istiyoruz.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
-          accept: 'OK',
-          reject: "Find out what's changed",
+          accept: 'Tamam',
+          reject: 'Neler değişti?',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'Çerez politikasını onayladığınızı bize iletin',
           description: {
             uk: {
-              first: 'We use ',
-              linkText: 'cookies',
+              first: 'Size en iyi çevrimiçi deneyimi sunabilmek için ',
+              linkText: 'çerezler',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' ullanıyoruz. Çerezleri kabul ediyorsanız lütfen bizi bilgilendirin.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
-              linkText: 'cookies',
+              first: 'Biz ve ortaklarımız ',
+              linkText: 'çerezleri gibi',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ' teknolojiler kullanıyoruz ve size en iyi çevrimiçi hizmeti sunabilmek adına internet tarama verilerini topluyoruz. Bu yolla içerik ve reklamları kişiselleştiriyoruz. Eğer kabul ediyorsanız lütfen bizi bilgilendirin.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'Evet, kabul ediyorum',
+          reject: 'Hayır, beni ayarlara götür',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
       media: {
-        audio: 'Dinleyin',
-        photogallery: 'Fotoğraf',
-        video: 'İzleyin',
+        audio: 'Ses dosyası',
+        photogallery: 'Fotoğraf galerisi',
+        video: 'Video',
+        listen: 'Listen',
+        watch: 'İzle',
+        liveLabel: 'CANLI',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: 'En çok okunanlar',
+      lastUpdated: 'Son güncelleme: ',
     },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        text: "Neden BBC'ye güvenebilirsiniz",
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: 'Link verilen internet sitelerine yaklaşımımız.',
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
+          href: 'https://www.bbc.com/turkce/kurumsal-36765772',
+          text: 'Kullanım koşulları',
         },
         {
-          href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
-        },
-        {
-          href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          href: 'https://www.bbc.com/turkce/kurumsal-36765774',
+          text: 'Gizlilik politikası',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: 'Çerezler',
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          href: 'https://www.bbc.com/turkce/kurumsal-36767474',
+          text: "BBC'yle temas kurun",
         },
       ],
       copyrightText:
-        'BBC. BBC, diğer internet sayfalarının içeriğinden sorumlu değildir',
+        'BBC. BBC, link verilen internet sitelerinin içeriğinden sorumlu değildir.',
     },
     fonts: [
       F_REITH_SANS_BOLD,
@@ -232,6 +235,7 @@ export const service = {
         url: '/turkce/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
       },
     ],
+    navigationSection: 'Kategoriler',
   },
 };
 

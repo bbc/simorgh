@@ -1,7 +1,16 @@
 import pathOr from 'ramda/src/pathOr';
 
 const whitelist = ['STY', 'MAP', 'PGL', 'LIV', 'PRO'];
-const contentTypes = ['Text', 'Feature', 'Audio', 'Video', 'Gallery', 'Guide'];
+const contentTypes = [
+  'Text',
+  'Feature',
+  'Audio',
+  'Video',
+  'Gallery',
+  'Guide',
+  'TVBulletin',
+  'RadioBulletin',
+];
 
 const filterUnknownContentTypes = data => {
   const groups = pathOr(null, ['content', 'groups'], data);
@@ -17,12 +26,15 @@ const filterUnknownContentTypes = data => {
     if (Array.isArray(group.items)) {
       newGroup.items = group.items.filter(item => {
         const itemType = item.assetTypeCode || item.cpsType;
-        const validItemType = whitelist.includes(itemType);
-        const validContentType =
-          item.assetTypeCode !== 'PRO' ||
-          contentTypes.includes(item.contentType);
+        const isValidItemType = whitelist.includes(itemType);
+        const isValidContentType =
+          itemType !== 'PRO' || contentTypes.includes(item.contentType);
+        const isValidGroupType =
+          group.type === 'useful-links'
+            ? item.assetTypeCode === 'PRO' && item.contentType === 'Guide'
+            : group.type !== 'useful-links' || itemType === 'PRO';
 
-        return itemType && validItemType && validContentType;
+        return isValidItemType && isValidContentType && isValidGroupType;
       });
     }
 

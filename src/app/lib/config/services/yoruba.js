@@ -144,6 +144,12 @@ export const service = {
           title: 'Placeholder title',
           subtitle: 'Placeholder subtitle',
         },
+        listen: 'Gbọ́',
+        watch: 'Wò',
+        liveLabel: 'NÍ YÀJÓYÀJÓ',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -153,7 +159,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/yoruba/institutional-48528718',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'Ìdí tí ẹ fi le è nígbàagbọ́ nínú ìròyìn BBC',
       },
       externalLink: {
@@ -161,10 +167,6 @@ export const service = {
         text: 'Ọwọ́ tí a fi mú ìbáṣepọ̀ ti ìta.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/yoruba/institutional-48528718',
-          text: 'Ìdí tí ẹ fi le è nígbàagbọ́ nínú ìròyìn BBC',
-        },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
           text: 'Ìlànà Lílò',
@@ -196,7 +198,10 @@ export const service = {
         title: 'Ìròyìn',
         url: '/yoruba',
       },
-      { title: 'Eré ìdárayá', url: '/yoruba/ere_idaraya' },
+      {
+        title: 'Eré ìdárayá',
+        url: '/yoruba/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592',
+      },
       {
         title: 'Fídíò',
         url: '/yoruba/media/video',
@@ -206,6 +211,7 @@ export const service = {
         url: '/yoruba/popular/read',
       },
     ],
+    navigationSection: 'Àwọn abala',
   },
 };
 

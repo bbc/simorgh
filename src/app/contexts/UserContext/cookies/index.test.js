@@ -1,5 +1,9 @@
 import Cookie from 'js-cookie';
-import { getCookiePolicy, personalisationEnabled } from '.';
+import {
+  getCookiePolicy,
+  getPreferredVariant,
+  personalisationEnabled,
+} from '.';
 
 jest.mock('js-cookie', () => ({
   get: jest.fn(),
@@ -29,6 +33,17 @@ describe('UserContext cookies', () => {
     it('should default to "000" if cookie value isnt set', () => {
       Cookie.get.mockReturnValue(undefined);
       expect(getCookiePolicy()).toEqual('000');
+    });
+  });
+
+  describe('getPreferredVariant', () => {
+    it('should return null if service is null', () => {
+      expect(getPreferredVariant()).toEqual(null);
+    });
+
+    it('should return cookie value from js-cookie', () => {
+      Cookie.get.mockReturnValue('trad');
+      expect(getPreferredVariant('zhongwen')).toEqual('trad');
     });
   });
 

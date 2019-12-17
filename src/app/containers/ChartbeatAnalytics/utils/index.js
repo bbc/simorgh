@@ -90,12 +90,12 @@ export const getConfig = ({
     sections,
     uid: chartbeatUID,
     title,
-    ...(isAmp && { contentType: type, virtualReferrer: referrer }),
+    virtualReferrer: referrer,
+    ...(isAmp && { contentType: type }),
     ...(!isAmp && {
       type,
       useCanonical,
       path: currentPath,
-      virtualReferrer: `${origin}/referrer`,
     }),
     ...(cookie && { idSync: { bbc_hid: cookie } }),
   };

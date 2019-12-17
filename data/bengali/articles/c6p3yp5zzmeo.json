@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Bengali",
     "language": "bn",
-    "lastUpdated": 1562942416450,
+    "lastUpdated": 1572879816559,
     "firstPublished": 1562942411695,
     "lastPublished": 1562942411695,
     "options": {},
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "ক্রিকেট বিশ্বকাপ ২০১৯: ম্যান অফ দা টুর্নামেন্টের দৌড়ে এগিয়ে কারা?",
+                        "text": "এটি এই পরীক্ষার নিবন্ধটির শিরোনাম",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "ক্রিকেট বিশ্বকাপ ২০১৯: ম্যান অফ দা টুর্নামেন্টের দৌড়ে এগিয়ে কারা?",
+                              "text": "এটি এই পরীক্ষার নিবন্ধটির শিরোনাম",
                               "attributes": []
                             }
                           }
@@ -58,63 +65,303 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।\n",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।\n",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "b06e/test/d8141e90-fcb8-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "এবারের বিশ্বকাপ ক্রিকেটে ম্যান অফ দা টুর্নামেন্ট কে হতে যাচ্ছেন- এমন প্রশ্ন এখন থেকেই আলোচিত হচ্ছে ক্রিকেট অঙ্গনে। উঠে আসছে নানা ক্রিকেটারের নাম।",
+                  "text": "এটি একটি পাঠ্য ব্লক, এতে বিবিসি আবহাওয়ার হোমপেজে একটি ইউআরএল লিঙ্ক রয়েছে।",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "এবারের বিশ্বকাপ ক্রিকেটে ম্যান অফ দা টুর্নামেন্ট কে হতে যাচ্ছেন- এমন প্রশ্ন এখন থেকেই আলোচিত হচ্ছে ক্রিকেট অঙ্গনে। উঠে আসছে নানা ক্রিকেটারের নাম।",
+                        "text": "এটি একটি পাঠ্য ব্লক, এতে বিবিসি আবহাওয়ার হোমপেজে একটি ইউআরএল ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "লিঙ্ক রয়েছে।",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "লিঙ্ক রয়েছে।",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p019qd7g",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "এটি একটি ভিডিওযুক্ত একটি ভিডিও ব্লক",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "এটি একটি ভিডিওযুক্ত একটি ভিডিও ব্লক",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "সর্বোচ্চ রান সংগ্রহকারীদের তালিকায় আছেন অস্ট্রেলিয়ার ডেভিড ওয়ার্নার, ভারতের রোহিত শর্মা, বাংলাদেশের সাকিব আল হাসান।",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p019qd7g",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "সর্বোচ্চ রান সংগ্রহকারীদের তালিকায় আছেন অস্ট্রেলিয়ার ডেভিড ওয়ার্নার, ভারতের রোহিত শর্মা, বাংলাদেশের সাকিব আল হাসান।",
-                        "attributes": []
+                        "id": "p019qd7g",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Test asset with square image",
+                        "synopses": {
+                          "short": "test asset"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019qd93.jpg",
+                        "embedding": false,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p019qd7k",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 16,
+                            "durationISO8601": "PT16S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1493293493000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 900,
+                              "width": 900,
+                              "copyrightHolder": "Sony",
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019qd93.jpg",
+                              "originCode": "mpv"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "\rএটি একটি সাবহেডলাইন ব্লক",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "\rএটি একটি সাবহেডলাইন ব্লক",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "\rএটি একটি সাবহেডলাইন ব্লক",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "\rএটি একটি সাবহেডলাইন ব্লক",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "rawImage",
                 "model": {
-                  "text": "সর্বোচ্চ উইকেট শিকারীর তালিকায় অস্ট্রেলিয়ার মিচেল স্টার্ক, বাংলাদেশের মুস্তাফিজুর রহমান, ভারতের জসপ্রিত বুমরাহ ও নিউজিল্যান্ডের লকি ফার্গুসন।",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "সর্বোচ্চ উইকেট শিকারীর তালিকায় অস্ট্রেলিয়ার মিচেল স্টার্ক, বাংলাদেশের মুস্তাফিজুর রহমান, ভারতের জসপ্রিত বুমরাহ ও নিউজিল্যান্ডের লকি ফার্গুসন।",
-                        "attributes": []
-                      }
-                    }
-                  ]
+                  "width": 800,
+                  "height": 450,
+                  "locator": "baed/test/3c2cf780-fcb9-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
                 }
-              },
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "ব্যাটিং এভারেজে এক নম্বরে আছেন নিউজিল্যান্ডের কেইন উইলিয়ামসন, যিনি একাই দলকে অনেকটা টেনে তুলেছেন ফাইনালে।",
+                  "text": "এই পরীক্ষার নিবন্ধটি তৈরি করা হয়েছে যাতে আমরা আমাদের ওয়েবসাইটে পরীক্ষা চালাতে পারি।",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "ব্যাটিং এভারেজে এক নম্বরে আছেন নিউজিল্যান্ডের কেইন উইলিয়ামসন, যিনি একাই দলকে অনেকটা টেনে তুলেছেন ফাইনালে।",
+                        "text": "এই পরীক্ষার নিবন্ধটি তৈরি করা হয়েছে যাতে আমরা আমাদের ওয়েবসাইটে পরীক্ষা চালাতে পারি।",
                         "attributes": []
                       }
                     }

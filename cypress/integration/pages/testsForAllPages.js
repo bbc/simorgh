@@ -382,18 +382,28 @@ export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
   describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {
     if (Cypress.env('APP_ENV') === 'live') {
       describe('Page links test', () => {
-        it('links should not 404', () => {
-          cy.get('a')
-            .not('[href="#*"]')
-            .each(element => {
-              const url = element.attr('href');
-              cy.request({
-                url,
-                failOnStatusCode: false,
-              }).then(resp => {
-                expect(resp.status).to.not.equal(404);
-              });
+        it('Top navigation links should not 404', () => {
+          cy.get('header a').each(element => {
+            const url = element.attr('href');
+            cy.request({
+              url,
+              failOnStatusCode: false,
+            }).then(resp => {
+              expect(resp.status).to.not.equal(404, `Received 404 for ${url}`);
             });
+          });
+        });
+
+        it('Footer links should not 404', () => {
+          cy.get('footer a').each(element => {
+            const url = element.attr('href');
+            cy.request({
+              url,
+              failOnStatusCode: false,
+            }).then(resp => {
+              expect(resp.status).to.not.equal(404, `Received 404 for ${url}`);
+            });
+          });
         });
       });
     }

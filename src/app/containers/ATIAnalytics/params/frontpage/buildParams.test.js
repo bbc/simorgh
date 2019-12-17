@@ -1,6 +1,7 @@
 import { buildFrontPageATIParams, buildFrontPageATIUrl } from './buildParams';
 import * as analyticsUtils from '#lib/analyticsUtils';
 
+analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
 analyticsUtils.getPublishedDatetime = jest
   .fn()
@@ -31,6 +32,7 @@ const validURLParams = {
   producerId: serviceContext.atiAnalyticsProducerId,
   timePublished: analyticsUtils.getPublishedDatetime(),
   timeUpdated: analyticsUtils.getPublishedDatetime(),
+  libraryVersion: analyticsUtils.LIBRARY_VERSION,
   platform: requestContext.platform,
   service: 'service',
   statsDestination: requestContext.statsDestination,
@@ -88,6 +90,7 @@ describe('frontpage buildParams', () => {
           'x4=[language]',
           'x5=[http://localhost/]',
           'x7=[index-home]',
+          'x8=[simorgh]',
           'x9=[title+-+brandName]',
           'x11=[1970-01-01T00:00:00.000Z]',
           'x12=[1970-01-01T00:00:00.000Z]',

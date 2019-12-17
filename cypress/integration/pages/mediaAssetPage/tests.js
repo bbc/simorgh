@@ -1,9 +1,23 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
-const getParagraphText = blocks =>
-  blocks.find(el => el.type === 'paragraph' && el.markupType === 'plain_text')
-    .text;
+const getParagraphText = blocks => {
+  const textReplacements = {
+    '&quot;': '"',
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+  };
+
+  const replacementsRegex = new RegExp(
+    Object.keys(textReplacements).join('|'),
+    'gi',
+  );
+
+  return blocks
+    .find(el => el.type === 'paragraph' && el.markupType === 'plain_text')
+    .text.replace(replacementsRegex, match => textReplacements[match]);
+};
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -12,7 +26,11 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
+export const testsThatFollowSmokeTestConfig = ({
+  service,
+  pageType,
+  variant,
+}) => {
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
     it('should render a H1, which contains/displays a styled headline', () => {
       cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
@@ -48,7 +66,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
               .eq(1)
               .should(
                 'contain',
-                appConfig[service].default.articleTimestampPrefix,
+                appConfig[service][variant].articleTimestampPrefix,
               );
           }
         },

@@ -1,6 +1,6 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import { articleDataNews } from '../Article/fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -11,6 +11,7 @@ import * as amp from './amp';
 import * as canonical from './canonical';
 import * as analyticsUtils from '../../lib/analyticsUtils';
 
+analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
 analyticsUtils.getPublishedDatetime = jest
   .fn()
@@ -59,6 +60,7 @@ describe('ATI Analytics Container', () => {
         'x4=[en-gb]',
         'x5=[http://localhost/]',
         'x7=[article]',
+        'x8=[simorgh]',
         'x9=[Article+Headline+for+SEO]',
         'x11=[1970-01-01T00:00:00.000Z]',
         'x12=[1970-01-01T00:00:00.000Z]',
@@ -68,7 +70,7 @@ describe('ATI Analytics Container', () => {
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
 
-      renderer.create(
+      render(
         <ContextWrap platform="canonical" pageType="article">
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
@@ -95,6 +97,7 @@ describe('ATI Analytics Container', () => {
         `x5=[\${sourceUrl}]`,
         `x6=[\${documentReferrer}]`,
         'x7=[article]',
+        'x8=[simorgh]',
         'x9=[Article+Headline+for+SEO]',
         'x11=[1970-01-01T00:00:00.000Z]',
         'x12=[1970-01-01T00:00:00.000Z]',
@@ -105,7 +108,7 @@ describe('ATI Analytics Container', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
       amp.default = mockAmp;
 
-      renderer.create(
+      render(
         <ContextWrap platform="amp" pageType="article">
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
@@ -131,13 +134,14 @@ describe('ATI Analytics Container', () => {
         'x3=[news]',
         'x5=[http://localhost/]',
         'x7=[index-home]',
+        'x8=[simorgh]',
         'x11=[1970-01-01T00:00:00.000Z]',
         'x12=[1970-01-01T00:00:00.000Z]',
       ].join('&');
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
 
-      renderer.create(
+      render(
         <ContextWrap platform="canonical" pageType="frontPage">
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
@@ -162,13 +166,14 @@ describe('ATI Analytics Container', () => {
         `x5=[\${sourceUrl}]`,
         `x6=[\${documentReferrer}]`,
         'x7=[index-home]',
+        'x8=[simorgh]',
         'x11=[1970-01-01T00:00:00.000Z]',
         'x12=[1970-01-01T00:00:00.000Z]',
       ].join('&');
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
       amp.default = mockAmp;
 
-      renderer.create(
+      render(
         <ContextWrap platform="amp" pageType="frontPage">
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,

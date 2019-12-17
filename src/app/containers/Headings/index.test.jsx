@@ -66,7 +66,7 @@ const textItalicFragmentPart = (text1, text2Italic, text3) => [
 const template = (title, text, type) => {
   describe(title, () => {
     const data = {
-      ...textBlock(text),
+      ...textBlock(text, 'mock-id'),
       type,
     };
     shouldMatchSnapshot(

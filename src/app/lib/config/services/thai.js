@@ -10,15 +10,15 @@ export const service = {
     lang: `th`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: `th`,
-    articleAuthor: `https://www.facebook.com/BBCThai`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ปรับปรุงแล้ว',
     atiAnalyticsAppName: 'news-thai',
     atiAnalyticsProducerId: '90',
-    brandName: 'BBC News บีบีซีไทย',
+    brandName: 'BBC News ไทย',
     product: 'BBC News',
-    serviceLocalizedName: 'บีบีซีไทย',
+    serviceLocalizedName: 'ไทย',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/thai.png',
-    defaultImageAltText: 'BBC News บีบีซีไทย',
+    defaultImageAltText: 'BBC News ไทย',
     dir: `ltr`,
     externalLinkText: ' ลิงก์จากภายนอก',
     imageCaptionOffscreenText: 'คำบรรยายภาพ ',
@@ -29,7 +29,7 @@ export const service = {
     locale: `th-TH`,
     datetimeLocale: 'th',
     service: 'thai',
-    serviceName: 'News ไทย',
+    serviceName: 'Thai',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbc_thailand',
     twitterSite: '@bbc_thailand',
@@ -51,9 +51,9 @@ export const service = {
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       relatedContent: 'อ่านข่าวนี้เพิ่มเติม',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'มีเดีย เพลเยอร์',
+        audioPlayer: 'ออดิโอ เพลเยอร์',
+        videoPlayer: 'วิดีโอ เพลเยอร์',
       },
       error: {
         404: {
@@ -139,6 +139,12 @@ export const service = {
         audio: 'เสียง',
         photogallery: 'แกลเลอรีภาพ',
         video: 'วิดีโอ',
+        listen: 'ฟัง',
+        watch: 'ดูู',
+        liveLabel: 'สด',
+        previousRadioShow: 'รายการวิทยุก่อนหน้า',
+        nextRadioShow: 'รายการวิทยุถัดไป',
+        duration: 'ความยาว',
       },
     },
     brandSVG,
@@ -176,9 +182,10 @@ export const service = {
         url: '/thai/popular/read',
       },
     ],
+    navigationSection: 'หมวดข่าว',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/thai/institutional-49281839',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้',
       },
       externalLink: {
@@ -186,10 +193,6 @@ export const service = {
         text: 'นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/thai/institutional-49281839',
-          text: 'ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้',
-        },
         {
           href: 'https://www.bbc.com/thai/institutional-38403477',
           text: 'เงื่อนไขการใช้งานของ BBC',

@@ -1,13 +1,8 @@
 #!/usr/bin/env groovy
 library 'Simorgh'
 
-def nodeImageVersion = "10.16.3"
-def nodeImage = "329802642264.dkr.ecr.eu-west-1.amazonaws.com/bbc-news/node-10-lts:${nodeImageVersion}"
-
-// Run latest every 1 hour
-def cron_string = env.BRANCH_NAME == "latest" ? "0 */1 * * *" : ""
-
-def stageHasFailed = false;
+// Run latest every 3 hours
+def cron_string = env.BRANCH_NAME == "latest" ? "0 0,6,9,12,15,18,21 * * *" : ""
 
 node {
     properties(
@@ -18,30 +13,35 @@ node {
                     artifactDaysToKeepStr: '10'
                 )
             ),
-            pipelineTriggers([cron(cron_string)])
+            pipelineTriggers([cron(cron_string)]),
+            parameters(
+                [
+                    string(defaultValue: '', name: 'BRANCH')
+                ]
+            )
         ]
     )
-    timeout(time: 120, unit: 'MINUTES') {
+    timeout(time: 240, unit: 'MINUTES') {
         withEnv([
             'CI=true'
         ]) {
             cleanWs() // Clean the workspace
-            checkout scm // Checkout from git
-
-            docker.image("${nodeImage}").inside('--ipc host') {
+            
+            stage('Get hash')
+                def hashToCheckout = params.BRANCH == '' ? Simorgh.getLiveCommitHash() : params.BRANCH
+                echo hashToCheckout
+            
+            docker.image(Simorgh.nodeDockerImage()).inside('--ipc host') {
                 try {
+                    Simorgh.checkout('latest', 'simorgh')
+                    Simorgh.checkoutToRevision("${hashToCheckout}", 'simorgh')
+
                     Simorgh.installNodeModules()
-                    parallel (
-                        'Live E2Es': {
-                            Simorgh.runE2Es('live', false)
-                        },
-                        'Localhost Tests': {
-                            sh script: 'sleep 5', label: 'Sleeping, waiting for launch of Xvfb'
-                            Simorgh.runLocalAndProductionTests()
-                        }
-                    )
+                    stage ('Live E2Es') {
+                        Simorgh.runE2Es('live', false)
+                    }
                 } finally {
-                    Simorgh.e2esPostBuildSteps('local & production')
+                    Simorgh.e2esPostBuildSteps('live')
                 }
             }
         }

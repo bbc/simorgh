@@ -61,6 +61,20 @@ const headlineBlock = {
   },
 };
 
+const visuallyHiddenHeadline = {
+  type: 'visuallyHiddenHeadline',
+  model: {
+    blocks: [paragraphBlock],
+  },
+};
+
+const fauxHeadline = {
+  type: 'fauxHeadline',
+  model: {
+    blocks: [paragraphBlock],
+  },
+};
+
 const aresMediaBlock = {
   type: 'aresMedia',
   model: {
@@ -143,6 +157,33 @@ describe('Timestamp rules', () => {
             paragraphBlock,
             headlineBlock,
             aresMediaBlock,
+            generatedTimestampBlock,
+          ],
+        },
+      },
+    });
+    expect(applyTimestampRules(fixtureData)).toEqual(expectedTransform);
+  });
+
+  it('should put Timestamp block after fauxHeadline, if no headline exists', () => {
+    const fixtureData = {
+      metadata: {
+        firstPublished: 1514808060000,
+        lastPublished: 1514811600000,
+      },
+      content: {
+        model: {
+          blocks: [visuallyHiddenHeadline, aresMediaBlock, fauxHeadline],
+        },
+      },
+    };
+    const expectedTransform = Object.assign(deepClone(fixtureData), {
+      content: {
+        model: {
+          blocks: [
+            visuallyHiddenHeadline,
+            aresMediaBlock,
+            fauxHeadline,
             generatedTimestampBlock,
           ],
         },

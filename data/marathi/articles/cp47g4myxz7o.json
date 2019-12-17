@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Marathi",
     "language": "mr",
-    "lastUpdated": 1562942291965,
+    "lastUpdated": 1572879715401,
     "firstPublished": 1562942287715,
     "lastPublished": 1562942287715,
     "options": {},
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Marathi"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "चांद्रमोहीम : कसं होतं अपोलो 11 मिशन?",
+                        "text": "ही या चाचणी लेखाची मथळा आहे",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "चांद्रमोहीम : कसं होतं अपोलो 11 मिशन?",
+                              "text": "ही या चाचणी लेखाची मथळा आहे",
                               "attributes": []
                             }
                           }
@@ -58,20 +65,32 @@
           }
         },
         {
-          "type": "text",
+          "type": "image",
           "model": {
             "blocks": [
               {
-                "type": "paragraph",
+                "type": "caption",
                 "model": {
-                  "text": "चंद्रावर माणूस पहिल्यांदा उतरला आणि असं करणारा अमेरिका पहिला देश ठरला, त्याला जवळपास 50 वर्षं झाली आहेत.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "type": "text",
                       "model": {
-                        "text": "चंद्रावर माणूस पहिल्यांदा उतरला आणि असं करणारा अमेरिका पहिला देश ठरला, त्याला जवळपास 50 वर्षं झाली आहेत.",
-                        "attributes": [
-                          "bold"
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ही चाचणी प्रतिमा, बीबीसी कॉपीराइट, फ्रान्सचा नकाशा दर्शविते. प्रतिमा पहिल्या तीन ब्लॉक्समध्ये आहे आणि त्यास हे मथळा आहे.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ही चाचणी प्रतिमा, बीबीसी कॉपीराइट, फ्रान्सचा नकाशा दर्शविते. प्रतिमा पहिल्या तीन ब्लॉक्समध्ये आहे आणि त्यास हे मथळा आहे.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
                         ]
                       }
                     }
@@ -79,59 +98,277 @@
                 }
               },
               {
-                "type": "paragraph",
+                "type": "altText",
                 "model": {
-                  "text": "अमेरिका आणि जगाच्या इतिहासातच अपोलो 11 मोहिमेचं यश, हा मोठा क्षण होता. पण तेव्हा नक्की काय घडलं? आणि ते इतकं महत्त्वाचं का आहे?",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "type": "text",
                       "model": {
-                        "text": "अमेरिका आणि जगाच्या इतिहासातच अपोलो 11 मोहिमेचं यश, हा मोठा क्षण होता. पण तेव्हा नक्की काय घडलं? आणि ते इतकं महत्त्वाचं का आहे?",
-                        "attributes": []
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "\rही चाचणी प्रतिमा, बीबीसी कॉपीराइट, फ्रान्सचा नकाशा दर्शविते. प्रतिमा पहिल्या तीन ब्लॉक्समध्ये आहे आणि त्यास हे मथळा आहे.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "\rही चाचणी प्रतिमा, बीबीसी कॉपीराइट, फ्रान्सचा नकाशा दर्शविते. प्रतिमा पहिल्या तीन ब्लॉक्समध्ये आहे आणि त्यास हे मथळा आहे.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "9563/test/1b98b910-fcb3-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
                 "type": "paragraph",
                 "model": {
-                  "text": "1957मध्ये तेव्हाच्या सोव्हिएत युनियने स्पुटनिक उपग्रह लाँच केला. त्यानंतर अमेरिका आणि सोव्हिएत युनियनमध्ये अंतराळात जाण्याची स्पर्धा सुरू झाली.",
+                  "text": "हा मजकूर ब्लॉक आहे, ज्यात बीबीसी हवामान मुख्यपृष्ठाचा दुवा आहे.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "1957मध्ये तेव्हाच्या सोव्हिएत युनियने स्पुटनिक उपग्रह लाँच केला. त्यानंतर अमेरिका आणि सोव्हिएत युनियनमध्ये अंतराळात जाण्याची स्पर्धा सुरू झाली.",
+                        "text": "हा मजकूर ब्लॉक आहे, ज्यात बीबीसी हवामान",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": " मुख्यपृष्ठाचा दुवा आहे",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": " मुख्यपृष्ठाचा दुवा आहे",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ".",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p019qd7g",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "हा एक व्हिडिओ ब्लॉक आहे ज्यामध्ये फाईल आहे",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "हा एक व्हिडिओ ब्लॉक आहे ज्यामध्ये फाईल आहे",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "1961 मध्ये जॉन एफ. केनेडी अमेरिकेचे अध्यक्ष झाले आणि अनेक अमेरिकन नागरिकांना असं वाटलं की शीतयुद्धातल्या त्यांच्या या प्रतिस्पर्ध्याच्या समोर या तंत्रज्ञानाच्या स्पर्धेत अमेरिका मागे पडणार.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p019qd7g",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "1961 मध्ये जॉन एफ. केनेडी अमेरिकेचे अध्यक्ष झाले आणि अनेक अमेरिकन नागरिकांना असं वाटलं की शीतयुद्धातल्या त्यांच्या या प्रतिस्पर्ध्याच्या समोर या तंत्रज्ञानाच्या स्पर्धेत अमेरिका मागे पडणार.",
-                        "attributes": []
+                        "id": "p019qd7g",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Test asset with square image",
+                        "synopses": {
+                          "short": "test asset"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019qd93.jpg",
+                        "embedding": false,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p019qd7k",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 16,
+                            "durationISO8601": "PT16S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1493293493000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 900,
+                              "width": 900,
+                              "copyrightHolder": "Sony",
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019qd93.jpg",
+                              "originCode": "mpv"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "ही एक उपशीर्षक आहे\r",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "ही एक उपशीर्षक आहे\r",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "ही एक उपशीर्षक आहे\r",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "ही एक उपशीर्षक आहे\r",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
+                "type": "rawImage",
+                "model": {
+                  "width": 800,
+                  "height": 450,
+                  "locator": "14a4/test/93248360-fcb3-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
                 "type": "paragraph",
                 "model": {
-                  "text": "त्याच वर्षी सोव्हिएत युनियन पहिल्यांदा मानवाला अंतराळात पाठवलं.",
+                  "text": "हा चाचणी लेख तयार केला गेला आहे जेणेकरून आम्ही आमच्या वेबसाइटवर चाचण्या करू शकू.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "त्याच वर्षी सोव्हिएत युनियन पहिल्यांदा मानवाला अंतराळात पाठवलं.",
+                        "text": "हा चाचणी लेख तयार केला गेला आहे जेणेकरून आम्ही आमच्या वेबसाइटवर चाचण्या करू शकू.",
                         "attributes": []
                       }
                     }

@@ -43,7 +43,7 @@ const baseServiceConfig = {
     home: 'Home',
     currentPage: 'Current page',
     skipLinkText: 'Skip to content',
-    relatedContent: 'Related content',
+    relatedContent: '更多有关此项报道的内容',
     mediaAssetPage: {
       mediaPlayer: 'Media player',
       audioPlayer: 'Audio player',
@@ -131,6 +131,12 @@ const baseServiceConfig = {
       audio: '音频',
       photogallery: '图辑',
       video: '视频',
+      listen: 'Listen',
+      watch: 'Watch',
+      liveLabel: 'LIVE',
+      previousRadioShow: 'Previous radio show',
+      nextRadioShow: 'Next radio show',
+      duration: 'Duration',
     },
   },
   brandSVG,
@@ -148,10 +154,6 @@ const baseServiceConfig = {
       text: 'Read about our approach to external linking.',
     },
     links: [
-      {
-        href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
-      },
       {
         href: 'https://www.bbc.com/terms',
         text: 'Terms of Use',
@@ -173,36 +175,6 @@ const baseServiceConfig = {
   },
   fonts: [],
   timezone: 'GMT',
-  navigation: [
-    {
-      title: '主页',
-      url: '/ukchina/simp',
-    },
-    {
-      title: 'BBC精选',
-      url: '/ukchina/simp/horizon',
-    },
-    {
-      title: '英伦风采',
-      url: '/ukchina/simp/cool_britannia',
-    },
-    {
-      title: '记者来鸿',
-      url: '/ukchina/simp/fooc',
-    },
-    {
-      title: '英国体坛',
-      url: '/ukchina/simp/sport',
-    },
-    {
-      title: '视频内容',
-      url: '/ukchina/simp/media/video',
-    },
-    {
-      title: '图辑精选',
-      url: '/ukchina/simp/media/photogalleries',
-    },
-  ],
 };
 
 export const service = {
@@ -210,11 +182,73 @@ export const service = {
     ...baseServiceConfig,
     lang: `zh-hans`,
     locale: `zh-hans`,
+    navigation: [
+      {
+        title: '主页',
+        url: '/ukchina/simp',
+      },
+      {
+        title: 'BBC精选',
+        url: '/ukchina/simp/horizon',
+      },
+      {
+        title: '英伦风采',
+        url: '/ukchina/simp/cool_britannia',
+      },
+      {
+        title: '记者来鸿',
+        url: '/ukchina/simp/fooc',
+      },
+      {
+        title: '英国体坛',
+        url: '/ukchina/simp/sport',
+      },
+      {
+        title: '视频内容',
+        url: '/ukchina/simp/media/video',
+      },
+      {
+        title: '图辑精选',
+        url: '/ukchina/simp/media/photogalleries',
+      },
+    ],
+    navigationSection: '分类',
   },
   trad: {
     ...baseServiceConfig,
     lang: `zh-hant`,
     locale: `zh-hant`,
+    navigation: [
+      {
+        title: '主頁',
+        url: '/ukchina/trad',
+      },
+      {
+        title: 'BBC精選',
+        url: '/ukchina/trad/horizon',
+      },
+      {
+        title: '英倫風采',
+        url: '/ukchina/trad/cool_britannia',
+      },
+      {
+        title: '記者來鴻',
+        url: '/ukchina/trad/fooc',
+      },
+      {
+        title: '英國體壇',
+        url: '/ukchina/trad/sport',
+      },
+      {
+        title: '視頻內容',
+        url: '/ukchina/trad/media/video',
+      },
+      {
+        title: '圖輯精選',
+        url: '/ukchina/trad/media/photogalleries',
+      },
+    ],
+    navigationSection: '分類',
   },
 };
 

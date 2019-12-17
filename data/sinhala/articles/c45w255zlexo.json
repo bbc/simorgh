@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Sinhala",
     "language": "si",
-    "lastUpdated": 1562942505927,
+    "lastUpdated": 1572879866445,
     "firstPublished": 1562942502450,
     "lastPublished": 1562942502450,
     "options": {},
@@ -17,13 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Sinhala"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
       "fragment",
-      "inline"
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -40,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "පේටන්ට් බලපත්‍ර 107ක් හිමි රාජකීය සමාජයට එක් වූ ශ්‍රී ලංකාවේ මහාචාර්යවරයා සමග කතාබහක්",
+                        "text": "මෙම පරීක්ෂණ ලිපියේ සිරස්තලය මෙයයි",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "පේටන්ට් බලපත්‍ර 107ක් හිමි රාජකීය සමාජයට එක් වූ ශ්‍රී ලංකාවේ මහාචාර්යවරයා සමග කතාබහක්",
+                              "text": "මෙම පරීක්ෂණ ලිපියේ සිරස්තලය මෙයයි",
                               "attributes": []
                             }
                           }
@@ -59,88 +65,313 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "මෙම පරීක්ෂණ රූපය, ප්‍රකාශන හිමිකම් බීබීසී, ප්‍රංශයේ සිතියමක් පෙන්වයි. රූපය පළමු කොටස් තුනෙහි ඇති අතර මෙම ශීර්ෂ පා ය ඇත.\r",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "මෙම පරීක්ෂණ රූපය, ප්‍රකාශන හිමිකම් බීබීසී, ප්‍රංශයේ සිතියමක් පෙන්වයි. රූපය පළමු කොටස් තුනෙහි ඇති අතර මෙම ශීර්ෂ පා ය ඇත.\r",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "මෙම පරීක්ෂණ රූපය, ප්‍රකාශන හිමිකම් බීබීසී, ප්‍රංශයේ සිතියමක් පෙන්වයි. රූපය පළමු කොටස් තුනෙහි ඇති අතර මෙම ශීර්ෂ පා ය ඇත.\r",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "මෙම පරීක්ෂණ රූපය, ප්‍රකාශන හිමිකම් බීබීසී, ප්‍රංශයේ සිතියමක් පෙන්වයි. රූපය පළමු කොටස් තුනෙහි ඇති අතර මෙම ශීර්ෂ පා ය ඇත.\r",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "9115/test/ebbecc50-fcb9-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "ලොව ප්‍රමුඛ පෙළේ විද්‍යාඥයින්ගෙන් සැදුම් ලත් එක්සත් රාජධානියේ රාජකීය සමාජයේ (The Royal Society) සාමාජිකත්වය සඳහා පසුගිය දා නම් කෙරුණු ශ්‍රී ලාංකික භෞතික විද්‍යාඥයෙකු වන මහාචාර්ය කුමාර් වික්‍රමසිංහට, නිල වශයෙන් එහි සාමාජිකත්වය පිරිනැමීම සිකුරාදා (ජූලි 12) සිදු කෙරිණි.",
+                  "text": "මෙය පෙළ වාරණයක් වන අතර එය බීබීසී කාලගුණ මුල් පිටුවට සබැඳියක් අඩංගු වේ.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "ලොව ප්‍රමුඛ පෙළේ විද්‍යාඥයින්ගෙන් සැදුම් ලත් එක්සත් රාජධානියේ රාජකීය සමාජයේ ",
+                        "text": "මෙය පෙළ වාරණයක් වන අතර එය බීබීසී කාලගුණ මුල් පිටුවට ",
                         "attributes": []
                       }
                     },
                     {
-                      "type": "inline",
+                      "type": "urlLink",
                       "model": {
-                        "text": "(The Royal Society)",
+                        "text": "සබැඳියක් අඩංගු වේ",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "(The Royal Society)",
-                              "attributes": [
-                                "italic"
-                              ]
+                              "text": "සබැඳියක් අඩංගු වේ",
+                              "attributes": []
                             }
                           }
                         ],
-                        "language": "en-gb"
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
                       }
                     },
                     {
                       "type": "fragment",
                       "model": {
-                        "text": " සාමාජිකත්වය සඳහා පසුගිය දා නම් කෙරුණු ශ්‍රී ලාංකික භෞතික විද්‍යාඥයෙකු වන මහාචාර්ය කුමාර් වික්‍රමසිංහට, නිල වශයෙන් එහි සාමාජිකත්වය පිරිනැමීම සිකුරාදා (ජූලි 12) සිදු කෙරිණි.",
+                        "text": ".",
                         "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01djw2m",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "චීන සුපිරි අධිවේගී මාර්ග භාවිතා කරන්නන් නව මංසන්ධියෙන් මවිතයට පත් වේ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "චීන සුපිරි අධිවේගී මාර්ග භාවිතා කරන්නන් නව මංසන්ධියෙන් මවිතයට පත් වේ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "ඒ, රාජකීය සමාජයේ සාමාජිකයින් පිළිගැනීම සඳහා ලන්ඩන් නුවර පැවති විශේෂ උත්සවයකදීය. මෙම විශේෂ උත්සවය සිකුරාදා සහ සෙනසුරාදා යන දින දෙකේදී ම පැවැත්වේ.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p01djw2m",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "ඒ, රාජකීය සමාජයේ සාමාජිකයින් පිළිගැනීම සඳහා ලන්ඩන් නුවර පැවති විශේෂ උත්සවයකදීය. මෙම විශේෂ උත්සවය සිකුරාදා සහ සෙනසුරාදා යන දින දෙකේදී ම පැවැත්වේ.",
-                        "attributes": []
+                        "id": "p01djw2m",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Motorists amazed by new China highway",
+                        "synopses": {
+                          "short": "Chinese superhighway users amazed by new junction",
+                          "medium": "The motorists got their first glimpse of the new road system earlier.",
+                          "long": "A new $450m Chinese highway opened earlier, giving Shanghai motorists their first glimpse of the future of road travel.\n\nMany were left confused."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01djw9d.jpg",
+                        "embedding": false,
+                        "advertising": true,
+                        "caption": "The road was funded by foreign investors in China",
+                        "versions": [
+                          {
+                            "versionId": "p01djw2p",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 28,
+                            "durationISO8601": "PT28S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1507025738000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 720,
+                              "width": 1280,
+                              "copyrightHolder": "Sony",
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
+                              "originCode": "mpv"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "මෙය උප සිරස්තලයකි",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "මෙය උප සිරස්තලයකි",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "මෙය උප සිරස්තලයකි",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "මෙය උප සිරස්තලයකි",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "rawImage",
                 "model": {
-                  "text": "ඒ අනුව, මහාචාර්ය කුමාර් වික්‍රමසිංහ එම සමාජයට එක් වන දෙවන ශ්‍රී ලාංකිකයා වේ. (සාර්ස් වෛරසය හඳුනාගත් ශ්‍රී ලාංකික මහාචාර්ය මලික් පීරිස් මීට පෙර 2006 වසරේදී එහි සාමාජිකත්වය ලැබීය.)",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "ඒ අනුව, මහාචාර්ය කුමාර් වික්‍රමසිංහ එම සමාජයට එක් වන දෙවන ශ්‍රී ලාංකිකයා වේ. (සාර්ස් වෛරසය හඳුනාගත් ශ්‍රී ලාංකික මහාචාර්ය මලික් පීරිස් මීට පෙර 2006 වසරේදී එහි සාමාජිකත්වය ලැබීය.)",
-                        "attributes": []
-                      }
-                    }
-                  ]
+                  "width": 800,
+                  "height": 450,
+                  "locator": "3425/test/13a560c0-fcbb-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
                 }
-              },
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "රාජකීය සමාජය යනු මෙතෙක් ක්‍රියාත්මක වන ලොව පැරණිතම විද්‍යා සංගමය ලෙස සැලකේ. ශ්‍රීමත් අයිසැක් නිව්ටන්, චාල්ස් ඩාර්වින්, ස්ටීවන් හෝකින්ස් ආදී විශිෂ්ට විද්වතුන් එම සංගමයේ සාමාජිකත්වය දරා තිබේ.",
+                  "text": "අපගේ වෙබ් අඩවියේ පරීක්ෂණ ක්‍රියාත්මක කිරීමට හැකිවන පරිදි මෙම පරීක්ෂණ ලිපිය නිර්මාණය කර ඇත.\r",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "රාජකීය සමාජය යනු මෙතෙක් ක්‍රියාත්මක වන ලොව පැරණිතම විද්‍යා සංගමය ලෙස සැලකේ. ශ්‍රීමත් අයිසැක් නිව්ටන්, චාල්ස් ඩාර්වින්, ස්ටීවන් හෝකින්ස් ආදී විශිෂ්ට විද්වතුන් එම සංගමයේ සාමාජිකත්වය දරා තිබේ.",
+                        "text": "අපගේ වෙබ් අඩවියේ පරීක්ෂණ ක්‍රියාත්මක කිරීමට හැකිවන පරිදි මෙම පරීක්ෂණ ලිපිය නිර්මාණය කර ඇත.\r",
                         "attributes": []
                       }
                     }

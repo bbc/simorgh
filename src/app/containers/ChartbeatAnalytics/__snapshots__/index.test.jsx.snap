@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Charbeats Analytics Container should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on live 1`] = `"amp-return-value"`;
-
-exports[`Charbeats Analytics Container should return null when toggle is disbaled for live 1`] = `null`;
-
-exports[`Charbeats Analytics Container should return null when toggle is disbaled for localhost 1`] = `null`;

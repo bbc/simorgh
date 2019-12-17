@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
-import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import path from 'ramda/src/path';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
@@ -11,6 +11,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     isAmp,
     variant,
     id,
+    errorCode,
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
@@ -26,9 +27,21 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     pageType,
     error,
     loading: false,
+    errorCode,
   });
 
   const isInitialMount = useRef(true);
+  const shouldSetFocus = useRef(false);
+
+  useEffect(() => {
+    if (shouldSetFocus.current) {
+      const contentEl = document.querySelector('h1#content');
+      if (contentEl) {
+        contentEl.focus();
+      }
+      shouldSetFocus.current = false;
+    }
+  }, [state.loading]);
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -59,11 +72,13 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           pageType: route.pageType,
           loading: true,
           error: null,
+          errorCode: null,
         });
       });
 
       route.getInitialData(location.pathname).then(data => {
         clearTimeout(loaderTimeout);
+        shouldSetFocus.current = true;
         setState(prevState => ({
           ...prevState,
           loading: false,

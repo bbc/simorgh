@@ -76,11 +76,71 @@ const GalleryAssetType = {
   type: 'link',
 };
 
+const TVBulletinAssetType = {
+  name: 'Test TV Bulletin promo',
+  summary: 'Test TV summary',
+  indexImage: {
+    id: '63711781',
+    subType: 'index',
+    href: 'http://b.files.bbci.co.uk/4917/test/_63711781_clinton.jpg',
+    path: '/cpsdevpb/4917/test/_63711781_clinton.jpg',
+    height: 371,
+    width: 660,
+    altText: 'Clinton',
+    caption: 'Clinton',
+    copyrightHolder: 'BBC',
+  },
+  uri: 'https://www.bbc.co.uk/news',
+  contentType: 'TVBulletin',
+  assetTypeCode: 'PRO',
+  timestamp: 1565085977000,
+  type: 'link',
+};
+
+const RadioBulletinAssetType = {
+  name: 'Test Radio Bulletin promo',
+  summary: 'Test Radio summary',
+  indexImage: {
+    id: '63711781',
+    subType: 'index',
+    href: 'http://b.files.bbci.co.uk/4917/test/_63711781_clinton.jpg',
+    path: '/cpsdevpb/4917/test/_63711781_clinton.jpg',
+    height: 371,
+    width: 660,
+    altText: 'Clinton',
+    caption: 'Clinton',
+    copyrightHolder: 'BBC',
+  },
+  uri: 'https://www.bbc.co.uk/news',
+  contentType: 'RadioBulletin',
+  assetTypeCode: 'PRO',
+  timestamp: 1571655919000,
+  type: 'link',
+};
+
 const FeatureAssetType = {
   name: 'Test feature link promo',
   contentType: 'Feature',
   assetTypeCode: 'PRO',
 };
+
+const usefulLinksItems = [
+  {
+    name: 'Ethiopia: Ndị uweojii agba gbuola ndị mmadụ',
+    contentType: 'Link',
+    assetTypeCode: 'PRO',
+  },
+  {
+    name: 'Onye isi ala ndị New Zealand dị ime',
+    contentType: 'Guide',
+    assetTypeCode: 'PRO',
+  },
+  {
+    name: 'Yabasị a na-achụ TB ọsọ',
+    contentType: 'Text',
+    assetTypeCode: 'PRO',
+  },
+];
 
 describe('filterUnknownContentTypes', () => {
   it('should no-op when no groups', () => {
@@ -373,6 +433,8 @@ describe('filterUnknownContentTypes', () => {
             AudioAssetType,
             VideoAssetType,
             GalleryAssetType,
+            TVBulletinAssetType,
+            RadioBulletinAssetType,
           ],
         },
       };
@@ -384,6 +446,8 @@ describe('filterUnknownContentTypes', () => {
             AudioAssetType,
             VideoAssetType,
             GalleryAssetType,
+            TVBulletinAssetType,
+            RadioBulletinAssetType,
           ],
         },
       };
@@ -448,6 +512,8 @@ describe('filterUnknownContentTypes', () => {
                 TextAssetType,
                 AudioAssetType,
                 FeatureAssetType,
+                TVBulletinAssetType,
+                RadioBulletinAssetType,
               ],
             },
           ],
@@ -457,7 +523,13 @@ describe('filterUnknownContentTypes', () => {
         content: {
           groups: [
             {
-              items: [TextAssetType, AudioAssetType, FeatureAssetType],
+              items: [
+                TextAssetType,
+                AudioAssetType,
+                FeatureAssetType,
+                TVBulletinAssetType,
+                RadioBulletinAssetType,
+              ],
             },
           ],
         },
@@ -468,6 +540,39 @@ describe('filterUnknownContentTypes', () => {
 
     it('should handle "real" data', () => {
       expect(filterUnknownContentTypes(azeriFixtureData)).toMatchSnapshot();
+    });
+  });
+
+  describe('filters usefulLinks', () => {
+    it('should remove usefulLink items with contentType !== Guide', () => {
+      const data = {
+        content: {
+          groups: [
+            {
+              type: 'useful-links',
+              items: usefulLinksItems,
+            },
+          ],
+        },
+      };
+      const expected = {
+        content: {
+          groups: [
+            {
+              type: 'useful-links',
+              items: [
+                {
+                  name: 'Onye isi ala ndị New Zealand dị ime',
+                  contentType: 'Guide',
+                  assetTypeCode: 'PRO',
+                },
+              ],
+            },
+          ],
+        },
+      };
+
+      expect(filterUnknownContentTypes(data)).toEqual(expected);
     });
   });
 });

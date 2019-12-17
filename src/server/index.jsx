@@ -7,19 +7,23 @@ import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import routes from '#app/routes';
 import {
-  articleDataRegexPath,
-  articleManifestRegexPath,
-  articleSwRegexPath,
-  frontpageDataRegexPath,
-  frontpageManifestRegexPath,
-  frontpageSwRegexPath,
-  cpsAssetPageDataRegexPath,
-  radioAndTvDataRegexPath,
+  articleDataPath,
+  articleManifestPath,
+  articleSwPath,
+  frontPageDataPath,
+  frontPageManifestPath,
+  frontPageSwPath,
+  cpsAssetPageDataPath,
+  radioAndTvDataPath,
+  mostReadDataRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
+import injectCspHeader, {
+  localInjectHostCspHeader,
+} from './utilities/constructCspHeader';
 
 const fs = require('fs');
 
@@ -28,6 +32,9 @@ const morgan = require('morgan');
 const logger = nodeLogger(__filename);
 
 const publicDirectory = 'build/public';
+
+const cspInjectFun =
+  process.env.APP_ENV === 'local' ? localInjectHostCspHeader : injectCspHeader;
 
 logger.debug(
   `Application outputting logs to directory "${process.env.LOG_DIR}"`,
@@ -42,7 +49,7 @@ class LoggerStream {
 
 const constructDataFilePath = ({ pageType, service, id, variant = '' }) => {
   const dataPath =
-    pageType === 'frontpage'
+    pageType === 'frontpage' || pageType === 'mostRead'
       ? `${variant || 'index'}.json`
       : `${id}${variant}.json`;
 
@@ -108,7 +115,7 @@ if (process.env.APP_ENV === 'local') {
         redirect: false,
       }),
     )
-    .get(articleDataRegexPath, async ({ params }, res, next) => {
+    .get(articleDataPath, async ({ params }, res, next) => {
       const { service, id, variant } = params;
 
       const dataFilePath = constructDataFilePath({
@@ -120,7 +127,7 @@ if (process.env.APP_ENV === 'local') {
 
       sendDataFile(res, dataFilePath, next);
     })
-    .get(frontpageDataRegexPath, async ({ params }, res, next) => {
+    .get(frontPageDataPath, async ({ params }, res, next) => {
       const { service, variant } = params;
 
       const dataFilePath = constructDataFilePath({
@@ -131,7 +138,17 @@ if (process.env.APP_ENV === 'local') {
 
       sendDataFile(res, dataFilePath, next);
     })
-    .get(radioAndTvDataRegexPath, async ({ params }, res, next) => {
+    .get(mostReadDataRegexPath, async ({ params }, res, next) => {
+      const { service, variant } = params;
+      const dataFilePath = constructDataFilePath({
+        pageType: 'mostRead',
+        service,
+        variant,
+      });
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(radioAndTvDataPath, async ({ params }, res, next) => {
       const { service, serviceId, mediaId } = params;
 
       const dataFilePath = path.join(
@@ -144,7 +161,7 @@ if (process.env.APP_ENV === 'local') {
 
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
-    .get(cpsAssetPageDataRegexPath, async ({ params }, res, next) => {
+    .get(cpsAssetPageDataPath, async ({ params }, res, next) => {
       const { service, assetUri: id, variant } = params;
 
       const dataFilePath = constructDataFilePath({
@@ -168,7 +185,7 @@ if (process.env.APP_ENV === 'local') {
  */
 
 server
-  .get([articleSwRegexPath, frontpageSwRegexPath], (req, res) => {
+  .get([articleSwPath, frontPageSwPath], (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
     res.sendFile(swPath, {}, error => {
       if (error) {
@@ -178,7 +195,7 @@ server
     });
   })
   .get(
-    [articleManifestRegexPath, frontpageManifestRegexPath],
+    [articleManifestPath, frontPageManifestPath],
     async ({ params }, res) => {
       const { service } = params;
       const manifestPath = `${__dirname}/public/${service}/manifest.json`;
@@ -190,10 +207,12 @@ server
       });
     },
   )
-  .get('/*', async ({ url, headers, path: urlPath }, res) => {
+  .get('/*', cspInjectFun, async ({ url, headers, path: urlPath }, res) => {
+    logger.info(`Path: [${urlPath}] URL: [${url}]`);
+
     try {
-      const { service, isAmp, route, variant } = getRouteProps(routes, url);
-      const data = await route.getInitialData(urlPath);
+      const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
+      const data = await route.getInitialData(url);
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
 
@@ -202,17 +221,23 @@ server
 
       data.path = urlPath;
 
-      res.status(status).send(
-        await renderDocument({
-          bbcOrigin,
-          data,
-          isAmp,
-          routes,
-          service,
-          url,
-          variant,
-        }),
-      );
+      const result = await renderDocument({
+        bbcOrigin,
+        data,
+        isAmp,
+        routes,
+        service,
+        url,
+        variant,
+      });
+
+      if (result.redirectUrl) {
+        res.redirect(301, result.redirectUrl);
+      } else if (result.html) {
+        res.status(status).send(result.html);
+      } else {
+        throw new Error('unknown result');
+      }
     } catch ({ message, status }) {
       // Return an internal server error for any uncaught errors
       logger.error(`status: ${status || 500} - ${message}`);

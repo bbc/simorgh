@@ -173,7 +173,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
       name="twitter:card"
     />
     <meta
-      content="@bbcnewsamharic"
+      content="@bbcnews"
       name="twitter:creator"
     />
     <meta
@@ -189,7 +189,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
       name="twitter:image:src"
     />
     <meta
-      content="@bbcnewsamharic"
+      content="@bbcnews"
       name="twitter:site"
     />
     <meta
@@ -213,10 +213,6 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   padding-bottom: 2rem;
 }
 
-.c1 {
-  grid-column: 1 / span 6;
-}
-
 .c2 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -224,6 +220,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
 }
@@ -293,6 +290,24 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   }
 }
 
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
 @media (max-width:25rem) {
   .c1 {
     padding: 0 0.5rem;
@@ -302,33 +317,6 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c1 {
     padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
   }
 }
 
@@ -384,7 +372,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
         <script
           type="application/json"
         >
-          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=4&p=amharic.bbc_amharic_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares::ws_live:bbc_amharic_radio]&x2=[amp]&x3=[news-amharic]&x4=[am]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x9=[ያድምጡ+-+BBC+News+አማርኛ]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=4&p=amharic.bbc_amharic_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares::ws_live:bbc_amharic_radio]&x2=[amp]&x3=[news-amharic]&x4=[am]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[ያድምጡ+-+BBC+News+አማርኛ]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
         </script>
       </amp-analytics>
       <main
@@ -420,13 +408,18 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
                   frameborder="0"
                   layout="fill"
                   sandbox="allow-scripts allow-same-origin"
-                  src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
+                  scrolling="no"
+                  src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
                   title="Audio player"
                 >
                   <amp-img
+                    alt=""
+                    attribution=""
+                    height="16"
                     layout="fill"
                     placeholder="true"
                     src="http://localhost:7080/images/amp_audio_placeholder.png"
+                    width="9"
                   />
                 </amp-iframe>
               </div>
@@ -445,10 +438,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   padding-bottom: 2rem;
 }
 
-.c1 {
-  grid-column: 1 / span 6;
-}
-
 .c2 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -456,18 +445,9 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   font-weight: 700;
   font-style: normal;
   color: #3F3F42;
+  display: block;
   margin: 0;
   padding: 2rem 0;
-}
-
-.c7 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  overflow: hidden;
 }
 
 .c6 {
@@ -493,6 +473,16 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+}
+
+.c7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
 }
 
 @media (max-width:37.4375rem) {
@@ -535,6 +525,24 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   }
 }
 
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
 @media (max-width:25rem) {
   .c1 {
     padding: 0 0.5rem;
@@ -544,33 +552,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c1 {
     padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
   }
 }
 
@@ -796,7 +777,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       name="twitter:card"
     />
     <meta
-      content="@bbcnewsamharic"
+      content="@bbcnews"
       name="twitter:creator"
     />
     <meta
@@ -812,7 +793,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       name="twitter:image:src"
     />
     <meta
-      content="@bbcnewsamharic"
+      content="@bbcnews"
       name="twitter:site"
     />
     <meta
@@ -860,7 +841,8 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   allow="autoplay; fullscreen"
                   allowfullscreen=""
                   class="c7"
-                  src="https://www.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
+                  scrolling="no"
+                  src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
                   title="Audio player"
                 />
               </div>

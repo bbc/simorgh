@@ -49,7 +49,7 @@ describe('Blocks', () => {
   const blocks = [
     blockContainingText('headline', 'This is a headline!', 'mock-id-1'),
     blockContainingText('subheadline', 'This is a subheadline!', 'mock-id-2'),
-    singleTextBlock('This is some text content!'),
+    singleTextBlock('This is some text content!', 'mock-id-3'),
   ];
 
   shouldMatchSnapshot(
@@ -61,7 +61,7 @@ describe('Blocks', () => {
     const mixedBlocks = [
       blockContainingText('headline', 'This is a headline!', 'mock-id-1'),
       blockContainingText('subheadline', 'This is a subheadline!', 'mock-id-2'),
-      singleTextBlock('This is some text content!'),
+      singleTextBlock('This is some text content!', 'mock-id-3'),
       unknownTestBlock,
       parentBlockNotAllowed,
     ];

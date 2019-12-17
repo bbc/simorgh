@@ -1,6 +1,7 @@
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import {
-  VideoCanonical,
+  VideoCanonicalWithPlaceholder,
+  VideoCanonicalNoPlaceholder,
   VideoAmp,
   VideoCanonicalNoVersionId,
   VideoCanonicalToggledOff,
@@ -9,20 +10,29 @@ import {
 } from './fixtureData';
 
 describe('MediaPlayer', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
+  });
+
   shouldMatchSnapshot(
-    'Calls the canonical placeholder when platform is canonical',
-    VideoCanonical,
+    'Calls the canonical placeholder when platform is canonical and showPlaceholder is true',
+    VideoCanonicalWithPlaceholder,
   );
 
-  shouldMatchSnapshot('Calls the AMP player when platform is AMP', VideoAmp);
+  shouldMatchSnapshot(
+    'Does not Call the canonical placeholder when platform is canonical but showPlaceholder is false',
+    VideoCanonicalNoPlaceholder,
+  );
+
+  shouldMatchSnapshot('Renders the AMP player when platform is AMP', VideoAmp);
 
   shouldMatchSnapshot(
-    'Calls the canonical player with a caption',
+    'Renders the canonical player with a caption',
     VideoCanonicalWithCaption,
   );
 
   shouldMatchSnapshot(
-    'Calls the AMP player with a caption',
+    'Renders the AMP player with a caption',
     VideoAmpWithCaption,
   );
 

@@ -1,8 +1,11 @@
-const servicesWithVariants = {
+export const servicesWithVariants = {
+  // the first element in the array is the default variant
   serbian: ['lat', 'cyr'],
   ukchina: ['simp', 'trad'],
   zhongwen: ['simp', 'trad'],
 };
+
+export const variants = ['simp', 'trad', 'lat', 'cyr', 'default'];
 
 // Remove leading slash from variant
 export const variantSanitiser = variant => variant && variant.replace('/', '');

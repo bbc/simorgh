@@ -13,6 +13,16 @@ const defaultProps = {
   status: 200,
 };
 
+jest.mock('../PageHandlers/withVariant', () => Component => {
+  const VariantContainer = props => (
+    <div id="VariantContainer">
+      <Component {...props} />
+    </div>
+  );
+
+  return VariantContainer;
+});
+
 jest.mock('../PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
     <div id="PageWrapperContainer">

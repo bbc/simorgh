@@ -7,7 +7,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import { inlineLinkModelPropTypes } from '#models/propTypes/inlineLink';
-import { articleRegexPath } from '../../routes/regex';
+import { articlePath } from '../../routes/regex';
 
 const InternalInlineLink = InlineLink.withComponent(Link);
 
@@ -15,7 +15,7 @@ const componentsToRender = { fragment };
 
 const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
   const { externalLinkText } = useContext(ServiceContext);
-  const regexp = pathToRegexp(articleRegexPath, [], {
+  const regexp = pathToRegexp(articlePath, [], {
     start: false,
     end: false,
   });

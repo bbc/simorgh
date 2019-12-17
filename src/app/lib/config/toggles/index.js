@@ -12,6 +12,9 @@ const toggles = {
     navOnArticles: {
       enabled: true,
     },
+    mostRead: {
+      enabled: false,
+    },
   },
   test: {
     chartbeatAnalytics: {
@@ -26,18 +29,41 @@ const toggles = {
     navOnArticles: {
       enabled: true,
     },
+    mostRead: {
+      enabled: false,
+    },
   },
-  live: {
+  stage: {
     chartbeatAnalytics: {
       enabled: false,
     },
     mediaPlayer: {
-      enabled: false,
+      enabled: true,
     },
     mpulse: {
       enabled: true,
     },
     navOnArticles: {
+      enabled: true,
+    },
+    mostRead: {
+      enabled: false,
+    },
+  },
+  live: {
+    chartbeatAnalytics: {
+      enabled: true,
+    },
+    mediaPlayer: {
+      enabled: true,
+    },
+    mpulse: {
+      enabled: true,
+    },
+    navOnArticles: {
+      enabled: false,
+    },
+    mostRead: {
       enabled: false,
     },
   },

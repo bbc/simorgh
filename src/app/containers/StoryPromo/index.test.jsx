@@ -5,7 +5,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import relItems from './IndexAlsos/relatedItems';
-import StoryPromo from '.';
+import StoryPromoContainer from '.';
 
 const completeItem = {
   headlines: {
@@ -163,6 +163,17 @@ const featureLinkItem = {
   type: 'link',
 };
 
+const itemWithoutImage = {
+  headlines: {
+    headline: 'A headline',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  summary: 'Summary text',
+  timestamp: 1556795033000,
+};
+
 const indexAlsosItem = {
   headlines: {
     headline: 'A headline',
@@ -196,6 +207,7 @@ const fixtures = {
   'audio with no duration': audioItemNoDuration,
   standardLink: standardLinkItem,
   featureLink: featureLinkItem,
+  'item without an image': itemWithoutImage,
 };
 
 // eslint-disable-next-line react/prop-types
@@ -210,7 +222,7 @@ const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
       statusCode={200}
       pathname="/pathname"
     >
-      <StoryPromo {...props} />
+      <StoryPromoContainer {...props} />
     </RequestContextProvider>
   </ServiceContextProvider>
 );

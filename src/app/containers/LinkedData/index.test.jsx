@@ -1,8 +1,9 @@
 import React from 'react';
+import assocPath from 'ramda/src/assocPath';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import LinkData from '.';
+import LinkedData from '.';
 
 // eslint-disable-next-line react/prop-types
 const Context = ({ children, service }) => (
@@ -21,7 +22,7 @@ const Context = ({ children, service }) => (
   </ServiceContextProvider>
 );
 
-describe('LinkData', () => {
+describe('LinkedData', () => {
   const propsForArticle = {
     showAuthor: true,
     type: 'Article',
@@ -52,28 +53,42 @@ describe('LinkData', () => {
   shouldMatchSnapshot(
     'should correctly render linked data for articles',
     <Context>
-      <LinkData {...propsForArticle} />
+      <LinkedData {...propsForArticle} />
     </Context>,
   );
 
   shouldMatchSnapshot(
     'should correctly render linked data for radio pages',
     <Context>
-      <LinkData {...propsForRadio} />
+      <LinkedData {...propsForRadio} />
     </Context>,
   );
 
   shouldMatchSnapshot(
     'should correctly render linked data for front pages',
     <Context>
-      <LinkData {...propsForFrontpage} />
+      <LinkedData {...propsForFrontpage} />
     </Context>,
   );
 
   shouldMatchSnapshot(
     'should correctly render linked data for article pages for service with no trust project markup',
     <Context service="scotland">
-      <LinkData {...propsForArticle} />
+      <LinkedData {...propsForArticle} />
     </Context>,
   );
+
+  describe('showAuthor', () => {
+    const articleProps = assocPath(['showAuthor'], false, propsForArticle);
+    it('should default to false', () => {
+      expect(LinkedData.defaultProps.showAuthor).toBe(false);
+    });
+
+    shouldMatchSnapshot(
+      'should exclude author from article when false',
+      <Context>
+        <LinkedData {...articleProps} />
+      </Context>,
+    );
+  });
 });

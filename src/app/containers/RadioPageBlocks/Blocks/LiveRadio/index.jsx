@@ -29,17 +29,13 @@ const MediaPlayerInnerWrapper = styled.div`
 `;
 
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
-  const { platform, origin } = useContext(RequestContext);
-  const { liveRadio, lang, translations } = useContext(ServiceContext);
+  const { platform } = useContext(RequestContext);
+  const { liveRadio, lang, translations, service } = useContext(ServiceContext);
 
   const isAmp = platform === 'amp';
+  const isValidPlatform = ['amp', 'canonical'].includes(platform);
 
-  const MediaPlayer = {
-    canonical: CanonicalMediaPlayer,
-    amp: AmpMediaPlayer,
-  }[platform];
-
-  if (!MediaPlayer || !externalId || !id) return null;
+  if (!isValidPlatform || !externalId || !id) return null;
 
   const serviceId = pathOr(
     externalId,
@@ -51,24 +47,41 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
     requestUrl: `${serviceId}/${id}/${lang}`,
     type: 'media',
     isAmp,
-    origin,
   });
+
+  const iframeTitle = pathOr(
+    'Media player',
+    ['mediaAssetPage', 'audioPlayer'],
+    translations,
+  );
+
+  const mediaInfo = {
+    title: 'Live radio',
+    type: 'audio',
+  };
 
   return (
     <MediaPlayerOuterWrapper>
       <MediaPlayerInnerWrapper>
-        <MediaPlayer
-          placeholderSrc={isAmp ? liveRadioPlaceholderImageSrc : null}
-          showPlaceholder={!isAmp ? false : null}
-          src={embedSource}
-          title={pathOr(
-            'Media player',
-            ['mediaAssetPage', 'audioPlayer'],
-            translations,
-          )}
-          id={idAttr}
-          skin="audio"
-        />
+        {isAmp ? (
+          <AmpMediaPlayer
+            placeholderSrc={liveRadioPlaceholderImageSrc}
+            src={embedSource}
+            title={iframeTitle}
+            id={idAttr}
+            skin="audio"
+          />
+        ) : (
+          <CanonicalMediaPlayer
+            showPlaceholder={false}
+            src={embedSource}
+            title={iframeTitle}
+            id={idAttr}
+            skin="audio"
+            service={service}
+            mediaInfo={mediaInfo}
+          />
+        )}
       </MediaPlayerInnerWrapper>
     </MediaPlayerOuterWrapper>
   );

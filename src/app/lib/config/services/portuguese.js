@@ -17,7 +17,7 @@ export const service = {
   default: {
     lang: `pt-BR`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Atualizado',
     atiAnalyticsAppName: 'news-portuguese',
     atiAnalyticsProducerId: '33',
     brandName: 'BBC News Brasil',
@@ -27,12 +27,12 @@ export const service = {
       'https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Brasil',
     dir: `ltr`,
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    externalLinkText: ', externo',
+    imageCaptionOffscreenText: 'Legenda da foto, ',
+    videoCaptionOffscreenText: 'Legenda do vídeo, ',
+    audioCaptionOffscreenText: 'Legenda do áudio, ',
+    defaultCaptionOffscreenText: 'Legenda, ',
+    imageCopyrightOffscreenText: 'Crédito, ',
     locale: `pt-BR`,
     datetimeLocale: `pt-br`,
     service: 'portuguese',
@@ -53,11 +53,11 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
-      home: 'Notícias',
-      currentPage: 'Current page',
-      skipLinkText: 'Ir para o conteúdo',
-      relatedContent: 'Related content',
+      seeAll: 'Ver todos',
+      home: 'Início',
+      currentPage: 'Página atual',
+      skipLinkText: 'Vá para o conteúdo',
+      relatedContent: 'Histórias relacionadas',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -66,40 +66,41 @@ export const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404- Página não encontrada',
+          title: 'Página não encontrada',
           message:
-            'Isto pode ter acontecido por que você digitou o endereço errado. Por favor cheque o endereço.',
+            'Desculpe, mas não foi possível reproduzir a página solicitada. Tente:',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'Verificar a url',
+            'Clicar no botão de atualização de página do seu navegador',
+            'Buscar pela página solicitada utilizando a barra de busca da BBC',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'Home Page da BBC Brasil',
+          callToActionFirst: 'Ou, tente abrir a ',
+          callToActionLinkText: 'página de início da BBC News Brasil',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/portuguese',
         },
         500: {
           statusCode: '500',
-          title: '505 - Erro',
-          message: 'Houve um erro. Por favor recarregue a página.',
+          title: 'Erro no servidor interno',
+          message:
+            'No momento não é possível reproduzir a página solicitada. Tente:',
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            'Clicar no botão de atualização de página do seu navegador',
+            'Voltar mais tarde',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'Home Page da BBC Brasil',
+          callToActionFirst: 'Ou, tente abrir a ',
+          callToActionLinkText: 'página de início da BBC News Brasil',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/portuguese',
         },
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title: 'Nós atualizamos nossa Política de Privacidade e Cookies',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Nós fizemos importantes modificações nos termos de nossa Política de Privacidade e Cookies e gostaríamos que soubesse o que elas significam para você e para os dados pessoais que você nos forneceu.',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -113,79 +114,85 @@ export const service = {
             },
           },
           accept: 'OK',
-          reject: "Find out what's changed",
+          reject: 'Saiba o que foi alterado',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know you agree to cookies',
+          title: 'Diga-nos se concorda com o uso de cookies',
           description: {
             uk: {
-              first: 'We use ',
+              first: 'Nós usamos ',
               linkText: 'cookies',
               last:
-                ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                ' para lhe proporcionar a melhor experiência online. Diga-nos se concorda com o uso de todos estes tipos de cookies.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'We and our partners use technologies, such as ',
+              first: 'Nós e nossos parceiros utilizamos tecnologia do tipo ',
               linkText: 'cookies',
               last:
-                ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                ' e coletamos dados durante a navegação para lhe proporcionar a melhor experiência online e para personalizar o conteúdo e os anúncios publicitários que são exibidos para você. Diga-nos se concorda com o uso de todos estes tipos de cookies.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, take me to settings',
+          accept: 'Sim, concordo',
+          reject: 'Não concordo, volte para Configurações',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
       media: {
-        audio: 'Audio',
-        photogallery: 'Galeria de Fotos',
+        audio: 'Áudio',
+        photogallery: 'Galeria de fotos',
         video: 'Vídeo',
+        listen: 'Listen',
+        watch: 'Assista',
+        liveLabel: 'AO VIVO',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: 'Mais lidas',
+      lastUpdated: 'Última atualização: ',
     },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        text: 'Por que você pode confiar na BBC',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'Read about our approach to external linking.',
+        text: 'Leia sobre nossa política em relação a links externos.',
       },
       links: [
         {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Why you can trust the BBC',
+          href: 'https://www.bbc.com/portuguese/institutional-36202448',
+          text: 'Termos de Uso',
         },
         {
-          href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          href: 'https://www.bbc.com/portuguese/institutional-36202452',
+          text: 'Sobre a BBC',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          href: 'https://www.bbc.com/portuguese/institutional-36202454',
+          text: 'Política de privacidade',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          href: 'https://www.bbc.com/portuguese/institutional-36202456',
+          text: 'Fale com a BBC',
         },
       ],
       copyrightText:
-        'BBC. A BBC não se responsabiliza pelo conteúdo de sites externos de internet',
+        'BBC. A BBC não se responsabiliza pelo conteúdo de sites externos.',
     },
     fonts: [
       F_REITH_SANS_BOLD,
@@ -242,6 +249,7 @@ export const service = {
         url: '/portuguese/media/video',
       },
     ],
+    navigationSection: 'Seções',
   },
 };
 

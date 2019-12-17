@@ -7,7 +7,7 @@
     "type": "article",
     "createdBy": "Tamil",
     "language": "ta",
-    "lastUpdated": 1562942573769,
+    "lastUpdated": 1572879942689,
     "firstPublished": 1562942569172,
     "lastPublished": 1562942569172,
     "options": {},
@@ -17,12 +17,19 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil"
     },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.1.2",
     "blockTypes": [
       "headline",
       "text",
       "paragraph",
-      "fragment"
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
     ]
   },
   "content": {
@@ -39,12 +46,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "‘தல’ தோனி மற்றும் இறுதி ஓவர்கள் - என்றும் மாறாத காதல் கதை",
+                        "text": "இந்த சோதனைக் கட்டுரையின் தலைப்பு இது",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "‘தல’ தோனி மற்றும் இறுதி ஓவர்கள் - என்றும் மாறாத காதல் கதை",
+                              "text": "இந்த சோதனைக் கட்டுரையின் தலைப்பு இது",
                               "attributes": []
                             }
                           }
@@ -58,63 +65,306 @@
           }
         },
         {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "இந்த சோதனை படம், பதிப்புரிமை பிபிசி, பிரான்சின் வரைபடத்தைக் காட்டுகிறது. படம் முதல் மூன்று தொகுதிகளில் உள்ளது மற்றும் இந்த தலைப்பைக் கொண்டுள்ளது.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "இந்த சோதனை படம், பதிப்புரிமை பிபிசி, பிரான்சின் வரைபடத்தைக் காட்டுகிறது. படம் முதல் மூன்று தொகுதிகளில் உள்ளது மற்றும் இந்த தலைப்பைக் கொண்டுள்ளது.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "இந்த சோதனை படம், பதிப்புரிமை பிபிசி, பிரான்சின் வரைபடத்தைக் காட்டுகிறது. படம் முதல் மூன்று தொகுதிகளில் உள்ளது மற்றும் இந்த தலைப்பைக் கொண்டுள்ளது.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "இந்த சோதனை படம், பதிப்புரிமை பிபிசி, பிரான்சின் வரைபடத்தைக் காட்டுகிறது. படம் முதல் மூன்று தொகுதிகளில் உள்ளது மற்றும் இந்த தலைப்பைக் கொண்டுள்ளது.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "d6d7/test/0eb95930-fcbc-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "2011 உலகக்கோப்பை இறுதிப்போட்டியில், இலங்கை பந்துவீச்சாளர் குலசேகரா வீசிய பந்தை இந்திய அணியின் கேப்டன் மகேந்திர சிங் தோனி சிக்ஸர் அடிக்க, மும்பை வாங்கடே மைதானம் மட்டுமல்லாமல் இந்தியாவே ஆரவாரத்தில் அதிர்ந்தது",
+                  "text": "இது ஒரு உரைத் தொகுதி, இது பிபிசி வானிலை முகப்புப்பக்கத்திற்கான url இணைப்பைக் கொண்டுள்ளது.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "2011 உலகக்கோப்பை இறுதிப்போட்டியில், இலங்கை பந்துவீச்சாளர் குலசேகரா வீசிய பந்தை இந்திய அணியின் கேப்டன் மகேந்திர சிங் தோனி சிக்ஸர் அடிக்க, மும்பை வாங்கடே மைதானம் மட்டுமல்லாமல் இந்தியாவே ஆரவாரத்தில் அதிர்ந்தது",
+                        "text": "இது ஒரு உரைத் தொகுதி, இது பிபிசி வானிலை முகப்புப்பக்கத்திற்கான url இணைப்பைக் ",
                         "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "கொண்டுள்ளது.",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "கொண்டுள்ளது.",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01djw2m",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "சீன சூப்பர்ஹைவே பயனர்கள் புதிய சந்திப்பால் வியப்படைகிறார்கள்",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "சீன சூப்பர்ஹைவே பயனர்கள் புதிய சந்திப்பால் வியப்படைகிறார்கள்",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "aresMedia",
                 "model": {
-                  "text": "இந்தியா 28 ஆண்டுகளுக்கு பிறகு உலகக்கோப்பையை வெல்ல காரணமாக அமைந்த அந்த சிக்ஸர் ஆட்டத்தின் இறுதி ஓவருக்கு முந்தைய ஓவரில் அடிக்கப்பட்டது.",
                   "blocks": [
                     {
-                      "type": "fragment",
+                      "blockId": "urn:bbc:ares::clip:p01djw2m",
+                      "type": "aresMediaMetadata",
                       "model": {
-                        "text": "இந்தியா 28 ஆண்டுகளுக்கு பிறகு உலகக்கோப்பையை வெல்ல காரணமாக அமைந்த அந்த சிக்ஸர் ஆட்டத்தின் இறுதி ஓவருக்கு முந்தைய ஓவரில் அடிக்கப்பட்டது.",
-                        "attributes": []
+                        "id": "p01djw2m",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Motorists amazed by new China highway",
+                        "synopses": {
+                          "short": "Chinese superhighway users amazed by new junction",
+                          "medium": "The motorists got their first glimpse of the new road system earlier.",
+                          "long": "A new $450m Chinese highway opened earlier, giving Shanghai motorists their first glimpse of the future of road travel.\n\nMany were left confused."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01djw9d.jpg",
+                        "embedding": false,
+                        "advertising": true,
+                        "caption": "The road was funded by foreign investors in China",
+                        "versions": [
+                          {
+                            "versionId": "p01djw2p",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 28,
+                            "durationISO8601": "PT28S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1507025738000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "height": 720,
+                              "width": 1280,
+                              "copyrightHolder": "BBC",
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
+                              "originCode": "mpv"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "இது ஒரு துணை தலைப்பு",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "இது ஒரு துணை தலைப்பு",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "இது ஒரு துணை தலைப்பு",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "இது ஒரு துணை தலைப்பு",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
                 }
               },
               {
-                "type": "paragraph",
+                "type": "rawImage",
                 "model": {
-                  "text": "இந்த சிக்ஸரை அடித்த தோனி, இதேபோல் எண்ணற்ற போட்டிகளில் இறுதி ஓவர்களில் அதகளம் நடத்தியவர்தான்.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "இந்த சிக்ஸரை அடித்த தோனி, இதேபோல் எண்ணற்ற போட்டிகளில் இறுதி ஓவர்களில் அதகளம் நடத்தியவர்தான்.",
-                        "attributes": []
-                      }
-                    }
-                  ]
+                  "width": 800,
+                  "height": 450,
+                  "locator": "cbb1/test/a11af360-fcbc-11e9-9afe-1371928331c5.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
                 }
-              },
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "மேற்கிந்திய தீவுகள் அணிக்கு எதிராக வியாழக்கிழமை மான்செஸ்டர் நகரில் நடந்த போட்டியில் முதலில் பேட்டிங் செய்த இந்தியா ரன்கள் குவிக்க தடுமாறியது.",
+                  "text": "இந்த சோதனைக் கட்டுரை உருவாக்கப்பட்டது, இதன் மூலம் எங்கள் வலைத்தளத்தில் சோதனைகளை இயக்க முடியும்.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "மேற்கிந்திய தீவுகள் அணிக்கு எதிராக வியாழக்கிழமை மான்செஸ்டர் நகரில் நடந்த போட்டியில் முதலில் பேட்டிங் செய்த இந்தியா ரன்கள் குவிக்க தடுமாறியது.",
+                        "text": "இந்த சோதனைக் கட்டுரை உருவாக்கப்பட்டது, இதன் மூலம் எங்கள் வலைத்தளத்தில் சோதனைகளை இயக்க முடியும்.",
                         "attributes": []
                       }
                     }

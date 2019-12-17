@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { inputProvider } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
-
+import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import RadioPage from '.';
 import indonesia from '#data/indonesia/bbc_indonesian_radio/liveradio.json';
 import korean from '#data/korean/bbc_korean_radio/liveradio.json';
@@ -37,23 +36,21 @@ const status = 200;
 storiesOf('Pages|Radio Page', module)
   .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
-  .add(
-    'default',
-    inputProvider({
-      // eslint-disable-next-line react/prop-types
-      componentFunction: ({ service }) => (
-        <RadioPage
-          match={matchFixtures(service)}
-          pageData={liveRadioFixtures[service]}
-          status={status}
-          service={service}
-          isAmp={false}
-          loading={false}
-          error=""
-          pageType="media"
-        />
-      ),
-      service: Object.keys(liveRadioFixtures),
-      options: { defaultService: 'indonesia' },
+  .addDecorator(
+    withServicesKnob({
+      defaultService: 'indonesia',
+      services: Object.keys(liveRadioFixtures),
     }),
-  );
+  )
+  .add('default', ({ service }) => (
+    <RadioPage
+      match={matchFixtures(service)}
+      pageData={liveRadioFixtures[service]}
+      status={status}
+      service={service}
+      isAmp={false}
+      loading={false}
+      error=""
+      pageType="media"
+    />
+  ));

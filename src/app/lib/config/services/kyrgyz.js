@@ -8,7 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `ky`,
-    articleAuthor: `https://www.facebook.com/bbckyrgyz`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Жаңылоо',
     atiAnalyticsAppName: 'news-kyrgyz',
     atiAnalyticsProducerId: '58',
@@ -147,6 +147,12 @@ export const service = {
           subtitle:
             'Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.',
         },
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'LIVE',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -156,7 +162,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/kyrgyz/institutional-49677275',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'Эмнеге BBC News ишенсе болот?',
       },
       externalLink: {
@@ -164,10 +170,6 @@ export const service = {
         text: 'Башка интернет сайттардын мазмуну боюнча биздин позиция.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/kyrgyz/institutional-49677275',
-          text: 'Эмнеге BBC News ишенсе болот?',
-        },
         {
           href: 'https://www.bbc.com/kyrgyz/institutional-38157280',
           text: 'Колдонуу эрежелери',
@@ -233,6 +235,7 @@ export const service = {
         url: '/kyrgyz/blog',
       },
     ],
+    navigationSection: 'Бөлүмдөр',
   },
 };
 

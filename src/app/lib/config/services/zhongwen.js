@@ -43,7 +43,7 @@ const baseServiceConfig = {
     home: 'Home',
     currentPage: 'Current page',
     skipLinkText: 'Skip to content',
-    relatedContent: 'Related content',
+    relatedContent: '更多有关此项报道的内容',
     mediaAssetPage: {
       mediaPlayer: 'Media player',
       audioPlayer: 'Audio player',
@@ -136,6 +136,12 @@ const baseServiceConfig = {
         subtitle:
           'BBC中文部提供的国际新闻、分析和资讯、时事和专题内容。可收听或浏览香港电台FM电台广播及网站',
       },
+      listen: 'Listen',
+      watch: 'Watch',
+      liveLabel: 'LIVE',
+      previousRadioShow: 'Previous radio show',
+      nextRadioShow: 'Next radio show',
+      duration: 'Duration',
     },
   },
   brandSVG,
@@ -153,10 +159,6 @@ const baseServiceConfig = {
       text: 'Read about our approach to external linking.',
     },
     links: [
-      {
-        href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
-      },
       {
         href: 'https://www.bbc.com/terms',
         text: 'Terms of Use',
@@ -178,52 +180,6 @@ const baseServiceConfig = {
   },
   fonts: [],
   timezone: 'GMT',
-  navigation: [
-    {
-      title: '主页',
-      url: '/zhongwen/simp',
-    },
-    {
-      title: '国际',
-      url: '/zhongwen/simp/world',
-    },
-    {
-      title: '两岸',
-      url: '/zhongwen/simp/chinese_news',
-    },
-    {
-      title: '英国',
-      url: '/zhongwen/simp/uk',
-    },
-    {
-      title: '评论',
-      url: '/zhongwen/simp/indepth',
-    },
-    {
-      title: '科技',
-      url: '/zhongwen/simp/science',
-    },
-    {
-      title: '财经',
-      url: '/zhongwen/simp/business',
-    },
-    {
-      title: '图辑',
-      url: '/zhongwen/simp/media/photogalleries',
-    },
-    {
-      title: '音频材料',
-      url: '/zhongwen/simp/media/audio',
-    },
-    {
-      title: '视频材料',
-      url: '/zhongwen/simp/media/video',
-    },
-    {
-      title: 'BBC英伦网',
-      url: 'http://www.bbc.co.uk/ukchina/simp',
-    },
-  ],
 };
 
 export const service = {
@@ -231,11 +187,105 @@ export const service = {
     ...baseServiceConfig,
     lang: `zh-hans`,
     locale: `zh-hans`,
+    navigation: [
+      {
+        title: '主页',
+        url: '/zhongwen/simp',
+      },
+      {
+        title: '国际',
+        url: '/zhongwen/simp/world',
+      },
+      {
+        title: '两岸',
+        url: '/zhongwen/simp/chinese_news',
+      },
+      {
+        title: '英国',
+        url: '/zhongwen/simp/uk',
+      },
+      {
+        title: '评论',
+        url: '/zhongwen/simp/indepth',
+      },
+      {
+        title: '科技',
+        url: '/zhongwen/simp/science',
+      },
+      {
+        title: '财经',
+        url: '/zhongwen/simp/business',
+      },
+      {
+        title: '图辑',
+        url: '/zhongwen/simp/media/photogalleries',
+      },
+      {
+        title: '音频材料',
+        url: '/zhongwen/simp/media/audio',
+      },
+      {
+        title: '视频材料',
+        url: '/zhongwen/simp/media/video',
+      },
+      {
+        title: 'BBC英伦网',
+        url: 'http://www.bbc.co.uk/ukchina/simp',
+      },
+    ],
+    navigationSection: '分类',
   },
   trad: {
     ...baseServiceConfig,
     lang: `zh-hant`,
     locale: `zh-hant`,
+    navigation: [
+      {
+        title: '主頁',
+        url: '/zhongwen/trad',
+      },
+      {
+        title: '國際',
+        url: '/zhongwen/trad/world',
+      },
+      {
+        title: '兩岸',
+        url: '/zhongwen/trad/chinese_news',
+      },
+      {
+        title: '英國',
+        url: '/zhongwen/trad/uk',
+      },
+      {
+        title: '評論',
+        url: '/zhongwen/trad/indepth',
+      },
+      {
+        title: '科技',
+        url: '/zhongwen/trad/science',
+      },
+      {
+        title: '財經',
+        url: '/zhongwen/trad/business',
+      },
+      {
+        title: '圖輯',
+        url: '/zhongwen/trad/media/photogalleries',
+      },
+      {
+        title: '音頻材料',
+        url: '/zhongwen/trad/media/audio',
+      },
+      {
+        title: '視頻材料',
+        url: '/zhongwen/trad/media/video',
+      },
+      {
+        title: 'BBC英倫網',
+        url: 'http://www.bbc.co.uk/ukchina/trad',
+      },
+    ],
+    navigationSection: '分類',
   },
 };
 

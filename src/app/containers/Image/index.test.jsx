@@ -54,6 +54,7 @@ describe('Image', () => {
       blockContainingText(
         'altText',
         'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+        'mock-id-1',
       ),
     ]);
 
@@ -61,6 +62,7 @@ describe('Image', () => {
       blockContainingText(
         'altText',
         'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+        'mock-id-2',
       ),
     ]);
 
@@ -95,6 +97,7 @@ describe('Image', () => {
       blockContainingText(
         'altText',
         'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+        'mock-id-3',
       ),
     ]);
 
@@ -110,10 +113,12 @@ describe('Image', () => {
       blockContainingText(
         'altText',
         'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+        'mock-id-4',
       ),
       blockContainingText(
         'caption',
         'Study by the Home Office about the Syrian Vulnerable Persons Resettlement Scheme',
+        'mock-id-5',
       ),
     ]);
 
@@ -129,6 +134,7 @@ describe('Image', () => {
       blockContainingText(
         'altText',
         'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+        'mock-id-6',
       ),
     ]);
 

@@ -150,6 +150,12 @@ export const service = {
           subtitle:
             'د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.',
         },
+        listen: 'Listen',
+        watch: 'و یې ګورئ',
+        liveLabel: 'ژوندۍ',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -159,7 +165,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/pashto/institutional-49283007',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'ولې تاسې پر بي بي سي خبرونو باور کولی شئ',
       },
       externalLink: {
@@ -167,10 +173,6 @@ export const service = {
         text: 'د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/pashto/institutional-49283007',
-          text: 'ولې تاسې پر بي بي سي خبرونو باور کولی شئ',
-        },
         {
           href: 'https://www.bbc.com/pashto/institutional-37620701',
           text: 'د کارولو شرايط',
@@ -238,6 +240,7 @@ export const service = {
         url: '/pashto/columns',
       },
     ],
+    navigationSection: 'برخې',
   },
 };
 

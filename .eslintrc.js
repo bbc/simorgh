@@ -36,7 +36,6 @@ module.exports = {
           '/.storybook/**',
           '**/stories.jsx',
           '/src/testHelpers/**',
-          '/dataValidator/**',
         ],
       },
     ],

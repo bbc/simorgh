@@ -150,6 +150,12 @@ export const service = {
           subtitle:
             'Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka',
         },
+        listen: 'Listen',
+        watch: 'Watch',
+        liveLabel: 'TOOS',
+        previousRadioShow: 'Previous radio show',
+        nextRadioShow: 'Next radio show',
+        duration: 'Duration',
       },
     },
     brandSVG,
@@ -167,10 +173,6 @@ export const service = {
         text: 'Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda.',
       },
       links: [
-        {
-          href: 'https://www.bbc.com/news/help-41670342',
-          text: 'Sababta aada ku aamini kartid BBC News',
-        },
         {
           href: 'https://www.bbc.com/somali/hayadeed-37098011',
           text: 'Shuruucda isticmaalka',
@@ -235,6 +237,7 @@ export const service = {
         url: '/somali/media/photogalleries',
       },
     ],
+    navigationSection: 'Qaybaha',
   },
 };
 

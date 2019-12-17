@@ -3,19 +3,34 @@ import path from 'ramda/src/path';
 
 const boldWrap = text => `<bold>${text}</bold>`;
 
-const escapeDoubleQuotes = text => text.replace(/&quot;/g, '"');
+// CPS encodes some known special characters into HTML entities
+// This function reverses that process, to prepare the text for rendering
+const parseReplacements = (
+  text,
+  replacements = {
+    '&quot;': '"',
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+  },
+) => {
+  const replacementsRegex = new RegExp(
+    Object.keys(replacements).join('|'),
+    'gi',
+  );
+  return text.replace(replacementsRegex, match => replacements[match]);
+};
 
 export const processBlock = _block => {
   const block = _block;
 
   if (path(['text'], block)) {
-    // escape quotes in all text
-    block.text = escapeDoubleQuotes(block.text);
-
     // make introductions bold
     if (block.role === 'introduction') {
       block.text = boldWrap(block.text);
       block.markupType = 'candy_xml';
+    } else {
+      block.text = parseReplacements(block.text);
     }
   }
 

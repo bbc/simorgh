@@ -2,6 +2,10 @@ import React from 'react';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
+  AMP_JS,
+  AMP_GEO_JS,
+  AMP_CONSENT_JS,
+  AMP_ANALYTICS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import ResourceHints from '#app/components/ResourceHints';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
@@ -49,22 +53,10 @@ const Document = ({
         )}
         {isAmp && (
           <>
-            <script key="amp" async src="https://cdn.ampproject.org/v0.js" />
-            <script
-              async
-              custom-element="amp-geo"
-              src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
-            />
-            <script
-              async
-              custom-element="amp-consent"
-              src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
-            />
-            <script
-              async
-              custom-element="amp-analytics"
-              src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
-            />
+            {AMP_JS}
+            {AMP_GEO_JS}
+            {AMP_CONSENT_JS}
+            {AMP_ANALYTICS_JS}
           </>
         )}
       </head>
