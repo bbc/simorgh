@@ -28,7 +28,11 @@ exports[`MediaPlayer render the amp player 1`] = `
 }
 
 .c0 {
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.c0 figure {
+  padding-bottom: 0;
 }
 
 @media (max-width:63rem) {
@@ -58,6 +62,13 @@ exports[`MediaPlayer render the amp player 1`] = `
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -113,7 +124,11 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 }
 
 .c0 {
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.c0 figure {
+  padding-bottom: 0;
 }
 
 .c3 {
@@ -153,6 +168,13 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 

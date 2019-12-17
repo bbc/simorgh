@@ -6,14 +6,25 @@ import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import path from 'ramda/src/path';
 import assocPath from 'ramda/src/assocPath';
 
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
+
 import { RequestContext } from '#contexts/RequestContext';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GhostGrid, GridItemConstrainedLarge } from '#lib/styledGrid';
 import StoryPromo from '../StoryPromo';
 
-// z-index needs explicitly set as the psammead section label component uses negative z-indices
 const Wrapper = styled(GridItemConstrainedLarge)`
+  margin-bottom: ${GEL_SPACING_DBL};
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-bottom: ${GEL_SPACING_TRPL};
+  }
+
+  /* z-index needs explicitly set as the psammead section label component uses negative z-indices */
   z-index: 0;
 `;
 
