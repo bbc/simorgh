@@ -50,6 +50,11 @@ jest.mock('@loadable/server', () => ({
 
 jest.mock('../app/routes/getInitialData/utils/getRouteProps');
 
+const bbcHeaders = {
+  bbcOrigin: undefined,
+  bbcCountry: undefined,
+};
+
 const mockRouteProps = ({
   id,
   service,
@@ -90,6 +95,8 @@ const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
 const makeRequest = async requestPath => request(server).get(requestPath);
 
+const QUERY_STRING = '?param=test&query=1';
+
 const testRenderedData = ({
   url,
   service,
@@ -128,16 +135,17 @@ const testRenderedData = ({
       service={service}
       scripts="__mock_script_elements__"
       styleTags={<style />}
+      headers={bbcHeaders}
     />,
   );
 
   const expectedProps = {
-    bbcOrigin: undefined,
     data: successDataResponse,
     isAmp,
     service,
     routes,
     url,
+    headers: expect.anything(),
   };
 
   if (variant) {
@@ -146,17 +154,21 @@ const testRenderedData = ({
 
   expect(renderDocumentSpy).toHaveBeenCalledWith(expectedProps);
 
+  expect(getRouteProps).toHaveBeenCalledWith(routes, url.split('?')[0]);
+
   expect(text).toEqual(
     '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   );
 };
 
-const testFrontPages = ({ platform, service, variant }) => {
+const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
-  const serviceURL = `/${service}${variant ? `/${variant}` : ''}${extension}`;
+  const serviceURL = `/${service}${
+    variant ? `/${variant}` : ''
+  }${extension}${queryString}`;
 
-  describe(`/{service}${extension}`, () => {
+  describe(`${serviceURL}`, () => {
     const successDataResponse = {
       isAmp,
       data: { some: 'data' },
@@ -235,11 +247,11 @@ const testFrontPages = ({ platform, service, variant }) => {
   });
 };
 
-const testArticles = ({ platform, service, variant }) => {
+const testArticles = ({ platform, service, variant, queryString = '' }) => {
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
 
-  describe(`/{service}/articles/{optimoID}${extension}`, () => {
+  describe(`/${service}/articles/optimoID/${extension}${queryString}`, () => {
     const successDataResponse = {
       isAmp,
       data: { some: 'data' },
@@ -255,7 +267,7 @@ const testArticles = ({ platform, service, variant }) => {
     };
 
     const id = `c0000000001o`;
-    const articleURL = `/${service}/articles/${id}${extension}`;
+    const articleURL = `/${service}/articles/${id}${extension}${queryString}`;
 
     describe('Successful render', () => {
       describe('200 status code', () => {
@@ -322,11 +334,17 @@ const testArticles = ({ platform, service, variant }) => {
   });
 };
 
-const testCpsAssetPages = ({ platform, service, assetUri, variant }) => {
+const testCpsAssetPages = ({
+  platform,
+  service,
+  assetUri,
+  variant,
+  queryString = '',
+}) => {
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
 
-  describe(`/{service}/{assetUri}${extension}`, () => {
+  describe(`/${service}/${assetUri}${extension}${queryString}`, () => {
     const successDataResponse = {
       isAmp,
       data: { some: 'data' },
@@ -341,7 +359,7 @@ const testCpsAssetPages = ({ platform, service, assetUri, variant }) => {
       status: 404,
     };
 
-    const articleURL = `/${service}/${assetUri}${extension}`;
+    const articleURL = `/${service}/${assetUri}${extension}${queryString}`;
 
     describe('Successful render', () => {
       describe('200 status code', () => {
@@ -408,7 +426,13 @@ const testCpsAssetPages = ({ platform, service, assetUri, variant }) => {
   });
 };
 
-const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
+const testMediaPages = ({
+  platform,
+  service,
+  serviceId,
+  mediaId,
+  queryString = '',
+}) => {
   describe(`${platform} radio page - live radio`, () => {
     const isAmp = platform === 'amp';
     const successDataResponse = {
@@ -426,7 +450,7 @@ const testMediaPages = ({ platform, service, serviceId, mediaId }) => {
     };
 
     const extension = isAmp ? '.amp' : '';
-    const mediaPageURL = `/${service}/${serviceId}/${mediaId}${extension}`;
+    const mediaPageURL = `/${service}/${serviceId}/${mediaId}${extension}${queryString}`;
 
     describe('Successful render', () => {
       describe('200 status code', () => {
@@ -649,21 +673,74 @@ describe('Server', () => {
   });
 
   testFrontPages({ platform: 'canonical', service: 'igbo' });
+  testFrontPages({
+    platform: 'canonical',
+    service: 'igbo',
+    queryString: QUERY_STRING,
+  });
   testFrontPages({ platform: 'amp', service: 'igbo' });
+  testFrontPages({
+    platform: 'amp',
+    service: 'igbo',
+    queryString: QUERY_STRING,
+  });
   testFrontPages({
     platform: 'canonical',
     service: 'ukchina',
     variant: 'simp',
   });
+  testFrontPages({
+    platform: 'canonical',
+    service: 'ukchina',
+    variant: 'simp',
+    queryString: QUERY_STRING,
+  });
   testFrontPages({ platform: 'amp', service: 'serbian', variant: 'lat' });
+  testFrontPages({
+    platform: 'amp',
+    service: 'serbian',
+    variant: 'lat',
+    queryString: QUERY_STRING,
+  });
 
   testArticles({ platform: 'amp', service: 'news' });
+  testArticles({ platform: 'amp', service: 'news', queryString: QUERY_STRING });
   testArticles({ platform: 'canonical', service: 'news' });
+  testArticles({
+    platform: 'canonical',
+    service: 'news',
+    queryString: QUERY_STRING,
+  });
   testArticles({ platform: 'amp', service: 'zhongwen', variant: 'trad' });
+  testArticles({
+    platform: 'amp',
+    service: 'zhongwen',
+    variant: 'trad',
+    queryString: QUERY_STRING,
+  });
   testArticles({ platform: 'canonical', service: 'zhongwen', variant: 'simp' });
+  testArticles({
+    platform: 'canonical',
+    service: 'zhongwen',
+    variant: 'simp',
+    queryString: QUERY_STRING,
+  });
 
   testMediaPages({
     platform: 'amp',
+    service: 'korean',
+    serviceId: 'bbc_korean_radio',
+    mediaId: 'liveradio',
+  });
+  testMediaPages({
+    platform: 'amp',
+    service: 'korean',
+    serviceId: 'bbc_korean_radio',
+    mediaId: 'liveradio',
+    queryString: QUERY_STRING,
+  });
+  testMediaPages({
+    platform: 'canonical',
     service: 'korean',
     serviceId: 'bbc_korean_radio',
     mediaId: 'liveradio',
@@ -673,6 +750,7 @@ describe('Server', () => {
     service: 'korean',
     serviceId: 'bbc_korean_radio',
     mediaId: 'liveradio',
+    queryString: QUERY_STRING,
   });
 
   testCpsAssetPages({
@@ -681,9 +759,21 @@ describe('Server', () => {
     assetUri: 'tori-49450859',
   });
   testCpsAssetPages({
+    platform: 'amp',
+    service: 'pidgin',
+    assetUri: 'tori-49450859',
+    queryString: QUERY_STRING,
+  });
+  testCpsAssetPages({
     platform: 'canonical',
     service: 'pidgin',
     assetUri: 'tori-49450859',
+  });
+  testCpsAssetPages({
+    platform: 'canonical',
+    service: 'pidgin',
+    assetUri: 'tori-49450859',
+    queryString: QUERY_STRING,
   });
   testCpsAssetPages({
     platform: 'amp',
@@ -696,6 +786,7 @@ describe('Server', () => {
     service: 'serbian',
     assetUri: 'srbija-49427344',
     variant: 'cyr',
+    queryString: QUERY_STRING,
   });
 
   describe('Unknown routes', () => {
@@ -740,6 +831,7 @@ describe('Server', () => {
             service={service}
             scripts="__mock_script_elements__"
             styleTags={<style />}
+            headers={bbcHeaders}
           />,
         );
 
