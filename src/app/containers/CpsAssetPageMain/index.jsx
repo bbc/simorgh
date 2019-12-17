@@ -6,7 +6,7 @@ import { GhostGrid, GridItemConstrainedMedium } from '#lib/styledGrid';
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
 import headings from '../Headings';
-import timestamp from '../ArticleTimestamp';
+import Timestamp from '../ArticleTimestamp';
 import text from '../CpsText';
 import image from '../Image';
 import MediaPlayer from '../CpsAssetMediaPlayer';
@@ -39,7 +39,8 @@ const CpsAssetPageMain = ({ pageData }) => {
     subheadline: headings,
     text,
     image,
-    timestamp: allowDateStamp ? timestamp : undefined,
+    timestamp: props =>
+      allowDateStamp ? <Timestamp {...props} popOut={false} /> : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };
