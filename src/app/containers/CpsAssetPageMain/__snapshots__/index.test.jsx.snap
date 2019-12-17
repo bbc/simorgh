@@ -13,13 +13,9 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   grid-column: 1 / span 6;
 }
 
-.c17 {
+.c16 {
   display: grid;
   grid-column-gap: 1rem;
-}
-
-.c9 {
-  grid-column: 1 / span 6;
 }
 
 .c8 {
@@ -34,7 +30,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   padding: 2rem 0;
 }
 
-.c12 {
+.c11 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -42,7 +38,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   font-weight: inherit;
 }
 
-.c10 {
+.c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -53,11 +49,11 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   padding-bottom: 0.25rem;
 }
 
-.c10:last-child {
+.c9:last-child {
   padding-bottom: 1rem;
 }
 
-.c11 {
+.c10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -68,25 +64,25 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   margin: 0;
 }
 
-.c13 {
+.c12 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c13:visited {
+.c12:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c13:focus,
-.c13:hover {
+.c12:focus,
+.c12:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c14 {
+.c13 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -95,7 +91,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   list-style-type: none;
 }
 
-.c14 > li::before {
+.c13 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
@@ -103,7 +99,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   margin-left: -2rem;
 }
 
-.c15 {
+.c14 {
   margin-bottom: 1rem;
 }
 
@@ -125,7 +121,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   margin: 0;
 }
 
-.c20 {
+.c19 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -139,7 +135,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   left: 0;
 }
 
-.c19 {
+.c18 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -159,7 +155,11 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
 }
 
 .c3 {
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.c3 figure {
+  padding-bottom: 0;
 }
 
 .c6 {
@@ -282,119 +282,80 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
 }
 
 @media (max-width:63rem) {
-  .c16 {
+  .c15 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c16 {
+  .c15 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c16 {
+  .c15 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c18 {
+  .c17 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c18 {
+  .c17 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c18 {
+  .c17 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c18 {
+  .c17 {
     grid-column: 1 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c21 {
+  .c20 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c21 {
+  .c20 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c21 {
+  .c20 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c21 {
+  .c20 {
     grid-column: 1 / span 10;
   }
 }
 
 @media (max-width:80rem) {
-  .c17 {
+  .c16 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c17 {
+  .c16 {
     grid-template-columns: repeat(12,1fr);
-  }
-}
-
-@media (max-width:25rem) {
-  .c9 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c9 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c9 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c9 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c9 {
-    max-width: initial;
   }
 }
 
@@ -419,42 +380,42 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c9 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
+  .c13 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c13 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -487,6 +448,13 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c3 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c3 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -542,16 +510,16 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </strong>
     </div>
     <div
-      class="c9"
+      class="c1"
     >
       <time
-        class="c10"
+        class="c9"
         datetime="2019-09-13"
       >
         13 сентябр 2019
       </time>
       <time
-        class="c10"
+        class="c9"
         datetime="2019-11-06"
       >
         Янгиланди 6 ноябр 2019
@@ -561,7 +529,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         <b>
           Ўзбек деҳқонининг косаси нега оқармайди
@@ -572,7 +540,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         <b>
           Ўзбек деҳқонининг косаси нега оқармайди
@@ -586,17 +554,17 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         <i
-          class="c12"
+          class="c11"
         >
           <b>
             Ўзбек деҳқонининг косаси нега оқармайди
           </b>
         </i>
         <i
-          class="c12"
+          class="c11"
         >
           <b>
              heading
@@ -608,7 +576,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         <b>
           Ўзбек деҳқонининг косаси нега оқармайди
@@ -622,11 +590,11 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Шу йил апрел ойида Ўзбекистон Президенти Ислом 
         <a
-          class="c13"
+          class="c12"
           href="https://bbc.com/uzbek"
         >
           Каримов ўзининг
@@ -638,7 +606,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб 
         <b>
@@ -651,7 +619,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..
       </p>
@@ -660,7 +628,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?
       </p>
@@ -669,7 +637,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.
       </p>
@@ -678,7 +646,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         "Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга 
       </p>
@@ -687,24 +655,24 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       class="c1"
     >
       <ul
-        class="c14"
+        class="c13"
         dir="ltr"
         role="list"
       >
         <li
-          class="c15"
+          class="c14"
           role="listitem"
         >
           Ўзбек деҳқонининг косаси нега оқармайди
         </li>
         <li
-          class="c15"
+          class="c14"
           role="listitem"
         >
           Ўзбек деҳқонининг косаси нега оқармайди
         </li>
         <li
-          class="c15"
+          class="c14"
           role="listitem"
         >
           <b>
@@ -712,7 +680,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
           </b>
         </li>
         <li
-          class="c15"
+          class="c14"
           role="listitem"
         >
           Ўзбек деҳқонининг косаси нега оқармайди
@@ -723,49 +691,49 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       class="c1"
     >
       <ul
-        class="c14"
+        class="c13"
         dir="ltr"
         role="list"
       >
         <li
-          class="c15"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c12"
             href="https://bbc.com/uzbek"
           >
             Ўзбек деҳқонининг косаси нега оқармайди
           </a>
         </li>
         <li
-          class="c15"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c12"
             href="https://bbc.com/uzbek"
           >
             Ўзбек деҳқонининг косаси нега оқармайди
           </a>
         </li>
         <li
-          class="c15"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c12"
             href="https://bbc.com/uzbek"
           >
             Ўзбек деҳқонининг косаси нега оқармайди
           </a>
         </li>
         <li
-          class="c15"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c12"
             href="https://bbc.com/uzbek"
           >
             Ўзбек деҳқонининг косаси нега оқармайди
@@ -774,26 +742,26 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </ul>
     </div>
     <div
-      class="c16"
+      class="c15"
     >
       <figure
         class="c4"
       >
         <div
-          class="c17"
+          class="c16"
         >
           <div
-            class="c18"
+            class="c17"
           >
             <div
-              class="c19"
+              class="c18"
             >
               <div
                 class="lazyload-placeholder"
               />
               <noscript />
               <p
-                class="c20"
+                class="c19"
                 role="text"
               >
                 <span
@@ -810,7 +778,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
             </div>
           </div>
           <div
-            class="c21"
+            class="c20"
           />
         </div>
       </figure>
@@ -819,7 +787,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Ўзбек деҳқонининг косаси нега оқармайди transmission info 
       </p>
@@ -828,7 +796,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Ўзбек деҳқонининг косаси нега оқармайди footer 
       </p>
@@ -850,13 +818,9 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   grid-column: 1 / span 6;
 }
 
-.c18 {
+.c17 {
   display: grid;
   grid-column-gap: 1rem;
-}
-
-.c9 {
-  grid-column: 1 / span 6;
 }
 
 .c8 {
@@ -871,7 +835,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   padding: 2rem 0;
 }
 
-.c12 {
+.c11 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -882,7 +846,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   padding: 1.5rem 0;
 }
 
-.c16 {
+.c15 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -890,7 +854,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   font-weight: inherit;
 }
 
-.c10 {
+.c9 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -901,11 +865,11 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c10:last-child {
+.c9:last-child {
   padding-bottom: 1rem;
 }
 
-.c11 {
+.c10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -916,25 +880,25 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   margin: 0;
 }
 
-.c15 {
+.c14 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c15:visited {
+.c14:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c15:focus,
-.c15:hover {
+.c14:focus,
+.c14:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c13 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -943,7 +907,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   list-style-type: none;
 }
 
-.c13 > li::before {
+.c12 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
@@ -951,7 +915,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   margin-left: -2rem;
 }
 
-.c14 {
+.c13 {
   margin-bottom: 1rem;
 }
 
@@ -973,7 +937,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   margin: 0;
 }
 
-.c21 {
+.c20 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -987,7 +951,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   left: 0;
 }
 
-.c23 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -998,20 +962,20 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   width: 100%;
 }
 
-.c23 > p {
+.c22 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c23 > p:last-child {
+.c22 > p:last-child {
   padding-bottom: 0;
 }
 
-.c23 i {
+.c22 i {
   font-style: normal;
 }
 
-.c20 {
+.c19 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1031,7 +995,11 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 }
 
 .c3 {
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.c3 figure {
+  padding-bottom: 0;
 }
 
 .c6 {
@@ -1154,119 +1122,80 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c17 {
+  .c16 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c17 {
+  .c16 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c17 {
+  .c16 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c19 {
+  .c18 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c19 {
+  .c18 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c19 {
+  .c18 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c19 {
+  .c18 {
     grid-column: 1 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c22 {
+  .c21 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c22 {
+  .c21 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c22 {
+  .c21 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c22 {
+  .c21 {
     grid-column: 1 / span 10;
   }
 }
 
 @media (max-width:80rem) {
-  .c18 {
+  .c17 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c18 {
+  .c17 {
     grid-template-columns: repeat(12,1fr);
-  }
-}
-
-@media (max-width:25rem) {
-  .c9 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c9 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c9 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c9 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c9 {
-    max-width: initial;
   }
 }
 
@@ -1291,89 +1220,89 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c11 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c11 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c11 {
     padding-top: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c9 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
+  .c22 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c22 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c23 {
+  .c22 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c23 {
+  .c22 {
     padding: 0.5rem 0 0;
   }
 }
@@ -1405,6 +1334,13 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c3 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c3 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -1460,16 +1396,16 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </strong>
     </div>
     <div
-      class="c9"
+      class="c1"
     >
       <time
-        class="c10"
+        class="c9"
         datetime="2019-09-13"
       >
         13 September 2019
       </time>
       <time
-        class="c10"
+        class="c9"
         datetime="2019-11-20"
       >
         New Informate 20 November 2019
@@ -1479,7 +1415,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         <b>
           This is an introduction in bold. & &lt; &gt;
@@ -1490,7 +1426,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <h2
-        class="c12"
+        class="c11"
         id="This-is-a-heading-<->"
         tabindex="-1"
       >
@@ -1501,7 +1437,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <h2
-        class="c12"
+        class="c11"
         id="This-is-a-subheading-<->"
         tabindex="-1"
       >
@@ -1512,7 +1448,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <h2
-        class="c12"
+        class="c11"
         id="This-is-a-crosshead-<->"
         tabindex="-1"
       >
@@ -1523,7 +1459,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
@@ -1532,7 +1468,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Bulleted list:
       </p>
@@ -1541,56 +1477,56 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <ul
-        class="c13"
+        class="c12"
         dir="ltr"
         role="list"
       >
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           afrique/23248423
         </li>
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           afrique/23248423
         </li>
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           afrique/23248423
         </li>
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c15"
+            class="c14"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c15"
+            class="c14"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c15"
+            class="c14"
             href="https://bbc.com/pidgin"
           >
             this is the link text
@@ -1602,7 +1538,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Numbered list:
       </p>
@@ -1611,56 +1547,56 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <ul
-        class="c13"
+        class="c12"
         dir="ltr"
         role="list"
       >
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           afrique/23248423
         </li>
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           afrique/23248423
         </li>
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           afrique/23248423
         </li>
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c15"
+            class="c14"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c15"
+            class="c14"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c15"
+            class="c14"
             href="https://bbc.com/pidgin"
           >
             this is the link text
@@ -1672,7 +1608,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Lorem ipsum dolor sit amet, 
         <b>
@@ -1684,13 +1620,13 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
         </b>
         ex ea commodo consequat. Duis aute irure dolor in reprehenderit
         <i
-          class="c16"
+          class="c15"
         >
            in voluptate velit esse cillum 
         </i>
         dolore "eu fugiat nulla" pariatur. 
         <a
-          class="c15"
+          class="c14"
           href="https://bbc.com/pidgin"
         >
           Excepteur
@@ -1702,7 +1638,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Testing special characters: !"£$%^&*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
       </p>
@@ -1711,7 +1647,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
       </p>
@@ -1720,7 +1656,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Table:
       </p>
@@ -1729,7 +1665,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Social media embed:
       </p>
@@ -1738,7 +1674,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Quote box:
       </p>
@@ -1747,7 +1683,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Correspondent quote box:
       </p>
@@ -1756,7 +1692,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Fact box:
       </p>
@@ -1765,7 +1701,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         ­
       </p>
@@ -1774,11 +1710,11 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         Lorem ipsum
         <a
-          class="c15"
+          class="c14"
           href="https://bbc.com/pidgin"
         >
            dolor sit amet
@@ -1787,26 +1723,26 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c17"
+      class="c16"
     >
       <figure
         class="c4"
       >
         <div
-          class="c18"
+          class="c17"
         >
           <div
-            class="c19"
+            class="c18"
           >
             <div
-              class="c20"
+              class="c19"
             >
               <div
                 class="lazyload-placeholder"
               />
               <noscript />
               <p
-                class="c21"
+                class="c20"
                 role="text"
               >
                 <span
@@ -1823,10 +1759,10 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
             </div>
           </div>
           <div
-            class="c22"
+            class="c21"
           >
             <figcaption
-              class="c23"
+              class="c22"
             >
               <span
                 class="c2"
@@ -1842,26 +1778,26 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </figure>
     </div>
     <div
-      class="c17"
+      class="c16"
     >
       <figure
         class="c4"
       >
         <div
-          class="c18"
+          class="c17"
         >
           <div
-            class="c19"
+            class="c18"
           >
             <div
-              class="c20"
+              class="c19"
             >
               <div
                 class="lazyload-placeholder"
               />
               <noscript />
               <p
-                class="c21"
+                class="c20"
                 role="text"
               >
                 <span
@@ -1878,10 +1814,10 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
             </div>
           </div>
           <div
-            class="c22"
+            class="c21"
           >
             <figcaption
-              class="c23"
+              class="c22"
             >
               <span
                 class="c2"
@@ -1900,30 +1836,30 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <ul
-        class="c13"
+        class="c12"
         dir="ltr"
         role="list"
       >
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
-          class="c14"
+          class="c13"
           role="listitem"
         >
           v3 draft
@@ -1934,7 +1870,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         This is transmission info 
       </p>
@@ -1943,7 +1879,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c1"
     >
       <p
-        class="c11"
+        class="c10"
       >
         This is the footer 
       </p>
@@ -2196,6 +2132,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 }
 
 .c1 {
+  margin-bottom: 1rem;
   z-index: 0;
 }
 
@@ -2459,6 +2396,12 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c1 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -2809,11 +2752,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   grid-column-gap: 1rem;
 }
 
-.c14 {
-  grid-column: 1 / span 6;
-}
-
-.c24 {
+.c23 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2824,7 +2763,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   padding: 1.5rem 0;
 }
 
-.c18 {
+.c17 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -2848,7 +2787,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   outline: none;
 }
 
-.c15 {
+.c14 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -2859,11 +2798,11 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c15:last-child {
+.c14:last-child {
   padding-bottom: 1rem;
 }
 
-.c16 {
+.c15 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2874,25 +2813,25 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   margin: 0;
 }
 
-.c17 {
+.c16 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c17:visited {
+.c16:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c17:focus,
-.c17:hover {
+.c16:focus,
+.c16:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c19 {
+.c18 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2901,7 +2840,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   list-style-type: none;
 }
 
-.c19 > li::before {
+.c18 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
@@ -2909,7 +2848,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   margin-left: -2rem;
 }
 
-.c20 {
+.c19 {
   margin-bottom: 1rem;
 }
 
@@ -2992,17 +2931,21 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   transition: visibility 0.2s linear;
 }
 
-.c22 {
+.c21 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c21 {
-  margin-bottom: 1.5rem;
+.c20 {
+  margin-top: 1rem;
 }
 
-.c29 {
+.c20 figure {
+  padding-bottom: 0;
+}
+
+.c28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3012,7 +2955,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.c30 {
+.c29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3031,7 +2974,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   align-items: baseline;
 }
 
-.c31 {
+.c30 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3051,46 +2994,47 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   align-items: center;
 }
 
-.c27 {
+.c26 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c26 {
+.c25 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c28 {
+.c27 {
   margin: 0;
   padding: 0;
 }
 
-.c33 {
+.c32 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c33:first-child {
+.c32:first-child {
   padding-top: 0;
 }
 
-.c33:last-child {
+.c32:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c32 {
+.c31 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c25 {
+.c24 {
+  margin-bottom: 1rem;
   z-index: 0;
 }
 
-.c23 {
+.c22 {
   position: absolute;
   top: 0;
   left: 0;
@@ -3287,61 +3231,22 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   }
 }
 
-@media (max-width:25rem) {
-  .c14 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c14 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c14 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c14 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c14 {
-    max-width: initial;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
+  .c23 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c24 {
+  .c23 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c24 {
+  .c23 {
     padding-top: 2rem;
   }
 }
@@ -3367,42 +3272,42 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
+  .c14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c14 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 {
+  .c15 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c15 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c19 {
+  .c18 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19 {
+  .c18 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -3435,37 +3340,44 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c21 {
+  .c20 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c21 {
+  .c20 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c21 {
+  .c20 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c21 {
+  .c20 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c21 {
+  .c20 {
     padding: 0 1rem;
   }
 }
 
+@media (min-width:63rem) {
+  .c20 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
+  }
+}
+
 @media (min-width:37.5rem) {
-  .c30 {
+  .c29 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -3474,39 +3386,39 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c31 {
+  .c30 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c30 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c30 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c30 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c27 {
+  .c26 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c26 {
     position: absolute;
     left: 0;
     right: 0;
@@ -3515,62 +3427,68 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c26 {
+  .c25 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c32 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c33 {
+  .c32 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33:first-child {
+  .c32:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c33:first-child {
+  .c32:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c25 {
+  .c24 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c25 {
+  .c24 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c25 {
+  .c24 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c25 {
+  .c24 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c25 {
+  .c24 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c24 {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -3777,10 +3695,14 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
       content="STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk? - BBC News Ìgbò"
       name="twitter:title"
     />
+    <meta
+      content="2019-10-23T12:18:59.000Z"
+      name="article:published_time"
+    />
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/igbo/afirika-23252735","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/igbo/afirika-23252735","name":"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?"},"headline":"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?","author":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/igbo/afirika-23252735","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/igbo/afirika-23252735","name":"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?"},"headline":"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?","datePublished":"2019-10-23T12:18:59.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
     </script>
     <script
       type="application/ld+json"
@@ -3874,16 +3796,16 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </figure>
         </div>
         <div
-          class="c14"
+          class="c1"
         >
           <time
-            class="c15"
+            class="c14"
             datetime="2019-10-23"
           >
             23 Ọktọba 2019
           </time>
           <time
-            class="c15"
+            class="c14"
             datetime="2019-10-23"
           >
             Mgbe ikpeazụ e tinyere ya ozi ọhụrụ 
@@ -3894,13 +3816,13 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <p
-            class="c16"
+            class="c15"
           >
             <b>
                This is introduction text, it should be bold by default, but also support 
             </b>
             <a
-              class="c17"
+              class="c16"
               href="https://bbc.com/pidgin/23248703"
             >
               inline links
@@ -3914,17 +3836,17 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <p
-            class="c16"
+            class="c15"
           >
             <i
-              class="c18"
+              class="c17"
             >
               <b>
                 This is a subheadline! that has 
               </b>
             </i>
             <a
-              class="c17"
+              class="c16"
               href="https://bbc.com/pidgin/23248703"
             >
               a link
@@ -3935,18 +3857,18 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <ul
-            class="c19"
+            class="c18"
             dir="ltr"
             role="list"
           >
             <li
-              class="c20"
+              class="c19"
               role="listitem"
             >
               This is a unordered list
             </li>
             <li
-              class="c20"
+              class="c19"
               role="listitem"
             >
               It can have 
@@ -3956,22 +3878,22 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                in it
             </li>
             <li
-              class="c20"
+              class="c19"
               role="listitem"
             >
               <a
-                class="c17"
+                class="c16"
                 href="https://bbc.com/pidgin/23248703"
               >
                 It can also have links
               </a>
             </li>
             <li
-              class="c20"
+              class="c19"
               role="listitem"
             >
               <i
-                class="c18"
+                class="c17"
               >
                 It can even have italic text in it!
               </i>
@@ -3982,11 +3904,11 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <p
-            class="c16"
+            class="c15"
           >
             Feta the big cheese macaroni cheese. 
             <a
-              class="c17"
+              class="c16"
               href="https://bbc.com/pidgin/23248703"
             >
               Caerphilly danish fontina
@@ -4044,7 +3966,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <p
-            class="c16"
+            class="c15"
           >
             <b>
               Start of localised text
@@ -4055,7 +3977,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <p
-            class="c16"
+            class="c15"
           >
             Minista nọ n'isi ụlọọrụ ahụ bụ Hadi Sirika sị na ya agaghị atụrụ ndị mmadụ asị na ya gaghaị arụcha ya bụ ọdọụgbọelụ na Disemba dịka ha kwuburu mana ya ga-eburu isi ụlọọrụ ya ga-gwunye n'Enugu ịhụ na ha rụchara n'Apreelụ.
           </p>
@@ -4064,7 +3986,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <p
-            class="c16"
+            class="c15"
           >
             <b>
               End of localised text
@@ -4075,11 +3997,11 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <p
-            class="c16"
+            class="c15"
           >
             Rubber cheese macaroni 
             <i
-              class="c18"
+              class="c17"
             >
               cheese cottage cheese
             </i>
@@ -4090,18 +4012,18 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <ul
-            class="c19"
+            class="c18"
             dir="ltr"
             role="list"
           >
             <li
-              class="c20"
+              class="c19"
               role="listitem"
             >
               This is a ordered list
             </li>
             <li
-              class="c20"
+              class="c19"
               role="listitem"
             >
               It can have 
@@ -4111,22 +4033,22 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                in it
             </li>
             <li
-              class="c20"
+              class="c19"
               role="listitem"
             >
               <a
-                class="c17"
+                class="c16"
                 href="https://bbc.com/pidgin/23248703"
               >
                 It can also have links
               </a>
             </li>
             <li
-              class="c20"
+              class="c19"
               role="listitem"
             >
               <i
-                class="c18"
+                class="c17"
               >
                 It can even have italic text in it!
               </i>
@@ -4137,24 +4059,24 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <p
-            class="c16"
+            class="c15"
           >
             Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
           </p>
         </div>
         <div
-          class="c21"
+          class="c20"
         >
           <figure
             class="c5"
           >
             <div
-              class="c22"
+              class="c21"
             >
               <iframe
                 allow="autoplay; fullscreen"
                 allowfullscreen=""
-                class="c23"
+                class="c22"
                 scrolling="no"
                 src="https://embed-host.bbc.com/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"
                 title="Media player"
@@ -4166,7 +4088,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <h2
-            class="c24"
+            class="c23"
             id="This-is-a-heading"
             tabindex="-1"
           >
@@ -4177,7 +4099,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <h2
-            class="c24"
+            class="c23"
             id="This-is-a-subheading"
             tabindex="-1"
           >
@@ -4188,7 +4110,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <p
-            class="c16"
+            class="c15"
           >
             Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
           </p>
@@ -4197,7 +4119,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <h2
-            class="c24"
+            class="c23"
             id="This-is-a-crosshead"
             tabindex="-1"
           >
@@ -4208,7 +4130,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <p
-            class="c16"
+            class="c15"
           >
             Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
           </p>
@@ -4217,11 +4139,11 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <p
-            class="c16"
+            class="c15"
           >
             <a
               aria-label="This is an external link to google!, Site na mpụta"
-              class="c17"
+              class="c16"
               href="https://www.google.com/"
             >
               This is an external link to google!
@@ -4232,7 +4154,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c1"
         >
           <p
-            class="c16"
+            class="c15"
           >
             Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
           </p>
@@ -4244,25 +4166,25 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
         role="complementary"
       >
         <div
-          class="c25"
+          class="c24"
         >
           <div
-            class="c26"
+            class="c25"
           >
             <div
-              class="c27"
+              class="c26"
             />
             <h2
-              class="c28"
+              class="c27"
             >
               <div
-                class="c29"
+                class="c28"
               >
                 <span
-                  class="c30"
+                  class="c29"
                 >
                   <span
-                    class="c31"
+                    class="c30"
                     dir="ltr"
                     id="related-content-heading"
                   >
@@ -4273,11 +4195,11 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
             </h2>
           </div>
           <ul
-            class="c32"
+            class="c31"
             role="list"
           >
             <li
-              class="c33"
+              class="c32"
               role="listitem"
             />
           </ul>
@@ -4463,7 +4385,11 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 .c3 {
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.c3 figure {
+  padding-bottom: 0;
 }
 
 .c6 {
@@ -4784,6 +4710,13 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c3 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c3 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -5559,6 +5492,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 .c1 {
+  margin-bottom: 1rem;
   z-index: 0;
 }
 
@@ -5822,6 +5756,12 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c1 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    margin-bottom: 1.5rem;
   }
 }
 
