@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ComponentUsingContext } from '#testHelpers/mockComponents';
 import WithContexts from './withContexts';
-import getOriginContext from '#contexts/RequestContext/getOriginContext';
+import isNotUK from '#contexts/RequestContext/isNotUK';
 import getStatsDestination from '#contexts/RequestContext/getStatsDestination';
 import getStatsPageIdentifier from '#contexts/RequestContext/getStatsPageIdentifier';
 import * as requestContextImports from '#contexts/RequestContext';
@@ -11,12 +11,9 @@ import * as serviceContextImports from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
 
-jest.mock('#contexts/RequestContext/getOriginContext', () => jest.fn());
+jest.mock('#contexts/RequestContext/isNotUK', () => jest.fn());
 
-getOriginContext.mockImplementation(origin => ({
-  isUK: true,
-  origin,
-}));
+isNotUK.mockImplementation(() => false);
 
 jest.mock('#contexts/RequestContext/getStatsDestination', () => jest.fn());
 
