@@ -7,10 +7,6 @@ import { bool } from 'prop-types';
 import { setPreferredVariantCookie } from '#contexts/UserContext/cookies';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const setCookie = (service, scriptLinkVariant) => {
-  return setPreferredVariantCookie(service, scriptLinkVariant);
-};
-
 const renderScriptLink = (
   script,
   service,
@@ -24,7 +20,7 @@ const renderScriptLink = (
     service={service}
     href={url}
     variant={scriptLinkVariant}
-    onClick={() => setCookie(service, scriptLinkVariant)}
+    onClick={() => setPreferredVariantCookie(service, scriptLinkVariant)}
   >
     <span aria-hidden>{scriptLinkText}</span>
     <VisuallyHiddenText> {offscreenText} </VisuallyHiddenText>
