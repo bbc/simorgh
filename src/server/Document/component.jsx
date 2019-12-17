@@ -6,17 +6,10 @@ import {
   AMP_GEO_JS,
   AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
+  AMP_ADS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import ResourceHints from '#app/components/ResourceHints';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
-
-const AMP_ADS_JS = (
-  <script
-    async
-    custom-element="amp-ad"
-    src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
-  />
-);
 
 /* eslint-disable react/prop-types */
 const Document = ({
