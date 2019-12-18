@@ -35,7 +35,7 @@ describe('AMP Navigation', () => {
   });
 
   describe('Assertions', () => {
-    it('should render scrollable nav and dropdown', () => {
+    it('should render scrollable nav and a hidden dropdown', () => {
       const { queryByTestId } = render(navigation);
       const dropdown = queryByTestId(dropdownTestId);
       const scrollableNav = queryByTestId(scrollableTestId);
