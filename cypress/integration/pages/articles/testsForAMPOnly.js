@@ -59,18 +59,16 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           );
         });
       });
-    }
-    // This test is being temporarily throttled to the service 'news'.
-    if (service === 'news') {
-      it('should have a visible play button and duration', () => {
-        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-          ({ body }) => {
-            const media = getBlockData('video', body);
-            if (media) {
-              const aresMediaBlocks = media.model.blocks[1].model.blocks[0];
-              const { durationISO8601 } = aresMediaBlocks.model.versions[0];
-              cy.get('div[class^="StyledVideoContainer"]')
-                .then(() => {
+
+      // This test is being temporarily throttled to the service 'news'.
+      if (service === 'news') {
+        it('should have a visible play button and duration', () => {
+          cy.viewport(600, 1008);
+          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+            ({ body }) => {
+              const media = getBlockData('video', body);
+              if (media) {
+                cy.get('div[class^="StyledVideoContainer"]').then(() => {
                   cy.get('iframe[class^="i-amphtml-fill-content"]').then(
                     $iframe => {
                       cy.wrap($iframe.prop('contentWindow'), {
@@ -84,26 +82,14 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
                         .should('be.gt', 0);
                     },
                   );
-                })
-                .within(() => {
-                  cy.viewport(600, 1008);
-                  cy.get('div[class^="mediaContainer"]').within(() => {
-                    cy.get('button')
-                      .should('be.visible')
-                      .within(() => {
-                        cy.get('svg').should('be.visible');
-                        cy.get('time')
-                          .should('be.visible')
-                          .should('have.attr', 'datetime')
-                          .and('eq', durationISO8601);
-                      });
-                  });
                 });
-            }
-          },
-        );
-      });
+              }
+            },
+          );
+        });
+      }
     }
+
     // it('should render a visible guidance message', () => {
     //   cy.request(`${config[service].pageTypes.articles.path}.json`).then(
     //     ({ body }) => {
