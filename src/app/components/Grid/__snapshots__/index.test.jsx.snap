@@ -71,13 +71,13 @@ exports[`Grid should render Grid with columns 1`] = `
     dir="ltr"
   >
     <p>
-      Test
+      item spanning 2 out of 6 columns
     </p>
   </div>
 </div>
 `;
 
-exports[`Grid should render GridMaxWidthGroup4 with columns 1`] = `
+exports[`Grid should render GridMaxWidthGroup5 with columns 1`] = `
 .c1 {
   margin: 0 auto;
 }

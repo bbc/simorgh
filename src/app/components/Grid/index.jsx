@@ -15,7 +15,7 @@ import {
 const group4WrapperMaxWidth = `63rem`; // 1008px
 const group5WrapperMaxWidth = `80rem`; // 1280px
 
-export const GridMaxWidthGroup4 = styled(Grid)`
+export const GridMaxWidthGroup5 = styled(Grid)`
   margin: 0 auto;
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     max-width: ${group4WrapperMaxWidth};
@@ -25,7 +25,7 @@ export const GridMaxWidthGroup4 = styled(Grid)`
   }
 `;
 
-export const FrontPageGrid = styled(GridMaxWidthGroup4)`
+export const FrontPageGrid = styled(GridMaxWidthGroup5)`
   padding-bottom: ${GEL_SPACING_QUAD};
   margin-top: ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
