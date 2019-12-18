@@ -184,6 +184,16 @@ const baseServiceConfig = {
   },
   fonts: [],
   timezone: 'GMT',
+  scriptLinkVariants: {
+    lat: {
+      scriptLinkText: 'Lat',
+      scriptLinkOffscreenText: 'Latin',
+    },
+    cyr: {
+      scriptLinkText: 'Ћир',
+      scriptLinkOffscreenText: 'Cyrillic',
+    },
+  },
 };
 
 export const service = {
@@ -193,9 +203,6 @@ export const service = {
     locale: `sr-latn`,
     script: latinDiacritics,
     datetimeLocale: `sr`,
-    scriptLinkText: 'Ћир',
-    scriptLinkOffscreenText: 'Cyrillic',
-    scriptLinkVariant: 'cyr',
     navigation: [
       {
         title: 'Početna strana',
@@ -230,9 +237,6 @@ export const service = {
     locale: `sr-cyrl`,
     script: cyrillicAndLatin,
     datetimeLocale: `sr-cyrl`,
-    scriptLinkText: 'Lat',
-    scriptLinkOffscreenText: 'Latin',
-    scriptLinkVariant: 'lat',
     navigation: [
       {
         title: 'Почетна страна',
