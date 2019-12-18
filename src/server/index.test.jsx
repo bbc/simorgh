@@ -50,11 +50,6 @@ jest.mock('@loadable/server', () => ({
 
 jest.mock('../app/routes/getInitialData/utils/getRouteProps');
 
-const bbcHeaders = {
-  bbcOrigin: undefined,
-  bbcCountry: undefined,
-};
-
 const mockRouteProps = ({
   id,
   service,
@@ -135,17 +130,16 @@ const testRenderedData = ({
       service={service}
       scripts="__mock_script_elements__"
       styleTags={<style />}
-      headers={bbcHeaders}
     />,
   );
 
   const expectedProps = {
+    bbcOrigin: undefined,
     data: successDataResponse,
     isAmp,
     service,
     routes,
     url,
-    headers: expect.anything(),
   };
 
   if (variant) {
@@ -831,7 +825,6 @@ describe('Server', () => {
             service={service}
             scripts="__mock_script_elements__"
             styleTags={<style />}
-            headers={bbcHeaders}
           />,
         );
 
