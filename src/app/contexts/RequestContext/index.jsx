@@ -7,6 +7,9 @@ import isNotUK from './isNotUK';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
 import variantPropType from '../../models/propTypes/variants';
+import nodeLogger from '#lib/logger.node';
+
+const logger = nodeLogger(__filename);
 
 export const RequestContext = React.createContext({});
 
@@ -52,6 +55,12 @@ export const RequestContextProvider = ({
     variant,
     ...getMetaUrls(origin, pathname),
   };
+
+  // debugging meta data urls - to be removed
+  logger.info(`Meata Urls: ${JSON.stringify(getMetaUrls(origin, pathname))}`);
+
+  // debugging origin - to be removed
+  logger.info(`Origin: ${origin}`);
 
   return (
     <RequestContext.Provider value={value}>{children}</RequestContext.Provider>
