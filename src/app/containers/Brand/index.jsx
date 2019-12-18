@@ -6,26 +6,36 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { bool } from 'prop-types';
 import { setPreferredVariantCookie } from '#contexts/UserContext/cookies';
 import { ServiceContext } from '#contexts/ServiceContext';
+import {
+  getOtherVariant,
+  useCurrentVariant,
+  variantSanitiser,
+} from '#lib/utilities/variantHandler';
 
 const renderScriptLink = (
   script,
   service,
-  scriptLinkVariant,
-  url,
-  scriptLinkText,
-  offscreenText,
-) => (
-  <ScriptLink
-    script={script}
-    service={service}
-    href={url}
-    variant={scriptLinkVariant}
-    onClick={() => setPreferredVariantCookie(service, scriptLinkVariant)}
-  >
-    <span aria-hidden="true">{scriptLinkText}</span>
-    <VisuallyHiddenText> {offscreenText} </VisuallyHiddenText>
-  </ScriptLink>
-);
+  scriptLinkVariants,
+  currentVariant,
+) => {
+  const requiredVariant = getOtherVariant(service, currentVariant);
+  const { scriptLinkText, scriptLinkOffscreenText } = scriptLinkVariants[
+    requiredVariant
+  ];
+
+  return (
+    <ScriptLink
+      script={script}
+      service={service}
+      href={`/${service}/${requiredVariant}`}
+      variant={requiredVariant}
+      onClick={() => setPreferredVariantCookie(service, requiredVariant)}
+    >
+      <span aria-hidden="true">{scriptLinkText}</span>
+      <VisuallyHiddenText> {scriptLinkOffscreenText} </VisuallyHiddenText>
+    </ScriptLink>
+  );
+};
 
 const renderSkipLink = (service, script, skipLinkText) => (
   <SkipLink service={service} script={script} href="#content">
@@ -42,9 +52,7 @@ const BrandContainer = props => {
     theming,
     script,
     translations,
-    scriptLinkText,
-    scriptLinkOffscreenText,
-    scriptLinkVariant = null,
+    scriptLinkVariants = null,
   } = useContext(ServiceContext);
   const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;
@@ -53,16 +61,10 @@ const BrandContainer = props => {
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
   const { skipLinkText } = translations;
+  const currentVariant = variantSanitiser(useCurrentVariant());
   const scriptLink =
-    scriptLinkVariant &&
-    renderScriptLink(
-      script,
-      service,
-      scriptLinkVariant,
-      `/${service}/${scriptLinkVariant}`,
-      scriptLinkText,
-      scriptLinkOffscreenText,
-    );
+    scriptLinkVariants &&
+    renderScriptLink(script, service, scriptLinkVariants, currentVariant);
 
   return (
     <Brand
