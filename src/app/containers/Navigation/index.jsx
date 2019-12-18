@@ -4,6 +4,9 @@ import Navigation, {
   NavigationLi,
 } from '@bbc/psammead-navigation';
 import { ServiceContext } from '#contexts/ServiceContext';
+import nodeLogger from '#lib/logger.node';
+
+const logger = nodeLogger(__filename);
 
 const NavigationContainer = () => {
   const { script, translations, navigation, service, dir } = useContext(
@@ -11,6 +14,9 @@ const NavigationContainer = () => {
   );
 
   const { currentPage, skipLinkText } = translations;
+
+  // debugging navigation - to be removed
+  logger.info(`Navigation: ${JSON.stringify(navigation)}`);
 
   if (!navigation || navigation.length === 0) {
     return null;
