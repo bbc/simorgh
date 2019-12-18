@@ -27,8 +27,8 @@ const getBaseUrl = requestUrl => {
   return process.env.SIMORGH_EMBEDS_BASE_URL;
 };
 
-const getParts = (type, requestUrl, isAmp) => {
-  const parts = [
+const getUrlParts = (type, requestUrl, isAmp) => {
+  const urlParts = [
     getBaseUrl(requestUrl),
     AV_ROUTE,
     type,
@@ -36,15 +36,15 @@ const getParts = (type, requestUrl, isAmp) => {
   ];
 
   if (isAmp) {
-    parts.push('amp');
+    urlParts.push('amp');
   }
 
-  return parts;
+  return urlParts;
 };
 
 const getUrl = (type, requestUrl, isAmp) => {
-  const parts = getParts(type, requestUrl, isAmp);
-  return parts.join('/');
+  const urlParts = getUrlParts(type, requestUrl, isAmp);
+  return urlParts.join('/');
 };
 
 const embedUrl = ({ type, requestUrl, isAmp = false }) => {
