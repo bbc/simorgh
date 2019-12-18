@@ -29,7 +29,7 @@ jest.mock('./getMetaUrls');
 
 getStatsDestination.default.mockReturnValue('getStatsDestination');
 getStatsPageIdentifier.default.mockReturnValue('getStatsPageIdentifier');
-getOriginContext.default.mockReturnValue({ isUK: true, origin: 'origin' });
+getOriginContext.default.mockReturnValue('origin');
 getEnv.default.mockReturnValue('getEnv');
 getMetaUrls.default.mockReturnValue({
   canonicalLink: 'canonicalLink',
@@ -42,6 +42,7 @@ getMetaUrls.default.mockReturnValue({
 
 const input = {
   bbcOrigin: 'bbcOrigin',
+  bbcCountry: 'gb',
   id: 'id',
   isAmp: true,
   pageType: 'frontPage',
@@ -128,6 +129,22 @@ describe('RequestContext', () => {
 
       expect(React.useContext).toHaveReturnedWith({
         ...expectedOutput,
+        platform: 'canonical',
+      });
+    });
+
+    it('should have isUK as false', () => {
+      render(
+        <RequestContextProvider
+          {...{ ...input, bbcCountry: 'ng' }}
+          isAmp={false}
+        >
+          <Component />
+        </RequestContextProvider>,
+      );
+
+      expect(React.useContext).toHaveReturnedWith({
+        ...{ ...expectedOutput, isUK: false },
         platform: 'canonical',
       });
     });
