@@ -43,79 +43,52 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     // `appToggles` tells us whether a feature is toggled on or off in the current environment.
     if (appToggles.mediaPlayer.enabled) {
       describe('Media Player', () => {
-        it('should render a placeholder image', () => {
-          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-            ({ body }) => {
-              // `video` blocks can also contain audio.
-              const media = getBlockData('video', body);
-              if (media) {
-                cy.get('div[class^="StyledVideoContainer"]').within(() => {
-                  cy.get('amp-img')
-                    .should('have.attr', 'src')
-                    .should('not.be.empty');
-                });
-              }
-            },
-          );
-        });
+        // This test is being temporarily throttled to the service 'news'.
+        if (service === 'news') {
+          it('should have a Media Player', () => {
+            cy.viewport(600, 1008);
+            cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+              ({ body }) => {
+                const media = getBlockData('video', body);
+                if (media) {
+                  cy.get('div[class^="StyledVideoContainer"]').then(() => {
+                    cy.get('iframe[class^="i-amphtml-fill-content"]').then(
+                      $iframe => {
+                        cy.wrap($iframe.prop('contentWindow'), {
+                          // `timeout` only applies to the methods chained below.
+                          // `its()` benefits from this, and will wait up to 8s
+                          // for the mediaPlayer instance to become available.
+                          timeout: 8000,
+                        })
+                          .its('embeddedMedia.playerInstances.mediaPlayer')
+                          .invoke('currentTime')
+                          .should('be.gt', 0);
+                      },
+                    );
+                  });
+                }
+              },
+            );
+          });
+
+          it('should render a placeholder image', () => {
+            cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+              ({ body }) => {
+                // `video` blocks can also contain audio.
+                const media = getBlockData('video', body);
+                if (media) {
+                  cy.get('div[class^="StyledVideoContainer"]').within(() => {
+                    cy.get('amp-img')
+                      .should('have.attr', 'src')
+                      .should('not.be.empty');
+                  });
+                }
+              },
+            );
+          });
+        }
       });
-
-      // This test is being temporarily throttled to the service 'news'.
-      if (service === 'news') {
-        it('should have a visible play button and duration', () => {
-          cy.viewport(600, 1008);
-          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-            ({ body }) => {
-              const media = getBlockData('video', body);
-              if (media) {
-                cy.get('div[class^="StyledVideoContainer"]').then(() => {
-                  cy.get('iframe[class^="i-amphtml-fill-content"]').then(
-                    $iframe => {
-                      cy.wrap($iframe.prop('contentWindow'), {
-                        // `timeout` only applies to the methods chained below.
-                        // `its()` benefits from this, and will wait up to 8s
-                        // for the mediaPlayer instance to become available.
-                        timeout: 8000,
-                      })
-                        .its('embeddedMedia.playerInstances.mediaPlayer')
-                        .invoke('currentTime')
-                        .should('be.gt', 0);
-                    },
-                  );
-                });
-              }
-            },
-          );
-        });
-      }
     }
-
-    // it('should render a visible guidance message', () => {
-    //   cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-    //     ({ body }) => {
-    //       const media = getBlockData('video', body);
-    //       if (media) {
-    //         const longGuidanceWarning =
-    //           media.model.blocks[1].model.blocks[0].model.versions[0].warnings
-    //             .long;
-
-    //         cy.get('div[class*="guidanceContainer"]')
-    //           .eq(0)
-    //           .within(() => {
-    //             // Check for video with guidance message
-    //             if (longGuidanceWarning) {
-    //               cy.get('div[class*="guidanceHolder"]')
-    //                 .should('be.visible')
-    //                 .and('contain', longGuidanceWarning);
-    //               // Check for video with no guidance message
-    //             } else {
-    //               cy.get('div[class*="guidanceHolder"]').should('not.exist');
-    //             }
-    //           });
-    //       }
-    //     },
-    //   );
-    // });
   });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
