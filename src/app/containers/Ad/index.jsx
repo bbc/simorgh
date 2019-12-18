@@ -1,16 +1,17 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '../../contexts/RequestContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import useToggle from '../Toggle/useToggle';
 
-const constructAdJsonData = ({ id, pageType }) => {
+const constructAdJsonData = ({ id, pageType, service }) => {
   const data = {
     targeting: {
       slot: 'mpu',
       asset_type: pageType,
       story_id: id,
-      channel: 'news',
-      sectn: 'news',
+      channel: service,
+      sectn: service,
       subject: '',
     },
   };
@@ -20,6 +21,7 @@ const constructAdJsonData = ({ id, pageType }) => {
 
 const AdContainer = () => {
   const { id, platform, pageType } = useContext(RequestContext);
+  const { service } = useContext(ServiceContext);
   const { enabled } = useToggle('ampAds');
 
   if (enabled && (platform === 'amp' || platform === 'canonical')) {
@@ -32,7 +34,7 @@ const AdContainer = () => {
           data-slot="/4817/bbccom.live.site.amp.news"
           data-amp-slot-index="0"
           data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-          json={constructAdJsonData({ id, pageType })}
+          json={constructAdJsonData({ id, pageType, service })}
         >
           <amp-img
             placeholder

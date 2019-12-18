@@ -13,9 +13,9 @@ shouldMatchSnapshot(
         isAmp
         id="123"
         pageType="article"
-        service="news"
         platform="amp"
         pathname="/news"
+        service="news"
       >
         <Ad />
       </RequestContextProvider>

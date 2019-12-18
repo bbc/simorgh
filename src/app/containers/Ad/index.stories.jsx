@@ -15,8 +15,8 @@ storiesOf('Ads', module)
           isAmp
           id="123"
           pageType="article"
-          service="news"
           platform="amp"
+          service="news"
         >
           <Ad />
         </RequestContextProvider>
