@@ -91,7 +91,7 @@
     "@loadable/server": "^5.11.0",
     "@loadable/webpack-plugin": "^5.7.1",
     "compression": "^1.7.4",
-    "core-js": "^3.4.5",
+    "core-js": "^3.5.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-static-gzip": "^2.0.5",

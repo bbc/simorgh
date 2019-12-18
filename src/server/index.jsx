@@ -214,7 +214,6 @@ server
       const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
       const data = await route.getInitialData(url);
       const { status } = data;
-      const bbcOrigin = headers['bbc-origin'];
 
       // Temp log to test upstream change
       logger.info(`Country code: ${headers['bbc-country'] || 'unknown!'}`);
@@ -222,13 +221,13 @@ server
       data.path = urlPath;
 
       const result = await renderDocument({
-        bbcOrigin,
         data,
         isAmp,
         routes,
         service,
         url,
         variant,
+        headers,
       });
 
       if (result.redirectUrl) {

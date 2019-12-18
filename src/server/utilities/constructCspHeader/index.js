@@ -2,6 +2,7 @@ import csp from 'helmet-csp';
 import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
 import routes from '#app/routes';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
+import isNotUK from '#contexts/RequestContext/isNotUK';
 
 export const generateCspContext = (isAmp, isUK, isLive) => ({
   isAmp,
@@ -126,7 +127,9 @@ export const localInjectHostCspHeader = (_req, _res, next) => {
 const injectCspHeader = (req, res, next) => {
   const { isAmp } = getRouteProps(routes, req.url);
   const originHeader = req.headers['bbc-origin'];
-  const { origin, isUK } = getOriginContext(originHeader);
+  const countryHeader = req.headers['bbc-country'];
+  const origin = getOriginContext(originHeader);
+  const isUK = !isNotUK(countryHeader);
 
   const isLive = origin === 'https://bbc.co.uk' || origin === 'https://bbc.com';
 
