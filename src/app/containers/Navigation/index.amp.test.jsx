@@ -3,29 +3,22 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/react';
-import Navigation from './index.amp';
-
-const dropdownTestId = 'dropdown';
-const scrollableTestId = 'scrollable-list';
-
-const scrollableListItems = (
-  <ul data-testid={scrollableTestId}>
-    <li>List Items</li>
-  </ul>
-);
-
-const dropdownListItems = <div data-testid={dropdownTestId}>Dropdown</div>;
+import AmpNavigation from './index.amp';
+import {
+  dropdownTestId,
+  scrollableTestId,
+  dropdownListItems,
+  scrollableListItems,
+} from './testHelpers';
 
 const navigation = (
-  <Navigation
+  <AmpNavigation
     scrollableListItems={scrollableListItems}
     dropdownListItems={dropdownListItems}
-    skipLinkText="skip link"
     menuAnnouncedText="menu"
     script={latin}
     service="news"
     dir="ltr"
-    isAmp
   />
 );
 

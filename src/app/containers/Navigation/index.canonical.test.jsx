@@ -2,24 +2,18 @@ import React from 'react';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render, fireEvent } from '@testing-library/react';
-import Navigation from './index.canonical';
-
-const scrollableTestId = 'scrollable-list';
-const dropdownTestId = 'dropdown';
-
-const scrollableListItems = (
-  <ul data-testid={scrollableTestId}>
-    <li>List Items</li>
-  </ul>
-);
-
-const dropdownListItems = <div data-testid={dropdownTestId}>Dropdown</div>;
+import CanonicalNavigation from './index.canonical';
+import {
+  dropdownTestId,
+  scrollableTestId,
+  dropdownListItems,
+  scrollableListItems,
+} from './testHelpers';
 
 const navigation = (
-  <Navigation
+  <CanonicalNavigation
     scrollableListItems={scrollableListItems}
     dropdownListItems={dropdownListItems}
-    skipLinkText="skip link"
     menuAnnouncedText="menu"
     script={latin}
     service="news"
@@ -60,8 +54,8 @@ describe('Canonical Navigation', () => {
 
       const dropdown = queryByTestId(dropdownTestId);
       const scrollableNav = queryByTestId(scrollableTestId);
-      expect(scrollableNav).toBeFalsy();
-      expect(dropdown.innerHTML).toBe('Dropdown');
+      expect(scrollableNav).toBeNull();
+      expect(dropdown.textContent).toBe('Dropdown');
     });
   });
 });

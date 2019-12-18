@@ -25,7 +25,6 @@ const StyledAmpScrollableNavigation = styled(AmpScrollableNavigation)`
 const AmpNavigationContainer = ({
   script,
   service,
-  skipLinkText,
   dir,
   menuAnnouncedText,
   scrollableListItems,
@@ -33,7 +32,6 @@ const AmpNavigationContainer = ({
 }) => (
   <Navigation
     script={script}
-    skipLinkText={skipLinkText}
     service={service}
     dir={dir}
     id={NAVIGATION_ID}
@@ -49,6 +47,8 @@ const AmpNavigationContainer = ({
       dir={dir}
       script={script}
     />
+    {/* Hidden attribute allows us to toggle visibility on the dropdown
+    using AMP actions. */}
     {cloneElement(dropdownListItems, { id: DROPDOWN_ID, hidden: true })}
     <StyledAmpScrollableNavigation dir={dir} id={SCROLLABLE_ID}>
       {scrollableListItems}
@@ -60,7 +60,6 @@ AmpNavigationContainer.propTypes = {
   service: string.isRequired,
   dir: string.isRequired,
   script: shape(scriptPropType).isRequired,
-  skipLinkText: string.isRequired,
   scrollableListItems: node.isRequired,
   dropdownListItems: node.isRequired,
   menuAnnouncedText: string.isRequired,

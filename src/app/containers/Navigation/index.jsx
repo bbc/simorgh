@@ -37,7 +37,7 @@ const NavigationContainer = () => {
   const { script, translations, navigation, service, dir } = useContext(
     ServiceContext,
   );
-  const { currentPage, skipLinkText, sections } = translations;
+  const { currentPage, sections } = translations;
 
   if (!navigation || navigation.length === 0) {
     return null;
@@ -77,7 +77,6 @@ const NavigationContainer = () => {
     <Navigation
       scrollableListItems={scrollableListItems}
       dropdownListItems={dropdownListItems}
-      skipLinkText={skipLinkText}
       menuAnnouncedText={sections}
       dir={dir}
       script={script}
