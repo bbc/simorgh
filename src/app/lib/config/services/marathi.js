@@ -48,6 +48,7 @@ export const service = {
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
       relatedContent: 'संबंधित मजकूर',
+      sections: 'विभाग',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिओ प्लेयर',
@@ -210,7 +211,6 @@ export const service = {
         url: '/marathi/international',
       },
     ],
-    navigationSection: 'विभाग',
   },
 };
 

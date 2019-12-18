@@ -48,6 +48,7 @@ export const service = {
       currentPage: 'વર્તમાન પેજ',
       skipLinkText: 'સામગ્રી પર જાઓ',
       relatedContent: 'સંબંધિત સમાચાર',
+      sections: 'વિભાગો',
       mediaAssetPage: {
         mediaPlayer: 'મીડિયા પ્લેયર',
         audioPlayer: 'ઓડિયો પ્લેયર',
@@ -213,7 +214,6 @@ export const service = {
         url: '/gujarati/international',
       },
     ],
-    navigationSection: 'વિભાગો',
   },
 };
 

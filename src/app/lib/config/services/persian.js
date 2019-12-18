@@ -54,6 +54,7 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
+      sections: 'صفحه ها',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -282,7 +283,6 @@ export const service = {
         url: '/persian/learningenglish',
       },
     ],
-    navigationSection: 'صفحه ها',
   },
 };
 
