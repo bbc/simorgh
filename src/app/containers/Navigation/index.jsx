@@ -34,15 +34,10 @@ const NavigationContainer = () => {
   const { platform } = useContext(RequestContext);
   const isAmp = platform === 'amp';
 
-  const {
-    script,
-    translations,
-    navigation,
-    service,
-    dir,
-    navigationSection,
-  } = useContext(ServiceContext);
-  const { currentPage, skipLinkText } = translations;
+  const { script, translations, navigation, service, dir } = useContext(
+    ServiceContext,
+  );
+  const { currentPage, skipLinkText, sections } = translations;
 
   if (!navigation || navigation.length === 0) {
     return null;
@@ -83,7 +78,7 @@ const NavigationContainer = () => {
       scrollableListItems={scrollableListItems}
       dropdownListItems={dropdownListItems}
       skipLinkText={skipLinkText}
-      menuAnnouncedText={navigationSection}
+      menuAnnouncedText={sections}
       dir={dir}
       script={script}
       service={service}

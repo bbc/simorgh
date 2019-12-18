@@ -64,14 +64,20 @@ describe('Render Document', () => {
     delete process.env.APP_ENV;
   });
 
+  const bbcOrigin = 'https://www.test.bbc.co.uk';
+  let bbcCountry;
+
   it('should render correctly', done => {
     renderDocument({
-      bbcOrigin: 'https://www.test.bbc.co.uk',
       data: { test: 'data' },
       isAmp: false,
       routes: ['someRoute'],
       service: 'news',
       url: '/',
+      headers: {
+        'bbc-origin': bbcOrigin,
+        'bbc-country': bbcCountry,
+      },
     }).then(document => {
       expect(document.html).toEqual(
         '<!doctype html><html lang="en-GB"></html>',
@@ -80,13 +86,16 @@ describe('Render Document', () => {
 
       expect(mockSheet.collectStyles).toHaveBeenCalledWith(
         <ServerApp
-          bbcOrigin="https://www.test.bbc.co.uk"
           context={{}}
           data={{ test: 'data' }}
           isAmp={false}
           location="/"
           routes={['someRoute']}
           service="news"
+          headers={{
+            bbcOrigin,
+            bbcCountry,
+          }}
         />,
       );
 
@@ -99,18 +108,25 @@ describe('Render Document', () => {
         scripts: '__mock_script_elements__',
         service: 'news',
         styleTags: '__mock_style_tags__',
+        headers: {
+          bbcOrigin,
+          bbcCountry,
+        },
       });
 
       expect(
         server.renderToString.mock.calls[0][0].props.children.props,
       ).toStrictEqual({
-        bbcOrigin: 'https://www.test.bbc.co.uk',
         context: {},
         data: { test: 'data' },
         isAmp: false,
         location: '/',
         routes: ['someRoute'],
         service: 'news',
+        headers: {
+          bbcOrigin,
+          bbcCountry,
+        },
       });
 
       expect(ChunkExtractor).toHaveBeenCalledWith({
