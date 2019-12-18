@@ -69,19 +69,36 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             if (media) {
               const aresMediaBlocks = media.model.blocks[1].model.blocks[0];
               const { durationISO8601 } = aresMediaBlocks.model.versions[0];
-              cy.get('div[class^="StyledVideoContainer"]').within(() => {
-                cy.get('amp-img').within(() => {
-                  cy.get('button')
-                    .should('be.visible')
-                    .within(() => {
-                      cy.get('svg').should('be.visible');
-                      cy.get('time')
-                        .should('be.visible')
-                        .should('have.attr', 'datetime')
-                        .and('eq', durationISO8601);
-                    });
+              cy.get('div[class^="StyledVideoContainer"]')
+                .then(() => {
+                  cy.get('iframe[class^="i-amphtml-fill-content"]').then(
+                    $iframe => {
+                      cy.wrap($iframe.prop('contentWindow'), {
+                        // `timeout` only applies to the methods chained below.
+                        // `its()` benefits from this, and will wait up to 8s
+                        // for the mediaPlayer instance to become available.
+                        timeout: 8000,
+                      })
+                        .its('embeddedMedia.playerInstances.mediaPlayer')
+                        .invoke('currentTime')
+                        .should('be.gt', 0);
+                    },
+                  );
+                })
+                .within(() => {
+                  cy.viewport(600, 1008);
+                  cy.get('div[class^="mediaContainer"]').within(() => {
+                    cy.get('button')
+                      .should('be.visible')
+                      .within(() => {
+                        cy.get('svg').should('be.visible');
+                        cy.get('time')
+                          .should('be.visible')
+                          .should('have.attr', 'datetime')
+                          .and('eq', durationISO8601);
+                      });
+                  });
                 });
-              });
             }
           },
         );
@@ -96,20 +113,17 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     //           media.model.blocks[1].model.blocks[0].model.versions[0].warnings
     //             .long;
 
-    //         cy.get('div[class^="StyledVideoContainer"]')
+    //         cy.get('div[class*="guidanceContainer"]')
     //           .eq(0)
     //           .within(() => {
     //             // Check for video with guidance message
     //             if (longGuidanceWarning) {
-    //               cy.get('div[class^="StyledPlaceholder"]')
-    //                 .within(() => {
-    //                   cy.get('strong');
-    //                 })
+    //               cy.get('div[class*="guidanceHolder"]')
     //                 .should('be.visible')
     //                 .and('contain', longGuidanceWarning);
     //               // Check for video with no guidance message
     //             } else {
-    //               cy.get('div[class^="StyledGuidance"]').should('not.exist');
+    //               cy.get('div[class*="guidanceHolder"]').should('not.exist');
     //             }
     //           });
     //       }
