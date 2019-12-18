@@ -1,74 +1,46 @@
 import embedUrl from './embedUrl';
 
 const requestUrl = 'foo/bar';
-const type = 'articles';
+const overrideParam = '?renderer_env=live';
+const requestUrlWithOverride = `${requestUrl}${overrideParam}`;
 
 const testCases = [
   {
-    description: 'CANONICAL: builds a URL for LIVE environment on .co.uk',
+    description: 'CANONICAL: builds a URL for articles',
     expected: `https://embed-host.bbc.com/ws/av-embeds/articles/${requestUrl}`,
     embedObject: {
       requestUrl,
-      type,
+      type: 'articles',
     },
   },
   {
-    description: 'CANONICAL: builds a URL for TEST environment on .com',
-    expected: `https://embed-host.bbc.com/ws/av-embeds/articles/${requestUrl}`,
+    description: 'CANONICAL: builds a URL with override',
+    expected: `https://embed-host.override.bbc.com/ws/av-embeds/articles/${requestUrlWithOverride}`,
     embedObject: {
-      requestUrl,
-      type,
+      requestUrl: requestUrlWithOverride,
+      type: 'articles',
     },
   },
   {
-    description:
-      'CANONICAL: builds a URL for LOCAL environment that has a base of test.bbc.com',
-    expected: `https://embed-host.bbc.com/ws/av-embeds/articles/${requestUrl}`,
-    embedObject: {
-      requestUrl,
-      type,
-    },
-  },
-  {
-    description:
-      'CANONICAL: builds a URL for LOCAL environment that has a base of test.bbc.com',
-    expected: `https://embed-host.bbc.com/ws/av-embeds/articles/${requestUrl}`,
-    embedObject: {
-      requestUrl,
-      type,
-    },
-  },
-  {
-    description: 'AMP: builds a URL for LIVE environment on .co.uk',
+    description: 'AMP: builds a URL',
     expected: `https://embed-host.bbc.com/ws/av-embeds/articles/${requestUrl}/amp`,
     embedObject: {
       isAmp: true,
       requestUrl,
-      type,
+      type: 'articles',
     },
   },
   {
-    description: 'AMP: builds a URL for TEST environment on .com',
-    expected: `https://embed-host.bbc.com/ws/av-embeds/articles/${requestUrl}/amp`,
+    description: 'AMP: builds a URL with override',
+    expected: `https://embed-host.override.bbc.com/ws/av-embeds/articles/${requestUrl}/amp${overrideParam}`,
     embedObject: {
       isAmp: true,
-      requestUrl,
-      type,
+      requestUrl: requestUrlWithOverride,
+      type: 'articles',
     },
   },
   {
-    description:
-      'AMP: builds a URL for LOCAL environment that has a base of test.bbc.com',
-    expected: `https://embed-host.bbc.com/ws/av-embeds/articles/${requestUrl}/amp`,
-    embedObject: {
-      isAmp: true,
-      requestUrl,
-      type,
-    },
-  },
-  {
-    description:
-      'AMP: builds a URL for LOCAL environment that has a base of test.bbc.com',
+    description: 'AMP: builds a URL for media',
     expected: `https://embed-host.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/amp`,
     embedObject: {
       isAmp: true,
@@ -77,23 +49,11 @@ const testCases = [
     },
   },
   {
-    description:
-      'CANONICAL: builds a URL for LOCAL environment that has a base of test.bbc.com',
-    expected: `https://embed-host.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio`,
+    description: 'AMP: builds a URL for media with override',
+    expected: `https://embed-host.override.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/amp${overrideParam}`,
     embedObject: {
-      isAmp: false,
-      requestUrl: 'bbc_korean_radio/liveradio',
-      type: 'media',
-    },
-  },
-  {
-    description:
-      'CANONICAL: builds a URL for GITHUB environment that has a base of test.bbc.com',
-    expected:
-      'https://embed-host.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio',
-    embedObject: {
-      isAmp: false,
-      requestUrl: 'bbc_korean_radio/liveradio',
+      isAmp: true,
+      requestUrl: `bbc_korean_radio/liveradio${overrideParam}`,
       type: 'media',
     },
   },
@@ -102,6 +62,8 @@ const testCases = [
 describe('Media Player: Embed URL', () => {
   beforeEach(() => {
     process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
+    process.env.SIMORGH_EMBEDS_BASE_URL_OVERRIDE =
+      'https://embed-host.override.bbc.com';
   });
   testCases.forEach(({ description, expected, embedObject }) =>
     it(description, () => expect(embedUrl(embedObject)).toEqual(expected)),
