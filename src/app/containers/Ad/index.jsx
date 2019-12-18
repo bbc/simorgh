@@ -22,7 +22,7 @@ const AdContainer = () => {
   const { id, platform, pageType } = useContext(RequestContext);
   const { enabled } = useToggle('ampAds');
 
-  if (platform === 'amp' && enabled) {
+  if (enabled && (platform === 'amp' || platform === 'canonical')) {
     return (
       <GridItemConstrainedMedium>
         <amp-ad
