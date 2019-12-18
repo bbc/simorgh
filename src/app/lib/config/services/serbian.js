@@ -203,6 +203,7 @@ export const service = {
     locale: `sr-latn`,
     script: latinDiacritics,
     datetimeLocale: `sr`,
+    variant: 'lat',
     navigation: [
       {
         title: 'Početna strana',
@@ -237,6 +238,7 @@ export const service = {
     locale: `sr-cyrl`,
     script: cyrillicAndLatin,
     datetimeLocale: `sr-cyrl`,
+    variant: 'cyr',
     navigation: [
       {
         title: 'Почетна страна',

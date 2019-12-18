@@ -4,21 +4,18 @@ import SkipLink from '@bbc/psammead-brand/skip-link';
 import ScriptLink from '@bbc/psammead-script-link';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { bool } from 'prop-types';
-import { setPreferredVariantCookie } from '#contexts/UserContext/cookies';
 import { ServiceContext } from '#contexts/ServiceContext';
-import {
-  getOtherVariant,
-  useCurrentVariant,
-  variantSanitiser,
-} from '#lib/utilities/variantHandler';
+import { UserContext } from '#contexts/UserContext';
+import { getOtherVariant } from '#lib/utilities/variantHandler';
 
 const renderScriptLink = (
   script,
   service,
   scriptLinkVariants,
-  currentVariant,
+  variant,
+  setPreferredVariantCookie,
 ) => {
-  const requiredVariant = getOtherVariant(service, currentVariant);
+  const requiredVariant = getOtherVariant(service, variant);
   const { scriptLinkText, scriptLinkOffscreenText } = scriptLinkVariants[
     requiredVariant
   ];
@@ -53,7 +50,9 @@ const BrandContainer = props => {
     script,
     translations,
     scriptLinkVariants = null,
+    variant,
   } = useContext(ServiceContext);
+  const { setPreferredVariantCookie } = useContext(UserContext);
   const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
@@ -61,10 +60,15 @@ const BrandContainer = props => {
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
   const { skipLinkText } = translations;
-  const currentVariant = variantSanitiser(useCurrentVariant());
   const scriptLink =
     scriptLinkVariants &&
-    renderScriptLink(script, service, scriptLinkVariants, currentVariant);
+    renderScriptLink(
+      script,
+      service,
+      scriptLinkVariants,
+      variant,
+      setPreferredVariantCookie,
+    );
 
   return (
     <Brand
