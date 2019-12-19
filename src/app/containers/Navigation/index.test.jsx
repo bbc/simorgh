@@ -1,27 +1,10 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import NavigationContainer from './index';
-import { service as igboConfig } from '#lib/config/services/igbo';
-
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useContext: jest.fn(),
-  };
-});
-
-const { useContext } = jest.requireMock('react');
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import Navigation from './index';
 
 describe('Navigation Container', () => {
-  beforeEach(() => {
-    useContext.mockReturnValue(igboConfig.default);
-  });
-
-  afterEach(() => {
-    useContext.mockReset();
-  });
-
   window.matchMedia = jest.fn().mockImplementation(query => {
     return {
       matches: false,
@@ -31,10 +14,37 @@ describe('Navigation Container', () => {
     };
   });
 
-  describe('snapshots', () => {
-    shouldMatchSnapshot(
-      'should render a Navigation with igbo links correctly',
-      <NavigationContainer />,
-    );
-  });
+  shouldMatchSnapshot(
+    'should correctly render amp navigation',
+    <ServiceContextProvider service="news">
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp
+        pageType="article"
+        service="news"
+        statusCode={200}
+        pathname="/pathname"
+      >
+        <Navigation />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
+  );
+
+  shouldMatchSnapshot(
+    'should correctly render canonical navigation',
+    <ServiceContextProvider service="news">
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={false}
+        pageType="article"
+        service="news"
+        statusCode={200}
+        pathname="/pathname"
+      >
+        <Navigation />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
+  );
 });
