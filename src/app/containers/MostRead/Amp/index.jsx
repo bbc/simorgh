@@ -33,7 +33,7 @@ const AmpMostRead = ({ endpoint, service, script, dir }) => (
         async
         custom-element="amp-date-display"
         src="https://cdn.ampproject.org/v0/amp-date-display-0.1.js"
-      ></script>
+      />
       {AMP_ACCESS_JS}
       {AMP_MUSTACHE_JS}
       {AMP_ACCESS_FETCH(endpoint)}
@@ -66,15 +66,17 @@ const AmpMostRead = ({ endpoint, service, script, dir }) => (
               script={script}
               dir={dir}
             >
+              {'{{#promo.timestamp.sixtyDaysOld}}'}
               <amp-date-display
                 timestamp-ms={'{{promo.timestamp.raw}}'}
-                width="150"
+                width="250"
                 height="20"
               >
                 <template type="amp-mustache">
-                  {'{{ day }} {{ monthName }} {{ year }}'}
+                  Last Updated: {'{{ day }} {{ monthName }} {{ year }}'}
                 </template>
               </amp-date-display>
+              {'{{/promo.timestamp.sixtyDaysOld}}'}
             </MostReadLink>
           </MostReadItemWrapper>
 

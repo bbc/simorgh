@@ -113,7 +113,7 @@ export const MostReadLink = ({
       <StyledLink href={href} script={script} service={service}>
         {title}
       </StyledLink>
-      <p style={{ margin: '0px' }}>{children}</p>
+      <p>{children}</p>
     </StyledItem>
   </Grid>
 );
@@ -133,7 +133,7 @@ MostReadRank.propTypes = {
 MostReadLink.propTypes = {
   title: string.isRequired,
   href: string.isRequired,
-  lastUpdated: node,
+  children: node,
   service: string.isRequired,
   script: shape(scriptPropType).isRequired,
   dir: oneOf(['rtl', 'ltr']),
@@ -148,6 +148,6 @@ MostReadRank.defaultProps = {
 };
 
 MostReadLink.defaultProps = {
-  lastUpdated: null,
+  children: null,
   dir: 'ltr',
 };

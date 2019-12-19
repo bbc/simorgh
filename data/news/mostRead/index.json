@@ -187,7 +187,7 @@
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
         "timestamp": {
           "raw": 1573056455555,
-          "sixtyDaysOld": true,
+          "sixtyDaysOld": false,
           "formatted": "25 December 2019"
         },
         "passport": {
@@ -310,7 +310,7 @@
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
         "timestamp": {
           "raw": 1573056455555,
-          "sixtyDaysOld": true,
+          "sixtyDaysOld": false,
           "formatted": "25 December 2019"
         },
         "passport": {
