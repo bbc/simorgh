@@ -103,17 +103,17 @@ export const MostReadRank = ({ service, script, dir, rank }) => (
 export const MostReadLink = ({
   title,
   href,
-  lastUpdated,
   service,
   script,
   dir,
+  children,
 }) => (
   <Grid {...MostReadLinkProps} dir={dir}>
     <StyledItem dir={dir}>
       <StyledLink href={href} script={script} service={service}>
         {title}
       </StyledLink>
-      <p style={{ margin: '0px' }}>{lastUpdated}</p>
+      <p style={{ margin: '0px' }}>{children}</p>
     </StyledItem>
   </Grid>
 );

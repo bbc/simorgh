@@ -29,11 +29,15 @@ const AMP_ACCESS_FETCH = endpoint => (
 const AmpMostRead = ({ endpoint, service, script, dir }) => (
   <>
     <Helmet>
+      <script
+        async
+        custom-element="amp-date-display"
+        src="https://cdn.ampproject.org/v0/amp-date-display-0.1.js"
+      ></script>
       {AMP_ACCESS_JS}
       {AMP_MUSTACHE_JS}
       {AMP_ACCESS_FETCH(endpoint)}
     </Helmet>
-
     <section amp-access="oldContent != false">
       <Template
         specName="default"
@@ -61,9 +65,19 @@ const AmpMostRead = ({ endpoint, service, script, dir }) => (
               service={service}
               script={script}
               dir={dir}
-              lastUpdated={`{{#promo.timestamp.sixtyDaysOld}}{{ promo.timestamp.formatted }}{{/promo.timestamp.sixtyDaysOld}}`}
-            />
+            >
+              <amp-date-display
+                timestamp-ms={'{{promo.timestamp.raw}}'}
+                width="150"
+                height="20"
+              >
+                <template type="amp-mustache">
+                  {'{{ day }} {{ monthName }} {{ year }}'}
+                </template>
+              </amp-date-display>
+            </MostReadLink>
           </MostReadItemWrapper>
+
           {'{{/records}}'}
         </MostReadList>
       </Template>
