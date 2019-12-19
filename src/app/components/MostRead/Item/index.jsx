@@ -102,7 +102,7 @@ export const MostReadRank = ({ service, script, dir, rank }) => (
 );
 
 const TimestampWrapper = props => (
-  <Timestamp timestamp={parseInt(props.timestamp, 10)} {...props} />
+  <Timestamp {...props} timestamp={parseInt(props.timestamp, 10)} />
 );
 
 export const MostReadLink = ({
