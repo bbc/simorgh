@@ -6,6 +6,8 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { latin } from '@bbc/gel-foundations/scripts';
 import BrandContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { UserContext } from '#contexts/UserContext';
+import * as cookies from '#contexts/UserContext/cookies';
 
 const newsServiceContextStub = {
   product: 'BBC News',
@@ -26,17 +28,30 @@ const newsServiceContextStub = {
 const variantServiceContextStub = {
   ...newsServiceContextStub,
   script: latin,
-  scriptLinkVariant: 'test',
-  scriptLinkText: 'Test',
-  scriptLinkOffscreenText: 'Test-variant',
-  translations: {
-    skipLinkText: 'Skip to content',
+  variant: 'test',
+  scriptLinkVariants: {
+    test: {
+      scriptLinkText: 'Test',
+      scriptLinkOffscreenText: 'Test-variant',
+    },
   },
+};
+
+jest.mock('#lib/utilities/variantHandler');
+const variantHandlers = require('#lib/utilities/variantHandler');
+
+variantHandlers.getOtherVariant.mockImplementation(() => 'test');
+
+const spy = jest.spyOn(cookies, 'setPreferredVariantCookie');
+const userContextMock = {
+  setPreferredVariantCookie: cookies.setPreferredVariantCookie,
 };
 
 const BrandContainerWithContext = context => (
   <ServiceContext.Provider value={context}>
-    <BrandContainer />
+    <UserContext.Provider value={userContextMock}>
+      <BrandContainer />
+    </UserContext.Provider>
   </ServiceContext.Provider>
 );
 
@@ -51,12 +66,7 @@ describe(`BrandContainer`, () => {
     BrandContainerWithContext(variantServiceContextStub),
   );
 
-  describe('assertions', () => {
-    afterEach(() => {
-      document.cookie = '';
-      jest.clearAllMocks();
-    });
-
+  describe('Assertions', () => {
     it('should render a Brand with a Skip to content link, linking to #content', () => {
       const { container } = render(
         BrandContainerWithContext(newsServiceContextStub),
@@ -68,19 +78,41 @@ describe(`BrandContainer`, () => {
       expect(skipLinkHref).toBe('#content');
     });
 
-    it('should update cookie to preffered variant when ScriptLink is clicked', () => {
-      document.cookie = '';
+    describe('preffered variant cookie', () => {
+      let container;
 
-      const { container } = render(
-        BrandContainerWithContext({
-          ...variantServiceContextStub,
-          scriptLinkVariant: 'cyr',
-        }),
-      );
+      beforeEach(() => {
+        container = render(
+          BrandContainerWithContext({
+            ...variantServiceContextStub,
+          }),
+        ).container;
+      });
 
-      const scriptLink = container.querySelector('a[data-variant="cyr"]');
-      fireEvent.click(scriptLink);
-      expect(document.cookie).toEqual('; ckps_news=cyr');
+      afterEach(() => {
+        document.cookie = '';
+        jest.clearAllMocks();
+      });
+
+      it('should be set when ScriptLink is clicked and cookie is not defined', () => {
+        document.cookie = '';
+
+        const scriptLink = container.querySelector('a[data-variant="test"]');
+        fireEvent.click(scriptLink);
+
+        expect(spy).toHaveBeenCalledTimes(1);
+        expect(document.cookie).toEqual('; ckps_news=test');
+      });
+
+      it('should be updated when ScriptLink is clicked and cookie exists', () => {
+        document.cookie = 'ckps_news=lat';
+
+        const scriptLink = container.querySelector('a[data-variant="test"]');
+        fireEvent.click(scriptLink);
+
+        expect(spy).toHaveBeenCalledTimes(1);
+        expect(document.cookie).toEqual('; ckps_news=test');
+      });
     });
   });
 });

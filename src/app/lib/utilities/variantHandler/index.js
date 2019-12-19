@@ -1,5 +1,3 @@
-import { useParams } from 'react-router-dom';
-
 export const servicesWithVariants = {
   // the first element in the array is the default variant
   serbian: ['lat', 'cyr'],
@@ -22,11 +20,6 @@ export const getVariant = ({ service, variant }) => {
   }
 
   return 'default';
-};
-
-export const useCurrentVariant = () => {
-  const { variant } = useParams();
-  return variant;
 };
 
 export const getOtherVariant = (service, variant) => {
