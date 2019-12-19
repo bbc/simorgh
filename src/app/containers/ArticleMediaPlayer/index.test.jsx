@@ -36,7 +36,7 @@ const GenerateMediaPlayer = ({
 
 describe('MediaPlayer', () => {
   beforeEach(() => {
-    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
+    process.env.SIMORGH_EMBEDS_BASE_URL_TEST = 'https://embed-host.bbc.com';
   });
 
   shouldMatchSnapshot(
