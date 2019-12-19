@@ -86,6 +86,36 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
               },
             );
           });
+          it('should check that media player auto plays', () => {
+            cy.viewport(600, 1008);
+            cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+              ({ body }) => {
+                const media = getBlockData('video', body);
+                if (media) {
+                  cy.get('div[class^="StyledVideoContainer"]')
+                    .within(() => {
+                      cy.get('button');
+                    })
+                    .should('not.exist')
+                    .then(() => {
+                      cy.get('iframe[class^="i-amphtml-fill-content"]').then(
+                        $iframe => {
+                          cy.wrap($iframe.prop('contentWindow'), {
+                            // `timeout` only applies to the methods chained below.
+                            // `its()` benefits from this, and will wait up to 8s
+                            // for the mediaPlayer instance to become available.
+                            timeout: 8000,
+                          })
+                            .its('embeddedMedia.playerInstances.mediaPlayer')
+                            .invoke('currentTime')
+                            .should('be.gt', 0);
+                        },
+                      );
+                    });
+                }
+              },
+            );
+          });
         }
       });
     }
