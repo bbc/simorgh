@@ -12,6 +12,7 @@ const serviceMapper = appEnv => {
 
 const genServices = appEnv => ({
   afaanoromoo: {
+    name: 'afaanoromoo',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -44,6 +45,7 @@ const genServices = appEnv => ({
     },
   },
   afrique: {
+    name: 'afrique',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -79,6 +81,7 @@ const genServices = appEnv => ({
     },
   },
   amharic: {
+    name: 'amharic',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -111,6 +114,7 @@ const genServices = appEnv => ({
     },
   },
   arabic: {
+    name: 'arabic',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -146,6 +150,7 @@ const genServices = appEnv => ({
     },
   },
   archive: {
+    name: 'archive',
     font: 'Reith',
     isWorldService: false,
     variant: 'default',
@@ -176,6 +181,7 @@ const genServices = appEnv => ({
     },
   },
   azeri: {
+    name: 'azeri',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -205,6 +211,7 @@ const genServices = appEnv => ({
     },
   },
   bengali: {
+    name: 'bengali',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -240,6 +247,7 @@ const genServices = appEnv => ({
     },
   },
   burmese: {
+    name: 'burmese',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -275,6 +283,7 @@ const genServices = appEnv => ({
     },
   },
   cymrufyw: {
+    name: 'cymrufyw',
     font: 'Reith',
     isWorldService: false,
     variant: 'default',
@@ -299,6 +308,7 @@ const genServices = appEnv => ({
     },
   },
   gahuza: {
+    name: 'gahuza',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -334,6 +344,7 @@ const genServices = appEnv => ({
     },
   },
   gujarati: {
+    name: 'gujarati',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -363,6 +374,7 @@ const genServices = appEnv => ({
     },
   },
   hausa: {
+    name: 'hausa',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -398,6 +410,7 @@ const genServices = appEnv => ({
     },
   },
   hindi: {
+    name: 'hindi',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -433,6 +446,7 @@ const genServices = appEnv => ({
     },
   },
   igbo: {
+    name: 'igbo',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -460,6 +474,7 @@ const genServices = appEnv => ({
     },
   },
   indonesia: {
+    name: 'indonesia',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -492,6 +507,7 @@ const genServices = appEnv => ({
     },
   },
   japanese: {
+    name: 'japanese',
     font: undefined,
     isWorldService: false,
     variant: 'default',
@@ -521,6 +537,7 @@ const genServices = appEnv => ({
     },
   },
   korean: {
+    name: 'korean',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -553,6 +570,7 @@ const genServices = appEnv => ({
     },
   },
   kyrgyz: {
+    name: 'kyrgyz',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -588,6 +606,7 @@ const genServices = appEnv => ({
     },
   },
   marathi: {
+    name: 'marathi',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -617,6 +636,7 @@ const genServices = appEnv => ({
     },
   },
   mundo: {
+    name: 'mundo',
     font: 'Reith',
     isWorldService: true,
     variant: 'default',
@@ -646,6 +666,7 @@ const genServices = appEnv => ({
     },
   },
   naidheachdan: {
+    name: 'naidheachdan',
     font: 'Reith',
     isWorldService: false,
     variant: 'default',
@@ -670,6 +691,7 @@ const genServices = appEnv => ({
     },
   },
   nepali: {
+    name: 'nepali',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -705,6 +727,7 @@ const genServices = appEnv => ({
     },
   },
   news: {
+    name: 'news',
     font: 'Reith',
     isWorldService: false,
     variant: 'default',
@@ -728,6 +751,7 @@ const genServices = appEnv => ({
     },
   },
   pashto: {
+    name: 'pashto',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -763,6 +787,7 @@ const genServices = appEnv => ({
     },
   },
   persian: {
+    name: 'persian',
     font: 'Nassim',
     isWorldService: true,
     variant: 'default',
@@ -798,6 +823,7 @@ const genServices = appEnv => ({
     },
   },
   pidgin: {
+    name: 'pidgin',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -824,6 +850,7 @@ const genServices = appEnv => ({
     },
   },
   portuguese: {
+    name: 'portuguese',
     font: 'Reith',
     isWorldService: true,
     variant: 'default',
@@ -853,6 +880,7 @@ const genServices = appEnv => ({
     },
   },
   punjabi: {
+    name: 'punjabi',
     font: undefined,
     variant: 'default',
     pageTypes: {
@@ -881,6 +909,7 @@ const genServices = appEnv => ({
     },
   },
   russian: {
+    name: 'russian',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -910,6 +939,7 @@ const genServices = appEnv => ({
     },
   },
   scotland: {
+    name: 'scotland',
     font: undefined,
     isWorldService: false,
     variant: 'default',
@@ -932,7 +962,45 @@ const genServices = appEnv => ({
       mediaAssetPage: { path: undefined, smoke: false },
     },
   },
-  serbian: {
+  serbianCyr: {
+    name: 'serbian',
+    font: undefined,
+    isWorldService: true,
+    variant: 'cyr',
+    pageTypes: {
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/articles/c805k05kr73o/cyr',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/articles/cabcdefghijo/cyr',
+        smoke: true,
+      },
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/cyr',
+        smoke: true,
+      },
+      liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/serbian/srbija-49427344/cyr',
+        smoke: false,
+      },
+    },
+  },
+  serbianLat: {
+    name: 'serbian',
     font: undefined,
     isWorldService: true,
     variant: 'lat',
@@ -963,6 +1031,7 @@ const genServices = appEnv => ({
     },
   },
   sinhala: {
+    name: 'sinhala',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -998,6 +1067,7 @@ const genServices = appEnv => ({
     },
   },
   somali: {
+    name: 'somali',
     font: undefined,
     variant: 'default',
     pageTypes: {
@@ -1032,6 +1102,7 @@ const genServices = appEnv => ({
     },
   },
   sport: {
+    name: 'sport',
     font: undefined,
     variant: 'default',
     pageTypes: {
@@ -1043,6 +1114,7 @@ const genServices = appEnv => ({
     },
   },
   swahili: {
+    name: 'swahili',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1078,6 +1150,7 @@ const genServices = appEnv => ({
     },
   },
   tamil: {
+    name: 'tamil',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1113,6 +1186,7 @@ const genServices = appEnv => ({
     },
   },
   telugu: {
+    name: 'telugu',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1142,6 +1216,7 @@ const genServices = appEnv => ({
     },
   },
   thai: {
+    name: 'thai',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1171,6 +1246,7 @@ const genServices = appEnv => ({
     },
   },
   tigrinya: {
+    name: 'tigrinya',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1203,6 +1279,7 @@ const genServices = appEnv => ({
     },
   },
   turkce: {
+    name: 'turkce',
     font: 'Reith',
     isWorldService: true,
     variant: 'default',
@@ -1231,7 +1308,8 @@ const genServices = appEnv => ({
       },
     },
   },
-  ukchina: {
+  ukchinaSimp: {
+    name: 'ukchina',
     font: undefined,
     isWorldService: true,
     variant: 'simp',
@@ -1261,7 +1339,45 @@ const genServices = appEnv => ({
       },
     },
   },
+  ukchinaTrad: {
+    name: 'ukchina',
+    font: undefined,
+    isWorldService: true,
+    variant: 'trad',
+    pageTypes: {
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/articles/c0e8weny66ko/trad',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/articles/cabcdefghijo/trad',
+        smoke: true,
+      },
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/trad',
+        smoke: true,
+      },
+      liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/ukchina/49375846/trad',
+        smoke: false,
+      },
+    },
+  },
   ukrainian: {
+    name: 'ukrainian',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1289,6 +1405,7 @@ const genServices = appEnv => ({
     },
   },
   urdu: {
+    name: 'urdu',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1324,6 +1441,7 @@ const genServices = appEnv => ({
     },
   },
   uzbek: {
+    name: 'uzbek',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1357,6 +1475,7 @@ const genServices = appEnv => ({
     },
   },
   vietnamese: {
+    name: 'vietnamese',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1386,6 +1505,7 @@ const genServices = appEnv => ({
     },
   },
   yoruba: {
+    name: 'yoruba',
     font: undefined,
     isWorldService: true,
     variant: 'default',
@@ -1414,7 +1534,8 @@ const genServices = appEnv => ({
       },
     },
   },
-  zhongwen: {
+  zhongwenSimp: {
+    name: 'zhongwen',
     font: undefined,
     isWorldService: true,
     variant: 'simp',
@@ -1440,6 +1561,43 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path: undefined,
+        smoke: false,
+      },
+    },
+  },
+  zhongwenTrad: {
+    name: 'zhongwen',
+    font: undefined,
+    isWorldService: true,
+    variant: 'trad',
+    pageTypes: {
+      articles: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/articles/c3xd4x9prgyo/trad',
+        smoke: true,
+      },
+      errorPage404: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/articles/cabcdefghijo/trad',
+        smoke: true,
+      },
+      frontPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/trad',
+        smoke: true,
+      },
+      liveRadio: { path: undefined, smoke: false },
+      mediaAssetPage: {
+        path:
+          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+            ? undefined
+            : '/zhongwen/chinese-news-49631219/trad',
         smoke: false,
       },
     },
