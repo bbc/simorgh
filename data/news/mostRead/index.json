@@ -2,15 +2,17 @@
   "generated": "2019-11-06T16:54:29.788Z",
   "lastRecordTimeStamp": "2019-11-06T16:49:00Z",
   "firstRecordTimeStamp": "2019-11-06T16:34:00Z",
+  "35minOld": false,
   "totalRecords": 100,
   "records": [
     {
       "id": "5cf09b17-d3b1-284f-bf5f-13a0bc3f4751",
+      "rank": 1,
       "count": 41416,
       "urn": "urn:bbc:curie:asset:5cf09b17-d3b1-284f-bf5f-13a0bc3f4750",
       "promo": {
         "headlines": {
-          "shortHeadline": "Labour bans three candidates from standing",
+          "shortHeadline": "Donald Trump is impeached and faces trial in the US Senate",
           "headline": "General Election 2019: Labour bans three former MPs from standing again"
         },
         "locators": {
@@ -20,6 +22,7 @@
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
         "timestamp": 1573056455555,
+        "60daysOld": false,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -42,11 +45,12 @@
     },
     {
       "id": "5cf09b17-d3b1-284f-bf5f-13a0bc3f4752",
+      "rank": 2,
       "count": 41416,
       "urn": "urn:bbc:curie:asset:5cf09b17-d3b1-284f-bf5f-13a0bc3f4750",
       "promo": {
         "headlines": {
-          "shortHeadline": "Labour bans three candidates from standing",
+          "shortHeadline": "Queen's Speech: What is it and why is it important?",
           "headline": "General Election 2019: Labour bans three former MPs from standing again"
         },
         "locators": {
@@ -56,6 +60,7 @@
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
         "timestamp": 1573056455555,
+        "60daysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -78,11 +83,12 @@
     },
     {
       "id": "5cf09b17-d3b1-284f-bf5f-13a0bc3f4753",
+      "rank": 3,
       "count": 41416,
       "urn": "urn:bbc:curie:asset:5cf09b17-d3b1-284f-bf5f-13a0bc3f4750",
       "promo": {
         "headlines": {
-          "shortHeadline": "Labour bans three candidates from standing",
+          "shortHeadline": "Airbnb is not an estate agent, EU court rules",
           "headline": "General Election 2019: Labour bans three former MPs from standing again"
         },
         "locators": {
@@ -92,6 +98,7 @@
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
         "timestamp": 1573056455555,
+        "60daysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -114,11 +121,12 @@
     },
     {
       "id": "5cf09b17-d3b1-284f-bf5f-13a0bc3f4754",
+      "rank": 4,
       "count": 41416,
       "urn": "urn:bbc:curie:asset:5cf09b17-d3b1-284f-bf5f-13a0bc3f4750",
       "promo": {
         "headlines": {
-          "shortHeadline": "Labour bans three candidates from standing",
+          "shortHeadline": "Will Gompertz reviews Cats starring Taylor Swift and Jennifer Hudson ★★☆☆☆",
           "headline": "General Election 2019: Labour bans three former MPs from standing again"
         },
         "locators": {
@@ -128,6 +136,7 @@
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
         "timestamp": 1573056455555,
+        "60daysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -150,11 +159,12 @@
     },
     {
       "id": "5cf09b17-d3b1-284f-bf5f-13a0bc3f4755",
+      "rank": 5,
       "count": 41416,
       "urn": "urn:bbc:curie:asset:5cf09b17-d3b1-284f-bf5f-13a0bc3f4750",
       "promo": {
         "headlines": {
-          "shortHeadline": "Labour bans three candidates from standing",
+          "shortHeadline": "Paw Patrol truck boy, 3, takes to A151 to get help for dad",
           "headline": "General Election 2019: Labour bans three former MPs from standing again"
         },
         "locators": {
@@ -164,6 +174,7 @@
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
         "timestamp": 1573056455555,
+        "60daysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -186,11 +197,12 @@
     },
     {
       "id": "5cf09b17-d3b1-284f-bf5f-13a0bc3f4756",
+      "rank": 6,
       "count": 41416,
       "urn": "urn:bbc:curie:asset:5cf09b17-d3b1-284f-bf5f-13a0bc3f4750",
       "promo": {
         "headlines": {
-          "shortHeadline": "Labour bans three candidates from standing",
+          "shortHeadline": "Scottish independence: Sturgeon requests powers for referendum",
           "headline": "General Election 2019: Labour bans three former MPs from standing again"
         },
         "locators": {
@@ -200,6 +212,7 @@
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
         "timestamp": 1573056455555,
+        "60daysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -222,11 +235,12 @@
     },
     {
       "id": "5cf09b17-d3b1-284f-bf5f-13a0bc3f4757",
+      "rank": 7,
       "count": 41416,
       "urn": "urn:bbc:curie:asset:5cf09b17-d3b1-284f-bf5f-13a0bc3f4750",
       "promo": {
         "headlines": {
-          "shortHeadline": "Labour bans three candidates from standing",
+          "shortHeadline": "Migrant boy, 15, found walking along M6 near Birmingham",
           "headline": "General Election 2019: Labour bans three former MPs from standing again"
         },
         "locators": {
@@ -236,6 +250,7 @@
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
         "timestamp": 1573056455555,
+        "60daysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -258,11 +273,12 @@
     },
     {
       "id": "5cf09b17-d3b1-284f-bf5f-13a0bc3f4758",
+      "rank": 8,
       "count": 41416,
       "urn": "urn:bbc:curie:asset:5cf09b17-d3b1-284f-bf5f-13a0bc3f4750",
       "promo": {
         "headlines": {
-          "shortHeadline": "Labour bans three candidates from standing",
+          "shortHeadline": "Australia heatwave: All-time temperature record broken again",
           "headline": "General Election 2019: Labour bans three former MPs from standing again"
         },
         "locators": {
@@ -272,6 +288,7 @@
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
         "timestamp": 1573056455555,
+        "60daysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -294,11 +311,12 @@
     },
     {
       "id": "5cf09b17-d3b1-284f-bf5f-13a0bc3f4759",
+      "rank": 9,
       "count": 41416,
       "urn": "urn:bbc:curie:asset:5cf09b17-d3b1-284f-bf5f-13a0bc3f4750",
       "promo": {
         "headlines": {
-          "shortHeadline": "Labour bans three candidates from standing",
+          "shortHeadline": "Universities warned over student 'sales pitches'",
           "headline": "General Election 2019: Labour bans three former MPs from standing again"
         },
         "locators": {
@@ -308,6 +326,7 @@
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
         "timestamp": 1573056455555,
+        "60daysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -330,6 +349,7 @@
     },
     {
       "id": "5cf09b17-d3b1-284f-bf5f-13a0bc3f4710",
+      "rank": 10,
       "count": 41416,
       "urn": "urn:bbc:curie:asset:5cf09b17-d3b1-284f-bf5f-13a0bc3f4750",
       "promo": {
@@ -344,6 +364,7 @@
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
         "timestamp": 1573056455555,
+        "60daysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
