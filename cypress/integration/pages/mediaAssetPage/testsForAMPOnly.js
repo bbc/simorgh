@@ -24,7 +24,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           const serviceId = isLiveStream
             ? mediaBlock.externalId
             : mediaBlock.versions[0].versionId;
-          const language = appConfig[service][variant].lang;
+          const language = appConfig[config[service].name][variant].lang;
 
           cy.get(
             `amp-iframe[src*="${envConfig.avEmbedBaseUrl}/ws/av-embeds/cps${assetUri}/${serviceId}/${language}"]`,
