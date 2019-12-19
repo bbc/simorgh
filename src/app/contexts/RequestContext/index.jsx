@@ -3,7 +3,6 @@ import { bool, node, oneOf, string, number } from 'prop-types';
 import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
 import getOriginContext from './getOriginContext';
-import isNotUK from './isNotUK';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
 import variantPropType from '../../models/propTypes/variants';
@@ -13,7 +12,6 @@ export const RequestContext = React.createContext({});
 export const RequestContextProvider = ({
   children,
   bbcOrigin,
-  bbcCountry,
   id,
   isAmp,
   pageType,
@@ -23,8 +21,7 @@ export const RequestContextProvider = ({
   pathname,
   variant,
 }) => {
-  const origin = getOriginContext(bbcOrigin);
-  const isUK = !isNotUK(bbcCountry);
+  const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = getEnv(origin);
   const platform = isAmp ? 'amp' : 'canonical';
   const statsDestination = getStatsDestination({
@@ -60,7 +57,6 @@ export const RequestContextProvider = ({
 
 RequestContextProvider.propTypes = {
   bbcOrigin: string,
-  bbcCountry: string,
   children: node.isRequired,
   id: string,
   isAmp: bool.isRequired,
@@ -83,7 +79,6 @@ RequestContextProvider.propTypes = {
 
 RequestContextProvider.defaultProps = {
   bbcOrigin: null,
-  bbcCountry: null,
   id: null,
   statusCode: null,
   previousPath: null,
