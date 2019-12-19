@@ -42,7 +42,10 @@ const variantHandlers = require('#lib/utilities/variantHandler');
 
 variantHandlers.getOtherVariant.mockImplementation(() => 'test');
 
-const spy = jest.spyOn(cookies, 'setPreferredVariantCookie');
+const setPreferredVariantCookieSpy = jest.spyOn(
+  cookies,
+  'setPreferredVariantCookie',
+);
 const userContextMock = {
   setPreferredVariantCookie: cookies.setPreferredVariantCookie,
 };
@@ -79,14 +82,13 @@ describe(`BrandContainer`, () => {
     });
 
     describe('preffered variant cookie', () => {
-      let container;
+      let scriptLink;
 
       beforeEach(() => {
-        container = render(
-          BrandContainerWithContext({
-            ...variantServiceContextStub,
-          }),
-        ).container;
+        const { container } = render(
+          BrandContainerWithContext(variantServiceContextStub),
+        );
+        scriptLink = container.querySelector('a[data-variant="test"]');
       });
 
       afterEach(() => {
@@ -97,20 +99,18 @@ describe(`BrandContainer`, () => {
       it('should be set when ScriptLink is clicked and cookie is not defined', () => {
         document.cookie = '';
 
-        const scriptLink = container.querySelector('a[data-variant="test"]');
         fireEvent.click(scriptLink);
 
-        expect(spy).toHaveBeenCalledTimes(1);
+        expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(1);
         expect(document.cookie).toEqual('; ckps_news=test');
       });
 
       it('should be updated when ScriptLink is clicked and cookie exists', () => {
         document.cookie = 'ckps_news=lat';
 
-        const scriptLink = container.querySelector('a[data-variant="test"]');
         fireEvent.click(scriptLink);
 
-        expect(spy).toHaveBeenCalledTimes(1);
+        expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(1);
         expect(document.cookie).toEqual('; ckps_news=test');
       });
     });

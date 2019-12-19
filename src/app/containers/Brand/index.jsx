@@ -15,18 +15,18 @@ const renderScriptLink = (
   variant,
   setPreferredVariantCookie,
 ) => {
-  const requiredVariant = getOtherVariant(service, variant);
+  const otherVariant = getOtherVariant(service, variant);
   const { scriptLinkText, scriptLinkOffscreenText } = scriptLinkVariants[
-    requiredVariant
+    otherVariant
   ];
 
   return (
     <ScriptLink
       script={script}
       service={service}
-      href={`/${service}/${requiredVariant}`}
-      variant={requiredVariant}
-      onClick={() => setPreferredVariantCookie(service, requiredVariant)}
+      href={`/${service}/${otherVariant}`}
+      variant={otherVariant}
+      onClick={() => setPreferredVariantCookie(service, otherVariant)}
     >
       <span aria-hidden="true">{scriptLinkText}</span>
       <VisuallyHiddenText> {scriptLinkOffscreenText} </VisuallyHiddenText>
