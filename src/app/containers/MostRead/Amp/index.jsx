@@ -33,7 +33,8 @@ const AmpMostRead = ({ endpoint, service, script, dir }) => (
       {AMP_MUSTACHE_JS}
       {AMP_ACCESS_FETCH(endpoint)}
     </Helmet>
-    <section amp-access="totalRecords > 0">
+
+    <section amp-access="oldContent != false">
       <Template
         specName="default"
         type="amp-mustache"
@@ -53,9 +54,6 @@ const AmpMostRead = ({ endpoint, service, script, dir }) => (
               dir={dir}
               rank={'{{rank}}'}
             />
-            {/* {'{{#promo.60daysOld}}'} */}
-            {/* <p>{'{{ promo.timestamp }}'}</p> */}
-            {/* {'{{#promo.60daysOld}}'} */}
 
             <MostReadLink
               title={'{{promo.headlines.shortHeadline}}'}
@@ -63,7 +61,7 @@ const AmpMostRead = ({ endpoint, service, script, dir }) => (
               service={service}
               script={script}
               dir={dir}
-              lastUpdated={'{{ promo.timestamp }}'}
+              lastUpdated={`{{#promo.timestamp.sixtyDaysOld}}{{ promo.timestamp.formatted }}{{/promo.timestamp.sixtyDaysOld}}`}
             />
           </MostReadItemWrapper>
           {'{{/records}}'}
@@ -78,6 +76,10 @@ AmpMostRead.propTypes = {
   service: string.isRequired,
   script: shape(scriptPropType).isRequired,
   dir: oneOf(['rtl', 'ltr']),
+};
+
+AmpMostRead.defaultProps = {
+  dir: 'ltr',
 };
 
 export default AmpMostRead;

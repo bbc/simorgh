@@ -16,7 +16,6 @@ import {
   getSerifMedium,
 } from '@bbc/psammead-styles/font-styles';
 import Grid from '@bbc/psammead-grid';
-import Timestamp from '@bbc/psammead-timestamp-container';
 
 const paddingStart = ({ dir }) => `padding-${dir === 'ltr' ? 'left' : 'right'}`;
 
@@ -101,10 +100,6 @@ export const MostReadRank = ({ service, script, dir, rank }) => (
   </Grid>
 );
 
-const TimestampWrapper = props => (
-  <Timestamp {...props} timestamp={parseInt(props.timestamp, 10)} />
-);
-
 export const MostReadLink = ({
   title,
   href,
@@ -118,24 +113,15 @@ export const MostReadLink = ({
       <StyledLink href={href} script={script} service={service}>
         {title}
       </StyledLink>
-      {typeof parseInt({ lastUpdated }, 10)}
-      {console.log(parseInt({ lastUpdated }, 10))}
-      {parseInt({ lastUpdated }, 10)}
-      <TimestampWrapper
-        timestamp={lastUpdated}
-        dateTimeFormat="YYYY-MM-DD"
-        isRelative={false}
-        format="D MMMM YYYY"
-        timezone="Europe/London"
-        prefix="Last updated:"
-        suffix=""
-        script={script}
-        locale="en"
-        service={service}
-      />
+      <p style={{ margin: '0px' }}>{lastUpdated}</p>
     </StyledItem>
   </Grid>
 );
+
+MostReadItemWrapper.propTypes = {
+  dir: oneOf(['rtl', 'ltr']),
+  children: node.isRequired,
+};
 
 MostReadRank.propTypes = {
   service: string.isRequired,
@@ -151,6 +137,10 @@ MostReadLink.propTypes = {
   service: string.isRequired,
   script: shape(scriptPropType).isRequired,
   dir: oneOf(['rtl', 'ltr']),
+};
+
+MostReadItemWrapper.defaultProps = {
+  dir: 'ltr',
 };
 
 MostReadRank.defaultProps = {
