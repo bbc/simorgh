@@ -83,10 +83,10 @@ describe(`BrandContainer`, () => {
 
       beforeEach(() => {
         container = render(
-          BrandContainerWithContext({
+          BrandContainerWithContext(variantServiceContextStub)
             ...variantServiceContextStub,
           }),
-        ).container;
+scriptLink = container.querySelector('a[data-variant="test"]');
       });
 
       afterEach(() => {

@@ -15,7 +15,7 @@ const renderScriptLink = (
   variant,
   setPreferredVariantCookie,
 ) => {
-  const requiredVariant = getOtherVariant(service, variant);
+  const otherVariant = getOtherVariant(service, variant);
   const { scriptLinkText, scriptLinkOffscreenText } = scriptLinkVariants[
     requiredVariant
   ];
