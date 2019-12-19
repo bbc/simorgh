@@ -52,6 +52,7 @@ export const service = {
       currentPage: 'Peegi ị nọ ugbua',
       skipLinkText: 'Wụga n’ọdịnaya',
       relatedContent: "Ihe ndị ọzọ n'akụkọ a",
+      sections: 'Ngalaba',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -178,7 +179,6 @@ export const service = {
         url: '/igbo/popular/read',
       },
     ],
-    navigationSection: 'Ngalaba',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',

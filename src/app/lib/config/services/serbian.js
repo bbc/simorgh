@@ -199,6 +199,10 @@ const baseServiceConfig = {
 export const service = {
   lat: {
     ...baseServiceConfig,
+    translations: {
+      ...baseServiceConfig.translations,
+      sections: 'Odeljci',
+    },
     lang: `sr-latn`,
     locale: `sr-latn`,
     script: latinDiacritics,
@@ -230,10 +234,13 @@ export const service = {
         url: '/serbian/lat/popular/read',
       },
     ],
-    navigationSection: 'Odeljci',
   },
   cyr: {
     ...baseServiceConfig,
+    translations: {
+      ...baseServiceConfig.translations,
+      sections: 'Одељци',
+    },
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
     script: cyrillicAndLatin,
@@ -265,7 +272,6 @@ export const service = {
         url: '/serbian/cyr/popular/read',
       },
     ],
-    navigationSection: 'Одељци',
   },
 };
 

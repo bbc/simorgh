@@ -190,6 +190,10 @@ const baseServiceConfig = {
 export const service = {
   simp: {
     ...baseServiceConfig,
+    translations: {
+      ...baseServiceConfig.translations,
+      sections: '分类',
+    },
     lang: `zh-hans`,
     locale: `zh-hans`,
     variant: 'simp',
@@ -223,10 +227,13 @@ export const service = {
         url: '/ukchina/simp/media/photogalleries',
       },
     ],
-    navigationSection: '分类',
   },
   trad: {
     ...baseServiceConfig,
+    translations: {
+      ...baseServiceConfig.translations,
+      sections: '分類',
+    },
     lang: `zh-hant`,
     locale: `zh-hant`,
     variant: 'trad',
@@ -260,7 +267,6 @@ export const service = {
         url: '/ukchina/trad/media/photogalleries',
       },
     ],
-    navigationSection: '分類',
   },
 };
 
