@@ -1,18 +1,9 @@
-import Url from 'url-parse';
+import { getUrlPath, getParsedQueryString } from '#lib/utilities/urlParser';
 
 const AV_ROUTE = 'ws/av-embeds';
 
-const getRequestPath = requestUrl => {
-  // Remove trailing /
-  return new Url(requestUrl).pathname.substring(1);
-};
-
-const getQueryParams = requestUrl => {
-  return new Url(requestUrl, true).query;
-};
-
 const overrideExists = requestUrl => {
-  const params = getQueryParams(requestUrl);
+  const params = getParsedQueryString(requestUrl);
 
   return (
     params && process.env.APP_ENV !== 'live' && params.renderer_env === 'live'
@@ -21,9 +12,9 @@ const overrideExists = requestUrl => {
 
 const getBaseUrl = requestUrl => {
   if (overrideExists(requestUrl)) {
-    return process.env.SIMORGH_EMBEDS_BASE_URL_OVERRIDE;
+    return process.env.SIMORGH_EMBEDS_BASE_URL_LIVE;
   }
-  return process.env.SIMORGH_EMBEDS_BASE_URL;
+  return process.env.SIMORGH_EMBEDS_BASE_URL_TEST;
 };
 
 const embedUrl = ({ type, requestUrl, isAmp = false }) => {
@@ -31,7 +22,7 @@ const embedUrl = ({ type, requestUrl, isAmp = false }) => {
     getBaseUrl(requestUrl),
     AV_ROUTE,
     type,
-    getRequestPath(requestUrl),
+    getUrlPath(requestUrl),
   ];
 
   if (isAmp) {

@@ -121,8 +121,8 @@ describe('Media Player: Embed URL in non-live environment', () => {
   const environment = process.env.APP_ENV;
   beforeEach(() => {
     process.env.APP_ENV = 'test';
-    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
-    process.env.SIMORGH_EMBEDS_BASE_URL_OVERRIDE =
+    process.env.SIMORGH_EMBEDS_BASE_URL_TEST = 'https://embed-host.bbc.com';
+    process.env.SIMORGH_EMBEDS_BASE_URL_LIVE =
       'https://embed-host.override.bbc.com';
   });
   const testCases = defaultTestCases.concat(nonLiveEnvWithOverrideTestCases);
@@ -138,7 +138,7 @@ describe('Media Player: Embed URL in live environment', () => {
   const environment = process.env.APP_ENV;
   beforeEach(() => {
     process.env.APP_ENV = 'live';
-    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
+    process.env.SIMORGH_EMBEDS_BASE_URL_LIVE = 'https://embed-host.bbc.com';
   });
   const testCases = defaultTestCases.concat(liveEnvWithOverrideTestCases);
   testCases.forEach(({ description, expected, embedObject }) =>
