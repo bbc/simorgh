@@ -390,6 +390,10 @@ describe('getUrl', () => {
       expect(getUrl('/test/article.amp?param=test')).toEqual(
         'http://localhost/test/article.json?param=test',
       );
+
+      afterEach(() => {
+        process.env.APP_ENV = environment;
+      });
     });
 
     describe('is live', () => {
@@ -420,10 +424,10 @@ describe('getUrl', () => {
           'http://localhost/test/article.json',
         );
       });
-    });
 
-    afterAll(() => {
-      process.env.APP_ENV = environment;
+      afterEach(() => {
+        process.env.APP_ENV = environment;
+      });
     });
   });
 });
