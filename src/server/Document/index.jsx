@@ -11,12 +11,12 @@ import { getStyleTag } from '../styles';
 import DocumentComponent from './component';
 
 const renderDocument = async ({
+  bbcOrigin,
   data,
   isAmp,
   routes,
   service,
   url,
-  headers,
 }) => {
   const sheet = new ServerStyleSheet();
 
@@ -28,11 +28,6 @@ const renderDocument = async ({
 
   const context = {};
 
-  const bbcHeaders = {
-    bbcOrigin: headers['bbc-origin'],
-    bbcCountry: headers['bbc-country'],
-  };
-
   const app = renderToString(
     extractor.collectChunks(
       sheet.collectStyles(
@@ -40,10 +35,10 @@ const renderDocument = async ({
           location={url}
           routes={routes}
           data={data}
+          bbcOrigin={bbcOrigin}
           context={context}
           service={service}
           isAmp={isAmp}
-          headers={bbcHeaders}
         />,
       ),
     ),
@@ -71,7 +66,6 @@ const renderDocument = async ({
       scripts={scripts}
       app={app}
       data={data}
-      headers={bbcHeaders}
       styleTags={getStyleTag(sheet, isAmp)}
       helmet={headHelmet}
       service={service}
