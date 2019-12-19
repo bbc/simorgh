@@ -41,7 +41,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       }
       shouldSetFocus.current = false;
     }
-  }, [state.loading]);
+  }, [state.loading, state.pageData]);
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -79,13 +79,18 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       route.getInitialData(location.pathname).then(data => {
         clearTimeout(loaderTimeout);
         shouldSetFocus.current = true;
-        setState(prevState => ({
-          ...prevState,
+        setState({
+          service: nextService,
+          variant: nextVariant,
+          id: nextId,
+          isAmp: nextIsAmp,
+          pageType: route.pageType,
           loading: false,
           pageData: path(['pageData'], data),
           status: path(['status'], data),
           error: path(['error'], data),
-        }));
+          errorCode: null,
+        });
       });
     }
   }, [routes, location.pathname]);
