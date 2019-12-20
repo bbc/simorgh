@@ -28,12 +28,10 @@ const newsServiceContextStub = {
 const variantServiceContextStub = {
   ...newsServiceContextStub,
   script: latin,
-  variant: 'test',
-  scriptLinkVariants: {
-    test: {
-      scriptLinkText: 'Test',
-      scriptLinkOffscreenText: 'Test-variant',
-    },
+  scriptLink: {
+    variant: 'test',
+    text: 'Test',
+    offscreenText: 'Test-variant',
   },
 };
 
