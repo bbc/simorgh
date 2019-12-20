@@ -2,7 +2,7 @@ import React from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { Link } from 'react-router-dom';
-import { GhostGrid, GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GhostGrid } from '#lib/styledGrid';
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
 import headings from '../Headings';
