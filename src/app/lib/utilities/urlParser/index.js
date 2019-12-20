@@ -2,14 +2,7 @@ import Url from 'url-parse';
 
 // Returns the path, excluding any query string params
 export const getUrlPath = url => {
-  // Remove leading / if it exists
-
-  let { pathname } = new Url(url);
-  if (pathname.charAt(0) === '/') {
-    pathname = pathname.substring(1);
-  }
-
-  return pathname;
+  return new Url(url).pathname;
 };
 
 // Returns the query string

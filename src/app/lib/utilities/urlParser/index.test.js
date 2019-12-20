@@ -9,18 +9,18 @@ const urlWithQueryString = `${url}${queryString}`;
 
 describe('getUrlPath', () => {
   it('should return path from url', () => {
-    expect(getUrlPath(url)).toBe(partialRequestUrl);
+    expect(getUrlPath(url)).toBe(`/${partialRequestUrl}`);
   });
   it('should return path from partial url', () => {
-    expect(getUrlPath(partialRequestUrl)).toBe(partialRequestUrl);
+    expect(getUrlPath(partialRequestUrl)).toBe(`/${partialRequestUrl}`);
   });
 
   it('should return path from url when query string exists', () => {
-    expect(getUrlPath(urlWithQueryString)).toBe(partialRequestUrl);
+    expect(getUrlPath(urlWithQueryString)).toBe(`/${partialRequestUrl}`);
   });
   it('should return path from partial url when query string exists', () => {
     expect(getUrlPath(partialRequestUrlWithQueryString)).toBe(
-      partialRequestUrl,
+      `/${partialRequestUrl}`,
     );
   });
 });
