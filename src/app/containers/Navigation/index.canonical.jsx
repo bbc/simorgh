@@ -10,7 +10,6 @@ import useMediaQuery from '#lib/utilities/useMediaQuery';
 const CanonicalNavigationContainer = ({
   script,
   service,
-  skipLinkText,
   dir,
   menuAnnouncedText,
   scrollableListItems,
@@ -27,13 +26,7 @@ const CanonicalNavigationContainer = ({
   });
 
   return (
-    <Navigation
-      script={script}
-      skipLinkText={skipLinkText}
-      service={service}
-      dir={dir}
-      isOpen={isOpen}
-    >
+    <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
       <CanonicalMenuButton
         announcedText={menuAnnouncedText}
         isOpen={isOpen}
@@ -56,7 +49,6 @@ CanonicalNavigationContainer.propTypes = {
   service: string.isRequired,
   dir: string.isRequired,
   script: shape(scriptPropType).isRequired,
-  skipLinkText: string.isRequired,
   scrollableListItems: node.isRequired,
   dropdownListItems: node.isRequired,
   menuAnnouncedText: string.isRequired,
