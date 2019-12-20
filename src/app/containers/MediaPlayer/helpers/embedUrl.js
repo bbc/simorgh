@@ -12,17 +12,15 @@ const getBaseUrl = requestUrl => {
 };
 
 const embedUrl = ({ type, requestUrl, isAmp = false }) => {
-  const urlParts = [
-    getBaseUrl(requestUrl),
-    AV_ROUTE,
-    `${type}${getUrlPath(requestUrl)}`,
-  ];
+  const urlParts = [AV_ROUTE, type, getUrlPath(requestUrl)];
 
   if (isAmp) {
     urlParts.push('amp');
   }
 
-  return urlParts.join('/');
+  const url = urlParts.join('/').replace('//', '/');
+
+  return `${getBaseUrl(requestUrl)}/${url}`;
 };
 
 export default embedUrl;
