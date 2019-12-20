@@ -38,15 +38,15 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
         cy.get('body amp-consent > script[type="application/json"]');
       });
 
-      // limiting number of tests to run for navigation toggling
       const { variant } = config[service];
-      const shouldTestNav = service === 'ukchina' || service === 'persian';
+      // limit number of tests to 2 services for navigation toggling
+      const shouldTestService = service === 'ukchina' || service === 'persian';
       const serviceHasNavigation = appConfig[service][variant].navigation;
       const pageTypeHasNavigation =
         pageType !== 'articles' ||
         (pageType === 'articles' && appToggles.navOnArticles.enabled);
 
-      if (shouldTestNav && serviceHasNavigation && pageTypeHasNavigation) {
+      if (shouldTestService && serviceHasNavigation && pageTypeHasNavigation) {
         it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
           cy.viewport(320, 480);
           cy.get('#scrollable-nav').should('be.visible');
