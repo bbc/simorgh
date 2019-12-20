@@ -1,6 +1,9 @@
 import { getUrlPath } from '#lib/utilities/urlParser';
 import isLive from '#lib/utilities/envHelper';
 import hasLiveOverride from '#lib/utilities/rendererEnvHelper';
+import nodeLogger from '#lib/logger.node';
+
+const logger = nodeLogger(__filename);
 
 const AV_ROUTE = 'ws/av-embeds';
 
@@ -20,7 +23,10 @@ const embedUrl = ({ type, requestUrl, isAmp = false }) => {
 
   const url = urlParts.join('/').replace('//', '/');
 
-  return `${getBaseUrl(requestUrl)}/${url}`;
+  const urlEmbed = `${getBaseUrl(requestUrl)}/${url}`;
+  logger.info(`Embed URL: ${urlEmbed}`);
+
+  return urlEmbed;
 };
 
 export default embedUrl;
