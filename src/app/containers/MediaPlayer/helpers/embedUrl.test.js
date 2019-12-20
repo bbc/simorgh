@@ -1,54 +1,53 @@
 import embedUrl from './embedUrl';
 
-const url = 'foo/bar';
+const mediaId = 'foo/bar';
+const url = `www.test.com/${mediaId}`;
 const liveOverrideParam = '?renderer_env=live';
 const testOverrideParam = '?renderer_env=test';
-const mediaUrl = 'bbc_korean_radio/liveradio';
 
-const getTestCases = (type, expectedBaseUrl, requestUrl) => {
+const getTestCases = (type, expectedBaseUrl, id) => {
   return [
     {
       description: `should build a CANONICAL url`,
-      expected: `${expectedBaseUrl}/ws/av-embeds/${type}/${requestUrl}`,
+      expected: `${expectedBaseUrl}/ws/av-embeds/${type}/${id}`,
       embedObject: {
-        requestUrl,
+        mediaId: id,
         type,
+        url,
       },
     },
     {
       description: `should build an AMP url`,
-      expected: `${expectedBaseUrl}/ws/av-embeds/${type}/${requestUrl}/amp`,
+      expected: `${expectedBaseUrl}/ws/av-embeds/${type}/${id}/amp`,
       embedObject: {
         isAmp: true,
-        requestUrl,
+        mediaId: id,
         type,
+        url,
       },
     },
   ];
 };
 
-const getTestCasesWithOverride = (
-  type,
-  expectedBaseUrl,
-  requestUrl,
-  overrideParam,
-) => {
+const getTestCasesWithOverride = (type, expectedBaseUrl, id, overrideParam) => {
   return [
     {
       description: `should build a CANONICAL url with override`,
-      expected: `${expectedBaseUrl}/ws/av-embeds/${type}/${requestUrl}`,
+      expected: `${expectedBaseUrl}/ws/av-embeds/${type}/${id}`,
       embedObject: {
-        requestUrl: `${requestUrl}${overrideParam}`,
+        mediaId: `${id}`,
         type,
+        url: `${url}${overrideParam}`,
       },
     },
     {
       description: `should build an AMP url with override`,
-      expected: `${expectedBaseUrl}/ws/av-embeds/${type}/${requestUrl}/amp`,
+      expected: `${expectedBaseUrl}/ws/av-embeds/${type}/${id}/amp`,
       embedObject: {
         isAmp: true,
-        requestUrl: `${requestUrl}${overrideParam}`,
+        mediaId: `${id}`,
         type,
+        url: `${url}${overrideParam}`,
       },
     },
   ];
@@ -60,25 +59,20 @@ const runAssertions = testCases => {
   );
 };
 
-const runNoOverrideScenarios = (type, requestUrl, expectedBaseUrl) => {
+const runNoOverrideScenarios = (type, id, expectedBaseUrl) => {
   describe('with no override param', () => {
-    const testCases = getTestCases(type, expectedBaseUrl, requestUrl);
+    const testCases = getTestCases(type, expectedBaseUrl, id);
 
     runAssertions(testCases);
   });
 };
 
-const runOverrideScenarios = (
-  type,
-  requestUrl,
-  expectedBaseUrl,
-  overrideParam,
-) => {
+const runOverrideScenarios = (type, id, expectedBaseUrl, overrideParam) => {
   describe(`with override param [${overrideParam}]`, () => {
     const testCases = getTestCasesWithOverride(
       type,
       expectedBaseUrl,
-      requestUrl,
+      id,
       overrideParam,
     );
 
@@ -88,15 +82,15 @@ const runOverrideScenarios = (
 
 const runAllScenarios = (
   type,
-  requestUrl,
+  id,
   expectedBaseUrl,
   expectedTestUrl,
   expectedLiveUrl,
 ) => {
   describe(`for ${type}`, () => {
-    runNoOverrideScenarios(type, requestUrl, expectedBaseUrl);
-    runOverrideScenarios(type, requestUrl, expectedTestUrl, testOverrideParam);
-    runOverrideScenarios(type, requestUrl, expectedLiveUrl, liveOverrideParam);
+    runNoOverrideScenarios(type, id, expectedBaseUrl);
+    runOverrideScenarios(type, id, expectedTestUrl, testOverrideParam);
+    runOverrideScenarios(type, id, expectedLiveUrl, liveOverrideParam);
   });
 };
 
@@ -117,9 +111,10 @@ describe('Media Player Embed URL', () => {
       process.env.SIMORGH_EMBEDS_BASE_URL_TEST,
       process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
     );
+
     runAllScenarios(
       'media',
-      mediaUrl,
+      url,
       process.env.SIMORGH_EMBEDS_BASE_URL_TEST,
       process.env.SIMORGH_EMBEDS_BASE_URL_TEST,
       process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
@@ -137,14 +132,14 @@ describe('Media Player Embed URL', () => {
 
     runAllScenarios(
       'articles',
-      url,
+      mediaId,
       process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
       process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
       process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
     );
     runAllScenarios(
       'media',
-      mediaUrl,
+      mediaId,
       process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
       process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
       process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
