@@ -58,12 +58,13 @@ describe('rich-text-transforms JS bundle request', () => {
               requests.some(url => url.match(richTextTransformsBundleRegex)),
             ).toEqual(false);
 
+            await page.evaluate(() => {
+              document.querySelector(
+                'a[data-e2e="cpsAssetDummyLink"]',
+              ).style.display = 'inline';
+            });
+
             await Promise.all([
-              page.evaluate(() => {
-                document.querySelector(
-                  'a[data-e2e="cpsAssetDummyLink"]',
-                ).style.display = 'inline';
-              }),
               page.click('a[data-e2e="cpsAssetDummyLink"]'),
               page.waitForNavigation({ waitUntil: 'networkidle2' }),
             ]);
