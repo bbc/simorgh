@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { string, bool } from 'prop-types';
+import { withRouter } from 'react-router';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
@@ -29,6 +30,7 @@ const MediaPlayerContainer = ({
   assetId,
   assetType,
   showPlaceholder,
+  location,
 }) => {
   const { platform } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
@@ -98,10 +100,12 @@ const MediaPlayerContainer = ({
     locator,
     resolution: DEFAULT_WIDTH,
   });
+
   const embedSource = embedUrl({
-    requestUrl: `${assetId}/${versionId}/${lang}`,
+    mediaId: `${assetId}/${versionId}/${lang}`,
     type: assetType,
     isAmp,
+    url: `${location.pathname}${location.search}`,
   });
   const iframeTitle = pathOr(
     'Media player',
@@ -147,4 +151,4 @@ MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
 };
 
-export default MediaPlayerContainer;
+export default withRouter(MediaPlayerContainer);
