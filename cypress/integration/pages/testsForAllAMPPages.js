@@ -47,7 +47,7 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
         (pageType === 'articles' && appToggles.navOnArticles.enabled);
 
       if (shouldTestNav && serviceHasNavigation && pageTypeHasNavigation) {
-        it('should have a dropdown menu that toggles on click', () => {
+        it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
           cy.viewport(320, 480);
           cy.get('#scrollable-nav').should('be.visible');
           cy.get('#dropdown-menu').should('not.be.visible');
