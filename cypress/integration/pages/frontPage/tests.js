@@ -1,5 +1,6 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
+import applySquashTopstories from '../../../../src/app/lib/utilities/preprocessor/rules/topstories';
 
 const serviceJsonPath = service =>
   `${config[service].pageTypes.frontPage.path}.json`;
@@ -185,7 +186,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                         .eq(0)
                         .then($el => {
                           expect($el.text()).includes(
-                            `${appConfig[service].default.translations.relatedContent}`,
+                            `${
+                              appConfig[config[service].name].default
+                                .translations.relatedContent
+                            }`,
                           );
                         });
 
@@ -229,8 +233,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
 
         it('should contain Radio Bulletin if a promo of type RadioBulletin is in the feed', () => {
           cy.request(serviceJsonPath(service)).then(({ body }) => {
-            const pageData = body.content.groups;
-            if (isValidRadioBulletin(pageData)) {
+            const pageData = applySquashTopstories(body);
+            const { groups } = pageData.content;
+
+            if (isValidRadioBulletin(groups)) {
               cy.get('[class^="RadioBulletin"]')
                 .eq(0)
                 .should('be.visible');
@@ -242,8 +248,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
 
         it('should contain TV Bulletin if a promo of type TVBulletin is in the feed', () => {
           cy.request(serviceJsonPath(service)).then(({ body }) => {
-            const pageData = body.content.groups;
-            if (isValidTvBulletin(pageData)) {
+            const pageData = applySquashTopstories(body);
+            const { groups } = pageData.content;
+
+            if (isValidTvBulletin(groups)) {
               cy.get('[class^="TVBulletin"]')
                 .eq(0)
                 .should('be.visible');

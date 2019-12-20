@@ -8,15 +8,18 @@ import useToggle from '../Toggle/useToggle';
 const HeaderContainer = () => {
   const { pageType } = useContext(RequestContext);
   const borderBottom = pageType !== 'frontPage';
-  const { enabled } = useToggle('navOnArticles');
-  const showNavBar =
-    ['frontPage', 'media', 'error'].includes(pageType) || enabled;
+
+  // The article page toggles the nav bar based on environment
+  const showNavOnArticles = useToggle('navOnArticles').enabled;
+
+  // All other page types show the nav bar at all times
+  const showNav = showNavOnArticles || pageType !== 'article';
 
   return (
     <header role="banner">
       <ConsentBanner />
       <BrandContainer borderBottom={borderBottom} />
-      {showNavBar && <NavigationContainer />}
+      {showNav && <NavigationContainer />}
     </header>
   );
 };

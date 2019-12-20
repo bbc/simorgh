@@ -5,6 +5,7 @@ const expectedLayoutGridExports = {
   layoutGridWrapper: 'object',
   layoutGridItemLargeNoMargin: 'object',
   layoutGridItemLarge: 'object',
+  layoutGridItemMediumNoMargin: 'object',
   layoutGridItemMedium: 'object',
   layoutGridItemSmall: 'object',
   layoutGridItem: 'object',

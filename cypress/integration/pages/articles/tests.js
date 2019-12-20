@@ -35,7 +35,7 @@ export const testsThatFollowSmokeTestConfig = ({
         cy.get('meta[name="article:author"]').should(
           'have.attr',
           'content',
-          appConfig[service][variant].articleAuthor,
+          appConfig[config[service].name][variant].articleAuthor,
         );
       });
 
@@ -184,7 +184,10 @@ export const testsThatFollowSmokeTestConfig = ({
               if (lastPublished !== firstPublished) {
                 cy.get('time')
                   .eq(1)
-                  .should('contain', appConfig[service].articleTimestampPrefix);
+                  .should(
+                    'contain',
+                    appConfig[config[service].name].articleTimestampPrefix,
+                  );
               }
             },
           );
