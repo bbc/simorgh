@@ -9,7 +9,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   padding-bottom: 2rem;
 }
 
-.c1 {
+.c8 {
   grid-column: 1 / span 6;
 }
 
@@ -18,7 +18,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   grid-column-gap: 1rem;
 }
 
-.c8 {
+.c7 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -103,13 +103,13 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   margin-bottom: 1rem;
 }
 
-.c4 {
+.c3 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.c2 {
+.c1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -148,21 +148,21 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c5 {
+.c4 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c3 {
+.c2 {
   margin-top: 1rem;
 }
 
-.c3 figure {
+.c2 figure {
   padding-bottom: 0;
 }
 
-.c6 {
+.c5 {
   position: absolute;
   top: 0;
   left: 0;
@@ -213,70 +213,70 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
 }
 
 @media (max-width:25rem) {
-  .c1 {
+  .c8 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
+  .c8 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c8 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c8 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c8 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c1 {
+  .c8 {
     max-width: initial;
   }
 }
 
 @media (max-width:63rem) {
-  .c7 {
+  .c6 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c7 {
+  .c6 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c7 {
+  .c6 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c7 {
+  .c6 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c7 {
+  .c6 {
     padding: 0 1rem;
   }
 }
@@ -360,21 +360,21 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
+  .c7 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     padding: 2.5rem 0;
   }
 }
@@ -422,37 +422,37 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
 }
 
 @media (max-width:63rem) {
-  .c3 {
+  .c2 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c3 {
+  .c2 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c3 {
+  .c2 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c3 {
+  .c2 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c3 {
+  .c2 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c3 {
+  .c2 {
     padding-top: 0.5rem;
     margin-top: 2rem;
   }
@@ -462,36 +462,33 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
     class="c0"
     role="main"
   >
-    <div
-      class="c1"
+    <a
+      data-e2e="cpsAssetDummyLink"
+      href="/pidgin/23248703"
+      style="display: none;"
     >
-      <a
-        data-e2e="cpsAssetDummyLink"
-        href="/pidgin/23248703"
-      >
-        Test MAP to MAP inline link
-      </a>
-    </div>
+      Test MAP to MAP inline link
+    </a>
     <h1
-      class="c2"
+      class="c1"
       id="content"
       tabindex="-1"
     >
       Ўзбек деҳқонининг косаси нега оқармайдиshort
     </h1>
     <div
-      class="c3"
+      class="c2"
     >
       <figure
-        class="c4"
+        class="c3"
       >
         <div
-          class="c5"
+          class="c4"
         >
           <iframe
             allow="autoplay; fullscreen"
             allowfullscreen=""
-            class="c6"
+            class="c5"
             scrolling="no"
             src="https://embed-host.bbc.com/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
             title="Медиа плейер"
@@ -500,17 +497,17 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </figure>
     </div>
     <div
-      class="c7"
+      class="c6"
     >
       <strong
         aria-hidden="true"
-        class="c8"
+        class="c7"
       >
         Ўзбек деҳқонининг косаси нега оқармайдиshort
       </strong>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <time
         class="c9"
@@ -526,7 +523,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </time>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -537,7 +534,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -551,7 +548,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -573,7 +570,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -587,7 +584,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -603,7 +600,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -616,7 +613,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -625,7 +622,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -634,7 +631,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -643,7 +640,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -652,7 +649,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <ul
         class="c13"
@@ -688,7 +685,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </ul>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <ul
         class="c13"
@@ -745,7 +742,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       class="c15"
     >
       <figure
-        class="c4"
+        class="c3"
       >
         <div
           class="c16"
@@ -765,7 +762,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
                 role="text"
               >
                 <span
-                  class="c2"
+                  class="c1"
                 >
                   Сүрөттүн булагы, 
                 </span>
@@ -784,7 +781,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </figure>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -793,7 +790,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -814,7 +811,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   padding-bottom: 2rem;
 }
 
-.c1 {
+.c8 {
   grid-column: 1 / span 6;
 }
 
@@ -823,7 +820,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   grid-column-gap: 1rem;
 }
 
-.c8 {
+.c7 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -919,13 +916,13 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   margin-bottom: 1rem;
 }
 
-.c4 {
+.c3 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.c2 {
+.c1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -988,21 +985,21 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c5 {
+.c4 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c3 {
+.c2 {
   margin-top: 1rem;
 }
 
-.c3 figure {
+.c2 figure {
   padding-bottom: 0;
 }
 
-.c6 {
+.c5 {
   position: absolute;
   top: 0;
   left: 0;
@@ -1053,70 +1050,70 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 }
 
 @media (max-width:25rem) {
-  .c1 {
+  .c8 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
+  .c8 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c8 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c8 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c8 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c1 {
+  .c8 {
     max-width: initial;
   }
 }
 
 @media (max-width:63rem) {
-  .c7 {
+  .c6 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c7 {
+  .c6 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c7 {
+  .c6 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c7 {
+  .c6 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c7 {
+  .c6 {
     padding: 0 1rem;
   }
 }
@@ -1200,21 +1197,21 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
+  .c7 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     padding: 2.5rem 0;
   }
 }
@@ -1308,37 +1305,37 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c3 {
+  .c2 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c3 {
+  .c2 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c3 {
+  .c2 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c3 {
+  .c2 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c3 {
+  .c2 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c3 {
+  .c2 {
     padding-top: 0.5rem;
     margin-top: 2rem;
   }
@@ -1348,36 +1345,33 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
     class="c0"
     role="main"
   >
-    <div
-      class="c1"
+    <a
+      data-e2e="cpsAssetDummyLink"
+      href="/pidgin/23248703"
+      style="display: none;"
     >
-      <a
-        data-e2e="cpsAssetDummyLink"
-        href="/pidgin/23248703"
-      >
-        Test MAP to MAP inline link
-      </a>
-    </div>
+      Test MAP to MAP inline link
+    </a>
     <h1
-      class="c2"
+      class="c1"
       id="content"
       tabindex="-1"
     >
       Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
     </h1>
     <div
-      class="c3"
+      class="c2"
     >
       <figure
-        class="c4"
+        class="c3"
       >
         <div
-          class="c5"
+          class="c4"
         >
           <iframe
             allow="autoplay; fullscreen"
             allowfullscreen=""
-            class="c6"
+            class="c5"
             scrolling="no"
             src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
             title="Media player"
@@ -1386,17 +1380,17 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </figure>
     </div>
     <div
-      class="c7"
+      class="c6"
     >
       <strong
         aria-hidden="true"
-        class="c8"
+        class="c7"
       >
         Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
       </strong>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <time
         class="c9"
@@ -1412,7 +1406,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </time>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -1423,7 +1417,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <h2
         class="c11"
@@ -1434,7 +1428,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </h2>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <h2
         class="c11"
@@ -1445,7 +1439,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </h2>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <h2
         class="c11"
@@ -1456,7 +1450,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </h2>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -1465,7 +1459,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -1474,7 +1468,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <ul
         class="c12"
@@ -1535,7 +1529,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </ul>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -1544,7 +1538,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <ul
         class="c12"
@@ -1605,7 +1599,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </ul>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -1635,7 +1629,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -1644,7 +1638,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -1653,7 +1647,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -1662,7 +1656,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -1671,7 +1665,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -1680,7 +1674,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -1689,7 +1683,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -1698,7 +1692,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -1707,7 +1701,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -1726,7 +1720,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c16"
     >
       <figure
-        class="c4"
+        class="c3"
       >
         <div
           class="c17"
@@ -1746,7 +1740,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
                 role="text"
               >
                 <span
-                  class="c2"
+                  class="c1"
                 >
                   Wia dis foto come from, 
                 </span>
@@ -1765,7 +1759,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
               class="c22"
             >
               <span
-                class="c2"
+                class="c1"
               >
                 Wetin we call dis foto, 
               </span>
@@ -1781,7 +1775,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c16"
     >
       <figure
-        class="c4"
+        class="c3"
       >
         <div
           class="c17"
@@ -1801,7 +1795,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
                 role="text"
               >
                 <span
-                  class="c2"
+                  class="c1"
                 >
                   Wia dis foto come from, 
                 </span>
@@ -1820,7 +1814,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
               class="c22"
             >
               <span
-                class="c2"
+                class="c1"
               >
                 Wetin we call dis foto, 
               </span>
@@ -1833,7 +1827,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </figure>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <ul
         class="c12"
@@ -1867,7 +1861,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </ul>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -1876,7 +1870,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c10"
@@ -2743,11 +2737,11 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   padding-bottom: 2rem;
 }
 
-.c1 {
+.c13 {
   grid-column: 1 / span 6;
 }
 
-.c6 {
+.c5 {
   display: grid;
   grid-column-gap: 1rem;
 }
@@ -2771,7 +2765,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   font-weight: inherit;
 }
 
-.c3 {
+.c2 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2783,7 +2777,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   padding: 2rem 0;
 }
 
-.c3:focus {
+.c2:focus {
   outline: none;
 }
 
@@ -2852,13 +2846,13 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   margin-bottom: 1rem;
 }
 
-.c5 {
+.c4 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.c11 {
+.c10 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -2870,7 +2864,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   margin: 0;
 }
 
-.c10 {
+.c9 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -2884,7 +2878,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   left: 0;
 }
 
-.c13 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2895,20 +2889,20 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   width: 100%;
 }
 
-.c13 > p {
+.c12 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c13 > p:last-child {
+.c12 > p:last-child {
   padding-bottom: 0;
 }
 
-.c13 i {
+.c12 i {
   font-style: normal;
 }
 
-.c8 {
+.c7 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -2921,7 +2915,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c9 {
+.c8 {
   display: block;
   width: 100%;
   visibility: visible;
@@ -3085,148 +3079,148 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (max-width:25rem) {
-  .c1 {
+  .c13 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
+  .c13 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c13 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c13 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c13 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c1 {
+  .c13 {
     max-width: initial;
   }
 }
 
 @media (max-width:63rem) {
-  .c2 {
+  .c1 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
+  .c1 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c2 {
+  .c1 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c2 {
+  .c1 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c1 {
     padding: 0 1rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c4 {
+  .c3 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c4 {
+  .c3 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c4 {
+  .c3 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c7 {
+  .c6 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c7 {
+  .c6 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c7 {
+  .c6 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c7 {
+  .c6 {
     grid-column: 1 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c12 {
+  .c11 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c12 {
+  .c11 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c12 {
+  .c11 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c12 {
+  .c11 {
     grid-column: 1 / span 10;
   }
 }
 
 @media (max-width:80rem) {
-  .c6 {
+  .c5 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c6 {
+  .c5 {
     grid-template-columns: repeat(12,1fr);
   }
 }
@@ -3252,21 +3246,21 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c2 {
     padding: 2.5rem 0;
   }
 }
@@ -3314,27 +3308,27 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c12 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c13 {
+  .c12 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c13 {
+  .c12 {
     padding: 0.5rem 0 0;
   }
 }
@@ -3716,21 +3710,18 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
         class="c0"
         role="main"
       >
+        <a
+          data-e2e="cpsAssetDummyLink"
+          href="/pidgin/23248703"
+          style="display: none;"
+        >
+          Test MAP to MAP inline link
+        </a>
         <div
           class="c1"
         >
-          <a
-            data-e2e="cpsAssetDummyLink"
-            href="/pidgin/23248703"
-          >
-            Test MAP to MAP inline link
-          </a>
-        </div>
-        <div
-          class="c2"
-        >
           <h1
-            class="c3"
+            class="c2"
             id="content"
             tabindex="-1"
           >
@@ -3738,33 +3729,33 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </h1>
         </div>
         <div
-          class="c4"
+          class="c3"
         >
           <figure
-            class="c5"
+            class="c4"
           >
             <div
-              class="c6"
+              class="c5"
             >
               <div
-                class="c7"
+                class="c6"
               >
                 <div
-                  class="c8"
+                  class="c7"
                 >
                   <img
                     alt="Some people at the NTA awards"
-                    class="c9"
+                    class="c8"
                     src="https://ichef.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
                     srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
                     width="976"
                   />
                   <p
-                    class="c10"
+                    class="c9"
                     role="text"
                   >
                     <span
-                      class="c11"
+                      class="c10"
                     >
                       Ebe foto si 
                     </span>
@@ -3777,13 +3768,13 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                 </div>
               </div>
               <div
-                class="c12"
+                class="c11"
               >
                 <figcaption
-                  class="c13"
+                  class="c12"
                 >
                   <span
-                    class="c11"
+                    class="c10"
                   >
                     Nkọwa foto 
                   </span>
@@ -3796,7 +3787,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </figure>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <time
             class="c14"
@@ -3813,7 +3804,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </time>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <p
             class="c15"
@@ -3833,7 +3824,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </p>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <p
             class="c15"
@@ -3854,7 +3845,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </p>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <ul
             class="c18"
@@ -3901,7 +3892,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </ul>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <p
             class="c15"
@@ -3921,30 +3912,30 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </p>
         </div>
         <div
-          class="c4"
+          class="c3"
         >
           <figure
-            class="c5"
+            class="c4"
           >
             <div
-              class="c6"
+              class="c5"
             >
               <div
-                class="c7"
+                class="c6"
               >
                 <div
-                  class="c8"
+                  class="c7"
                 >
                   <div
                     class="lazyload-placeholder"
                   />
                   <noscript />
                   <p
-                    class="c10"
+                    class="c9"
                     role="text"
                   >
                     <span
-                      class="c11"
+                      class="c10"
                     >
                       Ebe foto si 
                     </span>
@@ -3957,13 +3948,13 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                 </div>
               </div>
               <div
-                class="c12"
+                class="c11"
               />
             </div>
           </figure>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <p
             class="c15"
@@ -3974,7 +3965,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </p>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <p
             class="c15"
@@ -3983,7 +3974,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </p>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <p
             class="c15"
@@ -3994,7 +3985,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </p>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <p
             class="c15"
@@ -4009,7 +4000,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </p>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <ul
             class="c18"
@@ -4056,7 +4047,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </ul>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <p
             class="c15"
@@ -4068,7 +4059,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c20"
         >
           <figure
-            class="c5"
+            class="c4"
           >
             <div
               class="c21"
@@ -4085,7 +4076,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </figure>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <h2
             class="c23"
@@ -4096,7 +4087,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </h2>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <h2
             class="c23"
@@ -4107,7 +4098,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </h2>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <p
             class="c15"
@@ -4116,7 +4107,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </p>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <h2
             class="c23"
@@ -4127,7 +4118,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </h2>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <p
             class="c15"
@@ -4136,7 +4127,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </p>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <p
             class="c15"
@@ -4151,7 +4142,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </p>
         </div>
         <div
-          class="c1"
+          class="c13"
         >
           <p
             class="c15"
@@ -4219,7 +4210,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   padding-bottom: 2rem;
 }
 
-.c1 {
+.c8 {
   grid-column: 1 / span 6;
 }
 
@@ -4228,7 +4219,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   grid-column-gap: 1rem;
 }
 
-.c8 {
+.c7 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -4309,13 +4300,13 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   margin-bottom: 1rem;
 }
 
-.c4 {
+.c3 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.c2 {
+.c1 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -4378,21 +4369,21 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c5 {
+.c4 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c3 {
+.c2 {
   margin-top: 1rem;
 }
 
-.c3 figure {
+.c2 figure {
   padding-bottom: 0;
 }
 
-.c6 {
+.c5 {
   position: absolute;
   top: 0;
   left: 0;
@@ -4443,70 +4434,70 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 @media (max-width:25rem) {
-  .c1 {
+  .c8 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
+  .c8 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c8 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
+  .c8 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c8 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c1 {
+  .c8 {
     max-width: initial;
   }
 }
 
 @media (max-width:63rem) {
-  .c7 {
+  .c6 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c7 {
+  .c6 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c7 {
+  .c6 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c7 {
+  .c6 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c7 {
+  .c6 {
     padding: 0 1rem;
   }
 }
@@ -4590,21 +4581,21 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
+  .c7 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     padding: 2.5rem 0;
   }
 }
@@ -4684,37 +4675,37 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 @media (max-width:63rem) {
-  .c3 {
+  .c2 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c3 {
+  .c2 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c3 {
+  .c2 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c3 {
+  .c2 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c3 {
+  .c2 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c3 {
+  .c2 {
     padding-top: 0.5rem;
     margin-top: 2rem;
   }
@@ -4724,36 +4715,33 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
     class="c0"
     role="main"
   >
-    <div
-      class="c1"
+    <a
+      data-e2e="cpsAssetDummyLink"
+      href="/pidgin/23248703"
+      style="display: none;"
     >
-      <a
-        data-e2e="cpsAssetDummyLink"
-        href="/pidgin/23248703"
-      >
-        Test MAP to MAP inline link
-      </a>
-    </div>
+      Test MAP to MAP inline link
+    </a>
     <h1
-      class="c2"
+      class="c1"
       id="content"
       tabindex="-1"
     >
       Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
     </h1>
     <div
-      class="c3"
+      class="c2"
     >
       <figure
-        class="c4"
+        class="c3"
       >
         <div
-          class="c5"
+          class="c4"
         >
           <iframe
             allow="autoplay; fullscreen"
             allowfullscreen=""
-            class="c6"
+            class="c5"
             scrolling="no"
             src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
             title="Media player"
@@ -4762,17 +4750,17 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </figure>
     </div>
     <div
-      class="c7"
+      class="c6"
     >
       <strong
         aria-hidden="true"
-        class="c8"
+        class="c7"
       >
         Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
       </strong>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"
@@ -4783,7 +4771,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <h2
         class="c10"
@@ -4794,7 +4782,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </h2>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <h2
         class="c10"
@@ -4805,7 +4793,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </h2>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <h2
         class="c10"
@@ -4816,7 +4804,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </h2>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"
@@ -4825,7 +4813,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"
@@ -4834,7 +4822,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <ul
         class="c11"
@@ -4895,7 +4883,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </ul>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"
@@ -4904,7 +4892,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <ul
         class="c11"
@@ -4965,7 +4953,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </ul>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"
@@ -4995,7 +4983,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"
@@ -5004,7 +4992,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"
@@ -5013,7 +5001,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"
@@ -5022,7 +5010,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"
@@ -5031,7 +5019,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"
@@ -5040,7 +5028,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"
@@ -5049,7 +5037,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"
@@ -5058,7 +5046,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"
@@ -5067,7 +5055,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"
@@ -5086,7 +5074,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c15"
     >
       <figure
-        class="c4"
+        class="c3"
       >
         <div
           class="c16"
@@ -5106,7 +5094,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
                 role="text"
               >
                 <span
-                  class="c2"
+                  class="c1"
                 >
                   Wia dis foto come from, 
                 </span>
@@ -5125,7 +5113,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
               class="c21"
             >
               <span
-                class="c2"
+                class="c1"
               >
                 Wetin we call dis foto, 
               </span>
@@ -5141,7 +5129,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c15"
     >
       <figure
-        class="c4"
+        class="c3"
       >
         <div
           class="c16"
@@ -5161,7 +5149,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
                 role="text"
               >
                 <span
-                  class="c2"
+                  class="c1"
                 >
                   Wia dis foto come from, 
                 </span>
@@ -5180,7 +5168,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
               class="c21"
             >
               <span
-                class="c2"
+                class="c1"
               >
                 Wetin we call dis foto, 
               </span>
@@ -5193,7 +5181,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </figure>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <ul
         class="c11"
@@ -5227,7 +5215,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </ul>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"
@@ -5236,7 +5224,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c1"
+      class="c8"
     >
       <p
         class="c9"

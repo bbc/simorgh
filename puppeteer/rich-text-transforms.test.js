@@ -11,10 +11,7 @@ let browser;
 let page;
 let requests = [];
 
-const richTextTransformsBundleRegex = new RegExp(
-  `(\\/static\\/js\\/rich-text-transforms-\\w+\\.\\w+\\.js)`,
-  'g',
-);
+const richTextTransformsBundleRegex = /rich-text-transforms.*\.js/;
 
 jest.setTimeout(10000); // overriding the default jest timeout
 
@@ -62,6 +59,11 @@ describe('rich-text-transforms JS bundle request', () => {
             ).toEqual(false);
 
             await Promise.all([
+              page.evaluate(() => {
+                document.querySelector(
+                  'a[data-e2e="cpsAssetDummyLink"]',
+                ).style.display = 'inline';
+              }),
               page.click('a[data-e2e="cpsAssetDummyLink"]'),
               page.waitForNavigation({ waitUntil: 'networkidle2' }),
             ]);

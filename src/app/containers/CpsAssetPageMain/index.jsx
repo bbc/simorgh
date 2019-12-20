@@ -64,11 +64,13 @@ const CpsAssetPageMain = ({ pageData }) => {
       />
       <ATIAnalytics data={pageData} />
       <GhostGrid as="main" role="main">
-        <GridItemConstrainedMedium>
-          <Link to="/pidgin/23248703" data-e2e="cpsAssetDummyLink">
-            Test MAP to MAP inline link
-          </Link>
-        </GridItemConstrainedMedium>
+        <Link
+          to="/pidgin/23248703"
+          data-e2e="cpsAssetDummyLink"
+          style={{ display: 'none' }}
+        >
+          Test MAP to MAP inline link
+        </Link>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </GhostGrid>
       <CpsRelatedContent content={relatedContent} />
