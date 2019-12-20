@@ -1,4 +1,4 @@
-import { getUrlPath } from '#lib/utilities/urlParser';
+import { getQueryString } from '#lib/utilities/urlParser';
 import isLive from '#lib/utilities/envHelper';
 import hasLiveOverride from '#lib/utilities/rendererEnvHelper';
 import nodeLogger from '#lib/logger.node';
@@ -15,15 +15,15 @@ const getBaseUrl = requestUrl => {
 };
 
 const embedUrl = ({ type, requestUrl, isAmp = false }) => {
-  const urlParts = [AV_ROUTE, type, getUrlPath(requestUrl)];
+  const urlPath = requestUrl.replace(getQueryString(requestUrl), '');
+
+  const urlParts = [getBaseUrl(requestUrl), AV_ROUTE, type, urlPath];
 
   if (isAmp) {
     urlParts.push('amp');
   }
 
-  const url = urlParts.join('/').replace('//', '/');
-
-  const urlEmbed = `${getBaseUrl(requestUrl)}/${url}`;
+  const urlEmbed = urlParts.join('/');
   logger.info(`Embed URL: ${urlEmbed}`);
 
   return urlEmbed;
