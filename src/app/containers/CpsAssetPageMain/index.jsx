@@ -1,8 +1,7 @@
 import React from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { Link } from 'react-router-dom';
-import { GhostGrid, GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GhostGrid } from '#lib/styledGrid';
 import MetadataContainer from '../Metadata';
 import LinkedData from '../LinkedData';
 import headings from '../Headings';
@@ -64,11 +63,6 @@ const CpsAssetPageMain = ({ pageData }) => {
       />
       <ATIAnalytics data={pageData} />
       <GhostGrid as="main" role="main">
-        <GridItemConstrainedMedium>
-          <Link to="/pidgin/23248703" data-e2e="cpsAssetDummyLink">
-            Test MAP to MAP inline link
-          </Link>
-        </GridItemConstrainedMedium>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </GhostGrid>
       <CpsRelatedContent content={relatedContent} />
