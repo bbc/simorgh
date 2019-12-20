@@ -6,30 +6,25 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { bool } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContext } from '#contexts/UserContext';
-import { getOtherVariant } from '#lib/utilities/variantHandler';
 
 const renderScriptLink = (
   script,
   service,
-  scriptLinkVariants,
-  variant,
+  scriptLink,
   setPreferredVariantCookie,
 ) => {
-  const otherVariant = getOtherVariant(service, variant);
-  const { scriptLinkText, scriptLinkOffscreenText } = scriptLinkVariants[
-    otherVariant
-  ];
+  const { variant, text, offscreenText } = scriptLink;
 
   return (
     <ScriptLink
       script={script}
       service={service}
-      href={`/${service}/${otherVariant}`}
-      variant={otherVariant}
-      onClick={() => setPreferredVariantCookie(service, otherVariant)}
+      href={`/${service}/${variant}`}
+      variant={variant}
+      onClick={() => setPreferredVariantCookie(service, variant)}
     >
-      <span aria-hidden="true">{scriptLinkText}</span>
-      <VisuallyHiddenText> {scriptLinkOffscreenText} </VisuallyHiddenText>
+      <span aria-hidden="true">{text}</span>
+      <VisuallyHiddenText> {offscreenText} </VisuallyHiddenText>
     </ScriptLink>
   );
 };
@@ -49,8 +44,7 @@ const BrandContainer = props => {
     theming,
     script,
     translations,
-    scriptLinkVariants = null,
-    variant,
+    scriptLink = null,
   } = useContext(ServiceContext);
   const { setPreferredVariantCookie } = useContext(UserContext);
   const { brandBackgroundColour, brandLogoColour } = theming;
@@ -60,15 +54,9 @@ const BrandContainer = props => {
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
   const { skipLinkText } = translations;
-  const scriptLink =
-    scriptLinkVariants &&
-    renderScriptLink(
-      script,
-      service,
-      scriptLinkVariants,
-      variant,
-      setPreferredVariantCookie,
-    );
+  const addScriptLink =
+    scriptLink &&
+    renderScriptLink(script, service, scriptLink, setPreferredVariantCookie);
 
   return (
     <Brand
@@ -81,7 +69,7 @@ const BrandContainer = props => {
       maxWidth={maxWidth}
       svg={brandSVG}
       url={`/${service}`}
-      scriptLink={scriptLink}
+      scriptLink={addScriptLink}
       skipLink={renderSkipLink(service, script, skipLinkText)}
       {...props}
     />

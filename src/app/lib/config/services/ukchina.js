@@ -175,16 +175,6 @@ const baseServiceConfig = {
   },
   fonts: [],
   timezone: 'GMT',
-  scriptLinkVariants: {
-    simp: {
-      scriptLinkText: '简',
-      scriptLinkOffscreenText: 'Simplified',
-    },
-    trad: {
-      scriptLinkText: '繁',
-      scriptLinkOffscreenText: 'Traditional',
-    },
-  },
 };
 
 export const service = {
@@ -196,7 +186,11 @@ export const service = {
     },
     lang: `zh-hans`,
     locale: `zh-hans`,
-    variant: 'simp',
+    scriptLink: {
+      variant: 'simp',
+      text: '简',
+      offscreenText: 'Simplified',
+    },
     navigation: [
       {
         title: '主页',
@@ -236,7 +230,11 @@ export const service = {
     },
     lang: `zh-hant`,
     locale: `zh-hant`,
-    variant: 'trad',
+    scriptLink: {
+      variant: 'trad',
+      text: '繁',
+      offscreenText: 'Traditional',
+    },
     navigation: [
       {
         title: '主頁',
