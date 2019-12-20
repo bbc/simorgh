@@ -60,75 +60,43 @@ const runAssertions = testCases => {
   );
 };
 
-const runTestScenarios = (type, requestUrl) => {
-  describe(`for ${type}`, () => {
-    describe('with no override param', () => {
-      const articleTestCases = getTestCases(
-        type,
-        process.env.SIMORGH_EMBEDS_BASE_URL_TEST,
-        requestUrl,
-      );
+const runNoOverrideScenarios = (type, requestUrl, expectedBaseUrl) => {
+  describe('with no override param', () => {
+    const testCases = getTestCases(type, expectedBaseUrl, requestUrl);
 
-      runAssertions(articleTestCases);
-    });
-
-    describe('with live override param', () => {
-      const overrideTestCases = getTestCasesWithOverride(
-        type,
-        process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
-        requestUrl,
-        liveOverrideParam,
-      );
-
-      runAssertions(overrideTestCases);
-    });
-
-    describe('with test override param', () => {
-      const overrideTestCases = getTestCasesWithOverride(
-        type,
-        process.env.SIMORGH_EMBEDS_BASE_URL_TEST,
-        requestUrl,
-        testOverrideParam,
-      );
-
-      runAssertions(overrideTestCases);
-    });
+    runAssertions(testCases);
   });
 };
 
-const runLiveScenarios = (type, requestUrl) => {
+const runOverrideScenarios = (
+  type,
+  requestUrl,
+  expectedBaseUrl,
+  overrideParam,
+) => {
+  describe(`with override param [${overrideParam}]`, () => {
+    const testCases = getTestCasesWithOverride(
+      type,
+      expectedBaseUrl,
+      requestUrl,
+      overrideParam,
+    );
+
+    runAssertions(testCases);
+  });
+};
+
+const runAllScenarios = (
+  type,
+  requestUrl,
+  expectedBaseUrl,
+  expectedTestUrl,
+  expectedLiveUrl,
+) => {
   describe(`for ${type}`, () => {
-    describe('with no override param', () => {
-      const articleTestCases = getTestCases(
-        type,
-        process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
-        requestUrl,
-      );
-
-      runAssertions(articleTestCases);
-    });
-
-    describe('with live override param', () => {
-      const overrideTestCases = getTestCasesWithOverride(
-        type,
-        process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
-        requestUrl,
-        liveOverrideParam,
-      );
-
-      runAssertions(overrideTestCases);
-    });
-
-    describe('with test override param', () => {
-      const overrideTestCases = getTestCasesWithOverride(
-        type,
-        process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
-        requestUrl,
-        testOverrideParam,
-      );
-
-      runAssertions(overrideTestCases);
-    });
+    runNoOverrideScenarios(type, requestUrl, expectedBaseUrl);
+    runOverrideScenarios(type, requestUrl, expectedTestUrl, testOverrideParam);
+    runOverrideScenarios(type, requestUrl, expectedLiveUrl, liveOverrideParam);
   });
 };
 
@@ -142,8 +110,20 @@ describe('Media Player Embed URL', () => {
       process.env.APP_ENV = 'test';
     });
 
-    runTestScenarios('articles', url);
-    runTestScenarios('media', mediaUrl);
+    runAllScenarios(
+      'articles',
+      url,
+      process.env.SIMORGH_EMBEDS_BASE_URL_TEST,
+      process.env.SIMORGH_EMBEDS_BASE_URL_TEST,
+      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
+    );
+    runAllScenarios(
+      'media',
+      mediaUrl,
+      process.env.SIMORGH_EMBEDS_BASE_URL_TEST,
+      process.env.SIMORGH_EMBEDS_BASE_URL_TEST,
+      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
+    );
 
     afterEach(() => {
       process.env.APP_ENV = environment;
@@ -155,8 +135,20 @@ describe('Media Player Embed URL', () => {
       process.env.APP_ENV = 'live';
     });
 
-    runLiveScenarios('articles', url);
-    runLiveScenarios('media', mediaUrl);
+    runAllScenarios(
+      'articles',
+      url,
+      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
+      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
+      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
+    );
+    runAllScenarios(
+      'media',
+      mediaUrl,
+      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
+      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
+      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
+    );
 
     afterEach(() => {
       process.env.APP_ENV = environment;
