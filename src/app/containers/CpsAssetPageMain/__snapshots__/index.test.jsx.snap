@@ -462,13 +462,6 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
     class="c0"
     role="main"
   >
-    <a
-      data-e2e="cpsAssetDummyLink"
-      href="/pidgin/23248703"
-      style="display: none;"
-    >
-      Test MAP to MAP inline link
-    </a>
     <h1
       class="c1"
       id="content"
@@ -1345,13 +1338,6 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
     class="c0"
     role="main"
   >
-    <a
-      data-e2e="cpsAssetDummyLink"
-      href="/pidgin/23248703"
-      style="display: none;"
-    >
-      Test MAP to MAP inline link
-    </a>
     <h1
       class="c1"
       id="content"
@@ -3710,13 +3696,6 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
         class="c0"
         role="main"
       >
-        <a
-          data-e2e="cpsAssetDummyLink"
-          href="/pidgin/23248703"
-          style="display: none;"
-        >
-          Test MAP to MAP inline link
-        </a>
         <div
           class="c1"
         >
@@ -4715,13 +4694,6 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
     class="c0"
     role="main"
   >
-    <a
-      data-e2e="cpsAssetDummyLink"
-      href="/pidgin/23248703"
-      style="display: none;"
-    >
-      Test MAP to MAP inline link
-    </a>
     <h1
       class="c1"
       id="content"
