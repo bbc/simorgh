@@ -156,7 +156,7 @@
     "copy-webpack-plugin": "^5.1.1",
     "cypress": "^3.8.0",
     "depcheck": "^0.9.1",
-    "enzyme": "^3.10.0",
+    "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.3",
     "eslint": "^6.7.2",
