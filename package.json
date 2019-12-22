@@ -148,7 +148,7 @@
     "babel-plugin-dynamic-import-node": "^2.3.0",
     "babel-plugin-styled-components": "^1.10.6",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "bbc-a11y": "^2.3.3",
+    "bbc-a11y": "^2.4.0",
     "brotli-webpack-plugin": "^1.1.0",
     "chalk": "^3.0.0",
     "chrome-launcher": "^0.12.0",
