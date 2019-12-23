@@ -19,6 +19,16 @@ const constructAdJsonData = ({ id, pageType, service }) => {
   return data.toString();
 };
 
+const ampAdProps = ({ id, pageType, service }) => ({
+  type: 'doubleclick',
+  width: '300',
+  height: '250',
+  'data-slot': '/4817/bbccom.live.site.amp.news',
+  'data-amp-slot-index': '0',
+  'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
+  json: constructAdJsonData({ id, pageType, service }),
+});
+
 const AdContainer = () => {
   const { id, platform, pageType } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
@@ -27,15 +37,7 @@ const AdContainer = () => {
   if (enabled && (platform === 'amp' || platform === 'canonical')) {
     return (
       <GridItemConstrainedMedium>
-        <amp-ad
-          type="doubleclick"
-          width="300"
-          height="250"
-          data-slot="/4817/bbccom.live.site.amp.news"
-          data-amp-slot-index="0"
-          data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-          json={constructAdJsonData({ id, pageType, service })}
-        >
+        <amp-ad {...ampAdProps({ id, pageType, service })}>
           <amp-img
             placeholder
             height="300"
