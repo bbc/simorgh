@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-// import useToggle from '../Toggle/useToggle';
+import useToggle from '../Toggle/useToggle';
 import Canonical from './Canonical';
 import Amp from './Amp';
 
@@ -17,10 +17,10 @@ const MostReadContainer = () => {
   const { variant, platform } = useContext(RequestContext);
   const { service, script } = useContext(ServiceContext);
 
-  // const { enabled } = useToggle('mostRead');
-  // if (!enabled) {
-  //   return null;
-  // }
+  const { enabled } = useToggle('mostRead');
+  if (!enabled) {
+    return null;
+  }
 
   const MostReadComponent = platform === 'amp' ? Amp : Canonical;
 
