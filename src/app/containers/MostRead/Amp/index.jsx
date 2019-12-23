@@ -38,7 +38,7 @@ const AmpMostRead = ({ endpoint, service, script, dir }) => (
       {AMP_MUSTACHE_JS}
       {AMP_ACCESS_FETCH(endpoint)}
     </Helmet>
-    <section amp-access="oldContent != false">
+    <section amp-access="thirtyFiveMinOld != false">
       <Template
         specName="default"
         type="amp-mustache"
@@ -66,9 +66,9 @@ const AmpMostRead = ({ endpoint, service, script, dir }) => (
               script={script}
               dir={dir}
             >
-              {'{{#promo.timestamp.sixtyDaysOld}}'}
+              {'{{#promo.sixtyDaysOld}}'}
               <amp-date-display
-                timestamp-ms={'{{promo.timestamp.raw}}'}
+                timestamp-ms={'{{promo.timestamp}}'}
                 width="250"
                 height="20"
               >
@@ -76,7 +76,7 @@ const AmpMostRead = ({ endpoint, service, script, dir }) => (
                   Last Updated: {'{{ day }} {{ monthName }} {{ year }}'}
                 </template>
               </amp-date-display>
-              {'{{/promo.timestamp.sixtyDaysOld}}'}
+              {'{{/promo.sixtyDaysOld}}'}
             </MostReadLink>
           </MostReadItemWrapper>
 

@@ -19,17 +19,13 @@ const MostReadContainer = () => {
 
   // const { enabled } = useToggle('mostRead');
   // if (!enabled) {
-  // return null;
+  //   return null;
   // }
 
-  return platform === 'amp' ? (
-    <Amp
-      endpoint={getLocalMostReadEndpoint(service, variant)}
-      service={service}
-      script={script}
-    />
-  ) : (
-    <Canonical
+  const MostReadComponent = platform === 'amp' ? Amp : Canonical;
+
+  return (
+    <MostReadComponent
       endpoint={getLocalMostReadEndpoint(service, variant)}
       service={service}
       script={script}

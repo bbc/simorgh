@@ -2,7 +2,7 @@
   "generated": "2019-11-06T16:54:29.788Z",
   "lastRecordTimeStamp": "2019-11-06T16:49:00Z",
   "firstRecordTimeStamp": "2019-11-06T16:34:00Z",
-  "oldContent": true,
+  "thirtyFiveMinOld": true,
   "totalRecords": 100,
   "records": [
     {
@@ -21,11 +21,8 @@
           "curie": "http://www.bbc.co.uk/asset/5cf09b17-d3b1-284f-bf5f-13a0bc3f4750"
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
-        "timestamp": {
-          "raw": 1573056455555,
-          "sixtyDaysOld": true,
-          "formatted": "25 December 2019"
-        },
+        "timestamp": 1573056455555,
+        "sixtyDaysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -62,11 +59,8 @@
           "curie": "http://www.bbc.co.uk/asset/5cf09b17-d3b1-284f-bf5f-13a0bc3f4750"
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
-        "timestamp": {
-          "raw": 1573056455555,
-          "sixtyDaysOld": true,
-          "formatted": "25 December 2019"
-        },
+        "timestamp": 1573056455555,
+        "sixtyDaysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -103,11 +97,8 @@
           "curie": "http://www.bbc.co.uk/asset/5cf09b17-d3b1-284f-bf5f-13a0bc3f4750"
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
-        "timestamp": {
-          "raw": 1573056455555,
-          "sixtyDaysOld": true,
-          "formatted": "25 December 2019"
-        },
+        "timestamp": 1573056455555,
+        "sixtyDaysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -144,11 +135,8 @@
           "curie": "http://www.bbc.co.uk/asset/5cf09b17-d3b1-284f-bf5f-13a0bc3f4750"
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
-        "timestamp": {
-          "raw": 1573056455555,
-          "sixtyDaysOld": true,
-          "formatted": "25 December 2019"
-        },
+        "timestamp": 1573056455555,
+        "sixtyDaysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -185,11 +173,8 @@
           "curie": "http://www.bbc.co.uk/asset/5cf09b17-d3b1-284f-bf5f-13a0bc3f4750"
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
-        "timestamp": {
-          "raw": 1573056455555,
-          "sixtyDaysOld": false,
-          "formatted": "25 December 2019"
-        },
+        "timestamp": 1573056455555,
+        "sixtyDaysOld": false,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -226,11 +211,8 @@
           "curie": "http://www.bbc.co.uk/asset/5cf09b17-d3b1-284f-bf5f-13a0bc3f4750"
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
-        "timestamp": {
-          "raw": 1573056455555,
-          "sixtyDaysOld": true,
-          "formatted": "25 December 2019"
-        },
+        "timestamp": 1573056455555,
+        "sixtyDaysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -267,11 +249,8 @@
           "curie": "http://www.bbc.co.uk/asset/5cf09b17-d3b1-284f-bf5f-13a0bc3f4750"
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
-        "timestamp": {
-          "raw": 1573056455555,
-          "sixtyDaysOld": true,
-          "formatted": "25 December 2019"
-        },
+        "timestamp": 1573056455555,
+        "sixtyDaysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -308,11 +287,8 @@
           "curie": "http://www.bbc.co.uk/asset/5cf09b17-d3b1-284f-bf5f-13a0bc3f4750"
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
-        "timestamp": {
-          "raw": 1573056455555,
-          "sixtyDaysOld": false,
-          "formatted": "25 December 2019"
-        },
+        "timestamp": 1573056455555,
+        "sixtyDaysOld": false,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -349,11 +325,8 @@
           "curie": "http://www.bbc.co.uk/asset/5cf09b17-d3b1-284f-bf5f-13a0bc3f4750"
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
-        "timestamp": {
-          "raw": 1573056455555,
-          "sixtyDaysOld": true,
-          "formatted": "25 December 2019"
-        },
+        "timestamp": 1573056455555,
+        "sixtyDaysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -390,11 +363,8 @@
           "curie": "http://www.bbc.co.uk/asset/5cf09b17-d3b1-284f-bf5f-13a0bc3f4750"
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
-        "timestamp": {
-          "raw": 1573056455555,
-          "sixtyDaysOld": true,
-          "formatted": "25 December 2019"
-        },
+        "timestamp": 1573056455555,
+        "sixtyDaysOld": true,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
