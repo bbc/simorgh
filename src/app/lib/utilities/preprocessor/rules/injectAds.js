@@ -23,16 +23,18 @@ const mapInjectAdsWithinText = blocks => {
     const paragraphs = getBlocks(block);
     paragraphCount += paragraphs.length;
 
-    if (paragraphCount > 5 && adCount === 0) {
+    const injectAt = position => {
       adCount += 1;
       paragraphCount += 1;
-      paragraphs.splice(5, 0, adBlock);
+      paragraphs.splice(position, 0, adBlock);
+    };
+
+    if (paragraphCount > 5 && adCount === 0) {
+      injectAt(5);
     }
 
     if (paragraphCount > 9 && adCount === 1) {
-      adCount += 1;
-      paragraphCount += 1;
-      paragraphs.splice(9, 0, adBlock);
+      injectAt(9);
     }
 
     return {
