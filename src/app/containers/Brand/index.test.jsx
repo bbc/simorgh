@@ -7,6 +7,7 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import BrandContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContext } from '#contexts/UserContext';
+import { RequestContext } from '#contexts/RequestContext';
 import * as cookies from '#contexts/UserContext/cookies';
 
 const newsServiceContextStub = {
@@ -29,7 +30,6 @@ const variantServiceContextStub = {
   ...newsServiceContextStub,
   script: latin,
   scriptLink: {
-    variant: 'test',
     text: 'Test',
     offscreenText: 'Test-variant',
   },
@@ -47,11 +47,16 @@ const setPreferredVariantCookieSpy = jest.spyOn(
 const userContextMock = {
   setPreferredVariantCookie: cookies.setPreferredVariantCookie,
 };
+const requestContextMock = {
+  variant: 'test',
+};
 
 const BrandContainerWithContext = context => (
   <ServiceContext.Provider value={context}>
     <UserContext.Provider value={userContextMock}>
-      <BrandContainer />
+      <RequestContext.Provider value={requestContextMock}>
+        <BrandContainer />
+      </RequestContext.Provider>
     </UserContext.Provider>
   </ServiceContext.Provider>
 );
