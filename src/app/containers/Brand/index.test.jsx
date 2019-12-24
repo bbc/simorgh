@@ -47,14 +47,11 @@ const setPreferredVariantCookieSpy = jest.spyOn(
 const userContextMock = {
   setPreferredVariantCookie: cookies.setPreferredVariantCookie,
 };
-const requestContextMock = {
-  variant: 'test',
-};
 
 const BrandContainerWithContext = context => (
   <ServiceContext.Provider value={context}>
     <UserContext.Provider value={userContextMock}>
-      <RequestContext.Provider value={requestContextMock}>
+      <RequestContext.Provider value={{ variant: 'test' }}>
         <BrandContainer />
       </RequestContext.Provider>
     </UserContext.Provider>
