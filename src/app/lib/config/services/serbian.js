@@ -198,7 +198,6 @@ export const service = {
     script: latinDiacritics,
     datetimeLocale: `sr`,
     scriptLink: {
-      variant: 'lat',
       text: 'Lat',
       offscreenText: 'Latin',
     },
@@ -240,7 +239,6 @@ export const service = {
     script: cyrillicAndLatin,
     datetimeLocale: `sr-cyrl`,
     scriptLink: {
-      variant: 'cyr',
       text: 'Ћир',
       offscreenText: 'Cyrillic',
     },
