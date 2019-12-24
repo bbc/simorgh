@@ -110,6 +110,154 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   left: 0;
 }
 
+.c13 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c14 {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  background-color: #ffffff;
+  border: 0.1875rem solid #000;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c14:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+  -webkit-clip: auto;
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: -3rem;
+  left: 0.5rem;
+}
+
+.c15 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.c17 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.c17::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 80rem;
+  border-bottom: 0.0625rem solid #eab3b3;
+  z-index: -1;
+}
+
+.c18 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 1rem;
+}
+
+.c18:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.3125rem solid #FFFFFF;
+}
+
+.c18:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c20 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 1rem;
+}
+
+.c20:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c20:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c19::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c12 {
+  background-color: #B80000;
+}
+
+.c12 .c16::after {
+  left: 0;
+}
+
 .c0 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -620,6 +768,104 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             </a>
           </div>
         </div>
+        <nav
+          class="c12"
+          dir="ltr"
+          role="navigation"
+        >
+          <div
+            class="c13"
+          >
+            <a
+              class="c14"
+              href="#content"
+            >
+              Skip to content
+            </a>
+            <ul
+              class="c15"
+              role="list"
+            >
+              <li
+                class="c16 c17"
+                role="listitem"
+              >
+                <a
+                  class="c18"
+                  href="/news"
+                >
+                  <span
+                    class="c19"
+                    role="text"
+                  >
+                    <span
+                      class="c11"
+                    >
+                      Current page
+                      , 
+                    </span>
+                    Home
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c16 c17"
+                role="listitem"
+              >
+                <a
+                  class="c20"
+                  href="/news/uk"
+                >
+                  UK
+                </a>
+              </li>
+              <li
+                class="c16 c17"
+                role="listitem"
+              >
+                <a
+                  class="c20"
+                  href="/news/world"
+                >
+                  World
+                </a>
+              </li>
+              <li
+                class="c16 c17"
+                role="listitem"
+              >
+                <a
+                  class="c20"
+                  href="/news/business"
+                >
+                  Business
+                </a>
+              </li>
+              <li
+                class="c16 c17"
+                role="listitem"
+              >
+                <a
+                  class="c20"
+                  href="/news/politics"
+                >
+                  Politics
+                </a>
+              </li>
+              <li
+                class="c16 c17"
+                role="listitem"
+              >
+                <a
+                  class="c20"
+                  href="/news/technology"
+                >
+                  Tech
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </header>
       <h2>
         Child element
