@@ -6,26 +6,22 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { bool } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContext } from '#contexts/UserContext';
-import { RequestContext } from '#contexts/RequestContext';
-import { getOtherVariant } from '#lib/utilities/variantHandler';
 
 const renderScriptLink = (
   script,
   service,
   scriptLink,
   setPreferredVariantCookie,
-  variant,
 ) => {
-  const { text, offscreenText } = scriptLink;
-  const otherVariant = getOtherVariant(service, variant);
+  const { variant, text, offscreenText } = scriptLink;
 
   return (
     <ScriptLink
       script={script}
       service={service}
-      href={`/${service}/${otherVariant}`}
-      variant={otherVariant}
-      onClick={() => setPreferredVariantCookie(service, otherVariant)}
+      href={`/${service}/${variant}`}
+      variant={variant}
+      onClick={() => setPreferredVariantCookie(service, variant)}
     >
       <span aria-hidden="true">{text}</span>
       <VisuallyHiddenText> {offscreenText} </VisuallyHiddenText>
@@ -51,7 +47,6 @@ const BrandContainer = props => {
     scriptLink = null,
   } = useContext(ServiceContext);
   const { setPreferredVariantCookie } = useContext(UserContext);
-  const { variant } = useContext(RequestContext);
   const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
@@ -61,13 +56,7 @@ const BrandContainer = props => {
   const { skipLinkText } = translations;
   const addScriptLink =
     scriptLink &&
-    renderScriptLink(
-      script,
-      service,
-      scriptLink,
-      setPreferredVariantCookie,
-      variant,
-    );
+    renderScriptLink(script, service, scriptLink, setPreferredVariantCookie);
 
   return (
     <Brand
