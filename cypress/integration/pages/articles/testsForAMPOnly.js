@@ -60,9 +60,10 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
                           // for the mediaPlayer instance to become available.
                           timeout: 8000,
                         })
-                          .its('embeddedMedia.playerInstances.mediaPlayer')
-                          .invoke('currentTime')
-                          .should('be.gt', 0);
+                          .its(
+                            'embeddedMedia.playerInstances.mediaPlayer.ready',
+                          )
+                          .should('eq', true);
                       },
                     );
                   });
