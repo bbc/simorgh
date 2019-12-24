@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, shape } from 'prop-types';
+import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import HeaderContainer from './index';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -22,7 +22,13 @@ const defaultToggleState = {
 
 const mockToggleDispatch = jest.fn();
 
-const HeaderContainerWithContext = ({ pageType, service, serviceContext }) => (
+/* eslint-disable react/prop-types */
+const HeaderContainerWithContext = ({
+  pageType,
+  service = 'pidgin',
+  serviceContext = pidginServiceConfig.default,
+  bbcOrigin = 'https://www.test.bbc.com',
+}) => (
   <ToggleContext.Provider
     value={{
       toggleState: defaultToggleState,
@@ -35,7 +41,7 @@ const HeaderContainerWithContext = ({ pageType, service, serviceContext }) => (
         pageType={pageType}
         service={service}
         statusCode={200}
-        bbcOrigin="https://www.test.bbc.com"
+        bbcOrigin={bbcOrigin}
         pathname="/pathname"
       >
         <HeaderContainer />
@@ -43,11 +49,6 @@ const HeaderContainerWithContext = ({ pageType, service, serviceContext }) => (
     </ServiceContext.Provider>
   </ToggleContext.Provider>
 );
-HeaderContainerWithContext.propTypes = {
-  pageType: string.isRequired,
-  service: string.isRequired,
-  serviceContext: shape({}).isRequired,
-};
 
 describe(`Header`, () => {
   window.matchMedia = jest.fn().mockImplementation(() => {
@@ -62,23 +63,40 @@ describe(`Header`, () => {
     HeaderContainerWithContext({
       pageType: 'article',
       service: 'news',
-      serviceContext: pidginServiceConfig.default,
     }),
   );
+
   shouldMatchSnapshot(
     'should render correctly for WS frontPage',
     HeaderContainerWithContext({
       pageType: 'frontPage',
-      service: 'pidgin',
-      serviceContext: pidginServiceConfig.default,
     }),
   );
+
   shouldMatchSnapshot(
     'should render correctly for WS radio page',
     HeaderContainerWithContext({
       pageType: 'media',
-      service: 'pidgin',
-      serviceContext: pidginServiceConfig.default,
     }),
   );
+
+  it('should output a nav bar for media asset pages', () => {
+    render(HeaderContainerWithContext({ pageType: 'MAP' }));
+    expect(document.querySelector(`header nav`)).not.toBeNull();
+  });
+
+  it('should output a nav bar for articles', () => {
+    render(HeaderContainerWithContext({ pageType: 'article' }));
+    expect(document.querySelector(`header nav`)).not.toBeNull();
+  });
+
+  it('should NOT output a nav bar for articles on live', () => {
+    render(
+      HeaderContainerWithContext({
+        pageType: 'article',
+        bbcOrigin: 'https://www.bbc.com',
+      }),
+    );
+    expect(document.querySelector(`header nav`)).toBeNull();
+  });
 });

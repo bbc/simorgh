@@ -28,11 +28,10 @@ const bannerWithLinkMessaging = {
   },
 };
 
-const bannerTextWithContext = (message, topLevelDomain, country) => (
+const bannerTextWithContext = (message, topLevelDomain) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
       bbcOrigin={`https://www.test.bbc.${topLevelDomain}`}
-      bbcCountry={country}
       id="c0000000000o"
       isAmp={false}
       pageType="article"
@@ -48,21 +47,21 @@ const bannerTextWithContext = (message, topLevelDomain, country) => (
 describe('Consent Banner Text', () => {
   shouldMatchSnapshot(
     'should correctly render banner text in the UK',
-    bannerTextWithContext(bannerMessaging, 'co.uk', 'gb'),
+    bannerTextWithContext(bannerMessaging, 'co.uk'),
   );
 
   shouldMatchSnapshot(
     'should correctly render banner text outside the UK',
-    bannerTextWithContext(bannerMessaging, 'com', 'ng'),
+    bannerTextWithContext(bannerMessaging, 'com'),
   );
 
   shouldMatchSnapshot(
     'should correctly render banner text with a link in the UK',
-    bannerTextWithContext(bannerWithLinkMessaging, 'co.uk', 'gb'),
+    bannerTextWithContext(bannerWithLinkMessaging, 'co.uk'),
   );
 
   shouldMatchSnapshot(
     'should correctly render banner text with a link outside the UK',
-    bannerTextWithContext(bannerWithLinkMessaging, 'com', 'ng'),
+    bannerTextWithContext(bannerWithLinkMessaging, 'com'),
   );
 });
