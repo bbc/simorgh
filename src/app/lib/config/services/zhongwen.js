@@ -192,7 +192,6 @@ export const service = {
     lang: `zh-hans`,
     locale: `zh-hans`,
     scriptLink: {
-      variant: 'simp',
       text: '简',
       offscreenText: 'Simplified',
     },
@@ -252,7 +251,6 @@ export const service = {
     lang: `zh-hant`,
     locale: `zh-hant`,
     scriptLink: {
-      variant: 'trad',
       text: '繁',
       offscreenText: 'Traditional',
     },
