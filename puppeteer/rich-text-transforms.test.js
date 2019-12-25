@@ -11,10 +11,7 @@ let browser;
 let page;
 let requests = [];
 
-const richTextTransformsBundleRegex = new RegExp(
-  `(\\/static\\/js\\/rich-text-transforms-\\w+\\.\\w+\\.js)`,
-  'g',
-);
+const richTextTransformsBundleRegex = /rich-text-transforms.*\.js/;
 
 jest.setTimeout(10000); // overriding the default jest timeout
 
@@ -56,10 +53,21 @@ describe('rich-text-transforms JS bundle request', () => {
             requests = [];
           });
 
-          it('only loads rich-text-transforms bundle after client navigation to MAP asset', async () => {
+          it('does not load the rich-text-transforms bundle on initial page load', async () => {
             expect(
               requests.some(url => url.match(richTextTransformsBundleRegex)),
             ).toEqual(false);
+          });
+
+          // This scenario will not currently apply as we do not do client-side navigation on MAP pages
+          // Once client side nav is enabled, we should consider adding a test to ensure that the
+          // rich-text-transforms bundle is loaded in to deal with the data transformations
+          it.skip('only loads rich-text-transforms bundle after client navigation to MAP asset', async () => {
+            await page.evaluate(() => {
+              document.querySelector(
+                'a[data-e2e="cpsAssetDummyLink"]',
+              ).style.display = 'inline';
+            });
 
             await Promise.all([
               page.click('a[data-e2e="cpsAssetDummyLink"]'),
