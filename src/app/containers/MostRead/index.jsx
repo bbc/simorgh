@@ -1,28 +1,47 @@
 import React, { useContext } from 'react';
+import { string } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '../Toggle/useToggle';
+// import useToggle from '../Toggle/useToggle';
 import Canonical from './Canonical';
 
-const getLocalMostReadEndpoint = (service, variant) => {
-  const localhostURL = 'http://localhost:7080';
-  const localServiceURL = `${localhostURL}/${service}`;
+const getMostReadEndpoint = ({ service, variant }) =>
+  variant
+    ? `/${service}/most_read/${variant}.json`
+    : `/${service}/most_read.json`;
 
-  return variant
-    ? `${localServiceURL}/most_read/${variant}.json`
-    : `${localServiceURL}/most_read.json`;
+const MostReadContainer = ({ endpointOverride }) => {
+  const { variant } = useContext(RequestContext);
+  const { service, script, mostRead, dir, datetimeLocale } = useContext(
+    ServiceContext,
+  );
+
+  // const { enabled } = useToggle('mostRead');
+  // if (!enabled) {
+  //   return null;
+  // }
+
+  const endpoint =
+    endpointOverride || getMostReadEndpoint({ service, variant });
+
+  return (
+    <Canonical
+      endpoint={endpoint}
+      script={script}
+      service={service}
+      translations={mostRead}
+      dir={dir}
+      locale={datetimeLocale}
+    />
+  );
 };
 
-const MostReadContainer = () => {
-  const { variant } = useContext(RequestContext);
-  const { service } = useContext(ServiceContext);
+MostReadContainer.propTypes = {
+  endpointOverride: string,
+};
 
-  const { enabled } = useToggle('mostRead');
-  if (!enabled) {
-    return null;
-  }
-
-  return <Canonical endpoint={getLocalMostReadEndpoint(service, variant)} />;
+MostReadContainer.defaultProps = {
+  endpointOverride: null,
 };
 
 export default MostReadContainer;
