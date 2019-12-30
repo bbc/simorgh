@@ -19,7 +19,7 @@
           "curie": "http://www.bbc.co.uk/asset/5cf09b17-d3b1-284f-bf5f-13a0bc3f4750"
         },
         "summary": "Former MPs Chris Williamson, Roger Godsiff and Stephen Hepburn have not been endorsed by the party.",
-        "timestamp": 1573056455555,
+        "timestamp": 864691200,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -55,7 +55,7 @@
           "curie": "http://www.bbc.co.uk/asset/cd6aeb1e-6b36-d84c-8915-ddf6694019b6"
         },
         "summary": "The former Speaker tells journalists he no longer has to \"remain impartial\" after stepping down.",
-        "timestamp": 1573057017456,
+        "timestamp": 864691200,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -91,7 +91,7 @@
           "curie": "http://www.bbc.co.uk/asset/9b2ac689-c98a-5340-8f3f-a24450d664a8"
         },
         "summary": "About three million mobile customers will switch to Vodafone in a blow for BT.",
-        "timestamp": 1573058404781,
+        "timestamp": 864691200,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -127,7 +127,7 @@
           "curie": "http://www.bbc.co.uk/asset/c1906145-bbd2-b544-be78-86b49af6f57b"
         },
         "summary": "Minister Alun Cairns quits just hours after campaigning officially begins ahead of the December vote.",
-        "timestamp": 1573057218340,
+        "timestamp": 864691200,
         "passport": {
           "category": {
             "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -162,7 +162,7 @@
           "curie": "http://www.bbc.co.uk/asset/1673820a-704e-e84d-b0d3-365e8fb1d553"
         },
         "summary": "Schools should not be used as places to vote in case it disrupts Christmas plays, says minister.",
-        "timestamp": 1573052063255,
+        "timestamp": 864691200,
         "byline": {
           "name": "By Sean Coughlan",
           "title": "BBC News family and education correspondent",
@@ -218,7 +218,7 @@
           "curie": "http://www.bbc.co.uk/asset/257aa89f-1e5d-3d48-952e-42f68b0fc52e"
         },
         "summary": "The family of a death row prisoner hope celebrity support will help to stop his execution.",
-        "timestamp": 1573059065324,
+        "timestamp": 864691200,
         "byline": {
           "name": "By Catherine Burns",
           "title": "Newsbeat reporter",
