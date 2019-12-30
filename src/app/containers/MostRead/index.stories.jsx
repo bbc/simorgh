@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import MostReadContainer from './Canonical';
+import MostReadContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
@@ -23,7 +23,9 @@ const renderMostReadContainer = (service, variant) => (
     variant={variant}
   >
     <ServiceContextProvider service={service} variant={variant}>
-      <MostReadContainer endpoint={staticMostReadURL(service, variant)} />
+      <MostReadContainer
+        endpointOverride={staticMostReadURL(service, variant)}
+      />
     </ServiceContextProvider>
   </RequestContextProvider>
 );
