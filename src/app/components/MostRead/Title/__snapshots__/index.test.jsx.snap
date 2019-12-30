@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Most read title should render with BBCNassimArabic 1`] = `
+.c0 {
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 2.125rem;
+  color: #3F3F42;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 2rem;
+    line-height: 2.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 2.25rem;
+    line-height: 3.125rem;
+  }
+}
+
+<section
+  aria-labelledby="most-read-title"
+  class=""
+  role="region"
+>
+  <h2
+    class="c0"
+    dir="rtl"
+    id="most-read-title"
+  >
+    Most Read
+  </h2>
+</section>
+`;
+
+exports[`Most read title should render with ReithSans 1`] = `
+.c0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #3F3F42;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+<section
+  aria-labelledby="most-read-title"
+  class=""
+  role="region"
+>
+  <h2
+    class="c0"
+    dir="ltr"
+    id="most-read-title"
+  >
+    Most Read
+  </h2>
+</section>
+`;
