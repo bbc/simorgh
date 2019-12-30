@@ -148,8 +148,8 @@ export const service = {
           title: 'Placeholder title',
           subtitle: 'Placeholder subtitle',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Gee ntị',
+        watch: 'Lee',
         liveLabel: 'NA EME UGBU A',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -209,6 +209,7 @@ export const service = {
           text: 'Kpọtụrụ BBC',
         },
       ],
+      navigationSection: 'Ngalaba',
       copyrightText:
         'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
     },

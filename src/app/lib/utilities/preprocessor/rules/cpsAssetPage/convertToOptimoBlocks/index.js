@@ -2,6 +2,7 @@ import { clone, pathOr, path } from 'ramda';
 import paragraph from './blocks/paragraph';
 import media from './blocks/media';
 import image from './blocks/image';
+import list from './blocks/list';
 import subheadline from './blocks/subheadline';
 import version from './blocks/version';
 
@@ -14,6 +15,7 @@ const typesToConvert = {
   subheading: subheadline,
   image,
   paragraph,
+  list,
   media,
   version,
 };

@@ -6,7 +6,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
     <script
       type="application/ld+json"
     >
-      {"video":{"@list":[{"@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":191,"thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":1540218932000}]}}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://embed-host.bbc.com/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB/amp"}
     </script>
     <script
       async="true"
@@ -29,18 +29,6 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 
 .c0 {
   grid-column: 1 / span 6;
-}
-
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
 }
 
 @media (min-width:37.5rem) {
@@ -85,7 +73,8 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
               frameborder="0"
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
-              src="https://www.test.bbc.com/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB/amp"
+              scrolling="no"
+              src="https://embed-host.bbc.com/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB/amp"
               title="Media player"
             >
               <amp-img
@@ -253,18 +242,6 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   }
 }
 
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
 @media (min-width:37.5rem) {
   .c0 {
     grid-column: 1 / span 5;
@@ -297,7 +274,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
     <script
       type="application/ld+json"
     >
-      {"video":{"@list":[{"@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":191,"thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":1540218932000}]}}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://embed-host.bbc.com/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB"}
     </script>
   </head>
   <body>

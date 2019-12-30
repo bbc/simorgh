@@ -25,11 +25,13 @@ const filterPageTypes = (pageType, service) =>
 
 const getPrivacyBanner = (service, variant) =>
   cy.contains(
-    appConfig[service][variant].translations.consentBanner.privacy.title,
+    appConfig[config[service].name][variant].translations.consentBanner.privacy
+      .title,
   );
 const getCookieBanner = (service, variant) =>
   cy.contains(
-    appConfig[service][variant].translations.consentBanner.cookie.title,
+    appConfig[config[service].name][variant].translations.consentBanner.cookie
+      .title,
   );
 const getPrivacyBannerContainer = (service, variant) =>
   getPrivacyBanner(service, variant).parent();
@@ -39,19 +41,22 @@ const getPrivacyBannerAccept = (service, variant) =>
   getPrivacyBannerContainer(service, variant)
     .find('button')
     .contains(
-      appConfig[service][variant].translations.consentBanner.privacy.accept,
+      appConfig[config[service].name][variant].translations.consentBanner
+        .privacy.accept,
     );
 const getCookieBannerAccept = (service, variant) =>
   getCookieBannerContainer(service, variant)
     .find('button')
     .contains(
-      appConfig[service][variant].translations.consentBanner.cookie.accept,
+      appConfig[config[service].name][variant].translations.consentBanner.cookie
+        .accept,
     );
 const getCookieBannerReject = (service, variant) =>
   getCookieBannerContainer(service, variant)
     .find('a')
     .contains(
-      appConfig[service][variant].translations.consentBanner.cookie.reject,
+      appConfig[config[service].name][variant].translations.consentBanner.cookie
+        .reject,
     );
 
 const ensureCookieExpiryDates = () => {

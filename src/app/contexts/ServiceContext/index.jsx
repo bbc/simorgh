@@ -31,5 +31,5 @@ ServiceContextProvider.propTypes = {
 
 ServiceContextProvider.defaultProps = {
   service: 'default',
-  variant: null,
+  variant: 'default',
 };

@@ -6,14 +6,25 @@ import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import path from 'ramda/src/path';
 import assocPath from 'ramda/src/assocPath';
 
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
+
 import { RequestContext } from '#contexts/RequestContext';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { GridItemConstrainedLarge } from '#lib/styledGrid';
+import { GhostGrid, GridItemConstrainedLarge } from '#lib/styledGrid';
 import StoryPromo from '../StoryPromo';
 
-// z-index needs explicitly set as the psammead section label component uses negative z-indices
 const Wrapper = styled(GridItemConstrainedLarge)`
+  margin-bottom: ${GEL_SPACING_DBL};
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-bottom: ${GEL_SPACING_TRPL};
+  }
+
+  /* z-index needs explicitly set as the psammead section label component uses negative z-indices */
   z-index: 0;
 `;
 
@@ -34,26 +45,32 @@ const CpsRelatedContent = ({ content }) => {
   if (!content.length) return null;
 
   return (
-    <Wrapper aria-labelledby="related-content-heading">
-      <SectionLabel
-        script={script}
-        service={service}
-        dir={dir}
-        labelId="related-content-heading"
-      >
-        {translations.relatedContent}
-      </SectionLabel>
+    <GhostGrid
+      as="aside"
+      role="complementary"
+      aria-labelledby="related-content-heading"
+    >
+      <Wrapper>
+        <SectionLabel
+          script={script}
+          service={service}
+          dir={dir}
+          labelId="related-content-heading"
+        >
+          {translations.relatedContent}
+        </SectionLabel>
 
-      <StoryPromoUl>
-        {content
-          .map(item => formatItem(item, env))
-          .map(item => (
-            <StoryPromoLi key={item.id || item.uri}>
-              <StoryPromo item={item} />
-            </StoryPromoLi>
-          ))}
-      </StoryPromoUl>
-    </Wrapper>
+        <StoryPromoUl>
+          {content
+            .map(item => formatItem(item, env))
+            .map(item => (
+              <StoryPromoLi key={item.id || item.uri}>
+                <StoryPromo item={item} />
+              </StoryPromoLi>
+            ))}
+        </StoryPromoUl>
+      </Wrapper>
+    </GhostGrid>
   );
 };
 

@@ -6,6 +6,7 @@ import * as analyticsUtils from '#lib/analyticsUtils';
 import payload from '#data/pidgin/cpsAssets/tori-49450859.json';
 
 // Mocks
+analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
 analyticsUtils.getPublishedDatetime = jest
   .fn()
@@ -38,6 +39,7 @@ const expectation = {
   categoryName: 'News',
   producerId: serviceContext.atiAnalyticsProducerId,
   statsDestination: requestContext.statsDestination,
+  libraryVersion: analyticsUtils.LIBRARY_VERSION,
   platform: requestContext.platform,
   service: 'service',
   timePublished: analyticsUtils.getPublishedDatetime(),
@@ -85,6 +87,7 @@ describe('buildCpsAssetPageATIUrl', () => {
         `x4=[${expectation.language}]`,
         'x5=[http://localhost/]',
         `x7=[${expectation.contentType}]`,
+        `x8=[${expectation.libraryVersion}]`,
         `x9=[${expectation.pageTitle.replace(/ /g, '+')}]`,
         `x11=[${expectation.timePublished}]`,
         `x12=[${expectation.timeUpdated}]`,

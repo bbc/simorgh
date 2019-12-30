@@ -208,9 +208,11 @@ server
     },
   )
   .get('/*', cspInjectFun, async ({ url, headers, path: urlPath }, res) => {
+    logger.info(`Path: [${urlPath}] URL: [${url}]`);
+
     try {
-      const { service, isAmp, route, variant } = getRouteProps(routes, url);
-      const data = await route.getInitialData(urlPath);
+      const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
+      const data = await route.getInitialData(url);
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
 
@@ -219,17 +221,23 @@ server
 
       data.path = urlPath;
 
-      res.status(status).send(
-        await renderDocument({
-          bbcOrigin,
-          data,
-          isAmp,
-          routes,
-          service,
-          url,
-          variant,
-        }),
-      );
+      const result = await renderDocument({
+        bbcOrigin,
+        data,
+        isAmp,
+        routes,
+        service,
+        url,
+        variant,
+      });
+
+      if (result.redirectUrl) {
+        res.redirect(301, result.redirectUrl);
+      } else if (result.html) {
+        res.status(status).send(result.html);
+      } else {
+        throw new Error('unknown result');
+      }
     } catch ({ message, status }) {
       // Return an internal server error for any uncaught errors
       logger.error(`status: ${status || 500} - ${message}`);

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import useToggle from '../Toggle/useToggle';
 import Canonical from './Canonical';
 
 const getLocalMostReadEndpoint = (service, variant) => {
@@ -15,6 +16,11 @@ const getLocalMostReadEndpoint = (service, variant) => {
 const MostReadContainer = () => {
   const { variant } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
+
+  const { enabled } = useToggle('mostRead');
+  if (!enabled) {
+    return null;
+  }
 
   return <Canonical endpoint={getLocalMostReadEndpoint(service, variant)} />;
 };

@@ -11,7 +11,7 @@ import {
   isLocServeCookieSet,
   sanitise,
   getAtiUrl,
-  getClickInfo,
+  getEventInfo,
   getProducer,
 } from '#lib/analyticsUtils';
 
@@ -32,6 +32,7 @@ export const buildATIPageTrackPath = ({
   pageIdentifier,
   pageTitle,
   producerId,
+  libraryVersion,
   platform,
   statsDestination,
   timePublished,
@@ -118,6 +119,12 @@ export const buildATIPageTrackPath = ({
     },
     { key: 'x7', description: 'content type', value: contentType, wrap: true },
     {
+      key: 'x8',
+      description: 'library version',
+      value: libraryVersion,
+      wrap: true,
+    },
+    {
       key: 'x9',
       description: 'page title',
       value: sanitise(pageTitle),
@@ -177,11 +184,11 @@ export const buildATIEventTrackUrl = ({
   service,
   platform,
   statsDestination,
-  element,
-  component,
-  label,
+  componentName,
+  componentInfo,
   type,
 }) => {
+  const eventPublisher = type === 'view' ? 'ati' : 'atc';
   const eventTrackingBeaconValues = [
     {
       key: 's',
@@ -226,18 +233,18 @@ export const buildATIEventTrackUrl = ({
       wrap: false,
     },
     {
-      key: 'ati',
+      key: eventPublisher,
       description: 'event publisher',
-      value: getClickInfo(element, {
+      value: getEventInfo(pageIdentifier, {
         service,
-        component,
-        label: label || '',
+        componentName,
+        componentInfo,
         type: type || '',
       }),
     },
   ];
 
-  return (
-    process.env.SIMORGH_ATI_BASE_URL + getAtiUrl(eventTrackingBeaconValues)
-  );
+  return `${process.env.SIMORGH_ATI_BASE_URL}${getAtiUrl(
+    eventTrackingBeaconValues,
+  )}&type=AT`;
 };

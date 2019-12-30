@@ -73,7 +73,10 @@ describe('Render Document', () => {
       service: 'news',
       url: '/',
     }).then(document => {
-      expect(document).toEqual('<!doctype html><html lang="en-GB"></html>');
+      expect(document.html).toEqual(
+        '<!doctype html><html lang="en-GB"></html>',
+      );
+      expect(document.redirectUrl).toBe(null);
 
       expect(mockSheet.collectStyles).toHaveBeenCalledWith(
         <ServerApp

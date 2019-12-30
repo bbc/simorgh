@@ -1,5 +1,9 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
+import applySquashTopstories from '../../../../src/app/lib/utilities/preprocessor/rules/topstories';
+
+const serviceJsonPath = service =>
+  `${config[service].pageTypes.frontPage.path}.json`;
 
 // Limiting to only one service
 const serviceHasIndexAlsos = service => service === 'thai';
@@ -23,11 +27,34 @@ const isValidUsefulLinks = pageData => {
   return false;
 };
 
+const isValidRadioBulletin = pageData => {
+  return pageData.some(group => {
+    const hasStrapline = 'strapline' in group;
+    const hasRadioBulletin = group.items.some(
+      item =>
+        item.assetTypeCode === 'PRO' && item.contentType === 'RadioBulletin',
+    );
+
+    return hasStrapline && hasRadioBulletin;
+  });
+};
+
+const isValidTvBulletin = pageData => {
+  return pageData.some(group => {
+    const hasStrapline = 'strapline' in group;
+    const hasTvBulletin = group.items.some(
+      item => item.assetTypeCode === 'PRO' && item.contentType === 'TVBulletin',
+    );
+
+    return hasStrapline && hasTvBulletin;
+  });
+};
+
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
 
-// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+// For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
   describe(`Tests for ${service} ${pageType}`, () => {
     describe('Frontpage body', () => {
@@ -144,67 +171,94 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         }
 
         it('should contain Index Alsos if relatedItems block exists, but only within topstories block', () => {
-          cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
-            ({ body }) => {
-              const topstories = body.content.groups[0].items[0];
-              const relatedItemsExists = 'relatedItems' in topstories;
+          cy.request(serviceJsonPath(service)).then(({ body }) => {
+            const topstories = body.content.groups[0].items[0];
+            const relatedItemsExists = 'relatedItems' in topstories;
 
-              if (relatedItemsExists && serviceHasIndexAlsos(service)) {
-                cy.get('[aria-labelledby="Top-stories"]')
-                  .eq(0)
-                  .within(() => {
-                    cy.get('div[data-e2e=index-alsos]')
-                      .eq(0)
-                      .within(() => {
-                        cy.get('h4')
-                          .eq(0)
-                          .then($el => {
-                            expect($el.text()).includes(
-                              `${appConfig[service].default.translations.relatedContent}`,
-                            );
-                          });
+            if (relatedItemsExists && serviceHasIndexAlsos(service)) {
+              cy.get('[aria-labelledby="Top-stories"]')
+                .eq(0)
+                .within(() => {
+                  cy.get('div[data-e2e=index-alsos]')
+                    .eq(0)
+                    .within(() => {
+                      cy.get('h4')
+                        .eq(0)
+                        .then($el => {
+                          expect($el.text()).includes(
+                            `${
+                              appConfig[config[service].name].default
+                                .translations.relatedContent
+                            }`,
+                          );
+                        });
 
-                        if (topstories.relatedItems.length > 1) {
-                          cy.get('ul li a').should('be.visible');
-                        } else {
-                          cy.get('div').within(() => {
-                            cy.get('a span').should('be.visible');
-                          });
-                        }
-                      });
-                  });
+                      if (topstories.relatedItems.length > 1) {
+                        cy.get('ul li a').should('be.visible');
+                      } else {
+                        cy.get('div').within(() => {
+                          cy.get('a span').should('be.visible');
+                        });
+                      }
+                    });
+                });
 
-                cy.get('section')
-                  .eq(1)
-                  .within(() => {
-                    cy.get('div[class^="StyledIndexAlsos"]').should(
-                      'not.exist',
-                    );
-                  });
-              }
-            },
-          );
+              cy.get('section')
+                .eq(1)
+                .within(() => {
+                  cy.get('div[class^="StyledIndexAlsos"]').should('not.exist');
+                });
+            }
+          });
         });
 
         it('should contain Useful Links if valid usefulLinks block data exists', () => {
-          cy.request(`${config[service].pageTypes.frontPage.path}.json`).then(
-            ({ body }) => {
-              const pageData = body.content.groups;
-              if (isValidUsefulLinks(pageData)) {
-                cy.get('[data-e2e="useful-links"]')
-                  .eq(0)
-                  .within(() => {
-                    cy.get('a')
-                      .should('have.length.of.at.least', 1)
-                      .should('be.visible');
-                  });
-              } else {
-                cy.get('[aria-labelledby="Useful-links"]').should(
-                  'not.be.visible',
-                );
-              }
-            },
-          );
+          cy.request(serviceJsonPath(service)).then(({ body }) => {
+            const pageData = body.content.groups;
+            if (isValidUsefulLinks(pageData)) {
+              cy.get('[data-e2e="useful-links"]')
+                .eq(0)
+                .within(() => {
+                  cy.get('a')
+                    .should('have.length.of.at.least', 1)
+                    .should('be.visible');
+                });
+            } else {
+              cy.get('[aria-labelledby="Useful-links"]').should(
+                'not.be.visible',
+              );
+            }
+          });
+        });
+
+        it('should contain Radio Bulletin if a promo of type RadioBulletin is in the feed', () => {
+          cy.request(serviceJsonPath(service)).then(({ body }) => {
+            const pageData = applySquashTopstories(body);
+            const { groups } = pageData.content;
+
+            if (isValidRadioBulletin(groups)) {
+              cy.get('[class^="RadioBulletin"]')
+                .eq(0)
+                .should('be.visible');
+            } else {
+              cy.get('[class^="RadioBulletin"').should('not.be.visible');
+            }
+          });
+        });
+
+        it('should contain TV Bulletin if a promo of type TVBulletin is in the feed', () => {
+          cy.request(serviceJsonPath(service)).then(({ body }) => {
+            const pageData = applySquashTopstories(body);
+            const { groups } = pageData.content;
+
+            if (isValidTvBulletin(groups)) {
+              cy.get('[class^="TVBulletin"]')
+                .eq(0)
+                .should('be.visible');
+            } else {
+              cy.get('[class^="TVBulletin"').should('not.be.visible');
+            }
+          });
         });
       });
     });

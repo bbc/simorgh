@@ -11,10 +11,10 @@ storiesOf('Containers|Header', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
-  .add('default', ({ service }) => {
+  .add('default', ({ service, variant }) => {
     return (
       <ToggleContextProvider>
-        <ServiceContextProvider service={service}>
+        <ServiceContextProvider service={service} variant={variant}>
           <RequestContextProvider
             isAmp={false}
             pageType="frontPage"

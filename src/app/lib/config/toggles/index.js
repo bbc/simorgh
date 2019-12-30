@@ -12,10 +12,13 @@ const toggles = {
     navOnArticles: {
       enabled: true,
     },
+    mostRead: {
+      enabled: false,
+    },
   },
   test: {
     chartbeatAnalytics: {
-      enabled: false,
+      enabled: true,
     },
     mediaPlayer: {
       enabled: true,
@@ -25,6 +28,9 @@ const toggles = {
     },
     navOnArticles: {
       enabled: true,
+    },
+    mostRead: {
+      enabled: false,
     },
   },
   stage: {
@@ -40,18 +46,24 @@ const toggles = {
     navOnArticles: {
       enabled: true,
     },
+    mostRead: {
+      enabled: false,
+    },
   },
   live: {
     chartbeatAnalytics: {
-      enabled: false,
+      enabled: true,
     },
     mediaPlayer: {
-      enabled: false,
+      enabled: true,
     },
     mpulse: {
       enabled: true,
     },
     navOnArticles: {
+      enabled: false,
+    },
+    mostRead: {
       enabled: false,
     },
   },

@@ -55,7 +55,7 @@ export const service = {
       home: 'Главная',
       currentPage: 'Текущая страница',
       skipLinkText: 'Перейти к содержанию',
-      relatedContent: 'Related content',
+      relatedContent: 'Новости по теме',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плеер',
         audioPlayer: 'Аудио плеер',
@@ -157,7 +157,7 @@ export const service = {
             'Смотрите лучшие репортажи Би-би-си из России и со всего мира. Каждый день - с понедельника по пятницу – в выпуске теленовостей Би-би-си наши корреспонденты помогут вам понять, что происходит и почему это важно для вас.',
         },
         listen: 'Listen',
-        watch: 'Watch',
+        watch: 'Смотреть',
         liveLabel: 'LIVE',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -254,6 +254,7 @@ export const service = {
         url: '/russian/learning-english-41003378',
       },
     ],
+    navigationSection: 'Разделы',
   },
 };
 

@@ -1,6 +1,7 @@
 import { buildArticleATIParams, buildArticleATIUrl } from './buildParams';
 import * as analyticsUtils from '#lib/analyticsUtils';
 
+analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
 analyticsUtils.getPublishedDatetime = jest
   .fn()
@@ -33,6 +34,7 @@ const validURLParams = {
   timePublished: analyticsUtils.getPublishedDatetime(),
   timeUpdated: analyticsUtils.getPublishedDatetime(),
   service: 'service',
+  libraryVersion: analyticsUtils.LIBRARY_VERSION,
   ...requestContext,
 };
 
@@ -107,6 +109,7 @@ describe('buildParams', () => {
           'x5=[http://localhost/]',
           'x6=[originpreviousPath]',
           'x7=[article]',
+          'x8=[simorgh]',
           'x9=[pageTitle]',
           'x11=[1970-01-01T00:00:00.000Z]',
           'x12=[1970-01-01T00:00:00.000Z]',

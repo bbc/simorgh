@@ -21,7 +21,8 @@ const {
   sanitise,
   getProducer,
   getAtiUrl,
-  getClickInfo,
+  getEventInfo,
+  getComponentInfo,
 } = require('./index');
 
 let locServeCookieValue;
@@ -82,6 +83,16 @@ describe('getDestination', () => {
     {
       statsDestination: 'PLACEHOLDER_TEST',
       expected: 598297,
+      summary: 'should return for test Scotland',
+    },
+    {
+      statsDestination: 'BBC_ARCHIVE_PS',
+      expected: 605565,
+      summary: 'should return for live Scotland',
+    },
+    {
+      statsDestination: 'BBC_ARCHIVE_PS_TEST',
+      expected: 605566,
       summary: 'should return for test Scotland',
     },
     {
@@ -426,42 +437,77 @@ describe('getAtiUrl', () => {
   });
 });
 
-describe('getClickInfo', () => {
+describe('getEventInfo', () => {
   const params = {
     service: 'service',
-    component: 'component',
-    label: 'label',
+    componentName: 'component',
+    componentInfo: {
+      actionLabel: 'actionLabel',
+      result: 'url.com',
+      positioning: {
+        parent: 'container-component',
+        child: 'child',
+      },
+    },
     type: 'type',
   };
+  const pageIdentifier = 'page';
 
   it('should return url section', () => {
-    expect(getClickInfo({}, params)).toEqual(
-      'PUB-[service-component]-[=type]-[label]-[PAR=container-component::name~CHD=brand-top]-[]-[]-[]-[/]',
+    expect(getEventInfo(pageIdentifier, params)).toEqual(
+      'PUB-[service-component]-[actionLabel~type]-[]-[PAR=container-component~CHD=child]-[page]-[]-[responsive_web~news-simorgh]-[url.com]',
     );
   });
 
-  it('should include elem.dataset.info in output', () => {
+  it('should include elem.href in output', () => {
+    expect(getEventInfo(pageIdentifier, params)).toContain('[url.com]');
+  });
+});
+
+describe('getComponentInfo', () => {
+  const event = { target: { href: 'url.com' } };
+  const props = { actionLabel: 'prop1', child: 'prop2' };
+
+  it('should return a componentInfo object', () => {
+    const result = {
+      actionLabel: 'component-prop1',
+      source: '',
+      result: 'url.com',
+      positioning: {
+        parent: 'container-component',
+        child: 'prop2',
+      },
+    };
+
     expect(
-      getClickInfo(
-        {
-          dataset: {
-            info: 'data-info-attr',
-          },
-        },
-        params,
-      ),
-    ).toContain('data-info-attr');
+      getComponentInfo({
+        result: event.target.href,
+        componentName: 'component',
+        componentData: props,
+      }),
+    ).toEqual(result);
   });
 
-  it('should include elem.href in output', () => {
+  it('should return an object with adId if value included in props', () => {
+    props.source = 'source';
+
+    const result = {
+      actionLabel: 'component-prop1',
+      source: 'source',
+      result: 'url.com',
+      positioning: {
+        parent: 'container-component',
+        child: 'prop2',
+      },
+    };
+
     expect(
-      getClickInfo(
-        {
-          href: 'http://foobar.com',
-        },
-        params,
-      ),
-    ).toContain('[http://foobar.com]');
+      getComponentInfo({
+        result: event.target.href,
+        componentName: 'component',
+        componentData: props,
+      }),
+    ).toEqual(result);
   });
 });
 
@@ -470,17 +516,28 @@ describe('getAtUserId', () => {
 
   it('should return AT user id when found', () => {
     Cookie.getJSON = jest.fn().mockReturnValue({ val: 'uuid' });
+
     const id = getAtUserId();
     expect(id).toEqual('uuid');
   });
 
-  it('should return null if AT user id not found', () => {
+  it('should create new user id if cookie does not exist', () => {
+    Cookie.set = jest.fn();
     Cookie.getJSON = jest.fn().mockReturnValue(null);
-    let id = getAtUserId();
-    expect(id).toBeNull();
+    const val = '00000000-1111-aaaa-bbbb-1234567890ab';
 
-    Cookie.getJSON = jest.fn().mockReturnValue({});
+    let id = getAtUserId();
+    expect(id).not.toBeNull();
+    expect(id).not.toBe(val);
+    expect(id).toHaveLength(val.length);
+    expect(Cookie.set).toHaveBeenCalledWith(
+      'atuserid',
+      { val: id },
+      { expires: 397, path: '/' },
+    );
+
+    Cookie.getJSON = jest.fn().mockReturnValue({ val });
     id = getAtUserId();
-    expect(id).toBeNull();
+    expect(id).toBe(val);
   });
 });
