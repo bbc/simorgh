@@ -13,7 +13,7 @@ const toggles = {
       enabled: true,
     },
     mostRead: {
-      enabled: false,
+      enabled: true,
     },
   },
   test: {
