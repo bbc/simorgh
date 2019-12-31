@@ -64,7 +64,6 @@ describe('MostReadContainerCanonical', () => {
   Object.keys(services).forEach(service => {
     it(`test data returns as expected on canonical for ${service}`, async () => {
       const { variant, data: mostReadData } = services[service];
-      const paragraphText = `Last Updated: ${mostReadData.lastRecordTimeStamp}`;
 
       fetch.mockResponse(JSON.stringify(mostReadData));
       await renderMostReadContainer({
@@ -74,8 +73,7 @@ describe('MostReadContainerCanonical', () => {
         mostReadToggle: true,
       });
 
-      expect(container.querySelector('p').textContent).toEqual(paragraphText);
-      expect(container.querySelectorAll('ul').length).toEqual(10);
+      expect(container.querySelectorAll('li').length).toEqual(10);
     });
 
     it(`should return empty string when mostRead toggle is disabled - ${service}`, async () => {
