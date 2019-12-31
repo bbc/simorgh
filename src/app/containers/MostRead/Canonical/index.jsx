@@ -83,7 +83,7 @@ const CanonicalMostRead = ({
         .catch(e => logger.error(`HTTP Error: "${e}"`));
 
     fetchMostReadData(endpoint);
-  }, [endpoint, items, locale, script, service, translations.lastUpdated]);
+  }, [endpoint, locale, script, service, translations.lastUpdated]);
 
   return (
     <>
