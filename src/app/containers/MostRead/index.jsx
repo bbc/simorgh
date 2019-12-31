@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-// import useToggle from '../Toggle/useToggle';
+import useToggle from '../Toggle/useToggle';
 import Canonical from './Canonical';
 
 const getMostReadEndpoint = ({ service, variant }) =>
@@ -16,10 +16,10 @@ const MostReadContainer = ({ endpointOverride }) => {
     ServiceContext,
   );
 
-  // const { enabled } = useToggle('mostRead');
-  // if (!enabled) {
-  //   return null;
-  // }
+  const { enabled } = useToggle('mostRead');
+  if (!enabled) {
+    return null;
+  }
 
   const endpoint =
     endpointOverride || getMostReadEndpoint({ service, variant });
