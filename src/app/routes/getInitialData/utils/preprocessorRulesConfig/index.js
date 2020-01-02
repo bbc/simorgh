@@ -22,8 +22,8 @@ export const cpsAssetPreprocessorRules = [
 ];
 
 export const articlesPreprocessorRules = [
-  injectAds,
   applyTimestampRules,
+  injectAds,
   addIdsToBlocks,
   applyBlockPositioning,
 ];

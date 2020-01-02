@@ -47,8 +47,19 @@ const mapInjectAdsWithinText = blocks => {
   });
 };
 
+export const updateMetadata = () => jsonRaw => {
+  return {
+    ...jsonRaw,
+    metadata: {
+      ...jsonRaw.metadata,
+      blockTypes: [...jsonRaw.metadata.blockTypes, 'ad'],
+    },
+  };
+};
+
 export default jsonRaw => {
   const injectAdBlocks = compose(
+    updateMetadata,
     mergeJsonRawWithBlocks,
     mapInjectAdsWithinText,
     getBlocks,

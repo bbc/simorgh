@@ -13,7 +13,6 @@ describe('injectAds rule', () => {
             articleJson.content.model.blocks[0],
             articleJson.content.model.blocks[1],
             {
-              type: 'text',
               model: {
                 blocks: [
                   ...articleJson.content.model.blocks[2].model.blocks.slice(
@@ -21,22 +20,22 @@ describe('injectAds rule', () => {
                     5,
                   ),
                   {
-                    type: 'ad',
                     model: {
-                      text: '',
                       attributes: [],
+                      text: '',
                     },
+                    type: 'ad',
                   },
                   articleJson.content.model.blocks[2].model.blocks[5],
                 ],
               },
+              type: 'text',
             },
             articleJson.content.model.blocks[3],
             articleJson.content.model.blocks[4],
             articleJson.content.model.blocks[5],
             articleJson.content.model.blocks[6],
             {
-              type: 'text',
               model: {
                 blocks: [
                   ...articleJson.content.model.blocks[7].model.blocks.slice(
@@ -44,19 +43,24 @@ describe('injectAds rule', () => {
                     3,
                   ),
                   {
-                    type: 'ad',
                     model: {
-                      text: '',
                       attributes: [],
+                      text: '',
                     },
+                    type: 'ad',
                   },
                 ],
               },
+              type: 'text',
             },
             articleJson.content.model.blocks[8],
             articleJson.content.model.blocks[9],
           ],
         },
+      },
+      metadata: {
+        ...articleJson.metadata,
+        blockTypes: [...articleJson.metadata.blockTypes, 'ad'],
       },
     };
 
