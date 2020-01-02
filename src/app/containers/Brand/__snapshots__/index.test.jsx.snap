@@ -500,24 +500,26 @@ exports[`BrandContainer should render script link correctly 1`] = `
     >
       Skip to content
     </a>
-    <a
-      class="c7"
-      data-variant="test"
-      href="/news/test"
-    >
-      <span
-        aria-hidden="true"
+    <div>
+      <a
+        class="c7"
+        data-variant="test"
+        href="/news/test"
       >
-        Test
-      </span>
-      <span
-        class="c5"
-      >
-         
-        Test-variant
-         
-      </span>
-    </a>
+        <span
+          aria-hidden="true"
+        >
+          Test
+        </span>
+        <span
+          class="c5"
+        >
+           
+          Test-variant
+           
+        </span>
+      </a>
+    </div>
   </div>
 </div>
 `;
