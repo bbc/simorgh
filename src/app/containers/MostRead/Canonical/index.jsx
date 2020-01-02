@@ -3,7 +3,7 @@ import 'isomorphic-fetch';
 import { number, oneOf, string, shape } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import Timestamp from '@bbc/psammead-timestamp-container';
-import MostRead from '#app/components/MostRead';
+import MostRead from '@bbc/psammead-most-read';
 import mostReadTranslationsPropTypes from '#models/propTypes/mostRead';
 import webLogger from '#lib/logger.web';
 import { shouldRenderLastUpdated } from '../utilities';
