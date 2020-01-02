@@ -56,15 +56,17 @@ const CanonicalMostRead = ({
       const sortedItems = [];
 
       tenItems.forEach(({ id, promo: { headlines, timestamp, locators } }) => {
-        const renderTimestampContainer = shouldRenderLastUpdated(timestamp)
-          ? lastUpdated({
-              prefix: translations.lastUpdated,
-              script,
-              service,
-              timestamp,
-              locale,
-            })
-          : null;
+        const renderTimestampContainer = shouldRenderLastUpdated(timestamp) ? (
+          lastUpdated({
+            prefix: translations.lastUpdated,
+            script,
+            service,
+            timestamp,
+            locale,
+          })
+        ) : (
+          <></>
+        );
 
         sortedItems.push({
           id,
