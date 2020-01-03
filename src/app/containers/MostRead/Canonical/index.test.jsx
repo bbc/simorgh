@@ -10,8 +10,7 @@ import zhongwenSimpMostReadData from '#data/zhongwen/mostRead/simp';
 import { service as newsConfig } from '#app/lib/config/services/news';
 import { service as zhongwenConfig } from '#app/lib/config/services/zhongwen';
 import {
-  setFreshLastRecordTimestamp,
-  setOldPromoTimestamp,
+  setStalePromoTimestamp,
   setFreshPromoTimestamp,
 } from '../utilities/testHelper';
 
@@ -92,12 +91,10 @@ describe('MostReadContainerCanonical', () => {
       expect(container.innerHTML).toEqual('');
     });
 
-    it(`test most read is rendered when lastRecordTimeStamp is fresh for ${service}`, async () => {
+    it(`test time does not renders for most read items with timestamp older than 60 days for ${service}`, async () => {
       const { variant, data: mostReadData, config } = services[service];
       const mostReadHeader = config.mostRead.header;
-      fetch.mockResponse(
-        JSON.stringify(setFreshLastRecordTimestamp(mostReadData)),
-      );
+      fetch.mockResponse(JSON.stringify(setFreshPromoTimestamp(mostReadData)));
 
       await renderMostReadContainer({
         service,
@@ -107,18 +104,19 @@ describe('MostReadContainerCanonical', () => {
 
       expect(container.querySelector('h2').textContent).toEqual(mostReadHeader);
       expect(container.querySelectorAll('li').length).toEqual(10);
+      expect(container.querySelectorAll('time').length).toEqual(0);
     });
 
     it(`test time renders for most read items with timestamp older than 60 days for ${service}`, async () => {
-      const { variant, data: mostReadData, expectedLastUpdated } = services[
-        service
-      ];
+      const {
+        variant,
+        data: mostReadData,
+        config,
+        expectedLastUpdated,
+      } = services[service];
+      const mostReadHeader = config.mostRead.header;
 
-      fetch.mockResponse(
-        JSON.stringify(
-          setFreshLastRecordTimestamp(setOldPromoTimestamp(mostReadData)),
-        ),
-      );
+      fetch.mockResponse(JSON.stringify(setStalePromoTimestamp(mostReadData)));
 
       await renderMostReadContainer({
         service,
@@ -126,27 +124,11 @@ describe('MostReadContainerCanonical', () => {
         mostReadToggle: true,
       });
 
+      expect(container.querySelector('h2').textContent).toEqual(mostReadHeader);
+      expect(container.querySelectorAll('li').length).toEqual(10);
       expect(container.querySelectorAll('time')[0].textContent).toEqual(
         expectedLastUpdated,
       );
-    });
-
-    it(`test time  does not renders for most read items with timestamp older than 60 days for ${service}`, async () => {
-      const { variant, data: mostReadData } = services[service];
-
-      fetch.mockResponse(
-        JSON.stringify(
-          setFreshLastRecordTimestamp(setFreshPromoTimestamp(mostReadData)),
-        ),
-      );
-
-      await renderMostReadContainer({
-        service,
-        variant,
-        mostReadToggle: true,
-      });
-
-      expect(container.querySelectorAll('time').length).toEqual(0);
     });
   });
 });

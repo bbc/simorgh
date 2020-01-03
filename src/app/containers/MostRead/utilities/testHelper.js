@@ -1,27 +1,34 @@
-export const setFreshLastRecordTimestamp = mostReadData => {
+/*
+ * Both functions will manipulate the data response to return
+ * a fresh lastRecordTimestamp so that the mostRead component renders
+ */
+
+export const setStalePromoTimestamp = mostReadData => {
   const freshDate = new Date();
-  const freshMostReadData = mostReadData;
-  freshMostReadData.lastRecordTimeStamp = freshDate;
 
-  return freshMostReadData;
-};
-
-export const setOldPromoTimestamp = mostReadData => {
   const oldTimestamp = 864691200; // 27/05/1997
-  const oldPromoMostReadData = mostReadData;
+  const updatedMostReadData = mostReadData;
 
-  oldPromoMostReadData.records[0].promo.timestamp = oldTimestamp;
+  // Updates the lastRecordTimeStamp value to be equal to the current date/time
+  updatedMostReadData.lastRecordTimeStamp = freshDate;
 
-  return oldPromoMostReadData;
+  // set first promo to have an old timestamp
+  updatedMostReadData.records[0].promo.timestamp = oldTimestamp;
+
+  return updatedMostReadData;
 };
 
 export const setFreshPromoTimestamp = mostReadData => {
-  const freshDate = new Date().getTime();
-  const freshPromoMostReadData = mostReadData;
+  const freshDate = new Date();
+  const updatedMostReadData = mostReadData;
 
+  // Updates the lastRecordTimeStamp value to be equal to the current date/time
+  updatedMostReadData.lastRecordTimeStamp = freshDate;
+
+  // Updates first 10 promos to have a fresh date
   for (let i = 0; i < 10; i += 1) {
-    freshPromoMostReadData.records[i].promo.timestamp = freshDate;
+    updatedMostReadData.records[i].promo.timestamp = freshDate.getTime();
   }
 
-  return freshPromoMostReadData;
+  return updatedMostReadData;
 };
