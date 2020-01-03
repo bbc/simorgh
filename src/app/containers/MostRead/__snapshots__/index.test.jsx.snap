@@ -1,0 +1,711 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MostReadContainerCanonical test most read renders as expected on canonical for news 1`] = `
+<div>
+  <section
+    aria-labelledby="most-read-title"
+    class="StyledSection-sc-2f873t-1 cLaheh"
+    role="region"
+  >
+    <h2
+      class="StyledHeading-sc-2f873t-0 duYzdd"
+      dir="ltr"
+      id="most-read-title"
+    >
+      Most read
+    </h2>
+  </section>
+  <ol
+    class="StyledOl-sc-1ofyujo-0 eGFCUX"
+    role="list"
+  >
+    <div
+      class="GridComponent-nf79gm-0 hktVmz StyledGrid-sc-1ofyujo-2 qKECI"
+      dir="ltr"
+    >
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 bbTeiZ"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 jShtnn"
+              dir="ltr"
+            >
+              1
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 ipRxRd"
+              href="/news/election-2019-50319044"
+            >
+              Labour bans three candidates from standing
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 ftLRqF"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 jShtnn"
+              dir="ltr"
+            >
+              2
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 ipRxRd"
+              href="/news/election-2019-50318810"
+            >
+              Bercow: Brexit 'biggest foreign policy mistake'
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 bbTeiZ"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 jShtnn"
+              dir="ltr"
+            >
+              3
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 ipRxRd"
+              href="/news/business-50313824"
+            >
+              Virgin Media switches phone customers from BT
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 ftLRqF"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 jShtnn"
+              dir="ltr"
+            >
+              4
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 ipRxRd"
+              href="/news/live/election-2019-50313404"
+            >
+              Latest on day one of campaign as minister resigns
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 fHWtPZ"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 jShtnn"
+              dir="ltr"
+            >
+              5
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 ipRxRd"
+              href="/news/education-50317690"
+            >
+              Nativity play warning over school polling stations
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 cGZzEA"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 jShtnn"
+              dir="ltr"
+            >
+              6
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 ipRxRd"
+              href="/news/newsbeat-50304072"
+            >
+              Prisoner backed by Rihanna 'scared' of execution
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 gGoCHO"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 jShtnn"
+              dir="ltr"
+            >
+              7
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 ipRxRd"
+              href="/news/uk-50320800"
+            >
+              Catholic Church 'shocked to core' by child abuse
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 cGZzEA"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 jShtnn"
+              dir="ltr"
+            >
+              8
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 ipRxRd"
+              href="/news/uk-wales-politics-50302173"
+            >
+              Minister quits in aide's rape trial 'sabotage' row
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 gGoCHO"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 jShtnn"
+              dir="ltr"
+            >
+              9
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 ipRxRd"
+              href="/news/uk-scotland-scotland-business-50157515"
+            >
+              'Being a good guy boss left me £1.2m in debt'
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 cGZzEA"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 jShtnn"
+              dir="ltr"
+            >
+              10
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 ipRxRd"
+              href="/news/world-latin-america-50314700"
+            >
+              US boy walked 23km for help after Mexico ambush
+            </a>
+          </div>
+        </li>
+      </div>
+    </div>
+  </ol>
+</div>
+`;
+
+exports[`MostReadContainerCanonical test most read renders as expected on canonical for zhongwen 1`] = `
+<div>
+  <section
+    aria-labelledby="most-read-title"
+    class="StyledSection-sc-2f873t-1 cLaheh"
+    role="region"
+  >
+    <h2
+      class="StyledHeading-sc-2f873t-0 lgHCYw"
+      dir="ltr"
+      id="most-read-title"
+    >
+      Most read
+    </h2>
+  </section>
+  <ol
+    class="StyledOl-sc-1ofyujo-0 eGFCUX"
+    role="list"
+  >
+    <div
+      class="GridComponent-nf79gm-0 hktVmz StyledGrid-sc-1ofyujo-2 qKECI"
+      dir="ltr"
+    >
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 bbTeiZ"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 dDtvmu"
+              dir="ltr"
+            >
+              1
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 cQaNHp"
+              href="/zhongwen/simp/chinese-news-50312750"
+            >
+              何君尧被刺伤 香港再有地方选举候选人遭袭
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 ftLRqF"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 dDtvmu"
+              dir="ltr"
+            >
+              2
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 cQaNHp"
+              href="/zhongwen/simp/uk-50313393"
+            >
+              英国大学“受专制国家干预” 中国影响成为议会报告聚焦点
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 bbTeiZ"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 dDtvmu"
+              dir="ltr"
+            >
+              3
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 cQaNHp"
+              href="/zhongwen/simp/world-49630566"
+            >
+              成人网站Pornhub“坐收复仇式色情影片之利”　
+            </a>
+            <time
+              class="StyledTimestamp-um718p-0 iENDai"
+              datetime="2019-09-09"
+            >
+              Last updated:  
+              2019年9月9日
+            </time>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 ftLRqF"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 dDtvmu"
+              dir="ltr"
+            >
+              4
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 cQaNHp"
+              href="/zhongwen/simp/chinese-news-50292336"
+            >
+              中国人脸识别第一案：技术、法律与国际争议
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 fHWtPZ"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 dDtvmu"
+              dir="ltr"
+            >
+              5
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 cQaNHp"
+              href="/zhongwen/simp/world-50320490"
+            >
+              英国大选2019：竞选打响第一枪 各党亮出承诺
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 cGZzEA"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 dDtvmu"
+              dir="ltr"
+            >
+              6
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 cQaNHp"
+              href="/zhongwen/simp/chinese-news-50298922"
+            >
+              香港示威后习近平首见林郑月娥 公安部长在座
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 gGoCHO"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 dDtvmu"
+              dir="ltr"
+            >
+              7
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 cQaNHp"
+              href="/zhongwen/simp/science-50313320"
+            >
+              树洞救援队：中国志愿者网络用AI救援数百名自杀者
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 cGZzEA"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 dDtvmu"
+              dir="ltr"
+            >
+              8
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 cQaNHp"
+              href="/zhongwen/simp/chinese-news-50305473"
+            >
+              暗淡蓝点：美在印太抗衡“一带一路”新计划
+            </a>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 gGoCHO"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 dDtvmu"
+              dir="ltr"
+            >
+              9
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 cQaNHp"
+              href="/zhongwen/simp/world-50272480"
+            >
+              英国集装箱案：39名死者“均为越南人”
+            </a>
+            <time
+              class="StyledTimestamp-um718p-0 iENDai"
+              datetime="2019-11-03"
+            >
+              Last updated:  
+              2019年11月3日
+            </time>
+          </div>
+        </li>
+      </div>
+      <div
+        as="li"
+        class="GridComponent-nf79gm-0 dRNjpp"
+        dir="ltr"
+      >
+        <li
+          class="StyledLi-sc-1ofyujo-1 iSuRez"
+        >
+          <div
+            class="StyledWrapper-u0d8kd-1 cGZzEA"
+            dir="ltr"
+          >
+            <span
+              class="MostReadRank-u0d8kd-3 dDtvmu"
+              dir="ltr"
+            >
+              10
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-2 bcrSam"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 cQaNHp"
+              href="/zhongwen/simp/chinese-news-50285833"
+            >
+              习近平首提“全过程民主” 新词汇引发新质疑
+            </a>
+          </div>
+        </li>
+      </div>
+    </div>
+  </ol>
+</div>
+`;
