@@ -1,12 +1,12 @@
 import React from 'react';
 import path from 'ramda/src/path';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import RadioPageBlocks from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 import preprocessor from '#lib/utilities/preprocessor';
+import renderWithRouter from '#lib/utilities/testHelpers';
 import { radioPagePreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
 
 const serviceContextMock = {
@@ -28,7 +28,7 @@ describe('Radio Page Blocks', () => {
     );
     const blocks = path(['content', 'blocks'], pageData);
 
-    await matchSnapshotAsync(
+    const { asFragment } = renderWithRouter(
       <ServiceContext.Provider value={serviceContextMock}>
         <RequestContext.Provider
           value={{
@@ -41,6 +41,7 @@ describe('Radio Page Blocks', () => {
         </RequestContext.Provider>
       </ServiceContext.Provider>,
     );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should match snapshot for AMP', async () => {
@@ -50,7 +51,7 @@ describe('Radio Page Blocks', () => {
     );
     const blocks = path(['content', 'blocks'], pageData);
 
-    await matchSnapshotAsync(
+    const { asFragment } = renderWithRouter(
       <ServiceContext.Provider value={serviceContextMock}>
         <RequestContext.Provider
           value={{
@@ -63,5 +64,6 @@ describe('Radio Page Blocks', () => {
         </RequestContext.Provider>
       </ServiceContext.Provider>,
     );
+    expect(asFragment()).toMatchSnapshot();
   });
 });

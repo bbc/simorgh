@@ -1,5 +1,5 @@
 import React from 'react';
-import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
+import { renderWithRouter } from '#lib/utilities/testHelpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import RadioPageMain from '.';
@@ -21,7 +21,7 @@ describe('Radio Page Main', () => {
       radioPagePreprocessorRules,
     );
 
-    await matchSnapshotAsync(
+    const { asFragment } = renderWithRouter(
       <ServiceContextProvider service="amharic">
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -35,6 +35,7 @@ describe('Radio Page Main', () => {
         </RequestContextProvider>
       </ServiceContextProvider>,
     );
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should match snapshot for AMP', async () => {
@@ -43,7 +44,7 @@ describe('Radio Page Main', () => {
       radioPagePreprocessorRules,
     );
 
-    await matchSnapshotAsync(
+    const { asFragment } = renderWithRouter(
       <ServiceContextProvider service="amharic">
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -57,5 +58,6 @@ describe('Radio Page Main', () => {
         </RequestContextProvider>
       </ServiceContextProvider>,
     );
+    expect(asFragment()).toMatchSnapshot();
   });
 });

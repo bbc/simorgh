@@ -1,4 +1,4 @@
-import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
+import { renderWithRouter, assertFirstChildIsNull } from '#lib/utilities/testHelpers';
 import {
   VideoCanonicalWithPlaceholder,
   VideoCanonicalNoPlaceholder,
@@ -14,30 +14,40 @@ describe('MediaPlayer', () => {
     process.env.SIMORGH_EMBEDS_BASE_URL_TEST = 'https://embed-host.bbc.com';
   });
 
-  shouldMatchSnapshot(
-    'Calls the canonical placeholder when platform is canonical and showPlaceholder is true',
-    VideoCanonicalWithPlaceholder,
-  );
+  it('Calls the canonical placeholder when platform is canonical and showPlaceholder is true', () => {
+    const { asFragment } = renderWithRouter(VideoCanonicalWithPlaceholder);
+    expect(asFragment()).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'Does not Call the canonical placeholder when platform is canonical but showPlaceholder is false',
-    VideoCanonicalNoPlaceholder,
-  );
+  it('Does not Call the canonical placeholder when platform is canonical but showPlaceholder is false', () => {
+    const { asFragment } = renderWithRouter(VideoCanonicalNoPlaceholder);
+    expect(asFragment()).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot('Renders the AMP player when platform is AMP', VideoAmp);
+  it('Renders the AMP player when platform is AMP', () => {
+    const { asFragment } = renderWithRouter(VideoAmp);
+    expect(asFragment()).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'Renders the canonical player with a caption',
-    VideoCanonicalWithCaption,
-  );
+  it('Renders the canonical player with a caption', () => {
+    const { asFragment } = renderWithRouter(VideoCanonicalWithCaption);
+    expect(asFragment()).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'Renders the AMP player with a caption',
-    VideoAmpWithCaption,
-  );
+  it('Renders the AMP player with a caption', () => {
+    const { asFragment } = renderWithRouter(VideoAmpWithCaption);
+    expect(asFragment()).toMatchSnapshot();
+  });
 
   describe('Fails and returns early when', () => {
-    isNull('there is no versionId', VideoCanonicalNoVersionId);
-    isNull('component is toggled off', VideoCanonicalToggledOff);
+    it('there is no versionId', () => {
+      const { container } = renderWithRouter(VideoCanonicalNoVersionId);
+      assertFirstChildIsNull(container);
+    });
+
+    it('component is toggled off', () => {
+      const { container } = renderWithRouter(VideoCanonicalToggledOff);
+      assertFirstChildIsNull(container);
+    });
   });
 });
