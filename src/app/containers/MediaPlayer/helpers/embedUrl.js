@@ -13,8 +13,8 @@ const getBaseUrl = url => {
   return process.env.SIMORGH_EMBEDS_BASE_URL_TEST;
 };
 
-const embedUrl = ({ type, mediaId, isAmp = false, url }) => {
-  const urlParts = [getBaseUrl(url), AV_ROUTE, type, mediaId];
+const embedUrl = ({ type, mediaId, isAmp = false, pageUrl }) => {
+  const urlParts = [getBaseUrl(pageUrl), AV_ROUTE, type, mediaId];
 
   if (isAmp) {
     urlParts.push('amp');

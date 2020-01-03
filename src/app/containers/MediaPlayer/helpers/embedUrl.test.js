@@ -1,152 +1,182 @@
 import embedUrl from './embedUrl';
 
 const mediaId = 'foo/bar';
-const url = `www.test.com/${mediaId}`;
+const pageUrl = `www.test.com/${mediaId}`;
 const liveOverrideParam = '?renderer_env=live';
 const testOverrideParam = '?renderer_env=test';
+process.env.SIMORGH_EMBEDS_BASE_URL_LIVE = 'www.embed-host.live.bbc.com';
+process.env.SIMORGH_EMBEDS_BASE_URL_TEST = 'www.embed-host.test.bbc.com';
+const applicationEnv = process.env.APP_ENV;
 
-const getTestCases = (type, expectedBaseUrl, id) => {
-  return [
-    {
-      description: `should build a CANONICAL url`,
-      expected: `${expectedBaseUrl}/ws/av-embeds/${type}/${id}`,
-      embedObject: {
-        mediaId: id,
-        type,
-        url,
-      },
-    },
-    {
-      description: `should build an AMP url`,
-      expected: `${expectedBaseUrl}/ws/av-embeds/${type}/${id}/amp`,
-      embedObject: {
-        isAmp: true,
-        mediaId: id,
-        type,
-        url,
-      },
-    },
-  ];
+const setEnvironment = env => {
+  process.env.APP_ENV = env;
 };
 
-const getTestCasesWithOverride = (type, expectedBaseUrl, id, overrideParam) => {
-  return [
-    {
-      description: `should build a CANONICAL url with override`,
-      expected: `${expectedBaseUrl}/ws/av-embeds/${type}/${id}`,
-      embedObject: {
-        mediaId: `${id}`,
-        type,
-        url: `${url}${overrideParam}`,
-      },
-    },
-    {
-      description: `should build an AMP url with override`,
-      expected: `${expectedBaseUrl}/ws/av-embeds/${type}/${id}/amp`,
-      embedObject: {
-        isAmp: true,
-        mediaId: `${id}`,
-        type,
-        url: `${url}${overrideParam}`,
-      },
-    },
-  ];
+const resetEnvironment = () => {
+  process.env.APP_ENV = applicationEnv;
 };
 
-const runAssertions = testCases => {
-  testCases.forEach(({ description, expected, embedObject }) =>
-    it(description, () => expect(embedUrl(embedObject)).toEqual(expected)),
+const testCases = [
+  {
+    description: `should build a CANONICAL url for articles in test`,
+    expected: `www.embed-host.test.bbc.com/ws/av-embeds/articles/${mediaId}`,
+    environment: 'test',
+    before: setEnvironment,
+    after: resetEnvironment,
+    embedObject: {
+      mediaId,
+      type: 'articles',
+      pageUrl,
+    },
+  },
+  {
+    description: `should build an AMP url for articles in test`,
+    expected: `www.embed-host.test.bbc.com/ws/av-embeds/articles/${mediaId}/amp`,
+    environment: 'test',
+    before: setEnvironment,
+    after: resetEnvironment,
+    embedObject: {
+      isAmp: true,
+      mediaId,
+      type: 'articles',
+      pageUrl,
+    },
+  },
+  {
+    description: `should build a CANONICAL url for articles in test with test override`,
+    expected: `www.embed-host.test.bbc.com/ws/av-embeds/articles/${mediaId}`,
+    environment: 'test',
+    before: setEnvironment,
+    after: resetEnvironment,
+    embedObject: {
+      mediaId,
+      type: 'articles',
+      pageUrl: `${pageUrl}${testOverrideParam}`,
+    },
+  },
+  {
+    description: `should build an AMP url for articles in test with live override`,
+    expected: `www.embed-host.test.bbc.com/ws/av-embeds/articles/${mediaId}/amp`,
+    environment: 'test',
+    before: setEnvironment,
+    after: resetEnvironment,
+    embedObject: {
+      isAmp: true,
+      mediaId,
+      type: 'articles',
+      pageUrl: `${pageUrl}${testOverrideParam}`,
+    },
+  },
+  {
+    description: `should build a CANONICAL url for articles in test with live override`,
+    expected: `www.embed-host.live.bbc.com/ws/av-embeds/articles/${mediaId}`,
+    environment: 'test',
+    before: setEnvironment,
+    after: resetEnvironment,
+    embedObject: {
+      mediaId,
+      type: 'articles',
+      pageUrl: `${pageUrl}${liveOverrideParam}`,
+    },
+  },
+  {
+    description: `should build an AMP url for articles in test with live override`,
+    expected: `www.embed-host.live.bbc.com/ws/av-embeds/articles/${mediaId}/amp`,
+    environment: 'test',
+    before: setEnvironment,
+    after: resetEnvironment,
+    embedObject: {
+      isAmp: true,
+      mediaId,
+      type: 'articles',
+      pageUrl: `${pageUrl}${liveOverrideParam}`,
+    },
+  },
+  {
+    description: `should build a CANONICAL url for articles in live`,
+    expected: `www.embed-host.live.bbc.com/ws/av-embeds/articles/${mediaId}`,
+    environment: 'live',
+    before: setEnvironment,
+    after: resetEnvironment,
+    embedObject: {
+      mediaId,
+      type: 'articles',
+      pageUrl,
+    },
+  },
+  {
+    description: `should build an AMP url for articles in live`,
+    expected: `www.embed-host.live.bbc.com/ws/av-embeds/articles/${mediaId}/amp`,
+    environment: 'live',
+    before: setEnvironment,
+    after: resetEnvironment,
+    embedObject: {
+      isAmp: true,
+      mediaId,
+      type: 'articles',
+      pageUrl,
+    },
+  },
+  {
+    description: `should build a CANONICAL url for articles in live with test override`,
+    expected: `www.embed-host.live.bbc.com/ws/av-embeds/articles/${mediaId}`,
+    environment: 'live',
+    before: setEnvironment,
+    after: resetEnvironment,
+    embedObject: {
+      mediaId,
+      type: 'articles',
+      pageUrl: `${pageUrl}${testOverrideParam}`,
+    },
+  },
+  {
+    description: `should build an AMP url for articles in live with test override`,
+    expected: `www.embed-host.live.bbc.com/ws/av-embeds/articles/${mediaId}/amp`,
+    environment: 'live',
+    before: setEnvironment,
+    after: resetEnvironment,
+    embedObject: {
+      isAmp: true,
+      mediaId,
+      type: 'articles',
+      pageUrl: `${pageUrl}${testOverrideParam}`,
+    },
+  },
+  {
+    description: `should build a CANONICAL url for articles in live with live override`,
+    expected: `www.embed-host.live.bbc.com/ws/av-embeds/articles/${mediaId}`,
+    environment: 'live',
+    before: setEnvironment,
+    after: resetEnvironment,
+    embedObject: {
+      mediaId,
+      type: 'articles',
+      pageUrl: `${pageUrl}${liveOverrideParam}`,
+    },
+  },
+  {
+    description: `should build an AMP url for articles in live with live override`,
+    expected: `www.embed-host.live.bbc.com/ws/av-embeds/articles/${mediaId}/amp`,
+    environment: 'live',
+    before: setEnvironment,
+    after: resetEnvironment,
+    embedObject: {
+      isAmp: true,
+      mediaId,
+      type: 'articles',
+      pageUrl: `${pageUrl}${liveOverrideParam}`,
+    },
+  },
+];
+
+describe('Media Player: Embed URL', () => {
+  testCases.forEach(
+    ({ description, expected, before, after, environment, embedObject }) => {
+      it(description, () => {
+        before(environment);
+        expect(embedUrl(embedObject)).toEqual(expected);
+        after();
+      });
+    },
   );
-};
-
-const runNoOverrideScenarios = (type, id, expectedBaseUrl) => {
-  describe('with no override param', () => {
-    const testCases = getTestCases(type, expectedBaseUrl, id);
-
-    runAssertions(testCases);
-  });
-};
-
-const runOverrideScenarios = (type, id, expectedBaseUrl, overrideParam) => {
-  describe(`with override param [${overrideParam}]`, () => {
-    const testCases = getTestCasesWithOverride(
-      type,
-      expectedBaseUrl,
-      id,
-      overrideParam,
-    );
-
-    runAssertions(testCases);
-  });
-};
-
-const runAllScenarios = (
-  type,
-  id,
-  expectedBaseUrl,
-  expectedTestUrl,
-  expectedLiveUrl,
-) => {
-  describe(`for ${type}`, () => {
-    runNoOverrideScenarios(type, id, expectedBaseUrl);
-    runOverrideScenarios(type, id, expectedTestUrl, testOverrideParam);
-    runOverrideScenarios(type, id, expectedLiveUrl, liveOverrideParam);
-  });
-};
-
-describe('Media Player Embed URL', () => {
-  const environment = process.env.APP_ENV;
-  process.env.SIMORGH_EMBEDS_BASE_URL_TEST = 'https://embed-host.test.bbc.com';
-  process.env.SIMORGH_EMBEDS_BASE_URL_LIVE = 'https://embed-host.live.bbc.com';
-
-  describe('in non-live environment', () => {
-    beforeEach(() => {
-      process.env.APP_ENV = 'test';
-    });
-
-    runAllScenarios(
-      'articles',
-      url,
-      process.env.SIMORGH_EMBEDS_BASE_URL_TEST,
-      process.env.SIMORGH_EMBEDS_BASE_URL_TEST,
-      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
-    );
-
-    runAllScenarios(
-      'media',
-      url,
-      process.env.SIMORGH_EMBEDS_BASE_URL_TEST,
-      process.env.SIMORGH_EMBEDS_BASE_URL_TEST,
-      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
-    );
-
-    afterEach(() => {
-      process.env.APP_ENV = environment;
-    });
-  });
-
-  describe('in live environment', () => {
-    beforeEach(() => {
-      process.env.APP_ENV = 'live';
-    });
-
-    runAllScenarios(
-      'articles',
-      mediaId,
-      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
-      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
-      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
-    );
-    runAllScenarios(
-      'media',
-      mediaId,
-      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
-      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
-      process.env.SIMORGH_EMBEDS_BASE_URL_LIVE,
-    );
-
-    afterEach(() => {
-      process.env.APP_ENV = environment;
-    });
-  });
 });
