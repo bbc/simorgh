@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { string, bool } from 'prop-types';
-import { withRouter } from 'react-router';
+import { useLocation } from 'react-router-dom';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
@@ -30,11 +30,11 @@ const MediaPlayerContainer = ({
   assetId,
   assetType,
   showPlaceholder,
-  location,
 }) => {
   const { platform } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
+  const location = useLocation();
   const isAmp = platform === 'amp';
 
   if (!enabled || !blocks) {
@@ -105,7 +105,7 @@ const MediaPlayerContainer = ({
     mediaId: `${assetId}/${versionId}/${lang}`,
     type: assetType,
     isAmp,
-    url: `${location.pathname}${location.search}`,
+    pageUrl: `${location.pathname}${location.search}`,
   });
   const iframeTitle = pathOr(
     'Media player',
@@ -151,4 +151,4 @@ MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
 };
 
-export default withRouter(MediaPlayerContainer);
+export default MediaPlayerContainer;

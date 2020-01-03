@@ -1,6 +1,5 @@
-/* eslint-disable react/prop-types */
 import React, { useContext } from 'react';
-import { withRouter } from 'react-router';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
 import { string } from 'prop-types';
@@ -30,9 +29,10 @@ const MediaPlayerInnerWrapper = styled.div`
   max-width: calc(100vw - ${GEL_SPACING_QUAD});
 `;
 
-const LiveRadioContainer = ({ idAttr, externalId, id, location }) => {
+const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   const { platform } = useContext(RequestContext);
   const { liveRadio, lang, translations, service } = useContext(ServiceContext);
+  const location = useLocation();
 
   const isAmp = platform === 'amp';
   const isValidPlatform = ['amp', 'canonical'].includes(platform);
@@ -49,7 +49,7 @@ const LiveRadioContainer = ({ idAttr, externalId, id, location }) => {
     mediaId: `${serviceId}/${id}/${lang}`,
     type: 'media',
     isAmp,
-    url: `${location.pathname}${location.search}`,
+    pageUrl: `${location.pathname}${location.search}`,
   });
 
   const iframeTitle = pathOr(
@@ -100,4 +100,4 @@ LiveRadioContainer.defaultProps = {
   idAttr: null,
 };
 
-export default withRouter(LiveRadioContainer);
+export default LiveRadioContainer;
