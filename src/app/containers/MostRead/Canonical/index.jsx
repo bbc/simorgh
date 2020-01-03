@@ -43,37 +43,39 @@ const CanonicalMostRead = ({
   useEffect(() => {
     const handleResponse = async response => {
       const mostReadData = await response.json();
-      const lastRecordUpdated = mostReadData.lastRecordTimeStamp;
 
       // do not show most read if lastRecordUpdated is greated than 35min
-      if (!mostReadRecordIsFresh(lastRecordUpdated)) {
+      if (!mostReadRecordIsFresh(mostReadData.lastRecordTimeStamp)) {
         return;
       }
 
       // extracting the data we need from the api
-      const tenItems = mostReadData.records.slice(0, 10);
       const sortedItems = [];
 
-      tenItems.forEach(({ id, promo: { headlines, timestamp, locators } }) => {
-        const renderTimestampContainer = shouldRenderLastUpdated(timestamp) ? (
-          lastUpdated({
-            prefix: translations.lastUpdated,
-            script,
-            service,
+      mostReadData.records
+        .slice(0, 10)
+        .forEach(({ id, promo: { headlines, timestamp, locators } }) => {
+          const renderTimestampContainer = shouldRenderLastUpdated(
             timestamp,
-            locale,
-          })
-        ) : (
-          <></>
-        );
+          ) ? (
+            lastUpdated({
+              prefix: translations.lastUpdated,
+              script,
+              service,
+              timestamp,
+              locale,
+            })
+          ) : (
+            <></>
+          );
 
-        sortedItems.push({
-          id,
-          title: headlines.shortHeadline,
-          href: locators.assetUri,
-          timestamp: renderTimestampContainer,
+          sortedItems.push({
+            id,
+            title: headlines.shortHeadline,
+            href: locators.assetUri,
+            timestamp: renderTimestampContainer,
+          });
         });
-      });
 
       setItems(sortedItems);
     };
