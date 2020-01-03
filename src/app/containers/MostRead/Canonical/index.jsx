@@ -6,8 +6,7 @@ import Timestamp from '@bbc/psammead-timestamp-container';
 import MostRead from '@bbc/psammead-most-read';
 import mostReadTranslationsPropTypes from '#models/propTypes/mostRead';
 import webLogger from '#lib/logger.web';
-import { shouldRenderLastUpdated } from '../utilities';
-// import { shouldRenderLastUpdated, mostReadRecordIsFresh } from '../utilities';
+import { shouldRenderLastUpdated, mostReadRecordIsFresh } from '../utilities';
 
 const logger = webLogger();
 
@@ -44,12 +43,12 @@ const CanonicalMostRead = ({
   useEffect(() => {
     const handleResponse = async response => {
       const mostReadData = await response.json();
-      // const lastRecordUpdated = mostReadData.lastRecordTimeStamp;
+      const lastRecordUpdated = mostReadData.lastRecordTimeStamp;
 
       // do not show most read if lastRecordUpdated is greated than 35min
-      // if (mostReadRecordIsFresh(lastRecordUpdated)) {
-      //   return;
-      // }
+      if (!mostReadRecordIsFresh(lastRecordUpdated)) {
+        return;
+      }
 
       // extracting the data we need from the api
       const tenItems = mostReadData.records.slice(0, 10);
