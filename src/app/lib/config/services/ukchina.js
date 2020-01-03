@@ -187,8 +187,8 @@ export const service = {
     lang: `zh-hans`,
     locale: `zh-hans`,
     scriptLink: {
-      text: '简',
-      offscreenText: 'Simplified',
+      text: '繁',
+      offscreenText: 'Traditional',
     },
     navigation: [
       {
@@ -230,8 +230,8 @@ export const service = {
     lang: `zh-hant`,
     locale: `zh-hant`,
     scriptLink: {
-      text: '繁',
-      offscreenText: 'Traditional',
+      text: '简',
+      offscreenText: 'Simplified',
     },
     navigation: [
       {
