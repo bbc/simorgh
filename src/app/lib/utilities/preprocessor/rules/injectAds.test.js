@@ -10,57 +10,25 @@ describe('injectAds rule', () => {
         model: {
           ...articleJson.content.model,
           blocks: [
-            articleJson.content.model.blocks[0],
-            articleJson.content.model.blocks[1],
+            ...articleJson.content.model.blocks.slice(0, 3),
             {
               model: {
-                blocks: [
-                  ...articleJson.content.model.blocks[2].model.blocks.slice(
-                    0,
-                    5,
-                  ),
-                  {
-                    model: {
-                      attributes: [],
-                      text: '',
-                    },
-                    type: 'ad',
-                  },
-                  articleJson.content.model.blocks[2].model.blocks[5],
-                ],
+                attributes: [],
+                text: '',
               },
-              type: 'text',
+              type: 'ad',
             },
-            articleJson.content.model.blocks[3],
-            articleJson.content.model.blocks[4],
-            articleJson.content.model.blocks[5],
-            articleJson.content.model.blocks[6],
+            ...articleJson.content.model.blocks.slice(3, 8),
             {
               model: {
-                blocks: [
-                  ...articleJson.content.model.blocks[7].model.blocks.slice(
-                    0,
-                    3,
-                  ),
-                  {
-                    model: {
-                      attributes: [],
-                      text: '',
-                    },
-                    type: 'ad',
-                  },
-                ],
+                attributes: [],
+                text: '',
               },
-              type: 'text',
+              type: 'ad',
             },
-            articleJson.content.model.blocks[8],
-            articleJson.content.model.blocks[9],
+            ...articleJson.content.model.blocks.slice(8),
           ],
         },
-      },
-      metadata: {
-        ...articleJson.metadata,
-        blockTypes: [...articleJson.metadata.blockTypes, 'ad'],
       },
     };
 

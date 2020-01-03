@@ -17,49 +17,35 @@ const mapInjectAdsWithinText = blocks => {
   let paragraphCount = 0;
   let adCount = 0;
 
-  return blocks.map(block => {
-    if (block.type !== 'text') return block;
+  return blocks.reduce((accBlocks, currentBlock) => {
+    const withoutAd = [...accBlocks, currentBlock];
 
-    const paragraphs = getBlocks(block);
+    if (currentBlock.type !== 'text') {
+      return withoutAd;
+    }
+
+    const paragraphs = getBlocks(currentBlock);
     paragraphCount += paragraphs.length;
 
-    const injectAt = position => {
+    const withAd = () => {
       adCount += 1;
-      paragraphCount += 1;
-      paragraphs.splice(position, 0, adBlock);
+      return [...accBlocks, currentBlock, adBlock];
     };
 
     if (paragraphCount > 5 && adCount === 0) {
-      injectAt(5);
+      return withAd();
     }
 
     if (paragraphCount > 9 && adCount === 1) {
-      injectAt(9);
+      return withAd();
     }
 
-    return {
-      ...block,
-      model: {
-        ...block.model,
-        blocks: paragraphs,
-      },
-    };
-  });
-};
-
-export const updateMetadata = () => jsonRaw => {
-  return {
-    ...jsonRaw,
-    metadata: {
-      ...jsonRaw.metadata,
-      blockTypes: [...jsonRaw.metadata.blockTypes, 'ad'],
-    },
-  };
+    return withoutAd;
+  }, []);
 };
 
 export default jsonRaw => {
   const injectAdBlocks = compose(
-    updateMetadata,
     mergeJsonRawWithBlocks,
     mapInjectAdsWithinText,
     getBlocks,
