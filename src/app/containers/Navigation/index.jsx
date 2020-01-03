@@ -1,10 +1,6 @@
 import React, { useContext } from 'react';
 import { NavigationUl, NavigationLi } from '@bbc/psammead-navigation';
-import {
-  Dropdown,
-  DropdownUl,
-  DropdownLi,
-} from '@bbc/psammead-navigation/dropdown';
+import { DropdownUl, DropdownLi } from '@bbc/psammead-navigation/dropdown';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import Canonical from './index.canonical';
@@ -57,18 +53,16 @@ const NavigationContainer = () => {
   );
 
   const dropdownListItems = (
-    <Dropdown>
-      <DropdownUl>
-        {renderListItems(
-          DropdownLi,
-          navigation,
-          script,
-          currentPage,
-          service,
-          dir,
-        )}
-      </DropdownUl>
-    </Dropdown>
+    <DropdownUl>
+      {renderListItems(
+        DropdownLi,
+        navigation,
+        script,
+        currentPage,
+        service,
+        dir,
+      )}
+    </DropdownUl>
   );
 
   const Navigation = isAmp ? Amp : Canonical;

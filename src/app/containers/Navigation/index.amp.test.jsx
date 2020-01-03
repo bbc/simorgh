@@ -37,5 +37,5 @@ describe('AMP Navigation', () => {
     });
   });
 
-  // AMP state toggling should be tested by an e2e.
+  // AMP state toggling tested by an e2e.
 });

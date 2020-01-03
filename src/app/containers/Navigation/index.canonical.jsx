@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import Navigation from '@bbc/psammead-navigation';
 import { node, string, shape } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { CanonicalScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
-import { CanonicalMenuButton } from '@bbc/psammead-navigation/dropdown';
+import {
+  CanonicalDropdown,
+  CanonicalMenuButton,
+} from '@bbc/psammead-navigation/dropdown';
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
 import useMediaQuery from '#lib/utilities/useMediaQuery';
+
+const ScrollableWrapper = styled.div`
+  position: relative;
+`;
 
 const CanonicalNavigationContainer = ({
   script,
@@ -27,20 +35,21 @@ const CanonicalNavigationContainer = ({
 
   return (
     <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
-      <CanonicalMenuButton
-        announcedText={menuAnnouncedText}
-        isOpen={isOpen}
-        onClick={() => setIsOpen(!isOpen)}
-        dir={dir}
-        script={script}
-      />
-      {isOpen ? (
-        dropdownListItems
-      ) : (
-        <CanonicalScrollableNavigation dir={dir} isScrollable={isScrollable}>
-          {scrollableListItems}
-        </CanonicalScrollableNavigation>
-      )}
+      <ScrollableWrapper>
+        <CanonicalMenuButton
+          announcedText={menuAnnouncedText}
+          isOpen={isOpen}
+          onClick={() => setIsOpen(!isOpen)}
+          dir={dir}
+          script={script}
+        />
+        {!isOpen && (
+          <CanonicalScrollableNavigation dir={dir} isScrollable={isScrollable}>
+            {scrollableListItems}
+          </CanonicalScrollableNavigation>
+        )}
+      </ScrollableWrapper>
+      <CanonicalDropdown isOpen={isOpen}>{dropdownListItems}</CanonicalDropdown>
     </Navigation>
   );
 };
