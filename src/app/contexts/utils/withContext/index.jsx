@@ -3,7 +3,7 @@ import { node, string, elementType } from 'prop-types';
 
 const withContext = data => {
   const LoadedContextProvider = ({ Context, dataKey, children }) => (
-    <Context.Provider data={dataKey ? data[dataKey] : data}>
+    <Context.Provider value={dataKey ? data[dataKey] : data}>
       {children}
     </Context.Provider>
   );
