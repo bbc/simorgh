@@ -46,26 +46,22 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
         // This test is being temporarily throttled to the service 'news'.
         if (service === 'news') {
           it('should have a Media Player', () => {
-            cy.viewport(600, 1008);
             cy.request(`${config[service].pageTypes.articles.path}.json`).then(
               ({ body }) => {
                 const media = getBlockData('video', body);
                 if (media && media.type === 'video') {
-                  cy.get('div[class^="StyledVideoContainer"]').then(() => {
-                    cy.get('iframe[class^="i-amphtml-fill-content"]').then(
-                      $iframe => {
-                        cy.wrap($iframe.prop('contentWindow'), {
-                          // `timeout` only applies to the methods chained below.
-                          // `its()` benefits from this, and will wait up to 8s
-                          // for the mediaPlayer instance to become available.
-                          timeout: 8000,
-                        })
-                          .its(
-                            'embeddedMedia.playerInstances.mediaPlayer.ready',
-                          )
-                          .should('eq', true);
-                      },
-                    );
+                  cy.scrollTo('bottom');
+                  cy.get(
+                    'div[class^="StyledVideoContainer"] iframe[class^="i-amphtml-fill-content"]',
+                  ).then($iframe => {
+                    cy.wrap($iframe.prop('contentWindow'), {
+                      // `timeout` only applies to the methods chained below.
+                      // `its()` benefits from this, and will wait up to 8s
+                      // for the mediaPlayer instance to become available.
+                      timeout: 8000,
+                    })
+                      .its('embeddedMedia.playerInstances.mediaPlayer.ready')
+                      .should('eq', true);
                   });
                 }
               },
