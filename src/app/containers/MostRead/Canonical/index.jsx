@@ -71,7 +71,7 @@ const CanonicalMostRead = ({ endpoint }) => {
                 <MostReadLink
                   service={service}
                   script={script}
-                  title={item.promo.headlines.headline}
+                  title={item.promo.headlines.shortHeadline}
                   href={item.promo.locators.assetUri}
                 >
                   <LastUpdated
