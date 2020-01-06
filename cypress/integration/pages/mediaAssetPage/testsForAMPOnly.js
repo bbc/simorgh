@@ -24,13 +24,22 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           const serviceId = isLiveStream
             ? mediaBlock.externalId
             : mediaBlock.versions[0].versionId;
-          const language = appConfig[service][variant].lang;
+          const language = appConfig[config[service].name][variant].lang;
 
           cy.get(
             `amp-iframe[src*="${envConfig.avEmbedBaseUrl}/ws/av-embeds/cps${assetUri}/${serviceId}/${language}"]`,
           ).should('be.visible');
         },
       );
+    });
+    describe('AMP Status', () => {
+      it('should return a 200 response', () => {
+        cy.testResponseCodeAndType(
+          `${config[service].pageTypes.mediaAssetPage.path}.amp`,
+          200,
+          'text/html',
+        );
+      });
     });
   });
 
