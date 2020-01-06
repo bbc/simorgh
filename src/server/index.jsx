@@ -217,7 +217,7 @@ server
       const bbcOrigin = headers['bbc-origin'];
 
       // Temp log to test upstream change
-      logger.info(`Country code: ${headers['bbc-country'] || 'unknown!'}`);
+      logger.info(`Headers: ${JSON.stringify(headers, null, 2)}`);
 
       data.path = urlPath;
 
