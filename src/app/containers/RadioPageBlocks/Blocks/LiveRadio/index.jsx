@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
 import { string } from 'prop-types';
@@ -31,6 +32,7 @@ const MediaPlayerInnerWrapper = styled.div`
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   const { platform } = useContext(RequestContext);
   const { liveRadio, lang, translations, service } = useContext(ServiceContext);
+  const location = useLocation();
 
   const isAmp = platform === 'amp';
   const isValidPlatform = ['amp', 'canonical'].includes(platform);
@@ -44,9 +46,10 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   );
 
   const embedSource = embedUrl({
-    requestUrl: `${serviceId}/${id}/${lang}`,
+    mediaId: `${serviceId}/${id}/${lang}`,
     type: 'media',
     isAmp,
+    pageUrl: `${location.pathname}${location.search}`,
   });
 
   const iframeTitle = pathOr(
