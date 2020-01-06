@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
@@ -43,14 +44,18 @@ storiesOf('Pages|Radio Page', module)
     }),
   )
   .add('default', ({ service }) => (
-    <RadioPage
-      match={matchFixtures(service)}
-      pageData={liveRadioFixtures[service]}
-      status={status}
-      service={service}
-      isAmp={false}
-      loading={false}
-      error=""
-      pageType="media"
-    />
+    <BrowserRouter>
+      <Route path="/:service">
+        <RadioPage
+          match={matchFixtures(service)}
+          pageData={liveRadioFixtures[service]}
+          status={status}
+          service={service}
+          isAmp={false}
+          loading={false}
+          error=""
+          pageType="media"
+        />
+      </Route>
+    </BrowserRouter>
   ));

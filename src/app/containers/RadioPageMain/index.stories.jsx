@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
@@ -57,11 +58,15 @@ storiesOf('Main|Radio Page', module)
             origin="https://www.bbc.com"
             service={service}
           >
-            <RadioPageMain
-              pageData={liveRadioFixtures[service]}
-              match={matchFixtures(service)}
-              service={service}
-            />
+            <BrowserRouter>
+              <Route path="/:service">
+                <RadioPageMain
+                  pageData={liveRadioFixtures[service]}
+                  match={matchFixtures(service)}
+                  service={service}
+                />
+              </Route>
+            </BrowserRouter>
           </RequestContextProvider>
         </ServiceContextProvider>
       </ToggleContextProvider>
