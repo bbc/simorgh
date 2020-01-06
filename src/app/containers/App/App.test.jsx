@@ -39,8 +39,8 @@ describe('App', () => {
         initialData={initialData}
         history={history}
         headers={{
-          'bbc-origin': bbcOrigin,
-          'bbc-country': bbcCountry,
+          bbcOrigin,
+          bbcCountry,
         }}
       />,
     );
