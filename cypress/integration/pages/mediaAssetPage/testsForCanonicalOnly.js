@@ -1,7 +1,6 @@
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import { getBlockData } from './helpers';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -32,27 +31,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           ).should('be.visible');
         },
       );
-    });
-
-    it('should render an SMP player that is ready to play media', () => {
-      cy.window().then(win => {
-        const media = getBlockData('video', win.SIMORGH_DATA.pageData);
-
-        if (media) {
-          cy.get(
-            'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
-          ).then($iframe => {
-            cy.wrap($iframe.prop('contentWindow'), {
-              // `timeout` only applies to the methods chained below.
-              // `its()` benefits from this, and will wait up to 8s
-              // for the mediaPlayer instance to become available.
-              timeout: 8000,
-            })
-              .its('embeddedMedia.playerInstances.mediaPlayer.ready')
-              .should('eq', true);
-          });
-        }
-      });
     });
   });
 

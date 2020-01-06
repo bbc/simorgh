@@ -195,20 +195,24 @@ export const service = {
         url: '/marathi',
       },
       {
+        title: 'महाराष्ट्र',
+        url: '/marathi/topics/c5qvpxvv7y3t',
+      },
+      {
+        title: 'भारत',
+        url: '/marathi/topics/cxnyk3y49x6t',
+      },
+      {
+        title: 'आंतरराष्ट्रीय',
+        url: '/marathi/international',
+      },
+      {
         title: 'व्हीडिओ',
         url: '/marathi/media/video',
       },
       {
         title: 'लोकप्रिय',
         url: '/marathi/popular/read',
-      },
-      {
-        title: 'भारत',
-        url: '/marathi/topics/5a08f030-710f-4168-acee-67294a90fc75',
-      },
-      {
-        title: 'आंतरराष्ट्रीय',
-        url: '/marathi/international',
       },
     ],
   },
