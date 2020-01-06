@@ -200,25 +200,6 @@ export const service = {
       F_REITH_SERIF_MEDIUM_ITALIC,
     ],
     timezone: 'Europe/London',
-    navigation: [
-      {
-        title: 'Home',
-        url: '/archive',
-      },
-      {
-        title: 'Collections',
-        url: '/archive/collections',
-      },
-      {
-        title: 'Stuff We Do',
-        url: '/archive/stuff-we-do',
-      },
-      {
-        title: 'Access Archives',
-        url: '/archive/access-archives',
-      },
-    ],
-    navigationSection: 'Sections',
   },
 };
 
