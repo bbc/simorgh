@@ -17,17 +17,16 @@ const serviceContextMock = {
 };
 
 describe('Radio Page Blocks', () => {
-  beforeEach(() => {
+  let pageData;
+  let blocks;
+  beforeEach(async () => {
     process.env.SIMORGH_EMBEDS_BASE_URL_TEST = 'https://embed-host.bbc.com';
+
+    pageData = await preprocessor(amharicPageData, radioPagePreprocessorRules);
+    blocks = path(['content', 'blocks'], pageData);
   });
 
   it('should match snapshot for Canonical', async () => {
-    const pageData = await preprocessor(
-      amharicPageData,
-      radioPagePreprocessorRules,
-    );
-    const blocks = path(['content', 'blocks'], pageData);
-
     const { asFragment } = renderWithRouter(
       <ServiceContext.Provider value={serviceContextMock}>
         <RequestContext.Provider
@@ -45,12 +44,6 @@ describe('Radio Page Blocks', () => {
   });
 
   it('should match snapshot for AMP', async () => {
-    const pageData = await preprocessor(
-      amharicPageData,
-      radioPagePreprocessorRules,
-    );
-    const blocks = path(['content', 'blocks'], pageData);
-
     const { asFragment } = renderWithRouter(
       <ServiceContext.Provider value={serviceContextMock}>
         <RequestContext.Provider
