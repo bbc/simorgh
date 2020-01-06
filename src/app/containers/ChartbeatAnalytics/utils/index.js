@@ -68,7 +68,7 @@ export const getTitle = (pageType, pageData, brandName) => {
 };
 
 export const getConfig = ({
-  platform,
+  isAmp,
   pageType,
   data,
   brandName,
@@ -77,13 +77,12 @@ export const getConfig = ({
   origin,
   previousPath,
 }) => {
-  const referrer = getReferrer(platform, origin, previousPath);
+  const referrer = getReferrer(isAmp, origin, previousPath);
   const title = getTitle(pageType, data, brandName);
   const domain = env !== 'live' ? getDomain('test') : getDomain(service);
   const sections = buildSections(service, pageType);
   const cookie = getSylphidCookie();
   const type = getType(pageType);
-  const isAmp = platform === 'amp';
   const currentPath = onClient() && window.location.pathname;
   return {
     domain,
