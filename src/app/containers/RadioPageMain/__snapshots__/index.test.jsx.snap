@@ -1,112 +1,856 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio Page Main should match snapshot for AMP 1`] = `
-<DocumentFragment>
-  <amp-analytics>
+<html
+  amp=""
+  dir="ltr"
+  lang="am"
+>
+  <head>
+    <title>
+      ያድምጡ - BBC News አማርኛ
+    </title>
+    <link
+      href="https://www.test.bbc.com/pathname"
+      rel="canonical"
+    />
+    <link
+      href="http://localhost:7080/amharic/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="BBC News አማርኛ"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News አማርኛ"
+      name="application-name"
+    />
+    <meta
+      content="ዝግጅቶቻችንን’"
+      name="description"
+    />
+    <meta
+      content="100004154058350"
+      name="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      name="fb:app_id"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="ዝግጅቶቻችንን’"
+      name="og:description"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
+      name="og:image"
+    />
+    <meta
+      content="BBC News አማርኛ"
+      name="og:image:alt"
+    />
+    <meta
+      content="am-ET"
+      name="og:locale"
+    />
+    <meta
+      content="BBC News አማርኛ"
+      name="og:site_name"
+    />
+    <meta
+      content="ያድምጡ - BBC News አማርኛ"
+      name="og:title"
+    />
+    <meta
+      content="website"
+      name="og:type"
+    />
+    <meta
+      content="https://www.test.bbc.com/pathname"
+      name="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
+    />
+    <meta
+      content="@bbcnews"
+      name="twitter:creator"
+    />
+    <meta
+      content="ዝግጅቶቻችንን’"
+      name="twitter:description"
+    />
+    <meta
+      content="BBC News አማርኛ"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@bbcnews"
+      name="twitter:site"
+    />
+    <meta
+      content="ያድምጡ - BBC News አማርኛ"
+      name="twitter:title"
+    />
     <script
-      type="application/json"
+      type="application/ld+json"
     >
-      {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=4&p=amharic.bbc_amharic_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares::ws_live:bbc_amharic_radio]&x2=[amp]&x3=[news-amharic]&x4=[am]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[ያድምጡ+-+BBC+News+አማርኛ]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+      {"@context":"http://schema.org","@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News አማርኛ","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ያድምጡ"}}
     </script>
-  </amp-analytics>
-  <main
-    class="Grid-sc-12lwanc-0 bETYGj"
-    role="main"
-  >
-    <div
-      class="GridItemConstrainedLarge-sc-12lwanc-5 eXdLFq"
-    >
-      <h1
-        class="Headline-sc-1kh1qhu-0 cWPJOi"
-        id="content"
-        tabindex="-1"
-      >
-        ያድምጡ
-      </h1>
-      <p
-        class="Paragraph-k859h4-0 cnKvCl"
-      >
-        ዝግጅቶቻችንን’
-      </p>
-      <div
-        class="MediaPlayerOuterWrapper-sc-1hns5mj-0 hdCRkd"
+    <script
+      async="true"
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    />
+  </head>
+  <body>
+    .c0 {
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.c2 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c6 {
+  height: 165px;
+  position: relative;
+  overflow: hidden;
+}
+
+.c5 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 50rem;
+  max-width: calc(100vw - 2rem);
+}
+
+.c3 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2rem;
+    line-height: 2.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+<div>
+      <amp-analytics>
+        <script
+          type="application/json"
+        >
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=4&p=amharic.bbc_amharic_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares::ws_live:bbc_amharic_radio]&x2=[amp]&x3=[news-amharic]&x4=[am]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[ያድምጡ+-+BBC+News+አማርኛ]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main
+        class="c0"
+        role="main"
       >
         <div
-          class="MediaPlayerInnerWrapper-sc-1hns5mj-1 cfTqqs"
+          class="c1"
         >
-          <div
-            class="StyledAudioContainer-sc-13p1a4d-1 bNktbX"
+          <h1
+            class="c2"
+            id="content"
+            tabindex="-1"
           >
-            <amp-iframe
-              allowfullscreen="allowfullscreen"
-              frameborder="0"
-              layout="fill"
-              sandbox="allow-scripts allow-same-origin"
-              scrolling="no"
-              src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
-              title="Audio player"
+            ያድምጡ
+          </h1>
+          <p
+            class="c3"
+          >
+            ዝግጅቶቻችንን’
+          </p>
+          <div
+            class="c4"
+          >
+            <div
+              class="c5"
             >
-              <amp-img
-                alt=""
-                attribution=""
-                height="16"
-                layout="fill"
-                placeholder="true"
-                src="http://localhost:7080/images/amp_audio_placeholder.png"
-                width="9"
-              />
-            </amp-iframe>
+              <div
+                class="c6"
+              >
+                <amp-iframe
+                  allowfullscreen="allowfullscreen"
+                  frameborder="0"
+                  layout="fill"
+                  sandbox="allow-scripts allow-same-origin"
+                  scrolling="no"
+                  src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
+                  title="Audio player"
+                >
+                  <amp-img
+                    alt=""
+                    attribution=""
+                    height="16"
+                    layout="fill"
+                    placeholder="true"
+                    src="http://localhost:7080/images/amp_audio_placeholder.png"
+                    width="9"
+                  />
+                </amp-iframe>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
-  </main>
-</DocumentFragment>
+  </body>
+</html>
 `;
 
 exports[`Radio Page Main should match snapshot for Canonical 1`] = `
-<DocumentFragment>
-  <noscript />
-  <main
-    class="Grid-sc-12lwanc-0 bETYGj"
-    role="main"
-  >
-    <div
-      class="GridItemConstrainedLarge-sc-12lwanc-5 eXdLFq"
+.c0 {
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.c2 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c6 {
+  height: 165px;
+  position: relative;
+  overflow: hidden;
+}
+
+.c5 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 50rem;
+  max-width: calc(100vw - 2rem);
+}
+
+.c3 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2rem;
+    line-height: 2.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+<html
+  dir="ltr"
+  lang="am"
+>
+  <head>
+    <title>
+      ያድምጡ - BBC News አማርኛ
+    </title>
+    <link
+      href="https://www.test.bbc.com/pathname"
+      rel="canonical"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/pathname.amp"
+      rel="amphtml"
+    />
+    <link
+      href="http://localhost:7080/amharic/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="BBC News አማርኛ"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News አማርኛ"
+      name="application-name"
+    />
+    <meta
+      content="ዝግጅቶቻችንን’"
+      name="description"
+    />
+    <meta
+      content="100004154058350"
+      name="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      name="fb:app_id"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="ዝግጅቶቻችንን’"
+      name="og:description"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
+      name="og:image"
+    />
+    <meta
+      content="BBC News አማርኛ"
+      name="og:image:alt"
+    />
+    <meta
+      content="am-ET"
+      name="og:locale"
+    />
+    <meta
+      content="BBC News አማርኛ"
+      name="og:site_name"
+    />
+    <meta
+      content="ያድምጡ - BBC News አማርኛ"
+      name="og:title"
+    />
+    <meta
+      content="website"
+      name="og:type"
+    />
+    <meta
+      content="https://www.test.bbc.com/pathname"
+      name="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
+    />
+    <meta
+      content="@bbcnews"
+      name="twitter:creator"
+    />
+    <meta
+      content="ዝግጅቶቻችንን’"
+      name="twitter:description"
+    />
+    <meta
+      content="BBC News አማርኛ"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@bbcnews"
+      name="twitter:site"
+    />
+    <meta
+      content="ያድምጡ - BBC News አማርኛ"
+      name="twitter:title"
+    />
+    <script
+      type="application/ld+json"
     >
-      <h1
-        class="Headline-sc-1kh1qhu-0 cWPJOi"
-        id="content"
-        tabindex="-1"
-      >
-        ያድምጡ
-      </h1>
-      <p
-        class="Paragraph-k859h4-0 cnKvCl"
-      >
-        ዝግጅቶቻችንን’
-      </p>
-      <div
-        class="MediaPlayerOuterWrapper-sc-1hns5mj-0 hdCRkd"
+      {"@context":"http://schema.org","@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News አማርኛ","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ያድምጡ"}}
+    </script>
+  </head>
+  <body>
+    <div>
+      <noscript />
+      <main
+        class="c0"
+        role="main"
       >
         <div
-          class="MediaPlayerInnerWrapper-sc-1hns5mj-1 cfTqqs"
+          class="c1"
         >
-          <div
-            class="StyledAudioContainer-sc-13p1a4d-1 bNktbX"
+          <h1
+            class="c2"
+            id="content"
+            tabindex="-1"
           >
-            <iframe
-              allow="autoplay; fullscreen"
-              allowfullscreen=""
-              class="StyledIframe-fuo2ed-0 jQWQE"
-              scrolling="no"
-              src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
-              title="Audio player"
-            />
+            ያድምጡ
+          </h1>
+          <p
+            class="c3"
+          >
+            ዝግጅቶቻችንን’
+          </p>
+          <div
+            class="c4"
+          >
+            <div
+              class="c5"
+            >
+              <div
+                class="c6"
+              >
+                <iframe
+                  allow="autoplay; fullscreen"
+                  allowfullscreen=""
+                  class="c7"
+                  scrolling="no"
+                  src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
+                  title="Audio player"
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
-  </main>
-</DocumentFragment>
+  </body>
+</html>
 `;
