@@ -17,8 +17,7 @@ export const App = ({ routes, location, initialData, history, headers }) => {
 
   const { pageData, status, error } = initialData;
 
-  const bbcOrigin = headers['bbc-origin'];
-  const bbcCountry = headers['bbc-country'];
+  const { bbcOrigin, bbcCountry } = headers || {};
 
   const [state, setState] = useState({
     pageData,
