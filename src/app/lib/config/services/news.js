@@ -253,14 +253,6 @@ export const service = {
         title: 'Video & Audio',
         url: '/news/video_and_audio/headlines',
       },
-      {
-        title: 'In Pictures',
-        url: '/news/in_pictures',
-      },
-      {
-        title: 'Newsbeat',
-        url: '/news/newsbeat',
-      },
     ],
     navigationSection: 'Sections',
   },
