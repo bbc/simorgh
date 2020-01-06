@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
-<DocumentFragment>
-  .c2 {
+.c2 {
   height: 165px;
   position: relative;
   overflow: hidden;
@@ -29,43 +28,54 @@ exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
   }
 }
 
-<div
-    class="c0"
-  >
-    <div
-      class="c1"
-    >
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    />
+  </head>
+  <body>
+    <div>
       <div
-        class="c2"
+        class="c0"
       >
-        <amp-iframe
-          allowfullscreen="allowfullscreen"
-          frameborder="0"
-          layout="fill"
-          sandbox="allow-scripts allow-same-origin"
-          scrolling="no"
-          src="https://embed-host.bbc.com/ws/av-embeds/media/externalId/id/ko/amp"
-          title="Audio player"
+        <div
+          class="c1"
         >
-          <amp-img
-            alt=""
-            attribution=""
-            height="16"
-            layout="fill"
-            placeholder="true"
-            src="http://localhost:7080/images/amp_audio_placeholder.png"
-            width="9"
-          />
-        </amp-iframe>
+          <div
+            class="c2"
+          >
+            <amp-iframe
+              allowfullscreen="allowfullscreen"
+              frameborder="0"
+              layout="fill"
+              sandbox="allow-scripts allow-same-origin"
+              scrolling="no"
+              src="https://embed-host.bbc.com/ws/av-embeds/media/externalId/id/ko/amp"
+              title="Audio player"
+            >
+              <amp-img
+                alt=""
+                attribution=""
+                height="16"
+                layout="fill"
+                placeholder="true"
+                src="http://localhost:7080/images/amp_audio_placeholder.png"
+                width="9"
+              />
+            </amp-iframe>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</DocumentFragment>
+  </body>
+</html>
 `;
 
 exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
-<DocumentFragment>
-  .c2 {
+.c2 {
   height: 165px;
   position: relative;
   overflow: hidden;
@@ -103,31 +113,38 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
 }
 
 <div
-    class="c0"
+  class="c0"
+>
+  <div
+    class="c1"
   >
     <div
-      class="c1"
+      class="c2"
     >
-      <div
-        class="c2"
-      >
-        <iframe
-          allow="autoplay; fullscreen"
-          allowfullscreen=""
-          class="c3"
-          scrolling="no"
-          src="https://embed-host.bbc.com/ws/av-embeds/media/externalId/id/ko"
-          title="Audio player"
-        />
-      </div>
+      <iframe
+        allow="autoplay; fullscreen"
+        allowfullscreen=""
+        class="c3"
+        scrolling="no"
+        src="https://embed-host.bbc.com/ws/av-embeds/media/externalId/id/ko"
+        title="Audio player"
+      />
     </div>
   </div>
-</DocumentFragment>
+</div>
 `;
 
 exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio should render correctly for amp 1`] = `
-<DocumentFragment>
-  .c2 {
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    />
+  </head>
+  <body>
+    .c2 {
   height: 165px;
   position: relative;
   overflow: hidden;
@@ -154,43 +171,45 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
   }
 }
 
-<div
-    class="c0"
-  >
-    <div
-      class="c1"
-    >
+<div>
       <div
-        class="c2"
+        class="c0"
       >
-        <amp-iframe
-          allowfullscreen="allowfullscreen"
-          frameborder="0"
-          layout="fill"
-          sandbox="allow-scripts allow-same-origin"
-          scrolling="no"
-          src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om/amp"
-          title="Audio player"
+        <div
+          class="c1"
         >
-          <amp-img
-            alt=""
-            attribution=""
-            height="16"
-            layout="fill"
-            placeholder="true"
-            src="http://localhost:7080/images/amp_audio_placeholder.png"
-            width="9"
-          />
-        </amp-iframe>
+          <div
+            class="c2"
+          >
+            <amp-iframe
+              allowfullscreen="allowfullscreen"
+              frameborder="0"
+              layout="fill"
+              sandbox="allow-scripts allow-same-origin"
+              scrolling="no"
+              src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om/amp"
+              title="Audio player"
+            >
+              <amp-img
+                alt=""
+                attribution=""
+                height="16"
+                layout="fill"
+                placeholder="true"
+                src="http://localhost:7080/images/amp_audio_placeholder.png"
+                width="9"
+              />
+            </amp-iframe>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</DocumentFragment>
+  </body>
+</html>
 `;
 
 exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio should render correctly for canonical 1`] = `
-<DocumentFragment>
-  .c2 {
+.c2 {
   height: 165px;
   position: relative;
   overflow: hidden;
@@ -228,24 +247,23 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
 }
 
 <div
-    class="c0"
+  class="c0"
+>
+  <div
+    class="c1"
   >
     <div
-      class="c1"
+      class="c2"
     >
-      <div
-        class="c2"
-      >
-        <iframe
-          allow="autoplay; fullscreen"
-          allowfullscreen=""
-          class="c3"
-          scrolling="no"
-          src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om"
-          title="Audio player"
-        />
-      </div>
+      <iframe
+        allow="autoplay; fullscreen"
+        allowfullscreen=""
+        class="c3"
+        scrolling="no"
+        src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om"
+        title="Audio player"
+      />
     </div>
   </div>
-</DocumentFragment>
+</div>
 `;

@@ -1,5 +1,4 @@
-import renderWithRouter from '#testHelpers/renderWithRouter';
-import assertFirstChildIsNull from '#testHelpers/assertions';
+import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import {
   VideoCanonicalWithPlaceholder,
   VideoCanonicalNoPlaceholder,
@@ -12,43 +11,33 @@ import {
 
 describe('MediaPlayer', () => {
   beforeEach(() => {
-    process.env.SIMORGH_EMBEDS_BASE_URL_TEST = 'https://embed-host.bbc.com';
+    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
   });
 
-  it('Calls the canonical placeholder when platform is canonical and showPlaceholder is true', () => {
-    const { asFragment } = renderWithRouter(VideoCanonicalWithPlaceholder);
-    expect(asFragment()).toMatchSnapshot();
-  });
+  shouldMatchSnapshot(
+    'Calls the canonical placeholder when platform is canonical and showPlaceholder is true',
+    VideoCanonicalWithPlaceholder,
+  );
 
-  it('Does not Call the canonical placeholder when platform is canonical but showPlaceholder is false', () => {
-    const { asFragment } = renderWithRouter(VideoCanonicalNoPlaceholder);
-    expect(asFragment()).toMatchSnapshot();
-  });
+  shouldMatchSnapshot(
+    'Does not Call the canonical placeholder when platform is canonical but showPlaceholder is false',
+    VideoCanonicalNoPlaceholder,
+  );
 
-  it('Renders the AMP player when platform is AMP', () => {
-    const { asFragment } = renderWithRouter(VideoAmp);
-    expect(asFragment()).toMatchSnapshot();
-  });
+  shouldMatchSnapshot('Renders the AMP player when platform is AMP', VideoAmp);
 
-  it('Renders the canonical player with a caption', () => {
-    const { asFragment } = renderWithRouter(VideoCanonicalWithCaption);
-    expect(asFragment()).toMatchSnapshot();
-  });
+  shouldMatchSnapshot(
+    'Renders the canonical player with a caption',
+    VideoCanonicalWithCaption,
+  );
 
-  it('Renders the AMP player with a caption', () => {
-    const { asFragment } = renderWithRouter(VideoAmpWithCaption);
-    expect(asFragment()).toMatchSnapshot();
-  });
+  shouldMatchSnapshot(
+    'Renders the AMP player with a caption',
+    VideoAmpWithCaption,
+  );
 
   describe('Fails and returns early when', () => {
-    it('there is no versionId', () => {
-      const { container } = renderWithRouter(VideoCanonicalNoVersionId);
-      assertFirstChildIsNull(container);
-    });
-
-    it('component is toggled off', () => {
-      const { container } = renderWithRouter(VideoCanonicalToggledOff);
-      assertFirstChildIsNull(container);
-    });
+    isNull('there is no versionId', VideoCanonicalNoVersionId);
+    isNull('component is toggled off', VideoCanonicalToggledOff);
   });
 });
