@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderWithRouter } from '#lib/utilities/testHelpers';
+import renderWithRouter from '#testHelpers/renderWithRouter';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';

@@ -1,4 +1,5 @@
-import { renderWithRouter, assertFirstChildIsNull } from '#lib/utilities/testHelpers';
+import renderWithRouter from '#testHelpers/renderWithRouter';
+import assertFirstChildIsNull from '#testHelpers/assertions';
 import {
   VideoCanonicalWithPlaceholder,
   VideoCanonicalNoPlaceholder,

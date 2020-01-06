@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderWithRouter } from '#lib/utilities/testHelpers';
+import renderWithRouter from '#testHelpers/renderWithRouter';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import RadioPageMain from '.';

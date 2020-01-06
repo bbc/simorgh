@@ -1,9 +1,7 @@
 import React from 'react';
 import { suppressPropWarnings } from '@bbc/psammead-test-helpers';
-import {
-  renderWithRouter,
-  assertFirstChildIsNull,
-} from '#lib/utilities/testHelpers';
+import renderWithRouter from '#testHelpers/renderWithRouter';
+import assertFirstChildIsNull from '#testHelpers/assertions';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import LiveRadio from '.';
