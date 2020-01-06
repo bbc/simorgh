@@ -1,83 +1,42 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
-import { number, oneOf, string, shape } from 'prop-types';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import Timestamp from '@bbc/psammead-timestamp-container';
-import MostRead from '@bbc/psammead-most-read';
-import mostReadTranslationsPropTypes from '#models/propTypes/mostRead';
+import { string } from 'prop-types';
+import {
+  MostReadList,
+  MostReadLink,
+  MostReadTitle,
+  MostReadRank,
+  MostReadItemWrapper,
+} from '@bbc/psammead-most-read';
+import { ServiceContext } from '#contexts/ServiceContext';
 import webLogger from '#lib/logger.web';
-import { shouldRenderLastUpdated, mostReadRecordIsFresh } from '../utilities';
+import { mostReadRecordIsFresh } from '../utilities';
+import LastUpdated from './lastUpdated';
 
 const logger = webLogger();
 
-const lastUpdated = ({ locale, prefix, script, service, timestamp }) => (
-  <Timestamp
-    timestamp={timestamp}
-    dateTimeFormat="YYYY-MM-DD"
-    prefix={prefix}
-    format="LL"
-    script={script}
-    service={service}
-    locale={locale}
-  />
-);
-
-lastUpdated.propTypes = {
-  locale: string.isRequired,
-  prefix: string.isRequired,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  timestamp: number.isRequired,
-};
-
-const CanonicalMostRead = ({
-  dir,
-  endpoint,
-  translations,
-  script,
-  service,
-  locale,
-}) => {
+const CanonicalMostRead = ({ endpoint }) => {
   const [items, setItems] = useState([]);
+  const {
+    service,
+    script,
+    dir,
+    datetimeLocale,
+    mostRead: { header, lastUpdated, numberOfItems },
+  } = useContext(ServiceContext);
 
   useEffect(() => {
     const handleResponse = async response => {
       const mostReadData = await response.json();
 
-      // do not show most read if lastRecordUpdated is greated than 35min
+      // Do not show most read if lastRecordUpdated is greated than 35min
       if (!mostReadRecordIsFresh(mostReadData.lastRecordTimeStamp)) {
         return;
       }
 
-      // extracting the data we need from the api
-      const sortedItems = [];
+      const slicedData = mostReadData.records.slice(0, numberOfItems);
 
-      mostReadData.records
-        .slice(0, 10)
-        .forEach(({ id, promo: { headlines, timestamp, locators } }) => {
-          const renderTimestampContainer = shouldRenderLastUpdated(
-            timestamp,
-          ) ? (
-            lastUpdated({
-              prefix: translations.lastUpdated,
-              script,
-              service,
-              timestamp,
-              locale,
-            })
-          ) : (
-            <></>
-          );
-
-          sortedItems.push({
-            id,
-            title: headlines.shortHeadline,
-            href: locators.assetUri,
-            timestamp: renderTimestampContainer,
-          });
-        });
-
-      setItems(sortedItems);
+      setItems(slicedData);
     };
 
     const fetchMostReadData = pathname =>
@@ -86,34 +45,54 @@ const CanonicalMostRead = ({
         .catch(e => logger.error(`HTTP Error: "${e}"`));
 
     fetchMostReadData(endpoint);
-  }, [endpoint, locale, script, service, translations.lastUpdated]);
+  }, [endpoint, numberOfItems]);
 
   return (
     <>
+      {/* Render nothing when items is empty */}
       {items.length !== 0 ? (
-        <MostRead
-          items={items}
-          header={translations.header}
-          service={service}
-          script={script}
-          dir={dir}
-        />
+        <>
+          <MostReadTitle
+            header={header}
+            script={script}
+            service={service}
+            dir={dir}
+          />
+          <MostReadList numberOfItems={numberOfItems} dir={dir}>
+            {items.map((item, index) => (
+              <MostReadItemWrapper dir={dir} key={item.promo.id}>
+                <MostReadRank
+                  service={service}
+                  script={script}
+                  listIndex={index + 1}
+                  numberOfItems={numberOfItems}
+                  dir={dir}
+                />
+                <MostReadLink
+                  service={service}
+                  script={script}
+                  title={item.promo.headlines.headline}
+                  href={item.promo.locators.assetUri}
+                >
+                  <LastUpdated
+                    prefix={lastUpdated}
+                    script={script}
+                    service={service}
+                    timestamp={item.promo.timestamp}
+                    locale={datetimeLocale}
+                  />
+                </MostReadLink>
+              </MostReadItemWrapper>
+            ))}
+          </MostReadList>
+        </>
       ) : null}
     </>
   );
 };
 
 CanonicalMostRead.propTypes = {
-  dir: oneOf(['rtl', 'ltr']),
   endpoint: string.isRequired,
-  translations: mostReadTranslationsPropTypes.isRequired,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
-  locale: string.isRequired,
-};
-
-CanonicalMostRead.defaultProps = {
-  dir: 'ltr',
 };
 
 export default CanonicalMostRead;
