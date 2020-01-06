@@ -1,5 +1,1 @@
-const isLive = () => {
-  return process.env.APP_ENV === 'live';
-};
-
-export default isLive;
+export default () => process.env.APP_ENV === 'live';
