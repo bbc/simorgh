@@ -186,6 +186,7 @@ export const service = {
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated: ',
+      numberOfItems: 10,
     },
     navigation: [
       {
@@ -242,6 +243,7 @@ export const service = {
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated: ',
+      numberOfItems: 10,
     },
     navigation: [
       {

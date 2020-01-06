@@ -156,6 +156,7 @@ export const service = {
     mostRead: {
       header: 'ఎక్కువమంది చదివినవి',
       lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ: ',
+      numberOfItems: 10,
     },
     footer: {
       trustProjectLink: {

@@ -156,6 +156,7 @@ export const service = {
     mostRead: {
       header: 'Wanda aka fi karantawa',
       lastUpdated: 'Na baya-bayan nan ',
+      numberOfItems: 10,
     },
     footer: {
       trustProjectLink: {

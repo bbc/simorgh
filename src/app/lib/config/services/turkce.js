@@ -157,6 +157,7 @@ export const service = {
     mostRead: {
       header: 'En çok okunanlar',
       lastUpdated: 'Son güncelleme: ',
+      numberOfItems: 10,
     },
     footer: {
       trustProjectLink: {

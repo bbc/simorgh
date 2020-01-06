@@ -158,6 +158,7 @@ export const service = {
     mostRead: {
       header: 'Энг кўп ўқилган',
       lastUpdated: 'Сўнгги янгиланиш: ',
+      numberOfItems: 10,
     },
     footer: {
       trustProjectLink: {

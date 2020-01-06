@@ -151,6 +151,7 @@ export const service = {
     mostRead: {
       header: 'ได้รับความนิยมสูงสุด',
       lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา ',
+      numberOfItems: 10,
     },
     navigation: [
       {

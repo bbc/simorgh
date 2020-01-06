@@ -162,6 +162,7 @@ export const service = {
     mostRead: {
       header: 'Ugu akhris badan',
       lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay ',
+      numberOfItems: 10,
     },
     footer: {
       trustProjectLink: {
