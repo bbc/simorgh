@@ -12,9 +12,7 @@ const getMostReadEndpoint = ({ service, variant }) =>
 
 const MostReadContainer = ({ endpointOverride }) => {
   const { variant } = useContext(RequestContext);
-  const { service, script, mostRead, dir, datetimeLocale } = useContext(
-    ServiceContext,
-  );
+  const { service } = useContext(ServiceContext);
 
   const { enabled } = useToggle('mostRead');
   if (!enabled) {
@@ -24,16 +22,7 @@ const MostReadContainer = ({ endpointOverride }) => {
   const endpoint =
     endpointOverride || getMostReadEndpoint({ service, variant });
 
-  return (
-    <Canonical
-      endpoint={endpoint}
-      script={script}
-      service={service}
-      translations={mostRead}
-      dir={dir}
-      locale={datetimeLocale}
-    />
-  );
+  return <Canonical endpoint={endpoint} />;
 };
 
 MostReadContainer.propTypes = {
