@@ -116,8 +116,8 @@ export const getHref = platform => {
   return null;
 };
 
-export const getReferrer = (isAmp, origin, previousPath) => {
-  if (isAmp) {
+export const getReferrer = (platform, origin, previousPath) => {
+  if (platform === 'amp') {
     return `\${documentReferrer}`;
   }
 
