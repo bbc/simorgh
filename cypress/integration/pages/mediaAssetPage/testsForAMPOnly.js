@@ -32,6 +32,15 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
         },
       );
     });
+    describe('AMP Status', () => {
+      it('should return a 200 response', () => {
+        cy.testResponseCodeAndType(
+          `${config[service].pageTypes.mediaAssetPage.path}.amp`,
+          200,
+          'text/html',
+        );
+      });
+    });
   });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
