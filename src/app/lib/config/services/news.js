@@ -229,6 +229,38 @@ export const service = {
         title: 'Tech',
         url: '/news/technology',
       },
+      {
+        title: 'Science',
+        url: '/news/science_and_environment',
+      },
+      {
+        title: 'Health',
+        url: '/news/health',
+      },
+      {
+        title: 'Family & Education',
+        url: '/news/education',
+      },
+      {
+        title: 'Entertainment & Arts',
+        url: '/news/entertainment_and_arts',
+      },
+      {
+        title: 'Stories',
+        url: '/news/stories',
+      },
+      {
+        title: 'Video & Audio',
+        url: '/news/video_and_audio/headlines',
+      },
+      {
+        title: 'In Pictures',
+        url: '/news/in_pictures',
+      },
+      {
+        title: 'Newsbeat',
+        url: '/news/newsbeat',
+      },
     ],
     navigationSection: 'Sections',
   },

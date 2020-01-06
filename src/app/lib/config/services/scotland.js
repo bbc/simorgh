@@ -201,6 +201,42 @@ export const service = {
       F_REITH_SERIF_MEDIUM_ITALIC,
     ],
     timezone: 'Europe/London',
+    navigation: [
+      {
+        title: 'Home',
+        url: '/scotland',
+      },
+      {
+        title: 'Features',
+        url: '/programmes/p00cst9x/articles',
+      },
+      {
+        title: 'Programmes',
+        url: '/tv/bbcscotland',
+      },
+      {
+        title: 'Trailers',
+        url: '/programmes/p01zn5g7',
+      },
+      {
+        title: 'Archive',
+        url: '/programmes/p047y2dr',
+      },
+      {
+        title: 'Learn',
+        url: '/programmes/p04yy4wy',
+      },
+      {
+        title: 'Newsletter',
+        url:
+          '/programmes/articles/4MgQWSWT49VdgHD988GrxxY/newsletter-emails-made-for-you',
+      },
+      {
+        title: 'Social',
+        url: '/programmes/p00cst9x/contact',
+      },
+    ],
+    navigationSection: 'Sections',
   },
 };
 
