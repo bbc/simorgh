@@ -2,10 +2,8 @@ import React from 'react';
 import { node, string, elementType } from 'prop-types';
 
 const withContext = data => {
-  const value = data;
-
   const LoadedContextProvider = ({ Context, dataKey, children }) => (
-    <Context.Provider value={dataKey ? value[dataKey] : value}>
+    <Context.Provider data={dataKey ? data[dataKey] : data}>
       {children}
     </Context.Provider>
   );
