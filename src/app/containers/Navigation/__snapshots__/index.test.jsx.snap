@@ -606,12 +606,12 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 `;
 
 exports[`Navigation Container should correctly render canonical navigation 1`] = `
-.c3 {
+.c4 {
   color: #fff;
   fill: currentColor;
 }
 
-.c10 {
+.c11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -623,7 +623,58 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   margin: 0;
 }
 
-.c2 {
+.c13 {
+  background-color: #222222;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+.c14 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.c15 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.c15:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.c16 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c16:hover,
+.c16:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c17 {
+  border-left: 0.25rem solid #FFFFFF;
+  padding-left: 0.5rem;
+}
+
+.c3 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -634,13 +685,13 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   width: 2.75rem;
 }
 
-.c2:hover,
-.c2:focus {
+.c3:hover,
+.c3:focus {
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.c2:hover::after,
-.c2:focus::after {
+.c3:hover::after,
+.c3:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -650,7 +701,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   border: 0.25rem solid #FFFFFF;
 }
 
-.c2 svg {
+.c3 svg {
   vertical-align: middle;
 }
 
@@ -660,14 +711,14 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   margin: 0 auto;
 }
 
-.c5 {
+.c6 {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
 }
 
-.c8 {
+.c9 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -681,7 +732,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   padding: 0.75rem 1rem;
 }
 
-.c8:hover::after {
+.c9:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -691,7 +742,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c8:focus::after {
+.c9:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -702,7 +753,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   border: 0.25rem solid #FFFFFF;
 }
 
-.c11 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -716,7 +767,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   padding: 0.75rem 1rem;
 }
 
-.c11:hover::after {
+.c12:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -725,7 +776,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c11:focus::after {
+.c12:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -736,13 +787,13 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   border: 0.25rem solid #FFFFFF;
 }
 
-.c7 {
+.c8 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-.c9::after {
+.c10::after {
   content: '';
   position: absolute;
   left: 0;
@@ -751,7 +802,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c12 .c6::after {
+.c18 .c7::after {
   left: 0;
 }
 
@@ -761,78 +812,110 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.c0 .c6::after {
+.c0 .c7::after {
   left: 0;
 }
 
+.c2 {
+  position: relative;
+}
+
 @media (min-width:37.5rem) {
-  .c2 {
+  .c13 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c13 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) {
-  .c2 {
+  .c3 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c6 {
     overflow: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c8 {
+  .c9 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c11 {
+  .c12 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c7:last-child {
+  .c8:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7::after {
+  .c8::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -843,7 +926,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 }
 
 @media (max-width:37.4375rem) {
-  .c4 {
+  .c5 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: smooth;
@@ -858,11 +941,11 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
     -ms-overflow-style: none;
   }
 
-  .c4::-webkit-scrollbar {
+  .c5::-webkit-scrollbar {
     display: none;
   }
 
-  .c4:after {
+  .c5:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -884,49 +967,146 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   <div
     class="c1"
   >
-    <button
-      aria-expanded="false"
-      aria-label="Sections"
-      class="c2"
-      dir="ltr"
-      type="button"
-    >
-      <svg
-        aria-hidden="true"
-        class="c3"
-        focusable="false"
-        height="2.75rem"
-        viewBox="0 0 44 44"
-        width="2.75rem"
-      >
-        <path
-          d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
-        />
-      </svg>
-    </button>
     <div
-      class="c4"
-      dir="ltr"
+      class="c2"
     >
-      <ul
-        class="c5"
-        role="list"
+      <button
+        aria-expanded="false"
+        aria-label="Sections"
+        class="c3"
+        dir="ltr"
+        type="button"
       >
-        <li
-          class="c6 c7"
-          dir="ltr"
-          role="listitem"
+        <svg
+          aria-hidden="true"
+          class="c4"
+          focusable="false"
+          height="2.75rem"
+          viewBox="0 0 44 44"
+          width="2.75rem"
         >
-          <a
-            class="c8"
-            href="/news"
+          <path
+            d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+          />
+        </svg>
+      </button>
+      <div
+        class="c5"
+        dir="ltr"
+      >
+        <ul
+          class="c6"
+          role="list"
+        >
+          <li
+            class="c7 c8"
+            dir="ltr"
+            role="listitem"
           >
-            <span
+            <a
               class="c9"
-              role="text"
+              href="/news"
             >
               <span
                 class="c10"
+                role="text"
+              >
+                <span
+                  class="c11"
+                >
+                  Current page
+                  , 
+                </span>
+                Home
+              </span>
+            </a>
+          </li>
+          <li
+            class="c7 c8"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/uk"
+            >
+              UK
+            </a>
+          </li>
+          <li
+            class="c7 c8"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/world"
+            >
+              World
+            </a>
+          </li>
+          <li
+            class="c7 c8"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/business"
+            >
+              Business
+            </a>
+          </li>
+          <li
+            class="c7 c8"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/politics"
+            >
+              Politics
+            </a>
+          </li>
+          <li
+            class="c7 c8"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/technology"
+            >
+              Tech
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="c13"
+      height="0"
+    >
+      <ul
+        class="c14"
+        role="list"
+      >
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
+            href="/news"
+          >
+            <span
+              class="c17"
+              dir="ltr"
+              role="text"
+            >
+              <span
+                class="c11"
               >
                 Current page
                 , 
@@ -936,60 +1116,55 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
           </a>
         </li>
         <li
-          class="c6 c7"
-          dir="ltr"
+          class="c15"
           role="listitem"
         >
           <a
-            class="c11"
+            class="c16"
             href="/news/uk"
           >
             UK
           </a>
         </li>
         <li
-          class="c6 c7"
-          dir="ltr"
+          class="c15"
           role="listitem"
         >
           <a
-            class="c11"
+            class="c16"
             href="/news/world"
           >
             World
           </a>
         </li>
         <li
-          class="c6 c7"
-          dir="ltr"
+          class="c15"
           role="listitem"
         >
           <a
-            class="c11"
+            class="c16"
             href="/news/business"
           >
             Business
           </a>
         </li>
         <li
-          class="c6 c7"
-          dir="ltr"
+          class="c15"
           role="listitem"
         >
           <a
-            class="c11"
+            class="c16"
             href="/news/politics"
           >
             Politics
           </a>
         </li>
         <li
-          class="c6 c7"
-          dir="ltr"
+          class="c15"
           role="listitem"
         >
           <a
-            class="c11"
+            class="c16"
             href="/news/technology"
           >
             Tech

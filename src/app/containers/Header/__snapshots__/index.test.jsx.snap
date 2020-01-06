@@ -51,12 +51,63 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c15 {
+.c16 {
   color: #fff;
   fill: currentColor;
 }
 
-.c14 {
+.c24 {
+  background-color: #222222;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+.c25 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.c26 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.c26:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.c27 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c27:hover,
+.c27:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c28 {
+  border-left: 0.25rem solid #FFFFFF;
+  padding-left: 0.5rem;
+}
+
+.c15 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -67,13 +118,13 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   width: 2.75rem;
 }
 
-.c14:hover,
-.c14:focus {
+.c15:hover,
+.c15:focus {
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.c14:hover::after,
-.c14:focus::after {
+.c15:hover::after,
+.c15:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -83,7 +134,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c14 svg {
+.c15 svg {
   vertical-align: middle;
 }
 
@@ -93,14 +144,14 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   margin: 0 auto;
 }
 
-.c17 {
+.c18 {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
 }
 
-.c20 {
+.c21 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -114,7 +165,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c20:hover::after {
+.c21:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -124,7 +175,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c20:focus::after {
+.c21:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -135,7 +186,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c22 {
+.c23 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -149,7 +200,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c22:hover::after {
+.c23:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -158,7 +209,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c22:focus::after {
+.c23:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -169,13 +220,13 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c19 {
+.c20 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-.c21::after {
+.c22::after {
   content: '';
   position: absolute;
   left: 0;
@@ -190,8 +241,12 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.c12 .c18::after {
+.c12 .c19::after {
   left: 0;
+}
+
+.c14 {
+  position: relative;
 }
 
 .c0 {
@@ -305,73 +360,101 @@ exports[`Header should render correctly for WS frontPage 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c24 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c24 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) {
-  .c14 {
+  .c15 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c18 {
     overflow: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c20 {
+  .c21 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c23 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c23 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c22 {
+  .c23 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c19:last-child {
+  .c20:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19::after {
+  .c20::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -382,7 +465,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c16 {
+  .c17 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: smooth;
@@ -397,11 +480,11 @@ exports[`Header should render correctly for WS frontPage 1`] = `
     -ms-overflow-style: none;
   }
 
-  .c16::-webkit-scrollbar {
+  .c17::-webkit-scrollbar {
     display: none;
   }
 
-  .c16:after {
+  .c17:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -620,45 +703,178 @@ exports[`Header should render correctly for WS frontPage 1`] = `
     <div
       class="c13"
     >
-      <button
-        aria-expanded="false"
-        aria-label="Plenti seshon"
-        class="c14"
-        dir="ltr"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="c15"
-          focusable="false"
-          height="2.75rem"
-          viewBox="0 0 44 44"
-          width="2.75rem"
-        >
-          <path
-            d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
-          />
-        </svg>
-      </button>
       <div
-        class="c16"
-        dir="ltr"
+        class="c14"
+      >
+        <button
+          aria-expanded="false"
+          aria-label="Plenti seshon"
+          class="c15"
+          dir="ltr"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="c16"
+            focusable="false"
+            height="2.75rem"
+            viewBox="0 0 44 44"
+            width="2.75rem"
+          >
+            <path
+              d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+            />
+          </svg>
+        </button>
+        <div
+          class="c17"
+          dir="ltr"
+        >
+          <ul
+            class="c18"
+            role="list"
+          >
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c21"
+                href="/pidgin"
+              >
+                <span
+                  class="c22"
+                  role="text"
+                >
+                  <span
+                    class="c11"
+                  >
+                    Page where you dey
+                    , 
+                  </span>
+                  Home
+                </span>
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+              >
+                Nigeria
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+              >
+                Africa
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/world"
+              >
+                World
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/media/video"
+              >
+                Video
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/media/audio"
+              >
+                Audio
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+              >
+                Sport
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+              >
+                Entertainment
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/popular/read"
+              >
+                Most popular
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="c24"
+        height="0"
       >
         <ul
-          class="c17"
+          class="c25"
           role="list"
         >
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c20"
+              class="c27"
               href="/pidgin"
             >
               <span
-                class="c21"
+                class="c28"
+                dir="ltr"
                 role="text"
               >
                 <span
@@ -672,96 +888,88 @@ exports[`Header should render correctly for WS frontPage 1`] = `
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
             >
               Nigeria
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
             >
               Africa
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/world"
             >
               World
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/media/video"
             >
               Video
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/media/audio"
             >
               Audio
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
             >
               Sport
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
             >
               Entertainment
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/popular/read"
             >
               Most popular
@@ -826,12 +1034,63 @@ exports[`Header should render correctly for WS radio page 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c15 {
+.c16 {
   color: #fff;
   fill: currentColor;
 }
 
-.c14 {
+.c24 {
+  background-color: #222222;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+.c25 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.c26 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.c26:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.c27 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c27:hover,
+.c27:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c28 {
+  border-left: 0.25rem solid #FFFFFF;
+  padding-left: 0.5rem;
+}
+
+.c15 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -842,13 +1101,13 @@ exports[`Header should render correctly for WS radio page 1`] = `
   width: 2.75rem;
 }
 
-.c14:hover,
-.c14:focus {
+.c15:hover,
+.c15:focus {
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.c14:hover::after,
-.c14:focus::after {
+.c15:hover::after,
+.c15:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -858,7 +1117,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c14 svg {
+.c15 svg {
   vertical-align: middle;
 }
 
@@ -868,14 +1127,14 @@ exports[`Header should render correctly for WS radio page 1`] = `
   margin: 0 auto;
 }
 
-.c17 {
+.c18 {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
 }
 
-.c20 {
+.c21 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -889,7 +1148,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c20:hover::after {
+.c21:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -899,7 +1158,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c20:focus::after {
+.c21:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -910,7 +1169,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c22 {
+.c23 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -924,7 +1183,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c22:hover::after {
+.c23:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -933,7 +1192,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c22:focus::after {
+.c23:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -944,13 +1203,13 @@ exports[`Header should render correctly for WS radio page 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c19 {
+.c20 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-.c21::after {
+.c22::after {
   content: '';
   position: absolute;
   left: 0;
@@ -965,8 +1224,12 @@ exports[`Header should render correctly for WS radio page 1`] = `
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.c12 .c18::after {
+.c12 .c19::after {
   left: 0;
+}
+
+.c14 {
+  position: relative;
 }
 
 .c0 {
@@ -1080,73 +1343,101 @@ exports[`Header should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c24 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c24 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) {
-  .c14 {
+  .c15 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c18 {
     overflow: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c20 {
+  .c21 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c23 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c23 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c22 {
+  .c23 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c19:last-child {
+  .c20:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19::after {
+  .c20::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -1157,7 +1448,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c16 {
+  .c17 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: smooth;
@@ -1172,11 +1463,11 @@ exports[`Header should render correctly for WS radio page 1`] = `
     -ms-overflow-style: none;
   }
 
-  .c16::-webkit-scrollbar {
+  .c17::-webkit-scrollbar {
     display: none;
   }
 
-  .c16:after {
+  .c17:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -1395,45 +1686,178 @@ exports[`Header should render correctly for WS radio page 1`] = `
     <div
       class="c13"
     >
-      <button
-        aria-expanded="false"
-        aria-label="Plenti seshon"
-        class="c14"
-        dir="ltr"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="c15"
-          focusable="false"
-          height="2.75rem"
-          viewBox="0 0 44 44"
-          width="2.75rem"
-        >
-          <path
-            d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
-          />
-        </svg>
-      </button>
       <div
-        class="c16"
-        dir="ltr"
+        class="c14"
+      >
+        <button
+          aria-expanded="false"
+          aria-label="Plenti seshon"
+          class="c15"
+          dir="ltr"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="c16"
+            focusable="false"
+            height="2.75rem"
+            viewBox="0 0 44 44"
+            width="2.75rem"
+          >
+            <path
+              d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+            />
+          </svg>
+        </button>
+        <div
+          class="c17"
+          dir="ltr"
+        >
+          <ul
+            class="c18"
+            role="list"
+          >
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c21"
+                href="/pidgin"
+              >
+                <span
+                  class="c22"
+                  role="text"
+                >
+                  <span
+                    class="c11"
+                  >
+                    Page where you dey
+                    , 
+                  </span>
+                  Home
+                </span>
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+              >
+                Nigeria
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+              >
+                Africa
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/world"
+              >
+                World
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/media/video"
+              >
+                Video
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/media/audio"
+              >
+                Audio
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+              >
+                Sport
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+              >
+                Entertainment
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/popular/read"
+              >
+                Most popular
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="c24"
+        height="0"
       >
         <ul
-          class="c17"
+          class="c25"
           role="list"
         >
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c20"
+              class="c27"
               href="/pidgin"
             >
               <span
-                class="c21"
+                class="c28"
+                dir="ltr"
                 role="text"
               >
                 <span
@@ -1447,96 +1871,88 @@ exports[`Header should render correctly for WS radio page 1`] = `
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
             >
               Nigeria
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
             >
               Africa
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/world"
             >
               World
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/media/video"
             >
               Video
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/media/audio"
             >
               Audio
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
             >
               Sport
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
             >
               Entertainment
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/popular/read"
             >
               Most popular
@@ -1601,12 +2017,63 @@ exports[`Header should render correctly for news article 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c15 {
+.c16 {
   color: #fff;
   fill: currentColor;
 }
 
-.c14 {
+.c24 {
+  background-color: #222222;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+.c25 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.c26 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.c26:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.c27 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c27:hover,
+.c27:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c28 {
+  border-left: 0.25rem solid #FFFFFF;
+  padding-left: 0.5rem;
+}
+
+.c15 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -1617,13 +2084,13 @@ exports[`Header should render correctly for news article 1`] = `
   width: 2.75rem;
 }
 
-.c14:hover,
-.c14:focus {
+.c15:hover,
+.c15:focus {
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.c14:hover::after,
-.c14:focus::after {
+.c15:hover::after,
+.c15:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1633,7 +2100,7 @@ exports[`Header should render correctly for news article 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c14 svg {
+.c15 svg {
   vertical-align: middle;
 }
 
@@ -1643,14 +2110,14 @@ exports[`Header should render correctly for news article 1`] = `
   margin: 0 auto;
 }
 
-.c17 {
+.c18 {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
 }
 
-.c20 {
+.c21 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1664,7 +2131,7 @@ exports[`Header should render correctly for news article 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c20:hover::after {
+.c21:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1674,7 +2141,7 @@ exports[`Header should render correctly for news article 1`] = `
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c20:focus::after {
+.c21:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1685,7 +2152,7 @@ exports[`Header should render correctly for news article 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c22 {
+.c23 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1699,7 +2166,7 @@ exports[`Header should render correctly for news article 1`] = `
   padding: 0.75rem 1rem;
 }
 
-.c22:hover::after {
+.c23:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1708,7 +2175,7 @@ exports[`Header should render correctly for news article 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c22:focus::after {
+.c23:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1719,13 +2186,13 @@ exports[`Header should render correctly for news article 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.c19 {
+.c20 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-.c21::after {
+.c22::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1740,8 +2207,12 @@ exports[`Header should render correctly for news article 1`] = `
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.c12 .c18::after {
+.c12 .c19::after {
   left: 0;
+}
+
+.c14 {
+  position: relative;
 }
 
 .c0 {
@@ -1855,73 +2326,101 @@ exports[`Header should render correctly for news article 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c24 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c24 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) {
-  .c14 {
+  .c15 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c18 {
     overflow: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c20 {
+  .c21 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c23 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c23 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c22 {
+  .c23 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c19:last-child {
+  .c20:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19::after {
+  .c20::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -1932,7 +2431,7 @@ exports[`Header should render correctly for news article 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c16 {
+  .c17 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: smooth;
@@ -1947,11 +2446,11 @@ exports[`Header should render correctly for news article 1`] = `
     -ms-overflow-style: none;
   }
 
-  .c16::-webkit-scrollbar {
+  .c17::-webkit-scrollbar {
     display: none;
   }
 
-  .c16:after {
+  .c17:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -2162,45 +2661,178 @@ exports[`Header should render correctly for news article 1`] = `
     <div
       class="c13"
     >
-      <button
-        aria-expanded="false"
-        aria-label="Plenti seshon"
-        class="c14"
-        dir="ltr"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="c15"
-          focusable="false"
-          height="2.75rem"
-          viewBox="0 0 44 44"
-          width="2.75rem"
-        >
-          <path
-            d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
-          />
-        </svg>
-      </button>
       <div
-        class="c16"
-        dir="ltr"
+        class="c14"
+      >
+        <button
+          aria-expanded="false"
+          aria-label="Plenti seshon"
+          class="c15"
+          dir="ltr"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="c16"
+            focusable="false"
+            height="2.75rem"
+            viewBox="0 0 44 44"
+            width="2.75rem"
+          >
+            <path
+              d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+            />
+          </svg>
+        </button>
+        <div
+          class="c17"
+          dir="ltr"
+        >
+          <ul
+            class="c18"
+            role="list"
+          >
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c21"
+                href="/pidgin"
+              >
+                <span
+                  class="c22"
+                  role="text"
+                >
+                  <span
+                    class="c11"
+                  >
+                    Page where you dey
+                    , 
+                  </span>
+                  Home
+                </span>
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+              >
+                Nigeria
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+              >
+                Africa
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/world"
+              >
+                World
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/media/video"
+              >
+                Video
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/media/audio"
+              >
+                Audio
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+              >
+                Sport
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+              >
+                Entertainment
+              </a>
+            </li>
+            <li
+              class="c19 c20"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="c23"
+                href="/pidgin/popular/read"
+              >
+                Most popular
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="c24"
+        height="0"
       >
         <ul
-          class="c17"
+          class="c25"
           role="list"
         >
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c20"
+              class="c27"
               href="/pidgin"
             >
               <span
-                class="c21"
+                class="c28"
+                dir="ltr"
                 role="text"
               >
                 <span
@@ -2214,96 +2846,88 @@ exports[`Header should render correctly for news article 1`] = `
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
             >
               Nigeria
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
             >
               Africa
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/world"
             >
               World
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/media/video"
             >
               Video
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/media/audio"
             >
               Audio
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
             >
               Sport
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
             >
               Entertainment
             </a>
           </li>
           <li
-            class="c18 c19"
-            dir="ltr"
+            class="c26"
             role="listitem"
           >
             <a
-              class="c22"
+              class="c27"
               href="/pidgin/popular/read"
             >
               Most popular

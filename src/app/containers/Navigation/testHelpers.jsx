@@ -10,5 +10,7 @@ export const scrollableListItems = (
 );
 
 export const dropdownListItems = (
-  <div data-testid={dropdownTestId}>Dropdown</div>
+  <ul data-testid={dropdownTestId}>
+    <li>Dropdown Items</li>
+  </ul>
 );
