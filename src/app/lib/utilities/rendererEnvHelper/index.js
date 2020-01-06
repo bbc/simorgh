@@ -1,10 +1,13 @@
-import { getParsedQueryString } from '../urlParser';
+/* eslint-disable camelcase */
+import { getQueryParams } from '../urlParser';
 import isLive from '../envHelper';
 
-const hasLiveOverride = url => {
-  const params = getParsedQueryString(url);
+export default url => {
+  if (isLive()) {
+    return false;
+  }
 
-  return params && !isLive() && params.renderer_env === 'live';
+  const { renderer_env } = getQueryParams(url);
+
+  return renderer_env === 'live';
 };
-
-export default hasLiveOverride;

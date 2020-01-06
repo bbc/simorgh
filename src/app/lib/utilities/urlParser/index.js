@@ -17,6 +17,6 @@ export const getQueryString = url => {
  *   x:'y'
  * }
  */
-export const getParsedQueryString = url => {
+export const getQueryParams = url => {
   return new Url(url, true).query;
 };
