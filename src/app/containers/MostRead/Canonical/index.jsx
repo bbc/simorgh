@@ -44,7 +44,7 @@ const CanonicalMostRead = ({
     const handleResponse = async response => {
       const mostReadData = await response.json();
 
-      // do not show most read if lastRecordUpdated is greated than 35min
+      // do not show most read if lastRecordUpdated is greater than 35min
       if (!mostReadRecordIsFresh(mostReadData.lastRecordTimeStamp)) {
         return;
       }
