@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GridItemConstrainedLargeWithAutoMargin } from '#lib/styledGrid';
 import useToggle from '../Toggle/useToggle';
 
 const constructAdJsonData = ({ id, pageType, service }) => {
@@ -36,7 +36,7 @@ const AdContainer = () => {
 
   if (enabled && (platform === 'amp' || platform === 'canonical')) {
     return (
-      <GridItemConstrainedMedium>
+      <GridItemConstrainedLargeWithAutoMargin>
         <amp-ad {...ampAdProps({ id, pageType, service })}>
           <amp-img
             placeholder
@@ -46,7 +46,7 @@ const AdContainer = () => {
             layout="responsive"
           />
         </amp-ad>
-      </GridItemConstrainedMedium>
+      </GridItemConstrainedLargeWithAutoMargin>
     );
   }
 

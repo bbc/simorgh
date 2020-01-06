@@ -71,6 +71,14 @@ export const GridItemConstrainedLargeWithTopMargin = styled(
   }
 `;
 
+export const GridItemConstrainedLargeWithAutoMargin = styled(
+  GridItemConstrainedLarge,
+)`
+  margin: auto;
+  padding-top: ${GEL_SPACING};
+  padding-bottom: ${GEL_SPACING};
+`;
+
 export const NestedGridItemChildSmall = styled.div`
   ${nestedGridItemSmallCss}
 `;
