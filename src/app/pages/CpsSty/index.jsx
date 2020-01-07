@@ -8,7 +8,6 @@ import withLoading from '../../containers/PageHandlers/withLoading';
 import withData from '../../containers/PageHandlers/withData';
 
 const CpsStyContainer = props => {
-  console.log(`STY Container`);
   return <CpsAssetPageMain {...props} />;
 };
 

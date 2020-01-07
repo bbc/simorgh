@@ -31,10 +31,10 @@ const CpsAsset = props => {
     case 'MAP':
       return CpsMap({ ...props, pageType: type });
     case 'FIX': // TODO: Create FIX Page if required
-      return FrontPage({ ...props, pageTyp: type });
-    // default:
-    //   // Return 404 error page if page type does not match those above
-    //   return ErrorPage({ ...props, pageType: 'error', status: 404 });
+      return FrontPage({ ...props, pageType: type });
+    default:
+      // Return 404 error page if page type does not match those above
+      return ErrorPage({ ...props, pageType: 'error', status: 404 });
   }
 };
 

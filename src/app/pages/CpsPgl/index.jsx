@@ -8,7 +8,6 @@ import withLoading from '../../containers/PageHandlers/withLoading';
 import withData from '../../containers/PageHandlers/withData';
 
 const CpsPglContainer = props => {
-  console.log(`PGL Container`);
   return <CpsAssetPageMain {...props} />;
 };
 

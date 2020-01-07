@@ -8,7 +8,6 @@ import withLoading from '../../containers/PageHandlers/withLoading';
 import withData from '../../containers/PageHandlers/withData';
 
 const CpsMapContainer = props => {
-  console.log(`MAP Container`);
   return <CpsAssetPageMain {...props} />;
 };
 
