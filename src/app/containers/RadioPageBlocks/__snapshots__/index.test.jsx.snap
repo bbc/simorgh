@@ -1,80 +1,269 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio Page Blocks should match snapshot for AMP 1`] = `
-<DocumentFragment>
-  <h1
-    class="Headline-sc-1kh1qhu-0 bcVCel"
-    id="content"
-    tabindex="-1"
-  >
-    ያድምጡ
-  </h1>
-  <p
-    class="Paragraph-k859h4-0 iVdzZk"
-  >
-    ዝግጅቶቻችንን’
-  </p>
-  <div
-    class="MediaPlayerOuterWrapper-sc-1hns5mj-0 hdCRkd"
-  >
-    <div
-      class="MediaPlayerInnerWrapper-sc-1hns5mj-1 cfTqqs"
-    >
-      <div
-        class="StyledAudioContainer-sc-13p1a4d-1 bNktbX"
+.c0 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c4 {
+  height: 165px;
+  position: relative;
+  overflow: hidden;
+}
+
+.c3 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 50rem;
+  max-width: calc(100vw - 2rem);
+}
+
+.c1 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    />
+  </head>
+  <body>
+    <div>
+      <h1
+        class="c0"
+        id="content"
+        tabindex="-1"
       >
-        <amp-iframe
-          allowfullscreen="allowfullscreen"
-          frameborder="0"
-          layout="fill"
-          sandbox="allow-scripts allow-same-origin"
-          scrolling="no"
-          src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
-          title="Audio player"
+        ያድምጡ
+      </h1>
+      <p
+        class="c1"
+      >
+        ዝግጅቶቻችንን’
+      </p>
+      <div
+        class="c2"
+      >
+        <div
+          class="c3"
         >
-          <amp-img
-            alt=""
-            attribution=""
-            height="16"
-            layout="fill"
-            placeholder="true"
-            src="http://localhost:7080/images/amp_audio_placeholder.png"
-            width="9"
-          />
-        </amp-iframe>
+          <div
+            class="c4"
+          >
+            <amp-iframe
+              allowfullscreen="allowfullscreen"
+              frameborder="0"
+              layout="fill"
+              sandbox="allow-scripts allow-same-origin"
+              scrolling="no"
+              src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
+              title="Audio player"
+            >
+              <amp-img
+                alt=""
+                attribution=""
+                height="16"
+                layout="fill"
+                placeholder="true"
+                src="http://localhost:7080/images/amp_audio_placeholder.png"
+                width="9"
+              />
+            </amp-iframe>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</DocumentFragment>
+  </body>
+</html>
 `;
 
 exports[`Radio Page Blocks should match snapshot for Canonical 1`] = `
-<DocumentFragment>
+.c0 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c4 {
+  height: 165px;
+  position: relative;
+  overflow: hidden;
+}
+
+.c3 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 50rem;
+  max-width: calc(100vw - 2rem);
+}
+
+.c1 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+<div>
   <h1
-    class="Headline-sc-1kh1qhu-0 bcVCel"
+    class="c0"
     id="content"
     tabindex="-1"
   >
     ያድምጡ
   </h1>
   <p
-    class="Paragraph-k859h4-0 iVdzZk"
+    class="c1"
   >
     ዝግጅቶቻችንን’
   </p>
   <div
-    class="MediaPlayerOuterWrapper-sc-1hns5mj-0 hdCRkd"
+    class="c2"
   >
     <div
-      class="MediaPlayerInnerWrapper-sc-1hns5mj-1 cfTqqs"
+      class="c3"
     >
       <div
-        class="StyledAudioContainer-sc-13p1a4d-1 bNktbX"
+        class="c4"
       >
         <iframe
           allow="autoplay; fullscreen"
           allowfullscreen=""
-          class="StyledIframe-fuo2ed-0 jQWQE"
+          class="c5"
           scrolling="no"
           src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
           title="Audio player"
@@ -82,5 +271,5 @@ exports[`Radio Page Blocks should match snapshot for Canonical 1`] = `
       </div>
     </div>
   </div>
-</DocumentFragment>
+</div>
 `;
