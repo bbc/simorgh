@@ -17,7 +17,7 @@ const cpsAssetScaffoldProps = {
   status: 200,
 };
 
-jest.mock('../../Containers/PageHandlers/withPageWrapper', () => Component => {
+jest.mock('../../containers/PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
     <div id="PageWrapperContainer">
       <Component {...props} />
@@ -27,7 +27,7 @@ jest.mock('../../Containers/PageHandlers/withPageWrapper', () => Component => {
   return PageWrapperContainer;
 });
 
-jest.mock('../../Containers/PageHandlers/withLoading', () => Component => {
+jest.mock('../../containers/PageHandlers/withLoading', () => Component => {
   const LoadingContainer = props => (
     <div id="LoadingContainer">
       <Component {...props} />
@@ -37,7 +37,7 @@ jest.mock('../../Containers/PageHandlers/withLoading', () => Component => {
   return LoadingContainer;
 });
 
-jest.mock('../../Containers/PageHandlers/withError', () => Component => {
+jest.mock('../../containers/PageHandlers/withError', () => Component => {
   const ErrorContainer = props => (
     <div id="ErrorContainer">
       <Component {...props} />
@@ -47,7 +47,7 @@ jest.mock('../../Containers/PageHandlers/withError', () => Component => {
   return ErrorContainer;
 });
 
-jest.mock('../../Containers/PageHandlers/withData', () => Component => {
+jest.mock('../../containers/PageHandlers/withData', () => Component => {
   const DataContainer = props => (
     <div id="DataContainer">
       <Component {...props} />
@@ -57,13 +57,13 @@ jest.mock('../../Containers/PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
-jest.mock('../../Containers/CpsAssetPageMain', () => {
+jest.mock('../../containers/CpsAssetPageMain', () => {
   const CpsAssetPageMain = () => <div>CpsAssetPageMain</div>;
 
   return CpsAssetPageMain;
 });
 
-describe('CpsAssetPage', () => {
+describe('CPS PGL Page', () => {
   describe('snapshots', () => {
     shouldMatchSnapshot(
       'should match scaffold snapshot',

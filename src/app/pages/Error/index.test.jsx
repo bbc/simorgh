@@ -10,10 +10,9 @@ const defaultProps = {
   pageType: 'error',
   status: 404,
   service: 'news',
-  pathname: '/pathname',
 };
 
-jest.mock('../../Containers/PageHandlers/withPageWrapper', () => Component => {
+jest.mock('../../containers/PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
     <div id="PageWrapperContainer">
       <Component {...props} />
@@ -23,7 +22,7 @@ jest.mock('../../Containers/PageHandlers/withPageWrapper', () => Component => {
   return PageWrapperContainer;
 });
 
-jest.mock('../../Containers/PageHandlers/withLoading', () => Component => {
+jest.mock('../../containers/PageHandlers/withLoading', () => Component => {
   const LoadingContainer = props => (
     <div id="LoadingContainer">
       <Component {...props} />
@@ -33,7 +32,7 @@ jest.mock('../../Containers/PageHandlers/withLoading', () => Component => {
   return LoadingContainer;
 });
 
-jest.mock('../../Containers/PageHandlers/withContexts', () => Component => {
+jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
   const ErrorContainer = props => (
     <div id="ContextsContainer">
       <Component {...props} />
@@ -42,7 +41,7 @@ jest.mock('../../Containers/PageHandlers/withContexts', () => Component => {
 
   return ErrorContainer;
 });
-jest.mock('../../Containers/ErrorMain', () => {
+jest.mock('../../containers/ErrorMain', () => {
   const ErrorMain = () => <div>ErrorMain</div>;
 
   return ErrorMain;

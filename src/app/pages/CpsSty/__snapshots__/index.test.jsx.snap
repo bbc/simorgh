@@ -1,5 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CPS STY Page snapshots should match scaffold snapshot 1`] = `
+<div
+  id="PageWrapperContainer"
+>
+  <div
+    id="LoadingContainer"
+  >
+    <div
+      id="ErrorContainer"
+    >
+      <div
+        id="DataContainer"
+      >
+        <div>
+          CpsAssetPageMain
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`CpsAssetPage snapshots should match scaffold snapshot 1`] = `
 <div
   id="PageWrapperContainer"
