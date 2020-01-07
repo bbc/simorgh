@@ -13,7 +13,7 @@ const defaultProps = {
   status: 200,
 };
 
-jest.mock('../PageHandlers/withVariant', () => Component => {
+jest.mock('../../Containers/PageHandlers/withVariant', () => Component => {
   const VariantContainer = props => (
     <div id="VariantContainer">
       <Component {...props} />
@@ -23,7 +23,7 @@ jest.mock('../PageHandlers/withVariant', () => Component => {
   return VariantContainer;
 });
 
-jest.mock('../PageHandlers/withPageWrapper', () => Component => {
+jest.mock('../../Containers/PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
     <div id="PageWrapperContainer">
       <Component {...props} />
@@ -33,7 +33,7 @@ jest.mock('../PageHandlers/withPageWrapper', () => Component => {
   return PageWrapperContainer;
 });
 
-jest.mock('../PageHandlers/withLoading', () => Component => {
+jest.mock('../../Containers/PageHandlers/withLoading', () => Component => {
   const LoadingContainer = props => (
     <div id="LoadingContainer">
       <Component {...props} />
@@ -43,7 +43,7 @@ jest.mock('../PageHandlers/withLoading', () => Component => {
   return LoadingContainer;
 });
 
-jest.mock('../PageHandlers/withError', () => Component => {
+jest.mock('../../Containers/PageHandlers/withError', () => Component => {
   const ErrorContainer = props => (
     <div id="ErrorContainer">
       <Component {...props} />
@@ -53,7 +53,7 @@ jest.mock('../PageHandlers/withError', () => Component => {
   return ErrorContainer;
 });
 
-jest.mock('../PageHandlers/withData', () => Component => {
+jest.mock('../../Containers/PageHandlers/withData', () => Component => {
   const DataContainer = props => (
     <div id="DataContainer">
       <Component {...props} />
@@ -63,7 +63,7 @@ jest.mock('../PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
-jest.mock('../ArticleMain', () => {
+jest.mock('../../Containers/ArticleMain', () => {
   const ArticleMain = () => <div>ArticleMain</div>;
 
   return ArticleMain;

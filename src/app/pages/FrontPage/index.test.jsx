@@ -18,7 +18,7 @@ const defaultProps = {
   data: { status: 200 },
 };
 
-jest.mock('../PageHandlers/withVariant', () => Component => {
+jest.mock('../../Containers/PageHandlers/withVariant', () => Component => {
   const VariantContainer = props => (
     <div id="VariantContainer">
       <Component {...props} />
@@ -28,7 +28,7 @@ jest.mock('../PageHandlers/withVariant', () => Component => {
   return VariantContainer;
 });
 
-jest.mock('../PageHandlers/withContexts', () => Component => {
+jest.mock('../../Containers/PageHandlers/withContexts', () => Component => {
   const DataContainer = props => (
     <div id="ContextsContainer">
       <Component {...props} />
@@ -38,7 +38,7 @@ jest.mock('../PageHandlers/withContexts', () => Component => {
   return DataContainer;
 });
 
-jest.mock('../PageHandlers/withPageWrapper', () => Component => {
+jest.mock('../../Containers/PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
     <div id="PageWrapperContainer">
       <Component {...props} />
@@ -48,7 +48,7 @@ jest.mock('../PageHandlers/withPageWrapper', () => Component => {
   return PageWrapperContainer;
 });
 
-jest.mock('../PageHandlers/withLoading', () => Component => {
+jest.mock('../../Containers/PageHandlers/withLoading', () => Component => {
   const LoadingContainer = props => (
     <div id="LoadingContainer">
       <Component {...props} />
@@ -58,7 +58,7 @@ jest.mock('../PageHandlers/withLoading', () => Component => {
   return LoadingContainer;
 });
 
-jest.mock('../PageHandlers/withError', () => Component => {
+jest.mock('../../Containers/PageHandlers/withError', () => Component => {
   const ErrorContainer = props => (
     <div id="ErrorContainer">
       <Component {...props} />
@@ -68,7 +68,7 @@ jest.mock('../PageHandlers/withError', () => Component => {
   return ErrorContainer;
 });
 
-jest.mock('../PageHandlers/withData', () => Component => {
+jest.mock('../../Containers/PageHandlers/withData', () => Component => {
   const DataContainer = props => (
     <div id="DataContainer">
       <Component {...props} />
@@ -78,7 +78,7 @@ jest.mock('../PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
-jest.mock('../PageHandlers/withContexts', () => Component => {
+jest.mock('../../Containers/PageHandlers/withContexts', () => Component => {
   const ContextsContainer = props => (
     <div id="ContextsContainer">
       <Component {...props} />
@@ -88,7 +88,7 @@ jest.mock('../PageHandlers/withContexts', () => Component => {
   return ContextsContainer;
 });
 
-jest.mock('../FrontPageMain', () => {
+jest.mock('../../Containers/FrontPageMain', () => {
   return jest.fn().mockReturnValue(<div>FrontPageMain</div>);
 });
 
@@ -105,9 +105,9 @@ describe('FrontPageContainer', () => {
       let FrontPageComponent;
       beforeAll(() => {
         jest.resetModules();
-        jest.unmock('../PageHandlers/withError');
-        jest.unmock('../PageHandlers/withLoading');
-        jest.unmock('../PageHandlers/withData');
+        jest.unmock('../../Containers/PageHandlers/withError');
+        jest.unmock('../../Containers/PageHandlers/withLoading');
+        jest.unmock('../../Containers/PageHandlers/withData');
 
         jest.mock('react', () => {
           const original = jest.requireActual('react');
@@ -150,7 +150,9 @@ describe('FrontPageContainer', () => {
         const pageData = igboData;
         const status = 200;
 
-        const frontPageMainMock = jest.requireMock('../FrontPageMain');
+        const frontPageMainMock = jest.requireMock(
+          '../../Containers/FrontPageMain',
+        );
         const { container } = render(
           <FrontPageComponent
             {...defaultProps}

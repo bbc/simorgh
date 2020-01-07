@@ -2,14 +2,14 @@ import React from 'react';
 import { shape } from 'prop-types';
 import compose from 'ramda/src/compose';
 import articlePropTypes from '#models/propTypes/article';
-import ArticleMain from '../ArticleMain';
+import ArticleMain from '../../containers/ArticleMain';
 
-import withVariant from '../PageHandlers/withVariant';
-import withContexts from '../PageHandlers/withContexts';
-import withPageWrapper from '../PageHandlers/withPageWrapper';
-import withError from '../PageHandlers/withError';
-import withLoading from '../PageHandlers/withLoading';
-import withData from '../PageHandlers/withData';
+import withVariant from '../../containers/PageHandlers/withVariant';
+import withContexts from '../../containers/PageHandlers/withContexts';
+import withPageWrapper from '../../containers/PageHandlers/withPageWrapper';
+import withError from '../../containers/PageHandlers/withError';
+import withLoading from '../../containers/PageHandlers/withLoading';
+import withData from '../../containers/PageHandlers/withData';
 
 const ArticleContainer = ({ pageData }) => (
   <ArticleMain articleData={pageData} />
