@@ -31,6 +31,8 @@ const CpsAssetPageMain = ({ pageData }) => {
   );
   const firstPublished = getFirstPublished(pageData);
 
+  // Hello world
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
