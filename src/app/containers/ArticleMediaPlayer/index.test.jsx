@@ -1,5 +1,5 @@
 import React from 'react';
-import renderWithRouter from '#testHelpers/renderWithRouter';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -36,26 +36,19 @@ const GenerateMediaPlayer = ({
 
 describe('MediaPlayer', () => {
   beforeEach(() => {
-    process.env.SIMORGH_EMBEDS_BASE_URL_TEST = 'https://embed-host.bbc.com';
+    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
   });
 
-  it('Calls the canonical media player, with a placeholder', () => {
-    const { asFragment } = renderWithRouter(
-      <GenerateMediaPlayer
-        platform="canonical"
-        blocks={[validAresMediaVideoBlock]}
-      />,
-    );
-    expect(asFragment()).toMatchSnapshot();
-  });
+  shouldMatchSnapshot(
+    'Calls the canonical media player, with a placeholder',
+    <GenerateMediaPlayer
+      platform="canonical"
+      blocks={[validAresMediaVideoBlock]}
+    />,
+  );
 
-  it('Calls the amp media player', () => {
-    const { asFragment } = renderWithRouter(
-      <GenerateMediaPlayer
-        platform="amp"
-        blocks={[validAresMediaVideoBlock]}
-      />,
-    );
-    expect(asFragment()).toMatchSnapshot();
-  });
+  shouldMatchSnapshot(
+    'Calls the amp media player',
+    <GenerateMediaPlayer platform="amp" blocks={[validAresMediaVideoBlock]} />,
+  );
 });
