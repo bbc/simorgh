@@ -19,18 +19,26 @@ import {
   radioAndTvPath,
 } from './regex';
 
+// Page Types
+import {
+  FEATURE_INDEX_PAGE,
+  MEDIA_ASSET_PAGE,
+  STORY_PAGE,
+  PHOTO_GALLERY_PAGE,
+} from './pageTypes';
+
 // CPS Asset Mapping to PageType
 const CpsAsset = props => {
   const type = path(['pageData', 'metadata', 'type'], props);
 
   switch (type) {
-    case 'STY':
+    case STORY_PAGE:
       return CpsSty({ ...props, pageType: type });
-    case 'PGL':
+    case PHOTO_GALLERY_PAGE:
       return CpsPgl({ ...props, pageType: type });
-    case 'MAP':
+    case MEDIA_ASSET_PAGE:
       return CpsMap({ ...props, pageType: type });
-    case 'FIX': // TODO: Create FIX Page if required
+    case FEATURE_INDEX_PAGE: // TODO: Create FIX Page if required
       return FrontPage({ ...props, pageType: type });
     default:
       // Return 404 error page if page type does not match those above
