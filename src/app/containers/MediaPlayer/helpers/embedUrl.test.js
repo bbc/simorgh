@@ -55,7 +55,7 @@ const testCases = [
     },
   },
   {
-    description: `should build an AMP url for articles in test with live override`,
+    description: `should build an AMP url for articles in test with test override`,
     expected: `www.embed-host.test.bbc.com/ws/av-embeds/articles/${mediaId}/amp`,
     environment: 'test',
     before: setEnvironment,
