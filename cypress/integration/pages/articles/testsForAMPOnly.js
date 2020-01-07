@@ -85,11 +85,11 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           );
         });
         it('should check that media player auto plays', () => {
-          cy.viewport(600, 1008);
           cy.request(`${config[service].pageTypes.articles.path}.json`).then(
             ({ body }) => {
               const media = getBlockData('video', body);
               if (media && media.type === 'video') {
+                cy.scrollTo('bottom');
                 cy.get('div[class^="StyledVideoContainer"]')
                   .within(() => {
                     cy.get('button');
