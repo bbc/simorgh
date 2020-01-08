@@ -26,7 +26,7 @@ const renderClientApp = () =>
 const renderServerApp = () =>
   render(
     <ServerApp
-      data="somePassedData"
+      data={{ text: 'somePassedData' }}
       routes={['someRoute']}
       headers={bbcHeaders}
     />,
@@ -37,7 +37,6 @@ describe('ClientApp', () => {
     renderClientApp();
     expect(App).toHaveBeenCalledWith(
       {
-        headers: bbcHeaders,
         initialData: { headers: bbcHeaders, text: 'someData!' },
         routes: ['someRoute'],
       },
@@ -71,9 +70,11 @@ describe('ServerApp', () => {
     renderServerApp();
     expect(App).toHaveBeenCalledWith(
       {
-        initialData: 'somePassedData',
+        initialData: {
+          text: 'somePassedData',
+          headers: bbcHeaders,
+        },
         routes: ['someRoute'],
-        headers: bbcHeaders,
       },
       {},
     );
@@ -86,7 +87,9 @@ describe('ServerApp', () => {
     expect(ReactRouter.StaticRouter).toHaveBeenCalledWith(
       {
         children: expect.anything(),
-        data: 'somePassedData',
+        data: {
+          text: 'somePassedData',
+        },
         routes: ['someRoute'],
         headers: bbcHeaders,
       },

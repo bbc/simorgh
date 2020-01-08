@@ -36,12 +36,8 @@ describe('App', () => {
       <App
         location={{ pathname: 'pathnameOne' }}
         routes={[]}
-        initialData={initialData}
+        initialData={{ ...initialData, headers: { bbcOrigin, bbcCountry } }}
         history={history}
-        headers={{
-          bbcOrigin,
-          bbcCountry,
-        }}
       />,
     );
   });

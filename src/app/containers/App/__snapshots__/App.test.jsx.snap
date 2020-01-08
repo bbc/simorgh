@@ -2,12 +2,6 @@
 
 exports[`App should return rendered routes 1`] = `
 <App
-  headers={
-    Object {
-      "bbcCountry": "GB",
-      "bbcOrigin": "https://www.bbc.co.uk",
-    }
-  }
   history={
     Object {
       "action": "POP",
@@ -15,6 +9,10 @@ exports[`App should return rendered routes 1`] = `
   }
   initialData={
     Object {
+      "headers": Object {
+        "bbcCountry": "GB",
+        "bbcOrigin": "https://www.bbc.co.uk",
+      },
       "pageData": "Some initial data",
     }
   }

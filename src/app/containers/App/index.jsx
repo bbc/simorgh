@@ -9,16 +9,15 @@ import App from './App';
 
 export const ClientApp = props => (
   <BrowserRouter {...props}>
-    <App initialData={props.data} routes={props.routes} headers={props.data.headers} />
+    <App initialData={props.data} routes={props.routes} />
   </BrowserRouter>
 );
 
 export const ServerApp = props => (
   <StaticRouter {...props}>
     <App
-      initialData={props.data}
+      initialData={{ ...props.data, headers: props.headers }}
       routes={props.routes}
-      headers={props.headers}
     />
   </StaticRouter>
 );

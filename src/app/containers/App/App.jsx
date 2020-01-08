@@ -5,7 +5,7 @@ import path from 'ramda/src/path';
 import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
 
-export const App = ({ routes, location, initialData, history, headers }) => {
+export const App = ({ routes, location, initialData, history }) => {
   const {
     service,
     isAmp,
@@ -15,7 +15,7 @@ export const App = ({ routes, location, initialData, history, headers }) => {
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
-  const { pageData, status, error } = initialData;
+  const { pageData, status, error, headers } = initialData;
 
   const { bbcOrigin, bbcCountry } = headers || {};
 
