@@ -8,7 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `uz-Cyrl`,
-    articleAuthor: `https://www.facebook.com/#!/bbcuzbek`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Янгиланди',
     atiAnalyticsAppName: 'news-uzbek',
     atiAnalyticsProducerId: '96',
@@ -19,15 +19,15 @@ export const service = {
     defaultImageAltText: "BBC News O'zbek",
     dir: `ltr`,
     externalLinkText: ', ташқи',
-    imageCaptionOffscreenText: 'Сүрөттүн түшүндүрмөсү, ',
-    videoCaptionOffscreenText: 'Видеонун түшүндүрмөсү, ',
-    audioCaptionOffscreenText: 'Аудионун түшүндүрмөсү, ',
-    defaultCaptionOffscreenText: 'Сурат тагсўзи, ',
-    imageCopyrightOffscreenText: 'Сүрөттүн булагы, ',
+    imageCaptionOffscreenText: 'Сурат тагсўзи, ',
+    videoCaptionOffscreenText: 'Видео тагсўзи, ',
+    audioCaptionOffscreenText: 'Аудио тагсўзи, ',
+    defaultCaptionOffscreenText: 'Тагсўз, ',
+    imageCopyrightOffscreenText: 'Сурат манбаси, ',
     locale: `uz-UZ`,
     datetimeLocale: `uz`,
     service: 'uzbek',
-    serviceName: "News O'zbek",
+    serviceName: 'Uzbek',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcuzbek',
     twitterSite: '@bbcuzbek',
@@ -43,7 +43,7 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'Баарын көрүү',
+      seeAll: 'Ҳаммасини кўриш',
       home: 'Бош саҳифа',
       currentPage: 'Жорий саҳифа',
       skipLinkText: 'Саҳифага ўтиш',
@@ -57,29 +57,30 @@ export const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404- Саҳифа топилмади',
+          title: 'Саҳифа топилмади',
           message:
-            'Бунга сабаб Сиз веб саҳифа адресини нотўғри ёзган бўлишингиз мумкин. Илтимос, текшириб қайтадан ёзинг',
+            'Узр, сизни қидираётган саҳифангизга олиб боролмаяпмиз. Марҳамат қилиб мана бу йўлларини кўринг:',
           solutions: [
             'url манзилини яна бир бор текшириб кўринг',
             'Браузерингиздаги "янгилаш" тугмасини босинг',
             'Ушбу саҳифани Би-би-сининг қидирув панелидан излаб кўринг',
           ],
           callToActionFirst: 'Бунга муқобил ',
-          callToActionLinkText: 'BBC Бош саҳифа',
+          callToActionLinkText: "BBC News O'zbek",
           callToActionLast: 'бош саҳифасига киринг',
           callToActionLinkUrl: 'https://www.bbc.com/uzbek',
         },
         500: {
           statusCode: '500',
-          title: '500- Хато',
-          message: 'Муаммо пайдо бўлди. Илтимос, саҳифани янгиланг',
+          title: 'Ички сервердаги хатолик',
+          message:
+            'Узр, ҳозирги пайтда сизни қидираётган саҳифангизга олиб боролмаяпмиз. Марҳамат қилиб мана бу йўлларини кўринг:',
           solutions: [
             'Браузерингиздаги "янгилаш" тугмасини босинг',
             'Яна бироз фурсатдан кейин ҳаракат қилиб кўринг',
           ],
           callToActionFirst: 'Бунга муқобил ',
-          callToActionLinkText: 'BBC Бош саҳифа',
+          callToActionLinkText: "BBC News O'zbek",
           callToActionLast: 'бош саҳифасига киринг',
           callToActionLinkUrl: 'https://www.bbc.com/uzbek',
         },
@@ -136,7 +137,7 @@ export const service = {
       },
       media: {
         audio: 'Аудио',
-        photogallery: 'Фотогалерея',
+        photogallery: 'Фото галерея',
         video: 'Видео',
         bbc_uzbek_radio: {
           title: 'BBC Uzbek Radio Dasturi',
