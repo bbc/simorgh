@@ -833,6 +833,72 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                   Tech
                 </a>
               </li>
+              <li
+                class="c16 c17"
+                role="listitem"
+              >
+                <a
+                  class="c20"
+                  href="/news/science_and_environment"
+                >
+                  Science
+                </a>
+              </li>
+              <li
+                class="c16 c17"
+                role="listitem"
+              >
+                <a
+                  class="c20"
+                  href="/news/health"
+                >
+                  Health
+                </a>
+              </li>
+              <li
+                class="c16 c17"
+                role="listitem"
+              >
+                <a
+                  class="c20"
+                  href="/news/education"
+                >
+                  Family & Education
+                </a>
+              </li>
+              <li
+                class="c16 c17"
+                role="listitem"
+              >
+                <a
+                  class="c20"
+                  href="/news/entertainment_and_arts"
+                >
+                  Entertainment & Arts
+                </a>
+              </li>
+              <li
+                class="c16 c17"
+                role="listitem"
+              >
+                <a
+                  class="c20"
+                  href="/news/stories"
+                >
+                  Stories
+                </a>
+              </li>
+              <li
+                class="c16 c17"
+                role="listitem"
+              >
+                <a
+                  class="c20"
+                  href="/news/video_and_audio/headlines"
+                >
+                  Video & Audio
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -1011,7 +1077,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 ©
                  
               </span>
-              2019 BBC. The BBC is not responsible for the content of external sites.
+              2020 BBC. The BBC is not responsible for the content of external sites.
                
               <a
                 class="c26 c30"
