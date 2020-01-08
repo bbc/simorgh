@@ -14,21 +14,37 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 .c7 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   max-width: 80rem;
   margin: 0 auto;
 }
 
 .c6 {
   background-color: #B80000;
-  height: 3.5rem;
+  min-height: 2.5rem;
   width: 100%;
   padding: 0 0.5rem;
   border-bottom: 0.0625rem solid transparent;
 }
 
-.c29 {
+.c30 {
   background-color: #B80000;
-  height: 3.5rem;
+  min-height: 2.5rem;
   width: 100%;
   padding: 0 0.5rem;
   border-top: 0.0625rem solid transparent;
@@ -45,8 +61,8 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
-  padding-top: 1rem;
-  padding-bottom: 0.75rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
   height: 1.5rem;
   width: 100%;
   max-width: 10.496849999999998rem;
@@ -58,14 +74,48 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
 }
 
-.c16 {
+.c12 {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  background-color: #FFFFFF;
+  border: 0.1875rem solid #000;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c12:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+  -webkit-clip: auto;
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: 0.5rem;
+  left: 0;
+}
+
+.c17 {
   color: #fff;
   fill: currentColor;
 }
 
-.c24 {
+.c25 {
   background-color: #222222;
   clear: both;
   overflow: hidden;
@@ -77,24 +127,24 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   visibility: hidden;
 }
 
-.c25 {
+.c26 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.125rem solid #3F3F42;
 }
 
-.c26 {
+.c27 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #3F3F42;
 }
 
-.c26:last-child {
+.c27:last-child {
   padding-bottom: 1rem;
   border: 0;
 }
 
-.c27 {
+.c28 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -105,18 +155,18 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   text-decoration: none;
 }
 
-.c27:hover,
-.c27:focus {
+.c28:hover,
+.c28:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c28 {
+.c29 {
   border-left: 0.25rem solid #FFFFFF;
   padding-left: 0.5rem;
 }
 
-.c15 {
+.c16 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -127,13 +177,13 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   width: 2.75rem;
 }
 
-.c15:hover,
-.c15:focus {
+.c16:hover,
+.c16:focus {
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.c15:hover::after,
-.c15:focus::after {
+.c16:hover::after,
+.c16:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -143,24 +193,24 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border: 0.25rem solid #FFFFFF;
 }
 
-.c15 svg {
+.c16 svg {
   vertical-align: middle;
 }
 
-.c13 {
+.c14 {
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.c18 {
+.c19 {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
 }
 
-.c21 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -174,7 +224,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   padding: 0.75rem 1rem;
 }
 
-.c21:hover::after {
+.c22:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -184,7 +234,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c21:focus::after {
+.c22:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -195,7 +245,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border: 0.25rem solid #FFFFFF;
 }
 
-.c23 {
+.c24 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -209,7 +259,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   padding: 0.75rem 1rem;
 }
 
-.c23:hover::after {
+.c24:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -218,7 +268,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c23:focus::after {
+.c24:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -229,13 +279,13 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border: 0.25rem solid #FFFFFF;
 }
 
-.c20 {
+.c21 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-.c22::after {
+.c23::after {
   content: '';
   position: absolute;
   left: 0;
@@ -244,17 +294,17 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c12 {
+.c13 {
   position: relative;
   background-color: #B80000;
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.c12 .c19::after {
+.c13 .c20::after {
   left: 0;
 }
 
-.c14 {
+.c15 {
   position: relative;
 }
 
@@ -348,7 +398,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   color: #FFFFFF;
 }
 
-.c35 {
+.c36 {
   padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
@@ -357,7 +407,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   display: block;
 }
 
-.c38 {
+.c39 {
   padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
@@ -366,13 +416,13 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   display: inline;
 }
 
-.c34:hover .c36,
-.c34:focus .c36 {
+.c35:hover .c37,
+.c35:focus .c37 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c32 {
+.c33 {
   border-bottom: 0.0625rem solid #3F3F42;
   list-style-type: none;
   margin: 0;
@@ -381,7 +431,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   column-count: 4;
 }
 
-.c32 > li:first-child {
+.c33 > li:first-child {
   border-bottom: 0.0625rem solid #3F3F42;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
@@ -391,7 +441,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   column-span: all;
 }
 
-.c33 {
+.c34 {
   min-width: 50%;
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
@@ -399,7 +449,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   break-inside: avoid-column;
 }
 
-.c30 {
+.c31 {
   background-color: #222222;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -408,36 +458,55 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   font-style: normal;
 }
 
-.c31 {
+.c32 {
   max-width: 80rem;
   margin: 0 auto;
   padding-top: 0.5rem);
 }
 
-.c37 {
+.c38 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
+@media (max-width:14.9375rem) {
+  .c7 {
+    display: block;
+  }
+}
+
 @media (min-width:25rem) {
   .c6 {
-    height: 5rem;
+    min-height: 3.25rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c29 {
-    height: 5rem;
+  .c30 {
+    min-height: 3.25rem;
     padding: 0 1rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c9 {
+    display: block;
   }
 }
 
 @media (min-width:25rem) {
   .c10 {
-    padding-top: 1.75rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -447,102 +516,122 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
-  .c24 {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c12 {
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c25 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .c24 {
+  .c25 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c27 {
+  .c28 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c28 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c16 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) {
-  .c15 {
+  .c16 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c19 {
     overflow: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c21 {
+  .c22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c21 {
+  .c22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c21 {
+  .c22 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
+  .c24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c23 {
+  .c24 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c20:last-child {
+  .c21:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20::after {
+  .c21::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -553,7 +642,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (max-width:37.4375rem) {
-  .c17 {
+  .c18 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: smooth;
@@ -568,11 +657,11 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
     -ms-overflow-style: none;
   }
 
-  .c17::-webkit-scrollbar {
+  .c18::-webkit-scrollbar {
     display: none;
   }
 
-  .c17:after {
+  .c18:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -672,14 +761,14 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c32 {
+  .c33 {
     display: grid;
     grid-auto-flow: column;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c32 {
+  .c33 {
     grid-auto-flow: row;
     -webkit-column-count: 1;
     column-count: 1;
@@ -687,7 +776,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width:15rem) and (max-width:37.4375rem) {
-  .c32 {
+  .c33 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat( 4,auto );
@@ -697,7 +786,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c32 {
+  .c33 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat( 3,auto );
@@ -707,7 +796,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c32 {
+  .c33 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat( 3,auto );
@@ -717,7 +806,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width:80rem) {
-  .c32 {
+  .c33 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat( 3,auto );
@@ -727,25 +816,25 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (max-width:25rem) {
-  .c30 {
+  .c31 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c30 {
+  .c31 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c30 {
+  .c31 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     font-size: 0.8125rem;
   }
 }
@@ -859,29 +948,36 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 BBC News
               </span>
             </a>
+            <a
+              class="c12"
+              dir="ltr"
+              href="#content"
+            >
+              Skip to content
+            </a>
           </div>
         </div>
         <nav
-          class="c12"
+          class="c13"
           dir="ltr"
           role="navigation"
         >
           <div
-            class="c13"
+            class="c14"
           >
             <div
-              class="c14"
+              class="c15"
             >
               <button
                 aria-expanded="false"
                 aria-label="Sections"
-                class="c15"
+                class="c16"
                 dir="ltr"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="c16"
+                  class="c17"
                   focusable="false"
                   height="2.75rem"
                   viewBox="0 0 44 44"
@@ -893,24 +989,24 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 </svg>
               </button>
               <div
-                class="c17"
+                class="c18"
                 dir="ltr"
               >
                 <ul
-                  class="c18"
+                  class="c19"
                   role="list"
                 >
                   <li
-                    class="c19 c20"
+                    class="c20 c21"
                     dir="ltr"
                     role="listitem"
                   >
                     <a
-                      class="c21"
+                      class="c22"
                       href="/news"
                     >
                       <span
-                        class="c22"
+                        class="c23"
                         role="text"
                       >
                         <span
@@ -924,132 +1020,132 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                     </a>
                   </li>
                   <li
-                    class="c19 c20"
+                    class="c20 c21"
                     dir="ltr"
                     role="listitem"
                   >
                     <a
-                      class="c23"
+                      class="c24"
                       href="/news/uk"
                     >
                       UK
                     </a>
                   </li>
                   <li
-                    class="c19 c20"
+                    class="c20 c21"
                     dir="ltr"
                     role="listitem"
                   >
                     <a
-                      class="c23"
+                      class="c24"
                       href="/news/world"
                     >
                       World
                     </a>
                   </li>
                   <li
-                    class="c19 c20"
+                    class="c20 c21"
                     dir="ltr"
                     role="listitem"
                   >
                     <a
-                      class="c23"
+                      class="c24"
                       href="/news/business"
                     >
                       Business
                     </a>
                   </li>
                   <li
-                    class="c19 c20"
+                    class="c20 c21"
                     dir="ltr"
                     role="listitem"
                   >
                     <a
-                      class="c23"
+                      class="c24"
                       href="/news/politics"
                     >
                       Politics
                     </a>
                   </li>
                   <li
-                    class="c19 c20"
+                    class="c20 c21"
                     dir="ltr"
                     role="listitem"
                   >
                     <a
-                      class="c23"
+                      class="c24"
                       href="/news/technology"
                     >
                       Tech
                     </a>
                   </li>
                   <li
-                    class="c19 c20"
+                    class="c20 c21"
                     dir="ltr"
                     role="listitem"
                   >
                     <a
-                      class="c23"
+                      class="c24"
                       href="/news/science_and_environment"
                     >
                       Science
                     </a>
                   </li>
                   <li
-                    class="c19 c20"
+                    class="c20 c21"
                     dir="ltr"
                     role="listitem"
                   >
                     <a
-                      class="c23"
+                      class="c24"
                       href="/news/health"
                     >
                       Health
                     </a>
                   </li>
                   <li
-                    class="c19 c20"
+                    class="c20 c21"
                     dir="ltr"
                     role="listitem"
                   >
                     <a
-                      class="c23"
+                      class="c24"
                       href="/news/education"
                     >
                       Family & Education
                     </a>
                   </li>
                   <li
-                    class="c19 c20"
+                    class="c20 c21"
                     dir="ltr"
                     role="listitem"
                   >
                     <a
-                      class="c23"
+                      class="c24"
                       href="/news/entertainment_and_arts"
                     >
                       Entertainment & Arts
                     </a>
                   </li>
                   <li
-                    class="c19 c20"
+                    class="c20 c21"
                     dir="ltr"
                     role="listitem"
                   >
                     <a
-                      class="c23"
+                      class="c24"
                       href="/news/stories"
                     >
                       Stories
                     </a>
                   </li>
                   <li
-                    class="c19 c20"
+                    class="c20 c21"
                     dir="ltr"
                     role="listitem"
                   >
                     <a
-                      class="c23"
+                      class="c24"
                       href="/news/video_and_audio/headlines"
                     >
                       Video & Audio
@@ -1059,23 +1155,23 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
               </div>
             </div>
             <div
-              class="c24"
+              class="c25"
               height="0"
             >
               <ul
-                class="c25"
+                class="c26"
                 role="list"
               >
                 <li
-                  class="c26"
+                  class="c27"
                   role="listitem"
                 >
                   <a
-                    class="c27"
+                    class="c28"
                     href="/news"
                   >
                     <span
-                      class="c28"
+                      class="c29"
                       dir="ltr"
                       role="text"
                     >
@@ -1090,121 +1186,121 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                   </a>
                 </li>
                 <li
-                  class="c26"
+                  class="c27"
                   role="listitem"
                 >
                   <a
-                    class="c27"
+                    class="c28"
                     href="/news/uk"
                   >
                     UK
                   </a>
                 </li>
                 <li
-                  class="c26"
+                  class="c27"
                   role="listitem"
                 >
                   <a
-                    class="c27"
+                    class="c28"
                     href="/news/world"
                   >
                     World
                   </a>
                 </li>
                 <li
-                  class="c26"
+                  class="c27"
                   role="listitem"
                 >
                   <a
-                    class="c27"
+                    class="c28"
                     href="/news/business"
                   >
                     Business
                   </a>
                 </li>
                 <li
-                  class="c26"
+                  class="c27"
                   role="listitem"
                 >
                   <a
-                    class="c27"
+                    class="c28"
                     href="/news/politics"
                   >
                     Politics
                   </a>
                 </li>
                 <li
-                  class="c26"
+                  class="c27"
                   role="listitem"
                 >
                   <a
-                    class="c27"
+                    class="c28"
                     href="/news/technology"
                   >
                     Tech
                   </a>
                 </li>
                 <li
-                  class="c26"
+                  class="c27"
                   role="listitem"
                 >
                   <a
-                    class="c27"
+                    class="c28"
                     href="/news/science_and_environment"
                   >
                     Science
                   </a>
                 </li>
                 <li
-                  class="c26"
+                  class="c27"
                   role="listitem"
                 >
                   <a
-                    class="c27"
+                    class="c28"
                     href="/news/health"
                   >
                     Health
                   </a>
                 </li>
                 <li
-                  class="c26"
+                  class="c27"
                   role="listitem"
                 >
                   <a
-                    class="c27"
+                    class="c28"
                     href="/news/education"
                   >
                     Family & Education
                   </a>
                 </li>
                 <li
-                  class="c26"
+                  class="c27"
                   role="listitem"
                 >
                   <a
-                    class="c27"
+                    class="c28"
                     href="/news/entertainment_and_arts"
                   >
                     Entertainment & Arts
                   </a>
                 </li>
                 <li
-                  class="c26"
+                  class="c27"
                   role="listitem"
                 >
                   <a
-                    class="c27"
+                    class="c28"
                     href="/news/stories"
                   >
                     Stories
                   </a>
                 </li>
                 <li
-                  class="c26"
+                  class="c27"
                   role="listitem"
                 >
                   <a
-                    class="c27"
+                    class="c28"
                     href="/news/video_and_audio/headlines"
                   >
                     Video & Audio
@@ -1222,7 +1318,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
         role="contentinfo"
       >
         <div
-          class="c29"
+          class="c30"
         >
           <div
             class="c7"
@@ -1262,118 +1358,125 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 BBC News
               </span>
             </a>
+            <a
+              class="c12"
+              dir="ltr"
+              href="#content"
+            >
+              Skip to content
+            </a>
           </div>
         </div>
         <div
-          class="c30"
+          class="c31"
         >
           <div
-            class="c31"
+            class="c32"
           >
             <ul
-              class="c32"
+              class="c33"
               role="list"
             >
               <li
-                class="c33"
+                class="c34"
                 role="listitem"
               >
                 <a
-                  class="c34 c35"
+                  class="c35 c36"
                   href="https://www.bbc.com/news/help-41670342"
                 >
                   <span
-                    class="c36"
+                    class="c37"
                   >
                     Why you can trust the BBC
                   </span>
                 </a>
               </li>
               <li
-                class="c33"
+                class="c34"
                 role="listitem"
               >
                 <a
-                  class="c34 c35"
+                  class="c35 c36"
                   href="https://www.bbc.com/terms"
                 >
                   <span
-                    class="c36"
+                    class="c37"
                   >
                     Terms of Use
                   </span>
                 </a>
               </li>
               <li
-                class="c33"
+                class="c34"
                 role="listitem"
               >
                 <a
-                  class="c34 c35"
+                  class="c35 c36"
                   href="https://www.bbc.co.uk/aboutthebbc/"
                 >
                   <span
-                    class="c36"
+                    class="c37"
                   >
                     About the BBC
                   </span>
                 </a>
               </li>
               <li
-                class="c33"
+                class="c34"
                 role="listitem"
               >
                 <a
-                  class="c34 c35"
+                  class="c35 c36"
                   href="https://www.bbc.com/privacy/"
                 >
                   <span
-                    class="c36"
+                    class="c37"
                   >
                     Privacy Policy
                   </span>
                 </a>
               </li>
               <li
-                class="c33"
+                class="c34"
                 role="listitem"
               >
                 <a
-                  class="c34 c35"
+                  class="c35 c36"
                   href="https://www.bbc.com/usingthebbc/cookies/"
                 >
                   <span
-                    class="c36"
+                    class="c37"
                   >
                     Cookies
                   </span>
                 </a>
               </li>
               <li
-                class="c33"
+                class="c34"
                 role="listitem"
               >
                 <a
-                  class="c34 c35"
+                  class="c35 c36"
                   href="https://www.bbc.com/accessibility/"
                 >
                   <span
-                    class="c36"
+                    class="c37"
                   >
                     Accessibility Help
                   </span>
                 </a>
               </li>
               <li
-                class="c33"
+                class="c34"
                 role="listitem"
               >
                 <a
-                  class="c34 c35"
+                  class="c35 c36"
                   href="https://www.bbc.com/contact/"
                 >
                   <span
-                    class="c36"
+                    class="c37"
                   >
                     Contact the BBC
                   </span>
@@ -1381,7 +1484,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
               </li>
             </ul>
             <p
-              class="c37"
+              class="c38"
             >
               <span
                 lang="en-GB"
@@ -1392,11 +1495,11 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
               2020 BBC. The BBC is not responsible for the content of external sites.
                
               <a
-                class="c34 c38"
+                class="c35 c39"
                 href="https://www.bbc.co.uk/help/web/links/"
               >
                 <span
-                  class="c36"
+                  class="c37"
                 >
                   Read about our approach to external linking.
                 </span>

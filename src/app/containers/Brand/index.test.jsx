@@ -1,10 +1,14 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { latin } from '@bbc/gel-foundations/scripts';
 import BrandContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { UserContext } from '#contexts/UserContext';
+import { RequestContext } from '#contexts/RequestContext';
+import * as cookies from '#contexts/UserContext/cookies';
 
 const newsServiceContextStub = {
   product: 'BBC News',
@@ -17,11 +21,40 @@ const newsServiceContextStub = {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,
   },
+  translations: {
+    skipLinkText: 'Skip to content',
+  },
+};
+
+const variantServiceContextStub = {
+  ...newsServiceContextStub,
+  script: latin,
+  scriptLink: {
+    text: 'Test',
+    offscreenText: 'Test-variant',
+  },
+};
+
+jest.mock('#lib/utilities/variantHandler');
+const variantHandlers = require('#lib/utilities/variantHandler');
+
+variantHandlers.getOtherVariant.mockImplementation(() => 'test');
+
+const setPreferredVariantCookieSpy = jest.spyOn(
+  cookies,
+  'setPreferredVariantCookie',
+);
+const userContextMock = {
+  setPreferredVariantCookie: cookies.setPreferredVariantCookie,
 };
 
 const BrandContainerWithContext = context => (
   <ServiceContext.Provider value={context}>
-    <BrandContainer />
+    <UserContext.Provider value={userContextMock}>
+      <RequestContext.Provider value={{ variant: 'test' }}>
+        <BrandContainer />
+      </RequestContext.Provider>
+    </UserContext.Provider>
   </ServiceContext.Provider>
 );
 
@@ -31,7 +64,12 @@ describe(`BrandContainer`, () => {
     BrandContainerWithContext(newsServiceContextStub),
   );
 
-  describe('assertions', () => {
+  shouldMatchSnapshot(
+    'should render script link correctly',
+    BrandContainerWithContext(variantServiceContextStub),
+  );
+
+  describe('Assertions', () => {
     it('should render a Brand with a Skip to content link, linking to #content', () => {
       const { container } = render(
         BrandContainerWithContext(newsServiceContextStub),
@@ -41,6 +79,40 @@ describe(`BrandContainer`, () => {
       const skipLinkHref = skipLink.getAttribute('href');
 
       expect(skipLinkHref).toBe('#content');
+    });
+
+    describe('preffered variant cookie', () => {
+      let scriptLink;
+
+      beforeEach(() => {
+        const { container } = render(
+          BrandContainerWithContext(variantServiceContextStub),
+        );
+        scriptLink = container.querySelector('a[data-variant="test"]');
+      });
+
+      afterEach(() => {
+        document.cookie = '';
+        jest.clearAllMocks();
+      });
+
+      it('should be set when ScriptLink is clicked and cookie is not defined', () => {
+        document.cookie = '';
+
+        fireEvent.click(scriptLink);
+
+        expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(1);
+        expect(document.cookie).toEqual('; ckps_news=test');
+      });
+
+      it('should be updated when ScriptLink is clicked and cookie exists', () => {
+        document.cookie = 'ckps_news=lat';
+
+        fireEvent.click(scriptLink);
+
+        expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(1);
+        expect(document.cookie).toEqual('; ckps_news=test');
+      });
     });
   });
 });
