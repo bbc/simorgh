@@ -10,7 +10,7 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {});
 };
 
-// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+// For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigforAllPages = ({
   service,
   pageType,
@@ -303,7 +303,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         });
       }
 
-      it('should have a visible banner', () => {
+      it('should have a visible banner, with a skip to content link', () => {
         cy.get('header')
           .should('have.lengthOf', 1)
           .find('div[class^="Banner"]')
@@ -313,6 +313,9 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           .should('have.attr', 'href', `/${config[service].name}`)
           .find('svg')
           .should('be.visible');
+        cy.get('div[class^="Banner"]')
+          .find('a[class^="SkipLink"]')
+          .should('have.attr', 'href', '#content');
       });
 
       if (appConfig[config[service].name][variant].navigation) {
@@ -320,14 +323,11 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           pageType !== 'articles' ||
           (pageType === 'articles' && useAppToggles.navOnArticles.enabled)
         ) {
-          it('should have one visible navigation with a skiplink to h1', () => {
+          it('should have one visible navigation', () => {
             cy.get('nav')
               .should('have.lengthOf', 1)
               .should('be.visible')
-              .find('a[class^="SkipLink"]')
-              .should('have.lengthOf', 1)
-              .should('have.attr', 'href', '#content');
-            cy.get('nav a[class^="StyledLink"]')
+              .find('a[class^="StyledLink"]')
               .should(
                 'have.attr',
                 'href',

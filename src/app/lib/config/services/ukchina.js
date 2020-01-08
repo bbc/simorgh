@@ -186,6 +186,10 @@ export const service = {
     },
     lang: `zh-hans`,
     locale: `zh-hans`,
+    scriptLink: {
+      text: '繁',
+      offscreenText: 'Traditional',
+    },
     navigation: [
       {
         title: '主页',
@@ -225,6 +229,10 @@ export const service = {
     },
     lang: `zh-hant`,
     locale: `zh-hant`,
+    scriptLink: {
+      text: '简',
+      offscreenText: 'Simplified',
+    },
     navigation: [
       {
         title: '主頁',
