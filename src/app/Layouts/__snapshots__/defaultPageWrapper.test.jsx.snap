@@ -993,6 +993,78 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                     Tech
                   </a>
                 </li>
+                <li
+                  class="c19 c20"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <a
+                    class="c23"
+                    href="/news/science_and_environment"
+                  >
+                    Science
+                  </a>
+                </li>
+                <li
+                  class="c19 c20"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <a
+                    class="c23"
+                    href="/news/health"
+                  >
+                    Health
+                  </a>
+                </li>
+                <li
+                  class="c19 c20"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <a
+                    class="c23"
+                    href="/news/education"
+                  >
+                    Family & Education
+                  </a>
+                </li>
+                <li
+                  class="c19 c20"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <a
+                    class="c23"
+                    href="/news/entertainment_and_arts"
+                  >
+                    Entertainment & Arts
+                  </a>
+                </li>
+                <li
+                  class="c19 c20"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <a
+                    class="c23"
+                    href="/news/stories"
+                  >
+                    Stories
+                  </a>
+                </li>
+                <li
+                  class="c19 c20"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <a
+                    class="c23"
+                    href="/news/video_and_audio/headlines"
+                  >
+                    Video & Audio
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

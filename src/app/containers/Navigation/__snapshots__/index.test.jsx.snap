@@ -502,6 +502,72 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
                   Tech
                 </a>
               </li>
+              <li
+                class="c6"
+                role="listitem"
+              >
+                <a
+                  class="c7"
+                  href="/news/science_and_environment"
+                >
+                  Science
+                </a>
+              </li>
+              <li
+                class="c6"
+                role="listitem"
+              >
+                <a
+                  class="c7"
+                  href="/news/health"
+                >
+                  Health
+                </a>
+              </li>
+              <li
+                class="c6"
+                role="listitem"
+              >
+                <a
+                  class="c7"
+                  href="/news/education"
+                >
+                  Family & Education
+                </a>
+              </li>
+              <li
+                class="c6"
+                role="listitem"
+              >
+                <a
+                  class="c7"
+                  href="/news/entertainment_and_arts"
+                >
+                  Entertainment & Arts
+                </a>
+              </li>
+              <li
+                class="c6"
+                role="listitem"
+              >
+                <a
+                  class="c7"
+                  href="/news/stories"
+                >
+                  Stories
+                </a>
+              </li>
+              <li
+                class="c6"
+                role="listitem"
+              >
+                <a
+                  class="c7"
+                  href="/news/video_and_audio/headlines"
+                >
+                  Video & Audio
+                </a>
+              </li>
             </ul>
           </div>
           <div
@@ -594,6 +660,78 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
                   href="/news/technology"
                 >
                   Tech
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/science_and_environment"
+                >
+                  Science
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/health"
+                >
+                  Health
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/education"
+                >
+                  Family & Education
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/entertainment_and_arts"
+                >
+                  Entertainment & Arts
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/stories"
+                >
+                  Stories
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/video_and_audio/headlines"
+                >
+                  Video & Audio
                 </a>
               </li>
             </ul>
@@ -993,6 +1131,78 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
             href="/news/technology"
           >
             Tech
+          </a>
+        </li>
+        <li
+          class="c6 c7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            class="c11"
+            href="/news/science_and_environment"
+          >
+            Science
+          </a>
+        </li>
+        <li
+          class="c6 c7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            class="c11"
+            href="/news/health"
+          >
+            Health
+          </a>
+        </li>
+        <li
+          class="c6 c7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            class="c11"
+            href="/news/education"
+          >
+            Family & Education
+          </a>
+        </li>
+        <li
+          class="c6 c7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            class="c11"
+            href="/news/entertainment_and_arts"
+          >
+            Entertainment & Arts
+          </a>
+        </li>
+        <li
+          class="c6 c7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            class="c11"
+            href="/news/stories"
+          >
+            Stories
+          </a>
+        </li>
+        <li
+          class="c6 c7"
+          dir="ltr"
+          role="listitem"
+        >
+          <a
+            class="c11"
+            href="/news/video_and_audio/headlines"
+          >
+            Video & Audio
           </a>
         </li>
       </ul>
