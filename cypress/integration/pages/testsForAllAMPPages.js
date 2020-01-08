@@ -38,10 +38,11 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
         cy.get('body amp-consent > script[type="application/json"]');
       });
 
-      const { variant } = config[service];
+      const { variant, name: serviceName } = config[service];
       // limit number of tests to 2 services for navigation toggling
-      const shouldTestService = service === 'ukchina' || service === 'persian';
-      const serviceHasNavigation = appConfig[service][variant].navigation;
+      const shouldTestService =
+        serviceName === 'ukchina' || serviceName === 'persian';
+      const serviceHasNavigation = appConfig[serviceName][variant].navigation;
       const pageTypeHasNavigation =
         pageType !== 'articles' ||
         (pageType === 'articles' && appToggles.navOnArticles.enabled);
