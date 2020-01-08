@@ -38,14 +38,6 @@ describe('defaultPageWrapper', () => {
     },
   };
 
-  window.matchMedia = jest.fn().mockImplementation(() => {
-    return {
-      matches: false,
-      addListener: jest.fn(),
-      removeListener: jest.fn(),
-    };
-  });
-
   shouldMatchSnapshot(
     'should render default page wrapper with children',
     <ServiceContextProvider service="news">
