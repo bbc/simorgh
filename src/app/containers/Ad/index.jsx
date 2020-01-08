@@ -30,11 +30,11 @@ const ampAdProps = ({ id, pageType, service }) => ({
 });
 
 const AdContainer = () => {
-  const { id, platform, pageType } = useContext(RequestContext);
+  const { id, pageType } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
   const { enabled } = useToggle('ampAds');
 
-  if (enabled && (platform === 'amp' || platform === 'canonical')) {
+  if (enabled) {
     return (
       <GridItemConstrainedLargeWithAutoMargin>
         <amp-ad {...ampAdProps({ id, pageType, service })}>
