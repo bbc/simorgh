@@ -78,7 +78,7 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
         allowfullscreen=""
         class="StyledIframe-fuo2ed-0 jQWQE"
         scrolling="no"
-        src="https://embed-host.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"
+        src="https://polling.test.bbc.co.uk/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"
         title="Media player"
       />
     </div>
@@ -100,7 +100,7 @@ exports[`MediaPlayer Renders the AMP player when platform is AMP 1`] = `
         layout="fill"
         sandbox="allow-scripts allow-same-origin"
         scrolling="no"
-        src="https://embed-host.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB/amp"
+        src="https://polling.test.bbc.co.uk/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB/amp"
         title="Media player"
       >
         <amp-img
@@ -133,7 +133,7 @@ exports[`MediaPlayer Renders the AMP player with a caption 1`] = `
         layout="fill"
         sandbox="allow-scripts allow-same-origin"
         scrolling="no"
-        src="https://embed-host.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB/amp"
+        src="https://polling.test.bbc.co.uk/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB/amp"
         title="Media player"
       >
         <amp-img

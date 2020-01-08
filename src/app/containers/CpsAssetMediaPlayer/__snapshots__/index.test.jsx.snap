@@ -74,7 +74,7 @@ exports[`MediaPlayer render the amp player 1`] = `
           layout="fill"
           sandbox="allow-scripts allow-same-origin"
           scrolling="no"
-          src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"
+          src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"
           title="Media player"
         >
           <amp-img
@@ -177,7 +177,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
           allowfullscreen=""
           class="c3"
           scrolling="no"
-          src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"
+          src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"
           title="Media player"
         />
       </div>

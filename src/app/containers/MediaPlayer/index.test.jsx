@@ -11,10 +11,6 @@ import {
 } from './fixtureData';
 
 describe('MediaPlayer', () => {
-  beforeEach(() => {
-    process.env.SIMORGH_EMBEDS_BASE_URL_TEST = 'https://embed-host.bbc.com';
-  });
-
   it('Calls the canonical placeholder when platform is canonical and showPlaceholder is true', () => {
     const { asFragment } = renderWithRouter(VideoCanonicalWithPlaceholder);
     expect(asFragment()).toMatchSnapshot();

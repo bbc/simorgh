@@ -35,10 +35,6 @@ const GenerateMediaPlayer = ({
 );
 
 describe('MediaPlayer', () => {
-  beforeEach(() => {
-    process.env.SIMORGH_EMBEDS_BASE_URL_TEST = 'https://embed-host.bbc.com';
-  });
-
   it('Calls the canonical media player, with a placeholder', () => {
     const { asFragment } = renderWithRouter(
       <GenerateMediaPlayer

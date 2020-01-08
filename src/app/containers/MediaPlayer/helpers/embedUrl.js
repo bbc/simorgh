@@ -1,13 +1,19 @@
 import isLive from '#lib/utilities/envHelper';
-import hasLiveOverride from '#lib/utilities/rendererEnvHelper';
+import hasLiveRendererOverride from '#lib/utilities/rendererEnvHelper';
 
 const AV_ROUTE = 'ws/av-embeds';
 
+const LIVE_URL = 'https://polling.bbc.co.uk';
+const TEST_URL = 'https://polling.test.bbc.co.uk';
+
 const getBaseUrl = url => {
-  if (isLive() || hasLiveOverride(url)) {
-    return process.env.SIMORGH_EMBEDS_BASE_URL_LIVE;
+  if (isLive()) {
+    return LIVE_URL;
   }
-  return process.env.SIMORGH_EMBEDS_BASE_URL_TEST;
+  if (hasLiveRendererOverride(url)) {
+    return LIVE_URL;
+  }
+  return TEST_URL;
 };
 
 const embedUrl = ({ type, mediaId, isAmp = false, pageUrl }) => {

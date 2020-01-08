@@ -20,8 +20,6 @@ describe('Radio Page Blocks', () => {
   let pageData;
   let blocks;
   beforeEach(async () => {
-    process.env.SIMORGH_EMBEDS_BASE_URL_TEST = 'https://embed-host.bbc.com';
-
     pageData = await preprocessor(amharicPageData, radioPagePreprocessorRules);
     blocks = path(['content', 'blocks'], pageData);
   });
