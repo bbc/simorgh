@@ -1,31 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ErrorMain should correctly render for 404 1`] = `
-.c5 {
+.c6 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c5:visited {
+.c6:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c5:focus,
-.c5:hover {
+.c6:focus,
+.c6:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c2 {
+.c3 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   color: #B80000;
@@ -35,7 +29,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   padding: 2.5rem 0 0.5rem 0;
 }
 
-.c3 {
+.c4 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -46,11 +40,11 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 }
 
 .c1 {
-  grid-column: 1 / span 6;
+  background-color: #FDFDFD;
   padding-bottom: 4rem;
 }
 
-.c4 {
+.c5 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -62,122 +56,134 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   padding-top: 0.2rem;
 }
 
-@media (max-width:37.4375rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column-gap: 0.5rem;
+    display: grid;
+    position: initial;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
+  .c2 {
+    display: block;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c3 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c4 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
 @media (min-width:63rem) and (max-width:80rem) {
   .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+    margin: 0 auto;
+    max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
+    margin: 0 auto;
+    max-width: 80rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -235,61 +241,60 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   <body>
     <div>
       <main
+        class="c0 c1"
+        dir="ltr"
         role="main"
       >
         <div
-          class="c0"
+          class="c2"
+          dir="ltr"
         >
-          <div
-            class="c1"
+          <span
+            class="c3"
           >
-            <span
-              class="c2"
+            404
+          </span>
+          <h1
+            class="c4"
+            id="content"
+            tabindex="-1"
+          >
+            Page cannot be found
+          </h1>
+          <p
+            class="c5"
+          >
+            Sorry, we're unable to bring you the page you're looking for. Please try:
+          </p>
+          <ul>
+            <li
+              class="c5"
             >
-              404
-            </span>
-            <h1
-              class="c3"
-              id="content"
-              tabindex="-1"
+              Double checking the url
+            </li>
+            <li
+              class="c5"
             >
-              Page cannot be found
-            </h1>
-            <p
-              class="c4"
+              Hitting the refresh button in your browser
+            </li>
+            <li
+              class="c5"
             >
-              Sorry, we're unable to bring you the page you're looking for. Please try:
-            </p>
-            <ul>
-              <li
-                class="c4"
-              >
-                Double checking the url
-              </li>
-              <li
-                class="c4"
-              >
-                Hitting the refresh button in your browser
-              </li>
-              <li
-                class="c4"
-              >
-                Searching for this page using the BBC search bar
-              </li>
-            </ul>
-            <p
-              class="c4"
+              Searching for this page using the BBC search bar
+            </li>
+          </ul>
+          <p
+            class="c5"
+          >
+            Alternatively, please visit the 
+            <a
+              class="c6"
+              href="https://www.bbc.com/news"
             >
-              Alternatively, please visit the 
-              <a
-                class="c5"
-                href="https://www.bbc.com/news"
-              >
-                BBC News homepage.
-              </a>
-              
-            </p>
-          </div>
+              BBC News homepage.
+            </a>
+            
+          </p>
         </div>
       </main>
     </div>
@@ -348,31 +353,25 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
     />
   </head>
   <body>
-    .c5 {
+    .c6 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c5:visited {
+.c6:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c5:focus,
-.c5:hover {
+.c6:focus,
+.c6:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c2 {
+.c3 {
   font-size: 1.5rem;
   line-height: 1.875rem;
   color: #B80000;
@@ -382,7 +381,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   padding: 2.5rem 0 0.5rem 0;
 }
 
-.c3 {
+.c4 {
   font-size: 2rem;
   line-height: 2.625rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -393,11 +392,11 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 }
 
 .c1 {
-  grid-column: 1 / span 6;
+  background-color: #FDFDFD;
   padding-bottom: 4rem;
 }
 
-.c4 {
+.c5 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -409,122 +408,134 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   padding-top: 0.2rem;
 }
 
-@media (max-width:37.4375rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column-gap: 0.5rem;
+    display: grid;
+    position: initial;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
+  .c2 {
+    display: block;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c3 {
     font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c4 {
     font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     font-size: 2.75rem;
     line-height: 3.375rem;
   }
 }
 
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
 @media (min-width:63rem) and (max-width:80rem) {
   .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+    margin: 0 auto;
+    max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
+    margin: 0 auto;
+    max-width: 80rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c5 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c5 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
@@ -532,61 +543,60 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 
 <div>
       <main
+        class="c0 c1"
+        dir="ltr"
         role="main"
       >
         <div
-          class="c0"
+          class="c2"
+          dir="ltr"
         >
-          <div
-            class="c1"
+          <span
+            class="c3"
           >
-            <span
-              class="c2"
+            ۴۰۴
+          </span>
+          <h1
+            class="c4"
+            id="content"
+            tabindex="-1"
+          >
+            این صفحه پیدا نشد
+          </h1>
+          <p
+            class="c5"
+          >
+            متاسفانه صفحه مورد نظر شما را پیدا نمی‌کنیم. لطفا گزینه‌های زیر را امتحان کنید:
+          </p>
+          <ul>
+            <li
+              class="c5"
             >
-              ۴۰۴
-            </span>
-            <h1
-              class="c3"
-              id="content"
-              tabindex="-1"
+              آدرس صفحه مورد نظر را دوباره بررسی کنید
+            </li>
+            <li
+              class="c5"
             >
-              این صفحه پیدا نشد
-            </h1>
-            <p
-              class="c4"
+              با مرورگر خود صفحه را ریفرش (Refresh) کنید
+            </li>
+            <li
+              class="c5"
             >
-              متاسفانه صفحه مورد نظر شما را پیدا نمی‌کنیم. لطفا گزینه‌های زیر را امتحان کنید:
-            </p>
-            <ul>
-              <li
-                class="c4"
-              >
-                آدرس صفحه مورد نظر را دوباره بررسی کنید
-              </li>
-              <li
-                class="c4"
-              >
-                با مرورگر خود صفحه را ریفرش (Refresh) کنید
-              </li>
-              <li
-                class="c4"
-              >
-                در نوار جستجوی بی‌بی‌سی دنبال اطلاعات مورد نظرتان بگردید
-              </li>
-            </ul>
-            <p
-              class="c4"
+              در نوار جستجوی بی‌بی‌سی دنبال اطلاعات مورد نظرتان بگردید
+            </li>
+          </ul>
+          <p
+            class="c5"
+          >
+            برای یافتن اطلاعات مورد نظر به 
+            <a
+              class="c6"
+              href="https://www.bbc.com/persian"
             >
-              برای یافتن اطلاعات مورد نظر به 
-              <a
-                class="c5"
-                href="https://www.bbc.com/persian"
-              >
-                صفحه اصلی بی‌بی‌سی فارسی
-              </a>
-               بروید
-            </p>
-          </div>
+              صفحه اصلی بی‌بی‌سی فارسی
+            </a>
+             بروید
+          </p>
         </div>
       </main>
     </div>
@@ -645,31 +655,25 @@ exports[`ErrorMain should correctly render for 500 1`] = `
     />
   </head>
   <body>
-    .c5 {
+    .c6 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c5:visited {
+.c6:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c5:focus,
-.c5:hover {
+.c6:focus,
+.c6:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c2 {
+.c3 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   color: #B80000;
@@ -679,7 +683,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   padding: 2.5rem 0 0.5rem 0;
 }
 
-.c3 {
+.c4 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -690,11 +694,11 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 }
 
 .c1 {
-  grid-column: 1 / span 6;
+  background-color: #FDFDFD;
   padding-bottom: 4rem;
 }
 
-.c4 {
+.c5 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -706,122 +710,134 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   padding-top: 0.2rem;
 }
 
-@media (max-width:37.4375rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column-gap: 0.5rem;
+    display: grid;
+    position: initial;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
+  .c2 {
+    display: block;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c3 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c4 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
 @media (min-width:63rem) and (max-width:80rem) {
   .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+    margin: 0 auto;
+    max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
+    margin: 0 auto;
+    max-width: 80rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -829,56 +845,55 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 
 <div>
       <main
+        class="c0 c1"
+        dir="ltr"
         role="main"
       >
         <div
-          class="c0"
+          class="c2"
+          dir="ltr"
         >
-          <div
-            class="c1"
+          <span
+            class="c3"
           >
-            <span
-              class="c2"
+            500
+          </span>
+          <h1
+            class="c4"
+            id="content"
+            tabindex="-1"
+          >
+            Internal server error
+          </h1>
+          <p
+            class="c5"
+          >
+            Sorry, we're currently unable to bring you the page you're looking for. Please try:
+          </p>
+          <ul>
+            <li
+              class="c5"
             >
-              500
-            </span>
-            <h1
-              class="c3"
-              id="content"
-              tabindex="-1"
+              Hitting the refresh button in your browser
+            </li>
+            <li
+              class="c5"
             >
-              Internal server error
-            </h1>
-            <p
-              class="c4"
+              Coming back again later
+            </li>
+          </ul>
+          <p
+            class="c5"
+          >
+            Alternatively, please visit the 
+            <a
+              class="c6"
+              href="https://www.bbc.com/news"
             >
-              Sorry, we're currently unable to bring you the page you're looking for. Please try:
-            </p>
-            <ul>
-              <li
-                class="c4"
-              >
-                Hitting the refresh button in your browser
-              </li>
-              <li
-                class="c4"
-              >
-                Coming back again later
-              </li>
-            </ul>
-            <p
-              class="c4"
-            >
-              Alternatively, please visit the 
-              <a
-                class="c5"
-                href="https://www.bbc.com/news"
-              >
-                BBC News homepage.
-              </a>
-              
-            </p>
-          </div>
+              BBC News homepage.
+            </a>
+            
+          </p>
         </div>
       </main>
     </div>
@@ -937,31 +952,25 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
     />
   </head>
   <body>
-    .c5 {
+    .c6 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c5:visited {
+.c6:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c5:focus,
-.c5:hover {
+.c6:focus,
+.c6:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c2 {
+.c3 {
   font-size: 1.5rem;
   line-height: 1.875rem;
   color: #B80000;
@@ -971,7 +980,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   padding: 2.5rem 0 0.5rem 0;
 }
 
-.c3 {
+.c4 {
   font-size: 2rem;
   line-height: 2.625rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -982,11 +991,11 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 }
 
 .c1 {
-  grid-column: 1 / span 6;
+  background-color: #FDFDFD;
   padding-bottom: 4rem;
 }
 
-.c4 {
+.c5 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -998,122 +1007,134 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   padding-top: 0.2rem;
 }
 
-@media (max-width:37.4375rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column-gap: 0.5rem;
+    display: grid;
+    position: initial;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
+  .c2 {
+    display: block;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c3 {
     font-size: 1.75rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c4 {
     font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     font-size: 2.75rem;
     line-height: 3.375rem;
   }
 }
 
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
 @media (min-width:63rem) and (max-width:80rem) {
   .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+    margin: 0 auto;
+    max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
+    margin: 0 auto;
+    max-width: 80rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c5 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c5 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
@@ -1121,56 +1142,55 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 
 <div>
       <main
+        class="c0 c1"
+        dir="ltr"
         role="main"
       >
         <div
-          class="c0"
+          class="c2"
+          dir="ltr"
         >
-          <div
-            class="c1"
+          <span
+            class="c3"
           >
-            <span
-              class="c2"
+            ۵۰۰
+          </span>
+          <h1
+            class="c4"
+            id="content"
+            tabindex="-1"
+          >
+            خطا در سرور داخلی
+          </h1>
+          <p
+            class="c5"
+          >
+            متاسفانه صفحه مورد نظر شما در دسترس نیست. لطفا گزینه‌های زیر را امتحان کنید:
+          </p>
+          <ul>
+            <li
+              class="c5"
             >
-              ۵۰۰
-            </span>
-            <h1
-              class="c3"
-              id="content"
-              tabindex="-1"
+              با مرورگر خود صفحه را ریفرش (Refresh) کنید
+            </li>
+            <li
+              class="c5"
             >
-              خطا در سرور داخلی
-            </h1>
-            <p
-              class="c4"
+              بعدا دوباره امتحان کنید
+            </li>
+          </ul>
+          <p
+            class="c5"
+          >
+            برای یافتن اطلاعات مورد نظر به 
+            <a
+              class="c6"
+              href="https://www.bbc.com/persian"
             >
-              متاسفانه صفحه مورد نظر شما در دسترس نیست. لطفا گزینه‌های زیر را امتحان کنید:
-            </p>
-            <ul>
-              <li
-                class="c4"
-              >
-                با مرورگر خود صفحه را ریفرش (Refresh) کنید
-              </li>
-              <li
-                class="c4"
-              >
-                بعدا دوباره امتحان کنید
-              </li>
-            </ul>
-            <p
-              class="c4"
-            >
-              برای یافتن اطلاعات مورد نظر به 
-              <a
-                class="c5"
-                href="https://www.bbc.com/persian"
-              >
-                صفحه اصلی بی‌بی‌سی فارسی
-              </a>
-               بروید
-            </p>
-          </div>
+              صفحه اصلی بی‌بی‌سی فارسی
+            </a>
+             بروید
+          </p>
         </div>
       </main>
     </div>
@@ -1229,31 +1249,25 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
     />
   </head>
   <body>
-    .c5 {
+    .c6 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c5:visited {
+.c6:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c5:focus,
-.c5:hover {
+.c6:focus,
+.c6:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c2 {
+.c3 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   color: #B80000;
@@ -1263,7 +1277,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   padding: 2.5rem 0 0.5rem 0;
 }
 
-.c3 {
+.c4 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1274,11 +1288,11 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 }
 
 .c1 {
-  grid-column: 1 / span 6;
+  background-color: #FDFDFD;
   padding-bottom: 4rem;
 }
 
-.c4 {
+.c5 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1290,122 +1304,134 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   padding-top: 0.2rem;
 }
 
-@media (max-width:37.4375rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column-gap: 0.5rem;
+    display: grid;
+    position: initial;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
+  .c2 {
+    display: block;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c3 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c3 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
+  .c4 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c4 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
 @media (min-width:63rem) and (max-width:80rem) {
   .c1 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+    margin: 0 auto;
+    max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
   .c1 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    max-width: initial;
+    margin: 0 auto;
+    max-width: 80rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -1413,56 +1439,55 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 
 <div>
       <main
+        class="c0 c1"
+        dir="ltr"
         role="main"
       >
         <div
-          class="c0"
+          class="c2"
+          dir="ltr"
         >
-          <div
-            class="c1"
+          <span
+            class="c3"
           >
-            <span
-              class="c2"
+            500
+          </span>
+          <h1
+            class="c4"
+            id="content"
+            tabindex="-1"
+          >
+            Internal server error
+          </h1>
+          <p
+            class="c5"
+          >
+            Sorry, we're currently unable to bring you the page you're looking for. Please try:
+          </p>
+          <ul>
+            <li
+              class="c5"
             >
-              500
-            </span>
-            <h1
-              class="c3"
-              id="content"
-              tabindex="-1"
+              Hitting the refresh button in your browser
+            </li>
+            <li
+              class="c5"
             >
-              Internal server error
-            </h1>
-            <p
-              class="c4"
+              Coming back again later
+            </li>
+          </ul>
+          <p
+            class="c5"
+          >
+            Alternatively, please visit the 
+            <a
+              class="c6"
+              href="https://www.bbc.com/news"
             >
-              Sorry, we're currently unable to bring you the page you're looking for. Please try:
-            </p>
-            <ul>
-              <li
-                class="c4"
-              >
-                Hitting the refresh button in your browser
-              </li>
-              <li
-                class="c4"
-              >
-                Coming back again later
-              </li>
-            </ul>
-            <p
-              class="c4"
-            >
-              Alternatively, please visit the 
-              <a
-                class="c5"
-                href="https://www.bbc.com/news"
-              >
-                BBC News homepage.
-              </a>
-              
-            </p>
-          </div>
+              BBC News homepage.
+            </a>
+            
+          </p>
         </div>
       </main>
     </div>

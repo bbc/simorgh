@@ -3,7 +3,7 @@ import { string, shape, object, arrayOf } from 'prop-types';
 import path from 'ramda/src/path';
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
-import { Grid, GridItemConstrainedLarge } from '#lib/styledGrid';
+import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '../LinkedData';
 import RadioPageBlocks from '../RadioPageBlocks';
 
@@ -23,11 +23,42 @@ const RadioPageMain = ({ pageData }) => {
       />
       <LinkedData type="RadioChannel" seoTitle={promo.name} />
 
-      <Grid as="main" role="main">
-        <GridItemConstrainedLarge>
+      <GelPageGrid
+        forwardedAs="main"
+        role="main"
+        columns={{
+          group0: 6,
+          group1: 6,
+          group2: 6,
+          group3: 6,
+          group4: 8,
+          group5: 20,
+        }}
+        enableGelGutters
+      >
+        <Grid
+          item
+          startOffset={{
+            group0: 1,
+            group1: 1,
+            group2: 1,
+            group3: 1,
+            group4: 2,
+            group5: 5,
+          }}
+          columns={{
+            group0: 6,
+            group1: 6,
+            group2: 6,
+            group3: 6,
+            group4: 6,
+            group5: 12,
+          }}
+          margins={{ group0: true, group1: true, group2: true, group3: true }}
+        >
           <RadioPageBlocks blocks={blocks} />
-        </GridItemConstrainedLarge>
-      </Grid>
+        </Grid>
+      </GelPageGrid>
     </>
   );
 };
