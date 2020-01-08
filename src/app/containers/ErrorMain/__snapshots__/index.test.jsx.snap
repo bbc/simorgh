@@ -420,7 +420,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -431,7 +431,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -442,7 +442,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -453,7 +453,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -463,7 +463,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   .c2 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    margin-left: 12.5%;
+    margin-right: 12.5%;
     display: inline-block;
     vertical-align: top;
   }
@@ -473,7 +473,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   .c2 {
     width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    margin-left: 20%;
+    margin-right: 20%;
     display: inline-block;
     vertical-align: top;
   }
@@ -544,12 +544,12 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 <div>
       <main
         class="c0 c1"
-        dir="ltr"
+        dir="rtl"
         role="main"
       >
         <div
           class="c2"
-          dir="ltr"
+          dir="rtl"
         >
           <span
             class="c3"
@@ -1019,7 +1019,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -1030,7 +1030,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -1041,7 +1041,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -1052,7 +1052,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -1062,7 +1062,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   .c2 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    margin-left: 12.5%;
+    margin-right: 12.5%;
     display: inline-block;
     vertical-align: top;
   }
@@ -1072,7 +1072,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   .c2 {
     width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    margin-left: 20%;
+    margin-right: 20%;
     display: inline-block;
     vertical-align: top;
   }
@@ -1143,12 +1143,12 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 <div>
       <main
         class="c0 c1"
-        dir="ltr"
+        dir="rtl"
         role="main"
       >
         <div
           class="c2"
-          dir="ltr"
+          dir="rtl"
         >
           <span
             class="c3"

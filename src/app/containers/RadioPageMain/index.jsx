@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { string, shape, object, arrayOf } from 'prop-types';
 import path from 'ramda/src/path';
 import ATIAnalytics from '../ATIAnalytics';
@@ -6,12 +6,13 @@ import MetadataContainer from '../Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '../LinkedData';
 import RadioPageBlocks from '../RadioPageBlocks';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const RadioPageMain = ({ pageData }) => {
   const blocks = path(['content', 'blocks'], pageData);
   const promo = path(['promo'], pageData);
   const metadata = path(['metadata'], pageData);
-
+  const { dir } = useContext(ServiceContext);
   return (
     <>
       <ATIAnalytics data={pageData} />
@@ -26,6 +27,7 @@ const RadioPageMain = ({ pageData }) => {
       <GelPageGrid
         forwardedAs="main"
         role="main"
+        dir={dir}
         columns={{
           group0: 6,
           group1: 6,
@@ -38,6 +40,7 @@ const RadioPageMain = ({ pageData }) => {
       >
         <Grid
           item
+          dir={dir}
           startOffset={{
             group0: 1,
             group1: 1,

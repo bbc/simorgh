@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, arrayOf, shape } from 'prop-types';
+import { string, arrayOf, oneOf, shape } from 'prop-types';
 import styled from 'styled-components';
 import InlineLink from '@bbc/psammead-inline-link';
 import Paragraph from '@bbc/psammead-paragraph';
@@ -47,12 +47,14 @@ const ErrorPage = ({
   callToActionLinkText,
   callToActionLinkUrl,
   callToActionLast,
+  dir,
   script,
   service,
 }) => (
   <GhostGelPageGridWithSpacing
     forwardedAs="main"
     role="main"
+    dir={dir}
     columns={{
       group0: 6,
       group1: 6,
@@ -64,6 +66,7 @@ const ErrorPage = ({
     enableGelGutters
   >
     <Grid
+      dir={dir}
       item
       startOffset={{
         group0: 1,
@@ -122,6 +125,7 @@ ErrorPage.propTypes = {
   callToActionLinkText: string.isRequired,
   callToActionLinkUrl: string.isRequired,
   callToActionLast: string,
+  dir: oneOf(['ltr', 'rtl']).isRequired,
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
 };
