@@ -40,7 +40,9 @@ const runTestsForPage = ({
     .forEach(service => {
       describe(`${pageType} - ${service} - Canonical`, () => {
         before(() => {
-          cy.visit(config[service].pageTypes[pageType].path, {
+          const { path } = config[service].pageTypes[pageType];
+          cy.testResponseCodeAndType(path, 200, 'text/html');
+          cy.visit(path, {
             failOnStatusCode: !pageType.includes('error'),
           });
         });
@@ -80,7 +82,9 @@ const runTestsForPage = ({
       // Switch to AMP page URL (NB all our pages have AMP variants)
       describe(`${pageType} - ${service} - Amp`, () => {
         before(() => {
-          cy.visit(`${config[service].pageTypes[pageType].path}.amp`, {
+          const path = `${config[service].pageTypes[pageType].path}.amp`;
+          cy.testResponseCodeAndType(path, 200, 'text/html');
+          cy.visit(path, {
             failOnStatusCode: !pageType.includes('error'),
           });
         });
