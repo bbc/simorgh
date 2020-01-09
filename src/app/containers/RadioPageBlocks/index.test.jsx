@@ -32,6 +32,7 @@ describe('Radio Page Blocks', () => {
       <ServiceContext.Provider value={serviceContextMock}>
         <RequestContext.Provider
           value={{
+            isAmp: false,
             platform: 'canonical',
             pageType: 'media',
             origin: 'http://localhost:7080',
@@ -54,6 +55,7 @@ describe('Radio Page Blocks', () => {
       <ServiceContext.Provider value={serviceContextMock}>
         <RequestContext.Provider
           value={{
+            isAmp: true,
             platform: 'amp',
             pageType: 'media',
             origin: 'http://localhost:7080',
