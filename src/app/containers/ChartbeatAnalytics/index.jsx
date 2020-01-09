@@ -18,6 +18,7 @@ const ChartbeatAnalytics = ({ data }) => {
   const isCanonicalAndEnabled = !isAmp && enabled;
 
   const configDependencies = {
+    isAmp,
     platform,
     pageType,
     data,
