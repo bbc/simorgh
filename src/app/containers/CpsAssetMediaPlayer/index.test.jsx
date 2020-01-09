@@ -1,17 +1,10 @@
 import React from 'react';
-import {
-  shouldMatchSnapshot,
-  isNull,
-  suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
+import { isNull, shouldMatchSnapshot, suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import CpsAssetMediaPlayerContainer from '.';
-import {
-  validAresMediaVideoBlock,
-  defaultToggles,
-} from '../MediaPlayer/fixtureData';
+import { defaultToggles, validAresMediaVideoBlock } from '../MediaPlayer/fixtureData';
 
 const GenerateMediaPlayer = ({
   /* eslint-disable react/prop-types */
@@ -40,6 +33,10 @@ const GenerateMediaPlayer = ({
 );
 
 describe('MediaPlayer', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
+  });
+
   shouldMatchSnapshot(
     'render the canonical player without a placeholder',
     <GenerateMediaPlayer

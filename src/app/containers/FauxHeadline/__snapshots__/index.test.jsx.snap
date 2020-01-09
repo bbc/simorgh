@@ -13,10 +13,6 @@ exports[`FauxHeadline with headline data should render correctly 1`] = `
   padding: 2rem 0;
 }
 
-.c0 {
-  display: inline;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c3 {
     font-size: 2rem;
@@ -124,7 +120,6 @@ exports[`FauxHeadline with headline data should render correctly 1`] = `
 @media (min-width:80rem) {
   .c1 {
     margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
@@ -159,10 +154,6 @@ exports[`FauxHeadline with plain text headline should render <strong> containing
   padding: 2rem 0;
 }
 
-.c0 {
-  display: inline;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c3 {
     font-size: 2rem;
@@ -270,7 +261,6 @@ exports[`FauxHeadline with plain text headline should render <strong> containing
 @media (min-width:80rem) {
   .c1 {
     margin: 0 auto;
-    max-width: 80rem;
   }
 }
 

@@ -38,10 +38,6 @@ exports[`ParagraphContainer should render correctly 1`] = `
   color: #B80000;
 }
 
-.c0 {
-  display: inline;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c3 {
     font-size: 1rem;
@@ -143,7 +139,6 @@ exports[`ParagraphContainer should render correctly 1`] = `
 @media (min-width:80rem) {
   .c1 {
     margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
@@ -215,10 +210,6 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
   margin: 0;
 }
 
-.c0 {
-  display: inline;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c3 {
     font-size: 1rem;
@@ -320,7 +311,6 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 @media (min-width:80rem) {
   .c1 {
     margin: 0 auto;
-    max-width: 80rem;
   }
 }
 

@@ -4,12 +4,7 @@ import Timestamp from '@bbc/psammead-timestamp-container';
 import Grid, { ArticlePageGrid } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { formatDateNumeric } from './timeFormats';
-import {
-  isFirstRelative,
-  isLastRelative,
-  formatType,
-  isValidDateTime,
-} from './helpers';
+import { formatType, isFirstRelative, isLastRelative, isValidDateTime } from './helpers';
 
 const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
   const {

@@ -1,10 +1,7 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '@bbc/gel-foundations/scripts';
-import {
-  F_NASSIM_PERSIAN_REGULAR,
-  F_NASSIM_PERSIAN_BOLD,
-} from '@bbc/psammead-styles/fonts';
+import { F_NASSIM_PERSIAN_BOLD, F_NASSIM_PERSIAN_REGULAR } from '@bbc/psammead-styles/fonts';
 import 'moment/locale/fa';
 import '@bbc/moment-timezone-include/tz/GMT';
 import { jalaali } from '@bbc/psammead-calendars';
@@ -161,7 +158,7 @@ export const service = {
             'برنامه خبری-تحلیلی یک ساعته که تصویری روشن و ساده از رویدادهای پیچیده جهان ارائه می‌کند.',
         },
         listen: 'Listen',
-        watch: 'Watch',
+        watch: 'تماشا کنید',
         liveLabel: 'زنده',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -282,6 +279,7 @@ export const service = {
         url: '/persian/learningenglish',
       },
     ],
+    navigationSection: 'صفحه ها',
   },
 };
 

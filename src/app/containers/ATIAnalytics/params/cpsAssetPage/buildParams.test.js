@@ -86,6 +86,7 @@ describe('buildCpsAssetPageATIUrl', () => {
         `x4=[${expectation.language}]`,
         'x5=[http://localhost/]',
         `x7=[${expectation.contentType}]`,
+        `x8=[${expectation.libraryVersion}]`,
         `x9=[${expectation.pageTitle.replace(/ /g, '+')}]`,
         `x11=[${expectation.timePublished}]`,
         `x12=[${expectation.timeUpdated}]`,

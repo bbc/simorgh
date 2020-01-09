@@ -1,10 +1,7 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import { pashto as brandSVG } from '@bbc/psammead-assets/svgs';
-import {
-  F_NASSIM_PASHTO_REGULAR,
-  F_NASSIM_PASHTO_BOLD,
-} from '@bbc/psammead-styles/fonts';
+import { F_NASSIM_PASHTO_BOLD, F_NASSIM_PASHTO_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/ps';
 import '@bbc/moment-timezone-include/tz/GMT';
 import { jalaali } from '@bbc/psammead-calendars';
@@ -151,7 +148,7 @@ export const service = {
             'د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.',
         },
         listen: 'Listen',
-        watch: 'Watch',
+        watch: 'و یې ګورئ',
         liveLabel: 'ژوندۍ',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -240,6 +237,7 @@ export const service = {
         url: '/pashto/columns',
       },
     ],
+    navigationSection: 'برخې',
   },
 };
 

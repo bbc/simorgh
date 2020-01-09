@@ -1,8 +1,5 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import {
-  latinDiacritics,
-  cyrillicAndLatin,
-} from '@bbc/gel-foundations/scripts';
+import { cyrillicAndLatin, latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { serbian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/sr-cyrl';
@@ -219,6 +216,7 @@ export const service = {
         url: '/serbian/lat/popular/read',
       },
     ],
+    navigationSection: 'Odeljci',
   },
   cyr: {
     ...baseServiceConfig,
@@ -252,6 +250,7 @@ export const service = {
         url: '/serbian/cyr/popular/read',
       },
     ],
+    navigationSection: 'Одељци',
   },
 };
 

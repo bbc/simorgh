@@ -1,10 +1,7 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { amharic as brandSVG } from '@bbc/psammead-assets/svgs';
-import {
-  F_NOTO_SANS_ETHIOPIC_BOLD,
-  F_NOTO_SANS_ETHIOPIC_REGULAR,
-} from '@bbc/psammead-styles/fonts';
+import { F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '@bbc/psammead-locales/moment/am';
 import withContext from '../../../contexts/utils/withContext';
@@ -135,8 +132,8 @@ export const service = {
         audio: 'ድምጽ',
         photogallery: 'የፎቶ መድብሎች',
         video: 'ቪዲዮ',
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'ያድምጡ',
+        watch: 'ተመልከት',
         liveLabel: 'ቀጥታ ስርጭት',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -200,6 +197,7 @@ export const service = {
         url: '/amharic/popular/read',
       },
     ],
+    navigationSection: 'ክፍሎች',
     timezone: 'Africa/Addis_Ababa',
   },
 };

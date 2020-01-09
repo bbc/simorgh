@@ -6,7 +6,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://www.test.bbc.com/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB/amp"}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://embed-host.bbc.com/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB/amp"}
     </script>
     <script
       async="true"
@@ -15,93 +15,193 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
     />
   </head>
   <body>
-    .c1 {
+    .c4 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.c2 {
+.c5 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
 }
 
-@media (max-width:25rem) {
-  .c0 {
+@media (max-width:14.9375rem) {
+  .c2 {
     padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
     padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
+  .c2 {
+    width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
+  .c2 {
+    width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
-    max-width: initial;
+  .c2 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c3 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c3 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c3 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c3 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .c3 {
+    display: block;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
   }
 }
 
 <div>
       <div
-        class="c0"
+        class="c0 c1"
+        dir="ltr"
       >
-        <figure
-          class="c1"
+        <div
+          class="c2"
+          dir="ltr"
         >
           <div
-            class="c2"
+            class="c3"
+            dir="ltr"
           >
-            <amp-iframe
-              allowfullscreen="allowfullscreen"
-              frameborder="0"
-              layout="fill"
-              sandbox="allow-scripts allow-same-origin"
-              scrolling="no"
-              src="https://www.test.bbc.com/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB/amp"
-              title="Media player"
+            <figure
+              class="c4"
             >
-              <amp-img
-                alt=""
-                attribution=""
-                height="16"
-                layout="fill"
-                placeholder="true"
-                src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-                srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
-                width="9"
-              />
-            </amp-iframe>
+              <div
+                class="c5"
+              >
+                <amp-iframe
+                  allowfullscreen="allowfullscreen"
+                  frameborder="0"
+                  layout="fill"
+                  sandbox="allow-scripts allow-same-origin"
+                  scrolling="no"
+                  src="https://embed-host.bbc.com/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB/amp"
+                  title="Media player"
+                >
+                  <amp-img
+                    alt=""
+                    attribution=""
+                    height="16"
+                    layout="fill"
+                    placeholder="true"
+                    src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                    srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                    width="9"
+                  />
+                </amp-iframe>
+              </div>
+            </figure>
           </div>
-        </figure>
+        </div>
       </div>
     </div>
   </body>
@@ -109,7 +209,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 `;
 
 exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = `
-.c11 {
+.c14 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -118,19 +218,19 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   height: 0.75rem;
 }
 
-.c1 {
+.c4 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.c13 {
+.c16 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c9 {
+.c12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -142,7 +242,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   margin: 0;
 }
 
-.c7 {
+.c10 {
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -160,14 +260,14 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   width: 5rem;
 }
 
-.c7:hover,
-.c7:focus {
+.c10:hover,
+.c10:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.c10 > svg {
+.c13 > svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -175,12 +275,12 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   width: 1.5rem;
 }
 
-.c12 {
+.c15 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.c5 {
+.c8 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -194,14 +294,14 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   color: #FFFFFF;
 }
 
-.c6 {
+.c9 {
   display: block;
   font-weight: normal;
   padding: 0.5rem;
   border-bottom: 0.0625rem solid transparent;
 }
 
-.c4 {
+.c7 {
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -210,86 +310,175 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   height: 100%;
 }
 
-.c8 {
+.c11 {
   position: absolute;
   bottom: 0;
 }
 
-.c3:hover .c8,
-.c3:focus .c8 {
+.c6:hover .c11,
+.c6:focus .c11 {
   background-color: #B80000;
 }
 
-.c2 {
+.c5 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c0 {
-  grid-column: 1 / span 6;
-}
-
 @media (min-width:37.5rem) {
-  .c5 {
+  .c8 {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c5 {
+  .c8 {
     background-color: transparent;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c6 {
+  .c9 {
     background-color: window;
   }
 }
 
 @media (min-width:25rem) {
-  .c6 {
+  .c9 {
     padding: 1rem;
-  }
-}
-
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
   .c0 {
-    max-width: initial;
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(5/6*(100% - 6 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c3 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c3 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c3 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c3 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .c3 {
+    display: block;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
   }
 }
 
@@ -298,74 +487,85 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://www.test.bbc.com/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB"}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://embed-host.bbc.com/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB"}
     </script>
   </head>
   <body>
     <div>
       <div
-        class="c0"
+        class="c0 c1"
+        dir="ltr"
       >
-        <figure
-          class="c1"
+        <div
+          class="c2"
+          dir="ltr"
         >
           <div
-            class="c2"
+            class="c3"
+            dir="ltr"
           >
-            <div
-              class="c3 c4"
+            <figure
+              class="c4"
             >
               <div
                 class="c5"
               >
-                <strong
-                  aria-hidden="true"
-                  class="c6"
-                >
-                  Contains strong language and adult humour.
-                </strong>
-              </div>
-              <button
-                class="c7 c8"
-              >
-                <span
-                  class="c9"
-                >
-                  Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
-                </span>
                 <div
-                  aria-hidden="true"
-                  class="c10"
+                  class="c6 c7"
                 >
-                  <svg
-                    class="c11"
-                    focusable="false"
-                    height="12px"
-                    viewBox="0 0 32 32"
-                    width="12px"
+                  <div
+                    class="c8"
                   >
-                    <polygon
-                      points="3,32 29,16 3,0"
-                    />
-                  </svg>
+                    <strong
+                      aria-hidden="true"
+                      class="c9"
+                    >
+                      Contains strong language and adult humour.
+                    </strong>
+                  </div>
+                  <button
+                    class="c10 c11"
+                  >
+                    <span
+                      class="c12"
+                    >
+                      Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
+                    </span>
+                    <div
+                      aria-hidden="true"
+                      class="c13"
+                    >
+                      <svg
+                        class="c14"
+                        focusable="false"
+                        height="12px"
+                        viewBox="0 0 32 32"
+                        width="12px"
+                      >
+                        <polygon
+                          points="3,32 29,16 3,0"
+                        />
+                      </svg>
+                    </div>
+                    <time
+                      aria-hidden="true"
+                      class="c15"
+                      datetime="PT3M11S"
+                    >
+                      03:11
+                    </time>
+                  </button>
+                  <img
+                    alt=""
+                    class="c16"
+                    src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                    srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                  />
                 </div>
-                <time
-                  aria-hidden="true"
-                  class="c12"
-                  datetime="PT3M11S"
-                >
-                  03:11
-                </time>
-              </button>
-              <img
-                alt=""
-                class="c13"
-                src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-                srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
-              />
-            </div>
+              </div>
+            </figure>
           </div>
-        </figure>
+        </div>
       </div>
     </div>
   </body>

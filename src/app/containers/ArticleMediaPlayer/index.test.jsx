@@ -4,10 +4,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import ArticleMediaPlayerContainer from '.';
-import {
-  validAresMediaVideoBlock,
-  defaultToggles,
-} from '../MediaPlayer/fixtureData';
+import { defaultToggles, validAresMediaVideoBlock } from '../MediaPlayer/fixtureData';
 
 const GenerateMediaPlayer = ({
   /* eslint-disable react/prop-types */
@@ -35,6 +32,10 @@ const GenerateMediaPlayer = ({
 );
 
 describe('MediaPlayer', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
+  });
+
   shouldMatchSnapshot(
     'Calls the canonical media player, with a placeholder',
     <GenerateMediaPlayer

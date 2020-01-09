@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import BulletedList from '@bbc/psammead-bulleted-list';
-import { arrayOf, shape, oneOf } from 'prop-types';
+import { arrayOf, oneOf, shape } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';
 import listItem, { ListItemPropTypes } from '../BulletedListItem';
@@ -38,7 +38,7 @@ const BulletedListContainer = ({ blocks }) => {
           group3: true,
         }}
       >
-        <BulletedList role="list" script={script} service={service} dir={dir}>
+        <BulletedList script={script} service={service} dir={dir}>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </BulletedList>
       </Grid>

@@ -8,8 +8,8 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `uk`,
-    articleAuthor: `http://www.facebook.com/BBC.Ukrainian`,
-    articleTimestampPrefix: 'Оновлення даних',
+    articleAuthor: `http://www.facebook.com/bbcnews`,
+    articleTimestampPrefix: 'Оновлення даних: ',
     atiAnalyticsAppName: 'news-ukrainian',
     atiAnalyticsProducerId: '94',
     brandName: 'BBC News Україна',
@@ -27,7 +27,7 @@ export const service = {
     locale: `uk-UA`,
     datetimeLocale: `uk`,
     service: 'ukrainian',
-    serviceName: 'Україна',
+    serviceName: 'Ukrainian',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBC_ua',
     twitterSite: '@BBC_ua',
@@ -56,9 +56,9 @@ export const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Сторінку не знайдено',
+          title: 'Сторінку не знайдено',
           message:
-            'Можливо, ви ввели неправильну адресу. Будь ласка, перевірте адресу і написання.',
+            'Вибачте, ми не знайшли сторінку, яку ви шукали. Спробуйте це:',
           solutions: [
             'Перевірте ще раз адресу посилання',
             'Натисніть на кнопку "оновити" в браузері',
@@ -71,8 +71,9 @@ export const service = {
         },
         500: {
           statusCode: '500',
-          title: '500 - Помилка',
-          message: 'Сталася помилка. Будь ласка, перезавантажте сторінку.',
+          title: 'Помилка серверу',
+          message:
+            'Вибачте, ми не змогли знайти сторінку, яку ви шукали. Спробуйте:',
           solutions: [
             'Натиснути кнопку "оновити" у вашому браузері',
             'Спробуйте пізніше',
@@ -103,7 +104,7 @@ export const service = {
               linkUrl: null,
             },
           },
-          accept: 'OK',
+          accept: 'ОК',
           reject: 'Подивитися, що змінилося',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
@@ -184,7 +185,7 @@ export const service = {
         },
       ],
       copyrightText:
-        'ВВС. ВВС не несе відповідальність за зміст зовнішніх інтернет-сайтів',
+        'BBC. ВВС на несе відповідальності за контент інших сайтів.',
     },
     fonts: [],
     timezone: 'GMT',
@@ -262,6 +263,7 @@ export const service = {
         url: '/ukrainian/learning_english',
       },
     ],
+    navigationSection: 'Розділи',
   },
 };
 

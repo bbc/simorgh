@@ -7,10 +7,6 @@ exports[`withLoading HOC and no loading prop should return the passed in compone
 `;
 
 exports[`withLoading HOC and the loading prop set to true should return the loading component 1`] = `
-.c0 {
-  display: inline;
-}
-
 @supports (display:grid) {
   .c0 {
     display: grid;
@@ -94,7 +90,6 @@ exports[`withLoading HOC and the loading prop set to true should return the load
 @media (min-width:80rem) {
   .c1 {
     margin: 0 auto;
-    max-width: 80rem;
   }
 }
 

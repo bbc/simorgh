@@ -6,7 +6,7 @@ exports[`MediaPlayer render the amp player 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://www.test.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"}
     </script>
     <script
       async="true"
@@ -15,84 +15,140 @@ exports[`MediaPlayer render the amp player 1`] = `
     />
   </head>
   <body>
-    .c1 {
+    .c2 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.c2 {
+.c3 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c0 {
-  margin-bottom: 1.5rem;
+@media (max-width:14.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
 }
 
-@media (max-width:63rem) {
+@media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
-    grid-column: 1 / span 6;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
-    grid-column: 3 / span 6;
+    margin-left: 12.5%;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 6 / span 12;
+    margin-left: 33.333333333333336%;
   }
 }
 
-@media (max-width:25rem) {
+@supports (display:grid) {
   .c0 {
-    padding: 0 0.5rem;
+    display: block;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
+@media (max-width:14.9375rem) {
+  .c1 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: block;
   }
 }
 
 <div>
       <div
         class="c0"
+        dir="ltr"
       >
-        <figure
+        <div
           class="c1"
+          dir="ltr"
         >
-          <div
+          <figure
             class="c2"
           >
-            <amp-iframe
-              allowfullscreen="allowfullscreen"
-              frameborder="0"
-              layout="fill"
-              sandbox="allow-scripts allow-same-origin"
-              scrolling="no"
-              src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"
-              title="Media player"
+            <div
+              class="c3"
             >
-              <amp-img
-                alt=""
-                attribution=""
-                height="16"
+              <amp-iframe
+                allowfullscreen="allowfullscreen"
+                frameborder="0"
                 layout="fill"
-                placeholder="true"
-                src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-                srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
-                width="9"
-              />
-            </amp-iframe>
-          </div>
-        </figure>
+                sandbox="allow-scripts allow-same-origin"
+                scrolling="no"
+                src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"
+                title="Media player"
+              >
+                <amp-img
+                  alt=""
+                  attribution=""
+                  height="16"
+                  layout="fill"
+                  placeholder="true"
+                  src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                  srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                  width="9"
+                />
+              </amp-iframe>
+            </div>
+          </figure>
+        </div>
       </div>
     </div>
   </body>
@@ -100,23 +156,19 @@ exports[`MediaPlayer render the amp player 1`] = `
 `;
 
 exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
-.c1 {
+.c2 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.c2 {
+.c3 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c0 {
-  margin-bottom: 1.5rem;
-}
-
-.c3 {
+.c4 {
   position: absolute;
   top: 0;
   left: 0;
@@ -126,33 +178,87 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
   overflow: hidden;
 }
 
-@media (max-width:63rem) {
+@media (max-width:14.9375rem) {
   .c0 {
-    grid-column: 1 / span 6;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    margin-left: 0%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c0 {
-    grid-column: 3 / span 6;
+    margin-left: 12.5%;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 6 / span 12;
+    margin-left: 33.333333333333336%;
   }
 }
 
-@media (max-width:25rem) {
+@supports (display:grid) {
   .c0 {
-    padding: 0 0.5rem;
+    display: block;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
+@media (max-width:14.9375rem) {
+  .c1 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: block;
   }
 }
 
@@ -161,30 +267,36 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://www.test.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"}
     </script>
   </head>
   <body>
     <div>
       <div
         class="c0"
+        dir="ltr"
       >
-        <figure
+        <div
           class="c1"
+          dir="ltr"
         >
-          <div
+          <figure
             class="c2"
           >
-            <iframe
-              allow="autoplay; fullscreen"
-              allowfullscreen=""
+            <div
               class="c3"
-              scrolling="no"
-              src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"
-              title="Media player"
-            />
-          </div>
-        </figure>
+            >
+              <iframe
+                allow="autoplay; fullscreen"
+                allowfullscreen=""
+                class="c4"
+                scrolling="no"
+                src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"
+                title="Media player"
+              />
+            </div>
+          </figure>
+        </div>
       </div>
     </div>
   </body>

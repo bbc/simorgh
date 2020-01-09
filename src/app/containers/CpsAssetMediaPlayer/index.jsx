@@ -2,10 +2,7 @@ import React from 'react';
 import { string } from 'prop-types';
 import MediaPlayerContainer from '../MediaPlayer';
 import Grid from '#app/components/Grid';
-import {
-  mediaPlayerPropTypes,
-  emptyBlockArrayDefaultProps,
-} from '#models/propTypes';
+import { emptyBlockArrayDefaultProps, mediaPlayerPropTypes } from '#models/propTypes';
 
 const CpsAssetMediaPlayerContainer = ({ blocks, assetUri }) => {
   if (!assetUri) return null;

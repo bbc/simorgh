@@ -1,4 +1,4 @@
-import { buildATIUrl, buildATIClickParams } from '.';
+import { buildATIClickParams, buildATIUrl } from '.';
 import * as analyticsUtils from '#lib/analyticsUtils';
 
 analyticsUtils.getAtUserId = jest.fn();
@@ -86,7 +86,7 @@ describe('ATIAnalytics params', () => {
         serviceContext,
       );
       expect(url).toEqual(
-        's=598285&s2=atiAnalyticsProducerId&p=service.articles.//www.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:optimo://www.bbc.co.uk]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x6=[originpreviousPath]&x7=[article]&x9=[pageTitle]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]&x13=[thing+label+1~thing+label+2]&x14=[thing+id+1~thing+id+2]',
+        's=598285&s2=atiAnalyticsProducerId&p=service.articles.//www.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:optimo://www.bbc.co.uk]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x6=[originpreviousPath]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]&x13=[thing+label+1~thing+label+2]&x14=[thing+id+1~thing+id+2]',
       );
     });
 
@@ -97,7 +97,7 @@ describe('ATIAnalytics params', () => {
         serviceContext,
       );
       expect(url).toEqual(
-        's=598285&s2=atiAnalyticsProducerId&p=service.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:cps:00000000-0000-0000-0000-000000000000]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x7=[index-home]&x9=[title+-+brandName]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]',
+        's=598285&s2=atiAnalyticsProducerId&p=service.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:cps:00000000-0000-0000-0000-000000000000]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x7=[index-home]&x8=[simorgh]&x9=[title+-+brandName]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]',
       );
     });
 
@@ -108,7 +108,7 @@ describe('ATIAnalytics params', () => {
         serviceContext,
       );
       expect(url).toEqual(
-        's=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x7=[player-live]&x9=[pageTitle]',
+        's=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x7=[player-live]&x8=[simorgh]&x9=[pageTitle]',
       );
     });
   });
@@ -131,6 +131,7 @@ describe('ATIAnalytics params', () => {
         origin: 'origin',
         pageIdentifier: 'service.articles.//www.bbc.co.uk.page',
         pageTitle: 'pageTitle',
+        libraryVersion: 'simorgh',
         platform: 'platform',
         previousPath: 'previousPath',
         producerId: 'atiAnalyticsProducerId',
@@ -154,6 +155,7 @@ describe('ATIAnalytics params', () => {
         language: 'language',
         pageIdentifier: 'service.page',
         pageTitle: 'title - brandName',
+        libraryVersion: 'simorgh',
         platform: 'platform',
         producerId: 'atiAnalyticsProducerId',
         service: 'service',
@@ -176,6 +178,7 @@ describe('ATIAnalytics params', () => {
         language: 'language',
         pageIdentifier: 'pageIdentifier',
         pageTitle: 'pageTitle',
+        libraryVersion: 'simorgh',
         platform: 'platform',
         producerId: 'atiAnalyticsProducerId',
         service: 'service',

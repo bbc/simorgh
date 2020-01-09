@@ -1,10 +1,7 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { sinhalese } from '@bbc/gel-foundations/scripts';
 import { sinhala as brandSVG } from '@bbc/psammead-assets/svgs';
-import {
-  F_ISKOOLA_POTA_BBC_BOLD,
-  F_ISKOOLA_POTA_BBC_REGULAR,
-} from '@bbc/psammead-styles/fonts';
+import { F_ISKOOLA_POTA_BBC_BOLD, F_ISKOOLA_POTA_BBC_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
@@ -225,6 +222,7 @@ export const service = {
         url: '/sinhala/media/video',
       },
     ],
+    navigationSection: 'අංශ',
   },
 };
 

@@ -1,10 +1,7 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { tigrinya as brandSVG } from '@bbc/psammead-assets/svgs';
-import {
-  F_NOTO_SANS_ETHIOPIC_BOLD,
-  F_NOTO_SANS_ETHIOPIC_REGULAR,
-} from '@bbc/psammead-styles/fonts';
+import { F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '@bbc/psammead-locales/moment/ti';
 import withContext from '../../../contexts/utils/withContext';
@@ -135,8 +132,8 @@ export const service = {
         audio: 'ድምፂ',
         photogallery: 'ስእልታት',
         video: 'ቪድዮ',
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'ናይ መወዳእታ ፍጻመታት',
+        watch: 'ተመልከት',
         liveLabel: 'ቀጥታ ስርጭት',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -196,6 +193,7 @@ export const service = {
         url: '/tigrinya/popular/read',
       },
     ],
+    navigationSection: 'ክፍልታት',
     timezone: 'Africa/Addis_Ababa',
   },
 };

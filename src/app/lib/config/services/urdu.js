@@ -1,10 +1,7 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import { urdu as brandSVG } from '@bbc/psammead-assets/svgs';
-import {
-  F_NASSIM_URDU_REGULAR,
-  F_NASSIM_URDU_BOLD,
-} from '@bbc/psammead-styles/fonts';
+import { F_NASSIM_URDU_BOLD, F_NASSIM_URDU_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Karachi';
 import '@bbc/psammead-locales/moment/ur';
 import withContext from '../../../contexts/utils/withContext';
@@ -235,6 +232,7 @@ export const service = {
         url: '/urdu/media/photogalleries',
       },
     ],
+    navigationSection: 'سیکشن',
   },
 };
 

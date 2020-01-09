@@ -10,20 +10,18 @@ import {
   articleDataPath,
   articleManifestPath,
   articleSwPath,
+  cpsAssetPageDataPath,
   frontPageDataPath,
   frontPageManifestPath,
   frontPageSwPath,
-  cpsAssetPageDataPath,
-  radioAndTvDataPath,
   mostReadDataRegexPath,
+  radioAndTvDataPath,
 } from '../app/routes/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
-import injectCspHeader, {
-  localInjectHostCspHeader,
-} from './utilities/constructCspHeader';
+import injectCspHeader, { localInjectHostCspHeader } from './utilities/constructCspHeader';
 
 const fs = require('fs');
 
@@ -208,14 +206,16 @@ server
     },
   )
   .get('/*', cspInjectFun, async ({ url, headers, path: urlPath }, res) => {
+    logger.info(`Path: [${urlPath}] URL: [${url}]`);
+
     try {
-      const { service, isAmp, route, variant } = getRouteProps(routes, url);
-      const data = await route.getInitialData(urlPath);
+      const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
+      const data = await route.getInitialData(url);
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
 
       // Temp log to test upstream change
-      logger.info(`Country code: ${headers['bbc-country'] || 'unknown!'}`);
+      logger.info(`Headers: ${JSON.stringify(headers, null, 2)}`);
 
       data.path = urlPath;
 

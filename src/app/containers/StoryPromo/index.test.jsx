@@ -1,11 +1,11 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import relItems from './IndexAlsos/relatedItems';
-import StoryPromo from '.';
+import StoryPromoContainer from '.';
 
 const completeItem = {
   headlines: {
@@ -222,7 +222,7 @@ const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
       statusCode={200}
       pathname="/pathname"
     >
-      <StoryPromo {...props} />
+      <StoryPromoContainer {...props} />
     </RequestContextProvider>
   </ServiceContextProvider>
 );

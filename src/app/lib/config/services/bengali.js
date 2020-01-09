@@ -1,10 +1,7 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { bengali } from '@bbc/gel-foundations/scripts';
 import { bengali as brandSVG } from '@bbc/psammead-assets/svgs';
-import {
-  F_SHONAR_BANGLA_BOLD,
-  F_SHONAR_BANGLA_REGULAR,
-} from '@bbc/psammead-styles/fonts';
+import { F_SHONAR_BANGLA_BOLD, F_SHONAR_BANGLA_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
 import '@bbc/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
@@ -218,6 +215,7 @@ export const service = {
         url: '/bengali/media/photogalleries',
       },
     ],
+    navigationSection: 'সেকশন',
   },
 };
 

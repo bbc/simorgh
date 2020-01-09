@@ -4,7 +4,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
 <DocumentFragment>
   <div
     aria-labelledby="related-content-heading"
-    class="GridComponent-nf79gm-0 kuufbF StyledGrid-sc-1itct8j-0 gnHIER"
+    class="GridComponent-nf79gm-0 kqodQk StyledGrid-sc-1itct8j-0 gnHIER"
     dir="ltr"
   >
     <div
@@ -213,7 +213,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 <DocumentFragment>
   <div
     aria-labelledby="related-content-heading"
-    class="GridComponent-nf79gm-0 kuufbF StyledGrid-sc-1itct8j-0 gnHIER"
+    class="GridComponent-nf79gm-0 kqodQk StyledGrid-sc-1itct8j-0 gnHIER"
     dir="ltr"
   >
     <div

@@ -1,6 +1,6 @@
 import React from 'react';
-import { render as create, act } from '@testing-library/react';
-import { render } from 'enzyme';
+import { act, render as create } from '@testing-library/react';
+import { mount, render } from 'enzyme';
 import CanonicalATIAnalytics from '.';
 import * as beacon from '#lib/analyticsUtils/sendBeacon';
 
@@ -10,7 +10,7 @@ describe('Canonical ATI Analytics', () => {
   });
 
   const atiBaseUrl = 'https://foobar.com?';
-  const mockPageviewParams = 'key=value&key2=value2';
+  const mockPageviewParams = 'key=value&key2=value2&x8=[simorgh]';
   const mockSendBeacon = jest.fn().mockReturnValue('beacon-return-value');
 
   it('calls atiBaseURL and sendBeacon with required params', () => {
@@ -32,5 +32,15 @@ describe('Canonical ATI Analytics', () => {
       <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />,
     );
     expect(renderedATI).toMatchSnapshot();
+  });
+
+  it('atiPageViewUrl should contain `x8=[simorgh-nojs]` for non-JS users', () => {
+    const mountedATI = mount(
+      <CanonicalATIAnalytics pageviewParams={mockPageviewParams} />,
+    );
+
+    expect(mountedATI.find('img').prop('src')).toEqual(
+      'https://foobar.com?key=value&key2=value2&x8=[simorgh-nojs]',
+    );
   });
 });

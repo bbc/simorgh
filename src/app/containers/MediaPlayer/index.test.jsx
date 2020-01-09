@@ -1,15 +1,19 @@
-import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
+import { isNull, shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import {
-  VideoCanonicalWithPlaceholder,
-  VideoCanonicalNoPlaceholder,
   VideoAmp,
+  VideoAmpWithCaption,
+  VideoCanonicalNoPlaceholder,
   VideoCanonicalNoVersionId,
   VideoCanonicalToggledOff,
   VideoCanonicalWithCaption,
-  VideoAmpWithCaption,
+  VideoCanonicalWithPlaceholder,
 } from './fixtureData';
 
 describe('MediaPlayer', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
+  });
+
   shouldMatchSnapshot(
     'Calls the canonical placeholder when platform is canonical and showPlaceholder is true',
     VideoCanonicalWithPlaceholder,

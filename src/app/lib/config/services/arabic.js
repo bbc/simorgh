@@ -1,10 +1,7 @@
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import { arabic as brandSVG } from '@bbc/psammead-assets/svgs';
-import {
-  F_NASSIM_ARABIC_REGULAR,
-  F_NASSIM_ARABIC_BOLD,
-} from '@bbc/psammead-styles/fonts';
+import { F_NASSIM_ARABIC_BOLD, F_NASSIM_ARABIC_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/ar';
 import '@bbc/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
@@ -268,6 +265,7 @@ export const service = {
         url: '/arabic/in_depth',
       },
     ],
+    navigationSection: 'أقسام',
   },
 };
 

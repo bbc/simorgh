@@ -4,11 +4,11 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import InlineLink from '../InlineLink';
-import inline from '../InlineContainer';
+import Inline from '../InlineContainer';
 import { paragraphModelPropTypes } from '#models/propTypes/paragraph';
 import Grid, { ArticlePageGrid } from '#app/components/Grid';
 
-const componentsToRender = { fragment, urlLink: InlineLink, inline };
+const componentsToRender = { fragment, urlLink: InlineLink, inline: Inline };
 
 const ParagraphContainer = ({ blocks }) => {
   const { script, service } = useContext(ServiceContext);

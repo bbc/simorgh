@@ -1,10 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ErrorMain should correctly render for 404 1`] = `
-.c0 {
-  display: inline;
-}
-
 .c7 {
   color: #222222;
   border-bottom: 1px solid #B80000;
@@ -142,7 +138,6 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 @media (min-width:80rem) {
   .c1 {
     margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
@@ -356,11 +351,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
     />
   </head>
   <body>
-    .c0 {
-  display: inline;
-}
-
-.c7 {
+    .c7 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
@@ -497,7 +488,6 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 @media (min-width:80rem) {
   .c1 {
     margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
@@ -661,11 +651,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
     />
   </head>
   <body>
-    .c0 {
-  display: inline;
-}
-
-.c7 {
+    .c7 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
@@ -802,7 +788,6 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 @media (min-width:80rem) {
   .c1 {
     margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
@@ -961,11 +946,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
     />
   </head>
   <body>
-    .c0 {
-  display: inline;
-}
-
-.c7 {
+    .c7 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
@@ -1102,7 +1083,6 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 @media (min-width:80rem) {
   .c1 {
     margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
@@ -1261,11 +1241,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
     />
   </head>
   <body>
-    .c0 {
-  display: inline;
-}
-
-.c7 {
+    .c7 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
@@ -1402,7 +1378,6 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
 @media (min-width:80rem) {
   .c1 {
     margin: 0 auto;
-    max-width: 80rem;
   }
 }
 

@@ -1,18 +1,18 @@
 import {
-  getDestination,
   getAppType,
-  getScreenInfo,
+  getAtiUrl,
+  getAtUserId,
   getBrowserViewPort,
   getCurrentTime,
+  getDestination,
   getDeviceLanguage,
+  getEventInfo,
   getHref,
+  getProducer,
   getReferrer,
-  getAtUserId,
+  getScreenInfo,
   isLocServeCookieSet,
   sanitise,
-  getAtiUrl,
-  getEventInfo,
-  getProducer,
 } from '#lib/analyticsUtils';
 
 const spaceRegex = / /g;
@@ -32,6 +32,7 @@ export const buildATIPageTrackPath = ({
   pageIdentifier,
   pageTitle,
   producerId,
+  libraryVersion,
   platform,
   statsDestination,
   timePublished,
@@ -118,6 +119,12 @@ export const buildATIPageTrackPath = ({
     },
     { key: 'x7', description: 'content type', value: contentType, wrap: true },
     {
+      key: 'x8',
+      description: 'library version',
+      value: libraryVersion,
+      wrap: true,
+    },
+    {
       key: 'x9',
       description: 'page title',
       value: sanitise(pageTitle),
@@ -181,6 +188,7 @@ export const buildATIEventTrackUrl = ({
   componentInfo,
   type,
 }) => {
+  const eventPublisher = type === 'view' ? 'ati' : 'atc';
   const eventTrackingBeaconValues = [
     {
       key: 's',
@@ -225,7 +233,7 @@ export const buildATIEventTrackUrl = ({
       wrap: false,
     },
     {
-      key: 'ati',
+      key: eventPublisher,
       description: 'event publisher',
       value: getEventInfo(pageIdentifier, {
         service,

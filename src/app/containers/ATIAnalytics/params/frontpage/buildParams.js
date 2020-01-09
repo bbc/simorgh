@@ -1,11 +1,6 @@
 import { buildATIPageTrackPath } from '../../atiUrl';
-import { getPublishedDatetime } from '../../../../lib/analyticsUtils';
-import {
-  getContentId,
-  getLanguage,
-  getPageIdentifier,
-  getPageTitle,
-} from '../../../../lib/analyticsUtils/frontpage';
+import { getPublishedDatetime, LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
+import { getContentId, getLanguage, getPageIdentifier, getPageTitle } from '../../../../lib/analyticsUtils/frontpage';
 
 export const buildFrontPageATIParams = (
   frontpageData,
@@ -30,6 +25,7 @@ export const buildFrontPageATIParams = (
     producerId: atiAnalyticsProducerId,
     timePublished: getPublishedDatetime('firstPublished', frontpageData),
     timeUpdated: getPublishedDatetime('lastPublished', frontpageData),
+    libraryVersion: LIBRARY_VERSION,
     platform,
     service,
     statsDestination,

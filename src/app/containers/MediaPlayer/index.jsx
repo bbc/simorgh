@@ -1,13 +1,10 @@
 import React, { useContext } from 'react';
-import { string, bool } from 'prop-types';
+import { bool, string } from 'prop-types';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import Figure from '@bbc/psammead-figure';
-import {
-  CanonicalMediaPlayer,
-  AmpMediaPlayer,
-} from '@bbc/psammead-media-player';
+import { AmpMediaPlayer, CanonicalMediaPlayer } from '@bbc/psammead-media-player';
 import Caption from '../Caption';
 import Metadata from './Metadata';
 import embedUrl from './helpers/embedUrl';
@@ -19,10 +16,7 @@ import useToggle from '../Toggle/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Grid from '#app/components/Grid';
-import {
-  mediaPlayerPropTypes,
-  emptyBlockArrayDefaultProps,
-} from '#models/propTypes';
+import { emptyBlockArrayDefaultProps, mediaPlayerPropTypes } from '#models/propTypes';
 
 const DEFAULT_WIDTH = 512;
 const MediaPlayerContainer = ({
@@ -31,7 +25,7 @@ const MediaPlayerContainer = ({
   assetType,
   showPlaceholder,
 }) => {
-  const { platform, origin } = useContext(RequestContext);
+  const { platform } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
   const isAmp = platform === 'amp';
@@ -103,7 +97,6 @@ const MediaPlayerContainer = ({
     requestUrl: `${assetId}/${versionId}/${lang}`,
     type: assetType,
     isAmp,
-    origin,
   });
   const iframeTitle = pathOr(
     'Media player',

@@ -18,7 +18,9 @@ describe('Application', () => {
 
       it(`should return a 200 status code for ${service}'s service worker`, () => {
         cy.testResponseCodeAndType(
-          usesArticlePath ? `/${service}/articles/sw.js` : `/${service}/sw.js`,
+          usesArticlePath
+            ? `/${config[service].name}/articles/sw.js`
+            : `/${config[service].name}/sw.js`,
           200,
           'application/javascript',
         );
@@ -27,8 +29,8 @@ describe('Application', () => {
       it(`should return a 200 status code for ${service} manifest file`, () => {
         cy.testResponseCodeAndType(
           usesArticlePath
-            ? `/${service}/articles/manifest.json`
-            : `/${service}/manifest.json`,
+            ? `/${config[service].name}/articles/manifest.json`
+            : `/${config[service].name}/manifest.json`,
           200,
           'application/json',
         );
