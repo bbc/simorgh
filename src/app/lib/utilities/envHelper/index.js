@@ -1,1 +1,1 @@
-export default () => process.env.APP_ENV === 'live';
+export default () => process.env.SIMORGH_APP_ENV === 'live';

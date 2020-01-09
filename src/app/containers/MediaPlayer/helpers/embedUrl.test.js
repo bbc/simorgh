@@ -4,14 +4,14 @@ const mediaId = 'foo/bar';
 const pageUrl = `www.test.com/${mediaId}`;
 const liveOverrideParam = '?renderer_env=live';
 const testOverrideParam = '?renderer_env=test';
-const applicationEnv = process.env.APP_ENV;
+const applicationEnv = process.env.SIMORGH_APP_ENV;
 
 const setEnvironment = env => {
-  process.env.APP_ENV = env;
+  process.env.SIMORGH_APP_ENV = env;
 };
 
 const resetEnvironment = () => {
-  process.env.APP_ENV = applicationEnv;
+  process.env.SIMORGH_APP_ENV = applicationEnv;
 };
 
 const testCases = [

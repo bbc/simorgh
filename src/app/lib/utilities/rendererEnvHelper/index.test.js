@@ -6,7 +6,7 @@ const additionalParam = 'param1=1';
 const url = 'https://www.test.com';
 
 describe('hasLiveOverride', () => {
-  const environment = process.env.APP_ENV;
+  const environment = process.env.SIMORGH_APP_ENV;
 
   it('should return false if no params exist', () => {
     expect(hasLiveOverride(url)).toBe(false);
@@ -14,7 +14,7 @@ describe('hasLiveOverride', () => {
 
   describe('in non-live environment', () => {
     beforeEach(() => {
-      process.env.APP_ENV = 'non-live';
+      process.env.SIMORGH_APP_ENV = 'non-live';
     });
 
     describe('with single param', () => {
@@ -40,13 +40,13 @@ describe('hasLiveOverride', () => {
     });
 
     afterEach(() => {
-      process.env.APP_ENV = environment;
+      process.env.SIMORGH_APP_ENV = environment;
     });
   });
 
   describe('in live environment', () => {
     beforeEach(() => {
-      process.env.APP_ENV = 'live';
+      process.env.SIMORGH_APP_ENV = 'live';
     });
 
     describe('with single param', () => {
@@ -72,7 +72,7 @@ describe('hasLiveOverride', () => {
     });
 
     afterEach(() => {
-      process.env.APP_ENV = environment;
+      process.env.SIMORGH_APP_ENV = environment;
     });
   });
 });
