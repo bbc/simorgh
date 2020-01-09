@@ -212,6 +212,10 @@ describe('CpsAssetPageMain', () => {
     it('should render timestamp', () => {
       expect(document.querySelector('main time')).not.toBeNull();
     });
+
+    it('should match snapshot', async () => {
+      await matchSnapshotAsync(createAssetPage({ pageData }, 'pidgin'));
+    });
   });
 
   it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
