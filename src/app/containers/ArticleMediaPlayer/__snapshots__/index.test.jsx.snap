@@ -52,17 +52,20 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
           class="StyledPlaceholder-sc-11nyhtu-0 fbxKDx"
         >
           <div
-            class="GuidanceWrapper-sc-1wm6qsk-0 eqKhbn"
+            class="GuidanceWrapper-sc-1wm6qsk-0 dSCKAT"
           >
             <strong
               aria-hidden="true"
-              class="GuidanceMessage-sc-1wm6qsk-1 iYcpPO"
+              class="GuidanceMessage-sc-1wm6qsk-1 iYcpPO guidance-message"
             >
               Contains strong language and adult humour.
             </strong>
+            <noscript
+              class="StyledNoScript-sc-1wm6qsk-2 fsOOOd"
+            />
           </div>
           <button
-            class="Button-sc-34e3rb-0 kwlSXK StyledPlayButton-sc-11nyhtu-1 egKqTy"
+            class="Button-sc-34e3rb-0 kwlSXK StyledPlayButton-sc-11nyhtu-1 bBTuxK"
           >
             <span
               class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
