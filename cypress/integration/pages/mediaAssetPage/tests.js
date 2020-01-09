@@ -66,32 +66,8 @@ export const testsThatFollowSmokeTestConfig = ({
               .eq(1)
               .should(
                 'contain',
-                appConfig[service][variant].articleTimestampPrefix,
+                appConfig[config[service].name][variant].articleTimestampPrefix,
               );
-          }
-        },
-      );
-    });
-
-    it('should navigate to first related content link, and back again', () => {
-      cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-        ({ body }) => {
-          const arrayLength = body.relatedContent.groups.length;
-
-          if (arrayLength > 0) {
-            const assetURI =
-              body.relatedContent.groups[0].promos[0].locators.assetUri;
-            cy.get('li[class^="StoryPromoLi"]')
-              .first()
-              .click();
-
-            cy.url().should('include', assetURI);
-
-            cy.go(-1);
-            cy.url().should(
-              'include',
-              `${config[service].pageTypes[pageType].path}`,
-            );
           }
         },
       );

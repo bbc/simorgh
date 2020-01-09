@@ -63,6 +63,8 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
     type: 'audio',
   };
 
+  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable Javascript or try a different browser.`;
+
   return (
     <MediaPlayerOuterWrapper>
       <MediaPlayerInnerWrapper>
@@ -83,6 +85,8 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
             skin="audio"
             service={service}
             mediaInfo={mediaInfo}
+            noJsMessage={noJsMessage}
+            noJsClassName="no-js"
           />
         )}
       </MediaPlayerInnerWrapper>
