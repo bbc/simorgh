@@ -24,7 +24,7 @@ export const getUrl = pathname => {
 
   let params = '';
 
-  if (process.env.APP_ENV !== 'live') {
+  if (process.env.SIMORGH_APP_ENV !== 'live') {
     params = getQueryString(pathname);
   }
 

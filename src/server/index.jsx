@@ -34,7 +34,9 @@ const logger = nodeLogger(__filename);
 const publicDirectory = 'build/public';
 
 const cspInjectFun =
-  process.env.APP_ENV === 'local' ? localInjectHostCspHeader : injectCspHeader;
+  process.env.SIMORGH_APP_ENV === 'local'
+    ? localInjectHostCspHeader
+    : injectCspHeader;
 
 logger.debug(
   `Application outputting logs to directory "${process.env.LOG_DIR}"`,
@@ -85,7 +87,7 @@ server
 /*
  * Prod only logging - response time
  */
-if (process.env.APP_ENV !== 'local') {
+if (process.env.SIMORGH_APP_ENV !== 'local') {
   server.use(logResponseTime);
 }
 
@@ -101,7 +103,7 @@ const sendDataFile = (res, dataFilePath, next) => {
   });
 };
 
-if (process.env.APP_ENV === 'local') {
+if (process.env.SIMORGH_APP_ENV === 'local') {
   server
     .use((req, res, next) => {
       if (req.url.substr(-1) === '/' && req.url.length > 1)

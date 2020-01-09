@@ -367,11 +367,11 @@ describe('getUrl', () => {
   });
 
   describe('where application environment', () => {
-    const environment = process.env.APP_ENV;
+    const environment = process.env.SIMORGH_APP_ENV;
 
     describe('is not live', () => {
       beforeEach(() => {
-        process.env.APP_ENV = 'not-live';
+        process.env.SIMORGH_APP_ENV = 'not-live';
       });
 
       it('should append single query string parameter', () => {
@@ -392,13 +392,13 @@ describe('getUrl', () => {
       );
 
       afterEach(() => {
-        process.env.APP_ENV = environment;
+        process.env.SIMORGH_APP_ENV = environment;
       });
     });
 
     describe('is live', () => {
       beforeEach(() => {
-        process.env.APP_ENV = 'live';
+        process.env.SIMORGH_APP_ENV = 'live';
       });
 
       it('should remove single query string parameter from url', () => {
@@ -426,7 +426,7 @@ describe('getUrl', () => {
       });
 
       afterEach(() => {
-        process.env.APP_ENV = environment;
+        process.env.SIMORGH_APP_ENV = environment;
       });
     });
   });
