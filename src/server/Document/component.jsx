@@ -27,6 +27,9 @@ const Document = ({
   const headScript = helmet.script.toComponent();
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !isAmp;
+
+  // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
+  const noJsHtmlAttrs = !isAmp && { className: 'no-js' };
   const scriptTags = (
     <>
       <IfAboveIE9>{scripts}</IfAboveIE9>
@@ -34,7 +37,7 @@ const Document = ({
   );
 
   return (
-    <html lang="en-GB" {...htmlAttrs}>
+    <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
         {meta}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -73,6 +76,18 @@ const Document = ({
           />
         )}
         {scriptsAllowed && scriptTags}
+        {scriptsAllowed && (
+          <script
+            type="text/javascript"
+            // Justification:
+            // - we need this to be a blocking script that runs before the page first renders
+            // - the content is static text so there is no real XSS risk
+            /* eslint-disable-next-line react/no-danger */
+            dangerouslySetInnerHTML={{
+              __html: `document.documentElement.classList.remove("no-js");`,
+            }}
+          />
+        )}
       </body>
     </html>
   );
