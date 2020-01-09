@@ -6,30 +6,49 @@ if (DOT_ENV_CONFIG.error) {
   throw DOT_ENV_CONFIG.error;
 }
 
-// now `process.env.*` variables are set run the rest of the app
+const cluster = require('cluster');
+const os = require('os');
 const http = require('http');
 const nodeLogger = require('#lib/logger.node');
 const app = require('./server').default;
 
 const logger = nodeLogger(__filename);
-const server = http.createServer(app);
-const port = process.env.PORT || 7080;
-let currentApp = app;
 
-server.listen(port, error => {
-  if (error) {
-    logger.error(error);
-  }
-});
+const startApplicationInstance = () => {
+  const server = http.createServer(app);
+  const port = process.env.PORT || 7080;
+  let currentApp = app;
 
-if (module.hot) {
-  logger.info('✅  Server-side Hot Module Replacement enabled');
-
-  module.hot.accept('./server', () => {
-    logger.info('🔁  Hot Module Replacement reloading `./server`...');
-    server.removeListener('request', currentApp);
-    const newApp = require('./server').default; // eslint-disable-line global-require
-    server.on('request', newApp);
-    currentApp = newApp;
+  server.listen(port, error => {
+    if (error) {
+      logger.error(error);
+    }
   });
-}
+
+  if (module.hot) {
+    logger.info('✅  Server-side Hot Module Replacement enabled');
+
+    module.hot.accept('./server', () => {
+      logger.info('🔁  Hot Module Replacement reloading `./server`...');
+      server.removeListener('request', currentApp);
+      const newApp = require('./server').default; // eslint-disable-line global-require
+      server.on('request', newApp);
+      currentApp = newApp;
+    });
+  }
+};
+
+const startCluster = () => {
+  if (cluster.isMaster) {
+    os.cpus().map(() => cluster.fork());
+    cluster.on('online', worker => logger.info(`Worker ${worker.id} started`));
+    cluster.on('exit', worker => {
+      cluster.fork();
+      return logger.error(`Worker ${worker.id} died`);
+    });
+  } else {
+    startApplicationInstance();
+  }
+};
+
+startCluster();
