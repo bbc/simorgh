@@ -54,6 +54,7 @@ const CpsAssetPageMain = ({ pageData }) => {
         openGraphType="website"
       >
         <meta name="article:published_time" content={firstPublished} />
+        <meta name="article:modified_time" content={lastPublished} />
       </MetadataContainer>
       <LinkedData
         type="Article"

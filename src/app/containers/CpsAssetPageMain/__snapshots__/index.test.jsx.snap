@@ -998,6 +998,10 @@ exports[`CpsAssetPageMain MAP should match snapshot 1`] = `
       content="2019-09-13T15:31:44.000Z"
       name="article:published_time"
     />
+    <meta
+      content="2019-11-20T12:24:25.000Z"
+      name="article:modified_time"
+    />
     <script
       type="application/ld+json"
     >
@@ -7597,6 +7601,10 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
     <meta
       content="2019-10-23T12:18:59.000Z"
       name="article:published_time"
+    />
+    <meta
+      content="2019-10-23T12:33:16.000Z"
+      name="article:modified_time"
     />
     <script
       type="application/ld+json"
