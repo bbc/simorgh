@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
-import { number, bool } from 'prop-types';
-import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { number, bool, string } from 'prop-types';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import {
   PopOutGridItemMedium,
@@ -16,7 +14,12 @@ import {
   isValidDateTime,
 } from './helpers';
 
-const ArticleTimestamp = ({ firstPublished, lastPublished, popOut }) => {
+const ArticleTimestamp = ({
+  firstPublished,
+  lastPublished,
+  popOut,
+  className,
+}) => {
   const {
     articleTimestampPrefix,
     datetimeLocale,
@@ -54,25 +57,21 @@ const ArticleTimestamp = ({ firstPublished, lastPublished, popOut }) => {
   const Wrapper = popOut ? PopOutGridItemMedium : GridItemConstrainedMedium;
 
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <Timestamp {...timestampProps} {...firstPublishedProps} />
       {firstPublished !== lastPublished && (
-        <SecondTimestampWrapper>
-          <Timestamp {...timestampProps} {...lastPublishedProps} />
-        </SecondTimestampWrapper>
+        <Timestamp {...timestampProps} {...lastPublishedProps} />
       )}
     </Wrapper>
   );
 };
 
-const SecondTimestampWrapper = styled.div`
-  padding-bottom: ${GEL_SPACING_DBL};
-`;
-
 ArticleTimestamp.propTypes = {
   firstPublished: number.isRequired,
   lastPublished: number.isRequired,
   popOut: bool,
+  // eslint-disable-next-line react/require-default-props
+  className: string,
 };
 
 ArticleTimestamp.defaultProps = {
