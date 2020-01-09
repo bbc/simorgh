@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
+import styled from 'styled-components';
 import { number, bool } from 'prop-types';
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import {
   PopOutGridItemMedium,
@@ -55,11 +57,17 @@ const ArticleTimestamp = ({ firstPublished, lastPublished, popOut }) => {
     <Wrapper>
       <Timestamp {...timestampProps} {...firstPublishedProps} />
       {firstPublished !== lastPublished && (
-        <Timestamp {...timestampProps} {...lastPublishedProps} />
+        <SecondTimestampWrapper>
+          <Timestamp {...timestampProps} {...lastPublishedProps} />
+        </SecondTimestampWrapper>
       )}
     </Wrapper>
   );
 };
+
+const SecondTimestampWrapper = styled.div`
+  padding-bottom: ${GEL_SPACING_DBL};
+`;
 
 ArticleTimestamp.propTypes = {
   firstPublished: number.isRequired,
