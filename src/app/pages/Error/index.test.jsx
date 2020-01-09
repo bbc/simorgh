@@ -12,7 +12,7 @@ const defaultProps = {
   service: 'news',
 };
 
-jest.mock('../PageHandlers/withPageWrapper', () => Component => {
+jest.mock('../../containers/PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
     <div id="PageWrapperContainer">
       <Component {...props} />
@@ -22,7 +22,7 @@ jest.mock('../PageHandlers/withPageWrapper', () => Component => {
   return PageWrapperContainer;
 });
 
-jest.mock('../PageHandlers/withLoading', () => Component => {
+jest.mock('../../containers/PageHandlers/withLoading', () => Component => {
   const LoadingContainer = props => (
     <div id="LoadingContainer">
       <Component {...props} />
@@ -32,7 +32,7 @@ jest.mock('../PageHandlers/withLoading', () => Component => {
   return LoadingContainer;
 });
 
-jest.mock('../PageHandlers/withContexts', () => Component => {
+jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
   const ErrorContainer = props => (
     <div id="ContextsContainer">
       <Component {...props} />
@@ -41,7 +41,7 @@ jest.mock('../PageHandlers/withContexts', () => Component => {
 
   return ErrorContainer;
 });
-jest.mock('../ErrorMain', () => {
+jest.mock('../../containers/ErrorMain', () => {
   const ErrorMain = () => <div>ErrorMain</div>;
 
   return ErrorMain;
