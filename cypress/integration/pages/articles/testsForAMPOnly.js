@@ -42,37 +42,10 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 
     // `appToggles` tells us whether a feature is toggled on or off in the current environment.
     if (appToggles.mediaPlayer.enabled) {
-      describe('Media Player', () => {
-        // This test is being temporarily throttled to the service 'news'.
-        if (service === 'news') {
-          it('should have a Media Player', () => {
-            cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-              ({ body }) => {
-                const media = getBlockData('video', body);
-                if (media && media.type === 'video') {
-                  cy.scrollTo('bottom');
-                  cy.get(
-                    'div[class^="StyledVideoContainer"] iframe[class^="i-amphtml-fill-content"]',
-                  ).then($iframe => {
-                    cy.wrap($iframe.prop('contentWindow'), {
-                      // `timeout` only applies to the methods chained below.
-                      // `its()` benefits from this, and will wait up to 8s
-                      // for the mediaPlayer instance to become available.
-                      timeout: 8000,
-                    })
-                      .its('embeddedMedia.playerInstances.mediaPlayer.ready')
-                      .should('eq', true);
-                  });
-                }
-              },
-            );
-          });
-        }
-
+      describe('Media Player: AMP', () => {
         it('should render a placeholder image', () => {
           cy.request(`${config[service].pageTypes.articles.path}.json`).then(
             ({ body }) => {
-              // `video` blocks can also contain audio.
               const media = getBlockData('video', body);
               if (media && media.type === 'video') {
                 cy.get('div[class^="StyledVideoContainer"]').within(() => {
@@ -84,36 +57,40 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             },
           );
         });
-        it('should check that media player auto plays', () => {
-          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-            ({ body }) => {
-              const media = getBlockData('video', body);
-              if (media && media.type === 'video') {
-                cy.scrollTo('bottom');
-                cy.get('div[class^="StyledVideoContainer"]')
-                  .within(() => {
-                    cy.get('button');
-                  })
-                  .should('not.exist')
-                  .then(() => {
-                    cy.get('iframe[class^="i-amphtml-fill-content"]').then(
-                      $iframe => {
-                        cy.wrap($iframe.prop('contentWindow'), {
-                          // `timeout` only applies to the methods chained below.
-                          // `its()` benefits from this, and will wait up to 8s
-                          // for the mediaPlayer instance to become available.
-                          timeout: 8000,
-                        })
-                          .its('embeddedMedia.playerInstances.mediaPlayer')
-                          .invoke('currentTime')
-                          .should('be.gt', 0);
-                      },
-                    );
-                  });
-              }
-            },
-          );
-        });
+
+        // Tests requiring iframe access are temporarily being throttled to the 'news' service.
+        if (service === 'news') {
+          it('should check that media player auto plays', () => {
+            cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+              ({ body }) => {
+                const media = getBlockData('video', body);
+                if (media && media.type === 'video') {
+                  cy.get('div[class^="StyledVideoContainer"]')
+                    .scrollIntoView()
+                    .within(() => {
+                      cy.get('button');
+                    })
+                    .should('not.exist')
+                    .then(() => {
+                      cy.get('iframe[class^="i-amphtml-fill-content"]').then(
+                        $iframe => {
+                          cy.wrap($iframe.prop('contentWindow'), {
+                            // `timeout` only applies to the methods chained below.
+                            // `its()` benefits from this, and will wait up to 8s
+                            // for the mediaPlayer instance to become available.
+                            timeout: 8000,
+                          })
+                            .its('embeddedMedia.playerInstances.mediaPlayer')
+                            .invoke('currentTime')
+                            .should('be.gt', 0);
+                        },
+                      );
+                    });
+                }
+              },
+            );
+          });
+        }
       });
     }
   });
