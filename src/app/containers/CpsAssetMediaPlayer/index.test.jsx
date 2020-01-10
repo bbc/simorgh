@@ -1,7 +1,10 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
-import { render } from '@testing-library/react';
+import {
+  shouldMatchSnapshot,
+  isNull,
+  suppressPropWarnings,
+} from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -31,36 +34,32 @@ const GenerateMediaPlayer = ({
       <ToggleContext.Provider
         value={{ toggleState: defaultToggles, toggleDispatch: jest.fn() }}
       >
-        <CpsAssetMediaPlayerContainer blocks={blocks} assetUri={assetUri} />
+        <BrowserRouter>
+          <CpsAssetMediaPlayerContainer blocks={blocks} assetUri={assetUri} />
+        </BrowserRouter>
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
 );
 
 describe('MediaPlayer', () => {
-  it('render the canonical player without a placeholder', () => {
-    const { asFragment } = render(
-      <GenerateMediaPlayer
-        platform="canonical"
-        blocks={[validAresMediaVideoBlock]}
-        assetUri="/pidgin/123456789"
-      />,
-      { wrapper: BrowserRouter },
-    );
-    expect(asFragment()).toMatchSnapshot();
-  });
+  shouldMatchSnapshot(
+    'render the canonical player without a placeholder',
+    <GenerateMediaPlayer
+      platform="canonical"
+      blocks={[validAresMediaVideoBlock]}
+      assetUri="/pidgin/123456789"
+    />,
+  );
 
-  it('render the amp player', () => {
-    const { asFragment } = render(
-      <GenerateMediaPlayer
-        platform="amp"
-        blocks={[validAresMediaVideoBlock]}
-        assetUri="/pidgin/123456789"
-      />,
-      { wrapper: BrowserRouter },
-    );
-    expect(asFragment()).toMatchSnapshot();
-  });
+  shouldMatchSnapshot(
+    'render the amp player',
+    <GenerateMediaPlayer
+      platform="amp"
+      blocks={[validAresMediaVideoBlock]}
+      assetUri="/pidgin/123456789"
+    />,
+  );
 
   suppressPropWarnings(['assetUri']);
   isNull(
