@@ -1,11 +1,11 @@
 import React from 'react';
 import { number } from 'prop-types';
 import compose from 'ramda/src/compose';
-import ErrorMain from '../ErrorMain';
+import ErrorMain from '../../containers/ErrorMain';
 
-import withContexts from '../PageHandlers/withContexts';
-import withPageWrapper from '../PageHandlers/withPageWrapper';
-import withLoading from '../PageHandlers/withLoading';
+import withContexts from '../../containers/PageHandlers/withContexts';
+import withPageWrapper from '../../containers/PageHandlers/withPageWrapper';
+import withLoading from '../../containers/PageHandlers/withLoading';
 
 const ErrorContainer = ({ status, errorCode }) => (
   <ErrorMain status={errorCode || status} />
