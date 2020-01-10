@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArticleTimestamp snapshot tests should render a 'created' Timestamp correctly 1`] = `
+exports[`ArticleTimestamp should render a 'created' Timestamp correctly 1`] = `
 .c1 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -85,7 +85,7 @@ exports[`ArticleTimestamp snapshot tests should render a 'created' Timestamp cor
 </div>
 `;
 
-exports[`ArticleTimestamp snapshot tests should render both a 'created' and an 'updated' Timestamp correctly 1`] = `
+exports[`ArticleTimestamp should render both a 'created' and an 'updated' Timestamp correctly 1`] = `
 .c1 {
   font-size: 0.875rem;
   line-height: 1.125rem;
