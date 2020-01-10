@@ -66,32 +66,29 @@ export const testsThatFollowSmokeTestConfig = ({
               .eq(1)
               .should(
                 'contain',
-                appConfig[service][variant].articleTimestampPrefix,
+                appConfig[config[service].name][variant].articleTimestampPrefix,
               );
           }
         },
       );
     });
-
-    it('should navigate to first related content link, and back again', () => {
+    it('should have href that matches assetURI for 1st related content link', () => {
       cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
         ({ body }) => {
-          const arrayLength = body.relatedContent.groups.length;
+          const numRelatedContentGroups = body.relatedContent.groups.length;
 
-          if (arrayLength > 0) {
+          if (numRelatedContentGroups > 0) {
             const assetURI =
               body.relatedContent.groups[0].promos[0].locators.assetUri;
-            cy.get('li[class^="StoryPromoLi"]')
-              .first()
-              .click();
-
-            cy.url().should('include', assetURI);
-
-            cy.go(-1);
-            cy.url().should(
-              'include',
-              `${config[service].pageTypes[pageType].path}`,
-            );
+            cy.get(
+              'li[class^="StoryPromoLi"] > div[class^="StoryPromoWrapper"]',
+            )
+              .find('h3')
+              .within(() => {
+                cy.get('a')
+                  .should('have.attr', 'href')
+                  .and('include', assetURI);
+              });
           }
         },
       );
