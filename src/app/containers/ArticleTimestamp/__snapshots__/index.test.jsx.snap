@@ -78,9 +78,9 @@ exports[`ArticleTimestamp snapshot tests should render a 'created' Timestamp cor
 >
   <time
     class="c1"
-    datetime="2020-01-10"
+    datetime="2018-07-07"
   >
-    3 hours ago
+    7 July 2018
   </time>
 </div>
 `;
@@ -163,16 +163,16 @@ exports[`ArticleTimestamp snapshot tests should render both a 'created' and an '
 >
   <time
     class="c1"
-    datetime="2020-01-10"
+    datetime="2018-07-07"
   >
-    10 January 2020, 11:44 GMT
+    7 July 2018
   </time>
   <time
     class="c1"
-    datetime="2020-01-10"
+    datetime="2019-03-15"
   >
     Updated 
-    5 hours ago
+    15 March 2019
   </time>
 </div>
 `;

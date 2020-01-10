@@ -47,22 +47,19 @@ describe('ArticleTimestamp', () => {
   });
 
   describe('snapshot tests', () => {
-    const threeHoursAgo = timestampGenerator({ hours: 3 });
-    const fiveHoursAgo = timestampGenerator({ hours: 5 });
-
     shouldMatchSnapshot(
       "should render a 'created' Timestamp correctly",
       <WrappedArticleTimestamp
-        firstPublished={threeHoursAgo}
-        lastPublished={threeHoursAgo}
+        firstPublished={1530947227000}
+        lastPublished={1530947227000}
       />,
     );
 
     shouldMatchSnapshot(
       "should render both a 'created' and an 'updated' Timestamp correctly",
       <WrappedArticleTimestamp
-        firstPublished={threeHoursAgo}
-        lastPublished={fiveHoursAgo}
+        firstPublished={1530947227000}
+        lastPublished={1552666749637}
       />,
     );
   });
