@@ -2,14 +2,14 @@ import React from 'react';
 import { shape } from 'prop-types';
 import compose from 'ramda/src/compose';
 import frontPagePropTypes from '#models/propTypes/frontPage';
-import FrontPageMain from '../FrontPageMain';
+import FrontPageMain from '../../containers/FrontPageMain';
 
-import withVariant from '../PageHandlers/withVariant';
-import withContexts from '../PageHandlers/withContexts';
-import withPageWrapper from '../PageHandlers/withPageWrapper';
-import withLoading from '../PageHandlers/withLoading';
-import withError from '../PageHandlers/withError';
-import withData from '../PageHandlers/withData';
+import withVariant from '../../containers/PageHandlers/withVariant';
+import withContexts from '../../containers/PageHandlers/withContexts';
+import withPageWrapper from '../../containers/PageHandlers/withPageWrapper';
+import withLoading from '../../containers/PageHandlers/withLoading';
+import withError from '../../containers/PageHandlers/withError';
+import withData from '../../containers/PageHandlers/withData';
 
 const FrontPageContainer = ({ pageData }) => (
   <FrontPageMain frontPageData={pageData} />

@@ -994,7 +994,7 @@ const genServices = appEnv => ({
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : '/serbian/srbija-49427344/cyr',
+            : undefined, // '/serbian/srbija-49427344/cyr'
         smoke: false,
       },
     },
@@ -1371,7 +1371,7 @@ const genServices = appEnv => ({
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : '/ukchina/49375846/trad',
+            : undefined, // '/ukchina/49375846/trad'
         smoke: false,
       },
     },
@@ -1383,7 +1383,7 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/ukrainian/articles/c0glz45kqz6o',
+        path: isLive(appEnv) ? undefined : '/ukrainian/articles/cp4l2mrejvdo',
         smoke: false,
       },
       errorPage404: {
@@ -1597,7 +1597,7 @@ const genServices = appEnv => ({
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : '/zhongwen/chinese-news-49631219/trad',
+            : undefined, // '/zhongwen/chinese-news-49631219/trad'
         smoke: false,
       },
     },
