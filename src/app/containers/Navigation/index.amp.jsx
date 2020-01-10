@@ -13,7 +13,7 @@ const SCROLLABLE_ID = 'scrollable-nav';
 const HIDDEN_CLASS_NAME = 'scrollable-hidden';
 const OPEN_CLASS_NAME = 'open';
 
-const StyledScrollableNavigation = styled(ScrollableNavigation)`
+const StyledAmpScrollableNavigation = styled(ScrollableNavigation)`
   &.${HIDDEN_CLASS_NAME} {
     @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
       display: none;
@@ -52,9 +52,9 @@ const AmpNavigationContainer = ({
     <AmpDropdown id={DROPDOWN_ID} hidden>
       {dropdownListItems}
     </AmpDropdown>
-    <StyledScrollableNavigation dir={dir} id={SCROLLABLE_ID}>
+    <StyledAmpScrollableNavigation dir={dir} id={SCROLLABLE_ID}>
       {scrollableListItems}
-    </StyledScrollableNavigation>
+    </StyledAmpScrollableNavigation>
   </Navigation>
 );
 
