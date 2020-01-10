@@ -1,24 +1,23 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import RadioPage from '.';
-import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
+import CpsAssetPage from '.';
+import pidginPageData from '#data/pidgin/cpsAssets/sport-23252855';
 
-const liveRadioScaffoldProps = {
+const cpsAssetScaffoldProps = {
   isAmp: false,
-  pageType: 'media',
-  service: 'amharic',
-  pathname: '/pathname',
+  pageType: 'PGL',
+  service: 'pidgin',
+  pathname: '/pidgin/sport-23252855',
   match: {
     params: {
-      serviceId: 'bbc_amharic_radio',
-      mediaId: 'liveradio',
-      pageData: amharicPageData,
+      assetUri: 'sport-23252855',
+      pageData: pidginPageData,
     },
   },
   status: 200,
 };
 
-jest.mock('../PageHandlers/withPageWrapper', () => Component => {
+jest.mock('../../containers/PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
     <div id="PageWrapperContainer">
       <Component {...props} />
@@ -28,7 +27,7 @@ jest.mock('../PageHandlers/withPageWrapper', () => Component => {
   return PageWrapperContainer;
 });
 
-jest.mock('../PageHandlers/withLoading', () => Component => {
+jest.mock('../../containers/PageHandlers/withLoading', () => Component => {
   const LoadingContainer = props => (
     <div id="LoadingContainer">
       <Component {...props} />
@@ -38,7 +37,7 @@ jest.mock('../PageHandlers/withLoading', () => Component => {
   return LoadingContainer;
 });
 
-jest.mock('../PageHandlers/withError', () => Component => {
+jest.mock('../../containers/PageHandlers/withError', () => Component => {
   const ErrorContainer = props => (
     <div id="ErrorContainer">
       <Component {...props} />
@@ -48,7 +47,7 @@ jest.mock('../PageHandlers/withError', () => Component => {
   return ErrorContainer;
 });
 
-jest.mock('../PageHandlers/withData', () => Component => {
+jest.mock('../../containers/PageHandlers/withData', () => Component => {
   const DataContainer = props => (
     <div id="DataContainer">
       <Component {...props} />
@@ -58,17 +57,17 @@ jest.mock('../PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
-jest.mock('../RadioPageMain', () => {
-  const RadioPageMain = () => <div>RadioPageMain</div>;
+jest.mock('../../containers/CpsAssetPageMain', () => {
+  const CpsAssetPageMain = () => <div>CpsAssetPageMain</div>;
 
-  return RadioPageMain;
+  return CpsAssetPageMain;
 });
 
-describe('Radio Page', () => {
+describe('CPS PGL Page', () => {
   describe('snapshots', () => {
     shouldMatchSnapshot(
       'should match scaffold snapshot',
-      <RadioPage {...liveRadioScaffoldProps} />,
+      <CpsAssetPage {...cpsAssetScaffoldProps} />,
     );
   });
 });
