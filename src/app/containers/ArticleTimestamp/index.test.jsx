@@ -1,6 +1,10 @@
 import React from 'react';
 import { render, mount } from 'enzyme';
-import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
+import {
+  isNull,
+  suppressPropWarnings,
+  shouldMatchSnapshot,
+} from '@bbc/psammead-test-helpers';
 import ArticleTimestamp from '.';
 import {
   timestampGenerator,
@@ -40,6 +44,27 @@ describe('ArticleTimestamp', () => {
 
   afterEach(() => {
     Date.now = originalDate;
+  });
+
+  describe('snapshot tests', () => {
+    const threeHoursAgo = timestampGenerator({ hours: 3 });
+    const fiveHoursAgo = timestampGenerator({ hours: 5 });
+
+    shouldMatchSnapshot(
+      "should render a 'created' Timestamp correctly",
+      <WrappedArticleTimestamp
+        firstPublished={threeHoursAgo}
+        lastPublished={threeHoursAgo}
+      />,
+    );
+
+    shouldMatchSnapshot(
+      "should render both a 'created' and an 'updated' Timestamp correctly",
+      <WrappedArticleTimestamp
+        firstPublished={threeHoursAgo}
+        lastPublished={fiveHoursAgo}
+      />,
+    );
   });
 
   describe('daylight savings time', () => {
