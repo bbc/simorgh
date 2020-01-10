@@ -14,7 +14,7 @@ import {
   isValidDateTime,
 } from './helpers';
 
-const ArticleTimestamp = ({ firstPublished, lastPublished, popOut }) => {
+const ArticleTimestamp = ({ firstPublished, lastPublished, popOut, delta }) => {
   const {
     articleTimestampPrefix,
     datetimeLocale,
@@ -51,10 +51,12 @@ const ArticleTimestamp = ({ firstPublished, lastPublished, popOut }) => {
 
   const Wrapper = popOut ? PopOutGridItemMedium : GridItemConstrainedMedium;
 
+  const timestampDifference = (lastPublished - firstPublished) / 1000 / 60;
+
   return (
     <Wrapper>
       <Timestamp {...timestampProps} {...firstPublishedProps} />
-      {firstPublished !== lastPublished && (
+      {timestampDifference > delta && (
         <Timestamp {...timestampProps} {...lastPublishedProps} />
       )}
     </Wrapper>
@@ -65,10 +67,12 @@ ArticleTimestamp.propTypes = {
   firstPublished: number.isRequired,
   lastPublished: number.isRequired,
   popOut: bool,
+  delta: number,
 };
 
 ArticleTimestamp.defaultProps = {
   popOut: true,
+  delta: 0,
 };
 
 export default ArticleTimestamp;
