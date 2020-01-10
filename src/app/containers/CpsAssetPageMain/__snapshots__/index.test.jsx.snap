@@ -870,25 +870,25 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   margin: 0;
 }
 
-.c14 {
+.c12 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c14:visited {
+.c12:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c14:focus,
-.c14:hover {
+.c12:focus,
+.c12:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c12 {
+.c13 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -897,7 +897,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   list-style-type: none;
 }
 
-.c12 > li::before {
+.c13 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
@@ -905,7 +905,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   margin-left: -2rem;
 }
 
-.c13 {
+.c14 {
   margin-bottom: 1rem;
 }
 
@@ -1258,14 +1258,14 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c13 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c13 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -1441,7 +1441,14 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       <p
         class="c10"
       >
-        This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+        <a
+          class="c12"
+          href="http://www.bbc.com/afrique/23248423"
+        >
+          Media Asset Page
+        </a>
+         fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
     </div>
     <div
@@ -1457,71 +1464,71 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c8"
     >
       <ul
-        class="c12"
+        class="c13"
         dir="ltr"
         role="list"
       >
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c12"
             href="http://www.bbc.com/afrique/23248423"
           >
             Media Asset Page
           </a>
         </li>
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c12"
             href="http://www.bbc.com/afrique/23248423"
           >
             Media Asset Page
           </a>
         </li>
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c12"
             href="http://www.bbc.com/afrique/23248423"
           >
             Media Asset Page
           </a>
         </li>
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c12"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c12"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c12"
             href="https://bbc.com/pidgin"
           >
             this is the link text
@@ -1542,71 +1549,71 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c8"
     >
       <ul
-        class="c12"
+        class="c13"
         dir="ltr"
         role="list"
       >
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c12"
             href="http://www.bbc.com/afrique/23248423"
           >
             Media Asset Page
           </a>
         </li>
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c12"
             href="http://www.bbc.com/afrique/23248423"
           >
             Media Asset Page
           </a>
         </li>
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c12"
             href="http://www.bbc.com/afrique/23248423"
           >
             Media Asset Page
           </a>
         </li>
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c12"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c12"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c12"
             href="https://bbc.com/pidgin"
           >
             this is the link text
@@ -1636,7 +1643,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
         </i>
         dolore "eu fugiat nulla" pariatur. 
         <a
-          class="c14"
+          class="c12"
           href="https://bbc.com/pidgin"
         >
           Excepteur
@@ -1724,7 +1731,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       >
         Lorem ipsum
         <a
-          class="c14"
+          class="c12"
           href="https://bbc.com/pidgin"
         >
            dolor sit amet
@@ -1846,30 +1853,30 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       class="c8"
     >
       <ul
-        class="c12"
+        class="c13"
         dir="ltr"
         role="list"
       >
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
-          class="c13"
+          class="c14"
           role="listitem"
         >
           v3 draft
@@ -4270,25 +4277,25 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   margin: 0;
 }
 
-.c13 {
+.c11 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c13:visited {
+.c11:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c13:focus,
-.c13:hover {
+.c11:focus,
+.c11:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c11 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -4297,7 +4304,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   list-style-type: none;
 }
 
-.c11 > li::before {
+.c12 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
@@ -4305,7 +4312,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   margin-left: -2rem;
 }
 
-.c12 {
+.c13 {
   margin-bottom: 1rem;
 }
 
@@ -4644,14 +4651,14 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -4811,7 +4818,14 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       <p
         class="c9"
       >
-        This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+        <a
+          class="c11"
+          href="http://www.bbc.com/afrique/23248423"
+        >
+          Media Asset Page
+        </a>
+         fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
     </div>
     <div
@@ -4827,71 +4841,71 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c8"
     >
       <ul
-        class="c11"
+        class="c12"
         dir="ltr"
         role="list"
       >
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c11"
             href="http://www.bbc.com/afrique/23248423"
           >
             Media Asset Page
           </a>
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c11"
             href="http://www.bbc.com/afrique/23248423"
           >
             Media Asset Page
           </a>
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c11"
             href="http://www.bbc.com/afrique/23248423"
           >
             Media Asset Page
           </a>
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c11"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c11"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c11"
             href="https://bbc.com/pidgin"
           >
             this is the link text
@@ -4912,71 +4926,71 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c8"
     >
       <ul
-        class="c11"
+        class="c12"
         dir="ltr"
         role="list"
       >
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c11"
             href="http://www.bbc.com/afrique/23248423"
           >
             Media Asset Page
           </a>
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c11"
             href="http://www.bbc.com/afrique/23248423"
           >
             Media Asset Page
           </a>
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c11"
             href="http://www.bbc.com/afrique/23248423"
           >
             Media Asset Page
           </a>
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c11"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c11"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c11"
             href="https://bbc.com/pidgin"
           >
             this is the link text
@@ -5006,7 +5020,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
         </i>
         dolore "eu fugiat nulla" pariatur. 
         <a
-          class="c13"
+          class="c11"
           href="https://bbc.com/pidgin"
         >
           Excepteur
@@ -5094,7 +5108,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       >
         Lorem ipsum
         <a
-          class="c13"
+          class="c11"
           href="https://bbc.com/pidgin"
         >
            dolor sit amet
@@ -5216,30 +5230,30 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       class="c8"
     >
       <ul
-        class="c11"
+        class="c12"
         dir="ltr"
         role="list"
       >
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           v3 draft
