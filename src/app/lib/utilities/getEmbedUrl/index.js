@@ -6,7 +6,6 @@ const LIVE_URL = 'https://polling.bbc.co.uk';
 const TEST_URL = 'https://polling.test.bbc.co.uk';
 
 const shouldRenderLiveData = queryString => {
-  console.log(`isLive: ${isLive()}, queryString: ${queryString}`);
   return (
     !isLive() &&
     Boolean(queryString) &&
