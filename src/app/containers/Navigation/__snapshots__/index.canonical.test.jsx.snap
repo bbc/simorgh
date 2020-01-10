@@ -163,7 +163,6 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
         </svg>
       </button>
       <div
-        aria-hidden="true"
         class="c5"
         dir="ltr"
       >
