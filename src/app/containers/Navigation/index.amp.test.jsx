@@ -30,12 +30,12 @@ describe('AMP Navigation', () => {
   describe('Assertions', () => {
     it('should render scrollable nav and a hidden dropdown', () => {
       const { queryByTestId } = render(navigation);
-      const dropdown = queryByTestId(dropdownTestId);
+      const dropdown = queryByTestId(dropdownTestId).parentElement;
       const scrollableNav = queryByTestId(scrollableTestId);
       expect(scrollableNav.innerHTML).toBe('<li>List Items</li>');
-      expect(dropdown).toHaveAttribute('hidden');
+      expect(dropdown).not.toBeVisible();
     });
   });
 
-  // AMP state toggling should be tested by an e2e.
+  // AMP state toggling tested by an e2e.
 });

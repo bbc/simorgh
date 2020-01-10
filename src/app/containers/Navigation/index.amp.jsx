@@ -1,9 +1,9 @@
-import React, { cloneElement } from 'react';
+import React from 'react';
 import Navigation from '@bbc/psammead-navigation';
 import { node, string, shape } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { AmpScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
-import { AmpMenuButton } from '@bbc/psammead-navigation/dropdown';
+import { AmpDropdown, AmpMenuButton } from '@bbc/psammead-navigation/dropdown';
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import styled from 'styled-components';
 
@@ -49,7 +49,9 @@ const AmpNavigationContainer = ({
     />
     {/* Hidden attribute allows us to toggle visibility on the dropdown
     using AMP actions. */}
-    {cloneElement(dropdownListItems, { id: DROPDOWN_ID, hidden: true })}
+    <AmpDropdown id={DROPDOWN_ID} hidden>
+      {dropdownListItems}
+    </AmpDropdown>
     <StyledAmpScrollableNavigation dir={dir} id={SCROLLABLE_ID}>
       {scrollableListItems}
     </StyledAmpScrollableNavigation>
