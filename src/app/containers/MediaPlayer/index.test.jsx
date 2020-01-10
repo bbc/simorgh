@@ -1,5 +1,4 @@
 import renderWithRouter from '#testHelpers/renderWithRouter';
-import assertFirstChildIsNull from '#testHelpers/assertions';
 import {
   VideoCanonicalWithPlaceholder,
   VideoCanonicalNoPlaceholder,
@@ -39,12 +38,12 @@ describe('MediaPlayer', () => {
   describe('Fails and returns early when', () => {
     it('there is no versionId', () => {
       const { container } = renderWithRouter(VideoCanonicalNoVersionId);
-      assertFirstChildIsNull(container);
+      expect(container.firstChild).toBeNull();
     });
 
     it('component is toggled off', () => {
       const { container } = renderWithRouter(VideoCanonicalToggledOff);
-      assertFirstChildIsNull(container);
+      expect(container.firstChild).toBeNull();
     });
   });
 });

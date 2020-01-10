@@ -1,7 +1,6 @@
 import React from 'react';
 import { suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import renderWithRouter from '#testHelpers/renderWithRouter';
-import assertFirstChildIsNull from '#testHelpers/assertions';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import LiveRadio from '.';
@@ -60,7 +59,7 @@ describe('MediaPageBlocks LiveRadio', () => {
           </ServiceContextProvider>
         </RequestContext.Provider>,
       );
-      assertFirstChildIsNull(container);
+      expect(container.firstChild).toBeNull();
     });
   });
 
@@ -75,7 +74,7 @@ describe('MediaPageBlocks LiveRadio', () => {
           </ServiceContextProvider>
         </RequestContext.Provider>,
       );
-      assertFirstChildIsNull(container);
+      expect(container.firstChild).toBeNull();
     });
   });
 
@@ -90,7 +89,7 @@ describe('MediaPageBlocks LiveRadio', () => {
           </ServiceContextProvider>
         </RequestContext.Provider>,
       );
-      assertFirstChildIsNull(container);
+      expect(container.firstChild).toBeNull();
     });
   });
 
