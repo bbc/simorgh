@@ -1,5 +1,6 @@
 import React from 'react';
-import renderWithRouter from '#testHelpers/renderWithRouter';
+import { BrowserRouter } from 'react-router-dom';
+import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import RadioPageMain from '.';
@@ -17,7 +18,7 @@ describe('Radio Page Main', () => {
       radioPagePreprocessorRules,
     );
 
-    const { asFragment } = renderWithRouter(
+    await matchSnapshotAsync(
       <ServiceContextProvider service="amharic">
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -27,11 +28,12 @@ describe('Radio Page Main', () => {
           service="amharic"
           statusCode={200}
         >
-          <RadioPageMain service="amharic" pageData={pageData} />
+          <BrowserRouter>
+            <RadioPageMain service="amharic" pageData={pageData} />
+          </BrowserRouter>
         </RequestContextProvider>
       </ServiceContextProvider>,
     );
-    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should match snapshot for AMP', async () => {
@@ -40,7 +42,7 @@ describe('Radio Page Main', () => {
       radioPagePreprocessorRules,
     );
 
-    const { asFragment } = renderWithRouter(
+    await matchSnapshotAsync(
       <ServiceContextProvider service="amharic">
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -50,10 +52,11 @@ describe('Radio Page Main', () => {
           service="amharic"
           statusCode={200}
         >
-          <RadioPageMain service="amharic" pageData={pageData} />
+          <BrowserRouter>
+            <RadioPageMain service="amharic" pageData={pageData} />
+          </BrowserRouter>
         </RequestContextProvider>
       </ServiceContextProvider>,
     );
-    expect(asFragment()).toMatchSnapshot();
   });
 });
