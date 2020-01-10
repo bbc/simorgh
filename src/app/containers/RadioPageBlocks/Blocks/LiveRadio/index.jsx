@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
 import { string } from 'prop-types';
@@ -32,7 +31,6 @@ const MediaPlayerInnerWrapper = styled.div`
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   const { platform } = useContext(RequestContext);
   const { liveRadio, lang, translations, service } = useContext(ServiceContext);
-  const location = useLocation();
 
   const isAmp = platform === 'amp';
   const isValidPlatform = ['amp', 'canonical'].includes(platform);
@@ -46,10 +44,9 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   );
 
   const embedSource = embedUrl({
-    mediaId: `${serviceId}/${id}/${lang}`,
+    requestUrl: `${serviceId}/${id}/${lang}`,
     type: 'media',
     isAmp,
-    pageUrl: `${location.pathname}${location.search}`,
   });
 
   const iframeTitle = pathOr(
@@ -62,6 +59,8 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
     title: 'Live radio',
     type: 'audio',
   };
+
+  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable Javascript or try a different browser.`;
 
   return (
     <MediaPlayerOuterWrapper>
@@ -83,6 +82,8 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
             skin="audio"
             service={service}
             mediaInfo={mediaInfo}
+            noJsMessage={noJsMessage}
+            noJsClassName="no-js"
           />
         )}
       </MediaPlayerInnerWrapper>

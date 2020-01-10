@@ -124,12 +124,11 @@ When adding a new page type there are several parts required.
 
 #### 3) Create a new container for the page type
 
-- Similar to [this](https://github.com/bbc/simorgh/blob/5de59c6207d46b11c3af68c58a620e250aff3a1a/src/app/containers/FrontPage/index.jsx) we require a container that will act as the entry point for the page routing
+- Similar to [this](https://github.com/bbc/simorgh/blob/latest/src/app/pages/FrontPage/index.jsx) we require a top level container that will act as the entry point for the page routing. Each page type should have its own container.
 
-#### 4) Add a new getInitalData method for the new page type
+#### 4) Add new pre-processing rules if required.
 
-- [getInitalData example](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/getInitialData/frontpage/index.js)
-- If required for the new page type this is where any pre-processing rules should be added. These are needed for use cases where we want to manipulate the data before it is received by the container for the page.
+- If required for the new page type you can add pre-processing rules [here](https://github.com/bbc/simorgh/tree/latest/src/app/lib/utilities/preprocessor/rules). These are needed for use cases where we want to manipulate the data before it is received by the container for the page.
   - EG: On the articles routes [unique ID's](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/getInitialData/article/index.js#L19) are added to each block in the payload
 
 #### 5) Add a new route to the react router config
@@ -312,9 +311,9 @@ There are several environment variables you can use with our test suite, which a
 | -------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
 | CYPRESS_ONLY_SERVICE | Restricts to running only the specified service                                                               | A single service i.e. `CYPRESS_ONLY_SERVICE=urdu` |
 | CYPRESS_APP_ENV      | Runs the tests in a specific environment                                                                      | `test`, `local`, `live`                           |
-| CYPRESS_SMOKE        | Runs only smoke tests if true                                                                                 | `true`, `false`                                          |
-| CYPRESS_UK           | See [running e2es in the UK against Live](https://github.com/bbc/simorgh/#running-e2e-in-the-uk-against-live) | `true`, `false`                                           |
-| CYPRESS_SKIP_EU      | See [running e2es outside EU](https://github.com/bbc/simorgh/#running-e2e-outside-eu)                         | `true`, `false`                                           |
+| CYPRESS_SMOKE        | Runs only smoke tests if true                                                                                 | `true`, `false`                                   |
+| CYPRESS_UK           | See [running e2es in the UK against Live](https://github.com/bbc/simorgh/#running-e2e-in-the-uk-against-live) | `true`, `false`                                   |
+| CYPRESS_SKIP_EU      | See [running e2es outside EU](https://github.com/bbc/simorgh/#running-e2e-outside-eu)                         | `true`, `false`                                   |
 
 These commands can be run in combination.
 

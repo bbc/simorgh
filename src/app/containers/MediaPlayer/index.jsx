@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { string, bool } from 'prop-types';
-import { useLocation } from 'react-router-dom';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
@@ -34,7 +33,6 @@ const MediaPlayerContainer = ({
   const { platform } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
-  const location = useLocation();
   const isAmp = platform === 'amp';
 
   if (!enabled || !blocks) {
@@ -100,18 +98,18 @@ const MediaPlayerContainer = ({
     locator,
     resolution: DEFAULT_WIDTH,
   });
-
   const embedSource = embedUrl({
-    mediaId: `${assetId}/${versionId}/${lang}`,
+    requestUrl: `${assetId}/${versionId}/${lang}`,
     type: assetType,
     isAmp,
-    pageUrl: `${location.pathname}${location.search}`,
   });
   const iframeTitle = pathOr(
     'Media player',
     ['mediaAssetPage', 'mediaPlayer'],
     translations,
   );
+
+  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable Javascript or try a different browser.`;
 
   return (
     <>
@@ -133,6 +131,8 @@ const MediaPlayerContainer = ({
             title={iframeTitle}
             service={service}
             mediaInfo={mediaInfo}
+            noJsMessage={noJsMessage}
+            noJsClassName="no-js"
           />
         )}
         {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}

@@ -3,7 +3,10 @@ import { render, waitForDomChange } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { articleDataNews, articleDataPersian } from '../Article/fixtureData';
+import {
+  articleDataNews,
+  articleDataPersian,
+} from '../../pages/Article/fixtureData';
 import services from '#server/utilities/serviceConfigs';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import frontPageData from '#data/igbo/frontpage/index.json';
