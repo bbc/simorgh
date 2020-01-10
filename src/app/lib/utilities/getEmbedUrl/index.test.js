@@ -1,7 +1,6 @@
-import embedUrl from './embedUrl';
+import getEmbedUrl from '.';
 
 const mediaId = 'foo/bar';
-const pageUrl = `www.test.com/${mediaId}`;
 const liveOverrideParam = '?renderer_env=live';
 const testOverrideParam = '?renderer_env=test';
 const applicationEnv = process.env.SIMORGH_APP_ENV;
@@ -24,7 +23,7 @@ const testCases = [
     embedObject: {
       mediaId,
       type: 'articles',
-      pageUrl,
+      queryString: '',
     },
   },
   {
@@ -37,7 +36,7 @@ const testCases = [
       isAmp: true,
       mediaId,
       type: 'articles',
-      pageUrl,
+      queryString: '',
     },
   },
   {
@@ -49,7 +48,7 @@ const testCases = [
     embedObject: {
       mediaId,
       type: 'articles',
-      pageUrl: `${pageUrl}${testOverrideParam}`,
+      queryString: testOverrideParam,
     },
   },
   {
@@ -62,7 +61,7 @@ const testCases = [
       isAmp: true,
       mediaId,
       type: 'articles',
-      pageUrl: `${pageUrl}${testOverrideParam}`,
+      queryString: testOverrideParam,
     },
   },
   {
@@ -74,7 +73,7 @@ const testCases = [
     embedObject: {
       mediaId,
       type: 'articles',
-      pageUrl: `${pageUrl}${liveOverrideParam}`,
+      queryString: liveOverrideParam,
     },
   },
   {
@@ -87,7 +86,7 @@ const testCases = [
       isAmp: true,
       mediaId,
       type: 'articles',
-      pageUrl: `${pageUrl}${liveOverrideParam}`,
+      queryString: liveOverrideParam,
     },
   },
   {
@@ -99,7 +98,7 @@ const testCases = [
     embedObject: {
       mediaId,
       type: 'articles',
-      pageUrl,
+      queryString: '',
     },
   },
   {
@@ -112,7 +111,7 @@ const testCases = [
       isAmp: true,
       mediaId,
       type: 'articles',
-      pageUrl,
+      queryString: '',
     },
   },
   {
@@ -124,7 +123,7 @@ const testCases = [
     embedObject: {
       mediaId,
       type: 'articles',
-      pageUrl: `${pageUrl}${testOverrideParam}`,
+      queryString: testOverrideParam,
     },
   },
   {
@@ -137,7 +136,7 @@ const testCases = [
       isAmp: true,
       mediaId,
       type: 'articles',
-      pageUrl: `${pageUrl}${testOverrideParam}`,
+      queryString: testOverrideParam,
     },
   },
   {
@@ -149,7 +148,7 @@ const testCases = [
     embedObject: {
       mediaId,
       type: 'articles',
-      pageUrl: `${pageUrl}${liveOverrideParam}`,
+      queryString: liveOverrideParam,
     },
   },
   {
@@ -162,7 +161,7 @@ const testCases = [
       isAmp: true,
       mediaId,
       type: 'articles',
-      pageUrl: `${pageUrl}${liveOverrideParam}`,
+      queryString: liveOverrideParam,
     },
   },
 ];
@@ -172,7 +171,7 @@ describe('Media Player: Embed URL', () => {
     ({ description, expected, before, after, environment, embedObject }) => {
       it(description, () => {
         before(environment);
-        expect(embedUrl(embedObject)).toEqual(expected);
+        expect(getEmbedUrl(embedObject)).toEqual(expected);
         after();
       });
     },
