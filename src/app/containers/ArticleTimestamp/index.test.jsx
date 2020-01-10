@@ -46,23 +46,21 @@ describe('ArticleTimestamp', () => {
     Date.now = originalDate;
   });
 
-  describe('snapshot tests', () => {
-    shouldMatchSnapshot(
-      "should render a 'created' Timestamp correctly",
-      <WrappedArticleTimestamp
-        firstPublished={1530947227000}
-        lastPublished={1530947227000}
-      />,
-    );
+  shouldMatchSnapshot(
+    "should render a 'created' Timestamp correctly",
+    <WrappedArticleTimestamp
+      firstPublished={1530947227000}
+      lastPublished={1530947227000}
+    />,
+  );
 
-    shouldMatchSnapshot(
-      "should render both a 'created' and an 'updated' Timestamp correctly",
-      <WrappedArticleTimestamp
-        firstPublished={1530947227000}
-        lastPublished={1552666749637}
-      />,
-    );
-  });
+  shouldMatchSnapshot(
+    "should render both a 'created' and an 'updated' Timestamp correctly",
+    <WrappedArticleTimestamp
+      firstPublished={1530947227000}
+      lastPublished={1552666749637}
+    />,
+  );
 
   describe('daylight savings time', () => {
     const daylightSavingsBehaviour = ({ descriptor, date, longName }) => {
