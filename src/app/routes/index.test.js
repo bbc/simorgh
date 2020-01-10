@@ -1,9 +1,9 @@
 import routes from './index';
 import { cpsAssetPagePath } from './regex';
 
-jest.mock('../containers/FrontPage', () => jest.fn());
-jest.mock('../containers/RadioPage', () => jest.fn());
-jest.mock('../containers/CpsAssetPage', () => jest.fn());
+jest.mock('../pages/FrontPage', () => jest.fn());
+jest.mock('../pages/RadioPage', () => jest.fn());
+jest.mock('../pages/CpsMap', () => jest.fn());
 
 const generateFixtureData = type => ({
   pageData: {
@@ -43,10 +43,10 @@ describe('Routes', () => {
       jest.resetAllMocks();
     });
 
-    const mediaPage = jest.requireMock('../containers/CpsAssetPage');
-    const frontPage = jest.requireMock('../containers/FrontPage');
+    const mediaPage = jest.requireMock('../pages/CpsMap');
+    const frontPage = jest.requireMock('../pages/FrontPage');
 
-    it('should route to CpsAssetPage component', () => {
+    it('should route to CpsMap component', () => {
       const data = generateFixtureData('MAP');
       Component(data);
 
