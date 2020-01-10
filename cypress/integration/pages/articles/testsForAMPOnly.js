@@ -60,31 +60,25 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 
         // Tests requiring iframe access are temporarily being throttled to the 'news' service.
         if (service === 'news') {
-          it('should check that media player auto plays', () => {
+          it('should autoplay', () => {
             cy.request(`${config[service].pageTypes.articles.path}.json`).then(
               ({ body }) => {
                 const media = getBlockData('video', body);
                 if (media && media.type === 'video') {
-                  cy.get('div[class^="StyledVideoContainer"]')
+                  cy.get(
+                    'div[class^="StyledVideoContainer"] iframe[class^="i-amphtml-fill-content"]',
+                  )
                     .scrollIntoView()
-                    .within(() => {
-                      cy.get('button');
-                    })
-                    .should('not.exist')
-                    .then(() => {
-                      cy.get('iframe[class^="i-amphtml-fill-content"]').then(
-                        $iframe => {
-                          cy.wrap($iframe.prop('contentWindow'), {
-                            // `timeout` only applies to the methods chained below.
-                            // `its()` benefits from this, and will wait up to 8s
-                            // for the mediaPlayer instance to become available.
-                            timeout: 8000,
-                          })
-                            .its('embeddedMedia.playerInstances.mediaPlayer')
-                            .invoke('currentTime')
-                            .should('be.gt', 0);
-                        },
-                      );
+                    .then($iframe => {
+                      cy.wrap($iframe.prop('contentWindow'), {
+                        // `timeout` only applies to the methods chained below.
+                        // `its()` benefits from this, and will wait up to 8s
+                        // for the mediaPlayer instance to become available.
+                        timeout: 8000,
+                      })
+                        .its('embeddedMedia.playerInstances.mediaPlayer')
+                        .invoke('currentTime')
+                        .should('be.gt', 0);
                     });
                 }
               },
