@@ -10,11 +10,13 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
     </script>
   </amp-analytics>
   <main
-    class="Grid-sc-12lwanc-0 bETYGj"
+    class="GridComponent-nf79gm-0 iUNUcT GelPageGrid-ylca1m-0 kIDOXv"
+    dir="ltr"
     role="main"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-5 eXdLFq"
+      class="GridComponent-nf79gm-0 eplZSI"
+      dir="ltr"
     >
       <h1
         class="Headline-sc-1kh1qhu-0 cWPJOi"
@@ -68,11 +70,13 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 <DocumentFragment>
   <noscript />
   <main
-    class="Grid-sc-12lwanc-0 bETYGj"
+    class="GridComponent-nf79gm-0 iUNUcT GelPageGrid-ylca1m-0 kIDOXv"
+    dir="ltr"
     role="main"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-5 eXdLFq"
+      class="GridComponent-nf79gm-0 eplZSI"
+      dir="ltr"
     >
       <h1
         class="Headline-sc-1kh1qhu-0 cWPJOi"

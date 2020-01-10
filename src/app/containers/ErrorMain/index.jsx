@@ -54,7 +54,12 @@ const ErrorMain = ({ status }) => {
         messaging={messaging}
         themeColor={themeColor}
       />
-      <ErrorPageComponent {...messaging} script={script} service={service} />
+      <ErrorPageComponent
+        {...messaging}
+        dir={dir}
+        script={script}
+        service={service}
+      />
     </>
   );
 };
