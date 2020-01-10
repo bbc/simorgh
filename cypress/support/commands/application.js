@@ -9,22 +9,20 @@ Cypress.Commands.add(
   (path, responseCode, type, retriesLeft = 2) => {
     cy.request({ url: path, failOnStatusCode: false }).then(
       ({ status, headers }) => {
+        expect(status, `Unexpected status code for ${path}`).to.equal(
+          responseCode,
+        );
+        expect(
+          headers['content-type'],
+          `Unexpected content-type for ${path}`,
+        ).to.include(type);
+
         try {
-          expect(status, `Unexpected status code for ${path}`).to.equal(
-            responseCode,
-          );
-          expect(
-            headers['content-type'],
-            `Unexpected content-type for ${path}`,
-          ).to.include(type);
           // Always ensure we're not seeing the Mozart fallback (denoted by x-mfa header)
           expect(
             headers,
             `Mozart fallback response detected for ${path}`,
           ).not.to.have.property('x-mfa');
-
-          // If these assertions pass then terminate cleanly
-          return;
         } catch (e) {
           if (retriesLeft < 1) {
             throw e;
