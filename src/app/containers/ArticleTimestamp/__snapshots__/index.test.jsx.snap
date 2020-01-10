@@ -165,7 +165,7 @@ exports[`ArticleTimestamp snapshot tests should render both a 'created' and an '
     class="c1"
     datetime="2020-01-10"
   >
-    10 January 2020, 11:26 GMT
+    10 January 2020, 11:44 GMT
   </time>
   <time
     class="c1"
