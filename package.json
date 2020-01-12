@@ -130,7 +130,7 @@
     "@babel/plugin-transform-runtime": "^7.8.0",
     "@babel/polyfill": "^7.8.0",
     "@babel/preset-env": "^7.8.0",
-    "@babel/preset-react": "^7.7.4",
+    "@babel/preset-react": "^7.8.0",
     "@babel/runtime": "^7.8.0",
     "@bbc/apache2-license-checker": "^1.1.4",
     "@bbc/psammead-storybook-helpers": "^8.2.0",
