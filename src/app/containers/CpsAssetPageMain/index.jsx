@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { GhostGrid } from '#lib/styledGrid';
@@ -78,10 +74,6 @@ const CpsAssetPageMain = ({ pageData }) => {
 
 const StyledTimestamp = styled(Timestamp)`
   padding-bottom: ${GEL_SPACING_DBL};
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-bottom: ${GEL_SPACING_TRPL};
-  }
 `;
 
 CpsAssetPageMain.propTypes = cpsAssetPagePropTypes;
