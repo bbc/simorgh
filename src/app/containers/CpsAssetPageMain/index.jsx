@@ -39,7 +39,9 @@ const CpsAssetPageMain = ({ pageData }) => {
     text,
     image,
     timestamp: props =>
-      allowDateStamp ? <Timestamp {...props} popOut={false} delta={1} /> : null,
+      allowDateStamp ? (
+        <Timestamp {...props} popOut={false} minutesTolerance={1} />
+      ) : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };

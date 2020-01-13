@@ -150,7 +150,7 @@ describe('ArticleTimestamp', () => {
       <WrappedArticleTimestamp
         firstPublished={1530947280000}
         lastPublished={1530947286000}
-        delta={1}
+        minutesTolerance={1}
       />,
     );
     expect(renderedWrapper.length).toEqual(1);
@@ -162,7 +162,7 @@ describe('ArticleTimestamp', () => {
       <WrappedArticleTimestamp
         firstPublished={1530947280000}
         lastPublished={1530947406000}
-        delta={1}
+        minutesTolerance={1}
       />,
     );
     expect(renderedWrapper.length).toEqual(2);
