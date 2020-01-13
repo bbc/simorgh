@@ -9,14 +9,3 @@ export const getUrlPath = url => {
 export const getQueryString = url => {
   return new Url(url).query;
 };
-
-/* Returns a parsed object containing the query string
- * e.g. for query string ?foo=bar&x=y, the resulting object is
- * {
- *   foo: 'bar',
- *   x:'y'
- * }
- */
-export const getQueryParams = url => {
-  return new Url(url, true).query;
-};

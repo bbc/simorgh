@@ -1,7 +1,10 @@
 import React from 'react';
-import { suppressPropWarnings } from '@bbc/psammead-test-helpers';
-import renderWithRouter from '#testHelpers/renderWithRouter';
-import assertFirstChildIsNull from '#testHelpers/assertions';
+import {
+  shouldMatchSnapshot,
+  isNull,
+  suppressPropWarnings,
+} from '@bbc/psammead-test-helpers';
+import { BrowserRouter } from 'react-router-dom';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import LiveRadio from '.';
@@ -9,125 +12,125 @@ import LiveRadio from '.';
 const origin = 'http://localhost:7080';
 
 describe('MediaPageBlocks LiveRadio', () => {
-  it('should render correctly for canonical', () => {
-    const { asFragment } = renderWithRouter(
-      <RequestContext.Provider value={{ platform: 'canonical', origin }}>
-        <ServiceContextProvider service="korean">
+  shouldMatchSnapshot(
+    'should render correctly for canonical',
+    <RequestContext.Provider value={{ platform: 'canonical', origin }}>
+      <ServiceContextProvider service="korean">
+        <BrowserRouter>
           <LiveRadio
             uuid="uuid"
             idAttr="idAttr"
             externalId="externalId"
             id="id"
           />
-        </ServiceContextProvider>
-      </RequestContext.Provider>,
-    );
-    expect(asFragment()).toMatchSnapshot();
-  });
+        </BrowserRouter>
+      </ServiceContextProvider>
+    </RequestContext.Provider>,
+  );
 
   // TODO: remove the need for this suppressPropWarnings for placeholderSrc on AMP player
   suppressPropWarnings(['placeholderSrc', 'undefined']);
 
-  it('should render correctly for amp', () => {
-    const { asFragment } = renderWithRouter(
-      <RequestContext.Provider value={{ platform: 'amp', origin }}>
-        <ServiceContextProvider service="korean">
+  shouldMatchSnapshot(
+    'should render correctly for amp',
+    <RequestContext.Provider value={{ platform: 'amp', origin }}>
+      <ServiceContextProvider service="korean">
+        <BrowserRouter>
           <LiveRadio
             uuid="uuid"
             idAttr="idAttr"
             externalId="externalId"
             id="id"
           />
-        </ServiceContextProvider>
-      </RequestContext.Provider>,
-    );
-    expect(asFragment()).toMatchSnapshot();
-  });
+        </BrowserRouter>
+      </ServiceContextProvider>
+    </RequestContext.Provider>,
+  );
 
   describe('when platform is unknown', () => {
     suppressPropWarnings(['text', 'undefined']);
 
-    it('should render null', () => {
-      const { container } = renderWithRouter(
-        <RequestContext.Provider value={{ platform: 'foobar', origin }}>
-          <ServiceContextProvider service="korean">
+    isNull(
+      'should render null',
+      <RequestContext.Provider value={{ platform: 'foobar', origin }}>
+        <ServiceContextProvider service="korean">
+          <BrowserRouter>
             <LiveRadio
               uuid="uuid"
               idAttr="idAttr"
               externalId="externalId"
               id="id"
             />
-          </ServiceContextProvider>
-        </RequestContext.Provider>,
-      );
-      assertFirstChildIsNull(container);
-    });
+          </BrowserRouter>
+        </ServiceContextProvider>
+      </RequestContext.Provider>,
+    );
   });
 
   describe('when id isnt provided', () => {
     suppressPropWarnings(['id', 'undefined']);
 
-    it('should render null', () => {
-      const { container } = renderWithRouter(
-        <RequestContext.Provider value={{ platform: 'foobar', origin }}>
-          <ServiceContextProvider service="korean">
+    isNull(
+      'should render null',
+      <RequestContext.Provider value={{ platform: 'foobar', origin }}>
+        <ServiceContextProvider service="korean">
+          <BrowserRouter>
             <LiveRadio uuid="uuid" idAttr="idAttr" externalId="externalId" />
-          </ServiceContextProvider>
-        </RequestContext.Provider>,
-      );
-      assertFirstChildIsNull(container);
-    });
+          </BrowserRouter>
+        </ServiceContextProvider>
+      </RequestContext.Provider>,
+    );
   });
 
   describe('when externalId isnt provided', () => {
     suppressPropWarnings(['externalId', 'undefined']);
 
-    it('should render null', () => {
-      const { container } = renderWithRouter(
-        <RequestContext.Provider value={{ platform: 'foobar', origin }}>
-          <ServiceContextProvider service="korean">
+    isNull(
+      'should render null',
+      <RequestContext.Provider value={{ platform: 'foobar', origin }}>
+        <ServiceContextProvider service="korean">
+          <BrowserRouter>
             <LiveRadio uuid="uuid" idAttr="idAttr" id="id" />
-          </ServiceContextProvider>
-        </RequestContext.Provider>,
-      );
-      assertFirstChildIsNull(container);
-    });
+          </BrowserRouter>
+        </ServiceContextProvider>
+      </RequestContext.Provider>,
+    );
   });
 
   describe('when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio', () => {
-    it('should render correctly for canonical', () => {
-      const { asFragment } = renderWithRouter(
-        <RequestContext.Provider value={{ platform: 'canonical', origin }}>
-          <ServiceContextProvider service="afaanoromoo">
+    shouldMatchSnapshot(
+      'should render correctly for canonical',
+      <RequestContext.Provider value={{ platform: 'canonical', origin }}>
+        <ServiceContextProvider service="afaanoromoo">
+          <BrowserRouter>
             <LiveRadio
               uuid="uuid"
               idAttr="idAttr"
               externalId="bbc_oromo_radio"
               id="id"
             />
-          </ServiceContextProvider>
-        </RequestContext.Provider>,
-      );
-      expect(asFragment()).toMatchSnapshot();
-    });
+          </BrowserRouter>
+        </ServiceContextProvider>
+      </RequestContext.Provider>,
+    );
 
     // TODO: remove the need for this suppressPropWarnings for placeholderSrc on AMP player
     suppressPropWarnings(['placeholderSrc', 'undefined']);
 
-    it('should render correctly for amp', () => {
-      const { asFragment } = renderWithRouter(
-        <RequestContext.Provider value={{ platform: 'amp', origin }}>
-          <ServiceContextProvider service="afaanoromoo">
+    shouldMatchSnapshot(
+      'should render correctly for amp',
+      <RequestContext.Provider value={{ platform: 'amp', origin }}>
+        <ServiceContextProvider service="afaanoromoo">
+          <BrowserRouter>
             <LiveRadio
               uuid="uuid"
               idAttr="idAttr"
               externalId="bbc_oromo_radio"
               id="id"
             />
-          </ServiceContextProvider>
-        </RequestContext.Provider>,
-      );
-      expect(asFragment()).toMatchSnapshot();
-    });
+          </BrowserRouter>
+        </ServiceContextProvider>
+      </RequestContext.Provider>,
+    );
   });
 });

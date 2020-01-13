@@ -11,7 +11,7 @@ import {
 } from '@bbc/psammead-media-player';
 import Caption from '../Caption';
 import Metadata from './Metadata';
-import embedUrl from './helpers/embedUrl';
+import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import formatDuration from '#lib/utilities/formatDuration';
@@ -101,11 +101,11 @@ const MediaPlayerContainer = ({
     resolution: DEFAULT_WIDTH,
   });
 
-  const embedSource = embedUrl({
+  const embedSource = getEmbedUrl({
     mediaId: `${assetId}/${versionId}/${lang}`,
     type: assetType,
     isAmp,
-    pageUrl: `${location.pathname}${location.search}`,
+    queryString: location.search,
   });
   const iframeTitle = pathOr(
     'Media player',
