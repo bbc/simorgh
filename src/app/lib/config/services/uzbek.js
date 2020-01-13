@@ -43,7 +43,7 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'Ҳаммасини кўриш',
+      seeAll: 'Ҳаммасини кўринг',
       home: 'Бош саҳифа',
       currentPage: 'Жорий саҳифа',
       skipLinkText: 'Саҳифага ўтиш',
