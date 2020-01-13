@@ -351,7 +351,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) ? undefined : '/gujarati',
+        path: '/gujarati',
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
@@ -612,7 +612,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) ? undefined : '/marathi',
+        path: '/marathi',
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
@@ -1153,7 +1153,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) ? undefined : '/tamil',
+        path: '/tamil',
         smoke: false,
       },
       liveRadio: {
@@ -1189,7 +1189,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) ? undefined : '/telugu',
+        path: '/telugu',
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
@@ -1442,7 +1442,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) ? undefined : '/uzbek',
+        path: '/uzbek',
         smoke: false,
       },
       liveRadio: {
