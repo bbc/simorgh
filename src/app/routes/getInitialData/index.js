@@ -1,9 +1,9 @@
 import 'isomorphic-fetch';
 import path from 'ramda/src/path';
-import Url from 'url-parse';
 import nodeLogger from '#lib/logger.node';
 import preprocess from '#lib/utilities/preprocessor';
 import onClient from '#lib/utilities/onClient';
+import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
 import getBaseUrl from './utils/getBaseUrl';
 import getPreprocessorRules from './utils/getPreprocessorRules';
 
@@ -19,26 +19,16 @@ const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)
   : process.env.SIMORGH_BASE_URL;
 
-const getParams = pathname => {
-  const url = new Url(pathname);
-  return url.query;
-};
-
-const getBasePath = pathname => {
-  const url = new Url(pathname);
-  return url.pathname;
-};
-
 export const getUrl = pathname => {
   if (!pathname) return '';
 
   let params = '';
 
   if (process.env.APP_ENV !== 'live') {
-    params = getParams(pathname);
+    params = getQueryString(pathname);
   }
 
-  const basePath = getBasePath(pathname);
+  const basePath = getUrlPath(pathname);
 
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`;
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -28,17 +29,15 @@ const GenerateMediaPlayer = ({
       <ToggleContext.Provider
         value={{ toggleState: defaultToggles, toggleDispatch: jest.fn() }}
       >
-        <ArticleMediaPlayerContainer blocks={blocks} />
+        <BrowserRouter>
+          <ArticleMediaPlayerContainer blocks={blocks} />
+        </BrowserRouter>
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
 );
 
 describe('MediaPlayer', () => {
-  beforeEach(() => {
-    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
-  });
-
   shouldMatchSnapshot(
     'Calls the canonical media player, with a placeholder',
     <GenerateMediaPlayer
