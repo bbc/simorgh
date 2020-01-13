@@ -1,0 +1,1809 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CpsAssetPageMain MAP should render component 1`] = `
+<DocumentFragment>
+  <noscript />
+  .c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+<main
+    class="c0"
+    role="main"
+  />
+  .c24 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+
+.c22 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 0.8125rem;
+}
+
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c19 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c23 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c13 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c7 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FFFFFF;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c2 {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.c4 {
+  margin: 0;
+  padding: 0;
+}
+
+.c9 {
+  border-bottom: 0.0625rem solid #F2F2F2;
+  padding: 0.5rem 0 1rem;
+}
+
+.c9:first-child {
+  padding-top: 0;
+}
+
+.c9:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c8 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c10 {
+  position: relative;
+}
+
+.c11 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c12 {
+  position: relative;
+}
+
+.c16 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c18 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c15 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c17 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c17:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c17:hover,
+.c17:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c17:visited {
+  color: #6E6E73;
+}
+
+.c20 {
+  padding: 0.5rem 0.25rem;
+  background-color: #FFFFFF;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #222222;
+  height: 2rem;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c25 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+}
+
+.c1 {
+  margin-bottom: 1rem;
+  z-index: 0;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c7 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c3 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    padding: 1.5rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9:first-child {
+    padding-top: 1.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c10 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    width: 33.33%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c11 {
+    display: block;
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:25rem) {
+  .c14 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c18 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c18 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c18 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c15 {
+    width: 66.67%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c15 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c20 {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+<aside
+    aria-labelledby="related-content-heading"
+    class="c0"
+    role="complementary"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <div
+          class="c3"
+        />
+        <h2
+          class="c4"
+        >
+          <div
+            class="c5"
+          >
+            <span
+              class="c6"
+            >
+              <span
+                class="c7"
+                dir="ltr"
+                id="related-content-heading"
+              >
+                Another thing we de for inside dis tori
+              </span>
+            </span>
+          </div>
+        </h2>
+      </div>
+      <ul
+        class="c8"
+        role="list"
+      >
+        <li
+          class="c9"
+          role="listitem"
+        >
+          <div
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="c14"
+                />
+              </div>
+            </div>
+            <div
+              class="c15"
+            >
+              <h3
+                class="c16"
+              >
+                <a
+                  class="c17"
+                  href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  Police Arrest 3 ontop Anambra Church Attack
+                </a>
+              </h3>
+              <p
+                class="c18"
+              >
+                Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
+              </p>
+              <time
+                class="c19"
+                datetime="2017-08-08"
+              >
+                8th August 2017
+              </time>
+            </div>
+          </div>
+        </li>
+        <li
+          class="c9"
+          role="listitem"
+        >
+          <div
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="c14"
+                />
+              </div>
+            </div>
+            <div
+              class="c15"
+            >
+              <h3
+                class="c16"
+              >
+                <a
+                  class="c17"
+                  href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
+                </a>
+              </h3>
+              <p
+                class="c18"
+              >
+                The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.
+              </p>
+              <time
+                class="c19"
+                datetime="2017-08-08"
+              >
+                8th August 2017
+              </time>
+            </div>
+          </div>
+        </li>
+        <li
+          class="c9"
+          role="listitem"
+        >
+          <div
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                />
+                <div
+                  class="c14"
+                >
+                  <div
+                    aria-hidden="true"
+                    class="c20"
+                  >
+                    <div
+                      class="c21"
+                    >
+                      <svg
+                        class="c22"
+                        focusable="false"
+                        height="13px"
+                        viewBox="0 0 32 26"
+                        width="16px"
+                      >
+                        <path
+                          d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
+                        />
+                        <circle
+                          cx="20"
+                          cy="14.02"
+                          r="5.5"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="c15"
+            >
+              <h3
+                class="c16"
+              >
+                <a
+                  class="c17"
+                  href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  <span
+                    role="text"
+                  >
+                    <span
+                      class="c23"
+                    >
+                      Image gallery, 
+                    </span>
+                    <span>
+                      Kenya Elections Pictures: 8 August 2017
+                    </span>
+                  </span>
+                </a>
+              </h3>
+              <p
+                class="c18"
+              >
+                This na some of the picture wey our eye see as Kenya people go vote for election today
+              </p>
+              <time
+                class="c19"
+                datetime="2017-08-08"
+              >
+                8th August 2017
+              </time>
+            </div>
+          </div>
+        </li>
+        <li
+          class="c9"
+          role="listitem"
+        >
+          <div
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="c14"
+                >
+                  <div
+                    aria-hidden="true"
+                    class="c20"
+                  >
+                    <div
+                      class="c21"
+                    >
+                      <svg
+                        class="c24"
+                        focusable="false"
+                        height="12px"
+                        viewBox="0 0 13 12"
+                        width="13px"
+                      >
+                        <path
+                          d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                        />
+                        <path
+                          d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                        />
+                      </svg>
+                      <time
+                        class="c25"
+                        datetime="PT15S"
+                      >
+                        0:15
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="c15"
+            >
+              <h3
+                class="c16"
+              >
+                <a
+                  class="c17"
+                  href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  <span
+                    role="text"
+                  >
+                    <span
+                      class="c23"
+                    >
+                      Audio, 
+                    </span>
+                    <span>
+                      BBC News Pidgin One Minute News
+                    </span>
+                    <span
+                      class="c23"
+                    >
+                      , 0,15
+                    </span>
+                  </span>
+                </a>
+              </h3>
+              <p
+                class="c18"
+              >
+                All di local and world tori wey you suppose know in 60 seconds!
+              </p>
+              <time
+                class="c19"
+                datetime="2017-08-17"
+              >
+                17th August 2017
+              </time>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </aside>
+</DocumentFragment>
+`;
+
+exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateStamp is false 1`] = `
+<DocumentFragment>
+  <noscript />
+  .c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+<main
+    class="c0"
+    role="main"
+  />
+  .c24 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+
+.c22 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 0.8125rem;
+}
+
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c19 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c23 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c13 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c7 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FFFFFF;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c2 {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.c4 {
+  margin: 0;
+  padding: 0;
+}
+
+.c9 {
+  border-bottom: 0.0625rem solid #F2F2F2;
+  padding: 0.5rem 0 1rem;
+}
+
+.c9:first-child {
+  padding-top: 0;
+}
+
+.c9:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c8 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c10 {
+  position: relative;
+}
+
+.c11 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c12 {
+  position: relative;
+}
+
+.c16 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c18 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c15 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c17 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c17:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c17:hover,
+.c17:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c17:visited {
+  color: #6E6E73;
+}
+
+.c20 {
+  padding: 0.5rem 0.25rem;
+  background-color: #FFFFFF;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #222222;
+  height: 2rem;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c25 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+}
+
+.c1 {
+  margin-bottom: 1rem;
+  z-index: 0;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c7 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c3 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    padding: 1.5rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9:first-child {
+    padding-top: 1.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c10 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    width: 33.33%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c11 {
+    display: block;
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:25rem) {
+  .c14 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c18 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c18 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c18 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c15 {
+    width: 66.67%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c15 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c20 {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+<aside
+    aria-labelledby="related-content-heading"
+    class="c0"
+    role="complementary"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <div
+          class="c3"
+        />
+        <h2
+          class="c4"
+        >
+          <div
+            class="c5"
+          >
+            <span
+              class="c6"
+            >
+              <span
+                class="c7"
+                dir="ltr"
+                id="related-content-heading"
+              >
+                Another thing we de for inside dis tori
+              </span>
+            </span>
+          </div>
+        </h2>
+      </div>
+      <ul
+        class="c8"
+        role="list"
+      >
+        <li
+          class="c9"
+          role="listitem"
+        >
+          <div
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="c14"
+                />
+              </div>
+            </div>
+            <div
+              class="c15"
+            >
+              <h3
+                class="c16"
+              >
+                <a
+                  class="c17"
+                  href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  Police Arrest 3 ontop Anambra Church Attack
+                </a>
+              </h3>
+              <p
+                class="c18"
+              >
+                Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
+              </p>
+              <time
+                class="c19"
+                datetime="2017-08-08"
+              >
+                8th August 2017
+              </time>
+            </div>
+          </div>
+        </li>
+        <li
+          class="c9"
+          role="listitem"
+        >
+          <div
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="c14"
+                />
+              </div>
+            </div>
+            <div
+              class="c15"
+            >
+              <h3
+                class="c16"
+              >
+                <a
+                  class="c17"
+                  href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
+                </a>
+              </h3>
+              <p
+                class="c18"
+              >
+                The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.
+              </p>
+              <time
+                class="c19"
+                datetime="2017-08-08"
+              >
+                8th August 2017
+              </time>
+            </div>
+          </div>
+        </li>
+        <li
+          class="c9"
+          role="listitem"
+        >
+          <div
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                />
+                <div
+                  class="c14"
+                >
+                  <div
+                    aria-hidden="true"
+                    class="c20"
+                  >
+                    <div
+                      class="c21"
+                    >
+                      <svg
+                        class="c22"
+                        focusable="false"
+                        height="13px"
+                        viewBox="0 0 32 26"
+                        width="16px"
+                      >
+                        <path
+                          d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
+                        />
+                        <circle
+                          cx="20"
+                          cy="14.02"
+                          r="5.5"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="c15"
+            >
+              <h3
+                class="c16"
+              >
+                <a
+                  class="c17"
+                  href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  <span
+                    role="text"
+                  >
+                    <span
+                      class="c23"
+                    >
+                      Image gallery, 
+                    </span>
+                    <span>
+                      Kenya Elections Pictures: 8 August 2017
+                    </span>
+                  </span>
+                </a>
+              </h3>
+              <p
+                class="c18"
+              >
+                This na some of the picture wey our eye see as Kenya people go vote for election today
+              </p>
+              <time
+                class="c19"
+                datetime="2017-08-08"
+              >
+                8th August 2017
+              </time>
+            </div>
+          </div>
+        </li>
+        <li
+          class="c9"
+          role="listitem"
+        >
+          <div
+            class="c10"
+          >
+            <div
+              class="c11"
+            >
+              <div
+                class="c12"
+              >
+                <div
+                  class="c13"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="c14"
+                >
+                  <div
+                    aria-hidden="true"
+                    class="c20"
+                  >
+                    <div
+                      class="c21"
+                    >
+                      <svg
+                        class="c24"
+                        focusable="false"
+                        height="12px"
+                        viewBox="0 0 13 12"
+                        width="13px"
+                      >
+                        <path
+                          d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                        />
+                        <path
+                          d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                        />
+                      </svg>
+                      <time
+                        class="c25"
+                        datetime="PT15S"
+                      >
+                        0:15
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="c15"
+            >
+              <h3
+                class="c16"
+              >
+                <a
+                  class="c17"
+                  href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  <span
+                    role="text"
+                  >
+                    <span
+                      class="c23"
+                    >
+                      Audio, 
+                    </span>
+                    <span>
+                      BBC News Pidgin One Minute News
+                    </span>
+                    <span
+                      class="c23"
+                    >
+                      , 0,15
+                    </span>
+                  </span>
+                </a>
+              </h3>
+              <p
+                class="c18"
+              >
+                All di local and world tori wey you suppose know in 60 seconds!
+              </p>
+              <time
+                class="c19"
+                datetime="2017-08-17"
+              >
+                17th August 2017
+              </time>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </aside>
+</DocumentFragment>
+`;
