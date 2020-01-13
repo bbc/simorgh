@@ -209,9 +209,20 @@ describe('CpsAssetPageMain', () => {
       expect(document.querySelector('main time')).not.toBeNull();
     });
 
-    it('should render two timestamps', () => {
+    it('should render first published timestamp and last updated timestamp for Pidgin', () => {
       expect(document.querySelectorAll('main time').length).toBe(2);
     });
+  });
+
+  it('should render first published timestamp and last updated timestamp for Igbo', async () => {
+    const pageData = await preprocessor(
+      igboPageData,
+      cpsAssetPreprocessorRules,
+    );
+
+    render(createAssetPage({ pageData }, 'igbo'));
+
+    expect(document.querySelectorAll('main time').length).toBe(2);
   });
 
   it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
