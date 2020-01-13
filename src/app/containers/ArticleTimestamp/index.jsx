@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { number, bool } from 'prop-types';
+import { number, bool, string } from 'prop-types';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import {
   PopOutGridItemMedium,
@@ -19,6 +19,7 @@ const ArticleTimestamp = ({
   lastPublished,
   popOut,
   minutesTolerance,
+  className,
 }) => {
   const {
     articleTimestampPrefix,
@@ -59,7 +60,7 @@ const ArticleTimestamp = ({
   const timeDifferenceMinutes = (lastPublished - firstPublished) / 1000 / 60;
 
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <Timestamp {...timestampProps} {...firstPublishedProps} />
       {timeDifferenceMinutes > minutesTolerance && (
         <Timestamp {...timestampProps} {...lastPublishedProps} />
@@ -73,6 +74,8 @@ ArticleTimestamp.propTypes = {
   lastPublished: number.isRequired,
   popOut: bool,
   minutesTolerance: number,
+  // eslint-disable-next-line react/require-default-props
+  className: string,
 };
 
 ArticleTimestamp.defaultProps = {
