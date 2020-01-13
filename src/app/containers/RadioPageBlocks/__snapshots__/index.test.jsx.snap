@@ -122,7 +122,7 @@ exports[`Radio Page Blocks should match snapshot for AMP 1`] = `
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
               scrolling="no"
-              src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
+              src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
               title="Audio player"
             >
               <amp-img
@@ -265,7 +265,7 @@ exports[`Radio Page Blocks should match snapshot for Canonical 1`] = `
           allowfullscreen=""
           class="c5"
           scrolling="no"
-          src="https://embed-host.bbc.com/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
+          src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
           title="Audio player"
         />
       </div>

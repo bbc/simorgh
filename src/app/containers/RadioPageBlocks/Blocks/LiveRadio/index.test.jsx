@@ -4,6 +4,7 @@ import {
   isNull,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
+import { BrowserRouter } from 'react-router-dom';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import LiveRadio from '.';
@@ -11,20 +12,18 @@ import LiveRadio from '.';
 const origin = 'http://localhost:7080';
 
 describe('MediaPageBlocks LiveRadio', () => {
-  beforeEach(() => {
-    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
-  });
-
   shouldMatchSnapshot(
     'should render correctly for canonical',
     <RequestContext.Provider value={{ platform: 'canonical', origin }}>
       <ServiceContextProvider service="korean">
-        <LiveRadio
-          uuid="uuid"
-          idAttr="idAttr"
-          externalId="externalId"
-          id="id"
-        />
+        <BrowserRouter>
+          <LiveRadio
+            uuid="uuid"
+            idAttr="idAttr"
+            externalId="externalId"
+            id="id"
+          />
+        </BrowserRouter>
       </ServiceContextProvider>
     </RequestContext.Provider>,
   );
@@ -36,12 +35,14 @@ describe('MediaPageBlocks LiveRadio', () => {
     'should render correctly for amp',
     <RequestContext.Provider value={{ platform: 'amp', origin }}>
       <ServiceContextProvider service="korean">
-        <LiveRadio
-          uuid="uuid"
-          idAttr="idAttr"
-          externalId="externalId"
-          id="id"
-        />
+        <BrowserRouter>
+          <LiveRadio
+            uuid="uuid"
+            idAttr="idAttr"
+            externalId="externalId"
+            id="id"
+          />
+        </BrowserRouter>
       </ServiceContextProvider>
     </RequestContext.Provider>,
   );
@@ -53,12 +54,14 @@ describe('MediaPageBlocks LiveRadio', () => {
       'should render null',
       <RequestContext.Provider value={{ platform: 'foobar', origin }}>
         <ServiceContextProvider service="korean">
-          <LiveRadio
-            uuid="uuid"
-            idAttr="idAttr"
-            externalId="externalId"
-            id="id"
-          />
+          <BrowserRouter>
+            <LiveRadio
+              uuid="uuid"
+              idAttr="idAttr"
+              externalId="externalId"
+              id="id"
+            />
+          </BrowserRouter>
         </ServiceContextProvider>
       </RequestContext.Provider>,
     );
@@ -71,7 +74,9 @@ describe('MediaPageBlocks LiveRadio', () => {
       'should render null',
       <RequestContext.Provider value={{ platform: 'foobar', origin }}>
         <ServiceContextProvider service="korean">
-          <LiveRadio uuid="uuid" idAttr="idAttr" externalId="externalId" />
+          <BrowserRouter>
+            <LiveRadio uuid="uuid" idAttr="idAttr" externalId="externalId" />
+          </BrowserRouter>
         </ServiceContextProvider>
       </RequestContext.Provider>,
     );
@@ -84,7 +89,9 @@ describe('MediaPageBlocks LiveRadio', () => {
       'should render null',
       <RequestContext.Provider value={{ platform: 'foobar', origin }}>
         <ServiceContextProvider service="korean">
-          <LiveRadio uuid="uuid" idAttr="idAttr" id="id" />
+          <BrowserRouter>
+            <LiveRadio uuid="uuid" idAttr="idAttr" id="id" />
+          </BrowserRouter>
         </ServiceContextProvider>
       </RequestContext.Provider>,
     );
@@ -95,12 +102,14 @@ describe('MediaPageBlocks LiveRadio', () => {
       'should render correctly for canonical',
       <RequestContext.Provider value={{ platform: 'canonical', origin }}>
         <ServiceContextProvider service="afaanoromoo">
-          <LiveRadio
-            uuid="uuid"
-            idAttr="idAttr"
-            externalId="bbc_oromo_radio"
-            id="id"
-          />
+          <BrowserRouter>
+            <LiveRadio
+              uuid="uuid"
+              idAttr="idAttr"
+              externalId="bbc_oromo_radio"
+              id="id"
+            />
+          </BrowserRouter>
         </ServiceContextProvider>
       </RequestContext.Provider>,
     );
@@ -112,12 +121,14 @@ describe('MediaPageBlocks LiveRadio', () => {
       'should render correctly for amp',
       <RequestContext.Provider value={{ platform: 'amp', origin }}>
         <ServiceContextProvider service="afaanoromoo">
-          <LiveRadio
-            uuid="uuid"
-            idAttr="idAttr"
-            externalId="bbc_oromo_radio"
-            id="id"
-          />
+          <BrowserRouter>
+            <LiveRadio
+              uuid="uuid"
+              idAttr="idAttr"
+              externalId="bbc_oromo_radio"
+              id="id"
+            />
+          </BrowserRouter>
         </ServiceContextProvider>
       </RequestContext.Provider>,
     );
