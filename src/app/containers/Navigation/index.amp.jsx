@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from '@bbc/psammead-navigation';
 import { node, string, shape } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { AmpScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
+import { ScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
 import { AmpDropdown, AmpMenuButton } from '@bbc/psammead-navigation/dropdown';
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import styled from 'styled-components';
@@ -13,7 +13,7 @@ const SCROLLABLE_ID = 'scrollable-nav';
 const HIDDEN_CLASS_NAME = 'scrollable-hidden';
 const OPEN_CLASS_NAME = 'open';
 
-const StyledAmpScrollableNavigation = styled(AmpScrollableNavigation)`
+const StyledAmpScrollableNavigation = styled(ScrollableNavigation)`
   &.${HIDDEN_CLASS_NAME} {
     @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
       display: none;

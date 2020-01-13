@@ -3,13 +3,11 @@ import styled from 'styled-components';
 import Navigation from '@bbc/psammead-navigation';
 import { node, string, shape } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import { CanonicalScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
+import { ScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
 import {
   CanonicalDropdown,
   CanonicalMenuButton,
 } from '@bbc/psammead-navigation/dropdown';
-import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
-import useMediaQuery from '#lib/utilities/useMediaQuery';
 
 const ScrollableWrapper = styled.div`
   position: relative;
@@ -24,14 +22,6 @@ const CanonicalNavigationContainer = ({
   dropdownListItems,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrollable, setIsScrollable] = useState(false);
-
-  useMediaQuery(`(max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX})`, event => {
-    setIsScrollable(event.matches);
-    if (!event.matches) {
-      setIsOpen(false);
-    }
-  });
 
   return (
     <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
@@ -44,9 +34,9 @@ const CanonicalNavigationContainer = ({
           script={script}
         />
         {!isOpen && (
-          <CanonicalScrollableNavigation dir={dir} isScrollable={isScrollable}>
+          <ScrollableNavigation dir={dir}>
             {scrollableListItems}
-          </CanonicalScrollableNavigation>
+          </ScrollableNavigation>
         )}
       </ScrollableWrapper>
       <CanonicalDropdown isOpen={isOpen}>{dropdownListItems}</CanonicalDropdown>
