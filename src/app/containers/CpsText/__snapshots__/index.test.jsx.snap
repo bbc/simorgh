@@ -22,6 +22,7 @@ exports[`CpsTextContainer with data should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: 0;
   list-style-type: none;
 }
 
