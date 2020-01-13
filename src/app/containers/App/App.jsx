@@ -41,7 +41,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       }
       shouldSetFocus.current = false;
     }
-  }, [state.loading]);
+  }, [state.loading, state.pageData]);
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -56,28 +56,41 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         route,
       } = getRouteProps(routes, location.pathname);
 
-      setState({
-        pageData: null,
-        status: null,
-        service: nextService,
-        variant: nextVariant,
-        id: nextId,
-        isAmp: nextIsAmp,
-        pageType: route.pageType,
-        loading: true,
-        error: null,
-        errorCode: null,
+      let loaderTimeout;
+      const loaderPromise = new Promise(resolve => {
+        loaderTimeout = setTimeout(resolve, 500);
+      });
+
+      loaderPromise.then(() => {
+        setState({
+          pageData: null,
+          status: null,
+          service: nextService,
+          variant: nextVariant,
+          id: nextId,
+          isAmp: nextIsAmp,
+          pageType: route.pageType,
+          loading: true,
+          error: null,
+          errorCode: null,
+        });
       });
 
       route.getInitialData(location.pathname).then(data => {
+        clearTimeout(loaderTimeout);
         shouldSetFocus.current = true;
-        setState(prevState => ({
-          ...prevState,
+        setState({
+          service: nextService,
+          variant: nextVariant,
+          id: nextId,
+          isAmp: nextIsAmp,
+          pageType: route.pageType,
           loading: false,
           pageData: path(['pageData'], data),
           status: path(['status'], data),
           error: path(['error'], data),
-        }));
+          errorCode: null,
+        });
       });
     }
   }, [routes, location.pathname]);
