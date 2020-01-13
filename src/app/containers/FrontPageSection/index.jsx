@@ -13,7 +13,7 @@ import {
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
-import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
+import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import pathOr from 'ramda/src/pathOr';
 import UsefulLinksComponent from './UsefulLinks';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -187,30 +187,75 @@ const renderStoryPromoList = (groupType, items, isFirstSection) => {
       ? getTopStoryLayout(items)
       : getSectionLayout(items);
 
+  const storyPromoUlStyles = css`
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  `;
+  const GridList = styled(Grid)`
+    ${storyPromoUlStyles}
+  `;
+  const GridListItem = styled(Grid)`
+    border-bottom: 0.0625rem solid ${C_LUNAR};
+    padding: ${GEL_SPACING} 0 ${GEL_SPACING_DBL};
+
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+      padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
+    }
+
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING_TRPL};
+    }
+
+    &:first-child {
+      padding-top: 0;
+
+      @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+        padding-top: 1rem;
+      }
+
+      @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+        padding-top: 1.5rem;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border: none;
+    }
+  `;
+
   return (
-    <StoryPromoUl>
-      <Grid enableGelGutters columns={fullWidthStoryPromoColumns}>
-        {items.slice(0, itemsToDisplay).map((item, index) => {
-          const topStory = isTopStory(index);
-          const displayImage = index < imageDisplayThreshold;
-          const isLeading = isLeadingStory(index);
-          const groups = columns(index);
-          return (
-            <Grid item columns={groups} key={item.id}>
-              <StoryPromoLi>
-                <StoryPromoComponent
-                  item={item}
-                  topStory={topStory}
-                  displayImage={displayImage}
-                  isFirstSection={isFirstSection}
-                  isLeading={isLeading}
-                />
-              </StoryPromoLi>
-            </Grid>
-          );
-        })}
-      </Grid>
-    </StoryPromoUl>
+    <GridList
+      forwardedAs="ul"
+      role="list"
+      enableGelGutters
+      columns={fullWidthStoryPromoColumns}
+    >
+      {items.slice(0, itemsToDisplay).map((item, index) => {
+        const topStory = isTopStory(index);
+        const displayImage = index < imageDisplayThreshold;
+        const isLeading = isLeadingStory(index);
+        const groups = columns(index);
+        return (
+          <GridListItem
+            item
+            columns={groups}
+            key={item.id}
+            as="li"
+            role="listitem"
+          >
+            <StoryPromoComponent
+              item={item}
+              topStory={topStory}
+              displayImage={displayImage}
+              isFirstSection={isFirstSection}
+              isLeading={isLeading}
+            />
+          </GridListItem>
+        );
+      })}
+    </GridList>
   );
 };
 
