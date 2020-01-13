@@ -467,8 +467,7 @@ const genServices = appEnv => ({
       frontPage: { path: '/igbo', smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv) ? undefined : '/igbo/media-23256786',
+        path: isLive(appEnv) ? undefined : '/igbo/media-23256786',
         smoke: false,
       },
     },
@@ -844,7 +843,7 @@ const genServices = appEnv => ({
       frontPage: { path: '/pidgin', smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/pidgin/23248703',
+        path: isLive(appEnv) ? undefined : '/pidgin/23248703',
         smoke: false,
       },
     },
@@ -1383,7 +1382,7 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/ukrainian/articles/c0glz45kqz6o',
+        path: isLive(appEnv) ? undefined : '/ukrainian/articles/cp4l2mrejvdo',
         smoke: false,
       },
       errorPage404: {
@@ -1526,10 +1525,7 @@ const genServices = appEnv => ({
       frontPage: { path: '/yoruba', smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/yoruba/media-23256797',
+        path: isLive(appEnv) ? undefined : '/yoruba/media-23256797',
         smoke: false,
       },
     },
