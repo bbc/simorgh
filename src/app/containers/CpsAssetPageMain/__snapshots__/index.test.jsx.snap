@@ -487,7 +487,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
             allowfullscreen=""
             class="c5"
             scrolling="no"
-            src="https://embed-host.bbc.com/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
             title="Медиа плейер"
           />
         </div>
@@ -1367,7 +1367,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
             allowfullscreen=""
             class="c5"
             scrolling="no"
-            src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
             title="Media player"
           />
         </div>
@@ -3699,7 +3699,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://embed-host.bbc.com/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"}
+      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"}
     </script>
   </head>
   <body>
@@ -4060,7 +4060,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                 allowfullscreen=""
                 class="c23"
                 scrolling="no"
-                src="https://embed-host.bbc.com/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"
+                src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"
                 title="Media player"
               />
             </div>
@@ -4727,7 +4727,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
             allowfullscreen=""
             class="c5"
             scrolling="no"
-            src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
             title="Media player"
           />
         </div>
