@@ -208,6 +208,10 @@ describe('CpsAssetPageMain', () => {
     it('should render timestamp', () => {
       expect(document.querySelector('main time')).not.toBeNull();
     });
+
+    it('should render two timestamps', () => {
+      expect(document.querySelectorAll('main time').length).toBe(2);
+    });
   });
 
   it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
