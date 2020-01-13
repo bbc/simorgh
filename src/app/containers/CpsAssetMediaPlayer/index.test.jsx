@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import {
   shouldMatchSnapshot,
   isNull,
@@ -33,17 +34,15 @@ const GenerateMediaPlayer = ({
       <ToggleContext.Provider
         value={{ toggleState: defaultToggles, toggleDispatch: jest.fn() }}
       >
-        <CpsAssetMediaPlayerContainer blocks={blocks} assetUri={assetUri} />
+        <BrowserRouter>
+          <CpsAssetMediaPlayerContainer blocks={blocks} assetUri={assetUri} />
+        </BrowserRouter>
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
 );
 
 describe('MediaPlayer', () => {
-  beforeEach(() => {
-    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
-  });
-
   shouldMatchSnapshot(
     'render the canonical player without a placeholder',
     <GenerateMediaPlayer
