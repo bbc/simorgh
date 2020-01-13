@@ -88,6 +88,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: 0;
   list-style-type: none;
 }
 
@@ -898,6 +899,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: 0;
   list-style-type: none;
 }
 
@@ -2825,6 +2827,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: 0;
   list-style-type: none;
 }
 
@@ -4276,6 +4279,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: 0;
   list-style-type: none;
 }
 
