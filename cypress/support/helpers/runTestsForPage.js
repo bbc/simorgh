@@ -19,6 +19,18 @@ import {
 const serviceHasPageType = (service, pageType) =>
   config[service].pageTypes[pageType].path !== undefined;
 
+const visitPage = (path, pageType) => {
+  const expectedContentType = 'text/html';
+  const isErrorPage = pageType.includes('error');
+  const expectedStatus = isErrorPage ? 404 : 200;
+  const failOnStatusCode = !isErrorPage;
+
+  cy.testResponseCodeAndType(path, expectedStatus, expectedContentType);
+  cy.visit(path, {
+    failOnStatusCode,
+  });
+};
+
 // This function takes all types of tests we have and runs in this series of steps with the fewest possible page visits
 
 // Pass arguments in from each page's index.js file
@@ -40,9 +52,7 @@ const runTestsForPage = ({
     .forEach(service => {
       describe(`${pageType} - ${service} - Canonical`, () => {
         before(() => {
-          cy.visit(config[service].pageTypes[pageType].path, {
-            failOnStatusCode: !pageType.includes('error'),
-          });
+          visitPage(config[service].pageTypes[pageType].path, pageType);
         });
 
         const testArgs = {
@@ -80,9 +90,10 @@ const runTestsForPage = ({
       // Switch to AMP page URL (NB all our pages have AMP variants)
       describe(`${pageType} - ${service} - Amp`, () => {
         before(() => {
-          cy.visit(`${config[service].pageTypes[pageType].path}.amp`, {
-            failOnStatusCode: !pageType.includes('error'),
-          });
+          visitPage(
+            `${config[service].pageTypes[pageType].path}.amp`,
+            pageType,
+          );
         });
 
         const testArgs = {
