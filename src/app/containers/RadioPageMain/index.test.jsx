@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -11,10 +12,6 @@ import { radioPagePreprocessorRules } from '#app/routes/getInitialData/utils/pre
 analyticsUtils.getAtUserId = jest.fn();
 
 describe('Radio Page Main', () => {
-  beforeEach(() => {
-    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
-  });
-
   it('should match snapshot for Canonical', async () => {
     const pageData = await preprocessor(
       amharicPageData,
@@ -31,7 +28,9 @@ describe('Radio Page Main', () => {
           service="amharic"
           statusCode={200}
         >
-          <RadioPageMain service="amharic" pageData={pageData} />
+          <BrowserRouter>
+            <RadioPageMain service="amharic" pageData={pageData} />
+          </BrowserRouter>
         </RequestContextProvider>
       </ServiceContextProvider>,
     );
@@ -53,7 +52,9 @@ describe('Radio Page Main', () => {
           service="amharic"
           statusCode={200}
         >
-          <RadioPageMain service="amharic" pageData={pageData} />
+          <BrowserRouter>
+            <RadioPageMain service="amharic" pageData={pageData} />
+          </BrowserRouter>
         </RequestContextProvider>
       </ServiceContextProvider>,
     );
