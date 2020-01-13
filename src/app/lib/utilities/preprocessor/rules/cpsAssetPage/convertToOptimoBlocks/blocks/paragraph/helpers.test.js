@@ -53,7 +53,7 @@ describe('processBlock', () => {
     expect(processBlock(input)).toEqual(expected);
   });
 
-  it('should escape quotes for candy_xml', () => {
+  it('should not handle special characters for candy_xml', () => {
     const input = {
       text: 'Paragraph containing special characters: &quot; &amp; &lt; &gt;',
       markupType: 'candy_xml',
@@ -61,7 +61,7 @@ describe('processBlock', () => {
     };
 
     const expected = {
-      text: 'Paragraph containing special characters: " & < >',
+      text: 'Paragraph containing special characters: &quot; &amp; &lt; &gt;',
       markupType: 'candy_xml',
       type: 'paragraph',
     };
