@@ -8,6 +8,8 @@ const boldWrap = text => `<bold>${text}</bold>`;
 const parseReplacements = (
   text,
   replacements = {
+    '%3C': '&lt;',
+    '%3E': '&gt;',
     '&quot;': '"',
     '&amp;': '&',
     '&lt;': '<',

@@ -1,7 +1,7 @@
 import transformer from '.';
 
-import data from './data';
-import expectation from './fixture';
+import inputFixture from './inputFixture';
+import outputFixture from './outputFixture';
 
 const wrapBlock = settings => ({
   content: {
@@ -57,8 +57,8 @@ const generateUrl = ([relativePath, linkText]) => {
 const scenarios = [
   {
     name: 'Real data - Pidgin fixture',
-    input: data,
-    expectation,
+    input: inputFixture,
+    expectation: outputFixture,
   },
   {
     name: 'Basic',
@@ -69,6 +69,17 @@ const scenarios = [
     expectation: wrapBlock({
       meta: generateMeta(['afrique/23248423', 'Hello']),
       text: generateUrl(['afrique/23248423', 'Hello']),
+    }),
+  },
+  {
+    name: 'Chevrons',
+    input: wrapBlock({
+      meta: generateMeta(['afrique/23248423', '<Hello>']),
+      text: '<itemMeta>afrique/23248423</itemMeta>',
+    }),
+    expectation: wrapBlock({
+      meta: generateMeta(['afrique/23248423', '<Hello>']),
+      text: generateUrl(['afrique/23248423', '%3CHello%3E']),
     }),
   },
   {

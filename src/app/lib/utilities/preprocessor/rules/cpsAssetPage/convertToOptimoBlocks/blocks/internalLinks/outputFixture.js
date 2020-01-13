@@ -1,3 +1,4 @@
+// expected output of transformer given fixture: pidgin/23248703
 module.exports = {
   content: {
     blocks: [
@@ -64,35 +65,7 @@ module.exports = {
           {
             headlines: {
               headline: 'Lorem ipsum dolor sit amet, consectetur',
-              overtyped: '<Media Asset Page>',
-              shortHeadline: 'Lorem ipsum dolor sit amet, consectetur',
-            },
-            id: 'urn:bbc:ares::asset:afrique/23248423',
-            locators: {
-              href: 'http://www.bbc.com/afrique/23248423',
-            },
-            passport: {
-              category: {
-                categoryId: '',
-                categoryName: '',
-              },
-              taggings: [],
-            },
-            summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-            timestamp: 1568218735000,
-            type: 'cps',
-          },
-        ],
-        text: '<itemMeta>afrique/23248423</itemMeta>',
-        type: 'paragraph',
-      },
-      {
-        markupType: 'candy_xml',
-        meta: [
-          {
-            headlines: {
-              headline: 'Lorem ipsum dolor sit amet, consectetur',
-              overtyped: '<Media Asset Page>',
+              overtyped: '<Media Asset Page 1>',
               shortHeadline: 'Lorem ipsum dolor sit amet, consectetur',
             },
             id: 'urn:bbc:ares::asset:afrique/23248423',
@@ -112,7 +85,36 @@ module.exports = {
           },
         ],
         text:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <itemMeta>afrique/23248423</itemMeta> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          '<link><caption>%3CMedia Asset Page 1%3E</caption><altText>%3CMedia Asset Page 1%3E</altText><url href="http://www.bbc.com/afrique/23248423" platform="highweb"/><url href="http://www.bbc.com/afrique/23248423" platform="enhancedmobile"/></link>',
+        type: 'paragraph',
+      },
+      {
+        markupType: 'candy_xml',
+        meta: [
+          {
+            headlines: {
+              headline: 'Lorem ipsum dolor sit amet, consectetur',
+              overtyped: '<Media Asset Page 2>',
+              shortHeadline: 'Lorem ipsum dolor sit amet, consectetur',
+            },
+            id: 'urn:bbc:ares::asset:afrique/23248423',
+            locators: {
+              href: 'http://www.bbc.com/afrique/23248423',
+            },
+            passport: {
+              category: {
+                categoryId: '',
+                categoryName: '',
+              },
+              taggings: [],
+            },
+            summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            timestamp: 1568218735000,
+            type: 'cps',
+          },
+        ],
+        text:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <link><caption>%3CMedia Asset Page 2%3E</caption><altText>%3CMedia Asset Page 2%3E</altText><url href="http://www.bbc.com/afrique/23248423" platform="highweb"/><url href="http://www.bbc.com/afrique/23248423" platform="enhancedmobile"/></link> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         type: 'paragraph',
       },
       {
@@ -123,7 +125,7 @@ module.exports = {
               {
                 headlines: {
                   headline: 'Lorem ipsum dolor sit amet, consectetur',
-                  overtyped: '<Media Asset Page>',
+                  overtyped: '<Media Asset Page 3>',
                   shortHeadline: 'Lorem ipsum dolor sit amet, consectetur',
                 },
                 id: 'urn:bbc:ares::asset:afrique/23248423',
@@ -143,7 +145,8 @@ module.exports = {
                 type: 'cps',
               },
             ],
-            text: '<itemMeta>afrique/23248423</itemMeta>',
+            text:
+              '<link><caption>%3CMedia Asset Page 3%3E</caption><altText>%3CMedia Asset Page 3%3E</altText><url href="http://www.bbc.com/afrique/23248423" platform="highweb"/><url href="http://www.bbc.com/afrique/23248423" platform="enhancedmobile"/></link>',
             type: 'listItem',
           },
           {
@@ -152,7 +155,7 @@ module.exports = {
               {
                 headlines: {
                   headline: 'Lorem ipsum dolor sit amet, consectetur',
-                  overtyped: '<Media Asset Page>',
+                  overtyped: '<Media Asset Page 4>',
                   shortHeadline: 'Lorem ipsum dolor sit amet, consectetur',
                 },
                 id: 'urn:bbc:ares::asset:afrique/23248423',
@@ -172,7 +175,8 @@ module.exports = {
                 type: 'cps',
               },
             ],
-            text: '<itemMeta>afrique/23248423</itemMeta>',
+            text:
+              '<link><caption>%3CMedia Asset Page 4%3E</caption><altText>%3CMedia Asset Page 4%3E</altText><url href="http://www.bbc.com/afrique/23248423" platform="highweb"/><url href="http://www.bbc.com/afrique/23248423" platform="enhancedmobile"/></link>',
             type: 'listItem',
           },
           {
@@ -181,7 +185,7 @@ module.exports = {
               {
                 headlines: {
                   headline: 'Lorem ipsum dolor sit amet, consectetur',
-                  overtyped: '<Media Asset Page>',
+                  overtyped: '<Media Asset Page 5>',
                   shortHeadline: 'Lorem ipsum dolor sit amet, consectetur',
                 },
                 id: 'urn:bbc:ares::asset:afrique/23248423',
@@ -201,7 +205,8 @@ module.exports = {
                 type: 'cps',
               },
             ],
-            text: '<itemMeta>afrique/23248423</itemMeta>',
+            text:
+              '<link><caption>%3CMedia Asset Page 5%3E</caption><altText>%3CMedia Asset Page 5%3E</altText><url href="http://www.bbc.com/afrique/23248423" platform="highweb"/><url href="http://www.bbc.com/afrique/23248423" platform="enhancedmobile"/></link>',
             type: 'listItem',
           },
           {
