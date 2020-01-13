@@ -463,6 +463,12 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   }
 }
 
+@media (min-width:63rem) {
+  .c9 {
+    padding-bottom: 1.5rem;
+  }
+}
+
 <main
     class="c0"
     role="main"
@@ -1341,6 +1347,12 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   .c2 {
     padding-top: 0.5rem;
     margin-top: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -3484,6 +3496,12 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) {
   .c25 {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c14 {
+    padding-bottom: 1.5rem;
   }
 }
 
