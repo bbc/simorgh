@@ -1,4 +1,6 @@
 import React from 'react';
+import styled from 'styled-components';
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { GhostGrid } from '#lib/styledGrid';
@@ -39,7 +41,7 @@ const CpsAssetPageMain = ({ pageData }) => {
     text,
     image,
     timestamp: props =>
-      allowDateStamp ? <Timestamp {...props} popOut={false} /> : null,
+      allowDateStamp ? <StyledTimestamp {...props} popOut={false} /> : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };
@@ -69,6 +71,10 @@ const CpsAssetPageMain = ({ pageData }) => {
     </>
   );
 };
+
+const StyledTimestamp = styled(Timestamp)`
+  padding-bottom: ${GEL_SPACING_DBL};
+`;
 
 CpsAssetPageMain.propTypes = cpsAssetPagePropTypes;
 
