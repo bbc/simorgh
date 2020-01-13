@@ -52,7 +52,6 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 
 .c11 {
@@ -425,7 +424,6 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 
 .c11 {
@@ -793,7 +791,6 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 
 .c10 {
@@ -1150,7 +1147,6 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 
 .c10 {
@@ -1493,7 +1489,6 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -1761,7 +1756,6 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -2024,7 +2018,6 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -2330,7 +2323,6 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -2644,7 +2636,6 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -2772,14 +2763,14 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 
 @media (min-width:37.5rem) {
   .c1 {
-    width: 50%;
+    width: calc(50% - 0.5rem);
     margin-bottom: 0;
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c1 {
-    width: 33.33%;
+    width: calc(50% - 0.5rem);
   }
 }
 
@@ -2798,9 +2789,9 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:63rem) {
   .c5 {
-    width: 66.67%;
+    width: 50%;
   }
 }
 
@@ -3052,7 +3043,6 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -3320,7 +3310,6 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -3583,7 +3572,6 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -3851,7 +3839,6 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 
 .c7 {
@@ -4123,7 +4110,6 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 
 .c11 {
@@ -4493,7 +4479,6 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 
 .c11 {
