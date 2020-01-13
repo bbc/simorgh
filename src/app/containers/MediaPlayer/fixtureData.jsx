@@ -1,5 +1,6 @@
 import React from 'react';
 import { string, shape, arrayOf, object, bool } from 'prop-types';
+import { BrowserRouter } from 'react-router-dom';
 import { singleTextBlock } from '#models/blocks';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -369,12 +370,14 @@ const GenerateFixtureData = ({
       <ToggleContext.Provider
         value={{ toggleState, toggleDispatch: jest.fn() }}
       >
-        <MediaPlayerContainer
-          blocks={blocks}
-          assetId={assetId}
-          assetType={assetType}
-          showPlaceholder={showPlaceholder}
-        />
+        <BrowserRouter>
+          <MediaPlayerContainer
+            blocks={blocks}
+            assetId={assetId}
+            assetType={assetType}
+            showPlaceholder={showPlaceholder}
+          />
+        </BrowserRouter>
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
