@@ -230,7 +230,7 @@ describe('CpsAssetPageMain', () => {
 
   it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
     const pageData = await preprocessor(
-      igboPageData,
+      styIgboPageData,
       cpsAssetPreprocessorRules,
     );
 
