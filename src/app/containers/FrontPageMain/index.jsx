@@ -47,6 +47,7 @@ const startOffsets = {
 
 const FrontPageMain = ({ frontPageData }) => {
   const {
+    dir,
     product,
     serviceLocalizedName,
     translations,
@@ -80,10 +81,11 @@ const FrontPageMain = ({ frontPageData }) => {
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
-        <FrontPageGrid columns={mainColumns} enableGelGutters>
+        <FrontPageGrid columns={mainColumns} dir={dir} enableGelGutters>
           <Grid
             item
             columns={itemColumns}
+            dir={dir}
             startOffset={startOffsets}
             margins={itemMargins}
           >
