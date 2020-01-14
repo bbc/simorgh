@@ -18,6 +18,7 @@ const ArticleTimestamp = ({
   firstPublished,
   lastPublished,
   popOut,
+  minutesTolerance,
   className,
 }) => {
   const {
@@ -56,10 +57,12 @@ const ArticleTimestamp = ({
 
   const Wrapper = popOut ? PopOutGridItemMedium : GridItemConstrainedMedium;
 
+  const timeDifferenceMinutes = (lastPublished - firstPublished) / 1000 / 60;
+
   return (
     <Wrapper className={className}>
       <Timestamp {...timestampProps} {...firstPublishedProps} />
-      {firstPublished !== lastPublished && (
+      {timeDifferenceMinutes > minutesTolerance && (
         <Timestamp {...timestampProps} {...lastPublishedProps} />
       )}
     </Wrapper>
@@ -70,12 +73,14 @@ ArticleTimestamp.propTypes = {
   firstPublished: number.isRequired,
   lastPublished: number.isRequired,
   popOut: bool,
+  minutesTolerance: number,
   // eslint-disable-next-line react/require-default-props
   className: string,
 };
 
 ArticleTimestamp.defaultProps = {
   popOut: true,
+  minutesTolerance: 0,
 };
 
 export default ArticleTimestamp;
