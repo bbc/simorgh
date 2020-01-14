@@ -11,8 +11,8 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import CpsAssetPageMain from '.';
 import preprocessor from '#lib/utilities/preprocessor';
-import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
-import styPidginPageData from '#data/pidgin/cpsAssets/23248703';
+import styIgboPageData from '#data/igbo/cpsAssets/afirika-23252735';
+import mapPidginPageData from '#data/pidgin/cpsAssets/23248703';
 import pglPidginPageData from '#data/pidgin/cpsAssets/sport-23252855';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
 import { cpsAssetPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
@@ -77,7 +77,7 @@ const getBlockTextAtIndex = (index, originalPageData) => {
 describe('CpsAssetPageMain', () => {
   it('should match snapshot for STY', async () => {
     const pageData = await preprocessor(
-      igboPageData,
+      styIgboPageData,
       cpsAssetPreprocessorRules,
     );
 
@@ -101,7 +101,10 @@ describe('CpsAssetPageMain', () => {
     let getByText;
 
     beforeEach(async () => {
-      pageData = await preprocessor(pidginPageData, cpsAssetPreprocessorRules);
+      pageData = await preprocessor(
+        mapPidginPageData,
+        cpsAssetPreprocessorRules,
+      );
 
       ({ asFragment, getByText } = render(
         createAssetPage({ pageData }, 'pidgin'),
@@ -113,7 +116,7 @@ describe('CpsAssetPageMain', () => {
     });
 
     it('should render paragraph', () => {
-      const paragraphText = getBlockTextAtIndex(1, pidginPageData);
+      const paragraphText = getBlockTextAtIndex(1, mapPidginPageData);
 
       expect(getByText(escapedText(paragraphText))).toBeInTheDocument();
     });
@@ -121,7 +124,7 @@ describe('CpsAssetPageMain', () => {
     it('should render image', () => {
       const imageCaption = path(
         ['content', 'blocks', 25, 'caption'],
-        pidginPageData,
+        mapPidginPageData,
       );
 
       // Images not rendered properly due to lazyload, therefore can only check caption text
@@ -186,7 +189,7 @@ describe('CpsAssetPageMain', () => {
       };
 
       beforeAll(() => {
-        headingText = getBlockTextAtIndex(2, pidginPageData);
+        headingText = getBlockTextAtIndex(2, mapPidginPageData);
       });
 
       it('should render faux headline', () => {
@@ -205,13 +208,13 @@ describe('CpsAssetPageMain', () => {
     });
 
     it('should render sub heading', () => {
-      const subHeadingText = getBlockTextAtIndex(3, pidginPageData);
+      const subHeadingText = getBlockTextAtIndex(3, mapPidginPageData);
 
       expect(getByText(escapedText(subHeadingText))).toBeInTheDocument();
     });
 
     it('should render crosshead', () => {
-      const crossHeadText = getBlockTextAtIndex(4, pidginPageData);
+      const crossHeadText = getBlockTextAtIndex(4, mapPidginPageData);
 
       expect(getByText(escapedText(crossHeadText))).toBeInTheDocument();
     });
@@ -225,7 +228,7 @@ describe('CpsAssetPageMain', () => {
     const pageDataWithHiddenTimestamp = assocPath(
       ['metadata', 'options', 'allowDateStamp'],
       false,
-      await preprocessor(pidginPageData, cpsAssetPreprocessorRules),
+      await preprocessor(mapPidginPageData, cpsAssetPreprocessorRules),
     );
 
     const { asFragment } = render(
@@ -238,7 +241,7 @@ describe('CpsAssetPageMain', () => {
 
   it('has a single "main" element, and a single "complementary" element (a11y)', async () => {
     const pageData = await preprocessor(
-      pidginPageData,
+      mapPidginPageData,
       cpsAssetPreprocessorRules,
     );
 
