@@ -205,9 +205,24 @@ describe('CpsAssetPageMain', () => {
       expect(getByText(escapedText(crossHeadText))).toBeInTheDocument();
     });
 
-    it('should render timestamp', () => {
-      expect(document.querySelector('main time')).not.toBeNull();
+    it('should render firstPublished timestamp for Pidgin', () => {
+      expect(getByText('13 September 2019')).toBeInTheDocument();
     });
+
+    it('should render lastPublished timestamp for Pidgin', () => {
+      expect(getByText('New Informate 20 November 2019')).toBeInTheDocument();
+    });
+  });
+
+  it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
+    const pageData = await preprocessor(
+      igboPageData,
+      cpsAssetPreprocessorRules,
+    );
+
+    const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
+
+    expect(getByText('23 Ọktọba 2019')).toBeInTheDocument();
   });
 
   it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
