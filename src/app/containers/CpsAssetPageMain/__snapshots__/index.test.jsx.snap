@@ -3827,13 +3827,6 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           >
             23 Ọktọba 2019
           </time>
-          <time
-            class="c15"
-            datetime="2019-10-23"
-          >
-            Mgbe ikpeazụ e tinyere ya ozi ọhụrụ 
-            23 Ọktọba 2019
-          </time>
         </div>
         <div
           class="c13"
