@@ -68,7 +68,7 @@ const ArticleMain = ({ articleData: data }) => {
         dateModified={lastPublished}
         aboutTags={aboutTags}
       />
-      <main role="main">
+      <main role="main" style={{ 'flex-grow': 1 }}>
         <GhostGrid>
           <Blocks
             blocks={path(['content', 'model', 'blocks'], data)}

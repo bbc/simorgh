@@ -65,8 +65,16 @@ const Document = ({
       </head>
       <body>
         {/* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
-        {/* eslint-disable-next-line react/no-danger */}
-        <div id="root" dangerouslySetInnerHTML={{ __html: app }} />
+        <div
+          id="root"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: app }}
+          style={{
+            'min-height': '100vh',
+            display: 'flex',
+            'flex-direction': 'column',
+          }}
+        />
         {scriptsAllowed && (
           <script
             /* eslint-disable-next-line react/no-danger */

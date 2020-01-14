@@ -37,6 +37,7 @@ const RadioPageMain = ({ pageData }) => {
           group5: 20,
         }}
         enableGelGutters
+        style={{ 'flex-grow': '1' }}
       >
         <Grid
           item
