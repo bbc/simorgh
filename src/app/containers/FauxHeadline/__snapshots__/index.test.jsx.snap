@@ -13,78 +13,7 @@ exports[`FauxHeadline with headline data should render correctly 1`] = `
   padding: 2rem 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (max-width:63rem) {
-  .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c0 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-<div
-  class="c0"
->
-  <strong
-    aria-hidden="true"
-    class="c1"
-  >
-    This is a headline!
-  </strong>
-</div>
-`;
-
-exports[`FauxHeadline with plain text headline should render <strong> containing correct text 1`] = `
-.c1 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #3F3F42;
-  display: block;
-  margin: 0;
+.c2 {
   padding: 2rem 0;
 }
 
@@ -138,12 +67,103 @@ exports[`FauxHeadline with plain text headline should render <strong> containing
   }
 }
 
+@media (min-width:63rem) {
+  .c2 {
+    padding: 2.5rem 0;
+  }
+}
+
 <div
   class="c0"
 >
   <strong
     aria-hidden="true"
-    class="c1"
+    class="c1 c2"
+  >
+    This is a headline!
+  </strong>
+</div>
+`;
+
+exports[`FauxHeadline with plain text headline should render <strong> containing correct text 1`] = `
+.c1 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c2 {
+  padding: 2rem 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    padding: 2.5rem 0;
+  }
+}
+
+<div
+  class="c0"
+>
+  <strong
+    aria-hidden="true"
+    class="c1 c2"
   >
     Plain headline
   </strong>
