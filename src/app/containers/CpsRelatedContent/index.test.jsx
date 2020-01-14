@@ -8,6 +8,9 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import CpsRelatedContent from '.';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 
+import preprocessor from '#lib/utilities/preprocessor';
+import { cpsAssetPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
+
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
 
 // eslint-disable-next-line react/prop-types
@@ -62,5 +65,36 @@ describe('CpsRelatedContent', () => {
   it('should have a "complementary" role (a11y)', () => {
     renderRelatedContent();
     expect(document.querySelectorAll(`[role='complementary']`).length).toBe(1);
+  });
+
+  it('should render timestamps in milliseconds when page data has timestamps in seconds', async () => {
+    const initialPromo = [
+      {
+        ...promos[0],
+        timestamp: 1234567890,
+      },
+    ];
+
+    const pageData = await preprocessor(
+      {
+        ...pidginPageData,
+        relatedContent: { groups: [{ promos: initialPromo }] },
+      },
+      cpsAssetPreprocessorRules,
+    );
+
+    const transformedPromos = path(
+      ['relatedContent', 'groups', 0, 'promos'],
+      pageData,
+    );
+
+    renderRelatedContent({
+      content: transformedPromos,
+    });
+
+    const renderedTime = document
+      .querySelector(`aside time`)
+      .getAttribute('datetime');
+    expect(renderedTime).toBe('2009-02-14');
   });
 });
