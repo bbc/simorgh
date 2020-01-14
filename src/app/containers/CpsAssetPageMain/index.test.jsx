@@ -12,7 +12,8 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import CpsAssetPageMain from '.';
 import preprocessor from '#lib/utilities/preprocessor';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
-import pidginPageData from '#data/pidgin/cpsAssets/23248703';
+import styPidginPageData from '#data/pidgin/cpsAssets/23248703';
+import pglPidginPageData from '#data/pidgin/cpsAssets/sport-23252855';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
 import { cpsAssetPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
 
@@ -77,6 +78,16 @@ describe('CpsAssetPageMain', () => {
   it('should match snapshot for STY', async () => {
     const pageData = await preprocessor(
       igboPageData,
+      cpsAssetPreprocessorRules,
+    );
+
+    const page = createAssetPage({ pageData }, 'igbo');
+    await matchSnapshotAsync(page);
+  });
+
+  it('should match snapshot for PGL', async () => {
+    const pageData = await preprocessor(
+      pglPidginPageData,
       cpsAssetPreprocessorRules,
     );
 

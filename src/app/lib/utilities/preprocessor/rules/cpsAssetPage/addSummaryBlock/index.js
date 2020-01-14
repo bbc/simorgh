@@ -15,7 +15,7 @@ const getSummary = json => {
 
 const addSummaryBlocks = originalJson => {
   const json = deepClone(originalJson);
-  const type = path(['metadata', 'type'], json);
+  const pageType = path(['metadata', 'type'], json);
 
   const blocks = path(['content', 'model', 'blocks'], json);
 
@@ -23,7 +23,7 @@ const addSummaryBlocks = originalJson => {
     return json;
   }
 
-  if (type === 'PGL') {
+  if (pageType === 'PGL') {
     const headline = blocks.find(({ type }) =>
       ['headline', 'fauxHeadline'].includes(type),
     );

@@ -46,8 +46,6 @@ const CpsAssetPageMain = ({ pageData }) => {
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };
 
-  console.log(JSON.stringify(blocks));
-
   return (
     <>
       <MetadataContainer
