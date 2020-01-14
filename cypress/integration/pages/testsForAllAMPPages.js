@@ -1,7 +1,4 @@
-import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
-import appConfig from '../../../src/server/utilities/serviceConfigs';
-import appToggles from '../../support/helpers/useAppToggles';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -37,28 +34,6 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
         cy.get('body amp-geo > script[type="application/json"]');
         cy.get('body amp-consent > script[type="application/json"]');
       });
-
-      const { variant, name: serviceName } = config[service];
-      // limit number of tests to 2 services for navigation toggling
-      const shouldTestService =
-        serviceName === 'ukchina' || serviceName === 'persian';
-      const serviceHasNavigation = appConfig[serviceName][variant].navigation;
-      const pageTypeHasNavigation =
-        pageType !== 'articles' ||
-        (pageType === 'articles' && appToggles.navOnArticles.enabled);
-
-      if (shouldTestService && serviceHasNavigation && pageTypeHasNavigation) {
-        it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
-          cy.viewport(320, 480);
-          cy.get('#scrollable-nav').should('be.visible');
-          cy.get('#dropdown-menu').should('not.be.visible');
-
-          cy.get('nav button').click();
-
-          cy.get('#scrollable-nav').should('not.be.visible');
-          cy.get('#dropdown-menu').should('be.visible');
-        });
-      }
 
       if (Cypress.env('SMOKE')) {
         describe('ATI', () => {
