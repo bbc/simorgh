@@ -701,10 +701,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       liveRadio: {
-        path:
-          isLive(appEnv) || isTest(appEnv) || Cypress.env('APP_ENV') === 'local'
-            ? undefined
-            : '/nepali/bbc_nepali_radio/liveradio',
+        path: '/nepali/bbc_nepali_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -761,10 +758,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       liveRadio: {
-        path:
-          isLive(appEnv) || isTest(appEnv) || Cypress.env('APP_ENV') === 'local'
-            ? undefined
-            : '/pashto/bbc_pashto_radio/liveradio',
+        path: '/pashto/bbc_pashto_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -1041,10 +1035,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       liveRadio: {
-        path:
-          isLive(appEnv) || isTest(appEnv) || Cypress.env('APP_ENV') === 'local'
-            ? undefined
-            : '/sinhala/bbc_sinhala_radio/liveradio',
+        path: '/sinhala/bbc_sinhala_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -1157,10 +1148,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       liveRadio: {
-        path:
-          isLive(appEnv) || isTest(appEnv) || Cypress.env('APP_ENV') === 'local'
-            ? undefined
-            : '/tamil/bbc_tamil_radio/liveradio',
+        path: '/tamil/bbc_tamil_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {

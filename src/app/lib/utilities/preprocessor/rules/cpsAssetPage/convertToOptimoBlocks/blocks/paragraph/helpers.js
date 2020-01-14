@@ -29,7 +29,9 @@ export const processBlock = _block => {
     if (block.role === 'introduction') {
       block.text = boldWrap(block.text);
       block.markupType = 'candy_xml';
-    } else {
+    } else if (block.markupType !== 'candy_xml') {
+      // We do not do this for candy_xml, as chevrons can be misinterpreted
+      // as XML tags once the text is handed off to the rich text transformer
       block.text = parseReplacements(block.text);
     }
   }
