@@ -2,6 +2,7 @@ import applyTimestampRules from '#lib/utilities/preprocessor/rules/timestamp';
 import addIdsToBlocks from '#lib/utilities/preprocessor/rules/addIdsToBlocks';
 import radioPageAddIdsToBlocks from '#lib/utilities/preprocessor/rules/radioPage/addIdsToBlocks';
 import applyBlockPositioning from '#lib/utilities/preprocessor/rules/blockPositioning';
+import parseInternalLinks from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks/blocks/internalLinks';
 import convertToOptimoBlocks from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks';
 import addHeadlineBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addHeadlineBlock';
 import timestampToMilliseconds from '#lib/utilities/preprocessor/rules/cpsAssetPage/timestampToMilliseconds';
@@ -13,6 +14,7 @@ import filterGroupsWithoutStraplines from '#lib/utilities/preprocessor/rules/fil
 import addSummaryBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addSummaryBlock';
 
 export const cpsAssetPreprocessorRules = [
+  parseInternalLinks,
   timestampToMilliseconds,
   convertToOptimoBlocks,
   addHeadlineBlock,
