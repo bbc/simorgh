@@ -209,12 +209,12 @@ describe('CpsAssetPageMain', () => {
       expect(document.querySelector('main time')).not.toBeNull();
     });
 
-    it('should render first published timestamp and last updated timestamp for Pidgin', () => {
+    it('should render firstPublished timestamp and lastPublished timestamp for Pidgin', () => {
       expect(document.querySelectorAll('main time').length).toBe(2);
     });
   });
 
-  it('should render first published timestamp and last updated timestamp for Igbo', async () => {
+  it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
     const pageData = await preprocessor(
       igboPageData,
       cpsAssetPreprocessorRules,
@@ -222,7 +222,7 @@ describe('CpsAssetPageMain', () => {
 
     render(createAssetPage({ pageData }, 'igbo'));
 
-    expect(document.querySelectorAll('main time').length).toBe(2);
+    expect(document.querySelectorAll('main time').length).toBe(1);
   });
 
   it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
