@@ -30,11 +30,13 @@ const CpsAssetPageMain = ({ pageData }) => {
   const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
   const assetUri = path(['locators', 'assetUri'], metadata);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
+  const isPGL = path(['metadata', 'type'], pageData) === 'PGL';
   const relatedContent = pathOr(
     [],
     ['relatedContent', 'groups', 0, 'promos'],
     pageData,
   );
+
   const firstPublished = getFirstPublished(pageData);
 
   const componentsToRender = {
@@ -46,7 +48,7 @@ const CpsAssetPageMain = ({ pageData }) => {
     image,
     timestamp: props =>
       allowDateStamp ? (
-        <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
+        <StyledTimestamp {...props} popOut={isPGL} minutesTolerance={1} />
       ) : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
