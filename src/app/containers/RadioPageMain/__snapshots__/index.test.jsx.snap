@@ -395,6 +395,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
         class="c0 c1"
         dir="ltr"
         role="main"
+        style="flex-grow: 1;"
       >
         <div
           class="c2"
@@ -847,6 +848,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
         class="c0 c1"
         dir="ltr"
         role="main"
+        style="flex-grow: 1;"
       >
         <div
           class="c2"

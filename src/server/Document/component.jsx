@@ -70,9 +70,9 @@ const Document = ({
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: app }}
           style={{
-            'min-height': '100vh',
+            minHeight: '100vh',
             display: 'flex',
-            'flex-direction': 'column',
+            flexDirection: 'column',
           }}
         />
         {scriptsAllowed && (

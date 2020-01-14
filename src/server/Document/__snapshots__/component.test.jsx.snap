@@ -71,6 +71,7 @@ exports[`Document Component should render AMP version correctly 1`] = `
   <body>
     <div
       id="root"
+      style="min-height:100vh;display:flex;flex-direction:column"
     >
       <h1
         data-reactroot=""
@@ -127,6 +128,7 @@ exports[`Document Component should render correctly 1`] = `
   <body>
     <div
       id="root"
+      style="min-height:100vh;display:flex;flex-direction:column"
     >
       <h1
         data-reactroot=""
