@@ -79,7 +79,7 @@ const scenarios = [
     }),
     expectation: wrapBlock({
       meta: generateMeta(['afrique/23248423', '<Hello>']),
-      text: generateUrl(['afrique/23248423', '%3CHello%3E']),
+      text: generateUrl(['afrique/23248423', '&lt;Hello&gt;']),
     }),
   },
   {

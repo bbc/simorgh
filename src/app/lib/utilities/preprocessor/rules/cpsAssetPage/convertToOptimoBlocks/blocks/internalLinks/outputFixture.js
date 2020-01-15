@@ -85,7 +85,7 @@ module.exports = {
           },
         ],
         text:
-          '<link><caption>%3CMedia Asset Page 1%3E</caption><altText>%3CMedia Asset Page 1%3E</altText><url href="http://www.bbc.com/afrique/23248423" platform="highweb"/><url href="http://www.bbc.com/afrique/23248423" platform="enhancedmobile"/></link>',
+          '<link><caption>&lt;Media Asset Page 1&gt;</caption><altText>&lt;Media Asset Page 1&gt;</altText><url href="http://www.bbc.com/afrique/23248423" platform="highweb"/><url href="http://www.bbc.com/afrique/23248423" platform="enhancedmobile"/></link>',
         type: 'paragraph',
       },
       {
@@ -114,7 +114,7 @@ module.exports = {
           },
         ],
         text:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <link><caption>%3CMedia Asset Page 2%3E</caption><altText>%3CMedia Asset Page 2%3E</altText><url href="http://www.bbc.com/afrique/23248423" platform="highweb"/><url href="http://www.bbc.com/afrique/23248423" platform="enhancedmobile"/></link> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <link><caption>&lt;Media Asset Page 2&gt;</caption><altText>&lt;Media Asset Page 2&gt;</altText><url href="http://www.bbc.com/afrique/23248423" platform="highweb"/><url href="http://www.bbc.com/afrique/23248423" platform="enhancedmobile"/></link> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         type: 'paragraph',
       },
       {
@@ -146,7 +146,7 @@ module.exports = {
               },
             ],
             text:
-              '<link><caption>%3CMedia Asset Page 3%3E</caption><altText>%3CMedia Asset Page 3%3E</altText><url href="http://www.bbc.com/afrique/23248423" platform="highweb"/><url href="http://www.bbc.com/afrique/23248423" platform="enhancedmobile"/></link>',
+              '<link><caption>&lt;Media Asset Page 3&gt;</caption><altText>&lt;Media Asset Page 3&gt;</altText><url href="http://www.bbc.com/afrique/23248423" platform="highweb"/><url href="http://www.bbc.com/afrique/23248423" platform="enhancedmobile"/></link>',
             type: 'listItem',
           },
           {
@@ -176,7 +176,7 @@ module.exports = {
               },
             ],
             text:
-              '<link><caption>%3CMedia Asset Page 4%3E</caption><altText>%3CMedia Asset Page 4%3E</altText><url href="http://www.bbc.com/afrique/23248423" platform="highweb"/><url href="http://www.bbc.com/afrique/23248423" platform="enhancedmobile"/></link>',
+              '<link><caption>&lt;Media Asset Page 4&gt;</caption><altText>&lt;Media Asset Page 4&gt;</altText><url href="http://www.bbc.com/afrique/23248423" platform="highweb"/><url href="http://www.bbc.com/afrique/23248423" platform="enhancedmobile"/></link>',
             type: 'listItem',
           },
           {
@@ -206,7 +206,7 @@ module.exports = {
               },
             ],
             text:
-              '<link><caption>%3CMedia Asset Page 5%3E</caption><altText>%3CMedia Asset Page 5%3E</altText><url href="http://www.bbc.com/afrique/23248423" platform="highweb"/><url href="http://www.bbc.com/afrique/23248423" platform="enhancedmobile"/></link>',
+              '<link><caption>&lt;Media Asset Page 5&gt;</caption><altText>&lt;Media Asset Page 5&gt;</altText><url href="http://www.bbc.com/afrique/23248423" platform="highweb"/><url href="http://www.bbc.com/afrique/23248423" platform="enhancedmobile"/></link>',
             type: 'listItem',
           },
           {
