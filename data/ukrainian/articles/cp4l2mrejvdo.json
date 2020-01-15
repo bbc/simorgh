@@ -1,0 +1,446 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cp4l2mrejvdo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cp4l2mrejvdo"
+    },
+    "type": "article",
+    "createdBy": "Ukrainian",
+    "language": "uk",
+    "lastUpdated": 1578478076155,
+    "firstPublished": 1578478069451,
+    "lastPublished": 1578478069451,
+    "timestamp": 1578478069451,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "uk",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+      "passportId": "96515063-ce2b-4e3f-8418-082651ea618b",
+      "locator": "urn:bbc:optimo:asset:cp4l2mrejvdo",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/passport/predicate/About",
+          "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+        }
+      ]
+    },
+    "tags": {},
+    "version": "v1.1.4",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "urlLink",
+      "video",
+      "subheadline"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Це заголовок цієї тестової статті",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Це заголовок цієї тестової статті",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Це тестове зображення, авторське право BBC, показує карту Франції. Зображення знаходиться в перших трьох блоках і має цей підпис.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Це тестове зображення, авторське право BBC, показує карту Франції. Зображення знаходиться в перших трьох блоках і має цей підпис.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Це тестове зображення, авторське право BBC, показує карту Франції. Зображення знаходиться в перших трьох блоках і має цей підпис.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Це тестове зображення, авторське право BBC, показує карту Франції. Зображення знаходиться в перших трьох блоках і має цей підпис.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "340d/test/8f2169c0-31fd-11ea-8512-1f30fd3689d9.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Це текстовий блок, який містить посилання URL на головну сторінку BBC Weather.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Це текстовий блок, який містить посилання URL на головну сторінку ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "BBC Weather",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "BBC Weather",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "locator": "https://www.bbc.co.uk/weather",
+                        "isExternal": false
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ".",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01plpzw",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Це підзаголовок",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Це підзаголовок",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01plpzw",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01plpzw",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Test Ukrainian",
+                        "synopses": {
+                          "short": "Test Ukrainian",
+                          "long": "Test Ukrainian",
+                          "medium": "Test Ukrainian"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01plq00",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 29,
+                            "durationISO8601": "PT29S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true,
+                              "world": false
+                            },
+                            "availableFrom": 1575389071000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 976,
+                              "height": 549,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p012zl0f.jpg",
+                              "originCode": "mpv"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "World Service Thumbnail",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "World Service Thumbnail",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Це підзаголовок",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Це підзаголовок",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Це підзаголовок",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Це підзаголовок",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 800,
+                  "height": 450,
+                  "locator": "e196/test/0ccfca60-31fe-11ea-8512-1f30fd3689d9.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Ця тестова стаття створена для того, щоб ми могли запускати автоматизовані тестові тести на нашому веб-сайті.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Ця тестова стаття створена для того, щоб ми могли запускати автоматизовані тестові тести на нашому веб-сайті.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "Це заголовок цієї тестової статті"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cp4l2mrejvdo"
+    },
+    "summary": "",
+    "timestamp": 1578478069451,
+    "id": "urn:bbc:ares::article:cp4l2mrejvdo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Ukrainian",
+      "uri": "/ukrainian",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

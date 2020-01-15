@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
 import { string } from 'prop-types';
@@ -9,7 +10,7 @@ import {
 import { pathOr } from 'ramda';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import embedUrl from '../../../MediaPlayer/helpers/embedUrl';
+import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 
 const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 
@@ -31,6 +32,7 @@ const MediaPlayerInnerWrapper = styled.div`
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   const { isAmp, platform } = useContext(RequestContext);
   const { liveRadio, lang, translations, service } = useContext(ServiceContext);
+  const location = useLocation();
   const isValidPlatform = ['amp', 'canonical'].includes(platform);
 
   if (!isValidPlatform || !externalId || !id) return null;
@@ -41,10 +43,11 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
     liveRadio,
   );
 
-  const embedSource = embedUrl({
-    requestUrl: `${serviceId}/${id}/${lang}`,
+  const embedSource = getEmbedUrl({
+    mediaId: `${serviceId}/${id}/${lang}`,
     type: 'media',
     isAmp,
+    queryString: location.search,
   });
 
   const iframeTitle = pathOr(

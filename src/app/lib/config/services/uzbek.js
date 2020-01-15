@@ -38,12 +38,13 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Бош саҳифа',
+    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'Ҳаммасини кўриш',
+      seeAll: 'Ҳаммасини кўринг',
       home: 'Бош саҳифа',
       currentPage: 'Жорий саҳифа',
       skipLinkText: 'Саҳифага ўтиш',
@@ -147,12 +148,12 @@ export const service = {
           subtitle:
             'Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Тингланг',
+        watch: 'Томоша қилинг',
         liveLabel: 'ЖОНЛИ ЭФИР',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        previousRadioShow: 'Аввалги радио дастур',
+        nextRadioShow: 'Кейинги радио дастур',
+        duration: 'Давомийлиги',
       },
     },
     brandSVG,
@@ -218,10 +219,6 @@ export const service = {
         url: '/uzbek/sport',
       },
       {
-        title: 'Маданият',
-        url: '/uzbek/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864',
-      },
-      {
         title: 'Илм-Фан',
         url: '/uzbek/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
       },
@@ -230,16 +227,8 @@ export const service = {
         url: '/uzbek/topics/31684f19-84d6-41f6-b033-7ae08098572a',
       },
       {
-        title: 'Аудио',
-        url: '/uzbek/media/audio',
-      },
-      {
         title: 'Видео',
         url: '/uzbek/media/video',
-      },
-      {
-        title: 'Суратлар',
-        url: '/uzbek/media/photogalleries',
       },
     ],
     navigationSection: 'Бўлимлар',
