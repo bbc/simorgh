@@ -43,6 +43,7 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle:
       'خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news',
+    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
