@@ -1515,19 +1515,34 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
           class="c15"
           role="listitem"
         >
-          afrique/23248423
+          <a
+            class="c16"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            %3CMedia Asset Page%3E
+          </a>
         </li>
         <li
           class="c15"
           role="listitem"
         >
-          afrique/23248423
+          <a
+            class="c16"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            %3CMedia Asset Page%3E
+          </a>
         </li>
         <li
           class="c15"
           role="listitem"
         >
-          afrique/23248423
+          <a
+            class="c16"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            %3CMedia Asset Page%3E
+          </a>
         </li>
         <li
           class="c15"
@@ -1585,19 +1600,34 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
           class="c15"
           role="listitem"
         >
-          afrique/23248423
+          <a
+            class="c16"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            %3CMedia Asset Page%3E
+          </a>
         </li>
         <li
           class="c15"
           role="listitem"
         >
-          afrique/23248423
+          <a
+            class="c16"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            %3CMedia Asset Page%3E
+          </a>
         </li>
         <li
           class="c15"
           role="listitem"
         >
-          afrique/23248423
+          <a
+            class="c16"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            %3CMedia Asset Page%3E
+          </a>
         </li>
         <li
           class="c15"
@@ -4924,19 +4954,34 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
           class="c13"
           role="listitem"
         >
-          afrique/23248423
+          <a
+            class="c14"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            %3CMedia Asset Page%3E
+          </a>
         </li>
         <li
           class="c13"
           role="listitem"
         >
-          afrique/23248423
+          <a
+            class="c14"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            %3CMedia Asset Page%3E
+          </a>
         </li>
         <li
           class="c13"
           role="listitem"
         >
-          afrique/23248423
+          <a
+            class="c14"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            %3CMedia Asset Page%3E
+          </a>
         </li>
         <li
           class="c13"
@@ -4994,19 +5039,34 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
           class="c13"
           role="listitem"
         >
-          afrique/23248423
+          <a
+            class="c14"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            %3CMedia Asset Page%3E
+          </a>
         </li>
         <li
           class="c13"
           role="listitem"
         >
-          afrique/23248423
+          <a
+            class="c14"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            %3CMedia Asset Page%3E
+          </a>
         </li>
         <li
           class="c13"
           role="listitem"
         >
-          afrique/23248423
+          <a
+            class="c14"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            %3CMedia Asset Page%3E
+          </a>
         </li>
         <li
           class="c13"
