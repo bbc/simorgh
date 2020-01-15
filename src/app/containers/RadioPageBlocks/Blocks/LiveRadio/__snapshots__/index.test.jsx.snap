@@ -90,13 +90,18 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
 }
 
 .c3 {
+  left: 0;
+  overflow: hidden;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+}
+
+.c4 {
   border: 0;
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 @media (min-width:63rem) {
@@ -121,14 +126,18 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
     <div
       class="c2"
     >
-      <iframe
-        allow="autoplay; fullscreen"
-        allowfullscreen=""
+      <div
         class="c3"
-        scrolling="no"
-        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/externalId/id/ko"
-        title="Audio player"
-      />
+      >
+        <iframe
+          allow="autoplay; fullscreen"
+          allowfullscreen=""
+          class="c4"
+          scrolling="no"
+          src="https://polling.test.bbc.co.uk/ws/av-embeds/media/externalId/id/ko"
+          title="Audio player"
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -224,13 +233,18 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
 }
 
 .c3 {
+  left: 0;
+  overflow: hidden;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+}
+
+.c4 {
   border: 0;
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 @media (min-width:63rem) {
@@ -255,14 +269,18 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
     <div
       class="c2"
     >
-      <iframe
-        allow="autoplay; fullscreen"
-        allowfullscreen=""
+      <div
         class="c3"
-        scrolling="no"
-        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om"
-        title="Audio player"
-      />
+      >
+        <iframe
+          allow="autoplay; fullscreen"
+          allowfullscreen=""
+          class="c4"
+          scrolling="no"
+          src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om"
+          title="Audio player"
+        />
+      </div>
     </div>
   </div>
 </div>
