@@ -3,13 +3,7 @@
 exports[`CpsAssetPageMain MAP AV player should render version (live audio stream) 1`] = `
 <DocumentFragment>
   <noscript />
-  .c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c9 {
+  .c9 {
   grid-column: 1 / span 6;
 }
 
@@ -171,6 +165,16 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   padding-bottom: 1rem;
 }
 
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
 .c5 {
   position: absolute;
   top: 0;
@@ -179,46 +183,6 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   height: 100%;
   border: 0;
   overflow: hidden;
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
 }
 
 @media (max-width:25rem) {
@@ -476,6 +440,46 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
 @media (min-width:63rem) {
   .c10 {
     padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
   }
 }
 
@@ -819,13 +823,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
 exports[`CpsAssetPageMain MAP should render component 1`] = `
 <DocumentFragment>
   <noscript />
-  .c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c9 {
+  .c9 {
   grid-column: 1 / span 6;
 }
 
@@ -1022,6 +1020,16 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   padding-bottom: 1rem;
 }
 
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
 .c5 {
   position: absolute;
   top: 0;
@@ -1030,46 +1038,6 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   height: 100%;
   border: 0;
   overflow: hidden;
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
 }
 
 @media (max-width:25rem) {
@@ -1373,6 +1341,46 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 @media (min-width:63rem) {
   .c10 {
     padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
   }
 }
 
@@ -2759,7 +2767,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 `;
 
 exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
-.c0 {
+.c25 {
   margin: 0 auto;
   background: #FDFDFD;
   padding-bottom: 2rem;
@@ -2968,7 +2976,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   padding-bottom: 0;
 }
 
-.c29 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2978,7 +2986,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.c30 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2997,7 +3005,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   align-items: baseline;
 }
 
-.c31 {
+.c32 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3017,48 +3025,58 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   align-items: center;
 }
 
-.c27 {
+.c28 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c26 {
+.c27 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c28 {
+.c29 {
   margin: 0;
   padding: 0;
 }
 
-.c33 {
+.c34 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c33:first-child {
+.c34:first-child {
   padding-top: 0;
 }
 
-.c33:last-child {
+.c34:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c32 {
+.c33 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c25 {
+.c26 {
   margin-bottom: 1rem;
   z-index: 0;
 }
 
 .c14 {
   padding-bottom: 1rem;
+}
+
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .c23 {
@@ -3072,39 +3090,39 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c0 {
+  .c25 {
     grid-column-gap: 0.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
+  .c25 {
     grid-column-gap: 1rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c0 {
+  .c25 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
+  .c25 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c0 {
+  .c25 {
     grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
     max-width: 46.4rem;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
+  .c25 {
     display: grid;
     max-width: initial;
     margin: initial;
@@ -3404,7 +3422,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -3413,39 +3431,39 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c31 {
+  .c32 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c32 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c32 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c32 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c27 {
+  .c28 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c28 {
     position: absolute;
     left: 0;
     right: 0;
@@ -3454,67 +3472,67 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c26 {
+  .c27 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c34 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c33 {
+  .c34 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33:first-child {
+  .c34:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c33:first-child {
+  .c34:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c25 {
+  .c26 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c25 {
+  .c26 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c25 {
+  .c26 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c25 {
+  .c26 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c25 {
+  .c26 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c26 {
     margin-bottom: 1.5rem;
   }
 }
@@ -3522,6 +3540,46 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 @media (min-width:63rem) {
   .c14 {
     padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
   }
 }
 
@@ -4178,29 +4236,29 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
       </main>
       <aside
         aria-labelledby="related-content-heading"
-        class="c0"
+        class="c25"
         role="complementary"
       >
         <div
-          class="c25"
+          class="c26"
         >
           <div
-            class="c26"
+            class="c27"
           >
             <div
-              class="c27"
+              class="c28"
             />
             <h2
-              class="c28"
+              class="c29"
             >
               <div
-                class="c29"
+                class="c30"
               >
                 <span
-                  class="c30"
+                  class="c31"
                 >
                   <span
-                    class="c31"
+                    class="c32"
                     dir="ltr"
                     id="related-content-heading"
                   >
@@ -4211,11 +4269,11 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
             </h2>
           </div>
           <ul
-            class="c32"
+            class="c33"
             role="list"
           >
             <li
-              class="c33"
+              class="c34"
               role="listitem"
             />
           </ul>
@@ -4229,13 +4287,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateStamp is false 1`] = `
 <DocumentFragment>
   <noscript />
-  .c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c9 {
+  .c9 {
   grid-column: 1 / span 6;
 }
 
@@ -4413,6 +4465,16 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   padding: 2rem 0;
 }
 
+.c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
 .c5 {
   position: absolute;
   top: 0;
@@ -4421,46 +4483,6 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   height: 100%;
   border: 0;
   overflow: hidden;
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
 }
 
 @media (max-width:25rem) {
@@ -4744,6 +4766,46 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 @media (min-width:63rem) {
   .c8 {
     padding: 2.5rem 0;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
   }
 }
 
