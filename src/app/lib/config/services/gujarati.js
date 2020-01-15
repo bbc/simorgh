@@ -159,7 +159,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/gujarati/institutional-50409883',
         text: 'તમે બીબીસી પર ભરોસો કેમ કરી શકો',
       },
       externalLink: {
