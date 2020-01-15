@@ -12,7 +12,7 @@ import { pageDataPropType } from '#models/propTypes/data';
 const ATIAnalytics = ({ data }) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
-  const { pageType, platform } = requestContext;
+  const { pageType, isAmp } = requestContext;
 
   const pageTypeHandlers = {
     article: buildArticleATIUrl,
@@ -32,7 +32,7 @@ const ATIAnalytics = ({ data }) => {
     serviceContext,
   );
 
-  return platform === 'amp' ? (
+  return isAmp ? (
     <AmpATIAnalytics pageviewParams={pageviewParams} />
   ) : (
     <CanonicalATIAnalytics pageviewParams={pageviewParams} />
