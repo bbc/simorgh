@@ -11,13 +11,14 @@ const ChartbeatAnalytics = ({ data }) => {
   const { service, brandName } = useContext(ServiceContext);
   const { sendCanonicalChartbeatBeacon } = useContext(UserContext);
   const { enabled } = useToggle('chartbeatAnalytics');
-  const { env, platform, pageType, previousPath, origin } = useContext(
+  const { env, isAmp, platform, pageType, previousPath, origin } = useContext(
     RequestContext,
   );
-  const isAmpAndEnabled = platform === 'amp' && enabled;
-  const isCanonicalAndEnabled = platform === 'canonical' && enabled;
+  const isAmpAndEnabled = isAmp && enabled;
+  const isCanonicalAndEnabled = !isAmp && enabled;
 
   const configDependencies = {
+    isAmp,
     platform,
     pageType,
     data,
