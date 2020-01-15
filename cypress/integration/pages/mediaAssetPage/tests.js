@@ -75,6 +75,7 @@ export const testsThatFollowSmokeTestConfig = ({
         },
       );
     });
+
     it('should have href that matches assetURI for 1st related content link', () => {
       cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
         ({ body }) => {
