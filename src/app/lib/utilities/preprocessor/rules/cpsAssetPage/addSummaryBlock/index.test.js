@@ -1,7 +1,7 @@
 import deepClone from 'ramda/src/clone';
 import addSummaryBlock from '.';
 
-const input = {
+const pglInput = {
   metadata: {
     type: 'PGL',
   },
@@ -25,10 +25,34 @@ const input = {
   },
 };
 
+const mapInput = {
+  metadata: {
+    type: 'MAP',
+  },
+  promo: {
+    headlines: {
+      headline: 'i am a headline',
+    },
+    summary: 'i am a summary',
+  },
+  content: {
+    model: {
+      blocks: [
+        {
+          type: 'video',
+        },
+        {
+          type: 'foobar',
+        },
+      ],
+    },
+  },
+};
+
 describe('addHeadlineBlock', () => {
   describe('when on PGL type', () => {
     it('should add a summary block if the first block is a headline', () => {
-      const pglInput = deepClone(input);
+      const input = deepClone(pglInput);
 
       const expected = {
         metadata: { type: 'PGL' },
@@ -54,12 +78,12 @@ describe('addHeadlineBlock', () => {
         },
       };
 
-      expect(addSummaryBlock(pglInput)).toEqual(expected);
+      expect(addSummaryBlock(input)).toEqual(expected);
     });
   });
 
   it('should return json if blocks is not defined', () => {
-    const inputMissingBlocks = deepClone(input);
+    const inputMissingBlocks = deepClone(pglInput);
     delete inputMissingBlocks.content.model.blocks;
 
     const expected = {
@@ -76,5 +100,11 @@ describe('addHeadlineBlock', () => {
     };
 
     expect(addSummaryBlock(inputMissingBlocks)).toEqual(expected);
+  });
+
+  it('should return unchanged json for a non-PGL asset', () => {
+    const input = deepClone(mapInput);
+
+    expect(addSummaryBlock(input)).toEqual(mapInput);
   });
 });
