@@ -39,6 +39,7 @@ module.exports = {
         ],
       },
     ],
+    "import/extensions": [1, { "json": "never" }]
   },
   settings: {
     'import/resolver': {
