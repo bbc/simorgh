@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 
 /*
 Problem:
@@ -19,6 +20,8 @@ to the same schema used for external links
 
 External links then get converted into the optimo format as part of the existing transformer
 */
+
+const getBlocks = path(['content', 'blocks']);
 
 const getUrl = path(['locators', 'href']);
 
@@ -77,18 +80,17 @@ const transformBlock = ({ text, items, ...block }) => ({
 });
 
 export default inputData => {
-  const blocks = path(['content', 'blocks'], inputData);
+  const blocks = getBlocks(inputData);
 
   if (blocks && blocks.length) {
     const transformedBlocks = blocks.map(transformBlock);
-
-    return {
-      ...inputData,
+    const mergeTransformedContentBlocks = mergeDeepLeft({
       content: {
-        ...inputData.content,
         blocks: transformedBlocks,
       },
-    };
+    });
+
+    return mergeTransformedContentBlocks(inputData);
   }
 
   return inputData;
