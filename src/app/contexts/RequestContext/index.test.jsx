@@ -58,6 +58,7 @@ const expectedOutput = {
   isUK: true,
   origin: 'origin',
   pageType: input.pageType,
+  isAmp: true,
   platform: 'amp',
   variant: 'simp',
   statsDestination: 'getStatsDestination',
@@ -115,6 +116,7 @@ describe('RequestContext', () => {
 
       expect(React.useContext).toHaveReturnedWith({
         ...expectedOutput,
+        isAmp: true,
         platform: 'amp',
       });
     });
@@ -128,6 +130,7 @@ describe('RequestContext', () => {
 
       expect(React.useContext).toHaveReturnedWith({
         ...expectedOutput,
+        isAmp: false,
         platform: 'canonical',
       });
     });
