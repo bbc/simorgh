@@ -49,7 +49,7 @@ const mapInput = {
   },
 };
 
-describe('addHeadlineBlock', () => {
+describe('addSummaryBlock', () => {
   describe('when on PGL type', () => {
     it('should add a summary block if the first block is a headline', () => {
       const input = deepClone(pglInput);
