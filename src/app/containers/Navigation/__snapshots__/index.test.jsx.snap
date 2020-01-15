@@ -117,7 +117,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
 }
 
 .c15:hover::after {
@@ -152,7 +152,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
 }
 
 .c17:hover::after {
@@ -255,7 +255,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (max-width:37.4375rem) {
   .c15 {
     padding: 0.75rem 0.5rem;
   }
@@ -275,7 +275,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (max-width:37.4375rem) {
   .c17 {
     padding: 0.75rem 0.5rem;
   }
@@ -867,7 +867,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
 }
 
 .c9:hover::after {
@@ -902,7 +902,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
 }
 
 .c12:hover::after {
@@ -1020,7 +1020,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (max-width:37.4375rem) {
   .c9 {
     padding: 0.75rem 0.5rem;
   }
@@ -1040,7 +1040,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (max-width:37.4375rem) {
   .c12 {
     padding: 0.75rem 0.5rem;
   }

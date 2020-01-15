@@ -212,7 +212,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
 }
 
 .c22:hover::after {
@@ -247,7 +247,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
 }
 
 .c24:hover::after {
@@ -510,7 +510,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (max-width:37.4375rem) {
   .c22 {
     padding: 0.75rem 0.5rem;
   }
@@ -530,7 +530,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (max-width:37.4375rem) {
   .c24 {
     padding: 0.75rem 0.5rem;
   }
@@ -1291,7 +1291,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
 }
 
 .c22:hover::after {
@@ -1326,7 +1326,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
 }
 
 .c24:hover::after {
@@ -1589,7 +1589,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (max-width:37.4375rem) {
   .c22 {
     padding: 0.75rem 0.5rem;
   }
@@ -1609,7 +1609,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (max-width:37.4375rem) {
   .c24 {
     padding: 0.75rem 0.5rem;
   }
@@ -2370,7 +2370,7 @@ exports[`Header should render correctly for news article 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
 }
 
 .c22:hover::after {
@@ -2405,7 +2405,7 @@ exports[`Header should render correctly for news article 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
 }
 
 .c24:hover::after {
@@ -2668,7 +2668,7 @@ exports[`Header should render correctly for news article 1`] = `
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (max-width:37.4375rem) {
   .c22 {
     padding: 0.75rem 0.5rem;
   }
@@ -2688,7 +2688,7 @@ exports[`Header should render correctly for news article 1`] = `
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (max-width:37.4375rem) {
   .c24 {
     padding: 0.75rem 0.5rem;
   }
