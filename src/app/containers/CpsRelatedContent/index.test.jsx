@@ -88,13 +88,10 @@ describe('CpsRelatedContent', () => {
       pageData,
     );
 
-    renderRelatedContent({
+    const { getByText } = renderRelatedContent({
       content: transformedPromos,
     });
 
-    const renderedTime = document
-      .querySelector(`aside time`)
-      .getAttribute('datetime');
-    expect(renderedTime).toBe('2009-02-14');
+    expect(getByText('February 2009', { exact: false })).not.toBeNull();
   });
 });
