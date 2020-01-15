@@ -6,8 +6,7 @@ import { canonicalChartbeatPropTypes } from '../../../models/propTypes/chartbeat
 
 const Chartbeat = ({ config }) => {
   const { enabled } = useToggle('chartbeatAnalytics');
-  const { platform } = useContext(RequestContext);
-  const isAmp = platform === 'amp';
+  const { isAmp } = useContext(RequestContext);
 
   if (!enabled || !config || isAmp) {
     return null;

@@ -30,11 +30,9 @@ const MediaPlayerInnerWrapper = styled.div`
 `;
 
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
-  const { platform } = useContext(RequestContext);
+  const { isAmp, platform } = useContext(RequestContext);
   const { liveRadio, lang, translations, service } = useContext(ServiceContext);
   const location = useLocation();
-
-  const isAmp = platform === 'amp';
   const isValidPlatform = ['amp', 'canonical'].includes(platform);
 
   if (!isValidPlatform || !externalId || !id) return null;
