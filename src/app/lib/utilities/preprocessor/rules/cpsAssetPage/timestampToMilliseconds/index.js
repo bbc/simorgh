@@ -1,33 +1,59 @@
-import pathOr from 'ramda/src/pathOr';
-import deepClone from 'ramda/src/clone';
-import semverCompare from 'semver-compare';
+import path from 'ramda/src/path';
+import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
+import compose from 'ramda/src/compose';
 
-const timestampToMilliseconds = jsonRaw => {
-  const firstPublished = pathOr(null, ['metadata', 'firstPublished'], jsonRaw);
-  const lastPublished = pathOr(null, ['metadata', 'lastPublished'], jsonRaw);
-  const rawAresVersion = pathOr(null, ['metadata', 'version'], jsonRaw);
+// ARES sometimes reports timestamps in seconds; sometimes in milliseconds
+// This standardises that by assuming any timestamp before 1973 needs converted to ms
+const MINIMUM_TIMESTAMP_VALUE = 100000000000; // March 1973
 
-  // if cant find ares version, do nothing
-  if (!rawAresVersion) return jsonRaw;
+const isInSeconds = timestamp =>
+  timestamp && timestamp < MINIMUM_TIMESTAMP_VALUE;
 
-  const aresVersion = rawAresVersion.replace('v', '');
+const convertToMilliseconds = timestamp => timestamp * 1000;
 
-  const semverComparison = semverCompare(aresVersion, '1.1.0');
+const standardiseTimestamp = timestamp =>
+  isInSeconds(timestamp) ? convertToMilliseconds(timestamp) : timestamp;
 
-  // if ares version is 1.1.0 or above, do nothing
-  if (semverComparison !== -1) return jsonRaw;
+const standardiseMetadataTimestamps = json => {
+  if (!json.metadata) return json;
 
-  const json = deepClone(jsonRaw);
-
-  if (firstPublished) {
-    json.metadata.firstPublished = firstPublished * 1000;
-  }
-
-  if (lastPublished) {
-    json.metadata.lastPublished = lastPublished * 1000;
-  }
-
-  return json;
+  return mergeDeepLeft(
+    {
+      metadata: {
+        firstPublished: standardiseTimestamp(json.metadata.firstPublished),
+        lastPublished: standardiseTimestamp(json.metadata.lastPublished),
+        lastUpdated: standardiseTimestamp(json.metadata.lastUpdated),
+      },
+    },
+    json,
+  );
 };
 
-export default timestampToMilliseconds;
+const standardiseRelatedContentTimestamp = item => ({
+  ...item,
+  timestamp: standardiseTimestamp(item.timestamp),
+});
+
+const standardiseRelatedContentTimestamps = json => {
+  const relatedContent = path(['relatedContent', 'groups', 0, 'promos'], json);
+
+  if (!Array.isArray(relatedContent)) return json;
+
+  return mergeDeepLeft(
+    {
+      relatedContent: {
+        groups: [
+          {
+            promos: relatedContent.map(standardiseRelatedContentTimestamp),
+          },
+        ],
+      },
+    },
+    json,
+  );
+};
+
+export default compose(
+  standardiseMetadataTimestamps,
+  standardiseRelatedContentTimestamps,
+);
