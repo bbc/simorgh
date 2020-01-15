@@ -3394,6 +3394,12 @@ exports[`CpsAssetPageMain should match snapshot for PGL 1`] = `
   }
 }
 
+@media (min-width:63rem) {
+  .c4 {
+    padding-bottom: 1.5rem;
+  }
+}
+
 <div>
       <main
         class="c0"
