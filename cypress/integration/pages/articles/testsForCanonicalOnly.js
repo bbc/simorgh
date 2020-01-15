@@ -95,10 +95,9 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
     // `appToggles` tells us whether a feature is toggled on or off in the current environment.
     if (appToggles.mediaPlayer.enabled) {
-      describe('Media Player', () => {
+      describe('Media Player: Canonical', () => {
         it('should render a visible placeholder image', () => {
           cy.window().then(win => {
-            // `video` blocks can also contain audio.
             const media = getBlockData('video', win.SIMORGH_DATA.pageData);
             if (media) {
               cy.get('div[class^="StyledVideoContainer"]').within(() => {
@@ -140,30 +139,30 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           });
         });
 
-        // This test is being temporarily throttled to the service 'news'.
-        if (service === 'news') {
-          it('should have a visible play button and duration', () => {
-            cy.window().then(win => {
-              const media = getBlockData('video', win.SIMORGH_DATA.pageData);
-              if (media) {
-                const aresMediaBlocks = media.model.blocks[1].model.blocks[0];
-                const { durationISO8601 } = aresMediaBlocks.model.versions[0];
+        it('should have a visible play button and valid duration', () => {
+          cy.window().then(win => {
+            const media = getBlockData('video', win.SIMORGH_DATA.pageData);
+            if (media && media.type === 'video') {
+              const aresMediaBlocks = media.model.blocks[1].model.blocks[0];
+              const { durationISO8601 } = aresMediaBlocks.model.versions[0];
 
-                cy.get('div[class^="StyledVideoContainer"]').within(() => {
-                  cy.get('button')
-                    .should('be.visible')
-                    .within(() => {
-                      cy.get('svg').should('be.visible');
-                      cy.get('time')
-                        .should('be.visible')
-                        .should('have.attr', 'datetime')
-                        .and('eq', durationISO8601);
-                    });
-                });
-              }
-            });
+              cy.get('div[class^="StyledVideoContainer"]').within(() => {
+                cy.get('button')
+                  .should('be.visible')
+                  .within(() => {
+                    cy.get('svg').should('be.visible');
+                    cy.get('time')
+                      .should('be.visible')
+                      .should('have.attr', 'datetime')
+                      .and('eq', durationISO8601);
+                  });
+              });
+            }
           });
+        });
 
+        // Tests requiring iframe access are temporarily being throttled to the 'news' service.
+        if (service === 'news') {
           it('plays media when a user clicks play', () => {
             cy.window().then(win => {
               const media = getBlockData('video', win.SIMORGH_DATA.pageData);
@@ -190,23 +189,24 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               }
             });
           });
+
           it('should have subtitles set to enabled by default', () => {
             cy.window().then(win => {
               const media = getBlockData('video', win.SIMORGH_DATA.pageData);
               if (media && media.type === 'video') {
-                cy.get('div[class^="StyledVideoContainer"]').then(() => {
-                  cy.get('iframe[class^="StyledIframe"]').then($iframe => {
-                    cy.wrap($iframe.prop('contentWindow'), {
-                      // `timeout` only applies to the methods chained below.
-                      // `its()` benefits from this, and will wait up to 8s
-                      // for the mediaPlayer instance to become available.
-                      timeout: 8000,
-                    })
-                      .its(
-                        'embeddedMedia.playerInstances.mediaPlayer._settings.ui.subtitles.enabled',
-                      )
-                      .should('eq', true);
-                  });
+                cy.get(
+                  'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
+                ).then($iframe => {
+                  cy.wrap($iframe.prop('contentWindow'), {
+                    // `timeout` only applies to the methods chained below.
+                    // `its()` benefits from this, and will wait up to 8s
+                    // for the mediaPlayer instance to become available.
+                    timeout: 8000,
+                  })
+                    .its(
+                      'embeddedMedia.playerInstances.mediaPlayer._settings.ui.subtitles.enabled',
+                    )
+                    .should('eq', true);
                 });
               }
             });
