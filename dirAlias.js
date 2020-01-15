@@ -8,6 +8,7 @@ module.exports = {
   webpackDirAlias: {
     '#app': resolvePath('src/app'),
     '#contexts': resolvePath('src/app/contexts'),
+    '#containers': resolvePath('src/app/containers'),
     '#data': resolvePath('data/'),
     '#lib': resolvePath('src/app/lib/'),
     '#models': resolvePath('src/app/models/'),
