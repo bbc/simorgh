@@ -34,6 +34,7 @@ const baseServiceConfig = {
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
   frontPageTitle: '主页',
+  hasRadioSchedule: false,
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,
