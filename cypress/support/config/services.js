@@ -580,10 +580,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       liveRadio: {
-        path:
-          isLive(appEnv) || isTest(appEnv) || Cypress.env('APP_ENV') === 'local'
-            ? undefined
-            : '/kyrgyz/bbc_kyrgyz_radio/liveradio',
+        path: '/kyrgyz/bbc_kyrgyz_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
