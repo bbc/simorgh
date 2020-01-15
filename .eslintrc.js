@@ -39,7 +39,7 @@ module.exports = {
         ],
       },
     ],
-    "import/extensions": [1, { "json": "never" }]
+    "import/extensions": [1, { "json": "ignorePackages" }]
   },
   settings: {
     'import/resolver': {
