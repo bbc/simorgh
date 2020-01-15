@@ -28,7 +28,7 @@ const Document = ({
   const headScript = helmet.script.toComponent();
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !isAmp;
-  const styledDiv = styled.div`
+  const StyledDiv = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -72,7 +72,7 @@ const Document = ({
       <body>
         {/* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
         {/* eslint-disable-next-line react/no-danger */}
-        <styledDiv id="root" dangerouslySetInnerHTML={{ __html: app }} />
+        <StyledDiv id="root" dangerouslySetInnerHTML={{ __html: app }} />
         {scriptsAllowed && (
           <script
             /* eslint-disable-next-line react/no-danger */
