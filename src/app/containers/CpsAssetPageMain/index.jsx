@@ -52,6 +52,10 @@ const CpsAssetPageMain = ({ pageData }) => {
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };
 
+  const StyledGhostGrid = styled(GhostGrid)`
+    flex-grow: 1;
+  `;
+
   return (
     <>
       <MetadataContainer
@@ -70,9 +74,9 @@ const CpsAssetPageMain = ({ pageData }) => {
         datePublished={firstPublished}
       />
       <ATIAnalytics data={pageData} />
-      <GhostGrid as="main" role="main">
+      <StyledGhostGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </GhostGrid>
+      </StyledGhostGrid>
       <CpsRelatedContent content={relatedContent} />
     </>
   );

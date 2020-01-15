@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { string, shape, object, arrayOf } from 'prop-types';
+import styled from 'styled-components';
 import path from 'ramda/src/path';
 import ATIAnalytics from '../ATIAnalytics';
 import MetadataContainer from '../Metadata';
@@ -13,6 +14,9 @@ const RadioPageMain = ({ pageData }) => {
   const promo = path(['promo'], pageData);
   const metadata = path(['metadata'], pageData);
   const { dir } = useContext(ServiceContext);
+  const StyledGelPageGrid = styled(GelPageGrid)`
+    flex-grow: 1;
+  `;
   return (
     <>
       <ATIAnalytics data={pageData} />
@@ -24,7 +28,7 @@ const RadioPageMain = ({ pageData }) => {
       />
       <LinkedData type="RadioChannel" seoTitle={promo.name} />
 
-      <GelPageGrid
+      <StyledGelPageGrid
         forwardedAs="main"
         role="main"
         dir={dir}
@@ -37,7 +41,6 @@ const RadioPageMain = ({ pageData }) => {
           group5: 20,
         }}
         enableGelGutters
-        style={{ flexGrow: '1' }}
       >
         <Grid
           item
@@ -62,7 +65,7 @@ const RadioPageMain = ({ pageData }) => {
         >
           <RadioPageBlocks blocks={blocks} />
         </Grid>
-      </GelPageGrid>
+      </StyledGelPageGrid>
     </>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
@@ -27,6 +28,11 @@ const Document = ({
   const headScript = helmet.script.toComponent();
   const serialisedData = JSON.stringify(data);
   const scriptsAllowed = !isAmp;
+  const styledDiv = styled.div`
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  `;
 
   // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
   const noJsHtmlAttrs = !isAmp && { className: 'no-js' };
@@ -65,16 +71,8 @@ const Document = ({
       </head>
       <body>
         {/* disabling the rule that bans the use of dangerouslySetInnerHTML until a more appropriate implementation can be implemented */}
-        <div
-          id="root"
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: app }}
-          style={{
-            minHeight: '100vh',
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-        />
+        {/* eslint-disable-next-line react/no-danger */}
+        <styledDiv id="root" dangerouslySetInnerHTML={{ __html: app }} />
         {scriptsAllowed && (
           <script
             /* eslint-disable-next-line react/no-danger */
