@@ -39,20 +39,21 @@ const startApplicationInstance = () => {
 };
 
 const startCluster = () => {
+  const processOnline = worker => logger.info(`Worker ${worker.id} started`);
+  const processExit = (worker, code, signal) => {
+    const exitReason = code ? ` with code ${code}` : ` due to signal ${signal}`;
+
+    if (code !== 0 && !worker.suicide) {
+      cluster.fork();
+    }
+
+    return logger.error(`Worker ${worker.id} died ${exitReason}`);
+  };
+
   if (cluster.isMaster) {
     os.cpus().map(() => cluster.fork());
-    cluster.on('online', worker => logger.info(`Worker ${worker.id} started`));
-    cluster.on('exit', (worker, code, signal) => {
-      const exitReason = code
-        ? ` with code ${code}`
-        : ` due to signal ${signal}`;
-
-      if (code !== 0 && !worker.suicide) {
-        cluster.fork();
-      }
-
-      return logger.error(`Worker ${worker.id} died ${exitReason}`);
-    });
+    cluster.on('online', processOnline);
+    cluster.on('exit', processExit);
   } else {
     startApplicationInstance();
   }
