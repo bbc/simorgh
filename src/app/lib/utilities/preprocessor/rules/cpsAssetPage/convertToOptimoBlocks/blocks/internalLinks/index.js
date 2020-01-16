@@ -28,7 +28,7 @@ const buildUrlString = ({ url, linkText }) => {
   const parsedLinkText = linkText
     .replace('<', '&lt;')
     .replace('>', '&gt;')
-    .replace('&', '&amp;');
+    .replace(/&(?!amp|gt|lt)/, '&amp;');
 
   return `
         <link>
@@ -77,7 +77,11 @@ const parseText = block => {
 
   // Iterate over every <itemMeta> tag, and pass it off to be replaced
   matches.forEach(([match, id]) => {
-    provideLinkXML({ block, match, metadata: findMetadata(block.meta, id) });
+    provideLinkXML({
+      block,
+      match,
+      metadata: findMetadata(block.meta, id),
+    });
   });
 };
 
