@@ -655,7 +655,7 @@ describe('Server', () => {
           '/arabic/bbc_arabic_radio/radioschedule.json',
         );
         expect(body).toEqual(
-          expect.objectContaining({ records: expect.any(Object) }),
+          expect.objectContaining({ schedules: expect.any(Object) }),
         );
       });
 
