@@ -38,7 +38,7 @@ const CpsMapContainer = props => {
   const metadata = path(['metadata'], pageData);
   const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
   const assetUri = path(['locators', 'assetUri'], metadata);
-  const blocks = pathOr([], ['content', 'blocks'], pageData);
+  const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
 
   const relatedContent = pathOr(
     [],
