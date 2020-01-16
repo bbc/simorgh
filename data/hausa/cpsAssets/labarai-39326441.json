@@ -1,0 +1,352 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:hausa/labarai-39326441",
+    "locators": {
+      "assetUri": "/hausa/labarai-39326441",
+      "cpsUrn": "urn:bbc:content:assetUri:hausa/labarai-39326441",
+      "curie": "http://www.bbc.co.uk/asset/3d1d9a46-af26-f740-946f-e845c491c773"
+    },
+    "type": "PGL",
+    "createdBy": "hausa-v6",
+    "language": "ha",
+    "lastUpdated": 1563379761387,
+    "firstPublished": 1490018250,
+    "lastPublished": 1499794159,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "hausa.news.photo_gallery.39326441.page",
+      "cps_asset_id": "39326441"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "BBC",
+          "thingUri": "http://www.bbc.co.uk/things/25844b6e-80b0-4de9-8ea0-7a35e7d4086f#id",
+          "thingId": "25844b6e-80b0-4de9-8ea0-7a35e7d4086f",
+          "thingType": [
+            "Organisation",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/BBC",
+            "http://www.wikidata.org/entity/Q9531"
+          ],
+          "topicName": "BBC",
+          "topicId": "c6vzy7pr361t",
+          "curationList": [
+            {
+              "curationId": "5bdd88e1-576b-4367-9a6e-e00edda477e5",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "95236135",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/CFAB/production/_95236135_nazirumikailu.jpg",
+        "path": "/cpsprodpb/CFAB/production/_95236135_nazirumikailu.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Naziru Mika'ilu",
+        "caption": "Naziru Mika'ilu shi ne editan BBC na Abuja. Kuma ya fara aiki ne da BBC a shekarar 2009.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95236137",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/11DCB/production/_95236137_muhdkabir.jpg",
+        "path": "/cpsprodpb/11DCB/production/_95236137_muhdkabir.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Muhammad Kabir Muhammad",
+        "caption": "Muhammad Kabir Muhammad ya fara aiki da BBC ne a shekara ta 2009.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95236311",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/2C63/production/_95236311_nasidi.jpg",
+        "path": "/cpsprodpb/2C63/production/_95236311_nasidi.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Nasidi Adamu Yahaya",
+        "caption": "Nasidi Adamu Yahaya ya fara aiki ne da BBC a shekarar 2010.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95236671",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/44FF/production/_95236671_ummu-aisha.jpg",
+        "path": "/cpsprodpb/44FF/production/_95236671_ummu-aisha.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Aisha da Ummulkhair",
+        "caption": "Aisha Sissy (daga hagu) ta fara aiki ne da BBC a shekarar 2017. Ummulkahair Ibrahim kuwa ta fara aiki a BBC ne a shekarar 2015.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95236141",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/3753/production/_95236141_harunadaannur.jpg",
+        "path": "/cpsprodpb/3753/production/_95236141_harunadaannur.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Haruna Shehu Tangaza",
+        "caption": "Haruna Shehu Tangaza (a tsaye) ya fara aiki ne da BBC a shekarar 2009. Annur Mohammed ya zo BBC ne shi ma a 2010.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95236143",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8573/production/_95236143_abdulwasiuandibrahim.jpg",
+        "path": "/cpsprodpb/8573/production/_95236143_abdulwasiuandibrahim.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Abdulwasi'u da Ibrahim",
+        "caption": "Abdulwasiu Hassan (Daga hagu) ya fara aiki ne da BBC a shekarar 2017. Sai dai shi kuwa Ibrahim Isa tsohon hannu ne domin ya fara aiki da BBC ne a shekarar 2008..",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95236237",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/11E2F/production/_95236237_badardayusuf.jpg",
+        "path": "/cpsprodpb/11E2F/production/_95236237_badardayusuf.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Badriyya da Yusuf",
+        "caption": "Badriyya Tijjani Kalarawi ta fara aiki da BBC a shekarar 2012, yayin da Yusuf Tijjani ya fara nasa aikin da BBC a shekarar 2008.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95236239",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16C4F/production/_95236239_usmanminjibir.jpg",
+        "path": "/cpsprodpb/16C4F/production/_95236239_usmanminjibir.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Usman Minjibir",
+        "caption": "Usman Minjibir ya fara aiki ne da BBC a shekarar 2014",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95236241",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/37B7/production/_95236241_aishasheriff.jpg",
+        "path": "/cpsprodpb/37B7/production/_95236241_aishasheriff.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Aisha Sheriff Baffa",
+        "caption": "Aisha Sheriff Baffa ta fara aiki da BBC a shekarar 2012.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95236244",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/ACE7/production/_95236244_abdouhalilou.jpg",
+        "path": "/cpsprodpb/ACE7/production/_95236244_abdouhalilou.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Abdou Halilou",
+        "caption": "Abdou Halilou ya fara aiki da BBC a shekarar 2012",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95236306",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/EBCB/production/_95236306_mukhtarbawa.jpg",
+        "path": "/cpsprodpb/EBCB/production/_95236306_mukhtarbawa.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Mukhtar Adamu Bawa",
+        "caption": "Mukhtar Adamu Bawa ya fara aiki ne da BBC a shekarar 2017",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95236308",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/139EB/production/_95236308_bilkisubabangida.jpg",
+        "path": "/cpsprodpb/139EB/production/_95236308_bilkisubabangida.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Bilkisu Babangida",
+        "caption": "Bilkisu Babangida ta fara aiki da BBC ne a shekarar 2006, ta zauna a Maiduguri kafin daga bisani ta dawo Abuja.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95236313",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/7A83/production/_95236313_habibaandhalima.jpg",
+        "path": "/cpsprodpb/7A83/production/_95236313_habibaandhalima.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Habiba Adamu",
+        "caption": "Habiba Adamu (a zaune) ta fara aiki ne da BBC a shekarar 2006. Halima Umar Saleh ta fara aiki da BBC ne a shekarar 2014.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95238827",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/11CB3/production/_95238827_muhammadabba.jpg",
+        "path": "/cpsprodpb/11CB3/production/_95238827_muhammadabba.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Muhammad Abba",
+        "caption": "Muhammad Abba ya fara aiki da BBC ne a shekarar 2006 - da shi aka bude ofishin na Abuja.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95238829",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16AD3/production/_95238829_abdussalam.jpg",
+        "path": "/cpsprodpb/16AD3/production/_95238829_abdussalam.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Abdulsalam Usman",
+        "caption": "Abdulsalam Usman ya fara aiki da BBC ne a shekarar 2010",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95238831",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/363B/production/_95238831_skipper.jpg",
+        "path": "/cpsprodpb/363B/production/_95238831_skipper.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Skipper",
+        "caption": "Muhammad Abdu Mamman Skipper Tudun Wada ya zo BBC ne a shekarar 2013.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95241955",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/DA6A/production/_95241955_lawan.jpg",
+        "path": "/cpsprodpb/DA6A/production/_95241955_lawan.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Lawal Nuhu Suleiman",
+        "caption": "Lawal Nuhu Suleiman ya fara aiki da BBC ne a shekarar 2006",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95259101",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/27D3/production/_95259101_danielochai.jpg",
+        "path": "/cpsprodpb/27D3/production/_95259101_danielochai.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Daniel Ochai",
+        "caption": "Daniel Ochai ya fara aiki da BBC ne a shekarar 2009",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "95398425",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/CD09/production/_95398425_mediaitem95398424.jpg",
+        "path": "/cpsprodpb/CD09/production/_95398425_mediaitem95398424.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Ahmad Wakili",
+        "caption": "Ahmad Wakili Zariya ya fara aiki ne a sashen Hausa na BBC a shekarar 2008",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Kun san ma'aikatan BBC na Abuja kuwa?",
+      "headline": "Ku kalli hotunan ma'aikatan BBC na Abuja"
+    },
+    "locators": {
+      "assetUri": "/hausa/labarai-39326441",
+      "cpsUrn": "urn:bbc:content:assetUri:hausa/labarai-39326441",
+      "curie": "http://www.bbc.co.uk/asset/3d1d9a46-af26-f740-946f-e845c491c773"
+    },
+    "summary": "Albarkacin cikar BBC Hausa shekara 60 da fara watsa shirye-shirye, za mu wallafa hotunan ma'aikatan sashen na da da na yanzu. Wannan kundin hotunan ma'aikatan Abuja ne da shekarun da suka fara aiki.",
+    "timestamp": 1563379761387,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      }
+    },
+    "indexImage": {
+      "id": "95240797",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/13758/production/_95240797_bbc-hausa.jpg",
+      "path": "/cpsprodpb/13758/production/_95240797_bbc-hausa.jpg",
+      "height": 1152,
+      "width": 2048,
+      "altText": "Wasu daga cikin ma'aikatan BBC a Abuja",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:hausa/labarai-39326441",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Labarai",
+      "uri": "/hausa/labarai",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Hausa",
+      "uri": "/hausa",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
