@@ -16,6 +16,7 @@ import {
   cpsAssetPageDataPath,
   radioAndTvDataPath,
   mostReadDataRegexPath,
+  radioScheduleRegexPath,
 } from '../app/routes/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
@@ -49,7 +50,9 @@ class LoggerStream {
 
 const constructDataFilePath = ({ pageType, service, id, variant = '' }) => {
   const dataPath =
-    pageType === 'frontpage' || pageType === 'mostRead'
+    pageType === 'frontpage' ||
+    pageType === 'mostRead' ||
+    pageType === 'radioSchedule'
       ? `${variant || 'index'}.json`
       : `${id}${variant}.json`;
 
@@ -160,6 +163,16 @@ if (process.env.APP_ENV === 'local') {
       );
 
       sendDataFile(res, `${dataFilePath}.json`, next);
+    })
+    .get(radioScheduleRegexPath, async ({ params }, res, next) => {
+      const { service, variant } = params;
+      const dataFilePath = constructDataFilePath({
+        pageType: 'radioSchedule',
+        service,
+        variant,
+      });
+
+      sendDataFile(res, dataFilePath, next);
     })
     .get(cpsAssetPageDataPath, async ({ params }, res, next) => {
       const { service, assetUri: id, variant } = params;
