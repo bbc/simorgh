@@ -16,7 +16,7 @@ import {
   cpsAssetPageDataPath,
   radioAndTvDataPath,
   mostReadDataRegexPath,
-  radioScheduleRegexPath,
+  radioScheduleDataPath,
 } from '../app/routes/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
@@ -164,7 +164,7 @@ if (process.env.APP_ENV === 'local') {
 
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
-    .get(radioScheduleRegexPath, async ({ params }, res, next) => {
+    .get(radioScheduleDataPath, async ({ params }, res, next) => {
       const { service, variant } = params;
       const dataFilePath = constructDataFilePath({
         pageType: 'radioSchedule',

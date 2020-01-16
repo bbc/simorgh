@@ -648,6 +648,32 @@ describe('Server', () => {
         });
       });
     });
+
+    describe('for radio schedules', () => {
+      it('should respond with JSON for service with radio schedule', async () => {
+        const { body } = await makeRequest(
+          '/arabic/bbc_arabic_radio/radio_schedule.json',
+        );
+        expect(body).toEqual(
+          expect.objectContaining({ records: expect.any(Object) }),
+        );
+      });
+
+      it('should respond with 500 for service without radio schedule', async () => {
+        const { statusCode } = await makeRequest(
+          '/pidgin/bbc_pidgin_radio/radio_schedule.json',
+        );
+        expect(statusCode).toEqual(500);
+      });
+
+      it('should respond with 500 for invalid service paths', async () => {
+        const { statusCode } = await makeRequest(
+          '/arabic/bbc_pidgin_radio/radio_schedule.json',
+        );
+        expect(statusCode).toEqual(500);
+      });
+    });
+
     describe('for cps asset pages', () => {
       it('should respond with JSON', async () => {
         const { body } = await makeRequest('/pidgin/tori-49450859.json');
