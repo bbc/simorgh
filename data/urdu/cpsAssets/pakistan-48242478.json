@@ -1,0 +1,331 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:urdu/pakistan-48242478",
+    "locators": {
+      "assetUri": "/urdu/pakistan-48242478",
+      "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48242478",
+      "curie": "http://www.bbc.co.uk/asset/e9a5c193-0f46-594b-95d7-543c5393ea6b"
+    },
+    "type": "PGL",
+    "createdBy": "urdu-v6",
+    "language": "ur",
+    "lastUpdated": 1557652304238,
+    "firstPublished": 1557652291,
+    "lastPublished": 1557652294,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "urdu.pakistan.photo_gallery.48242478.page",
+      "cps_asset_id": "48242478"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        },
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "106920834",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/AB1A/production/_106920834_hi053806837.jpg",
+        "path": "/cpsprodpb/AB1A/production/_106920834_hi053806837.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "رمضان",
+        "caption": "کراچی کی ایک مسجد میں رضاکار لوگوں کے لیے افطار کا اہتمام کر رہے ہیں۔",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "106920481",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/47E2/production/_106920481_gettyimages-1142151782.jpg",
+        "path": "/cpsprodpb/47E2/production/_106920481_gettyimages-1142151782.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "لاہور",
+        "caption": "پاکستانی کے دوسرے بڑے شہر لاہور میں صوفی بزرگ داتا گنج بخش کے مزار کے باہر ہونے والے خودکش حملے کے بعد سکیورٹی اہلکار ایلیٹ فورس کی نشانہ بننے والی گاڑی کا معائنہ کر رہے ہیں۔ اس دھماکے میں کم از کم 10 افرا ہلاک جبکہ دو خواتین سمیت متعدد افراد زخمی ہوئے۔",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "106920483",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/9602/production/_106920483_tv036780455.jpg",
+        "path": "/cpsprodpb/9602/production/_106920483_tv036780455.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "آسیہ بی بی",
+        "caption": "پاکستانی حکام کے مطابق توہین مذہب کے مقدمے میں سپریم کورٹ سے باعزت بری ہونے والی مسیحی خاتون آسیہ بی بی پاکستان سے چلی گئی ہیں۔",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "106920625",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/CD7A/production/_106920625_hi053876878.jpg",
+        "path": "/cpsprodpb/CD7A/production/_106920625_hi053876878.jpg",
+        "height": 647,
+        "width": 976,
+        "altText": "چینی",
+        "caption": "چینی باشندے پولیس کی نگرانی میں لاہور کے سول کورٹ میں پیش ہونے جارہے ہیں۔ وفاقی تحقیقاتی ادارے (ایف آئی اے) کے مطابق یہ افراد ایسے گینگ کا حصہ ہیں جو پاکستانی خواتین کو جسم فروشی کی غرض سے چائنہ لے جاتے ہیں۔ انسانی حقوق کے کارکنوں کے مطابق پچھلے ایک سال سے پاکستان کے صوبے پنجاب میں چینی باشندے شادی کی غرض سے آرہے ہیں اور لڑکیوں کو شادی کرکے چین لے جارہے ہیں جس کا مقصد ازدواجی تعلقات قائم کرنا نہیں ہے بلکہ یہ مبینہ طور پر بین الاقوامی سطح پر جسم فروشی کا ایک اہم ذریعہ ہے۔",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "106920608",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13ADA/production/_106920608_hi053808703.jpg",
+        "path": "/cpsprodpb/13ADA/production/_106920608_hi053808703.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "نواز",
+        "caption": "پاکستان کے سابق وزیر اعظم اور پاکستان مسلم لیگ نون کے قائد محمد نواز شریف العزیزیہ سٹیل ملز کیس میں چھ ہفتے کی ضمانت ختم ہونے کے بعد دوبارہ کوٹ لکھپت جیل پہنچ گئے ہیں۔",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "106920836",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/F93A/production/_106920836_hi053882657.jpg",
+        "path": "/cpsprodpb/F93A/production/_106920836_hi053882657.jpg",
+        "height": 650,
+        "width": 976,
+        "altText": "نرسیں",
+        "caption": "نرسوں کے عالمی دن کے موقع پر پاکستان کے شہر پشاور میں ایک نرس مریض کی دیکھ بھال کرتے ہوئے۔",
+        "copyrightHolder": "EPA",
+        "type": "image"
+      },
+      {
+        "id": "106829883",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/97EC/production/_106829883_ramzan3.jpg",
+        "path": "/cpsprodpb/97EC/production/_106829883_ramzan3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "رمضان",
+        "caption": "پاکستان میں رمضان کی آمد کے ساتھ ہی بنیادی اشیائے خورد و نوش بالخصوص پھلوں اور سبزیوں کی قیمتوں میں ہوشربا اضافہ دیکھنے میں آیا ہے۔",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "گذشتہ ہفتے کا پاکستان تصاویر میں",
+      "headline": "گذشتہ ہفتے کا پاکستان تصاویر میں"
+    },
+    "locators": {
+      "assetUri": "/urdu/pakistan-48242478",
+      "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-48242478",
+      "curie": "http://www.bbc.co.uk/asset/e9a5c193-0f46-594b-95d7-543c5393ea6b"
+    },
+    "summary": "پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔",
+    "timestamp": 1557652304238,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        },
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "106920834",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/AB1A/production/_106920834_hi053806837.jpg",
+      "path": "/cpsprodpb/AB1A/production/_106920834_hi053806837.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "رمضان",
+      "caption": "کراچی کی ایک مسجد میں رضاکار لوگوں کے لیے افطار کا اہتمام کر رہا ہے۔",
+      "copyrightHolder": "AFP",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:urdu/pakistan-48242478",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "پاکستان",
+      "uri": "/urdu/pakistan",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news",
+      "uri": "/urdu",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "گذشتہ ہفتے کا پاکستان تصاویر میں",
+              "headline": "گذشتہ ہفتے کا پاکستان تصاویر میں"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48167724",
+              "cpsUrn": "urn:bbc:content:assetUri:/urdu/pakistan-48167724"
+            },
+            "summary": "پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔",
+            "timestamp": 1557056036,
+            "cpsType": "PGL",
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48167724",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "گذشتہ ہفتے کا پاکستان تصاویر میں",
+              "headline": "گذشتہ ہفتے کے پاکستان کی تصویری جھلکیاں"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-48083226",
+              "cpsUrn": "urn:bbc:content:assetUri:/urdu/pakistan-48083226"
+            },
+            "summary": "پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی یہاں تصویری جھلکیاں پیش کی جا رہی ہیں۔",
+            "timestamp": 1556443883,
+            "cpsType": "PGL",
+            "id": "urn:bbc:ares::asset:urdu/pakistan-48083226",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "گذشتہ ہفتے کا پاکستان",
+              "headline": "گذشتہ ہفتے کے پاکستان کی تصویری جھلکیاں"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-47182263",
+              "cpsUrn": "urn:bbc:content:assetUri:/urdu/pakistan-47182263"
+            },
+            "summary": "پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی یہاں تصویری جھلکیاں پیش کی جا رہی ہیں۔",
+            "timestamp": 1549707378,
+            "cpsType": "PGL",
+            "id": "urn:bbc:ares::asset:urdu/pakistan-47182263",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "گذشتہ ہفتے کا پاکستان",
+              "headline": "گذشتہ ہفتے کا پاکستان: تصاویر"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-43688828",
+              "cpsUrn": "urn:bbc:content:assetUri:/urdu/pakistan-43688828"
+            },
+            "summary": "گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں",
+            "timestamp": 1523178301,
+            "cpsType": "PGL",
+            "id": "urn:bbc:ares::asset:urdu/pakistan-43688828",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "گذشتہ ہفتے کا پاکستان",
+              "headline": "گذشتہ ہفتے کا پاکستان تصاویر میں"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-45365033",
+              "cpsUrn": "urn:bbc:content:assetUri:/urdu/pakistan-45365033"
+            },
+            "summary": "گذشتہ ہفتے پاکستان میں رونما ہونے والے واقعات کی تصویری جھلکیاں۔",
+            "timestamp": 1535878916,
+            "cpsType": "PGL",
+            "id": "urn:bbc:ares::asset:urdu/pakistan-45365033",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "گذشتہ ہفتے کا پاکستان",
+              "headline": "گذشتہ ہفتے کا پاکستان تصاویر میں"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-43603915",
+              "cpsUrn": "urn:bbc:content:assetUri:/urdu/pakistan-43603915"
+            },
+            "summary": "گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں",
+            "timestamp": 1522557209,
+            "cpsType": "PGL",
+            "id": "urn:bbc:ares::asset:urdu/pakistan-43603915",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "گذشتہ ہفتے کا پاکستان",
+              "headline": "گذشتہ ہفتے کا پاکستان تصاویر میں"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-40240151",
+              "cpsUrn": "urn:bbc:content:assetUri:/urdu/pakistan-40240151"
+            },
+            "summary": "گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں",
+            "timestamp": 1497183615,
+            "cpsType": "PGL",
+            "id": "urn:bbc:ares::asset:urdu/pakistan-40240151",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "گذشتہ ہفتے کا پاکستان",
+              "headline": "گذشتہ ہفتے کا پاکستان تصاویر میں"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan-42382974",
+              "cpsUrn": "urn:bbc:content:assetUri:/urdu/pakistan-42382974"
+            },
+            "summary": "گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں",
+            "timestamp": 1513485682,
+            "cpsType": "PGL",
+            "id": "urn:bbc:ares::asset:urdu/pakistan-42382974",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

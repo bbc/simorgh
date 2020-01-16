@@ -1,0 +1,332 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:telugu/india-42321552",
+    "locators": {
+      "assetUri": "/telugu/india-42321552",
+      "cpsUrn": "urn:bbc:content:assetUri:telugu/india-42321552",
+      "curie": "http://www.bbc.co.uk/asset/38257b10-7b7a-294c-9421-3729498c2a39"
+    },
+    "type": "PGL",
+    "createdBy": "telugu-v6",
+    "language": "te",
+    "lastUpdated": 1579166342386,
+    "firstPublished": 1513089004000,
+    "lastPublished": 1529375600000,
+    "timestamp": 1513089004000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "telugu.india.photo_gallery.42321552.page",
+      "cps_asset_id": "42321552"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "History",
+          "thingUri": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
+          "thingId": "03eb3674-6190-4cd7-8104-1a00991d67a3",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/History",
+            "http://www.wikidata.org/entity/Q309"
+          ],
+          "topicName": "చరిత్ర",
+          "topicId": "cg726yj3rxrt",
+          "curationList": [
+            {
+              "curationId": "39672480-506c-4c0e-9f12-31334d2fa798",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Queen Elizabeth II",
+          "thingUri": "http://www.bbc.co.uk/things/1ff657f2-0bc9-4172-a198-fda306e611f4#id",
+          "thingId": "1ff657f2-0bc9-4172-a198-fda306e611f4",
+          "thingType": [
+            "Thing",
+            "Person"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Elizabeth_II",
+            "http://rdf.freebase.com/ns/m.0d1_f",
+            "http://www.wikidata.org/entity/Q9682"
+          ],
+          "topicName": "క్వీన్ ఎలిజబెత్ II",
+          "topicId": "c7zp5gdvgp1t",
+          "curationList": [
+            {
+              "curationId": "7f41a60b-e0b1-41b8-8ff0-d02dbfca7d96",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "United Kingdom",
+          "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+          "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
+          "thingType": [
+            "Thing",
+            "Place",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/2635167/"
+          ],
+          "topicName": "బ్రిటన్",
+          "topicId": "cyx5kx5g8nvt",
+          "curationList": [
+            {
+              "curationId": "ac3e7605-76e1-40fd-b9f1-b4ae37ac4c9b",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "India",
+          "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+          "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+          "thingType": [
+            "Thing",
+            "Place",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/1269750/"
+          ],
+          "topicName": "భారత్",
+          "topicId": "c5qvp16w7dnt",
+          "curationList": [
+            {
+              "curationId": "d2530071-ddd7-4dc5-b765-5ad5617068a1",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Photography",
+          "thingUri": "http://www.bbc.co.uk/things/ae0d5073-dfeb-4251-b555-0a9c74f3d4e0#id",
+          "thingId": "ae0d5073-dfeb-4251-b555-0a9c74f3d4e0",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Photography"
+          ],
+          "topicName": "ఫోటోగ్రఫి",
+          "topicId": "c06gqjrd46kt",
+          "curationList": [
+            {
+              "curationId": "ae016e9e-6ad1-4fcd-b409-8965c45ae8a0",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.4",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "99171050",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1399/production/_99171050_1.jpg",
+        "path": "/cpsprodpb/1399/production/_99171050_1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "భారతదేశ విభజనపై 1947లో జరిగిన సమావేశానికి వస్తున్న మహాత్మా గాంధీ, ఖాన్ అబ్దుల్ గఫార్ ఖాన్",
+        "caption": "భారతదేశ విభజనపై 1947లో జరిగిన సమావేశానికి వస్తున్న మహాత్మా గాంధీ. స్వాతంత్ర్య సమర యోధుడు ఖాన్ అబ్దుల్ గఫార్ ఖాన్, మహాత్మా గాంధీ వ్యక్తిగత వైద్యురాలు సుశీలా నాయర్ కూడా చిత్రంలో ఉన్నారు.",
+        "copyrightHolder": "HV Archive/ The Alkazi Collection of Photography",
+        "type": "image"
+      },
+      {
+        "id": "99171111",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/2B6D/production/_99171111_2.jpg",
+        "path": "/cpsprodpb/2B6D/production/_99171111_2.jpg",
+        "height": 949,
+        "width": 976,
+        "altText": "విజయ్ చౌక్ వద్ద గుర్రపు బగ్గీలో లార్డ్ మౌంట్‌బాటెన్",
+        "caption": "1947 ఆగస్టు 15న లార్డ్ మౌంట్‌బాటెన్ భారత గవర్నర్ జనరల్‌గా బాధ్యతలు స్వీకరించారు. ఆ సందర్భంగా రాష్ట్రపతి భవన్ నుంచి పార్లమెంట్ భవనం వరకు ఆయనను గుర్రపు బగ్గీలో తీసుకెళ్లారు. విజయ్ చౌక్ వద్ద తీసిన చిత్రం ఇది.",
+        "copyrightHolder": "HV Archive/ The Alkazi Collection of Photography",
+        "type": "image"
+      },
+      {
+        "id": "99170732",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/5C9B/production/_99170732_3.jpg",
+        "path": "/cpsprodpb/5C9B/production/_99170732_3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "గణతంత్ర దినోత్సవ పరేడ్",
+        "caption": "భారత్ 1950 జనవరి 26న తొలి గణతంత్ర దినోత్సవం జరుపుకొంది. ప్రస్తుతం నేషనల్ స్టేడియం ఉన్న చోట నాడు రిపబ్లిక్ డే పరేడ్ జరిగింది. నాటి రాష్ట్రపతి బాబు రాజేంద్ర ప్రసాద్ గౌరవ వందనం అందుకున్నారు.",
+        "copyrightHolder": "HV Archive/ The Alkazi Collection of Photography",
+        "type": "image"
+      },
+      {
+        "id": "99170733",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/83AB/production/_99170733_4.jpg",
+        "path": "/cpsprodpb/83AB/production/_99170733_4.jpg",
+        "height": 849,
+        "width": 976,
+        "altText": "ఫ్యాషన్ షోలో పాల్గొన్న రాణి ఎలిజబెత్-2",
+        "caption": "దిల్లీలోని సెంట్రల్ కాటేజ్ ఇండస్ట్రీస్‌లో బ్రిటిష్ అధికారుల భార్యలు ఒక ఫ్యాషన్ షో నిర్వహించారు. రాణి ఎలిజబెత్-2 ఈ కార్యక్రమంలో పాల్గొన్నారు.",
+        "copyrightHolder": "HV Archive/ The Alkazi Collection of Photography",
+        "type": "image"
+      },
+      {
+        "id": "99171112",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/527D/production/_99171112_5.jpg",
+        "path": "/cpsprodpb/527D/production/_99171112_5.jpg",
+        "height": 749,
+        "width": 976,
+        "altText": "నక్కల వేటలో కల్నల్",
+        "caption": "1940: కల్నల్ సాహ్నీ నేతృత్వంలో నక్కలను వేటాడారు.",
+        "copyrightHolder": "HV Archive/ The Alkazi Collection of Photography",
+        "type": "image"
+      },
+      {
+        "id": "99170735",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/D1CB/production/_99170735_6.jpg",
+        "path": "/cpsprodpb/D1CB/production/_99170735_6.jpg",
+        "height": 949,
+        "width": 976,
+        "altText": "నృత్యం చేస్తున్న నర్సులు",
+        "caption": "1940: బాంబేలో శిక్షణలో ఉన్న నర్సులు",
+        "copyrightHolder": "HV Archive/ The Alkazi Collection of Photography",
+        "type": "image"
+      },
+      {
+        "id": "99170736",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/F8DB/production/_99170736_7.jpg",
+        "path": "/cpsprodpb/F8DB/production/_99170736_7.jpg",
+        "height": 949,
+        "width": 976,
+        "altText": "జేజే స్కూల్ ఆఫ్ ఆర్ట్స్ విద్యార్తులు",
+        "caption": "1930: బాంబేలోని జేజే స్కూల్ ఆఫ్ ఆర్ట్స్ విద్యార్థులు",
+        "copyrightHolder": "HV Archive/ The Alkazi Collection of Photography",
+        "type": "image"
+      },
+      {
+        "id": "99170737",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/11FEB/production/_99170737_8.jpg",
+        "path": "/cpsprodpb/11FEB/production/_99170737_8.jpg",
+        "height": 749,
+        "width": 976,
+        "altText": "జవహర్ లాల్ నెహ్రూ, సిమోన్",
+        "caption": "బ్రిటీష్ ఓవర్‌సీస్ ఎయిర్ కార్పొరేషన్‌కి చెందిన విమానంలో బ్రిటన్ డిప్యూటీ హై కమిషనర్ భార్య సిమోన్ సిగరెట్ వెలిగిస్తున్న జవహర్ లాల్ నెహ్రూ. ఈ ఫొటో తీసింది ఎవరో తెలియాలంటే మరో రెండు ఫొటోలు ముందుకెళ్లండి.",
+        "copyrightHolder": "HV Archive/ The Alkazi Collection of Photography",
+        "type": "image"
+      },
+      {
+        "id": "99171048",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14831/production/_99171048_9.jpg",
+        "path": "/cpsprodpb/14831/production/_99171048_9.jpg",
+        "height": 949,
+        "width": 976,
+        "altText": "జవహర్ లాల్ నెహ్రూ, విజయలక్ష్మీ పండిట్",
+        "caption": "దిల్లీలోని పాలెం విమానాశ్రయంలో తన సోదరి విజయలక్ష్మీ పండిట్‌తో జవహర్ లాల్ నెహ్రూ. రష్యాలో భారత దౌత్యవేత్తగా పదవీ కాలం ముగిసిన తరువాత ఆమె భారత్‌కు తిరిగి వచ్చినప్పటిది ఈ చిత్రం.",
+        "copyrightHolder": "HV Archive/ The Alkazi Collection of Photography",
+        "type": "image"
+      },
+      {
+        "id": "99171049",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16F41/production/_99171049_10.jpg",
+        "path": "/cpsprodpb/16F41/production/_99171049_10.jpg",
+        "height": 949,
+        "width": 976,
+        "altText": "హోమీ వ్యారావాలా",
+        "caption": "తన కెమెరాతో హోమీ వ్యారావాలా. పై చిత్రాలు అన్నీ ఆమె తీశారు. 1913 డిసెంబరు 9న ఆమె జన్మించారు.",
+        "copyrightHolder": "HV Archive/ The Alkazi Collection of Photography",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "ఈ మహిళ ఎవరు? ఈ ఫొటో ఎవరు తీశారు?",
+      "headline": "ఈ మహిళ ఎవరు? ఈ ఫొటో ఎవరు తీశారు?"
+    },
+    "locators": {
+      "assetUri": "/telugu/india-42321552",
+      "cpsUrn": "urn:bbc:content:assetUri:telugu/india-42321552",
+      "curie": "http://www.bbc.co.uk/asset/38257b10-7b7a-294c-9421-3729498c2a39"
+    },
+    "summary": "ఒక విమానం. అందులో ఒక మహిళ. ఆమె నోట్లో ఓ సిగరెట్. దాన్ని వెలిగిస్తున్న నెహ్రూ. ఈ ఫొటోను క్లిక్‌మనిపించింది ఎవరో తెలుసా?",
+    "timestamp": 1513089004000,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "99172113",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/7997/production/_99172113_8.jpg",
+      "path": "/cpsprodpb/7997/production/_99172113_8.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "జవహర్ లాల్ నెహ్రూ, సిమోన్",
+      "caption": "బ్రిటీష్ ఓవర్‌సీస్ ఎయిర్ కార్పొరేషన్‌కి చెందిన విమానంలో బ్రిటన్ డిప్యూటీ హై కమిషనర్ భార్య సిమోన్ సిగరెట్ వెలిగిస్తున్న జవహర్ లాల్ నెహ్రూ",
+      "copyrightHolder": "HV Archive/ The Alkazi Collection of Photography",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:telugu/india-42321552",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "జాతీయం",
+      "uri": "/telugu/india",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC తెలుగు",
+      "uri": "/telugu",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

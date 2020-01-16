@@ -1,0 +1,325 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:afaanoromoo/oduu-41217768",
+    "locators": {
+      "assetUri": "/afaanoromoo/oduu-41217768",
+      "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-41217768",
+      "curie": "http://www.bbc.co.uk/asset/114f54f2-1c3f-5d41-8988-c3330e0c204c"
+    },
+    "type": "PGL",
+    "createdBy": "afaan-oromoo-v6",
+    "language": "om",
+    "lastUpdated": 1563495743899,
+    "firstPublished": 1505967874,
+    "lastPublished": 1505968091,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "afaanoromoo.news.photo_gallery.41217768.page",
+      "cps_asset_id": "41217768"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "History",
+          "thingUri": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
+          "thingId": "03eb3674-6190-4cd7-8104-1a00991d67a3",
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/History",
+            "http://www.wikidata.org/entity/Q309"
+          ],
+          "topicName": "Seenaa",
+          "topicId": "cz74k705q39t",
+          "curationList": [
+            {
+              "curationId": "cdab1c78-4525-4512-9698-7b9e88a04506",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Addis Ababa",
+          "thingUri": "http://www.bbc.co.uk/things/8a760184-c272-42ec-b898-858f069e4422#id",
+          "thingId": "8a760184-c272-42ec-b898-858f069e4422",
+          "thingType": [
+            "Place",
+            "Thing",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/344979/"
+          ],
+          "topicName": "Finfinnee",
+          "topicId": "cg72670d4dpt",
+          "curationList": [
+            {
+              "curationId": "c299510a-b7c6-4b1c-86fc-b3027924940c",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "97491025",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/CB33/production/_97491025_img_1060.jpg",
+        "path": "/cpsprodpb/CB33/production/_97491025_img_1060.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Masaraa Aaxee Minilik",
+        "caption": "1. Masaraa Aaxee Minilik Manni durii kunis kan bara 1875tti Aaxee Minilkiin ijaarame yoo ta'u, seenaa magaalaa Finfinnee keessattis masaraa jalqabaati. Mana seena qabeessa kanas wayita ammaa kanatti waldaa Qidista Maariyaam Tawaahido Ortodoksii Itoophiyaatu bulchaa jira. Irra caalaan mana kanaas dhoqqee fi dhakaa irraa kan ijaarame yoo ta'u, dhaabbiin isaa muka gaattiiraati. Dagaleen isaas kan hidhame gogaa qotiyyootiin ture.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "97491026",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/F243/production/_97491026_img_1135.jpg",
+        "path": "/cpsprodpb/F243/production/_97491026_img_1135.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Masaraa Aaxee Minilik",
+        "caption": "Dallaa masaraa keessattis manneen sadi ni argamu. Inni jalqabaas mana itti boqonnaa keessummaa yoo ta'u, inni lammaffaan mana ciisaa mootii fi giiftii akkasumas mana faayaan garaa garaa fi meeshaan waraanaa ka'amuudha. Inni sadaffaan ammookutaalee walgahii, bakka itti nyaatamuu, fi bakka dammii fi foon itti olkaa'amuu ammalleenni mul'atu.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "97493631",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/3547/production/_97493631_img_1065.jpg",
+        "path": "/cpsprodpb/3547/production/_97493631_img_1065.jpg",
+        "height": 4032,
+        "width": 3024,
+        "altText": "Masaraa Aaxee Minilik",
+        "caption": "Akka daawwachistoonni naannawichaa jedhanittis, Aaxee Minilik gara Adawaatti kan duulan masaraadhuma kanaa ka'uun injofannoon boodas asumatti deebii'an jedhama. Kana malees, baargamoon dallaa keessatti mul'atu kanas baargamoowwan Aaxee Minilik biyya Awusitraaliyaatii fidan keessaa akka ta'e dubbatama.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "97482039",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16B64/production/_97482039_img_1473.jpg",
+        "path": "/cpsprodpb/16B64/production/_97482039_img_1473.jpg",
+        "height": 3024,
+        "width": 4032,
+        "altText": "Mana Raas Tasamaa Naadoo",
+        "caption": "2. Mana Raas Tasamaa Naadoo Manni kunis Kutaa magaalaa Lidataa Aanaa 07 naanawa Hospitaala Tiqur Anbasaa Noki bakka gaaziin itti gurguramutti argama. Wayita ammaa kanattis mana barnoota Sadarkaa tokkooffaa Mejar Janaraal YaaYilom Arayaa ta'uun tajaajilaa jira. Bara isaattis faayaawwanii fi ibsaawwan isaa Awuroppaadhaa fiduun kan itti galfaman yoo ta'u, bareeda isaatiin kan ka'ees moggaasa 'Shawaan dinqisiifate' (Shawaan Garamawu) jedhu argate ture. Akkasumas Aaxe Hayilasillaaseen tibba qohpii addaa masaraa isaanitti qabaatan faayaa fi ambooloota asii ergifachaa akka turan illeen ni himama.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "97491028",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14063/production/_97491028_img_1454.jpg",
+        "path": "/cpsprodpb/14063/production/_97491028_img_1454.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Mana Raas Tasamaa Naadoo",
+        "caption": "Ambooloonni ibsaa Awuroppaadhaa dhufan isaan kanneen ta'u isaanitiif ragaa qabaachu yoo baatame illeen ammalleen manicha keessatti eddoo garaa garaatti raraafamanii ni mul'atu.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "97482217",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1163C/production/_97482217_img_1620.jpg",
+        "path": "/cpsprodpb/1163C/production/_97482217_img_1620.jpg",
+        "height": 3024,
+        "width": 4032,
+        "altText": "Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi",
+        "caption": "3. Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi Manni durii kunis kan argamu kutaa magaalaa Qiirqoos naannawa Kaazaanchis jedhamutti yoo ta'u, wayita ammaa kanattis mana barnootaa Yelibe Faanaa jedhamuun tajaajilaa jira. Manni kunis bara 1884tti kan ijaarame yoo ta'u, abbaan qabeenya manichaa Axinaafuu Sagadi lola Xaaliyaanii waliin taasifameen Maacoorratti du'aniiru.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "97491154",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/B03F/production/_97491154_img_1576.jpg",
+        "path": "/cpsprodpb/B03F/production/_97491154_img_1576.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi",
+        "caption": "Irra caalaan mana kanaas dhakkaa adii fi simintoodhaan kan ijaarameedha. Kutaan jalaa mana durii kanaatis bakka itti bilcheefamu ta'uun tajaajila ture. Dizaayinariin mana kanaas nama Mahaammad Walee jedhamu akka ture ragaaleen ni mul'isu.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "97491155",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/D74F/production/_97491155_img_1537.jpg",
+        "path": "/cpsprodpb/D74F/production/_97491155_img_1537.jpg",
+        "height": 360,
+        "width": 640,
+        "altText": "Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi",
+        "caption": "Kana malees, darbii isa gubbaa irraa kan ittiin gadi gara kuttaa lafa jalaatti bu'amuun sadarkaawwan bareedaas alaa fi keessaan kan ijaarameef yoo ta'u, sababii umurii isaatiin amma duloomaa jira.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "97491502",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/5027/production/_97491502_img_1386.jpg",
+        "path": "/cpsprodpb/5027/production/_97491502_img_1386.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Dubbii Hiimaa Mootii Nasiibuu Masqaloo",
+        "caption": "4. Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo Manni kunis kutaa magaalaa Araadaa Aaanaa 07 keessatti kan argamu yoo ta'u, kan ijaaramees bara 1898tti. Abbaa manaa kan turan Dubbii Hiimaa Mootii Nasiibuu Masqaloonis, mootii Aaxee Minilik yammu jalqabaaf mana marii ministirootaa hundeessanitti nama Ministira Murtii jalqabaa ta'uun kan mudamaniidha. Murtiin Dubbii Hiimaa Mootii Nasiibuu Masqaloo dabarsan yeroodhaa gara yerootti cimaa waan tureef himatamtoonni isaan duratti dhiyaachu hin barbaadan ture.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "97491503",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/7737/production/_97491503_img_1391.jpg",
+        "path": "/cpsprodpb/7737/production/_97491503_img_1391.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Dubbii Hiimaa Mootii Nasiibuu Masqaloo",
+        "caption": "Mannii durii kun abbaa darbii tokko yoo ta'u, jalli isaa akka gola itti bilcheefataniitti tajaajilaa ture. Kutaan jala manichaa ammoo bu'uura cimaa irratti kan ijaarame yoo ta'eeyyuu umurii fi kunuunsi gahaan waan hin tasifamneef baayyee dadhabaa jira.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "97491416",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/EFEB/production/_97491416_img_1371.jpg",
+        "path": "/cpsprodpb/EFEB/production/_97491416_img_1371.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Dubbii Hiimaa Mootii Nasiibuu Masqaloo",
+        "caption": "Wayita ammaa kanattis maatiin 40 olitu mana keessa jiraachaa jira. Naannawa manichaattis manneen dabalataa walitti qabatan baayyeen ijaaramanii jiru. Kana malees, foddaa fi karriwwan mana kanaa irra caalaan sibilatti geedaramanii jiru.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "97491667",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12B4B/production/_97491667_img_1394.jpg",
+        "path": "/cpsprodpb/12B4B/production/_97491667_img_1394.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Dubbii Hiimaa Mootii Nasiibuu Masqaloo",
+        "caption": "Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo kanaaf foyya'iinsi atattamaa yoo taasifame malee manichis ta'e namoonni achi keessa jiraatan balaaf saaxilamu malu.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "97494181",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg",
+        "path": "/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Mana Luli Raas Siyum Mangashaa",
+        "caption": "5. Mana Luli Raas Siyum Mangashaa Manneen duraan ilaalle dabalate, manni maastar plaanii magaalaatiin akka qabeenyaatti galmeefame kun, mana Luli Raas Siyum Mangashaa naannawa Faransaayitti argamuuhda. Kunis mana viilaa durii isa guddaadha. Haalli ijaarsa isaas kan oggummaa ijaarsa manaa bara sanaa agarsiisuudha.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "97494182",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg",
+        "path": "/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg",
+        "height": 360,
+        "width": 640,
+        "altText": "Mana Luli Raas Siyum Mangashaa",
+        "caption": "Akkuma Dubbii Hiimaa Mootii Nasiibuu Masqaloo, asis abbootii warraa baayyeetu jiraataachaa jira. Manni tibba tokko mana jireenyaa nama tokko turees har'aa abbootii warraa 30 olitu keessa jiraachaa jira. Naannawa manichaattis manneen hedduun ijaaramanii jiru.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "97494183",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg",
+        "path": "/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Mana Luli Raas Siyum Mangashaa",
+        "caption": "Manneen durii kanneeniif yoo haaromsi atattamaa taasifame malee jireenyi namoota keessa jiraatanii balaa irratti argama",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan",
+      "headline": "Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan"
+    },
+    "locators": {
+      "assetUri": "/afaanoromoo/oduu-41217768",
+      "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-41217768",
+      "curie": "http://www.bbc.co.uk/asset/114f54f2-1c3f-5d41-8988-c3330e0c204c"
+    },
+    "summary": "Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan",
+    "timestamp": 1563495743899,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      }
+    },
+    "indexImage": {
+      "id": "97739292",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/726D/production/_97739292_img_1620.jpg",
+      "path": "/cpsprodpb/726D/production/_97739292_img_1620.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:afaanoromoo/oduu-41217768",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Oduu",
+      "uri": "/afaanoromoo/oduu",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Afaan Oromoo",
+      "uri": "/afaanoromoo",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

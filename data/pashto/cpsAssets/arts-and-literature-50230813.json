@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:pashto/arts-and-literature-50230813",
+    "locators": {
+      "assetUri": "/pashto/arts-and-literature-50230813",
+      "cpsUrn": "urn:bbc:content:assetUri:pashto/arts-and-literature-50230813",
+      "curie": "http://www.bbc.co.uk/asset/f2c06ff2-4a9d-414b-8e27-1685b04772db"
+    },
+    "type": "PGL",
+    "createdBy": "pashto-v6",
+    "language": "ps",
+    "lastUpdated": 1572492353226,
+    "firstPublished": 1572415935000,
+    "lastPublished": 1572492349000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "pashto.arts_and_literature.photo_gallery.50230813.page",
+      "cps_asset_id": "50230813"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "India",
+          "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+          "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+          "thingType": [
+            "Thing",
+            "Place",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/1269750/"
+          ],
+          "topicName": "هند",
+          "topicId": "cdr56rxq1nxt",
+          "curationList": [
+            {
+              "curationId": "d2d51778-a81b-4479-b849-7381f9da821d",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Religion",
+          "thingUri": "http://www.bbc.co.uk/things/fbcd47f3-d67a-4b69-b15c-d4b6c270adbf#id",
+          "thingId": "fbcd47f3-d67a-4b69-b15c-d4b6c270adbf",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Religion",
+            "http://www.wikidata.org/entity/Q9174"
+          ],
+          "topicName": "دین",
+          "topicId": "cjgn7g4d3d6t",
+          "curationList": [
+            {
+              "curationId": "462d936b-25f5-41fa-8dd9-18448c12a1e7",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.2",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "109419069",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1775B/production/_109419069_mediaitem109419068.jpg",
+        "path": "/cpsprodpb/1775B/production/_109419069_mediaitem109419068.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "دیوالی",
+        "caption": "دېوالي ته د رڼاګانو جشن ویل کېږي او دا د هندوانو له عقیدې سره سم د رام د ۱۴ کاله ځنګلونو کې د دربدره ژوند او د لنکا راجه روان ته له ماتې ور کولو وروسته خپل ښار ایودیا ته واپس راتلو خوشالي کې ولمانځه. ایودیا کې دا مهال د شمو لګولو تیاری روان دی.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109419508",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13ACF/production/_109419508_81d24b4a-92bd-4382-a76b-4c0e0fddec42.jpg",
+        "path": "/cpsprodpb/13ACF/production/_109419508_81d24b4a-92bd-4382-a76b-4c0e0fddec42.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "دیوالی",
+        "caption": "دا ایودیا کې پر سرجو سیند غاړه د شمو منظره ده. د اترپردېش سر وزیر یا وزیر اعلی ادتیه یوګي نات هم ایودیا کې د دېوالي مراسمو کې د شمو لګولو لپاره ډېر تیاری کړی دی.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "109419509",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/161DF/production/_109419509_e86e40e1-855a-4e62-898f-d414386d4ebd.jpg",
+        "path": "/cpsprodpb/161DF/production/_109419509_e86e40e1-855a-4e62-898f-d414386d4ebd.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "دیوالی",
+        "caption": "ایودیا کې د بي بي سي خبریال فیصل محمد علي وايي، د پنځه نیم لکه شمعو د روښانولو تیاری شوی، چې په یو وار روښانولو ریکارډ به یې د ګېنیز نړیوالو ریکارډونو کې ثبت شي.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "109419260",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1893/production/_109419260_mediaitem109419259.jpg",
+        "path": "/cpsprodpb/1893/production/_109419260_mediaitem109419259.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "دیوالی",
+        "caption": "سږکال ایودیا کې د دېوالي لپاره مختلف پروګرامونه په پام کې نیول شوي.",
+        "copyrightHolder": "RUBAIYAT/BBC",
+        "type": "image"
+      },
+      {
+        "id": "109419510",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/0637/production/_109419510_ec1c2036-1148-4236-b58b-a4d9ae866f4a.jpg",
+        "path": "/cpsprodpb/0637/production/_109419510_ec1c2036-1148-4236-b58b-a4d9ae866f4a.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "دیوالی",
+        "caption": "دا مهال د فیجي وزیر وینا بټناګر ځانګړی مېلمه دی. له دې مخکې د سوېلي کوریا کېم جونګ سک هم ځانګړی مېلمه و.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "109419262",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/66B3/production/_109419262_mediaitem109419261.jpg",
+        "path": "/cpsprodpb/66B3/production/_109419262_mediaitem109419261.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "دیوالی",
+        "caption": "د سریو خوړ ترڅنګ ایودیا کې ډېر مندرونه دي او هر ځای کې شمعې دي.",
+        "copyrightHolder": "RUBAIYAT/BBC",
+        "type": "image"
+      },
+      {
+        "id": "109419264",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/B4D3/production/_109419264_mediaitem109419263.jpg",
+        "path": "/cpsprodpb/B4D3/production/_109419264_mediaitem109419263.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "دیوالی",
+        "caption": "له یو ډول خاورې جوړ پر ځمکه غورځېدونکي دا ستوري د اسمان ننداره وړاندې کوي.",
+        "copyrightHolder": "RUBAIYAT/BBC",
+        "type": "image"
+      },
+      {
+        "id": "109419328",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/141D7/production/_109419328_mediaitem109419267.jpg",
+        "path": "/cpsprodpb/141D7/production/_109419328_mediaitem109419267.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "دیوالی",
+        "caption": "د دیوالي مراسمو نورو سیمو کې هم روان دي. بهوپال کې هم څو ښځې شمعې بلوي.",
+        "copyrightHolder": "EPA",
+        "type": "image"
+      },
+      {
+        "id": "109419330",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/0D3F/production/_109419330_mediaitem109419329.jpg",
+        "path": "/cpsprodpb/0D3F/production/_109419330_mediaitem109419329.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "دیوالی",
+        "caption": "د ګجرات په ګاندي نګر کې یو مندر هم په شمعو روښان شوی دی.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "دېوالي: پنځه نیم سوه زره شمو سره نړیوال ریکارډ",
+      "headline": "دېوالي: پنځه نیم سوه زره شمو سره نړیوال ریکارډ"
+    },
+    "locators": {
+      "assetUri": "/pashto/arts-and-literature-50230813",
+      "cpsUrn": "urn:bbc:content:assetUri:pashto/arts-and-literature-50230813",
+      "curie": "http://www.bbc.co.uk/asset/f2c06ff2-4a9d-414b-8e27-1685b04772db"
+    },
+    "summary": "نړۍ کې د هندوانو جشن دېوالي په دودیز ډول لمانځل کېږي، خو دا ځل پکې ایودیا سیمه کې د شمو لګولو سره نړیوال ریکارډ جوړولو ته چمتوالی کېږي.",
+    "timestamp": 1572492353226,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "109419328",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/141D7/production/_109419328_mediaitem109419267.jpg",
+      "path": "/cpsprodpb/141D7/production/_109419328_mediaitem109419267.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "دیوالی",
+      "copyrightHolder": "EPA",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:pashto/arts-and-literature-50230813",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "هنر او ادب",
+      "uri": "/pashto/arts_and_literature",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Pashto",
+      "uri": "/pashto",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

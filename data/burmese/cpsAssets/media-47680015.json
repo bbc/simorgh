@@ -1,0 +1,262 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:burmese/media-47680015",
+    "locators": {
+      "assetUri": "/burmese/media-47680015",
+      "cpsUrn": "urn:bbc:content:assetUri:burmese/media-47680015",
+      "curie": "http://www.bbc.co.uk/asset/e264aede-b892-c24b-9945-b5fbb4122ab0"
+    },
+    "type": "PGL",
+    "createdBy": "burmese-v6",
+    "language": "my",
+    "lastUpdated": 1553363645175,
+    "firstPublished": 1553359364,
+    "lastPublished": 1553363636,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "burmese.embedded_media.photo_gallery.47680015.page",
+      "cps_asset_id": "47680015"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Film",
+          "thingUri": "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id",
+          "thingId": "2611f753-ece7-47ea-9782-f912bc1e4088",
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Film",
+            "http://www.wikidata.org/entity/Q11424"
+          ]
+        },
+        {
+          "thingLabel": "Myanmar",
+          "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+          "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
+          "thingType": [
+            "Place",
+            "Thing",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/1327865/"
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.0",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "106150860",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1A95/production/_106150860_dawsuummk.jpg",
+        "path": "/cpsprodpb/1A95/production/_106150860_dawsuummk.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "အကယ်ဒမီ",
+        "caption": "တသက်တာဆုရတဲ့ ဒေါ်မြင့်မြင့်ခင်။ မချမ်းသာသေးတဲ့အချိန် နိုင်ငံတော် အထောက်အပံ့ဟာ အကန့်အသတ်နဲ့ ရှိနေဦးမယ်လို့ အတိုင်ပင်ခံပြော။ စီးပွားရေး လုပ်ငန်းရှင်တွေကို ရုပ်ရှင်မှာ ရင်းနှီးမြှုပ်နှံဖို့ ဖိတ်ခေါ်။",
+        "copyrightHolder": "BB Burmese",
+        "type": "image"
+      },
+      {
+        "id": "106150863",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8FC5/production/_106150863_amt.jpg",
+        "path": "/cpsprodpb/8FC5/production/_106150863_amt.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "အကယ်ဒမီ",
+        "caption": "အကောင်းဆုံး အမျိုးသမီးဇာတ်ပို့ဆု - အေးမြတ်သူ ( နောင်တွင်ဥဒါန်းတွင်စေသတည်း )။ ပထမဆုံး အကယ်ဒမီ ရွှေစင်ရုပ်ကို ကိုင်ပြီး ပါးချိုင့်လေးခွက်အောင် ပြုံးနေတဲ့ မင်းသမီး အေးမြတ်သူ။",
+        "copyrightHolder": "BBC Burmese",
+        "type": "image"
+      },
+      {
+        "id": "106151333",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8223/production/_106151333_55506930_10157176354938988_3317048790828974080_o.jpg",
+        "path": "/cpsprodpb/8223/production/_106151333_55506930_10157176354938988_3317048790828974080_o.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "အကယ်ဒမီ",
+        "caption": "ရွေကြာနဲ့ အကောင်းဆုံး အမျိုးသမီးဇာတ်ဆောင်ဆုရသူ ဖွေးဖွေး။ ဇာတ်ကားကောင်း၊ သရုပ်ဆောင်ကောင်းတွေ အများကြီးကြားထဲ မင်းသမီးဆုကို အရယူသွားနိုင်တဲ့ ဖွေးဖွေး",
+        "copyrightHolder": "BBC Burmese",
+        "type": "image"
+      },
+      {
+        "id": "106150865",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/DDE5/production/_106150865_54516193_2209916582397548_7506522709262598144_o.jpg",
+        "path": "/cpsprodpb/DDE5/production/_106150865_54516193_2209916582397548_7506522709262598144_o.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "အကယ်ဒမီ",
+        "caption": "အကောင်းဆုံး အမျိုးသားဇာတ်ဆောင် သူထူးစံ (မှော်ဝင်သမန်းကျား)။ အကောင်းဆုံးမင်းသားဆု သူထူးစံဆီ ရောက်လာ။",
+        "copyrightHolder": "BBC Burmese",
+        "type": "image"
+      },
+      {
+        "id": "106151327",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/11A7B/production/_106151327_wine.jpg",
+        "path": "/cpsprodpb/11A7B/production/_106151327_wine.jpg",
+        "height": 549,
+        "width": 412,
+        "altText": "အကယ်ဒမီ",
+        "caption": "ရုပ်ရှင် ဇာတ်ညွှန်းဆု ဝိုင်း (ရွှေကြာ)။ ရွှေကြာနဲ့ ဒါရိုက်တာဆု မရခဲ့ပေမယ့် အကောင်းဆုံး ဇာတ်ညွှန်းဆုကိုတော့ ဆွတ်ခူးခဲ့တဲ့ ဝိုင်း။ သရုပ်ဆောင်လိုင်းကနေ ဒါရိုက်တာ ဖြစ်လာတဲ့အခါ ဇာတ်ကားကောင်းတွေ ဖန်တီးသူ အဖြစ် ချီးကျူးခံရသူ။",
+        "copyrightHolder": "BBC Burmese",
+        "type": "image"
+      },
+      {
+        "id": "106151329",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1689B/production/_106151329_55719271_1098693330479676_3461988084344684544_n.jpg",
+        "path": "/cpsprodpb/1689B/production/_106151329_55719271_1098693330479676_3461988084344684544_n.jpg",
+        "height": 549,
+        "width": 412,
+        "altText": "အကယ်ဒမီ",
+        "caption": "မုန်းစွဲနဲ့ အကောင်းဆုံး အမျိုးသား ဇာတ်ပို့ဆုရသွားတဲ့ ကျော်ကျော်ဗိုလ်။ ကိုကြံ့လို့ ရင်းနှီးတဲ့ ရုပ်ရှင်အသိုင်းဝိုင်းကြား ခေါ်ကြတဲ့ ကျော်ကျော်ဗိုလ် မုန်းစွဲနဲ့ အကယ်ဒမီရပါတယ်။ အစဉ်အလာကြီးတဲ့ ရွှေမန်း ဦးတင်မောင် မျိုးဆက်တစ်ယောက် ဖြစ်ပါတယ်။",
+        "copyrightHolder": "BBC Burmese",
+        "type": "image"
+      },
+      {
+        "id": "106151335",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/D043/production/_106151335_54728794_384851575687764_7833030508266127360_n.jpg",
+        "path": "/cpsprodpb/D043/production/_106151335_54728794_384851575687764_7833030508266127360_n.jpg",
+        "height": 549,
+        "width": 412,
+        "altText": "အကယ်ဒမီ",
+        "caption": "စီစဉ်သူလူကြီးနေရာရောက်လာပြီဖြစ်တဲ့ အကယ်ဒမီများရှင် ကိုရန်အောင်။ ကိုရန်လေးဆိုတဲ့ မင်းသားချော အဖြစ်ကနေ တည်တည်ခန့်ခန့် ဦးစီးဦးဆောင် လူကြီးနေရာ ရောက်လာတဲ့ ကိုရန်အောင်။",
+        "copyrightHolder": "BBC Burmese",
+        "type": "image"
+      },
+      {
+        "id": "106151458",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14DA7/production/_106151458_54070313_2321260681447855_986695472703864832_n.jpg",
+        "path": "/cpsprodpb/14DA7/production/_106151458_54070313_2321260681447855_986695472703864832_n.jpg",
+        "height": 549,
+        "width": 412,
+        "altText": "အကယ်ဒမီ",
+        "caption": "မုန်းစွဲနဲ့ အကယ်ဒမီ ဆွတ်ခူးပြန်ဦမလား တစ်ပေးခံခဲ့ရပေမယ့် လွဲခဲ့ရတဲ့ ကိုနေတိုး။",
+        "copyrightHolder": "BBC Burmese",
+        "type": "image"
+      },
+      {
+        "id": "106151461",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/401F/production/_106151461_53752121_2209717725750767_8783743565302857728_n.jpg",
+        "path": "/cpsprodpb/401F/production/_106151461_53752121_2209717725750767_8783743565302857728_n.jpg",
+        "height": 549,
+        "width": 412,
+        "altText": "အကယ်ဒမီ",
+        "caption": "ဥပါယ်တံမျဉ်၊ မုဒြာခေါ်သံတို့နဲ့ ပရိသတ် အားပေးတာ တခဲနက် ရခဲ့ကြတဲ့ အမေရိကန်ပြန် ခီမောင်နှံ၊",
+        "copyrightHolder": "BBC Burmese",
+        "type": "image"
+      },
+      {
+        "id": "106151463",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8E3F/production/_106151463_54798636_2342304282649122_2590260485198708736_n.jpg",
+        "path": "/cpsprodpb/8E3F/production/_106151463_54798636_2342304282649122_2590260485198708736_n.jpg",
+        "height": 549,
+        "width": 412,
+        "altText": "အကယ်ဒမီ",
+        "caption": "၉ဝ ပြည့်ကျော်နှစ်တွေမှာ လွှမ်းမိုးခဲ့တဲ့ အကယ်ဒမီများရှင် မေသန်းနု။ သင်္ကြန်မိုးက စလို့ ပရိသတ်ရင်ထဲ ရောက်လာခဲ့တဲ့ မဆင့်ရဲ့ ရင့်ကျက်တဲ့ အလှ။ သားနဲ့အတူ အကယ်ဒမီပွဲမှာ တွေ့ခဲ့ရ။",
+        "copyrightHolder": "BBC Burmese",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "ပရိသတ်ထင်ကြေးတချို့ လွဲခဲ့တဲ့၂၀၁၈ အကယ်ဒမီဆုများ",
+      "headline": "ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။"
+    },
+    "locators": {
+      "assetUri": "/burmese/media-47680015",
+      "cpsUrn": "urn:bbc:content:assetUri:burmese/media-47680015",
+      "curie": "http://www.bbc.co.uk/asset/e264aede-b892-c24b-9945-b5fbb4122ab0"
+    },
+    "summary": "၂ဝ၁၈ အကယ်ဒမီပုံရိပ်၊ ပွဲတက်ဖက်ရှင် ဓာတ်ပုံတွေ",
+    "timestamp": 1553363645175,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "106151465",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/DC5F/production/_106151465_gg2.jpg",
+      "path": "/cpsprodpb/DC5F/production/_106151465_gg2.jpg",
+      "height": 360,
+      "width": 640,
+      "altText": "အကယ်ဒမီ",
+      "caption": "၂ဝ၁၈ အတွက် အကယ်ဒမီ ဆုရှင်တွေ",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:burmese/media-47680015",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/burmese/media",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",
+      "uri": "/burmese",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

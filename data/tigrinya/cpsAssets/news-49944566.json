@@ -1,0 +1,308 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:tigrinya/news-49944566",
+    "locators": {
+      "assetUri": "/tigrinya/news-49944566",
+      "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-49944566",
+      "curie": "http://www.bbc.co.uk/asset/e4c276d4-2110-2641-a6bd-2ff70db0e12e"
+    },
+    "type": "PGL",
+    "createdBy": "tigrinya-v6",
+    "language": "ti",
+    "lastUpdated": 1570458551420,
+    "firstPublished": 1570267916000,
+    "lastPublished": 1570458544000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "tigrinya.news.photo_gallery.49944566.page",
+      "cps_asset_id": "49944566"
+    },
+    "tags": {},
+    "version": "v1.1.2",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "109112219",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16455/production/_109112219_whatsappimage2019-10-05at11.53.34am.jpg",
+        "path": "/cpsprodpb/16455/production/_109112219_whatsappimage2019-10-05at11.53.34am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ባህላዊ ክዳን ዝተኸደና ዕዱማት እቲ ብዓል",
+        "caption": "ባህላዊ ክዳን ኦሮሞ ዝተኸደና ዕዱማት እቲ ብዓል",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109112394",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/C0A9/production/_109112394_ee86b2cc-8acd-4a49-96fd-15b782003b85.jpg",
+        "path": "/cpsprodpb/C0A9/production/_109112394_ee86b2cc-8acd-4a49-96fd-15b782003b85.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ኣብቲ ምስጋና ዝቐርበሉ ቦታ",
+        "caption": "ምስጋና ዝቐርበሉ ቦታ ኢሬቻ",
+        "copyrightHolder": " ኣብቲ ምስጋና ዝቐርበሉ ቦታ",
+        "type": "image"
+      },
+      {
+        "id": "109112463",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8E45/production/_109112463_whatsappimage2019-10-05at11.26.02am.jpg",
+        "path": "/cpsprodpb/8E45/production/_109112463_whatsappimage2019-10-05at11.26.02am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ዕዱማት እቲ ብዓል",
+        "caption": "ብባህሊ ኦሮሞ ዝማዕረጉ ገለ ዕዱማት እቲ ብዓል",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109111467",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12A7B/production/_109111467_whatsappimage2019-10-05at11.25.38am.jpg",
+        "path": "/cpsprodpb/12A7B/production/_109111467_whatsappimage2019-10-05at11.25.38am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ዝተፈላለየ ባህላዊ ክዳን ዝተኸደኑ ዕዱማት ነቲ ብዓል ድምቐት ሂበሞ ይርከቡ",
+        "caption": "ዝተፈላለየ ባህላዊ ክዳን ኦሮሞ ዝተኸደኑ ዕዱማት ነቲ ብዓል ኣድሚቐምዎ",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109112175",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/DF21/production/_109112175_whatsappimage2019-10-05at11.53.41am.jpg",
+        "path": "/cpsprodpb/DF21/production/_109112175_whatsappimage2019-10-05at11.53.41am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበንኦ ይርከባ",
+        "caption": "ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበንኦ ይርከባ",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109112395",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/E7B9/production/_109112395_whatsappimage2019-10-05at11.23.08am.jpg",
+        "path": "/cpsprodpb/E7B9/production/_109112395_whatsappimage2019-10-05at11.23.08am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበሞ ይርከቡ",
+        "caption": "ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበንኦ ይርከባ",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109112063",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8CB5/production/_109112063_whatsappimage2019-10-05at11.22.11am.jpg",
+        "path": "/cpsprodpb/8CB5/production/_109112063_whatsappimage2019-10-05at11.22.11am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ",
+        "caption": "ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109112067",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/128F5/production/_109112067_whatsappimage2019-10-05at11.36.46am.jpg",
+        "path": "/cpsprodpb/128F5/production/_109112067_whatsappimage2019-10-05at11.36.46am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ",
+        "caption": "ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109112177",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12D41/production/_109112177_whatsappimage2019-10-05at11.53.36am.jpg",
+        "path": "/cpsprodpb/12D41/production/_109112177_whatsappimage2019-10-05at11.53.36am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ባህላዊ ክዳን ዝተኸነት ተሳታፊት እቲ ብዓል",
+        "caption": "ባህላዊ ክዳን ዝተኸነት ተሳታፊት እቲ ብዓል",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109112069",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/17715/production/_109112069_whatsappimage2019-10-05at11.36.40am.jpg",
+        "path": "/cpsprodpb/17715/production/_109112069_whatsappimage2019-10-05at11.36.40am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ባህላዊ ክዳን ዝተኸደና ደቂ ኣንስትዮ",
+        "caption": "ባህላዊ ክዳን ዝተኸደና ደቂ ኣንስትዮ",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109112065",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/DAD5/production/_109112065_whatsappimage2019-10-05at11.36.57am.jpg",
+        "path": "/cpsprodpb/DAD5/production/_109112065_whatsappimage2019-10-05at11.36.57am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ዕዱማት ናብቲ ጽንብል ዝካየደሉ ቦታ እናኸዱ",
+        "caption": "ዕዱማት ናብቲ ጽንብል ዝካየደሉ ቦታ እናኸዱ",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "ሎሚ ኣብ ኣዲስ ኣበባ ዝኽበር ዘሎ በዓል ኢሬቻ ፡ ንቐደም በሉ",
+      "headline": "ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ"
+    },
+    "locators": {
+      "assetUri": "/tigrinya/news-49944566",
+      "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-49944566",
+      "curie": "http://www.bbc.co.uk/asset/e4c276d4-2110-2641-a6bd-2ff70db0e12e"
+    },
+    "summary": "ሎሚ ኣብ ኣዲስ ኣበባ ካብ ዝኽበር ዘሎ ኢሬቻ ዝተሳኣለ ስእሊ ንቐደም በሉ",
+    "timestamp": 1570458551420,
+    "passport": {},
+    "indexImage": {
+      "id": "109112465",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/DC65/production/_109112465_whatsappimage2019-10-05at11.26.02am.jpg",
+      "path": "/cpsprodpb/DC65/production/_109112465_whatsappimage2019-10-05at11.26.02am.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "ዕዱማት እቲ ብዓል",
+      "caption": "ብባህሊ ኦሮሞ ዝማዕረጉ ገለ ዕዱማት እቲ ብዓል",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:tigrinya/news-49944566",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "ዜና",
+      "uri": "/tigrinya/news",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC ትግርኛ",
+      "uri": "/tigrinya",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "\"ኣሸንዳዋይ ናዓሚ ናዓሚየ ተጋኒና ሎሚየ\"",
+              "headline": "ምፅብባቕ ጓል ኣሸንዳ"
+            },
+            "locators": {
+              "assetUri": "/tigrinya/news-45272046",
+              "cpsUrn": "urn:bbc:content:assetUri:/tigrinya/news-45272046"
+            },
+            "summary": "ቆልዓ ኣሸንዳ ካብ ምፅብባቕ ጀሚሩ",
+            "timestamp": 1534951171000,
+            "cpsType": "MAP",
+            "indexImage": {
+              "id": "103129747",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/12428/production/_103129747_p06j4wbv.jpg",
+              "path": "/cpsprodpb/12428/production/_103129747_p06j4wbv.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "ምፅብባቕ ጓል ኣሸንዳ",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "mediaType": "Video",
+            "id": "urn:bbc:ares::asset:tigrinya/news-45272046",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "\"ቢሮ ባህልን ቱሪዝምን ትግራይ፡ ኣብ መቐለ እንታይ'ዩ ዝገብር ዘሎ?\"",
+              "headline": "ትግራይ፡ ካብ ዘለውዋ ጸጋታት ቱሪዝም ተረባሒት ኣይኮነትን ተባሂሉ"
+            },
+            "locators": {
+              "assetUri": "/tigrinya/news-47607740",
+              "cpsUrn": "urn:bbc:content:assetUri:/tigrinya/news-47607740"
+            },
+            "summary": "ቱሪዝም ባህላዊ ኢንዳስትሪ ኢትዮጵያ ኾይኑ፡ እዛ ሃገር ካብተን ጥንታዊ ሓድጊ፣ ባህልን ታሪኽን ዓቂበን ዝርከባ ሃገራት ሓንቲ'ያ። ትግራይ ድማ፡ ኢትዮጵያ ብሓድጊ ቱሪዝም ንዓለም ክተበርክቶ እትኽእላ ጸጋ ዝሓቖፈት'ያ። ተጠቃምነታ ግን ክሳብ ክንደይ'ዩ?",
+            "timestamp": 1552893336000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106063374",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/B8E8/production/_106063374_mediaitem106063039.jpg",
+              "path": "/cpsprodpb/B8E8/production/_106063374_mediaitem106063039.jpg",
+              "height": 720,
+              "width": 1280,
+              "altText": "ሓወልቲ ኣክሱም",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:tigrinya/news-47607740",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "'ዲም-ዲም...ተሓጺብክን ዶ ማይ ጳጉሜን'",
+              "headline": "ጳጉሜን -'ጸያቕ ኣዋርሕ'"
+            },
+            "locators": {
+              "assetUri": "/tigrinya/news-45345796",
+              "cpsUrn": "urn:bbc:content:assetUri:/tigrinya/news-45345796"
+            },
+            "summary": "ኣብ ኤርትራን ኢትዮጵያን ቅንያት 'ጳጉሜን' ትማሊ ተዛዚሙ ኣሎ። እዚ ብዓቢ ድምቀት ዝበዓልን ዝካየድን እምነትን ልምድን ካብይ ዝነቅለ'ዩ፡ ብኸመይ'ከ ይካየድ? ቢቢሲ ትግርኛ ኣብ ዝሓለፈ ዓመት ዘዳለዎ ንዝኽርኹም ዘበራብርን ዝሕግዝን ሕጽር ዝበለ ዛንታ እነሆ!",
+            "timestamp": 1568302917000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108769798",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/15EC4/production/_108769798_whatsappimage2019-09-12at18.30.22-1.jpg",
+              "path": "/cpsprodpb/15EC4/production/_108769798_whatsappimage2019-09-12at18.30.22-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ኣብ ሩባ ወሪዱ ማይ ጳጉሜን ዝሕጸብ ቆልዓ",
+              "caption": "ኣብ ሩባ ወሪዱ ማይ ጳጉሜን ዝሕጸብ ቆልዓ",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:tigrinya/news-45345796",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

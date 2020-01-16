@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:persian/magazine-49281981",
+    "locators": {
+      "assetUri": "/persian/magazine-49281981",
+      "cpsUrn": "urn:bbc:content:assetUri:persian/magazine-49281981",
+      "curie": "http://www.bbc.co.uk/asset/74f77673-d799-534a-8252-4831eddb9229"
+    },
+    "type": "PGL",
+    "createdBy": "persian-v6",
+    "language": "fa",
+    "lastUpdated": 1565337143621,
+    "firstPublished": 1565337132,
+    "lastPublished": 1565337134,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": false,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "persian.magazine.photo_gallery.49281981.page",
+      "cps_asset_id": "49281981"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "108241522",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/57F2/production/_108241522_hi055737601.jpg",
+        "path": "/cpsprodpb/57F2/production/_108241522_hi055737601.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "جشنواره بین‌المللی بالون این هفته در بریستول برگزار می‌شود. این بزرگ‌ترین فستیوال بالون‌ها در اروپا است و بیش از ۱۳۰ بالون هوای گرم از کشورهای مختلف جهان در این جشنواره شرکت دارند",
+        "caption": "جشنواره بین‌المللی بالون این هفته در بریستول برگزار می‌شود. این بزرگ‌ترین فستیوال بالون‌ها در اروپا است و بیش از ۱۳۰ بالون هوای گرم از کشورهای مختلف جهان در این جشنواره شرکت دارند",
+        "copyrightHolder": "Ben Birchall/Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "108241251",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/3B6E/production/_108241251_gettyimages-1166768117.jpg",
+        "path": "/cpsprodpb/3B6E/production/_108241251_gettyimages-1166768117.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "هر روز در آسمان شهر شاهد پرواز دارت ویدر (شخصیت پلید جنگ ستارگان) نیستید.",
+        "caption": "هر روز در آسمان شهر شاهد پرواز دارت ویدر (شخصیت پلید جنگ ستارگان) نیستید",
+        "copyrightHolder": "Finnbarr Webster/Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "108241254",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/B09E/production/_108241254_hi055737507.jpg",
+        "path": "/cpsprodpb/B09E/production/_108241254_hi055737507.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "این پلنگ سیاه چشم زرد خیلی جدی منتظر پرواز است",
+        "caption": "این پلنگ سیاه چشم زرد خیلی جدی منتظر پرواز است",
+        "copyrightHolder": "Ben Birchall/PA Wire",
+        "type": "image"
+      },
+      {
+        "id": "108241249",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/17006/production/_108241249_gettyimages-1166769206.jpg",
+        "path": "/cpsprodpb/17006/production/_108241249_gettyimages-1166769206.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "این خرس باشلونی هم آز آن بالا دارد برای تماشاچی‌ها دست تکان می‌دهد",
+        "caption": "این خرس باشلونی هم آز آن بالا دارد برای تماشاچی‌ها دست تکان می‌دهد",
+        "copyrightHolder": "Finnbarr Webster/Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "108241256",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/FEBE/production/_108241256_hi055737521.jpg",
+        "path": "/cpsprodpb/FEBE/production/_108241256_hi055737521.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "هزاران نفر برای تماشای این رویداد به بریستول سفر کرده‌اند",
+        "caption": "هزاران نفر برای تماشای این رویداد به بریستول سفر کرده‌اند",
+        "copyrightHolder": "Ben Birchall/PA Wire",
+        "type": "image"
+      },
+      {
+        "id": "108241520",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/09D2/production/_108241520_gettyimages-1166768363.jpg",
+        "path": "/cpsprodpb/09D2/production/_108241520_gettyimages-1166768363.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "این کوآلا هم احتمالا مسیر طولانی از استرالیا برای حضور در این جشنواره طی کرده است",
+        "caption": "این کوآلا هم احتمالا مسیر طولانی از استرالیا برای حضور در این جشنواره طی کرده است",
+        "copyrightHolder": "Finnbarr Webster/Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "108241518",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13E6A/production/_108241518_hi055737515.jpg",
+        "path": "/cpsprodpb/13E6A/production/_108241518_hi055737515.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "جشنواره بالون‌ها",
+        "caption": "پرواز این بالون‌ها آسمان شهر را زیبا کرده است",
+        "copyrightHolder": "Ben Birchall/PA Wire",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "جشنواره بالون‌ها؛ دارت ویدر و پلنگ سیاه به پرواز در آمدند",
+      "headline": "جشنواره بالون‌ها؛ دارت ویدر و پلنگ سیاه به پرواز در آمدند"
+    },
+    "locators": {
+      "assetUri": "/persian/magazine-49281981",
+      "cpsUrn": "urn:bbc:content:assetUri:persian/magazine-49281981",
+      "curie": "http://www.bbc.co.uk/asset/74f77673-d799-534a-8252-4831eddb9229"
+    },
+    "summary": "جشنواره بین‌المللی بالون این هفته در بریستول در بریتانیا برگزار می‌شود. این بزرگ‌ترین فستیوال بالون‌ها در اروپا است و بیش از ۱۳۰ بالون هوای گرم از کشورهای مختلف جهان در این جشنواره شرکت دارند",
+    "timestamp": 1565337143621,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "108241525",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/CD22/production/_108241525_gettyimages-1166768117.jpg",
+      "path": "/cpsprodpb/CD22/production/_108241525_gettyimages-1166768117.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "جشنواره بالون‌ها",
+      "copyrightHolder": "Finnbarr Webster/Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:persian/magazine-49281981",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "مجله ‌بی‌بی‌سی",
+      "uri": "/persian/magazine",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Persian",
+      "uri": "/persian",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
