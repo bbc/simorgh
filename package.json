@@ -60,7 +60,7 @@
     "@bbc/moment-timezone-include": "^1.1.2",
     "@bbc/psammead-amp-geo": "^1.1.2",
     "@bbc/psammead-assets": "^2.10.3",
-    "@bbc/psammead-brand": "^5.1.2",
+    "@bbc/psammead-brand": "^5.1.3",
     "@bbc/psammead-bulleted-list": "1.0.1",
     "@bbc/psammead-bulletin": "^1.0.0",
     "@bbc/psammead-calendars": "^2.0.5",

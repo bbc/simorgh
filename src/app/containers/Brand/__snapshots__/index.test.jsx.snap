@@ -46,6 +46,10 @@ exports[`BrandContainer should render correctly 1`] = `
   width: 100%;
   max-width: 10.496849999999998rem;
   min-width: 6.9979rem;
+  -webkit-flex: 1 1 6.9979rem;
+  -ms-flex: 1 1 6.9979rem;
+  flex: 1 1 6.9979rem;
+  -ms-flex-preferred-size: 10.496849999999998rem;
 }
 
 .c4 {
@@ -58,6 +62,10 @@ exports[`BrandContainer should render correctly 1`] = `
   width: 100%;
   max-width: 10.496849999999998rem;
   min-width: 6.9979rem;
+  -webkit-flex: 1 1 6.9979rem;
+  -ms-flex: 1 1 6.9979rem;
+  flex: 1 1 6.9979rem;
+  -ms-flex-preferred-size: 10.496849999999998rem;
 }
 
 .c2:hover .c4,
@@ -242,6 +250,10 @@ exports[`BrandContainer should render script link correctly 1`] = `
   width: 100%;
   max-width: 10.496849999999998rem;
   min-width: 6.9979rem;
+  -webkit-flex: 1 1 6.9979rem;
+  -ms-flex: 1 1 6.9979rem;
+  flex: 1 1 6.9979rem;
+  -ms-flex-preferred-size: 10.496849999999998rem;
 }
 
 .c4 {
@@ -254,6 +266,10 @@ exports[`BrandContainer should render script link correctly 1`] = `
   width: 100%;
   max-width: 10.496849999999998rem;
   min-width: 6.9979rem;
+  -webkit-flex: 1 1 6.9979rem;
+  -ms-flex: 1 1 6.9979rem;
+  flex: 1 1 6.9979rem;
+  -ms-flex-preferred-size: 10.496849999999998rem;
 }
 
 .c2:hover .c4,
