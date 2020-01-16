@@ -8,6 +8,8 @@ import {
   CanonicalDropdown,
   CanonicalMenuButton,
 } from '@bbc/psammead-navigation/dropdown';
+import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
+import useMediaQuery from '#lib/utilities/useMediaQuery';
 
 const ScrollableWrapper = styled.div`
   position: relative;
@@ -22,6 +24,12 @@ const CanonicalNavigationContainer = ({
   dropdownListItems,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useMediaQuery(`(max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX})`, event => {
+    if (!event.matches) {
+      setIsOpen(false);
+    }
+  });
 
   return (
     <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
