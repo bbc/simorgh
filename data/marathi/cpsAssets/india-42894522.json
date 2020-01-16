@@ -1,0 +1,233 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:marathi/india-42894522",
+    "locators": {
+      "assetUri": "/marathi/india-42894522",
+      "cpsUrn": "urn:bbc:content:assetUri:marathi/india-42894522",
+      "curie": "http://www.bbc.co.uk/asset/cd348faf-3f80-f44b-b8ea-a46e65594c43"
+    },
+    "type": "PGL",
+    "createdBy": "marathi-v6",
+    "language": "mr",
+    "lastUpdated": 1564010660712,
+    "firstPublished": 1517416145,
+    "lastPublished": 1517416198,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "marathi.india.photo_gallery.42894522.page",
+      "cps_asset_id": "42894522"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Astronomy",
+          "thingUri": "http://www.bbc.co.uk/things/4fdf1711-6845-4344-98cc-1a382ed91b65#id",
+          "thingId": "4fdf1711-6845-4344-98cc-1a382ed91b65",
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Astronomy",
+            "http://www.wikidata.org/entity/Q333"
+          ]
+        },
+        {
+          "thingLabel": "India",
+          "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+          "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+          "thingType": [
+            "Place",
+            "Thing",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/1269750/"
+          ],
+          "topicName": "भारत",
+          "topicId": "cxnyk3y49x6t",
+          "curationList": [
+            {
+              "curationId": "0c17788e-45bf-4ceb-9f64-33b86e6228f5",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "99831610",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/064D/production/_99831610_whatsappimage2018-01-31at9.28.50pm-1.jpg",
+        "path": "/cpsprodpb/064D/production/_99831610_whatsappimage2018-01-31at9.28.50pm-1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "चंद्रग्रहण",
+        "caption": "सूर्यास्तानंतर लगेच ग्रहणकाळाला सुरुवात झाली.",
+        "copyrightHolder": "Rahul Ransubhe/BBC",
+        "type": "image"
+      },
+      {
+        "id": "99831420",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/096D/production/_99831420_whatsappimage2018-01-31at9.28.49pm.jpg",
+        "path": "/cpsprodpb/096D/production/_99831420_whatsappimage2018-01-31at9.28.49pm.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "चंद्रग्रहण",
+        "caption": "ग्रहण अवस्थेची ही चित्रं टिपली आहेत मुंबईतून",
+        "copyrightHolder": "Rahul Ransubhe/BBC",
+        "type": "image"
+      },
+      {
+        "id": "99831606",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/ECC5/production/_99831606_whatsappimage2018-01-31at9.28.47pm-1.jpg",
+        "path": "/cpsprodpb/ECC5/production/_99831606_whatsappimage2018-01-31at9.28.47pm-1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "चंद्रग्रहण",
+        "caption": "चंद्रग्रहणाची ही दृश्य टिपली आहेत मुंबईतून",
+        "copyrightHolder": "Rahul Ransubhe/BBC",
+        "type": "image"
+      },
+      {
+        "id": "99831607",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/113D5/production/_99831607_whatsappimage2018-01-31at9.28.47pm.jpg",
+        "path": "/cpsprodpb/113D5/production/_99831607_whatsappimage2018-01-31at9.28.47pm.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "चंद्रग्रहण",
+        "caption": "ग्रहणाचा मध्य जवळ येताना लोकांचा उत्साह शिगेला पेटला होता",
+        "copyrightHolder": "Rahul Ransubhe/BBC",
+        "type": "image"
+      },
+      {
+        "id": "99831609",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/161F5/production/_99831609_whatsappimage2018-01-31at9.28.42pm.jpg",
+        "path": "/cpsprodpb/161F5/production/_99831609_whatsappimage2018-01-31at9.28.42pm.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "चंद्रग्रहण",
+        "caption": "पृथ्वीच्या सावलीनं चंद्र झाकोळला आणि आसमंतात अंधार पसरला",
+        "copyrightHolder": "Rahul Ransubhe/BBC",
+        "type": "image"
+      },
+      {
+        "id": "99831612",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/546D/production/_99831612_whatsappimage2018-01-31at9.28.48pm.jpg",
+        "path": "/cpsprodpb/546D/production/_99831612_whatsappimage2018-01-31at9.28.48pm.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "चंद्रग्रहण",
+        "caption": "ग्रहण अवस्थेची ही चित्रं टिपली आहेत मुंबईतून",
+        "copyrightHolder": "Rahul Ransubhe/BBC",
+        "type": "image"
+      },
+      {
+        "id": "99831613",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/7B7D/production/_99831613_whatsappimage2018-01-31at9.28.50pm-1.jpg",
+        "path": "/cpsprodpb/7B7D/production/_99831613_whatsappimage2018-01-31at9.28.50pm-1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "चंद्रग्रहण",
+        "caption": "ग्रहण अवस्थेची ही चित्रं टिपली आहेत मुंबईतून",
+        "copyrightHolder": "Rahul Ransubhe/BBC",
+        "type": "image"
+      },
+      {
+        "id": "99831614",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/A28D/production/_99831614_whatsappimage2018-01-31at9.28.51pm.jpg",
+        "path": "/cpsprodpb/A28D/production/_99831614_whatsappimage2018-01-31at9.28.51pm.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "चंद्रग्रहण",
+        "caption": "ग्रहणवस्थेची मुंबईतून टिपलेली चित्रं",
+        "copyrightHolder": "Rahul Ransubhe/BBC",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "फोटो फीचर : सुपरमूनला कसं लागलं ग्रहण?",
+      "headline": "फोटो फीचर : सुपरमूनला कसं लागलं ग्रहण?"
+    },
+    "locators": {
+      "assetUri": "/marathi/india-42894522",
+      "cpsUrn": "urn:bbc:content:assetUri:marathi/india-42894522",
+      "curie": "http://www.bbc.co.uk/asset/cd348faf-3f80-f44b-b8ea-a46e65594c43"
+    },
+    "summary": "ब्लूमून, सुपरमून आणि ब्लडमूड असा तिहेरी खगोल आविष्कार बुधवारी बघायला मिळाला. बीबीसी प्रतिनिधी राहुल रणसुभे यांनी टिपलेली ग्रहणचित्रं.",
+    "timestamp": 1564010660712,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      }
+    },
+    "indexImage": {
+      "id": "99827636",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/F8B8/production/_99827636_whatsappimage2018-01-31at9.28.49pm.jpg",
+      "path": "/cpsprodpb/F8B8/production/_99827636_whatsappimage2018-01-31at9.28.49pm.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "चंद्रग्रहण",
+      "copyrightHolder": "Rahul Ransubhe/BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:marathi/india-42894522",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "भारत",
+      "uri": "/marathi/india",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC मराठी",
+      "uri": "/marathi",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

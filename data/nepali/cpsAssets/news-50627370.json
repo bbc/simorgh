@@ -1,0 +1,324 @@
+Tree
+Chart
+JSON Input
+{..
+}
+JSON formated text
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:nepali/news-50627370",
+    "locators": {
+      "assetUri": "/nepali/news-50627370",
+      "cpsUrn": "urn:bbc:content:assetUri:nepali/news-50627370",
+      "curie": "http://www.bbc.co.uk/asset/dbe71115-203e-664c-80f2-5fdabbc80e3e"
+    },
+    "type": "PGL",
+    "createdBy": "nepali-v6",
+    "language": "ne",
+    "lastUpdated": 1575275703705,
+    "firstPublished": 1575275694000,
+    "lastPublished": 1575275694000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "nepali.news.photo_gallery.50627370.page",
+      "cps_asset_id": "50627370"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Animals",
+          "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+          "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Animal",
+            "http://www.wikidata.org/entity/Q729"
+          ],
+          "topicName": "जनावरहरु",
+          "topicId": "cjgn7kww28rt",
+          "curationList": [
+            {
+              "curationId": "2eed031a-db0d-4f43-a229-55db9857531b",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Nepal",
+          "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+          "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
+          "thingType": [
+            "Thing",
+            "Place",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/1282988/"
+          ],
+          "topicName": "नेपाल",
+          "topicId": "cyx5k2yzyj6t",
+          "curationList": [
+            {
+              "curationId": "c7e60cb4-d8d1-4ccf-b128-c2ed445abe6d",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "India",
+          "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+          "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+          "thingType": [
+            "Thing",
+            "Place",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/1269750/"
+          ],
+          "topicName": "भारत",
+          "topicId": "cqywjkryq2xt",
+          "curationList": [
+            {
+              "curationId": "9a0fad46-ebf6-4b3a-a13e-9097f6bc5553",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Animal rights",
+          "thingUri": "http://www.bbc.co.uk/things/8455721e-3da5-4a1c-a114-180dbc2bbd92#id",
+          "thingId": "8455721e-3da5-4a1c-a114-180dbc2bbd92",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Animal_rights",
+            "http://www.wikidata.org/entity/Q426"
+          ],
+          "topicId": "c1gdq211qr8t",
+          "curationList": [
+            {
+              "curationId": "7f420363-2c95-40ae-ad08-dfb3de1a2450",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Religion",
+          "thingUri": "http://www.bbc.co.uk/things/fbcd47f3-d67a-4b69-b15c-d4b6c270adbf#id",
+          "thingId": "fbcd47f3-d67a-4b69-b15c-d4b6c270adbf",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Religion",
+            "http://www.wikidata.org/entity/Q9174"
+          ],
+          "topicName": "धर्म",
+          "topicId": "cqywjkr75w7t",
+          "curationList": [
+            {
+              "curationId": "e12885ab-bfa7-45ed-9175-7f7fa6b2b13b",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.3",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "109969493",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/9A48/production/_109969493_78129142_2549429765173225_6208281273958400000_n.jpg",
+        "path": "/cpsprodpb/9A48/production/_109969493_78129142_2549429765173225_6208281273958400000_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "गढीमाई",
+        "caption": "नेपालको बारा जिल्लाको बरियारपुरमा मङ्सिर १ गतेदेखि जारी एक महिने पञ्चवर्षीय गढीमाई मेलामा नेपाल र भारतबाट आउने भक्तजनको सङ्ख्या दिनहुँ बढिरहेको मेला समितिले जनाएको छ।",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109969497",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13688/production/_109969497_78855285_1456873774450896_437587760790896640_n.jpg",
+        "path": "/cpsprodpb/13688/production/_109969497_78855285_1456873774450896_437587760790896640_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "गढीमाई",
+        "caption": "हरेक पाचँ वर्षमा एक महिना लाग्ने मेलामा ठूलो सङ्ख्यामा राँगा, बोका, कुखुरा र परेवाको बलि दिइने गरिन्छ।",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109969500",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/0254/production/_109969500_78047752_2503998406539045_1717206355338592256_n.jpg",
+        "path": "/cpsprodpb/0254/production/_109969500_78047752_2503998406539045_1717206355338592256_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "गढीमाई",
+        "caption": "गढीमाईलाई विशेषगरी चढाइने जीरा मिठाई भनिने मिठाई बनाउने र विक्री गर्न व्यापारीले मेला स्थलमा दर्जनौँ पसल थापेका छन्।",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109969633",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/83A0/production/_109969633_76727104_1506007989549958_9056790643652689920_n.jpg",
+        "path": "/cpsprodpb/83A0/production/_109969633_76727104_1506007989549958_9056790643652689920_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "गढीमाई",
+        "caption": "मेला समितिका अनुसार गढीमाई मेला हेर्न बन्दोबस्तीका सरसामानसहित ठूलो सङ्ख्यामा महिलाहरू पनि पुग्ने गरेका छन्।",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109969636",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/F8D0/production/_109969636_73364105_2419638198145632_8067144163344252928_n.jpg",
+        "path": "/cpsprodpb/F8D0/production/_109969636_73364105_2419638198145632_8067144163344252928_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "गढीमाई",
+        "caption": "बलि दिनुअघि रागाँ लगायत जनावरलाई फूलमाला आदि लगाएर विशेष रूपमा सिँगारिने गरिन्छ।",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109969639",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16E00/production/_109969639_74425741_2441839342581301_6611134371506159616_n.jpg",
+        "path": "/cpsprodpb/16E00/production/_109969639_74425741_2441839342581301_6611134371506159616_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "गढीमाई",
+        "caption": "गढीमाई दर्शनका लागि पुग्जे भक्तजनका लागि बस्ने पण्डालको व्यवस्थापन, निःशुल्क खाना, बाटो लगायत सबै व्यवस्था गरिएको मेला समितिले जनाएको छ।",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109969772",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/6C94/production/_109969772_75422261_1288497394685648_5408571080841363456_n.jpg",
+        "path": "/cpsprodpb/6C94/production/_109969772_75422261_1288497394685648_5408571080841363456_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "गढीमाई",
+        "caption": "मेलामा अबीर लगायत पूजा सामग्रीको विक्रीका लागि ठूलो सङ्ख्यामा व्यापारीहरूले पसल थापेका छन्।",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "109969775",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/E1C4/production/_109969775_78950417_2545356855518456_1259350184316370944_n.jpg",
+        "path": "/cpsprodpb/E1C4/production/_109969775_78950417_2545356855518456_1259350184316370944_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "गढीमाई",
+        "caption": "मेलाको व्यवस्थापनका लागि एक हजार जनाभन्दा बढी सुरक्षाकर्मी खटाईएको जिल्ला प्रशासन कार्यालय बाराले जनाएको छ।",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "प्रसिद्ध गढीमाई मेलाको रौनक",
+      "headline": "प्रसिद्ध गढीमाई मेलाको रौनक"
+    },
+    "locators": {
+      "assetUri": "/nepali/news-50627370",
+      "cpsUrn": "urn:bbc:content:assetUri:nepali/news-50627370",
+      "curie": "http://www.bbc.co.uk/asset/dbe71115-203e-664c-80f2-5fdabbc80e3e"
+    },
+    "summary": "बाराको गढीमाई मेलामा आफूले भाकल गरेको र मनोकामना पूरा भएको भन्दै नेपाल र भारतका विभिन्न ठाउँबाट राँगा, बोका तथा परेवा बलि दिनका लागि हजारौँ सङ्ख्यामा भक्तजन मेला स्थलमा पुगेका छन्।",
+    "timestamp": 1575275703705,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "109969493",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/9A48/production/_109969493_78129142_2549429765173225_6208281273958400000_n.jpg",
+      "path": "/cpsprodpb/9A48/production/_109969493_78129142_2549429765173225_6208281273958400000_n.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "गढीमाई",
+      "caption": "नेपालको बारा जिल्लाको बरियारपुरमा मङ्सिर १ गतेदेखि जारी एक महिने पञ्चवर्षीय गढीमाई मेलामा नेपाल र भारतबाट आउने भक्तजनको सङ्ख्या दिनहुँ बढिरहेको मेला समितिले जनाएको छ।",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:nepali/news-50627370",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "समाचार",
+      "uri": "/nepali/news",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "नेपाली समाचार",
+      "uri": "/nepali",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
