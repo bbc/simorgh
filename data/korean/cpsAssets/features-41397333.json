@@ -1,0 +1,338 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:korean/features-41397333",
+    "locators": {
+      "assetUri": "/korean/features-41397333",
+      "cpsUrn": "urn:bbc:content:assetUri:korean/features-41397333",
+      "curie": "http://www.bbc.co.uk/asset/7c7c43a5-7588-7145-b74a-63e687c7b68e"
+    },
+    "type": "PGL",
+    "createdBy": "korean-v6",
+    "language": "ko",
+    "lastUpdated": 1579164336823,
+    "firstPublished": 1506995464000,
+    "lastPublished": 1506995465000,
+    "timestamp": 1506995464000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "korean.features.photo_gallery.41397333.page",
+      "cps_asset_id": "41397333"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Nature",
+          "thingUri": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+          "thingId": "12e69b92-a7ba-4463-84e0-be107b9805d0",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Nature"
+          ],
+          "topicName": "자연",
+          "topicId": "c5qvpx19pw2t",
+          "curationList": [
+            {
+              "curationId": "832916de-c5e5-40c4-b549-dfe3fbdb7322",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Photography",
+          "thingUri": "http://www.bbc.co.uk/things/ae0d5073-dfeb-4251-b555-0a9c74f3d4e0#id",
+          "thingId": "ae0d5073-dfeb-4251-b555-0a9c74f3d4e0",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Photography"
+          ],
+          "topicName": "사진",
+          "topicId": "c1gdq2rq7rxt",
+          "curationList": [
+            {
+              "curationId": "8336d1a7-7050-49f8-86a7-bec1a5c65d10",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.4",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "98000577",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12EBC/production/_98000577_prod-yourshot-101177-10940182_005.jpg",
+        "path": "/cpsprodpb/12EBC/production/_98000577_prod-yourshot-101177-10940182_005.jpg",
+        "height": 649,
+        "width": 976,
+        "altText": "사진가 아차파는 인도 남서부 카르나타카 밀림 지역에 서식하는 노란 관목개구리(Coorg yellow bush frog)를 찍었다.",
+        "caption": "사진가 아차파는 인도 남서부 카르나타카 밀림 지역에 서식하는 노란 관목개구리(Coorg yellow bush frog)를 찍었다. 눈 주위의 파란 줄 때문에 ‘파란눈 관목 개구리’라고도 불린다.",
+        "copyrightHolder": "Angad Achappa",
+        "type": "image"
+      },
+      {
+        "id": "97965594",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/C194/production/_97965594_prod-yourshot-61445-10898184_003.jpg",
+        "path": "/cpsprodpb/C194/production/_97965594_prod-yourshot-61445-10898184_003.jpg",
+        "height": 649,
+        "width": 976,
+        "altText": "산 속 안개가 드리워진 다리위로 기차가 지나간다.",
+        "caption": "일본의 후쿠시마와 니카타 현을 연결하는 타다미노선. 이 철도노선에는 한 대의 열차만 통과할 수 있는 단선 구간이 있다. 사진가 아라야는 특히 타다미 강 구간을 백미로 꼽았다. 그는 “봄에는 벚꽃, 여름엔 신록, 가을엔 단풍, 겨울엔 설경이 그림처럼 펼쳐진다”고 한다.",
+        "copyrightHolder": "TERUO ARAYA",
+        "type": "image"
+      },
+      {
+        "id": "97965490",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/24F0/production/_97965490_prod-yourshot-534503-10922193_008.jpg",
+        "path": "/cpsprodpb/24F0/production/_97965490_prod-yourshot-534503-10922193_008.jpg",
+        "height": 649,
+        "width": 976,
+        "altText": "언덕 위에서 한가로이 풀을 뜯고 있는 말의 모습",
+        "caption": "루마니아 트란실바니아 산악지역의 아침 풍경. 사진가 세바스찬은 언덕 위에서 한가로이 풀을 뜯고 있는 말의 모습을 렌즈에 담았다.",
+        "copyrightHolder": "Sebastiaen",
+        "type": "image"
+      },
+      {
+        "id": "97965517",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/11784/production/_97965517_prod-yourshot-285286-8144547_006.jpg",
+        "path": "/cpsprodpb/11784/production/_97965517_prod-yourshot-285286-8144547_006.jpg",
+        "height": 649,
+        "width": 976,
+        "altText": "암사자가 기지개를 켜는 모습",
+        "caption": "조엘 피샬은 케냐 마사이 마라 국립공원에서 암사자가 기지개를 켜는 모습을 카메라에 담았다.",
+        "copyrightHolder": "Joel Fischer",
+        "type": "image"
+      },
+      {
+        "id": "97965523",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/7F2C/production/_97965523_prod-yourshot-518010-8364109_007.jpg",
+        "path": "/cpsprodpb/7F2C/production/_97965523_prod-yourshot-518010-8364109_007.jpg",
+        "height": 949,
+        "width": 976,
+        "altText": "그레이트불루 황새가 물위에 있다.",
+        "caption": "“오늘 아침 인도 델라웨어의 야생동물 보호지역 최고의 순간”이라고 제리 엔덴은 말한다. 그는 “그레이트불루 황새가 몸치장 하는 순간 바람 한점 없이 고요했다”고 한다.",
+        "copyrightHolder": "Jerry am Ende",
+        "type": "image"
+      },
+      {
+        "id": "97965489",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/18098/production/_97965489_prod-yourshot-1125771-8292384_011.jpg",
+        "path": "/cpsprodpb/18098/production/_97965489_prod-yourshot-1125771-8292384_011.jpg",
+        "height": 1249,
+        "width": 976,
+        "altText": "상공에서 바라 본 호주 케이블 해변. 해변을 따라 낙타 한 무리가 걷고 있다.",
+        "caption": "토드 케네디는 호주 서부 상공에서 해변을 따라 걷는 한 무리의 낙타이 모습을 카메라에 담았다.",
+        "copyrightHolder": "Todd Kennedy",
+        "type": "image"
+      },
+      {
+        "id": "97965488",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/15988/production/_97965488_prod-yourshot-1352010-10885652_014.jpg",
+        "path": "/cpsprodpb/15988/production/_97965488_prod-yourshot-1352010-10885652_014.jpg",
+        "height": 649,
+        "width": 976,
+        "altText": "강가에 있는 어미 곰과 새끼 곰의 모습.",
+        "caption": "아네트 구트만가 러시아의 캄차카반도에서 찍은 사진. 그는 “3개월 된 새끼 곰이 너무 귀여워 달려가 안아주고 싶었다. 근데 어미 곰이 나를 쳐다보고 있어 할 수 없었다”고 한다.",
+        "copyrightHolder": "anat gutman",
+        "type": "image"
+      },
+      {
+        "id": "97965487",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13278/production/_97965487_prod-yourshot-754803-9820883_009.jpg",
+        "path": "/cpsprodpb/13278/production/_97965487_prod-yourshot-754803-9820883_009.jpg",
+        "height": 649,
+        "width": 976,
+        "altText": "철새들의 비행을 항공촬영한 모습.",
+        "caption": "미국 북부 캘리포니아 지역에는 매년 12~3월에 특별한 방문객이 온다. 겨울철 서식지를 찾아 날아온 철새들의 모습을 항공기에서 촬영한 모습.",
+        "copyrightHolder": "Jassen Todorov",
+        "type": "image"
+      },
+      {
+        "id": "97965516",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/F074/production/_97965516_prod-yourshot-899521-10945110_010.jpg",
+        "path": "/cpsprodpb/F074/production/_97965516_prod-yourshot-899521-10945110_010.jpg",
+        "height": 649,
+        "width": 976,
+        "altText": "갑오징어의 모습.",
+        "caption": "서부 호주 항구도시 화이앨라의 바닷속 모습. 카메론 맥팔란은 “매년 교미 때가되면 대왕갑오징어 수만 만리가 몰려온다”며 이 지역은 “단 기간 가장 많은 수의 갑오징어를 볼 수 있는 곳”라고 한다.",
+        "copyrightHolder": "Cameron McFarlane",
+        "type": "image"
+      },
+      {
+        "id": "97965387",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13214/production/_97965387_prod-yourshot-1454449-9753307_015.jpg",
+        "path": "/cpsprodpb/13214/production/_97965387_prod-yourshot-1454449-9753307_015.jpg",
+        "height": 1449,
+        "width": 976,
+        "altText": "수면위로 모습을 드러내는 악어.",
+        "caption": "미국 루이지애나 뉴올리언스의 강가에서 촬영한 이 장면은 눈을 크게 뜨고 보면 수초 아래 악어 한 마리가 보인다. 이 모습을 찍은 프래쉐는 “산책로 밖에서 안전하게 촬영했다”고 덧붙였다.",
+        "copyrightHolder": "Cole Frechou",
+        "type": "image"
+      },
+      {
+        "id": "97965384",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/BCE4/production/_97965384_prod-yourshot-1580916-10801801_016.jpg",
+        "path": "/cpsprodpb/BCE4/production/_97965384_prod-yourshot-1580916-10801801_016.jpg",
+        "height": 599,
+        "width": 976,
+        "altText": "골격새우의 모습",
+        "caption": "애덤 실버만은 이 사진을 자신이 찍은 생물 사진 중 최고로 꼽는다. 그는 “확대 랜즈를 통해 골격 새우의 정교한 모습을 사진에 담았다. 붉은 눈도 볼 수 있고, 특히 카메라를 보는 얼굴과 펼쳐진 다리가 대칭을 이룬다”며 사진을 설명했다.",
+        "copyrightHolder": "Adam Silverman",
+        "type": "image"
+      },
+      {
+        "id": "97965386",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/10B04/production/_97965386_prod-yourshot-1590078-10916974_018.jpg",
+        "path": "/cpsprodpb/10B04/production/_97965386_prod-yourshot-1590078-10916974_018.jpg",
+        "height": 699,
+        "width": 976,
+        "altText": "거위의 모습을 드론으로 촬영했다.",
+        "caption": "사진가 다로치는 이 장면을 담은 순간이 생생하다. 그는 “아침 촬영을 마치고 집으로 가는 길이었다. 갑자기 한 무리의 거위가 눈앞에 펼쳐졌다.” 그는 거위들이 놀라지 않을 위치에 드론을 띄워 촬영했다.",
+        "copyrightHolder": "Csaba Daroczi",
+        "type": "image"
+      },
+      {
+        "id": "97965522",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/581C/production/_97965522_prod-yourshot-33945-9522446_001.jpg",
+        "path": "/cpsprodpb/581C/production/_97965522_prod-yourshot-33945-9522446_001.jpg",
+        "height": 719,
+        "width": 976,
+        "altText": "구불구불한 산악 도로를 하늘에서 본 모습.",
+        "caption": "루마니아의 트란실바니아 지역으로 향하는DN 1A도로. 사진가 스탄은 “그 유명한 드라큘라 백작이 태어난 트란실바니아로 가는 길”이라고 강조했다.",
+        "copyrightHolder": "Calin Stan",
+        "type": "image"
+      },
+      {
+        "id": "98007454",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/B19E/production/_98007454_28455f72-e00c-4671-a3fe-21c830b10602.jpg",
+        "path": "/cpsprodpb/B19E/production/_98007454_28455f72-e00c-4671-a3fe-21c830b10602.jpg",
+        "height": 659,
+        "width": 976,
+        "altText": "형형색색의 산악지대 모습.",
+        "caption": "알랑 보드로는 캐나다 메켄지 산맥의 절경을 담았다. 녹색의 산지와 회색의 기암이 절묘한 조화를 이루고 있다.",
+        "copyrightHolder": "Alain Boudreau ",
+        "type": "image"
+      },
+      {
+        "id": "97965518",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13E94/production/_97965518_prod-yourshot-64521-10446688_004.jpg",
+        "path": "/cpsprodpb/13E94/production/_97965518_prod-yourshot-64521-10446688_004.jpg",
+        "height": 669,
+        "width": 976,
+        "altText": "노르웨이 북부 로포텐 제도(Lofoten Islands)의 신비한 물웅덩이.",
+        "caption": "노르웨이 북부 로포텐 제도(Lofoten Islands)의 신비한 물웅덩이. 조수 간만의 차로 생긴 이곳은 신비한 자연경관을 연출한다. 펠릭스는 “만조일 때 백사장의 모래가 웅덩이로 밀려 들어오면 정말 장관이다”고 한다.",
+        "copyrightHolder": "Felix Inden",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "개구리, 사자, 곰 중 최고의 사진은?",
+      "headline": "내셔널지오그래픽 사진 공모작"
+    },
+    "locators": {
+      "assetUri": "/korean/features-41397333",
+      "cpsUrn": "urn:bbc:content:assetUri:korean/features-41397333",
+      "curie": "http://www.bbc.co.uk/asset/7c7c43a5-7588-7145-b74a-63e687c7b68e"
+    },
+    "summary": "내셔널지오그래픽사가 주최하는 2017년 ‘올해의 자연 사진가’ 공모전이 진행 중이다. 지금까지 제출된 사진 중 에디터가 선정한 최고의 사진을 감상해보자. 공모전 마감은 동부 표준 (EST)시간으로 11월17일 자정이다.",
+    "timestamp": 1506995464000,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "97862690",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/259A/production/_97862690_prod-yourshot-1352010-10885652_014.jpg",
+      "path": "/cpsprodpb/259A/production/_97862690_prod-yourshot-1352010-10885652_014.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Two bears wade in the river.",
+      "caption": "Anat Gutman took this image in Kamtsjatka, Russia. \"The three-month-old cub was so cute I almost dropped the camera and ran to hug him. Almost ... because the mother bear was looking at me suspiciously.\"",
+      "copyrightHolder": "anat gutman",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:korean/features-41397333",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "매거진",
+      "uri": "/korean/features",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC 코리아",
+      "uri": "/korean",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "related-urls",
+        "promos": [
+          {
+            "name": "2017 National Geographic Nature Photographer of the Year - National Geographic",
+            "uri": "http://photography.nationalgeographic.com/nature-photographer-of-the-year-2017",
+            "type": "link"
+          }
+        ]
+      }
+    ]
+  }
+}

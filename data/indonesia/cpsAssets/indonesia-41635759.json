@@ -1,0 +1,364 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:indonesia/indonesia-41635759",
+    "locators": {
+      "assetUri": "/indonesia/indonesia-41635759",
+      "cpsUrn": "urn:bbc:content:assetUri:indonesia/indonesia-41635759",
+      "curie": "http://www.bbc.co.uk/asset/bc0792ea-b105-b240-b496-e1f3a4e4c64b"
+    },
+    "type": "PGL",
+    "createdBy": "indonesia-v6",
+    "language": "id",
+    "lastUpdated": 1579164202277,
+    "firstPublished": 1508161196000,
+    "lastPublished": 1516760651000,
+    "timestamp": 1508161196000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "indonesia.indonesia.photo_gallery.41635759.page",
+      "cps_asset_id": "41635759"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Indonesia",
+          "thingUri": "http://www.bbc.co.uk/things/4aa966f9-091e-4dd1-8f10-a44ca20aec5d#id",
+          "thingId": "4aa966f9-091e-4dd1-8f10-a44ca20aec5d",
+          "thingType": [
+            "Thing",
+            "Place",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/1643084/"
+          ],
+          "topicId": "cjgn7k8yx4gt",
+          "curationList": [
+            {
+              "curationId": "902ce117-a931-4e10-a4ae-5dbeda1a3a09",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.4",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "98334130",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/0C47/production/_98334130_mediaitem98334129.jpg",
+        "path": "/cpsprodpb/0C47/production/_98334130_mediaitem98334129.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Anies Baswedan, Jokowi, Jakarta",
+        "caption": "Presiden Joko Widodo dan Wakil Presiden Jusuf Kalla memimpin 'kirab' yang mengawali pelantikan gubernur DKI Jakarta di Istana Negara, Senin (16/10).",
+        "copyrightHolder": "EPA",
+        "type": "image"
+      },
+      {
+        "id": "98334127",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/119CF/production/_98334127_mediaitem98334126.jpg",
+        "path": "/cpsprodpb/119CF/production/_98334127_mediaitem98334126.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Anies Baswedan, Jokowi, Jakarta",
+        "caption": "Anies Baswedan pernah menjabat menteri pendidikan namun bulan Juli 2016 diberhentikan oleh Presiden Joko Widodo, yang kini melantiknya sebagai gubernur DKI Jakarta setelah meraih kemenangan dalam pilkada pada April 2017 lalu bersama Wakil Gubernur, Sandiaga Uno.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "98334891",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/4D83/production/_98334891_mediaitem98334890.jpg",
+        "path": "/cpsprodpb/4D83/production/_98334891_mediaitem98334890.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Anies Baswedan, Jakarta, Sandiaga Uno, Ahok, Djarot",
+        "caption": "Pasangan Anies Basweedan-Sandiaga Uno berhasil mengalahkan gubernur petahana Basuki Tjahaja Purnama atau Ahok-Djarot Saiful Hidayat dalam pemilihan tahap kedua 19 April 2017.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "98334892",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/7493/production/_98334892_mediaitem98334131.jpg",
+        "path": "/cpsprodpb/7493/production/_98334892_mediaitem98334131.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Anies Baswedan, Jakarta, Sandiaga Uno, Ahok, Djarot",
+        "caption": "Dukungan atas Anies Basweedan-Sandiaga Uno antara lain juga berasal dari kekuatan kelompok Islam, yang menentang Ahok yang merupakan etnik Cina dan beragama Kristen.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "98335058",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14C3D/production/_98335058_mediaitem98335057.jpg",
+        "path": "/cpsprodpb/14C3D/production/_98335058_mediaitem98335057.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Anies Baswedan, Jakarta",
+        "caption": "Anies Baswedan -yang merupakan calon usungan Partai Gerindra dan PKS- dalam salah satu kegiatan kampanye pada Januari 2017.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "98335065",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/DAF5/production/_98335065_mediaitem98335064.jpg",
+        "path": "/cpsprodpb/DAF5/production/_98335065_mediaitem98335064.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Anies Baswedan, Jakarta, Sandiaga Uno",
+        "caption": "Pada masa kampanye, pasangan Anies-Sandi berjanji akan mengkaji kembali Proyek Reklamasi Pantai Utara Jakarta, yang sudah diputuskan pemerintah pusat.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "98339103",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/75F1/production/_98339103_mediaitem98339102.jpg",
+        "path": "/cpsprodpb/75F1/production/_98339103_mediaitem98339102.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Anies Baswedan, Jokowi, Jakarta",
+        "caption": "Presiden Joko Widodo beserta Ibu Negara Iriana Widodo memberikan ucapan selamat kepada Gubernur DKI Jakarta yang baru, Anies Baswedan.",
+        "copyrightHolder": "EPA",
+        "type": "image"
+      },
+      {
+        "id": "98338474",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/B97B/production/_98338474_01_anies.jpg",
+        "path": "/cpsprodpb/B97B/production/_98338474_01_anies.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Anies Baswedan, Jakarta",
+        "caption": "Selametan Jakarta digelar di Balai Kota Jakarta untuk merayakan pelantikan Anies-Sandi.",
+        "copyrightHolder": "Facebook Anies Baswedan",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Anies Baswedan, dari mantan menteri menjadi gubernur DKI Jakarta",
+      "headline": "Anies Baswedan, dari mantan menteri menjadi gubernur DKI Jakarta"
+    },
+    "locators": {
+      "assetUri": "/indonesia/indonesia-41635759",
+      "cpsUrn": "urn:bbc:content:assetUri:indonesia/indonesia-41635759",
+      "curie": "http://www.bbc.co.uk/asset/bc0792ea-b105-b240-b496-e1f3a4e4c64b"
+    },
+    "summary": "Presiden Joko Widodo melantik Anies Baswedan -yang tahun lalu dicopot dari jabatan Menteri Pendidikan- sebagai gubernur DKI Jakarta bersama wakilnya, Sandiaga Uno.",
+    "timestamp": 1508161196000,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "98334127",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/119CF/production/_98334127_mediaitem98334126.jpg",
+      "path": "/cpsprodpb/119CF/production/_98334127_mediaitem98334126.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Anies Baswedan, Jokowi, Jakarta",
+      "caption": "Anies Baswedan pernah menjabat Menteri Pendidikan namun Bulan Juli 2016 diganti oleh Presiden Joko Widodo, yang kini melantiknya sebagai Gubernur DKI Jakarta setelah meraih kemenangan dalam pilkada pada April 2017 lalu bersama Wakil Gubernur, Sandiaga Uno.",
+      "copyrightHolder": "Reuters",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:indonesia/indonesia-41635759",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Indonesia",
+      "uri": "/indonesia/indonesia",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Indonesia",
+      "uri": "/indonesia",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Bagaimana wujud janji Anies Baswedan dan Sandiaga Uno dalam 100 hari?",
+              "headline": "Bagaimana wujud janji Anies Baswedan dan Sandiaga Uno dalam 100 hari?"
+            },
+            "locators": {
+              "assetUri": "/indonesia/indonesia-41607251",
+              "cpsUrn": "urn:bbc:content:assetUri:/indonesia/indonesia-41607251"
+            },
+            "summary": "Masa pemerintahan Gubernur-Wakil Gubernur DKI Jakarta, Anies Baswedan dan Sandiaga Uno, memasuki 100 hari setelah resmi menjabat pada 16 Oktober 2017. Bagaimana wujud janji mereka?",
+            "timestamp": 1516760650000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "98328525",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/CD66/production/_98328525_gettyimages-647803356.jpg",
+              "path": "/cpsprodpb/CD66/production/_98328525_gettyimages-647803356.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Sandiaga Uno-Anies Baswedan",
+              "caption": "Pasangan Anies-Sandi sebelumnya mengkampanyekan penolakan terhadap proyek reklamasi.",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:indonesia/indonesia-41607251",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Pelantikan Anies-Sandi, Polda Metro kerahkan 7.000 aparat keamanan",
+              "headline": "Pelantikan Anies-Sandi, Polda Metro kerahkan 7.000 aparat keamanan"
+            },
+            "locators": {
+              "assetUri": "/indonesia/indonesia-41629929",
+              "cpsUrn": "urn:bbc:content:assetUri:/indonesia/indonesia-41629929"
+            },
+            "summary": "Peresiden Joko Widodo akan melantik Gubernur DKI Jakarta, Anies Baswedan, dan wakilnya, Sandiaga Uno, yang diikuti dengan Sidang Paripurna DPRD dan pesta rakyat.",
+            "timestamp": 1508107840000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "98327369",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/17874/production/_98327369_d1dcc757-bfea-40b5-86eb-e18782c88baa.jpg",
+              "path": "/cpsprodpb/17874/production/_98327369_d1dcc757-bfea-40b5-86eb-e18782c88baa.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Anies Baswedan, Sandiaga Uno",
+              "caption": "Anies Baswedan dan Sandiaga Uno menang dalam Pilkada DKI Jakarta dengan dukungan, antara lain, kekuatan Islam.",
+              "copyrightHolder": "Reuters",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:indonesia/indonesia-41629929",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Seperti apa perubahan Jakarta di bawah Anies Baswedan?",
+              "headline": "Seperti apa perubahan Jakarta di bawah Anies Baswedan?"
+            },
+            "locators": {
+              "assetUri": "/indonesia/indonesia-39639485",
+              "cpsUrn": "urn:bbc:content:assetUri:/indonesia/indonesia-39639485"
+            },
+            "summary": "Dengan hitung cepat yang menempatkan kemenangan Anies Baswedan sebagai gubernur baru di Jakarta, seperti apa perubahan yang akan terjadi?",
+            "timestamp": 1492638598000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "95706024",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A44C/production/_95706024_gettyimages-670156358.jpg",
+              "path": "/cpsprodpb/A44C/production/_95706024_gettyimages-670156358.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Anies Baswedan-Sandiaga Uno",
+              "caption": "Pasangan Anies-Sandi sebelumnya mengkampanyekan penolakan terhadap proyek reklamasi.",
+              "copyrightHolder": "ADEK BERRY/AFP/Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:indonesia/indonesia-39639485",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Pentingnya kunjungan Anies Baswedan ke markas FPI menjelang pilkada",
+              "headline": "Pentingnya kunjungan Anies Baswedan ke markas FPI menjelang pilkada"
+            },
+            "locators": {
+              "assetUri": "/indonesia/trensosial-38493642",
+              "cpsUrn": "urn:bbc:content:assetUri:/indonesia/trensosial-38493642"
+            },
+            "summary": "Kunjungan Anies Baswedan ke markas FPI mendatangkan kekecewaan bagi sebagian pengguna media sosial. Namun seorang pengamat politik menjelaskan mengapa langkah ini penting bagi calon gubernur DKI Jakarta nomor urut tiga ini.",
+            "timestamp": 1483438791000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "93217678",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/15677/production/_93217678_anis3.jpg",
+              "path": "/cpsprodpb/15677/production/_93217678_anis3.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Anies Baswedan",
+              "caption": "Kunjungan Anies Baswedan di Luar Batang, Jakarta dalam rangka kampanye.",
+              "copyrightHolder": "Facebook Anies Baswedan",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:indonesia/trensosial-38493642",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Anies Baswedan, tiga aturan Ahok, dan 'akal sehat'",
+              "headline": "Anies Baswedan, tiga aturan Ahok, dan 'akal sehat'"
+            },
+            "locators": {
+              "assetUri": "/indonesia/indonesia-39703013",
+              "cpsUrn": "urn:bbc:content:assetUri:/indonesia/indonesia-39703013"
+            },
+            "summary": "Anies Baswedan akan membatalkan tiga aturan gubernur Ahok yang ditolak sebagian kalangan Islam, namun mengaku mereka tak berfokus pada hal-hal yang berbau Islam. Kubu Anies juga mengatakan bahwa kemenangan mereka bukanlah kemenangan 'irasional.'",
+            "timestamp": 1493112076000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "95774850",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16D7/production/_95774850_img_9011.jpg",
+              "path": "/cpsprodpb/16D7/production/_95774850_img_9011.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Menurut hasil hitung cepat, pasangan Anies-Sandi mendapat sekitar 58% suara pemilih di Jakarta.",
+              "caption": "Menurut hasil hitung cepat, pasangan Anies-Sandi mendapat sekitar 58% suara pemilih di Jakarta.",
+              "copyrightHolder": "BBC Indonesia",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:indonesia/indonesia-39703013",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

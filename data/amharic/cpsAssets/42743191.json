@@ -1,0 +1,273 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:amharic/42743191",
+    "locators": {
+      "assetUri": "/amharic/42743191",
+      "cpsUrn": "urn:bbc:content:assetUri:amharic/42743191",
+      "curie": "http://www.bbc.co.uk/asset/54da4dff-4f63-494d-b516-e639d6e7cdae"
+    },
+    "type": "PGL",
+    "createdBy": "amharic-v6",
+    "language": "am",
+    "lastUpdated": 1579163326856,
+    "firstPublished": 1516345919000,
+    "lastPublished": 1516348635000,
+    "timestamp": 1516345919000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "amharic.photo_gallery.42743191.page",
+      "cps_asset_id": "42743191"
+    },
+    "tags": {},
+    "version": "v1.1.4",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "99659250",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14AF/production/_99659250_whatsappimage2018-01-19at9.45.24am.jpg",
+        "path": "/cpsprodpb/14AF/production/_99659250_whatsappimage2018-01-19at9.45.24am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ጎንደር የጥምቀት በዓል",
+        "caption": "የጥምቀት በዓል በጎንደር",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "99659245",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/D417/production/_99659245_whatsappimage2018-01-19at9.33.42am.jpg",
+        "path": "/cpsprodpb/D417/production/_99659245_whatsappimage2018-01-19at9.33.42am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ጎንደር የጥምቀት በዓል",
+        "caption": "የጥምቀት በዓል በጎንደር",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "99659247",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12237/production/_99659247_whatsappimage2018-01-19at9.38.33am.jpg",
+        "path": "/cpsprodpb/12237/production/_99659247_whatsappimage2018-01-19at9.38.33am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ጎንደር የጥምቀት በዓል",
+        "caption": "የከተራ በዓል በጎንደር",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "99658808",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13BF5/production/_99658808_whatsappimage2018-01-18at4.03.12pm.jpg",
+        "path": "/cpsprodpb/13BF5/production/_99658808_whatsappimage2018-01-18at4.03.12pm.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ጎንደር የከተራ በዓል",
+        "caption": "የከተራ በዓል በጎንደር",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "99659123",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/7DC3/production/_99659123_whatsappimage2018-01-18at4.03.13pm-1.jpg",
+        "path": "/cpsprodpb/7DC3/production/_99659123_whatsappimage2018-01-18at4.03.13pm-1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ጎንደር የከተራ በዓል",
+        "caption": "የከተራ በዓል በጎንደር",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "99658802",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/5195/production/_99658802_whatsappimage2018-01-18at2.50.13pm-1.jpg",
+        "path": "/cpsprodpb/5195/production/_99658802_whatsappimage2018-01-18at2.50.13pm-1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ጎንደር የከተራ በዓል",
+        "caption": "አርቲስት ሚካኤል ሚሊዮን ጎንደር የከተራ በዓል ዕለት",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "99658806",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/EDD5/production/_99658806_whatsappimage2018-01-18at4.03.11pm.jpg",
+        "path": "/cpsprodpb/EDD5/production/_99658806_whatsappimage2018-01-18at4.03.11pm.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "የከተራ በዓል በጎንደር",
+        "caption": "የከተራ በዓል በጎንደር",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "99659125",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/CBE3/production/_99659125_whatsappimage2018-01-18at4.03.13pm-2.jpg",
+        "path": "/cpsprodpb/CBE3/production/_99659125_whatsappimage2018-01-18at4.03.13pm-2.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "የከተራ በዓል በጎንደር",
+        "caption": "የከተራ በዓል በጎንደር",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "99659127",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/11A03/production/_99659127_whatsappimage2018-01-18at4.03.13pm.jpg",
+        "path": "/cpsprodpb/11A03/production/_99659127_whatsappimage2018-01-18at4.03.13pm.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "የከተራ በዓል በጎንደር",
+        "caption": "የከተራ በዓል በጎንደር",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "99659129",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16823/production/_99659129_whatsappimage2018-01-18at4.03.14pm-1.jpg",
+        "path": "/cpsprodpb/16823/production/_99659129_whatsappimage2018-01-18at4.03.14pm-1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "የከተራ በዓል በጎንደር",
+        "caption": "የከተራ በዓል በጎንደር",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "99659131",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/338B/production/_99659131_whatsappimage2018-01-18at4.03.14pm.jpg",
+        "path": "/cpsprodpb/338B/production/_99659131_whatsappimage2018-01-18at4.03.14pm.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "የከተራ በዓል በጎንደር",
+        "caption": "የከተራ በዓል በጎንደር",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "99659243",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/85F7/production/_99659243_whatsappimage2018-01-18at4.05.06pm.jpg",
+        "path": "/cpsprodpb/85F7/production/_99659243_whatsappimage2018-01-18at4.05.06pm.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ጎንደር የከተራ በዓል",
+        "caption": "ጎንደር የከተራ በዓል",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "99659252",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/62CF/production/_99659252_whatsappimage2018-01-19at9.45.18am.jpg",
+        "path": "/cpsprodpb/62CF/production/_99659252_whatsappimage2018-01-19at9.45.18am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "የጥምቀት በዓል በጎንደር",
+        "caption": "የጥምቀት በዓል በጎንደር",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "99659394",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/C0F3/production/_99659394_whatsappimage2018-01-19at9.45.17am.jpg",
+        "path": "/cpsprodpb/C0F3/production/_99659394_whatsappimage2018-01-19at9.45.17am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "የጥምቀት በዓል በጎንደር",
+        "caption": "የጥምቀት በዓል በጎንደር",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "99659396",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/10F13/production/_99659396_whatsappimage2018-01-19at9.45.15am.jpg",
+        "path": "/cpsprodpb/10F13/production/_99659396_whatsappimage2018-01-19at9.45.15am.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "የጥምቀት በዓል በጎንደር",
+        "caption": "የጥምቀት በዓል በጎንደር",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "የጥምቀት በዓል አከባበር በጎንደር",
+      "headline": "የጥምቀት በዓል አከባበር በጎንደር"
+    },
+    "locators": {
+      "assetUri": "/amharic/42743191",
+      "cpsUrn": "urn:bbc:content:assetUri:amharic/42743191",
+      "curie": "http://www.bbc.co.uk/asset/54da4dff-4f63-494d-b516-e639d6e7cdae"
+    },
+    "summary": "ጥምቀት በጎንደር ከሌሎች የሀገሪቱ ክፍሎች በተለየ ደመቅ ብሎ ይከበራል፡፡ በርካታ የሀገር ውስጥ እና የውጪ ጎብኚዎችም ጥምቀትን በአፄ ፋሲል መዋኛ ያሳልፋሉ፡፡ ለበዓሉ ወደ ጎንደር ጎራ የሚሉ ቱሪስቶች በከተማዋም ሆነ በአቅራቢዋ የሚገኙ ቦታዎችን ጎብኝተው ይመለሳሉ፡፡",
+    "timestamp": 1516345919000,
+    "passport": {
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "99659250",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/14AF/production/_99659250_whatsappimage2018-01-19at9.45.24am.jpg",
+      "path": "/cpsprodpb/14AF/production/_99659250_whatsappimage2018-01-19at9.45.24am.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "ጎንደር የጥመቀት በዓል",
+      "caption": "የጥመቀት በዓል በጎንደር",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:amharic/42743191",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "ዜና",
+      "uri": "/amharic/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC አማርኛ",
+      "uri": "/amharic",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
