@@ -1,0 +1,492 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:japanese/features-and-analysis-42786589",
+    "locators": {
+      "assetUri": "/japanese/features-and-analysis-42786589",
+      "cpsUrn": "urn:bbc:content:assetUri:japanese/features-and-analysis-42786589",
+      "curie": "http://www.bbc.co.uk/asset/87f2cb7c-c85a-9e4c-b90a-4e18789d256c"
+    },
+    "type": "PGL",
+    "createdBy": "japanese",
+    "language": "ja",
+    "lastUpdated": 1579164262886,
+    "firstPublished": 1516697919000,
+    "lastPublished": 1516698468000,
+    "timestamp": 1516697919000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "japanese.features_and_analysis.photo_gallery.42786589.page",
+      "cps_asset_id": "42786589"
+    },
+    "tags": {},
+    "version": "v1.1.4",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "99708202",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/4F38/production/_99708202_forbbconly.jpg",
+        "path": "/cpsprodpb/4F38/production/_99708202_forbbconly.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "This photo taken on February 20, 2017 shows a general view of the Masikryong ski resort, near North Korea's east coast port city of Wonsan.",
+        "caption": "今年の冬季五輪は来月、韓国・平昌で開催されるが、予想外にも北朝鮮の五輪参加が決まり、北朝鮮でも練習や文化イベントが計画されている。韓国政府や大会関係者らが3日間の訪問で視察する場所の一つが馬息嶺スキー場だ。写真はいずれも昨年2月撮影。",
+        "copyrightHolder": "AFP/Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "99705605",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/C5DA/production/_99705605_b7014169-51e4-4bf1-b596-8fac5fb9719d.jpg",
+        "path": "/cpsprodpb/C5DA/production/_99705605_b7014169-51e4-4bf1-b596-8fac5fb9719d.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "This photo taken on February 19, 2017 shows members of a 'ski camp' at the Masikryong ski resort",
+        "caption": "北朝鮮初のスキー場、馬息嶺は2013年に建設されたた。国内では北朝鮮の指導者、金正恩氏の主な偉業の一つとうたわれている。2017年2月撮影の写真から、近代的な施設の様子がうかがえる。韓国は合同練習のため、スキーの代表選手たちを馬息嶺に派遣する予定だ。",
+        "copyrightHolder": "AFP/Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "99705606",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/ECEA/production/_99705606_3b09cb57-e6ab-4a7e-b991-30c5dc875bf3.jpg",
+        "path": "/cpsprodpb/ECEA/production/_99705606_3b09cb57-e6ab-4a7e-b991-30c5dc875bf3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "In this photo taken on February 20, 2017, Kim Chol-Nam, 30, poses for a portrait at the ski hire desk",
+        "caption": "チケット売り場の価格表には、外国人旅行者用のリフトの1日パスとスキー用具の貸し出し金額が80ドル（約8900円）、北朝鮮人用が40ドル（約4400円）と書かれている。北朝鮮の平均的市民の給料約1カ月分だ。北朝鮮は旅行者から外貨を稼ぐため、このスキー場を建設した。",
+        "copyrightHolder": "AFP/Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "99705607",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/113FA/production/_99705607_691799c1-f3bb-4398-b362-d78fdf7551cd.jpg",
+        "path": "/cpsprodpb/113FA/production/_99705607_691799c1-f3bb-4398-b362-d78fdf7551cd.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "This photo taken on February 19, 2017 shows a general view of the lobby of the Masikryong ski resort",
+        "caption": "1400平方メートルのこのリゾートは、東部沿岸・元山市の近くにある。北朝鮮の対外宣伝サイト「朝鮮の今日」は、「世界最高のスキーリゾート」と呼ぶ。しかし人権団体は、この施設が強制労働者を使っている可能性があると指摘している。",
+        "copyrightHolder": "AFP/Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "99705608",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13B0A/production/_99705608_20982054-3a29-4577-8713-0de7d3f39f1d.jpg",
+        "path": "/cpsprodpb/13B0A/production/_99705608_20982054-3a29-4577-8713-0de7d3f39f1d.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "This photo taken on February 19, 2017 shows a room at the Masikryong ski resort,",
+        "caption": "寝室をのぞいてみよう。北朝鮮にしては、ぜいたくな施設なのが分かる。",
+        "copyrightHolder": "AFP/Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "99705609",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1621A/production/_99705609_c4de76a0-c890-49e8-92dd-ee14ad95cacc.jpg",
+        "path": "/cpsprodpb/1621A/production/_99705609_c4de76a0-c890-49e8-92dd-ee14ad95cacc.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "This photo taken on February 19, 2017 shows North Korean visitors posing on a snowmobile at the Masikryong ski resort,",
+        "caption": "このリゾートには、スキーコースが10カ所ある。また、カナダのスノーモービル「スキードゥー」などの最新設備もあるようだ。しかし、だとすると、北朝鮮への機材提供を禁止する国連制裁との兼ね合いはどうなっているのか。",
+        "copyrightHolder": "AFP/Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "99705610",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/0672/production/_99705610_e3b013a8-cd8e-4adc-b8eb-abeb57ac0126.jpg",
+        "path": "/cpsprodpb/0672/production/_99705610_e3b013a8-cd8e-4adc-b8eb-abeb57ac0126.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "In this photo taken on February 19, 2017, Pak Han-Song, 11, poses for a portrait on a beginner's slope at the Masikryong",
+        "caption": "北朝鮮によると、総工費約3億ドル（約330億円）のこのリゾートの利用者は、毎年7万人。平昌冬季五輪は来月9日から25日まで予定されている。",
+        "copyrightHolder": "AFP/Getty Images",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "【写真で見る】　北朝鮮の豪華スキーリゾート",
+      "headline": "【写真で見る】　北朝鮮の豪華スキーリゾート"
+    },
+    "locators": {
+      "assetUri": "/japanese/features-and-analysis-42786589",
+      "cpsUrn": "urn:bbc:content:assetUri:japanese/features-and-analysis-42786589",
+      "curie": "http://www.bbc.co.uk/asset/87f2cb7c-c85a-9e4c-b90a-4e18789d256c"
+    },
+    "summary": "韓国政府関係者らが平昌冬季五輪に先立ち、北朝鮮の馬息嶺スキー場を訪問する見通しだ。",
+    "timestamp": 1516697919000,
+    "passport": {
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "99708204",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/9D58/production/_99708204_nkski.jpg",
+      "path": "/cpsprodpb/9D58/production/_99708204_nkski.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "北朝鮮の豪華スキーリゾート　韓国関係者が訪問へ",
+      "caption": "北朝鮮の豪華スキーリゾート　韓国関係者が訪問へ",
+      "copyrightHolder": "AFP/Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:japanese/features-and-analysis-42786589",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "読み物・解説",
+      "uri": "/japanese/features_and_analysis",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Japanese",
+      "uri": "/japanese",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "南北統一旗で平昌五輪入場へ　韓国外相、南北対話は「曇りのない目で」 　",
+              "headline": "南北統一旗で平昌五輪入場へ　韓国外相、南北対話は「曇りのない目で」 　"
+            },
+            "locators": {
+              "assetUri": "/japanese/42728031",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/42728031"
+            },
+            "summary": "日米外相らが南北対話進展は北朝鮮の「時間稼ぎ」だと警告していることについて、韓国の康京和（カンギョンファ）外相はBBCに対して、高官級の南北対話は「曇りのない目で」冷静に続けると述べた。",
+            "timestamp": 1516244995000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "99641460",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/190E/production/_99641460_mediaitem99641459.jpg",
+              "path": "/cpsprodpb/190E/production/_99641460_mediaitem99641459.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "South and North Korean officials shake hands during talks in Panmunjom. Photo: 17 January 2018",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:japanese/42728031",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "韓国外相「機会を最大限に活用」　北朝鮮との協議めぐり",
+              "headline": "韓国外相「機会を最大限に活用」　北朝鮮との協議めぐり"
+            },
+            "locators": {
+              "assetUri": "/japanese/video-42728658",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/video-42728658"
+            },
+            "summary": "韓国の康外相はBBCとのインタビューで、来月開幕する平昌冬季五輪への北朝鮮選手団の参加をめぐる協議について、北朝鮮側にも目算があると認めながらも「この機会を最大限に活用するしかない」と語り、対話の意義を強調した。",
+            "timestamp": 1516260302000,
+            "cpsType": "MAP",
+            "media": {
+              "id": "42728659",
+              "subType": "primary",
+              "format": "video",
+              "externalId": "p05v8gjx",
+              "entityType": "Clip",
+              "caption": "韓国外相「機会を最大限に活用」　　北朝鮮との協議めぐり",
+              "type": "external_vpid"
+            },
+            "indexImage": {
+              "id": "99643872",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/6CBA/production/_99643872_p05v8gmx.jpg",
+              "path": "/cpsprodpb/6CBA/production/_99643872_p05v8gmx.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "韓国の康外相はBBCとのインタビューで、来月開幕する平昌冬季五輪への北朝鮮選手団の参加をめぐる協議について、北朝鮮側にも目算があると認めながらも「この機会を最大限に活用するしかない」と語り、対話の意義を強調した。",
+              "copyrightHolder": "韓国の康京和（カン・ギョンファ）外相はBBCとのインタビューで、来月開幕する平昌冬季五輪への北朝鮮選",
+              "type": "image"
+            },
+            "mediaType": "Video",
+            "id": "urn:bbc:ares::asset:japanese/video-42728658",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "日本政府、北朝鮮の「微笑外交」に警鐘",
+              "headline": "日本政府、北朝鮮の「微笑外交」に警鐘"
+            },
+            "locators": {
+              "assetUri": "/japanese/42714565",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/42714565"
+            },
+            "summary": "日本の河野太郎外相は16日午前（日本時間17日未明）、カナダ・バンクーバーで開かれた北朝鮮問題に関する外相会合で、北朝鮮による最近の「微笑外交」が目くらましになってはならないと警告し、南北対話が制裁緩和につながってはならないと強調した。",
+            "timestamp": 1516173344000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "99626068",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1502E/production/_99626068_hi044085774.jpg",
+              "path": "/cpsprodpb/1502E/production/_99626068_hi044085774.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Kim Jong-un",
+              "caption": "North Korea has recently moved towards talks with its Southern counterpart",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:japanese/42714565",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "米ハワイ州に警報システム改修の要請、弾道ミサイル誤報で",
+              "headline": "米ハワイ州に警報システム改修の要請、弾道ミサイル誤報で"
+            },
+            "locators": {
+              "assetUri": "/japanese/42685367",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/42685367"
+            },
+            "summary": "米ハワイ州政府が13日に「弾道ミサイル接近中」という緊急警報を誤って発信した問題で、米連邦通信委員会（FCC）は、同州の警報システムにはこうしたミスを防ぐ「適切」な防止策が欠けていると批判し、修正を求めた。",
+            "timestamp": 1515983092000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "99593049",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16F57/production/_99593049_mediaitem99591111.jpg",
+              "path": "/cpsprodpb/16F57/production/_99593049_mediaitem99591111.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Announcement of false alarm sent to people in Hawaii",
+              "copyrightHolder": "Reuters",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:japanese/42685367",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "南北閣僚級会談、軍事当局者の協議にも合意",
+              "headline": "南北閣僚級会談、軍事当局者の協議にも合意"
+            },
+            "locators": {
+              "assetUri": "/japanese/42630814",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/42630814"
+            },
+            "summary": "9日に板門店で開かれた韓国と北朝鮮の2年ぶりの南北高位級当局者協議で、双方は軍事的な緊張緩和のため軍事当局者の協議も開催すると合意した。これに先立ち北朝鮮は、2月に開かれる平昌冬季五輪に選手団を派遣すると表明していた。",
+            "timestamp": 1515549224000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "99523861",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/41C0/production/_99523861_mediaitem99523860.jpg",
+              "path": "/cpsprodpb/41C0/production/_99523861_mediaitem99523860.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "South Korean Unification Minister and chief delegate Cho Myoung-gyon (L) shakes hands with his North Korean counterpart Ri Son-gwon",
+              "copyrightHolder": "Reuters",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:japanese/42630814",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "北朝鮮、平昌冬季五輪に選手団派遣の意向",
+              "headline": "北朝鮮、平昌冬季五輪に選手団派遣の意向"
+            },
+            "locators": {
+              "assetUri": "/japanese/42617448",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/42617448"
+            },
+            "summary": "韓国政府は9日、北朝鮮が2月に開かれる平昌冬季五輪に選手団を派遣する意向を示したと発表した。",
+            "timestamp": 1515477860000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "99516848",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14B7D/production/_99516848_hi043927882-1.jpg",
+              "path": "/cpsprodpb/14B7D/production/_99516848_hi043927882-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "South Korean Unification Minister and chief delegate Cho Myoung-gyon (R) shakes hands with his North Korean counterpart Ri Son-gwon",
+              "caption": "The meeting will see both Koreas discuss Pyongyang's possible participation in the Winter Olympics",
+              "copyrightHolder": "EPA",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:japanese/42617448",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "「僕の核ボタンの方が大きい」　金委員長発言にトランプ氏反応",
+              "headline": "「僕の核ボタンの方が大きい」　金委員長発言にトランプ氏反応"
+            },
+            "locators": {
+              "assetUri": "/japanese/42550711",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/42550711"
+            },
+            "summary": "ドナルド・トランプ米大統領は2日、北朝鮮の金正恩（キム・ジョンウン）朝鮮労働党委員長が自分の机には常に核兵器発射のボタンがあると述べたことに対し、自分の核兵器ボタンの方が「はるかに大きく、強力だ」とツイッターに投稿した。",
+            "timestamp": 1514971257000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "99445001",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2746/production/_99445001_istock-585171778.jpg",
+              "path": "/cpsprodpb/2746/production/_99445001_istock-585171778.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Red button isolated on white - Stock image",
+              "copyrightHolder": "ptasha",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:japanese/42550711",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "核のボタンは自分の机の上に　金正恩氏、オリーブの枝も",
+              "headline": "核のボタンは自分の机の上に　金正恩氏、オリーブの枝も"
+            },
+            "locators": {
+              "assetUri": "/japanese/42532301",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/42532301"
+            },
+            "summary": "北朝鮮の最高指導者・金正恩氏の新年のあいさつには、核攻撃の警告と、平和的解決のために差し伸べる「オリーブの枝」が共に含まれていた。",
+            "timestamp": 1514784730000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "99423983",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/9814/production/_99423983_hi043792947.jpg",
+              "path": "/cpsprodpb/9814/production/_99423983_hi043792947.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "People watch a television news broadcast showing North Korean leader Kim Jong-Un\"s New Year\"s speech, at a railway station in Seoul on January 1, 2018.",
+              "caption": "Residents of South Korea watched the speech from the North's leader",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:japanese/42532301",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "米政府、北朝鮮のミサイル開発高官2人に独自制裁　金氏側近",
+              "headline": "米政府、北朝鮮のミサイル開発高官2人に独自制裁　金氏側近"
+            },
+            "locators": {
+              "assetUri": "/japanese/42489867",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/42489867"
+            },
+            "summary": "米財務省は26日、核・ミサイルの開発を主導したとして、北朝鮮高官2人への制裁を発表した。",
+            "timestamp": 1514340166000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "99372079",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/17B03/production/_99372079_mediaitem99372078.jpg",
+              "path": "/cpsprodpb/17B03/production/_99372079_mediaitem99372078.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Composite showing North Korean missile developers Ri Pyong-chol and Kim Jong-sik",
+              "copyrightHolder": "Reuters",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:japanese/42489867",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "北朝鮮兵士脱北　北の捜索に韓国が警告射撃",
+              "headline": "北朝鮮兵士脱北　北の捜索に韓国が警告射撃"
+            },
+            "locators": {
+              "assetUri": "/japanese/42435860",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/42435860"
+            },
+            "summary": "北朝鮮の兵士が21日朝に非武装地帯（DMZ）を越え韓国側に逃亡した際、兵士を捜索する北朝鮮警備兵に向け韓国側が警告射撃していたことが明らかになった。",
+            "timestamp": 1513846653000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "99307970",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1F22/production/_99307970_gettyimages-483542422.jpg",
+              "path": "/cpsprodpb/1F22/production/_99307970_gettyimages-483542422.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "In this handout photo provided by the South Korean Defense Ministry on August 10, 2015, South Korean soldiers patrol near the scene where planted landmines exploded on August 4, maiming two soldiers on border patrol in the demilitarized zone dividing North and South Korea, on 9 August 2015 in Paju, South Korea.",
+              "copyrightHolder": "AFP/Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:japanese/42435860",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "「北朝鮮に非核化強制できる準備を」　米大統領補佐官インタビュー",
+              "headline": "「北朝鮮に非核化強制できる準備を」　米大統領補佐官インタビュー"
+            },
+            "locators": {
+              "assetUri": "/japanese/video-42408315",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/video-42408315"
+            },
+            "summary": "H・R・マクマスター大統領補佐官（国家安全保障問題担当）はBBCとのインタビューで、金正恩（キム・ジョンウン）朝鮮労働党委員長率いる北朝鮮体制の協力がなかったとしても、必要となれば強制的に同国を非核化する準備ができていないくてはならないと述べた。",
+            "timestamp": 1513676944000,
+            "cpsType": "MAP",
+            "media": {
+              "id": "42409339",
+              "subType": "primary",
+              "format": "video",
+              "externalId": "p05rhx5p",
+              "entityType": "Clip",
+              "caption": "「北朝鮮の非核化強制できる準備を」　米大統領補佐官インタビュー",
+              "type": "external_vpid"
+            },
+            "indexImage": {
+              "id": "99266226",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/F33A/production/_99266226_p05rhx9s.jpg",
+              "path": "/cpsprodpb/F33A/production/_99266226_p05rhx9s.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "H・R・マクマスター大統領補佐官（国家安全保障問題担当）はBBCとのインタビューで、金正恩（キム・ジョンウン）朝鮮労働党委員長率いる北朝鮮体制の協力がなかったとしても、必要となれば強制的に同国を非核化する準備ができていないくてはならないと述べた。",
+              "copyrightHolder": "H・R・マクマスター大統領補佐官（国家安全保障問題担当）はBBCとのインタビューで、金正恩（キム・ジ",
+              "type": "image"
+            },
+            "mediaType": "Video",
+            "id": "urn:bbc:ares::asset:japanese/video-42408315",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}
