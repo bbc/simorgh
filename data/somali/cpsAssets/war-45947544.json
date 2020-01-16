@@ -1,0 +1,330 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:somali/war-45947544",
+    "locators": {
+      "assetUri": "/somali/war-45947544",
+      "cpsUrn": "urn:bbc:content:assetUri:somali/war-45947544",
+      "curie": "http://www.bbc.co.uk/asset/acde8344-78fd-e647-9e39-ede5243643ec"
+    },
+    "type": "PGL",
+    "createdBy": "somali-v6",
+    "language": "so",
+    "lastUpdated": 1563656720558,
+    "firstPublished": 1540243660,
+    "lastPublished": 1540271009,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "somali.news.photo_gallery.45947544.page",
+      "cps_asset_id": "45947544"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "Update me"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "China",
+          "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+          "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+          "thingType": [
+            "Place",
+            "Thing",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/China",
+            "http://sws.geonames.org/1814991/",
+            "http://www.wikidata.org/entity/Q148"
+          ]
+        },
+        {
+          "thingLabel": "Hong Kong",
+          "thingUri": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
+          "thingId": "a3b15769-775e-471d-a511-a7b78f346859",
+          "thingType": [
+            "Place",
+            "Thing",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/1819729/"
+          ],
+          "topicName": "Hong Kong",
+          "topicId": "cvjp2j5rr1vt",
+          "curationList": [
+            {
+              "curationId": "acef2004-0959-4912-81cc-9a8e835a739f",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Asia",
+          "thingUri": "http://www.bbc.co.uk/things/ba90754a-9033-4e9c-990b-d1139e5070a3#id",
+          "thingId": "ba90754a-9033-4e9c-990b-d1139e5070a3",
+          "thingType": [
+            "Place",
+            "Thing",
+            "news:Place"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Asia",
+            "http://www.wikidata.org/entity/Q48"
+          ],
+          "topicName": "Aasiya",
+          "topicId": "c340q42jp22t",
+          "curationList": [
+            {
+              "curationId": "cf236ed8-fbcf-40fa-9dce-60a4b54482e2",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "100889777",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12FE6/production/_100889777_reuters045818461.jpg",
+        "path": "/cpsprodpb/12FE6/production/_100889777_reuters045818461.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Buundada dunida ugu dheer oo bad dusheed laga dhiso.",
+        "caption": "Buundadan dhererkeedu yahay 55 km (34 mile) oo isku xireysaa Hong Kong-Zhuai-Macau waxaa ka muuqda farsamadii ugu dambeeysay ee Injinneerrada Shiinaha.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "100889929",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16B46/production/_100889929_getty044157215.jpg",
+        "path": "/cpsprodpb/16B46/production/_100889929_getty044157215.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Buundada dunida ugu dheer oo bad dusheed laga dhisa.",
+        "caption": "Buundada oo billow ilaa dhammaad laba haad leh waxay 20 jibbaar ka dheer tahay buundada San Francisco's Golden Gate.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "100889928",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14436/production/_100889928_reuters045818105.jpg",
+        "path": "/cpsprodpb/14436/production/_100889928_reuters045818105.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Buundada San Francisco's Golden Gate",
+        "caption": "Buundada waxaa loo naqshadeeyey qaab ay isaga caabbin karto dhulgariirka iyo duufaanta inta badan badaha Shiinaha ku dhufta.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "103953799",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/18597/production/_103953799_mediaitem103953798.jpg",
+        "path": "/cpsprodpb/18597/production/_103953799_mediaitem103953798.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Buundada dunida ugu dheer oo bad dusheed laga dhisa.",
+        "caption": "Maraakiibta socodkooda si ay buundadu u hakinin waxaa loo sameeyey 2 jasiiradood oo dad samee ah iyada oo ay buundadu 6.7km oo ka mid ah ay badda hoosteeda mareyso.",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "100889775",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/E1C6/production/_100889775_rreuters045818812.jpg",
+        "path": "/cpsprodpb/E1C6/production/_100889775_rreuters045818812.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Buundada dunida ugu dheer oo bad dusheed laga dhisa.",
+        "caption": "Buundada oo sii mareysa meel ku dhow marinka diyaaradaha Hongong waxay Injineerradu si aad ah uga taxaddareen joogga Buundada ineysan aad u dheerayn si aysan duullimaadka diyaaradaha u hakin.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "100889822",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/5972/production/_100889822_reuters045818458.jpg",
+        "path": "/cpsprodpb/5972/production/_100889822_reuters045818458.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Buundada dunida ugu dheer oo bad dusheed laga dhisa.",
+        "caption": "Dhismaha Buundadan oo la billaabay 2009-ka dhismaheedu waxaa ku kacay miisaaniyad ka badan $20 bilyan oo doolar.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "100889815",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/CABA/production/_100889815_afp045818172.jpg",
+        "path": "/cpsprodpb/CABA/production/_100889815_afp045818172.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Buundada dunida ugu dheer oo bad dusheed laga dhisa.",
+        "caption": "Furitaanka rasmiga ee Buundada oo lagu waday 2016-ka marar badanna dib u dhac uu ku yimid, bishan in la furo ayuu qorshuhu ahaa balse weli waxaan ka ahayn sannadkan in la furayo lama sheegin xilliga rasmiga ah.",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "100889853",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8C3A/production/_100889853_reuters045818110.jpg",
+        "path": "/cpsprodpb/8C3A/production/_100889853_reuters045818110.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Buundada dunida ugu dheer oo bad dusheed laga dhisa.",
+        "caption": "Miisaniyadda faraha badan ee dhismaha Buundada ku baxday waxaa u dheer waa buundadi shaqaalihi ugu badnaa ay ku dhintaan inta uu dhismaheedu socday.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "100889887",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13432/production/_100889887_afp045818177.jpg",
+        "path": "/cpsprodpb/13432/production/_100889887_afp045818177.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Buundada dunida ugu dheer oo bad dusheed laga dhisa.",
+        "caption": "Buundadu waxay xiriirinaysaa saddex qaybood oo kala go'naa oo kala aha Macau, Hong Kong iyo dhulwaynaha Shiinaha.",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "100889885",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/E612/production/_100889885_reuters045818558.jpg",
+        "path": "/cpsprodpb/E612/production/_100889885_reuters045818558.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Buundada dunida ugu dheer oo bad dusheed laga dhisa.",
+        "caption": "Basaska iyo gawaarida kale ee ganacsiga oo rakaab sida ayaa buundada adeegsan doona, Balse takaasida caadiga ah iyo gawaarida gaarka loo leeyahay kuwa kooban oo fasax u haysta mooyee buunddaa ma isticmaali karaan.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "103956691",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/4CD1/production/_103956691_mediaitem103953800.jpg",
+        "path": "/cpsprodpb/4CD1/production/_103956691_mediaitem103953800.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Waa sawir muujinaya xafiiska laanta socdaalka Hong Kong oo aan weli shaqa galin.",
+        "caption": "Safarka buundada ee lagu marayo Hong Kong iyo Mainland inta u dhaxeysa waxaa qofka laga rabaa inuu sii maro laba xafiis oo kuwa socdaalka ah oo buundada dusheda xafiisyo ku leh inuu sii maro.",
+        "copyrightHolder": "EPA",
+        "type": "image"
+      },
+      {
+        "id": "100889780",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/225E/production/_100889780_045818540.jpg",
+        "path": "/cpsprodpb/225E/production/_100889780_045818540.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Qayb ka mid ah meelaha ay buundadu badda hoosta ka mareyso.",
+        "caption": "Maxaa buundadan loo dhisay? Waxaa loo dhisay in safarka qaadan jiray ugu yaraan afar saacadood loo soo gaabiyo ugu badnaan 30 daqiiqo.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "103956693",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/9AF1/production/_103956693_mediaitem103956692.jpg",
+        "path": "/cpsprodpb/9AF1/production/_103956693_mediaitem103956692.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Muuqaalka Buundada habeenki sidan ayuu u ogyahay.",
+        "caption": "Qaar ka mid ah shacabka Hong Kong ayaa waxay sheegayaan inaan buundadan oo baahnayn balse ujeeddada Shiinaha uu u dhisay ay tahay inuu xiriiriyo Hong Kong iyo Mainland.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Sawirro: Buundada Dunida ugu dheer ee badda dulmarta oo la furay",
+      "headline": "Buundada Hong Kong-Zhuhai: oo ay sawirradeeda idiin muuqdaan waa buundada ugu weyn oo badda dusheeda marta oo dunida laga dhiso."
+    },
+    "locators": {
+      "assetUri": "/somali/war-45947544",
+      "cpsUrn": "urn:bbc:content:assetUri:somali/war-45947544",
+      "curie": "http://www.bbc.co.uk/asset/acde8344-78fd-e647-9e39-ede5243643ec"
+    },
+    "summary": "Buundadan dhererkeedu yahay 55 km oo qayba ka mid ah badda hoosteeda la mariyeye waxay isku xireysaa Hongkong-Shiinaha ilaa Macaue, Furitaanka buundadana xilligi lagu waday waxay kaddib dhacday muddo labo sano ah.",
+    "timestamp": 1563656720558,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "Update me"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "100889777",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/12FE6/production/_100889777_reuters045818461.jpg",
+      "path": "/cpsprodpb/12FE6/production/_100889777_reuters045818461.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Buundada dunida ugu dheer oo bad dusheed laga dhisa.",
+      "caption": "Buundadan dhererkeedu yahay 55 km (34 mile) oo isku xireysaa Hong Kong-Zhuai-Macau waxaa ka muuqda farsamadii ugu dambeeysay ee Injinneerrada Shiinaha.",
+      "copyrightHolder": "Reuters",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:somali/war-45947544",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "War",
+      "uri": "/somali/war",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Somali",
+      "uri": "/somali",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:afrique/region-39269126",
+    "locators": {
+      "assetUri": "/afrique/region-39269126",
+      "cpsUrn": "urn:bbc:content:assetUri:afrique/region-39269126",
+      "curie": "http://www.bbc.co.uk/asset/34d2945b-992d-c849-9706-b858a8242313"
+    },
+    "type": "PGL",
+    "createdBy": "afrique-v6",
+    "language": "fr",
+    "lastUpdated": 1563531500128,
+    "firstPublished": 1489505989,
+    "lastPublished": 1489571062,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "afrique.africa.photo_gallery.39269126.page",
+      "cps_asset_id": "39269126"
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "African Union",
+          "thingUri": "http://www.bbc.co.uk/things/47227265-9a40-4277-ad88-09d0453c33c6#id",
+          "thingId": "47227265-9a40-4277-ad88-09d0453c33c6",
+          "thingType": [
+            "Organisation",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/African_Union"
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "95147694",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/C20A/production/_95147694_mediaitem95147693.jpg",
+        "path": "/cpsprodpb/C20A/production/_95147694_mediaitem95147693.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "OUA",
+        "caption": "Le diplomate guinéen Boubacar Diallo Telli est le premier secrétaire général de l'Organisation de l'Unité africaine (OUA). Il dirigea l'instance continentale de 1964 à 1973.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "95147944",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/AFAE/production/_95147944_mediaitem95147943.jpg",
+        "path": "/cpsprodpb/AFAE/production/_95147944_mediaitem95147943.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Cameroun",
+        "caption": "A sa suite, les Camerounais Nzo Ekangaki (1972 - 1974) et William Eteki Mboumoua (1974-1978) ont dirigé l'Organisation de 1972 à 1978.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "95147341",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/3826/production/_95147341_mediaitem95147340.jpg",
+        "path": "/cpsprodpb/3826/production/_95147341_mediaitem95147340.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Édouard Kodjovi Kodjo dit Edem Kodjo a été secrétaire général de l'Organisation de l'unité africaine (OUA) de 1978 à 1983. Il a également été Premier ministre du Togo à deux reprises et médiateur dans plusieurs crise sur le continent.",
+        "caption": "Édouard Kodjovi Kodjo dit Edem Kodjo a été secrétaire général de l'Organisation de l'unité africaine (OUA) de 1978 à 1983. Il a également été Premier ministre du Togo à deux reprises et médiateur dans plusieurs crise sur le continent.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "95147946",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/FDCE/production/_95147946_mediaitem95147945.jpg",
+        "path": "/cpsprodpb/FDCE/production/_95147946_mediaitem95147945.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Le Nigérian Dr Peter U. Onu a succédé au Togolais Edem Kodjo et a dirigé l'OUA de 1983 à 1985.",
+        "caption": "Le Nigérian Dr Peter U. Onu a succédé au Togolais Edem Kodjo et a dirigé l'OUA de 1983 à 1985.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "95147698",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/15E4A/production/_95147698_mediaitem95147697.jpg",
+        "path": "/cpsprodpb/15E4A/production/_95147698_mediaitem95147697.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Ide Oumarou, un diplomate, journaliste et romancier nigérien a dirigé l'instance continentale de 1985 à 1982. Il a également été ministre des Affaires étrangères de son pays.",
+        "caption": "Ide Oumarou, un diplomate, journaliste et romancier nigérien a dirigé l'instance continentale de 1985 à 1982. Il a également été ministre des Affaires étrangères de son pays.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "95147337",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/11E9E/production/_95147337_mediaitem95147336.jpg",
+        "path": "/cpsprodpb/11E9E/production/_95147337_mediaitem95147336.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Salim Ahmed Salim, diplomate et homme politique tanzanien a été secrétaire général de l'Organisation de l'unité africaine de 1989 à 2001.",
+        "caption": "Salim Ahmed Salim, diplomate et homme politique tanzanien a été secrétaire général de l'Organisation de l'unité africaine de 1989 à 2001.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "95147700",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/0306/production/_95147700_mediaitem95147699.jpg",
+        "path": "/cpsprodpb/0306/production/_95147700_mediaitem95147699.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "L'homme politique et diplomate ivoirien Amara Essy est le dernier à avoir dirigé l'OUA avant la réforme ayant abouti à la création de l'Union africaine.",
+        "caption": "L'homme politique et diplomate ivoirien Amara Essy est le dernier à avoir dirigé l'OUA avant la réforme ayant abouti à la création de l'Union africaine.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "95147339",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16CBE/production/_95147339_mediaitem95147338.jpg",
+        "path": "/cpsprodpb/16CBE/production/_95147339_mediaitem95147338.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "L'ancien président de la République du Mali (1992 à 2002), Alpha Oumar Konaré, a été le premier à diriger la Commission de l’Union africaine du 10 juillet 2003 au 8 avril 2008",
+        "caption": "L'ancien président de la République du Mali (1992 à 2002), Alpha Oumar Konaré, a été le premier à diriger la Commission de l’Union africaine du 10 juillet 2003 au 8 avril 2008",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "95147343",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8646/production/_95147343_mediaitem95147342.jpg",
+        "path": "/cpsprodpb/8646/production/_95147343_mediaitem95147342.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Le ministre gabonais des Affaires étrangères Jean Ping succède en 2008 à l'ancien président malien à la tête de la commission de l’Union africaine de 2008 à 2012.",
+        "caption": "Le ministre gabonais des Affaires étrangères Jean Ping succède en 2008 à l'ancien président malien à la tête de la commission de l’Union africaine qu'il dirigera de 2008 à 2012. Il s'est présenté à la présidentielle au Gabon et a été vaincu par Ali Bongo. Une défaite qu'il conteste.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "95147345",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/D466/production/_95147345_mediaitem95147344.jpg",
+        "path": "/cpsprodpb/D466/production/_95147345_mediaitem95147344.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Nkosazana Dlamini-Zuma est la première femme à devenir présidente de la Commission de l'Union africaine. Elle l'a dirigé du 15 octobre 2012 au 30 janvier 2017. Elle a été ministre des Affaires étrangère de son pays, l'Afrique du Sud.",
+        "caption": "Nkosazana Dlamini-Zuma est la première femme à devenir présidente de la Commission de l'Union africaine. Elle l'a dirigé du 15 octobre 2012 au 30 janvier 2017. Elle a été ministre des Affaires étrangère de son pays, l'Afrique du Sud.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "95147942",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/618E/production/_95147942_mediaitem95147941.jpg",
+        "path": "/cpsprodpb/618E/production/_95147942_mediaitem95147941.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Le Tchadien Moussa Faki Mahamat, élu en janvier, a pris fonction mardi en tant que président de la Commission de l'Union africaine (UA) pour un mandat de quatre ans.",
+        "caption": "Le Tchadien Moussa Faki Mahamat, élu en janvier, a pris fonction mardi en tant que président de la Commission de l'Union africaine (UA) pour un mandat de quatre ans.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "De l'Oua à l'Ua: l'institution et ses dirigeants",
+      "headline": "De l'Oua à l'Ua: l'institution et ses dirigeants"
+    },
+    "locators": {
+      "assetUri": "/afrique/region-39269126",
+      "cpsUrn": "urn:bbc:content:assetUri:afrique/region-39269126",
+      "curie": "http://www.bbc.co.uk/asset/34d2945b-992d-c849-9706-b858a8242313"
+    },
+    "summary": "L'organisation de l'unité africaine (OUA), créée en 1963 et dissoute en 2002 préfigure l'Union africaine qui regroupe 55 Etats africains depuis la réintégration du Maroc en 2017. BBC Afrique vous propose de découvrir les différentes personnalités ayant dirigé l'instance continentale de 1963 à 2017.",
+    "timestamp": 1563531500128,
+    "passport": {},
+    "indexImage": {
+      "id": "95148589",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/18118/production/_95148589_mediaitem95148588.jpg",
+      "path": "/cpsprodpb/18118/production/_95148589_mediaitem95148588.jpg",
+      "height": 334,
+      "width": 594,
+      "altText": "L'Union africaine qui regroupe 55 Etats africains depuis la réintégration du Maroc en 2017",
+      "caption": "L'Union africaine qui regroupe 55 Etats africains depuis la réintégration du Maroc en 2017",
+      "copyrightHolder": "Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:afrique/region-39269126",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Afrique",
+      "uri": "/afrique/region",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Afrique",
+      "uri": "/afrique",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

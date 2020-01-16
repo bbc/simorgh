@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:portuguese/geral-40302633",
+    "locators": {
+      "assetUri": "/portuguese/geral-40302633",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-40302633",
+      "curie": "http://www.bbc.co.uk/asset/387b9b99-8fe2-eb4b-823d-3bcc4488e2d2"
+    },
+    "type": "PGL",
+    "createdBy": "brasil-v6",
+    "language": "pt-BR",
+    "lastUpdated": 1579165831103,
+    "firstPublished": 1497871498000,
+    "lastPublished": 1497871499000,
+    "timestamp": 1497871498000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "portuguese.also_in_the_news.photo_gallery.40302633.page",
+      "cps_asset_id": "40302633"
+    },
+    "tags": {},
+    "version": "v1.1.4",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "96512653",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8B25/production/_96512653_040066448.jpg",
+        "path": "/cpsprodpb/8B25/production/_96512653_040066448.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "'Peixe-robô' da Toshiba",
+        "caption": "Quando um tsunami devastou parte da costa do Japão em 2011, matando mais de 18 mil pessoas, também atingiu a usina nuclear de Fukushima, desencadeando o acidente nuclear mais grave desde Chernobyl. Partes dos reatores danificados ainda estão altamente contaminados com radiação. E a robótica está desempenhando um papel crucial na descontaminação.",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "96512645",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/D55D/production/_96512645_040066207.jpg",
+        "path": "/cpsprodpb/D55D/production/_96512645_040066207.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "'Peixe-robô' da Toshiba",
+        "caption": "A Toshiba e uma equipe de pesquisadores desenvolveram um robô subaquático, que está sendo chamado de \"peixinho pequeno\", para explorar as partes inundadas da usina nuclear.",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "96512657",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12765/production/_96512657_040066238.jpg",
+        "path": "/cpsprodpb/12765/production/_96512657_040066238.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "'Peixe-robô' da Toshiba",
+        "caption": "Do tamanho de um pedaço de pão, o 'robô-peixe' é equipado com luzes e hélices na cauda. Tem duas câmeras capazes de coletar dados e um dosímetro para medir a radiação.",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "96512649",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1719D/production/_96512649_040066410.jpg",
+        "path": "/cpsprodpb/1719D/production/_96512649_040066410.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "'Peixe-robô' da Toshiba",
+        "caption": "O pequeno robô ganhou as águas nesta semana em uma instalação de teste perto de Tóquio, dando início lentamente a sua primeira jornada.",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "96512655",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/D945/production/_96512655_040066449.jpg",
+        "path": "/cpsprodpb/D945/production/_96512655_040066449.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "'Peixe-robô' da Toshiba",
+        "caption": "Ele deslizou lentamente por uma maquete de um recipiente de contenção.",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "96512651",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/3D05/production/_96512651_040066416.jpg",
+        "path": "/cpsprodpb/3D05/production/_96512651_040066416.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "'Peixe-robô' da Toshiba",
+        "caption": "O 'peixe-robô' está sendo operado por um time de cientistas - um cabo de transmissão conecta o robô o tempo todo à equipe, enviando imagens e dados que consegue capturar.",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "96512647",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1237D/production/_96512647_040066242.jpg",
+        "path": "/cpsprodpb/1237D/production/_96512647_040066242.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "'Peixe-robô' da Toshiba",
+        "caption": "Quando o robô for enviado para o reator real, a esperança é que ele colete dados que ajudem os especialistas a remover mais resíduos radioativos da usina danificada.",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "96512643",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/873D/production/_96512643_040066241-1.jpg",
+        "path": "/cpsprodpb/873D/production/_96512643_040066241-1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "'Peixe-robô' da Toshiba",
+        "caption": "Vai ser uma jornada difícil - os robôs enviados anteriormente não conseguiram completar a missão. Ficaram presos nos reatores, tiveram os movimentos comprometidos ou \"morreram\" devido aos altos níveis de radiação, que matariam seres humanos em segundos. A esperança é que o \"peixinho\" tenha mais sorte. Ele será enviado para o reator no próximo mês.",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "O 'peixe-robô' encarregado de viajar ao núcleo de reator contaminado de Fukushima",
+      "headline": "O 'peixe-robô' encarregado de viajar ao núcleo de reator contaminado de Fukushima"
+    },
+    "locators": {
+      "assetUri": "/portuguese/geral-40302633",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-40302633",
+      "curie": "http://www.bbc.co.uk/asset/387b9b99-8fe2-eb4b-823d-3bcc4488e2d2"
+    },
+    "summary": "Jornada para avaliar danos e contaminação será difícil - robôs enviados anteriormente não conseguiram completar a missão por causa dos altos índices de radiação.",
+    "timestamp": 1497871498000,
+    "passport": {
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "96512645",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/D55D/production/_96512645_040066207.jpg",
+      "path": "/cpsprodpb/D55D/production/_96512645_040066207.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Toshiba's swimming robot",
+      "caption": "Toshiba and a team of researchers have now developed a swimming robot, which is being called \"little sunfish\", to explore the flooded parts of the nuclear plant.",
+      "copyrightHolder": "AFP",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:portuguese/geral-40302633",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Geral",
+      "uri": "/portuguese/geral",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Brasil",
+      "uri": "/portuguese",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
