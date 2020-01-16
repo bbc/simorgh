@@ -49,12 +49,10 @@ class LoggerStream {
 }
 
 const constructDataFilePath = ({ pageType, service, id, variant = '' }) => {
-  const dataPath =
-    pageType === 'frontpage' ||
-    pageType === 'mostRead' ||
-    pageType === 'radioSchedule'
-      ? `${variant || 'index'}.json`
-      : `${id}${variant}.json`;
+  const pageTypes = ['frontpage', 'mostRead', 'radioSchedule'];
+  const dataPath = pageTypes.includes(pageType)
+    ? `${variant || 'index'}.json`
+    : `${id}${variant}.json`;
 
   return path.join(process.cwd(), 'data', service, pageType, dataPath);
 };
