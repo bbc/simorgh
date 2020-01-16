@@ -3,9 +3,8 @@ const ampRegex = '.amp';
 const assetUriRegex = '[a-z-_]{0,}[0-9]{8,}';
 const variantRegex = '/simp|/trad|/cyr|/lat';
 const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
-const mediaIdRegex = '(?!radioschedule)[a-z0-9]+';
+const mediaIdRegex = '[a-z0-9]+';
 const mediaServiceIdRegex = 'bbc_[a-z]+_radio|bbc_[a-z]+_tv';
-const radioScheduleIdRegex = 'bbc_[a-z]+_radio';
 const errorCodeRegex = '404|500';
 
 const getServiceRegex = services => services.join('|');
@@ -48,11 +47,6 @@ export const getCpsAssetRegex = services => {
 export const getRadioAndTVRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/:serviceId(${mediaServiceIdRegex})/:mediaId(${mediaIdRegex}):amp(${ampRegex})?`;
-};
-
-export const getRadioScheduleRegex = services => {
-  const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:serviceId(${radioScheduleIdRegex})/radioschedule.json`;
 };
 
 export const getErrorPageRegex = services => {
