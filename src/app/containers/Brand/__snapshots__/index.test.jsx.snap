@@ -46,6 +46,10 @@ exports[`BrandContainer should render correctly 1`] = `
   width: 100%;
   max-width: 10.496849999999998rem;
   min-width: 6.9979rem;
+  -webkit-flex: 1 1 6.9979rem;
+  -ms-flex: 1 1 6.9979rem;
+  flex: 1 1 6.9979rem;
+  -ms-flex-preferred-size: 10.496849999999998rem;
 }
 
 .c4 {
@@ -58,6 +62,10 @@ exports[`BrandContainer should render correctly 1`] = `
   width: 100%;
   max-width: 10.496849999999998rem;
   min-width: 6.9979rem;
+  -webkit-flex: 1 1 6.9979rem;
+  -ms-flex: 1 1 6.9979rem;
+  flex: 1 1 6.9979rem;
+  -ms-flex-preferred-size: 10.496849999999998rem;
 }
 
 .c2:hover .c4,
@@ -242,6 +250,10 @@ exports[`BrandContainer should render script link correctly 1`] = `
   width: 100%;
   max-width: 10.496849999999998rem;
   min-width: 6.9979rem;
+  -webkit-flex: 1 1 6.9979rem;
+  -ms-flex: 1 1 6.9979rem;
+  flex: 1 1 6.9979rem;
+  -ms-flex-preferred-size: 10.496849999999998rem;
 }
 
 .c4 {
@@ -254,6 +266,10 @@ exports[`BrandContainer should render script link correctly 1`] = `
   width: 100%;
   max-width: 10.496849999999998rem;
   min-width: 6.9979rem;
+  -webkit-flex: 1 1 6.9979rem;
+  -ms-flex: 1 1 6.9979rem;
+  flex: 1 1 6.9979rem;
+  -ms-flex-preferred-size: 10.496849999999998rem;
 }
 
 .c2:hover .c4,
@@ -303,28 +319,26 @@ exports[`BrandContainer should render script link correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  position: relative;
   display: inline-block;
   color: #FFFFFF;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 0 1rem;
-  height: 3rem;
-}
-
-.c7::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  height: 2.25rem;
   border: 0.0625rem solid #FFFFFF;
+  margin: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.c7:hover::before,
-.c7:focus::before {
-  border: 0.25rem solid #FFFFFF;
+.c7 > span {
+  margin: 0.1875rem;
+  display: inline-block;
+  height: calc(100%);
+  padding: 0 1rem;
+}
+
+.c7:hover > span,
+.c7:focus > span {
+  margin: 0;
+  border: 0.1875rem solid #FFFFFF;
 }
 
 @media (max-width:14.9375rem) {
@@ -406,49 +420,20 @@ exports[`BrandContainer should render script link correctly 1`] = `
   }
 }
 
-@media (max-width:24.9375rem) {
-  .c7 {
-    line-height: 2.5rem;
-    height: 2.5rem;
-    padding: 0 0.75rem;
-  }
-}
-
 @media (min-width:25rem) {
   .c7 {
-    line-height: 3rem;
-  }
-
-  .c7::after {
-    content: '';
-    position: absolute;
-    top: -0.25rem;
-    left: -0.25rem;
-    right: 0;
-    bottom: 0;
-    height: 2.75rem;
-    width: 2.75rem;
-    margin: 0 0.25rem;
+    line-height: calc(2.25rem - 0.5rem);
   }
 }
 
-@media (min-width:37.5rem) {
+@media (max-width:37.4375rem) {
   .c7 {
-    height: 2.25rem;
-    line-height: 2.25rem;
-    padding: 0 0.625rem;
+    height: 2.5rem;
   }
 
-  .c7::after {
-    content: '';
-    position: absolute;
-    top: -0.25rem;
-    left: -0.25rem;
-    right: 0;
-    bottom: 0;
-    height: 2.75rem;
-    width: 2.75rem;
-    margin: 0 0.25rem;
+  .c7 > span {
+    padding: 0 0.75rem;
+    line-height: calc(2.5rem - 0.5rem);
   }
 }
 
@@ -506,17 +491,19 @@ exports[`BrandContainer should render script link correctly 1`] = `
         data-variant="test"
         href="/news/test"
       >
-        <span
-          aria-hidden="true"
-        >
-          Test
-        </span>
-        <span
-          class="c5"
-        >
-           
-          Test-variant
-           
+        <span>
+          <span
+            aria-hidden="true"
+          >
+            Test
+          </span>
+          <span
+            class="c5"
+          >
+             
+            Test-variant
+             
+          </span>
         </span>
       </a>
     </div>
