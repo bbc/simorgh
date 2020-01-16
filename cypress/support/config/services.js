@@ -1209,7 +1209,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/thai/thailand-23248713',
+        path: undefined,
         smoke: false,
       },
     },

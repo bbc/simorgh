@@ -1511,7 +1511,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
             class="c16"
             href="http://www.bbc.com/afrique/23248423"
           >
-            %3CMedia Asset Page%3E
+            &lt;Media Asset Page&gt;
           </a>
         </li>
         <li
@@ -1522,7 +1522,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
             class="c16"
             href="http://www.bbc.com/afrique/23248423"
           >
-            %3CMedia Asset Page%3E
+            &lt;Media Asset Page&gt;
           </a>
         </li>
         <li
@@ -1533,7 +1533,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
             class="c16"
             href="http://www.bbc.com/afrique/23248423"
           >
-            %3CMedia Asset Page%3E
+            &lt;Media Asset Page&gt;
           </a>
         </li>
         <li
@@ -1596,7 +1596,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
             class="c16"
             href="http://www.bbc.com/afrique/23248423"
           >
-            %3CMedia Asset Page%3E
+            &lt;Media Asset Page&gt;
           </a>
         </li>
         <li
@@ -1607,7 +1607,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
             class="c16"
             href="http://www.bbc.com/afrique/23248423"
           >
-            %3CMedia Asset Page%3E
+            &lt;Media Asset Page&gt;
           </a>
         </li>
         <li
@@ -1618,7 +1618,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
             class="c16"
             href="http://www.bbc.com/afrique/23248423"
           >
-            %3CMedia Asset Page%3E
+            &lt;Media Asset Page&gt;
           </a>
         </li>
         <li
@@ -4896,7 +4896,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
             class="c14"
             href="http://www.bbc.com/afrique/23248423"
           >
-            %3CMedia Asset Page%3E
+            &lt;Media Asset Page&gt;
           </a>
         </li>
         <li
@@ -4907,7 +4907,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
             class="c14"
             href="http://www.bbc.com/afrique/23248423"
           >
-            %3CMedia Asset Page%3E
+            &lt;Media Asset Page&gt;
           </a>
         </li>
         <li
@@ -4918,7 +4918,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
             class="c14"
             href="http://www.bbc.com/afrique/23248423"
           >
-            %3CMedia Asset Page%3E
+            &lt;Media Asset Page&gt;
           </a>
         </li>
         <li
@@ -4981,7 +4981,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
             class="c14"
             href="http://www.bbc.com/afrique/23248423"
           >
-            %3CMedia Asset Page%3E
+            &lt;Media Asset Page&gt;
           </a>
         </li>
         <li
@@ -4992,7 +4992,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
             class="c14"
             href="http://www.bbc.com/afrique/23248423"
           >
-            %3CMedia Asset Page%3E
+            &lt;Media Asset Page&gt;
           </a>
         </li>
         <li
@@ -5003,7 +5003,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
             class="c14"
             href="http://www.bbc.com/afrique/23248423"
           >
-            %3CMedia Asset Page%3E
+            &lt;Media Asset Page&gt;
           </a>
         </li>
         <li

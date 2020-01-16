@@ -36,7 +36,7 @@ const MetadataContainer = ({
   children,
 }) => {
   const {
-    platform,
+    isAmp,
     canonicalLink,
     ampLink,
     canonicalUkLink,
@@ -44,6 +44,7 @@ const MetadataContainer = ({
     canonicalNonUkLink,
     ampNonUkLink,
   } = useContext(RequestContext);
+
   const {
     service,
     brandName,
@@ -57,7 +58,6 @@ const MetadataContainer = ({
     twitterSite,
   } = useContext(ServiceContext);
   const appleTouchIcon = getAppleTouchUrl(service);
-  const isAmp = platform === 'amp';
   const isEnglishService = ENGLISH_SERVICES.includes(service);
   const alternateLinksEnglishSites = [
     {

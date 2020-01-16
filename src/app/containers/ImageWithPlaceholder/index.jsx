@@ -33,14 +33,14 @@ const ImageWithPlaceholder = ({
   srcset,
   width,
 }) => {
-  const { platform } = useContext(RequestContext);
+  const { isAmp } = useContext(RequestContext);
 
   const imageProps = { alt, src, sizes, width, srcset, fade };
   const imageToRender = <Image {...imageProps} />;
 
   return (
     <ImagePlaceholder ratio={ratio}>
-      {platform === 'amp' ? (
+      {isAmp ? (
         <AmpImg
           alt={alt}
           attribution={copyright || ''}
