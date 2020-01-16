@@ -16,4 +16,6 @@ exports[`regex utils snapshots should create expected regex from getManifestRege
 
 exports[`regex utils snapshots should create expected regex from getRadioAndTVRegex 1`] = `"/:service(news|persian|igbo)/:serviceId(bbc_[a-z]+_radio|bbc_[a-z]+_tv)/:mediaId([a-z0-9]+):amp(.amp)?"`;
 
+exports[`regex utils snapshots should create expected regex from getRadioScheduleRegex 1`] = `"/:service(news|persian|igbo)/:serviceId(bbc_[a-z]+_radio)/radioschedule.json"`;
+
 exports[`regex utils snapshots should create expected regex from getSwRegex 1`] = `"/:service(news|persian|igbo)/sw.js"`;
