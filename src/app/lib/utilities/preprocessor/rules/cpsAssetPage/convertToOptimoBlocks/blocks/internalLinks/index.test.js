@@ -72,7 +72,7 @@ const scenarios = [
     }),
   },
   {
-    name: 'Special Chars',
+    name: 'Special Characters',
     input: wrapBlock({
       meta: generateMeta(['afrique/23248423', '<Hello&>']),
       text: '<itemMeta>afrique/23248423</itemMeta>',
