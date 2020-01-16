@@ -1,0 +1,365 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:pidgin/tori-49221071",
+    "locators": {
+      "assetUri": "/pidgin/tori-49221071",
+      "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-49221071",
+      "curie": "http://www.bbc.co.uk/asset/07423361-ac65-fd46-9142-a94ee67e4f9c"
+    },
+    "type": "PGL",
+    "createdBy": "pidgin-v6",
+    "language": "pcm",
+    "lastUpdated": 1564845505546,
+    "firstPublished": 1564844475,
+    "lastPublished": 1564845496,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "pidgin.news.photo_gallery.49221071.page",
+      "cps_asset_id": "49221071"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        },
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Entertainment",
+          "thingUri": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+          "thingId": "1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Entertainment",
+            "http://www.wikidata.org/entity/Q173799"
+          ],
+          "topicName": "Jollificate",
+          "topicId": "cqywjyzk2vyt",
+          "curationList": [
+            {
+              "curationId": "4f658346-1590-47b2-8c90-bfcb72c63d4a",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Food",
+          "thingUri": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id",
+          "thingId": "99fb9bbd-9150-4e13-a3ac-3fa0610683f8",
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Food",
+            "http://www.wikidata.org/entity/Q2095"
+          ],
+          "topicName": "Chop chop",
+          "topicId": "c1gdqg6g4z4t",
+          "curationList": [
+            {
+              "curationId": "e1f7dc60-272b-46b6-b423-b18e62e5d880",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Port Harcourt",
+          "thingUri": "http://www.bbc.co.uk/things/b6a72157-a248-45e0-b0c4-1beb91e1bbd1#id",
+          "thingId": "b6a72157-a248-45e0-b0c4-1beb91e1bbd1",
+          "thingType": [
+            "Place",
+            "Thing",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/2324774/"
+          ],
+          "topicId": "c5qvpq9krr2t",
+          "curationList": [
+            {
+              "curationId": "51c57540-1e02-4467-9a2c-31256775c51a",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "108179656",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg",
+        "path": "/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Bole festival for Pitakwa",
+        "caption": "Dis year Bole festival title na Our taste, Our Culture and e hold on 3rd of August inside Port-Harcourt",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "108179658",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14EC1/production/_108179658_3a659b69-33d2-453d-a08e-f25f2d8a5dad.jpg",
+        "path": "/cpsprodpb/14EC1/production/_108179658_3a659b69-33d2-453d-a08e-f25f2d8a5dad.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Bole Festival for Port Harcourt Rivers state",
+        "caption": "Bole festival na di biggest food festival for di southern part of Nigeria wey dey attract many pipo from all ova di kontri",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "108179662",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/6849/production/_108179662_33ddcf60-5467-48ba-94db-44e4554371c8.jpg",
+        "path": "/cpsprodpb/6849/production/_108179662_33ddcf60-5467-48ba-94db-44e4554371c8.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Bole festival for Pitakwa",
+        "caption": "For Pitakwa, na must for Bole dish to get fish with pepper sauce plus also garnish am with vegetable and oda tins",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "108180331",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/33FC/production/_108180331_911b3b03-1d6e-4749-a915-d6c315b0c70b.jpg",
+        "path": "/cpsprodpb/33FC/production/_108180331_911b3b03-1d6e-4749-a915-d6c315b0c70b.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Bole Festival for Port Harcourt Rivers state",
+        "caption": "Different food exhibitors na im dey come di festival to showcase di many kind of Bole and fish delicacy",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "108180328",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14184/production/_108180328_bf971cef-76ed-4d40-9763-e9d062a6f353.jpg",
+        "path": "/cpsprodpb/14184/production/_108180328_bf971cef-76ed-4d40-9763-e9d062a6f353.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Bole festival for Pitakwa",
+        "caption": "Family, friends and odas dey get time to bond and enjoy dia selve during dis festival",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "108180318",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13D9C/production/_108180318_532898d2-c561-4122-8035-03f40da36eb5.jpg",
+        "path": "/cpsprodpb/13D9C/production/_108180318_532898d2-c561-4122-8035-03f40da36eb5.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Fish wey dem display for di Bole Festival",
+        "caption": "Di Bole festival dey celebrate one popular street food wey pitakwa pipo dey call Bole. Bole na mixture of roasted plantain and yam with fish and sauce.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "108180320",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/0904/production/_108180320_957152f9-81a0-48bb-a1f1-2af047ef0f85.jpg",
+        "path": "/cpsprodpb/0904/production/_108180320_957152f9-81a0-48bb-a1f1-2af047ef0f85.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Pipo wey dey play games during di bola festival",
+        "caption": "Di Bole festival dey provide time for families to bond and jolly as pipo fit enjoy games, better music and dance",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "108180322",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/5724/production/_108180322_a292dcd5-9163-4851-a474-66edf11185ca.jpg",
+        "path": "/cpsprodpb/5724/production/_108180322_a292dcd5-9163-4851-a474-66edf11185ca.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Bole Festival for Port Harcourt Rivers state",
+        "caption": "Di theme for dis year Bole festival na “our taste, our culture”",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "108180324",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/A544/production/_108180324_bbf45e0c-56aa-4cde-8569-3c07b5272de9.jpg",
+        "path": "/cpsprodpb/A544/production/_108180324_bbf45e0c-56aa-4cde-8569-3c07b5272de9.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Bole festival for Pitakwa",
+        "caption": "Di 2019 edition na di fourth time wey di festival dey hold",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "108180326",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/F364/production/_108180326_bd3a2739-0989-41c5-8ac4-ead9e2d1257d.jpg",
+        "path": "/cpsprodpb/F364/production/_108180326_bd3a2739-0989-41c5-8ac4-ead9e2d1257d.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Peppered chicken wey boku for Bole festival",
+        "caption": "Di Bole festival dey also celebrate foods and provide opportunity for pipo to Network",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "108180316",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/EF7C/production/_108180316_0335660e-045f-4ae6-9341-c97d6d06b649.jpg",
+        "path": "/cpsprodpb/EF7C/production/_108180316_0335660e-045f-4ae6-9341-c97d6d06b649.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Pipo dey play table tennis for Bole festival",
+        "caption": "Different kind of games na part of di activities wey dey also take place during di Bole festival",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "See as fish and bole package wella for 2019 Bole Festival",
+      "headline": "Fish and plantain sara everi wia for 2019 Bole Festival"
+    },
+    "locators": {
+      "assetUri": "/pidgin/tori-49221071",
+      "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-49221071",
+      "curie": "http://www.bbc.co.uk/asset/07423361-ac65-fd46-9142-a94ee67e4f9c"
+    },
+    "summary": "Bole Festival wey dey celebrate one popular street food, special dish of roasted plantain and fish with pepper sauce, don start for Port Harcourt Rivers state",
+    "timestamp": 1564845505546,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        },
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "108179656",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg",
+      "path": "/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Bole festival for Pitakwa",
+      "caption": "Dis year Bole festival title na Our taste, Our Culture and e hold on 3rd of August inside Port-Harcourt",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:pidgin/tori-49221071",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Tori",
+      "uri": "/pidgin/tori",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Pidgin",
+      "uri": "/pidgin",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Port Harcourt Bole festival",
+              "headline": "Bole na correct Port Harcourt food."
+            },
+            "locators": {
+              "assetUri": "/pidgin/media-45132087",
+              "cpsUrn": "urn:bbc:content:assetUri:/pidgin/media-45132087"
+            },
+            "summary": "Bole festival showcase di different types of bole dem.",
+            "timestamp": 1533819715,
+            "cpsType": "MAP",
+            "indexImage": {
+              "id": "102896990",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/26F1/production/_102896990_p06h05p7.jpg",
+              "path": "/cpsprodpb/26F1/production/_102896990_p06h05p7.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Keyframe #1",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:pidgin/media-45132087",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Jollof rice: Di only food wey get festival wan unite West Africa",
+              "headline": "Jollof Festival: West Africa no wan kwanta again unto which pesin jollof sweet pass"
+            },
+            "locators": {
+              "assetUri": "/pidgin/tori-45242255",
+              "cpsUrn": "urn:bbc:content:assetUri:/pidgin/tori-45242255"
+            },
+            "summary": "Jollof Festival happun for Lagos Nigeria on Sunday and na time for pipo wey show to sample West Africa fine food dem.",
+            "timestamp": 1534710099,
+            "cpsType": "PGL",
+            "id": "urn:bbc:ares::asset:pidgin/tori-45242255",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

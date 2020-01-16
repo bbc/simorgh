@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:gahuza/amakuru-43894701",
+    "locators": {
+      "assetUri": "/gahuza/amakuru-43894701",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-43894701",
+      "curie": "http://www.bbc.co.uk/asset/c9176a99-9a30-e34f-b637-cd39e3574db3"
+    },
+    "type": "PGL",
+    "createdBy": "gahuza-v6",
+    "language": "rw",
+    "lastUpdated": 1563572299841,
+    "firstPublished": 1524652443,
+    "lastPublished": 1524653681,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "gahuza.news.photo_gallery.43894701.page",
+      "cps_asset_id": "43894701"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Infographic",
+        "categoryName": "Infographic"
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Refugees and asylum seekers",
+          "thingUri": "http://www.bbc.co.uk/things/0cd55773-e753-44ad-ad07-1366bf1aa6bc#id",
+          "thingId": "0cd55773-e753-44ad-ad07-1366bf1aa6bc",
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Refugee",
+            "http://www.wikidata.org/entity/Q564811"
+          ],
+          "topicName": "Impunzi n'abasaba ubuhungiro",
+          "topicId": "cxnykn87rvrt",
+          "curationList": [
+            {
+              "curationId": "8f7a165d-b322-4b72-a75c-53f10b74001e",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Rwanda",
+          "thingUri": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+          "thingId": "8125f2a9-3259-4f35-ab75-d9a6577fdc88",
+          "thingType": [
+            "Place",
+            "Thing",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/49518/"
+          ],
+          "topicName": "Rwanda",
+          "topicId": "c340q4v3942t",
+          "curationList": [
+            {
+              "curationId": "aafe0848-80a9-4325-8b5d-de9d56d4bd64",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "thingLabel": "Democratic Republic of Congo",
+          "thingUri": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+          "thingId": "3548f44f-46f5-4e6e-8628-3f668f161691",
+          "thingType": [
+            "Place",
+            "Thing",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/203312/"
+          ],
+          "topicName": "Republika Iharanira Demokrasi ya Kongo",
+          "topicId": "c8y94y03z72t",
+          "curationList": [
+            {
+              "curationId": "be542793-fcb5-4ea2-8600-5b7d006fd03b",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "101034678",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1565B/production/_101034678_kiziba1.jpg",
+        "path": "/cpsprodpb/1565B/production/_101034678_kiziba1.jpg",
+        "height": 960,
+        "width": 960,
+        "altText": "Abanshinzwe umutekano b'u Rwanda mu nkambi ya Kiziba",
+        "caption": "Abashinzwe umutekano b'u Rwanda bongeye kwinjira mu nkambi ya Kiziba mu gitondo cy'uno munsi itariki 25/04/2018.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "101034732",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/5CBF/production/_101034732_kiziba2.jpg",
+        "path": "/cpsprodpb/5CBF/production/_101034732_kiziba2.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Abanshinzwe umutekano b'u Rwanda mu nkambi ya Kiziba",
+        "caption": "Uko byifashe muri iyo nkambi biragoye kumenyekana kuko ata munyamakuru wemerewe kwinjirayo.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "101034731",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/35AF/production/_101034731_kiziba3.jpg",
+        "path": "/cpsprodpb/35AF/production/_101034731_kiziba3.jpg",
+        "height": 960,
+        "width": 960,
+        "altText": "Abanshinzwe umutekano b'u Rwanda mu nkambi ya Kiziba",
+        "caption": "Mu mezi abiri ashize izi mpunzi zagize urugendo zerekeza ku biro bya HCR zisaba gusubizwa iwazo muri Kongo ngo kuko zibayeho nabi, abashinzwe umutekano basizubiza inyuma ku ngufu hapfamo abagera kuri 11.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "101034684",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/BE03/production/_101034684_kiziba4.jpg",
+        "path": "/cpsprodpb/BE03/production/_101034684_kiziba4.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Abanshinzwe umutekano b'u Rwanda mu nkambi ya Kiziba",
+        "caption": "Aba Banyekongo bavuga ko polisi ishaka gufata abayobozi b'inkambi ibahora gutegura imyigaragambyo.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "101034686",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/10C23/production/_101034686_kiziba5.jpg",
+        "path": "/cpsprodpb/10C23/production/_101034686_kiziba5.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Abanshinzwe umutekano b'u Rwanda mu nkambi ya Kiziba",
+        "caption": "Abacumbitse mu nkambi ya Kiziba bavuga ko abashinzwe umutekano b'u Rwanda bashaka gufata bamwe mu bayobozi b'iyo nkambi.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "101034728",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14337/production/_101034728_kiziba6.jpg",
+        "path": "/cpsprodpb/14337/production/_101034728_kiziba6.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Abanshinzwe umutekano b'u Rwanda mu nkambi ya Kiziba",
+        "caption": "Abanyekongo baba muri iyo nkambi bahise bahuruza basa n'abashaka guhangana n'abashinzwe umutekano.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "101034730",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/0E9F/production/_101034730_kiziba7.jpg",
+        "path": "/cpsprodpb/0E9F/production/_101034730_kiziba7.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Abanshinzwe umutekano b'u Rwanda mu nkambi ya Kiziba",
+        "caption": "Hari impungenge ko ibintu bishobora kuba bibi mu nkambi ya Kiziba, mu gihe leta y'u Rwanda ivuga ko izi mpunzi zidashaka gukurikiza amategeko y'igihugu.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Amafoto: Hazindutse uruhagarara mu nkambi y'Abanyekongo ya Kiziba",
+      "headline": "Amafoto: Hazindutse uruhagarara mu nkambi y'Abanyekongo ya Kiziba"
+    },
+    "locators": {
+      "assetUri": "/gahuza/amakuru-43894701",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-43894701",
+      "curie": "http://www.bbc.co.uk/asset/c9176a99-9a30-e34f-b637-cd39e3574db3"
+    },
+    "summary": "Mu mafoto, uruhagarara ni rwinshi mu nkambi ya Kiziba icumbikiye impunzi z'Abanyekongo mu gihe igipolisi cy'u Rwanda cyongeye kuyinjiramo",
+    "timestamp": 1563572299841,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Infographic",
+        "categoryName": "Infographic"
+      }
+    },
+    "indexImage": {
+      "id": "101034734",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/AADF/production/_101034734_kiziba7.jpg",
+      "path": "/cpsprodpb/AADF/production/_101034734_kiziba7.jpg",
+      "height": 608,
+      "width": 1080,
+      "altText": "Abashinze umutekano b'u Rwanda mu nkambi ya Kiziba",
+      "caption": "Abashinze umutekano b'u Rwanda mu nkambi ya Kiziba",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:gahuza/amakuru-43894701",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Amakuru",
+      "uri": "/gahuza/amakuru",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Gahuza",
+      "uri": "/gahuza",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
