@@ -978,7 +978,6 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             >
               <button
                 aria-expanded="false"
-                aria-label="Sections"
                 class="c16"
                 dir="ltr"
                 type="button"
@@ -995,6 +994,11 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                     d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
                   />
                 </svg>
+                <span
+                  class="c11"
+                >
+                  Sections
+                </span>
               </button>
               <div
                 class="c18"

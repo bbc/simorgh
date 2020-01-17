@@ -1,12 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Canonical Navigation snapshots should correctly render Canonical navigation 1`] = `
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 .c4 {
   color: #fff;
   fill: currentColor;
 }
 
-.c6 {
+.c7 {
   background-color: #222222;
   clear: both;
   overflow: hidden;
@@ -61,7 +73,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.c0 .c7::after {
+.c0 .c8::after {
   left: 0;
 }
 
@@ -70,14 +82,14 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c7 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .c6 {
+  .c7 {
     -webkit-transition: none;
     transition: none;
   }
@@ -98,7 +110,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
 }
 
 @media (max-width:37.4375rem) {
-  .c5 {
+  .c6 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: smooth;
@@ -113,11 +125,11 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
     -ms-overflow-style: none;
   }
 
-  .c5::-webkit-scrollbar {
+  .c6::-webkit-scrollbar {
     display: none;
   }
 
-  .c5:after {
+  .c6:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -144,7 +156,6 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
     >
       <button
         aria-expanded="false"
-        aria-label="menu"
         class="c3"
         dir="ltr"
         type="button"
@@ -161,9 +172,14 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
             d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
           />
         </svg>
+        <span
+          class="c5"
+        >
+          menu
+        </span>
       </button>
       <div
-        class="c5"
+        class="c6"
         dir="ltr"
       >
         <ul
@@ -176,7 +192,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
       </div>
     </div>
     <div
-      class="c6"
+      class="c7"
       height="0"
     >
       <ul
