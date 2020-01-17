@@ -7,7 +7,7 @@ install:
 	npm ci;
 
 heroku:
-	rm -rf build && cp envConfig/heroku.env .env && npm start
+	rm -rf build && cp envConfig/heroku.env .env && npx NODE_ENV=production webpack && npm start
 
 developmentTests:
 	npx apache2-license-checker;
