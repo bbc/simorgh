@@ -455,7 +455,7 @@ const genServices = appEnv => ({
       frontPage: { path: '/igbo', smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/igbo/media-23256786',
+        path: isLive(appEnv) ? '/igbo/media-42986440' : '/igbo/media-23256786', // live is audio clip
         smoke: false,
       },
     },
@@ -580,10 +580,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       liveRadio: {
-        path:
-          isLive(appEnv) || isTest(appEnv) || Cypress.env('APP_ENV') === 'local'
-            ? undefined
-            : '/kyrgyz/bbc_kyrgyz_radio/liveradio',
+        path: '/kyrgyz/bbc_kyrgyz_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -825,7 +822,7 @@ const genServices = appEnv => ({
       frontPage: { path: '/pidgin', smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/pidgin/23248703',
+        path: isLive(appEnv) ? '/pidgin/tori-50974590' : '/pidgin/23248703', // live is video with related content
         smoke: false,
       },
     },
@@ -1212,7 +1209,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/thai/thailand-23248713',
+        path: undefined,
         smoke: false,
       },
     },
@@ -1498,7 +1495,9 @@ const genServices = appEnv => ({
       frontPage: { path: '/yoruba', smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/yoruba/media-23256797',
+        path: isLive(appEnv)
+          ? '/yoruba/afrika-51116686'
+          : '/yoruba/media-23256797', // live is video clip
         smoke: false,
       },
     },

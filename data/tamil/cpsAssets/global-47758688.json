@@ -1,0 +1,221 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:tamil/global-47758688",
+    "locators": {
+      "assetUri": "/tamil/global-47758688",
+      "cpsUrn": "urn:bbc:content:assetUri:tamil/global-47758688",
+      "curie": "http://www.bbc.co.uk/asset/21c707d3-2a95-9e43-bddf-dc7d0f805789"
+    },
+    "type": "PGL",
+    "createdBy": "tamil-v6",
+    "language": "ta",
+    "lastUpdated": 1553933527922,
+    "firstPublished": 1553933517,
+    "lastPublished": 1553933518,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "tamil.global.photo_gallery.47758688.page",
+      "cps_asset_id": "47758688"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ]
+    },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "106236280",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/2047/production/_106236280_1.jpg",
+        "path": "/cpsprodpb/2047/production/_106236280_1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ஆஸ்திரேலியாவின் மெல்பர்ன் நகரில் உள்ள ஏரி ஒன்று இயற்கையாக பிங்க் நிறத்தில் மாறியுள்ளது.",
+        "caption": "ஆஸ்திரேலியாவின் மெல்பர்ன் நகரில் உள்ள ஏரி ஒன்று இயற்கையாக பிங்க் நிறத்தில் மாறியுள்ளது.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "106236281",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/4757/production/_106236281_2.jpg",
+        "path": "/cpsprodpb/4757/production/_106236281_2.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "இந்த கண்ணை கவரும் நிறம், அதிகப்படியான சூரிய ஒளி, குறைந்த மழை பொழிவு மற்றும் மிதமான வெப்பநிலையால் உருவாகிறது.",
+        "caption": "இந்த கண்ணை கவரும் நிறம், அதிகப்படியான சூரிய ஒளி, குறைந்த மழை பொழிவு மற்றும் மிதமான வெப்பநிலையால் உருவாகிறது.",
+        "copyrightHolder": "EPA",
+        "type": "image"
+      },
+      {
+        "id": "106236282",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/6E67/production/_106236282_3.jpg",
+        "path": "/cpsprodpb/6E67/production/_106236282_3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "இம்மாதிரியான சூழலில் இந்த ஏரியில் உள்ள பாசிகள் சிவப்பு நிற நிறமிகளை உருவாக்குகின்றன",
+        "caption": "இம்மாதிரியான சூழலில் இந்த ஏரியில் உள்ள பாசிகள் சிவப்பு நிற நிறமிகளை உருவாக்குகின்றன",
+        "copyrightHolder": "EPA",
+        "type": "image"
+      },
+      {
+        "id": "106236283",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/9577/production/_106236283_4.jpg",
+        "path": "/cpsprodpb/9577/production/_106236283_4.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "இந்த வண்ணயமான ஏரிக்கு கடந்த 2013ஆம் ஆண்டிலிருந்து பல சுற்றுலாப் பயணிகள் வந்த வண்ணம் உள்ளனர்.",
+        "caption": "இந்த வண்ணயமான ஏரிக்கு கடந்த 2013ஆம் ஆண்டிலிருந்து பல சுற்றுலாப் பயணிகள் வந்த வண்ணம் உள்ளனர்.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "106236284",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/BC87/production/_106236284_5.jpg",
+        "path": "/cpsprodpb/BC87/production/_106236284_5.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "சில சுற்றுலாப் பயணிகள் இந்த ஏரியின் வண்ணத்திற்கு ஏற்றாற்போல் உடையணிந்து புகைப்படங்கள் எடுத்துக் கொள்கின்றனர்",
+        "caption": "சில சுற்றுலா பயணிகள் இந்த ஏரியின் வண்ணத்திற்கு ஏற்றாற்போல் உடையணிந்து புகைப்படங்கள் எடுத்துக் கொள்கின்றனர்",
+        "copyrightHolder": "AFP/Getty images",
+        "type": "image"
+      },
+      {
+        "id": "106236715",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/CA33/production/_106236715_6.jpg",
+        "path": "/cpsprodpb/CA33/production/_106236715_6.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "இருப்பினும் இந்த ஏரியில் உப்பின் அளவு அதிகப்படியாக இருப்பதால், அது சிலரின் தோலுக்கு பாதிப்பை ஏற்படுத்தலாம் என்பதால் ஏரிக்கு மிக அருகில் செல்ல வேண்டாம் என அதிகாரிகள் எச்சரித்துள்ளனர்.",
+        "caption": "இருப்பினும் இந்த ஏரியில் உப்பின் அளவு அதிகப்படியாக இருப்பதால், அது சிலரின் தோலுக்கு பாதிப்பை ஏற்படுத்தலாம் என்பதால் ஏரிக்கு மிக அருகில் செல்ல வேண்டாம் என அதிகாரிகள் எச்சரித்துள்ளனர்.",
+        "copyrightHolder": "AFP/GETTY IMAGES",
+        "type": "image"
+      },
+      {
+        "id": "106236716",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/F143/production/_106236716_7.jpg",
+        "path": "/cpsprodpb/F143/production/_106236716_7.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ஏரிக்கு அருகில் அழுகிய முட்டையின் துர்நாற்றம் வருவதாக சமூக வலைதளங்களில் சிலர் எச்சரித்துள்ளனர்",
+        "caption": "ஏரிக்கு அருகில் அழுகிய முட்டையின் துர்நாற்றம் வருவதாக சமூக வலைதளங்களில் சிலர் எச்சரித்துள்ளனர்",
+        "copyrightHolder": "EPA",
+        "type": "image"
+      },
+      {
+        "id": "106236717",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/11853/production/_106236717_8.jpg",
+        "path": "/cpsprodpb/11853/production/_106236717_8.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "இந்த பிங்க் நிறம் இலையுதிர் காலத்தின் இறுதி வரை நீடிக்கும். குளுமையான வெப்பநிலை வந்த பிறகு ஏரி மீண்டும் நீல நிறத்திற்கு மாறும்",
+        "caption": "இந்த பிங்க் நிறம் இலையுதிர் காலத்தின் இறுதி வரை நீடிக்கும். குளிர்ச்சியான வெப்பநிலை வந்த பிறகு ஏரி மீண்டும் நீல நிறமாக மாறும்",
+        "copyrightHolder": "AFP/GETTY IMAGES",
+        "type": "image"
+      },
+      {
+        "id": "106236718",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13F63/production/_106236718_9.jpg",
+        "path": "/cpsprodpb/13F63/production/_106236718_9.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "இம்மாதிரியான பிங்க் ஏரிகள் ஆஸ்திரேலியா, ஸ்பெயின், கனடா மற்றும் செனகல் ஆகிய நாடுகளில் காணப்படுகின்றன",
+        "caption": "இம்மாதிரியான பிங்க் ஏரிகள் ஆஸ்திரேலியா, ஸ்பெயின், கனடா மற்றும் செனகல் ஆகிய நாடுகளில் காணப்படுகின்றன",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "ஆஸ்திரேலியாவில் சுற்றுலா பயணிகளை ஈர்க்கும் ’பிங்க்’ ஏரி",
+      "headline": "ஆஸ்திரேலியாவில் சுற்றுலா பயணிகளை ஈர்க்கும் ’பிங்க்’ ஏரி"
+    },
+    "locators": {
+      "assetUri": "/tamil/global-47758688",
+      "cpsUrn": "urn:bbc:content:assetUri:tamil/global-47758688",
+      "curie": "http://www.bbc.co.uk/asset/21c707d3-2a95-9e43-bddf-dc7d0f805789"
+    },
+    "summary": "இம்மாதிரியான பிங்க் ஏரிகள் ஆஸ்திரேலியா, ஸ்பெயின், கனடா மற்றும் செனகல் ஆகிய நாடுகளில் காணப்படுகின்றன",
+    "timestamp": 1553933527922,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "106236719",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/16673/production/_106236719_8.jpg",
+      "path": "/cpsprodpb/16673/production/_106236719_8.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "இந்த பிங்க் நிறம் இலையுதிர் காலத்தின் இறுதி வரை நீடிக்கும். குளுமையான வெப்பநிலை வந்த பிறகு ஏரி மீண்டும் நீல நிறத்திற்கு மாறும்",
+      "caption": "இந்த பிங்க் நிறம் இலையுதிர் காலத்தின் இறுதி வரை நீடிக்கும். குளுமையான வெப்பநிலை வந்த பிறகு ஏரி மீண்டும் நீல நிறத்திற்கு மாறும்",
+      "copyrightHolder": "AFP/GETTY IMAGES",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:tamil/global-47758688",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "உலகம்",
+      "uri": "/tamil/global",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "தமிழில் செய்திகள்",
+      "uri": "/tamil",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:bengali/news-38827173",
+    "locators": {
+      "assetUri": "/bengali/news-38827173",
+      "cpsUrn": "urn:bbc:content:assetUri:bengali/news-38827173",
+      "curie": "http://www.bbc.co.uk/asset/ab75ee89-8a70-524f-861c-d5b8dc5709d5"
+    },
+    "type": "PGL",
+    "createdBy": "bengali-v6",
+    "language": "bn",
+    "lastUpdated": 1579163671124,
+    "firstPublished": 1485946832000,
+    "lastPublished": 1485946845000,
+    "timestamp": 1485946832000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "bengali.news.photo_gallery.38827173.page",
+      "cps_asset_id": "38827173"
+    },
+    "tags": {},
+    "version": "v1.1.4",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "93903340",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/10EA/production/_93903340_888.jpg",
+        "path": "/cpsprodpb/10EA/production/_93903340_888.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "গোলাপ ফুল",
+        "caption": "বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। যদিও গোলাপ ফোটে সারা বছরই। তার উপর শীতের স্বর্ণরাঙা রোদের কিরণ ছড়িয়ে পড়তেই আভা চারদিকে ছড়িয়ে পড়েছে। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা",
+        "copyrightHolder": "Focus Bangla ",
+        "type": "image"
+      },
+      {
+        "id": "93903342",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/5F0A/production/_93903342_capture.jpg",
+        "path": "/cpsprodpb/5F0A/production/_93903342_capture.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "শিমুল ফুল",
+        "caption": "মাঘের শেষে ফাগুনে হাওয়া বইতে শুরু করেছে। গাছে গাছে ফুটতে শুরু করেছে শিমুল ফুল। ছবিটি রংপুরের তাজহাট এলাকা থেকে তোলা",
+        "copyrightHolder": "Focus Bangla ",
+        "type": "image"
+      },
+      {
+        "id": "93903595",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/E88A/production/_93903595_capture2.jpg",
+        "path": "/cpsprodpb/E88A/production/_93903595_capture2.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "গাদাঁ ফুল",
+        "caption": "বাংলাদেশে সারাবছরই ফুলের চাহিদা থাকে। তাই বাণিজ্যিকভাবে এখন ফুলের চাষও হচ্ছে। বিশেষ করে শীতের সময় গাদাঁ ফুলে চাহিদা থাকে অনেক বেশি। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা",
+        "copyrightHolder": "Focus Bangla ",
+        "type": "image"
+      },
+      {
+        "id": "93903597",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/136AA/production/_93903597_capture3.jpg",
+        "path": "/cpsprodpb/136AA/production/_93903597_capture3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ফুল ভালোবাসেন না এমন মানুষ পাওয়া যাবে না। শুষ্ক প্রকৃতির মাঝে শীতে বাড়তি আকর্ষণ বাহারি রঙের ফুল।",
+        "caption": "ফুল ভালোবাসেন না এমন মানুষ পাওয়া যাবে না। শুষ্ক প্রকৃতির মাঝে শীতে বাড়তি আকর্ষণ বাহারি রঙের ফুল।",
+        "copyrightHolder": "Focus Bangla ",
+        "type": "image"
+      },
+      {
+        "id": "93903599",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/184CA/production/_93903599_capture4.jpg",
+        "path": "/cpsprodpb/184CA/production/_93903599_capture4.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ডালিয়া ফুল।",
+        "caption": "ঢাকার বোটানিক্যাল গার্ডেনের বাগানে ফুটেছে অসংখ্য ডালিয়া ফুল।",
+        "copyrightHolder": "Focus Bangla ",
+        "type": "image"
+      },
+      {
+        "id": "93903601",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/2986/production/_93903601_capture5.jpg",
+        "path": "/cpsprodpb/2986/production/_93903601_capture5.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ফুল গাছ।",
+        "caption": "বোটানিক্যাল গার্ডেনের বাগানে সাজানো রয়েছে নানাজাতের অসংখ্য ফুল গাছ।",
+        "copyrightHolder": "Focus Bangla ",
+        "type": "image"
+      },
+      {
+        "id": "93903643",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8746/production/_93903643_capture6.jpg",
+        "path": "/cpsprodpb/8746/production/_93903643_capture6.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ফুল",
+        "caption": "শীতের সকালে বাগানে নানা রঙের ফুলের উপর পড়েছে সকালের কোমল রোদ। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা",
+        "copyrightHolder": "Focus Bangla ",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "শীতের স্বর্ণরাঙা রোদের ফুল",
+      "headline": "শীতের স্বর্ণরাঙা রোদের ফুল"
+    },
+    "locators": {
+      "assetUri": "/bengali/news-38827173",
+      "cpsUrn": "urn:bbc:content:assetUri:bengali/news-38827173",
+      "curie": "http://www.bbc.co.uk/asset/ab75ee89-8a70-524f-861c-d5b8dc5709d5"
+    },
+    "summary": "বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। অনেক ফুল সারাবছর ফুটলেও শীতের সময় সকালের রোদে যেন তাদের সৌন্দর্য আলাদা মাত্রা পায়।",
+    "timestamp": 1485946832000,
+    "passport": {
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "93903644",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/AE56/production/_93903644_888.jpg",
+      "path": "/cpsprodpb/AE56/production/_93903644_888.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "গোলাপ ফুল",
+      "caption": "বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। যদিও গোলাপ ফোটে সারা বছরই। তার উপর শীতের স্বর্ণরাঙা রোদের কিরণ ছড়িয়ে পড়তেই আভা চারদিকে ছড়িয়ে পড়েছে। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা",
+      "copyrightHolder": "Focus Bangla ",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:bengali/news-38827173",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "খবর",
+      "uri": "/bengali/news",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC বাংলা",
+      "uri": "/bengali",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
