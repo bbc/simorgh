@@ -318,6 +318,20 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           .should('have.attr', 'href', '#content');
       });
 
+      if (variant === 'default') {
+        it('should not render a script switch component if the default variant', () => {
+          cy.get('header')
+            .find('a[data-variant]')
+            .should('have.lengthOf', 0);
+        });
+      } else {
+        it('should render a script switch component if not the default variant', () => {
+          cy.get('header')
+            .find('a[data-variant]')
+            .should('have.lengthOf', 1);
+        });
+      }
+
       if (appConfig[config[service].name][variant].navigation) {
         if (
           pageType !== 'articles' ||
@@ -341,6 +355,34 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
               .should('have.lengthOf', 1)
               .should('have.attr', 'id', 'content');
           });
+
+          const serviceName = config[service].name;
+          // limit number of tests to 2 services for navigation toggling
+          const testMobileNav =
+            serviceName === 'ukchina' || serviceName === 'persian';
+
+          if (testMobileNav) {
+            it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
+              cy.viewport(320, 480);
+              cy.get('nav')
+                .find('div[class^="StyledScrollableNav"]')
+                .should('be.visible');
+
+              cy.get('nav')
+                .find('ul[class^="DropdownUl"]')
+                .should('not.be.visible');
+
+              cy.get('nav button').click();
+
+              cy.get('nav')
+                .find('div[class^="StyledScrollableNav"]')
+                .should('not.be.visible');
+
+              cy.get('nav')
+                .find('ul[class^="DropdownUl"]')
+                .should('be.visible');
+            });
+          }
         }
       }
     });

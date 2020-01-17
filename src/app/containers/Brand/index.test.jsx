@@ -81,7 +81,7 @@ describe(`BrandContainer`, () => {
       expect(skipLinkHref).toBe('#content');
     });
 
-    describe('preffered variant cookie', () => {
+    describe('Script Link and Preferred Variant Cookie', () => {
       let scriptLink;
 
       beforeEach(() => {
@@ -96,7 +96,11 @@ describe(`BrandContainer`, () => {
         jest.clearAllMocks();
       });
 
-      it('should be set when ScriptLink is clicked and cookie is not defined', () => {
+      it('Script Link should contain link to other variant', () => {
+        expect(scriptLink.getAttribute('href')).toBe('/news/test');
+      });
+
+      it('should set preferred variant cookie when ScriptLink is clicked and cookie is not defined', () => {
         document.cookie = '';
 
         fireEvent.click(scriptLink);
@@ -105,7 +109,7 @@ describe(`BrandContainer`, () => {
         expect(document.cookie).toEqual('; ckps_news=test');
       });
 
-      it('should be updated when ScriptLink is clicked and cookie exists', () => {
+      it('should update preferred variant cookie when ScriptLink is clicked and cookie exists', () => {
         document.cookie = 'ckps_news=lat';
 
         fireEvent.click(scriptLink);
