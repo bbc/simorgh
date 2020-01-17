@@ -24,7 +24,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
     target: 'web', // compile for browser environment
     entry: START_DEV_SERVER
       ? [
-          `webpack-dev-server/client?http://alistair-simorgh-test.herokuapp.com:${webpackDevServerPort}`,
+          `webpack-dev-server/client?https://alistair-simorgh-test.herokuapp.com:${webpackDevServerPort}`,
           'webpack/hot/only-dev-server',
           './src/poly',
           './src/client',
@@ -52,7 +52,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         : 'static/js/[name].[chunkhash:8].js', // hash based on the contents of the file
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
-        ? `http://alistair-simorgh-test.herokuapp.com:${webpackDevServerPort}/`
+        ? `https://alistair-simorgh-test.herokuapp.com:${webpackDevServerPort}/`
         : prodPublicPath,
     },
     optimization: {

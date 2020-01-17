@@ -28,3 +28,6 @@ buildStorybook:
 
 buildCi:
 	export NODE_ENV=production && rm -rf build && npm run build:test && npm run build:live;
+
+herokuTest:
+	git push heroku master --no-verify
