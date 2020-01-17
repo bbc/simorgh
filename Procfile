@@ -1,1 +1,1 @@
-testWeb: make heroku
+testWeb: pwd
