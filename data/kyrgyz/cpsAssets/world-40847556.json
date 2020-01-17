@@ -1,0 +1,280 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:kyrgyz/world-40847556",
+    "locators": {
+      "assetUri": "/kyrgyz/world-40847556",
+      "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-40847556",
+      "curie": "http://www.bbc.co.uk/asset/7fe5c28a-c952-e042-963f-14cde1715a6c"
+    },
+    "type": "PGL",
+    "createdBy": "kyrgyz-v6",
+    "language": "ky",
+    "lastUpdated": 1565171861508,
+    "firstPublished": 1502087428,
+    "lastPublished": 1565171852,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "kyrgyz.world.photo_gallery.40847556.page",
+      "cps_asset_id": "40847556"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Nuclear weapons",
+          "thingUri": "http://www.bbc.co.uk/things/16161b86-757f-4539-80a4-05e76681bcc0#id",
+          "thingId": "16161b86-757f-4539-80a4-05e76681bcc0",
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Nuclear_weapon",
+            "http://www.wikidata.org/entity/Q12802"
+          ]
+        },
+        {
+          "thingLabel": "Japan",
+          "thingUri": "http://www.bbc.co.uk/things/3f53c272-5b8f-4a4f-99de-a857d6726c5b#id",
+          "thingId": "3f53c272-5b8f-4a4f-99de-a857d6726c5b",
+          "thingType": [
+            "Place",
+            "Thing",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Japan",
+            "http://sws.geonames.org/1861060/",
+            "http://www.wikidata.org/entity/Q17"
+          ],
+          "topicName": "Жапония",
+          "topicId": "c95y3gw1509t",
+          "curationList": [
+            {
+              "curationId": "6d90125c-d106-4d6b-93e9-409eb713123e",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Photography",
+          "thingUri": "http://www.bbc.co.uk/things/ae0d5073-dfeb-4251-b555-0a9c74f3d4e0#id",
+          "thingId": "ae0d5073-dfeb-4251-b555-0a9c74f3d4e0",
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Photography"
+          ],
+          "topicName": "Фотосүрөт",
+          "topicId": "cyx5k25n22gt",
+          "curationList": [
+            {
+              "curationId": "e667de3c-fc04-48ee-bf92-f4ec43c1719d",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "97227860",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1AD8/production/_97227860_gettyimages-3313730.jpg",
+        "path": "/cpsprodpb/1AD8/production/_97227860_gettyimages-3313730.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Хиросима",
+        "caption": "Калк жыш отурукташкан, курулуштары дагы жыш жайгашкан Хиросима көз ирмемде эле жер менен жексен болду. Адистердин болжолдуу эсептөөлөрүнө караганда, Хиросимада каза тапкандардын (140-200 миң киши) 70-80 миңге чукулу бомба жарылган учурда эле мүрт кетишкен. Жарылуунун очогунда болуп калган кишилер жөн эле майда бөлүкчөгө айланып, ысык абага күйүп кеткен. Ал жердеги ысык абанын температурасы Цельсия боюнча 4000 градуска чейин жеткен.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "97227863",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/9008/production/_97227863_gettyimages-632667534.jpg",
+        "path": "/cpsprodpb/9008/production/_97227863_gettyimages-632667534.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "балакай бомбасы",
+        "caption": "Хиросимага ташталган \"Балакай\" деп аталган бомбанын макети. Бомбанын курамында 64 кг уран болгон.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "97228527",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/11B86/production/_97228527_gettyimages-3062456.jpg",
+        "path": "/cpsprodpb/11B86/production/_97228527_gettyimages-3062456.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "самолет",
+        "caption": "Бомбаны B-29 \"Суперфортресс\" учагынан ташташкан. Экипаждын командири полковник Пол Тиббетс болгон. Ал кийин буга бир да жолу өкүнбөгөнүн айткан экен. 1975-жылы берген интервьюсунда \"ар түнү уйкусу бейпил болорун» айткан. Арадан 30 жыл өткөндөн кийин Тиббетс: \"Азыр мени ошондогудай кырдаалга таштасаңар, шайтан алгырдыкы, муну дагы жасайм» деген.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "97227867",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12C48/production/_97227867_gettyimages-2637033.jpg",
+        "path": "/cpsprodpb/12C48/production/_97227867_gettyimages-2637033.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "жарылуудан кийин",
+        "caption": "Өзөктүк бомбанын жарылуудан кийинки эле кесепетинен 80 миң киши каза тапкан. 1945-жылдын соңунда радиоактивдүү нурлануудан жана башка тескери кесепеттеринен жалпысы болуп 166 миң киши мерт болгону белгилүү болгон.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "97228669",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/179AA/production/_97228669_gettyimages-2637030.jpg",
+        "path": "/cpsprodpb/179AA/production/_97228669_gettyimages-2637030.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Хиросимадагы жарылуудан аман калып, жашап кеткендер бүтүндөй өмүрүн болуп өткөн окуядан алган психологиялык дартынан арыла албай жашап өтүшкөн.",
+        "caption": "Хиросимадагы жарылуудан аман калып, жашап кеткендер бүтүндөй өмүрүн психологиялык дартынан арыла албай жашап өтүшкөн.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "97228671",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/4512/production/_97228671_gettyimages-2674070.jpg",
+        "path": "/cpsprodpb/4512/production/_97228671_gettyimages-2674070.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "күл",
+        "caption": "Бомба жарылуунун артында күл гана калды. Радиоактивдүү нурлануу бир нече жүздөгөн чакырымга чейин тараган. Бирок ууланган райондордогу калкты эвакуациялоо болгон эмес.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "97228674",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/BA42/production/_97228674_gettyimages-2637037.jpg",
+        "path": "/cpsprodpb/BA42/production/_97228674_gettyimages-2637037.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Хиросимадагы айрым имараттардын сөөгү бузулбай калган.",
+        "caption": "Хиросимадагы айрым имараттардын сөөгү бузулбай калган. Сүрөттө Соода палатасынын мекемеси. Чехиялык архитектор Ян Летцелдин долбоору менен курулган имарат жардыруунун очогунан 160 метр гана арлыкта болгон. Имаратты кайра тургузбай эле эстелик сыяктуу калтырып коюшкан. 1996-жылы аны ЮНЕСКО дүйнөлүк мурастар тизмесине каттады.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "97229400",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/01EC/production/_97229400_gettyimages-906221.jpg",
+        "path": "/cpsprodpb/01EC/production/_97229400_gettyimages-906221.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Нагасаки",
+        "caption": "Үч күндөн кийин, 9-августта саат 11:02де экинчи атом бомбасы жапониялык ири порт шаары болгон Нагасакиге ташталган. Муну кесепети менен 80 миң киши каза тапкан. Ушул өзөктүк соккулардан кийин Азиядагы согуш токтоду. Бирок тарыхчылар мунсуз деле Жапония багынып бергенин жарыялоого камынып жаткан эле деп белгилешет. Бул бомба чабуулдары жана Советтер союзу тарабынан Жапонияга согуштун жарыялангандан кийин, 14-августта Жапония капитуляция боюнча билдирүү жасады.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "97229009",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/15FEC/production/_97229009_tv040949883.jpg",
+        "path": "/cpsprodpb/15FEC/production/_97229009_tv040949883.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Жыл сайын Хиросимада он миңдеген япониялыктар чогулуп, каза тапкандарды эскеришет.",
+        "caption": "Жыл сайын Хиросимада он миңдеген жапониялыктар чогулуп, каза тапкандарды эскеришет.",
+        "copyrightHolder": "EPA",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Дүйнө тарыхын өзгөрткөн август",
+      "headline": "Дүйнө тарыхын өзгөрткөн август"
+    },
+    "locators": {
+      "assetUri": "/kyrgyz/world-40847556",
+      "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-40847556",
+      "curie": "http://www.bbc.co.uk/asset/7fe5c28a-c952-e042-963f-14cde1715a6c"
+    },
+    "summary": "1945-жылы 6-августта жапониялык Хиросимада сааттын жебелери токтоп калды. Бул эрте мененки саат 8:15те болгон. АКШ шаарга өзүнүн атомдук бомбасын таштаган. 9-августта атомдук бомба Нагасаки шаарына ташталган.",
+    "timestamp": 1565171861508,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "97228671",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/4512/production/_97228671_gettyimages-2674070.jpg",
+      "path": "/cpsprodpb/4512/production/_97228671_gettyimages-2674070.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "пепелище",
+      "caption": "Взрыв бомбы оставил после себя пепелище. Радиоактивое загрязнение распространилось на сотни километров. Но эвакуация населения из зараженных районов не проводилась.",
+      "copyrightHolder": "Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:kyrgyz/world-40847556",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Дүйнө",
+      "uri": "/kyrgyz/world",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Кыргыз",
+      "uri": "/kyrgyz",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

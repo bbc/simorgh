@@ -1,0 +1,302 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:swahili/habari-48185450",
+    "locators": {
+      "assetUri": "/swahili/habari-48185450",
+      "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48185450",
+      "curie": "http://www.bbc.co.uk/asset/cc51ed65-2db8-a740-8c2a-92cfba89bc24"
+    },
+    "type": "PGL",
+    "createdBy": "swahili-v6",
+    "language": "sw",
+    "lastUpdated": 1557230213399,
+    "firstPublished": 1557226994,
+    "lastPublished": 1557230204,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "swahili.news.photo_gallery.48185450.page",
+      "cps_asset_id": "48185450"
+    },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "106826610",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/067E/production/_106826610_934a63b0-d49f-4b1b-a5d0-b5f2d022b952.jpg",
+        "path": "/cpsprodpb/067E/production/_106826610_934a63b0-d49f-4b1b-a5d0-b5f2d022b952.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Watoto wa marehemu Regnald Mengi wakiingia katika ukumbi wa Karim Jee jijini Dar es salaam kuomboleza kifo cha baba yao(nyuma aliyeshika msalaba mweupe wenye shada la maua) ni jacline Ntuyabaliwe- mjane wa Dkt. Mengi",
+        "caption": "Watoto wa marehemu Regnald Mengi wakiingia katika ukumbi wa Karimjee jijini Dar es salaam kuomboleza kifo cha baba yao(nyuma aliyeshika msalaba mweupe wenye shada la maua) ni jacline Ntuyabaliwe- mjane wa Dkt. Mengi",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "106824520",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/09EE/production/_106824520_mengij.jpg",
+        "path": "/cpsprodpb/09EE/production/_106824520_mengij.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Mjane wa Dkt. Mengi, Jackline Ntuyabaliwe (mwenye shada jeupe la maua lenye muundo wa msalaba) akiingia katika ukumbi wa Karim Jee kwa ajili ya kuuaga rasmi mwili wa mumewe aliyefariki dunia mjini Dubai wiki iliyopita.",
+        "caption": "Mjane wa Dkt. Mengi, Jackline Ntuyabaliwe (mwenye shada jeupe la maua lenye muundo wa msalaba) akiingia katika ukumbi wa Karim Jee kwa ajili ya kuuaga rasmi mwili wa mumewe aliyefariki dunia mjini Dubai wiki iliyopita.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "106824524",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/A62E/production/_106824524_mengil.jpg",
+        "path": "/cpsprodpb/A62E/production/_106824524_mengil.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Muombolezaji",
+        "caption": "Mtoto pekee wakike wa marehemu Reginald Mengi, Regina akiingia ukumbini na picha ya baba yake.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "106824564",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/B5CE/production/_106824564_mengib.jpg",
+        "path": "/cpsprodpb/B5CE/production/_106824564_mengib.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Rais wa Tanzania John Pombe Maguguli ( kati kati) akiongoza waombolezaji kuuaga mwili wa Dkt Regnald Mengi aliyefariki dunia mjini Dubai tarehe 02/05/2015",
+        "caption": "Rais wa Tanzania John Pombe Maguguli ( kati kati) akiongoza waombolezaji kuuaga mwili wa Dkt Regnald Mengi aliyefariki dunia mjini Dubai tarehe 02/05/2015",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "106824556",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/10006/production/_106824556_mengim.jpg",
+        "path": "/cpsprodpb/10006/production/_106824556_mengim.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Mjane wa marehemu Reginald Mengi akiweka shada la maua juu ya jeneza",
+        "caption": "Mjane wa marehemu Reginald Mengi akiweka shada la maua juu ya jeneza",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "106824558",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14E26/production/_106824558_mengin.jpg",
+        "path": "/cpsprodpb/14E26/production/_106824558_mengin.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Jeneza lililoubeba mwili wa Dkt. Reginald Mengi likiingizwa katika ukumbi wa Karimjee",
+        "caption": "Jeneza lililoubeba mwili wa Dkt. Reginald Mengi likiingizwa katika ukumbi wa Karimjee",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "106824560",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/198E/production/_106824560_mengio.jpg",
+        "path": "/cpsprodpb/198E/production/_106824560_mengio.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Picha ya Regnald Mengi ilitundikwa kwenye ukumbi wa karimjee kwa ajili ya maombolezo",
+        "caption": "Picha ya Regnald Mengi ilitundikwa kwenye ukumbi wa Karimjee kwa ajili ya maombolezo",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "106824522",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/580E/production/_106824522_mengik.jpg",
+        "path": "/cpsprodpb/580E/production/_106824522_mengik.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Waombolezaji wakilitazama jeneza lililoubeba mwili wa marehemu Reginald Mengi likiingizwa ndani ya ukumbi wa Karimjee jijini Dar es salaam",
+        "caption": "Waombolezaji wakilitazama jeneza lililoubeba mwili wa marehemu Reginald Mengi likiingizwa ndani ya ukumbi wa Karimjee",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "106824510",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/0606/production/_106824510_mengie.jpg",
+        "path": "/cpsprodpb/0606/production/_106824510_mengie.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karimjee kupewa heshma za mwisho",
+        "caption": "jeneza la mwili wa marehemu Dkt. Reginald Mengi ukiingizwa kwenye ukmbi wa Karimjee kupewa heshima za mwisho",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "106825595",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/E8A0/production/_106825595_mengie.jpg",
+        "path": "/cpsprodpb/E8A0/production/_106825595_mengie.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karim Jee kupewa heshma za mwisho",
+        "caption": "Jeneza la mwili wa marehemu Dkt. Reginald Mengi ukiingizwa kwenye ukmbi wa Karimjee kupewa heshma za mwisho",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "106824516",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/F066/production/_106824516_mengih.jpg",
+        "path": "/cpsprodpb/F066/production/_106824516_mengih.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Waombolezaji",
+        "caption": "Waombolezaji",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "106824508",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13A9E/production/_106824508_mengid.jpg",
+        "path": "/cpsprodpb/13A9E/production/_106824508_mengid.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Wanawake waliovalia mavazi meusi, Ni huzuni na majonzi vilivyotawala miongoni mwa waliofika kwenye shughuli ya kuuaga mwili wa Regnald Mengi",
+        "caption": "Ni huzuni na majonzi vilivyotawala waliofika kwenye shughuli ya kuuaga mwili wa Regnald Mengi",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "106824514",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/A246/production/_106824514_mengig.jpg",
+        "path": "/cpsprodpb/A246/production/_106824514_mengig.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Waombolezaji",
+        "caption": "Waombolezaji",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "106825596",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/10FB0/production/_106825596_mengie.jpg",
+        "path": "/cpsprodpb/10FB0/production/_106825596_mengie.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukumbi wa Karim Jee kupewa heshma za mwisho",
+        "caption": "Jeneza lenye mwili wa Reginald Mengi likiingizwa ukumbini.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "106824512",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/5426/production/_106824512_mengif.jpg",
+        "path": "/cpsprodpb/5426/production/_106824512_mengif.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Viongozi mbali mbali nchini Tanzania wakisikiliza hotba wakati wa maombolezo katika ukumbi wa Karim Jee jijini Dar es salaam",
+        "caption": "Viongozi mbali mbali nchini Tanzania wakisikiliza hotuba wakati wa maombolezo katika ukumbi wa Karimjee jijini Dar es salaam",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Watanzania wajitokeza kwa wingi kumuaga Mengi",
+      "headline": "Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi"
+    },
+    "locators": {
+      "assetUri": "/swahili/habari-48185450",
+      "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-48185450",
+      "curie": "http://www.bbc.co.uk/asset/cc51ed65-2db8-a740-8c2a-92cfba89bc24"
+    },
+    "summary": "Viongozi mbali mbali wa serikali pamoja na Watanzania wa tabaka mabli mbali wamejitokeza kuuaga mwili wa mfanyabiashara maarufu Regnald Mengi aliyefariki dunia wiki iliyopita mjini Dubai",
+    "timestamp": 1557230213399,
+    "passport": {},
+    "indexImage": {
+      "id": "106825597",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/136C0/production/_106825597_mengie.jpg",
+      "path": "/cpsprodpb/136C0/production/_106825597_mengie.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karim Jee kupewa heshma za mwisho",
+      "caption": "jeneza la mwili wa marehemu Dkt. Reginald Mengi ukiingizwa kwenye ukmbi wa Karim Jee kupewa heshma za mwisho",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:swahili/habari-48185450",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Habari",
+      "uri": "/swahili/habari",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Swahili",
+      "uri": "/swahili",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Reginald Mengi: Nilizaliwa katika umasikini wa kutupwa",
+              "headline": "Reginald Mengi na safari ya ufukara mpaka utajiri"
+            },
+            "locators": {
+              "assetUri": "/swahili/habari-48130222",
+              "cpsUrn": "urn:bbc:content:assetUri:/swahili/habari-48130222"
+            },
+            "summary": "Reginald Mengi ni jina kubwa Tanzania na Afrika kwa ujumla, lakini wajua ametokea wapi?",
+            "timestamp": 1556795873,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106758196",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/10E41/production/_106758196_mengiii.jpg",
+              "path": "/cpsprodpb/10E41/production/_106758196_mengiii.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Reginald Mengi",
+              "copyrightHolder": "IPP",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:swahili/habari-48130222",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}
