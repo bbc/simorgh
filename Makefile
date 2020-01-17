@@ -6,6 +6,9 @@ install:
 	rm -rf node_modules
 	npm ci;
 
+heroku:
+	rm -rf build && cp envConfig/heroku.env .env && npm start
+
 developmentTests:
 	npx apache2-license-checker;
 	npm run test;
