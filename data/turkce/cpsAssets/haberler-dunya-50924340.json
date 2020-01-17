@@ -1,0 +1,526 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:turkce/haberler-dunya-50924340",
+    "locators": {
+      "assetUri": "/turkce/haberler-dunya-50924340",
+      "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-dunya-50924340",
+      "curie": "http://www.bbc.co.uk/asset/c6ce7d26-c6f0-e846-80ef-0ee4f28901f9"
+    },
+    "type": "PGL",
+    "createdBy": "turkish-v6",
+    "language": "tr",
+    "lastUpdated": 1577609147688,
+    "firstPublished": 1577609134000,
+    "lastPublished": 1577609134000,
+    "timestamp": 1577609134000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "turkce.world.photo_gallery.50924340.page",
+      "cps_asset_id": "50924340"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ],
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Art",
+          "thingUri": "http://www.bbc.co.uk/things/37dcc888-51a7-4470-82d8-8ef2b811d482#id",
+          "thingId": "37dcc888-51a7-4470-82d8-8ef2b811d482",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Art",
+            "http://www.wikidata.org/entity/Q735"
+          ],
+          "topicName": "Sanat",
+          "topicId": "cwr9jq9rpp2t",
+          "curationList": [
+            {
+              "curationId": "94ca71e1-246f-4cf2-bdea-fbaba52c3529",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Photography",
+          "thingUri": "http://www.bbc.co.uk/things/ae0d5073-dfeb-4251-b555-0a9c74f3d4e0#id",
+          "thingId": "ae0d5073-dfeb-4251-b555-0a9c74f3d4e0",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Photography"
+          ],
+          "topicName": "Fotoğrafçılık",
+          "topicId": "cxnykv9kpqkt",
+          "curationList": [
+            {
+              "curationId": "dcfb7a9a-2d5b-409e-ad66-b39f13791709",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.4",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "107154957",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/128A9/production/_107154957_119985.jpg",
+        "path": "/cpsprodpb/128A9/production/_107154957_119985.jpg",
+        "height": 976,
+        "width": 976,
+        "altText": "Derek Payne: Günümüzde kimliklerimizi selfielerle tanımlıyoruz",
+        "caption": "Derek Payne: Günümüzde kimliklerimizi selfielerle tanımlıyoruz",
+        "copyrightHolder": "Derek Payne",
+        "type": "image"
+      },
+      {
+        "id": "108298453",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8AA1/production/_108298453_a1e66983-f645-489a-9665-f277e0334419.jpg",
+        "path": "/cpsprodpb/8AA1/production/_108298453_a1e66983-f645-489a-9665-f277e0334419.jpg",
+        "height": 949,
+        "width": 976,
+        "altText": "Anant Ganesh Patel: Zambia'nın Livingstone kentinde köpekler su aygırına merakla bakarken",
+        "caption": "Anant Ganesh Patel: Zambia'nın Livingstone kentinde köpekler su aygırına merakla bakarken",
+        "copyrightHolder": "Anant Ganesh Patel ",
+        "type": "image"
+      },
+      {
+        "id": "110322314",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/A16A/production/_110322314_1bdf101e-fa75-429f-bfda-521376650b0a.jpg",
+        "path": "/cpsprodpb/A16A/production/_110322314_1bdf101e-fa75-429f-bfda-521376650b0a.jpg",
+        "height": 850,
+        "width": 976,
+        "altText": "Birkaç yıl önce Liverpool'u ziyaret ederken bu sıra dışı merdiven ve yürüyen merdiven ikilisine rastladım",
+        "caption": "Birkaç yıl önce Liverpool'u ziyaret ederken bu sıra dışı merdiven ve yürüyen merdiven ikilisine rastladım",
+        "copyrightHolder": "Gordon Calder",
+        "type": "image"
+      },
+      {
+        "id": "110322315",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/C87A/production/_110322315_9c14661c-e0fa-4198-9152-e8fd3c75b96e.jpg",
+        "path": "/cpsprodpb/C87A/production/_110322315_9c14661c-e0fa-4198-9152-e8fd3c75b96e.jpg",
+        "height": 976,
+        "width": 976,
+        "altText": "Penni James: Sidney'in Anzak Köprüsü'nde yağmurlu bir yolculuk.",
+        "caption": "Penni James: Sidney'in Anzak Köprüsü'nde yağmurlu bir yolculuk.",
+        "copyrightHolder": "Penni James",
+        "type": "image"
+      },
+      {
+        "id": "110322316",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/EF8A/production/_110322316_bbc28b6b-b18b-4761-bb9b-9808b97da491.jpg",
+        "path": "/cpsprodpb/EF8A/production/_110322316_bbc28b6b-b18b-4761-bb9b-9808b97da491.jpg",
+        "height": 959,
+        "width": 976,
+        "altText": "Kadının haberi olmadan çekilen bu fotoğrafa bayılıyorum. Düşüncelere dalmış, yüzünde gün ışığının yansıması var",
+        "caption": "Rhonda Tough: Kadının haberi olmadan çekilen bu fotoğrafa bayılıyorum. Düşüncelere dalmış, yüzünde gün ışığının yansıması var.",
+        "copyrightHolder": "Rhonda Tough",
+        "type": "image"
+      },
+      {
+        "id": "109476738",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14737/production/_109476738_cf8105d2-598c-45d8-9aa7-3c21f9cdd368.jpg",
+        "path": "/cpsprodpb/14737/production/_109476738_cf8105d2-598c-45d8-9aa7-3c21f9cdd368.jpg",
+        "height": 1200,
+        "width": 976,
+        "altText": "Tracey Reid: Gloucestershire'daki Puzzlewood. Orada ikamet eden renkli cadıyı da fotoğrafta görebilirsiniz",
+        "caption": "Tracey Reid: Gloucestershire'daki Puzzlewood. Orada ikamet eden renkli cadıyı da fotoğrafta görebilirsiniz",
+        "copyrightHolder": "Tracey Reid",
+        "type": "image"
+      },
+      {
+        "id": "105415998",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/15F5F/production/_105415998_92346.jpg",
+        "path": "/cpsprodpb/15F5F/production/_105415998_92346.jpg",
+        "height": 749,
+        "width": 976,
+        "altText": "Verna Evans: Balerinler de tuvalet sırası bekler.",
+        "caption": "Verna Evans: Balerinler de tuvalet sırası bekler.",
+        "copyrightHolder": "Verna Evans",
+        "type": "image"
+      },
+      {
+        "id": "110322317",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1169A/production/_110322317_847c6a17-21c3-47dd-8b5f-5b4510906f70.jpg",
+        "path": "/cpsprodpb/1169A/production/_110322317_847c6a17-21c3-47dd-8b5f-5b4510906f70.jpg",
+        "height": 649,
+        "width": 976,
+        "altText": "Nehirde yüzen kadınlar",
+        "caption": "Barbara Bryant: Norfolklu Çılgın Hanımlar olarak Bure Nehri'ne haftalık ziyaretimizi yapıyoruz. Yıl boyunca her mevsimde mayolarımızla yüzüyoruz. Bol bol gülüyor ve kek yiyoruz.",
+        "copyrightHolder": "Barbara Bryant",
+        "type": "image"
+      },
+      {
+        "id": "110322318",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13DAA/production/_110322318_9582fee3-81e2-4862-b5a1-63115b1c12a7.jpg",
+        "path": "/cpsprodpb/13DAA/production/_110322318_9582fee3-81e2-4862-b5a1-63115b1c12a7.jpg",
+        "height": 700,
+        "width": 976,
+        "altText": "Paul Granahan",
+        "caption": "Paul Granahan: Bu fotoğrafı ABD'de, Oregon'daki Krater Gölü yakınlarında çektim. Tepelerin sabah sisinde nasıl kaybolduğunu göstermek istiyordum. Sabah sisinin etkisi, o bölgede yaygın olan çam ormanı yangınlarından gelen dumanlarla artmıştı.",
+        "copyrightHolder": "Paul Granahan ",
+        "type": "image"
+      },
+      {
+        "id": "110322319",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/164BA/production/_110322319_5dc78b21-5383-45be-8683-e85d8efc1bf0.jpg",
+        "path": "/cpsprodpb/164BA/production/_110322319_5dc78b21-5383-45be-8683-e85d8efc1bf0.jpg",
+        "height": 649,
+        "width": 976,
+        "altText": "Altı yıl önce korkusuz gezgin Paul Rose, İngiltere'deki Windermere gölünün tabanındaki atıkları temizlemeye karar verdi. Başta tanıdığı birkaç dalgıcı çağırmayı düşünüyordu. Fakat gönüllülerin sayısı arttı, 260 dalgıç ve 100 de sahilde gönüllü ile çalışma yürütüldü. Ben de gölün dibinden çıkanları fotoğrafladım.",
+        "caption": "Dayve Ward: Altı yıl önce korkusuz gezgin Paul Rose, İngiltere'deki Windermere gölünün tabanındaki atıkları temizlemeye karar verdi. Başta tanıdığı birkaç dalgıcı çağırmayı düşünüyordu. Fakat gönüllülerin sayısı arttı, 260 dalgıç ve 100 de sahilde gönüllü ile çalışma yürütüldü. Ben de gölün dibinden çıkanları fotoğrafladım.",
+        "copyrightHolder": "Dayve Ward",
+        "type": "image"
+      },
+      {
+        "id": "110322320",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/0912/production/_110322320_363e3d60-1ee0-4c0b-b077-3ef582052f5e.jpg",
+        "path": "/cpsprodpb/0912/production/_110322320_363e3d60-1ee0-4c0b-b077-3ef582052f5e.jpg",
+        "height": 649,
+        "width": 976,
+        "altText": "Taipei'de eski bir ankesörlü telefon, parlak kırmızıya boyanmış bir duvar önünde. Telefon temiz ve iyi durumda gözüküyor. Muhtemelen bir süredir hiç kullanan olmadı.",
+        "caption": "Janie Tonkin: Taipei'de eski bir ankesörlü telefon, parlak kırmızıya boyanmış bir duvar önünde. Telefon temiz ve iyi durumda gözüküyor. Muhtemelen bir süredir hiç kullanan olmadı.",
+        "copyrightHolder": "Janie Tonkin",
+        "type": "image"
+      },
+      {
+        "id": "110322321",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/3022/production/_110322321_856c5b3d-61b7-4496-b697-257a2db9fd36.jpg",
+        "path": "/cpsprodpb/3022/production/_110322321_856c5b3d-61b7-4496-b697-257a2db9fd36.jpg",
+        "height": 609,
+        "width": 976,
+        "altText": "Richard Derwent: Yemek odamdaki piyanonun üstünde aile ve müzik hatıraları",
+        "caption": "Richard Derwent: Yemek odamdaki piyanonun üstünde aile ve müzik hatıraları.",
+        "copyrightHolder": "Richard Derwent",
+        "type": "image"
+      },
+      {
+        "id": "110322322",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/5732/production/_110322322_b77e4d20-78aa-4fb4-b391-a21630332199.jpg",
+        "path": "/cpsprodpb/5732/production/_110322322_b77e4d20-78aa-4fb4-b391-a21630332199.jpg",
+        "height": 649,
+        "width": 976,
+        "altText": "Niagara Şelaleleri'ni görmek ve gücünü hissetmek için sıramı beklerken",
+        "caption": "Betty Nesbitt: Niagara Şelaleleri'ni görmek ve gücünü hissetmek için sıramı beklerken.",
+        "copyrightHolder": "Betty Nesbitt",
+        "type": "image"
+      },
+      {
+        "id": "110322670",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1DC6/production/_110322670_7043d53c-eb23-41a7-a18c-87ae2ff106df.jpg",
+        "path": "/cpsprodpb/1DC6/production/_110322670_7043d53c-eb23-41a7-a18c-87ae2ff106df.jpg",
+        "height": 659,
+        "width": 976,
+        "altText": "İzlanda'daki Skógá nehri üzerinde bulunan Skógafoss şelalesi gündüz çok güzel, akşamları ise muhteşem. Özellikle de kuzey ışıkları dans etmeye başladığında.",
+        "caption": "Sally Brown: İzlanda'daki Skógá nehri üzerinde bulunan Skógafoss şelalesi gündüz çok güzel, akşamları ise muhteşem. Özellikle de kuzey ışıkları dans etmeye başladığında.",
+        "copyrightHolder": "Sally Brown",
+        "type": "image"
+      },
+      {
+        "id": "110322769",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/179D2/production/_110322769_645598d7-b728-424d-9207-623edb5bece2.jpg",
+        "path": "/cpsprodpb/179D2/production/_110322769_645598d7-b728-424d-9207-623edb5bece2.jpg",
+        "height": 700,
+        "width": 976,
+        "altText": "Bu ayçiçeği Kernevek çisentisinde açılmakta zorlanıyordu",
+        "caption": "Esther Johnson: Bu ayçiçek Kernevek çisentisinde açılmakta gerçekten zorlanıyordu.",
+        "copyrightHolder": "Esther Johnson",
+        "type": "image"
+      },
+      {
+        "id": "109563051",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/3ABC/production/_109563051_fbcae1ba-0a23-496d-93de-67d619676e63.jpg",
+        "path": "/cpsprodpb/3ABC/production/_109563051_fbcae1ba-0a23-496d-93de-67d619676e63.jpg",
+        "height": 649,
+        "width": 976,
+        "altText": "Kentucky'deki evimi iki sinekkuşu düzenli olarak ziyaret eder",
+        "caption": "Paul Mazurek: Kentucky'deki evimi iki sinekkuşu düzenli olarak ziyaret eder",
+        "copyrightHolder": "Paul Mazurek",
+        "type": "image"
+      },
+      {
+        "id": "110322770",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1E2A/production/_110322770_08f70688-9e33-497f-9067-132d334947d9.jpg",
+        "path": "/cpsprodpb/1E2A/production/_110322770_08f70688-9e33-497f-9067-132d334947d9.jpg",
+        "height": 649,
+        "width": 976,
+        "altText": "Yeni toplanmış acı biberler kurutulurken.",
+        "caption": "Jenny Downing: Yeni toplanmış acı biberler kurutulurken.",
+        "copyrightHolder": "Jenny Downing",
+        "type": "image"
+      },
+      {
+        "id": "110322771",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/453A/production/_110322771_472d2de3-f8af-49e8-a868-cd26ed46ca76.jpg",
+        "path": "/cpsprodpb/453A/production/_110322771_472d2de3-f8af-49e8-a868-cd26ed46ca76.jpg",
+        "height": 659,
+        "width": 976,
+        "altText": "Otoyol bakım teknisyenleri Cardiff kent merkezinde bakım yaparken",
+        "caption": "Simon Lamb: Otoyol bakım teknisyenleri Cardiff kent merkezinde bakım yaparken.",
+        "copyrightHolder": "Simon Lamb",
+        "type": "image"
+      },
+      {
+        "id": "110322819",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/166AE/production/_110322819_f3a935a9-61c3-4425-b5a0-6a91d0b5e303.jpg",
+        "path": "/cpsprodpb/166AE/production/_110322819_f3a935a9-61c3-4425-b5a0-6a91d0b5e303.jpg",
+        "height": 649,
+        "width": 976,
+        "altText": "ABD'nin Washington eyaletinde, Seattle kentinde bir adam sabahın ilk ışıklarında karşıya geçmek için trafiği kontrol ederken.",
+        "caption": "Chris Jones: ABD'nin Washington eyaletinde, Seattle kentinde bir adam sabahın ilk ışıklarında karşıya geçmek için trafiği kontrol ederken.",
+        "copyrightHolder": "Chris Jones",
+        "type": "image"
+      },
+      {
+        "id": "110323197",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1351C/production/_110323197_ed516b07-f47c-41e9-bfc6-e268892095ed.jpg",
+        "path": "/cpsprodpb/1351C/production/_110323197_ed516b07-f47c-41e9-bfc6-e268892095ed.jpg",
+        "height": 749,
+        "width": 976,
+        "altText": "Sergio Campanile: Kanada Ontario'da sonbaharda güneye giderken",
+        "caption": "Sergio Campanile: Kanada Ontario'da sonbaharda güneye giderken",
+        "copyrightHolder": "Sergio Campanile",
+        "type": "image"
+      },
+      {
+        "id": "110323198",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/15C2C/production/_110323198_b93af63d-2b3d-4909-81e7-95d004d8e53d.jpg",
+        "path": "/cpsprodpb/15C2C/production/_110323198_b93af63d-2b3d-4909-81e7-95d004d8e53d.jpg",
+        "height": 749,
+        "width": 976,
+        "altText": "Bu mavi kuş, aynadaki mavi kuşa karşı bölgesini koruyor",
+        "caption": "Bu mavi kuş, aynadaki mavi kuşa karşı bölgesini koruyor",
+        "copyrightHolder": "Deborah Roy",
+        "type": "image"
+      },
+      {
+        "id": "110323199",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1833C/production/_110323199_70616795-b14e-44c2-9ba7-53ec747eaddf.jpg",
+        "path": "/cpsprodpb/1833C/production/_110323199_70616795-b14e-44c2-9ba7-53ec747eaddf.jpg",
+        "height": 1450,
+        "width": 976,
+        "altText": "Bu fotoğraf Bolivya'da çekildi. Dört gün boyunca Altiplano'nun bir ucundan diğer ucuna araç kullandık. Yol boyunca kar, şimşek, bora ve güneşle karşılaştık. O yolculuktan en çok bu fotoğrafı seviyorum, fırtına sonrası sessizliği gösteriyor",
+        "caption": "Sophie Adams: Bu fotoğraf Bolivya'da çekildi. Dört gün boyunca Altiplano'nun bir ucundan diğer ucuna araç kullandık. Yol boyunca kar, şimşek, bora ve güneşle karşılaştık. O yolculuktan en çok bu fotoğrafı seviyorum, fırtına sonrası sessizliği gösteriyor.",
+        "copyrightHolder": "Sophie Adams",
+        "type": "image"
+      },
+      {
+        "id": "110323337",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/11E74/production/_110323337_97c13e5d-ecd7-4674-98a6-2ccad260b07e.jpg",
+        "path": "/cpsprodpb/11E74/production/_110323337_97c13e5d-ecd7-4674-98a6-2ccad260b07e.jpg",
+        "height": 1600,
+        "width": 976,
+        "altText": "İspanya'daki tatilimizde ailece eğleniyorduk. Ama aramızdan biri dayanamadı ve sırayı bozdu",
+        "caption": "İspanya'daki tatilimizde ailece eğleniyorduk. Ama aramızdan biri dayanamadı ve sırayı bozdu",
+        "copyrightHolder": "Richard Derwent",
+        "type": "image"
+      },
+      {
+        "id": "106211590",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/2527/production/_106211590_107478.jpg",
+        "path": "/cpsprodpb/2527/production/_106211590_107478.jpg",
+        "height": 1500,
+        "width": 976,
+        "altText": "Vitalis Vasylius: Sayısız yıldızlar",
+        "caption": "Vitalis Vasylius: Sayısız yıldızlar",
+        "copyrightHolder": "VITALIS VASYLIUS",
+        "type": "image"
+      },
+      {
+        "id": "110323338",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14584/production/_110323338_089c293c-766b-441d-abe1-0fb34f6ca0ed.jpg",
+        "path": "/cpsprodpb/14584/production/_110323338_089c293c-766b-441d-abe1-0fb34f6ca0ed.jpg",
+        "height": 1215,
+        "width": 976,
+        "altText": "Papatyaların açtığı dönemde kusursuz bir günbatımı yakalamak için bekledim.",
+        "caption": "Carolyn DiFrancesco: Papatyaların açtığı dönemde kusursuz bir günbatımı yakalamak için bekledim.",
+        "copyrightHolder": "Carolyn DiFrancesco",
+        "type": "image"
+      },
+      {
+        "id": "110323376",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/10704/production/_110323376_0afb9c40-36e6-4d04-b246-98239de40a43.jpg",
+        "path": "/cpsprodpb/10704/production/_110323376_0afb9c40-36e6-4d04-b246-98239de40a43.jpg",
+        "height": 700,
+        "width": 976,
+        "altText": "Bolu'da kent merkezindeki bir meydanda bu iki adam oturmuş sohbet ediyordu",
+        "caption": "Matthew Jeanes: Bolu'da kent merkezindeki bir meydanda bu iki adam oturmuş sohbet ediyordu.",
+        "copyrightHolder": "Matthew Jeanes",
+        "type": "image"
+      },
+      {
+        "id": "110323377",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12E14/production/_110323377_6d23f8b6-e4cd-4b77-8075-5c27697f5097.jpg",
+        "path": "/cpsprodpb/12E14/production/_110323377_6d23f8b6-e4cd-4b77-8075-5c27697f5097.jpg",
+        "height": 729,
+        "width": 976,
+        "altText": "Avustralya'daki Lee Point sahilinde kızın Alannah ve labradorumuz Lola ile günbatımında yürütüşte.",
+        "caption": "Gus Campion: Avustralya'daki Lee Point sahilinde kızın Alannah ve labradorumuz Lola ile günbatımında yürütüşte.",
+        "copyrightHolder": "Gus Campion",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "2019'un en iyi okur fotoğrafları",
+      "headline": "2019'un en iyi okur fotoğrafları"
+    },
+    "locators": {
+      "assetUri": "/turkce/haberler-dunya-50924340",
+      "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-dunya-50924340",
+      "curie": "http://www.bbc.co.uk/asset/c6ce7d26-c6f0-e846-80ef-0ee4f28901f9"
+    },
+    "summary": "Dünyanın dört bir yanından okurlar çektikleri fotoğrafları, yayınlanması için BBC'ye gönderiyor. BBC editörleri, 2019'da okurlardan gelen en güzel fotoğrafları derledi.",
+    "timestamp": 1577609134000,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ],
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "110160924",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/A79A/production/_110160924_116060.jpg",
+      "path": "/cpsprodpb/A79A/production/_110160924_116060.jpg",
+      "height": 541,
+      "width": 961,
+      "altText": "A waterfall is illuminated under the aurora lit sky",
+      "caption": "Skógá nehri üzerindeki Skógafoss şelalesi",
+      "copyrightHolder": "Sally Brown",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:turkce/haberler-dunya-50924340",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Dünya",
+      "uri": "/turkce/dunya",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Turkce",
+      "uri": "/turkce",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "We set the theme; you take the pictures",
+              "headline": "We set the theme; you take the pictures"
+            },
+            "locators": {
+              "assetUri": "/news/world-10768282",
+              "cpsUrn": "urn:bbc:content:assetUri:/news/world-10768282"
+            },
+            "summary": "Each week we ask you to send in your pictures on a set theme and a selection of these are then published each Thursday on our In pictures page",
+            "timestamp": 1533554945000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "89586348",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14990/production/_89586348_istock_000080279023_medium.jpg",
+              "path": "/cpsprodpb/14990/production/_89586348_istock_000080279023_medium.jpg",
+              "height": 906,
+              "width": 1610,
+              "altText": "Photographer",
+              "copyrightHolder": "iStock",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:news/world-10768282",
+            "type": "cps"
+          }
+        ]
+      },
+      {
+        "type": "related-urls",
+        "promos": [
+          {
+            "name": "Your news, your pictures - BBC News - Send - BBC",
+            "uri": "https://www.bbc.co.uk/send/u16904890",
+            "type": "link"
+          }
+        ]
+      }
+    ]
+  }
+}

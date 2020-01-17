@@ -50,7 +50,11 @@ const getLinkXML = (url, text) =>
 </link>
 `.replace(whiteSpaceRegex, '');
 
-const replaceChevrons = text => text.replace('<', '&lt;').replace('>', '&gt;');
+const replaceChevrons = text =>
+  text
+    .replace('<', '&lt;')
+    .replace('>', '&gt;')
+    .replace(/&(?!amp|gt|lt)/, '&amp;');
 
 const transformBlockText = (blockText, blockMeta) => {
   const itemMetaMatches = getItemMetaMatches(blockText);

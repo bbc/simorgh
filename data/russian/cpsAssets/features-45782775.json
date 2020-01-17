@@ -1,0 +1,314 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:russian/features-45782775",
+    "locators": {
+      "assetUri": "/russian/features-45782775",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/features-45782775",
+      "curie": "http://www.bbc.co.uk/asset/d8233746-0c01-2542-8577-82a832d28475"
+    },
+    "type": "PGL",
+    "createdBy": "russian-v6",
+    "language": "ru",
+    "lastUpdated": 1579165907791,
+    "firstPublished": 1538986037000,
+    "lastPublished": 1538986686000,
+    "timestamp": 1538986037000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "russian.features.photo_gallery.45782775.page",
+      "cps_asset_id": "45782775"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "Give me perspective"
+        }
+      ],
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Renewable energy",
+          "thingUri": "http://www.bbc.co.uk/things/7a198bf4-40e2-4131-b2e5-8027f5497bf1#id",
+          "thingId": "7a198bf4-40e2-4131-b2e5-8027f5497bf1",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Renewable_energy",
+            "http://www.wikidata.org/entity/Q12705"
+          ]
+        },
+        {
+          "thingLabel": "Nuclear power",
+          "thingUri": "http://www.bbc.co.uk/things/c191b8f2-d9db-49eb-9194-8980e1bf3661#id",
+          "thingId": "c191b8f2-d9db-49eb-9194-8980e1bf3661",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Nuclear_power",
+            "http://www.wikidata.org/entity/Q12739"
+          ]
+        },
+        {
+          "thingLabel": "Ukraine",
+          "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+          "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+          "thingType": [
+            "Thing",
+            "Place",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Ukraine",
+            "http://sws.geonames.org/690791/",
+            "http://www.wikidata.org/entity/Q212"
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.4",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "103747346",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/FB76/production/_103747346_hi049784039.jpg",
+        "path": "/cpsprodpb/FB76/production/_103747346_hi049784039.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Солнечные панели на фоне колючей проволоки перед новым саркофагом, построенным над остатками поврежденного четвертого блока реакторов ЧАЭС",
+        "caption": "На месте бывшей Чернобыльской АЭС, где в 1986 году произошла самая серьезная за всю историю ядерная катастрофа, построена первая на Украине солнечная электростанция.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "103747348",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14996/production/_103747348_hi049782415.jpg",
+        "path": "/cpsprodpb/14996/production/_103747348_hi049782415.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС",
+        "caption": "Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "103747704",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/9F46/production/_103747704_mediaitem103747702.jpg",
+        "path": "/cpsprodpb/9F46/production/_103747704_mediaitem103747702.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Операция по удалению опухоли щитовидной железы в Институте эндокринологии в Киеве 5 апреля 2004 года",
+        "caption": "В апреле 1986 года в результате разрушения реактора в атмосферу была выброшена огромная масса радиоактивных материалов, что привело к росту числа заболеваний раком щитовидной железы.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "103747354",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/B13E/production/_103747354_hi011040701.jpg",
+        "path": "/cpsprodpb/B13E/production/_103747354_hi011040701.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Чернобыльский пейзаж 10 апреля 2010 года",
+        "caption": "В настоящее время комплекс бывшей ЧАЭС окружен запретной зоной, площадь которой составляет 2600 кв. км.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "103747515",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/C976/production/_103747515_mediaitem103747504.jpg",
+        "path": "/cpsprodpb/C976/production/_103747515_mediaitem103747504.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Солнечные панели на фоне колючей проволоки перед новым саркофагом, построенным над остатками поврежденного четвертого блока реакторов ЧАЭС",
+        "caption": "Украина построила в зоне отчуждения первую в стране крупную солнечную электростанцию - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "103747522",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/582E/production/_103747522_mediaitem103747521.jpg",
+        "path": "/cpsprodpb/582E/production/_103747522_mediaitem103747521.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Рабочие на открытой 5 октября 2018 года солнечной установке",
+        "caption": "Правительство Украины предлагает развернуть в запретной зоне строительство энергоустановок, использующих альтернативные источники энергии.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "103747610",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/068A/production/_103747610_mediaitem103747609.jpg",
+        "path": "/cpsprodpb/068A/production/_103747610_mediaitem103747609.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Рабочие на открытой 5 октября 2018 года солнечной установке",
+        "caption": "Рабочие на открытой 5 октября 2018 года солнечной установке.",
+        "copyrightHolder": "EPA",
+        "type": "image"
+      },
+      {
+        "id": "103747639",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16DEA/production/_103747639_mediaitem103747638.jpg",
+        "path": "/cpsprodpb/16DEA/production/_103747639_mediaitem103747638.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС",
+        "caption": "Однако, согласно заявлению украинских властей, запретная зона останется закрытой для людей в течение 24 тысяч лет - это срок полураспада изотопов плутония.",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "В Чернобыле построили первую солнечную электростанцию. Всего в 100 метрах от саркофага",
+      "headline": "В Чернобыле построили первую солнечную электростанцию. Фото"
+    },
+    "locators": {
+      "assetUri": "/russian/features-45782775",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/features-45782775",
+      "curie": "http://www.bbc.co.uk/asset/d8233746-0c01-2542-8577-82a832d28475"
+    },
+    "summary": "Украина открыла свою первую солнечную электростанцию на месте Чернобыльской ядерной катастрофы - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор.",
+    "timestamp": 1538986037000,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "Give me perspective"
+        }
+      ],
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "103747346",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/FB76/production/_103747346_hi049784039.jpg",
+      "path": "/cpsprodpb/FB76/production/_103747346_hi049784039.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС.",
+      "copyrightHolder": "Reuters",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:russian/features-45782775",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Подробности",
+      "uri": "/russian/features",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Новости на русском языке",
+      "uri": "/russian",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "\"Чернобыльский шлях\" из Минска дойдет до Островца?",
+              "headline": "\"Чернобыльский шлях\" из Минска дойдет до Островца?"
+            },
+            "locators": {
+              "assetUri": "/russian/features-43915925",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/features-43915925"
+            },
+            "summary": "Шествие с названием \"Чернобыльский шлях\" (Чернобыльский путь) - ежегодная традиция для Беларуси, наиболее пострадавшей от аварии на АЭС в украинском Чернобыле в 1986 году.",
+            "timestamp": 1524785878000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "101058881",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/49C5/production/_101058881_photo3.jpg",
+              "path": "/cpsprodpb/49C5/production/_101058881_photo3.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Шествие в Беларуси",
+              "caption": "Организованные оппозицией шествие и митинг у поминального Чернобыльского камня в этом году были санкционированы в Минске",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/features-43915925",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "\"Мой счетчик Гейгера ожил\". Что ищет охотник за радиацией",
+              "headline": "\"Мой счетчик Гейгера ожил\". Что ищет охотник за радиацией"
+            },
+            "locators": {
+              "assetUri": "/russian/vert-fut-43883685",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/vert-fut-43883685"
+            },
+            "summary": "Большинство из нас не хотело бы подвергнуться воздействию радиации, но Эндрю Уокер разыскивает и собирает вещи, ее излучающие. Сам, по собственной воле. Оказывается, такие вещи можно найти где угодно.",
+            "timestamp": 1524984759000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "101018380",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/20BD/production/_101018380_radimainistock.jpg",
+              "path": "/cpsprodpb/20BD/production/_101018380_radimainistock.jpg",
+              "height": 1152,
+              "width": 2048,
+              "altText": "Знак радиации",
+              "copyrightHolder": "iStock",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/vert-fut-43883685",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

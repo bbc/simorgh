@@ -1,0 +1,319 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:hindi/india-50198153",
+    "locators": {
+      "assetUri": "/hindi/india-50198153",
+      "cpsUrn": "urn:bbc:content:assetUri:hindi/india-50198153",
+      "curie": "http://www.bbc.co.uk/asset/37b71fc6-d6f3-a649-828e-4e991e6757d0"
+    },
+    "type": "PGL",
+    "createdBy": "hindi-v6",
+    "language": "hi",
+    "lastUpdated": 1572155269348,
+    "firstPublished": 1572155040000,
+    "lastPublished": 1572155261000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "hindi.india.photo_gallery.50198153.page",
+      "cps_asset_id": "50198153"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "India",
+          "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+          "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+          "thingType": [
+            "Thing",
+            "Place",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/1269750/"
+          ],
+          "topicName": "भारत",
+          "topicId": "ckdxnkz7607t",
+          "curationList": [
+            {
+              "curationId": "056dd909-0188-42dd-b164-d88ba2145db8",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Uttar Pradesh",
+          "thingUri": "http://www.bbc.co.uk/things/7c657c38-57a4-4d98-b283-f3b6a8b16bd9#id",
+          "thingId": "7c657c38-57a4-4d98-b283-f3b6a8b16bd9",
+          "thingType": [
+            "Thing",
+            "Place",
+            "news:Place"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Uttar_Pradesh"
+          ],
+          "topicName": "उत्तर प्रदेश",
+          "topicId": "c7zp510pgv8t",
+          "curationList": [
+            {
+              "curationId": "fa661c7c-0fd3-4a84-8c93-3e7c3e5908a5",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Diwali",
+          "thingUri": "http://www.bbc.co.uk/things/9fc34042-7f4d-4e54-b23e-e92bacea49e4#id",
+          "thingId": "9fc34042-7f4d-4e54-b23e-e92bacea49e4",
+          "thingType": [
+            "Thing",
+            "Event"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Diwali",
+            "http://www.wikidata.org/entity/Q10244"
+          ],
+          "topicName": "दिवाली",
+          "topicId": "cdr56k9pnx5t",
+          "curationList": [
+            {
+              "curationId": "df893f6f-04c2-4c19-87f8-abd31b9e2162",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Ayodhya dispute",
+          "thingUri": "http://www.bbc.co.uk/things/ee41140e-1a3d-4b34-8674-c6b005cba64a#id",
+          "thingId": "ee41140e-1a3d-4b34-8674-c6b005cba64a",
+          "thingType": [
+            "Thing",
+            "Event"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Ayodhya_dispute",
+            "http://www.wikidata.org/entity/Q3522690"
+          ],
+          "topicName": "अयोध्या विवाद",
+          "topicId": "cyz9jmpee94t",
+          "curationList": [
+            {
+              "curationId": "c667524b-56cc-45a4-89ae-2f3ef465c4d9",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.2",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "109418898",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/15F19/production/_109418898_mediaitem109418687.jpg",
+        "path": "/cpsprodpb/15F19/production/_109418898_mediaitem109418687.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अयोध्या में दीपावली",
+        "caption": "अयोध्या में दिवाली की पूर्वसंध्या पर सरयू नदी के तट पर दिये जलाए गए",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "109418901",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/2AE5/production/_109418901_mediaitem109418899.jpg",
+        "path": "/cpsprodpb/2AE5/production/_109418901_mediaitem109418899.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अयोध्या में दीपावली",
+        "caption": "इसका आयोजन उत्तर प्रदेश सरकार ने किया था",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "109418904",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/A015/production/_109418904_mediaitem109418902.jpg",
+        "path": "/cpsprodpb/A015/production/_109418904_mediaitem109418902.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अयोध्या में दीपावली",
+        "caption": "दो साल पहले शुरु हुए इस उत्सव को 'दीपोत्सव' नाम दिया गया",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "109418949",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/17305/production/_109418949_mediaitem109418948.jpg",
+        "path": "/cpsprodpb/17305/production/_109418949_mediaitem109418948.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अयोध्या में दीपावली",
+        "caption": "इस बार साढ़े पांच लाख दिए जलाकर गिनीज़ बुक ऑफ़ वर्ल्ड रिकॉर्ड्स में शामिल होने का लक्ष्य",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "109418952",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/657D/production/_109418952_mediaitem109418951.jpg",
+        "path": "/cpsprodpb/657D/production/_109418952_mediaitem109418951.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अयोध्या में दीपावली",
+        "caption": "अयोध्या में दीपावली",
+        "copyrightHolder": "Rubaiyat/BBC",
+        "type": "image"
+      },
+      {
+        "id": "109418955",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/DAAD/production/_109418955_mediaitem109418953.jpg",
+        "path": "/cpsprodpb/DAAD/production/_109418955_mediaitem109418953.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अयोध्या में दीपावली",
+        "caption": "अयोध्या में दीपावली",
+        "copyrightHolder": "Rubaiyat/BBC",
+        "type": "image"
+      },
+      {
+        "id": "109419013",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/7973/production/_109419013_mediaitem109419012.jpg",
+        "path": "/cpsprodpb/7973/production/_109419013_mediaitem109419012.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अयोध्या में दीपावली",
+        "caption": "अयोध्या में दीपावली",
+        "copyrightHolder": "Rubaiyat/BBC",
+        "type": "image"
+      },
+      {
+        "id": "109419015",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/C793/production/_109419015_mediaitem109419014.jpg",
+        "path": "/cpsprodpb/C793/production/_109419015_mediaitem109419014.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अयोध्या में दीपावली",
+        "caption": "अयोध्या में दीपावली",
+        "copyrightHolder": "Rubaiyat/BBC",
+        "type": "image"
+      },
+      {
+        "id": "109419017",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/115B3/production/_109419017_mediaitem109419016.jpg",
+        "path": "/cpsprodpb/115B3/production/_109419017_mediaitem109419016.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अयोध्या में दीपावली",
+        "caption": "अयोध्या में दीपावली",
+        "copyrightHolder": "Rubaiyat/BBC",
+        "type": "image"
+      },
+      {
+        "id": "109419049",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16F8B/production/_109419049_mediaitem109419048.jpg",
+        "path": "/cpsprodpb/16F8B/production/_109419049_mediaitem109419048.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अयोध्या में दीपावली",
+        "caption": "अयोध्या में दीपावली",
+        "copyrightHolder": "Rubaiyat/BBC",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "अयोध्या में सरयू तट पर मनी दीपावली",
+      "headline": "अयोध्या में सरयू तट पर मनी दीपावली"
+    },
+    "locators": {
+      "assetUri": "/hindi/india-50198153",
+      "cpsUrn": "urn:bbc:content:assetUri:hindi/india-50198153",
+      "curie": "http://www.bbc.co.uk/asset/37b71fc6-d6f3-a649-828e-4e991e6757d0"
+    },
+    "summary": "अयोध्या में दिवाली की पूर्वसंध्या पर सरयू नदी के तट पर दिये जलाए गए",
+    "timestamp": 1572155269348,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "109419060",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/17CB/production/_109419060_mediaitem109418902.jpg",
+      "path": "/cpsprodpb/17CB/production/_109419060_mediaitem109418902.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "अयोध्या में दीपावली",
+      "copyrightHolder": "AFP",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:hindi/india-50198153",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "भारत",
+      "uri": "/hindi/india",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Hindi",
+      "uri": "/hindi",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
