@@ -1,0 +1,211 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:sinhala/world-37657374",
+    "locators": {
+      "assetUri": "/sinhala/world-37657374",
+      "cpsUrn": "urn:bbc:content:assetUri:sinhala/world-37657374",
+      "curie": "http://www.bbc.co.uk/asset/05b2f317-3157-ba41-91ff-2b56612d9725"
+    },
+    "type": "PGL",
+    "createdBy": "sinhala-v6",
+    "language": "si",
+    "lastUpdated": 1579166183934,
+    "firstPublished": 1476451709000,
+    "lastPublished": 1476451720000,
+    "timestamp": 1476451709000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "sinhala.world.photo_gallery.37657374.page",
+      "cps_asset_id": "37657374"
+    },
+    "tags": {},
+    "version": "v1.1.4",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "91927762",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/6894/production/_91927762_029063bbc474.jpg",
+        "path": "/cpsprodpb/6894/production/_91927762_029063bbc474.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "තම අධ්‍යාපන කටයුතු සඳහා ස්විස්ටර්ලන්තය ලන්තයට නැවත ගොස් සිටියදී පැරීසියේ කළ සංචාරයක දී භුමිපාල් රජුට තම අනාගත බිරිඳ මුණ ගැසුණි.",
+        "caption": "තම අධ්‍යාපන කටයුතු සඳහා ස්විස්ටර්ලන්තය ලන්තයට නැවත ගොස් සිටියදී පැරීසියේ කළ සංචාරයක දී භුමිපාල් රජුට තම අනාගත බිරිඳ මුණ ගැසුණි.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "91927769",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/17A04/production/_91927769_02906347bbc5.jpg",
+        "path": "/cpsprodpb/17A04/production/_91927769_02906347bbc5.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "දේශපාලන අධිකාරියට ඉහලින් පෙනී සිටි පීතෘවරයෙකු බඳු චරිතයක් හිමිව සිටි භුමිපාල් අතුලතේජ් රජතුමා දේශපාලන කැළඹීම් සහිත අවස්ථාවන් වල දී ඒවාට මැදිහත්වී කටයුතු කළේය.",
+        "caption": "දේශපාලන අධිකාරියට ඉහලින් පෙනී සිටි පීතෘවරයෙකු බඳු චරිතයක් හිමිව සිටි භුමිපාල් අතුලතේජ් රජතුමා දේශපාලන කැළඹීම් සහිත අවස්ථාවන් වල දී ඒවාට මැදිහත්වී කටයුතු කළේය.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "91928053",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/890A/production/_91928053_029062421afp.jpg",
+        "path": "/cpsprodpb/890A/production/_91928053_029062421afp.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "අමරිකානු හිටපු ජනාධිපති ජෝර්ජ් බුස් සමග භුමිපාල් අතුලතේජ් රජතුමා",
+        "caption": "ඇමරිකාවේ හිටපු ජනාධිපති ජෝර්ජ් බුෂ් සහ භුමිපාල් අතුලතේජ් රජතුමා",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "91928058",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14C5A/production/_91928058_029062422afp.jpg",
+        "path": "/cpsprodpb/14C5A/production/_91928058_029062422afp.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "රුසියානු ජනාධිපති විලද්මීර් පුටින් සමග භුමිපාල් අතුලතේජ් රජතුමා",
+        "caption": "රුසියානු ජනාධිපති ව්ලැදිමීර් පූතීන් සමග භුමිපාල් අතුලතේජ් රජතුමා",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "91928144",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/AC96/production/_91928144_024232892ap.jpg",
+        "path": "/cpsprodpb/AC96/production/_91928144_024232892ap.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "සංගීතයට ලැදිකමක් දැක්වූ ඔහු කණ්ඩායම් නායක බෙනි ගුඩ්මාන් සමග",
+        "caption": "සංගීතයට ලැදිකමක් දැක්වූ ඔහු කණ්ඩායම් නායක බෙනි ගුඩ්මාන් සමග",
+        "copyrightHolder": "AP",
+        "type": "image"
+      },
+      {
+        "id": "91928181",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/4706/production/_91928181_0242328afp88.jpg",
+        "path": "/cpsprodpb/4706/production/_91928181_0242328afp88.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "තායිලන්ත ව්‍යවස්ථාවට අනුව රාජ්‍යත්වයට හිමිවන්නේ සීමිත බලයක් වුවද බොහෝ තායි ජාතිකයන් අතර ඔහු දේවත්වයෙන් පිදුම් ලැබීය.",
+        "caption": "තායිලන්ත ව්‍යවස්ථාවට අනුව රාජ්‍යත්වයට හිමිවන්නේ සීමිත බලයක් වුවද බොහෝ තායි ජාතිකයන් අතර ඔහු දේවත්වයෙන් පිදුම් ලැබීය.",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "91928190",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/23DE/production/_91928190_029063469bbc.jpg",
+        "path": "/cpsprodpb/23DE/production/_91928190_029063469bbc.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "රාජ්‍ය පාලනයෙන් තායිලන්තය තුළ මහත් ගෞරවාදරයට පාත්‍රව සිටි එතුමන්ගේ පාලන කාලය තුළ හමුදා කුමන්ත්‍රණ රැසක් සිදුවිය.",
+        "caption": "රාජ්‍ය පාලනයෙන් තායිලන්තය තුළ මහත් ගෞරවාදරයට පාත්‍රව සිටි එතුමන්ගේ පාලන කාලය තුළ හමුදා කුමන්ත්‍රණ රැසක් සිදුවිය.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "91928249",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1704A/production/_91928249_001844286ap.jpg",
+        "path": "/cpsprodpb/1704A/production/_91928249_001844286ap.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "භුමිපාල් බිලිඳා උපත ලැබුවේ ඔහුගේ පියා වූ මහිපාල් අතුලතේජ් කුමරු හාවර්ඩ් විශ්ව විද්‍යාලයේ ඉගෙන ගනිමින් සිටියදීය .",
+        "caption": "භුමිපාල් බිලිඳා උපත ලැබුවේ ඔහුගේ පියා වූ මහිපාල් අතුලතේජ් කුමරු හාවර්ඩ් විශ්ව විද්‍යාලයේ ඉගෙන ගනිමින් සිටියදීය .",
+        "copyrightHolder": "AP",
+        "type": "image"
+      },
+      {
+        "id": "91928339",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16CC6/production/_91928339_029062456afp.jpg",
+        "path": "/cpsprodpb/16CC6/production/_91928339_029062456afp.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "භුමිපාල් කුමරුගේ පියාගේ මරණින් පසු මව ස්විස්ටර්ලන්තයට ගිය අතර කුමරු අධ්‍යාපනය ලැබුවේ එහිදීය.",
+        "caption": "භුමිපාල් කුමරුගේ පියාගේ මරණින් පසු මව ස්විස්ටර්ලන්තයට ගිය අතර කුමරු අධ්‍යාපනය ලැබුවේ එහිදීය.",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "91928509",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/161D6/production/_91928509_161010055400_thai_people_976x549_epa.jpg",
+        "path": "/cpsprodpb/161D6/production/_91928509_161010055400_thai_people_976x549_epa.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "තායි වැසියෝ සිය රජතුමාට අවසන් ගෞරවය දැක්වීම සඳහා නිහඬව සහ සන්සුන්ව දේහය ගෙන ගිය මාර්ගය දෙපස එක්රැස්ව සිටියහ.",
+        "caption": "තායි වැසියෝ සිය රජතුමාට අවසන් ගෞරවය දැක්වීම සඳහා නිහඬව සහ සන්සුන්ව දේහය ගෙන ගිය මාර්ගය දෙපස එක්රැස්ව සිටියහ.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්",
+      "headline": "භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්"
+    },
+    "locators": {
+      "assetUri": "/sinhala/world-37657374",
+      "cpsUrn": "urn:bbc:content:assetUri:sinhala/world-37657374",
+      "curie": "http://www.bbc.co.uk/asset/05b2f317-3157-ba41-91ff-2b56612d9725"
+    },
+    "summary": "තායිලන්ත ජනතාව අතර ගරු බුහුමන් ලබමින්, වත්මන් ලෝකයේ වැඩිම කලක් සිහසුන දැරූ පාලකයා වූ භූමිපාල් අතුලතේජ් රජතුමා දිවියෙන් සමු ගන්නා විට අසූ අට වෙනි වියේ පසු විය.",
+    "timestamp": 1476451709000,
+    "passport": {
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "91928507",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/113B6/production/_91928507_161012223344_thai_king_bhumibol_adulyadej_in_december_2010_getty_512x288_getty_nocredit.jpg",
+      "path": "/cpsprodpb/113B6/production/_91928507_161012223344_thai_king_bhumibol_adulyadej_in_december_2010_getty_512x288_getty_nocredit.jpg",
+      "height": 288,
+      "width": 512,
+      "altText": "භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:sinhala/world-37657374",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "ලෝකය",
+      "uri": "/sinhala/world",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "පුවත් - බීබීසී සිංහල",
+      "uri": "/sinhala",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

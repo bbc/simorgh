@@ -41,6 +41,7 @@ export const RequestContextProvider = ({
     isUK,
     origin,
     pageType,
+    isAmp,
     platform,
     statsDestination,
     statsPageIdentifier,
