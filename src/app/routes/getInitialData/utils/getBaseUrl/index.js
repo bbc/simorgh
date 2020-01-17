@@ -2,7 +2,7 @@ const getBaseUrl = origin => {
   let base = 'https://www.bbc';
   let tld = '.com';
 
-  if (origin.includes('localhost')) {
+  if (origin.includes('alistair-simorgh-test.herokuapp.com')) {
     return origin;
   }
 
