@@ -49,9 +49,9 @@ describe('Canonical Navigation', () => {
     });
 
     it('should render dropdown and no scrollable nav after menu button clicked', () => {
-      const { queryByTestId, queryByLabelText } = render(navigation);
+      const { queryByTestId, queryByText } = render(navigation);
 
-      fireEvent.click(queryByLabelText('menu'));
+      fireEvent.click(queryByText('menu'));
 
       const dropdown = queryByTestId(dropdownTestId);
       const scrollableNav = queryByTestId(scrollableTestId);

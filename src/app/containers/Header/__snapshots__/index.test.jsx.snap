@@ -812,7 +812,6 @@ exports[`Header should render correctly for WS frontPage 1`] = `
       >
         <button
           aria-expanded="false"
-          aria-label="Plenti seshon"
           class="c16"
           dir="ltr"
           type="button"
@@ -829,6 +828,11 @@ exports[`Header should render correctly for WS frontPage 1`] = `
               d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
             />
           </svg>
+          <span
+            class="c11"
+          >
+            Plenti seshon
+          </span>
         </button>
         <div
           class="c18"
@@ -1899,7 +1903,6 @@ exports[`Header should render correctly for WS radio page 1`] = `
       >
         <button
           aria-expanded="false"
-          aria-label="Plenti seshon"
           class="c16"
           dir="ltr"
           type="button"
@@ -1916,6 +1919,11 @@ exports[`Header should render correctly for WS radio page 1`] = `
               d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
             />
           </svg>
+          <span
+            class="c11"
+          >
+            Plenti seshon
+          </span>
         </button>
         <div
           class="c18"
@@ -2978,7 +2986,6 @@ exports[`Header should render correctly for news article 1`] = `
       >
         <button
           aria-expanded="false"
-          aria-label="Plenti seshon"
           class="c16"
           dir="ltr"
           type="button"
@@ -2995,6 +3002,11 @@ exports[`Header should render correctly for news article 1`] = `
               d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
             />
           </svg>
+          <span
+            class="c11"
+          >
+            Plenti seshon
+          </span>
         </button>
         <div
           class="c18"

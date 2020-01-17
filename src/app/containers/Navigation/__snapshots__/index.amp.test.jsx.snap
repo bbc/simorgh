@@ -1,12 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
+.c4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 .c3 {
   color: #fff;
   fill: currentColor;
 }
 
-.c4 {
+.c5 {
   background-color: #222222;
   clear: both;
 }
@@ -54,12 +66,12 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.c0 .c7::after {
+.c0 .c8::after {
   left: 0;
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c5 {
     display: none;
     visibility: hidden;
   }
@@ -86,7 +98,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c5 {
+  .c6 {
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-scroll-behavior: smooth;
@@ -101,11 +113,11 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
     -ms-overflow-style: none;
   }
 
-  .c5::-webkit-scrollbar {
+  .c6::-webkit-scrollbar {
     display: none;
   }
 
-  .c5:after {
+  .c6:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -120,7 +132,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c6.scrollable-hidden {
+  .c7.scrollable-hidden {
     display: none;
     visibility: hidden;
   }
@@ -156,7 +168,6 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
           </amp-state>
           <button
             aria-expanded="false"
-            aria-label="menu"
             class="c2"
             data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
             dir="ltr"
@@ -195,9 +206,14 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
                 fill-rule="evenodd"
               />
             </svg>
+            <span
+              class="c4"
+            >
+              menu
+            </span>
           </button>
           <div
-            class="c4"
+            class="c5"
             hidden=""
             id="dropdown-menu"
           >
@@ -210,7 +226,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
             </ul>
           </div>
           <div
-            class="c5 c6"
+            class="c6 c7"
             dir="ltr"
             id="scrollable-nav"
           >
