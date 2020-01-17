@@ -6,9 +6,6 @@ install:
 	rm -rf node_modules
 	npm ci;
 
-heroku:
-	cd /app && npm run build:heroku && npm start
-
 developmentTests:
 	npx apache2-license-checker;
 	npm run test;
@@ -32,5 +29,8 @@ buildStorybook:
 buildCi:
 	export NODE_ENV=production && rm -rf build && npm run build:test && npm run build:live;
 
-herokuTest:
-	git push heroku master --no-verify
+herokuPush:
+	heroku container:push web
+
+herokuRelease:
+	heroku container:release web
