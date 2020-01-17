@@ -23,15 +23,23 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
   const clientConfig = {
     target: 'web', // compile for browser environment
     entry: START_DEV_SERVER
-      ? [
-          `webpack-dev-server/client?https://alistair-simorgh-test.herokuapp.com:${webpackDevServerPort}`,
+      ? APP_ENV === 'local' ? [
+          `webpack-dev-server/client?http://localhost:${webpackDevServerPort}`,
           'webpack/hot/only-dev-server',
           './src/poly',
           './src/client',
         ]
-      : ['./src/poly', './src/client'],
+        :
+        [
+        `webpack-dev-server/client?https://alistair-simorgh-test.herokuapp.com:${webpackDevServerPort}`,
+        './src/poly',
+        './src/client',
+      ] : ['./src/poly', './src/client'],
     devServer: {
-      host: 'alistair-simorgh-test.herokuapp.com',
+      host:
+        APP_ENV === 'heroku'
+          ? 'alistair-simorgh-test.herokuapp.com'
+          : 'localhost',
       port: webpackDevServerPort,
       historyApiFallback: true,
       hot: true,
@@ -52,7 +60,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         : 'static/js/[name].[chunkhash:8].js', // hash based on the contents of the file
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
-        ? `https://alistair-simorgh-test.herokuapp.com:${webpackDevServerPort}/`
+        ? APP_ENV === 'heroku' ? `https://alistair-simorgh-test.herokuapp.com:${webpackDevServerPort}/` :`http://localhost:${webpackDevServerPort}/`
         : prodPublicPath,
     },
     optimization: {

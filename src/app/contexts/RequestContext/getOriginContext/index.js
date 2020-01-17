@@ -4,7 +4,11 @@ const getOriginContext = bbcOrigin => {
 
   if (bbcOrigin) {
     origin = bbcOrigin;
-  } else if (process && process.env && process.env.APP_ENV === 'local') {
+  } else if (
+    process &&
+    process.env &&
+    (process.env.APP_ENV === 'local' || process.env.APP_ENV === 'heroku')
+  ) {
     origin = process.env.SIMORGH_BASE_URL;
   } else if (
     typeof window !== 'undefined' &&
