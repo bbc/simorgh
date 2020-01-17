@@ -19,7 +19,7 @@ import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import ATIAnalytics from '#containers/ATIAnalytics';
-// import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import { getFirstPublished } from '#containers/ArticleMain/utils';
@@ -31,8 +31,7 @@ import withError from '#containers/PageHandlers/withError';
 import withLoading from '#containers/PageHandlers/withLoading';
 import withData from '#containers/PageHandlers/withData';
 
-const CpsMapContainer = props => {
-  const { pageData } = props;
+const CpsMapContainer = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
@@ -95,6 +94,8 @@ const StyledTimestamp = styled(Timestamp)`
     padding-bottom: ${GEL_SPACING_TRPL};
   }
 `;
+
+CpsMapContainer.propTypes = cpsAssetPagePropTypes;
 
 const EnhancedCpsMapContainer = compose(
   withContexts,
