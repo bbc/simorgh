@@ -7,7 +7,7 @@ install:
 	npm ci;
 
 heroku:
-	npm i && npm run build:heroku && npm start
+	cd / && npm run build:heroku && npm start
 
 developmentTests:
 	npx apache2-license-checker;
