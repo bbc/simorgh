@@ -18,7 +18,7 @@
     "cypress:interactive": "cypress open",
     "cypress:3rdParty": "npm run cypress -- --project ./3rdPartyCypress/.",
     "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
-    "heroku": "rm -rf build && cp envConfig/heroku.env .env && run-p webpack:heroku:client webpack:dev:server",
+    "heroku": "rm -rf build && cp envConfig/heroku.env .env && start",
     "lighthouse": "./scripts/lighthouseRun.sh",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
     "start": "NODE_ENV=production node build/server.js",
