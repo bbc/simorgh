@@ -1,1 +1,0 @@
-web: npm run build:heroku && npm start
