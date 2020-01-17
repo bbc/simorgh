@@ -149,11 +149,7 @@ export const testsThatFollowSmokeTestConfig = ({
         );
       });
 
-      if (
-        serviceHasInlineLink(service) &&
-        (Cypress.env('APP_ENV') === 'local' ||
-          Cypress.env('APP_ENV') === 'test')
-      ) {
+      if (serviceHasInlineLink(service) && Cypress.env('APP_ENV') === 'local') {
         it('should have an inlink link to an article page', () => {
           cy.get('[class^="InlineLink"]')
             .eq(1)
