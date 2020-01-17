@@ -1,1 +1,1 @@
-testWeb: npm run build:heroku && npm start
+web: npm run build:heroku && npm start
