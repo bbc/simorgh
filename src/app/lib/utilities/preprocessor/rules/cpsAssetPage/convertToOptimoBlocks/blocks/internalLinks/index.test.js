@@ -72,14 +72,14 @@ const scenarios = [
     }),
   },
   {
-    name: 'Chevrons',
+    name: 'Special Characters',
     input: wrapBlock({
-      meta: generateMeta(['afrique/23248423', '<Hello>']),
+      meta: generateMeta(['afrique/23248423', '<Hello&>']),
       text: '<itemMeta>afrique/23248423</itemMeta>',
     }),
     expectation: wrapBlock({
-      meta: generateMeta(['afrique/23248423', '<Hello>']),
-      text: generateUrl(['afrique/23248423', '&lt;Hello&gt;']),
+      meta: generateMeta(['afrique/23248423', '<Hello&>']),
+      text: generateUrl(['afrique/23248423', '&lt;Hello&amp;&gt;']),
     }),
   },
   {

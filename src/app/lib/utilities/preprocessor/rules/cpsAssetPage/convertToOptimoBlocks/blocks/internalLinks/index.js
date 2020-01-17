@@ -25,7 +25,11 @@ External links then get converted into the optimo format as part of the existing
 // A later transformer converts them into the optimo format
 const buildUrlString = ({ url, linkText }) => {
   // simorgh#5078 - The psammead-rich-text-transforms package does not like chevrons
-  const parsedLinkText = linkText.replace('<', '&lt;').replace('>', '&gt;');
+  const parsedLinkText = linkText
+    .replace('<', '&lt;')
+    .replace('>', '&gt;')
+    .replace(/&(?!amp|gt|lt)/, '&amp;');
+
   return `
         <link>
             <caption>${parsedLinkText}</caption>
@@ -73,7 +77,11 @@ const parseText = block => {
 
   // Iterate over every <itemMeta> tag, and pass it off to be replaced
   matches.forEach(([match, id]) => {
-    provideLinkXML({ block, match, metadata: findMetadata(block.meta, id) });
+    provideLinkXML({
+      block,
+      match,
+      metadata: findMetadata(block.meta, id),
+    });
   });
 };
 
