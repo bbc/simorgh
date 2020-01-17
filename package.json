@@ -7,7 +7,7 @@
     "amp:validate": "wait-on http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/igbo.amp && amphtml-validator http://localhost:7080/korean/bbc_korean_radio/liveradio.amp",
     "bbcA11y": "wait-on -t 20000 http://localhost:7080/news/articles/cn7k01xp8kxo && bbc-a11y",
     "bbcA11y:ci": "wait-on -t 20000 http://localhost:7080/news/articles/cn7k01xp8kxo && xvfb-run -a bbc-a11y",
-    "build": "rm -rf build && cp envConfig/heroku.env .env && NODE_ENV=production webpack && node ./scripts/bundleSize.js",
+    "build": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack && node ./scripts/bundleSize.js",
     "build:heroku": "cp envConfig/heroku.env .env && NODE_ENV=production webpack",
     "build:live": "cp envConfig/live.env .env && NODE_ENV=production webpack",
     "build:live:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/live.env > .env && NODE_ENV=production webpack",
