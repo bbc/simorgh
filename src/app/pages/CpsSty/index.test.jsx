@@ -57,12 +57,6 @@ jest.mock('../../containers/PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
-jest.mock('../../containers/CpsAssetPageMain', () => {
-  const CpsAssetPageMain = () => <div>CpsAssetPageMain</div>;
-
-  return CpsAssetPageMain;
-});
-
 describe('CPS STY Page', () => {
   describe('snapshots', () => {
     shouldMatchSnapshot(
