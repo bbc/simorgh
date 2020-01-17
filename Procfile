@@ -1,1 +1,1 @@
-web: make heroku
+testWeb: make heroku
