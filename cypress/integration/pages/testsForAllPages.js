@@ -318,8 +318,14 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           .should('have.attr', 'href', '#content');
       });
 
-      if (variant !== 'default') {
-        it('should render a script switch component, if not the default variant', () => {
+      if (variant === 'default') {
+        it('should not render a script switch component if the default variant', () => {
+          cy.get('header')
+            .find('a[data-variant]')
+            .should('have.lengthOf', 0);
+        });
+      } else {
+        it('should render a script switch component if not the default variant', () => {
           cy.get('header')
             .find('a[data-variant]')
             .should('have.lengthOf', 1);
