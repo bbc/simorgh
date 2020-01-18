@@ -10,5 +10,5 @@
   "defaultCommandTimeout": 10000,
   "pageLoadTimeout": 100000,
   "responseTimeout": 50000,
-  "reporter": "progress"
+  "reporter": "dot"
 }
