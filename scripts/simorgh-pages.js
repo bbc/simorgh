@@ -1224,7 +1224,7 @@ const generateLaunchDates = service => {
 };
 
 console.log('<!--Please update the config in simorgh-pages.js -->');
-console.log('<!--This table can then be generated using the following command: `node simorgh-pages.js > Simorgh-Pages.md` -->');
+console.log('<!--This table can then be generated using the following command: `node simorgh-pages.js > ../docs/Simorgh-Pages.md` -->');
 console.log('<!--Don\'t forget to commit and push your changes to both simorgh-pages.js and Simorgh-Pages.md -->');
 
 console.log(`| Service | Local | Test | Stage | Live | Launch Date |`);
