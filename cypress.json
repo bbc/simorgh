@@ -9,5 +9,6 @@
   "ignoreTestFiles": ["**/README.md", "**/pages/**/tests.js", "**/pages/**/testsForAMPOnly.js", "**/*/pages/**/testsForCanonicalOnly.js", "**/pages/testsForAllPages.js", "**/pages/testsForAllAMPPages.js", "**/pages/testsForAllCanonicalPages.js", "**/123PlaygroundForTests/**"],
   "defaultCommandTimeout": 10000,
   "pageLoadTimeout": 100000,
-  "responseTimeout": 50000
+  "responseTimeout": 50000,
+  "reporter": "landing"
 }
