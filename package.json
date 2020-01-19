@@ -67,7 +67,7 @@
     "@bbc/psammead-caption": "^2.2.21",
     "@bbc/psammead-consent-banner": "^2.3.22",
     "@bbc/psammead-copyright": "^1.2.19",
-    "@bbc/psammead-figure": "^1.2.8",
+    "@bbc/psammead-figure": "^1.2.9",
     "@bbc/psammead-grid": "^1.1.1",
     "@bbc/psammead-headings": "^3.1.22",
     "@bbc/psammead-image": "^1.2.4",
