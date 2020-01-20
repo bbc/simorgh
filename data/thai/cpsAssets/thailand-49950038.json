@@ -1,0 +1,342 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:thai/thailand-49950038",
+    "locators": {
+      "assetUri": "/thai/thailand-49950038",
+      "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-49950038",
+      "curie": "http://www.bbc.co.uk/asset/5858e31f-36a4-ac44-ab69-9c340b45dd49"
+    },
+    "type": "PGL",
+    "createdBy": "thai-v6",
+    "language": "th",
+    "lastUpdated": 1570464832998,
+    "firstPublished": 1570338893000,
+    "lastPublished": 1570464826000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "thai.thailand.photo_gallery.49950038.page",
+      "cps_asset_id": "49950038"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "History",
+          "thingUri": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
+          "thingId": "03eb3674-6190-4cd7-8104-1a00991d67a3",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/History",
+            "http://www.wikidata.org/entity/Q309"
+          ],
+          "topicName": "ประวัติศาสตร์",
+          "topicId": "cxnykvnznk2t",
+          "curationList": [
+            {
+              "curationId": "516394c7-a483-4070-a947-7dd108c61872",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Thailand",
+          "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+          "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
+          "thingType": [
+            "Thing",
+            "Place",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/1605651/"
+          ],
+          "topicName": "ประเทศไทย",
+          "topicId": "cjgn73g98rqt",
+          "curationList": [
+            {
+              "curationId": "81f2e8f7-89c1-4c7c-a720-2a22d6437226",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Politics",
+          "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+          "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Politics"
+          ],
+          "topicName": "การเมือง",
+          "topicId": "cz74kp7vjzpt",
+          "curationList": [
+            {
+              "curationId": "384d96bb-5602-4787-979f-dca814554de3",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.2",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "109118259",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/17431/production/_109118259_01.jpg",
+        "path": "/cpsprodpb/17431/production/_109118259_01.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์",
+        "caption": "ประติมานุสรณ์ ม. ธรรมศาสตร์ เป็นพื้นที่ความทรงจำในเหตุการณ์ 6 ตุลา 2519",
+        "copyrightHolder": "Thai news Pix",
+        "type": "image"
+      },
+      {
+        "id": "109118269",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/17819/production/_109118269_06.jpg",
+        "path": "/cpsprodpb/17819/production/_109118269_06.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "สุธรรม",
+        "caption": "สุธรรม แสงประทุม (ขวามือ) อดีตเลขาธิการศูนย์กลางนิสิตนักศึกษาแห่งประเทศไทย (ศนท.) และอดีตจำเลยคดีคอมมิวนิสต์ ร่วมทำบุญตักบาตรพระสงฆ์ 19 รูป ที่ ม. ธรรมศาสตร์",
+        "copyrightHolder": "Thai news Pix",
+        "type": "image"
+      },
+      {
+        "id": "109118261",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/3F99/production/_109118261_02.jpg",
+        "path": "/cpsprodpb/3F99/production/_109118261_02.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "แขวนคอ",
+        "caption": "ผู้ชุมนุมจำนวนหนึ่งเสียชีวิตเพราะถูกแขวนคอ ท่ามกลางวาทกรรมกล่าวหาขบวนการนักศึกษาว่า \"ไม่ใช่คนไทย\" และ \"ฆ่าคอมมิวนิสต์ไม่บาป\"",
+        "copyrightHolder": "Thai news Pix",
+        "type": "image"
+      },
+      {
+        "id": "109118263",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8DB9/production/_109118263_03.jpg",
+        "path": "/cpsprodpb/8DB9/production/_109118263_03.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "หมอสุรพงษ์",
+        "caption": "นพ. สุรพงษ์ สืบวงษ์ลี อดีตผู้นำนักศึกษา ปาฐกถารำลึกเหตุการณ์เมื่อ 43 ปีก่อน ระบุตอนหนึ่งว่า \"ไม่มีใครอยากตาย แต่มีบางคนพร้อมเผชิญหน้ากับความตายแพื่อแลกกับอุดมการณ์ที่ใฝ่ฝัน\"",
+        "copyrightHolder": "Thai news Pix",
+        "type": "image"
+      },
+      {
+        "id": "109118265",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/DBD9/production/_109118265_04.jpg",
+        "path": "/cpsprodpb/DBD9/production/_109118265_04.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "จ่านิว",
+        "caption": "สภานักศึกษา ม. ธรรมศาสตร์ มอบรางวัล \"จารุพงษ์ ทองสินธุ์ เพื่อประชาธิปไตย” แด่ สิรวิชญ์ เสรีธิวัฒน์ หรือจ่านิว อดีตนักศึกษาคณะรัฐศาสตร์ ม. ธรรมศาสตร์ และนักกิจกรรม \"กลุ่มคนอยากเลือกตั้ง\" เพื่อเป็นแบบอย่างให้ผู้อื่นพิทักษ์ประชาธิปไตยและความเป็นธรรมสืบไป สำหรับ จารุพงษ์ ทองสินธุ์ เป็นอดีตนักศึกษาที่เสียชีวิตในเหตุการณ์ 6 ตุลา",
+        "copyrightHolder": "Thai news Pix",
+        "type": "image"
+      },
+      {
+        "id": "109118391",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/4BB5/production/_109118391_05.jpg",
+        "path": "/cpsprodpb/4BB5/production/_109118391_05.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "วางดอกไม้",
+        "caption": "อดีตคนเดือนตุลา ญาติผู้สูญเสีย นักการเมือง นักศึกษา และประชาชน ร่วมนำดอกไม้วางไว้ที่ประติมานุสรณ์ เพื่อแสดงความไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ 6 ตุลา 2519",
+        "copyrightHolder": "Thai news Pix",
+        "type": "image"
+      },
+      {
+        "id": "109118271",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/4381/production/_109118271_07.jpg",
+        "path": "/cpsprodpb/4381/production/_109118271_07.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ประตูแดง",
+        "caption": "เหตุฆาตกรรม 2 พนักงานการไฟฟ้าที่ร่วมคัดค้านการกลับเข้าประเทศของ \"เณรถนอม\" แล้วนำร่างไปแขวนไว้ที่ \"ประตูแดง\" อ. พระประโทน จ. นครปฐม คือชนวนนัดชุมนุมใหญ่ของขบวนการนักศึกษาประชาชน",
+        "copyrightHolder": "Thai news Pix",
+        "type": "image"
+      },
+      {
+        "id": "109118273",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/91A1/production/_109118273_08.jpg",
+        "path": "/cpsprodpb/91A1/production/_109118273_08.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ประตูแดง",
+        "caption": "ชุมพร ทุมไมย และ วิชัย เกษศรีพงษา เป็นเพื่อนรักกัน และเสียชีวิตพร้อมกันเมื่อ 43 ปีก่อน",
+        "copyrightHolder": "Thai news Pix",
+        "type": "image"
+      },
+      {
+        "id": "109118275",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/DFC1/production/_109118275_09.jpg",
+        "path": "/cpsprodpb/DFC1/production/_109118275_09.jpg",
+        "height": 801,
+        "width": 1200,
+        "altText": "ลำโพง",
+        "caption": "โครงการจัดตั้งพิพิธภัณฑ์ 6 ตุลา ระบุว่า ลำโพงนี้ถูกกระสุนปืนลูกซอง 3 นัด ยิงถล่มในวันที่ 6 ตุลา สื่อถึงการ \"ถูกปิดปากด้วยความรุนแรง\"",
+        "copyrightHolder": "Thai news Pix",
+        "type": "image"
+      },
+      {
+        "id": "109118277",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12DE1/production/_109118277_10.jpg",
+        "path": "/cpsprodpb/12DE1/production/_109118277_10.jpg",
+        "height": 800,
+        "width": 1200,
+        "altText": "กางเกง",
+        "caption": "เสื้อผ้าชุดสุดท้ายที่ ดนัยศักดิ์ เอี่ยมคง นักศึกษา ม. รามคำแหง สวมใส่ ก่อนเสียชีวิตเมื่อ 6 ตุลา 2519 ซึ่งผลชันสูตรระบุสาเหตุเสียชีวิตเพราะถูกยิงที่ต้นขา",
+        "copyrightHolder": "Thai news Pix",
+        "type": "image"
+      },
+      {
+        "id": "109118279",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/17C01/production/_109118279_11.jpg",
+        "path": "/cpsprodpb/17C01/production/_109118279_11.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "วิดีโอ",
+        "caption": "ประชาชนให้ความสนใจชมวิดีโออธิบายเหตุการณ์ 14 ตุลา และ 6 ตุลา 4 ที่ใช้ชื่อ \"4 ทศวรรษเหตุการณ์เดือนตุลา คุณจำอย่างไร\" จัดทำโดยทีมข่าวบีบีซีไทย",
+        "copyrightHolder": "Thai news Pix",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "รำลึก 43 ปี 6 ตุลา",
+      "headline": "6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519"
+    },
+    "locators": {
+      "assetUri": "/thai/thailand-49950038",
+      "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-49950038",
+      "curie": "http://www.bbc.co.uk/asset/5858e31f-36a4-ac44-ab69-9c340b45dd49"
+    },
+    "summary": "มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย",
+    "timestamp": 1570464832998,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "109118259",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/17431/production/_109118259_01.jpg",
+      "path": "/cpsprodpb/17431/production/_109118259_01.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์",
+      "caption": "ประติมานุสรณ์ ม. ธรรมศาสตร์ เป็นพื้นที่ความทรงจำในเหตุการณ์ 6 ตุลา 2519",
+      "copyrightHolder": "Thai news Pix",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:thai/thailand-49950038",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "ไทย",
+      "uri": "/thai/thailand",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "บีบีซีไทย",
+      "uri": "/thai",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "ภารกิจที่ยังไม่จบในวัยเกษียณของ เกษียร-ธงชัย หลังผ่านความตาย 6 ตุลา 2519",
+              "headline": "6 ตุลา : ภารกิจ \"สืบต่อความทรงจำ\" กับวาระ \"รื้อคิดความเป็นไทย\" ของ 2 ผู้รอดชีวิต"
+            },
+            "locators": {
+              "assetUri": "/thai/thailand-49902201",
+              "cpsUrn": "urn:bbc:content:assetUri:/thai/thailand-49902201"
+            },
+            "summary": "ในวาระ 43 ปี 6 ตุลา บีบีซีไทยร่วมบันทึกภารกิจภาคต่อของ \"ผู้ปราศรัยคนสุดท้าย\" ธงชัย วินิจจะกูล กับ \"สหายมา\" เกษียร เตชะพีระ",
+            "timestamp": 1570160658000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "109125046",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/FA34/production/_109125046_hqdefault.jpg",
+              "path": "/cpsprodpb/FA34/production/_109125046_hqdefault.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "วิดีโอ",
+              "copyrightHolder": "Wasawat Lukharang/BBC Thai",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:thai/thailand-49902201",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

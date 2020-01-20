@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/named
-import { getUrlPath, getQueryString, getQueryParams } from '.';
+import { getUrlPath, getQueryString } from '.';
 
 const queryString = '?param=test&qs=1';
 const partialRequestUrl = 'foo/bar';
@@ -38,30 +38,5 @@ describe('getQueryString', () => {
   });
   it('should return query string from partial url when query string exists', () => {
     expect(getQueryString(partialRequestUrlWithQueryString)).toBe(queryString);
-  });
-});
-
-describe('getQueryParams', () => {
-  it('should return empty query string object from url when no query string exists ', () => {
-    expect(getQueryParams(url)).toEqual({});
-  });
-  it('should return empty query string object from partial url when no query string exists ', () => {
-    expect(getQueryParams(partialRequestUrl)).toEqual({});
-  });
-
-  describe('parsed query string object', () => {
-    const parsedQueryString = {
-      param: 'test',
-      qs: '1',
-    };
-
-    it('should be returned from url when query string exists', () => {
-      expect(getQueryParams(urlWithQueryString)).toEqual(parsedQueryString);
-    });
-    it('should be returned from partial url when query string exists', () => {
-      expect(getQueryParams(partialRequestUrlWithQueryString)).toEqual(
-        parsedQueryString,
-      );
-    });
   });
 });

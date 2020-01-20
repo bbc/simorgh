@@ -1,8 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MediaPlayer render the amp player 1`] = `
-<DocumentFragment>
-  .c1 {
+<html>
+  <head>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"}
+    </script>
+    <script
+      async="true"
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    />
+  </head>
+  <body>
+    .c1 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -59,44 +72,46 @@ exports[`MediaPlayer render the amp player 1`] = `
   }
 }
 
-<div
-    class="c0"
-  >
-    <figure
-      class="c1"
-    >
+<div>
       <div
-        class="c2"
+        class="c0"
       >
-        <amp-iframe
-          allowfullscreen="allowfullscreen"
-          frameborder="0"
-          layout="fill"
-          sandbox="allow-scripts allow-same-origin"
-          scrolling="no"
-          src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"
-          title="Media player"
+        <figure
+          class="c1"
         >
-          <amp-img
-            alt=""
-            attribution=""
-            height="16"
-            layout="fill"
-            placeholder="true"
-            src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-            srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
-            width="9"
-          />
-        </amp-iframe>
+          <div
+            class="c2"
+          >
+            <amp-iframe
+              allowfullscreen="allowfullscreen"
+              frameborder="0"
+              layout="fill"
+              sandbox="allow-scripts allow-same-origin"
+              scrolling="no"
+              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"
+              title="Media player"
+            >
+              <amp-img
+                alt=""
+                attribution=""
+                height="16"
+                layout="fill"
+                placeholder="true"
+                src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                width="9"
+              />
+            </amp-iframe>
+          </div>
+        </figure>
       </div>
-    </figure>
-  </div>
-</DocumentFragment>
+    </div>
+  </body>
+</html>
 `;
 
 exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
-<DocumentFragment>
-  .c1 {
+.c1 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -163,25 +178,37 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
   }
 }
 
-<div
-    class="c0"
-  >
-    <figure
-      class="c1"
+<html>
+  <head>
+    <script
+      type="application/ld+json"
     >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"}
+    </script>
+  </head>
+  <body>
+    <div>
       <div
-        class="c2"
+        class="c0"
       >
-        <iframe
-          allow="autoplay; fullscreen"
-          allowfullscreen=""
-          class="c3"
-          scrolling="no"
-          src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"
-          title="Media player"
-        />
+        <figure
+          class="c1"
+        >
+          <div
+            class="c2"
+          >
+            <iframe
+              allow="autoplay; fullscreen"
+              allowfullscreen=""
+              class="c3"
+              scrolling="no"
+              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"
+              title="Media player"
+            />
+          </div>
+        </figure>
       </div>
-    </figure>
-  </div>
-</DocumentFragment>
+    </div>
+  </body>
+</html>
 `;

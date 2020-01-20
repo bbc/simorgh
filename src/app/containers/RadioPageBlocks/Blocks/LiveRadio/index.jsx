@@ -10,7 +10,7 @@ import {
 import { pathOr } from 'ramda';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import embedUrl from '../../../MediaPlayer/helpers/embedUrl';
+import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 
 const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 
@@ -30,11 +30,9 @@ const MediaPlayerInnerWrapper = styled.div`
 `;
 
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
-  const { platform } = useContext(RequestContext);
+  const { isAmp, platform } = useContext(RequestContext);
   const { liveRadio, lang, translations, service } = useContext(ServiceContext);
   const location = useLocation();
-
-  const isAmp = platform === 'amp';
   const isValidPlatform = ['amp', 'canonical'].includes(platform);
 
   if (!isValidPlatform || !externalId || !id) return null;
@@ -45,11 +43,11 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
     liveRadio,
   );
 
-  const embedSource = embedUrl({
+  const embedSource = getEmbedUrl({
     mediaId: `${serviceId}/${id}/${lang}`,
     type: 'media',
     isAmp,
-    pageUrl: `${location.pathname}${location.search}`,
+    queryString: location.search,
   });
 
   const iframeTitle = pathOr(
