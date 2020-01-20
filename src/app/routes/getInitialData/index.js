@@ -6,6 +6,7 @@ import onClient from '#lib/utilities/onClient';
 import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
 import getBaseUrl from './utils/getBaseUrl';
 import getPreprocessorRules from './utils/getPreprocessorRules';
+import isLive from '#lib/utilities/isLive';
 
 const logger = nodeLogger(__filename);
 const STATUS_CODE_OK = 200;
@@ -22,11 +23,7 @@ const baseUrl = onClient()
 export const getUrl = pathname => {
   if (!pathname) return '';
 
-  let params = '';
-
-  if (process.env.SIMORGH_APP_ENV !== 'live') {
-    params = getQueryString(pathname);
-  }
+  const params = isLive() ? '' : getQueryString(pathname);
 
   const basePath = getUrlPath(pathname);
 

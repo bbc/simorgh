@@ -367,8 +367,6 @@ describe('getUrl', () => {
   });
 
   describe('where application environment', () => {
-    const environment = process.env.SIMORGH_APP_ENV;
-
     describe('is not live', () => {
       beforeEach(() => {
         process.env.SIMORGH_APP_ENV = 'not-live';
@@ -390,10 +388,6 @@ describe('getUrl', () => {
       expect(getUrl('/test/article.amp?param=test')).toEqual(
         'http://localhost/test/article.json?param=test',
       );
-
-      afterEach(() => {
-        process.env.SIMORGH_APP_ENV = environment;
-      });
     });
 
     describe('is live', () => {
@@ -424,10 +418,10 @@ describe('getUrl', () => {
           'http://localhost/test/article.json',
         );
       });
+    });
 
-      afterEach(() => {
-        process.env.SIMORGH_APP_ENV = environment;
-      });
+    afterAll(() => {
+      delete process.env.SIMORGH_APP_ENV;
     });
   });
 });
