@@ -15,6 +15,8 @@ if (DOT_ENV_CONFIG.error) {
 
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
   const APP_ENV = process.env.APP_ENV || 'live';
+  const HOST_URL = process.env.HOST_URL || 'localhost';
+  const PROTOCOL = process.env.PROTOCOL || 'http';
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
   const prodPublicPath =
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
@@ -23,23 +25,15 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
   const clientConfig = {
     target: 'web', // compile for browser environment
     entry: START_DEV_SERVER
-      ? APP_ENV === 'local' ? [
-          `webpack-dev-server/client?http://localhost:${webpackDevServerPort}`,
+      ? [
+          `webpack-dev-server/client?${PROTOCOL}://${HOST_URL}:${webpackDevServerPort}`,
           'webpack/hot/only-dev-server',
           './src/poly',
           './src/client',
         ]
-        :
-        [
-        `webpack-dev-server/client?https://alistair-simorgh-test.herokuapp.com:${webpackDevServerPort}`,
-        './src/poly',
-        './src/client',
-      ] : ['./src/poly', './src/client'],
+      : ['./src/poly', './src/client'],
     devServer: {
-      host:
-        APP_ENV === 'heroku'
-          ? 'alistair-simorgh-test.herokuapp.com'
-          : 'localhost',
+      host: HOST_URL,
       port: webpackDevServerPort,
       historyApiFallback: true,
       hot: true,
@@ -60,7 +54,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         : 'static/js/[name].[chunkhash:8].js', // hash based on the contents of the file
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
-        ? APP_ENV === 'heroku' ? `https://alistair-simorgh-test.herokuapp.com:${webpackDevServerPort}/` :`http://localhost:${webpackDevServerPort}/`
+        ? `${PROTOCOL}://${HOST_URL}:${webpackDevServerPort}/`
         : prodPublicPath,
     },
     optimization: {

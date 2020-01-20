@@ -44,10 +44,14 @@ const config = {
     alwaysCheckForFallback: false,
   },
   heroku: {
-    baseUrl: 'https://alistair-simorgh-test.herokuapp.com',
-    dataUrl: 'https://alistair-simorgh-test.herokuapp.com',
-    assetUrl: 'https://alistair-simorgh-test.herokuapp.com',
-    assetOrigin: 'https://alistair-simorgh-test.herokuapp.com',
+    baseUrl: `${process.env.PROTOCOL || 'http'}://${process.env.HOST_URL ||
+      'localhost'}.com`,
+    dataUrl: `${process.env.PROTOCOL || 'http'}://${process.env.HOST_URL ||
+      'localhost'}.com`,
+    assetUrl: `${process.env.PROTOCOL || 'http'}://${process.env.HOST_URL ||
+      'localhost'}.com`,
+    assetOrigin: `${process.env.PROTOCOL || 'http'}://${process.env.HOST_URL ||
+      'localhost'}.com`,
     atiUrl: 'https://logws1363.ati-host.net?',
     chartbeatEnabled: false,
     avEmbedBaseUrl: 'https://polling.test.bbc.co.uk',

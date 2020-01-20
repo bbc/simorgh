@@ -3,7 +3,7 @@ const getBaseUrl = origin => {
   let tld = '.com';
 
   if (
-    origin.includes('alistair-simorgh-test.herokuapp.com') ||
+    (process.env.HOST_URL && origin.includes(process.env.HOST_URL)) ||
     origin.includes('localhost')
   ) {
     return origin;
