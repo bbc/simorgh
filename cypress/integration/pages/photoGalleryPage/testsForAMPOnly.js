@@ -35,7 +35,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     describe('AMP Status', () => {
       it('should return a 200 response', () => {
         cy.testResponseCodeAndType(
-          `${config[service].pageTypes.mediaAssetPage.path}.amp`,
+          `${config[service].pageTypes.photoGalleryPage.path}.amp`,
           200,
           'text/html',
         );
