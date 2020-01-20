@@ -1544,6 +1544,10 @@ const genServices = appEnv => ({
         path: undefined,
         smoke: false,
       },
+      photoGalleryPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   ukchinaTrad: {
