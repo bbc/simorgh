@@ -11,12 +11,14 @@ import filterEmptyGroupItems from '#lib/utilities/preprocessor/rules/filterEmpty
 import applySquashTopstories from '#lib/utilities/preprocessor/rules/topstories';
 import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
 import filterGroupsWithoutStraplines from '#lib/utilities/preprocessor/rules/filterGroupsWithoutStraplines';
+import addSummaryBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addSummaryBlock';
 
 export const cpsAssetPreprocessorRules = [
   parseInternalLinks,
   timestampToMilliseconds,
   convertToOptimoBlocks,
   addHeadlineBlock,
+  addSummaryBlock,
   applyTimestampRules,
   addIdsToBlocks,
   applyBlockPositioning,
