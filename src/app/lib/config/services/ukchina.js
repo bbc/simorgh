@@ -193,24 +193,8 @@ export const service = {
         url: '/ukchina/simp/horizon',
       },
       {
-        title: '英伦风采',
-        url: '/ukchina/simp/cool_britannia',
-      },
-      {
-        title: '记者来鸿',
-        url: '/ukchina/simp/fooc',
-      },
-      {
-        title: '英国体坛',
-        url: '/ukchina/simp/sport',
-      },
-      {
         title: '视频内容',
         url: '/ukchina/simp/media/video',
-      },
-      {
-        title: '图辑精选',
-        url: '/ukchina/simp/media/photogalleries',
       },
     ],
     navigationSection: '分类',
@@ -229,24 +213,8 @@ export const service = {
         url: '/ukchina/trad/horizon',
       },
       {
-        title: '英倫風采',
-        url: '/ukchina/trad/cool_britannia',
-      },
-      {
-        title: '記者來鴻',
-        url: '/ukchina/trad/fooc',
-      },
-      {
-        title: '英國體壇',
-        url: '/ukchina/trad/sport',
-      },
-      {
         title: '視頻內容',
         url: '/ukchina/trad/media/video',
-      },
-      {
-        title: '圖輯精選',
-        url: '/ukchina/trad/media/photogalleries',
       },
     ],
     navigationSection: '分類',
