@@ -188,6 +188,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     description = body.promo.summary;
                     title = body.promo.headlines.headline;
                     break;
+                  case 'pgl':
+                    description = body.promo.summary;
+                    title = body.promo.headlines.headline;
+                    break;
                   default:
                     description = '';
                     title = '';
