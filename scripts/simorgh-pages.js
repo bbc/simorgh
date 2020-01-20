@@ -1195,19 +1195,19 @@ const generateLaunchDates = service => {
   const output = [];
   const { home, article, MAP, liveRadio } = services[service];
   if (home && home.launch !== '') {
-    output.push(`Home: ${home.launch}`);
+    output.push(`__Home__: ${home.launch}`);
   }
 
   if (article && article.launch !== '') {
-    output.push(`Articles: ${article.launch}`);
+    output.push(`__Articles__: ${article.launch}`);
   }
 
   if (liveRadio && liveRadio.launch !== '') {
-    output.push(`Live Radio: ${liveRadio.launch}`);
+    output.push(`__Live Radio__: ${liveRadio.launch}`);
   }
 
   if (MAP && MAP.launch !== '') {
-    output.push(`MAPs: ${MAP.launch}`);
+    output.push(`__MAPs__: ${MAP.launch}`);
   }
 
   return output.join(' - ');
