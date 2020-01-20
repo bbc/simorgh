@@ -2,526 +2,7 @@
 
 exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = `
 <DocumentFragment>
-  .c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c12 {
-  grid-column: 1 / span 6;
-}
-
-.c19 {
-  display: grid;
-  grid-column-gap: 1rem;
-}
-
-.c9 {
-  grid-column: 1 / span 6;
-}
-
-.c7 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-.c14 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-family: inherit;
-  font-weight: inherit;
-}
-
-.c11 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  padding-bottom: 0.25rem;
-}
-
-.c11:last-child {
-  padding-bottom: 1rem;
-}
-
-.c13 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c15 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c15:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.c15:focus,
-.c15:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
-
-.c16 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 0;
-  list-style-type: none;
-}
-
-.c16 > li::before {
-  content: ' ';
-  display: inline-block;
-  width: 2rem;
-  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
-  margin-left: -2rem;
-}
-
-.c17 {
-  margin-bottom: 1rem;
-}
-
-.c3 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-.c1 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c22 {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  background-color: rgba(34,34,34,0.75);
-  text-transform: uppercase;
-  color: #FFFFFF;
-  padding: 0.25rem 0.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  position: absolute;
-  bottom: 0;
-  margin: 0;
-  left: 0;
-}
-
-.c21 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #ECEAE7;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-.c4 {
-  padding-top: 56.25%;
-  position: relative;
-  overflow: hidden;
-}
-
-.c2 {
-  margin-top: 1rem;
-}
-
-.c2 figure {
-  padding-bottom: 0;
-}
-
-.c8 {
-  padding: 2rem 0;
-}
-
-.c10 {
-  padding-bottom: 1rem;
-}
-
-.c5 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  overflow: hidden;
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:25rem) {
-  .c12 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c12 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c12 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c12 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c12 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c6 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c6 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c6 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c6 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c6 {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:63rem) {
-  .c18 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c18 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c18 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c20 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c20 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c20 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c20 {
-    grid-column: 1 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c23 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c23 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c23 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:80rem) {
-  .c23 {
-    grid-column: 1 / span 10;
-  }
-}
-
-@media (max-width:80rem) {
-  .c19 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    grid-template-columns: repeat(12,1fr);
-  }
-}
-
-@media (max-width:25rem) {
-  .c9 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c9 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c9 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c9 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c9 {
-    max-width: initial;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c7 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    padding-top: 0.5rem;
-    margin-top: 2rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c8 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .c10 {
-    padding-bottom: 1.5rem;
-  }
-}
-
-<div
+  <div
     id="ContextsContainer"
   >
     <div
@@ -538,29 +19,29 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
           >
             <noscript />
             <main
-              class="c0"
+              class="GhostGrid-sc-12lwanc-1 gfRQD"
               role="main"
             >
               <h1
-                class="c1"
+                class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
                 id="content"
                 tabindex="-1"
               >
                 Ўзбек деҳқонининг косаси нега оқармайдиshort
               </h1>
               <div
-                class="c2"
+                class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-7tc6v2-0 iIHKoO"
               >
                 <figure
-                  class="c3"
+                  class="Figure-sc-6a3dhy-0 gJUCFc"
                 >
                   <div
-                    class="c4"
+                    class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK"
                   >
                     <iframe
                       allow="autoplay; fullscreen"
                       allowfullscreen=""
-                      class="c5"
+                      class="StyledIframe-fuo2ed-0 jQWQE"
                       scrolling="no"
                       src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
                       title="Медиа плейер"
@@ -569,36 +50,36 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                 </figure>
               </div>
               <div
-                class="c6"
+                class="GridItemConstrainedLarge-sc-12lwanc-5 eXdLFq"
               >
                 <strong
                   aria-hidden="true"
-                  class="c7 c8"
+                  class="Headline-sc-1kh1qhu-0 hzbExq StyledFauxHeadline-sc-15zvetq-0 jJBkMr"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайдиshort
                 </strong>
               </div>
               <div
-                class="c9 c10"
+                class="PopOutAtGroup5-sc-12lwanc-14 kIHzqH StyledTimestamp-sc-10y88yd-0 kzbeYN"
               >
                 <time
-                  class="c11"
+                  class="StyledTimestamp-um718p-0 bAgcOD"
                   datetime="2019-09-13"
                 >
                   13 сентябр 2019
                 </time>
                 <time
-                  class="c11"
+                  class="StyledTimestamp-um718p-0 bAgcOD"
                   datetime="2019-11-06"
                 >
                   Янгиланди 6 ноябр 2019
                 </time>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   <b>
                     Ўзбек деҳқонининг косаси нега оқармайди
@@ -606,10 +87,10 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   <b>
                     Ўзбек деҳқонининг косаси нега оқармайди
@@ -620,20 +101,20 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   <i
-                    class="c14"
+                    class="italic-sc-1a0jt7x-0 bbwGZK"
                   >
                     <b>
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </b>
                   </i>
                   <i
-                    class="c14"
+                    class="italic-sc-1a0jt7x-0 bbwGZK"
                   >
                     <b>
                        heading
@@ -642,10 +123,10 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   <b>
                     Ўзбек деҳқонининг косаси нега оқармайди
@@ -656,14 +137,14 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Шу йил апрел ойида Ўзбекистон Президенти Ислом 
                   <a
-                    class="c15"
+                    class="InlineLink-hkwpaz-0 idscKS"
                     href="https://bbc.com/uzbek"
                   >
                     Каримов ўзининг
@@ -672,10 +153,10 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб 
                   <b>
@@ -685,63 +166,63 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   "Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга 
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <ul
-                  class="c16"
+                  class="BulletedList-sc-13z0d8v-0 zkoYd"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="c17"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     Ўзбек деҳқонининг косаси нега оқармайди
                   </li>
                   <li
-                    class="c17"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     Ўзбек деҳқонининг косаси нега оқармайди
                   </li>
                   <li
-                    class="c17"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <b>
@@ -749,7 +230,7 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                     </b>
                   </li>
                   <li
-                    class="c17"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     Ўзбек деҳқонининг косаси нега оқармайди
@@ -757,52 +238,52 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                 </ul>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <ul
-                  class="c16"
+                  class="BulletedList-sc-13z0d8v-0 zkoYd"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="c17"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c15"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="https://bbc.com/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </a>
                   </li>
                   <li
-                    class="c17"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c15"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="https://bbc.com/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </a>
                   </li>
                   <li
-                    class="c17"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c15"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="https://bbc.com/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
                     </a>
                   </li>
                   <li
-                    class="c17"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c15"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="https://bbc.com/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
@@ -811,30 +292,30 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                 </ul>
               </div>
               <div
-                class="c18"
+                class="GridItemConstrainedLargeNoMargin-sc-12lwanc-6 kXuCUa"
               >
                 <figure
-                  class="c3"
+                  class="Figure-sc-6a3dhy-0 gJUCFc"
                 >
                   <div
-                    class="c19"
+                    class="NestedGridParentLarge-sc-12lwanc-11 dBQHDQ"
                   >
                     <div
-                      class="c20"
+                      class="NestedGridItemChildLarge-sc-12lwanc-10 BSSLC"
                     >
                       <div
-                        class="c21"
+                        class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                       >
                         <div
                           class="lazyload-placeholder"
                         />
                         <noscript />
                         <p
-                          class="c22"
+                          class="Copyright-sc-11lgtw-0 hDvIfz"
                           role="text"
                         >
                           <span
-                            class="c1"
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
                           >
                             Сурат манбаси, 
                           </span>
@@ -847,25 +328,25 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                       </div>
                     </div>
                     <div
-                      class="c23"
+                      class="NestedGridItemChildLarge-sc-12lwanc-10 ihJhxe"
                     />
                   </div>
                 </figure>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайди transmission info 
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайди footer 
                 </p>
@@ -881,1056 +362,7 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
 
 exports[`CPS MAP Page should render component 1`] = `
 <DocumentFragment>
-  .c47 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.8125rem;
-  height: 0.75rem;
-}
-
-.c46 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 1rem;
-  height: 0.8125rem;
-}
-
-.c0 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c12 {
-  grid-column: 1 / span 6;
-}
-
-.c20 {
-  display: grid;
-  grid-column-gap: 1rem;
-}
-
-.c9 {
-  grid-column: 1 / span 6;
-}
-
-.c7 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-.c14 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.c18 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-family: inherit;
-  font-weight: inherit;
-}
-
-.c11 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  padding-bottom: 0.25rem;
-}
-
-.c11:last-child {
-  padding-bottom: 1rem;
-}
-
-.c43 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c13 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c17 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c17:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.c17:focus,
-.c17:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
-
-.c15 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 0;
-  list-style-type: none;
-}
-
-.c15 > li::before {
-  content: ' ';
-  display: inline-block;
-  width: 2rem;
-  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
-  margin-left: -2rem;
-}
-
-.c16 {
-  margin-bottom: 1rem;
-}
-
-.c3 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-.c1 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c23 {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  background-color: rgba(34,34,34,0.75);
-  text-transform: uppercase;
-  color: #FFFFFF;
-  padding: 0.25rem 0.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  position: absolute;
-  bottom: 0;
-  margin: 0;
-  left: 0;
-}
-
-.c25 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  color: #6E6E73;
-  padding: 0.5rem 0.5rem 0;
-  width: 100%;
-}
-
-.c25 > p {
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c25 > p:last-child {
-  padding-bottom: 0;
-}
-
-.c25 i {
-  font-style: normal;
-}
-
-.c22 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #ECEAE7;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-.c4 {
-  padding-top: 56.25%;
-  position: relative;
-  overflow: hidden;
-}
-
-.c2 {
-  margin-top: 1rem;
-}
-
-.c2 figure {
-  padding-bottom: 0;
-}
-
-.c30 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c32 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FFFFFF;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c28 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c27 {
-  position: relative;
-  margin-top: 2rem;
-}
-
-.c29 {
-  margin: 0;
-  padding: 0;
-}
-
-.c34 {
-  border-bottom: 0.0625rem solid #F2F2F2;
-  padding: 0.5rem 0 1rem;
-}
-
-.c34:first-child {
-  padding-top: 0;
-}
-
-.c34:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
-.c33 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c35 {
-  position: relative;
-}
-
-.c36 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 33.33%;
-}
-
-.c37 {
-  position: relative;
-}
-
-.c40 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c42 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c39 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-.c41 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c41:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c41:hover,
-.c41:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c41:visited {
-  color: #6E6E73;
-}
-
-.c44 {
-  padding: 0.5rem 0.25rem;
-  background-color: #FFFFFF;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  color: #222222;
-  height: 2rem;
-}
-
-.c45 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.c48 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-}
-
-.c26 {
-  margin-bottom: 1rem;
-  z-index: 0;
-}
-
-.c8 {
-  padding: 2rem 0;
-}
-
-.c10 {
-  padding-bottom: 1rem;
-}
-
-.c5 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  overflow: hidden;
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:25rem) {
-  .c12 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c12 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c12 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c12 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c12 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c6 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c6 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c6 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c6 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c6 {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:63rem) {
-  .c19 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c19 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c21 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c21 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c21 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c21 {
-    grid-column: 1 / span 12;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c24 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c24 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c24 {
-    grid-column: 1 / span 5;
-  }
-}
-
-@media (min-width:80rem) {
-  .c24 {
-    grid-column: 1 / span 10;
-  }
-}
-
-@media (max-width:80rem) {
-  .c20 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:80rem) {
-  .c20 {
-    grid-template-columns: repeat(12,1fr);
-  }
-}
-
-@media (max-width:25rem) {
-  .c9 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c9 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c9 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c9 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c9 {
-    max-width: initial;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c7 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    padding-top: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c43 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c43 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c15 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c25 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c25 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c25 {
-    padding: 0.5rem 1rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .c25 {
-    padding: 0.5rem 0 0;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    padding-top: 0.5rem;
-    margin-top: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c31 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c32 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c32 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c32 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c32 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c28 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c28 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c27 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c34 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c34 {
-    padding: 1.5rem 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c34:first-child {
-    padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c34:first-child {
-    padding-top: 1.5rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c35 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c36 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c36 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
-@media (min-width:25rem) {
-  .c38 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c40 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c40 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c40 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c42 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c42 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c42 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c39 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c39 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .c44 {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
-  }
-}
-
-@media (max-width:63rem) {
-  .c26 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c26 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c26 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c26 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c26 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c8 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .c10 {
-    padding-bottom: 1.5rem;
-  }
-}
-
-<div
+  <div
     id="ContextsContainer"
   >
     <div
@@ -1947,29 +379,29 @@ exports[`CPS MAP Page should render component 1`] = `
           >
             <noscript />
             <main
-              class="c0"
+              class="GhostGrid-sc-12lwanc-1 gfRQD"
               role="main"
             >
               <h1
-                class="c1"
+                class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
                 id="content"
                 tabindex="-1"
               >
                 Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
               </h1>
               <div
-                class="c2"
+                class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-7tc6v2-0 iIHKoO"
               >
                 <figure
-                  class="c3"
+                  class="Figure-sc-6a3dhy-0 gJUCFc"
                 >
                   <div
-                    class="c4"
+                    class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK"
                   >
                     <iframe
                       allow="autoplay; fullscreen"
                       allowfullscreen=""
-                      class="c5"
+                      class="StyledIframe-fuo2ed-0 jQWQE"
                       scrolling="no"
                       src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
                       title="Media player"
@@ -1978,36 +410,36 @@ exports[`CPS MAP Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="c6"
+                class="GridItemConstrainedLarge-sc-12lwanc-5 eXdLFq"
               >
                 <strong
                   aria-hidden="true"
-                  class="c7 c8"
+                  class="Headline-sc-1kh1qhu-0 hzbExq StyledFauxHeadline-sc-15zvetq-0 jJBkMr"
                 >
                   Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
                 </strong>
               </div>
               <div
-                class="c9 c10"
+                class="PopOutAtGroup5-sc-12lwanc-14 kIHzqH StyledTimestamp-sc-10y88yd-0 kzbeYN"
               >
                 <time
-                  class="c11"
+                  class="StyledTimestamp-um718p-0 bAgcOD"
                   datetime="2019-09-13"
                 >
                   13 September 2019
                 </time>
                 <time
-                  class="c11"
+                  class="StyledTimestamp-um718p-0 bAgcOD"
                   datetime="2019-11-20"
                 >
                   New Informate 20 November 2019
                 </time>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   <b>
                     This is an introduction in bold. & &lt; &gt;
@@ -2015,10 +447,10 @@ exports[`CPS MAP Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <h2
-                  class="c14"
+                  class="SubHeading-sc-1kh1qhu-1 jHLqCp"
                   id="This-is-a-heading-<->"
                   tabindex="-1"
                 >
@@ -2026,10 +458,10 @@ exports[`CPS MAP Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <h2
-                  class="c14"
+                  class="SubHeading-sc-1kh1qhu-1 jHLqCp"
                   id="This-is-a-subheading-<->"
                   tabindex="-1"
                 >
@@ -2037,10 +469,10 @@ exports[`CPS MAP Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <h2
-                  class="c14"
+                  class="SubHeading-sc-1kh1qhu-1 jHLqCp"
                   id="This-is-a-crosshead-<->"
                   tabindex="-1"
                 >
@@ -2048,92 +480,92 @@ exports[`CPS MAP Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Bulleted list:
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <ul
-                  class="c15"
+                  class="BulletedList-sc-13z0d8v-0 zkoYd"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c17"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="http://www.bbc.com/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
                   </li>
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c17"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="http://www.bbc.com/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
                   </li>
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c17"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="http://www.bbc.com/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
                   </li>
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c17"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="https://bbc.com/pidgin"
                     >
                       this is the link text
                     </a>
                   </li>
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c17"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="https://bbc.com/pidgin"
                     >
                       this is the link text
                     </a>
                   </li>
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c17"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="https://bbc.com/pidgin"
                     >
                       this is the link text
@@ -2142,83 +574,83 @@ exports[`CPS MAP Page should render component 1`] = `
                 </ul>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Numbered list:
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <ul
-                  class="c15"
+                  class="BulletedList-sc-13z0d8v-0 zkoYd"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c17"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="http://www.bbc.com/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
                   </li>
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c17"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="http://www.bbc.com/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
                   </li>
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c17"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="http://www.bbc.com/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
                     </a>
                   </li>
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c17"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="https://bbc.com/pidgin"
                     >
                       this is the link text
                     </a>
                   </li>
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c17"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="https://bbc.com/pidgin"
                     >
                       this is the link text
                     </a>
                   </li>
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     <a
-                      class="c17"
+                      class="InlineLink-hkwpaz-0 idscKS"
                       href="https://bbc.com/pidgin"
                     >
                       this is the link text
@@ -2227,10 +659,10 @@ exports[`CPS MAP Page should render component 1`] = `
                 </ul>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Lorem ipsum dolor sit amet, 
                   <b>
@@ -2242,13 +674,13 @@ exports[`CPS MAP Page should render component 1`] = `
                   </b>
                   ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                   <i
-                    class="c18"
+                    class="italic-sc-1a0jt7x-0 bbwGZK"
                   >
                      in voluptate velit esse cillum 
                   </i>
                   dolore "eu fugiat nulla" pariatur. 
                   <a
-                    class="c17"
+                    class="InlineLink-hkwpaz-0 idscKS"
                     href="https://bbc.com/pidgin"
                   >
                     Excepteur
@@ -2257,86 +689,86 @@ exports[`CPS MAP Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Testing special characters: !"£$%^&*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Table:
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Social media embed:
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Quote box:
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Correspondent quote box:
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Fact box:
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   ­
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   Lorem ipsum
                   <a
-                    class="c17"
+                    class="InlineLink-hkwpaz-0 idscKS"
                     href="https://bbc.com/pidgin"
                   >
                      dolor sit amet
@@ -2345,30 +777,30 @@ exports[`CPS MAP Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="c19"
+                class="GridItemConstrainedLargeNoMargin-sc-12lwanc-6 kXuCUa"
               >
                 <figure
-                  class="c3"
+                  class="Figure-sc-6a3dhy-0 gJUCFc"
                 >
                   <div
-                    class="c20"
+                    class="NestedGridParentLarge-sc-12lwanc-11 dBQHDQ"
                   >
                     <div
-                      class="c21"
+                      class="NestedGridItemChildLarge-sc-12lwanc-10 BSSLC"
                     >
                       <div
-                        class="c22"
+                        class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                       >
                         <div
                           class="lazyload-placeholder"
                         />
                         <noscript />
                         <p
-                          class="c23"
+                          class="Copyright-sc-11lgtw-0 hDvIfz"
                           role="text"
                         >
                           <span
-                            class="c1"
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
                           >
                             Wia dis foto come from, 
                           </span>
@@ -2381,13 +813,13 @@ exports[`CPS MAP Page should render component 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c24"
+                      class="NestedGridItemChildLarge-sc-12lwanc-10 ihJhxe"
                     >
                       <figcaption
-                        class="c25"
+                        class="Caption-sc-16x70so-0 bjgllj"
                       >
                         <span
-                          class="c1"
+                          class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
                         >
                           Wetin we call dis foto, 
                         </span>
@@ -2400,30 +832,30 @@ exports[`CPS MAP Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="c19"
+                class="GridItemConstrainedLargeNoMargin-sc-12lwanc-6 kXuCUa"
               >
                 <figure
-                  class="c3"
+                  class="Figure-sc-6a3dhy-0 gJUCFc"
                 >
                   <div
-                    class="c20"
+                    class="NestedGridParentLarge-sc-12lwanc-11 dBQHDQ"
                   >
                     <div
-                      class="c21"
+                      class="NestedGridItemChildLarge-sc-12lwanc-10 BSSLC"
                     >
                       <div
-                        class="c22"
+                        class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                       >
                         <div
                           class="lazyload-placeholder"
                         />
                         <noscript />
                         <p
-                          class="c23"
+                          class="Copyright-sc-11lgtw-0 hDvIfz"
                           role="text"
                         >
                           <span
-                            class="c1"
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
                           >
                             Wia dis foto come from, 
                           </span>
@@ -2436,13 +868,13 @@ exports[`CPS MAP Page should render component 1`] = `
                       </div>
                     </div>
                     <div
-                      class="c24"
+                      class="NestedGridItemChildLarge-sc-12lwanc-10 ihJhxe"
                     >
                       <figcaption
-                        class="c25"
+                        class="Caption-sc-16x70so-0 bjgllj"
                       >
                         <span
-                          class="c1"
+                          class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
                         >
                           Wetin we call dis foto, 
                         </span>
@@ -2455,33 +887,33 @@ exports[`CPS MAP Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <ul
-                  class="c15"
+                  class="BulletedList-sc-13z0d8v-0 zkoYd"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     sunt in culpa qui officia deserunt mollit anim id est laborum
                   </li>
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     sunt in culpa qui officia deserunt mollit anim id est laborum
                   </li>
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     sunt in culpa qui officia deserunt mollit anim id est laborum
                   </li>
                   <li
-                    class="c16"
+                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
                     role="listitem"
                   >
                     v3 draft
@@ -2489,19 +921,19 @@ exports[`CPS MAP Page should render component 1`] = `
                 </ul>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   This is transmission info 
                 </p>
               </div>
               <div
-                class="c12"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
                 <p
-                  class="c13"
+                  class="Paragraph-k859h4-0 hymSIv"
                 >
                   This is the footer 
                 </p>
@@ -2509,29 +941,29 @@ exports[`CPS MAP Page should render component 1`] = `
             </main>
             <aside
               aria-labelledby="related-content-heading"
-              class="c0"
+              class="GhostGrid-sc-12lwanc-1 gfRQD"
               role="complementary"
             >
               <div
-                class="c26"
+                class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 ebGqUw"
               >
                 <div
-                  class="c27"
+                  class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
                 >
                   <div
-                    class="c28"
+                    class="Bar-sc-1x4gwjz-0 qaAlR"
                   />
                   <h2
-                    class="c29"
+                    class="Heading-sc-1x4gwjz-2 eZofTG"
                   >
                     <div
-                      class="c30"
+                      class="FlexColumn-wx5kdp-0 dgpsiS"
                     >
                       <span
-                        class="c31"
+                        class="FlexRow-wx5kdp-2 dVBNyZ"
                       >
                         <span
-                          class="c32"
+                          class="Title-wx5kdp-4 jiurmA"
                           dir="ltr"
                           id="related-content-heading"
                         >
@@ -2542,54 +974,54 @@ exports[`CPS MAP Page should render component 1`] = `
                   </h2>
                 </div>
                 <ul
-                  class="c33"
+                  class="StoryPromoUl-sc-171lqjd-1 isCYWc"
                   role="list"
                 >
                   <li
-                    class="c34"
+                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
                     role="listitem"
                   >
                     <div
-                      class="c35"
+                      class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
                     >
                       <div
-                        class="c36"
+                        class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
                       >
                         <div
-                          class="c37"
+                          class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                         >
                           <div
-                            class="c22"
+                            class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                           >
                             <div
                               class="lazyload-placeholder"
                             />
                           </div>
                           <div
-                            class="c38"
+                            class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                           />
                         </div>
                       </div>
                       <div
-                        class="c39"
+                        class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
                       >
                         <h3
-                          class="c40"
+                          class="Headline-sc-1dvfmi3-4 cWuUJx"
                         >
                           <a
-                            class="c41"
+                            class="Link-sc-1dvfmi3-7 iSHpco"
                             href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                           >
                             Police Arrest 3 ontop Anambra Church Attack
                           </a>
                         </h3>
                         <p
-                          class="c42"
+                          class="Summary-sc-1dvfmi3-5 itgvLR"
                         >
                           Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
                         </p>
                         <time
-                          class="c43"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -2598,50 +1030,50 @@ exports[`CPS MAP Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="c34"
+                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
                     role="listitem"
                   >
                     <div
-                      class="c35"
+                      class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
                     >
                       <div
-                        class="c36"
+                        class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
                       >
                         <div
-                          class="c37"
+                          class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                         >
                           <div
-                            class="c22"
+                            class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                           >
                             <div
                               class="lazyload-placeholder"
                             />
                           </div>
                           <div
-                            class="c38"
+                            class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                           />
                         </div>
                       </div>
                       <div
-                        class="c39"
+                        class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
                       >
                         <h3
-                          class="c40"
+                          class="Headline-sc-1dvfmi3-4 cWuUJx"
                         >
                           <a
-                            class="c41"
+                            class="Link-sc-1dvfmi3-7 iSHpco"
                             href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                           >
                             Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
                           </a>
                         </h3>
                         <p
-                          class="c42"
+                          class="Summary-sc-1dvfmi3-5 itgvLR"
                         >
                           The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.
                         </p>
                         <time
-                          class="c43"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -2650,33 +1082,33 @@ exports[`CPS MAP Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="c34"
+                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
                     role="listitem"
                   >
                     <div
-                      class="c35"
+                      class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
                     >
                       <div
-                        class="c36"
+                        class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
                       >
                         <div
-                          class="c37"
+                          class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                         >
                           <div
-                            class="c22"
+                            class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                           />
                           <div
-                            class="c38"
+                            class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                           >
                             <div
                               aria-hidden="true"
-                              class="c44"
+                              class="MediaIndicatorWrapper-sc-1p6h86b-0 hRcKme"
                             >
                               <div
-                                class="c45"
+                                class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
                               >
                                 <svg
-                                  class="c46"
+                                  class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
                                   focusable="false"
                                   height="13px"
                                   viewBox="0 0 32 26"
@@ -2697,20 +1129,20 @@ exports[`CPS MAP Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c39"
+                        class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
                       >
                         <h3
-                          class="c40"
+                          class="Headline-sc-1dvfmi3-4 cWuUJx"
                         >
                           <a
-                            class="c41"
+                            class="Link-sc-1dvfmi3-7 iSHpco"
                             href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                           >
                             <span
                               role="text"
                             >
                               <span
-                                class="c1"
+                                class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
                               >
                                 Image gallery, 
                               </span>
@@ -2721,12 +1153,12 @@ exports[`CPS MAP Page should render component 1`] = `
                           </a>
                         </h3>
                         <p
-                          class="c42"
+                          class="Summary-sc-1dvfmi3-5 itgvLR"
                         >
                           This na some of the picture wey our eye see as Kenya people go vote for election today
                         </p>
                         <time
-                          class="c43"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -2735,37 +1167,37 @@ exports[`CPS MAP Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="c34"
+                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
                     role="listitem"
                   >
                     <div
-                      class="c35"
+                      class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
                     >
                       <div
-                        class="c36"
+                        class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
                       >
                         <div
-                          class="c37"
+                          class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                         >
                           <div
-                            class="c22"
+                            class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                           >
                             <div
                               class="lazyload-placeholder"
                             />
                           </div>
                           <div
-                            class="c38"
+                            class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                           >
                             <div
                               aria-hidden="true"
-                              class="c44"
+                              class="MediaIndicatorWrapper-sc-1p6h86b-0 hRcKme"
                             >
                               <div
-                                class="c45"
+                                class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
                               >
                                 <svg
-                                  class="c47"
+                                  class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 13 12"
@@ -2779,7 +1211,7 @@ exports[`CPS MAP Page should render component 1`] = `
                                   />
                                 </svg>
                                 <time
-                                  class="c48"
+                                  class="TimeDuration-sc-1p6h86b-2 dLCVKn"
                                   datetime="PT15S"
                                 >
                                   0:15
@@ -2790,20 +1222,20 @@ exports[`CPS MAP Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c39"
+                        class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
                       >
                         <h3
-                          class="c40"
+                          class="Headline-sc-1dvfmi3-4 cWuUJx"
                         >
                           <a
-                            class="c41"
+                            class="Link-sc-1dvfmi3-7 iSHpco"
                             href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                           >
                             <span
                               role="text"
                             >
                               <span
-                                class="c1"
+                                class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
                               >
                                 Audio, 
                               </span>
@@ -2811,7 +1243,7 @@ exports[`CPS MAP Page should render component 1`] = `
                                 BBC News Pidgin One Minute News
                               </span>
                               <span
-                                class="c1"
+                                class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
                               >
                                 , 0,15
                               </span>
@@ -2819,12 +1251,12 @@ exports[`CPS MAP Page should render component 1`] = `
                           </a>
                         </h3>
                         <p
-                          class="c42"
+                          class="Summary-sc-1dvfmi3-5 itgvLR"
                         >
                           All di local and world tori wey you suppose know in 60 seconds!
                         </p>
                         <time
-                          class="c43"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
                           datetime="2017-08-17"
                         >
                           17th August 2017
