@@ -46,7 +46,7 @@ const genServices = appEnv => ({
         path:
           isLive(appEnv) || isTest(appEnv)
             ? undefined
-            : '/afaanoromoo/oduu-41217768.json',
+            : '/afaanoromoo/oduu-41217768',
         smoke: false,
       },
     },
@@ -1873,6 +1873,8 @@ const genServices = appEnv => ({
 // Allow runs to be limited to a single service via the CYPRESS_ONLY_SERVICE env var
 const runOnlyService = Cypress.env('ONLY_SERVICE');
 const environment = serviceMapper(Cypress.env('APP_ENV'));
+
+console.log({ environment });
 
 if (
   runOnlyService &&
