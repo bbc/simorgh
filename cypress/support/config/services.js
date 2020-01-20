@@ -1416,7 +1416,10 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/uzbek/articles/cxj3rjxm6r0o',
+        path:
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/uzbek/articles/cxj3rjxm6r0o',
         smoke: false,
       },
       errorPage404: {
