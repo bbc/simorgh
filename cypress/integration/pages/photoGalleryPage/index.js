@@ -16,7 +16,7 @@ import {
 } from './testsForCanonicalOnly';
 
 const testsForPage = {
-  pageType: 'pgl',
+  pageType: 'photoGalleryPage',
   testsThatAlwaysRun,
   testsThatAlwaysRunForCanonicalOnly,
   testsThatAlwaysRunForAMPOnly,

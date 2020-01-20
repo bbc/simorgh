@@ -188,7 +188,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     description = body.promo.summary;
                     title = body.promo.headlines.headline;
                     break;
-                  case 'pgl':
+                  case 'photoGalleryPage':
                     description = body.promo.summary;
                     title = body.promo.headlines.headline;
                     break;
