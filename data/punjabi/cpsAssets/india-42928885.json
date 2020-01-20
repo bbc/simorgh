@@ -1,0 +1,330 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:punjabi/india-42928885",
+    "locators": {
+      "assetUri": "/punjabi/india-42928885",
+      "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-42928885",
+      "curie": "http://www.bbc.co.uk/asset/85cd6e44-90b8-b24c-8d0b-0c7bb679be83"
+    },
+    "type": "PGL",
+    "createdBy": "punjabi-v6",
+    "language": "pa",
+    "lastUpdated": 1579165873098,
+    "firstPublished": 1517661265000,
+    "lastPublished": 1517668021000,
+    "timestamp": 1517661265000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "punjabi.india.photo_gallery.42928885.page",
+      "cps_asset_id": "42928885"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Punjab",
+          "thingUri": "http://www.bbc.co.uk/things/23b55a8e-f58c-404a-92ba-426dc5d00fee#id",
+          "thingId": "23b55a8e-f58c-404a-92ba-426dc5d00fee",
+          "thingType": [
+            "Thing",
+            "Place",
+            "news:Place"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/_region"
+          ],
+          "topicName": "ਪੰਜਾਬ",
+          "topicId": "c8y94yqdnxrt",
+          "curationList": [
+            {
+              "curationId": "168ab74f-bae0-4fbd-a110-1220bdca2410",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Gujarat",
+          "thingUri": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+          "thingId": "4317a084-9a75-42ad-bf1c-2f13ed498cc1",
+          "thingType": [
+            "Thing",
+            "Place",
+            "news:Place"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Gujarat"
+          ],
+          "topicName": "ਗੁਜਰਾਤ",
+          "topicId": "cpzd4z5z7g0t",
+          "curationList": [
+            {
+              "curationId": "403b26d5-30e0-4b91-86d7-4305903c7699",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Deepika Padukone",
+          "thingUri": "http://www.bbc.co.uk/things/8b977a7c-a1cf-48b2-94b2-02769fec97ea#id",
+          "thingId": "8b977a7c-a1cf-48b2-94b2-02769fec97ea",
+          "thingType": [
+            "Thing",
+            "Person"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Deepika_Padukone"
+          ],
+          "topicName": "ਦੀਪਿਕਾ ਪਾਦੁਕੋਨ",
+          "topicId": "c5qvpq4d207t",
+          "curationList": [
+            {
+              "curationId": "640f3c96-e0fd-479d-bdcd-e7a334b07c41",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Photography",
+          "thingUri": "http://www.bbc.co.uk/things/ae0d5073-dfeb-4251-b555-0a9c74f3d4e0#id",
+          "thingId": "ae0d5073-dfeb-4251-b555-0a9c74f3d4e0",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Photography"
+          ],
+          "topicName": "ਫ਼ੋਟੋਗ੍ਰਾਫ਼ੀ",
+          "topicId": "cpzd4z5qxqjt",
+          "curationList": [
+            {
+              "curationId": "d7cdc72d-c664-4f7a-b40d-b7d11a8e9956",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Maharashtra",
+          "thingUri": "http://www.bbc.co.uk/things/b805724b-b4b1-41db-9c16-de0dd571b599#id",
+          "thingId": "b805724b-b4b1-41db-9c16-de0dd571b599",
+          "thingType": [
+            "Thing",
+            "Place",
+            "news:Place"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Maharashtra"
+          ],
+          "topicName": "ਮਹਾਰਾਸ਼ਟਰ",
+          "topicId": "c1gdqgzgdgnt",
+          "curationList": [
+            {
+              "curationId": "c573b068-d69d-4368-ad16-8dedb35ef949",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.4",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "99870379",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/17C1B/production/_99870379_pic5.jpg",
+        "path": "/cpsprodpb/17C1B/production/_99870379_pic5.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Jangam Monk",
+        "caption": "ਜਲੰਧਰ ਵਿੱਚ ਮਹਾ ਸ਼ਿਵਰਾਤਰੀ ਮੌਕੇ ਭਜਨ ਕਰਦੇ ਹੋਏ ਜੰਗਮ ਸੰਤ।",
+        "copyrightHolder": "SHAMMI MEHRA/AFP/GETTYIMAGES",
+        "type": "image"
+      },
+      {
+        "id": "99870471",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/43FF/production/_99870471_pic6.jpg",
+        "path": "/cpsprodpb/43FF/production/_99870471_pic6.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Amritsar pigeons",
+        "caption": "ਅੰਮ੍ਰਿ੍ਤਸਰ ਵਿੱਚ ਕਬੂਤਰਾਂ ਨੂੰ ਦਾਣੇ ਪਾਂਦੇ ਹੋਏ ਇੱਕ ਪੰਜਾਬੀ ਮੁੰਡਾ।",
+        "copyrightHolder": "NARINDER NANU/AFP/GETTYIMAGES",
+        "type": "image"
+      },
+      {
+        "id": "99870593",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/9A53/production/_99870593_pic1.jpg",
+        "path": "/cpsprodpb/9A53/production/_99870593_pic1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Tribal festival",
+        "caption": "ਤੇਲੰਨਗਾਨਾ ਦੇ ਆਦੀਵਾਸੀ ਮੇਲੇ 'ਮੇਡਾਰਮ ਜਾਤਰਾ' ਵਿੱਚ ਉਨ੍ਹਾਂ ਦੇ ਰੱਬ 'ਸੱਮਾਕਾ ਸਾਰਾਲਾਮਾ' ਦੇ ਦਰਸ਼ਨਾਂ ਲਈ ਕਰੋੜਾਂ ਸ਼ਰਧਾਲੂ ਪਹੁੰਚੇ।",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "99870373",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/91BB/production/_99870373_pic2.jpg",
+        "path": "/cpsprodpb/91BB/production/_99870373_pic2.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Super moon",
+        "caption": "ਹੈਦਰਾਬਾਦ ਵਿੱਚ 'ਸੂਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਦਾ ਨਜ਼ਾਰਾ। ਇਹ ਨਜ਼ਾਰਾ 152 ਸਾਲਾਂ ਬਾਅਦ ਵੇਖਣ ਨੂੰ ਮਿਲਿਆ ਸੀ।",
+        "copyrightHolder": "NOAH SEELAM/GETTYIMAGES",
+        "type": "image"
+      },
+      {
+        "id": "99870375",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/DFDB/production/_99870375_pic3.jpg",
+        "path": "/cpsprodpb/DFDB/production/_99870375_pic3.jpg",
+        "height": 1024,
+        "width": 929,
+        "altText": "Thaipoosam Festival",
+        "caption": "ਚਿੰਨੇਈ ਦੇ ਤਿਓਹਾਰ 'ਥਾਈਪੂਸਮ' ਦੌਰਾਨ ਸ਼ੁੱਧੀ ਲਈ ਕੋਇਲੇ 'ਤੇ ਤੁਰਦਾ ਹੋਇਆ ਹਿੰਦੂ ਬੱਚਾ।",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "99870377",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12DFB/production/_99870377_pic4.jpg",
+        "path": "/cpsprodpb/12DFB/production/_99870377_pic4.jpg",
+        "height": 960,
+        "width": 959,
+        "altText": "Lunar Eclipse",
+        "caption": "ਸੂਪਰ ਮੂਨ, ਬਲੂ ਮੂਨ ਅਤੇ ਚੰਦਰ ਗ੍ਰਹਿਣ 152 ਸਾਲਾਂ ਬਾਅਦ ਇਕੱਠੇ ਨਜ਼ਰ ਆਏ, ਪੁੰਡੂਚੇਰੀ ਦੇ ਫੋਟੋਗ੍ਰਾਫਰ ਸ਼ਨਮੁਗਾਰਾਜਨ ਨੇ ਇਸ ਨੂੰ ਆਪਣੇ ਕੈਮਰਾ ਵਿੱਚ ਕੈਦ ਕੀਤਾ।",
+        "copyrightHolder": "Madhu India",
+        "type": "image"
+      },
+      {
+        "id": "99870477",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12E5F/production/_99870477_pic9.jpg",
+        "path": "/cpsprodpb/12E5F/production/_99870477_pic9.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Submarine Karanj",
+        "caption": "ਮੁੰਬਈ ਦੇ ਮਾਜ਼ਗਾਓਂ ਡੌਕਯਾਰਡ ਤੋਂ ਅਰੇਬੀਅਨ ਸਮੁੰਦਰ ਵਿੱਚ ਲਾਂਚ ਹੋਈ ਭਾਰਤੀ ਨੇਵੀ ਦੀ ਪਣਡੁੱਬੀ 'ਕਾਰੰਜ'।",
+        "copyrightHolder": "PUNIT PARANJPE/AFP/Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "99870479",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/17C7F/production/_99870479_pic10.jpg",
+        "path": "/cpsprodpb/17C7F/production/_99870479_pic10.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Super moon",
+        "caption": "ਮੁੰਬਈ ਦੇ ਛੱਤਰਪਤੀ ਸ਼ਿਵਾਜੀ ਰੇਲਵੇ ਸਟੇਸ਼ਨ 'ਤੇ ਸੂਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ।",
+        "copyrightHolder": "PUNIT PARANJPE/AFP/Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "99870473",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/921F/production/_99870473_pic7.jpg",
+        "path": "/cpsprodpb/921F/production/_99870473_pic7.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Polio Campaign",
+        "caption": "ਅਹਿਮਦਾਬਾਦ ਵਿੱਚ ਪੋਲੀਓ ਬਾਰੇ ਮੁਹਿੰਮ। ਭਾਰਤ ਪਹਿਲਾਂ ਹੀ ਪੋਲੀਓ ਮੁਕਤ ਦੇਸ਼ ਹੈ ਫਿਰ ਵੀ ਸਾਵਧਾਨੀ ਦੇ ਤੌਰ 'ਤੇ ਇਹ ਮੁਹਿੰਮ ਰੱਖੀ ਗਈ ਹੈ।",
+        "copyrightHolder": "Kalpit Bhachech",
+        "type": "image"
+      },
+      {
+        "id": "99870475",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/E03F/production/_99870475_pic8.jpg",
+        "path": "/cpsprodpb/E03F/production/_99870475_pic8.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Padmavat row in Ahmedabad",
+        "caption": "ਫਿਲਮ 'ਪਦਮਾਵਤ' ਵਿਵਾਦ ਵਿਚਾਲੇ ਕਰਣੀ ਸੈਨਾ ਦਾ ਬੈਨ ਦੌਰਾਨ ਅਹਿਮਦਾਬਾਦ ਦੇ ਇੱਕ ਮਾਲ ਦੀ ਤਸਵੀਰ।",
+        "copyrightHolder": "Kalpit Bhachech",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "ਤਸਵੀਰਾਂ ਰਾਹੀਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਖ਼ਾਸ ਘਟਨਾਵਾਂ",
+      "headline": "ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ"
+    },
+    "locators": {
+      "assetUri": "/punjabi/india-42928885",
+      "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-42928885",
+      "curie": "http://www.bbc.co.uk/asset/85cd6e44-90b8-b24c-8d0b-0c7bb679be83"
+    },
+    "summary": "ਪਿਛਲੇ ਹਫਤੇ ਦੁਨੀਆਂ ਨੇ ਵੇਖਿਆ 'ਸੁਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਅਤੇ ਹੋਰ ਕੀ ਕੁਝ, ਤਸਵੀਰਾਂ 'ਚ",
+    "timestamp": 1517661265000,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "99872399",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/183FF/production/_99872399_pic6.jpg",
+      "path": "/cpsprodpb/183FF/production/_99872399_pic6.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Amritsar pigeons",
+      "caption": "ਅੰਮ੍ਰਿ੍ਤਸਰ ਵਿੱਚ ਕਬੂਤਰਾਂ ਨੂੰ ਦਾਣੇ ਪਾਂਦੇ ਹੋਏ ਇੱਕ ਪੰਜਾਬੀ ਮੁੰਡਾ।",
+      "copyrightHolder": "NARINDER NANU/AFP/GETTYIMAGES",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:punjabi/india-42928885",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "ਇੰਡੀਆ",
+      "uri": "/punjabi/india",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC ਪੰਜਾਬੀ",
+      "uri": "/punjabi",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

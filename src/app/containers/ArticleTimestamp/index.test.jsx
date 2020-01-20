@@ -165,6 +165,30 @@ describe('ArticleTimestamp', () => {
     expect(firstChild(renderedWrapper)).toMatch(regexDate);
   });
 
+  it('should render one timestamp with date when firstPublished before today and lastPublished was published less than 1 minute after firstPublished', () => {
+    const renderedWrapper = renderedTimestamps(
+      <WrappedArticleTimestamp
+        firstPublished={1530947280000}
+        lastPublished={1530947286000}
+        minutesTolerance={1}
+      />,
+    );
+    expect(renderedWrapper.length).toEqual(1);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
+  });
+
+  it('should render two timestamps with date when firstPublished before today and lastPublished was published more than 1 minute after firstPublished', () => {
+    const renderedWrapper = renderedTimestamps(
+      <WrappedArticleTimestamp
+        firstPublished={1530947280000}
+        lastPublished={1530947406000}
+        minutesTolerance={1}
+      />,
+    );
+    expect(renderedWrapper.length).toEqual(2);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
+  });
+
   it('should render two timestamps - published: date & time, updated: relative when both are today and < 10 hours ago', () => {
     const [
       fiveHoursAgo,

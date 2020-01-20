@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:yoruba/media-50970014",
+    "locators": {
+      "assetUri": "/yoruba/media-50970014",
+      "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-50970014",
+      "curie": "http://www.bbc.co.uk/asset/f7937009-e80f-a74b-9226-d36edc716ad5"
+    },
+    "type": "PGL",
+    "createdBy": "yoruba-v6",
+    "language": "yo",
+    "lastUpdated": 1577949042967,
+    "firstPublished": 1577948757000,
+    "lastPublished": 1577949034000,
+    "timestamp": 1577948757000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "yoruba.embedded_media.photo_gallery.50970014.page",
+      "cps_asset_id": "50970014"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Society",
+          "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+          "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Society",
+            "http://www.wikidata.org/entity/Q8425"
+          ]
+        },
+        {
+          "thingLabel": "Politics",
+          "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+          "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Politics"
+          ],
+          "topicName": "Eto Iselu",
+          "topicId": "cyx5k5r3g5nt",
+          "curationList": [
+            {
+              "curationId": "d7bd2a05-896d-4dc9-97b2-d2cd8a92b142",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Nigeria politics",
+          "thingUri": "http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id",
+          "thingId": "7d65828a-85c1-41f4-96cf-c758da75e401",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Politics_of_Nigeria"
+          ],
+          "topicName": "Eto Iselu Naijiria",
+          "topicId": "c404v45pnr8t",
+          "curationList": [
+            {
+              "curationId": "ac23e408-552d-4b5c-b801-c268843ef02e",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Kwara state",
+          "thingUri": "http://www.bbc.co.uk/things/cece4fd8-a9a3-4b50-bbc7-406ba2bccccb#id",
+          "thingId": "cece4fd8-a9a3-4b50-bbc7-406ba2bccccb",
+          "thingType": [
+            "Thing",
+            "Place",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Kwara_State",
+            "http://sws.geonames.org/2332785/"
+          ],
+          "topicName": "Ipinlẹ Kwara",
+          "topicId": "cr50y0714pnt",
+          "curationList": [
+            {
+              "curationId": "626f5391-5064-45e3-9dfb-150ae09cd7c9",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.4",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "110368041",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/3706/production/_110368041_sar1.jpg",
+        "path": "/cpsprodpb/3706/production/_110368041_sar1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ile arugbo",
+        "caption": "Laago merin idaji oni ni ijọba gbe katakata wa wo ile Wrugbo ni Ilorin",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "110368043",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8526/production/_110368043_sar3.jpg",
+        "path": "/cpsprodpb/8526/production/_110368043_sar3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ile arugbo",
+        "caption": "Ile arugbo loke to wa nitosi Radio Kwara ni ijọba Ramoni Razaki wo",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "110368045",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/D346/production/_110368045_sar4.jpg",
+        "path": "/cpsprodpb/D346/production/_110368045_sar4.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ile arugbo",
+        "caption": "Gomina Abdul Razaq fihan pe ijọba amuni-mu-oogun ni ijọba ki ijoba to ba wa lori aleefa lasiko ki asiko",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "110368497",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1367E/production/_110368497_sar5.jpg",
+        "path": "/cpsprodpb/1367E/production/_110368497_sar5.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ile arugbo",
+        "caption": "Goo goo go ni awọn eeyan duro kaakiri agbegbe yii lẹbaa Civil service clinic",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "110368499",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1849E/production/_110368499_sar6.jpg",
+        "path": "/cpsprodpb/1849E/production/_110368499_sar6.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ile arugbo",
+        "caption": "Ilé arugbo di ohun itan ni Kwara, Bukola Saraki ko ri nkan ṣe sii",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "110368501",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/295A/production/_110368501_sar8.jpg",
+        "path": "/cpsprodpb/295A/production/_110368501_sar8.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ile arugbo",
+        "caption": "Gomina Rasaq ko gbọ ọrọ sawọn arugbo Kwara lẹnu o wo ile naa",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "110368503",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/777A/production/_110368503_sar9.jpg",
+        "path": "/cpsprodpb/777A/production/_110368503_sar9.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ile arugbo",
+        "caption": "Awọn ara Ilorin ko ri nkankan ṣe si aṣẹ gomina Razak ti Kwara, onikaluku fọwọ lẹran ni",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "110368505",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/C59A/production/_110368505_sar10.jpg",
+        "path": "/cpsprodpb/C59A/production/_110368505_sar10.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ile arugbo",
+        "caption": "Lati ipilẹ ni wọn ti wo ile Arugbo Ilorin ti ọrọ si pin bayii",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "110368547",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1235A/production/_110368547_sar11.jpg",
+        "path": "/cpsprodpb/1235A/production/_110368547_sar11.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ile arugbo",
+        "caption": "Ko si ẹni to lagbara kọja ijọba to ba n tukọ orilẹ ede tabi ipinlẹ kan. Ramoni wole arugbo Ilorin pari",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "110368578",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/15622/production/_110368578_lo1.jpg",
+        "path": "/cpsprodpb/15622/production/_110368578_lo1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ile arugbo",
+        "caption": "Tokada-tokada ni wọn fi wo ile naa lai ku nkan pẹlu awọn nkan inu rẹ.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "110368580",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/218A/production/_110368580_or1.jpg",
+        "path": "/cpsprodpb/218A/production/_110368580_or1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ile arugbo",
+        "caption": "Ijoba Kwara naa fi atẹjade tiwọn sita pe ijọba lo ni ilẹ ti Baba Oloye Sarki fi kọ ile arugbo si tẹlẹ.",
+        "copyrightHolder": "Kwara Govt",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Ìjọba Gomina Raman Razak padà wólé arúgbó ní Ilọrin!",
+      "headline": "Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin!"
+    },
+    "locators": {
+      "assetUri": "/yoruba/media-50970014",
+      "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-50970014",
+      "curie": "http://www.bbc.co.uk/asset/f7937009-e80f-a74b-9226-d36edc716ad5"
+    },
+    "summary": "Laago mẹrin idaji aarọ yii ni ijọba wa wo ile arugbo ti Bukola Saraki ni kí wọn ma wo tẹlẹ, ọrọ bẹ́yìn yọ.",
+    "timestamp": 1577948757000,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "110368497",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/1367E/production/_110368497_sar5.jpg",
+      "path": "/cpsprodpb/1367E/production/_110368497_sar5.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "ile arugbo",
+      "caption": "Goo goo go ni awọn eeyan duro kaakiri agbegbe yii lẹbaa Civil service clinic",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:yoruba/media-50970014",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/yoruba/media",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News Yorùbá",
+      "uri": "/yoruba",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
