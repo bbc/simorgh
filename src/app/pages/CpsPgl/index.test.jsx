@@ -57,7 +57,7 @@ jest.mock('../../containers/PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
-jest.mock('../../containers/CpsAssetPageMain', () => {
+jest.mock('./index.jsx', () => {
   const CpsAssetPageMain = () => <div>CpsAssetPageMain</div>;
 
   return CpsAssetPageMain;
