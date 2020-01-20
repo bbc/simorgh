@@ -132,7 +132,7 @@ const services = {
       test: true,
       stage: true,
       live: true,
-      launch: '2019',
+      launch: '26th Sept 2019',
     },
     MAP: {
       local: 'region-49364777',
@@ -261,7 +261,7 @@ const services = {
       test: true,
       stage: true,
       live: true,
-      launch: '2019',
+      launch: '13th Jan 2020',
     },
     MAP: {
       local: 'media-49502679',
@@ -397,7 +397,7 @@ const services = {
       test: true,
       stage: true,
       live: true,
-      launch: '2019',
+      launch: '26th Sept 2019',
     },
     MAP: {
       local: 'video-23248670',
@@ -450,7 +450,7 @@ const services = {
       test: true,
       stage: true,
       live: true,
-      launch: '2019',
+      launch: '26th Sept 2019',
     },
     liveRadio: {
       local: 'bbc_kyrgyz_radio/liveradio',
@@ -480,7 +480,7 @@ const services = {
       test: true,
       stage: true,
       live: true,
-      launch: '2019',
+      launch: '13th Jan 2020',
     },
     MAP: {
       local: 'india-48062804',
@@ -694,7 +694,7 @@ const services = {
       test: true,
       stage: true,
       live: true,
-      launch: '2019',
+      launch: '10th Sept 2019',
     },
     MAP: {
       local: 'international-49567825',
@@ -915,7 +915,7 @@ const services = {
       test: true,
       stage: true,
       live: true,
-      launch: '2019',
+      launch: '13th Jan 2020',
     },
     MAP: {
       local: 'india-49647976',
@@ -938,7 +938,7 @@ const services = {
       test: true,
       stage: true,
       live: true,
-      launch: '2019',
+      launch: '19th Aug 2019',
     },
     MAP: {
       local: '23122810',
@@ -1090,7 +1090,7 @@ const services = {
       test: true,
       stage: true,
       live: true,
-      launch: '2019',
+      launch: '13th Jan 2020',
     },
     MAP: {
       local: 'uzbekistan-49192467',
