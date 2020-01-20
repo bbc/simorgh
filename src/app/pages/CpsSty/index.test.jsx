@@ -1,21 +1,51 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { StaticRouter } from 'react-router-dom';
+import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContext } from '#contexts/ToggleContext';
 import CpsAssetPage from '.';
 import pidginPageData from '#data/pidgin/cpsAssets/world-23252817';
+import preprocessor from '#lib/utilities/preprocessor';
+import { cpsAssetPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
 
-const cpsAssetScaffoldProps = {
-  isAmp: false,
-  pageType: 'STY',
-  service: 'pidgin',
-  pathname: '/pidgin/world-23252817',
-  match: {
-    params: {
-      assetUri: 'world-23252817',
-      pageData: pidginPageData,
+const toggleState = {
+  local: {
+    mediaPlayer: {
+      enabled: true,
     },
   },
-  status: 200,
+  test: {
+    mediaPlayer: {
+      enabled: true,
+    },
+  },
+  live: {
+    mediaPlayer: {
+      enabled: false,
+    },
+  },
 };
+
+const createAssetPage = ({ pageData }, service) => (
+  <StaticRouter>
+    <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
+      <ServiceContextProvider service={service}>
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          isAmp={false}
+          pageType={pageData.metadata.type}
+          pathname={pageData.metadata.locators.assetUri}
+          service={service}
+          statusCode={200}
+        >
+          <CpsAssetPage service={service} pageData={pageData} />
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ToggleContext.Provider>
+  </StaticRouter>
+);
 
 jest.mock('../../containers/PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
@@ -57,11 +87,25 @@ jest.mock('../../containers/PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
+jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
+  const ContextsContainer = props => (
+    <div id="ContextsContainer">
+      <Component {...props} />
+    </div>
+  );
+
+  return ContextsContainer;
+});
+
 describe('CPS STY Page', () => {
   describe('snapshots', () => {
-    shouldMatchSnapshot(
-      'should match scaffold snapshot',
-      <CpsAssetPage {...cpsAssetScaffoldProps} />,
-    );
+    it('should match snapshot for STY', async () => {
+      const pageData = await preprocessor(
+        pidginPageData,
+        cpsAssetPreprocessorRules,
+      );
+      const page = createAssetPage({ pageData }, 'pidgin');
+      await matchSnapshotAsync(page);
+    });
   });
 });
