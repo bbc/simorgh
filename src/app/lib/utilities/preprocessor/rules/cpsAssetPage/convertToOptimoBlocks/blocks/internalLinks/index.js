@@ -1,5 +1,5 @@
-import cloneDeep from 'ramda/src/clone';
 import path from 'ramda/src/path';
+import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 
 /*
 Problem:
@@ -21,90 +21,81 @@ to the same schema used for external links
 External links then get converted into the optimo format as part of the existing transformer
 */
 
+const getBlocks = path(['content', 'blocks']);
+
+const getUrl = path(['locators', 'href']);
+
+const getLinkText = path(['headlines', 'overtyped']);
+
+const itemIdEndsWith = string => ({ id }) => id.endsWith(string);
+
+const getItemMetadata = (id, metadata) => metadata.find(itemIdEndsWith(id));
+
+// Given a block that has text, gather up any <itemMeta> tags within that text
+const getItemMetaMatches = text =>
+  Array.from(text.matchAll(/<itemMeta>(.*?)<\/itemMeta>/g));
+
+const whiteSpaceRegex = /(\r?\n|\r)\s*/g;
+
 // This is the template CPS uses for external links - we already support these
 // A later transformer converts them into the optimo format
-const buildUrlString = ({ url, linkText }) => {
-  // simorgh#5078 - The psammead-rich-text-transforms package does not like chevrons
-  const parsedLinkText = linkText
+
+const getLinkXML = (url, text) =>
+  `
+<link>
+    <caption>${text}</caption>
+    <altText>${text}</altText>
+    <url href="${url}" platform="highweb"/>
+    <url href="${url}" platform="enhancedmobile"/>
+</link>
+`.replace(whiteSpaceRegex, '');
+
+const replaceChevrons = text =>
+  text
     .replace('<', '&lt;')
     .replace('>', '&gt;')
     .replace(/&(?!amp|gt|lt)/, '&amp;');
 
-  return `
-        <link>
-            <caption>${parsedLinkText}</caption>
-            <altText>${parsedLinkText}</altText>
-            <url href="${url}" platform="highweb"/>
-            <url href="${url}" platform="enhancedmobile"/>
-        </link>
-    `.replace(/(\r?\n|\r)\s*/g, '');
+const transformBlockText = (blockText, blockMeta) => {
+  const itemMetaMatches = getItemMetaMatches(blockText);
+
+  // Iterate over every <itemMeta> tag and replace it
+  return itemMetaMatches.reduce((accumulator, [match, id]) => {
+    const itemMetadata = getItemMetadata(id, blockMeta);
+    if (!itemMetadata) {
+      return accumulator;
+    }
+    const url = getUrl(itemMetadata);
+    const linkText = replaceChevrons(getLinkText(itemMetadata));
+
+    return accumulator.replace(match, getLinkXML(url, linkText));
+  }, blockText);
 };
 
-// Given a block, an <itemMeta> match, and the corresponding metadata,
-// replace the match with the full link XML
-const provideLinkXML = ({ block, match, metadata }) => {
-  if (!metadata) return;
+// Recursively iterate through blocks - if a block has a "text" property we should process it
+const transformBlock = ({ text, items, ...block }) => ({
+  ...block,
+  ...(text && {
+    text: transformBlockText(text, block.meta),
+  }),
+  ...(items && {
+    items: items.map(transformBlock),
+  }),
+});
 
-  const url = path(['locators', 'href'], metadata);
-  const linkText = path(['headlines', 'overtyped'], metadata);
+export default inputData => {
+  const blocks = getBlocks(inputData);
 
-  if (!url || !linkText) return;
-
-  // eslint-disable-next-line no-param-reassign
-  block.text = block.text.replace(
-    match,
-    buildUrlString({
-      url,
-      linkText,
-    }),
-  );
-};
-
-// Given an array of metadata and the id stored within the <itemMeta> tag,
-// find the corresponding metadata object from that array
-const findMetadata = (metadata, id) => {
-  return metadata.find(item => {
-    return item.id.endsWith(id);
-  });
-};
-
-// Given a block that has text, gather up any <itemMeta> tags within that text
-const parseText = block => {
-  const matches = Array.from(
-    block.text.matchAll(/<itemMeta>(.*?)<\/itemMeta>/g),
-  );
-  if (!matches.length) return;
-
-  // Iterate over every <itemMeta> tag, and pass it off to be replaced
-  matches.forEach(([match, id]) => {
-    provideLinkXML({
-      block,
-      match,
-      metadata: findMetadata(block.meta, id),
+  if (blocks && blocks.length) {
+    const transformedBlocks = blocks.map(transformBlock);
+    const mergeTransformedContentBlocks = mergeDeepLeft({
+      content: {
+        blocks: transformedBlocks,
+      },
     });
-  });
-};
 
-// Recursively iterate through all blocks - if a block has a "text" property, send it off for processing
-const findAndEnrichTextValues = blocks => {
-  if (!Array.isArray(blocks)) return;
-  blocks.forEach(block => {
-    if (block.text) {
-      parseText(block);
-    }
-    if (block.items) {
-      findAndEnrichTextValues(block.items);
-    }
-  });
-};
+    return mergeTransformedContentBlocks(inputData);
+  }
 
-// Validate input & deep clone to prevent mutation
-const main = inputData => {
-  if (!inputData || !inputData.content || !inputData.content.blocks)
-    return inputData;
-  const enrichedData = cloneDeep(inputData);
-  findAndEnrichTextValues(enrichedData.content.blocks);
-  return enrichedData;
+  return inputData;
 };
-
-export default main;
