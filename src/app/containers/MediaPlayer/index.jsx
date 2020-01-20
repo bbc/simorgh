@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { string, bool } from 'prop-types';
+import { useLocation } from 'react-router-dom';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
@@ -10,7 +11,7 @@ import {
 } from '@bbc/psammead-media-player';
 import Caption from '../Caption';
 import Metadata from './Metadata';
-import embedUrl from './helpers/embedUrl';
+import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import formatDuration from '#lib/utilities/formatDuration';
@@ -30,10 +31,10 @@ const MediaPlayerContainer = ({
   assetType,
   showPlaceholder,
 }) => {
-  const { platform } = useContext(RequestContext);
+  const { isAmp } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
-  const isAmp = platform === 'amp';
+  const location = useLocation();
 
   if (!enabled || !blocks) {
     return null;
@@ -98,10 +99,12 @@ const MediaPlayerContainer = ({
     locator,
     resolution: DEFAULT_WIDTH,
   });
-  const embedSource = embedUrl({
-    requestUrl: `${assetId}/${versionId}/${lang}`,
+
+  const embedSource = getEmbedUrl({
+    mediaId: `${assetId}/${versionId}/${lang}`,
     type: assetType,
     isAmp,
+    queryString: location.search,
   });
   const iframeTitle = pathOr(
     'Media player',

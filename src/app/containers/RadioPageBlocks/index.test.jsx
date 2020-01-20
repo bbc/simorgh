@@ -2,6 +2,7 @@ import React from 'react';
 import path from 'ramda/src/path';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
+import { BrowserRouter } from 'react-router-dom';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import RadioPageBlocks from '.';
@@ -17,10 +18,6 @@ const serviceContextMock = {
 };
 
 describe('Radio Page Blocks', () => {
-  beforeEach(() => {
-    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
-  });
-
   it('should match snapshot for Canonical', async () => {
     const pageData = await preprocessor(
       amharicPageData,
@@ -32,12 +29,15 @@ describe('Radio Page Blocks', () => {
       <ServiceContext.Provider value={serviceContextMock}>
         <RequestContext.Provider
           value={{
+            isAmp: false,
             platform: 'canonical',
             pageType: 'media',
             origin: 'http://localhost:7080',
           }}
         >
-          <RadioPageBlocks blocks={blocks} />
+          <BrowserRouter>
+            <RadioPageBlocks blocks={blocks} />
+          </BrowserRouter>
         </RequestContext.Provider>
       </ServiceContext.Provider>,
     );
@@ -54,12 +54,15 @@ describe('Radio Page Blocks', () => {
       <ServiceContext.Provider value={serviceContextMock}>
         <RequestContext.Provider
           value={{
+            isAmp: true,
             platform: 'amp',
             pageType: 'media',
             origin: 'http://localhost:7080',
           }}
         >
-          <RadioPageBlocks blocks={blocks} />
+          <BrowserRouter>
+            <RadioPageBlocks blocks={blocks} />
+          </BrowserRouter>
         </RequestContext.Provider>
       </ServiceContext.Provider>,
     );

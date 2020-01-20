@@ -37,7 +37,9 @@ export const testsThatFollowSmokeTestConfig = ({
 
     describe(`${service} Article Error Page Tests`, () => {
       before(() => {
-        cy.visit(config[service].pageTypes.errorPage404.path, {
+        const { path } = config[service].pageTypes.errorPage404;
+        cy.testResponseCodeAndType(path, 404, 'text/html');
+        cy.visit(path, {
           failOnStatusCode: false,
         });
       });

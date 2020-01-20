@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
@@ -36,12 +37,14 @@ storiesOf('Containers|Media Player/Canonical', module)
       >
         <ServiceContextProvider service="news">
           <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
-            <MediaPlayerContainer
-              blocks={validVideoWithCaptionBlock}
-              assetId={articleID}
-              assetType="articles"
-              showPlaceholder
-            />
+            <BrowserRouter>
+              <MediaPlayerContainer
+                blocks={validVideoWithCaptionBlock}
+                assetId={articleID}
+                assetType="articles"
+                showPlaceholder
+              />
+            </BrowserRouter>
           </ToggleContext.Provider>
         </ServiceContextProvider>
       </RequestContextProvider>
@@ -66,12 +69,14 @@ storiesOf('Containers|Media Player/AMP', module)
       >
         <ServiceContextProvider service="news">
           <ToggleContext.Provider value={{ toggleState: defaultToggles }}>
-            <MediaPlayerContainer
-              blocks={validVideoWithCaptionBlock}
-              assetId={articleID}
-              assetType="articles"
-              showPlaceholder
-            />
+            <BrowserRouter>
+              <MediaPlayerContainer
+                blocks={validVideoWithCaptionBlock}
+                assetId={articleID}
+                assetType="articles"
+                showPlaceholder
+              />
+            </BrowserRouter>
           </ToggleContext.Provider>
         </ServiceContextProvider>
       </RequestContextProvider>

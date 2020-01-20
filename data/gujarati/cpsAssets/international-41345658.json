@@ -1,0 +1,261 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:gujarati/international-41345658",
+    "locators": {
+      "assetUri": "/gujarati/international-41345658",
+      "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-41345658",
+      "curie": "http://www.bbc.co.uk/asset/ea095550-f30d-e04e-9afa-57cd8ad36da4"
+    },
+    "type": "PGL",
+    "createdBy": "gujarati-v6",
+    "language": "gu",
+    "lastUpdated": 1555921612829,
+    "firstPublished": 1505990516,
+    "lastPublished": 1555921605,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "gujarati.international.photo_gallery.41345658.page",
+      "cps_asset_id": "41345658"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Nature",
+          "thingUri": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+          "thingId": "12e69b92-a7ba-4463-84e0-be107b9805d0",
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Nature"
+          ]
+        },
+        {
+          "thingLabel": "Animals",
+          "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+          "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Animal",
+            "http://www.wikidata.org/entity/Q729"
+          ]
+        },
+        {
+          "thingLabel": "Photography",
+          "thingUri": "http://www.bbc.co.uk/things/ae0d5073-dfeb-4251-b555-0a9c74f3d4e0#id",
+          "thingId": "ae0d5073-dfeb-4251-b555-0a9c74f3d4e0",
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Photography"
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.0",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "98026616",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/F0DE/production/_98026616_1.jpg",
+        "path": "/cpsprodpb/F0DE/production/_98026616_1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ઈગ્વાને નામનાં પ્રાણીનો ફોટા",
+        "caption": "વિશ્વની સૌથી મોટી ફોટોગ્રાફી સ્પર્ધામાં બે લાખથી વધારે લોકોએ ફોટોઝ મોકલ્યાં હતા, અને તેમાંથી નેશનલ એવોર્ડ કૅટેગરીના અહીં અમૂક અવિશ્વનીય વાઇલ્ડ લાઇફ ફોટોગ્રાફ્સ રજૂ કરવામાં આવ્યાં છે. આ ફોટાઓ પોતાના દેશના પ્રથમ, દ્વિતીય અને તૃતીય વિજેતાઓના છે. પનામાના જિનાતન બનિસ્ટાને ઈગ્વાને નામનાં પ્રાણીના ફોટા માટે પ્રથમ સ્થાન અપાયું હતું.",
+        "copyrightHolder": "JONATAN BANISTA, 2017 SONY WORLD PHOTOGRAPHY AWARD",
+        "type": "image"
+      },
+      {
+        "id": "98027087",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/130F8/production/_98027087_2.jpg",
+        "path": "/cpsprodpb/130F8/production/_98027087_2.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "પાણીનો ઘૂમરાવ અને માછલી પકડતા પક્ષીનો ફોટો",
+        "caption": "આ રંગબેરંગી ફોટો પેટાર સબોલે ક્રોએશિયાના પાલોએક વિસ્તાર નજીકના તળાવ પાસે પાડવામાં આવ્યો હતો. તેણે આ ફોટા દ્વારા પોતાના દેશમાં પ્રથમ સ્થાન હાંસલ કર્યું હતું. પેટારે જણાવ્યું હતું કે પાણી અને માછલી પકડતા પક્ષીને ફોટામાં કેદ કરવા કેમેરાના બ્રસ્ટ મોડનો ઉપયોગ કર્યો હતો.",
+        "copyrightHolder": "PETAR SABOL, 2017 SONY WORLD PHOTOGRAPHY AWARDS",
+        "type": "image"
+      },
+      {
+        "id": "98026618",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13EFE/production/_98026618_3.jpg",
+        "path": "/cpsprodpb/13EFE/production/_98026618_3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "પાણીમાં કૂદકો મારતી માછલીનો ફોટો",
+        "caption": "જોન તાવોને પોતાના શાનદાર ફોટા માટે તાઈવાનમાં ત્રીજું સ્થાન મળ્યું હતું. આ ફોટાનું વર્ણન કરતા જોને જણાવ્યું કે માતા પોતાના બચ્ચાંને પાણીમાંથી બહાર કઈ રીતે કૂદકો મારવો તે શીખવતી હતી, તે ક્ષણે આ ફોટો તેને અચાનક પાડ્યો હતો.",
+        "copyrightHolder": "JOHN TAO/2017 SONY WORLD PHOTOGRAPHY AWARDS",
+        "type": "image"
+      },
+      {
+        "id": "98026619",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1660E/production/_98026619_4.jpg",
+        "path": "/cpsprodpb/1660E/production/_98026619_4.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "પૅન્ગિવન્સ એક સાથે પાણીની બહાર આવતો હોય તેવો ફોટો",
+        "caption": "જન્ટુ પૅન્ગિવન્સનો ઍન્ટાર્ક્ટિકાના ઠંડા પાણીમાં શિકાર કરતો ફોટો અમેરિકન નાડિયા એલેએ પાડ્યો હતો અને આ ફોટાને ત્રીજું સ્થાન મળ્યું હતું. તેણીએ જણાવ્યું હતું કે તેઓ કઈ રીતે એક સાથે ફરે છે તે જોવું રસપ્રદ છે. આ ફોટોમાં પૅન્ગિવન્સ એક સાથે પાણીની બહાર આવતા જોવા મળે છે.",
+        "copyrightHolder": "NADIA ALY/2017 SONY WORLD PHOTOGRAPHY AWARDS",
+        "type": "image"
+      },
+      {
+        "id": "98026620",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/0A66/production/_98026620_5.jpg",
+        "path": "/cpsprodpb/0A66/production/_98026620_5.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ઝાડ પર બેઠેલા સિંહનો ફોટો",
+        "caption": "શું તમે આ તસવીરમાં સિંહને જોઈ શકો છો? નાકુરુ નેશનલ પાર્કના તળાવ નજીક દેવેની નિશાંત મંજુલા અને તેના મિત્રોએ સિંહણને ઝાડ પર જોઈ. તેઓની તીક્ષ્ણ આંખોના કારણે રચાયેલા આ અદૃભૂત ફોટાને શ્રીલંકામાં પ્રથમ સ્થાન મળ્યું હતું.",
+        "copyrightHolder": "DEVENI NISHANTHA MANJULA/2017 SONY AWARDS",
+        "type": "image"
+      },
+      {
+        "id": "98026621",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/3176/production/_98026621_6.jpg",
+        "path": "/cpsprodpb/3176/production/_98026621_6.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ઝાડ પર આરામ ફરમાવતા ચિત્તાનો ફોટો",
+        "caption": "સિંહ જ માત્ર ઝાડ પર ચડીને આરામ ફરમાવતા નથી. સ્વીડનના બીજોર્ન પર્સ્સનને ઝાડ પર આરામ ફરમાવતા ચિત્તાના ફોટા માટે ત્રીજું સ્થાન મળ્યું હતું.",
+        "copyrightHolder": "BJORN PERSSON/SONY WORLD PHOTOGRAPHY AWARDS",
+        "type": "image"
+      },
+      {
+        "id": "98026622",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/5886/production/_98026622_7.jpg",
+        "path": "/cpsprodpb/5886/production/_98026622_7.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "જિરાફ અને ઝીબ્રાઓનો દોડતો ફોટો",
+        "caption": "જિરાફ અને ઝીબ્રાઓનો દોડતો ફોટો મોહમ્મદ અલનેઝરે કેમેરામાં કેદ કર્યો હતો. આ ફોટાએ સાઉદી અરેબિયામાં ત્રીજું સ્થાન મેળવ્યું હતું.",
+        "copyrightHolder": "MOHAMMAD ALNASER, 2017 SONY AWARDS",
+        "type": "image"
+      },
+      {
+        "id": "98027074",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/B7E0/production/_98027074_8.jpg",
+        "path": "/cpsprodpb/B7E0/production/_98027074_8.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ધુવડનો ફોટો",
+        "caption": "આ નાના સુંદર ઘુવડના ફોટાને બીજું સ્થાન મળ્યું હતું. સાઉદી અરેબિયાના હુસૈન હકિન અફ્રેડે આ ફોટો પાડ્યો હતો.",
+        "copyrightHolder": "HUSAIN HAKIN, 2017 SONY WORLD PHOTOGRAPHY AWARDS",
+        "type": "image"
+      },
+      {
+        "id": "98027075",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/DEF0/production/_98027075_9.jpg",
+        "path": "/cpsprodpb/DEF0/production/_98027075_9.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "બીગઆઈ ટ્રિવેલી નામની માછલીના જૂથનો ફોટો",
+        "caption": "ફિલિપાઈન્સના ડેની ઓકામ્પોએ બીગઆઈ ટ્રિવેલી નામની માછલીના જૂથનો ફોટો પાડ્યો હતો. તેના આ ફોટાને ત્રીજું સ્થાન મળ્યું હતું.",
+        "copyrightHolder": "DANNY OCAMPO, 2017 SONY WORLD PHOTOGRAPHY AWARDS",
+        "type": "image"
+      },
+      {
+        "id": "98027076",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/10600/production/_98027076_10.jpg",
+        "path": "/cpsprodpb/10600/production/_98027076_10.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "પક્ષીઓના જૂથનો ફોટો",
+        "caption": "કાર્લોસ એમ. અલમાર્ગોએ પક્ષીઓના ફોટા માટે સ્પેનમાં ત્રીજું સ્થાન મળ્યું હતું. તેણે પક્ષીઓની આ ફ્રેમનો ફોટો પાડવા માટે રાહ જોવી પડી હતી. તેઓએ આ સિવાય અનેક ફોટાઓ પાડ્યા હતા અને પછી આ એક મોકલ્યો હતો.",
+        "copyrightHolder": "CARLOS M. ALMAGRO, 2017 SONY AWARDS",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "વિશ્વનાં પ્રાણીઓની સર્વશ્રેષ્ઠ તસવીરો",
+      "headline": "બે લાખ ફોટાઓમાંથી પસંદ કરાયેલા પ્રાણીઓના મનમોહક ફોટોઝ્"
+    },
+    "locators": {
+      "assetUri": "/gujarati/international-41345658",
+      "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-41345658",
+      "curie": "http://www.bbc.co.uk/asset/ea095550-f30d-e04e-9afa-57cd8ad36da4"
+    },
+    "summary": "વન્યજીવોની આવી તસવીરો તમે ક્યારેય નહીં જોઈ હોય. સોની વર્લ્ડ ફોટોગ્રાફી એવોર્ડ દ્વારા વિજેતાઓની યાદી જાહેર થઈ ત્યારની આ તસવીરો છે. આ યાદી વર્ષ 2017માં જાહેર કરવામાં આવી હતી.",
+    "timestamp": 1555921612829,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      }
+    },
+    "indexImage": {
+      "id": "98033722",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/58CD/production/_98033722_1.jpg",
+      "path": "/cpsprodpb/58CD/production/_98033722_1.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "ઈગ્વાને નામનાં પ્રાણીનો ફોટા",
+      "caption": "વિશ્વની સૌથી મોટી ફોટોગ્રાફી સ્પર્ધામાં બે લાખથી વધારે લોકોએ ફોટોઝ મોકલ્યાં હતા, અને તેમાંથી નેશનલ એવોર્ડ કેટેગરીના અહીં અમૂક અવિશ્વનીય વાઈલ્ડ લાઈફ ફોટોગ્રાફ્સ રજૂ કરવામાં આવ્યાં છે. આ ફોટાઓ પોતાના દેશના પ્રથમ, દ્વિતીય અને તૃતીય વિજેતાઓના છે. પનામાના જિનાતન બનિસ્ટાને ઈગ્વાને નામનાં પ્રાણીના ફોટા માટે પ્રથમ સ્થાન અપાયું હતું.",
+      "copyrightHolder": "JONATAN BANISTA, 2017 SONY WORLD PHOTOGRAPHY AWARD",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:gujarati/international-41345658",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "આંતરરાષ્ટ્રીય",
+      "uri": "/gujarati/international",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC ગુજરાતી",
+      "uri": "/gujarati",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

@@ -1,6 +1,10 @@
 import React from 'react';
 import { render, mount } from 'enzyme';
-import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
+import {
+  isNull,
+  suppressPropWarnings,
+  shouldMatchSnapshot,
+} from '@bbc/psammead-test-helpers';
 import ArticleTimestamp from '.';
 import {
   timestampGenerator,
@@ -41,6 +45,22 @@ describe('ArticleTimestamp', () => {
   afterEach(() => {
     Date.now = originalDate;
   });
+
+  shouldMatchSnapshot(
+    "should render a 'created' Timestamp correctly",
+    <WrappedArticleTimestamp
+      firstPublished={1530947227000}
+      lastPublished={1530947227000}
+    />,
+  );
+
+  shouldMatchSnapshot(
+    "should render both a 'created' and an 'updated' Timestamp correctly",
+    <WrappedArticleTimestamp
+      firstPublished={1530947227000}
+      lastPublished={1552666749637}
+    />,
+  );
 
   describe('daylight savings time', () => {
     const daylightSavingsBehaviour = ({ descriptor, date, longName }) => {
@@ -142,6 +162,30 @@ describe('ArticleTimestamp', () => {
       />,
     );
     expect(renderedWrapper.length).toEqual(1);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
+  });
+
+  it('should render one timestamp with date when firstPublished before today and lastPublished was published less than 1 minute after firstPublished', () => {
+    const renderedWrapper = renderedTimestamps(
+      <WrappedArticleTimestamp
+        firstPublished={1530947280000}
+        lastPublished={1530947286000}
+        minutesTolerance={1}
+      />,
+    );
+    expect(renderedWrapper.length).toEqual(1);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
+  });
+
+  it('should render two timestamps with date when firstPublished before today and lastPublished was published more than 1 minute after firstPublished', () => {
+    const renderedWrapper = renderedTimestamps(
+      <WrappedArticleTimestamp
+        firstPublished={1530947280000}
+        lastPublished={1530947406000}
+        minutesTolerance={1}
+      />,
+    );
+    expect(renderedWrapper.length).toEqual(2);
     expect(firstChild(renderedWrapper)).toMatch(regexDate);
   });
 

@@ -9,11 +9,11 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   padding-bottom: 2rem;
 }
 
-.c8 {
+.c9 {
   grid-column: 1 / span 6;
 }
 
-.c16 {
+.c18 {
   display: grid;
   grid-column-gap: 1rem;
 }
@@ -30,7 +30,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   padding: 2rem 0;
 }
 
-.c11 {
+.c13 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -38,7 +38,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   font-weight: inherit;
 }
 
-.c9 {
+.c11 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -49,11 +49,11 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   padding-bottom: 0.25rem;
 }
 
-.c9:last-child {
+.c11:last-child {
   padding-bottom: 1rem;
 }
 
-.c10 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -64,34 +64,35 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   margin: 0;
 }
 
-.c12 {
+.c14 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c12:visited {
+.c14:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c12:focus,
-.c12:hover {
+.c14:focus,
+.c14:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c13 {
+.c15 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: 0;
   list-style-type: none;
 }
 
-.c13 > li::before {
+.c15 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
@@ -99,7 +100,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   margin-left: -2rem;
 }
 
-.c14 {
+.c16 {
   margin-bottom: 1rem;
 }
 
@@ -121,7 +122,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   margin: 0;
 }
 
-.c19 {
+.c21 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -135,7 +136,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   left: 0;
 }
 
-.c18 {
+.c20 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -160,6 +161,14 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
 
 .c2 figure {
   padding-bottom: 0;
+}
+
+.c8 {
+  padding: 2rem 0;
+}
+
+.c10 {
+  padding-bottom: 1rem;
 }
 
 .c5 {
@@ -213,40 +222,40 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
 }
 
 @media (max-width:25rem) {
-  .c8 {
+  .c9 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c8 {
+  .c9 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c9 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c8 {
+  .c9 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c8 {
+  .c9 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c8 {
+  .c9 {
     max-width: initial;
   }
 }
@@ -282,79 +291,79 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
 }
 
 @media (max-width:63rem) {
-  .c15 {
+  .c17 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c15 {
+  .c17 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c15 {
+  .c17 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c17 {
+  .c19 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c17 {
+  .c19 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c17 {
+  .c19 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c17 {
+  .c19 {
     grid-column: 1 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c20 {
+  .c22 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c20 {
+  .c22 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c20 {
+  .c22 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c20 {
+  .c22 {
     grid-column: 1 / span 10;
   }
 }
 
 @media (max-width:80rem) {
-  .c16 {
+  .c18 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c16 {
+  .c18 {
     grid-template-columns: repeat(12,1fr);
   }
 }
@@ -380,42 +389,42 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c11 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c11 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c15 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c15 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -458,6 +467,18 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
   }
 }
 
+@media (min-width:63rem) {
+  .c8 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c10 {
+    padding-bottom: 1.5rem;
+  }
+}
+
 <main
     class="c0"
     role="main"
@@ -483,7 +504,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
             allowfullscreen=""
             class="c5"
             scrolling="no"
-            src="https://embed-host.bbc.com/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
             title="Медиа плейер"
           />
         </div>
@@ -494,32 +515,32 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
     >
       <strong
         aria-hidden="true"
-        class="c7"
+        class="c7 c8"
       >
         Ўзбек деҳқонининг косаси нега оқармайдиshort
       </strong>
     </div>
     <div
-      class="c8"
+      class="c9 c10"
     >
       <time
-        class="c9"
+        class="c11"
         datetime="2019-09-13"
       >
         13 сентябр 2019
       </time>
       <time
-        class="c9"
+        class="c11"
         datetime="2019-11-06"
       >
         Янгиланди 6 ноябр 2019
       </time>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         <b>
           Ўзбек деҳқонининг косаси нега оқармайди
@@ -527,10 +548,10 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         <b>
           Ўзбек деҳқонининг косаси нега оқармайди
@@ -541,20 +562,20 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         <i
-          class="c11"
+          class="c13"
         >
           <b>
             Ўзбек деҳқонининг косаси нега оқармайди
           </b>
         </i>
         <i
-          class="c11"
+          class="c13"
         >
           <b>
              heading
@@ -563,10 +584,10 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         <b>
           Ўзбек деҳқонининг косаси нега оқармайди
@@ -577,14 +598,14 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Шу йил апрел ойида Ўзбекистон Президенти Ислом 
         <a
-          class="c12"
+          class="c14"
           href="https://bbc.com/uzbek"
         >
           Каримов ўзининг
@@ -593,10 +614,10 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб 
         <b>
@@ -606,63 +627,63 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         "Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга 
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <ul
-        class="c13"
+        class="c15"
         dir="ltr"
         role="list"
       >
         <li
-          class="c14"
+          class="c16"
           role="listitem"
         >
           Ўзбек деҳқонининг косаси нега оқармайди
         </li>
         <li
-          class="c14"
+          class="c16"
           role="listitem"
         >
           Ўзбек деҳқонининг косаси нега оқармайди
         </li>
         <li
-          class="c14"
+          class="c16"
           role="listitem"
         >
           <b>
@@ -670,7 +691,7 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
           </b>
         </li>
         <li
-          class="c14"
+          class="c16"
           role="listitem"
         >
           Ўзбек деҳқонининг косаси нега оқармайди
@@ -678,52 +699,52 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </ul>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <ul
-        class="c13"
+        class="c15"
         dir="ltr"
         role="list"
       >
         <li
-          class="c14"
+          class="c16"
           role="listitem"
         >
           <a
-            class="c12"
+            class="c14"
             href="https://bbc.com/uzbek"
           >
             Ўзбек деҳқонининг косаси нега оқармайди
           </a>
         </li>
         <li
-          class="c14"
+          class="c16"
           role="listitem"
         >
           <a
-            class="c12"
+            class="c14"
             href="https://bbc.com/uzbek"
           >
             Ўзбек деҳқонининг косаси нега оқармайди
           </a>
         </li>
         <li
-          class="c14"
+          class="c16"
           role="listitem"
         >
           <a
-            class="c12"
+            class="c14"
             href="https://bbc.com/uzbek"
           >
             Ўзбек деҳқонининг косаси нега оқармайди
           </a>
         </li>
         <li
-          class="c14"
+          class="c16"
           role="listitem"
         >
           <a
-            class="c12"
+            class="c14"
             href="https://bbc.com/uzbek"
           >
             Ўзбек деҳқонининг косаси нега оқармайди
@@ -732,26 +753,26 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
       </ul>
     </div>
     <div
-      class="c15"
+      class="c17"
     >
       <figure
         class="c3"
       >
         <div
-          class="c16"
+          class="c18"
         >
           <div
-            class="c17"
+            class="c19"
           >
             <div
-              class="c18"
+              class="c20"
             >
               <div
                 class="lazyload-placeholder"
               />
               <noscript />
               <p
-                class="c19"
+                class="c21"
                 role="text"
               >
                 <span
@@ -768,25 +789,25 @@ exports[`CpsAssetPageMain MAP AV player should render version (live audio stream
             </div>
           </div>
           <div
-            class="c20"
+            class="c22"
           />
         </div>
       </figure>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Ўзбек деҳқонининг косаси нега оқармайди transmission info 
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Ўзбек деҳқонининг косаси нега оқармайди footer 
       </p>
@@ -4727,11 +4748,11 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   padding-bottom: 2rem;
 }
 
-.c8 {
+.c9 {
   grid-column: 1 / span 6;
 }
 
-.c17 {
+.c19 {
   display: grid;
   grid-column-gap: 1rem;
 }
@@ -4748,7 +4769,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   padding: 2rem 0;
 }
 
-.c11 {
+.c13 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -4759,7 +4780,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   padding: 1.5rem 0;
 }
 
-.c15 {
+.c17 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -4767,7 +4788,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   font-weight: inherit;
 }
 
-.c9 {
+.c11 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -4778,11 +4799,11 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c9:last-child {
+.c11:last-child {
   padding-bottom: 1rem;
 }
 
-.c10 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -4793,34 +4814,35 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   margin: 0;
 }
 
-.c14 {
+.c16 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c14:visited {
+.c16:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c14:focus,
-.c14:hover {
+.c16:focus,
+.c16:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c12 {
+.c14 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: 0;
   list-style-type: none;
 }
 
-.c12 > li::before {
+.c14 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
@@ -4828,7 +4850,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   margin-left: -2rem;
 }
 
-.c13 {
+.c15 {
   margin-bottom: 1rem;
 }
 
@@ -4850,7 +4872,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   margin: 0;
 }
 
-.c20 {
+.c22 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -4864,7 +4886,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   left: 0;
 }
 
-.c22 {
+.c24 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -4875,20 +4897,20 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   width: 100%;
 }
 
-.c22 > p {
+.c24 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c22 > p:last-child {
+.c24 > p:last-child {
   padding-bottom: 0;
 }
 
-.c22 i {
+.c24 i {
   font-style: normal;
 }
 
-.c19 {
+.c21 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -4913,6 +4935,14 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 
 .c2 figure {
   padding-bottom: 0;
+}
+
+.c8 {
+  padding: 2rem 0;
+}
+
+.c10 {
+  padding-bottom: 1rem;
 }
 
 .c5 {
@@ -4966,40 +4996,40 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 }
 
 @media (max-width:25rem) {
-  .c8 {
+  .c9 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c8 {
+  .c9 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c9 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c8 {
+  .c9 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c8 {
+  .c9 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c8 {
+  .c9 {
     max-width: initial;
   }
 }
@@ -5035,79 +5065,79 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c16 {
+  .c18 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c16 {
+  .c18 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c16 {
+  .c18 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c18 {
+  .c20 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c18 {
+  .c20 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c18 {
+  .c20 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c18 {
+  .c20 {
     grid-column: 1 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c21 {
+  .c23 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c21 {
+  .c23 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c21 {
+  .c23 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c21 {
+  .c23 {
     grid-column: 1 / span 10;
   }
 }
 
 @media (max-width:80rem) {
-  .c17 {
+  .c19 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c17 {
+  .c19 {
     grid-template-columns: repeat(12,1fr);
   }
 }
@@ -5133,54 +5163,40 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c13 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c13 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c13 {
     padding-top: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c11 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c11 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c12 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -5195,27 +5211,41 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c24 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c24 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c22 {
+  .c24 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c22 {
+  .c24 {
     padding: 0.5rem 0 0;
   }
 }
@@ -5257,6 +5287,18 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
   }
 }
 
+@media (min-width:63rem) {
+  .c8 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c10 {
+    padding-bottom: 1.5rem;
+  }
+}
+
 <main
     class="c0"
     role="main"
@@ -5282,7 +5324,7 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
             allowfullscreen=""
             class="c5"
             scrolling="no"
-            src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
             title="Media player"
           />
         </div>
@@ -5293,32 +5335,32 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
     >
       <strong
         aria-hidden="true"
-        class="c7"
+        class="c7 c8"
       >
         Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
       </strong>
     </div>
     <div
-      class="c8"
+      class="c9 c10"
     >
       <time
-        class="c9"
+        class="c11"
         datetime="2019-09-13"
       >
         13 September 2019
       </time>
       <time
-        class="c9"
+        class="c11"
         datetime="2019-11-20"
       >
         New Informate 20 November 2019
       </time>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         <b>
           This is an introduction in bold. & &lt; &gt;
@@ -5326,10 +5368,10 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <h2
-        class="c11"
+        class="c13"
         id="This-is-a-heading-<->"
         tabindex="-1"
       >
@@ -5337,10 +5379,10 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </h2>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <h2
-        class="c11"
+        class="c13"
         id="This-is-a-subheading-<->"
         tabindex="-1"
       >
@@ -5348,10 +5390,10 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </h2>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <h2
-        class="c11"
+        class="c13"
         id="This-is-a-crosshead-<->"
         tabindex="-1"
       >
@@ -5359,77 +5401,92 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </h2>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Bulleted list:
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <ul
-        class="c12"
+        class="c14"
         dir="ltr"
         role="list"
       >
         <li
-          class="c13"
-          role="listitem"
-        >
-          afrique/23248423
-        </li>
-        <li
-          class="c13"
-          role="listitem"
-        >
-          afrique/23248423
-        </li>
-        <li
-          class="c13"
-          role="listitem"
-        >
-          afrique/23248423
-        </li>
-        <li
-          class="c13"
+          class="c15"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c16"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            &lt;Media Asset Page&gt;
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            &lt;Media Asset Page&gt;
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            &lt;Media Asset Page&gt;
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c13"
+          class="c15"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c16"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c13"
+          class="c15"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c16"
             href="https://bbc.com/pidgin"
           >
             this is the link text
@@ -5438,68 +5495,83 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </ul>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Numbered list:
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <ul
-        class="c12"
+        class="c14"
         dir="ltr"
         role="list"
       >
         <li
-          class="c13"
-          role="listitem"
-        >
-          afrique/23248423
-        </li>
-        <li
-          class="c13"
-          role="listitem"
-        >
-          afrique/23248423
-        </li>
-        <li
-          class="c13"
-          role="listitem"
-        >
-          afrique/23248423
-        </li>
-        <li
-          class="c13"
+          class="c15"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c16"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            &lt;Media Asset Page&gt;
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            &lt;Media Asset Page&gt;
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            &lt;Media Asset Page&gt;
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c13"
+          class="c15"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c16"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c13"
+          class="c15"
           role="listitem"
         >
           <a
-            class="c14"
+            class="c16"
             href="https://bbc.com/pidgin"
           >
             this is the link text
@@ -5508,10 +5580,10 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </ul>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Lorem ipsum dolor sit amet, 
         <b>
@@ -5523,13 +5595,13 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
         </b>
         ex ea commodo consequat. Duis aute irure dolor in reprehenderit
         <i
-          class="c15"
+          class="c17"
         >
            in voluptate velit esse cillum 
         </i>
         dolore "eu fugiat nulla" pariatur. 
         <a
-          class="c14"
+          class="c16"
           href="https://bbc.com/pidgin"
         >
           Excepteur
@@ -5538,86 +5610,86 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Testing special characters: !"£$%^&*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Table:
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Social media embed:
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Quote box:
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Correspondent quote box:
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Fact box:
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         ­
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         Lorem ipsum
         <a
-          class="c14"
+          class="c16"
           href="https://bbc.com/pidgin"
         >
            dolor sit amet
@@ -5626,26 +5698,26 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </p>
     </div>
     <div
-      class="c16"
+      class="c18"
     >
       <figure
         class="c3"
       >
         <div
-          class="c17"
+          class="c19"
         >
           <div
-            class="c18"
+            class="c20"
           >
             <div
-              class="c19"
+              class="c21"
             >
               <div
                 class="lazyload-placeholder"
               />
               <noscript />
               <p
-                class="c20"
+                class="c22"
                 role="text"
               >
                 <span
@@ -5662,10 +5734,10 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
             </div>
           </div>
           <div
-            class="c21"
+            class="c23"
           >
             <figcaption
-              class="c22"
+              class="c24"
             >
               <span
                 class="c1"
@@ -5681,26 +5753,26 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </figure>
     </div>
     <div
-      class="c16"
+      class="c18"
     >
       <figure
         class="c3"
       >
         <div
-          class="c17"
+          class="c19"
         >
           <div
-            class="c18"
+            class="c20"
           >
             <div
-              class="c19"
+              class="c21"
             >
               <div
                 class="lazyload-placeholder"
               />
               <noscript />
               <p
-                class="c20"
+                class="c22"
                 role="text"
               >
                 <span
@@ -5717,10 +5789,10 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
             </div>
           </div>
           <div
-            class="c21"
+            class="c23"
           >
             <figcaption
-              class="c22"
+              class="c24"
             >
               <span
                 class="c1"
@@ -5736,33 +5808,33 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </figure>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <ul
-        class="c12"
+        class="c14"
         dir="ltr"
         role="list"
       >
         <li
-          class="c13"
+          class="c15"
           role="listitem"
         >
           sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
-          class="c13"
+          class="c15"
           role="listitem"
         >
           sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
-          class="c13"
+          class="c15"
           role="listitem"
         >
           sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
-          class="c13"
+          class="c15"
           role="listitem"
         >
           v3 draft
@@ -5770,19 +5842,19 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
       </ul>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         This is transmission info 
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c10"
+        class="c12"
       >
         This is the footer 
       </p>
@@ -6639,6 +6711,1051 @@ exports[`CpsAssetPageMain MAP should render component 1`] = `
 </DocumentFragment>
 `;
 
+exports[`CpsAssetPageMain should match snapshot for PGL 1`] = `
+<html
+  dir="ltr"
+  lang="pcm"
+>
+  <head>
+    <title>
+      PGL - Blood pressure drugs dey work better - BBC News Ìgbò
+    </title>
+    <link
+      href="https://www.test.bbc.com/pidgin/sport-23252855"
+      rel="canonical"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/pidgin/sport-23252855"
+      hreflang="ig"
+      rel="alternate"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/pidgin/sport-23252855.amp"
+      rel="amphtml"
+    />
+    <link
+      href="http://localhost:7080/igbo/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="BBC News Ìgbò"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News Ìgbò"
+      name="application-name"
+    />
+    <meta
+      content="This is a test asset used in Simorgh, please do not edit it without asking."
+      name="description"
+    />
+    <meta
+      content="100004154058350"
+      name="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      name="fb:app_id"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="This is a test asset used in Simorgh, please do not edit it without asking."
+      name="og:description"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"
+      name="og:image"
+    />
+    <meta
+      content="BBC News Ìgbò"
+      name="og:image:alt"
+    />
+    <meta
+      content="ig"
+      name="og:locale"
+    />
+    <meta
+      content="BBC News Ìgbò"
+      name="og:site_name"
+    />
+    <meta
+      content="PGL - Blood pressure drugs dey work better - BBC News Ìgbò"
+      name="og:title"
+    />
+    <meta
+      content="website"
+      name="og:type"
+    />
+    <meta
+      content="https://www.test.bbc.com/pidgin/sport-23252855"
+      name="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:creator"
+    />
+    <meta
+      content="This is a test asset used in Simorgh, please do not edit it without asking."
+      name="twitter:description"
+    />
+    <meta
+      content="BBC News Ìgbò"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:site"
+    />
+    <meta
+      content="PGL - Blood pressure drugs dey work better - BBC News Ìgbò"
+      name="twitter:title"
+    />
+    <meta
+      content="2019-10-23T13:19:44.000Z"
+      name="article:published_time"
+    />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pidgin/sport-23252855","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/sport-23252855","name":"PGL - Blood pressure drugs dey work better"},"headline":"PGL - Blood pressure drugs dey work better","datePublished":"2019-10-23T13:19:44.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    .c0 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c3 {
+  grid-column: 1 / span 6;
+}
+
+.c9 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+.c2 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c5 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+.c5:last-child {
+  padding-bottom: 1rem;
+}
+
+.c6 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c8 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.c13 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c12 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  background-color: rgba(34,34,34,0.75);
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 0.25rem 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+}
+
+.c15 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6E6E73;
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+}
+
+.c15 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c15 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c15 i {
+  font-style: normal;
+}
+
+.c11 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c4 {
+  padding-bottom: 1rem;
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:25rem) {
+  .c3 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c3 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c3 {
+    max-width: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c7 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c7 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c7 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c10 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c10 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c10 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c10 {
+    grid-column: 1 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c14 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c14 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c14 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:80rem) {
+  .c14 {
+    grid-column: 1 / span 10;
+  }
+}
+
+@media (max-width:80rem) {
+  .c9 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c9 {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c15 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c15 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c15 {
+    padding: 0.5rem 0 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+<div>
+      <main
+        class="c0"
+        role="main"
+      >
+        <div
+          class="c1"
+        >
+          <h1
+            class="c2"
+            id="content"
+            tabindex="-1"
+          >
+            PGL - Blood pressure drugs dey work better
+          </h1>
+        </div>
+        <div
+          class="c3 c4"
+        >
+          <time
+            class="c5"
+            datetime="2019-10-23"
+          >
+            23 Ọktọba 2019
+          </time>
+          <time
+            class="c5"
+            datetime="2019-10-23"
+          >
+            Mgbe ikpeazụ e tinyere ya ozi ọhụrụ 
+            23 Ọktọba 2019
+          </time>
+        </div>
+        <div
+          class="c3"
+        >
+          <p
+            class="c6"
+          >
+            This is a test asset used in Simorgh, please do not edit it without asking.
+          </p>
+        </div>
+        <div
+          class="c7"
+        >
+          <figure
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <div
+                class="c10"
+              >
+                <div
+                  class="c11"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                  <noscript />
+                  <p
+                    class="c12"
+                    role="text"
+                  >
+                    <span
+                      class="c13"
+                    >
+                      Ebe foto si 
+                    </span>
+                    <span
+                      lang="en-GB"
+                    >
+                      Someone
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="c14"
+              >
+                <figcaption
+                  class="c15"
+                >
+                  <span
+                    class="c13"
+                  >
+                    Nkọwa foto 
+                  </span>
+                  <p>
+                    Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div
+          class="c7"
+        >
+          <figure
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <div
+                class="c10"
+              >
+                <div
+                  class="c11"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                  <noscript />
+                  <p
+                    class="c12"
+                    role="text"
+                  >
+                    <span
+                      class="c13"
+                    >
+                      Ebe foto si 
+                    </span>
+                    <span
+                      lang="en-GB"
+                    >
+                      Stuart C. Wilson
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="c14"
+              >
+                <figcaption
+                  class="c15"
+                >
+                  <span
+                    class="c13"
+                  >
+                    Nkọwa foto 
+                  </span>
+                  <p>
+                    Holy and Phil at NTAs holding an award
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div
+          class="c7"
+        >
+          <figure
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <div
+                class="c10"
+              >
+                <div
+                  class="c11"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                  <noscript />
+                  <p
+                    class="c12"
+                    role="text"
+                  >
+                    <span
+                      class="c13"
+                    >
+                      Ebe foto si 
+                    </span>
+                    <span
+                      lang="en-GB"
+                    >
+                      Joe Maher
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="c14"
+              >
+                <figcaption
+                  class="c15"
+                >
+                  <span
+                    class="c13"
+                  >
+                    Nkọwa foto 
+                  </span>
+                  <p>
+                    Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div
+          class="c7"
+        >
+          <figure
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <div
+                class="c10"
+              >
+                <div
+                  class="c11"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                  <noscript />
+                  <p
+                    class="c12"
+                    role="text"
+                  >
+                    <span
+                      class="c13"
+                    >
+                      Ebe foto si 
+                    </span>
+                    <span
+                      lang="en-GB"
+                    >
+                      Joe Maher
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="c14"
+              >
+                <figcaption
+                  class="c15"
+                >
+                  <span
+                    class="c13"
+                  >
+                    Nkọwa foto 
+                  </span>
+                  <p>
+                    Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div
+          class="c7"
+        >
+          <figure
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <div
+                class="c10"
+              >
+                <div
+                  class="c11"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                  <noscript />
+                  <p
+                    class="c12"
+                    role="text"
+                  >
+                    <span
+                      class="c13"
+                    >
+                      Ebe foto si 
+                    </span>
+                    <span
+                      lang="en-GB"
+                    >
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="c14"
+              >
+                <figcaption
+                  class="c15"
+                >
+                  <span
+                    class="c13"
+                  >
+                    Nkọwa foto 
+                  </span>
+                  <p>
+                    Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div
+          class="c7"
+        >
+          <figure
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <div
+                class="c10"
+              >
+                <div
+                  class="c11"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                  <noscript />
+                  <p
+                    class="c12"
+                    role="text"
+                  >
+                    <span
+                      class="c13"
+                    >
+                      Ebe foto si 
+                    </span>
+                    <span
+                      lang="en-GB"
+                    >
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="c14"
+              >
+                <figcaption
+                  class="c15"
+                >
+                  <span
+                    class="c13"
+                  >
+                    Nkọwa foto 
+                  </span>
+                  <p>
+                    Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div
+          class="c7"
+        >
+          <figure
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <div
+                class="c10"
+              >
+                <div
+                  class="c11"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                  <noscript />
+                  <p
+                    class="c12"
+                    role="text"
+                  >
+                    <span
+                      class="c13"
+                    >
+                      Ebe foto si 
+                    </span>
+                    <span
+                      lang="en-GB"
+                    >
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="c14"
+              >
+                <figcaption
+                  class="c15"
+                >
+                  <span
+                    class="c13"
+                  >
+                    Nkọwa foto 
+                  </span>
+                  <p>
+                    Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
+`;
+
 exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 .c0 {
   margin: 0 auto;
@@ -6655,7 +7772,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   grid-column-gap: 1rem;
 }
 
-.c23 {
+.c24 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6666,7 +7783,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   padding: 1.5rem 0;
 }
 
-.c17 {
+.c18 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -6690,7 +7807,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   outline: none;
 }
 
-.c14 {
+.c15 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -6701,11 +7818,11 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c14:last-child {
+.c15:last-child {
   padding-bottom: 1rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6716,34 +7833,35 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   margin: 0;
 }
 
-.c16 {
+.c17 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c16:visited {
+.c17:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c16:focus,
-.c16:hover {
+.c17:focus,
+.c17:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c18 {
+.c19 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: 0;
   list-style-type: none;
 }
 
-.c18 > li::before {
+.c19 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
@@ -6751,7 +7869,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   margin-left: -2rem;
 }
 
-.c19 {
+.c20 {
   margin-bottom: 1rem;
 }
 
@@ -6834,21 +7952,21 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   transition: visibility 0.2s linear;
 }
 
-.c21 {
+.c22 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c20 {
+.c21 {
   margin-top: 1rem;
 }
 
-.c20 figure {
+.c21 figure {
   padding-bottom: 0;
 }
 
-.c28 {
+.c29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6858,7 +7976,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.c29 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6877,7 +7995,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   align-items: baseline;
 }
 
-.c30 {
+.c31 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6897,47 +8015,51 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
   align-items: center;
 }
 
-.c26 {
+.c27 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c25 {
+.c26 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c27 {
+.c28 {
   margin: 0;
   padding: 0;
 }
 
-.c32 {
+.c33 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c32:first-child {
+.c33:first-child {
   padding-top: 0;
 }
 
-.c32:last-child {
+.c33:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c31 {
+.c32 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c24 {
+.c25 {
   margin-bottom: 1rem;
   z-index: 0;
 }
 
-.c22 {
+.c14 {
+  padding-bottom: 1rem;
+}
+
+.c23 {
   position: absolute;
   top: 0;
   left: 0;
@@ -7135,21 +8257,21 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
+  .c24 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c24 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c24 {
     padding-top: 2rem;
   }
 }
@@ -7175,42 +8297,42 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
+  .c15 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c15 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
+  .c16 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c16 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
+  .c19 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c19 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -7243,44 +8365,44 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c20 {
+  .c21 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c20 {
+  .c21 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c20 {
+  .c21 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c20 {
+  .c21 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c20 {
+  .c21 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c20 {
+  .c21 {
     padding-top: 0.5rem;
     margin-top: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c30 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -7289,39 +8411,39 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c30 {
+  .c31 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c26 {
+  .c27 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c26 {
+  .c27 {
     position: absolute;
     left: 0;
     right: 0;
@@ -7330,68 +8452,74 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c26 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c33 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c32 {
+  .c33 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c32:first-child {
+  .c33:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c32:first-child {
+  .c33:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c24 {
+  .c25 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c24 {
+  .c25 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c24 {
+  .c25 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c24 {
+  .c25 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c24 {
+  .c25 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c24 {
+  .c25 {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c14 {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -7614,7 +8742,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://embed-host.bbc.com/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"}
+      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"}
     </script>
   </head>
   <body>
@@ -7693,19 +8821,12 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           </figure>
         </div>
         <div
-          class="c13"
+          class="c13 c14"
         >
           <time
-            class="c14"
+            class="c15"
             datetime="2019-10-23"
           >
-            23 Ọktọba 2019
-          </time>
-          <time
-            class="c14"
-            datetime="2019-10-23"
-          >
-            Mgbe ikpeazụ e tinyere ya ozi ọhụrụ 
             23 Ọktọba 2019
           </time>
         </div>
@@ -7713,13 +8834,13 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <p
-            class="c15"
+            class="c16"
           >
             <b>
                This is introduction text, it should be bold by default, but also support 
             </b>
             <a
-              class="c16"
+              class="c17"
               href="https://bbc.com/pidgin/23248703"
             >
               inline links
@@ -7733,17 +8854,17 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <p
-            class="c15"
+            class="c16"
           >
             <i
-              class="c17"
+              class="c18"
             >
               <b>
                 This is a subheadline! that has 
               </b>
             </i>
             <a
-              class="c16"
+              class="c17"
               href="https://bbc.com/pidgin/23248703"
             >
               a link
@@ -7754,18 +8875,18 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <ul
-            class="c18"
+            class="c19"
             dir="ltr"
             role="list"
           >
             <li
-              class="c19"
+              class="c20"
               role="listitem"
             >
               This is a unordered list
             </li>
             <li
-              class="c19"
+              class="c20"
               role="listitem"
             >
               It can have 
@@ -7775,22 +8896,22 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                in it
             </li>
             <li
-              class="c19"
+              class="c20"
               role="listitem"
             >
               <a
-                class="c16"
+                class="c17"
                 href="https://bbc.com/pidgin/23248703"
               >
                 It can also have links
               </a>
             </li>
             <li
-              class="c19"
+              class="c20"
               role="listitem"
             >
               <i
-                class="c17"
+                class="c18"
               >
                 It can even have italic text in it!
               </i>
@@ -7801,11 +8922,11 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <p
-            class="c15"
+            class="c16"
           >
             Feta the big cheese macaroni cheese. 
             <a
-              class="c16"
+              class="c17"
               href="https://bbc.com/pidgin/23248703"
             >
               Caerphilly danish fontina
@@ -7863,7 +8984,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <p
-            class="c15"
+            class="c16"
           >
             <b>
               Start of localised text
@@ -7874,7 +8995,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <p
-            class="c15"
+            class="c16"
           >
             Minista nọ n'isi ụlọọrụ ahụ bụ Hadi Sirika sị na ya agaghị atụrụ ndị mmadụ asị na ya gaghaị arụcha ya bụ ọdọụgbọelụ na Disemba dịka ha kwuburu mana ya ga-eburu isi ụlọọrụ ya ga-gwunye n'Enugu ịhụ na ha rụchara n'Apreelụ.
           </p>
@@ -7883,7 +9004,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <p
-            class="c15"
+            class="c16"
           >
             <b>
               End of localised text
@@ -7894,11 +9015,11 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <p
-            class="c15"
+            class="c16"
           >
             Rubber cheese macaroni 
             <i
-              class="c17"
+              class="c18"
             >
               cheese cottage cheese
             </i>
@@ -7909,18 +9030,18 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <ul
-            class="c18"
+            class="c19"
             dir="ltr"
             role="list"
           >
             <li
-              class="c19"
+              class="c20"
               role="listitem"
             >
               This is a ordered list
             </li>
             <li
-              class="c19"
+              class="c20"
               role="listitem"
             >
               It can have 
@@ -7930,22 +9051,22 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
                in it
             </li>
             <li
-              class="c19"
+              class="c20"
               role="listitem"
             >
               <a
-                class="c16"
+                class="c17"
                 href="https://bbc.com/pidgin/23248703"
               >
                 It can also have links
               </a>
             </li>
             <li
-              class="c19"
+              class="c20"
               role="listitem"
             >
               <i
-                class="c17"
+                class="c18"
               >
                 It can even have italic text in it!
               </i>
@@ -7956,26 +9077,26 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <p
-            class="c15"
+            class="c16"
           >
             Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
           </p>
         </div>
         <div
-          class="c20"
+          class="c21"
         >
           <figure
             class="c4"
           >
             <div
-              class="c21"
+              class="c22"
             >
               <iframe
                 allow="autoplay; fullscreen"
                 allowfullscreen=""
-                class="c22"
+                class="c23"
                 scrolling="no"
-                src="https://embed-host.bbc.com/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"
+                src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/ig"
                 title="Media player"
               />
             </div>
@@ -7985,7 +9106,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <h2
-            class="c23"
+            class="c24"
             id="This-is-a-heading"
             tabindex="-1"
           >
@@ -7996,7 +9117,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <h2
-            class="c23"
+            class="c24"
             id="This-is-a-subheading"
             tabindex="-1"
           >
@@ -8007,7 +9128,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <p
-            class="c15"
+            class="c16"
           >
             Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
           </p>
@@ -8016,7 +9137,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <h2
-            class="c23"
+            class="c24"
             id="This-is-a-crosshead"
             tabindex="-1"
           >
@@ -8027,7 +9148,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <p
-            class="c15"
+            class="c16"
           >
             Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
           </p>
@@ -8036,11 +9157,11 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <p
-            class="c15"
+            class="c16"
           >
             <a
               aria-label="This is an external link to google!, Site na mpụta"
-              class="c16"
+              class="c17"
               href="https://www.google.com/"
             >
               This is an external link to google!
@@ -8051,7 +9172,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
           class="c13"
         >
           <p
-            class="c15"
+            class="c16"
           >
             Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
           </p>
@@ -8063,25 +9184,25 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
         role="complementary"
       >
         <div
-          class="c24"
+          class="c25"
         >
           <div
-            class="c25"
+            class="c26"
           >
             <div
-              class="c26"
+              class="c27"
             />
             <h2
-              class="c27"
+              class="c28"
             >
               <div
-                class="c28"
+                class="c29"
               >
                 <span
-                  class="c29"
+                  class="c30"
                 >
                   <span
-                    class="c30"
+                    class="c31"
                     dir="ltr"
                     id="related-content-heading"
                   >
@@ -8092,11 +9213,11 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
             </h2>
           </div>
           <ul
-            class="c31"
+            class="c32"
             role="list"
           >
             <li
-              class="c32"
+              class="c33"
               role="listitem"
             />
           </ul>
@@ -8116,11 +9237,11 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   padding-bottom: 2rem;
 }
 
-.c8 {
+.c9 {
   grid-column: 1 / span 6;
 }
 
-.c16 {
+.c17 {
   display: grid;
   grid-column-gap: 1rem;
 }
@@ -8137,7 +9258,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   padding: 2rem 0;
 }
 
-.c10 {
+.c11 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -8148,7 +9269,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   padding: 1.5rem 0;
 }
 
-.c14 {
+.c15 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -8156,7 +9277,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   font-weight: inherit;
 }
 
-.c9 {
+.c10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -8167,34 +9288,35 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   margin: 0;
 }
 
-.c13 {
+.c14 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c13:visited {
+.c14:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c13:focus,
-.c13:hover {
+.c14:focus,
+.c14:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c11 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: 0;
   list-style-type: none;
 }
 
-.c11 > li::before {
+.c12 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
@@ -8202,7 +9324,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   margin-left: -2rem;
 }
 
-.c12 {
+.c13 {
   margin-bottom: 1rem;
 }
 
@@ -8224,7 +9346,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   margin: 0;
 }
 
-.c19 {
+.c20 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -8238,7 +9360,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   left: 0;
 }
 
-.c21 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -8249,20 +9371,20 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   width: 100%;
 }
 
-.c21 > p {
+.c22 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c21 > p:last-child {
+.c22 > p:last-child {
   padding-bottom: 0;
 }
 
-.c21 i {
+.c22 i {
   font-style: normal;
 }
 
-.c18 {
+.c19 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -8287,6 +9409,10 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 
 .c2 figure {
   padding-bottom: 0;
+}
+
+.c8 {
+  padding: 2rem 0;
 }
 
 .c5 {
@@ -8340,40 +9466,40 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 @media (max-width:25rem) {
-  .c8 {
+  .c9 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c8 {
+  .c9 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c9 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c8 {
+  .c9 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c8 {
+  .c9 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c8 {
+  .c9 {
     max-width: initial;
   }
 }
@@ -8409,79 +9535,79 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 @media (max-width:63rem) {
-  .c15 {
+  .c16 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c15 {
+  .c16 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c15 {
+  .c16 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c17 {
+  .c18 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c17 {
+  .c18 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c17 {
+  .c18 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c17 {
+  .c18 {
     grid-column: 1 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c20 {
+  .c21 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c20 {
+  .c21 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c20 {
+  .c21 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c20 {
+  .c21 {
     grid-column: 1 / span 10;
   }
 }
 
 @media (max-width:80rem) {
-  .c16 {
+  .c17 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c16 {
+  .c17 {
     grid-template-columns: repeat(12,1fr);
   }
 }
@@ -8507,75 +9633,75 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c11 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c11 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c11 {
     padding-top: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c10 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c21 {
+  .c22 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c21 {
+  .c22 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c21 {
+  .c22 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c21 {
+  .c22 {
     padding: 0.5rem 0 0;
   }
 }
@@ -8617,6 +9743,12 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
   }
 }
 
+@media (min-width:63rem) {
+  .c8 {
+    padding: 2.5rem 0;
+  }
+}
+
 <main
     class="c0"
     role="main"
@@ -8642,7 +9774,7 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
             allowfullscreen=""
             class="c5"
             scrolling="no"
-            src="https://embed-host.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
             title="Media player"
           />
         </div>
@@ -8653,16 +9785,16 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
     >
       <strong
         aria-hidden="true"
-        class="c7"
+        class="c7 c8"
       >
         Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
       </strong>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         <b>
           This is an introduction in bold. & &lt; &gt;
@@ -8670,10 +9802,10 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <h2
-        class="c10"
+        class="c11"
         id="This-is-a-heading-<->"
         tabindex="-1"
       >
@@ -8681,10 +9813,10 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </h2>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <h2
-        class="c10"
+        class="c11"
         id="This-is-a-subheading-<->"
         tabindex="-1"
       >
@@ -8692,10 +9824,10 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </h2>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <h2
-        class="c10"
+        class="c11"
         id="This-is-a-crosshead-<->"
         tabindex="-1"
       >
@@ -8703,77 +9835,92 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </h2>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         Bulleted list:
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <ul
-        class="c11"
+        class="c12"
         dir="ltr"
         role="list"
       >
         <li
-          class="c12"
-          role="listitem"
-        >
-          afrique/23248423
-        </li>
-        <li
-          class="c12"
-          role="listitem"
-        >
-          afrique/23248423
-        </li>
-        <li
-          class="c12"
-          role="listitem"
-        >
-          afrique/23248423
-        </li>
-        <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c14"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            &lt;Media Asset Page&gt;
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            &lt;Media Asset Page&gt;
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            &lt;Media Asset Page&gt;
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c14"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c14"
             href="https://bbc.com/pidgin"
           >
             this is the link text
@@ -8782,68 +9929,83 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </ul>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         Numbered list:
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <ul
-        class="c11"
+        class="c12"
         dir="ltr"
         role="list"
       >
         <li
-          class="c12"
-          role="listitem"
-        >
-          afrique/23248423
-        </li>
-        <li
-          class="c12"
-          role="listitem"
-        >
-          afrique/23248423
-        </li>
-        <li
-          class="c12"
-          role="listitem"
-        >
-          afrique/23248423
-        </li>
-        <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c14"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            &lt;Media Asset Page&gt;
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            &lt;Media Asset Page&gt;
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="http://www.bbc.com/afrique/23248423"
+          >
+            &lt;Media Asset Page&gt;
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c14"
             href="https://bbc.com/pidgin"
           >
             this is the link text
           </a>
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           <a
-            class="c13"
+            class="c14"
             href="https://bbc.com/pidgin"
           >
             this is the link text
@@ -8852,10 +10014,10 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </ul>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         Lorem ipsum dolor sit amet, 
         <b>
@@ -8867,13 +10029,13 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
         </b>
         ex ea commodo consequat. Duis aute irure dolor in reprehenderit
         <i
-          class="c14"
+          class="c15"
         >
            in voluptate velit esse cillum 
         </i>
         dolore "eu fugiat nulla" pariatur. 
         <a
-          class="c13"
+          class="c14"
           href="https://bbc.com/pidgin"
         >
           Excepteur
@@ -8882,86 +10044,86 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         Testing special characters: !"£$%^&*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         Table:
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         Social media embed:
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         Quote box:
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         Correspondent quote box:
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         Fact box:
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         ­
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         Lorem ipsum
         <a
-          class="c13"
+          class="c14"
           href="https://bbc.com/pidgin"
         >
            dolor sit amet
@@ -8970,26 +10132,26 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </p>
     </div>
     <div
-      class="c15"
+      class="c16"
     >
       <figure
         class="c3"
       >
         <div
-          class="c16"
+          class="c17"
         >
           <div
-            class="c17"
+            class="c18"
           >
             <div
-              class="c18"
+              class="c19"
             >
               <div
                 class="lazyload-placeholder"
               />
               <noscript />
               <p
-                class="c19"
+                class="c20"
                 role="text"
               >
                 <span
@@ -9006,10 +10168,10 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
             </div>
           </div>
           <div
-            class="c20"
+            class="c21"
           >
             <figcaption
-              class="c21"
+              class="c22"
             >
               <span
                 class="c1"
@@ -9025,26 +10187,26 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </figure>
     </div>
     <div
-      class="c15"
+      class="c16"
     >
       <figure
         class="c3"
       >
         <div
-          class="c16"
+          class="c17"
         >
           <div
-            class="c17"
+            class="c18"
           >
             <div
-              class="c18"
+              class="c19"
             >
               <div
                 class="lazyload-placeholder"
               />
               <noscript />
               <p
-                class="c19"
+                class="c20"
                 role="text"
               >
                 <span
@@ -9061,10 +10223,10 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
             </div>
           </div>
           <div
-            class="c20"
+            class="c21"
           >
             <figcaption
-              class="c21"
+              class="c22"
             >
               <span
                 class="c1"
@@ -9080,33 +10242,33 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </figure>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <ul
-        class="c11"
+        class="c12"
         dir="ltr"
         role="list"
       >
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           sunt in culpa qui officia deserunt mollit anim id est laborum
         </li>
         <li
-          class="c12"
+          class="c13"
           role="listitem"
         >
           v3 draft
@@ -9114,19 +10276,19 @@ exports[`CpsAssetPageMain should not show the pop-out timestamp when allowDateSt
       </ul>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         This is transmission info 
       </p>
     </div>
     <div
-      class="c8"
+      class="c9"
     >
       <p
-        class="c9"
+        class="c10"
       >
         This is the footer 
       </p>
