@@ -102,6 +102,10 @@ describe('CpsAssetPageMain', () => {
       ));
     });
 
+    it('should match snapshot', async () => {
+      await matchSnapshotAsync(createAssetPage({ pageData }, 'pidgin'));
+    });
+
     it('should render component', () => {
       expect(asFragment()).toMatchSnapshot();
     });

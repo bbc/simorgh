@@ -151,8 +151,8 @@ export const service = {
           subtitle:
             'சமீபத்திய சர்வதேச மற்றும் இந்திய கண்டுபிடிப்புகள் குறித்த தொழில்நுட்ப நிகழ்ச்சி',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'கேட்க',
+        watch: 'பார்க்க',
         liveLabel: 'நேரலை',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
