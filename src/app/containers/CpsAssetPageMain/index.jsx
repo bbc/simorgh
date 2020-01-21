@@ -8,7 +8,7 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { GhostGrid } from '#lib/styledGrid';
-import MetadataContainer from '../Metadata';
+import CpsMetadata from '../CpsMetadata';
 import LinkedData from '../LinkedData';
 import headings from '../Headings';
 import Timestamp from '../ArticleTimestamp';
@@ -35,6 +35,8 @@ const CpsAssetPageMain = ({ pageData }) => {
     ['relatedContent', 'groups', 0, 'promos'],
     pageData,
   );
+  const indexImage = path(['promo', 'indexImage', 'href'], pageData);
+  const indexImageAltText = path(['promo', 'indexImage', 'altText'], pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
 
@@ -55,15 +57,15 @@ const CpsAssetPageMain = ({ pageData }) => {
 
   return (
     <>
-      <MetadataContainer
+      <CpsMetadata
         title={title}
-        lang={metadata.language}
+        language={metadata.language}
         description={summary}
-        openGraphType="website"
-      >
-        <meta name="article:published_time" content={firstPublished} />
-        <meta name="article:modified_time" content={lastPublished} />
-      </MetadataContainer>
+        firstPublished={firstPublished}
+        lastPublished={lastPublished}
+        indexImage={indexImage}
+        indexImageAltText={indexImageAltText}
+      />
       <LinkedData
         type="Article"
         seoTitle={title}
