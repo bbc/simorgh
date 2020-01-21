@@ -460,24 +460,23 @@ it('should render the default service image as open graph image', async () => {
 it('should render the open graph image if provided', async () => {
   await renderMapMetadataToDocument();
 
-  const ogImage = document
-    .querySelector('head > meta[name="og:image"]')
-    .getAttribute('content');
-  const ogImageAltText = document
-    .querySelector('head > meta[name="og:image:alt"]')
-    .getAttribute('content');
-  const twitterImage = document
-    .querySelector('head > meta[name="og:image"]')
-    .getAttribute('content');
-  const twitterImageAltText = document
-    .querySelector('head > meta[name="og:image:alt"]')
-    .getAttribute('content');
-  const actual = [ogImage, ogImageAltText, twitterImage, twitterImageAltText];
+  const actual = Array.from(
+    document.querySelectorAll('head > meta[name*="image"]'),
+  ).map(tag => ({
+    name: tag.getAttribute('name'),
+    content: tag.getAttribute('content'),
+  }));
   const expected = [
-    'http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg',
-    'connectionAltText',
-    'http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg',
-    'connectionAltText',
+    {
+      name: 'og:image',
+      content: 'http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg',
+    },
+    { name: 'og:image:alt', content: 'connectionAltText' },
+    { name: 'twitter:image:alt', content: 'connectionAltText' },
+    {
+      name: 'twitter:image:src',
+      content: 'http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg',
+    },
   ];
   expect(actual).toEqual(expected);
 });
