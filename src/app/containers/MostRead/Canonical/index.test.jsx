@@ -67,7 +67,9 @@ describe('MostReadContainerCanonical', () => {
       });
 
       expect(container.querySelector('h2').textContent).toEqual(mostReadHeader);
-      expect(container.querySelectorAll('li').length).toEqual(10);
+      expect(container.querySelectorAll('li').length).toEqual(
+        config.mostRead.numberOfItems,
+      );
       expect(container.querySelectorAll('time').length).toEqual(0);
     });
 
@@ -91,7 +93,9 @@ describe('MostReadContainerCanonical', () => {
       });
 
       expect(container.querySelector('h2').textContent).toEqual(mostReadHeader);
-      expect(container.querySelectorAll('li').length).toEqual(10);
+      expect(container.querySelectorAll('li').length).toEqual(
+        config.mostRead.numberOfItems,
+      );
       expect(container.querySelectorAll('time')[0].textContent).toEqual(
         expectedLastUpdated,
       );
