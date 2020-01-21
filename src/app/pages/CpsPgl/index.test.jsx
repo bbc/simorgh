@@ -2,11 +2,15 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import CpsAssetPage from '.';
 import pidginPageData from '#data/pidgin/cpsAssets/sport-23252855';
+import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import preprocessor from '#lib/utilities/preprocessor';
 import { cpsAssetPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
 
@@ -107,5 +111,28 @@ describe('CPS PGL Page', () => {
       const page = createAssetPage({ pageData }, 'pidgin');
       await matchSnapshotAsync(page);
     });
+  });
+  it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
+    const pageData = await preprocessor(
+      igboPageData,
+      cpsAssetPreprocessorRules,
+    );
+    const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
+    expect(getByText('23 Ọktọba 2019')).toBeInTheDocument();
+  });
+
+  it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
+    const pageDataWithHiddenTimestamp = assocPath(
+      ['metadata', 'options', 'allowDateStamp'],
+      false,
+      await preprocessor(igboPageData, cpsAssetPreprocessorRules),
+    );
+
+    const { asFragment } = render(
+      createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'pidgin'),
+    );
+
+    expect(document.querySelector('main time')).toBeNull();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

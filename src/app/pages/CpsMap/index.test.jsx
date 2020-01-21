@@ -245,4 +245,8 @@ describe('CPS MAP Page', () => {
   it('should render lastPublished timestamp for Pidgin', () => {
     expect(getByText('New Informate 20 November 2019')).toBeInTheDocument();
   });
+  it('has a single "main" element, and a single "complementary" element (a11y)', async () => {
+    expect(document.querySelectorAll(`[role='main']`).length).toBe(1);
+    expect(document.querySelectorAll(`[role='complementary']`).length).toBe(1);
+  });
 });
