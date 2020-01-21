@@ -160,6 +160,7 @@ export const service = {
     mostRead: {
       header: 'সর্বাধিক পঠিত',
       lastUpdated: 'সর্বশেষ আপডেট হয়েছে: ',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

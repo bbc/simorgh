@@ -145,10 +145,6 @@ const baseServiceConfig = {
     },
   },
   brandSVG,
-  mostRead: {
-    header: 'Најчитаније',
-    lastUpdated: 'Последњи пут ажурирано: ',
-  },
   footer: {
     trustProjectLink: {
       href: 'https://www.bbc.com/news/help-41670342',
@@ -221,6 +217,11 @@ export const service = {
       },
     ],
     navigationSection: 'Odeljci',
+    mostRead: {
+      header: 'Најчитаније',
+      lastUpdated: 'Последњи пут ажурирано: ',
+      numberOfItems: 5,
+    },
   },
   cyr: {
     ...baseServiceConfig,
@@ -255,6 +256,11 @@ export const service = {
       },
     ],
     navigationSection: 'Одељци',
+    mostRead: {
+      header: 'Најчитаније',
+      lastUpdated: 'Последњи пут ажурирано: ',
+      numberOfItems: 5,
+    },
   },
 };
 

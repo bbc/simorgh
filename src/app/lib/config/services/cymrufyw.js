@@ -159,6 +159,7 @@ export const service = {
     mostRead: {
       header: 'Mwyaf poblogaidd',
       lastUpdated: 'Diweddariad diwethaf: ',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

@@ -146,10 +146,6 @@ const baseServiceConfig = {
     },
   },
   brandSVG,
-  mostRead: {
-    header: 'Most read',
-    lastUpdated: 'Last updated: ',
-  },
   footer: {
     trustProjectLink: {
       href: 'https://www.bbc.com/news/help-41670342',
@@ -235,6 +231,11 @@ export const service = {
       },
     ],
     navigationSection: '分类',
+    mostRead: {
+      header: 'Most read',
+      lastUpdated: 'Last updated: ',
+      numberOfItems: 5,
+    },
   },
   trad: {
     ...baseServiceConfig,
@@ -287,6 +288,11 @@ export const service = {
       },
     ],
     navigationSection: '分類',
+    mostRead: {
+      header: 'Most read',
+      lastUpdated: 'Last updated: ',
+      numberOfItems: 5,
+    },
   },
 };
 

@@ -147,6 +147,7 @@ export const service = {
     mostRead: {
       header: 'ਸਭ ਤੋਂ ਵੱਧ ਪੜ੍ਹਿਆ ਗਿਆ',
       lastUpdated: 'ਆਖ਼ਰੀ ਅਪਡੇਟ: ',
+      numberOfItems: 5,
     },
     navigation: [
       {
