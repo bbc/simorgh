@@ -1,19 +1,16 @@
 import React, { useContext } from 'react';
+import { string } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '../Toggle/useToggle';
 import Canonical from './Canonical';
 
-const getLocalMostReadEndpoint = (service, variant) => {
-  const localhostURL = 'http://localhost:7080';
-  const localServiceURL = `${localhostURL}/${service}`;
+const getMostReadEndpoint = ({ service, variant }) =>
+  variant
+    ? `/${service}/most_read/${variant}.json`
+    : `/${service}/most_read.json`;
 
-  return variant
-    ? `${localServiceURL}/most_read/${variant}.json`
-    : `${localServiceURL}/most_read.json`;
-};
-
-const MostReadContainer = () => {
+const MostReadContainer = ({ endpointOverride }) => {
   const { variant } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
 
@@ -22,7 +19,18 @@ const MostReadContainer = () => {
     return null;
   }
 
-  return <Canonical endpoint={getLocalMostReadEndpoint(service, variant)} />;
+  const endpoint =
+    endpointOverride || getMostReadEndpoint({ service, variant });
+
+  return <Canonical endpoint={endpoint} />;
+};
+
+MostReadContainer.propTypes = {
+  endpointOverride: string,
+};
+
+MostReadContainer.defaultProps = {
+  endpointOverride: null,
 };
 
 export default MostReadContainer;
