@@ -24,10 +24,10 @@ const RadioScheduleData = ({ endpoint }) => {
 
   return (
     <>
-      <p>Radio schedules:</p>
+      <p>Radio Schedules</p>
       {schedule.map(
         ({
-          version,
+          broadcast,
           transmissionTimeStart,
           transmissionTimeEnd,
           episode: {
@@ -35,11 +35,11 @@ const RadioScheduleData = ({ endpoint }) => {
             synopses: { short },
           },
         }) => (
-          <ul key={version.pid}>
-            <li>PresentationTitle: {presentationTitle}</li>
-            <li>Synopses: {short}</li>
-            <li>TransmissionTimeStart: {transmissionTimeStart}</li>
-            <li>TransmissionTimeEnd: {transmissionTimeEnd}</li>
+          <ul key={broadcast.pid}>
+            <li>{presentationTitle}</li>
+            <li>{short}</li>
+            <li>{transmissionTimeStart}</li>
+            <li>{transmissionTimeEnd}</li>
           </ul>
         ),
       )}

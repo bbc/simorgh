@@ -4,26 +4,23 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import RadioScheduleData from './RadioScheduleData';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-
-// Currently, only these services have radio schedule data
-const validServices = [
-  'arabic',
-  'gahuza',
-  'hausa',
-  'korean',
-  'pashto',
-  'persian',
-  'somali',
-  'urdu',
-];
+import { RequestContextProvider } from '#contexts/RequestContext';
+import validServices from './RadioScheduleData/validServices';
 
 const staticRadioScheduleURL = service =>
   `/data/${service}/bbc_${service}_radio/radioschedule.json`;
 
 const renderRadioScheduleContainer = service => (
-  <ServiceContextProvider service={service}>
-    <RadioScheduleData endpoint={staticRadioScheduleURL(service)} />
-  </ServiceContextProvider>
+  <RequestContextProvider
+    isAmp={false}
+    pageType="frontPage"
+    service={service}
+    pathname={`/${service}`}
+  >
+    <ServiceContextProvider service={service}>
+      <RadioScheduleData endpoint={staticRadioScheduleURL(service)} />
+    </ServiceContextProvider>
+  </RequestContextProvider>
 );
 
 const stories = storiesOf('Containers|RadioSchedule', module)
