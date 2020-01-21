@@ -8,6 +8,6 @@ describe('CpsMetadata utils', () => {
     const expected =
       'http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg';
 
-    expected(actual).toEqual(expected);
+    expect(actual).toEqual(expected);
   });
 });
