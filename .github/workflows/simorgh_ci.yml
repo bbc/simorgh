@@ -24,3 +24,18 @@ jobs:
         npm test
       env:
         CI: true
+
+  cypress-run:
+    runs-on: ubuntu-latest
+    # let's make sure our tests pass on Chrome browser
+    name: E2E on Chrome
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Run Cypress
+        uses: cypress-io/github-action@v1
+        with:
+          start: npm run start
+          browser: chrome
+          headless: true
+        env: CYPRESS_SKIP_EU=true
