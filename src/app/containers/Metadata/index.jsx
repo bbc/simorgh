@@ -33,6 +33,8 @@ const MetadataContainer = ({
   lang,
   description,
   openGraphType,
+  openGraphImage,
+  openGraphImageAltText,
   children,
 }) => {
   const {
@@ -88,6 +90,9 @@ const MetadataContainer = ({
 
   const pageTitle = `${title} - ${brandName}`;
 
+  const image = openGraphImage || defaultImage;
+  const imageAltText = openGraphImageAltText || defaultImageAltText;
+
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -117,8 +122,8 @@ const MetadataContainer = ({
         content={getIconAssetUrl(service, '144x144')}
       />
       <meta name="og:description" content={description} />
-      <meta name="og:image" content={defaultImage} />
-      <meta name="og:image:alt" content={defaultImageAltText} />
+      <meta name="og:image" content={image} />
+      <meta name="og:image:alt" content={imageAltText} />
       <meta name="og:locale" content={locale} />
       <meta name="og:site_name" content={brandName} />
       <meta name="og:title" content={pageTitle} />
@@ -127,8 +132,8 @@ const MetadataContainer = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterCreator} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image:alt" content={defaultImageAltText} />
-      <meta name="twitter:image:src" content={defaultImage} />
+      <meta name="twitter:image:alt" content={imageAltText} />
+      <meta name="twitter:image:src" content={image} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={pageTitle} />
       <link rel="apple-touch-icon" href={appleTouchIcon} />
@@ -148,10 +153,14 @@ MetadataContainer.propTypes = {
   lang: string.isRequired,
   description: string.isRequired,
   openGraphType: string.isRequired,
+  openGraphImage: string,
+  openGraphImageAltText: string,
   children: node,
 };
 
 MetadataContainer.defaultProps = {
+  openGraphImage: null,
+  openGraphImageAltText: null,
   children: null,
 };
 
