@@ -960,11 +960,11 @@ exports[`CpsAssetPageMain MAP should match snapshot 1`] = `
       name="og:description"
     />
     <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
+      content="http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg"
       name="og:image"
     />
     <meta
-      content="BBC News Pidgin"
+      content="connectionAltText"
       name="og:image:alt"
     />
     <meta
@@ -980,7 +980,7 @@ exports[`CpsAssetPageMain MAP should match snapshot 1`] = `
       name="og:title"
     />
     <meta
-      content="website"
+      content="article"
       name="og:type"
     />
     <meta
@@ -1000,11 +1000,11 @@ exports[`CpsAssetPageMain MAP should match snapshot 1`] = `
       name="twitter:description"
     />
     <meta
-      content="BBC News Pidgin"
+      content="connectionAltText"
       name="twitter:image:alt"
     />
     <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
+      content="http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg"
       name="twitter:image:src"
     />
     <meta
@@ -1014,6 +1014,10 @@ exports[`CpsAssetPageMain MAP should match snapshot 1`] = `
     <meta
       content="Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"
       name="twitter:title"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
     />
     <meta
       content="2019-09-13T15:31:44.000Z"
@@ -6982,7 +6986,7 @@ exports[`CpsAssetPageMain should match snapshot for PGL 1`] = `
       name="og:title"
     />
     <meta
-      content="website"
+      content="article"
       name="og:type"
     />
     <meta
@@ -7016,6 +7020,10 @@ exports[`CpsAssetPageMain should match snapshot for PGL 1`] = `
     <meta
       content="PGL - Blood pressure drugs dey work better - BBC News Ìgbò"
       name="twitter:title"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
     />
     <meta
       content="2019-10-23T13:19:44.000Z"
@@ -8797,7 +8805,7 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
       name="og:title"
     />
     <meta
-      content="website"
+      content="article"
       name="og:type"
     />
     <meta
@@ -8831,6 +8839,10 @@ exports[`CpsAssetPageMain should match snapshot for STY 1`] = `
     <meta
       content="STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk? - BBC News Ìgbò"
       name="twitter:title"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
     />
     <meta
       content="2019-10-23T12:18:59.000Z"
