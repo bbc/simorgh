@@ -125,7 +125,7 @@ When adding a new page type there are several parts required.
 #### 3) Create a new container for the page type
 
 - Similar to [this](https://github.com/bbc/simorgh/blob/latest/src/app/pages/FrontPage/index.jsx) we require a top level container that will act as the entry point for the page routing. Each page type should have its own container.
-  - The container should have a render a `main` element with a [`flex-grow: 1;` css declaration](https://github.com/bbc/simorgh/blob/8e19f820ec0de4abd18a4d13e62dd5d843a064c0/src/app/containers/ArticleMain/index.jsx#L39), this is to ensure it grows to fill the space betwen the visual header and footer, the [root div](https://github.com/bbc/simorgh/blob/8e19f820ec0de4abd18a4d13e62dd5d843a064c0/src/server/Document/component.jsx#L31) using a [flexbox 'sticky footer' implementation](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers#Alternate_method).
+  - The container should render a `main` element with a [`flex-grow: 1;` css declaration](https://github.com/bbc/simorgh/blob/8e19f820ec0de4abd18a4d13e62dd5d843a064c0/src/app/containers/ArticleMain/index.jsx#L39), this is to ensure it grows to fill the space betwen the visual header and footer, the [root div](https://github.com/bbc/simorgh/blob/8e19f820ec0de4abd18a4d13e62dd5d843a064c0/src/server/Document/component.jsx#L31) using a [flexbox 'sticky footer' implementation](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers#Alternate_method).
 
 #### 4) Add new pre-processing rules if required.
 
