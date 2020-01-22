@@ -1,3 +1,4 @@
+const fs = require('fs');
 const allServices = require('../cypress/support/config/allServices');
 
 const launchDates = {
@@ -315,28 +316,33 @@ const generateLaunchDates = service => {
   return output.join(' - ');
 };
 
-console.log('<!--Please update the config in scripts/simorgh-pages.js -->');
-console.log(
-  '<!--This table can then be generated using the following command: `cd scripts && node simorgh-pages.js > ../docs/Simorgh-Pages.md` -->',
-);
-console.log(
-  '<!--Remember to commit and push the changes to both simorgh-pages.js and Simorgh-Pages.md -->',
-);
+const stream = fs.createWriteStream('../docs/Simorgh-Pages.md');
+stream.once('open', () => {
+  stream.write(
+    '<!--Please update the launchDates config in scripts/simorgh-pages.js -->\n',
+  );
+  stream.write(
+    '<!--This table can then be generated using the following command: `cd scripts && node simorgh-pages.js` -->\n',
+  );
+  stream.write(
+    '<!--Remember to commit and push the changes to both simorgh-pages.js and Simorgh-Pages.md -->\n',
+  );
 
-console.log(`| Service | Local | Test | Stage | Live | Launch Dates |`);
-console.log(`|---------|-------|------|-------|------|--------------|`);
+  stream.write(`| Service | Local | Test | Stage | Live | Launch Dates |\n`);
+  stream.write(`|---------|-------|------|-------|------|--------------|\n`);
 
-const localServices = allServices('local');
+  const localServices = allServices('local');
 
-Object.keys(localServices).forEach(service => {
-  const items = [
-    capitalizeFirstLetter(service),
-    generateLinks(service, 'local', 'http://localhost:7080'),
-    generateLinks(service, 'test', 'https://www.test.bbc.com'),
-    generateLinks(service, 'stage', 'https://www.stage.bbc.com'),
-    generateLinks(service, 'live', 'https://www.bbc.com'),
-    generateLaunchDates(service),
-  ];
+  Object.keys(localServices).forEach(service => {
+    const items = [
+      capitalizeFirstLetter(service),
+      generateLinks(service, 'local', 'http://localhost:7080'),
+      generateLinks(service, 'test', 'https://www.test.bbc.com'),
+      generateLinks(service, 'stage', 'https://www.stage.bbc.com'),
+      generateLinks(service, 'live', 'https://www.bbc.com'),
+      generateLaunchDates(service),
+    ];
 
-  console.log(`| ${items.join(' | ')} |`);
+    stream.write(`| ${items.join(' | ')} |\n`);
+  });
 });

@@ -1,5 +1,5 @@
-<!--Please update the config in scripts/simorgh-pages.js -->
-<!--This table can then be generated using the following command: `cd scripts && node simorgh-pages.js > ../docs/Simorgh-Pages.md` -->
+<!--Please update the launchDates config in scripts/simorgh-pages.js -->
+<!--This table can then be generated using the following command: `cd scripts && node simorgh-pages.js` -->
 <!--Remember to commit and push the changes to both simorgh-pages.js and Simorgh-Pages.md -->
 | Service | Local | Test | Stage | Live | Launch Dates |
 |---------|-------|------|-------|------|--------------|
