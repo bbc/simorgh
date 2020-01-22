@@ -18,14 +18,6 @@ jest.mock('../containers/ServiceWorker', () => () => (
 ));
 
 describe('defaultPageWrapper', () => {
-  window.matchMedia = jest.fn().mockImplementation(() => {
-    return {
-      matches: false,
-      addListener: jest.fn(),
-      removeListener: jest.fn(),
-    };
-  });
-
   const propsWithChildren = {
     children: <h2>Child element</h2>,
   };

@@ -7,15 +7,6 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import Navigation from './index';
 
 describe('Navigation Container', () => {
-  window.matchMedia = jest.fn().mockImplementation(query => {
-    return {
-      matches: false,
-      media: query,
-      addListener: jest.fn(),
-      removeListener: jest.fn(),
-    };
-  });
-
   shouldMatchSnapshot(
     'should correctly render amp navigation',
     <ServiceContextProvider service="news">

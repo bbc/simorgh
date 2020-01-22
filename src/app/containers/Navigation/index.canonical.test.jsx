@@ -23,15 +23,6 @@ const navigation = (
 );
 
 describe('Canonical Navigation', () => {
-  window.matchMedia = jest.fn().mockImplementation(query => {
-    return {
-      matches: true,
-      media: query,
-      addListener: jest.fn(),
-      removeListener: jest.fn(),
-    };
-  });
-
   describe('snapshots', () => {
     shouldMatchSnapshot(
       'should correctly render Canonical navigation',
