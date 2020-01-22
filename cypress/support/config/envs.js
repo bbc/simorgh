@@ -44,14 +44,14 @@ const config = {
     alwaysCheckForFallback: false,
   },
   heroku: {
-    baseUrl: `${process.env.PROTOCOL || 'http'}://${process.env.HOST_URL ||
-      'localhost'}.com`,
-    dataUrl: `${process.env.PROTOCOL || 'http'}://${process.env.HOST_URL ||
-      'localhost'}.com`,
-    assetUrl: `${process.env.PROTOCOL || 'http'}://${process.env.HOST_URL ||
-      'localhost'}.com`,
-    assetOrigin: `${process.env.PROTOCOL || 'http'}://${process.env.HOST_URL ||
-      'localhost'}.com`,
+    baseUrl: `${process.env.SIMORGH_PROTOCOL || 'http'}://${process.env
+      .SIMORGH_HOST_URL || 'localhost'}.com`,
+    dataUrl: `${process.env.SIMORGH_PROTOCOL || 'http'}://${process.env
+      .SIMORGH_HOST_URL || 'localhost'}.com`,
+    assetUrl: `${process.env.SIMORGH_PROTOCOL || 'http'}://${process.env
+      .SIMORGH_HOST_URL || 'localhost'}.com`,
+    assetOrigin: `${process.env.SIMORGH_PROTOCOL || 'http'}://${process.env
+      .SIMORGH_HOST_URL || 'localhost'}.com`,
     atiUrl: 'https://logws1363.ati-host.net?',
     chartbeatEnabled: false,
     avEmbedBaseUrl: 'https://polling.test.bbc.co.uk',

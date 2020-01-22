@@ -15,25 +15,34 @@ if (DOT_ENV_CONFIG.error) {
 
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
   const APP_ENV = process.env.APP_ENV || 'live';
-  const HOST_URL = process.env.HOST_URL || 'localhost';
-  const PROTOCOL = process.env.PROTOCOL || 'http';
+  const SIMORGH_HOST_URL = process.env.SIMORGH_HOST_URL || 'localhost';
+  const SIMORGH_PROTOCOL = process.env.SIMORGH_PROTOCOL || 'http';
+  const SIMORGH_PORT = process.env.SIMORGH_SERVER_PORT
+    ? `:${process.env.SIMORGH_SERVER_PORT}`
+    : '';
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
-  const prodPublicPath =
+  const publicPath =
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+
+  const localPublicPath = `${SIMORGH_PROTOCOL}://${SIMORGH_HOST_URL}${SIMORGH_PORT}`;
+
+  const prodPublicPath = process.env.SIMORGH_HOST_URL
+    ? localPublicPath
+    : publicPath;
 
   const clientConfig = {
     target: 'web', // compile for browser environment
     entry: START_DEV_SERVER
       ? [
-          `webpack-dev-server/client?${PROTOCOL}://${HOST_URL}:${webpackDevServerPort}`,
+          `webpack-dev-server/client?${SIMORGH_PROTOCOL}://${SIMORGH_HOST_URL}:${webpackDevServerPort}`,
           'webpack/hot/only-dev-server',
           './src/poly',
           './src/client',
         ]
       : ['./src/poly', './src/client'],
     devServer: {
-      host: HOST_URL,
+      host: SIMORGH_HOST_URL,
       port: webpackDevServerPort,
       historyApiFallback: true,
       hot: true,
@@ -54,7 +63,7 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         : 'static/js/[name].[chunkhash:8].js', // hash based on the contents of the file
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
-        ? `${PROTOCOL}://${HOST_URL}:${webpackDevServerPort}/`
+        ? `${SIMORGH_PROTOCOL}://${SIMORGH_HOST_URL}:${webpackDevServerPort}/`
         : prodPublicPath,
     },
     optimization: {

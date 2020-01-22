@@ -3,7 +3,8 @@ const getBaseUrl = origin => {
   let tld = '.com';
 
   if (
-    (process.env.HOST_URL && origin.includes(process.env.HOST_URL)) ||
+    (process.env.SIMORGH_HOST_URL &&
+      origin.includes(process.env.SIMORGH_HOST_URL)) ||
     origin.includes('localhost')
   ) {
     return origin;

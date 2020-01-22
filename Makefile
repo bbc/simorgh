@@ -30,7 +30,7 @@ buildCi:
 	export NODE_ENV=production && rm -rf build && npm run build:test && npm run build:live;
 
 herokuPush:
-	heroku container:push web --arg PROTOCOL=https,HOST_URL=alistair-simorgh-test.herokuapps.com,SERVER_PORT=80
+	heroku container:push web --arg SIMORGH_PROTOCOL=https,SIMORGH_HOST_URL=alistair-simorgh-test.herokuapp.com
 
 herokuRelease:
 	heroku container:release web
