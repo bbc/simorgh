@@ -2,7 +2,6 @@ import Cookie from 'js-cookie';
 import {
   getCookiePolicy,
   getPreferredVariant,
-  setPreferredVariantCookie,
   personalisationEnabled,
 } from '.';
 
@@ -45,21 +44,6 @@ describe('UserContext cookies', () => {
     it('should return cookie value from js-cookie', () => {
       Cookie.get.mockReturnValue('trad');
       expect(getPreferredVariant('zhongwen')).toEqual('trad');
-    });
-  });
-
-  describe('setPreferredVariant', () => {
-    Cookie.set = jest.fn();
-    it('should not set invalid service or variant', () => {
-      setPreferredVariantCookie('news', '');
-      expect(Cookie.set).not.toHaveBeenCalled();
-      setPreferredVariantCookie('');
-      expect(Cookie.set).not.toHaveBeenCalled();
-    });
-
-    it('should set preferred variant', () => {
-      setPreferredVariantCookie('serbian', 'lat');
-      expect(Cookie.set).toHaveBeenCalledWith('ckps_serbian', 'lat');
     });
   });
 

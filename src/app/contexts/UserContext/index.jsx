@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { node } from 'prop-types';
-import {
-  getCookiePolicy,
-  personalisationEnabled,
-  setPreferredVariantCookie,
-} from './cookies';
+import { getCookiePolicy, personalisationEnabled } from './cookies';
 import Chartbeat from './Chartbeat';
 
 export const UserContext = React.createContext({});
@@ -18,7 +14,6 @@ export const UserContextProvider = ({ children }) => {
     sendCanonicalChartbeatBeacon,
     updateCookiePolicy: () => setCookiePolicy(getCookiePolicy()),
     personalisationEnabled: personalisationEnabled(cookiePolicy),
-    setPreferredVariantCookie,
   };
 
   return (
