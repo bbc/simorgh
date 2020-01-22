@@ -1874,8 +1874,6 @@ const genServices = appEnv => ({
 const runOnlyService = Cypress.env('ONLY_SERVICE');
 const environment = serviceMapper(Cypress.env('APP_ENV'));
 
-console.log({ environment });
-
 if (
   runOnlyService &&
   Object.keys(genServices(environment)).includes(runOnlyService)
