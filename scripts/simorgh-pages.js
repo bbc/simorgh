@@ -1,4 +1,6 @@
-const services = {
+const services = require('../cypress/support/config/allServices');
+
+const delete_services = {
   afaanoromoo: {
     article: {
       local: 'c4g19kgl85ko',
@@ -1223,6 +1225,9 @@ console.log(
 
 console.log(`| Service | Local | Test | Stage | Live | Launch Dates |`);
 console.log(`|---------|-------|------|-------|------|--------------|`);
+
+const localServices = services('local');
+console.log(localServices);
 
 Object.keys(services).forEach(service => {
   const items = [
