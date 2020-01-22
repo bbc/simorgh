@@ -21,7 +21,7 @@ import ATIAnalytics from '../ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '../FauxHeadline';
 import visuallyHiddenHeadline from '../VisuallyHiddenHeadline';
-import { getFirstPublished } from '../ArticleMain/utils';
+import { getFirstPublished, getLastPublished } from '../ArticleMain/utils';
 
 const CpsAssetPageMain = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -36,6 +36,7 @@ const CpsAssetPageMain = ({ pageData }) => {
     pageData,
   );
   const firstPublished = getFirstPublished(pageData);
+  const lastPublished = getLastPublished(pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -52,6 +53,10 @@ const CpsAssetPageMain = ({ pageData }) => {
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };
 
+  const StyledGhostGrid = styled(GhostGrid)`
+    flex-grow: 1;
+  `;
+
   return (
     <>
       <MetadataContainer
@@ -61,6 +66,7 @@ const CpsAssetPageMain = ({ pageData }) => {
         openGraphType="website"
       >
         <meta name="article:published_time" content={firstPublished} />
+        <meta name="article:modified_time" content={lastPublished} />
       </MetadataContainer>
       <LinkedData
         type="Article"
@@ -68,11 +74,12 @@ const CpsAssetPageMain = ({ pageData }) => {
         headline={title}
         showAuthor
         datePublished={firstPublished}
+        dateModified={lastPublished}
       />
       <ATIAnalytics data={pageData} />
-      <GhostGrid as="main" role="main">
+      <StyledGhostGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </GhostGrid>
+      </StyledGhostGrid>
       <CpsRelatedContent content={relatedContent} />
     </>
   );
