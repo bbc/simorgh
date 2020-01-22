@@ -23,6 +23,9 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
         `${config[service].pageTypes.photoGalleryPage.path}.json`,
       ).then(({ body }) => {
         const { lastPublished, firstPublished } = body.metadata;
+        const timeDifferenceMinutes =
+          (lastPublished - firstPublished) / 1000 / 60;
+        const minutesTolerance = 1;
         cy.get('time')
           .eq(0)
           .should('exist')
@@ -30,8 +33,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
           .should('have.attr', 'datetime')
           .should('not.be.empty');
 
-        // Persian has been excluded as prefix doesn't show when it should
-        if (lastPublished !== firstPublished && service !== 'persian') {
+        if (timeDifferenceMinutes > minutesTolerance) {
           cy.get('time')
             .eq(1)
             .should(
