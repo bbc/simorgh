@@ -942,7 +942,7 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv)
             ? undefined
             : '/persian/magazine-49281981',
-        smoke: false,
+        smoke: true,
       },
     },
   },
@@ -976,7 +976,7 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv)
             ? undefined
             : '/pidgin/sport-23252855',
-        smoke: false,
+        smoke: true,
       },
     },
   },
