@@ -14,7 +14,7 @@ if (DOT_ENV_CONFIG.error) {
 }
 
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
-  const APP_ENV = process.env.APP_ENV || 'live';
+  const APP_ENV = process.env.SIMORGH_APP_ENV || 'live';
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
   const prodPublicPath =
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +

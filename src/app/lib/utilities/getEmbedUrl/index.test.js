@@ -3,14 +3,9 @@ import getEmbedUrl from '.';
 const mediaId = 'foo/bar';
 const liveOverrideParam = '?renderer_env=live';
 const testOverrideParam = '?renderer_env=test';
-const applicationEnv = process.env.SIMORGH_APP_ENV;
 
-const setEnvironment = env => {
-  process.env.SIMORGH_APP_ENV = env;
-};
-
-const resetEnvironment = () => {
-  process.env.SIMORGH_APP_ENV = applicationEnv;
+const setEnvironment = environment => {
+  process.env.SIMORGH_APP_ENV = environment;
 };
 
 const testCases = [
@@ -19,7 +14,6 @@ const testCases = [
     expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
     environment: 'test',
     before: setEnvironment,
-    after: resetEnvironment,
     embedObject: {
       mediaId,
       type: 'articles',
@@ -31,7 +25,6 @@ const testCases = [
     expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
     environment: 'test',
     before: setEnvironment,
-    after: resetEnvironment,
     embedObject: {
       isAmp: true,
       mediaId,
@@ -44,7 +37,6 @@ const testCases = [
     expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
     environment: 'test',
     before: setEnvironment,
-    after: resetEnvironment,
     embedObject: {
       mediaId,
       type: 'articles',
@@ -56,7 +48,6 @@ const testCases = [
     expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
     environment: 'test',
     before: setEnvironment,
-    after: resetEnvironment,
     embedObject: {
       isAmp: true,
       mediaId,
@@ -69,7 +60,6 @@ const testCases = [
     expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
     environment: 'test',
     before: setEnvironment,
-    after: resetEnvironment,
     embedObject: {
       mediaId,
       type: 'articles',
@@ -81,7 +71,6 @@ const testCases = [
     expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
     environment: 'test',
     before: setEnvironment,
-    after: resetEnvironment,
     embedObject: {
       isAmp: true,
       mediaId,
@@ -94,7 +83,6 @@ const testCases = [
     expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
     environment: 'live',
     before: setEnvironment,
-    after: resetEnvironment,
     embedObject: {
       mediaId,
       type: 'articles',
@@ -106,7 +94,6 @@ const testCases = [
     expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
     environment: 'live',
     before: setEnvironment,
-    after: resetEnvironment,
     embedObject: {
       isAmp: true,
       mediaId,
@@ -119,7 +106,6 @@ const testCases = [
     expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
     environment: 'live',
     before: setEnvironment,
-    after: resetEnvironment,
     embedObject: {
       mediaId,
       type: 'articles',
@@ -131,7 +117,6 @@ const testCases = [
     expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
     environment: 'live',
     before: setEnvironment,
-    after: resetEnvironment,
     embedObject: {
       isAmp: true,
       mediaId,
@@ -144,7 +129,6 @@ const testCases = [
     expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
     environment: 'live',
     before: setEnvironment,
-    after: resetEnvironment,
     embedObject: {
       mediaId,
       type: 'articles',
@@ -156,7 +140,6 @@ const testCases = [
     expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
     environment: 'live',
     before: setEnvironment,
-    after: resetEnvironment,
     embedObject: {
       isAmp: true,
       mediaId,
@@ -168,12 +151,14 @@ const testCases = [
 
 describe('Media Player: Embed URL', () => {
   testCases.forEach(
-    ({ description, expected, before, after, environment, embedObject }) => {
+    ({ description, expected, before, environment, embedObject }) => {
       it(description, () => {
         before(environment);
         expect(getEmbedUrl(embedObject)).toEqual(expected);
-        after();
       });
     },
   );
+  afterAll(() => {
+    delete process.env.SIMORGH_APP_ENV;
+  });
 });
