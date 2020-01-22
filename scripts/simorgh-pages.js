@@ -332,9 +332,9 @@ stream.once('open', () => {
   stream.write(`| Service | Local | Test | Stage | Live | Launch Dates |\n`);
   stream.write(`|---------|-------|------|-------|------|--------------|\n`);
 
-  const localServices = allServices('local');
+  const services = allServices('');
 
-  Object.keys(localServices).forEach(service => {
+  Object.keys(services).forEach(service => {
     console.log(`Generating information for ${service}`);
     const items = [
       capitalizeFirstLetter(service),
