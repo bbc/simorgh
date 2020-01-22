@@ -35,8 +35,6 @@ const getConsentBannerUtilities = ({ logger } = {}) => {
   });
 };
 
-window.document.domain = 'bbc.com';
-
 describe('Consent Banner Utilities', () => {
   afterEach(() => {
     jest.clearAllMocks();
