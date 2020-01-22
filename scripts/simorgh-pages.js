@@ -316,7 +316,8 @@ const generateLaunchDates = service => {
   return output.join(' - ');
 };
 
-const stream = fs.createWriteStream('../docs/Simorgh-Pages.md');
+const SimorghPages = '../docs/Simorgh-Pages.md';
+const stream = fs.createWriteStream(SimorghPages);
 stream.once('open', () => {
   stream.write(
     '<!--Please update the launchDates config in scripts/simorgh-pages.js -->\n',
@@ -334,6 +335,7 @@ stream.once('open', () => {
   const localServices = allServices('local');
 
   Object.keys(localServices).forEach(service => {
+    console.log(`Generating information for ${service}`);
     const items = [
       capitalizeFirstLetter(service),
       generateLinks(service, 'local', 'http://localhost:7080'),
@@ -345,4 +347,5 @@ stream.once('open', () => {
 
     stream.write(`| ${items.join(' | ')} |\n`);
   });
+  console.log(`Completed writing file ${SimorghPages}`);
 });
