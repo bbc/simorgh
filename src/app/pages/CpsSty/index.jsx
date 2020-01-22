@@ -22,7 +22,10 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
-import { getFirstPublished } from '#containers/ArticleMain/utils';
+import {
+  getFirstPublished,
+  getLastPublished,
+} from '#containers/ArticleMain/utils';
 
 // Page Handlers
 import withContexts from '#containers/PageHandlers/withContexts';
@@ -44,6 +47,7 @@ const CpsStyContainer = ({ pageData }) => {
     pageData,
   );
   const firstPublished = getFirstPublished(pageData);
+  const lastPublished = getLastPublished(pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -73,6 +77,7 @@ const CpsStyContainer = ({ pageData }) => {
         openGraphType="website"
       >
         <meta name="article:published_time" content={firstPublished} />
+        <meta name="article:modified_time" content={lastPublished} />
       </MetadataContainer>
       <LinkedData
         type="Article"
@@ -80,6 +85,7 @@ const CpsStyContainer = ({ pageData }) => {
         headline={title}
         showAuthor
         datePublished={firstPublished}
+        dateModified={lastPublished}
       />
       <ATIAnalytics data={pageData} />
       <StyledGhostGrid as="main" role="main">
