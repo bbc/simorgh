@@ -1,4 +1,4 @@
-import genServices from './allServices';
+import allServices from './allServices';
 
 const serviceMapper = appEnv => {
   if (appEnv === 'stage') {
@@ -14,11 +14,11 @@ const environment = serviceMapper(Cypress.env('APP_ENV'));
 
 if (
   runOnlyService &&
-  Object.keys(genServices(environment)).includes(runOnlyService)
+  Object.keys(allServices(environment)).includes(runOnlyService)
 ) {
   module.exports = {
-    [runOnlyService]: genServices(environment)[runOnlyService],
+    [runOnlyService]: allServices(environment)[runOnlyService],
   };
 } else {
-  module.exports = genServices(environment);
+  module.exports = allServices(environment);
 }

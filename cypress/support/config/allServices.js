@@ -1,5 +1,5 @@
 const isLive = appEnv => appEnv === 'live';
-const isTest = appEnv => appEnv === 'test';
+const isTest = appEnv => appEnv === 'test' || appEnv === 'stage';
 const isLocal = appEnv => appEnv === 'local';
 
 const allServices = appEnv => ({
