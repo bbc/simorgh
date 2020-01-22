@@ -170,6 +170,9 @@ export const testsThatFollowSmokeTestConfig = ({
           cy.request(`${config[service].pageTypes.articles.path}.json`).then(
             ({ body }) => {
               const { lastPublished, firstPublished } = body.metadata;
+              const timeDifferenceMinutes =
+                (lastPublished - firstPublished) / 1000 / 60;
+              const minutesTolerance = 1;
               cy.get('time')
                 .eq(0)
                 .should('exist')
@@ -177,7 +180,7 @@ export const testsThatFollowSmokeTestConfig = ({
                 .should('have.attr', 'datetime')
                 .should('not.be.empty');
 
-              if (lastPublished !== firstPublished) {
+              if (timeDifferenceMinutes > minutesTolerance) {
                 cy.get('time')
                   .eq(1)
                   .should(
