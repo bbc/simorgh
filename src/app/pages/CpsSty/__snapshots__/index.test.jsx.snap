@@ -2,7 +2,7 @@
 
 exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp is false 1`] = `
 <DocumentFragment>
-  .c23 {
+  .c24 {
   margin: 0 auto;
   background: #FDFDFD;
   padding-bottom: 2rem;
@@ -17,7 +17,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   grid-column-gap: 1rem;
 }
 
-.c22 {
+.c23 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -196,7 +196,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   padding-bottom: 0;
 }
 
-.c28 {
+.c29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -206,7 +206,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   flex-direction: column;
 }
 
-.c29 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -225,7 +225,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   align-items: baseline;
 }
 
-.c30 {
+.c31 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -245,42 +245,42 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   align-items: center;
 }
 
-.c26 {
+.c27 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c25 {
+.c26 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c27 {
+.c28 {
   margin: 0;
   padding: 0;
 }
 
-.c32 {
+.c33 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c32:first-child {
+.c33:first-child {
   padding-top: 0;
 }
 
-.c32:last-child {
+.c33:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c31 {
+.c32 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c24 {
+.c25 {
   margin-bottom: 1rem;
   z-index: 0;
 }
@@ -296,49 +296,54 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 .c21 {
+  left: 0;
+  overflow: hidden;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+}
+
+.c22 {
   border: 0;
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 @media (max-width:37.4375rem) {
-  .c23 {
+  .c24 {
     grid-column-gap: 0.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c24 {
     grid-column-gap: 1rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c23 {
+  .c24 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c23 {
+  .c24 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c23 {
+  .c24 {
     grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
     max-width: 46.4rem;
   }
 }
 
 @supports (display:grid) {
-  .c23 {
+  .c24 {
     display: grid;
     max-width: initial;
     margin: initial;
@@ -493,21 +498,21 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c23 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c23 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c23 {
     padding-top: 2rem;
   }
 }
@@ -624,7 +629,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c30 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -633,39 +638,39 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c30 {
+  .c31 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c26 {
+  .c27 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c26 {
+  .c27 {
     position: absolute;
     left: 0;
     right: 0;
@@ -674,67 +679,67 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c26 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c33 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c32 {
+  .c33 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c32:first-child {
+  .c33:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c32:first-child {
+  .c33:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c24 {
+  .c25 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c24 {
+  .c25 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c24 {
+  .c25 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c24 {
+  .c25 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c24 {
+  .c25 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c24 {
+  .c25 {
     margin-bottom: 1.5rem;
   }
 }
@@ -1128,14 +1133,18 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                   <div
                     class="c20"
                   >
-                    <iframe
-                      allow="autoplay; fullscreen"
-                      allowfullscreen=""
+                    <div
                       class="c21"
-                      scrolling="no"
-                      src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
-                      title="Media player"
-                    />
+                    >
+                      <iframe
+                        allow="autoplay; fullscreen"
+                        allowfullscreen=""
+                        class="c22"
+                        scrolling="no"
+                        src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
+                        title="Media player"
+                      />
+                    </div>
                   </div>
                 </figure>
               </div>
@@ -1143,7 +1152,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                 class="c13"
               >
                 <h2
-                  class="c22"
+                  class="c23"
                   id="This-is-a-heading"
                   tabindex="-1"
                 >
@@ -1154,7 +1163,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                 class="c13"
               >
                 <h2
-                  class="c22"
+                  class="c23"
                   id="This-is-a-subheading"
                   tabindex="-1"
                 >
@@ -1174,7 +1183,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                 class="c13"
               >
                 <h2
-                  class="c22"
+                  class="c23"
                   id="This-is-a-crosshead"
                   tabindex="-1"
                 >
@@ -1217,29 +1226,29 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
             </main>
             <aside
               aria-labelledby="related-content-heading"
-              class="c23"
+              class="c24"
               role="complementary"
             >
               <div
-                class="c24"
+                class="c25"
               >
                 <div
-                  class="c25"
+                  class="c26"
                 >
                   <div
-                    class="c26"
+                    class="c27"
                   />
                   <h2
-                    class="c27"
+                    class="c28"
                   >
                     <div
-                      class="c28"
+                      class="c29"
                     >
                       <span
-                        class="c29"
+                        class="c30"
                       >
                         <span
-                          class="c30"
+                          class="c31"
                           dir="ltr"
                           id="related-content-heading"
                         >
@@ -1250,11 +1259,11 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                   </h2>
                 </div>
                 <ul
-                  class="c31"
+                  class="c32"
                   role="list"
                 >
                   <li
-                    class="c32"
+                    class="c33"
                     role="listitem"
                   />
                 </ul>
@@ -1269,7 +1278,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 `;
 
 exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
-.c26 {
+.c27 {
   margin: 0 auto;
   background: #FDFDFD;
   padding-bottom: 2rem;
@@ -1288,7 +1297,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   grid-column: 1 / span 6;
 }
 
-.c25 {
+.c26 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1482,7 +1491,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 0;
 }
 
-.c31 {
+.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1492,7 +1501,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.c32 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1511,7 +1520,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   align-items: baseline;
 }
 
-.c33 {
+.c34 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1531,42 +1540,42 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   align-items: center;
 }
 
-.c29 {
+.c30 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c28 {
+.c29 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c30 {
+.c31 {
   margin: 0;
   padding: 0;
 }
 
-.c35 {
+.c36 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c35:first-child {
+.c36:first-child {
   padding-top: 0;
 }
 
-.c35:last-child {
+.c36:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c34 {
+.c35 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c27 {
+.c28 {
   margin-bottom: 1rem;
   z-index: 0;
 }
@@ -1586,49 +1595,54 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c24 {
+  left: 0;
+  overflow: hidden;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+}
+
+.c25 {
   border: 0;
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 @media (max-width:37.4375rem) {
-  .c26 {
+  .c27 {
     grid-column-gap: 0.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c26 {
+  .c27 {
     grid-column-gap: 1rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c26 {
+  .c27 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c26 {
+  .c27 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c26 {
+  .c27 {
     grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
     max-width: 46.4rem;
   }
 }
 
 @supports (display:grid) {
-  .c26 {
+  .c27 {
     display: grid;
     max-width: initial;
     margin: initial;
@@ -1822,21 +1836,21 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c25 {
+  .c26 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c26 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c26 {
     padding-top: 2rem;
   }
 }
@@ -1967,7 +1981,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c33 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1976,39 +1990,39 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c33 {
+  .c34 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c34 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c34 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c34 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c29 {
+  .c30 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c30 {
     position: absolute;
     left: 0;
     right: 0;
@@ -2017,67 +2031,67 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c28 {
+  .c29 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c35 {
+  .c36 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c35 {
+  .c36 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c35:first-child {
+  .c36:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c35:first-child {
+  .c36:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c27 {
+  .c28 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c27 {
+  .c28 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c27 {
+  .c28 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c27 {
+  .c28 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c27 {
+  .c28 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c28 {
     margin-bottom: 1.5rem;
   }
 }
@@ -2706,14 +2720,18 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                       <div
                         class="c23"
                       >
-                        <iframe
-                          allow="autoplay; fullscreen"
-                          allowfullscreen=""
+                        <div
                           class="c24"
-                          scrolling="no"
-                          src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
-                          title="Media player"
-                        />
+                        >
+                          <iframe
+                            allow="autoplay; fullscreen"
+                            allowfullscreen=""
+                            class="c25"
+                            scrolling="no"
+                            src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                            title="Media player"
+                          />
+                        </div>
                       </div>
                     </figure>
                   </div>
@@ -2721,7 +2739,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     class="c16"
                   >
                     <h2
-                      class="c25"
+                      class="c26"
                       id="This-is-a-heading"
                       tabindex="-1"
                     >
@@ -2741,7 +2759,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     class="c16"
                   >
                     <h2
-                      class="c25"
+                      class="c26"
                       id="This-is-a-crosshead"
                       tabindex="-1"
                     >
@@ -2784,29 +2802,29 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                 </main>
                 <aside
                   aria-labelledby="related-content-heading"
-                  class="c26"
+                  class="c27"
                   role="complementary"
                 >
                   <div
-                    class="c27"
+                    class="c28"
                   >
                     <div
-                      class="c28"
+                      class="c29"
                     >
                       <div
-                        class="c29"
+                        class="c30"
                       />
                       <h2
-                        class="c30"
+                        class="c31"
                       >
                         <div
-                          class="c31"
+                          class="c32"
                         >
                           <span
-                            class="c32"
+                            class="c33"
                           >
                             <span
-                              class="c33"
+                              class="c34"
                               dir="ltr"
                               id="related-content-heading"
                             >
@@ -2817,11 +2835,11 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                       </h2>
                     </div>
                     <ul
-                      class="c34"
+                      class="c35"
                       role="list"
                     >
                       <li
-                        class="c35"
+                        class="c36"
                         role="listitem"
                       />
                     </ul>

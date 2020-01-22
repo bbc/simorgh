@@ -38,14 +38,18 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                   <div
                     class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK"
                   >
-                    <iframe
-                      allow="autoplay; fullscreen"
-                      allowfullscreen=""
-                      class="StyledIframe-fuo2ed-0 jQWQE"
-                      scrolling="no"
-                      src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
-                      title="Медиа плейер"
-                    />
+                    <div
+                      class="CanonicalWrapper-fuo2ed-0 fbSEgM"
+                    >
+                      <iframe
+                        allow="autoplay; fullscreen"
+                        allowfullscreen=""
+                        class="StyledIframe-fuo2ed-1 bUEDMC"
+                        scrolling="no"
+                        src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
+                        title="Медиа плейер"
+                      />
+                    </div>
                   </div>
                 </figure>
               </div>
@@ -398,14 +402,18 @@ exports[`CPS MAP Page should render component 1`] = `
                   <div
                     class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK"
                   >
-                    <iframe
-                      allow="autoplay; fullscreen"
-                      allowfullscreen=""
-                      class="StyledIframe-fuo2ed-0 jQWQE"
-                      scrolling="no"
-                      src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
-                      title="Media player"
-                    />
+                    <div
+                      class="CanonicalWrapper-fuo2ed-0 fbSEgM"
+                    >
+                      <iframe
+                        allow="autoplay; fullscreen"
+                        allowfullscreen=""
+                        class="StyledIframe-fuo2ed-1 bUEDMC"
+                        scrolling="no"
+                        src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
+                        title="Media player"
+                      />
+                    </div>
                   </div>
                 </figure>
               </div>
