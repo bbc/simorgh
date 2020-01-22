@@ -14,10 +14,28 @@ const PRIVACY_COOKIE_PREVIOUS_VALUES = ['0', '1'];
 
 const onClient = typeof window !== 'undefined';
 
+const removeWWWFromDomain = domain => {
+  const [firstPart, ...rest] = domain.split('.');
+
+  if (firstPart === 'www') {
+    return rest.join('.');
+  }
+  return domain;
+};
+
+const isLocalhost = domain => domain === 'localhost';
+
+const formatDomain = domain => {
+  if (isLocalhost(domain)) {
+    return domain;
+  }
+  return `.${removeWWWFromDomain(domain)}`;
+};
+
 const setCookie = (name, value) =>
   Cookie.set(name, value, {
     expires: COOKIE_EXPIRY,
-    domain: `.${document.domain}`,
+    domain: formatDomain(document.domain),
   });
 
 const setPolicyCookie = (value, logger) => {
