@@ -39,3 +39,4 @@ jobs:
           browser: chrome
           headless: true
         env: CYPRESS_SKIP_EU=true
+        
