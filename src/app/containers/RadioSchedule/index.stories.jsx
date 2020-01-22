@@ -2,10 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import RadioScheduleData from './RadioScheduleData';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import validServices from './RadioScheduleData/validServices';
+import RadioScheduleContainer from '.';
+import validServices from './helpers/validServices';
 
 const staticRadioScheduleURL = service =>
   `/data/${service}/bbc_${service}_radio/radioschedule.json`;
@@ -18,7 +18,7 @@ const renderRadioScheduleContainer = service => (
     pathname={`/${service}`}
   >
     <ServiceContextProvider service={service}>
-      <RadioScheduleData endpoint={staticRadioScheduleURL(service)} />
+      <RadioScheduleContainer endpoint={staticRadioScheduleURL(service)} />
     </ServiceContextProvider>
   </RequestContextProvider>
 );
