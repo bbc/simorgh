@@ -57,11 +57,11 @@ DocumentComponent.mockImplementation(() => <html lang="en-GB" />);
 
 describe('Render Document', () => {
   beforeEach(() => {
-    process.env.APP_ENV = 'foobar';
+    process.env.SIMORGH_APP_ENV = 'foobar';
   });
 
   afterAll(() => {
-    delete process.env.APP_ENV;
+    delete process.env.SIMORGH_APP_ENV;
   });
 
   it('should render correctly', done => {
