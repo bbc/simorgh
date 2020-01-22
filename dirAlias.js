@@ -8,6 +8,7 @@ module.exports = {
   webpackDirAlias: {
     '#app': resolvePath('src/app'),
     '#contexts': resolvePath('src/app/contexts'),
+    '#containers': resolvePath('src/app/containers'),
     '#data': resolvePath('data/'),
     '#lib': resolvePath('src/app/lib/'),
     '#models': resolvePath('src/app/models/'),
@@ -17,6 +18,7 @@ module.exports = {
   jestDirAlias: {
     '^#app(.*)$': '<rootDir>/src/app$1',
     '^#contexts(.*)$': '<rootDir>/src/app/contexts$1',
+    '^#containers(.*)$': '<rootDir>/src/app/containers$1',
     '^#data(.*)$': '<rootDir>/data$1',
     '^#lib(.*)$': '<rootDir>/src/app/lib$1',
     '^#models(.*)$': '<rootDir>/src/app/models$1',
@@ -27,6 +29,7 @@ module.exports = {
     map: [
       ['#app', './src/app'],
       ['#contexts', './src/app/contexts'],
+      ['#containers', './src/app/containers'],
       ['#data', './data'],
       ['#lib', './src/app/lib'],
       ['#models', './src/app/models'],
