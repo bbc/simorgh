@@ -340,6 +340,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
                   class="c11"
                 >
                   <svg
+                    aria-hidden="true"
                     class="c12"
                     focusable="false"
                     height="12px"

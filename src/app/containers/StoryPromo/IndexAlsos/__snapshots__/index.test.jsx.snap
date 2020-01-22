@@ -117,6 +117,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
             class="c6"
           >
             <svg
+              aria-hidden="true"
               class="c7"
               focusable="false"
               height="12px"
@@ -272,6 +273,7 @@ exports[`Index Alsos should render one correctly 1`] = `
           class="c5"
         >
           <svg
+            aria-hidden="true"
             class="c6"
             focusable="false"
             height="12px"

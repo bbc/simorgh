@@ -210,6 +210,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
                 class="c10"
               >
                 <svg
+                  aria-hidden="true"
                   class="c11"
                   focusable="false"
                   height="12px"
@@ -762,6 +763,7 @@ exports[`MediaPlayer Renders the canonical player with a caption 1`] = `
                 class="c10"
               >
                 <svg
+                  aria-hidden="true"
                   class="c11"
                   focusable="false"
                   height="12px"

@@ -329,6 +329,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
         dir="ltr"
       >
         <svg
+          aria-hidden="true"
           class="c11"
           focusable="false"
           height="12px"
@@ -680,6 +681,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
         dir="ltr"
       >
         <svg
+          aria-hidden="true"
           class="c11"
           focusable="false"
           height="12px"
@@ -1010,6 +1012,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
         dir="ltr"
       >
         <svg
+          aria-hidden="true"
           class="c10"
           focusable="false"
           height="12px"
@@ -1345,6 +1348,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
         dir="ltr"
       >
         <svg
+          aria-hidden="true"
           class="c10"
           focusable="false"
           height="12px"
