@@ -1,6 +1,6 @@
-<!--Please update the launchDates config in scripts/simorgh-pages.js -->
-<!--This table can then be generated using the following command: `cd scripts && node simorgh-pages.js` -->
-<!--Remember to commit and push the changes to both simorgh-pages.js and Simorgh-Pages.md -->
+<!--Please update the service launch date in scripts/simorghLaunchDates.js -->
+<!--This table can then be generated using the following command: `cd scripts && node simorghPages.js` -->
+<!--Remember to commit and push the changes to both simorghLaunchDates.js and Simorgh-Pages.md -->
 | Service | Local | Test | Stage | Live | Launch Dates |
 |---------|-------|------|-------|------|--------------|
 | Afaanoromoo | [home](http://localhost:7080/afaanoromoo) - [articles](http://localhost:7080/afaanoromoo/articles/c4g19kgl85ko) - [liveRadio](http://localhost:7080/afaanoromoo/bbc_afaanoromoo_radio/liveradio) | [articles](https://www.test.bbc.com/afaanoromoo/articles/c4g19kgl85ko) - [liveRadio](https://www.test.bbc.com/afaanoromoo/bbc_afaanoromoo_radio/liveradio) | [articles](https://www.stage.bbc.com/afaanoromoo/articles/c4g19kgl85ko) - [liveRadio](https://www.stage.bbc.com/afaanoromoo/bbc_afaanoromoo_radio/liveradio) | [articles](https://www.bbc.com/afaanoromoo/articles/ce3nlgrelv1o) - [liveRadio](https://www.bbc.com/afaanoromoo/bbc_afaanoromoo_radio/liveradio) | __Live Radio__: 30th Sept 2019 |
