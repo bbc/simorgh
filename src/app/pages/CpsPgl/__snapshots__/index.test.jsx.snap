@@ -1942,6 +1942,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL 1`] = `
               <div
                 id="DataContainer"
               >
+                <noscript />
                 <main
                   class="c0"
                   role="main"
