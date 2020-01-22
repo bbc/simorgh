@@ -3,7 +3,18 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import RadioScheduleContainer from '.';
-import validServices from './helpers/validServices';
+
+// Currently, only these services have radio schedule data
+const validServices = [
+  'arabic',
+  'gahuza',
+  'hausa',
+  'korean',
+  'pashto',
+  'persian',
+  'somali',
+  'urdu',
+];
 
 const staticRadioScheduleURL = service =>
   `/data/${service}/bbc_${service}_radio/radioschedule.json`;
