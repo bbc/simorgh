@@ -14,7 +14,9 @@ const origin = 'http://localhost:7080';
 describe('MediaPageBlocks LiveRadio', () => {
   shouldMatchSnapshot(
     'should render correctly for canonical',
-    <RequestContext.Provider value={{ platform: 'canonical', origin }}>
+    <RequestContext.Provider
+      value={{ platform: 'canonical', isAmp: false, origin }}
+    >
       <ServiceContextProvider service="korean">
         <BrowserRouter>
           <LiveRadio
@@ -33,7 +35,7 @@ describe('MediaPageBlocks LiveRadio', () => {
 
   shouldMatchSnapshot(
     'should render correctly for amp',
-    <RequestContext.Provider value={{ platform: 'amp', origin }}>
+    <RequestContext.Provider value={{ platform: 'amp', isAmp: true, origin }}>
       <ServiceContextProvider service="korean">
         <BrowserRouter>
           <LiveRadio
@@ -100,7 +102,9 @@ describe('MediaPageBlocks LiveRadio', () => {
   describe('when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio', () => {
     shouldMatchSnapshot(
       'should render correctly for canonical',
-      <RequestContext.Provider value={{ platform: 'canonical', origin }}>
+      <RequestContext.Provider
+        value={{ platform: 'canonical', isAmp: false, origin }}
+      >
         <ServiceContextProvider service="afaanoromoo">
           <BrowserRouter>
             <LiveRadio
@@ -119,7 +123,7 @@ describe('MediaPageBlocks LiveRadio', () => {
 
     shouldMatchSnapshot(
       'should render correctly for amp',
-      <RequestContext.Provider value={{ platform: 'amp', origin }}>
+      <RequestContext.Provider value={{ platform: 'amp', isAmp: true, origin }}>
         <ServiceContextProvider service="afaanoromoo">
           <BrowserRouter>
             <LiveRadio

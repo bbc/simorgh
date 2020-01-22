@@ -68,6 +68,7 @@ export const getTitle = (pageType, pageData, brandName) => {
 };
 
 export const getConfig = ({
+  isAmp,
   platform,
   pageType,
   data,
@@ -83,7 +84,6 @@ export const getConfig = ({
   const sections = buildSections(service, pageType);
   const cookie = getSylphidCookie();
   const type = getType(pageType);
-  const isAmp = platform === 'amp';
   const currentPath = onClient() && window.location.pathname;
   return {
     domain,

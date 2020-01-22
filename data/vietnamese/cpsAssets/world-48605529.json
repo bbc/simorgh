@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:vietnamese/world-48605529",
+    "locators": {
+      "assetUri": "/vietnamese/world-48605529",
+      "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48605529",
+      "curie": "http://www.bbc.co.uk/asset/3503ddd7-6ad7-7645-bb4c-9223969a7c18"
+    },
+    "type": "PGL",
+    "createdBy": "vietnamese-v6",
+    "language": "vi",
+    "lastUpdated": 1560669745833,
+    "firstPublished": 1560666196,
+    "lastPublished": 1560669736,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "vietnamese.world.photo_gallery.48605529.page",
+      "cps_asset_id": "48605529"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ]
+    },
+    "tags": {
+      "mentions": [
+        {
+          "thingLabel": "Hong Kong",
+          "thingUri": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
+          "thingId": "a3b15769-775e-471d-a511-a7b78f346859",
+          "thingType": [
+            "Place",
+            "Thing",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/1819729/"
+          ],
+          "topicName": "Hong Kong",
+          "topicId": "c8y9491y26nt",
+          "curationList": [
+            {
+              "curationId": "f74ad3a8-2594-482c-bd67-95fac6914c5b",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.0",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "107394341",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/380D/production/_107394341_64478760_618661238632427_5281532485165907968_n.jpg",
+        "path": "/cpsprodpb/380D/production/_107394341_64478760_618661238632427_5281532485165907968_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "hong kong",
+        "caption": "Phóng viên Tina Hà Giang của BBC Tiếng Việt cho hay, các bạn trẻ mặc áo đen tập hợp tại Pacific Place shopping center, gần các tòa nhà chính quyền.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "107394343",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/862D/production/_107394343_64857583_2153839961408725_5860674576962289664_n.jpg",
+        "path": "/cpsprodpb/862D/production/_107394343_64857583_2153839961408725_5860674576962289664_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "hong kong",
+        "caption": "Một cô gái thành kính thắp nhang tưởng nhớ người đã khuất.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "107394345",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/D44D/production/_107394345_64402320_690170728099257_1227566343994212352_n.jpg",
+        "path": "/cpsprodpb/D44D/production/_107394345_64402320_690170728099257_1227566343994212352_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "hong kong",
+        "caption": "Hoa và thiệp tưởng nhớ người đã khuất.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "107394347",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1226D/production/_107394347_62590773_1095489037316373_7522281369473384448_n.jpg",
+        "path": "/cpsprodpb/1226D/production/_107394347_62590773_1095489037316373_7522281369473384448_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "hong kong",
+        "caption": "Những gương mặt rất trẻ xuống đường hôm nay để phản đối dự luật dẫn độ.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "107394979",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/17E9D/production/_107394979_64685174_1750009351769252_4277115431937900544_n.jpg",
+        "path": "/cpsprodpb/17E9D/production/_107394979_64685174_1750009351769252_4277115431937900544_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "hong kong",
+        "caption": "Gần 80 người bị thương trong tình trạng bất ổn tuần qua, gồm 22 cảnh sát và một người đàn ông đã chết vào đêm 15/6 khi rơi xuống từ một tòa nhà.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "107395016",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/EE83/production/_107395016_64307247_668670380245445_2930193076364247040_n.jpg",
+        "path": "/cpsprodpb/EE83/production/_107395016_64307247_668670380245445_2930193076364247040_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "hong kong",
+        "caption": "Đám đông đang kéo về",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "107395078",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/15413/production/_107395078_64647053_434763684014739_6218418801231265792_n.jpg",
+        "path": "/cpsprodpb/15413/production/_107395078_64647053_434763684014739_6218418801231265792_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "hong kong",
+        "caption": "Hàng vạn người Hong Kong dự kiến biểu tình hôm nay 16/6 để yêu cầu Trưởng đặc khu Hành chính Hong Kong Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "107395109",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1602F/production/_107395109_65042061_456970265098549_632756795617574912_n.jpg",
+        "path": "/cpsprodpb/1602F/production/_107395109_65042061_456970265098549_632756795617574912_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "hong kong",
+        "caption": "Cô Nancy Nguyễn (phải), nhà hoạt động gốc Việt, trong đám đông biểu tình hôm nay 16/6.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "107395227",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/11A43/production/_107395227_62633022_694053677681593_1434911520910737408_n.jpg",
+        "path": "/cpsprodpb/11A43/production/_107395227_62633022_694053677681593_1434911520910737408_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "hong kong",
+        "caption": "Nhiều bạn trẻ mang theo vật dụng cổ vũ biểu tình tự chế.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "107395289",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/17FD3/production/_107395289_64270616_335711173769586_6727835951562752000_n.jpg",
+        "path": "/cpsprodpb/17FD3/production/_107395289_64270616_335711173769586_6727835951562752000_n.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "hong kong",
+        "caption": "Phần lớn người biểu tình mặc áo đen.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Hong Kong: Đợt biểu tình mới hôm 16/6",
+      "headline": "Hong Kong: Đợt biểu tình mới hôm 16/6"
+    },
+    "locators": {
+      "assetUri": "/vietnamese/world-48605529",
+      "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-48605529",
+      "curie": "http://www.bbc.co.uk/asset/3503ddd7-6ad7-7645-bb4c-9223969a7c18"
+    },
+    "summary": "Dự kiến hàng vạn người Hong Kong biểu tình hôm 16/6 để yêu cầu bà Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ.",
+    "timestamp": 1560669745833,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "107395290",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/242B/production/_107395290_62633022_694053677681593_1434911520910737408_n.jpg",
+      "path": "/cpsprodpb/242B/production/_107395290_62633022_694053677681593_1434911520910737408_n.jpg",
+      "height": 1080,
+      "width": 1920,
+      "altText": "hong kong",
+      "caption": "hong kong",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:vietnamese/world-48605529",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Thế giới",
+      "uri": "/vietnamese/world",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Tiếng Việt",
+      "uri": "/vietnamese",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

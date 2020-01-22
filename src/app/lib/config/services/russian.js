@@ -46,6 +46,7 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Главная',
+    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -218,40 +219,20 @@ export const service = {
         url: '/russian',
       },
       {
-        title: 'Новости',
-        url: '/russian/news',
-      },
-      {
-        title: 'Россия',
-        url: '/russian/topics/39267b85-1784-4f4b-80ed-f8cb4a35f337',
-      },
-      {
-        title: 'Британия',
-        url: '/russian/topics/2e91364c-5c77-4660-b76e-d76202785e64',
-      },
-      {
-        title: 'Бизнес',
-        url: '/russian/topics/2f2db234-3c2d-40a4-b4ac-eea661faadd0',
-      },
-      {
-        title: 'Наука',
-        url: '/russian/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+        title: 'Истории',
+        url: '/russian/features-50983593',
       },
       {
         title: 'Видео',
         url: '/russian/media/video',
       },
       {
+        title: 'Фильмы',
+        url: '/russian/in-depth-48104242',
+      },
+      {
         title: 'Подкасты',
         url: '/russian/media-47937790',
-      },
-      {
-        title: 'Спецпроекты',
-        url: '/russian/in_depth',
-      },
-      {
-        title: 'Learning English',
-        url: '/russian/learning-english-41003378',
       },
     ],
     navigationSection: 'Разделы',

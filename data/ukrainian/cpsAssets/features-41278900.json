@@ -1,0 +1,404 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:ukrainian/features-41278900",
+    "locators": {
+      "assetUri": "/ukrainian/features-41278900",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-41278900",
+      "curie": "http://www.bbc.co.uk/asset/dbe3dc16-0d40-c348-b545-25f330b94c10"
+    },
+    "type": "PGL",
+    "createdBy": "ukrainian-v6",
+    "language": "uk",
+    "lastUpdated": 1579166601257,
+    "firstPublished": 1505478312000,
+    "lastPublished": 1505478315000,
+    "timestamp": 1505478312000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": false,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "ukrainian.features.photo_gallery.41278900.page",
+      "cps_asset_id": "41278900"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Environment",
+          "thingUri": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+          "thingId": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Natural_environment",
+            "http://www.wikidata.org/entity/Q43619"
+          ],
+          "topicName": "Довкілля",
+          "topicId": "cg726yyyz53t",
+          "curationList": [
+            {
+              "curationId": "1512cfb5-3ab9-4119-a7cb-f38b824ef8c6",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Science",
+          "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+          "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Science",
+            "http://www.wikidata.org/entity/Q336"
+          ],
+          "topicName": "Наука",
+          "topicId": "cyx5kzy4w5yt",
+          "curationList": [
+            {
+              "curationId": "5604b754-7cc0-4d33-805f-6e8942192517",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Culture",
+          "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+          "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Culture",
+            "http://www.wikidata.org/entity/Q11042"
+          ],
+          "topicName": "Культура",
+          "topicId": "ckdxn222ny7t",
+          "curationList": [
+            {
+              "curationId": "99afbb65-eb26-4326-bd6c-b1c671d9d9fb",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.4",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "97774840",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12EF/production/_97774840_7b49cf24-0a70-48a5-b786-4a0ab1d87f11.jpg",
+        "path": "/cpsprodpb/12EF/production/_97774840_7b49cf24-0a70-48a5-b786-4a0ab1d87f11.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Тюлені",
+        "caption": "На цій неймовірній світлині, зробленій фотографом Лонером Баллестою, молодий тюлень ‎разом із мамою уперше плаває у крижаній воді Антарктики. Цього року на конкурс ‎Найкращого фотографа дикої природи надійшло понад 50 тисяч фотографій. Переможця ‎оголосять 17 жовтня.‎",
+        "copyrightHolder": "Laurent Ballesta/Natural History Museum",
+        "type": "image"
+      },
+      {
+        "id": "97776042",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/5E03/production/_97776042_mediaitem97776041.jpg",
+        "path": "/cpsprodpb/5E03/production/_97776042_mediaitem97776041.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "\"Арктичний ‎скарб\"",
+        "caption": "На цьому фото песець несе в зубах впольоване яйце білої гуски. Фотографію \"Арктичний ‎скарб\", що увійшла до категорії портрету, зробив на острові Врангеля у Росії фотограф Сергій ‎Горшков.‎",
+        "copyrightHolder": "Natural History Museum/Sergey Gorshkov",
+        "type": "image"
+      },
+      {
+        "id": "97774841",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/39FF/production/_97774841_a914b989-e632-45bd-a2ca-54e5984b3da3.jpg",
+        "path": "/cpsprodpb/39FF/production/_97774841_a914b989-e632-45bd-a2ca-54e5984b3da3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Морський янгол",
+        "caption": "Фотограф Андрій Нарчук подав на конкурс цю світлину морських янголів, близьких родичів ‎слимаків і равликів. Лондонський Музей природознавства, який проводить конкурс, заявив, ‎що це фото демонструє \"дивовижне різноманіття життя на нашій планеті\".‎",
+        "copyrightHolder": "Andrey Narchuk/Natural History Museum",
+        "type": "image"
+      },
+      {
+        "id": "97776535",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/D13F/production/_97776535_mediaitem97776534.jpg",
+        "path": "/cpsprodpb/D13F/production/_97776535_mediaitem97776534.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Білоголовий орел",
+        "caption": "Німецький фотограф Клаус Ніґґе зробив це фото білоголового орла на острові Амакнак на ‎Алясці. Воно також увійшло до категорії портрету на конкурсі.‎",
+        "copyrightHolder": "Natural History Museum/Klaus Nigge",
+        "type": "image"
+      },
+      {
+        "id": "97774842",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/610F/production/_97774842_1adfd036-ff4d-4242-af96-9f9086c16c3f.jpg",
+        "path": "/cpsprodpb/610F/production/_97774842_1adfd036-ff4d-4242-af96-9f9086c16c3f.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Тигр",
+        "caption": "Стів Вінтер зробив цю світлину пораненого тигреняти на індонезійському острові Суматра. ‎Шестимісячного малюка врятували із пастки, встановленої браконьєрами.‎",
+        "copyrightHolder": "Mats Andersson/Natural History Museum",
+        "type": "image"
+      },
+      {
+        "id": "97774550",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/15AB/production/_97774550_mediaitem97774549.jpg",
+        "path": "/cpsprodpb/15AB/production/_97774550_mediaitem97774549.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Ведмеді",
+        "caption": "А на цьому милому фото ведмежатко обіймає свою маму. Ешлі Скаллі зробила цю світлину у ‎Національному парку Лейк-Кларк на Алясці. Ешлі всього 13 років, і на конкурс вона подалася ‎в категорії молодих фотографів. ‎",
+        "copyrightHolder": "Natural History Museum/Ashleigh Scully",
+        "type": "image"
+      },
+      {
+        "id": "97773621",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/315D/production/_97773621_8e917b12-4dfe-4095-b175-f49bb61a1b6f.jpg",
+        "path": "/cpsprodpb/315D/production/_97773621_8e917b12-4dfe-4095-b175-f49bb61a1b6f.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Квезаль",
+        "caption": "Цю рідкісну і прекрасну пташку квезаль зловив у об’єктив ізраїльський фотограф Тьохар ‎Кастіель. Він провів тиждень, спостерігаючи, як пташки приносять їжу своїм пташенятам, перш ‎ніж зробив це неймовірне фото.‎",
+        "copyrightHolder": "Tyohar Kastiel/Natural History Museum",
+        "type": "image"
+      },
+      {
+        "id": "97774843",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/881F/production/_97774843_f2955277-8f39-45ba-99ff-d366d2555ae3.jpg",
+        "path": "/cpsprodpb/881F/production/_97774843_f2955277-8f39-45ba-99ff-d366d2555ae3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Морський коник",
+        "caption": "На цій світлині Джастіна Гоффмана малесенький морський коник тримається за ватну паличку, ‎намагаючись протистояти сильній течії біля узбережжя острова Сумбава в Індонезії.‎",
+        "copyrightHolder": "Justin Hofman/Natural History Museum",
+        "type": "image"
+      },
+      {
+        "id": "97774844",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/AF2F/production/_97774844_f21ac788-fa76-45cc-abc6-6dda92dcd459.jpg",
+        "path": "/cpsprodpb/AF2F/production/_97774844_f21ac788-fa76-45cc-abc6-6dda92dcd459.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Білка",
+        "caption": "Сфотографувавши цю руду білку одним холодним лютневим ранком, Матсу Андерсону ‎вдалося упіймати в об’єктив шматочок зими. Усі ці світлини можна буде побачити на виставці у ‎Музеї природознавства у Лондоні, яка відкриється 20 жовтня і проходитиме до весни ‎наступного року.‎",
+        "copyrightHolder": "Mats Andersson/Natural History Museum",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Найкращий фотограф дикої природи-2017: фото фіналістів",
+      "headline": "Найкращий фотограф дикої природи-2017: фото фіналістів"
+    },
+    "locators": {
+      "assetUri": "/ukrainian/features-41278900",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-41278900",
+      "curie": "http://www.bbc.co.uk/asset/dbe3dc16-0d40-c348-b545-25f330b94c10"
+    },
+    "summary": "Музей природознавства у Лондоні оголосив фіналістів конкурсу на Найкращого фотографа дикої ‎природи-2017.‎",
+    "timestamp": 1505478312000,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "97776536",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/F84F/production/_97776536_mediaitem97776041.jpg",
+      "path": "/cpsprodpb/F84F/production/_97776536_mediaitem97776041.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "\"Арктичний ‎скарб\"",
+      "caption": "На цьому фото песець несе в зубах впольоване яйце білої гуски. Фотографію \"Арктичний ‎скарб\", що увійшла до категорії портету, зробив на острові Врангеля у Росії фотограф Сергій ‎Горшков.",
+      "copyrightHolder": "Natural History Museum/Sergey Gorshkov",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:ukrainian/features-41278900",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Докладно",
+      "uri": "/ukrainian/features",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Україна",
+      "uri": "/ukrainian",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Конкурс на найкраще фото птахів виграли фламінго",
+              "headline": "Конкурс на найкраще фото птахів виграли фламінго"
+            },
+            "locators": {
+              "assetUri": "/ukrainian/features-41240507",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/features-41240507"
+            },
+            "summary": "Фотоконкурс демонструє дивовижну красу і різноманіття царства птахів.‎",
+            "timestamp": 1505223204000,
+            "cpsType": "PGL",
+            "id": "urn:bbc:ares::asset:ukrainian/features-41240507",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Фото дикої природи – лідери глядацьких симпатій",
+              "headline": "Фото дикої природи – лідери глядацьких симпатій"
+            },
+            "locators": {
+              "assetUri": "/ukrainian/media-38155339",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/media-38155339"
+            },
+            "summary": "Зображення, які потрапили в короткий список конкурсу \"Фотограф-натураліст року\" у номінації приз глядацьких симпатій.",
+            "timestamp": 1480507253000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "92641956",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1017A/production/_92641956_1024-alain-mafart_wildlife-.jpg",
+              "path": "/cpsprodpb/1017A/production/_92641956_1024-alain-mafart_wildlife-.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "A mother's hand by Alain Mafart Renodier, France",
+              "copyrightHolder": "Alain Mafart Renodier / WPOTY 2016",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukrainian/media-38155339",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Конкурс знімків зі смартфонів виграло фото пляжу в Мексиці",
+              "headline": "Конкурс світлин зі смартфонів виграло фото пляжу в Мексиці"
+            },
+            "locators": {
+              "assetUri": "/ukrainian/other-news-41158616",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/other-news-41158616"
+            },
+            "summary": "Авторка переможного фото отримала можливість організувати персональну виставку фото в галереї Saatchi у Лондоні.",
+            "timestamp": 1504600678000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "97661925",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/CEB4/production/_97661925_paola-ismene-'daydream-in-b.gif",
+              "path": "/cpsprodpb/CEB4/production/_97661925_paola-ismene-'daydream-in-b.gif",
+              "height": 549,
+              "width": 976,
+              "altText": "Paola Ismene's Daydream in Blue",
+              "copyrightHolder": "P Ismene",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukrainian/other-news-41158616",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Фото: найкращі морські пейзажі Британії",
+              "headline": "Фото: найкращі морські пейзажі Британії"
+            },
+            "locators": {
+              "assetUri": "/ukrainian/features-41199464",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/features-41199464"
+            },
+            "summary": "Зображення маяка на мисі Сент-Еббз-Хед у Шотландії назвали найкращим морським пейзажем Британії на конкурсі фото Ultimate Sea View.",
+            "timestamp": 1504875264000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "97671538",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1463D/production/_97671538_beams-by-william-pollard.gif",
+              "path": "/cpsprodpb/1463D/production/_97671538_beams-by-william-pollard.gif",
+              "height": 1152,
+              "width": 2048,
+              "altText": "St Abb's",
+              "copyrightHolder": "William Pollard",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukrainian/features-41199464",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Мистецтво будинку",
+              "headline": "Фіналісти архітектурного конкурсу Art of Building 2016"
+            },
+            "locators": {
+              "assetUri": "/ukrainian/news-38330203",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/news-38330203"
+            },
+            "summary": "Учасники цьогорічного конкурсу архітектурного фото сягають за межі можливого.",
+            "timestamp": 1481809046000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "92947639",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16DEA/production/_92947639_4_flatiron_building_in_a_snowstorm_by_michelle_palazzo.jpg",
+              "path": "/cpsprodpb/16DEA/production/_92947639_4_flatiron_building_in_a_snowstorm_by_michelle_palazzo.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Сніг у Нью-Йорку",
+              "caption": "Хмарочос-праска в хуртовині",
+              "copyrightHolder": "Michele Palazzo",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukrainian/news-38330203",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

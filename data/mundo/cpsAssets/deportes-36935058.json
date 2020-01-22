@@ -1,0 +1,486 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:mundo/deportes-36935058",
+    "locators": {
+      "assetUri": "/mundo/deportes-36935058",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/deportes-36935058",
+      "curie": "http://www.bbc.co.uk/asset/08e22e90-7361-cd47-b586-7cb53fc5a012"
+    },
+    "type": "PGL",
+    "createdBy": "mundo-v6",
+    "language": "es",
+    "lastUpdated": 1579164502827,
+    "firstPublished": 1470561662000,
+    "lastPublished": 1470561674000,
+    "timestamp": 1470561662000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "mundo.sport.photo_gallery.36935058.page",
+      "cps_asset_id": "36935058"
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Olympics",
+          "thingUri": "http://www.bbc.co.uk/things/0d205538-c52e-41c7-a4a1-50efd6c1da59#id",
+          "thingId": "0d205538-c52e-41c7-a4a1-50efd6c1da59",
+          "thingType": [
+            "http://www.bbc.co.uk/ontologies/event/RecurringEvent",
+            "sport:RecurringCompetition",
+            "http://www.bbc.co.uk/ontologies/applicationlogic-sport/SportTopic",
+            "sport:MultiDisciplineRecurringCompetition",
+            "Thing",
+            "sport:Competition"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Summer_Olympic_Games"
+          ]
+        },
+        {
+          "thingLabel": "Brazil",
+          "thingUri": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
+          "thingId": "15f1bcf6-b6ab-48e8-b708-efed41e43d31",
+          "thingType": [
+            "Thing",
+            "Place",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/3469034/"
+          ]
+        },
+        {
+          "thingLabel": "Rio 2016",
+          "thingUri": "http://www.bbc.co.uk/things/1d2e1514-faa8-425d-8481-a1cc4da6cc24#id",
+          "thingId": "1d2e1514-faa8-425d-8481-a1cc4da6cc24",
+          "thingType": [
+            "sport:DivisionalCompetition",
+            "http://www.bbc.co.uk/ontologies/applicationlogic-sport/SportTopic",
+            "sport:MultiStageCompetition",
+            "sport:Competition",
+            "http://www.bbc.co.uk/ontologies/event/Event",
+            "Thing"
+          ],
+          "thingSameAs": []
+        },
+        {
+          "thingLabel": "Sport",
+          "thingUri": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+          "thingId": "4063f80f-cccc-44c8-9449-5ca44e4c8592",
+          "thingType": [
+            "http://data.press.net/ontology/classification/Classification",
+            "http://www.bbc.co.uk/ontologies/classification/RootClassification",
+            "skos:Concept",
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Sport"
+          ],
+          "topicName": "Deportes",
+          "topicId": "cr50y726329t",
+          "curationList": [
+            {
+              "curationId": "ef20cc08-891f-46ff-a045-6449c68d0c7e",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.4",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "90570591",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/4C33/production/_90570591_gettyimages-3046790.jpg",
+        "path": "/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg",
+        "height": 549,
+        "width": 549,
+        "altText": "Tenista de 1904",
+        "caption": "En tenis, las competidoras en los juegos de principios del siglo XX utilizaban vestidos y medias largas, algo impensable para los estándares de la actualidad. Fue hasta 1920 en Amberes cuando las mujeres tuvieron participación reconocida oficialmente.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90570663",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8EFF/production/_90570663_gettyimages-51182171.jpg",
+        "path": "/cpsprodpb/8EFF/production/_90570663_gettyimages-51182171.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Venus Williams en Atenas 2004",
+        "caption": "Las tenistas en los últimos años han optado por trajes que les den facilidad de movimiento en las piernas, mientras que la parte superior varía en estilos totalmente cubiertos o semidescubiertos.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90570593",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/9A53/production/_90570593_gettyimages-3242582.jpg",
+        "path": "/cpsprodpb/9A53/production/_90570593_gettyimages-3242582.jpg",
+        "height": 549,
+        "width": 549,
+        "altText": "Gimnastas en los primeros juegos",
+        "caption": "La gimnasia es una de las disciplinas cuya ropa ha tenido la mayor evolución, pues hace poco menos de un siglo las atletas usaban prendas largas y holgadas para desarrollar sus rutinas. No obstante, su fuerza desde entonces era notable.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90570689",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1812F/production/_90570689_gettyimages-640615533.jpg",
+        "path": "/cpsprodpb/1812F/production/_90570689_gettyimages-640615533.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Nadia Comaneci en Montreal 1976",
+        "caption": "Nadia Comaneci en Montreal 1976 consiguió la calificación perfecta de 10. Para entonces las gimnastas ya usaban trajes que les daban total libertad en las piernas, a diferencia de las faldas de principios de siglo. Esto no ha cambiado mucho a la actualidad, salvo por los diseños estéticos.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90570598",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/15DA3/production/_90570598_britishswimmerhenrytaylorwhowonthe400metreraceatthelondonolympicgamesatwhitecitywithhistrainer.jpg",
+        "path": "/cpsprodpb/15DA3/production/_90570598_britishswimmerhenrytaylorwhowonthe400metreraceatthelondonolympicgamesatwhitecitywithhistrainer.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Nadador en 1908",
+        "caption": "El traje de un nadador de los Juegos Olímpicos de Londres 1908 era de una pieza larga. Desde entonces ya usaban el gorro que también ha sido parte de la evolución de la ropa deportiva. La ropa abrigadora de la gente contrasta con la del nadador en el centro acuático abierto.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90570691",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/4C97/production/_90570691_gettyimages-149436112.jpg",
+        "path": "/cpsprodpb/4C97/production/_90570691_gettyimages-149436112.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Los trajes en la natación masculina",
+        "caption": "Desde 2010, la Federación Internacional de Natación prohibió trajes de alta tecnología de poliuretano que cubrían todo el cuerpo, pues daban ventaja de flotación. Los hombres solo pueden usar pantalones de materiales textiles.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90570600",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/025F/production/_90570600_gettyimages-53323618.jpg",
+        "path": "/cpsprodpb/025F/production/_90570600_gettyimages-53323618.jpg",
+        "height": 549,
+        "width": 549,
+        "altText": "Nadadoras olímpicas",
+        "caption": "Las mujeres también usaban en la natación trajes de una pieza que a principios del siglo XX aún no se caracterizaban por su estética. Unos más cortos y otros más largos, cumplían con cubrir el cuerpo y las gorras no tenían un diseño específico.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90570665",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/DD1F/production/_90570665_gettyimages-151163412.jpg",
+        "path": "/cpsprodpb/DD1F/production/_90570665_gettyimages-151163412.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Nadadoras en Londres 2012",
+        "caption": "El largo de los trajes de baño en las mujeres no ha variado mucho en un siglo, pero sí su diseño y sobre todo el tejido. Las mujeres pueden usar trajes que cubren desde los hombros hasta los muslos, pero no de poliuretano.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90570614",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/A287/production/_90570614_gettyimages-2642619.jpg",
+        "path": "/cpsprodpb/A287/production/_90570614_gettyimages-2642619.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Prueba de corredores en 1936",
+        "caption": "En los Juegos Olímpicos de Berlín 1936, la ropa de los competidores aún no se destacaba por su confección o por tener características especiales más allá de lo estético.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90570612",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/5467/production/_90570612_gettyimages-92856408.jpg",
+        "path": "/cpsprodpb/5467/production/_90570612_gettyimages-92856408.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Prueba de los 100 metros planos",
+        "caption": "Los trajes de los corredores en la actualidad varían. El multicampeón Usain Bolt (al frente) acostumbra usar un pantalón corto y una camiseta suelta, mientras que otros corredores optan por los trajes de licra que generan menos resistencia al aire.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90570709",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16253/production/_90570709_gettyimages-141256529.jpg",
+        "path": "/cpsprodpb/16253/production/_90570709_gettyimages-141256529.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Salto con pértiga en 1948",
+        "caption": "En Londres 1948 la ropa de los saltadores con pértiga era sencilla y holgada. Los uniformes nacionales ya tenían algunos distintivos para las competiciones olímpicas.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90570667",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12B3F/production/_90570667_gettyimages-84961618.jpg",
+        "path": "/cpsprodpb/12B3F/production/_90570667_gettyimages-84961618.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Yelena Isinbaeva en el salto de altura",
+        "caption": "En disciplinas del atletismo como el salto con garrocha, la ropa corta y ajustada es la elección de muchas competidoras. Para evitar el contacto con el listón, los competidores han optado por la ropa ajustada.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90570538",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14633/production/_90570538_robertgarrettusawinsthegoldinthediscusatthe1896..jpg",
+        "path": "/cpsprodpb/14633/production/_90570538_robertgarrettusawinsthegoldinthediscusatthe1896..jpg",
+        "height": 549,
+        "width": 549,
+        "altText": "Competidor de 1896",
+        "caption": "Un competidor de Estados Unidos en la prueba de lanzamiento de disco en los primeros Juegos Olímpicos de la era moderna, en Atenas 1896, usaba pantalones cortos por encima de las rodillas y una camiseta sin mangas. En la ropa solo se aprecia un distintivo de la bandera del país.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90570705",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/C613/production/_90570705_gettyimages-82463599.jpg",
+        "path": "/cpsprodpb/C613/production/_90570705_gettyimages-82463599.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Lanzamiento de disco en Pekín 2008",
+        "caption": "Un atleta en Pekín 2008 muestra que la ropa pude no ser más importante que la fuerza y la técnica en el lanzamiento de disco, pero a diferencia del pasado usan protecciones para evitar las lesiones.",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "90577565",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/DD01/production/_90577565_britishcyclistbenjoneswinnerofthe5000metrecycleraceatthe1908olympicsatwhitecitylondon.jpg",
+        "path": "/cpsprodpb/DD01/production/_90577565_britishcyclistbenjoneswinnerofthe5000metrecycleraceatthe1908olympicsatwhitecitylondon.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Ciclsita en Londres 1908.",
+        "caption": "Hace poco más de un siglo, los ciclistas usaban uniformes relativamente sueltos y la tela no tenía características especiales como lo muestra esta fotografía de Londres 1908.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90577567",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12B21/production/_90577567_gettyimages-51196712.jpg",
+        "path": "/cpsprodpb/12B21/production/_90577567_gettyimages-51196712.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Ciclismo de velocidad.",
+        "caption": "En el ciclismo de velocidad actual, los participantes usan trajes totalmente ajustados al cuerpo y los vistosos cascos aerodinámicos, un deporte en el que la resistencia del atleta se combina con la tecnología.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90577685",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/E535/production/_90577685_gettyimages-3381393.jpg",
+        "path": "/cpsprodpb/E535/production/_90577685_gettyimages-3381393.jpg",
+        "height": 549,
+        "width": 549,
+        "altText": "Clavadista en Londres 1948.",
+        "caption": "Ya desde la mitad del siglo XX los clavadistas usaban los trajes de baño cortos que han con el paso de los años se fueron diseñando con mayor ajuste al cuerpo. De este clavadista de 1948 resalta el cinturón que sujetaba su traje de baño.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90577687",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13355/production/_90577687_gettyimages-82525601.jpg",
+        "path": "/cpsprodpb/13355/production/_90577687_gettyimages-82525601.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Clavadista en Pekín 2008.",
+        "caption": "La reducción del traje de baño se ha hecho notable hasta la actualidad, y ya nadie usa el traje de baño que cubre la parte superior del cuerpo como en los primeros juegos.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90577707",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/11479/production/_90577707_gettyimages-2630092.jpg",
+        "path": "/cpsprodpb/11479/production/_90577707_gettyimages-2630092.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Competencia ecuestre",
+        "caption": "Quizás uno de los deportes en que menos ha cambiado la ropa de sus participantes es la equitación, como muestra esta foto de Helsinki 1952. Las chaquetas, botas, chisteras y cascos se han mantenido con ligeros cambios.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "90577709",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16299/production/_90577709_gettyimages-150155844.jpg",
+        "path": "/cpsprodpb/16299/production/_90577709_gettyimages-150155844.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Jinete ecuestre en Londres 2012",
+        "caption": "En las competencias ecuestres los trajes son de los uniformes más elegantes que hay en los Juegos Olímpicos, pero su diseño no es juzgado ni forma parte de la puntuación.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos",
+      "headline": "Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos"
+    },
+    "locators": {
+      "assetUri": "/mundo/deportes-36935058",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/deportes-36935058",
+      "curie": "http://www.bbc.co.uk/asset/08e22e90-7361-cd47-b586-7cb53fc5a012"
+    },
+    "summary": "La estética de la ropa deportiva ha ido evolucionando en cada edición olímpica, pero no solo se trata de lucir bien, pues en varias competencias contar con un traje adecuado puede ser un factor que contribuya al triunfo.",
+    "timestamp": 1470561662000,
+    "passport": {
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "90689319",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/16506/production/_90689319_gettyimages-2642105-1.jpg",
+      "path": "/cpsprodpb/16506/production/_90689319_gettyimages-2642105-1.jpg",
+      "height": 1152,
+      "width": 2048,
+      "altText": "Gimnastas en los primeros juegos",
+      "copyrightHolder": "Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:mundo/deportes-36935058",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Deportes",
+      "uri": "/mundo/deportes",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Mundo",
+      "uri": "/mundo",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Lo que no deberías perderte de las Olimpiadas de Río 2016",
+              "headline": "Lo que no deberías perderte de las Olimpiadas de Río 2016"
+            },
+            "locators": {
+              "assetUri": "/mundo/deportes-36986518",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/deportes-36986518"
+            },
+            "summary": "Están los habituales, pero también hay otros que por su emoción, adrenalina y tensión son los eventos que se espera dejen huella en los primeros juegos olímpicos en Sudamérica.",
+            "timestamp": 1470402155000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "90684643",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/8758/production/_90684643_gettyimages-82477781.jpg",
+              "path": "/cpsprodpb/8758/production/_90684643_gettyimages-82477781.jpg",
+              "height": 1152,
+              "width": 2048,
+              "altText": "Usain Bolt",
+              "caption": "Usain Bolt quiere retirarse de los juegos olímpicos con otras tres medallas de oro.",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:mundo/deportes-36986518",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Las esperanzas de medalla de oro de América Latina en las Olimpiadas de Río 2016",
+              "headline": "Las esperanzas de medalla de oro de América Latina en las Olimpiadas de Río 2016"
+            },
+            "locators": {
+              "assetUri": "/mundo/deportes-36976235",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/deportes-36976235"
+            },
+            "summary": "Por historia, presente y convicción, estos son los deportistas de los países de la región que vienen dominando su especialidad en los últimos años y que ahora aspiran lucir en los más alto del podio los colores de sus banderas.",
+            "timestamp": 1470378732000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "90682354",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/B110/production/_90682354_untitled-2.jpg",
+              "path": "/cpsprodpb/B110/production/_90682354_untitled-2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Mariana Pajón, Las Leonas argentinas, Yulimar Rojas y Joahnys Argilagos",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:mundo/deportes-36976235",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "5 hitos que marcaron México 1968, las primeras Olimpiadas celebradas en América Latina",
+              "headline": "5 hitos que marcaron México 1968, las primeras Olimpiadas celebradas en América Latina"
+            },
+            "locators": {
+              "assetUri": "/mundo/deportes-36938386",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/deportes-36938386"
+            },
+            "summary": "La edición 19 de los Juegos Olímpicos marcó un antes y un después en récords, innovación en el deporte y abrieron paso a las mujeres en el momento cumbre de la inauguración: el encendido del pebetero.",
+            "timestamp": 1470135577000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "90608996",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1115C/production/_90608996_884b09bb-702e-43d0-99c1-30f1868ead10.jpg",
+              "path": "/cpsprodpb/1115C/production/_90608996_884b09bb-702e-43d0-99c1-30f1868ead10.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Bob Beamon",
+              "caption": "El estadounidense Bob Beamon ganó el oro en el salto de longitud con su intento de 8,90 metros, marca que todavía permanece como récord olímpico.",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:mundo/deportes-36938386",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}
