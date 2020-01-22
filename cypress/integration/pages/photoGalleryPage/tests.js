@@ -44,13 +44,13 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
       });
     });
 
-    it('should render a caption, which contains/displays styled text', () => {
+    it('should render a description for the page, which contains/displays styled text', () => {
       cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
         ({ body }) => {
-          const caption = body.promo.summary;
+          const description = body.promo.summary;
           cy.get('main p')
             .first()
-            .should('contain', caption);
+            .should('contain', description);
         },
       );
     });
