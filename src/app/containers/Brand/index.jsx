@@ -33,8 +33,8 @@ const renderScriptLink = (
   );
 };
 
-const renderSkipLink = (service, script, skipLinkText) => (
-  <SkipLink service={service} script={script} href="#content">
+const renderSkipLink = (service, script, dir, skipLinkText) => (
+  <SkipLink service={service} script={script} dir={dir} href="#content">
     {skipLinkText}
   </SkipLink>
 );
@@ -48,6 +48,7 @@ const BrandContainer = props => {
     theming,
     script,
     translations,
+    dir,
     scriptLink = null,
   } = useContext(ServiceContext);
   const { variant } = useContext(RequestContext);
@@ -81,7 +82,7 @@ const BrandContainer = props => {
       svg={brandSVG}
       url={`/${service}`}
       scriptLink={addScriptLink}
-      skipLink={renderSkipLink(service, script, skipLinkText)}
+      skipLink={renderSkipLink(service, script, dir, skipLinkText)}
       {...props}
     />
   );

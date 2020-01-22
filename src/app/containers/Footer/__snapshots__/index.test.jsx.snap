@@ -165,7 +165,7 @@ exports[`FooterContainer should render correctly 1`] = `
   clip: auto;
   height: auto;
   width: auto;
-  top: 0.5rem;
+  top: 0;
   left: 0;
 }
 
@@ -284,6 +284,12 @@ exports[`FooterContainer should render correctly 1`] = `
 @media screen and (-ms-high-contrast:active),print {
   .c4 {
     fill: windowText;
+  }
+}
+
+@media (min-width:25rem) {
+  .c6:focus {
+    top: 0.5rem;
   }
 }
 

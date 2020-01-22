@@ -103,7 +103,7 @@ exports[`BrandContainer should render correctly 1`] = `
   clip: auto;
   height: auto;
   width: auto;
-  top: 0.5rem;
+  top: 0;
   left: 0;
 }
 
@@ -143,6 +143,12 @@ exports[`BrandContainer should render correctly 1`] = `
 @media screen and (-ms-high-contrast:active),print {
   .c4 {
     fill: windowText;
+  }
+}
+
+@media (min-width:25rem) {
+  .c6:focus {
+    top: 0.5rem;
   }
 }
 
@@ -309,7 +315,7 @@ exports[`BrandContainer should render script link correctly 1`] = `
   clip: auto;
   height: auto;
   width: auto;
-  top: 0.5rem;
+  top: 0;
   left: 0;
 }
 
@@ -397,6 +403,12 @@ exports[`BrandContainer should render script link correctly 1`] = `
   .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c6:focus {
+    top: 0.5rem;
   }
 }
 

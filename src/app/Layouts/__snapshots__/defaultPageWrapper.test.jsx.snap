@@ -114,7 +114,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   clip: auto;
   height: auto;
   width: auto;
-  top: 0.5rem;
+  top: 0;
   left: 0;
 }
 
@@ -535,6 +535,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   .c12 {
     font-size: 1rem;
     line-height: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c12:focus {
+    top: 0.5rem;
   }
 }
 
