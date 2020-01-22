@@ -21,7 +21,7 @@ const renderDocument = async ({
   const sheet = new ServerStyleSheet();
 
   const statsFile = path.resolve(
-    `${__dirname}/public/loadable-stats-${process.env.APP_ENV}.json`,
+    `${__dirname}/public/loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
   );
 
   const extractor = new ChunkExtractor({ statsFile });

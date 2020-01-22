@@ -1,0 +1,250 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:arabic/art-and-culture-38260491",
+    "locators": {
+      "assetUri": "/arabic/art-and-culture-38260491",
+      "cpsUrn": "urn:bbc:content:assetUri:arabic/art-and-culture-38260491",
+      "curie": "http://www.bbc.co.uk/asset/bc8c6f47-cc26-1a49-8bd8-fc679131aa17"
+    },
+    "type": "PGL",
+    "createdBy": "arabic-v6",
+    "language": "ar",
+    "lastUpdated": 1579163408647,
+    "firstPublished": 1481306573000,
+    "lastPublished": 1481548334000,
+    "timestamp": 1481306573000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "arabic.art_and_culture.photo_gallery.38260491.page",
+      "cps_asset_id": "38260491"
+    },
+    "tags": {},
+    "version": "v1.1.4",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "92908623",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/7FA8/production/_92908623_1111.jpg",
+        "path": "/cpsprodpb/7FA8/production/_92908623_1111.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "كيرك دوغلاس في الخمسينيات من القرن العشرين",
+        "caption": "ولد كيرك دوغلاس عام 1916، وكان لنظرته الحادة والرجولة الطاغية التي تظهر في ملامحه ووجهه المميز دور في أن يتحول إلى أحد أكثر نجوم هوليود تأثيرا",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "92908625",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/CDC8/production/_92908625_22.jpg",
+        "path": "/cpsprodpb/CDC8/production/_92908625_22.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "كيرك دوغلاس وروزاليند روسل",
+        "caption": "قام دوغلاس بأدوار البطولة في بدايته الفنية، منها فيلم \"الحداد يليق بإليكترا\" المستوحى من روية يوجين أونيل",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "92909208",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/139A2/production/_92909208_33.jpg",
+        "path": "/cpsprodpb/139A2/production/_92909208_33.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "كيرك دوغلاس وهاري جيمس",
+        "caption": "مُنح دوغلاس جائزة الأوسكار للمرة الأولى عام 1950 عن فيلم \"الملاكم\"، ولعب دور البطولة في نفس العام في فيلم يانج مان ويذ أهورن، الذي اضطره إلى تلقي دروس في العزف على آلة الترومبيت",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "92909210",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/050A/production/_92909210_44.jpg",
+        "path": "/cpsprodpb/050A/production/_92909210_44.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "كيرك دوغلاس بجوار ملصق دعائي لفيلم سبارتاكوس",
+        "caption": "يعتبر فيلم \"اسبارتاكوس\"، الذي لعب فيه دوغلاس دور مصارع يقود تمردا ضد الإمبراطورية الرومانية، من أروع أفلام نجم هوليود",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "92909216",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/EF6A/production/_92909216_55.jpg",
+        "path": "/cpsprodpb/EF6A/production/_92909216_55.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "كيرك دوغلاس في مشهد من فيلم اسبارتاكوس",
+        "caption": "كانت مطالبة دوغلاس بضرورة ذكر اسم دالتون ترامبو، ككاتب سيناريو، على أعماله عام 1960 من أهم العوامل التي أدت إلى إنهاء العمل وفقا للقائمة السوداء التي طبقتها هوليود على المؤلفين والممثلين والمخرجين المتهمين بالانتماء للحزب الشيوعي أو بالتعاطف معه.",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "92909353",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8A3E/production/_92909353_66.jpg",
+        "path": "/cpsprodpb/8A3E/production/_92909353_66.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "كيرك دوغلاس وبيرت لانكستر",
+        "caption": "كانت هناك منافسة يسودها الود بين كيرك دوغلاس والنجم برت لانكستر الذي شاركه البطولة في عدة أعمال منها \"سبعة أيام\"، و\"ماي آند تاف غايز\"",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "92909381",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/47D6/production/_92909381_77.jpg",
+        "path": "/cpsprodpb/47D6/production/_92909381_77.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "دوغلاس وولداه دويل ومايكل",
+        "caption": "أدى زواج دوغلاس مرتين إلى إنتاج عناصر جديدة انضمت إلى العائلة الفنية الكبيرة في هوليود، وهما ابناه جويل ومايكل",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "92909400",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/01EA/production/_92909400_88.jpg",
+        "path": "/cpsprodpb/01EA/production/_92909400_88.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "كيرك دوغلاس وولده مايكل دوغلاس",
+        "caption": "بدأ مايكل دوغلاس التمثيل أمام والده عام 1965، ومنذ ذلك الحين انطلق في عالم السينما بين الممثلين ومنتجي السينما الحاصلين على جوائز أوسكار",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "92909402",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/500A/production/_92909402_99.jpg",
+        "path": "/cpsprodpb/500A/production/_92909402_99.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "كيرك دوغلاس، ومايكل دوغلاس، وكيرك دوغلاس",
+        "caption": "ظهر الجيل الثالث من عائلة دوغلاس في عالم السينما عندما قام بدور البطولة مع ولده مايكل دوغلاس وحفيده كاميرون دوغلاس",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "92909433",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/82D2/production/_92909433_10.jpg",
+        "path": "/cpsprodpb/82D2/production/_92909433_10.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "كيرك دوغلاس وزوجة ابنه كاثرين زيتا جونز",
+        "caption": "كيرك دوغلاس هو والد زوج النجمة البريطانية كاثرين زيتا جونز التي تزوجها مايكل دوغلاس عام 2000",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "92909436",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/F802/production/_92909436_11.jpg",
+        "path": "/cpsprodpb/F802/production/_92909436_11.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "كيرك دوغلاس في القدس",
+        "caption": "أدت تجربة عصيبة كادت تؤدي إلى وفاة كيرك دوغلاس عام 1991 إلى اعتناقه الديانة اليهودية التي ولد فيها، والصورة له أثناء أداء الصلاة في القدس.",
+        "copyrightHolder": "Google",
+        "type": "image"
+      },
+      {
+        "id": "92909488",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/159AA/production/_92909488_12.jpg",
+        "path": "/cpsprodpb/159AA/production/_92909488_12.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "كيرك دوغلاس بعد فقد النطق",
+        "caption": "أُصيب بسكتة قلبية أفقدته القدرة على النطق، بعدها ألف كتابا بعنوان \"ضربة حظي\"",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "بالصور: كيرك دوغلاس يحتفل بعيد ميلاده المئة",
+      "headline": "بالصور: كيرك دوغلاس يحتفل بعيد ميلاده المئة"
+    },
+    "locators": {
+      "assetUri": "/arabic/art-and-culture-38260491",
+      "cpsUrn": "urn:bbc:content:assetUri:arabic/art-and-culture-38260491",
+      "curie": "http://www.bbc.co.uk/asset/bc8c6f47-cc26-1a49-8bd8-fc679131aa17"
+    },
+    "summary": "مجموعة منتقاة من الصور لنجم هوليود كيرك دوغلاس بمناسبة مرور مئة عام عام على مولده",
+    "timestamp": 1481306573000,
+    "passport": {
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "92909541",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/38FE/production/_92909541_77.jpg",
+      "path": "/cpsprodpb/38FE/production/_92909541_77.jpg",
+      "height": 371,
+      "width": 660,
+      "altText": "كيرك دوغلاس",
+      "caption": "كيرك دوغلاس وأولاده",
+      "copyrightHolder": "Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:arabic/art-and-culture-38260491",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "ثقافة وفنون",
+      "uri": "/arabic/artandculture",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Arabic",
+      "uri": "/arabic",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "name": "ßíÑß ÏæÌáÇÓ íÔíÏ ÈÞÇÏÉ ÅÓÑÇÆíá",
+            "type": "link"
+          },
+          {
+            "name": "ãÇíßá ÏæÌáÇÓ íÓÊÚÏ ááÒæÇÌ ãä ßÇËÑíä ÒíÊÇ",
+            "type": "link"
+          }
+        ]
+      }
+    ]
+  }
+}

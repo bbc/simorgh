@@ -31,11 +31,10 @@ const MediaPlayerContainer = ({
   assetType,
   showPlaceholder,
 }) => {
-  const { platform } = useContext(RequestContext);
+  const { isAmp } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
   const location = useLocation();
-  const isAmp = platform === 'amp';
 
   if (!enabled || !blocks) {
     return null;

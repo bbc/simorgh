@@ -1,0 +1,307 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:igbo/afirika-49666505",
+    "locators": {
+      "assetUri": "/igbo/afirika-49666505",
+      "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-49666505",
+      "curie": "http://www.bbc.co.uk/asset/40af9483-cf8c-254f-b5f8-af1fa2a74436"
+    },
+    "type": "PGL",
+    "createdBy": "igbo-v6",
+    "language": "ig",
+    "lastUpdated": 1568461898179,
+    "firstPublished": 1568317639,
+    "lastPublished": 1568461889,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "igbo.africa.photo_gallery.49666505.page",
+      "cps_asset_id": "49666505"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Robert Mugabe",
+          "thingUri": "http://www.bbc.co.uk/things/45210c2a-374d-448b-a175-3471b1afca7e#id",
+          "thingId": "45210c2a-374d-448b-a175-3471b1afca7e",
+          "thingType": [
+            "Thing",
+            "Person"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Robert_Mugabe"
+          ]
+        },
+        {
+          "thingLabel": "Africa",
+          "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+          "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+          "thingType": [
+            "news:Place",
+            "Place",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Africa",
+            "http://sws.geonames.org/6255146/",
+            "http://www.wikidata.org/entity/Q15"
+          ]
+        },
+        {
+          "thingLabel": "Zimbabwe",
+          "thingUri": "http://www.bbc.co.uk/things/f863965b-7b40-4e80-ad7a-6290d822e64f#id",
+          "thingId": "f863965b-7b40-4e80-ad7a-6290d822e64f",
+          "thingType": [
+            "Thing",
+            "Place",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/878675/"
+          ],
+          "topicId": "cnq68k0jr7zt",
+          "curationList": [
+            {
+              "curationId": "6d994f3e-7e07-4c47-baa2-6907e9989d86",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "108810248",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/148E9/production/_108810248_mugabe2.jpg",
+        "path": "/cpsprodpb/148E9/production/_108810248_mugabe2.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Ndị mmadụ na-agụ egwu iji kwanyere Robert Mugabe ugwu n'akwamozu ya.",
+        "caption": "Ndị mmadụ na-agụ egwu iji kwanyere Robert Mugabe ugwu n'akwamozu ya.",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "108808243",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/85E8/production/_108808243_mugabe3.jpg",
+        "path": "/cpsprodpb/85E8/production/_108808243_mugabe3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Ndị otu ndọrọndọrọ Mugabe n'akwamozu ya",
+        "caption": "Ndị otu ndọrọndọrọ Mugabe bụ ZANU PF pụtara n'akwamozu ya",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "108808245",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/D408/production/_108808245_mugabe1.jpg",
+        "path": "/cpsprodpb/D408/production/_108808245_mugabe1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Ndị mmadụ pụtara n'igwe ha n'ọgbọ egwuregwu Harare ị fere Mugabe aka ikpeazụ",
+        "caption": "Ndị mmadụ pụtara n'igwe ha n'ọgbọ egwuregwu Harare ị fere Mugabe aka ikpeazụ",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "108770908",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13C0B/production/_108770908_mugabebodyreuters.jpg",
+        "path": "/cpsprodpb/13C0B/production/_108770908_mugabebodyreuters.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Ozu Mugabe n'aka ndị gọọmentị ala ha",
+        "caption": "Ndịagha mba Zimbabwe ebe ha na-akwanyere Mugabe ugwu dịka aka chịbụrụ ala ahụ",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "108771400",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/01A1/production/_108771400_gettyimages-1167386538.jpg",
+        "path": "/cpsprodpb/01A1/production/_108771400_gettyimages-1167386538.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Nwunye Mugabe bụ Grace Mugabe nakwa aka na-achị Zimbabwe bụ Emmerson Mnangagwa",
+        "caption": "Nwunye Mugabe bụ Grace Mugabe nakwa aka na-achị Zimbabwe bụ Emmerson Mnangagwa",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "108757623",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/7FA3/production/_108757623_mugabebody.jpg",
+        "path": "/cpsprodpb/7FA3/production/_108757623_mugabebody.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Akaptị ozu Mugabe",
+        "caption": "Akpatị ozu Mugabe ebe ndị mmadụ nwereike ịga we nye ya ugwu ikpeazụ",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "108757621",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/3183/production/_108757621_mugabereuters2.jpg",
+        "path": "/cpsprodpb/3183/production/_108757621_mugabereuters2.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Ụmụ nwaanyị Zimbabwe ebe ha na-eru ụjụ maka Robert Mugabe",
+        "caption": "Ụmụ nwaanyị Zimbabwe ebe ha na-eru ụjụ maka ọnwụ Robert Mugabe",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "108771338",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/14575/production/_108771338_mugabemournerreuters.jpg",
+        "path": "/cpsprodpb/14575/production/_108771338_mugabemournerreuters.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Otu nwaanyị nọ na mwute",
+        "caption": "Otu nwaanyị nọ na mwute gbasara ọnwụ Mugabe na Zimbabwe",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "108771050",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1399/production/_108771050_mugabemournersinstadiumreuters.jpg",
+        "path": "/cpsprodpb/1399/production/_108771050_mugabemournersinstadiumreuters.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Igwe mmadụ pụtara n'ọgbọ egwuregwu ebe a kwanyere Robert Mugabe uwgu ikpeazụ",
+        "caption": "Igwe mmadụ pụtara n'ọgbọ egwuregwu ebe a kwanyere Robert Mugabe ugwu ikpeazụ",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "108771054",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/AFD9/production/_108771054_mugabepolice.jpg",
+        "path": "/cpsprodpb/AFD9/production/_108771054_mugabepolice.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Ndị uweojii na imirikiti mmadụ",
+        "caption": "Ndị uweojii na-agba mbọ ị belata ọgbaghara dapụtara n'ihi imirikiti mmadụ pụtara ị bunye Mugabe ụkpa ekele ikpeazụ ya",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "108771046",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/FA11/production/_108771046_mugabeinjure.jpg",
+        "path": "/cpsprodpb/FA11/production/_108771046_mugabeinjure.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Onye merụrụ ahụ",
+        "caption": "Otu onye merụrụ ahụ na ọgbaghara dapụtara n'ugwu ikpeazụ Robert Mugabe",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "108771336",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/F755/production/_108771336_mugabe3.jpg",
+        "path": "/cpsprodpb/F755/production/_108771336_mugabe3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Ndị mmadụ kwụ n'ahịrị",
+        "caption": "Ndị mmadụ kwụ n'ahịrị ebe ha na-edenye aha n'ọgbo egwuregwu iji kwanyere Mugabe ugwu ikpeazụ ya",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Zimbabwe eferela Robert Mugabe aka",
+      "headline": "Robert Mugabe: Zimbabwe eferela nwa amadi a aka"
+    },
+    "locators": {
+      "assetUri": "/igbo/afirika-49666505",
+      "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-49666505",
+      "curie": "http://www.bbc.co.uk/asset/40af9483-cf8c-254f-b5f8-af1fa2a74436"
+    },
+    "summary": "Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.",
+    "timestamp": 1568461898179,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "108810335",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/D035/production/_108810335_mugabe2.jpg",
+      "path": "/cpsprodpb/D035/production/_108810335_mugabe2.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Ndị mmadụ na-agụ egwu iji kwanyere Robert Mugabe ugwu n'akwamozu ya.",
+      "caption": "Ndị mmadụ na-agụ egwu iji kwanyere Robert Mugabe ugwu n'akwamozu ya.",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:igbo/afirika-49666505",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Afịrịka",
+      "uri": "/igbo/afirika",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News Ìgbò",
+      "uri": "/igbo",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

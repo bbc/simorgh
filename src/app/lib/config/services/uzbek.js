@@ -38,6 +38,7 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Бош саҳифа',
+    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -147,12 +148,12 @@ export const service = {
           subtitle:
             'Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Тингланг',
+        watch: 'Кўринг',
         liveLabel: 'ЖОНЛИ ЭФИР',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        previousRadioShow: 'Аввалги радио дастур',
+        nextRadioShow: 'Кейинги радио дастур',
+        duration: 'Давомийлиги',
       },
     },
     brandSVG,
@@ -162,7 +163,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/uzbek/institutional-50220995',
         text: 'Нега сиз Би-би-сига ишонишингиз мумкин?',
       },
       externalLink: {

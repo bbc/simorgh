@@ -6,17 +6,14 @@ const LIVE_URL = 'https://polling.bbc.co.uk';
 const TEST_URL = 'https://polling.test.bbc.co.uk';
 
 const shouldRenderLiveData = queryString => {
-  return (
-    !isLive() &&
-    Boolean(queryString) &&
-    queryString.includes('renderer_env=live')
-  );
+  if (isLive()) {
+    return true;
+  }
+
+  return Boolean(queryString) && queryString.includes('renderer_env=live');
 };
 
 const getBaseUrl = queryString => {
-  if (isLive()) {
-    return LIVE_URL;
-  }
   if (shouldRenderLiveData(queryString)) {
     return LIVE_URL;
   }
