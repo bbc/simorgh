@@ -1,6 +1,6 @@
 import { splitEvery, splitAt, take } from 'ramda';
 
-const getAllowedItems = (items, isFirstSection) =>
+export const getAllowedItems = (items, isFirstSection) =>
   isFirstSection ? take(13, items) : take(10, items);
 
 // Split the top row stories out into their own list
@@ -22,7 +22,7 @@ const splitStandardRows = items =>
 // Anything beyond the first 2 fours goes into an imageless slice
 const splitNoImageRow = standardSlices => splitAt(2, standardSlices);
 
-const getRows = (items, isFirstSection) => {
+export const getRows = (items, isFirstSection) => {
   const allowedItems = getAllowedItems(items, isFirstSection);
 
   const [topRow, unsplitregularItems] = splitTopRow(
@@ -39,5 +39,3 @@ const getRows = (items, isFirstSection) => {
     noImageRow: noImageRow || [],
   };
 };
-
-export default getRows;
