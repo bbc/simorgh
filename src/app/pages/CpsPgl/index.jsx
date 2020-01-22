@@ -74,8 +74,12 @@ const CpsPglContainer = ({ pageData }) => {
         title={title}
         lang={metadata.language}
         description={summary}
-        openGraphType="website"
+        openGraphType="article"
       >
+        <meta
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+        />
         <meta name="article:published_time" content={firstPublished} />
         <meta name="article:modified_time" content={lastPublished} />
       </MetadataContainer>
