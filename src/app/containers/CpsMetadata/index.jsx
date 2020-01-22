@@ -13,7 +13,7 @@ const CpsMetadata = ({
   indexImage,
   indexImageAltText,
 }) => {
-  const { service } = useContext(ServiceContext);
+  const { service, articleAuthor } = useContext(ServiceContext);
   const brandedImage = indexImage ? getBrandedImage(indexImage, service) : null;
   return (
     <Metadata
@@ -24,7 +24,7 @@ const CpsMetadata = ({
       openGraphImage={brandedImage}
       openGraphImageAltText={indexImageAltText}
     >
-      <meta name="article:author" content="https://www.facebook.com/bbcnews" />
+      <meta name="article:author" content={articleAuthor} />
       <meta name="article:published_time" content={firstPublished} />
       <meta name="article:modified_time" content={lastPublished} />
     </Metadata>
