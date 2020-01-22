@@ -1,8 +1,14 @@
 FROM node:12
 WORKDIR /usr/src/app
+ARG PROTOCOL=http
+ARG HOST_URL=localhost
+ARG SERVER_PORT=7080
 COPY package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 7080
-RUN npm run build:heroku
+RUN PROTOCOL=$PROTOCOL HOST_URL=$HOST_URL npm run build:heroku
+ENV HOST_URL=$HOST_URL
+ENV PROTOCOL=$PROTOCOL
+ENV SERVER_PORT=$SERVER_PORT
 CMD ["npm", "run", "start:heroku"]

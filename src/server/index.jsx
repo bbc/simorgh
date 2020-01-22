@@ -41,7 +41,6 @@ const cspInjectFun =
 logger.debug(
   `Application outputting logs to directory "${process.env.LOG_DIR}"`,
 );
-logger.debug(`HOST_URL=${process.env.HOST_URL}`);
 
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["write"] }] */
 class LoggerStream {
