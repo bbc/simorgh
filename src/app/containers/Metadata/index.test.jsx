@@ -435,24 +435,23 @@ it('should render the default service image as open graph image', async () => {
   await renderMetadataToDocument();
   const serviceConfig = services.news.default;
 
-  const ogImage = document
-    .querySelector('head > meta[name="og:image"]')
-    .getAttribute('content');
-  const ogImageAltText = document
-    .querySelector('head > meta[name="og:image:alt"]')
-    .getAttribute('content');
-  const twitterImage = document
-    .querySelector('head > meta[name="og:image"]')
-    .getAttribute('content');
-  const twitterImageAltText = document
-    .querySelector('head > meta[name="og:image:alt"]')
-    .getAttribute('content');
-  const actual = [ogImage, ogImageAltText, twitterImage, twitterImageAltText];
+  const actual = Array.from(
+    document.querySelectorAll('head > meta[name*="image"]'),
+  ).map(tag => ({
+    name: tag.getAttribute('name'),
+    content: tag.getAttribute('content'),
+  }));
   const expected = [
-    serviceConfig.defaultImage,
-    serviceConfig.defaultImageAltText,
-    serviceConfig.defaultImage,
-    serviceConfig.defaultImageAltText,
+    {
+      name: 'og:image',
+      content: serviceConfig.defaultImage,
+    },
+    { name: 'og:image:alt', content: serviceConfig.defaultImageAltText },
+    { name: 'twitter:image:alt', content: serviceConfig.defaultImageAltText },
+    {
+      name: 'twitter:image:src',
+      content: serviceConfig.defaultImage,
+    },
   ];
   expect(actual).toEqual(expected);
 });
