@@ -150,7 +150,7 @@ export const service = {
             'Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi',
         },
         listen: 'Тингланг',
-        watch: 'Томоша қилинг',
+        watch: 'Кўринг',
         liveLabel: 'ЖОНЛИ ЭФИР',
         previousRadioShow: 'Аввалги радио дастур',
         nextRadioShow: 'Кейинги радио дастур',
