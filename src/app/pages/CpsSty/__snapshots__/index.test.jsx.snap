@@ -2291,7 +2291,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
       name="og:title"
     />
     <meta
-      content="website"
+      content="article"
       name="og:type"
     />
     <meta
@@ -2325,6 +2325,10 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
     <meta
       content="STY - Blood pressure drugs dey work better - BBC News Pidgin"
       name="twitter:title"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
     />
     <meta
       content="2019-10-23T12:39:30.000Z"

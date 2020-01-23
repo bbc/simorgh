@@ -1876,7 +1876,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL 1`] = `
       name="og:title"
     />
     <meta
-      content="website"
+      content="article"
       name="og:type"
     />
     <meta
@@ -1910,6 +1910,10 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL 1`] = `
     <meta
       content="PGL - Blood pressure drugs dey work better - BBC News Pidgin"
       name="twitter:title"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
     />
     <meta
       content="2019-10-23T13:19:44.000Z"
