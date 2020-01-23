@@ -20,6 +20,8 @@ export const buildCpsAssetPageATIParams = (
 
   const { metadata, promo } = pageData;
 
+  const { type } = metadata;
+
   const getChapter1 = pageIdentifier => pageIdentifier.split('.')[1];
 
   const page = path(['analyticsLabels', 'counterName'], metadata);
@@ -29,7 +31,8 @@ export const buildCpsAssetPageATIParams = (
   return {
     appName: atiAnalyticsAppName,
     contentId: path(['id'], metadata),
-    contentType: 'article-media-asset',
+    contentType:
+      type === 'PGL' ? 'article-photo-gallery' : 'article-media-asset',
     language: path(['language'], metadata),
     // Example page identifier: embedded_media::pidgin.embedded_media.media_asset.49529724.page
     pageIdentifier: chapter1 ? `${chapter1}::${page}` : page,
