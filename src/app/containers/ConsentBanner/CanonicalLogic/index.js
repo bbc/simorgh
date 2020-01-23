@@ -16,9 +16,13 @@ const onClient = typeof window !== 'undefined';
 
 const removeDomainRestrictions = domain => {
   const domainParts = domain.split('.');
-  const indexOfSecondLevelDomain = domainParts.indexOf('bbc');
+  const indexOfBBCDomainName = domainParts.indexOf('bbc');
+  const isBBCDomain = indexOfBBCDomainName > -1;
 
-  return `.${domainParts.slice(indexOfSecondLevelDomain).join('.')}`;
+  if (isBBCDomain) {
+    return `.${domainParts.slice(indexOfBBCDomainName).join('.')}`;
+  }
+  return domain;
 };
 
 const setCookie = (name, value) =>
