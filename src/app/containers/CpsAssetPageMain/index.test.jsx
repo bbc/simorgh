@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, waitForDomChange } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
@@ -75,6 +75,49 @@ const getBlockTextAtIndex = (index, originalPageData) => {
 };
 
 describe('CpsAssetPageMain', () => {
+  describe('Metadata', () => {
+    const ENV = process.env;
+    afterEach(() => {
+      process.env = ENV;
+    });
+
+    it('should render the index image as metadata image', async () => {
+      process.env.SIMORGH_APP_ENV = 'test';
+      const pageData = await preprocessor(
+        mapPageData,
+        cpsAssetPreprocessorRules,
+      );
+      render(createAssetPage({ pageData }, 'pidgin'));
+
+      await waitForDomChange({
+        container: document.querySelector('head'),
+      });
+
+      const actual = Array.from(
+        document.querySelectorAll('head > meta[name*="image"]'),
+      ).map(tag => ({
+        name: tag.getAttribute('name'),
+        content: tag.getAttribute('content'),
+      }));
+      const expected = [
+        {
+          name: 'og:image',
+          content:
+            'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+        },
+        { name: 'og:image:alt', content: 'connectionAltText' },
+        { name: 'twitter:image:alt', content: 'connectionAltText' },
+        {
+          name: 'twitter:image:src',
+          content:
+            'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+        },
+      ];
+
+      expect(actual).toEqual(expected);
+    });
+  });
+
   it('should match snapshot for STY', async () => {
     const pageData = await preprocessor(styPageData, cpsAssetPreprocessorRules);
 

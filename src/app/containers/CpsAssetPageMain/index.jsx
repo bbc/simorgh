@@ -8,6 +8,7 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { GhostGrid } from '#lib/styledGrid';
+import { getImageParts } from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '../CpsMetadata';
 import LinkedData from '../LinkedData';
 import headings from '../Headings';
@@ -35,7 +36,10 @@ const CpsAssetPageMain = ({ pageData }) => {
     ['relatedContent', 'groups', 0, 'promos'],
     pageData,
   );
-  const indexImage = path(['promo', 'indexImage', 'href'], pageData);
+  const indexImagePath = path(['promo', 'indexImage', 'path'], pageData);
+  const indexImageLocator = indexImagePath
+    ? getImageParts(indexImagePath)[1]
+    : null;
   const indexImageAltText = path(['promo', 'indexImage', 'altText'], pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
@@ -63,8 +67,8 @@ const CpsAssetPageMain = ({ pageData }) => {
         description={summary}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
-        indexImage={indexImage}
-        indexImageAltText={indexImageAltText}
+        imageLocator={indexImageLocator}
+        imageAltText={indexImageAltText}
       />
       <LinkedData
         type="Article"
