@@ -14,7 +14,7 @@ const PRIVACY_COOKIE_PREVIOUS_VALUES = ['0', '1'];
 
 const onClient = typeof window !== 'undefined';
 
-const removeTLDRestriction = domain => {
+const removeTopLevelDomainRestriction = domain => {
   const [firstPart, ...rest] = domain.split('.');
 
   if (firstPart === 'www') {
@@ -29,7 +29,7 @@ const enableSubDomains = domain => {
   if (isLocalhost(domain)) {
     return domain;
   }
-  return `.${removeTLDRestriction(domain)}`;
+  return `.${removeTopLevelDomainRestriction(domain)}`;
 };
 
 const setCookie = (name, value) =>
