@@ -33,8 +33,8 @@ const MetadataContainer = ({
   lang,
   description,
   openGraphType,
-  openGraphImage,
-  openGraphImageAltText,
+  image,
+  imageAltText,
   children,
 }) => {
   const {
@@ -90,8 +90,8 @@ const MetadataContainer = ({
 
   const pageTitle = `${title} - ${brandName}`;
 
-  const image = openGraphImage || defaultImage;
-  const imageAltText = openGraphImageAltText || defaultImageAltText;
+  const metaImage = image || defaultImage;
+  const metaImageAltText = imageAltText || defaultImageAltText;
 
   return (
     <Helmet htmlAttributes={htmlAttributes}>
@@ -122,8 +122,8 @@ const MetadataContainer = ({
         content={getIconAssetUrl(service, '144x144')}
       />
       <meta name="og:description" content={description} />
-      <meta name="og:image" content={image} />
-      <meta name="og:image:alt" content={imageAltText} />
+      <meta name="og:image" content={metaImage} />
+      <meta name="og:image:alt" content={metaImageAltText} />
       <meta name="og:locale" content={locale} />
       <meta name="og:site_name" content={brandName} />
       <meta name="og:title" content={pageTitle} />
@@ -132,8 +132,8 @@ const MetadataContainer = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterCreator} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image:alt" content={imageAltText} />
-      <meta name="twitter:image:src" content={image} />
+      <meta name="twitter:image:alt" content={metaImageAltText} />
+      <meta name="twitter:image:src" content={metaImage} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={pageTitle} />
       <link rel="apple-touch-icon" href={appleTouchIcon} />
@@ -153,14 +153,14 @@ MetadataContainer.propTypes = {
   lang: string.isRequired,
   description: string.isRequired,
   openGraphType: string.isRequired,
-  openGraphImage: string,
-  openGraphImageAltText: string,
+  image: string,
+  imageAltText: string,
   children: node,
 };
 
 MetadataContainer.defaultProps = {
-  openGraphImage: null,
-  openGraphImageAltText: null,
+  image: null,
+  imageAltText: null,
   children: null,
 };
 

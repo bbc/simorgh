@@ -37,8 +37,8 @@ const MetadataWithContext = ({
   lang,
   description,
   openGraphType,
-  openGraphImage,
-  openGraphImageAltText,
+  image,
+  imageAltText,
   /* eslint-enable react/prop-types */
 }) => {
   const serviceConfig = services[service].default;
@@ -59,8 +59,8 @@ const MetadataWithContext = ({
           lang={lang}
           description={description}
           openGraphType={openGraphType}
-          openGraphImage={openGraphImage}
-          openGraphImageAltText={openGraphImageAltText}
+          image={image}
+          imageAltText={imageAltText}
         />
       </RequestContextProvider>
     </ServiceContextProvider>
@@ -82,8 +82,8 @@ const CanonicalNewsInternationalOrigin = () => (
 const CanonicalMapInternationalOrigin = () => (
   <MetadataWithContext
     service="pidgin"
-    openGraphImage="http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg"
-    openGraphImageAltText="connectionAltText"
+    image="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"
+    imageAltText="connectionAltText"
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="23248703"
@@ -468,13 +468,15 @@ it('should render the open graph image if provided', async () => {
   const expected = [
     {
       name: 'og:image',
-      content: 'http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg',
+      content:
+        'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
     },
     { name: 'og:image:alt', content: 'connectionAltText' },
     { name: 'twitter:image:alt', content: 'connectionAltText' },
     {
       name: 'twitter:image:src',
-      content: 'http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg',
+      content:
+        'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
     },
   ];
   expect(actual).toEqual(expected);
