@@ -16,9 +16,7 @@ const onClient = typeof window !== 'undefined';
 
 const removeDomainRestrictions = domain => {
   const domainParts = domain.split('.');
-  const indexOfSecondLevelDomain = domainParts.findIndex(
-    domainPart => domainPart === 'bbc',
-  );
+  const indexOfSecondLevelDomain = domainParts.indexOf('bbc');
 
   return domainParts.slice(indexOfSecondLevelDomain).join('.');
 };
