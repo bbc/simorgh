@@ -7,12 +7,17 @@ const Promo = ({ text }) => <div>{text}</div>;
 
 describe('FrontPageStoryRows Container', () =>
   describe('snapshots', () => {
-    shouldMatchSnapshot('TopRow', <TopRow story={<Promo text="top" />} />);
+    shouldMatchSnapshot(
+      'TopRow',
+      <TopRow stories={[{ story: <Promo text="top story" />, id: 0 }]} />,
+    );
     shouldMatchSnapshot(
       'LeadingRow',
       <LeadingRow
-        leadingStory={<Promo text="leading" />}
-        regularStory={<Promo text="regular" />}
+        stories={[
+          { story: <Promo text="leading" />, id: 0 },
+          { story: <Promo text="regular" />, id: 1 },
+        ]}
       />,
     );
     shouldMatchSnapshot(

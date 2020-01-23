@@ -7,12 +7,16 @@ import { TopRow, LeadingRow, RegularRow } from '.';
 // eslint-disable-next-line react/prop-types
 const Promo = ({ color }) => <div style={{ backgroundColor: color }}>hi</div>;
 
-const TopRowStory = () => <TopRow story={<Promo color="blue" />} />;
+const TopRowStory = () => (
+  <TopRow stories={[{ story: <Promo color="blue" />, id: 0 }]} />
+);
 
 const LeadingRowStory = () => (
   <LeadingRow
-    leadingStory={<Promo color="blue" />}
-    regularStory={<Promo color="red" />}
+    stories={[
+      { story: <Promo color="blue" />, id: 0 },
+      { story: <Promo color="red" />, id: 1 },
+    ]}
   />
 );
 

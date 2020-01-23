@@ -7,30 +7,31 @@ import {
   regularStoryColumns,
 } from './storyColumns';
 
-export const TopRow = ({ story }) => (
+export const TopRow = ({ stories }) => (
   <Grid item columns={topStoryColumns}>
-    {story}
+    {stories[0].story}
   </Grid>
 );
 
 TopRow.propTypes = {
-  story: node.isRequired,
+  stories: arrayOf(shape({ story: node.isRequired, id: any.isRequired }))
+    .isRequired,
 };
 
-export const LeadingRow = ({ leadingStory, regularStory }) => (
+export const LeadingRow = ({ stories }) => (
   <>
     <Grid item columns={leadingStoryColumns}>
-      {leadingStory}
+      {stories[0].story}
     </Grid>
     <Grid item columns={regularStoryColumns}>
-      {regularStory}
+      {stories[1].story}
     </Grid>
   </>
 );
 
 LeadingRow.propTypes = {
-  leadingStory: node.isRequired,
-  regularStory: node.isRequired,
+  stories: arrayOf(shape({ story: node.isRequired, id: any.isRequired }))
+    .isRequired,
 };
 
 export const RegularRow = ({ stories }) => (
