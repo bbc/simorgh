@@ -90,6 +90,7 @@ const isBulletin = item =>
 const renderPromo = (item, index, firstSection) => {
   const topStory = firstSection && index === 0;
   const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
+  const promoType = topStory ? 'top' : 'regular';
 
   if (isBulletin(item)) {
     return <BulletinContainer item={item} lazyLoadImage={lazyLoadImage} />;
@@ -98,7 +99,7 @@ const renderPromo = (item, index, firstSection) => {
   return (
     <StoryPromoContainer
       item={item}
-      topStory={topStory}
+      promoType={promoType}
       lazyLoadImage={lazyLoadImage}
     />
   );

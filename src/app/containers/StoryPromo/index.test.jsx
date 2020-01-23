@@ -246,7 +246,11 @@ describe('StoryPromo Container', () => {
 
   shouldMatchSnapshot(
     `should render multiple Index Alsos correctly for canonical`,
-    <WrappedStoryPromo platform="canonical" item={indexAlsosItem} topStory />,
+    <WrappedStoryPromo
+      platform="canonical"
+      item={indexAlsosItem}
+      promoType="top"
+    />,
   );
 
   describe('assertion tests', () => {
@@ -451,7 +455,7 @@ describe('StoryPromo Container', () => {
     describe('With Index Alsos', () => {
       it('should render a list with two related items', () => {
         const { container } = render(
-          <WrappedStoryPromo item={indexAlsosItem} topStory />,
+          <WrappedStoryPromo item={indexAlsosItem} promoType="top" />,
         );
 
         expect(container.getElementsByTagName('ul')).toHaveLength(1);
@@ -460,7 +464,7 @@ describe('StoryPromo Container', () => {
 
       it('should render a related item not contained within a list', () => {
         const { container } = render(
-          <WrappedStoryPromo item={onlyOneRelatedItem} topStory />,
+          <WrappedStoryPromo item={onlyOneRelatedItem} promoType="top" />,
         );
         expect(container.getElementsByTagName('ul')).toHaveLength(0);
         expect(container.getElementsByTagName('li')).toHaveLength(0);

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { shape, bool, string, element, oneOfType } from 'prop-types';
+import { shape, bool, string, element, oneOf, oneOfType } from 'prop-types';
 import StoryPromo, {
   Headline,
   Summary,
@@ -21,6 +21,8 @@ import LinkContents from './LinkContents';
 import MediaIndicator from './MediaIndicator';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
+
+const PROMO_TYPES = oneOf(['top', 'regular', 'leading']);
 
 const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   if (!imageValues) {
@@ -89,7 +91,7 @@ LiveComponent.propTypes = {
   headline: element.isRequired,
 };
 
-const StoryPromoContainer = ({ item, lazyLoadImage, topStory }) => {
+const StoryPromoContainer = ({ item, promoType, lazyLoadImage }) => {
   const { script, datetimeLocale, service, timezone, dir } = useContext(
     ServiceContext,
   );
@@ -117,10 +119,12 @@ const StoryPromoContainer = ({ item, lazyLoadImage, topStory }) => {
     return null;
   }
 
+  const topStory = promoType === 'top';
+
   const Info = (
     <>
       {headline && (
-        <Headline script={script} service={service} topStory={topStory}>
+        <Headline script={script} service={service} promoType={promoType}>
           <Link href={url}>
             {isLive ? (
               <LiveComponent
@@ -135,7 +139,7 @@ const StoryPromoContainer = ({ item, lazyLoadImage, topStory }) => {
         </Headline>
       )}
       {summary && (
-        <Summary script={script} service={service} topStory={topStory}>
+        <Summary script={script} service={service} promoType={promoType}>
           {summary}
         </Summary>
       )}
@@ -152,7 +156,7 @@ const StoryPromoContainer = ({ item, lazyLoadImage, topStory }) => {
           isRelative={isTenHoursAgo(timestamp)}
         />
       )}
-      {topStory && relatedItems && (
+      {promoType === 'top' && relatedItems && (
         <IndexAlsosContainer
           alsoItems={relatedItems}
           script={script}
@@ -179,20 +183,20 @@ const StoryPromoContainer = ({ item, lazyLoadImage, topStory }) => {
       mediaIndicator={
         <MediaIndicator item={item} topStory={topStory} service={service} />
       }
-      topStory={topStory}
+      promoType={promoType}
     />
   );
 };
 
 StoryPromoContainer.propTypes = {
   item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
+  promoType: PROMO_TYPES,
   lazyLoadImage: bool,
-  topStory: bool,
 };
 
 StoryPromoContainer.defaultProps = {
+  promoType: 'regular',
   lazyLoadImage: true,
-  topStory: false,
 };
 
 export default StoryPromoContainer;
