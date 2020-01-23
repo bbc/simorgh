@@ -1,9 +1,8 @@
+/* eslint-disable no-console */
 const fs = require('fs');
+const path = require('path');
 const allServices = require('../cypress/support/config/allServices');
 const simorghLaunchDates = require('./simorghLaunchDates');
-
-const capitalizeFirstLetter = string =>
-  string.charAt(0).toUpperCase() + string.slice(1);
 
 const generateLinks = (service, env, domain) => {
   const output = [];
@@ -54,28 +53,28 @@ const generateLaunchDates = service => {
   return output.join(' - ');
 };
 
-const SimorghPages = '../docs/Simorgh-Pages.md';
+const scriptDir = path.resolve(__dirname);
+const SimorghPages = `${scriptDir}/../docs/Simorgh-Release-Info.md`;
 const stream = fs.createWriteStream(SimorghPages);
+
 stream.once('open', () => {
   stream.write(
-    '<!--Please update the service launch date in scripts/simorghLaunchDates.js -->\n',
-  );
-  stream.write(
-    '<!--This table can then be generated using the following command: `cd scripts && node simorghPages.js` -->\n',
-  );
-  stream.write(
-    '<!--Remember to commit and push the changes to both simorghLaunchDates.js and Simorgh-Pages.md -->\n',
+    '<!--Please update the service launch date in scripts/simorghLaunchDates.js\n' +
+      'This table can then be generated using the following command: `node scripts/simorghPages.js`\n' +
+      'Remember to commit and push the changes to both simorghLaunchDates.js and Simorgh-Release-Info.md -->\n',
   );
 
-  stream.write(`| Service | Local | Test | Stage | Live | Launch Dates |\n`);
-  stream.write(`|---------|-------|------|-------|------|--------------|\n`);
+  stream.write(
+    '| Service | Local | Test | Stage | Live | Launch Dates |\n' +
+      '|---------|-------|------|-------|------|--------------|\n',
+  );
 
   const services = allServices('');
 
   Object.keys(services).forEach(service => {
     console.log(`Generating information for ${service}`);
     const items = [
-      capitalizeFirstLetter(service),
+      service,
       generateLinks(service, 'local', 'http://localhost:7080'),
       generateLinks(service, 'test', 'https://www.test.bbc.com'),
       generateLinks(service, 'stage', 'https://www.stage.bbc.com'),
