@@ -15,7 +15,5 @@ export default async (...args) => {
 
   const processedPageData = processPageData(rawPageData);
 
-  console.log(JSON.stringify(processedPageData));
-
   return { pageData: processedPageData, ...rest };
 };

@@ -3,7 +3,6 @@ import enhancePage from './enhancePage';
 import ErrorPage from '../../containers/ErrorMain';
 import getInitialData from './getInitialData';
 
-const PAGE_TYPE = 'error';
 const component = enhancePage(ErrorPage);
 
 export default {
@@ -11,5 +10,4 @@ export default {
   exact: true,
   component,
   getInitialData,
-  pageType: PAGE_TYPE,
 };
