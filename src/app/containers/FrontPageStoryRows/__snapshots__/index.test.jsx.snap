@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FrontPageStoryRows Container snapshots LeadingRow 1`] = `
+@supports (display:grid) {
+  .c0 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: block;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+    dir="ltr"
+  >
+    <div>
+      leading
+    </div>
+  </div>
+  <div
+    class="c1"
+    dir="ltr"
+  >
+    <div>
+      regular
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FrontPageStoryRows Container snapshots RegularRow 1`] = `
+@supports (display:grid) {
+  .c0 {
+    display: block;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+    dir="ltr"
+  >
+    <div>
+      left
+    </div>
+  </div>
+  <div
+    class="c0"
+    dir="ltr"
+  >
+    <div>
+      left middle
+    </div>
+  </div>
+  <div
+    class="c0"
+    dir="ltr"
+  >
+    <div>
+      right middle
+    </div>
+  </div>
+  <div
+    class="c0"
+    dir="ltr"
+  >
+    <div>
+      right
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FrontPageStoryRows Container snapshots TopRow 1`] = `
+@supports (display:grid) {
+  .c0 {
+    display: block;
+  }
+}
+
+<div
+  class="c0"
+  dir="ltr"
+>
+  <div>
+    top
+  </div>
+</div>
+`;
