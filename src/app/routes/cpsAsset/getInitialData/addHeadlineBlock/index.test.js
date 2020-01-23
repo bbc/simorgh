@@ -1,5 +1,5 @@
 import deepClone from 'ramda/src/clone';
-import addHeadlineBlock from '.';
+import addHeadlineBlock from '../addHeadlineBlock';
 import {
   getVisuallyHiddenHeadlineBlock,
   getFauxHeadlineBlock,

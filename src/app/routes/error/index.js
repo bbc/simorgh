@@ -1,6 +1,6 @@
 import { errorPagePath } from '../../lib/utilities/getRoutePath';
 import enhancePage from './enhancePage';
-import ErrorPage from '../../components/ErrorPage';
+import ErrorPage from '../../containers/ErrorMain';
 import getInitialData from './getInitialData';
 
 const PAGE_TYPE = 'error';

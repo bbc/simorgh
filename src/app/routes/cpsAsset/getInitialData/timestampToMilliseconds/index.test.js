@@ -1,4 +1,4 @@
-import timestampToMilliseconds from '.';
+import timestampToMilliseconds from '../timestampToMilliseconds';
 
 describe('timestampToMilliseconds - metadata', () => {
   it('should multiply timestamps by 1000 if before the minimum date', async () => {

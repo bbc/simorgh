@@ -14,10 +14,13 @@ import {
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '../../constants/pageTypes';
-import enhanceFrontPage from '../frontPage/enhancePage';
+import enhanceFrontPage from '../index/enhancePage';
+import ErrorPage from '../../containers/ErrorMain';
+
+const getCpsAssetType = path(['pageData', 'metadata', 'type']);
 
 export default Component => props => {
-  const cpsAssestType = path(['pageData', 'metadata', 'type'], props);
+  const cpsAssestType = getCpsAssetType(props);
 
   switch (cpsAssestType) {
     case STORY_PAGE:
@@ -36,10 +39,12 @@ export default Component => props => {
     case FEATURE_INDEX_PAGE: {
       // TODO: Create FIX Page if required
       const FrontPage = enhanceFrontPage(Component);
+
       return <FrontPage {...props} />;
     }
-    default:
-    // Return 404 error page if page type does not match those above
-    // return ErrorPage({ ...props, pageType: 'error', status: 404 });
+    default: {
+      // Return 404 error page if page type does not match those above
+      return <ErrorPage {...props} pageType="error" status={404} />;
+    }
   }
 };
