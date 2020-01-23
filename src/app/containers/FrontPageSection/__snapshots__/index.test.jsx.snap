@@ -79,10 +79,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   padding: 0;
 }
 
-.c9 {
-  position: relative;
-}
-
 .c10 {
   display: inline-block;
   vertical-align: top;
@@ -91,11 +87,31 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   width: 100%;
 }
 
-.c20 {
+.c21 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
+}
+
+.c15 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.c23 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c9 {
+  position: relative;
+}
+
+.c20 {
+  position: relative;
 }
 
 .c11 {
@@ -118,7 +134,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   padding-bottom: 0.5rem;
 }
 
-.c23 {
+.c24 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -140,7 +156,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   padding-bottom: 0.5rem;
 }
 
-.c24 {
+.c25 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -149,18 +165,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c15 {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.c22 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
 }
 
 .c17 {
@@ -291,6 +295,85 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   }
 }
 
+@media (min-width:37.5rem) {
+  .c10 {
+    width: calc(50% - 0.5rem);
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c10 {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c10 {
+    width: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) {
+  .c21 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c21 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    width: 50%;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c15 {
+    width: 50%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c15 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c23 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c23 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
 @supports (grid-template-columns:fit-content(200px)) {
   .c9 {
     display: grid;
@@ -299,43 +382,16 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   }
 }
 
-@media (min-width:37.5rem) {
-  .c10 {
-    width: 50%;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width:80rem) {
-  .c10 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c10 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c20 {
-    width: 33.33%;
-  }
-}
-
 @supports (grid-template-columns:fit-content(200px)) {
   .c20 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c21 {
+  .c22 {
     position: absolute;
     bottom: 0;
   }
@@ -356,30 +412,9 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+  .c24 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -405,71 +440,30 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
+  .c25 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c24 {
+  .c25 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c24 {
+  .c25 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c15 {
-    width: 50%;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c15 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c15 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c15 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c22 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c22 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c22 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c25 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -616,10 +610,10 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
         role="listitem"
       >
         <div
-          class="c9"
+          class="c20"
         >
           <div
-            class="c20"
+            class="c21"
           >
             <div
               class="c11"
@@ -632,15 +626,15 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
                 />
               </div>
               <div
-                class="c21"
+                class="c22"
               />
             </div>
           </div>
           <div
-            class="c22"
+            class="c23"
           >
             <h3
-              class="c23"
+              class="c24"
             >
               <a
                 class="c17"
@@ -650,7 +644,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
               </a>
             </h3>
             <p
-              class="c24"
+              class="c25"
             >
               Summary text 2
             </p>
@@ -739,15 +733,22 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   padding: 0;
 }
 
-.c8 {
-  position: relative;
-}
-
 .c9 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
+}
+
+.c13 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c8 {
+  position: relative;
 }
 
 .c10 {
@@ -774,13 +775,6 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c13 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
 }
 
 .c15 {
@@ -905,25 +899,48 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   }
 }
 
+@media (min-width:63rem) {
+  .c9 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c9 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c13 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c13 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
 @supports (grid-template-columns:fit-content(200px)) {
   .c8 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c9 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c9 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 2;
   }
 }
 
@@ -934,24 +951,10 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (min-width:37.5rem) {
   .c14 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -976,24 +979,10 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   }
 }
 
-@media (min-width:37.5rem) {
-  .c13 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c13 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c13 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c16 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -1250,16 +1239,21 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   padding: 0;
 }
 
-.c7 {
-  position: relative;
-}
-
 .c8 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   margin-bottom: 0.5rem;
   width: 100%;
+}
+
+.c13 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.c7 {
+  position: relative;
 }
 
 .c9 {
@@ -1291,11 +1285,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c13 {
-  display: inline-block;
-  vertical-align: top;
 }
 
 .c15 {
@@ -1412,6 +1401,48 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   }
 }
 
+@media (min-width:37.5rem) {
+  .c8 {
+    width: calc(50% - 0.5rem);
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c8 {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c8 {
+    width: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    width: 50%;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c13 {
+    width: 50%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c13 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
 @supports (grid-template-columns:fit-content(200px)) {
   .c7 {
     display: grid;
@@ -1420,38 +1451,10 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   }
 }
 
-@media (min-width:37.5rem) {
-  .c8 {
-    width: 50%;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width:80rem) {
-  .c8 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c8 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 6;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c14 {
     font-size: 1.375rem;
     line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    font-size: 1.75rem;
-    line-height: 2rem;
   }
 }
 
@@ -1480,33 +1483,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   .c16 {
     display: none;
     visibility: hidden;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    width: 50%;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c13 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c13 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 1 / span 6;
   }
 }
 
@@ -1691,15 +1667,22 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   padding: 0;
 }
 
-.c7 {
-  position: relative;
-}
-
 .c8 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
+}
+
+.c12 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c7 {
+  position: relative;
 }
 
 .c9 {
@@ -1726,13 +1709,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c12 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
 }
 
 .c14 {
@@ -1842,25 +1818,48 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   }
 }
 
+@media (min-width:63rem) {
+  .c8 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c8 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c12 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c12 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
 @supports (grid-template-columns:fit-content(200px)) {
   .c7 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c8 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c8 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 2;
   }
 }
 
@@ -1871,24 +1870,10 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (min-width:37.5rem) {
   .c13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -1913,24 +1898,10 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   }
 }
 
-@media (min-width:37.5rem) {
-  .c12 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c12 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c12 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c15 {
+    display: none;
+    visibility: hidden;
   }
 }
 
