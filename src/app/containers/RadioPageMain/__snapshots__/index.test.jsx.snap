@@ -503,18 +503,13 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 .c8 {
+  border: 0;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-.c9 {
-  border: 0;
-  height: 100%;
-  width: 100%;
 }
 
 @supports (display:grid) {
@@ -892,18 +887,14 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               <div
                 class="c7"
               >
-                <div
+                <iframe
+                  allow="autoplay; fullscreen"
+                  allowfullscreen=""
                   class="c8"
-                >
-                  <iframe
-                    allow="autoplay; fullscreen"
-                    allowfullscreen=""
-                    class="c9"
-                    scrolling="no"
-                    src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
-                    title="Audio player"
-                  />
-                </div>
+                  scrolling="no"
+                  src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
+                  title="Audio player"
+                />
               </div>
             </div>
           </div>

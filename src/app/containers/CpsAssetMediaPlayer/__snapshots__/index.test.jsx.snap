@@ -132,18 +132,13 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 }
 
 .c3 {
+  border: 0;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-.c4 {
-  border: 0;
-  height: 100%;
-  width: 100%;
 }
 
 @media (max-width:63rem) {
@@ -202,18 +197,14 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
           <div
             class="c2"
           >
-            <div
+            <iframe
+              allow="autoplay; fullscreen"
+              allowfullscreen=""
               class="c3"
-            >
-              <iframe
-                allow="autoplay; fullscreen"
-                allowfullscreen=""
-                class="c4"
-                scrolling="no"
-                src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"
-                title="Media player"
-              />
-            </div>
+              scrolling="no"
+              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"
+              title="Media player"
+            />
           </div>
         </figure>
       </div>

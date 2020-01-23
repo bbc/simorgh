@@ -90,18 +90,13 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
 }
 
 .c3 {
+  border: 0;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-.c4 {
-  border: 0;
-  height: 100%;
-  width: 100%;
 }
 
 @media (min-width:63rem) {
@@ -126,18 +121,14 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
     <div
       class="c2"
     >
-      <div
+      <iframe
+        allow="autoplay; fullscreen"
+        allowfullscreen=""
         class="c3"
-      >
-        <iframe
-          allow="autoplay; fullscreen"
-          allowfullscreen=""
-          class="c4"
-          scrolling="no"
-          src="https://polling.test.bbc.co.uk/ws/av-embeds/media/externalId/id/ko"
-          title="Audio player"
-        />
-      </div>
+        scrolling="no"
+        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/externalId/id/ko"
+        title="Audio player"
+      />
     </div>
   </div>
 </div>
@@ -233,18 +224,13 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
 }
 
 .c3 {
+  border: 0;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-.c4 {
-  border: 0;
-  height: 100%;
-  width: 100%;
 }
 
 @media (min-width:63rem) {
@@ -269,18 +255,14 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
     <div
       class="c2"
     >
-      <div
+      <iframe
+        allow="autoplay; fullscreen"
+        allowfullscreen=""
         class="c3"
-      >
-        <iframe
-          allow="autoplay; fullscreen"
-          allowfullscreen=""
-          class="c4"
-          scrolling="no"
-          src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om"
-          title="Audio player"
-        />
-      </div>
+        scrolling="no"
+        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om"
+        title="Audio player"
+      />
     </div>
   </div>
 </div>
