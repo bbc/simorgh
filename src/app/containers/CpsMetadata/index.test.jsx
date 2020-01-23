@@ -31,8 +31,8 @@ const mapProps = {
   description: articleDataNews.promo.headlines.seoHeadline,
   firstPublished: getISOStringDate(articleDataNews.metadata.firstPublished),
   lastPublished: getISOStringDate(articleDataNews.metadata.lastPublished),
-  indexImage: 'http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg',
-  indexImageAltText: 'connectionAltText',
+  imageLocator: '6FC4/test/_63721682_p01kx435.jpg',
+  imageAltText: 'connectionAltText',
 };
 
 const renderMetadataToDocument = async Component => {
@@ -43,39 +43,50 @@ const renderMetadataToDocument = async Component => {
   });
 };
 
-it('should render the expected metadata tags', async () => {
-  await renderMetadataToDocument(
-    <Context service="news">
-      <CpsMetadata {...mapProps} />
-    </Context>,
-  );
+describe('CpsMetadata get branded image', () => {
+  const ENV = process.env;
+  afterEach(() => {
+    process.env = ENV;
+  });
 
-  const actual = Array.from(
-    document.querySelectorAll(
-      'head > meta[name^="article:"], head > meta[name*="image"]',
-    ),
-  ).map(tag => ({
-    name: tag.getAttribute('name'),
-    content: tag.getAttribute('content'),
-  }));
+  it('should render the expected metadata tags', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
 
-  const expected = [
-    {
-      name: 'og:image',
-      content: 'http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg',
-    },
-    { name: 'og:image:alt', content: 'connectionAltText' },
-    { name: 'twitter:image:alt', content: 'connectionAltText' },
-    {
-      name: 'twitter:image:src',
-      content: 'http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg',
-    },
-    { content: 'https://www.facebook.com/bbcnews', name: 'article:author' },
-    { content: '2018-01-01T12:01:00.000Z', name: 'article:published_time' },
-    { content: '2018-01-01T13:00:00.000Z', name: 'article:modified_time' },
-  ];
+    await renderMetadataToDocument(
+      <Context service="news">
+        <CpsMetadata {...mapProps} />
+      </Context>,
+    );
 
-  expect(actual).toEqual(expected);
+    const actual = Array.from(
+      document.querySelectorAll(
+        'head > meta[name^="article:"], head > meta[name*="image"]',
+      ),
+    ).map(tag => ({
+      name: tag.getAttribute('name'),
+      content: tag.getAttribute('content'),
+    }));
+
+    const expected = [
+      {
+        name: 'og:image',
+        content:
+          'http://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg',
+      },
+      { name: 'og:image:alt', content: 'connectionAltText' },
+      { name: 'twitter:image:alt', content: 'connectionAltText' },
+      {
+        name: 'twitter:image:src',
+        content:
+          'http://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg',
+      },
+      { content: 'https://www.facebook.com/bbcnews', name: 'article:author' },
+      { content: '2018-01-01T12:01:00.000Z', name: 'article:published_time' },
+      { content: '2018-01-01T13:00:00.000Z', name: 'article:modified_time' },
+    ];
+
+    expect(actual).toEqual(expected);
+  });
 });
 
 shouldMatchSnapshot(

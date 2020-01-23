@@ -159,7 +159,7 @@ exports[`should match snapshot for News & International 1`] = `
       name="og:description"
     />
     <meta
-      content="http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg"
+      content="http://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg"
       name="og:image"
     />
     <meta
@@ -203,7 +203,7 @@ exports[`should match snapshot for News & International 1`] = `
       name="twitter:image:alt"
     />
     <meta
-      content="http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg"
+      content="http://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg"
       name="twitter:image:src"
     />
     <meta

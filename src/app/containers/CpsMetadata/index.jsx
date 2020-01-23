@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Metadata from '../Metadata';
-import { getBrandedImage } from './utils';
+import getBrandedImage from './utils/getBrandedImage';
 
 const CpsMetadata = ({
   title,
@@ -10,19 +10,21 @@ const CpsMetadata = ({
   description,
   firstPublished,
   lastPublished,
-  indexImage,
-  indexImageAltText,
+  imageLocator,
+  imageAltText,
 }) => {
   const { service, articleAuthor } = useContext(ServiceContext);
-  const brandedImage = indexImage ? getBrandedImage(indexImage, service) : null;
+  const brandedImage = imageLocator
+    ? getBrandedImage(imageLocator, service)
+    : null;
   return (
     <Metadata
       title={title}
       lang={language}
       description={description}
       openGraphType="article"
-      openGraphImage={brandedImage}
-      openGraphImageAltText={indexImageAltText}
+      image={brandedImage}
+      imageAltText={imageAltText}
     >
       <meta name="article:author" content={articleAuthor} />
       <meta name="article:published_time" content={firstPublished} />
@@ -37,13 +39,13 @@ CpsMetadata.propTypes = {
   description: string.isRequired,
   firstPublished: string.isRequired,
   lastPublished: string.isRequired,
-  indexImage: string,
-  indexImageAltText: string,
+  imageLocator: string,
+  imageAltText: string,
 };
 
 CpsMetadata.defaultProps = {
-  indexImage: null,
-  indexImageAltText: null,
+  imageLocator: null,
+  imageAltText: null,
 };
 
 export default CpsMetadata;
