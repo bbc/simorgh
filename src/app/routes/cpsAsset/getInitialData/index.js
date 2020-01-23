@@ -12,19 +12,21 @@ import addSummaryBlock from './addSummaryBlock';
 export default async (...args) => {
   const { pageData: rawPageData, ...rest } = await fetchPageData(...args);
 
-  const a = pipe(parseInternalLinks, timestampToMilliseconds)(rawPageData);
+  const normalisePageData = pipe(parseInternalLinks, timestampToMilliseconds);
 
-  const b = await convertToOptimoBlocks(a);
+  const optimoBlocks = await convertToOptimoBlocks(
+    normalisePageData(rawPageData),
+  );
 
-  const processedPageData = pipe(
+  const processPageData = pipe(
     addHeadlineBlock,
     addSummaryBlock,
     applyTimestampRules,
     addIdsToBlocks,
     applyBlockPositioning,
-  )(b);
+  );
 
-  console.log('processedPageData', rawPageData);
+  const processedPageData = processPageData(optimoBlocks);
 
   return {
     pageData: processedPageData,
