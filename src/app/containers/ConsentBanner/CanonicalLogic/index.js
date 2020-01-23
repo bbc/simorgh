@@ -14,28 +14,22 @@ const PRIVACY_COOKIE_PREVIOUS_VALUES = ['0', '1'];
 
 const onClient = typeof window !== 'undefined';
 
-const removeTopLevelDomainRestriction = domain => {
-  const [firstPart, ...rest] = domain.split('.');
+const removeDomainRestriction = domain => {
+  const [firstPart, secondPart, ...rest] = domain.split('.');
 
-  if (firstPart === 'www') {
-    return rest.join('.');
+  if (firstPart === 'bbc') {
+    return `.bbc.${[secondPart, ...rest].join('.')}`;
+  }
+  if (secondPart === 'bbc') {
+    return `.bbc.${rest.join('.')}`;
   }
   return domain;
-};
-
-const isLocalhost = domain => domain === 'localhost';
-
-const enableSubDomains = domain => {
-  if (isLocalhost(domain)) {
-    return domain;
-  }
-  return `.${removeTopLevelDomainRestriction(domain)}`;
 };
 
 const setCookie = (name, value) =>
   Cookie.set(name, value, {
     expires: COOKIE_EXPIRY,
-    domain: enableSubDomains(document.domain),
+    domain: removeDomainRestriction(document.domain),
   });
 
 const setPolicyCookie = (value, logger) => {
