@@ -44,9 +44,8 @@ const renderMetadataToDocument = async Component => {
 };
 
 describe('CpsMetadata get branded image', () => {
-  const ENV = process.env;
   afterEach(() => {
-    process.env = ENV;
+    delete process.env.SIMORGH_APP_ENV;
   });
 
   it('should render the expected metadata tags', async () => {

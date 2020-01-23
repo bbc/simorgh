@@ -132,9 +132,8 @@ describe('CPS MAP Page', () => {
     ));
   });
 
-  const ENV = process.env;
   afterEach(() => {
-    process.env = ENV;
+    delete process.env.SIMORGH_APP_ENV;
   });
 
   it('should render the index image as metadata image', async () => {
