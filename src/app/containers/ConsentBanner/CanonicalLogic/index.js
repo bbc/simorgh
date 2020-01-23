@@ -16,10 +16,10 @@ const onClient = typeof window !== 'undefined';
 
 const removeDomainRestrictions = domain => {
   const domainParts = domain.split('.');
-  const indexOfBBCDomainName = domainParts.indexOf('bbc');
-  const isBBCDomain = indexOfBBCDomainName > -1;
+  const isBBCDomain = domainParts.includes('bbc');
 
   if (isBBCDomain) {
+    const indexOfBBCDomainName = domainParts.indexOf('bbc');
     return `.${domainParts.slice(indexOfBBCDomainName).join('.')}`;
   }
   return domain;
