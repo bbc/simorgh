@@ -1,5 +1,5 @@
 import csp from 'helmet-csp';
-import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
+import getRouteProps from '#lib/utilities/getRouteProps';
 import routes from '#app/routes';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 

@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router';
 import path from 'ramda/src/path';
-import getRouteProps from '../../routes/getInitialData/utils/getRouteProps';
+import getRouteProps from '../../lib/utilities/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
 
 export const App = ({ routes, location, initialData, bbcOrigin, history }) => {

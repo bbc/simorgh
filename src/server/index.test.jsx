@@ -3,7 +3,7 @@ import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
-import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
+import getRouteProps from '../app/lib/utilities/getRouteProps';
 import Document from './Document/component';
 import routes from '../app/routes';
 import { localBaseUrl } from '../testHelpers/config';

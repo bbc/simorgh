@@ -45,7 +45,7 @@ const startOffsets = {
   group5: 5,
 };
 
-const FrontPageMain = ({ frontPageData }) => {
+const FrontPageMain = ({ pageData }) => {
   const {
     product,
     serviceLocalizedName,
@@ -53,10 +53,10 @@ const FrontPageMain = ({ frontPageData }) => {
     frontPageTitle,
   } = useContext(ServiceContext);
   const home = path(['home'], translations);
-  const groups = path(['content', 'groups'], frontPageData);
-  const lang = path(['metadata', 'language'], frontPageData);
-  const description = path(['metadata', 'summary'], frontPageData);
-  const seoTitle = path(['promo', 'name'], frontPageData);
+  const groups = path(['content', 'groups'], pageData);
+  const lang = path(['metadata', 'language'], pageData);
+  const description = path(['metadata', 'summary'], pageData);
+  const seoTitle = path(['promo', 'name'], pageData);
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
@@ -67,8 +67,8 @@ const FrontPageMain = ({ frontPageData }) => {
 
   return (
     <>
-      <ATIAnalytics data={frontPageData} />
-      <ChartbeatAnalytics data={frontPageData} />
+      <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
         title={frontPageTitle}
         lang={lang}
@@ -102,7 +102,7 @@ const FrontPageMain = ({ frontPageData }) => {
 };
 
 FrontPageMain.propTypes = {
-  frontPageData: frontPageDataPropTypes.isRequired,
+  pageData: frontPageDataPropTypes.isRequired,
 };
 
 export default FrontPageMain;

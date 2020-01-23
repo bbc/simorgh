@@ -7,7 +7,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import { inlineLinkModelPropTypes } from '#models/propTypes/inlineLink';
-import { articlePath } from '../../routes/regex';
+import { articlePath } from '../../lib/utilities/regex';
 
 const InternalInlineLink = InlineLink.withComponent(Link);
 

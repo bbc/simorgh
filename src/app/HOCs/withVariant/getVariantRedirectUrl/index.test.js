@@ -2,8 +2,8 @@ import Cookie from 'js-cookie';
 import {
   getVariant,
   servicesWithVariants,
-} from './node_modules/#lib/utilities/variantHandler';
-import { articlePath, frontPagePath } from './node_modules/#app/routes/regex';
+} from '#lib/utilities/variantHandler';
+import { articlePath, frontPagePath } from '#lib/utilities/regex';
 import getVariantRedirectUrl from './index';
 
 const serviceNames = Object.keys(servicesWithVariants);

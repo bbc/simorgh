@@ -1,5 +1,5 @@
 import routes from './index';
-import { cpsAssetPagePath } from './regex';
+import { cpsAssetPagePath } from '../lib/utilities/regex';
 
 jest.mock('../pages/FrontPage', () => jest.fn());
 jest.mock('../pages/RadioPage', () => jest.fn());

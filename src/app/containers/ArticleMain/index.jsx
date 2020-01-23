@@ -35,7 +35,7 @@ const componentsToRender = {
   timestamp,
 };
 
-const ArticleMain = ({ articleData: data }) => {
+const ArticleMain = ({ pageData: data }) => {
   const { articleAuthor } = useContext(ServiceContext);
   const headline = getHeadline(data);
   const description = getSummary(data) || getHeadline(data);
@@ -80,6 +80,6 @@ const ArticleMain = ({ articleData: data }) => {
   );
 };
 ArticleMain.propTypes = {
-  articleData: articleDataPropTypes.isRequired,
+  pageData: articleDataPropTypes.isRequired,
 };
 export default ArticleMain;

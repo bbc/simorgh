@@ -16,10 +16,10 @@ import {
   cpsAssetPageDataPath,
   radioAndTvDataPath,
   mostReadDataRegexPath,
-} from '../app/routes/regex';
+} from '../app/lib/utilities/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
-import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
+import getRouteProps from '#lib/utilities/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
 import injectCspHeader, {
   localInjectHostCspHeader,
