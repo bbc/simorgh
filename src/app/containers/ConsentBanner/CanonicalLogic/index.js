@@ -18,7 +18,7 @@ const removeDomainRestrictions = domain => {
   const domainParts = domain.split('.');
   const indexOfSecondLevelDomain = domainParts.indexOf('bbc');
 
-  return domainParts.slice(indexOfSecondLevelDomain).join('.');
+  return `.${domainParts.slice(indexOfSecondLevelDomain).join('.')}`;
 };
 
 const setCookie = (name, value) =>
