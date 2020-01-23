@@ -105,6 +105,10 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
       name="viewport"
     />
     <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
       content="BBC News አማርኛ"
       name="apple-mobile-web-app-title"
     />
@@ -755,6 +759,10 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
     />
     <meta
       content="BBC News አማርኛ"

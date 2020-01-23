@@ -10,7 +10,6 @@ const renderTags = tags =>
 const ArticleMetadata = ({
   articleId,
   title,
-  author,
   firstPublished,
   lastPublished,
   section,
@@ -26,7 +25,6 @@ const ArticleMetadata = ({
       description={description}
       openGraphType="article"
     >
-      <meta name="article:author" content={author} />
       <meta name="article:modified_time" content={lastPublished} />
       <meta name="article:published_time" content={firstPublished} />
       {section && <meta name="article:section" content={section} />}

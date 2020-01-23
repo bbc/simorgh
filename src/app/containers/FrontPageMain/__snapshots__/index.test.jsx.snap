@@ -983,6 +983,10 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
       name="viewport"
     />
     <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
       content="BBC News Ìgbò"
       name="apple-mobile-web-app-title"
     />

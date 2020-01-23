@@ -120,6 +120,10 @@ exports[`should match for AMP News & UK origin 1`] = `
       name="viewport"
     />
     <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
       content="BBC News"
       name="apple-mobile-web-app-title"
     />
@@ -341,6 +345,10 @@ exports[`should match for Canonical News & international origin 1`] = `
       name="viewport"
     />
     <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
       content="BBC News"
       name="apple-mobile-web-app-title"
     />
@@ -542,6 +550,10 @@ exports[`should match for Persian News & UK origin 1`] = `
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
     />
     <meta
       content="BBC News فارسی"
@@ -749,6 +761,10 @@ exports[`should match for Persian News & international origin 1`] = `
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
     />
     <meta
       content="BBC News فارسی"
@@ -963,6 +979,10 @@ exports[`should match for WS Frontpages 1`] = `
       name="viewport"
     />
     <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
       content="BBC News Ìgbò"
       name="apple-mobile-web-app-title"
     />
@@ -1168,6 +1188,10 @@ exports[`should match for WS Media liveradio 1`] = `
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1"
       name="viewport"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
     />
     <meta
       content="BBC News 코리아"

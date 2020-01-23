@@ -46,6 +46,7 @@ const MetadataContainer = ({
   } = useContext(RequestContext);
 
   const {
+    articleAuthor,
     service,
     brandName,
     defaultImage,
@@ -105,6 +106,7 @@ const MetadataContainer = ({
         !isEnglishService &&
         alternateLinksWsSites.map(renderAlternateLinks)}
       {renderAmpHtml(ampLink, isAmp)}
+      <meta name="article:author" content={articleAuthor} />
       <meta name="apple-mobile-web-app-title" content={brandName} />
       <meta name="application-name" content={brandName} />
       <meta name="description" content={description} />

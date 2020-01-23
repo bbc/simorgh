@@ -2235,6 +2235,10 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
       name="viewport"
     />
     <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
       content="BBC News Pidgin"
       name="apple-mobile-web-app-title"
     />
