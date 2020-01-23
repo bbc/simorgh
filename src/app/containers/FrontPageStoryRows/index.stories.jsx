@@ -19,10 +19,10 @@ const LeadingRowStory = () => (
 const RegularRowStory = () => (
   <RegularRow
     stories={[
-      <Promo color="blue" />,
-      <Promo color="red" />,
-      <Promo color="green" />,
-      <Promo color="purple" />,
+      { story: <Promo color="blue" />, id: 0 },
+      { story: <Promo color="red" />, id: 1 },
+      { story: <Promo color="green" />, id: 2 },
+      { story: <Promo color="purple" />, id: 3 },
     ]}
   />
 );
