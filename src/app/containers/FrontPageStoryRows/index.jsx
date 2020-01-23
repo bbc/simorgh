@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@bbc/psammead-grid';
-import { node, arrayOf } from 'prop-types';
+import { node, arrayOf, shape, any } from 'prop-types';
 import {
   topStoryColumns,
   leadingStoryColumns,
@@ -35,14 +35,15 @@ LeadingRow.propTypes = {
 
 export const RegularRow = ({ stories }) => (
   <>
-    {stories.map((story, index) => (
-      <Grid item columns={regularStoryColumns} id={index}>
-        {story}
+    {stories.map(story => (
+      <Grid item columns={regularStoryColumns} key={story.id}>
+        {story.story}
       </Grid>
     ))}
   </>
 );
 
 RegularRow.propTypes = {
-  stories: arrayOf(node).isRequired,
+  stories: arrayOf(shape({ story: node.isRequired, id: any.isRequired }))
+    .isRequired,
 };
