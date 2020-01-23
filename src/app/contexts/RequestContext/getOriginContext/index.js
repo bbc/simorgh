@@ -7,7 +7,7 @@ const getOriginContext = bbcOrigin => {
   } else if (
     process &&
     process.env &&
-    (process.env.APP_ENV === 'local' || process.env.APP_ENV === 'heroku')
+    process.env.SIMORGH_APP_ENV === 'local'
   ) {
     origin = process.env.SIMORGH_BASE_URL;
   } else if (

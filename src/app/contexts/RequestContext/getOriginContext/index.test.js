@@ -4,7 +4,7 @@ const windowLocation = window.location;
 
 describe('getOriginContext', () => {
   beforeEach(() => {
-    process.env.APP_ENV = 'test';
+    process.env.SIMORGH_APP_ENV = 'test';
   });
   afterEach(() => {
     resetWindowValue('location', windowLocation);
@@ -56,7 +56,7 @@ describe('getOriginContext - localhost', () => {
   const getOriginContext = require('./index').default; // eslint-disable-line global-require
 
   beforeEach(() => {
-    process.env.APP_ENV = 'local';
+    process.env.SIMORGH_APP_ENV = 'local';
     process.env.SIMORGH_BASE_URL = 'http://localhost:7080';
   });
 

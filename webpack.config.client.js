@@ -14,7 +14,7 @@ if (DOT_ENV_CONFIG.error) {
 }
 
 module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
-  const APP_ENV = process.env.APP_ENV || 'live';
+  const APP_ENV = process.env.SIMORGH_APP_ENV || 'live';
   const SIMORGH_HOST_URL = process.env.SIMORGH_HOST_URL || 'localhost';
   const SIMORGH_PROTOCOL = process.env.SIMORGH_PROTOCOL || 'http';
   const SIMORGH_PORT = process.env.SIMORGH_SERVER_PORT
