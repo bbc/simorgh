@@ -83,6 +83,7 @@ const CpsPglContainer = ({ pageData }) => {
         type="Article"
         seoTitle={title}
         headline={title}
+        description={summary}
         showAuthor
         datePublished={firstPublished}
         dateModified={lastPublished}
