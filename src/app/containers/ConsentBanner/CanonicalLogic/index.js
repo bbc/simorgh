@@ -14,7 +14,7 @@ const PRIVACY_COOKIE_PREVIOUS_VALUES = ['0', '1'];
 
 const onClient = typeof window !== 'undefined';
 
-const removeWWWFromDomain = domain => {
+const removeDomainRestriction = domain => {
   const [firstPart, ...rest] = domain.split('.');
 
   if (firstPart === 'www') {
@@ -25,17 +25,17 @@ const removeWWWFromDomain = domain => {
 
 const isLocalhost = domain => domain === 'localhost';
 
-const formatDomain = domain => {
+const enableSubDomains = domain => {
   if (isLocalhost(domain)) {
     return domain;
   }
-  return `.${removeWWWFromDomain(domain)}`;
+  return `.${removeDomainRestriction(domain)}`;
 };
 
 const setCookie = (name, value) =>
   Cookie.set(name, value, {
     expires: COOKIE_EXPIRY,
-    domain: formatDomain(document.domain),
+    domain: enableSubDomains(document.domain),
   });
 
 const setPolicyCookie = (value, logger) => {
