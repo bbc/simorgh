@@ -14,22 +14,19 @@ const PRIVACY_COOKIE_PREVIOUS_VALUES = ['0', '1'];
 
 const onClient = typeof window !== 'undefined';
 
-const removeDomainRestriction = domain => {
-  const [firstPart, secondPart, ...rest] = domain.split('.');
+const removeDomainRestrictions = domain => {
+  const domainParts = domain.split('.');
+  const indexOfSecondLevelDomain = domainParts.findIndex(
+    domainPart => domainPart === 'bbc',
+  );
 
-  if (firstPart === 'bbc') {
-    return `.bbc.${[secondPart, ...rest].join('.')}`;
-  }
-  if (secondPart === 'bbc') {
-    return `.bbc.${rest.join('.')}`;
-  }
-  return domain;
+  return domainParts.slice(indexOfSecondLevelDomain).join('.');
 };
 
 const setCookie = (name, value) =>
   Cookie.set(name, value, {
     expires: COOKIE_EXPIRY,
-    domain: removeDomainRestriction(document.domain),
+    domain: removeDomainRestrictions(document.domain),
   });
 
 const setPolicyCookie = (value, logger) => {
