@@ -25,6 +25,7 @@ import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
   getFirstPublished,
   getLastPublished,
+  getAboutTags,
 } from '#containers/ArticleMain/utils';
 
 // Page Handlers
@@ -48,6 +49,7 @@ const CpsPglContainer = ({ pageData }) => {
   );
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
+  const aboutTags = getAboutTags(pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -87,6 +89,7 @@ const CpsPglContainer = ({ pageData }) => {
         showAuthor
         datePublished={firstPublished}
         dateModified={lastPublished}
+        aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
       <StyledGhostGrid as="main" role="main">
