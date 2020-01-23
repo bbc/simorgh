@@ -1,9 +1,8 @@
 import getBrandedImage from '.';
 
 describe('CpsMetadata get branded image', () => {
-  const ENV = process.env;
   afterEach(() => {
-    process.env = ENV;
+    delete process.env.SIMORGH_APP_ENV;
   });
 
   it('should return branded image for test', () => {
@@ -31,7 +30,7 @@ describe('CpsMetadata get branded image', () => {
   });
 
   it('should return branded image for production', () => {
-    process.env.SIMORGH_APP_ENV = 'prod';
+    process.env.SIMORGH_APP_ENV = 'live';
 
     const locator = '729E/test/_63724392_gettyimages-1098075358.jpg';
     const service = 'korean';
