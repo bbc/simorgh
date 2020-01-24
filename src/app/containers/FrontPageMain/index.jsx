@@ -34,6 +34,7 @@ const itemMargins = {
   group1: true,
   group2: true,
   group3: true,
+  group4: true,
 };
 
 const startOffsets = {
