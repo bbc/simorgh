@@ -1,4 +1,4 @@
-import isLive from '#lib/utilities/isLive';
+import isLive from '../../../../lib/utilities/isLive';
 
 const getBrandedImage = (locator, service) => {
   const iChefHost = isLive()
