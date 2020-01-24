@@ -4,9 +4,9 @@ import { TopRow, LeadingRow, RegularRow } from '../../FrontPageStoryRows';
 const getTopRowType = rowLength => {
   switch (rowLength) {
     case 1:
-      return { rowType: TopRow, storyTypes: ['top'] };
+      return { rowType: TopRow };
     case 2:
-      return { rowType: LeadingRow, storyTypes: ['leading', 'regular'] };
+      return { rowType: LeadingRow };
     default:
       return null;
   }
@@ -14,24 +14,22 @@ const getTopRowType = rowLength => {
 
 const getRowTypes = rows => {
   const topRow = {
-    row: rows.topRow,
+    stories: rows.topRow,
     displayImages: true,
     ...getTopRowType(rows.topRow.length),
   };
   const regularRows = rows.regularRows.map(row => ({
-    row,
+    stories: row,
     rowType: RegularRow,
-    storyTypes: ['regular', 'regular', 'regular', 'regular'],
     displayImages: true,
   }));
   const noImageRow = {
-    row: rows.noImageRow,
-    storyTypes: ['regular', 'regular', 'regular', 'regular'],
+    stories: rows.noImageRow,
     rowType: RegularRow,
     displayImages: false,
   };
   return flatten([topRow, regularRows, noImageRow]).filter(
-    row => !isEmpty(row.row) && !isNil(row.row),
+    row => !isEmpty(row.stories) && !isNil(row.stories),
   );
 };
 

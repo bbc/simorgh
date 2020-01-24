@@ -79,8 +79,8 @@ const renderPromoList = (items, isFirstSection) => {
 
   const renderedRows = rows.map(row => (
     <row.rowType
-      key={row.row[0].id}
-      stories={row.row}
+      key={row.stories[0].id}
+      stories={row.stories}
       isFirstSection={isFirstSection}
     />
   ));

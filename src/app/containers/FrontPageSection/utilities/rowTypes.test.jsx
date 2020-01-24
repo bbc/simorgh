@@ -16,23 +16,24 @@ const rowValues = {
       noImageRow: [9, 10, 11, 12],
     },
     expected: [
-      { row: [0], rowType: TopRow, storyTypes: ['top'], displayImages: true },
       {
-        row: [1, 2, 3, 4],
-        rowType: RegularRow,
-        storyTypes: ['regular', 'regular', 'regular', 'regular'],
+        stories: [0],
+        rowType: TopRow,
         displayImages: true,
       },
       {
-        row: [5, 6, 7, 8],
+        stories: [1, 2, 3, 4],
         rowType: RegularRow,
-        storyTypes: ['regular', 'regular', 'regular', 'regular'],
         displayImages: true,
       },
       {
-        row: [9, 10, 11, 12],
+        stories: [5, 6, 7, 8],
         rowType: RegularRow,
-        storyTypes: ['regular', 'regular', 'regular', 'regular'],
+        displayImages: true,
+      },
+      {
+        stories: [9, 10, 11, 12],
+        rowType: RegularRow,
         displayImages: false,
       },
     ],
@@ -48,21 +49,18 @@ const rowValues = {
     },
     expected: [
       {
-        row: [0, 1],
+        stories: [0, 1],
         rowType: LeadingRow,
-        storyTypes: ['leading', 'regular'],
         displayImages: true,
       },
       {
-        row: [2, 3, 4, 5],
+        stories: [2, 3, 4, 5],
         rowType: RegularRow,
-        storyTypes: ['regular', 'regular', 'regular', 'regular'],
         displayImages: true,
       },
       {
-        row: [6, 7, 8, 9],
+        stories: [6, 7, 8, 9],
         rowType: RegularRow,
-        storyTypes: ['regular', 'regular', 'regular', 'regular'],
         displayImages: true,
       },
     ],
@@ -75,15 +73,13 @@ const rowValues = {
     },
     expected: [
       {
-        row: [0, 1],
+        stories: [0, 1],
         rowType: LeadingRow,
-        storyTypes: ['leading', 'regular'],
         displayImages: true,
       },
       {
-        row: [2, 3, 4, 5],
+        stories: [2, 3, 4, 5],
         rowType: RegularRow,
-        storyTypes: ['regular', 'regular', 'regular', 'regular'],
         displayImages: true,
       },
     ],
@@ -95,11 +91,10 @@ const rowValues = {
       noImageRow: [],
     },
     expected: [
-      { row: [0], rowType: TopRow, storyTypes: ['top'], displayImages: true },
+      { stories: [0], rowType: TopRow, displayImages: true },
       {
-        row: [1, 2, 3, 4],
+        stories: [1, 2, 3, 4],
         rowType: RegularRow,
-        storyTypes: ['regular', 'regular', 'regular', 'regular'],
         displayImages: true,
       },
     ],
@@ -112,9 +107,8 @@ const rowValues = {
     },
     expected: [
       {
-        row: [0, 1],
+        stories: [0, 1],
         rowType: LeadingRow,
-        storyTypes: ['leading', 'regular'],
         displayImages: true,
       },
     ],
@@ -125,9 +119,7 @@ const rowValues = {
       regularRows: [],
       noImageRow: [],
     },
-    expected: [
-      { row: [0], rowType: TopRow, storyTypes: ['top'], displayImages: true },
-    ],
+    expected: [{ stories: [0], rowType: TopRow, displayImages: true }],
   },
   regular: {
     input: {
@@ -137,9 +129,8 @@ const rowValues = {
     },
     expected: [
       {
-        row: [0, 1, 2, 3],
+        stories: [0, 1, 2, 3],
         rowType: RegularRow,
-        storyTypes: ['regular', 'regular', 'regular', 'regular'],
         displayImages: true,
       },
     ],
@@ -155,15 +146,13 @@ const rowValues = {
     },
     expected: [
       {
-        row: [0, 1, 2, 3],
+        stories: [0, 1, 2, 3],
         rowType: RegularRow,
-        storyTypes: ['regular', 'regular', 'regular', 'regular'],
         displayImages: true,
       },
       {
-        row: [5, 6, 7, 8],
+        stories: [5, 6, 7, 8],
         rowType: RegularRow,
-        storyTypes: ['regular', 'regular', 'regular', 'regular'],
         displayImages: true,
       },
     ],
