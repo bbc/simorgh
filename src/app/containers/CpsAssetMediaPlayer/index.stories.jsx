@@ -19,7 +19,6 @@ const defaultToggles = {
 };
 
 storiesOf('Containers|MAP Media Player/Canonical', module)
-  .addParameters({ chromatic: { disable: true } })
   .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
   .add('default', () => {
@@ -46,7 +45,6 @@ storiesOf('Containers|MAP Media Player/Canonical', module)
   });
 
 storiesOf('Containers|MAP Media Player/AMP', module)
-  .addParameters({ chromatic: { disable: true } })
   .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
   .addDecorator(AmpDecorator)
