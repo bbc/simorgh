@@ -397,6 +397,36 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           );
       });
     });
+
+    if (pageType === 'mediaAssetPage' || pageType === 'photoGalleryPage') {
+      describe('CPS PGL and MAP Tests', () => {
+        it('should render a timestamp', () => {
+          cy.request(
+            `${config[service].pageTypes.photoGalleryPage.path}.json`,
+          ).then(({ body }) => {
+            const { lastPublished, firstPublished } = body.metadata;
+            const timeDifferenceMinutes =
+              (lastPublished - firstPublished) / 1000 / 60;
+            const minutesTolerance = 1;
+            cy.get('time')
+              .eq(0)
+              .should('be.visible')
+              .should('have.attr', 'datetime')
+              .should('not.be.empty');
+
+            if (timeDifferenceMinutes > minutesTolerance) {
+              cy.get('time')
+                .eq(1)
+                .should(
+                  'contain',
+                  appConfig[config[service].name].default
+                    .articleTimestampPrefix,
+                );
+            }
+          });
+        });
+      });
+    }
   });
 };
 
