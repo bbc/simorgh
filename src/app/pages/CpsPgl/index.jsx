@@ -23,10 +23,10 @@ import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
+  getAboutTags,
   getFirstPublished,
   getLastPublished,
-  getAboutTags,
-} from '#containers/ArticleMain/utils';
+} from '#lib/utilities/parseAssetData';
 
 // Page Handlers
 import withContexts from '#containers/PageHandlers/withContexts';
