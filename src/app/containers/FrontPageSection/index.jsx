@@ -2,8 +2,6 @@ import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
 import styled, { css } from 'styled-components';
 import {
-  GEL_GROUP_1_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
@@ -14,14 +12,17 @@ import {
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
-import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
-import pathOr from 'ramda/src/pathOr';
+import { StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import Grid from '@bbc/psammead-grid';
+import { pathOr } from 'ramda';
 import UsefulLinksComponent from './UsefulLinks';
-import BulletinContainer from '../Bulletin';
-import StoryPromoContainer from '../StoryPromo';
 import { ServiceContext } from '#contexts/ServiceContext';
 import groupShape from '#models/propTypes/frontPageGroup';
 import idSanitiser from '#lib/utilities/idSanitiser';
+import { getAllowedItems, getRows } from './utilities/storySplitter';
+import getRowTypes from './utilities/rowTypes';
+import fullWidthColumns from './utilities/gridColumns';
+import { TopRow } from '../FrontPageStoryRows';
 
 // Apply the right margin-top to the first section of the page when there is one or multiple items.
 const FirstSectionTopMargin = styled.div`
@@ -72,36 +73,24 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
   return children;
 };
 
-const StoryPromoListItem = styled(StoryPromoLi)`
-  ${({ isBulletin, isFirstPromo }) =>
-    isBulletin &&
-    css`
-      @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-        ${isFirstPromo
-          ? `padding-bottom: ${GEL_SPACING_TRPL};`
-          : `padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_TRPL};`}
-      }
-    `}
-`;
+const renderPromoList = (items, isFirstSection) => {
+  const allowedItems = getAllowedItems(items);
+  const rows = getRowTypes(getRows(allowedItems, isFirstSection));
 
-const isBulletin = item =>
-  item.contentType === 'TVBulletin' || item.contentType === 'RadioBulletin';
-
-const renderPromo = (item, index, firstSection) => {
-  const topStory = firstSection && index === 0;
-  const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
-  const promoType = topStory ? 'top' : 'regular';
-
-  if (isBulletin(item)) {
-    return <BulletinContainer item={item} lazyLoadImage={lazyLoadImage} />;
-  }
+  const renderedRows = rows.map(row => (
+    <row.rowType
+      key={row.row[0].id}
+      stories={row.row}
+      isFirstSection={isFirstSection}
+    />
+  ));
 
   return (
-    <StoryPromoContainer
-      item={item}
-      promoType={promoType}
-      lazyLoadImage={lazyLoadImage}
-    />
+    <MarginWrapper firstSection={isFirstSection}>
+      <Grid columns={fullWidthColumns} enableGelGutters as={StoryPromoUl}>
+        {renderedRows}
+      </Grid>
+    </MarginWrapper>
   );
 };
 
@@ -113,24 +102,10 @@ const sectionBody = (group, items, script, service, isFirstSection) => {
   }
 
   return items.length > 1 ? (
-    <MarginWrapper firstSection={isFirstSection}>
-      <StoryPromoUl>
-        {items.map((item, index) => {
-          return (
-            <StoryPromoListItem
-              key={item.id}
-              isFirstPromo={index === 0}
-              isBulletin={isBulletin(item)}
-            >
-              {renderPromo(item, index, isFirstSection)}
-            </StoryPromoListItem>
-          );
-        })}
-      </StoryPromoUl>
-    </MarginWrapper>
+    renderPromoList(items, isFirstSection)
   ) : (
     <MarginWrapper firstSection={isFirstSection} oneItem>
-      {renderPromo(items[0], 0, isFirstSection)}
+      <TopRow stories={items} isSingleStory />
     </MarginWrapper>
   );
 };
