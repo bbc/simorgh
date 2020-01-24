@@ -25,7 +25,7 @@ import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
   getFirstPublished,
   getLastPublished,
-} from '#containers/ArticleMain/utils';
+} from '#lib/utilities/parseAssetData';
 
 // Page Handlers
 import withContexts from '#containers/PageHandlers/withContexts';
