@@ -58,7 +58,7 @@ const CpsStyContainer = ({ pageData }) => {
     image,
     timestamp: props =>
       allowDateStamp ? (
-        <StyledTimestamp {...props} minutesTolerance={1} />
+        <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
       ) : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
