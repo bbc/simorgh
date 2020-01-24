@@ -1318,7 +1318,7 @@ exports[`should not show the pop-out timestamp when allowDateStamp is false 1`] 
                     <iframe
                       allow="autoplay; fullscreen"
                       allowfullscreen=""
-                      class="StyledIframe-fuo2ed-0 jQWQE"
+                      class="StyledIframe-fuo2ed-0 dIyDYU"
                       scrolling="no"
                       src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
                       title="Media player"
@@ -2009,6 +2009,7 @@ exports[`should not show the pop-out timestamp when allowDateStamp is false 1`] 
                                 class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
                               >
                                 <svg
+                                  aria-hidden="true"
                                   class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
                                   focusable="false"
                                   height="13px"
@@ -2098,6 +2099,7 @@ exports[`should not show the pop-out timestamp when allowDateStamp is false 1`] 
                                 class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
                               >
                                 <svg
+                                  aria-hidden="true"
                                   class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
                                   focusable="false"
                                   height="12px"
