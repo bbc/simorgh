@@ -7,7 +7,7 @@ import ArticleMetadata from './index';
 import {
   articleDataNews,
   articleDataPersian,
-} from '../../pages/Article/fixtureData';
+} from '#pages/Article/fixtureData';
 
 const getISOStringDate = date => new Date(date).toISOString();
 
