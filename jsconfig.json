@@ -8,7 +8,8 @@
       "#data/*": ["./data/*"],
       "#models/*": ["./src/app/models/*"],
       "#contexts/*": ["./src/app/contexts/*"],
-      "#app/*": ["./src/app/*"]
+      "#app/*": ["./src/app/*"],
+      "#pages/*": ["./src/app/pages/*"]
     }
   },
   "exclude": ["node_modules", "dist"]
