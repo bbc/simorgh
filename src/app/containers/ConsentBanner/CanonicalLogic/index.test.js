@@ -131,7 +131,7 @@ describe('Consent Banner Utilities', () => {
       expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
     });
 
-    it('sets PRIVACY_COOKIE with without domain restrictions', () => {
+    it('sets PRIVACY_COOKIE without domain restrictions', () => {
       global.document.domain = 'www.bbc.co.uk';
 
       setCookieGetMock({ privacy: null });
@@ -226,7 +226,7 @@ describe('Consent Banner Utilities', () => {
       expect(setShowCookieBannerMock).toHaveBeenCalledWith(true);
     });
 
-    it('sets POLICY_COOKIE with without domain restrictions', () => {
+    it('sets POLICY_COOKIE without domain restrictions', () => {
       setCookieGetMock({ explicit: '0', policy: null });
       global.document.domain = 'www.test.bbc.com';
 
