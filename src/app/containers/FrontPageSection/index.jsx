@@ -74,7 +74,7 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
 };
 
 const renderPromoList = (items, isFirstSection) => {
-  const allowedItems = getAllowedItems(items);
+  const allowedItems = getAllowedItems(items, isFirstSection);
   const rows = getRowTypes(getRows(allowedItems, isFirstSection));
 
   const renderedRows = rows.map(row => (
@@ -82,6 +82,7 @@ const renderPromoList = (items, isFirstSection) => {
       key={row.stories[0].id}
       stories={row.stories}
       isFirstSection={isFirstSection}
+      displayImages={row.displayImages}
     />
   ));
 
