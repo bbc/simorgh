@@ -9,21 +9,21 @@ import timestampToMilliseconds from './timestampToMilliseconds';
 import addHeadlineBlock from './addHeadlineBlock';
 import addSummaryBlock from './addSummaryBlock';
 
+const normalisePageData = pipe(parseInternalLinks, timestampToMilliseconds);
+
+const processPageData = pipe(
+  addHeadlineBlock,
+  addSummaryBlock,
+  applyTimestampRules,
+  addIdsToBlocks,
+  applyBlockPositioning,
+);
+
 export default async (...args) => {
   const { pageData: rawPageData, ...rest } = await fetchPageData(...args);
 
-  const normalisePageData = pipe(parseInternalLinks, timestampToMilliseconds);
-
   const optimoBlocks = await convertToOptimoBlocks(
     normalisePageData(rawPageData),
-  );
-
-  const processPageData = pipe(
-    addHeadlineBlock,
-    addSummaryBlock,
-    applyTimestampRules,
-    addIdsToBlocks,
-    applyBlockPositioning,
   );
 
   const processedPageData = processPageData(optimoBlocks);
