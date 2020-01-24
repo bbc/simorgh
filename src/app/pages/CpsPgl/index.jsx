@@ -23,9 +23,10 @@ import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
+  getAboutTags,
   getFirstPublished,
   getLastPublished,
-} from '#containers/ArticleMain/utils';
+} from '#lib/utilities/parseAssetData';
 
 // Page Handlers
 import withContexts from '#containers/PageHandlers/withContexts';
@@ -48,6 +49,7 @@ const CpsPglContainer = ({ pageData }) => {
   );
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
+  const aboutTags = getAboutTags(pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -83,9 +85,11 @@ const CpsPglContainer = ({ pageData }) => {
         type="Article"
         seoTitle={title}
         headline={title}
+        description={summary}
         showAuthor
         datePublished={firstPublished}
         dateModified={lastPublished}
+        aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
       <StyledGhostGrid as="main" role="main">
