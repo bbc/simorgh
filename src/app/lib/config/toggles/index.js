@@ -15,6 +15,9 @@ const toggles = {
     mostRead: {
       enabled: false,
     },
+    radioSchedule: {
+      enabled: false,
+    },
   },
   test: {
     chartbeatAnalytics: {
@@ -30,6 +33,9 @@ const toggles = {
       enabled: true,
     },
     mostRead: {
+      enabled: false,
+    },
+    radioSchedule: {
       enabled: false,
     },
   },
@@ -49,6 +55,9 @@ const toggles = {
     mostRead: {
       enabled: false,
     },
+    radioSchedule: {
+      enabled: false,
+    },
   },
   live: {
     chartbeatAnalytics: {
@@ -64,6 +73,9 @@ const toggles = {
       enabled: false,
     },
     mostRead: {
+      enabled: false,
+    },
+    radioSchedule: {
       enabled: false,
     },
   },
