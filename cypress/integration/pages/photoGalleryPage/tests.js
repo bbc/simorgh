@@ -17,7 +17,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
       );
     });
 
-    it('should render a description for the page, which contains/displays styled text', () => {
+    it('should render a description for the page', () => {
       cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
         ({ body }) => {
           const description = body.promo.summary;

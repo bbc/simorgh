@@ -408,15 +408,18 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             const timeDifferenceMinutes =
               (lastPublished - firstPublished) / 1000 / 60;
             const minutesTolerance = 1;
+            const hasTimestampPrefix = timeDifferenceMinutes > minutesTolerance;
             cy.get('time')
               .eq(0)
               .should('be.visible')
               .should('have.attr', 'datetime')
               .should('not.be.empty');
 
-            if (timeDifferenceMinutes > minutesTolerance) {
+            if (hasTimestampPrefix) {
               cy.get('time')
                 .eq(1)
+                .should('be.visible')
+                .should('have.attr', 'datetime')
                 .should(
                   'contain',
                   appConfig[config[service].name].default
