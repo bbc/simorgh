@@ -254,19 +254,16 @@ describe('CPS MAP Page', () => {
   });
 });
 
-it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
+it('should not show the timestamp when allowDateStamp is false', async () => {
   const pageDataWithHiddenTimestamp = assocPath(
     ['metadata', 'options', 'allowDateStamp'],
     false,
     await preprocessor(mapPageData, cpsAssetPreprocessorRules),
   );
 
-  const { asFragment } = render(
-    createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'pidgin'),
-  );
+  render(createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'pidgin'));
 
   expect(document.querySelector('main time')).toBeNull();
-  expect(asFragment()).toMatchSnapshot();
 });
 
 it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
