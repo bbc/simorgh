@@ -14,7 +14,7 @@ const defaultToggles = {
   },
 };
 
-storiesOf('Pages|Media Asset Page/Canonical', module).add('pidgin', () => (
+storiesOf('Pages|Media Asset Page/Canonical', module).add('default', () => (
   <ToggleContextProvider value={{ toggleState: defaultToggles }}>
     <BrowserRouter>
       <CPSMap
@@ -29,17 +29,19 @@ storiesOf('Pages|Media Asset Page/Canonical', module).add('pidgin', () => (
   </ToggleContextProvider>
 ));
 
-storiesOf('Pages|Media Asset Page/AMP', module).add('pidgin', () => (
-  <ToggleContextProvider value={{ toggleState: defaultToggles }}>
-    <BrowserRouter>
-      <CPSMap
-        pageType="MAP"
-        isAmp
-        pathname="/pathname"
-        status={200}
-        pageData={pageData}
-        service="pidgin"
-      />
-    </BrowserRouter>
-  </ToggleContextProvider>
-));
+storiesOf('Pages|Media Asset Page/AMP', module)
+  .addDecorator(AmpDecorator)
+  .add('default', () => (
+    <ToggleContextProvider value={{ toggleState: defaultToggles }}>
+      <BrowserRouter>
+        <CPSMap
+          pageType="MAP"
+          isAmp
+          pathname="/pathname"
+          status={200}
+          pageData={pageData}
+          service="pidgin"
+        />
+      </BrowserRouter>
+    </ToggleContextProvider>
+  ));
