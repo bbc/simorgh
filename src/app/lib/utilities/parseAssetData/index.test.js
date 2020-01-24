@@ -6,8 +6,8 @@ import {
   getArticleSection,
   getMentions,
   getLang,
-} from './utils';
-import { articleDataNews } from '../../pages/Article/fixtureData';
+} from '.';
+import { articleDataNews } from '../../../pages/Article/fixtureData';
 
 describe('ArticleMain utils', () => {
   it('getHeadline › it should return the correct value', () => {
