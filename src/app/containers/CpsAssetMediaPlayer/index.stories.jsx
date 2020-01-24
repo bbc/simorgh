@@ -8,6 +8,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import CpsAssetMediaPlayerContainer from '.';
 import videoBlock from './fixtureData';
+import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 const defaultToggles = {
   test: {
@@ -19,6 +20,7 @@ const defaultToggles = {
 
 storiesOf('Containers|MAP Media Player/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
+  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
   .add('default', () => {
     return (
@@ -45,6 +47,7 @@ storiesOf('Containers|MAP Media Player/Canonical', module)
 
 storiesOf('Containers|MAP Media Player/AMP', module)
   .addParameters({ chromatic: { disable: true } })
+  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
   .addDecorator(AmpDecorator)
   .add('default', () => {
