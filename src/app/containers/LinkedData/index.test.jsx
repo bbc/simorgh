@@ -53,8 +53,8 @@ describe('LinkedData', () => {
   const propsForPGL = {
     showAuthor: true,
     type: 'Article',
-    seoTitle: 'PGL Headline for Magnificent Gallery',
-    headline: 'PGL Headline for SEO',
+    seoTitle: 'PGL Headline for SEO',
+    headline: 'PGL Headline for Magnificent Gallery',
     datePublished: '2018-01-01T12:01:00.000Z',
     dateModified: '2018-01-01T13:00:00.000Z',
     description: 'Some photos in a gallery',
