@@ -73,7 +73,7 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
   return children;
 };
 
-const renderPromoList = (items, isFirstSection) => {
+const renderPromoList = (items, isFirstSection, dir) => {
   const allowedItems = getAllowedItems(items, isFirstSection);
   const rows = getRowTypes(getRows(allowedItems, isFirstSection));
 
@@ -83,19 +83,25 @@ const renderPromoList = (items, isFirstSection) => {
       stories={row.stories}
       isFirstSection={isFirstSection}
       displayImages={row.displayImages}
+      dir={dir}
     />
   ));
 
   return (
     <MarginWrapper firstSection={isFirstSection}>
-      <Grid columns={fullWidthColumns} enableGelGutters as={StoryPromoUl}>
+      <Grid
+        columns={fullWidthColumns}
+        enableGelGutters
+        as={StoryPromoUl}
+        dir={dir}
+      >
         {renderedRows}
       </Grid>
     </MarginWrapper>
   );
 };
 
-const sectionBody = (group, items, script, service, isFirstSection) => {
+const sectionBody = (group, items, script, service, isFirstSection, dir) => {
   if (group.semanticGroupName === 'Useful links') {
     return (
       <UsefulLinksComponent items={items} script={script} service={service} />
@@ -103,9 +109,9 @@ const sectionBody = (group, items, script, service, isFirstSection) => {
   }
 
   return items.length > 1 ? (
-    renderPromoList(items, isFirstSection)
+    renderPromoList(items, isFirstSection, dir)
   ) : (
-    <MarginWrapper firstSection={isFirstSection} oneItem>
+    <MarginWrapper firstSection={isFirstSection} oneItem dir={dir}>
       <TopRow stories={items} isSingleStory />
     </MarginWrapper>
   );
@@ -152,7 +158,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
       >
         {group.strapline.name}
       </SectionLabel>
-      {sectionBody(group, items, script, service, isFirstSection)}
+      {sectionBody(group, items, script, service, isFirstSection, dir)}
     </section>
   );
 };

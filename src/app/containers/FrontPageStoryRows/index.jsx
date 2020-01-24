@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@bbc/psammead-grid';
-import { arrayOf, shape, bool } from 'prop-types';
+import { arrayOf, shape, bool, oneOf } from 'prop-types';
 import styled, { css } from 'styled-components';
 
 import {
@@ -56,11 +56,12 @@ const renderPromo = (
   return renderedPromo;
 };
 
-export const TopRow = ({ stories, isFirstSection, isSingleStory }) => (
+export const TopRow = ({ stories, isFirstSection, isSingleStory, dir }) => (
   <Grid
     item
     columns={topStoryColumns}
     as={!isSingleStory && StoryPromoListItem}
+    dir={dir}
   >
     {renderPromo(stories[0], 'top', { isFirstSection })}
   </Grid>
@@ -70,20 +71,23 @@ TopRow.propTypes = {
   stories: arrayOf(shape(storyItem)).isRequired,
   isFirstSection: bool,
   isSingleStory: bool,
+  dir: oneOf(['ltr', 'rtl']),
 };
 
 TopRow.defaultProps = {
   isFirstSection: false,
   isSingleStory: false,
+  dir: 'ltr',
 };
 
-export const LeadingRow = ({ stories }) => (
+export const LeadingRow = ({ stories, dir }) => (
   <>
     <Grid
       item
       columns={leadingStoryColumns}
       as={StoryPromoListItem}
       isBulletin={isBulletin(stories[0])}
+      dir={dir}
     >
       {renderPromo(stories[0], 'leading')}
     </Grid>
@@ -92,6 +96,7 @@ export const LeadingRow = ({ stories }) => (
       columns={regularStoryColumns}
       as={StoryPromoListItem}
       isBulletin={isBulletin(stories[1])}
+      dir={dir}
     >
       {renderPromo(stories[1], 'regular')}
     </Grid>
@@ -100,9 +105,14 @@ export const LeadingRow = ({ stories }) => (
 
 LeadingRow.propTypes = {
   stories: arrayOf(shape(storyItem)).isRequired,
+  dir: oneOf(['ltr', 'rtl']),
 };
 
-export const RegularRow = ({ stories, displayImages }) => (
+LeadingRow.defaultProps = {
+  dir: 'ltr',
+};
+
+export const RegularRow = ({ stories, displayImages, dir }) => (
   <>
     {stories.map(story => (
       <Grid
@@ -111,6 +121,7 @@ export const RegularRow = ({ stories, displayImages }) => (
         key={story.id}
         as={StoryPromoListItem}
         isBulletin={isBulletin(story)}
+        dir={dir}
       >
         {renderPromo(story, 'regular', { displayImage: displayImages })}
       </Grid>
@@ -121,8 +132,10 @@ export const RegularRow = ({ stories, displayImages }) => (
 RegularRow.propTypes = {
   stories: arrayOf(shape(storyItem)).isRequired,
   displayImages: bool,
+  dir: oneOf(['ltr', 'rtl']),
 };
 
 RegularRow.defaultProps = {
   displayImages: false,
+  dir: 'ltr',
 };
