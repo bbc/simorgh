@@ -22,7 +22,14 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       });
     });
     it('should render at least one amp image', () => {
-      cy.get('amp-img').should('be.visible');
+      cy.get('figure')
+        .first()
+        .should('be.visible')
+        .within(() => {
+          cy.get('amp-img')
+            .first()
+            .should('be.visible');
+        });
     });
   });
 

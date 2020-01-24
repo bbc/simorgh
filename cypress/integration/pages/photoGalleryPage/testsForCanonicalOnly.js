@@ -9,9 +9,16 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
 }) =>
-  describe(`testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {
     it('should render at least one image', () => {
-      cy.get('img').should('be.visible');
+      cy.get('figure')
+        .first()
+        .should('be.visible')
+        .within(() => {
+          cy.get('img')
+            .first()
+            .should('be.visible');
+        });
     });
   });
 
