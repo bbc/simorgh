@@ -13,7 +13,7 @@ import rtlFixture from '#data/urdu/frontpage';
 
 const getFixture = dir => (dir === 'ltr' ? fixture : rtlFixture);
 
-const promoFixtures = (type, dir) =>
+const promoFixtures = dir =>
   pathOr(null, ['content', 'groups'], getFixture(dir))
     .flatMap(group => pathOr(null, ['items'], group))
     .filter(item => pathOr(null, ['assetTypeCode'], item) === 'PRO');
