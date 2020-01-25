@@ -2,14 +2,14 @@ import React from 'react';
 import { node, string } from 'prop-types';
 import { render } from '@testing-library/react';
 import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
-import { articleDataNews } from '../../pages/Article/fixtureData';
+import { articleDataNews } from '#pages/Article/fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
-import * as analyticsUtils from '../../lib/analyticsUtils';
+import * as analyticsUtils from '#lib/analyticsUtils';
 
 analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');

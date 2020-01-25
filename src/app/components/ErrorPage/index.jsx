@@ -30,8 +30,9 @@ const Heading = styled.h1`
   margin-top: 0;
 `;
 
-const GhostGelPageGridWithSpacing = styled(GhostGelPageGrid)`
+const StyledGhostGelPageGrid = styled(GhostGelPageGrid)`
   padding-bottom: 4rem;
+  flex-grow: 1;
 `;
 
 const CustomParagraph = styled(Paragraph)`
@@ -51,7 +52,7 @@ const ErrorPage = ({
   script,
   service,
 }) => (
-  <GhostGelPageGridWithSpacing
+  <StyledGhostGelPageGrid
     forwardedAs="main"
     role="main"
     dir={dir}
@@ -113,7 +114,7 @@ const ErrorPage = ({
         {callToActionLast}
       </CustomParagraph>
     </Grid>
-  </GhostGelPageGridWithSpacing>
+  </StyledGhostGelPageGrid>
 );
 
 ErrorPage.propTypes = {
