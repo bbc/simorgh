@@ -10,6 +10,7 @@ const LinkedData = ({
   type,
   seoTitle,
   headline,
+  description,
   datePublished,
   dateModified,
   aboutTags,
@@ -64,6 +65,7 @@ const LinkedData = ({
     thumbnailUrl: defaultImage,
     mainEntityOfPage,
     headline,
+    description,
     datePublished,
     dateModified,
     ...(aboutTags && { about: getAboutTagsContent(aboutTags) }),
@@ -99,6 +101,7 @@ LinkedData.propTypes = {
   type: string.isRequired,
   seoTitle: string.isRequired,
   headline: string,
+  description: string,
   datePublished: string,
   dateModified: string,
   aboutTags: arrayOf(
@@ -113,6 +116,7 @@ LinkedData.propTypes = {
 LinkedData.defaultProps = {
   showAuthor: false,
   headline: undefined,
+  description: undefined,
   datePublished: undefined,
   dateModified: undefined,
   aboutTags: undefined,

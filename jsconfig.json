@@ -8,6 +8,7 @@
       "#data/*": ["./data/*"],
       "#models/*": ["./src/app/models/*"],
       "#contexts/*": ["./src/app/contexts/*"],
+      "#pages/*": ["./src/app/pages/*"],
       "#app/*": ["./src/app/*"]
     }
   },
