@@ -62,7 +62,7 @@
     "@bbc/psammead-assets": "^2.12.0",
     "@bbc/psammead-brand": "^5.1.7",
     "@bbc/psammead-bulleted-list": "1.0.1",
-    "@bbc/psammead-bulletin": "^1.0.6",
+    "@bbc/psammead-bulletin": "^1.0.7",
     "@bbc/psammead-calendars": "^2.0.5",
     "@bbc/psammead-caption": "^2.2.23",
     "@bbc/psammead-consent-banner": "^2.3.25",
