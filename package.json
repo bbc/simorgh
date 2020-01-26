@@ -80,7 +80,7 @@
     "@bbc/psammead-paragraph": "^2.2.23",
     "@bbc/psammead-rich-text-transforms": "^2.0.0",
     "@bbc/psammead-section-label": "^3.0.12",
-    "@bbc/psammead-sitewide-links": "^4.0.5",
+    "@bbc/psammead-sitewide-links": "^4.0.6",
     "@bbc/psammead-story-promo": "^2.7.18",
     "@bbc/psammead-story-promo-list": "^2.1.25",
     "@bbc/psammead-styles": "^4.2.0",
