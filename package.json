@@ -143,7 +143,7 @@
     "@testing-library/react-hooks": "^3.2.1",
     "amphtml-validator": "^1.0.29",
     "babel-eslint": "^10.0.3",
-    "babel-jest": "^24.9.0",
+    "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-dynamic-import-node": "^2.3.0",
     "babel-plugin-styled-components": "^1.10.7",
