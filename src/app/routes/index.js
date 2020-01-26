@@ -2,13 +2,13 @@ import path from 'ramda/src/path';
 import getInitialData from './getInitialData';
 
 // Pages
-import Article from '../pages/Article';
-import FrontPage from '../pages/FrontPage';
-import RadioPage from '../pages/RadioPage';
-import CpsMap from '../pages/CpsMap';
-import CpsSty from '../pages/CpsSty';
-import CpsPgl from '../pages/CpsPgl';
-import ErrorPage from '../pages/Error';
+import Article from '#pages/Article';
+import FrontPage from '#pages/FrontPage';
+import RadioPage from '#pages/RadioPage';
+import CpsMap from '#pages/CpsMap';
+import CpsSty from '#pages/CpsSty';
+import CpsPgl from '#pages/CpsPgl';
+import ErrorPage from '#pages/Error';
 
 // Regex Matchers
 import {
