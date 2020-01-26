@@ -41,9 +41,6 @@ const contextStub = {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,
   },
-  translations: {
-    skipLinkText: 'Skip to content',
-  },
 };
 
 describe(`FooterContainer`, () => {

@@ -27,8 +27,7 @@ const renderListItems = (Li, navigation, script, currentPage, service, dir) =>
   });
 
 const NavigationContainer = () => {
-  const { platform } = useContext(RequestContext);
-  const isAmp = platform === 'amp';
+  const { isAmp } = useContext(RequestContext);
 
   const { script, translations, navigation, service, dir } = useContext(
     ServiceContext,
