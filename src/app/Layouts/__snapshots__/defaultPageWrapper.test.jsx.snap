@@ -518,8 +518,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width:25rem) {
-
-  .c21 {
+  .c30 {
     min-height: 3.25rem;
     padding: 0 1rem;
   }
