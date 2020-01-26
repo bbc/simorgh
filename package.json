@@ -59,7 +59,7 @@
     "@bbc/gel-foundations": "^3.4.3",
     "@bbc/moment-timezone-include": "^1.1.2",
     "@bbc/psammead-amp-geo": "^1.1.2",
-    "@bbc/psammead-assets": "^2.12.0",
+    "@bbc/psammead-assets": "^2.12.1",
     "@bbc/psammead-brand": "^5.1.9",
     "@bbc/psammead-bulleted-list": "1.0.4",
     "@bbc/psammead-bulletin": "^1.0.7",
