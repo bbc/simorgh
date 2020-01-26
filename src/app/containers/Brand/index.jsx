@@ -1,25 +1,15 @@
 import React, { useContext } from 'react';
 import Brand from '@bbc/psammead-brand';
-import SkipLink from '@bbc/psammead-brand/skip-link';
-import { bool } from 'prop-types';
+import { bool, node } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const renderSkipLink = (service, script, dir, skipLinkText) => (
-  <SkipLink service={service} script={script} dir={dir} href="#content">
-    {skipLinkText}
-  </SkipLink>
-);
-
-const BrandContainer = props => {
+const BrandContainer = ({ skipLink, ...props }) => {
   const {
     product,
     serviceLocalizedName,
     brandSVG,
     service,
     theming,
-    script,
-    translations,
-    dir,
   } = useContext(ServiceContext);
   const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;
@@ -27,7 +17,6 @@ const BrandContainer = props => {
   const svgRatio = brandSVG && brandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
-  const { skipLinkText } = translations;
 
   return (
     <Brand
@@ -40,7 +29,7 @@ const BrandContainer = props => {
       maxWidth={maxWidth}
       svg={brandSVG}
       url={`/${service}`}
-      skipLink={renderSkipLink(service, script, dir, skipLinkText)}
+      skipLink={skipLink}
       {...props}
     />
   );
@@ -49,11 +38,13 @@ const BrandContainer = props => {
 BrandContainer.propTypes = {
   borderTop: bool,
   borderBottom: bool,
+  skipLink: node,
 };
 
 BrandContainer.defaultProps = {
   borderTop: false,
   borderBottom: false,
+  skipLink: null,
 };
 
 export default BrandContainer;

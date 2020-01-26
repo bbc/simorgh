@@ -76,37 +76,6 @@ exports[`BrandContainer should render correctly 1`] = `
   margin-bottom: -0.25rem;
 }
 
-.c6 {
-  position: absolute;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  padding: 0.75rem 0.5rem;
-  background-color: #FFFFFF;
-  border: 0.1875rem solid #000;
-  color: #333;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c6:focus {
-  -webkit-clip-path: none;
-  clip-path: none;
-  -webkit-clip: auto;
-  clip: auto;
-  height: auto;
-  width: auto;
-  top: 0;
-  left: 0;
-}
-
 @media (max-width:14.9375rem) {
   .c1 {
     display: block;
@@ -143,18 +112,6 @@ exports[`BrandContainer should render correctly 1`] = `
 @media screen and (-ms-high-contrast:active),print {
   .c4 {
     fill: windowText;
-  }
-}
-
-@media (min-width:25rem) {
-  .c6:focus {
-    top: 0.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c6 {
-    padding: 0.5rem;
   }
 }
 
@@ -198,13 +155,6 @@ exports[`BrandContainer should render correctly 1`] = `
       >
         BBC News
       </span>
-    </a>
-    <a
-      class="c6"
-      dir="ltr"
-      href="#content"
-    >
-      Skip to content
     </a>
   </div>
 </div>

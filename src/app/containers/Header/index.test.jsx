@@ -92,4 +92,15 @@ describe(`Header`, () => {
     );
     expect(document.querySelector(`header nav`)).toBeNull();
   });
+
+  it('should render a Brand with a Skip to content link, linking to #content', () => {
+    render(
+      HeaderContainerWithContext({
+        pageType: 'frontPage',
+      }),
+    );
+
+    const skipLink = document.querySelectorAll("a[href='#content']")[1];
+    expect(skipLink).not.toBeNull();
+  });
 });
