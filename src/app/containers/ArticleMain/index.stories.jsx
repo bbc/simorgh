@@ -4,6 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { UserContextProvider } from '#contexts/UserContext';
 import ArticleMain from '.';
 
 // article c5jje4ejkqvo contains a Headline, a Paragraph, a timestamp
@@ -19,7 +20,9 @@ storiesOf('Main|Article', module)
     <ToggleContextProvider>
       <ServiceContextProvider service="news">
         <RequestContextProvider isAmp={false} pageType="article" service="news">
-          <ArticleMain articleData={articleData} />
+          <UserContextProvider>
+            <ArticleMain articleData={articleData} />
+          </UserContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>
