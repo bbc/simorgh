@@ -1,4 +1,4 @@
-import getRowTypes from './rowTypes';
+import getRowDetails from './rowDetails';
 import {
   TopRow,
   RegularRow,
@@ -18,22 +18,22 @@ const rowValues = {
     expected: [
       {
         stories: [0],
-        rowType: TopRow,
+        rowComponent: TopRow,
         displayImages: true,
       },
       {
         stories: [1, 2, 3, 4],
-        rowType: RegularRow,
+        rowComponent: RegularRow,
         displayImages: true,
       },
       {
         stories: [5, 6, 7, 8],
-        rowType: RegularRow,
+        rowComponent: RegularRow,
         displayImages: true,
       },
       {
         stories: [9, 10, 11, 12],
-        rowType: RegularRow,
+        rowComponent: RegularRow,
         displayImages: false,
       },
     ],
@@ -50,17 +50,17 @@ const rowValues = {
     expected: [
       {
         stories: [0, 1],
-        rowType: LeadingRow,
+        rowComponent: LeadingRow,
         displayImages: true,
       },
       {
         stories: [2, 3, 4, 5],
-        rowType: RegularRow,
+        rowComponent: RegularRow,
         displayImages: true,
       },
       {
         stories: [6, 7, 8, 9],
-        rowType: RegularRow,
+        rowComponent: RegularRow,
         displayImages: true,
       },
     ],
@@ -74,12 +74,12 @@ const rowValues = {
     expected: [
       {
         stories: [0, 1],
-        rowType: LeadingRow,
+        rowComponent: LeadingRow,
         displayImages: true,
       },
       {
         stories: [2, 3, 4, 5],
-        rowType: RegularRow,
+        rowComponent: RegularRow,
         displayImages: true,
       },
     ],
@@ -91,10 +91,10 @@ const rowValues = {
       noImageRow: [],
     },
     expected: [
-      { stories: [0], rowType: TopRow, displayImages: true },
+      { stories: [0], rowComponent: TopRow, displayImages: true },
       {
         stories: [1, 2, 3, 4],
-        rowType: RegularRow,
+        rowComponent: RegularRow,
         displayImages: true,
       },
     ],
@@ -108,7 +108,7 @@ const rowValues = {
     expected: [
       {
         stories: [0, 1],
-        rowType: LeadingRow,
+        rowComponent: LeadingRow,
         displayImages: true,
       },
     ],
@@ -119,7 +119,7 @@ const rowValues = {
       regularRows: [],
       noImageRow: [],
     },
-    expected: [{ stories: [0], rowType: TopRow, displayImages: true }],
+    expected: [{ stories: [0], rowComponent: TopRow, displayImages: true }],
   },
   regular: {
     input: {
@@ -130,7 +130,7 @@ const rowValues = {
     expected: [
       {
         stories: [0, 1, 2, 3],
-        rowType: RegularRow,
+        rowComponent: RegularRow,
         displayImages: true,
       },
     ],
@@ -147,12 +147,12 @@ const rowValues = {
     expected: [
       {
         stories: [0, 1, 2, 3],
-        rowType: RegularRow,
+        rowComponent: RegularRow,
         displayImages: true,
       },
       {
         stories: [5, 6, 7, 8],
-        rowType: RegularRow,
+        rowComponent: RegularRow,
         displayImages: true,
       },
     ],
@@ -163,7 +163,7 @@ describe('getRows for first section', () => {
   describe('assertions', () => {
     Object.keys(rowValues).forEach(value =>
       it(`should return right splitting for ${value} rows`, () => {
-        expect(getRowTypes(rowValues[value].input)).toStrictEqual(
+        expect(getRowDetails(rowValues[value].input)).toStrictEqual(
           rowValues[value].expected,
         );
       }),

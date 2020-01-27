@@ -3,12 +3,12 @@ import { TopRow, LeadingRow, RegularRow } from '../../FrontPageStoryRows';
 
 // Returns the component that should be used for the first row.
 // This is one of TopRow, LeadingRow.
-const getTopRowType = rowLength => {
+const getTopRowComponent = rowLength => {
   switch (rowLength) {
     case 1:
-      return { rowType: TopRow };
+      return { rowComponent: TopRow };
     case 2:
-      return { rowType: LeadingRow };
+      return { rowComponent: LeadingRow };
     default:
       return null;
   }
@@ -16,20 +16,20 @@ const getTopRowType = rowLength => {
 
 // Flattens the structure created in the storySplitter function,
 // allowing the resulting array to be easily mapped over.
-const getRowTypes = rows => {
+const getRowDetails = rows => {
   const topRow = {
     stories: rows.topRow,
     displayImages: true,
-    ...getTopRowType(rows.topRow.length),
+    ...getTopRowComponent(rows.topRow.length),
   };
   const regularRows = rows.regularRows.map(row => ({
     stories: row,
-    rowType: RegularRow,
+    rowComponent: RegularRow,
     displayImages: true,
   }));
   const noImageRow = {
     stories: rows.noImageRow,
-    rowType: RegularRow,
+    rowComponent: RegularRow,
     displayImages: false,
   };
   return flatten([topRow, regularRows, noImageRow]).filter(
@@ -37,4 +37,4 @@ const getRowTypes = rows => {
   );
 };
 
-export default getRowTypes;
+export default getRowDetails;

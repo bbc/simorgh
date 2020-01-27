@@ -20,7 +20,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import groupShape from '#models/propTypes/frontPageGroup';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { getAllowedItems, getRows } from './utilities/storySplitter';
-import getRowTypes from './utilities/rowTypes';
+import getRowDetails from './utilities/rowDetails';
 import fullWidthColumns from './utilities/gridColumns';
 import { TopRow } from '../FrontPageStoryRows';
 
@@ -75,10 +75,10 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
 
 const renderPromoList = (items, isFirstSection, dir) => {
   const allowedItems = getAllowedItems(items, isFirstSection);
-  const rows = getRowTypes(getRows(allowedItems, isFirstSection));
+  const rows = getRowDetails(getRows(allowedItems, isFirstSection));
 
   const renderedRows = rows.map(row => (
-    <row.rowType
+    <row.rowComponent
       key={row.stories[0].id}
       stories={row.stories}
       isFirstSection={isFirstSection}
