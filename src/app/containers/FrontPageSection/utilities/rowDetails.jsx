@@ -14,8 +14,15 @@ const getFirstRowComponent = rowLength => {
   }
 };
 
-// Flattens the structure created in the storySplitter function,
-// allowing the resulting array to be easily mapped over.
+/* Flattens the structure created in the storySplitter function,
+ * allowing the resulting array to be easily mapped over.
+ * Returns an array of objects in the format:
+ * [{
+ *   stories: [An array of story items],
+ *   displayImages: bool - whether images should be displayed in the promos,
+ *   rowComponent: the React component that displays the row
+ * }]
+ */
 const getRowDetails = rows => {
   const firstRow = {
     stories: rows.firstRow,
