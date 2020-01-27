@@ -24,8 +24,10 @@ const RadioScheduleContainer = ({ endpoint }) => {
         .then(handleResponse)
         .catch(e => logger.error(`HTTP Error: "${e}"`));
 
-    fetchRadioScheduleData(endpoint);
-  }, [endpoint]);
+    if (enabled) {
+      fetchRadioScheduleData(endpoint);
+    }
+  }, [endpoint, enabled]);
 
   if (!enabled || !hasRadioSchedule) {
     return null;
