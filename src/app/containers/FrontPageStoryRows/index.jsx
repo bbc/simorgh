@@ -41,7 +41,7 @@ const renderPromo = (
   promoType,
   optional = { isFirstSection: false, displayImage: true },
 ) => {
-  const lazyLoadImage = promoType === 'top' && optional.isFirstSection; // don't lazy load image if it is a top story
+  const lazyLoadImage = !(promoType === 'top' && optional.isFirstSection); // don't lazy load image if it is a top story
   const renderedPromo = isBulletin(item) ? (
     <BulletinContainer item={item} lazyLoadImage={lazyLoadImage} />
   ) : (
