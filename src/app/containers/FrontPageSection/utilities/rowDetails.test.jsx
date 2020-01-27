@@ -8,7 +8,7 @@ import {
 const rowValues = {
   'top story, regular, regular, no image': {
     input: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [
         [1, 2, 3, 4],
         [5, 6, 7, 8],
@@ -40,7 +40,7 @@ const rowValues = {
   },
   'leading, regular, regular': {
     input: {
-      topRow: [0, 1],
+      firstRow: [0, 1],
       regularRows: [
         [2, 3, 4, 5],
         [6, 7, 8, 9],
@@ -67,7 +67,7 @@ const rowValues = {
   },
   'leading, regular': {
     input: {
-      topRow: [0, 1],
+      firstRow: [0, 1],
       regularRows: [[2, 3, 4, 5]],
       noImageRow: [],
     },
@@ -86,7 +86,7 @@ const rowValues = {
   },
   'top, regular': {
     input: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [[1, 2, 3, 4]],
       noImageRow: [],
     },
@@ -101,7 +101,7 @@ const rowValues = {
   },
   leading: {
     input: {
-      topRow: [0, 1],
+      firstRow: [0, 1],
       regularRows: [],
       noImageRow: [],
     },
@@ -115,7 +115,7 @@ const rowValues = {
   },
   top: {
     input: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [],
       noImageRow: [],
     },
@@ -123,7 +123,7 @@ const rowValues = {
   },
   regular: {
     input: {
-      topRow: [],
+      firstRow: [],
       regularRows: [[0, 1, 2, 3]],
       noImageRow: [],
     },
@@ -137,7 +137,7 @@ const rowValues = {
   },
   'regular, regular': {
     input: {
-      topRow: [],
+      firstRow: [],
       regularRows: [
         [0, 1, 2, 3],
         [5, 6, 7, 8],
