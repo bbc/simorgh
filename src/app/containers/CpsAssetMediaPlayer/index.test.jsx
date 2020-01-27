@@ -62,9 +62,6 @@ describe('MediaPlayer', () => {
   suppressPropWarnings(['assetUri']);
   isNull(
     'is Null when assetUri is not provided',
-    <GenerateMediaPlayer
-      platform="canonical"
-      blocks={[videoBlock]}
-    />,
+    <GenerateMediaPlayer platform="canonical" blocks={[videoBlock]} />,
   );
 });
