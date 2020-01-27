@@ -9,7 +9,7 @@ We only run a subset of these integrations tests in CI and CD (those we always r
 If you would like to run e2e tests as it runs on the cron pass this env variable to cypress `CYPRESS_SMOKE=false`, so your script could be something like `CYPRESS_SMOKE=false npm run test:e2e`.
 
 ## [Config used in the tests](../support/config)
-It's important to familiarise yourself with the service.js config before writing e2e tests. Within there we define which combinations of services and page types should be tested, what the paths to test on are and whether something should be tested while only smoke testing.
+It's important to familiarise yourself with the [services config file](../support/config/settings.js) before writing e2e tests. Within there we define which combinations of services and page types should be tested, what the paths to test on are and whether something should be tested while only smoke testing.
 
 ## [Application](./application)
 Here we test things that aren't pages such as manifest files and service workers. NB we don't test the .json endpoint for each page here because it's an implicit part of every 'page' test.
