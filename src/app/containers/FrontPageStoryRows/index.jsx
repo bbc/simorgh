@@ -38,10 +38,14 @@ const isBulletin = item =>
 
 const renderPromo = (
   item,
-  promoType,
-  optional = { isFirstSection: false, displayImage: true },
+  optional = {
+    promoType: 'regular',
+    isFirstSection: false,
+    displayImage: true,
+  },
 ) => {
-  const lazyLoadImage = !(promoType === 'top' && optional.isFirstSection); // don't lazy load image if it is a top story
+  const { promoType, displayImage, isFirstSection } = optional;
+  const lazyLoadImage = !(promoType === 'top' && isFirstSection); // don't lazy load image if it is a top story
   const renderedPromo = isBulletin(item) ? (
     <BulletinContainer item={item} lazyLoadImage={lazyLoadImage} />
   ) : (
@@ -49,7 +53,7 @@ const renderPromo = (
       item={item}
       promoType={promoType}
       lazyLoadImage={lazyLoadImage}
-      displayImage={optional.displayImage}
+      displayImage={displayImage}
     />
   );
 
@@ -82,7 +86,7 @@ export const TopRow = ({
     as={!sectionHasSingleStory && StoryPromoListItem}
     dir={dir}
   >
-    {renderPromo(stories[0], 'top', { isFirstSection })}
+    {renderPromo(stories[0], { promoType: 'top', isFirstSection })}
   </Grid>
 );
 
@@ -107,7 +111,7 @@ export const LeadingRow = ({ stories, dir }) => (
       isBulletin={isBulletin(stories[0])}
       dir={dir}
     >
-      {renderPromo(stories[0], 'leading')}
+      {renderPromo(stories[0], { promoType: 'leading' })}
     </Grid>
     <Grid
       item
@@ -116,7 +120,7 @@ export const LeadingRow = ({ stories, dir }) => (
       isBulletin={isBulletin(stories[1])}
       dir={dir}
     >
-      {renderPromo(stories[1], 'regular')}
+      {renderPromo(stories[1], { promoType: 'regular' })}
     </Grid>
   </>
 );
@@ -140,7 +144,10 @@ export const RegularRow = ({ stories, displayImages, dir }) => (
         isBulletin={isBulletin(story)}
         dir={dir}
       >
-        {renderPromo(story, 'regular', { displayImage: displayImages })}
+        {renderPromo(story, {
+          promoType: 'regular',
+          displayImage: displayImages,
+        })}
       </Grid>
     ))}
   </>
