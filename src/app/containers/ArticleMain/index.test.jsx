@@ -10,7 +10,7 @@ import {
   articleDataNews,
   articleDataPersian,
   articleDataPidgin,
-} from '../../pages/Article/fixtureData';
+} from '#pages/Article/fixtureData';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));

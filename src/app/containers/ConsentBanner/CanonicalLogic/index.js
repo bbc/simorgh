@@ -14,8 +14,22 @@ const PRIVACY_COOKIE_PREVIOUS_VALUES = ['0', '1'];
 
 const onClient = typeof window !== 'undefined';
 
+const removeDomainRestrictions = domain => {
+  const domainParts = domain.split('.');
+  const isBBCDomain = domainParts.includes('bbc');
+
+  if (isBBCDomain) {
+    const indexOfBBCDomainName = domainParts.indexOf('bbc');
+    return `.${domainParts.slice(indexOfBBCDomainName).join('.')}`;
+  }
+  return domain;
+};
+
 const setCookie = (name, value) =>
-  Cookie.set(name, value, { expires: COOKIE_EXPIRY });
+  Cookie.set(name, value, {
+    expires: COOKIE_EXPIRY,
+    domain: removeDomainRestrictions(document.domain),
+  });
 
 const setPolicyCookie = (value, logger) => {
   setCookie(POLICY_COOKIE, value);

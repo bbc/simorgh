@@ -26,7 +26,7 @@ import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
   getFirstPublished,
   getLastPublished,
-} from '#containers/ArticleMain/utils';
+} from '#lib/utilities/parseAssetData';
 
 // Page Handlers
 import withContexts from '#containers/PageHandlers/withContexts';
@@ -64,7 +64,7 @@ const CpsMapContainer = ({ pageData }) => {
     image,
     timestamp: props =>
       allowDateStamp ? (
-        <StyledTimestamp {...props} minutesTolerance={1} />
+        <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
       ) : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
