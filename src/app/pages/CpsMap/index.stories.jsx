@@ -18,23 +18,6 @@ const defaultToggles = {
 
 const isAmp = platform => platform === 'AMP';
 
-const mediaAssetPage = platform => {
-  return (
-    <ToggleContextProvider value={{ toggleState: defaultToggles }}>
-      <BrowserRouter>
-        <CPSMap
-          pageType="MAP"
-          isAmp={isAmp(platform)}
-          pathname="/pathname"
-          status={200}
-          pageData={pageData}
-          service="pidgin"
-        />
-      </BrowserRouter>
-    </ToggleContextProvider>
-  );
-};
-
 const platforms = ['Canonical', 'AMP'];
 
 platforms.forEach(platform => {
@@ -49,6 +32,19 @@ platforms.forEach(platform => {
   }
 
   mapStories.add('default', () => {
-    return mediaAssetPage(platform);
+    return (
+      <ToggleContextProvider value={{ toggleState: defaultToggles }}>
+        <BrowserRouter>
+          <CPSMap
+            pageType="MAP"
+            isAmp={isAmp(platform)}
+            pathname="/pathname"
+            status={200}
+            pageData={pageData}
+            service="pidgin"
+          />
+        </BrowserRouter>
+      </ToggleContextProvider>
+    );
   });
 });
