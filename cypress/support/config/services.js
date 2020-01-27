@@ -153,7 +153,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: undefined,
+        path: isLive(appEnv)
+          ? '/archive/articles/c413ngjk87wo'
+          : '/archive/articles/cqv9w00mgjpo',
         smoke: false,
       },
       errorPage404: {
@@ -1352,7 +1354,9 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv) ? undefined : '/ukrainian/articles/cp4l2mrejvdo',
+        path: isLive(appEnv)
+          ? '/ukrainian/articles/c8zv0eed9gko'
+          : '/ukrainian/articles/cp4l2mrejvdo',
         smoke: false,
       },
       errorPage404: {
