@@ -4,7 +4,7 @@ import { act } from 'react-dom/test-utils';
 import RadioScheduleContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ToggleContext } from '#contexts/ToggleContext';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/radioschedule.json';
 
 let container;
@@ -20,13 +20,10 @@ const getToggleState = enabled => ({
   test: { radioSchedule: { enabled } },
 });
 
-const renderRadioScheduleContainer = ({
-  service,
-  radioScheduleToggle = false,
-}) =>
+const renderRadioScheduleContainer = (service, radioScheduleToggle = false) =>
   act(async () => {
     ReactDOM.render(
-      <ToggleContextProvider
+      <ToggleContext.Provider
         value={{ toggleState: getToggleState(radioScheduleToggle) }}
       >
         <RequestContextProvider
@@ -41,7 +38,7 @@ const renderRadioScheduleContainer = ({
             />
           </ServiceContextProvider>
         </RequestContextProvider>
-      </ToggleContextProvider>,
+      </ToggleContext.Provider>,
       container,
     );
   });
@@ -61,17 +58,14 @@ describe('RadioScheduleData', () => {
     const ulContent = arabicRadioScheduleData.schedules.length;
 
     fetch.mockResponse(JSON.stringify(arabicRadioScheduleData));
-    await renderRadioScheduleContainer({
-      service: 'arabic',
-      radioScheduleToggle: true,
-    });
+    await renderRadioScheduleContainer('arabic', true);
 
     expect(container.querySelectorAll('ul').length).toEqual(ulContent);
   });
 
   it('returns empty string when radio schedule toggle is disabled', async () => {
     fetch.mockResponse(JSON.stringify(arabicRadioScheduleData));
-    await renderRadioScheduleContainer({ service: 'arabic' });
+    await renderRadioScheduleContainer('arabic');
 
     expect(container.innerHTML).toEqual('');
   });
