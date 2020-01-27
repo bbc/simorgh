@@ -14,8 +14,8 @@ const processPageData = pipe(
   filterGroupsWithoutStraplines,
 );
 
-export default async (...args) => {
-  const { pageData: rawPageData, ...rest } = await fetchPageData(...args);
+export default async path => {
+  const { pageData: rawPageData, ...rest } = await fetchPageData(path);
 
   const processedPageData = processPageData(rawPageData);
 
