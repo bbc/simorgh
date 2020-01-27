@@ -173,7 +173,7 @@
     "history": "^4.10.1",
     "husky": "^4.2.1",
     "inspectpack": "^4.3.1",
-    "jest": "^24.9.0",
+    "jest": "^25.0.0",
     "jest-fetch-mock": "^3.0.1",
     "jest-styled-components": "^6.3.4",
     "jsdom": "^16.0.1",
