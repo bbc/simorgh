@@ -2,7 +2,7 @@ const isLive = appEnv => appEnv === 'live';
 const isTest = appEnv => appEnv === 'test' || appEnv === 'stage';
 const isLocal = appEnv => appEnv === 'local';
 
-const allServices = appEnv => ({
+module.exports = appEnv => ({
   afaanoromoo: {
     name: 'afaanoromoo',
     font: undefined,
@@ -23,7 +23,7 @@ const allServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/afaanoromoo',
+        path: isLive(appEnv) ? undefined : '/afaanoromoo',
         smoke: false,
       },
       liveRadio: {
@@ -89,7 +89,7 @@ const allServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/amharic',
+        path: isLive(appEnv) ? undefined : '/amharic',
         smoke: false,
       },
       liveRadio: {
@@ -219,7 +219,7 @@ const allServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/bengali',
+        path: isLive(appEnv) ? undefined : '/bengali',
         smoke: false,
       },
       liveRadio: {
@@ -686,7 +686,7 @@ const allServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/nepali',
+        path: isLive(appEnv) ? undefined : '/nepali',
         smoke: false,
       },
       liveRadio: {
@@ -1014,7 +1014,7 @@ const allServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/sinhala',
+        path: isLive(appEnv) ? undefined : '/sinhala',
         smoke: false,
       },
       liveRadio: {
@@ -1051,7 +1051,7 @@ const allServices = appEnv => ({
       },
       liveRadio: {
         path:
-          isLive(appEnv) || isTest(appEnv) || isLocal(appEnv)
+          isLive(appEnv) || isTest(appEnv) || Cypress.env('APP_ENV') === 'local'
             ? undefined
             : '/somali/bbc_somali_radio/liveradio',
         smoke: false,
@@ -1220,7 +1220,7 @@ const allServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/tigrinya',
+        path: isLive(appEnv) ? undefined : '/tigrinya',
         smoke: false,
       },
       liveRadio: {
@@ -1548,5 +1548,3 @@ const allServices = appEnv => ({
     },
   },
 });
-
-module.exports = allServices;

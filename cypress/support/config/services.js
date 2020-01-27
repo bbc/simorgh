@@ -1,4 +1,4 @@
-import allServices from './allServices';
+import allServices from './settings';
 
 const serviceMapper = appEnv => {
   if (appEnv === 'stage') {
