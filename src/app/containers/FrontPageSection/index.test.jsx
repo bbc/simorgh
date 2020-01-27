@@ -47,6 +47,60 @@ const group = {
       },
       id: 'urn:bbc:ares::asset:igbo/testasset-00000002',
     },
+    {
+      headlines: {
+        headline: 'Top Story 3 headline',
+      },
+      locators: {
+        assetUri: 'https://www.bbc.co.uk',
+      },
+      summary: 'Summary text 3',
+      timestamp: 1557738768,
+      indexImage: {
+        path: '/cpsprodpb/0A06/production/image3.jpg',
+        height: 1152,
+        width: 2048,
+        altText: 'Image Alt text 3',
+        copyrightHolder: 'Image provider 3',
+      },
+      id: 'urn:bbc:ares::asset:igbo/testasset-00000003',
+    },
+    {
+      headlines: {
+        headline: 'Top Story 4 headline',
+      },
+      locators: {
+        assetUri: 'https://www.bbc.co.uk',
+      },
+      summary: 'Summary text 4',
+      timestamp: 1557738768,
+      indexImage: {
+        path: '/cpsprodpb/0A06/production/image4.jpg',
+        height: 1152,
+        width: 2048,
+        altText: 'Image Alt text 4',
+        copyrightHolder: 'Image provider 4',
+      },
+      id: 'urn:bbc:ares::asset:igbo/testasset-00000004',
+    },
+    {
+      headlines: {
+        headline: 'Top Story 5 headline',
+      },
+      locators: {
+        assetUri: 'https://www.bbc.co.uk',
+      },
+      summary: 'Summary text 5',
+      timestamp: 1557738768,
+      indexImage: {
+        path: '/cpsprodpb/0A06/production/image5.jpg',
+        height: 1152,
+        width: 2048,
+        altText: 'Image Alt text 5',
+        copyrightHolder: 'Image provider 5',
+      },
+      id: 'urn:bbc:ares::asset:igbo/testasset-00000005',
+    },
   ],
   strapline: {
     name: 'Top Stories',
@@ -300,7 +354,7 @@ describe('FrontPageSection Container', () => {
     it('should render 1 section, 1 h2, 1 ul, and an li and an h3 for EACH item', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={group} sectionNumber={1} />
+          <FrontPageSection group={group} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
@@ -308,8 +362,8 @@ describe('FrontPageSection Container', () => {
       expect(container.getElementsByTagName('h2')).toHaveLength(1);
       expect(container.getElementsByTagName('ul')).toHaveLength(1);
 
-      expect(container.getElementsByTagName('li')).toHaveLength(2);
-      expect(container.getElementsByTagName('h3')).toHaveLength(2);
+      expect(container.getElementsByTagName('li')).toHaveLength(5);
+      expect(container.getElementsByTagName('h3')).toHaveLength(5);
     });
 
     it('should render with a link when is a linking group', () => {
