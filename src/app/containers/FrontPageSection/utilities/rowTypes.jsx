@@ -1,6 +1,8 @@
 import { flatten, isEmpty, isNil } from 'ramda';
 import { TopRow, LeadingRow, RegularRow } from '../../FrontPageStoryRows';
 
+// Returns the component that should be used for the first row.
+// This is one of TopRow, LeadingRow.
 const getTopRowType = rowLength => {
   switch (rowLength) {
     case 1:
@@ -12,6 +14,8 @@ const getTopRowType = rowLength => {
   }
 };
 
+// Flattens the structure created in the storySplitter function,
+// allowing the resulting array to be easily mapped over.
 const getRowTypes = rows => {
   const topRow = {
     stories: rows.topRow,
