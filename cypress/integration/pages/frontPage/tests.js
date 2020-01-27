@@ -70,6 +70,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
 
       describe('Section', () => {
         it('should be labelled by a visible section label', () => {
+          cy.viewport(1008, 768);
           cy.get('section')
             .should('have.length.of.at.least', 1)
             .should('be.visible')
@@ -90,6 +91,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         });
 
         it('should contain at least one story promo', () => {
+          cy.viewport(1008, 768);
           cy.get('section').within(() => {
             cy.get('img')
               .should('have.length.of.at.least', 1)
