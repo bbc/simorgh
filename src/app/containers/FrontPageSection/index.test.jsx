@@ -300,7 +300,7 @@ describe('FrontPageSection Container', () => {
     it('should render 1 section, 1 h2, 1 ul, and an li and an h3 for EACH item', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={group} sectionNumber={0} />
+          <FrontPageSection group={group} sectionNumber={1} />
         </ServiceContextProvider>,
       );
 
