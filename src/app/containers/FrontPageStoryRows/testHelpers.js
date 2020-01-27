@@ -1,4 +1,4 @@
-import { pathOr } from 'ramda';
+import { pathOr, take } from 'ramda';
 import uuid from 'uuid';
 import fixture from '#data/pidgin/frontpage';
 import rtlFixture from '#data/urdu/frontpage';
@@ -11,4 +11,7 @@ const getPromoFixtures = dir =>
     .filter(item => pathOr(null, ['assetTypeCode'], item) === 'PRO')
     .map(item => ({ id: uuid(), ...item }));
 
-export default getPromoFixtures;
+const getNumberPromoFixtures = (dir, number = 1) =>
+  take(number, getPromoFixtures(dir));
+
+export default getNumberPromoFixtures;

@@ -1,12 +1,9 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { take } from 'ramda';
 import { TopRow, LeadingRow, RegularRow } from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import getPromoFixtures from './testHelpers';
-
-const standardPromos = (dir, number) => take(number, getPromoFixtures(dir));
+import getNumberPromoFixtures from './testHelpers';
 
 const getRow = (Type, service, dir, number) => (
   <ServiceContextProvider service={service}>
@@ -18,7 +15,7 @@ const getRow = (Type, service, dir, number) => (
       isAmp={false}
       service={service}
     >
-      <Type stories={standardPromos(dir, number)} />
+      <Type stories={getNumberPromoFixtures(dir, number)} />
     </RequestContextProvider>
   </ServiceContextProvider>
 );
