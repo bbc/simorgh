@@ -16,14 +16,15 @@ const defaultToggles = {
   },
 };
 
-storiesOf('Pages|Media Asset Page/Canonical', module)
-  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
-  .add('default', () => (
+const isAmp = platform => platform === 'AMP';
+
+const mediaAssetPage = platform => {
+  return (
     <ToggleContextProvider value={{ toggleState: defaultToggles }}>
       <BrowserRouter>
         <CPSMap
           pageType="MAP"
-          isAmp={false}
+          isAmp={isAmp(platform)}
           pathname="/pathname"
           status={200}
           pageData={pageData}
@@ -31,22 +32,23 @@ storiesOf('Pages|Media Asset Page/Canonical', module)
         />
       </BrowserRouter>
     </ToggleContextProvider>
+  );
+};
+
+const platforms = ['Canonical', 'AMP'];
+
+platforms.forEach(platform => {
+  const mapStories = storiesOf(`Pages|Media Asset Page/${platform}`, module);
+
+  mapStories.addDecorator(story => (
+    <WithTimeMachine>{story()}</WithTimeMachine>
   ));
 
-storiesOf('Pages|Media Asset Page/AMP', module)
-  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
-  .addDecorator(AmpDecorator)
-  .add('default', () => (
-    <ToggleContextProvider value={{ toggleState: defaultToggles }}>
-      <BrowserRouter>
-        <CPSMap
-          pageType="MAP"
-          isAmp
-          pathname="/pathname"
-          status={200}
-          pageData={pageData}
-          service="pidgin"
-        />
-      </BrowserRouter>
-    </ToggleContextProvider>
-  ));
+  if (isAmp(platform)) {
+    mapStories.addDecorator(AmpDecorator);
+  }
+
+  mapStories.add('default', () => {
+    return mediaAssetPage(platform);
+  });
+});

@@ -17,56 +17,50 @@ const defaultToggles = {
     },
   },
 };
+const isAmp = platform => {
+  return platform === 'AMP';
+};
 
-storiesOf('Containers|MAP Media Player/Canonical', module)
-  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
-  .addDecorator(withKnobs)
-  .add('default', () => {
-    return (
-      <ToggleContextProvider value={{ toggleState: defaultToggles }}>
-        <ServiceContextProvider service="pidgin">
-          <RequestContextProvider
-            isAmp={false}
-            pageType="MAP"
-            origin="https://www.bbc.com"
-            service="pidgin"
-            pathname="/pathname"
-          >
-            <BrowserRouter>
-              <CpsAssetMediaPlayerContainer
-                blocks={[videoBlock]}
-                assetUri="/pidgin/23248703"
-              />
-            </BrowserRouter>
-          </RequestContextProvider>
-        </ServiceContextProvider>
-      </ToggleContextProvider>
-    );
-  });
+const mediaPlayer = platform => {
+  return (
+    <ToggleContextProvider value={{ toggleState: defaultToggles }}>
+      <ServiceContextProvider service="pidgin">
+        <RequestContextProvider
+          isAmp={isAmp(platform)}
+          pageType="MAP"
+          origin="https://www.bbc.com"
+          service="pidgin"
+          pathname="/pathname"
+        >
+          <BrowserRouter>
+            <CpsAssetMediaPlayerContainer
+              blocks={[videoBlock]}
+              assetUri="/pidgin/23248703"
+            />
+          </BrowserRouter>
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ToggleContextProvider>
+  );
+};
 
-storiesOf('Containers|MAP Media Player/AMP', module)
-  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
-  .addDecorator(withKnobs)
-  .addDecorator(AmpDecorator)
-  .add('default', () => {
-    return (
-      <ToggleContextProvider value={{ toggleState: defaultToggles }}>
-        <ServiceContextProvider service="pidgin">
-          <RequestContextProvider
-            isAmp
-            pageType="MAP"
-            origin="https://www.bbc.com"
-            service="pidgin"
-            pathname="/pathname"
-          >
-            <BrowserRouter>
-              <CpsAssetMediaPlayerContainer
-                blocks={[videoBlock]}
-                assetUri="/pidgin/23248703"
-              />
-            </BrowserRouter>
-          </RequestContextProvider>
-        </ServiceContextProvider>
-      </ToggleContextProvider>
-    );
+const platforms = ['Canonical', 'AMP'];
+
+platforms.forEach(platform => {
+  const mapMediaPlayerStories = storiesOf(
+    `Containers|MAP Media Player/${platform}`,
+    module,
+  );
+
+  mapMediaPlayerStories
+    .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
+    .addDecorator(withKnobs);
+
+  if (isAmp(platform)) {
+    mapMediaPlayerStories.addDecorator(AmpDecorator);
+  }
+
+  mapMediaPlayerStories.add('default', () => {
+    return mediaPlayer(platform);
   });
+});
