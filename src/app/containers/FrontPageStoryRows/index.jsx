@@ -56,6 +56,20 @@ const renderPromo = (
   return renderedPromo;
 };
 
+/*
+ * Below are all the different row types that can be used for frontpages.
+ * They all take in an array of story items and a dir.
+ */
+
+const rowPropTypes = {
+  stories: arrayOf(shape(storyItem)).isRequired,
+  dir: oneOf(['ltr', 'rtl']),
+};
+
+const rowDefaultProps = {
+  dir: 'ltr',
+};
+
 export const TopRow = ({
   stories,
   isFirstSection,
@@ -73,16 +87,15 @@ export const TopRow = ({
 );
 
 TopRow.propTypes = {
-  stories: arrayOf(shape(storyItem)).isRequired,
+  ...rowPropTypes,
   isFirstSection: bool,
   sectionHasSingleStory: bool,
-  dir: oneOf(['ltr', 'rtl']),
 };
 
 TopRow.defaultProps = {
+  ...rowDefaultProps,
   isFirstSection: false,
   sectionHasSingleStory: false,
-  dir: 'ltr',
 };
 
 export const LeadingRow = ({ stories, dir }) => (
@@ -109,12 +122,11 @@ export const LeadingRow = ({ stories, dir }) => (
 );
 
 LeadingRow.propTypes = {
-  stories: arrayOf(shape(storyItem)).isRequired,
-  dir: oneOf(['ltr', 'rtl']),
+  ...rowPropTypes,
 };
 
 LeadingRow.defaultProps = {
-  dir: 'ltr',
+  ...rowDefaultProps,
 };
 
 export const RegularRow = ({ stories, displayImages, dir }) => (
@@ -135,12 +147,11 @@ export const RegularRow = ({ stories, displayImages, dir }) => (
 );
 
 RegularRow.propTypes = {
-  stories: arrayOf(shape(storyItem)).isRequired,
+  ...rowPropTypes,
   displayImages: bool,
-  dir: oneOf(['ltr', 'rtl']),
 };
 
 RegularRow.defaultProps = {
+  ...rowDefaultProps,
   displayImages: false,
-  dir: 'ltr',
 };
