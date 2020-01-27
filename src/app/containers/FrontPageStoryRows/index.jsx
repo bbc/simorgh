@@ -56,11 +56,16 @@ const renderPromo = (
   return renderedPromo;
 };
 
-export const TopRow = ({ stories, isFirstSection, isSingleStory, dir }) => (
+export const TopRow = ({
+  stories,
+  isFirstSection,
+  sectionHasSingleStory,
+  dir,
+}) => (
   <Grid
     item
     columns={topStoryColumns}
-    as={!isSingleStory && StoryPromoListItem}
+    as={!sectionHasSingleStory && StoryPromoListItem}
     dir={dir}
   >
     {renderPromo(stories[0], 'top', { isFirstSection })}
@@ -70,13 +75,13 @@ export const TopRow = ({ stories, isFirstSection, isSingleStory, dir }) => (
 TopRow.propTypes = {
   stories: arrayOf(shape(storyItem)).isRequired,
   isFirstSection: bool,
-  isSingleStory: bool,
+  sectionHasSingleStory: bool,
   dir: oneOf(['ltr', 'rtl']),
 };
 
 TopRow.defaultProps = {
   isFirstSection: false,
-  isSingleStory: false,
+  sectionHasSingleStory: false,
   dir: 'ltr',
 };
 
