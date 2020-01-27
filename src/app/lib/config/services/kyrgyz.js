@@ -163,7 +163,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/kyrgyz/institutional-49677275',
         text: 'Эмнеге BBC News ишенсе болот?',
       },
       externalLink: {
