@@ -31,7 +31,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/afaanoromoo',
+        path: isLive(appEnv) ? undefined : '/afaanoromoo',
         smoke: false,
       },
       liveRadio: {
@@ -97,7 +97,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/amharic',
+        path: isLive(appEnv) ? undefined : '/amharic',
         smoke: false,
       },
       liveRadio: {
@@ -227,7 +227,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/bengali',
+        path: isLive(appEnv) ? undefined : '/bengali',
         smoke: false,
       },
       liveRadio: {
@@ -694,7 +694,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/nepali',
+        path: isLive(appEnv) ? undefined : '/nepali',
         smoke: false,
       },
       liveRadio: {
@@ -1028,7 +1028,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/sinhala',
+        path: isLive(appEnv) ? undefined : '/sinhala',
         smoke: false,
       },
       liveRadio: {
@@ -1234,7 +1234,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/tigrinya',
+        path: isLive(appEnv) ? undefined : '/tigrinya',
         smoke: false,
       },
       liveRadio: {
