@@ -11,8 +11,6 @@ const RadioScheduleContainer = ({ endpoint }) => {
   const { enabled } = useToggle('radioSchedule');
   const { hasRadioSchedule } = useContext(ServiceContext);
 
-  console.log('----BEF----ENABLED', enabled);
-
   const [schedule, setRadioSchedule] = useState([]);
 
   const handleResponse = async response => {
