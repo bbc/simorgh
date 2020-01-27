@@ -23,6 +23,7 @@ import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
+  getAboutTags,
   getFirstPublished,
   getLastPublished,
 } from '#lib/utilities/parseAssetData';
@@ -48,6 +49,7 @@ const CpsPglContainer = ({ pageData }) => {
   );
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
+  const aboutTags = getAboutTags(pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -58,7 +60,7 @@ const CpsPglContainer = ({ pageData }) => {
     image,
     timestamp: props =>
       allowDateStamp ? (
-        <StyledTimestamp {...props} minutesTolerance={1} />
+        <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
       ) : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
@@ -83,9 +85,11 @@ const CpsPglContainer = ({ pageData }) => {
         type="Article"
         seoTitle={title}
         headline={title}
+        description={summary}
         showAuthor
         datePublished={firstPublished}
         dateModified={lastPublished}
+        aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
       <StyledGhostGrid as="main" role="main">

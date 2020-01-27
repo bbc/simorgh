@@ -60,7 +60,7 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                 </strong>
               </div>
               <div
-                class="PopOutAtGroup5-sc-12lwanc-14 kIHzqH StyledTimestamp-sc-10y88yd-1 jtbZwP"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX StyledTimestamp-sc-10y88yd-1 jtbZwP"
               >
                 <time
                   class="StyledTimestamp-um718p-0 bAgcOD"
@@ -420,7 +420,7 @@ exports[`CPS MAP Page should render component 1`] = `
                 </strong>
               </div>
               <div
-                class="PopOutAtGroup5-sc-12lwanc-14 kIHzqH StyledTimestamp-sc-10y88yd-1 jtbZwP"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX StyledTimestamp-sc-10y88yd-1 jtbZwP"
               >
                 <time
                   class="StyledTimestamp-um718p-0 bAgcOD"
