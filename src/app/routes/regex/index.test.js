@@ -200,6 +200,7 @@ describe('radioAndTvPath', () => {
     '/persian/bbc_hausa_radio/abcd1234.amp', // service with non matching live radio service id amp
     '/persian/bbc_marathi_tv/livetv', // service with non matching live tv service id
     '/persian/bbc_abcdefg_radio/hijklmn', // live radio with a-z inside service id and for media id
+    '/arabic/bbc_arabic_radio/radioschedule', // default radio schedule route
   ];
   shouldMatchValidRoutes(validRoutes, radioAndTvPath);
 });

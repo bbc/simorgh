@@ -38,6 +38,7 @@ const getConsentBannerUtilities = ({ logger } = {}) => {
 describe('Consent Banner Utilities', () => {
   afterEach(() => {
     jest.clearAllMocks();
+    global.document.domain = 'www.bbc.com';
   });
 
   beforeEach(() => {
@@ -86,6 +87,7 @@ describe('Consent Banner Utilities', () => {
         PRIVACY_COOKIE_CURRENT,
         {
           expires: 365,
+          domain: `.bbc.com`,
         },
       );
       expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
@@ -104,6 +106,7 @@ describe('Consent Banner Utilities', () => {
         PRIVACY_COOKIE_CURRENT,
         {
           expires: 365,
+          domain: '.bbc.com',
         },
       );
       expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
@@ -122,9 +125,29 @@ describe('Consent Banner Utilities', () => {
         PRIVACY_COOKIE_CURRENT,
         {
           expires: 365,
+          domain: '.bbc.com',
         },
       );
       expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
+    });
+
+    it('sets PRIVACY_COOKIE without domain restrictions', () => {
+      global.document.domain = 'www.bbc.co.uk';
+
+      setCookieGetMock({ privacy: null });
+
+      const { runInitial } = getConsentBannerUtilities();
+
+      runInitial();
+
+      expect(Cookie.set).toHaveBeenCalledWith(
+        PRIVACY_COOKIE,
+        PRIVACY_COOKIE_CURRENT,
+        {
+          expires: 365,
+          domain: '.bbc.co.uk',
+        },
+      );
     });
 
     it('does not show the cookie banner when EXPLICIT_COOKIE is 1 or 2', () => {
@@ -160,6 +183,7 @@ describe('Consent Banner Utilities', () => {
 
       expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '000', {
         expires: 365,
+        domain: '.bbc.com',
       });
       expect(setCookieOvenMock).toHaveBeenCalledWith(
         POLICY_COOKIE,
@@ -192,6 +216,7 @@ describe('Consent Banner Utilities', () => {
       expect(Cookie.set).toHaveBeenCalledTimes(1);
       expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '000', {
         expires: 365,
+        domain: '.bbc.com',
       });
       expect(setCookieOvenMock).toHaveBeenCalledWith(
         POLICY_COOKIE,
@@ -199,6 +224,20 @@ describe('Consent Banner Utilities', () => {
         undefined,
       );
       expect(setShowCookieBannerMock).toHaveBeenCalledWith(true);
+    });
+
+    it('sets POLICY_COOKIE without domain restrictions', () => {
+      setCookieGetMock({ explicit: '0', policy: null });
+      global.document.domain = 'www.test.bbc.com';
+
+      const { runInitial } = getConsentBannerUtilities();
+
+      runInitial();
+
+      expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '000', {
+        expires: 365,
+        domain: '.bbc.com',
+      });
     });
 
     it('Passes logger object to setCookieOven when provided', async () => {
@@ -250,6 +289,7 @@ describe('Consent Banner Utilities', () => {
       expect(Cookie.set).toHaveBeenCalledTimes(2);
       expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '111', {
         expires: 365,
+        domain: '.bbc.com',
       });
       expect(setCookieOvenMock).toHaveBeenCalledWith(
         POLICY_COOKIE,
@@ -258,6 +298,7 @@ describe('Consent Banner Utilities', () => {
       );
       expect(Cookie.set).toHaveBeenCalledWith(EXPLICIT_COOKIE, '1', {
         expires: 365,
+        domain: '.bbc.com',
       });
     });
   });
@@ -273,6 +314,7 @@ describe('Consent Banner Utilities', () => {
       expect(Cookie.set).toHaveBeenCalledTimes(1);
       expect(Cookie.set).toHaveBeenCalledWith(EXPLICIT_COOKIE, '1', {
         expires: 365,
+        domain: '.bbc.com',
       });
     });
   });
