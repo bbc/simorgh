@@ -7,7 +7,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import CpsAssetMediaPlayerContainer from '.';
-import videoBlock from './fixtureData';
+import videoBlock from './fixtures';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 const defaultToggles = {
@@ -19,29 +19,6 @@ const defaultToggles = {
 };
 
 const isAmp = platform => platform === 'AMP';
-
-const mediaPlayer = platform => {
-  return (
-    <ToggleContextProvider value={{ toggleState: defaultToggles }}>
-      <ServiceContextProvider service="pidgin">
-        <RequestContextProvider
-          isAmp={isAmp(platform)}
-          pageType="MAP"
-          origin="https://www.bbc.com"
-          service="pidgin"
-          pathname="/pathname"
-        >
-          <BrowserRouter>
-            <CpsAssetMediaPlayerContainer
-              blocks={[videoBlock]}
-              assetUri="/pidgin/23248703"
-            />
-          </BrowserRouter>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
-  );
-};
 
 const platforms = ['Canonical', 'AMP'];
 
@@ -60,6 +37,25 @@ platforms.forEach(platform => {
   }
 
   mapMediaPlayerStories.add('default', () => {
-    return mediaPlayer(platform);
+    return (
+      <ToggleContextProvider value={{ toggleState: defaultToggles }}>
+        <ServiceContextProvider service="pidgin">
+          <RequestContextProvider
+            isAmp={isAmp(platform)}
+            pageType="MAP"
+            origin="https://www.bbc.com"
+            service="pidgin"
+            pathname="/pathname"
+          >
+            <BrowserRouter>
+              <CpsAssetMediaPlayerContainer
+                blocks={[videoBlock]}
+                assetUri="/pidgin/23248703"
+              />
+            </BrowserRouter>
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>
+    );
   });
 });
