@@ -1,11 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import 'isomorphic-fetch';
 import { string } from 'prop-types';
+import { ServiceContext } from '#contexts/ServiceContext';
+import useToggle from '../Toggle/useToggle';
 import webLogger from '#lib/logger.web';
 
 const logger = webLogger();
 
 const RadioScheduleContainer = ({ endpoint }) => {
+  const { enabled } = useToggle('radioSchedule');
+  const { hasRadioSchedule } = useContext(ServiceContext);
+
+  console.log('----BEF----ENABLED', enabled);
+
   const [schedule, setRadioSchedule] = useState([]);
 
   const handleResponse = async response => {
@@ -21,6 +28,10 @@ const RadioScheduleContainer = ({ endpoint }) => {
 
     fetchRadioScheduleData(endpoint);
   }, [endpoint]);
+
+  if (!enabled || !hasRadioSchedule) {
+    return null;
+  }
 
   return (
     <>
