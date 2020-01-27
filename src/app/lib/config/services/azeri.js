@@ -153,7 +153,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/azeri/institutional-49283479',
         text: 'BBC News-a niyə etibar etməlisiniz',
       },
       externalLink: {
