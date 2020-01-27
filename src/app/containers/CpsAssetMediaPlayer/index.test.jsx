@@ -9,10 +9,8 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import CpsAssetMediaPlayerContainer from '.';
-import {
-  validAresMediaVideoBlock,
-  defaultToggles,
-} from '../MediaPlayer/fixtureData';
+import { defaultToggles } from '../MediaPlayer/fixtureData';
+import videoBlock from './fixtures';
 
 const GenerateMediaPlayer = ({
   /* eslint-disable react/prop-types */
@@ -47,7 +45,7 @@ describe('MediaPlayer', () => {
     'render the canonical player without a placeholder',
     <GenerateMediaPlayer
       platform="canonical"
-      blocks={[validAresMediaVideoBlock]}
+      blocks={[videoBlock]}
       assetUri="/pidgin/123456789"
     />,
   );
@@ -56,7 +54,7 @@ describe('MediaPlayer', () => {
     'render the amp player',
     <GenerateMediaPlayer
       platform="amp"
-      blocks={[validAresMediaVideoBlock]}
+      blocks={[videoBlock]}
       assetUri="/pidgin/123456789"
     />,
   );
@@ -66,7 +64,7 @@ describe('MediaPlayer', () => {
     'is Null when assetUri is not provided',
     <GenerateMediaPlayer
       platform="canonical"
-      blocks={[validAresMediaVideoBlock]}
+      blocks={[videoBlock]}
     />,
   );
 });
