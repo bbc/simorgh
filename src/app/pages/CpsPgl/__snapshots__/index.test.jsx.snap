@@ -2484,11 +2484,11 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
       name="og:description"
     />
     <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"
+      content="http://ichef.test.bbci.co.uk/news/1024/branded_afaanoromoo/726D/production/_97739292_img_1620.jpg"
       name="og:image"
     />
     <meta
-      content="BBC News Afaan Oromoo"
+      content="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
       name="og:image:alt"
     />
     <meta
@@ -2504,7 +2504,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
       name="og:title"
     />
     <meta
-      content="website"
+      content="article"
       name="og:type"
     />
     <meta
@@ -2524,11 +2524,11 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
       name="twitter:description"
     />
     <meta
-      content="BBC News Afaan Oromoo"
+      content="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
       name="twitter:image:alt"
     />
     <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"
+      content="http://ichef.test.bbci.co.uk/news/1024/branded_afaanoromoo/726D/production/_97739292_img_1620.jpg"
       name="twitter:image:src"
     />
     <meta
@@ -2538,6 +2538,10 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
     <meta
       content="Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan - BBC News Afaan Oromoo"
       name="twitter:title"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
     />
     <meta
       content="2017-09-21T04:24:34.000Z"
