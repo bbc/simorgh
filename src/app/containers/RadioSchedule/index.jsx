@@ -10,6 +10,7 @@ const logger = webLogger();
 const RadioScheduleContainer = ({ endpoint }) => {
   const { enabled } = useToggle('radioSchedule');
   const { hasRadioSchedule } = useContext(ServiceContext);
+  const radioScheduleEnabled = enabled && hasRadioSchedule;
 
   const [schedule, setRadioSchedule] = useState([]);
 
@@ -24,12 +25,12 @@ const RadioScheduleContainer = ({ endpoint }) => {
         .then(handleResponse)
         .catch(e => logger.error(`HTTP Error: "${e}"`));
 
-    if (enabled) {
+    if (radioScheduleEnabled) {
       fetchRadioScheduleData(endpoint);
     }
-  }, [endpoint, enabled]);
+  }, [endpoint, radioScheduleEnabled]);
 
-  if (!enabled || !hasRadioSchedule) {
+  if (!radioScheduleEnabled) {
     return null;
   }
 
