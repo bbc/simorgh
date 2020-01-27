@@ -17,9 +17,8 @@ const defaultToggles = {
     },
   },
 };
-const isAmp = platform => {
-  return platform === 'AMP';
-};
+
+const isAmp = platform => platform === 'AMP';
 
 const mediaPlayer = platform => {
   return (
