@@ -1,21 +1,12 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { pathOr, take } from 'ramda';
+import { take } from 'ramda';
 import { TopRow, LeadingRow, RegularRow } from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import fixture from '#data/pidgin/frontpage';
-import rtlFixture from '#data/urdu/frontpage';
+import getPromoFixtures from './testHelpers';
 
-const getFixture = dir => (dir === 'ltr' ? fixture : rtlFixture);
-
-const promoFixtures = dir =>
-  pathOr(null, ['content', 'groups'], getFixture(dir))
-    .flatMap(group => pathOr(null, ['items'], group))
-    .filter(item => pathOr(null, ['assetTypeCode'], item) === 'PRO');
-
-const standardPromos = (dir, number) =>
-  take(number, promoFixtures('Text', dir));
+const standardPromos = (dir, number) => take(number, getPromoFixtures(dir));
 
 const getRow = (Type, service, dir, number) => (
   <ServiceContextProvider service={service}>

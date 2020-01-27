@@ -1,25 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Grid from '@bbc/psammead-grid';
-import { pathOr, take } from 'ramda';
+import { take } from 'ramda';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { topStoryColumns } from './storyColumns';
 import { TopRow, LeadingRow, RegularRow } from '.';
-import fixture from '#data/pidgin/frontpage';
-import rtlFixture from '#data/urdu/frontpage';
+import getPromoFixtures from './testHelpers';
 
-const getFixture = dir => (dir === 'ltr' ? fixture : rtlFixture);
-
-const promoFixtures = dir =>
-  pathOr(null, ['content', 'groups'], getFixture(dir))
-    .flatMap(group => pathOr(null, ['items'], group))
-    .filter(item => pathOr(null, ['assetTypeCode'], item) === 'PRO');
-
-const standardPromos = (dir, number) =>
-  take(number, promoFixtures('Text', dir));
+const standardPromos = (dir, number) => take(number, getPromoFixtures(dir));
 
 // eslint-disable-next-line react/prop-types
 const TopRowStory = ({ dir }) => (
