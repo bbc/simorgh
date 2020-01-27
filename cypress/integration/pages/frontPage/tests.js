@@ -125,7 +125,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('be.visible')
               .find('a')
               .should('have.attr', 'href');
-
+            // This check would only run for the top stories section and not anyother sections
             cy.get('p').then($el => {
               if ($el.length > 0) {
                 cy.get('p')
