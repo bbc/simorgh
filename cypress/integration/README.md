@@ -19,7 +19,7 @@ This is where the overwhelming majority of e2es live.
 Key points:
   - The index.js of each page type directory must use the [runTestsForPage function](../support/helpers/runTestsForPage.js), this:
     - reduces the number of page visits to one visit to the canonical page and one visit to the [AMP](https://amp.dev/) version of the same page.
-    - runs tests on every service automatically based on the service:page type combinations found in the [services config file](../support/config/services.js).
+    - runs tests on every service automatically based on the service:page type combinations found in the [services config file](../support/config/settings.js).
  - Files in the base of the pages directory run on all page types (as their naming suggests.
  - There is a directory per page type where each page's custom tests are written, the naming convention with each is exactly the same as every other one and should be kept this way for ease of comprehension.
  - In all cases tests should be written at the 'highest' possible level. The importance of this is that it tends our tests written to the highest possible level of coverage with the smallest possible amount of code. This means when writing a test you should write it based on this order of preference:
@@ -30,7 +30,7 @@ Key points:
  - Inside each of the files in the list above there are three sets of tests:
    - **testsThatAlwaysRun** - as the name implies these will always run, use this sparingly because by default it will run for every service, page type and platform (canonical, AMP)! This is useful for features that vary between services.
      - We recommend using conditional logic to select just the services/pagetypes that are necessary. e.g. only run ATI analytics tests on `afaanoromoo, cymrufyw, japanese, naidheachdan, news` instead of all 44 services, since these cover all variants. 
-   - **testsThatFollowSmokeTestConfig** - this is where most tests will go. These will only run on PRs if the `smoke` value is `true` for that service/pageType combination. [services config file](../support/config/services.js)
+   - **testsThatFollowSmokeTestConfig** - this is where most tests will go. These will only run on PRs if the `smoke` value is `true` for that service/pageType combination. [services config file](../support/config/settings.js)
    - **testsThatNeverRunDuringSmokeTesting** - this is for tests that are very CPU intensive, long running or low priority. It's a good place for testing layout or page-width variants.
    - Similarly the same kind of logic applies to the tests that run for all pages, and the naming conventions appends ForAllPages, ForAllCanonicalPages or ForAllPages e.g. **testsThatNeverRunDuringSmokeTestingForAllPages**
 

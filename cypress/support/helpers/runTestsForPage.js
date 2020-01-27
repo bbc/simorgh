@@ -61,7 +61,7 @@ const runTestsForPage = ({
           variant: config[service].variant,
         };
 
-        // Enables overriding of the smoke test values in the config/services.js file
+        // Enables overriding of the smoke test values in the config/settings.js file
         testsThatAlwaysRunForAllPages(testArgs);
         testsThatAlwaysRunForAllCanonicalPages(testArgs);
         // Page specific tests
@@ -102,7 +102,7 @@ const runTestsForPage = ({
           variant: config[service].variant,
         };
 
-        // Enables overriding of the smoke test values in the config/services.js file
+        // Enables overriding of the smoke test values in the config/settings.js file
         testsThatAlwaysRunForAllPages(testArgs);
         testsThatAlwaysRunForAllAMPPages(testArgs);
         // Page specific tests
