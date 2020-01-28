@@ -1199,7 +1199,10 @@ const genServices = appEnv => ({
         smoke: false,
       },
       errorPage404: {
-        path: isLive(appEnv) ? undefined : '/thai/articles/c123456abcdo',
+        path:
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/thai/articles/c123456abcdo',
         smoke: false,
       },
       frontPage: {
@@ -1208,10 +1211,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/thai/thailand-23248713',
+        path: isLive(appEnv) ? undefined : '/thai/thailand-23248713',
         smoke: false,
       },
     },
