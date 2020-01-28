@@ -1,7 +1,7 @@
 import {
   buildCpsAssetPageATIParams,
   buildCpsAssetPageATIUrl,
-} from '../buildParams';
+} from './buildParams';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import payload from '#data/pidgin/cpsAssets/tori-49450859.json';
 
@@ -11,8 +11,6 @@ analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
 analyticsUtils.getPublishedDatetime = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
-
-const CONTENT_TYPE = 'article-media-asset';
 
 // Fixtures
 const requestContext = {
@@ -32,47 +30,51 @@ const serviceContext = {
 
 const expectation = {
   appName: serviceContext.atiAnalyticsAppName,
-  contentId: payload.metadata.id,
+  categoryName: 'News',
   campaigns: payload.metadata.passport.campaigns,
-  contentType: 'article-media-asset',
+  contentId: payload.metadata.id,
+  contentType: 'test-content-type',
   language: payload.metadata.language,
+  libraryVersion: analyticsUtils.LIBRARY_VERSION,
   pageIdentifier: `news::${payload.metadata.analyticsLabels.counterName}`,
   pageTitle: `${payload.promo.headlines.headline} - ${serviceContext.brandName}`,
-  categoryName: 'News',
+  platform: requestContext.platform,
   producerId: serviceContext.atiAnalyticsProducerId,
   statsDestination: requestContext.statsDestination,
-  libraryVersion: analyticsUtils.LIBRARY_VERSION,
-  platform: requestContext.platform,
   service: 'service',
   timePublished: analyticsUtils.getPublishedDatetime(),
   timeUpdated: analyticsUtils.getPublishedDatetime(),
 };
 
 describe('buildCpsAssetPageATIParams', () => {
-  it('should handle invalid counter name', () => {
-    let invalidPagePayload = payload;
-    invalidPagePayload.metadata.analyticsLabels.counterName = 'invalid';
-
-    let invalidExpectation = expectation;
-    invalidExpectation.pageIdentifier = 'invalid';
-
-    const result = buildCpsAssetPageATIParams(
-      invalidPagePayload,
-      requestContext,
-      serviceContext,
-      CONTENT_TYPE,
-    );
-    expect(result).toEqual(invalidExpectation);
-  });
-
   it('should return the right object', () => {
     const result = buildCpsAssetPageATIParams(
       payload,
       requestContext,
       serviceContext,
-      CONTENT_TYPE,
+      'test-content-type',
     );
     expect(result).toEqual(expectation);
+  });
+
+  it('should handle invalid counter name', () => {
+    const payloadInvalidCounterName = {
+      ...payload,
+      metadata: {
+        ...payload.metadata,
+        analyticsLabels: {
+          ...payload.metadata.analyticsLabels,
+          counterName: 'invalid',
+        },
+      },
+    };
+    const result = buildCpsAssetPageATIParams(
+      payloadInvalidCounterName,
+      requestContext,
+      serviceContext,
+      'test-content-type',
+    );
+    expect(result).toEqual({ ...expectation, pageIdentifier: 'invalid' });
   });
 });
 
@@ -82,7 +84,7 @@ describe('buildCpsAssetPageATIUrl', () => {
       payload,
       requestContext,
       serviceContext,
-      CONTENT_TYPE,
+      'test-content-type',
     );
     const campaignString = expectation.campaigns
       .filter(
