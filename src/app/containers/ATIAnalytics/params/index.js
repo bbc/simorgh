@@ -55,10 +55,10 @@ const pageTypeParamBuilders = {
     ),
 };
 
-const createBuilderFactory = (requestContext, pageTypeHandlers = {}) => {
+const createBuilderFactory = (requestContext, pageTypeHandlers) => {
   const { pageType } = requestContext;
 
-  return pageTypeHandlers[pageType] || (() => null);
+  return pageTypeHandlers[pageType];
 };
 
 export const buildATIUrl = (data, requestContext, serviceContext) => {
