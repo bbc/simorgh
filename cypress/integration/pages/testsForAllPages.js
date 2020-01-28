@@ -420,12 +420,12 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                 cy.get('time')
                   .eq(1)
                   .should('be.visible')
-                  .should('have.attr', 'datetime')
                   .should(
                     'contain',
                     appConfig[config[service].name].default
                       .articleTimestampPrefix,
-                  );
+                  )
+                  .should('have.attr', 'datetime');
               }
             },
           );
