@@ -11,6 +11,7 @@ import FrontPageMain from '.';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
+import { UserContextProvider } from '#contexts/UserContext';
 
 const serviceDataSets = {
   news: newsData,
@@ -34,7 +35,9 @@ Object.keys(serviceDataSets).forEach(service => {
           pageType="frontPage"
           service={service}
         >
-          <FrontPageMain frontPageData={serviceDataSets[service]} />
+          <UserContextProvider>
+            <FrontPageMain frontPageData={serviceDataSets[service]} />
+          </UserContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>

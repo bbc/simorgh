@@ -203,12 +203,12 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 }
 
 .c4 {
-  cursor: pointer;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: default;
 }
 
 .c9 {
@@ -340,6 +340,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
                   class="c11"
                 >
                   <svg
+                    aria-hidden="true"
                     class="c12"
                     focusable="false"
                     height="12px"
