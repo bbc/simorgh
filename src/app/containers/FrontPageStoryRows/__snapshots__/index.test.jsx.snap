@@ -439,6 +439,7 @@ exports[`FrontPageStoryRows Container snapshots LeadingRow 1`] = `
                 class="c15"
               >
                 <svg
+                  aria-hidden="true"
                   class="c16"
                   focusable="false"
                   height="12px"
@@ -787,6 +788,7 @@ exports[`FrontPageStoryRows Container snapshots RegularRow 1`] = `
             class="c8"
           >
             <svg
+              aria-hidden="true"
               class="c9"
               focusable="false"
               height="12px"

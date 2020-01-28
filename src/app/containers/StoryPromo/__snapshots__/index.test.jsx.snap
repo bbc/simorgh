@@ -288,6 +288,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
             class="c6"
           >
             <svg
+              aria-hidden="true"
               class="c7"
               focusable="false"
               height="12px"
@@ -640,6 +641,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
             class="c6"
           >
             <svg
+              aria-hidden="true"
               class="c7"
               focusable="false"
               height="12px"
@@ -992,6 +994,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
             class="c6"
           >
             <svg
+              aria-hidden="true"
               class="c7"
               focusable="false"
               height="12px"
@@ -1328,6 +1331,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
             class="c6"
           >
             <svg
+              aria-hidden="true"
               class="c7"
               focusable="false"
               height="12px"
@@ -3307,6 +3311,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
                 class="c16"
               >
                 <svg
+                  aria-hidden="true"
                   class="c17"
                   focusable="false"
                   height="12px"
@@ -4644,6 +4649,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
             class="c6"
           >
             <svg
+              aria-hidden="true"
               class="c7"
               focusable="false"
               height="12px"
@@ -4993,6 +4999,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
             class="c6"
           >
             <svg
+              aria-hidden="true"
               class="c7"
               focusable="false"
               height="12px"
