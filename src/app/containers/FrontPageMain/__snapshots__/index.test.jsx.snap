@@ -1297,6 +1297,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                                 class="c34"
                               >
                                 <svg
+                                  aria-hidden="true"
                                   class="c35"
                                   focusable="false"
                                   height="12px"
@@ -1987,6 +1988,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               class="c34"
                             >
                               <svg
+                                aria-hidden="true"
                                 class="c45"
                                 focusable="false"
                                 height="12px"
@@ -2083,6 +2085,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               class="c34"
                             >
                               <svg
+                                aria-hidden="true"
                                 class="c45"
                                 focusable="false"
                                 height="12px"
@@ -2179,6 +2182,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               class="c34"
                             >
                               <svg
+                                aria-hidden="true"
                                 class="c45"
                                 focusable="false"
                                 height="12px"
@@ -2275,6 +2279,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               class="c34"
                             >
                               <svg
+                                aria-hidden="true"
                                 class="c45"
                                 focusable="false"
                                 height="12px"
@@ -2371,6 +2376,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               class="c34"
                             >
                               <svg
+                                aria-hidden="true"
                                 class="c45"
                                 focusable="false"
                                 height="12px"
@@ -3194,6 +3200,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               class="c34"
                             >
                               <svg
+                                aria-hidden="true"
                                 class="c35"
                                 focusable="false"
                                 height="12px"
@@ -3411,6 +3418,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               class="c34"
                             >
                               <svg
+                                aria-hidden="true"
                                 class="c45"
                                 focusable="false"
                                 height="12px"
@@ -3526,6 +3534,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               class="c34"
                             >
                               <svg
+                                aria-hidden="true"
                                 class="c46"
                                 focusable="false"
                                 height="13px"
