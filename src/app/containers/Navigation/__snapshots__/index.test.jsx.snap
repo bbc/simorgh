@@ -358,7 +358,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
       <nav
         class="c0"
         dir="ltr"
-        id="si-nav-navigation-id"
+        id="si-nav"
         role="navigation"
       >
         <div
@@ -380,8 +380,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             dir="ltr"
             on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
         si-nav-dropdown-menu.toggleVisibility,
-        si-nav-scrollable-nav.toggleClass(class=si-nav-scrollable-hidden),
-        si-nav-navigation-id.toggleClass(class=si-nav-open)
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
       "
             type="button"
           >
@@ -577,7 +577,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
           <div
             class="c10 c11"
             dir="ltr"
-            id="si-nav-scrollable-nav"
+            id="si-nav-scrollable"
           >
             <ul
               class="c12"

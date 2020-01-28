@@ -8,8 +8,8 @@ import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import styled from 'styled-components';
 
 const DROPDOWN_ID = 'si-nav-dropdown-menu';
-const NAVIGATION_ID = 'si-nav-navigation-id';
-const SCROLLABLE_ID = 'si-nav-scrollable-nav';
+const NAVIGATION_ID = 'si-nav';
+const SCROLLABLE_ID = 'si-nav-scrollable';
 const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
 const OPEN_CLASS_NAME = 'si-nav-open';
 

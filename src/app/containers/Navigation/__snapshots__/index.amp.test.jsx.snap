@@ -151,7 +151,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
       <nav
         class="c0"
         dir="ltr"
-        id="si-nav-navigation-id"
+        id="si-nav"
         role="navigation"
       >
         <div
@@ -173,8 +173,8 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
             dir="ltr"
             on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
         si-nav-dropdown-menu.toggleVisibility,
-        si-nav-scrollable-nav.toggleClass(class=si-nav-scrollable-hidden),
-        si-nav-navigation-id.toggleClass(class=si-nav-open)
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
       "
             type="button"
           >
@@ -228,7 +228,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
           <div
             class="c6 c7"
             dir="ltr"
-            id="si-nav-scrollable-nav"
+            id="si-nav-scrollable"
           >
             <ul
               data-testid="scrollable-list"
