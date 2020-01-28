@@ -9,6 +9,7 @@ export const buildCpsAssetPageATIParams = (
   pageData,
   requestContext,
   serviceContext,
+  contentType,
 ) => {
   const { platform, statsDestination } = requestContext;
   const {
@@ -20,8 +21,6 @@ export const buildCpsAssetPageATIParams = (
 
   const { metadata, promo } = pageData;
 
-  const { type } = metadata;
-
   const getChapter1 = pageIdentifier => pageIdentifier.split('.')[1];
 
   const page = path(['analyticsLabels', 'counterName'], metadata);
@@ -31,8 +30,7 @@ export const buildCpsAssetPageATIParams = (
   return {
     appName: atiAnalyticsAppName,
     contentId: path(['id'], metadata),
-    contentType:
-      type === 'PGL' ? 'article-photo-gallery' : 'article-media-asset',
+    contentType,
     language: path(['language'], metadata),
     // Example page identifier: embedded_media::pidgin.embedded_media.media_asset.49529724.page
     pageIdentifier: chapter1 ? `${chapter1}::${page}` : page,
@@ -53,8 +51,14 @@ export const buildCpsAssetPageATIUrl = (
   pageData,
   requestContext,
   serviceContext,
+  contentType,
 ) => {
   return buildATIPageTrackPath(
-    buildCpsAssetPageATIParams(pageData, requestContext, serviceContext),
+    buildCpsAssetPageATIParams(
+      pageData,
+      requestContext,
+      serviceContext,
+      contentType,
+    ),
   );
 };

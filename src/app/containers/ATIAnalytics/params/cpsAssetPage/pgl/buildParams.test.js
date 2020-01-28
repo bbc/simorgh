@@ -1,9 +1,10 @@
+import path from 'ramda/src/path';
 import {
   buildCpsAssetPageATIParams,
   buildCpsAssetPageATIUrl,
-} from './buildParams';
+} from '../buildParams';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import payload from '#data/pidgin/cpsAssets/tori-49450859.json';
+import payload from '#data/pidgin/cpsAssets/sport-23252855.json';
 
 // Mocks
 analyticsUtils.getAtUserId = jest.fn();
@@ -11,6 +12,8 @@ analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
 analyticsUtils.getPublishedDatetime = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
+
+const CONTENT_TYPE = 'article-photo-gallery';
 
 // Fixtures
 const requestContext = {
@@ -31,12 +34,12 @@ const serviceContext = {
 const expectation = {
   appName: serviceContext.atiAnalyticsAppName,
   contentId: payload.metadata.id,
-  campaigns: payload.metadata.passport.campaigns,
-  contentType: 'article-media-asset',
+  campaigns: path(['metadata', 'passport', 'campaigns'], payload),
+  contentType: 'article-photo-gallery',
   language: payload.metadata.language,
-  pageIdentifier: `news::${payload.metadata.analyticsLabels.counterName}`,
+  pageIdentifier: 'sport::pidgin.sport.photo_gallery.23252855.page',
   pageTitle: `${payload.promo.headlines.headline} - ${serviceContext.brandName}`,
-  categoryName: 'News',
+  categoryName: undefined,
   producerId: serviceContext.atiAnalyticsProducerId,
   statsDestination: requestContext.statsDestination,
   libraryVersion: analyticsUtils.LIBRARY_VERSION,
@@ -52,6 +55,7 @@ describe('buildCpsAssetPageATIParams', () => {
       payload,
       requestContext,
       serviceContext,
+      CONTENT_TYPE,
     );
     expect(result).toEqual(expectation);
   });
@@ -63,14 +67,8 @@ describe('buildCpsAssetPageATIUrl', () => {
       payload,
       requestContext,
       serviceContext,
+      CONTENT_TYPE,
     );
-    const campaignString = expectation.campaigns
-      .filter(
-        campaign =>
-          campaign.campaignName && typeof campaign.campaignName === 'string',
-      )
-      .map(campaign => campaign.campaignName.replace(/ /g, '%20'))
-      .join('~');
 
     expect(result).toEqual(
       [
@@ -91,8 +89,6 @@ describe('buildCpsAssetPageATIUrl', () => {
         `x9=[${expectation.pageTitle.replace(/ /g, '+')}]`,
         `x11=[${expectation.timePublished}]`,
         `x12=[${expectation.timeUpdated}]`,
-        `x16=[${campaignString}]`,
-        `x17=[${expectation.categoryName}]`,
       ].join('&'),
     );
   });
