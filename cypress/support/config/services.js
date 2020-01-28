@@ -1199,10 +1199,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/thai/articles/c123456abcdo',
+        path: isLive(appEnv) ? undefined : '/thai/articles/c123456abcdo',
         smoke: false,
       },
       frontPage: {
