@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
+import styled from 'styled-components';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '../ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -23,7 +24,7 @@ import {
   getArticleSection,
   getMentions,
   getLang,
-} from './utils';
+} from '#lib/utilities/parseAssetData';
 
 const componentsToRender = {
   headline: headings,
@@ -34,6 +35,10 @@ const componentsToRender = {
   image,
   timestamp,
 };
+
+const StyledMain = styled.main`
+  flex-grow: 1;
+`;
 
 const ArticleMain = ({ articleData: data }) => {
   const { articleAuthor } = useContext(ServiceContext);
@@ -68,14 +73,14 @@ const ArticleMain = ({ articleData: data }) => {
         dateModified={lastPublished}
         aboutTags={aboutTags}
       />
-      <main role="main">
+      <StyledMain role="main">
         <GhostGrid>
           <Blocks
             blocks={path(['content', 'model', 'blocks'], data)}
             componentsToRender={componentsToRender}
           />
         </GhostGrid>
-      </main>
+      </StyledMain>
     </>
   );
 };

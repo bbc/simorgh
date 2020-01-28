@@ -167,7 +167,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/somali/hayadeed-49283375',
         text: 'Sababta aada ku aamini kartid BBC News',
       },
       externalLink: {

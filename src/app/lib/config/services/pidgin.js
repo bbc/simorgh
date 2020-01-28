@@ -200,7 +200,7 @@ export const service = {
     navigationSection: 'Plenti seshon',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/pidgin/institutional-48528766',
         text: 'Why you fit trust BBC News',
       },
       externalLink: {

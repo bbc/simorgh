@@ -4,7 +4,7 @@ import appConfig from '../../../src/server/utilities/serviceConfigs';
 const serviceHasPageType = (service, pageType) =>
   config[service].pageTypes[pageType].path !== undefined;
 
-const servicesUsingArticlePaths = ['news', 'scotland'];
+const servicesUsingArticlePaths = ['news', 'scotland', 'archive'];
 
 describe('Application', () => {
   Object.keys(config)
