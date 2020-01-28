@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, objectOf, any } from 'prop-types';
+import { string, shape, arrayOf, objectOf, any } from 'prop-types';
 import Metadata from '../Metadata';
 
 const ArticleMetadata = ({
@@ -30,12 +30,25 @@ const ArticleMetadata = ({
     </Metadata>
   );
 
+const tagPropTypes = shape({
+  thingUri: string,
+  topicId: string,
+  topicName: string,
+  curationType: arrayOf(string),
+  thingId: string,
+  thingLabel: string,
+  thingType: arrayOf(string),
+  thingSameAs: arrayOf(string),
+});
+
 ArticleMetadata.propTypes = {
   title: string.isRequired,
   author: string.isRequired,
   firstPublished: string.isRequired,
   lastPublished: string.isRequired,
   section: string,
+  aboutTags: arrayOf(tagPropTypes),
+  mentionsTags: arrayOf(tagPropTypes),
   lang: string.isRequired,
   description: string.isRequired,
   linkedData: objectOf(any),
@@ -43,6 +56,8 @@ ArticleMetadata.propTypes = {
 
 ArticleMetadata.defaultProps = {
   section: '',
+  aboutTags: [],
+  mentionsTags: [],
   linkedData: {},
 };
 
