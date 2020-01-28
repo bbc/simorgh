@@ -2536,6 +2536,14 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
       name="twitter:title"
     />
     <meta
+      content="History"
+      name="article:tag"
+    />
+    <meta
+      content="Addis Ababa"
+      name="article:tag"
+    />
+    <meta
       content="2017-09-21T04:24:34.000Z"
       name="article:published_time"
     />

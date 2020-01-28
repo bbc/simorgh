@@ -226,18 +226,6 @@ exports[`should match snapshot for News & International 1`] = `
       content="2018-01-01T12:01:00.000Z"
       name="article:published_time"
     />
-    <meta
-      content="Royal Wedding 2018"
-      name="article:tag"
-    />
-    <meta
-      content="Duchess of Sussex"
-      name="article:tag"
-    />
-    <meta
-      content="Queen Victoria"
-      name="article:tag"
-    />
   </head>
   <body>
     <div />

@@ -44,6 +44,9 @@ const expectation = {
   service: 'service',
   timePublished: analyticsUtils.getPublishedDatetime(),
   timeUpdated: analyticsUtils.getPublishedDatetime(),
+  ldpThingLabels: 'Technology~Nigeria',
+  ldpThingIds:
+    '31684f19-84d6-41f6-b033-7ae08098572a~3d5d5e30-dd50-4041-96d5-c970b20005b9',
 };
 
 describe('buildCpsAssetPageATIParams', () => {
@@ -91,6 +94,8 @@ describe('buildCpsAssetPageATIUrl', () => {
         `x9=[${expectation.pageTitle.replace(/ /g, '+')}]`,
         `x11=[${expectation.timePublished}]`,
         `x12=[${expectation.timeUpdated}]`,
+        `x13=[${expectation.ldpThingLabels}]`,
+        `x14=[${expectation.ldpThingIds}]`,
         `x16=[${campaignString}]`,
         `x17=[${expectation.categoryName}]`,
       ].join('&'),

@@ -211,6 +211,18 @@ exports[`should match for AMP News & UK origin 1`] = `
       content="Article Headline for SEO - BBC News"
       name="twitter:title"
     />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
+    />
   </head>
   <body>
     <div />
@@ -432,6 +444,18 @@ exports[`should match for Canonical News & international origin 1`] = `
       content="Article Headline for SEO - BBC News"
       name="twitter:title"
     />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
+    />
   </head>
   <body>
     <div />
@@ -634,6 +658,18 @@ exports[`should match for Persian News & UK origin 1`] = `
     <meta
       content="سرصفحه مقاله - BBC News فارسی"
       name="twitter:title"
+    />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
     />
   </head>
   <body>
@@ -841,6 +877,18 @@ exports[`should match for Persian News & international origin 1`] = `
     <meta
       content="سرصفحه مقاله - BBC News فارسی"
       name="twitter:title"
+    />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
     />
   </head>
   <body>
