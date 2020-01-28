@@ -6,7 +6,7 @@ exports[`MediaPlayer render the amp player 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB/amp"}
     </script>
     <script
       async="true"
@@ -88,7 +88,7 @@ exports[`MediaPlayer render the amp player 1`] = `
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
               scrolling="no"
-              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB/amp"
+              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB/amp"
               title="Media player"
             >
               <amp-img
@@ -97,8 +97,8 @@ exports[`MediaPlayer render the amp player 1`] = `
                 height="16"
                 layout="fill"
                 placeholder="true"
-                src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-                srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                src="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg"
+                srcset="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 240w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 320w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 480w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 624w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 800w"
                 width="9"
               />
             </amp-iframe>
@@ -183,7 +183,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"}
+      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB"}
     </script>
   </head>
   <body>
@@ -202,7 +202,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
               allowfullscreen=""
               class="c3"
               scrolling="no"
-              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01k6msp/en-GB"
+              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB"
               title="Media player"
             />
           </div>

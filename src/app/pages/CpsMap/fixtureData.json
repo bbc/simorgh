@@ -1,0 +1,1931 @@
+{
+  "metadata": {
+    "firstPublished": 1568388704000,
+    "lastPublished": 1574252665000,
+    "lastUpdated": 1574252675611,
+    "analyticsLabels": {
+      "counterName": "pidgin.media_asset.23248703.page",
+      "cps_asset_id": "23248703",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": [
+      "media",
+      "paragraph",
+      "heading",
+      "subheading",
+      "crosshead",
+      "list",
+      "table",
+      "social_embed",
+      "quote",
+      "pullOut",
+      "image"
+    ],
+    "createdBy": "pidgin-v6",
+    "id": "urn:bbc:ares::asset:pidgin/23248703",
+    "includeComments": false,
+    "language": "pcm",
+    "locators": {
+      "assetUri": "/pidgin/23248703",
+      "cpsUrn": "urn:bbc:content:assetUri:pidgin/23248703",
+      "curie": "http://www.bbc.co.uk/asset/5679389a-3ea6-0b40-9de4-f4d33d6bcd9f"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": false,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5ad8625ac93a9f000eecb253",
+          "campaignName": "Inspire me"
+        },
+        {
+          "campaignId": "5ad86285c93a9f000eecb256",
+          "campaignName": "Give me perspective"
+        },
+        {
+          "campaignId": "5ad86291c93a9f000eecb257",
+          "campaignName": "Keep me on trend"
+        }
+      ],
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+        "categoryName": "Opinion"
+      },
+      "taggings": []
+    },
+    "tags": {},
+    "type": "MAP",
+    "version": "v1.1.3"
+  },
+  "relatedContent": {
+    "groups": [
+      {
+        "promos": [
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "Police Arrest 3 ontop Anambra Church Attack",
+              "shortHeadline": "Anambra Church: Police Arrest 3"
+            },
+            "id": "urn:bbc:ares::asset:pidgin/tori-23145776",
+            "indexImage": {
+              "altText": "One gun enter St. Phillips Church for Ozubulu, Anambra and shoot and kill 11 people, injure 18 others",
+              "caption": "Di attack happen for inside St. Philip Catholic Chirch Ozubulu",
+              "copyrightHolder": "BBC",
+              "height": 351,
+              "href": "http://b.files.bbci.co.uk/5C06/test/_63585532_ozubuluchurch.jpg",
+              "id": "63585532",
+              "path": "/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 624
+            },
+            "locators": {
+              "assetUri": "/pidgin/tori-23145776",
+              "cpsUrn": "urn:bbc:content:assetUri:/pidgin/tori-23145776"
+            },
+            "summary": "Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp",
+            "timestamp": 1502217403000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "Lagos 'Gay' men Appear for Court, say Dem no dey Guilty",
+              "shortHeadline": "Lagos don carry 'gay' men go court"
+            },
+            "id": "urn:bbc:ares::asset:pidgin/tori-23143754",
+            "indexImage": {
+              "altText": "Two homosexual men",
+              "caption": "Homosexuality dey illegal for Nigeria",
+              "copyrightHolder": "AFP",
+              "height": 351,
+              "href": "http://b.files.bbci.co.uk/13644/test/_63582497_black-gay.jpg",
+              "id": "63582497",
+              "path": "/cpsdevpb/13644/test/_63582497_black-gay.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 624
+            },
+            "locators": {
+              "assetUri": "/pidgin/tori-23143754",
+              "cpsUrn": "urn:bbc:content:assetUri:/pidgin/tori-23143754"
+            },
+            "summary": "The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.",
+            "timestamp": 1502195579000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "PGL",
+            "headlines": {
+              "headline": "Kenya Elections Pictures: 8 August 2017",
+              "shortHeadline": "Kenya Decides 2017 in Pictures"
+            },
+            "id": "urn:bbc:ares::asset:pidgin/23146654",
+            "locators": {
+              "assetUri": "/pidgin/23146654",
+              "cpsUrn": "urn:bbc:content:assetUri:/pidgin/23146654"
+            },
+            "summary": "This na some of the picture wey our eye see as Kenya people go vote for election today",
+            "timestamp": 1502222360000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "MAP",
+            "headlines": {
+              "headline": "BBC News Pidgin One Minute News",
+              "shortHeadline": "BBC News Pidgin One Minute News"
+            },
+            "id": "urn:bbc:ares::asset:pidgin/media-23147054",
+            "indexImage": {
+              "altText": "BBC MInute",
+              "caption": "BBC Pidgin minute",
+              "copyrightHolder": "BBC",
+              "height": 576,
+              "href": "http://b.files.bbci.co.uk/B7E8/test/_63708074_mediaitem63708073.png",
+              "id": "63708074",
+              "path": "/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png",
+              "subType": "index",
+              "type": "image",
+              "width": 1024
+            },
+            "locators": {
+              "assetUri": "/pidgin/media-23147054",
+              "cpsUrn": "urn:bbc:content:assetUri:/pidgin/media-23147054"
+            },
+            "media": {
+              "advertising": true,
+              "caption": "The Wold's most interesting stories",
+              "embedding": false,
+              "format": "audio",
+              "id": "p01cqycr",
+              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cqz13.jpg",
+              "subType": "clip",
+              "synopses": {
+                "long": "The Wold's most interesting stories",
+                "medium": "The Wold's most interesting stories",
+                "short": "The Wold's most interesting stories"
+              },
+              "title": "BBC News Piding One Minute News",
+              "type": "media",
+              "versions": [
+                {
+                  "availableFrom": 1502288512000,
+                  "availableTerritories": {
+                    "nonUk": true,
+                    "uk": true,
+                    "world": false
+                  },
+                  "duration": 15,
+                  "durationISO8601": "PT15S",
+                  "types": ["Original"],
+                  "versionId": "p01cqyct",
+                  "warnings": {}
+                }
+              ]
+            },
+            "mediaType": "Audio",
+            "summary": "All di local and world tori wey you suppose know in 60 seconds!",
+            "timestamp": 1502963087000,
+            "type": "cps"
+          }
+        ]
+      }
+    ],
+    "section": {
+      "name": "Domot",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/pidgin/front_page"
+    },
+    "site": {
+      "name": "BBC Pidgin",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/pidgin"
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+                              "attributes": []
+                            },
+                            "id": "c35b60e9-e983-4558-b93e-79286d4dc52f",
+                            "position": [1, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "id": "c978d9d7-f696-47ee-9ea6-e1337f38132c",
+                      "position": [1, 1, 1]
+                    }
+                  ]
+                },
+                "id": "1d024819-54b0-4519-97c8-518cf2e70733",
+                "position": [1, 1]
+              }
+            ]
+          },
+          "type": "visuallyHiddenHeadline",
+          "id": "15dd7e91-1638-43df-beb0-c27c6f22a36c",
+          "position": [1]
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01kx42s",
+            "blocks": [
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "aresMediaMetadata",
+                      "blockId": "urn:bbc:ares::clip:p01kx42s",
+                      "model": {
+                        "advertising": true,
+                        "embedding": true,
+                        "format": "audio_video",
+                        "id": "p01kx42s",
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
+                        "subType": "clip",
+                        "synopses": { "short": "short" },
+                        "title": "alt-text world service clip",
+                        "versions": [
+                          {
+                            "availableFrom": 1545304011000,
+                            "availableTerritories": {
+                              "nonUk": true,
+                              "uk": true,
+                              "world": false
+                            },
+                            "duration": 5,
+                            "durationISO8601": "PT5S",
+                            "types": ["Original"],
+                            "versionId": "p01kx42v",
+                            "warnings": {}
+                          }
+                        ]
+                      },
+                      "id": "dc7ab746-3bbd-4708-9712-61fec1b3f775",
+                      "position": [2, 1, 1]
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "locator": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg",
+                              "originCode": "pips"
+                            },
+                            "id": "1cdbb93e-cfca-4573-be08-97ff2225f78a",
+                            "position": [2, 1, 2, 1]
+                          }
+                        ]
+                      },
+                      "id": "50dfde8c-1377-4ed5-aa23-e3de936be73b",
+                      "position": [2, 1, 2]
+                    }
+                  ]
+                },
+                "id": "42e7d21e-ea08-4f14-9be0-f7fe3adf8f2d",
+                "position": [2, 1]
+              }
+            ]
+          },
+          "id": "290c9d21-abd6-480b-a1c4-ea3f17967954",
+          "position": [2]
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+                              "attributes": []
+                            },
+                            "id": "75c2e76b-18d0-4e7e-9d7a-a98285ce1fbb",
+                            "position": [3, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "id": "fbba70f2-c8d4-46b3-b678-9dee7b2691e9",
+                      "position": [3, 1, 1]
+                    }
+                  ]
+                },
+                "id": "5ccda529-8953-470b-ac12-d193df4d73f8",
+                "position": [3, 1]
+              }
+            ]
+          },
+          "type": "fauxHeadline",
+          "id": "c601fcf5-3f31-446e-8a40-bbce0228d515",
+          "position": [3]
+        },
+        {
+          "type": "timestamp",
+          "model": {
+            "firstPublished": 1568388704000,
+            "lastPublished": 1574252665000
+          },
+          "id": "385f3e68-e4f6-4707-9bd7-c33c1790b7f4",
+          "position": [4]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "This is an introduction in bold. & < >",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "This is an introduction in bold. & < >",
+                        "attributes": ["bold"]
+                      },
+                      "id": "303f1f8a-7e50-46b6-8258-aec87daf25fb",
+                      "position": [5, 1, 1]
+                    }
+                  ]
+                },
+                "id": "82b6ee0c-9828-44d9-9497-ce6c3e0c3705",
+                "position": [5, 1]
+              }
+            ]
+          },
+          "id": "f658610c-0c77-49ec-8350-38f239625374",
+          "position": [5]
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "This is a heading & < >",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "This is a heading & < >",
+                              "attributes": []
+                            },
+                            "id": "e4d5b3e2-de10-416b-8dda-7af8e5274bb0",
+                            "position": [6, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "id": "014c4327-db73-43d0-9ae7-959fa7533d68",
+                      "position": [6, 1, 1]
+                    }
+                  ]
+                },
+                "id": "69ff7174-2d96-4c5e-bdea-8ff8580d96dd",
+                "position": [6, 1]
+              }
+            ]
+          },
+          "id": "badee024-0c85-4749-aa73-7221d8a1f89c",
+          "position": [6]
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "This is a subheading & < >",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "This is a subheading & < >",
+                              "attributes": []
+                            },
+                            "id": "9473f420-ae02-47c3-9e74-22f8bfb9c7be",
+                            "position": [7, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "id": "8af24d29-ce31-4e35-aa40-5bc84fa29ea4",
+                      "position": [7, 1, 1]
+                    }
+                  ]
+                },
+                "id": "731c14cb-829a-467f-97c8-6901b706b15e",
+                "position": [7, 1]
+              }
+            ]
+          },
+          "id": "970a3612-f9df-4688-bf77-5c253b407c64",
+          "position": [7]
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "This is a crosshead & < >",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "This is a crosshead & < >",
+                              "attributes": []
+                            },
+                            "id": "f426934c-4e9b-4389-ab6c-8e8a9d0ce583",
+                            "position": [8, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "id": "e4db894d-cc1d-4a46-be51-b1064ad5a529",
+                      "position": [8, 1, 1]
+                    }
+                  ]
+                },
+                "id": "2622d979-27dd-44d2-8dd4-d1fc999259f0",
+                "position": [8, 1]
+              }
+            ]
+          },
+          "id": "8939aee3-6757-4017-ad80-67ab78c97780",
+          "position": [8]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "This is regular paragraph text. \"Lorem ipsum dolor sit amet\", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "This is regular paragraph text. \"Lorem ipsum dolor sit amet\", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                        "attributes": []
+                      },
+                      "id": "0587fb96-f884-43ac-9f04-1f7e8ecfb6df",
+                      "position": [9, 1, 1]
+                    }
+                  ]
+                },
+                "id": "209f2650-8a06-4666-8c74-34a62f8f8e5e",
+                "position": [9, 1]
+              }
+            ]
+          },
+          "id": "ffbcbde2-f826-4605-ad59-63bf6c910583",
+          "position": [9]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Bulleted list:",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": { "text": "Bulleted list:", "attributes": [] },
+                      "id": "4dc15e4a-fdd7-4df6-b66b-f47066849e59",
+                      "position": [10, 1, 1]
+                    }
+                  ]
+                },
+                "id": "8b871d46-d987-4439-8ff3-45a01139c3f6",
+                "position": [10, 1]
+              }
+            ]
+          },
+          "id": "e4dff710-abf6-4da1-b481-10a899e973f4",
+          "position": [10]
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "<Media Asset Page>",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "<Media Asset Page>",
+                                    "locator": "http://www.bbc.com/afrique/23248423",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "<Media Asset Page>",
+                                          "attributes": []
+                                        },
+                                        "id": "f5678148-3334-410e-9ee7-32ffb8474c7a",
+                                        "position": [11, 1, 1, 1, 1, 1]
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  },
+                                  "id": "baaaa522-5c68-4c15-8c50-ca03d48ebb3a",
+                                  "position": [11, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "538fbb28-5180-456a-98bf-cbbdd299ad00",
+                            "position": [11, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "id": "2e8b260d-d6d7-485e-8339-3086e0da7652",
+                      "position": [11, 1, 1]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "<Media Asset Page>",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "<Media Asset Page>",
+                                    "locator": "http://www.bbc.com/afrique/23248423",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "<Media Asset Page>",
+                                          "attributes": []
+                                        },
+                                        "id": "9ab64720-0cc8-4190-8e8a-3dd41f0678ca",
+                                        "position": [11, 1, 2, 1, 1, 1]
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  },
+                                  "id": "55daa4eb-042b-46f3-a422-6718db92183c",
+                                  "position": [11, 1, 2, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "e4728250-b972-405d-8a88-f3a232d9afad",
+                            "position": [11, 1, 2, 1]
+                          }
+                        ]
+                      },
+                      "id": "38fb7b3b-0ec1-4929-b382-aa397f762ef4",
+                      "position": [11, 1, 2]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "<Media Asset Page>",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "<Media Asset Page>",
+                                    "locator": "http://www.bbc.com/afrique/23248423",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "<Media Asset Page>",
+                                          "attributes": []
+                                        },
+                                        "id": "bcf7ca23-312b-4a42-9789-36874dbbe2a8",
+                                        "position": [11, 1, 3, 1, 1, 1]
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  },
+                                  "id": "3f14cae0-715b-438b-8525-2624b8a8fea6",
+                                  "position": [11, 1, 3, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "cf292e51-5c15-42ac-866f-45fac862d52c",
+                            "position": [11, 1, 3, 1]
+                          }
+                        ]
+                      },
+                      "id": "085cb435-8f83-4bba-aeac-4ed40f1539ae",
+                      "position": [11, 1, 3]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "this is the link text",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "this is the link text",
+                                    "locator": "https://bbc.com/pidgin",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "this is the link text",
+                                          "attributes": []
+                                        },
+                                        "id": "353286f6-fa1f-4c0a-b43c-382dca2e954a",
+                                        "position": [11, 1, 4, 1, 1, 1]
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  },
+                                  "id": "83dd267f-c578-408e-b77a-788b0c0e66bb",
+                                  "position": [11, 1, 4, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "a263f461-d14c-4d82-b11e-aa2bf64b8c8b",
+                            "position": [11, 1, 4, 1]
+                          }
+                        ]
+                      },
+                      "id": "033ba219-6e2c-4ef5-b497-f2eb687bd845",
+                      "position": [11, 1, 4]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "this is the link text",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "this is the link text",
+                                    "locator": "https://bbc.com/pidgin",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "this is the link text",
+                                          "attributes": []
+                                        },
+                                        "id": "4a014479-9c96-4e95-b64f-bb676d5f68f3",
+                                        "position": [11, 1, 5, 1, 1, 1]
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  },
+                                  "id": "3f073847-a74e-42af-bfcb-1484eee49d89",
+                                  "position": [11, 1, 5, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "98052360-4556-44f9-9730-d79aa57aa826",
+                            "position": [11, 1, 5, 1]
+                          }
+                        ]
+                      },
+                      "id": "0cad8254-18a3-4204-9be7-b504a7a452e3",
+                      "position": [11, 1, 5]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "this is the link text",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "this is the link text",
+                                    "locator": "https://bbc.com/pidgin",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "this is the link text",
+                                          "attributes": []
+                                        },
+                                        "id": "a2300879-ce0c-4fcc-b12d-a7e5917b084d",
+                                        "position": [11, 1, 6, 1, 1, 1]
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  },
+                                  "id": "2f38a5f9-6e01-4708-859c-4dd8ca389dd5",
+                                  "position": [11, 1, 6, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "47065a07-778d-462a-bddc-5e3a67afe0cb",
+                            "position": [11, 1, 6, 1]
+                          }
+                        ]
+                      },
+                      "id": "44137deb-624e-4422-8d88-d0a5843678bc",
+                      "position": [11, 1, 6]
+                    }
+                  ]
+                },
+                "type": "unorderedList",
+                "id": "c68215e6-d785-4e7b-8653-150961aef737",
+                "position": [11, 1]
+              }
+            ]
+          },
+          "type": "text",
+          "id": "71bdb98e-396c-403a-bebb-a1d213964cfe",
+          "position": [11]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Numbered list:",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": { "text": "Numbered list:", "attributes": [] },
+                      "id": "deadb2e6-b3db-4416-a0ad-927f49ede09d",
+                      "position": [12, 1, 1]
+                    }
+                  ]
+                },
+                "id": "784559c1-717d-45ee-a380-7364e5a4c72c",
+                "position": [12, 1]
+              }
+            ]
+          },
+          "id": "52f1c079-aa07-4518-a3cc-a61fe43f8912",
+          "position": [12]
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "<Media Asset Page>",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "<Media Asset Page>",
+                                    "locator": "http://www.bbc.com/afrique/23248423",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "<Media Asset Page>",
+                                          "attributes": []
+                                        },
+                                        "id": "8fd0a6d3-1a50-4acd-9677-38595f666ae0",
+                                        "position": [13, 1, 1, 1, 1, 1]
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  },
+                                  "id": "80c1fb85-5f80-4d62-97c4-de20f912e93c",
+                                  "position": [13, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "d682b0fd-74a4-4199-82b4-bb3f2b981005",
+                            "position": [13, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "id": "9eb02c43-b8df-4429-a013-16c1c471061f",
+                      "position": [13, 1, 1]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "<Media Asset Page>",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "<Media Asset Page>",
+                                    "locator": "http://www.bbc.com/afrique/23248423",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "<Media Asset Page>",
+                                          "attributes": []
+                                        },
+                                        "id": "a1276dd0-c643-490f-8d2f-b0579d911c36",
+                                        "position": [13, 1, 2, 1, 1, 1]
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  },
+                                  "id": "a74bbae9-beff-4165-835c-b713e499af00",
+                                  "position": [13, 1, 2, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "32a6d508-1568-4564-ac71-be7cc04d2360",
+                            "position": [13, 1, 2, 1]
+                          }
+                        ]
+                      },
+                      "id": "acaa7ec9-e7e0-48d4-aafb-69ff53f15dfa",
+                      "position": [13, 1, 2]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "<Media Asset Page>",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "<Media Asset Page>",
+                                    "locator": "http://www.bbc.com/afrique/23248423",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "<Media Asset Page>",
+                                          "attributes": []
+                                        },
+                                        "id": "765239a2-6517-4e66-a5dc-9d64f9d7a32c",
+                                        "position": [13, 1, 3, 1, 1, 1]
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  },
+                                  "id": "acbc2cee-6ba3-4fb2-8bc5-a6949d3767a3",
+                                  "position": [13, 1, 3, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "1f8c73e7-b52f-415b-98b6-94de6fd88eb8",
+                            "position": [13, 1, 3, 1]
+                          }
+                        ]
+                      },
+                      "id": "f7873438-7759-4f8f-9a57-75206262e274",
+                      "position": [13, 1, 3]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "this is the link text",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "this is the link text",
+                                    "locator": "https://bbc.com/pidgin",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "this is the link text",
+                                          "attributes": []
+                                        },
+                                        "id": "d659a5e2-51a9-4265-b735-00a577246d42",
+                                        "position": [13, 1, 4, 1, 1, 1]
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  },
+                                  "id": "009ab627-08fa-4411-bf47-9518a01d24bb",
+                                  "position": [13, 1, 4, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "0a966223-be41-471d-a86b-919479ff18ef",
+                            "position": [13, 1, 4, 1]
+                          }
+                        ]
+                      },
+                      "id": "738d86e6-fcd1-4b9d-8d44-5a3ee4738121",
+                      "position": [13, 1, 4]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "this is the link text",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "this is the link text",
+                                    "locator": "https://bbc.com/pidgin",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "this is the link text",
+                                          "attributes": []
+                                        },
+                                        "id": "ed6ef0d2-bdc8-4bad-b73e-41825142ecc8",
+                                        "position": [13, 1, 5, 1, 1, 1]
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  },
+                                  "id": "9ce6eb1f-8431-453b-a9c8-8b6ed8bdd6a4",
+                                  "position": [13, 1, 5, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "38f7d23a-51fc-4bab-971c-e04552827441",
+                            "position": [13, 1, 5, 1]
+                          }
+                        ]
+                      },
+                      "id": "4b71b4e5-8eac-4a3c-ab8d-ea8f246f0021",
+                      "position": [13, 1, 5]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "this is the link text",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "this is the link text",
+                                    "locator": "https://bbc.com/pidgin",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "this is the link text",
+                                          "attributes": []
+                                        },
+                                        "id": "b5b62259-c0dc-441e-8e72-bcde2f594bbb",
+                                        "position": [13, 1, 6, 1, 1, 1]
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  },
+                                  "id": "82dbf058-ec74-407a-a009-400ae81311fb",
+                                  "position": [13, 1, 6, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "fc9399aa-2b41-4b72-be28-2d71d131455a",
+                            "position": [13, 1, 6, 1]
+                          }
+                        ]
+                      },
+                      "id": "40f79fb8-a781-4e1d-85fa-a120514e75ca",
+                      "position": [13, 1, 6]
+                    }
+                  ]
+                },
+                "type": "orderedList",
+                "id": "09362e9a-7b95-43c1-bd3f-469cf7fbcd0f",
+                "position": [13, 1]
+              }
+            ]
+          },
+          "type": "text",
+          "id": "c66cdf98-5a33-4a3c-ac4a-bcd538bebe22",
+          "position": [13]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore \"eu fugiat nulla\" pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Lorem ipsum dolor sit amet, ",
+                        "attributes": []
+                      },
+                      "id": "513e4f7a-fa8a-48ee-b23c-172a91620aca",
+                      "position": [14, 1, 1]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "consectetur",
+                        "attributes": ["bold"]
+                      },
+                      "id": "e75ba0dc-1d08-4b04-8043-535e680c59cf",
+                      "position": [14, 1, 2]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+                        "attributes": []
+                      },
+                      "id": "160e1042-befe-4b15-9bf1-790d4dab7d29",
+                      "position": [14, 1, 3]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " ullamco laboris nisi ut aliquip ",
+                        "attributes": ["bold"]
+                      },
+                      "id": "8da5ab85-8f94-4884-9592-c6b6ac4f8d85",
+                      "position": [14, 1, 4]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+                        "attributes": []
+                      },
+                      "id": "8ea924c9-384e-4505-a954-5e4543d66350",
+                      "position": [14, 1, 5]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " in voluptate velit esse cillum ",
+                        "attributes": ["italic"]
+                      },
+                      "id": "5489a322-54e8-4ca7-b27a-5eace50dcf81",
+                      "position": [14, 1, 6]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "dolore \"eu fugiat nulla\" pariatur. ",
+                        "attributes": []
+                      },
+                      "id": "65e384b9-99e5-432e-a7bf-c23b8e10c44d",
+                      "position": [14, 1, 7]
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "Excepteur",
+                        "locator": "https://bbc.com/pidgin",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": { "text": "Excepteur", "attributes": [] },
+                            "id": "b92b3fb3-2326-48e3-ace5-869f1e26222c",
+                            "position": [14, 1, 8, 1]
+                          }
+                        ],
+                        "isExternal": false
+                      },
+                      "id": "9829684d-dbc1-422b-92c4-94c881654adf",
+                      "position": [14, 1, 8]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                        "attributes": []
+                      },
+                      "id": "6b694a99-50fd-418e-89ce-821d4dd6255d",
+                      "position": [14, 1, 9]
+                    }
+                  ]
+                },
+                "id": "845a4610-ed74-4e7e-9fe2-5ade1f30d7da",
+                "position": [14, 1]
+              }
+            ]
+          },
+          "id": "b957f9b7-b496-4c13-b3b1-9e01fc727b5c",
+          "position": [14]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Testing special characters: !\"£$%^&*()_+=-{}[]:@~;'#<>?,./\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Testing special characters: !\"£$%^&*()_+=-{}[]:@~;'#<>?,./\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ",
+                        "attributes": []
+                      },
+                      "id": "0131a40f-b120-4ca2-bf0c-011cdfa920d8",
+                      "position": [15, 1, 1]
+                    }
+                  ]
+                },
+                "id": "71ab481b-7694-4d75-8959-bec64efc3d45",
+                "position": [15, 1]
+              }
+            ]
+          },
+          "id": "0fd90cd3-59bc-4e5b-bad6-828332887423",
+          "position": [15]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#",
+                        "attributes": []
+                      },
+                      "id": "f1dcf78e-6e49-48d2-8290-913687972f6f",
+                      "position": [16, 1, 1]
+                    }
+                  ]
+                },
+                "id": "187c4a6e-0b34-4295-bac9-cea0591c9903",
+                "position": [16, 1]
+              }
+            ]
+          },
+          "id": "78392175-16c1-427c-984a-75871b7d184e",
+          "position": [16]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Table:",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": { "text": "Table:", "attributes": [] },
+                      "id": "816dd3b6-b0a8-4c5e-858e-4accdd77089f",
+                      "position": [17, 1, 1]
+                    }
+                  ]
+                },
+                "id": "1c3e569e-8f9b-4220-847b-fbca6b8107e7",
+                "position": [17, 1]
+              }
+            ]
+          },
+          "id": "770de180-c513-45c8-993f-f0a9c360d38c",
+          "position": [17]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Social media embed:",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Social media embed:",
+                        "attributes": []
+                      },
+                      "id": "8df1122e-4ace-426b-9cb4-37a49e9227ba",
+                      "position": [18, 1, 1]
+                    }
+                  ]
+                },
+                "id": "6de51080-0231-41c2-b124-5db639ff0216",
+                "position": [18, 1]
+              }
+            ]
+          },
+          "id": "57002092-f422-40e2-aaa6-2bcb216066c8",
+          "position": [18]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Quote box:",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": { "text": "Quote box:", "attributes": [] },
+                      "id": "3c07bb81-b295-488c-8a01-179a3396b292",
+                      "position": [19, 1, 1]
+                    }
+                  ]
+                },
+                "id": "aa8bd8da-97c2-4e18-9b62-e744dbadc0ea",
+                "position": [19, 1]
+              }
+            ]
+          },
+          "id": "2a990c79-40fa-45c2-be6e-c14414901c47",
+          "position": [19]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Correspondent quote box:",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Correspondent quote box:",
+                        "attributes": []
+                      },
+                      "id": "b020c649-1ce6-46ca-b9dd-089a0cc59735",
+                      "position": [20, 1, 1]
+                    }
+                  ]
+                },
+                "id": "c2f1314c-f970-46e7-928b-f015dd1e0b53",
+                "position": [20, 1]
+              }
+            ]
+          },
+          "id": "7bf66b80-f65e-40a5-b9e2-557d421c1215",
+          "position": [20]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Fact box:",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": { "text": "Fact box:", "attributes": [] },
+                      "id": "b7ee8dce-0986-4d00-8406-5e26c9a55180",
+                      "position": [21, 1, 1]
+                    }
+                  ]
+                },
+                "id": "bcdf7f4c-b9f5-4291-8a31-b8dc016dcaf0",
+                "position": [21, 1]
+              }
+            ]
+          },
+          "id": "f899809e-8a4a-44fc-a145-330528481d7b",
+          "position": [21]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "­",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": { "text": "­", "attributes": [] },
+                      "id": "621ff847-a441-4bbc-bff6-3b6d7ae7b323",
+                      "position": [22, 1, 1]
+                    }
+                  ]
+                },
+                "id": "c0519df2-0277-4469-af26-75541f899510",
+                "position": [22, 1]
+              }
+            ]
+          },
+          "id": "97477649-344f-4232-aaa6-e44e524fd864",
+          "position": [22]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": { "text": "Lorem ipsum", "attributes": [] },
+                      "id": "ea34be4d-0c32-4924-b190-312c8a4a42e1",
+                      "position": [23, 1, 1]
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": " dolor sit amet",
+                        "locator": "https://bbc.com/pidgin",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": " dolor sit amet",
+                              "attributes": []
+                            },
+                            "id": "354473b0-6ba8-4853-b8d9-5fb7b6ca9756",
+                            "position": [23, 1, 2, 1]
+                          }
+                        ],
+                        "isExternal": false
+                      },
+                      "id": "1922b65d-21ee-480b-9a83-9a5e3f7b3ca8",
+                      "position": [23, 1, 2]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ", consectetur adipiscing elit",
+                        "attributes": []
+                      },
+                      "id": "3a6b658c-0fe2-44cd-9292-ae93f6317cd4",
+                      "position": [23, 1, 3]
+                    }
+                  ]
+                },
+                "id": "26e3fb2c-a1c9-45e4-b616-0f335ad153c7",
+                "position": [23, 1]
+              }
+            ]
+          },
+          "id": "440c70c2-0d66-463d-bdee-03f937ee745a",
+          "position": [23]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Psammead was named after the mythical sand creature",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Psammead was named after the mythical sand creature",
+                                    "attributes": []
+                                  },
+                                  "id": "efee0132-02ac-4209-b7b8-591c3e982ef8",
+                                  "position": [24, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "d7ab9008-5d4d-4f3c-98cf-0a5f5a64c4c4",
+                            "position": [24, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "id": "6deee8f6-c230-4ea9-a64c-2016f70b1ff0",
+                      "position": [24, 1, 1]
+                    }
+                  ]
+                },
+                "id": "1e9df0bf-5db6-4a29-92d2-0d97746102e4",
+                "position": [24, 1]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "psammead",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "psammead",
+                                    "attributes": []
+                                  },
+                                  "id": "ff9d5b20-75fb-43ad-8bdb-eb0e214f56e7",
+                                  "position": [24, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "0681deee-6fad-43ca-860e-cfae9f914b5f",
+                            "position": [24, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "id": "5cbf37b9-64e7-4424-8375-f2dd5b0fcbea",
+                      "position": [24, 2, 1]
+                    }
+                  ]
+                },
+                "id": "71048f26-bef8-489f-8743-7593b894799b",
+                "position": [24, 2]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Google",
+                  "height": 576,
+                  "locator": "5426/test/_63724512_psammead-closeup.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 1024
+                },
+                "id": "d6baaa53-9e38-4596-8cdc-3d8268032f85",
+                "position": [24, 3]
+              }
+            ]
+          },
+          "id": "fdcef213-4d79-48a8-8c5b-e30e89b039a6",
+          "position": [24]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "A pretty little butterfly & < >",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "A pretty little butterfly & < >",
+                                    "attributes": []
+                                  },
+                                  "id": "1bdc139f-ba4f-498a-8c4e-d05fff412166",
+                                  "position": [25, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "5fe98fd8-eab5-4e1a-8fdd-85a00fa015a0",
+                            "position": [25, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "id": "56d33f8b-1e36-4cfe-bb23-98a5fd35f669",
+                      "position": [25, 1, 1]
+                    }
+                  ]
+                },
+                "id": "7d6b2500-4b38-4745-b894-7334e586f66e",
+                "position": [25, 1]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "butterfly",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "butterfly",
+                                    "attributes": []
+                                  },
+                                  "id": "c60a9ee9-1cf5-4d2e-8bce-6c85d28d7298",
+                                  "position": [25, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "957bfe54-dca4-4fa5-97d4-53641b0f3dd3",
+                            "position": [25, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "id": "44d93d05-f2ce-45e5-a86c-6e8e578b62d8",
+                      "position": [25, 2, 1]
+                    }
+                  ]
+                },
+                "id": "be11ff77-356a-4196-903c-c34f776fe434",
+                "position": [25, 2]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Butterfly person",
+                  "height": 360,
+                  "locator": "292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 640
+                },
+                "id": "7f787fae-2210-4f5b-b2e8-350009dbe2ed",
+                "position": [25, 3]
+              }
+            ]
+          },
+          "id": "5190dbae-7b80-4e9f-9175-562b7c5bfe80",
+          "position": [25]
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
+                                    "attributes": []
+                                  },
+                                  "id": "370ca67a-621e-4de7-b340-d28d7a4fa616",
+                                  "position": [26, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "5718d399-6637-4d64-9797-52974d70b91c",
+                            "position": [26, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "id": "bad61b2d-690b-40aa-b9dc-f48c4b86dc34",
+                      "position": [26, 1, 1]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
+                                    "attributes": []
+                                  },
+                                  "id": "7b4a5365-d3cf-483b-8393-65935a6f7726",
+                                  "position": [26, 1, 2, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "58cc6508-7ff8-467a-8e03-ec5b85e3fab1",
+                            "position": [26, 1, 2, 1]
+                          }
+                        ]
+                      },
+                      "id": "21f748af-b882-405c-876f-9997881c78ed",
+                      "position": [26, 1, 2]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "sunt in culpa qui officia deserunt mollit anim id est laborum",
+                                    "attributes": []
+                                  },
+                                  "id": "dfe527df-3205-4eed-a2ab-89166fcaf926",
+                                  "position": [26, 1, 3, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "37b844ab-30c7-4e09-86de-c551b9b34b32",
+                            "position": [26, 1, 3, 1]
+                          }
+                        ]
+                      },
+                      "id": "91a14755-6bea-4a5d-854f-4cf9f14c9bfd",
+                      "position": [26, 1, 3]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "v3 draft",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "v3 draft",
+                                    "attributes": []
+                                  },
+                                  "id": "9ac2c57b-c9c4-475d-b00d-f487cea8b801",
+                                  "position": [26, 1, 4, 1, 1]
+                                }
+                              ]
+                            },
+                            "id": "910cc419-8392-4456-a51f-5439be974978",
+                            "position": [26, 1, 4, 1]
+                          }
+                        ]
+                      },
+                      "id": "aca5c884-1960-44b3-be4c-458e254db4fa",
+                      "position": [26, 1, 4]
+                    }
+                  ]
+                },
+                "type": "unorderedList",
+                "id": "114459f4-0b41-4232-846a-1f1656c97031",
+                "position": [26, 1]
+              }
+            ]
+          },
+          "type": "text",
+          "id": "7b935d25-fc47-4ec3-aa0d-b1706f4ec267",
+          "position": [26]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "This is transmission info ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "This is transmission info ",
+                        "attributes": []
+                      },
+                      "id": "df54fd36-ad3e-405b-b361-60aa377c03c2",
+                      "position": [27, 1, 1]
+                    }
+                  ]
+                },
+                "id": "a596b08c-81c0-41f9-8f28-15297d1bd11f",
+                "position": [27, 1]
+              }
+            ]
+          },
+          "id": "069c44a3-2755-43b7-a898-477f591a0679",
+          "position": [27]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "This is the footer ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "This is the footer ",
+                        "attributes": []
+                      },
+                      "id": "919f7f70-3b13-49c1-a3cf-5afde484c712",
+                      "position": [28, 1, 1]
+                    }
+                  ]
+                },
+                "id": "7ab7beba-31c3-41e5-a610-7bcf81f792d5",
+                "position": [28, 1]
+              }
+            ]
+          },
+          "id": "189b4ca6-81d7-47ab-9c91-18ad11f150bc",
+          "position": [28]
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+      "shortHeadline": "First CPS Media Asset Pages Appear on Heloo"
+    },
+    "id": "urn:bbc:ares::asset:pidgin/23248703",
+    "indexImage": {
+      "altText": "connectionAltText",
+      "copyrightHolder": "BBC",
+      "height": 360,
+      "href": "http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg",
+      "id": "63721682",
+      "path": "/cpsdevpb/6FC4/test/_63721682_p01kx435.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 640
+    },
+    "locators": {
+      "assetUri": "/pidgin/23248703",
+      "cpsUrn": "urn:bbc:content:assetUri:pidgin/23248703",
+      "curie": "http://www.bbc.co.uk/asset/5679389a-3ea6-0b40-9de4-f4d33d6bcd9f"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "short",
+      "embedding": true,
+      "format": "video",
+      "id": "p01kx42s",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
+      "subType": "clip",
+      "synopses": { "short": "short" },
+      "title": "alt-text world service clip",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1545304011000,
+          "availableTerritories": { "nonUk": true, "uk": true, "world": false },
+          "duration": 5,
+          "durationISO8601": "PT5S",
+          "types": ["Original"],
+          "versionId": "p01kx42v",
+          "warnings": {}
+        }
+      ]
+    },
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5ad8625ac93a9f000eecb253",
+          "campaignName": "Inspire me"
+        },
+        {
+          "campaignId": "5ad86285c93a9f000eecb256",
+          "campaignName": "Give me perspective"
+        },
+        {
+          "campaignId": "5ad86291c93a9f000eecb257",
+          "campaignName": "Keep me on trend"
+        }
+      ],
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+        "categoryName": "Opinion"
+      },
+      "taggings": []
+    },
+    "summary": "This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components.",
+    "timestamp": 1574252675611,
+    "type": "cps"
+  }
+}
