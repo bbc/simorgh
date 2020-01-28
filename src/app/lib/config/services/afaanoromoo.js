@@ -154,7 +154,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/afaanoromoo/institutional-49281861',
         text: 'BBC News maaliif amanuu dandeessa',
       },
       externalLink: {
