@@ -186,7 +186,7 @@ export const service = {
     ],
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/thai/institutional-49281839',
         text: 'ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้',
       },
       externalLink: {

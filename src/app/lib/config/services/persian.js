@@ -177,7 +177,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/persian/institutional-49283091',
         text: 'چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟',
       },
       externalLink: {

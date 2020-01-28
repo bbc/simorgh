@@ -167,7 +167,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/afrique/institutionelles-49283281',
         text: 'Pourquoi vous pouvez faire confiance à BBC News',
       },
       externalLink: {

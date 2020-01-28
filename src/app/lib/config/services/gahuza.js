@@ -159,7 +159,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/gahuza/institutional-49283343',
         text: 'Igituma ushobora kwizera BBC News',
       },
       externalLink: {
