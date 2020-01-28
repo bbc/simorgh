@@ -7,11 +7,11 @@ import { AmpDropdown, AmpMenuButton } from '@bbc/psammead-navigation/dropdown';
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import styled from 'styled-components';
 
-const DROPDOWN_ID = 'dropdown-menu';
-const NAVIGATION_ID = 'navigation-id';
-const SCROLLABLE_ID = 'scrollable-nav';
-const HIDDEN_CLASS_NAME = 'scrollable-hidden';
-const OPEN_CLASS_NAME = 'open';
+const DROPDOWN_ID = 'si-nav-dropdown-menu';
+const NAVIGATION_ID = 'si-nav-navigation-id';
+const SCROLLABLE_ID = 'si-nav-scrollable-nav';
+const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
+const OPEN_CLASS_NAME = 'si-nav-open';
 
 const StyledAmpScrollableNavigation = styled(ScrollableNavigation)`
   &.${HIDDEN_CLASS_NAME} {

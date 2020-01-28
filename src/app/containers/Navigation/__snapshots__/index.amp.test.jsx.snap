@@ -92,7 +92,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c0.open {
+  .c0.si-nav-open {
     background-color: #222222;
   }
 }
@@ -132,7 +132,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c7.scrollable-hidden {
+  .c7.si-nav-scrollable-hidden {
     display: none;
     visibility: hidden;
   }
@@ -151,7 +151,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
       <nav
         class="c0"
         dir="ltr"
-        id="navigation-id"
+        id="si-nav-navigation-id"
         role="navigation"
       >
         <div
@@ -172,9 +172,9 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
             data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
             dir="ltr"
             on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
-        dropdown-menu.toggleVisibility,
-        scrollable-nav.toggleClass(class=scrollable-hidden),
-        navigation-id.toggleClass(class=open)
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable-nav.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav-navigation-id.toggleClass(class=si-nav-open)
       "
             type="button"
           >
@@ -215,7 +215,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
           <div
             class="c5"
             hidden=""
-            id="dropdown-menu"
+            id="si-nav-dropdown-menu"
           >
             <ul
               data-testid="dropdown"
@@ -228,7 +228,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
           <div
             class="c6 c7"
             dir="ltr"
-            id="scrollable-nav"
+            id="si-nav-scrollable-nav"
           >
             <ul
               data-testid="scrollable-list"

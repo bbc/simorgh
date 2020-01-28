@@ -299,7 +299,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c0.open {
+  .c0.si-nav-open {
     background-color: #222222;
   }
 }
@@ -339,7 +339,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c11.scrollable-hidden {
+  .c11.si-nav-scrollable-hidden {
     display: none;
     visibility: hidden;
   }
@@ -358,7 +358,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
       <nav
         class="c0"
         dir="ltr"
-        id="navigation-id"
+        id="si-nav-navigation-id"
         role="navigation"
       >
         <div
@@ -379,9 +379,9 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
             dir="ltr"
             on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
-        dropdown-menu.toggleVisibility,
-        scrollable-nav.toggleClass(class=scrollable-hidden),
-        navigation-id.toggleClass(class=open)
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable-nav.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav-navigation-id.toggleClass(class=si-nav-open)
       "
             type="button"
           >
@@ -422,7 +422,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
           <div
             class="c5"
             hidden=""
-            id="dropdown-menu"
+            id="si-nav-dropdown-menu"
           >
             <ul
               class="c6"
@@ -577,7 +577,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
           <div
             class="c10 c11"
             dir="ltr"
-            id="scrollable-nav"
+            id="si-nav-scrollable-nav"
           >
             <ul
               class="c12"
