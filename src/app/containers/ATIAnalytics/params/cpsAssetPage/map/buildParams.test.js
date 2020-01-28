@@ -49,6 +49,22 @@ const expectation = {
 };
 
 describe('buildCpsAssetPageATIParams', () => {
+  it('should handle invalid counter name', () => {
+    let invalidPagePayload = payload;
+    invalidPagePayload.metadata.analyticsLabels.counterName = 'invalid';
+
+    let invalidExpectation = expectation;
+    invalidExpectation.pageIdentifier = 'invalid';
+
+    const result = buildCpsAssetPageATIParams(
+      invalidPagePayload,
+      requestContext,
+      serviceContext,
+      CONTENT_TYPE,
+    );
+    expect(result).toEqual(invalidExpectation);
+  });
+
   it('should return the right object', () => {
     const result = buildCpsAssetPageATIParams(
       payload,
