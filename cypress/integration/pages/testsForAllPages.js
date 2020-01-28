@@ -79,14 +79,26 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         it('should have the correct shared metadata', () => {
           cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
             ({ body }) => {
+              const mediaAssetPageType = 'mediaAssetPage';
+              const articlesPageType = 'articles';
+
               const { indexImage } = body.promo;
               const imagePath = indexImage ? indexImage.path : null;
-              const imageAltText = indexImage
-                ? indexImage.altText
-                : appConfig[config[service].name][variant].defaultImageAltText;
-              const imageSrc = imagePath
-                ? getBrandedImage(imagePath, service)
-                : appConfig[config[service].name][variant].defaultImage;
+              const imageAltText =
+                indexImage && pageType === mediaAssetPageType
+                  ? indexImage.altText
+                  : appConfig[config[service].name][variant]
+                      .defaultImageAltText;
+
+              const imageSrc =
+                imagePath && pageType === mediaAssetPageType
+                  ? getBrandedImage(imagePath, service)
+                  : appConfig[config[service].name][variant].defaultImage;
+              const ogType = [articlesPageType, mediaAssetPageType].includes(
+                pageType,
+              )
+                ? 'article'
+                : 'website';
 
               cy.get('head').within(() => {
                 cy.get('meta[name="fb:admins"]').should(
@@ -117,7 +129,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                 cy.get('meta[name="og:type"]').should(
                   'have.attr',
                   'content',
-                  'article',
+                  ogType,
                 );
                 cy.get('meta[name="og:url"]').should(
                   'have.attr',
