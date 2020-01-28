@@ -24,12 +24,8 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     it('should render at least one amp image', () => {
       cy.get('figure')
         .first()
-        .should('be.visible')
-        .within(() => {
-          cy.get('amp-img')
-            .first()
-            .should('be.visible');
-        });
+        .find('amp-img')
+        .should('be.visible');
     });
   });
 

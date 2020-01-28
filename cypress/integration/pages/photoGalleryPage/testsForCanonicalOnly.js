@@ -13,12 +13,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     it('should render at least one image', () => {
       cy.get('figure')
         .first()
-        .should('be.visible')
-        .within(() => {
-          cy.get('img')
-            .first()
-            .should('be.visible');
-        });
+        .find('img')
+        .should('be.visible');
     });
   });
 
