@@ -165,7 +165,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/arabic/institutional-49283069',
         text: 'لماذا يمكنك الإعتماد على أخبار بي بي سي',
       },
       externalLink: {

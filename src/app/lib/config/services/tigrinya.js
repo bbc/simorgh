@@ -151,7 +151,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/tigrinya/institutional-49283259',
         text: 'ን BBC News ንምንታይ ክትኣምንዎ ከምዘለኩም',
       },
       externalLink: {
