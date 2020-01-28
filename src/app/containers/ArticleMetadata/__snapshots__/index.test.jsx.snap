@@ -215,6 +215,18 @@ exports[`should match snapshot for News & International 1`] = `
       name="twitter:title"
     />
     <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
+    />
+    <meta
       content="https://www.facebook.com/bbcnews"
       name="article:author"
     />

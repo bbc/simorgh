@@ -35,6 +35,8 @@ const propsForNewsInternational = {
   firstPublished: getISOStringDate(articleDataNews.metadata.firstPublished),
   lastPublished: getISOStringDate(articleDataNews.metadata.lastPublished),
   section: articleDataNews.metadata.passport.genre,
+  aboutTags: articleDataNews.metadata.tags.about,
+  mentionsTags: articleDataNews.metadata.tags.mentions,
   lang: articleDataNews.metadata.passport.language,
   description: articleDataNews.promo.headlines.seoHeadline,
 };
@@ -62,6 +64,9 @@ it('should render the article tags', async () => {
   }));
 
   const expected = [
+    { content: 'Royal Wedding 2018', name: 'article:tag' },
+    { content: 'Duchess of Sussex', name: 'article:tag' },
+    { content: 'Queen Victoria', name: 'article:tag' },
     { content: 'https://www.facebook.com/bbcnews', name: 'article:author' },
     { content: '2018-01-01T13:00:00.000Z', name: 'article:modified_time' },
     { content: '2018-01-01T12:01:00.000Z', name: 'article:published_time' },
@@ -107,6 +112,8 @@ shouldMatchSnapshot(
         articleDataPersian.metadata.lastPublished,
       )}
       section={articleDataPersian.metadata.passport.genre}
+      aboutTags={articleDataPersian.metadata.tags.about}
+      mentionsTags={articleDataPersian.metadata.tags.mentions}
       lang={articleDataPersian.metadata.passport.language}
       description={articleDataPersian.promo.headlines.seoHeadline}
     />
