@@ -69,7 +69,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
       });
 
       describe('Section', () => {
-        it('should be labelled by a visible section label', () => {
+        it('should be labelled by a visible section label for 1008px & 320px layouts', () => {
           cy.viewport(1008, 768);
           cy.get('section')
             .should('have.length.of.at.least', 1)
