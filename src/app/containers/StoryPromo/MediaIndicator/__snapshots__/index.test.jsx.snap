@@ -50,7 +50,6 @@ exports[`Story Promo Media Indicator should render a photo gallery item correctl
     class="c1"
   >
     <svg
-      aria-hidden="true"
       class="c2"
       focusable="false"
       height="13px"
@@ -125,7 +124,6 @@ exports[`Story Promo Media Indicator should render a video item correctly 1`] = 
     class="c1"
   >
     <svg
-      aria-hidden="true"
       class="c2"
       focusable="false"
       height="12px"
@@ -201,7 +199,6 @@ exports[`Story Promo Media Indicator should render an audio item correctly 1`] =
     class="c1"
   >
     <svg
-      aria-hidden="true"
       class="c2"
       focusable="false"
       height="12px"
@@ -275,7 +272,6 @@ exports[`Story Promo Media Indicator should render correctly even without durati
     class="c1"
   >
     <svg
-      aria-hidden="true"
       class="c2"
       focusable="false"
       height="12px"
@@ -309,7 +305,6 @@ exports[`Story Promo Media Indicator with Index Alsos should render a video indi
   class="c0"
 >
   <svg
-    aria-hidden="true"
     class="c1"
     focusable="false"
     height="12px"

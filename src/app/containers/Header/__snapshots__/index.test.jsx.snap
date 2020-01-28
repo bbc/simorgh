@@ -14,29 +14,13 @@ exports[`Header should render correctly for WS frontPage 1`] = `
 }
 
 .c7 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   max-width: 80rem;
   margin: 0 auto;
 }
 
 .c6 {
   background-color: #B80000;
-  min-height: 2.5rem;
+  height: 3.5rem;
   width: 100%;
   padding: 0 0.5rem;
 }
@@ -46,26 +30,18 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   width: 100%;
   max-width: 14.880600000000001rem;
   min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
 }
 
 .c10 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
-  padding-top: 0.625rem;
-  padding-bottom: 0.375rem;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
   height: 1.5rem;
   width: 100%;
   max-width: 14.880600000000001rem;
   min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
 }
 
 .c8:hover .c10,
@@ -73,7 +49,6 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
 }
 
 .c13 {
@@ -314,36 +289,17 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   color: #FFFFFF;
 }
 
-@media (max-width:14.9375rem) {
-  .c7 {
-    display: block;
-  }
-}
-
 @media (min-width:25rem) {
   .c6 {
-    min-height: 3.25rem;
+    height: 5rem;
     padding: 0 1rem;
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c9 {
-    display: block;
-  }
-}
-
 @media (min-width:25rem) {
   .c10 {
-    padding-top: 1rem;
-    padding-bottom: 0.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    padding-top: 1.25rem;
-    padding-bottom: 1rem;
+    padding-top: 1.75rem;
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -756,29 +712,13 @@ exports[`Header should render correctly for WS radio page 1`] = `
 }
 
 .c7 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   max-width: 80rem;
   margin: 0 auto;
 }
 
 .c6 {
   background-color: #B80000;
-  min-height: 2.5rem;
+  height: 3.5rem;
   width: 100%;
   padding: 0 0.5rem;
   border-bottom: 0.0625rem solid transparent;
@@ -789,26 +729,18 @@ exports[`Header should render correctly for WS radio page 1`] = `
   width: 100%;
   max-width: 14.880600000000001rem;
   min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
 }
 
 .c10 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
-  padding-top: 0.625rem;
-  padding-bottom: 0.375rem;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
   height: 1.5rem;
   width: 100%;
   max-width: 14.880600000000001rem;
   min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
 }
 
 .c8:hover .c10,
@@ -816,7 +748,6 @@ exports[`Header should render correctly for WS radio page 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
 }
 
 .c13 {
@@ -1057,36 +988,17 @@ exports[`Header should render correctly for WS radio page 1`] = `
   color: #FFFFFF;
 }
 
-@media (max-width:14.9375rem) {
-  .c7 {
-    display: block;
-  }
-}
-
 @media (min-width:25rem) {
   .c6 {
-    min-height: 3.25rem;
+    height: 5rem;
     padding: 0 1rem;
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c9 {
-    display: block;
-  }
-}
-
 @media (min-width:25rem) {
   .c10 {
-    padding-top: 1rem;
-    padding-bottom: 0.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    padding-top: 1.25rem;
-    padding-bottom: 1rem;
+    padding-top: 1.75rem;
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -1499,29 +1411,13 @@ exports[`Header should render correctly for news article 1`] = `
 }
 
 .c7 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   max-width: 80rem;
   margin: 0 auto;
 }
 
 .c6 {
   background-color: #B80000;
-  min-height: 2.5rem;
+  height: 3.5rem;
   width: 100%;
   padding: 0 0.5rem;
   border-bottom: 0.0625rem solid transparent;
@@ -1532,26 +1428,18 @@ exports[`Header should render correctly for news article 1`] = `
   width: 100%;
   max-width: 14.880600000000001rem;
   min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
 }
 
 .c10 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
-  padding-top: 0.625rem;
-  padding-bottom: 0.375rem;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
   height: 1.5rem;
   width: 100%;
   max-width: 14.880600000000001rem;
   min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
 }
 
 .c8:hover .c10,
@@ -1559,7 +1447,6 @@ exports[`Header should render correctly for news article 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
 }
 
 .c13 {
@@ -1800,36 +1687,17 @@ exports[`Header should render correctly for news article 1`] = `
   color: #FFFFFF;
 }
 
-@media (max-width:14.9375rem) {
-  .c7 {
-    display: block;
-  }
-}
-
 @media (min-width:25rem) {
   .c6 {
-    min-height: 3.25rem;
+    height: 5rem;
     padding: 0 1rem;
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c9 {
-    display: block;
-  }
-}
-
 @media (min-width:25rem) {
   .c10 {
-    padding-top: 1rem;
-    padding-bottom: 0.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    padding-top: 1.25rem;
-    padding-bottom: 1rem;
+    padding-top: 1.75rem;
+    padding-bottom: 1.5rem;
   }
 }
 
