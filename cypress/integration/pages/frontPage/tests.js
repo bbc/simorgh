@@ -90,7 +90,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
             });
         });
 
-        it('should contain at least one story promo', () => {
+        it('should contain at least one story promo for 1008px & 320px layouts', () => {
           cy.viewport(1008, 768);
           cy.get('section').within(() => {
             cy.get('img')
