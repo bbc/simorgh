@@ -48,6 +48,7 @@ const CpsStyContainer = ({ pageData }) => {
   );
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
+  const aboutTags = path(['metadata', 'tags', 'about'], pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -75,6 +76,7 @@ const CpsStyContainer = ({ pageData }) => {
         lang={metadata.language}
         description={summary}
         openGraphType="website"
+        aboutTags={aboutTags}
       >
         <meta name="article:published_time" content={firstPublished} />
         <meta name="article:modified_time" content={lastPublished} />
@@ -86,6 +88,7 @@ const CpsStyContainer = ({ pageData }) => {
         showAuthor
         datePublished={firstPublished}
         dateModified={lastPublished}
+        aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
       <StyledGhostGrid as="main" role="main">

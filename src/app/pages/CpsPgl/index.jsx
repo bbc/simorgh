@@ -77,6 +77,7 @@ const CpsPglContainer = ({ pageData }) => {
         lang={metadata.language}
         description={summary}
         openGraphType="website"
+        aboutTags={aboutTags}
       >
         <meta name="article:published_time" content={firstPublished} />
         <meta name="article:modified_time" content={lastPublished} />
