@@ -1482,6 +1482,79 @@
         "strapline": {
           "name": "AV stories live"
         }
+      },
+      {
+        "type": "radio-live-streams",
+        "title": "Radio Bulletins",
+        "items": [
+          {
+            "name": "Igbo TVRadio bulletin",
+            "summary": "This is an Igbo Radio bulletin promo, using a CPS promo for a Radio Bulletin",
+            "indexImage": {
+              "id": "63725091",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/4A6C/test/_63725091_e7badb45-9052-4554-87f6-b430cb6d48fb.jpg",
+              "path": "/cpsdevpb/4A6C/test/_63725091_e7badb45-9052-4554-87f6-b430cb6d48fb.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "NYSC from the Igbo site",
+              "caption": "NYSC from the Igbo site",
+              "copyrightHolder": "other"
+            },
+            "indexThumbnail": {
+              "id": "63725093",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/988C/test/_63725093_mediaitem63725091.jpg",
+              "path": "/cpsdevpb/988C/test/_63725093_mediaitem63725091.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "NYSC from the Igbo site",
+              "caption": "NYSC from the Igbo site",
+              "copyrightHolder": "other"
+            },
+            "uri": "https://www.bbc.com/igbo/media-42986440",
+            "contentType": "RadioBulletin",
+            "assetTypeCode": "PRO",
+            "timestamp": 1573483162000,
+            "type": "link"
+          },
+          {
+            "name": "Igbo Radio bulletin",
+            "summary": "This is an Igbo Radio bulletin promo, using a CPS promo for a Radio Bulletin with the LIVE button checked",
+            "indexImage": {
+              "id": "63725091",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/4A6C/test/_63725091_e7badb45-9052-4554-87f6-b430cb6d48fb.jpg",
+              "path": "/cpsdevpb/4A6C/test/_63725091_e7badb45-9052-4554-87f6-b430cb6d48fb.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "NYSC from the Igbo site",
+              "caption": "NYSC from the Igbo site",
+              "copyrightHolder": "other"
+            },
+            "indexThumbnail": {
+              "id": "63725093",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/988C/test/_63725093_mediaitem63725091.jpg",
+              "path": "/cpsdevpb/988C/test/_63725093_mediaitem63725091.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "NYSC from the Igbo site",
+              "caption": "NYSC from the Igbo site",
+              "copyrightHolder": "other"
+            },
+            "uri": "https://www.bbc.com/igbo/media-42986440",
+            "contentType": "RadioBulletin",
+            "assetTypeCode": "PRO",
+            "timestamp": 1573483578000,
+            "isLive": true,
+            "type": "link"
+          }
+        ],
+        "semanticGroupName": "Radio bulletins only",
+        "strapline": {
+          "name": "Radio bulletins only"
+        }
       }
     ]
   },

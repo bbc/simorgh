@@ -14,7 +14,7 @@ import {
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import Grid from '@bbc/psammead-grid';
-import { pathOr } from 'ramda';
+import { pathOr, dropWhile } from 'ramda';
 import UsefulLinksComponent from './UsefulLinks';
 import { ServiceContext } from '#contexts/ServiceContext';
 import groupShape from '#models/propTypes/frontPageGroup';
@@ -117,6 +117,10 @@ const sectionBody = (group, items, script, service, isFirstSection, dir) => {
   );
 };
 
+const removeFirstSlotRadioBulletin = dropWhile(
+  item => item.contentType === 'RadioBulletin',
+);
+
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
@@ -124,7 +128,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const strapline = pathOr(null, ['strapline', 'name'], group);
   const isLink = pathOr(null, ['strapline', 'type'], group) === 'LINK';
   const href = pathOr(null, ['strapline', 'links', 'mobile'], group);
-  const items = pathOr(null, ['items'], group);
+  const items = removeFirstSlotRadioBulletin(pathOr(null, ['items'], group));
   const seeAll = pathOr(null, ['seeAll'], translations);
   const isFirstSection = sectionNumber === 0;
 
