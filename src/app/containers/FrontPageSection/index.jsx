@@ -112,7 +112,7 @@ const sectionBody = (group, items, script, service, isFirstSection, dir) => {
     renderPromoList(items, isFirstSection, dir)
   ) : (
     <MarginWrapper firstSection={isFirstSection} oneItem dir={dir}>
-      <TopRow stories={items} sectionHasSingleStory />
+      <TopRow stories={items} sectionHasSingleStory dir={dir} />
     </MarginWrapper>
   );
 };
