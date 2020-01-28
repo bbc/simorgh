@@ -4,6 +4,7 @@ import {
   getPublishedDatetime,
   LIBRARY_VERSION,
 } from '../../../../lib/analyticsUtils';
+import { getThingAttributes } from '../../../../lib/analyticsUtils/article';
 
 export const buildCpsAssetPageATIParams = (
   pageData,
@@ -32,6 +33,8 @@ export const buildCpsAssetPageATIParams = (
     contentType: 'article-media-asset',
     language: path(['language'], metadata),
     // Example page identifier: embedded_media::pidgin.embedded_media.media_asset.49529724.page
+    ldpThingIds: getThingAttributes('thingId', pageData),
+    ldpThingLabels: getThingAttributes('thingLabel', pageData),
     pageIdentifier: chapter1 ? `${chapter1}::${page}` : page,
     pageTitle: `${path(['headlines', 'headline'], promo)} - ${brandName}`,
     timePublished: getPublishedDatetime('firstPublished', pageData),
