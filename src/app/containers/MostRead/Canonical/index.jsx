@@ -30,22 +30,20 @@ const CanonicalMostRead = ({ endpoint }) => {
 
       const mostReadItems = mostReadData.records
         .slice(0, numberOfItems)
-        .forEach(({ id, promo: { headlines, locators, timestamp } }) => {
-          mostReadItems.push({
-            id,
-            title: headlines.shortHeadline,
-            href: locators.assetUri,
-            timestamp: (
-              <LastUpdated
-                prefix={lastUpdated}
-                script={script}
-                service={service}
-                timestamp={timestamp}
-                locale={datetimeLocale}
-              />
-            ),
-          });
-        });
+        .map(({ id, promo: { headlines, locators, timestamp } }) => ({
+          id,
+          title: headlines.shortHeadline,
+          href: locators.assetUri,
+          timestamp: (
+            <LastUpdated
+              prefix={lastUpdated}
+              script={script}
+              service={service}
+              timestamp={timestamp}
+              locale={datetimeLocale}
+            />
+          ),
+        }));
       setItems(mostReadItems);
     };
 
