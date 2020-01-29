@@ -4,7 +4,7 @@ import {
   getPublishedDatetime,
   LIBRARY_VERSION,
   getThingAttributes,
-} from '../../../../lib/analyticsUtils';
+} from '#lib/analyticsUtils';
 
 export const buildCpsAssetPageATIParams = (
   pageData,

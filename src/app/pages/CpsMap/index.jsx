@@ -25,6 +25,7 @@ import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
   getFirstPublished,
   getLastPublished,
+  getAboutTags,
 } from '#lib/utilities/parseAssetData';
 
 // Page Handlers
@@ -48,7 +49,7 @@ const CpsMapContainer = ({ pageData }) => {
   );
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
-  const aboutTags = path(['metadata', 'tags', 'about'], pageData);
+  const aboutTags = getAboutTags(pageData);
 
   const componentsToRender = {
     fauxHeadline,
