@@ -239,6 +239,7 @@ export const service = {
     mostRead: {
       header: '熱讀',
       lastUpdated: '最近更新：',
+      numberOfItems: 5,
     },
     navigation: [
       {
