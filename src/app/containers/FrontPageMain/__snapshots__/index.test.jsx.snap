@@ -1098,11 +1098,11 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -1118,35 +1118,35 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
     />
     <meta
       content="We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join."
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="BBC News Ìgbò"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="ig"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News Ìgbò"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="Ogbako - BBC News Ìgbò"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="website"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="http://localhost/pathname"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
