@@ -6,9 +6,9 @@ import { TopRow, LeadingRow, RegularRow } from '../../FrontPageStoryRows';
 const getFirstRowComponent = rowLength => {
   switch (rowLength) {
     case 1:
-      return { rowComponent: TopRow };
+      return { RowComponent: TopRow };
     case 2:
-      return { rowComponent: LeadingRow };
+      return { RowComponent: LeadingRow };
     default:
       return null;
   }
@@ -20,7 +20,7 @@ const getFirstRowComponent = rowLength => {
  * [{
  *   stories: [An array of story items],
  *   displayImages: bool - whether images should be displayed in the promos,
- *   rowComponent: the React component that displays the row
+ *   RowComponent: the React component that displays the row
  * }]
  */
 const getRowDetails = rows => {
@@ -31,12 +31,12 @@ const getRowDetails = rows => {
   };
   const regularRows = rows.regularRows.map(row => ({
     stories: row,
-    rowComponent: RegularRow,
+    RowComponent: RegularRow,
     displayImages: true,
   }));
   const noImageRow = {
     stories: rows.noImageRow,
-    rowComponent: RegularRow,
+    RowComponent: RegularRow,
     displayImages: false,
   };
   return flatten([firstRow, regularRows, noImageRow]).filter(

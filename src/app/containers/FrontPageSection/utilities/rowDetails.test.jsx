@@ -18,22 +18,22 @@ const rowValues = {
     expected: [
       {
         stories: [0],
-        rowComponent: TopRow,
+        RowComponent: TopRow,
         displayImages: true,
       },
       {
         stories: [1, 2, 3, 4],
-        rowComponent: RegularRow,
+        RowComponent: RegularRow,
         displayImages: true,
       },
       {
         stories: [5, 6, 7, 8],
-        rowComponent: RegularRow,
+        RowComponent: RegularRow,
         displayImages: true,
       },
       {
         stories: [9, 10, 11, 12],
-        rowComponent: RegularRow,
+        RowComponent: RegularRow,
         displayImages: false,
       },
     ],
@@ -50,17 +50,17 @@ const rowValues = {
     expected: [
       {
         stories: [0, 1],
-        rowComponent: LeadingRow,
+        RowComponent: LeadingRow,
         displayImages: true,
       },
       {
         stories: [2, 3, 4, 5],
-        rowComponent: RegularRow,
+        RowComponent: RegularRow,
         displayImages: true,
       },
       {
         stories: [6, 7, 8, 9],
-        rowComponent: RegularRow,
+        RowComponent: RegularRow,
         displayImages: true,
       },
     ],
@@ -74,12 +74,12 @@ const rowValues = {
     expected: [
       {
         stories: [0, 1],
-        rowComponent: LeadingRow,
+        RowComponent: LeadingRow,
         displayImages: true,
       },
       {
         stories: [2, 3, 4, 5],
-        rowComponent: RegularRow,
+        RowComponent: RegularRow,
         displayImages: true,
       },
     ],
@@ -91,10 +91,10 @@ const rowValues = {
       noImageRow: [],
     },
     expected: [
-      { stories: [0], rowComponent: TopRow, displayImages: true },
+      { stories: [0], RowComponent: TopRow, displayImages: true },
       {
         stories: [1, 2, 3, 4],
-        rowComponent: RegularRow,
+        RowComponent: RegularRow,
         displayImages: true,
       },
     ],
@@ -108,7 +108,7 @@ const rowValues = {
     expected: [
       {
         stories: [0, 1],
-        rowComponent: LeadingRow,
+        RowComponent: LeadingRow,
         displayImages: true,
       },
     ],
@@ -119,7 +119,7 @@ const rowValues = {
       regularRows: [],
       noImageRow: [],
     },
-    expected: [{ stories: [0], rowComponent: TopRow, displayImages: true }],
+    expected: [{ stories: [0], RowComponent: TopRow, displayImages: true }],
   },
   regular: {
     input: {
@@ -130,7 +130,7 @@ const rowValues = {
     expected: [
       {
         stories: [0, 1, 2, 3],
-        rowComponent: RegularRow,
+        RowComponent: RegularRow,
         displayImages: true,
       },
     ],
@@ -147,12 +147,12 @@ const rowValues = {
     expected: [
       {
         stories: [0, 1, 2, 3],
-        rowComponent: RegularRow,
+        RowComponent: RegularRow,
         displayImages: true,
       },
       {
         stories: [5, 6, 7, 8],
-        rowComponent: RegularRow,
+        RowComponent: RegularRow,
         displayImages: true,
       },
     ],
