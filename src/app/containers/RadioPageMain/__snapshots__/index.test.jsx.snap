@@ -118,11 +118,11 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -138,35 +138,35 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
     />
     <meta
       content="ዝግጅቶቻችንን’"
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="BBC News አማርኛ"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="am-ET"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News አማርኛ"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="ያድምጡ - BBC News አማርኛ"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="website"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.test.bbc.com/pathname"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
@@ -770,11 +770,11 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -790,35 +790,35 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
     />
     <meta
       content="ዝግጅቶቻችንን’"
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="BBC News አማርኛ"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="am-ET"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News አማርኛ"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="ያድምጡ - BBC News አማርኛ"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="website"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.test.bbc.com/pathname"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
