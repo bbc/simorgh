@@ -3,8 +3,8 @@ import { buildATIPageTrackPath } from '../../atiUrl';
 import {
   getPublishedDatetime,
   LIBRARY_VERSION,
+  getThingAttributes,
 } from '../../../../lib/analyticsUtils';
-import { getThingAttributes } from '../../../../lib/analyticsUtils/article';
 
 export const buildCpsAssetPageATIParams = (
   pageData,
