@@ -387,10 +387,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       liveRadio: {
-        path:
-          isLive(appEnv) || isTest(appEnv) || Cypress.env('APP_ENV') === 'local'
-            ? undefined
-            : '/hausa/bbc_hausa_radio/liveradio',
+        path: '/hausa/bbc_hausa_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -1066,10 +1063,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       liveRadio: {
-        path:
-          isLive(appEnv) || isTest(appEnv) || Cypress.env('APP_ENV') === 'local'
-            ? undefined
-            : '/somali/bbc_somali_radio/liveradio',
+        path: '/somali/bbc_somali_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
