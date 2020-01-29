@@ -5113,6 +5113,15 @@ Object {
             "uri": "https://www.bbc.com/igbo/media-42986440",
           },
           Object {
+            "assetTypeCode": "PRO",
+            "contentType": "RadioBulletin",
+            "name": "Igbo radio bulletin without Image",
+            "summary": "This is an Igbo radio bulletin promo, using a CPS promo for a Radio Bulletin",
+            "timestamp": 1573482847000,
+            "type": "link",
+            "uri": "https://www.bbc.com/igbo/media-42986440",
+          },
+          Object {
             "cpsType": "STY",
             "headlines": Object {
               "headline": "Egbuola ndị na-eme ngagharị iwe na Congo",
