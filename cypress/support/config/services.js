@@ -1428,7 +1428,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: undefined,
+        path: isLive(appEnv) ? undefined : '/thai/thailand-23248713',
         smoke: false,
       },
       photoGalleryPage: {
