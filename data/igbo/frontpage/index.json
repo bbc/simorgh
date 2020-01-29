@@ -363,7 +363,15 @@
             "isLive": true,
             "type": "link"
           },
-
+          {
+            "name": "Igbo radio bulletin without Image",
+            "summary": "This is an Igbo radio bulletin promo, using a CPS promo for a Radio Bulletin",
+            "uri": "https://www.bbc.com/igbo/media-42986440",
+            "contentType": "RadioBulletin",
+            "assetTypeCode": "PRO",
+            "timestamp": 1573482847000,
+            "type": "link"
+          },
           {
             "headlines": {
               "headline": "Egbuola ndị na-eme ngagharị iwe na Congo"
