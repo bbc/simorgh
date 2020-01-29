@@ -1790,11 +1790,11 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL 1`] = `
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -1810,35 +1810,35 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL 1`] = `
     />
     <meta
       content="This is a test asset used in Simorgh, please do not edit it without asking."
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="BBC News Pidgin"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="pcm"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News Pidgin"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="PGL - Blood pressure drugs dey work better - BBC News Pidgin"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="article"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.test.bbc.com/pidgin/sport-23252855"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
@@ -1903,6 +1903,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL 1`] = `
               <div
                 id="DataContainer"
               >
+                <noscript />
                 <main
                   class="c0"
                   role="main"
@@ -2461,11 +2462,11 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -2481,35 +2482,35 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
     />
     <meta
       content="Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan"
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="http://ichef.test.bbci.co.uk/news/1024/branded_afaanoromoo/726D/production/_97739292_img_1620.jpg"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="om-ET"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News Afaan Oromoo"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan - BBC News Afaan Oromoo"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="article"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.test.bbc.com/afaanoromoo/oduu-41217768"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
@@ -3143,6 +3144,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
               <div
                 id="DataContainer"
               >
+                <noscript />
                 <main
                   class="c0"
                   role="main"
