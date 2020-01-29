@@ -3,6 +3,7 @@ import { node, string } from 'prop-types';
 import { render } from '@testing-library/react';
 import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import { articleDataNews } from '#pages/Article/fixtureData';
+import mapAssetData from '#pages/CpsMap/fixtureData.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
@@ -176,6 +177,83 @@ describe('ATI Analytics Container', () => {
       render(
         <ContextWrap platform="amp" pageType="frontPage">
           <ATIAnalytics data={articleDataNews} />
+        </ContextWrap>,
+      );
+
+      expect(mockAmp.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+  });
+
+  describe('pageType=MAP', () => {
+    it('should call CanonicalATIAnalytics when platform is canonical', () => {
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=media_asset::pidgin.media_asset.23248703.page',
+        'r=0x0x24x24',
+        're=1024x768',
+        'hl=00-00-00',
+        'lng=en-US',
+        'x1=[urn:bbc:ares::asset:pidgin/23248703]',
+        'x2=[responsive]',
+        'x3=[news]',
+        'x4=[pcm]',
+        'x5=[http://localhost/]',
+        'x7=[article-media-asset]',
+        'x8=[simorgh]',
+        'x9=[Simorgh:+Media+Pod+Build+First+CPS+Media+Asset+Page+in+Simorgh+with+the+Help+of+Drew+',
+        '+<+>+-+BBC+News]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]',
+        'x17=[Opinion]',
+      ].join('&');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      canonical.default = mockCanonical;
+
+      render(
+        <ContextWrap platform="canonical" pageType="MAP">
+          <ATIAnalytics data={mapAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockCanonical.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+
+    it('should call AmpATIAnalytics when platform is Amp', () => {
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=media_asset::pidgin.media_asset.23248703.page',
+        `r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
+        `re=\${availableScreenWidth}x\${availableScreenHeight}`,
+        'hl=00-00-00',
+        `lng=\${browserLanguage}`,
+        'x1=[urn:bbc:ares::asset:pidgin/23248703]',
+        'x2=[amp]',
+        'x3=[news]',
+        'x4=[pcm]',
+        `x5=[\${sourceUrl}]`,
+        `x6=[\${documentReferrer}]`,
+        'x7=[article-media-asset]',
+        'x8=[simorgh]',
+        'x9=[Simorgh:+Media+Pod+Build+First+CPS+Media+Asset+Page+in+Simorgh+with+the+Help+of+Drew+',
+        '+<+>+-+BBC+News]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]',
+        'x17=[Opinion]',
+      ].join('&');
+      const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      amp.default = mockAmp;
+
+      render(
+        <ContextWrap platform="amp" pageType="MAP">
+          <ATIAnalytics data={mapAssetData} />
         </ContextWrap>,
       );
 
