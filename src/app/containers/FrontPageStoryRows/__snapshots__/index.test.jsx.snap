@@ -523,12 +523,6 @@ exports[`FrontPageStoryRows Container snapshots RegularRow 1`] = `
 .c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
 }
 
 .c10 {
@@ -540,6 +534,7 @@ exports[`FrontPageStoryRows Container snapshots RegularRow 1`] = `
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c5 {
@@ -662,6 +657,20 @@ exports[`FrontPageStoryRows Container snapshots RegularRow 1`] = `
   .c4 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-family: ReithSerif,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #222222;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    display: inline;
   }
 }
 

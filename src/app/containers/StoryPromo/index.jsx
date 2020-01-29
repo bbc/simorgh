@@ -129,7 +129,12 @@ const StoryPromoContainer = ({
   const Info = (
     <>
       {headline && (
-        <Headline script={script} service={service} promoType={promoType}>
+        <Headline
+          script={script}
+          service={service}
+          promoType={promoType}
+          promoHasImage={displayImage}
+        >
           <Link href={url}>
             {isLive ? (
               <LiveComponent
@@ -144,7 +149,12 @@ const StoryPromoContainer = ({
         </Headline>
       )}
       {summary && (
-        <Summary script={script} service={service} promoType={promoType}>
+        <Summary
+          script={script}
+          service={service}
+          promoType={promoType}
+          promoHasImage={displayImage}
+        >
           {summary}
         </Summary>
       )}
