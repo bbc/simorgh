@@ -101,42 +101,42 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                 : 'website';
 
               cy.get('head').within(() => {
-                cy.get('meta[name="fb:admins"]').should(
+                cy.get('meta[property="fb:admins"]').should(
                   'have.attr',
                   'content',
                   '100004154058350',
                 );
-                cy.get('meta[name="fb:app_id"]').should(
+                cy.get('meta[property="fb:app_id"]').should(
                   'have.attr',
                   'content',
                   '1609039196070050',
                 );
-                cy.get('meta[name="og:image"]').should(
+                cy.get('meta[property="og:image"]').should(
                   'have.attr',
                   'content',
                   imageSrc,
                 );
-                cy.get('meta[name="og:image:alt"]').should(
+                cy.get('meta[property="og:image:alt"]').should(
                   'have.attr',
                   'content',
                   imageAltText,
                 );
-                cy.get('meta[name="og:locale"]').should(
+                cy.get('meta[property="og:locale"]').should(
                   'have.attr',
                   'content',
                   appConfig[config[service].name][variant].locale,
                 );
-                cy.get('meta[name="og:type"]').should(
+                cy.get('meta[property="og:type"]').should(
                   'have.attr',
                   'content',
                   ogType,
                 );
-                cy.get('meta[name="og:url"]').should(
+                cy.get('meta[property="og:url"]').should(
                   'have.attr',
                   'content',
                   `${envConfig.baseUrl}${config[service].pageTypes[pageType].path}`,
                 );
-                cy.get('meta[name="og:site_name"]').should(
+                cy.get('meta[property="og:site_name"]').should(
                   'have.attr',
                   'content',
                   appConfig[config[service].name][variant].brandName,
