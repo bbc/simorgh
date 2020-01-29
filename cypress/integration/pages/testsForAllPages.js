@@ -81,6 +81,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             ({ body }) => {
               const mediaAssetPageType = 'mediaAssetPage';
               const articlesPageType = 'articles';
+              const photoGalleryPageType = 'photoGalleryPage';
 
               const { indexImage } = body.promo;
               const imagePath = indexImage ? indexImage.path : null;
@@ -94,9 +95,12 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                 imagePath && pageType === mediaAssetPageType
                   ? getBrandedImage(imagePath, service)
                   : appConfig[config[service].name][variant].defaultImage;
-              const ogType = [articlesPageType, mediaAssetPageType].includes(
-                pageType,
-              )
+
+              const ogType = [
+                articlesPageType,
+                mediaAssetPageType,
+                photoGalleryPageType,
+              ].includes(pageType)
                 ? 'article'
                 : 'website';
 
