@@ -25,8 +25,8 @@ const itemColumns = {
   group1: 6,
   group2: 6,
   group3: 6,
-  group4: 6,
-  group5: 12,
+  group4: 8,
+  group5: 20,
 };
 
 const itemMargins = {
@@ -34,6 +34,7 @@ const itemMargins = {
   group1: true,
   group2: true,
   group3: true,
+  group4: true,
 };
 
 const startOffsets = {
@@ -41,8 +42,8 @@ const startOffsets = {
   group1: 1,
   group2: 1,
   group3: 1,
-  group4: 2,
-  group5: 5,
+  group4: 1,
+  group5: 1,
 };
 
 const FrontPageMain = ({ frontPageData }) => {

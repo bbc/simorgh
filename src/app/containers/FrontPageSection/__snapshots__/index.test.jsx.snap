@@ -79,7 +79,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   padding: 0;
 }
 
-.c10 {
+.c12 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -87,43 +87,43 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   width: 100%;
 }
 
-.c21 {
+.c24 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c15 {
+.c17 {
   display: inline-block;
   vertical-align: top;
 }
 
-.c23 {
+.c26 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c9 {
-  position: relative;
-}
-
-.c20 {
-  position: relative;
-}
-
 .c11 {
   position: relative;
 }
 
-.c14 {
+.c23 {
+  position: relative;
+}
+
+.c13 {
+  position: relative;
+}
+
+.c16 {
   position: absolute;
   bottom: 0;
 }
 
-.c16 {
+.c18 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -134,7 +134,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   padding-bottom: 0.5rem;
 }
 
-.c24 {
+.c27 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -145,7 +145,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   padding-bottom: 0.5rem;
 }
 
-.c18 {
+.c20 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -156,7 +156,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   padding-bottom: 0.5rem;
 }
 
-.c25 {
+.c28 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -167,14 +167,14 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   padding-bottom: 0.5rem;
 }
 
-.c17 {
+.c19 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c17:before {
+.c19:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -186,17 +186,17 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   z-index: 1;
 }
 
-.c17:hover,
-.c17:focus {
+.c19:hover,
+.c19:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c17:visited {
+.c19:visited {
   color: #6E6E73;
 }
 
-.c12 {
+.c14 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -209,13 +209,13 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c13 {
+.c15 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c19 {
+.c21 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -225,16 +225,16 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   font-style: normal;
 }
 
-.c8 {
+.c9 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c8:first-child {
+.c9:first-child {
   padding-top: 0;
 }
 
-.c8:last-child {
+.c9:last-child {
   padding-bottom: 0;
   border: none;
 }
@@ -295,55 +295,74 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   }
 }
 
-@media (min-width:37.5rem) {
+@supports (display:grid) {
+  .c8 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@supports (display:grid) {
   .c10 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c22 {
+    display: block;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
     width: calc(50% - 0.5rem);
     margin-bottom: 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c10 {
+  .c12 {
     width: calc(50% - 0.5rem);
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c10 {
+  .c12 {
     width: initial;
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) {
-  .c21 {
+  .c24 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c21 {
+  .c24 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c17 {
     width: 50%;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c15 {
+  .c17 {
     width: 50%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c15 {
+  .c17 {
     display: block;
     width: initial;
     padding: initial;
@@ -352,13 +371,13 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c26 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c23 {
+  .c26 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -366,7 +385,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c23 {
+  .c26 {
     display: block;
     width: initial;
     padding: initial;
@@ -375,7 +394,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c9 {
+  .c11 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -383,7 +402,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c20 {
+  .c23 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -391,123 +410,123 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width:25rem) {
-  .c22 {
+  .c25 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 {
+  .c18 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c18 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c24 {
+  .c27 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
+  .c20 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c20 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c18 {
+  .c20 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c25 {
+  .c28 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c28 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c25 {
+  .c28 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c25 {
+  .c28 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c19 {
+  .c21 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19 {
+  .c21 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
-    margin-top: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
+  .c9 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c8 {
+  .c9 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8:first-child {
+  .c9:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c8:first-child {
+  .c9:first-child {
     padding-top: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    margin-top: 0.5rem;
   }
 }
 
@@ -545,28 +564,30 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
     class="c6"
   >
     <ul
-      class="c7"
+      class="c7 c8"
+      dir="ltr"
       role="list"
     >
       <li
-        class="c8"
+        class="c9 c10"
+        dir="ltr"
         role="listitem"
       >
         <div
-          class="c9"
+          class="c11"
         >
           <div
-            class="c10"
+            class="c12"
           >
             <div
-              class="c11"
+              class="c13"
             >
               <div
-                class="c12"
+                class="c14"
               >
                 <img
                   alt="Image Alt text 1"
-                  class="c13"
+                  class="c15"
                   sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
                   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
                   srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image1.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image1.jpg 624w"
@@ -574,30 +595,30 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
                 />
               </div>
               <div
-                class="c14"
+                class="c16"
               />
             </div>
           </div>
           <div
-            class="c15"
+            class="c17"
           >
             <h3
-              class="c16"
+              class="c18"
             >
               <a
-                class="c17"
+                class="c19"
                 href="https://www.bbc.co.uk"
               >
                 Top Story 1 headline
               </a>
             </h3>
             <p
-              class="c18"
+              class="c20"
             >
               Summary text 1
             </p>
             <time
-              class="c19"
+              class="c21"
               datetime="1970-01-19"
             >
               19 January 1970
@@ -606,50 +627,210 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
         </div>
       </li>
       <li
-        class="c8"
+        class="c9 c22"
+        dir="ltr"
         role="listitem"
       >
         <div
-          class="c20"
+          class="c23"
         >
           <div
-            class="c21"
+            class="c24"
           >
             <div
-              class="c11"
+              class="c13"
             >
               <div
-                class="c12"
+                class="c14"
               >
                 <div
                   class="lazyload-placeholder"
                 />
               </div>
               <div
-                class="c22"
+                class="c25"
               />
             </div>
           </div>
           <div
-            class="c23"
+            class="c26"
           >
             <h3
-              class="c24"
+              class="c27"
             >
               <a
-                class="c17"
+                class="c19"
                 href="https://www.bbc.co.uk"
               >
                 Top Story 2 headline
               </a>
             </h3>
             <p
-              class="c25"
+              class="c28"
             >
               Summary text 2
             </p>
             <time
-              class="c19"
+              class="c21"
+              datetime="1970-01-19"
+            >
+              19 January 1970
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="c9 c22"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="c23"
+        >
+          <div
+            class="c24"
+          >
+            <div
+              class="c13"
+            >
+              <div
+                class="c14"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
+              <div
+                class="c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <h3
+              class="c27"
+            >
+              <a
+                class="c19"
+                href="https://www.bbc.co.uk"
+              >
+                Top Story 3 headline
+              </a>
+            </h3>
+            <p
+              class="c28"
+            >
+              Summary text 3
+            </p>
+            <time
+              class="c21"
+              datetime="1970-01-19"
+            >
+              19 January 1970
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="c9 c22"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="c23"
+        >
+          <div
+            class="c24"
+          >
+            <div
+              class="c13"
+            >
+              <div
+                class="c14"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
+              <div
+                class="c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <h3
+              class="c27"
+            >
+              <a
+                class="c19"
+                href="https://www.bbc.co.uk"
+              >
+                Top Story 4 headline
+              </a>
+            </h3>
+            <p
+              class="c28"
+            >
+              Summary text 4
+            </p>
+            <time
+              class="c21"
+              datetime="1970-01-19"
+            >
+              19 January 1970
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="c9 c22"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="c23"
+        >
+          <div
+            class="c24"
+          >
+            <div
+              class="c13"
+            >
+              <div
+                class="c14"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
+              <div
+                class="c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <h3
+              class="c27"
+            >
+              <a
+                class="c19"
+                href="https://www.bbc.co.uk"
+              >
+                Top Story 5 headline
+              </a>
+            </h3>
+            <p
+              class="c28"
+            >
+              Summary text 5
+            </p>
+            <time
+              class="c21"
               datetime="1970-01-19"
             >
               19 January 1970
@@ -733,21 +914,34 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   padding: 0;
 }
 
-.c9 {
+.c22 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c13 {
+.c16 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 66.67%;
+}
+
+.c23 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c8 {
+.c11 {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.33%;
+}
+
+.c21 {
   position: relative;
 }
 
@@ -755,7 +949,11 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   position: relative;
 }
 
-.c14 {
+.c17 {
+  position: relative;
+}
+
+.c24 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -766,7 +964,18 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   padding-bottom: 0.5rem;
 }
 
-.c16 {
+.c12 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c14 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -777,14 +986,14 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   padding-bottom: 0.5rem;
 }
 
-.c15 {
+.c13 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c15:before {
+.c13:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -796,17 +1005,17 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   z-index: 1;
 }
 
-.c15:hover,
-.c15:focus {
+.c13:hover,
+.c13:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c15:visited {
+.c13:visited {
   color: #6E6E73;
 }
 
-.c11 {
+.c18 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -819,7 +1028,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c17 {
+.c15 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -829,16 +1038,16 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   font-style: normal;
 }
 
-.c7 {
+.c8 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c7:first-child {
+.c8:first-child {
   padding-top: 0;
 }
 
-.c7:last-child {
+.c8:last-child {
   padding-bottom: 0;
   border: none;
 }
@@ -899,28 +1108,55 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   }
 }
 
-@media (min-width:63rem) {
+@supports (display:grid) {
+  .c7 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@supports (display:grid) {
+  .c20 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
   .c9 {
+    display: block;
+  }
+}
+
+@media (min-width:63rem) {
+  .c22 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c9 {
+  .c22 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
+@supports (grid-template-columns:fit-content(200px)) {
+  .c16 {
+    width: initial;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-end: span 4;
+  }
+}
+
 @media (min-width:37.5rem) {
-  .c13 {
+  .c23 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c13 {
+  .c23 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -928,7 +1164,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c13 {
+  .c23 {
     display: block;
     width: initial;
     padding: initial;
@@ -937,7 +1173,26 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c8 {
+  .c11 {
+    display: block;
+    width: initial;
+    padding: initial;
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-end: span 2;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c21 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c10 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -945,81 +1200,95 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 }
 
 @media (min-width:25rem) {
-  .c12 {
+  .c19 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c24 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 {
+  .c12 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c14 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c16 {
+  .c14 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c16 {
+  .c14 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c17 {
+  .c15 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c15 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c8 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c7 {
+  .c8 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7:first-child {
+  .c8:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c7:first-child {
+  .c8:first-child {
     padding-top: 1.5rem;
   }
 }
@@ -1055,106 +1324,109 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
     </h2>
   </div>
   <ul
-    class="c6"
+    class="c6 c7"
+    dir="ltr"
     role="list"
   >
     <li
-      class="c7"
+      class="c8 c9"
+      dir="ltr"
       role="listitem"
     >
       <div
-        class="c8"
+        class="c10"
       >
         <div
-          class="c9"
-        >
-          <div
-            class="c10"
-          >
-            <div
-              class="c11"
-            >
-              <div
-                class="lazyload-placeholder"
-              />
-            </div>
-            <div
-              class="c12"
-            />
-          </div>
-        </div>
-        <div
-          class="c13"
+          class="c11"
         >
           <h3
-            class="c14"
+            class="c12"
           >
             <a
-              class="c15"
+              class="c13"
               href="https://www.bbc.co.uk"
             >
               Top Story 1 headline
             </a>
           </h3>
           <p
-            class="c16"
+            class="c14"
           >
             Summary text 1
           </p>
           <time
-            class="c17"
+            class="c15"
             datetime="1970-01-19"
           >
             19 January 1970
           </time>
         </div>
-      </div>
-    </li>
-    <li
-      class="c7"
-      role="listitem"
-    >
-      <div
-        class="c8"
-      >
         <div
-          class="c9"
+          class="c16"
         >
           <div
-            class="c10"
+            class="c17"
           >
             <div
-              class="c11"
+              class="c18"
             >
               <div
                 class="lazyload-placeholder"
               />
             </div>
             <div
-              class="c12"
+              class="c19"
+            />
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      class="c8 c20"
+      dir="ltr"
+      role="listitem"
+    >
+      <div
+        class="c21"
+      >
+        <div
+          class="c22"
+        >
+          <div
+            class="c17"
+          >
+            <div
+              class="c18"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
+            <div
+              class="c19"
             />
           </div>
         </div>
         <div
-          class="c13"
+          class="c23"
         >
           <h3
-            class="c14"
+            class="c24"
           >
             <a
-              class="c15"
+              class="c13"
               href="https://www.bbc.co.uk"
             >
               Top Story 2 headline
             </a>
           </h3>
           <p
-            class="c16"
+            class="c14"
           >
             Summary text 2
           </p>
           <time
-            class="c17"
+            class="c15"
             datetime="1970-01-19"
           >
             19 January 1970
@@ -1239,7 +1511,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   padding: 0;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -1252,11 +1524,11 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   vertical-align: top;
 }
 
-.c7 {
+.c8 {
   position: relative;
 }
 
-.c9 {
+.c10 {
   position: relative;
 }
 
@@ -1316,7 +1588,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   color: #6E6E73;
 }
 
-.c10 {
+.c11 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1327,12 +1599,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   padding-bottom: 56.25%;
   width: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-.c11 {
-  display: block;
-  width: 100%;
-  visibility: visible;
 }
 
 .c17 {
@@ -1401,21 +1667,27 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   }
 }
 
+@supports (display:grid) {
+  .c7 {
+    display: block;
+  }
+}
+
 @media (min-width:37.5rem) {
-  .c8 {
+  .c9 {
     width: calc(50% - 0.5rem);
     margin-bottom: 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c8 {
+  .c9 {
     width: calc(50% - 0.5rem);
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c8 {
+  .c9 {
     width: initial;
     grid-column: 1 / span 6;
   }
@@ -1444,7 +1716,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c7 {
+  .c8 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -1547,6 +1819,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   >
     <div
       class="c7"
+      dir="ltr"
     >
       <div
         class="c8"
@@ -1557,44 +1830,43 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
           <div
             class="c10"
           >
-            <img
-              alt="Image Alt text 1"
+            <div
               class="c11"
-              sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
-              src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
-              srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0A06/production/image.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image.jpg 624w"
-              width="2048"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
+            <div
+              class="c12"
             />
           </div>
-          <div
-            class="c12"
-          />
         </div>
-      </div>
-      <div
-        class="c13"
-      >
-        <h3
-          class="c14"
+        <div
+          class="c13"
         >
-          <a
-            class="c15"
-            href="https://www.bbc.co.uk"
+          <h3
+            class="c14"
           >
-            Top Story 1 headline
-          </a>
-        </h3>
-        <p
-          class="c16"
-        >
-          Summary text 1
-        </p>
-        <time
-          class="c17"
-          datetime="1970-01-19"
-        >
-          19 January 1970
-        </time>
+            <a
+              class="c15"
+              href="https://www.bbc.co.uk"
+            >
+              Top Story 1 headline
+            </a>
+          </h3>
+          <p
+            class="c16"
+          >
+            Summary text 1
+          </p>
+          <time
+            class="c17"
+            datetime="1970-01-19"
+          >
+            19 January 1970
+          </time>
+        </div>
       </div>
     </div>
   </div>
@@ -1667,29 +1939,62 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   padding: 0;
 }
 
-.c8 {
+.c10 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.c21 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c12 {
+.c14 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.c23 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c7 {
-  position: relative;
-}
-
 .c9 {
   position: relative;
 }
 
+.c20 {
+  position: relative;
+}
+
+.c11 {
+  position: relative;
+}
+
 .c13 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c15 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c24 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1700,7 +2005,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   padding-bottom: 0.5rem;
 }
 
-.c15 {
+.c17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1711,14 +2016,25 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   padding-bottom: 0.5rem;
 }
 
-.c14 {
+.c25 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c16 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c14:before {
+.c16:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1730,17 +2046,17 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   z-index: 1;
 }
 
-.c14:hover,
-.c14:focus {
+.c16:hover,
+.c16:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c14:visited {
+.c16:visited {
   color: #6E6E73;
 }
 
-.c10 {
+.c12 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1753,7 +2069,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c16 {
+.c18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -1763,16 +2079,16 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   font-style: normal;
 }
 
-.c6 {
+.c7 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c6:first-child {
+.c7:first-child {
   padding-top: 0;
 }
 
-.c6:last-child {
+.c7:last-child {
   padding-bottom: 0;
   border: none;
 }
@@ -1818,28 +2134,89 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   }
 }
 
-@media (min-width:63rem) {
+@supports (display:grid) {
+  .c6 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@supports (display:grid) {
   .c8 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c19 {
+    display: block;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    width: calc(50% - 0.5rem);
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c10 {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c10 {
+    width: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) {
+  .c21 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c8 {
+  .c21 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c14 {
+    width: 50%;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c12 {
+  .c14 {
+    width: 50%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c14 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c23 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1847,7 +2224,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c12 {
+  .c23 {
     display: block;
     width: initial;
     padding: initial;
@@ -1856,7 +2233,15 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c7 {
+  .c9 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c20 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -1864,81 +2249,116 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @media (min-width:25rem) {
-  .c11 {
+  .c22 {
     position: absolute;
     bottom: 0;
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c15 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
 @media (min-width:37.5rem) {
-  .c13 {
+  .c15 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c24 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
+  .c17 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c17 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c15 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:63rem) {
-  .c15 {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c17 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 {
+  .c25 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c25 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c25 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c25 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c18 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c18 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c7 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c6 {
+  .c7 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6:first-child {
+  .c7:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c6:first-child {
+  .c7:first-child {
     padding-top: 1.5rem;
   }
 }
@@ -1971,54 +2391,56 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
     </h2>
   </div>
   <ul
-    class="c5"
+    class="c5 c6"
+    dir="ltr"
     role="list"
   >
     <li
-      class="c6"
+      class="c7 c8"
+      dir="ltr"
       role="listitem"
     >
       <div
-        class="c7"
+        class="c9"
       >
         <div
-          class="c8"
+          class="c10"
         >
           <div
-            class="c9"
+            class="c11"
           >
             <div
-              class="c10"
+              class="c12"
             >
               <div
                 class="lazyload-placeholder"
               />
             </div>
             <div
-              class="c11"
+              class="c13"
             />
           </div>
         </div>
         <div
-          class="c12"
+          class="c14"
         >
           <h3
-            class="c13"
+            class="c15"
           >
             <a
-              class="c14"
+              class="c16"
               href="https://www.bbc.co.uk"
             >
               Top Story 1 headline
             </a>
           </h3>
           <p
-            class="c15"
+            class="c17"
           >
             Summary text 1
           </p>
           <time
-            class="c16"
+            class="c18"
             datetime="1970-01-19"
           >
             19 January 1970
@@ -2027,50 +2449,210 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
       </div>
     </li>
     <li
-      class="c6"
+      class="c7 c19"
+      dir="ltr"
       role="listitem"
     >
       <div
-        class="c7"
+        class="c20"
       >
         <div
-          class="c8"
+          class="c21"
         >
           <div
-            class="c9"
+            class="c11"
           >
             <div
-              class="c10"
+              class="c12"
             >
               <div
                 class="lazyload-placeholder"
               />
             </div>
             <div
-              class="c11"
+              class="c22"
             />
           </div>
         </div>
         <div
-          class="c12"
+          class="c23"
         >
           <h3
-            class="c13"
+            class="c24"
           >
             <a
-              class="c14"
+              class="c16"
               href="https://www.bbc.co.uk"
             >
               Top Story 2 headline
             </a>
           </h3>
           <p
-            class="c15"
+            class="c25"
           >
             Summary text 2
           </p>
           <time
-            class="c16"
+            class="c18"
+            datetime="1970-01-19"
+          >
+            19 January 1970
+          </time>
+        </div>
+      </div>
+    </li>
+    <li
+      class="c7 c19"
+      dir="ltr"
+      role="listitem"
+    >
+      <div
+        class="c20"
+      >
+        <div
+          class="c21"
+        >
+          <div
+            class="c11"
+          >
+            <div
+              class="c12"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
+            <div
+              class="c22"
+            />
+          </div>
+        </div>
+        <div
+          class="c23"
+        >
+          <h3
+            class="c24"
+          >
+            <a
+              class="c16"
+              href="https://www.bbc.co.uk"
+            >
+              Top Story 3 headline
+            </a>
+          </h3>
+          <p
+            class="c25"
+          >
+            Summary text 3
+          </p>
+          <time
+            class="c18"
+            datetime="1970-01-19"
+          >
+            19 January 1970
+          </time>
+        </div>
+      </div>
+    </li>
+    <li
+      class="c7 c19"
+      dir="ltr"
+      role="listitem"
+    >
+      <div
+        class="c20"
+      >
+        <div
+          class="c21"
+        >
+          <div
+            class="c11"
+          >
+            <div
+              class="c12"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
+            <div
+              class="c22"
+            />
+          </div>
+        </div>
+        <div
+          class="c23"
+        >
+          <h3
+            class="c24"
+          >
+            <a
+              class="c16"
+              href="https://www.bbc.co.uk"
+            >
+              Top Story 4 headline
+            </a>
+          </h3>
+          <p
+            class="c25"
+          >
+            Summary text 4
+          </p>
+          <time
+            class="c18"
+            datetime="1970-01-19"
+          >
+            19 January 1970
+          </time>
+        </div>
+      </div>
+    </li>
+    <li
+      class="c7 c19"
+      dir="ltr"
+      role="listitem"
+    >
+      <div
+        class="c20"
+      >
+        <div
+          class="c21"
+        >
+          <div
+            class="c11"
+          >
+            <div
+              class="c12"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
+            <div
+              class="c22"
+            />
+          </div>
+        </div>
+        <div
+          class="c23"
+        >
+          <h3
+            class="c24"
+          >
+            <a
+              class="c16"
+              href="https://www.bbc.co.uk"
+            >
+              Top Story 5 headline
+            </a>
+          </h3>
+          <p
+            class="c25"
+          >
+            Summary text 5
+          </p>
+          <time
+            class="c18"
             datetime="1970-01-19"
           >
             19 January 1970

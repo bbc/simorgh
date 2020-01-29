@@ -5,12 +5,12 @@ const numberOfStories = {
   0: {
     input: [],
     expectedFirstSection: {
-      topRow: [],
+      firstRow: [],
       regularRows: [],
       noImageRow: [],
     },
     expectedNotFirstSection: {
-      topRow: [],
+      firstRow: [],
       regularRows: [],
       noImageRow: [],
     },
@@ -20,12 +20,12 @@ const numberOfStories = {
   1: {
     input: range(0, 1),
     expectedFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [],
       noImageRow: [],
     },
     expectedNotFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [],
       noImageRow: [],
     },
@@ -35,12 +35,12 @@ const numberOfStories = {
   2: {
     input: range(0, 2),
     expectedFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [],
       noImageRow: [],
     },
     expectedNotFirstSection: {
-      topRow: [0, 1],
+      firstRow: [0, 1],
       regularRows: [],
       noImageRow: [],
     },
@@ -50,12 +50,12 @@ const numberOfStories = {
   3: {
     input: range(0, 3),
     expectedFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [],
       noImageRow: [],
     },
     expectedNotFirstSection: {
-      topRow: [0, 1],
+      firstRow: [0, 1],
       regularRows: [],
       noImageRow: [],
     },
@@ -65,12 +65,12 @@ const numberOfStories = {
   4: {
     input: range(0, 4),
     expectedFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [],
       noImageRow: [],
     },
     expectedNotFirstSection: {
-      topRow: [],
+      firstRow: [],
       regularRows: [[0, 1, 2, 3]],
       noImageRow: [],
     },
@@ -80,12 +80,12 @@ const numberOfStories = {
   5: {
     input: range(0, 5),
     expectedFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [[1, 2, 3, 4]],
       noImageRow: [],
     },
     expectedNotFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [[1, 2, 3, 4]],
       noImageRow: [],
     },
@@ -95,12 +95,12 @@ const numberOfStories = {
   6: {
     input: range(0, 6),
     expectedFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [[1, 2, 3, 4]],
       noImageRow: [],
     },
     expectedNotFirstSection: {
-      topRow: [0, 1],
+      firstRow: [0, 1],
       regularRows: [[2, 3, 4, 5]],
       noImageRow: [],
     },
@@ -110,12 +110,12 @@ const numberOfStories = {
   7: {
     input: range(0, 7),
     expectedFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [[1, 2, 3, 4]],
       noImageRow: [],
     },
     expectedNotFirstSection: {
-      topRow: [0, 1],
+      firstRow: [0, 1],
       regularRows: [[2, 3, 4, 5]],
       noImageRow: [],
     },
@@ -125,12 +125,12 @@ const numberOfStories = {
   8: {
     input: range(0, 8),
     expectedFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [[1, 2, 3, 4]],
       noImageRow: [],
     },
     expectedNotFirstSection: {
-      topRow: [],
+      firstRow: [],
       regularRows: [
         [0, 1, 2, 3],
         [4, 5, 6, 7],
@@ -143,7 +143,7 @@ const numberOfStories = {
   9: {
     input: range(0, 9),
     expectedFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [
         [1, 2, 3, 4],
         [5, 6, 7, 8],
@@ -151,7 +151,7 @@ const numberOfStories = {
       noImageRow: [],
     },
     expectedNotFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [
         [1, 2, 3, 4],
         [5, 6, 7, 8],
@@ -164,7 +164,7 @@ const numberOfStories = {
   10: {
     input: range(0, 10),
     expectedFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [
         [1, 2, 3, 4],
         [5, 6, 7, 8],
@@ -172,7 +172,7 @@ const numberOfStories = {
       noImageRow: [],
     },
     expectedNotFirstSection: {
-      topRow: [0, 1],
+      firstRow: [0, 1],
       regularRows: [
         [2, 3, 4, 5],
         [6, 7, 8, 9],
@@ -185,7 +185,7 @@ const numberOfStories = {
   11: {
     input: range(0, 11),
     expectedFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [
         [1, 2, 3, 4],
         [5, 6, 7, 8],
@@ -193,7 +193,7 @@ const numberOfStories = {
       noImageRow: [],
     },
     expectedNotFirstSection: {
-      topRow: [0, 1],
+      firstRow: [0, 1],
       regularRows: [
         [2, 3, 4, 5],
         [6, 7, 8, 9],
@@ -206,7 +206,7 @@ const numberOfStories = {
   12: {
     input: range(0, 12),
     expectedFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [
         [1, 2, 3, 4],
         [5, 6, 7, 8],
@@ -214,7 +214,7 @@ const numberOfStories = {
       noImageRow: [],
     },
     expectedNotFirstSection: {
-      topRow: [0, 1],
+      firstRow: [0, 1],
       regularRows: [
         [2, 3, 4, 5],
         [6, 7, 8, 9],
@@ -227,7 +227,7 @@ const numberOfStories = {
   13: {
     input: range(0, 13),
     expectedFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [
         [1, 2, 3, 4],
         [5, 6, 7, 8],
@@ -235,7 +235,7 @@ const numberOfStories = {
       noImageRow: [9, 10, 11, 12],
     },
     expectedNotFirstSection: {
-      topRow: [0, 1],
+      firstRow: [0, 1],
       regularRows: [
         [2, 3, 4, 5],
         [6, 7, 8, 9],
@@ -248,7 +248,7 @@ const numberOfStories = {
   14: {
     input: range(0, 14),
     expectedFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [
         [1, 2, 3, 4],
         [5, 6, 7, 8],
@@ -256,7 +256,7 @@ const numberOfStories = {
       noImageRow: [9, 10, 11, 12],
     },
     expectedNotFirstSection: {
-      topRow: [0, 1],
+      firstRow: [0, 1],
       regularRows: [
         [2, 3, 4, 5],
         [6, 7, 8, 9],
@@ -269,7 +269,7 @@ const numberOfStories = {
   20: {
     input: range(0, 20),
     expectedFirstSection: {
-      topRow: [0],
+      firstRow: [0],
       regularRows: [
         [1, 2, 3, 4],
         [5, 6, 7, 8],
@@ -277,7 +277,7 @@ const numberOfStories = {
       noImageRow: [9, 10, 11, 12],
     },
     expectedNotFirstSection: {
-      topRow: [0, 1],
+      firstRow: [0, 1],
       regularRows: [
         [2, 3, 4, 5],
         [6, 7, 8, 9],

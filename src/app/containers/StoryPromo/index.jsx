@@ -91,7 +91,12 @@ LiveComponent.propTypes = {
   headline: element.isRequired,
 };
 
-const StoryPromoContainer = ({ item, promoType, lazyLoadImage }) => {
+const StoryPromoContainer = ({
+  item,
+  promoType,
+  lazyLoadImage,
+  displayImage,
+}) => {
   const { script, datetimeLocale, service, timezone, dir } = useContext(
     ServiceContext,
   );
@@ -184,6 +189,7 @@ const StoryPromoContainer = ({ item, promoType, lazyLoadImage }) => {
         <MediaIndicator item={item} topStory={topStory} service={service} />
       }
       promoType={promoType}
+      displayImage={displayImage}
     />
   );
 };
@@ -192,11 +198,13 @@ StoryPromoContainer.propTypes = {
   item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
   promoType: PROMO_TYPES,
   lazyLoadImage: bool,
+  displayImage: bool,
 };
 
 StoryPromoContainer.defaultProps = {
   promoType: 'regular',
   lazyLoadImage: true,
+  displayImage: true,
 };
 
 export default StoryPromoContainer;

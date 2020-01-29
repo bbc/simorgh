@@ -4,7 +4,7 @@ export const getAllowedItems = (items, isFirstSection) =>
   isFirstSection ? take(13, items) : take(10, items);
 
 // Split the top row stories out into their own list
-const splitTopRow = (items, isFirstSection) => {
+const splitFirstRow = (items, isFirstSection) => {
   // First section always has a single top story
   if (isFirstSection || items.length % 4 === 1) {
     return splitAt(1, items);
@@ -25,7 +25,7 @@ const splitNoImageRow = standardSlices => splitAt(2, standardSlices);
 export const getRows = (items, isFirstSection) => {
   const allowedItems = getAllowedItems(items, isFirstSection);
 
-  const [topRow, unsplitregularItems] = splitTopRow(
+  const [firstRow, unsplitregularItems] = splitFirstRow(
     allowedItems,
     isFirstSection,
   );
@@ -34,7 +34,7 @@ export const getRows = (items, isFirstSection) => {
   );
 
   return {
-    topRow,
+    firstRow,
     regularRows,
     noImageRow: noImageRow || [],
   };

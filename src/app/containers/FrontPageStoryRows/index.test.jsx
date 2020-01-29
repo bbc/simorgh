@@ -1,29 +1,28 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { TopRow, LeadingRow, RegularRow } from '.';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import getNumberPromoFixtures from './testHelpers';
 
-// eslint-disable-next-line react/prop-types
-const Promo = ({ text }) => <div>{text}</div>;
+const getRow = (Type, service, dir, number) => (
+  <ServiceContextProvider service={service}>
+    <RequestContextProvider
+      bbcOrigin="https://www.test.bbc.co.uk"
+      id="c0000000000o"
+      pathname="/pathname"
+      pageType="frontPage"
+      isAmp={false}
+      service={service}
+    >
+      <Type stories={getNumberPromoFixtures(dir, number)} />
+    </RequestContextProvider>
+  </ServiceContextProvider>
+);
 
 describe('FrontPageStoryRows Container', () =>
   describe('snapshots', () => {
-    shouldMatchSnapshot('TopRow', <TopRow story={<Promo text="top" />} />);
-    shouldMatchSnapshot(
-      'LeadingRow',
-      <LeadingRow
-        leadingStory={<Promo text="leading" />}
-        regularStory={<Promo text="regular" />}
-      />,
-    );
-    shouldMatchSnapshot(
-      'RegularRow',
-      <RegularRow
-        stories={[
-          { story: <Promo text="left" />, id: 0 },
-          { story: <Promo text="left middle" />, id: 1 },
-          { story: <Promo text="right middle" />, id: 2 },
-          { story: <Promo text="right" />, id: 3 },
-        ]}
-      />,
-    );
+    shouldMatchSnapshot('TopRow', getRow(TopRow, 'news', 'ltr', 1));
+    shouldMatchSnapshot('LeadingRow', getRow(LeadingRow, 'news', 'ltr', 2));
+    shouldMatchSnapshot('RegularRow', getRow(RegularRow, 'news', 'ltr', 4));
   }));
