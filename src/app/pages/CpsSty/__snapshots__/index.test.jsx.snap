@@ -2205,11 +2205,11 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -2225,35 +2225,35 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
     />
     <meta
       content="This is a test asset used in Simorgh, please do not edit it without asking."
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="BBC News Pidgin"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="pcm"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News Pidgin"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="STY - Blood pressure drugs dey work better - BBC News Pidgin"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="article"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.test.bbc.com/pidgin/world-23252817"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
