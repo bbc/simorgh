@@ -37,7 +37,7 @@ describe('MostReadContainerCanonical', () => {
   });
 
   Object.keys(services).forEach(service => {
-    it(`test most read is not rendered when lastRecordTimeStamp is not fresh for ${service}`, async () => {
+    it(`should not render most read when lastRecordTimeStamp is not fresh for ${service}`, async () => {
       const { variant, data: mostReadData } = services[service];
 
       fetch.mockResponse(JSON.stringify(mostReadData));
@@ -53,7 +53,7 @@ describe('MostReadContainerCanonical', () => {
       expect(container.innerHTML).toEqual('');
     });
 
-    it(`test time does not renders for most read items with timestamp older than 60 days for ${service}`, async () => {
+    it(`should not render items with timestamps older than 60 days for ${service}`, async () => {
       const { variant, data: mostReadData, config } = services[service];
       const mostReadHeader = config.mostRead.header;
       fetch.mockResponse(JSON.stringify(setFreshPromoTimestamp(mostReadData)));
@@ -73,7 +73,7 @@ describe('MostReadContainerCanonical', () => {
       expect(container.querySelectorAll('time').length).toEqual(0);
     });
 
-    it(`test time renders for most read items with timestamp older than 60 days for ${service}`, async () => {
+    it(`should render items with timestamps older than 60 days for ${service}`, async () => {
       const {
         variant,
         data: mostReadData,
