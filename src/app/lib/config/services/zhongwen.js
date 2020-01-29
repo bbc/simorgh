@@ -232,8 +232,8 @@ export const service = {
     ],
     navigationSection: '分类',
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: '热读',
+      lastUpdated: '最近更新：',
       numberOfItems: 5,
     },
   },
@@ -289,8 +289,8 @@ export const service = {
     ],
     navigationSection: '分類',
     mostRead: {
-      header: 'Most read',
-      lastUpdated: 'Last updated: ',
+      header: '熱讀',
+      lastUpdated: '最近更新：',
       numberOfItems: 5,
     },
   },
