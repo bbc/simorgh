@@ -2,6 +2,7 @@ import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { ukchina as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
+import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';
 
 const baseServiceConfig = {
