@@ -15,13 +15,13 @@ const services = {
     variant: null,
     data: newsMostReadData,
     config: newsConfig.default,
-    expectedLastUpdated: '最近更新：11 January 1970',
+    expectedLastUpdated: 'Last updated:  11 January 1970',
   },
   zhongwen: {
     variant: 'simp',
     data: zhongwenSimpMostReadData,
     config: zhongwenConfig.simp,
-    expectedLastUpdated: '最近更新：1970年1月11日',
+    expectedLastUpdated: '最近更新： 1970年1月11日',
   },
 };
 
