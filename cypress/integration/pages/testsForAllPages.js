@@ -85,14 +85,17 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
 
               const { indexImage } = body.promo;
               const imagePath = indexImage ? indexImage.path : null;
+
               const imageAltText =
-                indexImage && pageType === mediaAssetPageType
+                (indexImage && pageType === mediaAssetPageType) ||
+                (indexImage && pageType === photoGalleryPageType)
                   ? indexImage.altText
                   : appConfig[config[service].name][variant]
                       .defaultImageAltText;
 
               const imageSrc =
-                imagePath && pageType === mediaAssetPageType
+                (imagePath && pageType === mediaAssetPageType) ||
+                (imagePath && pageType === photoGalleryPageType)
                   ? getBrandedImage(imagePath, service)
                   : appConfig[config[service].name][variant].defaultImage;
 
