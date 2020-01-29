@@ -225,12 +225,12 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
 
                 cy.get('head').within(() => {
                   cy.title().should('eq', pageTitle);
-                  cy.get('meta[name="og:description"]').should(
+                  cy.get('meta[property="og:description"]').should(
                     'have.attr',
                     'content',
                     description,
                   );
-                  cy.get('meta[name="og:title"]').should(
+                  cy.get('meta[property="og:title"]').should(
                     'have.attr',
                     'content',
                     pageTitle,
