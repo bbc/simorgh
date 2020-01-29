@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { shape, bool, oneOfType } from 'prop-types';
 import Bulletin from '@bbc/psammead-bulletin';
-import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import { createSrcset } from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
@@ -11,11 +10,6 @@ import { tvBulletinItem, radioBulletinItem } from '#models/propTypes/bulletin';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const BulletinImage = ({ imageValues, lazyLoad }) => {
-  if (!imageValues) {
-    const landscapeRatio = (9 / 16) * 100;
-    return <ImagePlaceholder ratio={landscapeRatio} />;
-  }
-
   const { path, height, width, altText, copyrightHolder } = imageValues;
 
   const ratio = (height / width) * 100;
@@ -74,7 +68,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
   const summary = pathOr(null, ['summary'], item);
 
   const imageValues = pathOr(null, ['indexImage'], item);
-  const Image = (
+  const Image = imageValues && (
     <BulletinImage lazyLoad={lazyLoadImage} imageValues={imageValues} />
   );
 
