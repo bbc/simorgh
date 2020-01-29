@@ -2,6 +2,7 @@ import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
 import appConfig from '../../../src/server/utilities/serviceConfigs';
 import describeForEuOnly from '../../support/helpers/describeForEuOnly';
+import getBrandedImage from '../../support/helpers/getBrandedImage';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
 // For testing important features that differ between services, e.g. Timestamps.
@@ -76,82 +77,107 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         });
 
         it('should have the correct shared metadata', () => {
-          cy.get('head').within(() => {
-            cy.get('meta[name="fb:admins"]').should(
-              'have.attr',
-              'content',
-              '100004154058350',
-            );
-            cy.get('meta[name="fb:app_id"]').should(
-              'have.attr',
-              'content',
-              '1609039196070050',
-            );
-            cy.get('meta[name="og:image"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].defaultImage,
-            );
-            cy.get('meta[name="og:image:alt"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].defaultImageAltText,
-            );
-            cy.get('meta[name="og:locale"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].locale,
-            );
-            cy.get('meta[name="og:type"]').should(
-              'have.attr',
-              'content',
-              pageType === 'articles' ? 'article' : 'website',
-            );
-            cy.get('meta[name="og:url"]').should(
-              'have.attr',
-              'content',
-              `${envConfig.baseUrl}${config[service].pageTypes[pageType].path}`,
-            );
-            cy.get('meta[name="og:site_name"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].brandName,
-            );
-            cy.get('meta[name="twitter:card"]').should(
-              'have.attr',
-              'content',
-              'summary_large_image',
-            );
-            cy.get('meta[name="twitter:creator"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].twitterCreator,
-            );
-            cy.get('meta[name="twitter:image:alt"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].defaultImageAltText,
-            );
-            cy.get('meta[name="twitter:image:src"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].defaultImage,
-            );
-            cy.get('meta[name="twitter:site"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].twitterSite,
-            );
-            cy.get('link[rel="apple-touch-icon"]').each(link => {
-              const url = link.attr('href');
-              cy.request({
-                url,
-                failOnStatusCode: false,
-              }).then(resp => {
-                expect(resp.status).to.equal(200);
+          cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+            ({ body }) => {
+              const mediaAssetPageType = 'mediaAssetPage';
+              const articlesPageType = 'articles';
+
+              const { indexImage } = body.promo;
+              const imagePath = indexImage ? indexImage.path : null;
+              const imageAltText =
+                indexImage && pageType === mediaAssetPageType
+                  ? indexImage.altText
+                  : appConfig[config[service].name][variant]
+                      .defaultImageAltText;
+
+              const imageSrc =
+                imagePath && pageType === mediaAssetPageType
+                  ? getBrandedImage(imagePath, service)
+                  : appConfig[config[service].name][variant].defaultImage;
+              const ogType = [articlesPageType, mediaAssetPageType].includes(
+                pageType,
+              )
+                ? 'article'
+                : 'website';
+
+              cy.get('head').within(() => {
+                cy.get('meta[name="fb:admins"]').should(
+                  'have.attr',
+                  'content',
+                  '100004154058350',
+                );
+                cy.get('meta[name="fb:app_id"]').should(
+                  'have.attr',
+                  'content',
+                  '1609039196070050',
+                );
+                cy.get('meta[name="og:image"]').should(
+                  'have.attr',
+                  'content',
+                  imageSrc,
+                );
+                cy.get('meta[name="og:image:alt"]').should(
+                  'have.attr',
+                  'content',
+                  imageAltText,
+                );
+                cy.get('meta[name="og:locale"]').should(
+                  'have.attr',
+                  'content',
+                  appConfig[config[service].name][variant].locale,
+                );
+                cy.get('meta[name="og:type"]').should(
+                  'have.attr',
+                  'content',
+                  ogType,
+                );
+                cy.get('meta[name="og:url"]').should(
+                  'have.attr',
+                  'content',
+                  `${envConfig.baseUrl}${config[service].pageTypes[pageType].path}`,
+                );
+                cy.get('meta[name="og:site_name"]').should(
+                  'have.attr',
+                  'content',
+                  appConfig[config[service].name][variant].brandName,
+                );
+                cy.get('meta[name="twitter:card"]').should(
+                  'have.attr',
+                  'content',
+                  'summary_large_image',
+                );
+                cy.get('meta[name="twitter:creator"]').should(
+                  'have.attr',
+                  'content',
+                  appConfig[config[service].name][variant].twitterCreator,
+                );
+                cy.get('meta[name="twitter:image:alt"]').should(
+                  'have.attr',
+                  'content',
+                  imageAltText,
+                );
+                cy.get('meta[name="twitter:image:src"]').should(
+                  'have.attr',
+                  'content',
+                  imageSrc,
+                );
+                cy.get('meta[name="twitter:site"]').should(
+                  'have.attr',
+                  'content',
+                  appConfig[config[service].name][variant].twitterSite,
+                );
+                cy.get('link[rel="apple-touch-icon"]').each(link => {
+                  const url = link.attr('href');
+                  cy.request({
+                    url,
+                    failOnStatusCode: false,
+                  }).then(resp => {
+                    expect(resp.status).to.equal(200);
+                  });
+                });
               });
-            });
-          });
+            },
+          );
         });
 
         it('should have correct title & description metadata', () => {
