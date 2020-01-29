@@ -4,6 +4,7 @@ import { render } from '@testing-library/react';
 import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import { articleDataNews } from '#pages/Article/fixtureData';
 import mapAssetData from '#pages/CpsMap/fixtureData.json';
+import pglAssetData from '#pages/CpsPgl/fixtureData.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
@@ -254,6 +255,77 @@ describe('ATI Analytics Container', () => {
       render(
         <ContextWrap platform="amp" pageType="MAP">
           <ATIAnalytics data={mapAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockAmp.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+  });
+
+  describe('pageType=PGL', () => {
+    it('should call CanonicalATIAnalytics when platform is canonical', () => {
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=sport::pidgin.sport.photo_gallery.23252855.page',
+        'r=0x0x24x24',
+        're=1024x768',
+        'hl=00-00-00',
+        'lng=en-US',
+        'x1=[urn:bbc:ares::asset:pidgin/sport-23252855]',
+        'x2=[responsive]',
+        'x3=[news]',
+        'x4=[pcm]',
+        'x5=[http://localhost/]',
+        'x7=[article-photo-gallery]',
+        'x8=[simorgh]',
+        'x9=[PGL+-+Blood+pressure+drugs+dey+work+better+-+BBC+News]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+      ].join('&');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      canonical.default = mockCanonical;
+
+      render(
+        <ContextWrap platform="canonical" pageType="PGL">
+          <ATIAnalytics data={pglAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockCanonical.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+
+    it('should call AmpATIAnalytics when platform is Amp', () => {
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=sport::pidgin.sport.photo_gallery.23252855.page',
+        `r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
+        `re=\${availableScreenWidth}x\${availableScreenHeight}`,
+        'hl=00-00-00',
+        `lng=\${browserLanguage}`,
+        'x1=[urn:bbc:ares::asset:pidgin/sport-23252855]',
+        'x2=[amp]',
+        'x3=[news]',
+        'x4=[pcm]',
+        `x5=[\${sourceUrl}]`,
+        `x6=[\${documentReferrer}]`,
+        'x7=[article-photo-gallery]',
+        'x8=[simorgh]',
+        'x9=[PGL+-+Blood+pressure+drugs+dey+work+better+-+BBC+News]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+      ].join('&');
+      const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      amp.default = mockAmp;
+
+      render(
+        <ContextWrap platform="amp" pageType="PGL">
+          <ATIAnalytics data={pglAssetData} />
         </ContextWrap>,
       );
 
