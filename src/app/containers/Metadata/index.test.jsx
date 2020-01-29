@@ -37,6 +37,8 @@ const MetadataWithContext = ({
   lang,
   description,
   openGraphType,
+  image,
+  imageAltText,
   /* eslint-enable react/prop-types */
 }) => {
   const serviceConfig = services[service].default;
@@ -57,6 +59,8 @@ const MetadataWithContext = ({
           lang={lang}
           description={description}
           openGraphType={openGraphType}
+          image={image}
+          imageAltText={imageAltText}
         />
       </RequestContextProvider>
     </ServiceContextProvider>
@@ -75,8 +79,30 @@ const CanonicalNewsInternationalOrigin = () => (
   />
 );
 
+const CanonicalMapInternationalOrigin = () => (
+  <MetadataWithContext
+    service="pidgin"
+    image="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"
+    imageAltText="connectionAltText"
+    bbcOrigin={dotComOrigin}
+    platform="canonical"
+    id="23248703"
+    pageType="article"
+    pathname="/pigdin/23248703"
+    {...newsArticleMetadataProps}
+  />
+);
+
 const renderMetadataToDocument = async () => {
   render(<CanonicalNewsInternationalOrigin />);
+
+  await waitForDomChange({
+    container: document.querySelector('head'),
+  });
+};
+
+const renderMapMetadataToDocument = async () => {
+  render(<CanonicalMapInternationalOrigin />);
 
   await waitForDomChange({
     container: document.querySelector('head'),
@@ -402,6 +428,57 @@ it('should render the twitter metatags', async () => {
     { content: 'Article Headline for SEO - BBC News', name: 'twitter:title' },
   ];
 
+  expect(actual).toEqual(expected);
+});
+
+it('should render the default service image as open graph image', async () => {
+  await renderMetadataToDocument();
+  const serviceConfig = services.news.default;
+
+  const actual = Array.from(
+    document.querySelectorAll('head > meta[name*="image"]'),
+  ).map(tag => ({
+    name: tag.getAttribute('name'),
+    content: tag.getAttribute('content'),
+  }));
+  const expected = [
+    {
+      name: 'og:image',
+      content: serviceConfig.defaultImage,
+    },
+    { name: 'og:image:alt', content: serviceConfig.defaultImageAltText },
+    { name: 'twitter:image:alt', content: serviceConfig.defaultImageAltText },
+    {
+      name: 'twitter:image:src',
+      content: serviceConfig.defaultImage,
+    },
+  ];
+  expect(actual).toEqual(expected);
+});
+
+it('should render the open graph image if provided', async () => {
+  await renderMapMetadataToDocument();
+
+  const actual = Array.from(
+    document.querySelectorAll('head > meta[name*="image"]'),
+  ).map(tag => ({
+    name: tag.getAttribute('name'),
+    content: tag.getAttribute('content'),
+  }));
+  const expected = [
+    {
+      name: 'og:image',
+      content:
+        'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+    },
+    { name: 'og:image:alt', content: 'connectionAltText' },
+    { name: 'twitter:image:alt', content: 'connectionAltText' },
+    {
+      name: 'twitter:image:src',
+      content:
+        'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+    },
+  ];
   expect(actual).toEqual(expected);
 });
 
