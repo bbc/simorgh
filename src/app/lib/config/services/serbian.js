@@ -267,7 +267,7 @@ export const service = {
           text: 'Колачићи',
         },
         {
-          href: 'https://www.bbc.com/serbian/lat/institutional-43543431',
+          href: 'https://www.bbc.com/serbian/cyr/institutional-43543431',
           text: 'Контактирајте ББЦ',
         },
       ],
