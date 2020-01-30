@@ -124,7 +124,7 @@ describe('CPS PGL Page', () => {
       await matchSnapshotAsync(page);
     });
 
-    it('should match snapshot for PGL with non-PGL onward journeys filtered', async () => {
+    it('should match snapshot for PGL with non-CPS onward journeys filtered', async () => {
       const pageData = await preprocessor(
         someCpsOnwardJourneys,
         cpsAssetPreprocessorRules,
