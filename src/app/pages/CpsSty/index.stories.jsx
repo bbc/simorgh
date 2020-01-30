@@ -10,7 +10,7 @@ const styStories = storiesOf('Pages|Story Page', module);
 
 styStories.addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
-styStories.add('STY', () => {
+styStories.add('Pidgin', () => {
   return (
     <BrowserRouter>
       <CPSsty
