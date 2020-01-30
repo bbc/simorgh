@@ -39,6 +39,8 @@ const MetadataWithContext = ({
   lang,
   description,
   openGraphType,
+  image,
+  imageAltText,
   aboutTags,
   mentionsTags,
   /* eslint-enable react/prop-types */
@@ -63,6 +65,8 @@ const MetadataWithContext = ({
           openGraphType={openGraphType}
           aboutTags={aboutTags}
           mentionsTags={mentionsTags}
+          image={image}
+          imageAltText={imageAltText}
         />
       </RequestContextProvider>
     </ServiceContextProvider>
@@ -81,8 +85,30 @@ const CanonicalNewsInternationalOrigin = () => (
   />
 );
 
+const CanonicalMapInternationalOrigin = () => (
+  <MetadataWithContext
+    service="pidgin"
+    image="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"
+    imageAltText="connectionAltText"
+    bbcOrigin={dotComOrigin}
+    platform="canonical"
+    id="23248703"
+    pageType="article"
+    pathname="/pigdin/23248703"
+    {...newsArticleMetadataProps}
+  />
+);
+
 const renderMetadataToDocument = async () => {
   render(<CanonicalNewsInternationalOrigin />);
+
+  await waitForDomChange({
+    container: document.querySelector('head'),
+  });
+};
+
+const renderMapMetadataToDocument = async () => {
+  render(<CanonicalMapInternationalOrigin />);
 
   await waitForDomChange({
     container: document.querySelector('head'),
@@ -318,10 +344,10 @@ it('should render the facebook metatags', async () => {
   await renderMetadataToDocument();
 
   const fbAdminId = document
-    .querySelector('head > meta[name="fb:admins"]')
+    .querySelector('head > meta[property="fb:admins"]')
     .getAttribute('content');
   const fbAppId = document
-    .querySelector('head > meta[name="fb:app_id"]')
+    .querySelector('head > meta[property="fb:app_id"]')
     .getAttribute('content');
 
   expect(fbAdminId).toEqual('100004154058350');
@@ -359,26 +385,26 @@ it('should render the OG metatags', async () => {
   await renderMetadataToDocument();
 
   const actual = Array.from(
-    document.querySelectorAll('head > meta[name^="og:"]'),
+    document.querySelectorAll('head > meta[property^="og:"]'),
   ).map(tag => ({
-    name: tag.getAttribute('name'),
+    property: tag.getAttribute('property'),
     content: tag.getAttribute('content'),
   }));
   const expected = [
-    { content: 'Article summary.', name: 'og:description' },
+    { content: 'Article summary.', property: 'og:description' },
     {
       content:
         'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
-      name: 'og:image',
+      property: 'og:image',
     },
-    { content: 'BBC News', name: 'og:image:alt' },
-    { content: 'en_GB', name: 'og:locale' },
-    { content: 'BBC News', name: 'og:site_name' },
-    { content: 'Article Headline for SEO - BBC News', name: 'og:title' },
-    { content: 'article', name: 'og:type' },
+    { content: 'BBC News', property: 'og:image:alt' },
+    { content: 'en_GB', property: 'og:locale' },
+    { content: 'BBC News', property: 'og:site_name' },
+    { content: 'Article Headline for SEO - BBC News', property: 'og:title' },
+    { content: 'article', property: 'og:type' },
     {
       content: 'https://www.bbc.com/news/articles/c0000000001o',
-      name: 'og:url',
+      property: 'og:url',
     },
   ];
 
@@ -427,6 +453,75 @@ it('should render the LDP tags', async () => {
     { content: 'Queen Victoria', name: 'article:tag' },
   ];
 
+  expect(actual).toEqual(expected);
+});
+
+it('should render the default service image as open graph image', async () => {
+  await renderMetadataToDocument();
+  const serviceConfig = services.news.default;
+
+  const actual = Array.from(
+    document.querySelectorAll(
+      'head > meta[property*="image"], head > meta[name*="image"]',
+    ),
+  ).map(tag =>
+    tag.hasAttribute('property')
+      ? {
+          property: tag.getAttribute('property'),
+          content: tag.getAttribute('content'),
+        }
+      : {
+          name: tag.getAttribute('name'),
+          content: tag.getAttribute('content'),
+        },
+  );
+  const expected = [
+    {
+      property: 'og:image',
+      content: serviceConfig.defaultImage,
+    },
+    { property: 'og:image:alt', content: serviceConfig.defaultImageAltText },
+    { name: 'twitter:image:alt', content: serviceConfig.defaultImageAltText },
+    {
+      name: 'twitter:image:src',
+      content: serviceConfig.defaultImage,
+    },
+  ];
+  expect(actual).toEqual(expected);
+});
+
+it('should render the open graph image if provided', async () => {
+  await renderMapMetadataToDocument();
+
+  const actual = Array.from(
+    document.querySelectorAll(
+      'head > meta[property*="image"], head > meta[name*="image"]',
+    ),
+  ).map(tag =>
+    tag.hasAttribute('property')
+      ? {
+          property: tag.getAttribute('property'),
+          content: tag.getAttribute('content'),
+        }
+      : {
+          name: tag.getAttribute('name'),
+          content: tag.getAttribute('content'),
+        },
+  );
+  const expected = [
+    {
+      property: 'og:image',
+      content:
+        'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+    },
+    { property: 'og:image:alt', content: 'connectionAltText' },
+    { name: 'twitter:image:alt', content: 'connectionAltText' },
+    {
+      name: 'twitter:image:src',
+      content:
+        'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+    },
+  ];
   expect(actual).toEqual(expected);
 });
 

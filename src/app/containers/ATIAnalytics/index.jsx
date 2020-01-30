@@ -18,7 +18,20 @@ const ATIAnalytics = ({ data }) => {
     article: buildArticleATIUrl,
     frontPage: buildFrontPageATIUrl,
     media: buildRadioATIUrl,
-    MAP: buildCpsAssetPageATIUrl,
+    MAP: () =>
+      buildCpsAssetPageATIUrl(
+        data,
+        requestContext,
+        serviceContext,
+        'article-media-asset',
+      ),
+    PGL: () =>
+      buildCpsAssetPageATIUrl(
+        data,
+        requestContext,
+        serviceContext,
+        'article-photo-gallery',
+      ),
   };
 
   const isValidPageType = Object.keys(pageTypeHandlers).includes(pageType);

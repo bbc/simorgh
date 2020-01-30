@@ -9,7 +9,8 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { GhostGrid } from '#lib/styledGrid';
-import MetadataContainer from '#containers/Metadata';
+import { getImageParts } from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks/blocks/image/helpers';
+import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
@@ -47,6 +48,11 @@ const CpsMapContainer = ({ pageData }) => {
     ['relatedContent', 'groups', 0, 'promos'],
     pageData,
   );
+  const indexImagePath = path(['promo', 'indexImage', 'path'], pageData);
+  const indexImageLocator = indexImagePath
+    ? getImageParts(indexImagePath)[1]
+    : null;
+  const indexImageAltText = path(['promo', 'indexImage', 'altText'], pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
@@ -72,16 +78,16 @@ const CpsMapContainer = ({ pageData }) => {
 
   return (
     <>
-      <MetadataContainer
+      <CpsMetadata
         title={title}
-        lang={metadata.language}
+        language={metadata.language}
         description={summary}
-        openGraphType="website"
+        firstPublished={firstPublished}
+        lastPublished={lastPublished}
+        imageLocator={indexImageLocator}
+        imageAltText={indexImageAltText}
         aboutTags={aboutTags}
-      >
-        <meta name="article:published_time" content={firstPublished} />
-        <meta name="article:modified_time" content={lastPublished} />
-      </MetadataContainer>
+      />
       <LinkedData
         type="Article"
         seoTitle={title}

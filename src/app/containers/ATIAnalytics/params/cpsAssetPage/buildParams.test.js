@@ -30,17 +30,17 @@ const serviceContext = {
 
 const expectation = {
   appName: serviceContext.atiAnalyticsAppName,
-  contentId: payload.metadata.id,
+  categoryName: 'News',
   campaigns: payload.metadata.passport.campaigns,
-  contentType: 'article-media-asset',
+  contentId: payload.metadata.id,
+  contentType: 'test-content-type',
   language: payload.metadata.language,
+  libraryVersion: analyticsUtils.LIBRARY_VERSION,
   pageIdentifier: `news::${payload.metadata.analyticsLabels.counterName}`,
   pageTitle: `${payload.promo.headlines.headline} - ${serviceContext.brandName}`,
-  categoryName: 'News',
+  platform: requestContext.platform,
   producerId: serviceContext.atiAnalyticsProducerId,
   statsDestination: requestContext.statsDestination,
-  libraryVersion: analyticsUtils.LIBRARY_VERSION,
-  platform: requestContext.platform,
   service: 'service',
   timePublished: analyticsUtils.getPublishedDatetime(),
   timeUpdated: analyticsUtils.getPublishedDatetime(),
@@ -55,8 +55,29 @@ describe('buildCpsAssetPageATIParams', () => {
       payload,
       requestContext,
       serviceContext,
+      'test-content-type',
     );
     expect(result).toEqual(expectation);
+  });
+
+  it('should handle invalid counter name', () => {
+    const payloadInvalidCounterName = {
+      ...payload,
+      metadata: {
+        ...payload.metadata,
+        analyticsLabels: {
+          ...payload.metadata.analyticsLabels,
+          counterName: 'invalid',
+        },
+      },
+    };
+    const result = buildCpsAssetPageATIParams(
+      payloadInvalidCounterName,
+      requestContext,
+      serviceContext,
+      'test-content-type',
+    );
+    expect(result).toEqual({ ...expectation, pageIdentifier: 'invalid' });
   });
 });
 
@@ -66,6 +87,7 @@ describe('buildCpsAssetPageATIUrl', () => {
       payload,
       requestContext,
       serviceContext,
+      'test-content-type',
     );
     const campaignString = expectation.campaigns
       .filter(
