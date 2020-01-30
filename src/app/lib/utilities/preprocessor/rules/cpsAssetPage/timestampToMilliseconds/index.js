@@ -29,22 +29,28 @@ const standardiseMetadataTimestamps = json => {
   );
 };
 
-const standardiseRelatedContentTimestamp = item => ({
+const standardisePromoTimestamp = item => ({
   ...item,
   timestamp: standardiseTimestamp(item.timestamp),
 });
 
-const standardiseRelatedContentTimestamps = json => {
-  const relatedContent = path(['relatedContent', 'groups', 0, 'promos'], json);
+const standardisePromoTimestamps = json => {
+  const relatedContentGroup = path(['relatedContent', 'groups', 0], json);
 
-  if (!Array.isArray(relatedContent)) return json;
+  if (!relatedContentGroup || !Array.isArray(relatedContentGroup.promos))
+    return json;
+
+  const { promos } = relatedContentGroup;
+
+  if (!Array.isArray(promos)) return json;
 
   return mergeDeepLeft(
     {
       relatedContent: {
         groups: [
           {
-            promos: relatedContent.map(standardiseRelatedContentTimestamp),
+            ...relatedContentGroup,
+            promos: promos.map(standardisePromoTimestamp),
           },
         ],
       },
@@ -55,5 +61,5 @@ const standardiseRelatedContentTimestamps = json => {
 
 export default compose(
   standardiseMetadataTimestamps,
-  standardiseRelatedContentTimestamps,
+  standardisePromoTimestamps,
 );
