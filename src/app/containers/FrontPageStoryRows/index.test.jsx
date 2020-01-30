@@ -5,6 +5,9 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import getNumberPromoFixtures from './testHelpers';
 
+const ImageRow = props => <RegularRow displayImages {...props} />;
+const NoImageRow = props => <RegularRow {...props} />;
+
 const getRow = (Type, service, dir, number) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
@@ -24,5 +27,12 @@ describe('FrontPageStoryRows Container', () =>
   describe('snapshots', () => {
     shouldMatchSnapshot('TopRow', getRow(TopRow, 'news', 'ltr', 1));
     shouldMatchSnapshot('LeadingRow', getRow(LeadingRow, 'news', 'ltr', 2));
-    shouldMatchSnapshot('RegularRow', getRow(RegularRow, 'news', 'ltr', 4));
+    shouldMatchSnapshot(
+      'RegularRow with images',
+      getRow(ImageRow, 'news', 'ltr', 4),
+    );
+    shouldMatchSnapshot(
+      'RegularRow without images',
+      getRow(NoImageRow, 'news', 'ltr', 4),
+    );
   }));

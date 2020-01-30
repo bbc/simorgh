@@ -41,6 +41,7 @@ const getRow = (RowType, dir = 'ltr', displayImages = true) => {
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
+        isAmp={false}
         pathname="/pathname"
         pageType="article"
         service="news"

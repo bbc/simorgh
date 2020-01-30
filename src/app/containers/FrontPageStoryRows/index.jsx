@@ -16,6 +16,7 @@ import {
   topStoryColumns,
   leadingStoryColumns,
   regularStoryColumns,
+  noImageStoryColumns,
 } from './storyColumns';
 import { storyItem } from '#models/propTypes/storyItem';
 import BulletinContainer from '../Bulletin';
@@ -138,7 +139,7 @@ export const RegularRow = ({ stories, displayImages, dir }) => (
     {stories.map(story => (
       <Grid
         item
-        columns={regularStoryColumns}
+        columns={displayImages ? regularStoryColumns : noImageStoryColumns}
         key={story.id}
         as={StoryPromoListItem}
         isBulletin={isBulletin(story)}

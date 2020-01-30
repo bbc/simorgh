@@ -148,7 +148,7 @@ const StoryPromoContainer = ({
           </Link>
         </Headline>
       )}
-      {summary && (
+      {summary && displayImage && (
         <Summary
           script={script}
           service={service}
