@@ -1,64 +1,40 @@
 import path from 'ramda/src/path';
-import deepClone from 'ramda/src/clone';
 
-const seeAlsoPredicate = ({ type }) => {
-  return type === 'see-alsos';
-};
-
-const isCpsOnwardJourney = ({ type }) => {
-  return type === 'cps';
-};
-
-const cpsOnlyOnwardJourneys = originalJson => {
-  const json = deepClone(originalJson);
-
+const cpsOnlyOnwardJourneys = json => {
   const groups = path(['relatedContent', 'groups'], json);
 
-  const seeAlsoGroup = groups.find(seeAlsoPredicate);
+  const processedGroups = groups.reduce((acc, group) => {
+    const { type } = group;
+    if (type === 'see-alsos') {
+      const { promos } = group;
+      const onlyCpsPromos = promos.filter(
+        ({ type: promoType }) => promoType === 'cps',
+      );
 
-  if (seeAlsoGroup) {
-    const { promos } = seeAlsoGroup;
-
-    const noCpsOnwardJourneys = promos.every(
-      onwardJourney => !isCpsOnwardJourney(onwardJourney),
-    );
-
-    if (noCpsOnwardJourneys) {
-      const groupsWithoutSeeAlso = groups.filter(seeAlsoPredicate);
-      return {
-        ...json,
-        groups: groupsWithoutSeeAlso,
-      };
-    } else {
-      const someNonCpsOnwardJourneys = promos.some(isCpsOnwardJourney);
-      console.log('some');
-
-      if (someNonCpsOnwardJourneys) {
-        const groupsWithOnlyCpsOnwardJourneys = groups.map(group => {
-          if (seeAlsoPredicate(group)) {
-            const { promos } = group;
-            return {
-              ...group,
-              promos: promos.filter(isCpsOnwardJourney),
-            };
-          }
-          return group;
-        });
-
-        const { relatedContent } = json;
-
-        return {
-          ...json,
-          relatedContent: {
-            ...relatedContent,
-            groups: groupsWithOnlyCpsOnwardJourneys,
-          },
-        };
+      const noCpsPromos = promos.length === 0;
+      if (noCpsPromos) {
+        // omit the entire group if no cps promos
+        return acc;
       }
-    }
-  }
+      const seeAlsoGroupCpsOnly = {
+        ...group,
+        promos: onlyCpsPromos,
+      };
 
-  return json;
+      return [...acc, seeAlsoGroupCpsOnly];
+    }
+    return [...acc, group];
+  }, []);
+
+  const { relatedContent } = json;
+
+  return {
+    ...json,
+    relatedContent: {
+      ...relatedContent,
+      groups: processedGroups,
+    },
+  };
 };
 
 export default cpsOnlyOnwardJourneys;
