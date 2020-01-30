@@ -1,7 +1,9 @@
+import path from 'ramda/src/path';
 import cpsOnlyOnwardJourneys from '.';
 import noCpsOnwardJourneysFixture from '#data/arabic/cpsAssets/art-and-culture-38260491.json';
 import someCpsOnwardJourneysFixture from '#data/azeri/cpsAssets/azerbaijan-44208474.json';
-import path from 'ramda/src/path';
+import allCpsOnwardJoruneysFixture from '#data/pidgin/cpsAssets/tori-49221071.json';
+import noOnwardJourneysFixture from '#data/pidgin/cpsAssets/sport-23252855.json';
 
 describe('cpsOnlyOnwardJourneys', () => {
   const expectedSeeAlsos = {
@@ -295,12 +297,16 @@ describe('cpsOnlyOnwardJourneys', () => {
   it('should remove related content section if all onward journeys are not cps content', () => {
     const result = cpsOnlyOnwardJourneys(noCpsOnwardJourneysFixture);
     const groups = path(['relatedContent', 'groups'], result);
-    expect(
-      groups.some(({ type }) => {
-        type === 'see-alsos';
-      }),
-    ).toBeFalsy();
+    expect(groups.some(({ type }) => type === 'see-alsos')).toBeFalsy();
   });
 
-  it('should leave onward journeys unchanged if type: cps', () => {});
+  it('should leave onward journeys unchanged if type: cps', () => {
+    const result = cpsOnlyOnwardJourneys(allCpsOnwardJoruneysFixture);
+    expect(result).toEqual(allCpsOnwardJoruneysFixture);
+  });
+
+  it('should leave payload unchanged if no onward journeys', () => {
+    const result = cpsOnlyOnwardJourneys(noOnwardJourneysFixture);
+    expect(result).toEqual(noOnwardJourneysFixture);
+  });
 });

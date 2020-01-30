@@ -11,7 +11,8 @@ const cpsOnlyOnwardJourneys = json => {
         ({ type: promoType }) => promoType === 'cps',
       );
 
-      const noCpsPromos = promos.length === 0;
+      const noCpsPromos = onlyCpsPromos.length === 0;
+
       if (noCpsPromos) {
         // omit the entire group if no cps promos
         return acc;
