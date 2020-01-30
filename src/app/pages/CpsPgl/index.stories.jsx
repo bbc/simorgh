@@ -16,10 +16,10 @@ pglStories.add('PGL', () => {
       <CPSPgl
         pageType="PGL"
         isAmp={false}
-        pathname="/pathname"
+        pathname="/path"
         status={200}
         pageData={pageData}
-        service="afrique"
+        service="azeri"
       />
     </BrowserRouter>
   );
