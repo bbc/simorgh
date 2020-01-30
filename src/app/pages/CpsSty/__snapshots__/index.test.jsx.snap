@@ -296,13 +296,13 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 .c21 {
+  border: 0;
+  left: 0;
+  overflow: hidden;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
-  overflow: hidden;
 }
 
 @media (max-width:37.4375rem) {
@@ -1269,13 +1269,13 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 `;
 
 exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
-.c26 {
+.c25 {
   margin: 0 auto;
   background: #FDFDFD;
   padding-bottom: 2rem;
 }
 
-.c16 {
+.c13 {
   grid-column: 1 / span 6;
 }
 
@@ -1284,11 +1284,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   grid-column-gap: 1rem;
 }
 
-.c13 {
-  grid-column: 1 / span 6;
-}
-
-.c25 {
+.c24 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1299,7 +1295,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   padding: 1.5rem 0;
 }
 
-.c19 {
+.c18 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -1338,7 +1334,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 1rem;
 }
 
-.c17 {
+.c16 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1349,25 +1345,25 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   margin: 0;
 }
 
-.c18 {
+.c17 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c18:visited {
+.c17:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c18:focus,
-.c18:hover {
+.c17:focus,
+.c17:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c20 {
+.c19 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1377,7 +1373,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   list-style-type: none;
 }
 
-.c20 > li::before {
+.c19 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
@@ -1385,7 +1381,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   margin-left: -2rem;
 }
 
-.c21 {
+.c20 {
   margin-bottom: 1rem;
 }
 
@@ -1468,21 +1464,21 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   transition: visibility 0.2s linear;
 }
 
-.c23 {
+.c22 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c22 {
+.c21 {
   margin-top: 1rem;
 }
 
-.c22 figure {
+.c21 figure {
   padding-bottom: 0;
 }
 
-.c31 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1492,7 +1488,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.c32 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1511,7 +1507,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   align-items: baseline;
 }
 
-.c33 {
+.c32 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1531,42 +1527,42 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   align-items: center;
 }
 
-.c29 {
+.c28 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c28 {
+.c27 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c30 {
+.c29 {
   margin: 0;
   padding: 0;
 }
 
-.c35 {
+.c34 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c35:first-child {
+.c34:first-child {
   padding-top: 0;
 }
 
-.c35:last-child {
+.c34:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c34 {
+.c33 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c27 {
+.c26 {
   margin-bottom: 1rem;
   z-index: 0;
 }
@@ -1585,50 +1581,50 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   flex-grow: 1;
 }
 
-.c24 {
+.c23 {
+  border: 0;
+  left: 0;
+  overflow: hidden;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
-  overflow: hidden;
 }
 
 @media (max-width:37.4375rem) {
-  .c26 {
+  .c25 {
     grid-column-gap: 0.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c26 {
+  .c25 {
     grid-column-gap: 1rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c26 {
+  .c25 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c26 {
+  .c25 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c26 {
+  .c25 {
     grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
     max-width: 46.4rem;
   }
 }
 
 @supports (display:grid) {
-  .c26 {
+  .c25 {
     display: grid;
     max-width: initial;
     margin: initial;
@@ -1636,40 +1632,40 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width:25rem) {
-  .c16 {
+  .c13 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c16 {
+  .c13 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c13 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c16 {
+  .c13 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c16 {
+  .c13 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c16 {
+  .c13 {
     max-width: initial;
   }
 }
@@ -1782,61 +1778,22 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (max-width:25rem) {
-  .c13 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c13 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c13 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c13 {
-    grid-column: 2 / span 4;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c13 {
-    max-width: initial;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c25 {
+  .c24 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c24 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c24 {
     padding-top: 2rem;
   }
 }
@@ -1876,28 +1833,28 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c17 {
+  .c16 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c16 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
+  .c19 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c19 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -1930,44 +1887,44 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c22 {
+  .c21 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c22 {
+  .c21 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c22 {
+  .c21 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c22 {
+  .c21 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c22 {
+  .c21 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c22 {
+  .c21 {
     padding-top: 0.5rem;
     margin-top: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c31 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1976,39 +1933,39 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c33 {
+  .c32 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c32 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c32 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c32 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c29 {
+  .c28 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c28 {
     position: absolute;
     left: 0;
     right: 0;
@@ -2017,67 +1974,67 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c28 {
+  .c27 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c35 {
+  .c34 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c35 {
+  .c34 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c35:first-child {
+  .c34:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c35:first-child {
+  .c34:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c27 {
+  .c26 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c27 {
+  .c26 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c27 {
+  .c26 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c27 {
+  .c26 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c27 {
+  .c26 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c26 {
     margin-bottom: 1.5rem;
   }
 }
@@ -2248,11 +2205,11 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -2268,35 +2225,35 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
     />
     <meta
       content="This is a test asset used in Simorgh, please do not edit it without asking."
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="BBC News Pidgin"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="pcm"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News Pidgin"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="STY - Blood pressure drugs dey work better - BBC News Pidgin"
-      name="og:title"
+      property="og:title"
     />
     <meta
-      content="website"
-      name="og:type"
+      content="article"
+      property="og:type"
     />
     <meta
       content="https://www.test.bbc.com/pidgin/world-23252817"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
@@ -2325,6 +2282,10 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
     <meta
       content="STY - Blood pressure drugs dey work better - BBC News Pidgin"
       name="twitter:title"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
     />
     <meta
       content="2019-10-23T12:39:30.000Z"
@@ -2446,16 +2407,16 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </time>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <p
-                      class="c17"
+                      class="c16"
                     >
                       <b>
                          This is introduction text, it should be bold by default, but also support 
                       </b>
                       <a
-                        class="c18"
+                        class="c17"
                         href="https://bbc.com/pidgin/23248703"
                       >
                         inline links
@@ -2466,20 +2427,20 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </p>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <p
-                      class="c17"
+                      class="c16"
                     >
                       <i
-                        class="c19"
+                        class="c18"
                       >
                         <b>
                           This is a subheadline! that has 
                         </b>
                       </i>
                       <a
-                        class="c18"
+                        class="c17"
                         href="https://bbc.com/pidgin/23248703"
                       >
                         a link
@@ -2487,21 +2448,21 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </p>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <ul
-                      class="c20"
+                      class="c19"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="c21"
+                        class="c20"
                         role="listitem"
                       >
                         This is a unordered list
                       </li>
                       <li
-                        class="c21"
+                        class="c20"
                         role="listitem"
                       >
                         It can have 
@@ -2511,22 +2472,22 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                          in it
                       </li>
                       <li
-                        class="c21"
+                        class="c20"
                         role="listitem"
                       >
                         <a
-                          class="c18"
+                          class="c17"
                           href="https://bbc.com/pidgin/23248703"
                         >
                           It can also have links
                         </a>
                       </li>
                       <li
-                        class="c21"
+                        class="c20"
                         role="listitem"
                       >
                         <i
-                          class="c19"
+                          class="c18"
                         >
                           It can even have italic text in it!
                         </i>
@@ -2534,14 +2495,14 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <p
-                      class="c17"
+                      class="c16"
                     >
                       Feta the big cheese macaroni cheese. 
                       <a
-                        class="c18"
+                        class="c17"
                         href="https://bbc.com/pidgin/23248703"
                       >
                         Caerphilly danish fontina
@@ -2596,10 +2557,10 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </figure>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <p
-                      class="c17"
+                      class="c16"
                     >
                       <b>
                         Start of localised text
@@ -2607,19 +2568,19 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </p>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <p
-                      class="c17"
+                      class="c16"
                     >
                       Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.
                     </p>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <p
-                      class="c17"
+                      class="c16"
                     >
                       <b>
                         End of localised text
@@ -2627,14 +2588,14 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </p>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <p
-                      class="c17"
+                      class="c16"
                     >
                       Rubber cheese macaroni 
                       <i
-                        class="c19"
+                        class="c18"
                       >
                         cheese cottage cheese
                       </i>
@@ -2642,21 +2603,21 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </p>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <ul
-                      class="c20"
+                      class="c19"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="c21"
+                        class="c20"
                         role="listitem"
                       >
                         This is a ordered list
                       </li>
                       <li
-                        class="c21"
+                        class="c20"
                         role="listitem"
                       >
                         It can have 
@@ -2666,22 +2627,22 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                          in it
                       </li>
                       <li
-                        class="c21"
+                        class="c20"
                         role="listitem"
                       >
                         <a
-                          class="c18"
+                          class="c17"
                           href="https://bbc.com/pidgin/23248703"
                         >
                           It can also have links
                         </a>
                       </li>
                       <li
-                        class="c21"
+                        class="c20"
                         role="listitem"
                       >
                         <i
-                          class="c19"
+                          class="c18"
                         >
                           It can even have italic text in it!
                         </i>
@@ -2689,27 +2650,27 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <p
-                      class="c17"
+                      class="c16"
                     >
                       Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
                     </p>
                   </div>
                   <div
-                    class="c22"
+                    class="c21"
                   >
                     <figure
                       class="c4"
                     >
                       <div
-                        class="c23"
+                        class="c22"
                       >
                         <iframe
                           allow="autoplay; fullscreen"
                           allowfullscreen=""
-                          class="c24"
+                          class="c23"
                           scrolling="no"
                           src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                           title="Media player"
@@ -2718,10 +2679,10 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </figure>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <h2
-                      class="c25"
+                      class="c24"
                       id="This-is-a-heading"
                       tabindex="-1"
                     >
@@ -2729,19 +2690,19 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </h2>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <p
-                      class="c17"
+                      class="c16"
                     >
                       Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
                     </p>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <h2
-                      class="c25"
+                      class="c24"
                       id="This-is-a-crosshead"
                       tabindex="-1"
                     >
@@ -2749,23 +2710,23 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </h2>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <p
-                      class="c17"
+                      class="c16"
                     >
                       Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
                     </p>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <p
-                      class="c17"
+                      class="c16"
                     >
                       <a
                         aria-label="This is an external link to google!, outside"
-                        class="c18"
+                        class="c17"
                         href="https://www.google.com/"
                       >
                         This is an external link to google!
@@ -2773,10 +2734,10 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </p>
                   </div>
                   <div
-                    class="c16"
+                    class="c13"
                   >
                     <p
-                      class="c17"
+                      class="c16"
                     >
                       Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
                     </p>
@@ -2784,29 +2745,29 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                 </main>
                 <aside
                   aria-labelledby="related-content-heading"
-                  class="c26"
+                  class="c25"
                   role="complementary"
                 >
                   <div
-                    class="c27"
+                    class="c26"
                   >
                     <div
-                      class="c28"
+                      class="c27"
                     >
                       <div
-                        class="c29"
+                        class="c28"
                       />
                       <h2
-                        class="c30"
+                        class="c29"
                       >
                         <div
-                          class="c31"
+                          class="c30"
                         >
                           <span
-                            class="c32"
+                            class="c31"
                           >
                             <span
-                              class="c33"
+                              class="c32"
                               dir="ltr"
                               id="related-content-heading"
                             >
@@ -2817,11 +2778,11 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                       </h2>
                     </div>
                     <ul
-                      class="c34"
+                      class="c33"
                       role="list"
                     >
                       <li
-                        class="c35"
+                        class="c34"
                         role="listitem"
                       />
                     </ul>

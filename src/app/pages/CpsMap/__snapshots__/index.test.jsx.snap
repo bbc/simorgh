@@ -41,7 +41,7 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                     <iframe
                       allow="autoplay; fullscreen"
                       allowfullscreen=""
-                      class="StyledIframe-fuo2ed-0 jQWQE"
+                      class="StyledIframe-fuo2ed-0 dIyDYU"
                       scrolling="no"
                       src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
                       title="Медиа плейер"
@@ -60,7 +60,7 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                 </strong>
               </div>
               <div
-                class="PopOutAtGroup5-sc-12lwanc-14 kIHzqH StyledTimestamp-sc-10y88yd-1 jtbZwP"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX StyledTimestamp-sc-10y88yd-1 jtbZwP"
               >
                 <time
                   class="StyledTimestamp-um718p-0 bAgcOD"
@@ -401,7 +401,7 @@ exports[`CPS MAP Page should render component 1`] = `
                     <iframe
                       allow="autoplay; fullscreen"
                       allowfullscreen=""
-                      class="StyledIframe-fuo2ed-0 jQWQE"
+                      class="StyledIframe-fuo2ed-0 dIyDYU"
                       scrolling="no"
                       src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
                       title="Media player"
@@ -420,7 +420,7 @@ exports[`CPS MAP Page should render component 1`] = `
                 </strong>
               </div>
               <div
-                class="PopOutAtGroup5-sc-12lwanc-14 kIHzqH StyledTimestamp-sc-10y88yd-1 jtbZwP"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX StyledTimestamp-sc-10y88yd-1 jtbZwP"
               >
                 <time
                   class="StyledTimestamp-um718p-0 bAgcOD"
@@ -1108,6 +1108,7 @@ exports[`CPS MAP Page should render component 1`] = `
                                 class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
                               >
                                 <svg
+                                  aria-hidden="true"
                                   class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
                                   focusable="false"
                                   height="13px"
@@ -1197,6 +1198,7 @@ exports[`CPS MAP Page should render component 1`] = `
                                 class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
                               >
                                 <svg
+                                  aria-hidden="true"
                                   class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
                                   focusable="false"
                                   height="12px"

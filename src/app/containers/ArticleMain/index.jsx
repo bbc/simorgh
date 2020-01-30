@@ -24,7 +24,7 @@ import {
   getArticleSection,
   getMentions,
   getLang,
-} from './utils';
+} from '#lib/utilities/parseAssetData';
 
 const componentsToRender = {
   headline: headings,

@@ -1,15 +1,17 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, waitForDomChange } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import path from 'ramda/src/path';
+import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import CpsMapPage from '.';
 import mapPageData from '#data/pidgin/cpsAssets/23248703';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
+import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import preprocessor from '#lib/utilities/preprocessor';
 import { cpsAssetPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
 
@@ -132,6 +134,48 @@ describe('CPS MAP Page', () => {
     ));
   });
 
+  afterEach(() => {
+    delete process.env.SIMORGH_APP_ENV;
+  });
+
+  it('should render the index image as metadata image', async () => {
+    await waitForDomChange({
+      container: document.querySelector('head'),
+    });
+
+    const actual = Array.from(
+      document.querySelectorAll(
+        'head > meta[property*="image"], head > meta[name*="image"]',
+      ),
+    ).map(tag =>
+      tag.hasAttribute('property')
+        ? {
+            property: tag.getAttribute('property'),
+            content: tag.getAttribute('content'),
+          }
+        : {
+            name: tag.getAttribute('name'),
+            content: tag.getAttribute('content'),
+          },
+    );
+    const expected = [
+      {
+        property: 'og:image',
+        content:
+          'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+      },
+      { property: 'og:image:alt', content: 'connectionAltText' },
+      { name: 'twitter:image:alt', content: 'connectionAltText' },
+      {
+        name: 'twitter:image:src',
+        content:
+          'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+      },
+    ];
+
+    expect(actual).toEqual(expected);
+  });
+
   it('should render component', () => {
     expect(asFragment()).toMatchSnapshot();
   });
@@ -245,8 +289,29 @@ describe('CPS MAP Page', () => {
   it('should render lastPublished timestamp for Pidgin', () => {
     expect(getByText('New Informate 20 November 2019')).toBeInTheDocument();
   });
+
   it('has a single "main" element, and a single "complementary" element (a11y)', async () => {
     expect(document.querySelectorAll(`[role='main']`).length).toBe(1);
     expect(document.querySelectorAll(`[role='complementary']`).length).toBe(1);
   });
+});
+
+it('should not show the timestamp when allowDateStamp is false', async () => {
+  const pageDataWithHiddenTimestamp = assocPath(
+    ['metadata', 'options', 'allowDateStamp'],
+    false,
+    await preprocessor(mapPageData, cpsAssetPreprocessorRules),
+  );
+
+  render(createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'pidgin'));
+
+  expect(document.querySelector('main time')).toBeNull();
+});
+
+it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
+  const pageData = await preprocessor(igboPageData, cpsAssetPreprocessorRules);
+
+  const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
+
+  expect(getByText('23 Ọktọba 2019')).toBeInTheDocument();
 });

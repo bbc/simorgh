@@ -33,6 +33,8 @@ const MetadataContainer = ({
   lang,
   description,
   openGraphType,
+  image,
+  imageAltText,
   children,
 }) => {
   const {
@@ -88,6 +90,9 @@ const MetadataContainer = ({
 
   const pageTitle = `${title} - ${brandName}`;
 
+  const metaImage = image || defaultImage;
+  const metaImageAltText = imageAltText || defaultImageAltText;
+
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -108,27 +113,27 @@ const MetadataContainer = ({
       <meta name="apple-mobile-web-app-title" content={brandName} />
       <meta name="application-name" content={brandName} />
       <meta name="description" content={description} />
-      <meta name="fb:admins" content={FACEBOOK_ADMIN_ID} />
-      <meta name="fb:app_id" content={FACEBOOK_APP_ID} />
+      <meta property="fb:admins" content={FACEBOOK_ADMIN_ID} />
+      <meta property="fb:app_id" content={FACEBOOK_APP_ID} />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="msapplication-TileColor" content={themeColor} />
       <meta
         name="msapplication-TileImage"
         content={getIconAssetUrl(service, '144x144')}
       />
-      <meta name="og:description" content={description} />
-      <meta name="og:image" content={defaultImage} />
-      <meta name="og:image:alt" content={defaultImageAltText} />
-      <meta name="og:locale" content={locale} />
-      <meta name="og:site_name" content={brandName} />
-      <meta name="og:title" content={pageTitle} />
-      <meta name="og:type" content={openGraphType} />
-      <meta name="og:url" content={canonicalNonUkLink} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={metaImage} />
+      <meta property="og:image:alt" content={metaImageAltText} />
+      <meta property="og:locale" content={locale} />
+      <meta property="og:site_name" content={brandName} />
+      <meta property="og:title" content={pageTitle} />
+      <meta property="og:type" content={openGraphType} />
+      <meta property="og:url" content={canonicalNonUkLink} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterCreator} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image:alt" content={defaultImageAltText} />
-      <meta name="twitter:image:src" content={defaultImage} />
+      <meta name="twitter:image:alt" content={metaImageAltText} />
+      <meta name="twitter:image:src" content={metaImage} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={pageTitle} />
       <link rel="apple-touch-icon" href={appleTouchIcon} />
@@ -148,10 +153,14 @@ MetadataContainer.propTypes = {
   lang: string.isRequired,
   description: string.isRequired,
   openGraphType: string.isRequired,
+  image: string,
+  imageAltText: string,
   children: node,
 };
 
 MetadataContainer.defaultProps = {
+  image: null,
+  imageAltText: null,
   children: null,
 };
 
