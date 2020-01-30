@@ -6,10 +6,7 @@ import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import path from 'ramda/src/path';
 import assocPath from 'ramda/src/assocPath';
 
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -32,11 +29,7 @@ const Wrapper = styled(GridItemConstrainedLarge)`
 `;
 
 const StyledSectionLabel = styled(SectionLabel)`
-  margin-top: ${GEL_SPACING_DBL};
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_TRPL};
-  }
+  margin-top: 0rem;
 `;
 
 const formatItem = (item, env) => {
