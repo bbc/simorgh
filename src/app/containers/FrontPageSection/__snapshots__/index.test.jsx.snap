@@ -124,25 +124,25 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 }
 
 .c18 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .c27 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c20 {
@@ -226,7 +226,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 }
 
 .c9 {
-  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -430,10 +429,17 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c27 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -497,6 +503,12 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   .c21 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c9 {
+    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
@@ -954,25 +966,25 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 }
 
 .c24 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c12 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
 }
 
 .c14 {
@@ -1039,7 +1051,6 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 }
 
 .c8 {
-  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -1206,10 +1217,17 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c24 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c24 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1266,6 +1284,12 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   .c15 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c8 {
+    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
@@ -1538,14 +1562,14 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 }
 
 .c14 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .c16 {
@@ -1984,25 +2008,25 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 }
 
 .c15 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .c24 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c17 {
@@ -2080,7 +2104,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 }
 
 .c7 {
-  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -2269,10 +2292,17 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c24 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c24 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2336,6 +2366,12 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   .c18 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c7 {
+    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 

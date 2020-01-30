@@ -33,14 +33,14 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 }
 
 .c10 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c13 {
@@ -200,10 +200,17 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c10 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -391,14 +398,14 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 }
 
 .c10 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c13 {
@@ -558,10 +565,17 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c10 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -744,14 +758,14 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 }
 
 .c9 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c12 {
@@ -906,10 +920,17 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c9 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1086,14 +1107,14 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 }
 
 .c9 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c12 {
@@ -1248,10 +1269,17 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c9 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1414,14 +1442,14 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
 }
 
 .c6 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c8 {
@@ -1539,10 +1567,17 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1666,14 +1701,14 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
 }
 
 .c6 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c8 {
@@ -1791,10 +1826,17 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1913,14 +1955,14 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 .c6 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c8 {
@@ -2038,10 +2080,17 @@ exports[`StoryPromo Container should render item without an image correctly for 
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2156,14 +2205,14 @@ exports[`StoryPromo Container should render item without an image correctly for 
 }
 
 .c6 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c8 {
@@ -2281,10 +2330,17 @@ exports[`StoryPromo Container should render item without an image correctly for 
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2399,14 +2455,14 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 }
 
 .c6 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c10 {
@@ -2545,10 +2601,17 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2689,14 +2752,14 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 }
 
 .c6 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c10 {
@@ -2835,10 +2898,17 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2987,14 +3057,14 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 }
 
 .c6 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .c8 {
@@ -3387,14 +3457,14 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
 }
 
 .c6 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c8 {
@@ -3512,10 +3582,17 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -3639,14 +3716,14 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 }
 
 .c6 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c8 {
@@ -3764,10 +3841,17 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -3886,14 +3970,14 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
 }
 
 .c6 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c8 {
@@ -4011,10 +4095,17 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -4138,14 +4229,14 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
 }
 
 .c6 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c8 {
@@ -4263,10 +4354,17 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -4394,14 +4492,14 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 }
 
 .c10 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c13 {
@@ -4561,10 +4659,17 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c10 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -4749,14 +4854,14 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 }
 
 .c10 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c13 {
@@ -4916,10 +5021,17 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c10 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 

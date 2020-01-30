@@ -978,7 +978,7 @@ exports[`CPS MAP Page should render component 1`] = `
                   role="list"
                 >
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+                    class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
                     role="listitem"
                   >
                     <div
@@ -1006,7 +1006,7 @@ exports[`CPS MAP Page should render component 1`] = `
                         class="TextGridItem-sc-1lkbq5i-0 eyxIXC"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-3 dWqxrP"
+                          class="Headline-sc-1dvfmi3-3 bunGcv"
                         >
                           <a
                             class="Link-sc-1dvfmi3-5 yQgSu"
@@ -1030,7 +1030,7 @@ exports[`CPS MAP Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+                    class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
                     role="listitem"
                   >
                     <div
@@ -1058,7 +1058,7 @@ exports[`CPS MAP Page should render component 1`] = `
                         class="TextGridItem-sc-1lkbq5i-0 eyxIXC"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-3 dWqxrP"
+                          class="Headline-sc-1dvfmi3-3 bunGcv"
                         >
                           <a
                             class="Link-sc-1dvfmi3-5 yQgSu"
@@ -1082,7 +1082,7 @@ exports[`CPS MAP Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+                    class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
                     role="listitem"
                   >
                     <div
@@ -1133,7 +1133,7 @@ exports[`CPS MAP Page should render component 1`] = `
                         class="TextGridItem-sc-1lkbq5i-0 eyxIXC"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-3 dWqxrP"
+                          class="Headline-sc-1dvfmi3-3 bunGcv"
                         >
                           <a
                             class="Link-sc-1dvfmi3-5 yQgSu"
@@ -1168,7 +1168,7 @@ exports[`CPS MAP Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+                    class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
                     role="listitem"
                   >
                     <div
@@ -1227,7 +1227,7 @@ exports[`CPS MAP Page should render component 1`] = `
                         class="TextGridItem-sc-1lkbq5i-0 eyxIXC"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-3 dWqxrP"
+                          class="Headline-sc-1dvfmi3-3 bunGcv"
                         >
                           <a
                             class="Link-sc-1dvfmi3-5 yQgSu"

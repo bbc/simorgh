@@ -41,7 +41,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
         role="list"
       >
         <li
-          class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+          class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
           role="listitem"
         >
           <div
@@ -69,7 +69,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
               class="TextGridItem-sc-1lkbq5i-0 eyxIXC"
             >
               <h3
-                class="Headline-sc-1dvfmi3-3 dWqxrP"
+                class="Headline-sc-1dvfmi3-3 bunGcv"
               >
                 <a
                   class="Link-sc-1dvfmi3-5 yQgSu"
@@ -104,7 +104,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+          class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
           role="listitem"
         >
           <div
@@ -132,7 +132,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
               class="TextGridItem-sc-1lkbq5i-0 eyxIXC"
             >
               <h3
-                class="Headline-sc-1dvfmi3-3 dWqxrP"
+                class="Headline-sc-1dvfmi3-3 bunGcv"
               >
                 <a
                   class="Link-sc-1dvfmi3-5 yQgSu"
@@ -156,7 +156,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+          class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
           role="listitem"
         >
           <div
@@ -184,7 +184,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
               class="TextGridItem-sc-1lkbq5i-0 eyxIXC"
             >
               <h3
-                class="Headline-sc-1dvfmi3-3 dWqxrP"
+                class="Headline-sc-1dvfmi3-3 bunGcv"
               >
                 <a
                   class="Link-sc-1dvfmi3-5 yQgSu"
@@ -254,7 +254,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
         role="list"
       >
         <li
-          class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+          class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
           role="listitem"
         >
           <div
@@ -282,7 +282,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
               class="TextGridItem-sc-1lkbq5i-0 eyxIXC"
             >
               <h3
-                class="Headline-sc-1dvfmi3-3 dWqxrP"
+                class="Headline-sc-1dvfmi3-3 bunGcv"
               >
                 <a
                   class="Link-sc-1dvfmi3-5 yQgSu"
@@ -317,7 +317,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+          class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
           role="listitem"
         >
           <div
@@ -345,7 +345,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
               class="TextGridItem-sc-1lkbq5i-0 eyxIXC"
             >
               <h3
-                class="Headline-sc-1dvfmi3-3 dWqxrP"
+                class="Headline-sc-1dvfmi3-3 bunGcv"
               >
                 <a
                   class="Link-sc-1dvfmi3-5 yQgSu"
@@ -369,7 +369,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+          class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
           role="listitem"
         >
           <div
@@ -397,7 +397,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
               class="TextGridItem-sc-1lkbq5i-0 eyxIXC"
             >
               <h3
-                class="Headline-sc-1dvfmi3-3 dWqxrP"
+                class="Headline-sc-1dvfmi3-3 bunGcv"
               >
                 <a
                   class="Link-sc-1dvfmi3-5 yQgSu"
