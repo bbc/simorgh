@@ -171,7 +171,7 @@ export const service = {
       },
       {
         title: '#ISWOTY',
-        url: '/gujarati/resources/idt-0370808c-2dea-4f55-b69f-309a2881ef25',
+        url: '/punjabi/resources/idt-681afed0-03f5-4d5f-a640-3011a722d1c',
       },
     ],
     navigationSection: 'ਸੈਕਸ਼ਨਜ਼',
