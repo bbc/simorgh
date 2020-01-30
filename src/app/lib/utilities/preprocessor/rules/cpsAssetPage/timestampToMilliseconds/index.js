@@ -42,8 +42,6 @@ const standardisePromoTimestamps = json => {
 
   const { promos } = relatedContentGroup;
 
-  if (!Array.isArray(promos)) return json;
-
   return mergeDeepLeft(
     {
       relatedContent: {
