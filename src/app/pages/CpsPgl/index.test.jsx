@@ -9,7 +9,9 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import CpsAssetPage from '.';
-import pidginPageData from '#data/pidgin/cpsAssets/sport-23252855';
+import noOnwardJourneys from '#data/pidgin/cpsAssets/sport-23252855';
+import someCpsOnwardJourneys from '#data/azeri/cpsAssets/azerbaijan-44208474.json';
+import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
 import preprocessor from '#lib/utilities/preprocessor';
@@ -104,9 +106,9 @@ jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
 
 describe('CPS PGL Page', () => {
   describe('snapshots', () => {
-    it('should match snapshot for PGL', async () => {
+    it('should match snapshot for PGL with no onward journeys', async () => {
       const pageData = await preprocessor(
-        pidginPageData,
+        noOnwardJourneys,
         cpsAssetPreprocessorRules,
       );
       const page = createAssetPage({ pageData }, 'pidgin');
@@ -119,6 +121,24 @@ describe('CPS PGL Page', () => {
         cpsAssetPreprocessorRules,
       );
       const page = createAssetPage({ pageData }, 'afaanoromoo');
+      await matchSnapshotAsync(page);
+    });
+
+    it('should match snapshot for PGL with non-PGL onward journeys filtered', async () => {
+      const pageData = await preprocessor(
+        someCpsOnwardJourneys,
+        cpsAssetPreprocessorRules,
+      );
+      const page = createAssetPage({ pageData }, 'azeri');
+      await matchSnapshotAsync(page);
+    });
+
+    it('should match snapshot for PGL with all CPS onward journeys', async () => {
+      const pageData = await preprocessor(
+        allCpsOnwardJourneys,
+        cpsAssetPreprocessorRules,
+      );
+      const page = createAssetPage({ pageData }, 'pidgin');
       await matchSnapshotAsync(page);
     });
   });

@@ -4,7 +4,7 @@ import pglNoCpsOnwardJourneys from '#data/arabic/cpsAssets/art-and-culture-38260
 import styNoCpsOnwardJourneys from '#data/igbo/cpsAssets/afirika-23252735.json';
 import pglSomeCpsOnwardJourneys from '#data/azeri/cpsAssets/azerbaijan-44208474.json';
 import pglNoOnwardJourneys from '#data/pidgin/cpsAssets/sport-23252855.json';
-import pglAllCpsOnwardJoruneys from '#data/pidgin/cpsAssets/tori-49221071.json';
+import pglAllCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
 import mapPageAllCpsOnwardJourneys from '#data/pidgin/cpsAssets/23248703.json';
 
 describe('cpsOnlyOnwardJourneys', () => {
@@ -309,8 +309,8 @@ describe('cpsOnlyOnwardJourneys', () => {
   });
 
   it('should leave onward journeys unchanged if type: cps, PGL page', () => {
-    const result = cpsOnlyOnwardJourneys(pglAllCpsOnwardJoruneys);
-    expect(result).toEqual(pglAllCpsOnwardJoruneys);
+    const result = cpsOnlyOnwardJourneys(pglAllCpsOnwardJourneys);
+    expect(result).toEqual(pglAllCpsOnwardJourneys);
   });
   it('should leave onward journeys unchanged if type: cps, MAP page', () => {
     const result = cpsOnlyOnwardJourneys(mapPageAllCpsOnwardJourneys);
