@@ -15,6 +15,7 @@ import addSummaryBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addS
 import cpsOnlyOnwardJourneys from '#lib/utilities/preprocessor/rules/cpsAssetPage/cpsOnlyOnwardJourneys';
 
 export const cpsAssetPreprocessorRules = [
+  cpsOnlyOnwardJourneys,
   parseInternalLinks,
   timestampToMilliseconds,
   convertToOptimoBlocks,
@@ -22,7 +23,6 @@ export const cpsAssetPreprocessorRules = [
   addSummaryBlock,
   applyTimestampRules,
   addIdsToBlocks,
-  cpsOnlyOnwardJourneys,
   applyBlockPositioning,
 ];
 
