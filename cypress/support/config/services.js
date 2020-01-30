@@ -517,7 +517,10 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/japanese/video-23248670',
+        path:
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/japanese/video-23248670',
         smoke: false,
       },
     },
@@ -550,7 +553,10 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/korean/media-23248686',
+        path:
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/korean/media-23248686',
         smoke: false,
       },
     },
@@ -880,7 +886,10 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/punjabi/media-23248705',
+        path:
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/punjabi/media-23248705',
         smoke: false,
       },
     },
@@ -1035,7 +1044,8 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/sinhala/23248970',
+        path:
+          isLive(appEnv) || isTest(appEnv) ? undefined : '/sinhala/23248970',
         smoke: false,
       },
     },
@@ -1205,7 +1215,10 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/thai/thailand-23248713',
+        path:
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/thai/thailand-23248713',
         smoke: false,
       },
     },
@@ -1439,7 +1452,10 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/uzbek/sport-23248721',
+        path:
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/uzbek/sport-23248721',
         smoke: true,
       },
     },
