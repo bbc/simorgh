@@ -19,7 +19,7 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
           >
             <noscript />
             <main
-              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-sc-10y88yd-0 cYTtjw"
+              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-sc-10y88yd-0 gLWwCc"
               role="main"
             >
               <h1
@@ -387,7 +387,7 @@ exports[`CPS MAP Page should render component 1`] = `
           >
             <noscript />
             <main
-              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-sc-10y88yd-0 cYTtjw"
+              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-sc-10y88yd-0 gLWwCc"
               role="main"
             >
               <h1
@@ -968,7 +968,7 @@ exports[`CPS MAP Page should render component 1`] = `
                 class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 ebGqUw"
               >
                 <div
-                  class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP StyledSectionLabel-sc-1itct8j-1 gOAYuA"
+                  class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP StyledSectionLabel-sc-1itct8j-1 cftGzF"
                 >
                   <div
                     class="Bar-sc-1x4gwjz-0 qaAlR"
