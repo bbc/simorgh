@@ -1389,11 +1389,11 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -1409,35 +1409,35 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
     />
     <meta
       content="Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan"
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="http://ichef.test.bbci.co.uk/news/1024/branded_afaanoromoo/726D/production/_97739292_img_1620.jpg"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="om-ET"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News Afaan Oromoo"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan - BBC News Afaan Oromoo"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="article"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.test.bbc.com/afaanoromoo/oduu-41217768"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
@@ -2071,6 +2071,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
               <div
                 id="DataContainer"
               >
+                <noscript />
                 <main
                   class="c0"
                   role="main"
@@ -2844,11 +2845,11 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -2864,35 +2865,35 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
     />
     <meta
       content="Bole Festival wey dey celebrate one popular street food, special dish of roasted plantain and fish with pepper sauce, don start for Port Harcourt Rivers state"
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="Bole festival for Pitakwa"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="pcm"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News Pidgin"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="Fish and plantain sara everi wia for 2019 Bole Festival - BBC News Pidgin"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="article"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.test.bbc.com/pidgin/tori-49221071"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
@@ -3825,6 +3826,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
               <div
                 id="DataContainer"
               >
+                <noscript />
                 <main
                   class="c0"
                   role="main"
@@ -5030,11 +5032,11 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -5050,35 +5052,35 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
     />
     <meta
       content="This is a test asset used in Simorgh, please do not edit it without asking."
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="BBC News Pidgin"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="pcm"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News Pidgin"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="PGL - Blood pressure drugs dey work better - BBC News Pidgin"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="article"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.test.bbc.com/pidgin/sport-23252855"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
@@ -5143,6 +5145,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
               <div
                 id="DataContainer"
               >
+                <noscript />
                 <main
                   class="c0"
                   role="main"
@@ -5701,11 +5704,11 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-PGL onwar
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -5721,35 +5724,35 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-PGL onwar
     />
     <meta
       content="Bu il mayın 28-də Azərbaycan Xalq Cümhuriyyətinin elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca həmin dövrün siyasi xadimlərinin və hadisələrin arxiv fotolarını təqdim edir."
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="http://ichef.test.bbci.co.uk/news/1024/branded_azeri/7E1F/production/_101678223_0-158827.jpg"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="AXC parlamentinin birinci iclasının açılışı"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="az-AZ"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News Azərbaycanca"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="Azərbaycan Xalq Cümhuriyyəti - Fotolarda - BBC News Azərbaycanca"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="article"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.test.bbc.com/azeri/azerbaijan-44208474"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
@@ -7006,6 +7009,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-PGL onwar
               <div
                 id="DataContainer"
               >
+                <noscript />
                 <main
                   class="c0"
                   role="main"

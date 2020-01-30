@@ -136,11 +136,11 @@ exports[`should match snapshot for News & International 1`] = `
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -156,35 +156,35 @@ exports[`should match snapshot for News & International 1`] = `
     />
     <meta
       content="Article Headline for SEO"
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="http://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="connectionAltText"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="en_GB"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="Article Headline for SEO - BBC News"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="article"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.test.bbc.com/pathname"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"

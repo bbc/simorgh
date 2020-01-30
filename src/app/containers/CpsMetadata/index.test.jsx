@@ -59,20 +59,27 @@ describe('CpsMetadata get branded image', () => {
 
     const actual = Array.from(
       document.querySelectorAll(
-        'head > meta[name^="article:"], head > meta[name*="image"]',
+        'head > meta[name^="article:"], head > meta[property*="image"], head > meta[name*="image"]',
       ),
-    ).map(tag => ({
-      name: tag.getAttribute('name'),
-      content: tag.getAttribute('content'),
-    }));
+    ).map(tag =>
+      tag.hasAttribute('property')
+        ? {
+            property: tag.getAttribute('property'),
+            content: tag.getAttribute('content'),
+          }
+        : {
+            name: tag.getAttribute('name'),
+            content: tag.getAttribute('content'),
+          },
+    );
 
     const expected = [
       {
-        name: 'og:image',
+        property: 'og:image',
         content:
           'http://ichef.test.bbci.co.uk/news/1024/branded_news/6FC4/test/_63721682_p01kx435.jpg',
       },
-      { name: 'og:image:alt', content: 'connectionAltText' },
+      { property: 'og:image:alt', content: 'connectionAltText' },
       { name: 'twitter:image:alt', content: 'connectionAltText' },
       {
         name: 'twitter:image:src',
