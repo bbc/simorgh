@@ -968,7 +968,7 @@ exports[`CPS MAP Page should render component 1`] = `
                 class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 ebGqUw"
               >
                 <div
-                  class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
+                  class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP StyledSectionLabel-sc-1itct8j-1 gOAYuA"
                 >
                   <div
                     class="Bar-sc-1x4gwjz-0 qaAlR"

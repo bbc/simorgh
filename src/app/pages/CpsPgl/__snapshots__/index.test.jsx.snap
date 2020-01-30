@@ -200,7 +200,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   padding-bottom: 0;
 }
 
-.c29 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -210,7 +210,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   flex-direction: column;
 }
 
-.c30 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -229,7 +229,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   align-items: baseline;
 }
 
-.c31 {
+.c32 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -249,7 +249,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   align-items: center;
 }
 
-.c27 {
+.c28 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
@@ -259,26 +259,26 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   margin-top: 2rem;
 }
 
-.c28 {
+.c29 {
   margin: 0;
   padding: 0;
 }
 
-.c33 {
+.c34 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c33:first-child {
+.c34:first-child {
   padding-top: 0;
 }
 
-.c33:last-child {
+.c34:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c32 {
+.c33 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -287,6 +287,10 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 .c25 {
   margin-bottom: 1rem;
   z-index: 0;
+}
+
+.c27 {
+  margin-top: 1rem;
 }
 
 .c0 {
@@ -628,7 +632,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -637,39 +641,39 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c31 {
+  .c32 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c32 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c32 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c32 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c27 {
+  .c28 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c28 {
     position: absolute;
     left: 0;
     right: 0;
@@ -684,25 +688,25 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c34 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c33 {
+  .c34 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33:first-child {
+  .c34:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c33:first-child {
+  .c34:first-child {
     padding-top: 1.5rem;
   }
 }
@@ -740,6 +744,12 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 @media (min-width:37.5rem) {
   .c25 {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c27 {
+    margin-top: 1.5rem;
   }
 }
 
@@ -1236,22 +1246,22 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
                 class="c25"
               >
                 <div
-                  class="c26"
+                  class="c26 c27"
                 >
                   <div
-                    class="c27"
+                    class="c28"
                   />
                   <h2
-                    class="c28"
+                    class="c29"
                   >
                     <div
-                      class="c29"
+                      class="c30"
                     >
                       <span
-                        class="c30"
+                        class="c31"
                       >
                         <span
-                          class="c31"
+                          class="c32"
                           dir="ltr"
                           id="related-content-heading"
                         >
@@ -1262,11 +1272,11 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
                   </h2>
                 </div>
                 <ul
-                  class="c32"
+                  class="c33"
                   role="list"
                 >
                   <li
-                    class="c33"
+                    class="c34"
                     role="listitem"
                   />
                 </ul>
