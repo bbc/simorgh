@@ -1480,6 +1480,14 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
       name="twitter:title"
     />
     <meta
+      content="History"
+      name="article:tag"
+    />
+    <meta
+      content="Addis Ababa"
+      name="article:tag"
+    />
+    <meta
       content="https://www.facebook.com/bbcnews"
       name="article:author"
     />
@@ -2936,11 +2944,15 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
       name="twitter:title"
     />
     <meta
-      content="History"
+      content="Entertainment"
       name="article:tag"
     />
     <meta
-      content="Addis Ababa"
+      content="Food"
+      name="article:tag"
+    />
+    <meta
+      content="Port Harcourt"
       name="article:tag"
     />
     <meta
@@ -5801,6 +5813,42 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
     <meta
       content="Azərbaycan Xalq Cümhuriyyəti - Fotolarda - BBC News Azərbaycanca"
       name="twitter:title"
+    />
+    <meta
+      content="History"
+      name="article:tag"
+    />
+    <meta
+      content="Azerbaijan"
+      name="article:tag"
+    />
+    <meta
+      content="Society"
+      name="article:tag"
+    />
+    <meta
+      content="Culture"
+      name="article:tag"
+    />
+    <meta
+      content="Politics"
+      name="article:tag"
+    />
+    <meta
+      content="Human rights"
+      name="article:tag"
+    />
+    <meta
+      content="Azerbaijan Democratic Republic 100th anniversary"
+      name="article:tag"
+    />
+    <meta
+      content="Caucasus"
+      name="article:tag"
+    />
+    <meta
+      content="Law and order"
+      name="article:tag"
     />
     <meta
       content="https://www.facebook.com/bbcnews"
