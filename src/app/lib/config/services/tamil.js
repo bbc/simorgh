@@ -138,7 +138,6 @@ export const service = {
         },
       },
       media: {
-        noJs: 'ஒலிபரப்பு மென்பொருள் உங்கள் கணினியில் இல்லை',
         audio: 'ஒலி',
         photogallery: 'படத் தொகுப்பு',
         video: 'காணொளி',

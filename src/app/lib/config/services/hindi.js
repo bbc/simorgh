@@ -137,7 +137,6 @@ export const service = {
         },
       },
       media: {
-        noJs: 'प्लेबैक आपके उपकरण पर नहीं हो पा रहा',
         audio: 'ऑडियो',
         photogallery: 'फ़ोटो गैलरी',
         video: 'वीडियो',
