@@ -138,6 +138,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'پخش این فایل در دستگاه شما پشتیبانی نمی شود.',
         audio: 'غږ',
         photogallery: 'د عکسونو البوم',
         video: 'ویډیو',

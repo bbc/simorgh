@@ -23,6 +23,7 @@ const {
   getAtiUrl,
   getEventInfo,
   getComponentInfo,
+  getThingAttributes,
 } = require('./index');
 
 let locServeCookieValue;
@@ -539,5 +540,33 @@ describe('getAtUserId', () => {
     Cookie.getJSON = jest.fn().mockReturnValue({ val });
     id = getAtUserId();
     expect(id).toBe(val);
+  });
+});
+
+describe('getThingAttributes', () => {
+  const data = {
+    metadata: {
+      tags: {
+        about: [{ thingId: 'foo bar' }, { thingId: 'baz' }],
+      },
+    },
+  };
+
+  it('should return thing names in good data', () => {
+    const thingAttributes = getThingAttributes('thingId', data);
+
+    expect(thingAttributes).toEqual('foo+bar~baz');
+  });
+
+  it('should return null if type not found', () => {
+    const thingAttributes = getThingAttributes('fooBar', data);
+
+    expect(thingAttributes).toEqual(null);
+  });
+
+  it('should return null if invalid data', () => {
+    const thingAttributes = getThingAttributes('fooBar', {});
+
+    expect(thingAttributes).toEqual(null);
   });
 });
