@@ -145,7 +145,8 @@ export const service = {
         },
       },
       media: {
-        noJs: "ਮੀਡੀਆ ਪਲੇਬੈਕ ਤੁਹਾਡੀ ਡਿਵਾਈਸ 'ਤੇ ਸਪੋਰਟ ਨਹੀਂ ਕਰਦਾ",
+        noJs:
+          'A reprodução deste formato de vídeo não é compatível com seu dispositivo',
         audio: 'Áudio',
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',
