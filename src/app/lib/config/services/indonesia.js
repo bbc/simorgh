@@ -135,6 +135,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Media playback tidak ada di perangkat Anda',
         audio: 'Audio',
         photogallery: 'Galeri Foto',
         video: 'Video',
