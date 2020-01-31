@@ -145,7 +145,6 @@ export const service = {
         },
       },
       media: {
-        noJs: "ਮੀਡੀਆ ਪਲੇਬੈਕ ਤੁਹਾਡੀ ਡਿਵਾਈਸ 'ਤੇ ਸਪੋਰਟ ਨਹੀਂ ਕਰਦਾ",
         audio: 'Áudio',
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',
