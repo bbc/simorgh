@@ -3,7 +3,10 @@ import {
   shouldMatchSnapshot,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
-import { articleDataNews, articleDataPersian } from '../../Article/fixtureData';
+import {
+  articleDataNews,
+  articleDataPersian,
+} from '#pages/Article/fixtureData';
 import WithData from '.';
 import frontPageDataPidgin from '#data/pidgin/frontpage';
 

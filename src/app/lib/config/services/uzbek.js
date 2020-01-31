@@ -8,7 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     lang: `uz-Cyrl`,
-    articleAuthor: `https://www.facebook.com/#!/bbcuzbek`,
+    articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Янгиланди',
     atiAnalyticsAppName: 'news-uzbek',
     atiAnalyticsProducerId: '96',
@@ -19,15 +19,15 @@ export const service = {
     defaultImageAltText: "BBC News O'zbek",
     dir: `ltr`,
     externalLinkText: ', ташқи',
-    imageCaptionOffscreenText: 'Сүрөттүн түшүндүрмөсү, ',
-    videoCaptionOffscreenText: 'Видеонун түшүндүрмөсү, ',
-    audioCaptionOffscreenText: 'Аудионун түшүндүрмөсү, ',
-    defaultCaptionOffscreenText: 'Сурат тагсўзи, ',
-    imageCopyrightOffscreenText: 'Сүрөттүн булагы, ',
+    imageCaptionOffscreenText: 'Сурат тагсўзи, ',
+    videoCaptionOffscreenText: 'Видео тагсўзи, ',
+    audioCaptionOffscreenText: 'Аудио тагсўзи, ',
+    defaultCaptionOffscreenText: 'Тагсўз, ',
+    imageCopyrightOffscreenText: 'Сурат манбаси, ',
     locale: `uz-UZ`,
     datetimeLocale: `uz`,
     service: 'uzbek',
-    serviceName: "News O'zbek",
+    serviceName: 'Uzbek',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcuzbek',
     twitterSite: '@bbcuzbek',
@@ -38,12 +38,13 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Бош саҳифа',
+    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'Баарын көрүү',
+      seeAll: 'Ҳаммасини кўринг',
       home: 'Бош саҳифа',
       currentPage: 'Жорий саҳифа',
       skipLinkText: 'Саҳифага ўтиш',
@@ -56,29 +57,30 @@ export const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404- Саҳифа топилмади',
+          title: 'Саҳифа топилмади',
           message:
-            'Бунга сабаб Сиз веб саҳифа адресини нотўғри ёзган бўлишингиз мумкин. Илтимос, текшириб қайтадан ёзинг',
+            'Узр, сизни қидираётган саҳифангизга олиб боролмаяпмиз. Марҳамат қилиб мана бу йўлларини кўринг:',
           solutions: [
             'url манзилини яна бир бор текшириб кўринг',
             'Браузерингиздаги "янгилаш" тугмасини босинг',
             'Ушбу саҳифани Би-би-сининг қидирув панелидан излаб кўринг',
           ],
           callToActionFirst: 'Бунга муқобил ',
-          callToActionLinkText: 'BBC Бош саҳифа',
+          callToActionLinkText: "BBC News O'zbek",
           callToActionLast: 'бош саҳифасига киринг',
           callToActionLinkUrl: 'https://www.bbc.com/uzbek',
         },
         500: {
           statusCode: '500',
-          title: '500- Хато',
-          message: 'Муаммо пайдо бўлди. Илтимос, саҳифани янгиланг',
+          title: 'Ички сервердаги хатолик',
+          message:
+            'Узр, ҳозирги пайтда сизни қидираётган саҳифангизга олиб боролмаяпмиз. Марҳамат қилиб мана бу йўлларини кўринг:',
           solutions: [
             'Браузерингиздаги "янгилаш" тугмасини босинг',
             'Яна бироз фурсатдан кейин ҳаракат қилиб кўринг',
           ],
           callToActionFirst: 'Бунга муқобил ',
-          callToActionLinkText: 'BBC Бош саҳифа',
+          callToActionLinkText: "BBC News O'zbek",
           callToActionLast: 'бош саҳифасига киринг',
           callToActionLinkUrl: 'https://www.bbc.com/uzbek',
         },
@@ -135,7 +137,7 @@ export const service = {
       },
       media: {
         audio: 'Аудио',
-        photogallery: 'Фотогалерея',
+        photogallery: 'Фото галерея',
         video: 'Видео',
         bbc_uzbek_radio: {
           title: 'BBC Uzbek Radio Dasturi',
@@ -146,12 +148,12 @@ export const service = {
           subtitle:
             'Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Тингланг',
+        watch: 'Кўринг',
         liveLabel: 'ЖОНЛИ ЭФИР',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        previousRadioShow: 'Аввалги радио дастур',
+        nextRadioShow: 'Кейинги радио дастур',
+        duration: 'Давомийлиги',
       },
     },
     brandSVG,
@@ -161,7 +163,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/uzbek/institutional-50220995',
         text: 'Нега сиз Би-би-сига ишонишингиз мумкин?',
       },
       externalLink: {
@@ -217,10 +219,6 @@ export const service = {
         url: '/uzbek/sport',
       },
       {
-        title: 'Маданият',
-        url: '/uzbek/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864',
-      },
-      {
         title: 'Илм-Фан',
         url: '/uzbek/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
       },
@@ -229,16 +227,8 @@ export const service = {
         url: '/uzbek/topics/31684f19-84d6-41f6-b033-7ae08098572a',
       },
       {
-        title: 'Аудио',
-        url: '/uzbek/media/audio',
-      },
-      {
         title: 'Видео',
         url: '/uzbek/media/video',
-      },
-      {
-        title: 'Суратлар',
-        url: '/uzbek/media/photogalleries',
       },
     ],
     navigationSection: 'Бўлимлар',

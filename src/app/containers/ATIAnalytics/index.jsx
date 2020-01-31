@@ -12,13 +12,26 @@ import { pageDataPropType } from '#models/propTypes/data';
 const ATIAnalytics = ({ data }) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
-  const { pageType, platform } = requestContext;
+  const { pageType, isAmp } = requestContext;
 
   const pageTypeHandlers = {
     article: buildArticleATIUrl,
     frontPage: buildFrontPageATIUrl,
     media: buildRadioATIUrl,
-    MAP: buildCpsAssetPageATIUrl,
+    MAP: () =>
+      buildCpsAssetPageATIUrl(
+        data,
+        requestContext,
+        serviceContext,
+        'article-media-asset',
+      ),
+    PGL: () =>
+      buildCpsAssetPageATIUrl(
+        data,
+        requestContext,
+        serviceContext,
+        'article-photo-gallery',
+      ),
   };
 
   const isValidPageType = Object.keys(pageTypeHandlers).includes(pageType);
@@ -32,7 +45,7 @@ const ATIAnalytics = ({ data }) => {
     serviceContext,
   );
 
-  return platform === 'amp' ? (
+  return isAmp ? (
     <AmpATIAnalytics pageviewParams={pageviewParams} />
   ) : (
     <CanonicalATIAnalytics pageviewParams={pageviewParams} />

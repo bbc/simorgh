@@ -42,6 +42,7 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated
+    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -198,7 +199,7 @@ export const service = {
     navigationSection: 'Plenti seshon',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/pidgin/institutional-48528766',
         text: 'Why you fit trust BBC News',
       },
       externalLink: {

@@ -34,7 +34,9 @@ const logger = nodeLogger(__filename);
 const publicDirectory = 'build/public';
 
 const cspInjectFun =
-  process.env.APP_ENV === 'local' ? localInjectHostCspHeader : injectCspHeader;
+  process.env.SIMORGH_APP_ENV === 'local'
+    ? localInjectHostCspHeader
+    : injectCspHeader;
 
 logger.debug(
   `Application outputting logs to directory "${process.env.LOG_DIR}"`,
@@ -48,10 +50,10 @@ class LoggerStream {
 }
 
 const constructDataFilePath = ({ pageType, service, id, variant = '' }) => {
-  const dataPath =
-    pageType === 'frontpage' || pageType === 'mostRead'
-      ? `${variant || 'index'}.json`
-      : `${id}${variant}.json`;
+  const pageTypes = ['frontpage', 'mostRead'];
+  const dataPath = pageTypes.includes(pageType)
+    ? `${variant || 'index'}.json`
+    : `${id}${variant}.json`;
 
   return path.join(process.cwd(), 'data', service, pageType, dataPath);
 };
@@ -85,7 +87,7 @@ server
 /*
  * Prod only logging - response time
  */
-if (process.env.APP_ENV !== 'local') {
+if (process.env.SIMORGH_APP_ENV !== 'local') {
   server.use(logResponseTime);
 }
 
@@ -101,7 +103,7 @@ const sendDataFile = (res, dataFilePath, next) => {
   });
 };
 
-if (process.env.APP_ENV === 'local') {
+if (process.env.SIMORGH_APP_ENV === 'local') {
   server
     .use((req, res, next) => {
       if (req.url.substr(-1) === '/' && req.url.length > 1)
@@ -211,13 +213,13 @@ server
     logger.info(`Path: [${urlPath}] URL: [${url}]`);
 
     try {
-      const { service, isAmp, route, variant } = getRouteProps(routes, url);
-      const data = await route.getInitialData(urlPath);
+      const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
+      const data = await route.getInitialData(url);
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
 
       // Temp log to test upstream change
-      logger.info(`Country code: ${headers['bbc-country'] || 'unknown!'}`);
+      logger.info(`Headers: ${JSON.stringify(headers, null, 2)}`);
 
       data.path = urlPath;
 

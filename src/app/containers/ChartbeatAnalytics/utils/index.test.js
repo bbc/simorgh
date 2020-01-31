@@ -235,6 +235,7 @@ describe('Chartbeat utilities', () => {
     isOnClient = true;
     it('should return config  for amp pages when page type is article and env is live', () => {
       const fixtureData = {
+        isAmp: true,
         platform: 'amp',
         pageType: 'article',
         data: {},
@@ -262,6 +263,7 @@ describe('Chartbeat utilities', () => {
 
     it('should return config  for canonical pages when page type is frontPage and env is not live', () => {
       const fixtureData = {
+        isAmp: false,
         platform: 'canonical',
         pageType: 'frontPage',
         data: {},

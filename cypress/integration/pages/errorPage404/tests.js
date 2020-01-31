@@ -37,15 +37,23 @@ export const testsThatFollowSmokeTestConfig = ({
 
     describe(`${service} Article Error Page Tests`, () => {
       before(() => {
-        cy.visit(config[service].pageTypes.errorPage404.path, {
+        const { path } = config[service].pageTypes.errorPage404;
+        cy.testResponseCodeAndType(path, 404, 'text/html');
+        cy.visit(path, {
           failOnStatusCode: false,
         });
       });
 
-      it(`should display a ${appConfig[service][variant].translations.error[404].statusCode} error message on screen`, () => {
+      it(`should display a ${
+        appConfig[config[service].name][variant].translations.error[404]
+          .statusCode
+      } error message on screen`, () => {
         cy.get('h1').should(
           'contain',
-          `${appConfig[service][variant].translations.error[404].title}`,
+          `${
+            appConfig[config[service].name][variant].translations.error[404]
+              .title
+          }`,
         );
       });
 
@@ -54,7 +62,10 @@ export const testsThatFollowSmokeTestConfig = ({
           cy.get('a').should(
             'have.attr',
             'href',
-            `${appConfig[service][variant].translations.error[404].callToActionLinkUrl}`,
+            `${
+              appConfig[config[service].name][variant].translations.error[404]
+                .callToActionLinkUrl
+            }`,
           );
         });
       });
@@ -62,9 +73,14 @@ export const testsThatFollowSmokeTestConfig = ({
       it('should have correct title & description metadata', () => {
         /* Note that description & title tests for all other page types are in /pages/testsForAllPages.js */
         const description =
-          appConfig[service][variant].translations.error[404].title;
-        const { title } = appConfig[service][variant].translations.error[404];
-        const pageTitle = `${title} - ${appConfig[service][variant].brandName}`;
+          appConfig[config[service].name][variant].translations.error[404]
+            .title;
+        const { title } = appConfig[config[service].name][
+          variant
+        ].translations.error[404];
+        const pageTitle = `${title} - ${
+          appConfig[config[service].name][variant].brandName
+        }`;
 
         cy.get('head').within(() => {
           cy.title().should('eq', pageTitle);
@@ -95,28 +111,38 @@ export const testsThatFollowSmokeTestConfig = ({
         cy.get('html').should(
           'have.attr',
           'lang',
-          appConfig[service][variant].lang,
+          appConfig[config[service].name][variant].lang,
         );
       });
     });
     if (envConfig.standaloneErrorPages) {
       describe(`${service} error page routes`, () => {
         it(`/${service}/404 should have response code 200`, () => {
-          cy.testResponseCodeAndType(`/${service}/404`, 200, 'text/html');
-          cy.visit(`${service}/404`)
+          cy.testResponseCodeAndType(
+            `/${config[service].name}/404`,
+            200,
+            'text/html',
+          );
+          cy.visit(`${config[service].name}/404`)
             .get('[class^="StatusCode"]')
             .should(
               'contain',
-              appConfig[service][variant].translations.error[404].statusCode,
+              appConfig[config[service].name][variant].translations.error[404]
+                .statusCode,
             );
         });
         it(`/${service}/500 should have response code 200`, () => {
-          cy.testResponseCodeAndType(`/${service}/500`, 200, 'text/html');
-          cy.visit(`${service}/500`)
+          cy.testResponseCodeAndType(
+            `/${config[service].name}/500`,
+            200,
+            'text/html',
+          );
+          cy.visit(`${config[service].name}/500`)
             .get('[class^="StatusCode"]')
             .should(
               'contain',
-              appConfig[service][variant].translations.error[500].statusCode,
+              appConfig[config[service].name][variant].translations.error[500]
+                .statusCode,
             );
         });
       });

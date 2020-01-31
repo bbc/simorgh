@@ -1,7 +1,10 @@
 import React, { useContext } from 'react';
-import { number } from 'prop-types';
+import { number, bool, string } from 'prop-types';
 import Timestamp from '@bbc/psammead-timestamp-container';
-import { PopOutGridItemMedium } from '#lib/styledGrid';
+import {
+  PopOutGridItemMedium,
+  GridItemConstrainedMedium,
+} from '#lib/styledGrid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { formatDateNumeric } from './timeFormats';
 import {
@@ -11,7 +14,13 @@ import {
   isValidDateTime,
 } from './helpers';
 
-const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
+const ArticleTimestamp = ({
+  firstPublished,
+  lastPublished,
+  popOut,
+  minutesTolerance,
+  className,
+}) => {
   const {
     articleTimestampPrefix,
     datetimeLocale,
@@ -46,19 +55,32 @@ const ArticleTimestamp = ({ firstPublished, lastPublished }) => {
     prefix: articleTimestampPrefix,
   };
 
+  const Wrapper = popOut ? PopOutGridItemMedium : GridItemConstrainedMedium;
+
+  const timeDifferenceMinutes = (lastPublished - firstPublished) / 1000 / 60;
+
   return (
-    <PopOutGridItemMedium>
+    <Wrapper className={className}>
       <Timestamp {...timestampProps} {...firstPublishedProps} />
-      {firstPublished !== lastPublished && (
+      {timeDifferenceMinutes > minutesTolerance && (
         <Timestamp {...timestampProps} {...lastPublishedProps} />
       )}
-    </PopOutGridItemMedium>
+    </Wrapper>
   );
 };
 
 ArticleTimestamp.propTypes = {
   firstPublished: number.isRequired,
   lastPublished: number.isRequired,
+  popOut: bool,
+  minutesTolerance: number,
+  // eslint-disable-next-line react/require-default-props
+  className: string,
+};
+
+ArticleTimestamp.defaultProps = {
+  popOut: true,
+  minutesTolerance: 0,
 };
 
 export default ArticleTimestamp;

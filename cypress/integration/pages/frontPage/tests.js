@@ -69,7 +69,8 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
       });
 
       describe('Section', () => {
-        it('should be labelled by a visible section label', () => {
+        it('should be labelled by a visible section label for 1008px & 320px layouts', () => {
+          cy.viewport(1008, 768);
           cy.get('section')
             .should('have.length.of.at.least', 1)
             .should('be.visible')
@@ -89,7 +90,8 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
             });
         });
 
-        it('should contain at least one story promo', () => {
+        it('should contain at least one story promo for 1008px & 320px layouts', () => {
+          cy.viewport(1008, 768);
           cy.get('section').within(() => {
             cy.get('img')
               .should('have.length.of.at.least', 1)
@@ -123,7 +125,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('be.visible')
               .find('a')
               .should('have.attr', 'href');
-
+            // This check would only run for the top stories section and not any other sections
             cy.get('p').then($el => {
               if ($el.length > 0) {
                 cy.get('p')
@@ -186,7 +188,10 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
                         .eq(0)
                         .then($el => {
                           expect($el.text()).includes(
-                            `${appConfig[service].default.translations.relatedContent}`,
+                            `${
+                              appConfig[config[service].name].default
+                                .translations.relatedContent
+                            }`,
                           );
                         });
 

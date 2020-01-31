@@ -3,8 +3,10 @@ import path from 'ramda/src/path';
 import nodeLogger from '#lib/logger.node';
 import preprocess from '#lib/utilities/preprocessor';
 import onClient from '#lib/utilities/onClient';
+import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
 import getBaseUrl from './utils/getBaseUrl';
 import getPreprocessorRules from './utils/getPreprocessorRules';
+import isLive from '#lib/utilities/isLive';
 
 const logger = nodeLogger(__filename);
 const STATUS_CODE_OK = 200;
@@ -18,7 +20,15 @@ const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)
   : process.env.SIMORGH_BASE_URL;
 
-const getUrl = pathname => `${baseUrl}${pathname.replace(ampRegex, '')}.json`;
+export const getUrl = pathname => {
+  if (!pathname) return '';
+
+  const params = isLive() ? '' : getQueryString(pathname);
+
+  const basePath = getUrlPath(pathname);
+
+  return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`;
+};
 
 const handleResponse = async response => {
   const { status } = response;

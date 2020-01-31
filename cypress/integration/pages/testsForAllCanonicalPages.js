@@ -1,4 +1,5 @@
 import envConfig from '../../support/config/envs';
+import config from '../../support/config/services';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -28,7 +29,7 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
           if ($p.attr('src').includes(envConfig.assetOrigin)) {
             return expect($p.attr('src')).to.match(
               new RegExp(
-                `(\\/static\\/js\\/(main|vendor|${service})-\\w+\\.\\w+\\.js)`,
+                `(\\/static\\/js\\/(main|vendor|${config[service].name})-\\w+\\.\\w+\\.js)`,
                 'g',
               ),
             );
@@ -46,7 +47,7 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
               .attr('src')
               .match(
                 new RegExp(
-                  `(\\/static\\/js\\/${service}-\\w+\\.\\w+\\.js)`,
+                  `(\\/static\\/js\\/${config[service].name}-\\w+\\.\\w+\\.js)`,
                   'g',
                 ),
               );

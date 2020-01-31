@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, arrayOf, shape } from 'prop-types';
+import { string, arrayOf, oneOf, shape } from 'prop-types';
 import styled from 'styled-components';
 import InlineLink from '@bbc/psammead-inline-link';
 import Paragraph from '@bbc/psammead-paragraph';
@@ -11,8 +11,8 @@ import {
   getParagon,
   GEL_FF_REITH_SANS,
 } from '@bbc/gel-foundations/typography';
-import { GhostGrid, GridItemConstrainedMedium } from '#lib/styledGrid';
 import idSanitiser from '#lib/utilities/idSanitiser';
+import Grid, { GhostGelPageGrid } from '#app/components/Grid';
 
 const StatusCode = styled.span`
   ${props => (props.script ? getParagon(props.script) : '')};
@@ -30,8 +30,9 @@ const Heading = styled.h1`
   margin-top: 0;
 `;
 
-const LongGridItemConstrainedMedium = styled(GridItemConstrainedMedium)`
+const StyledGhostGelPageGrid = styled(GhostGelPageGrid)`
   padding-bottom: 4rem;
+  flex-grow: 1;
 `;
 
 const CustomParagraph = styled(Paragraph)`
@@ -47,41 +48,73 @@ const ErrorPage = ({
   callToActionLinkText,
   callToActionLinkUrl,
   callToActionLast,
+  dir,
   script,
   service,
 }) => (
-  <main role="main">
-    <GhostGrid>
-      <LongGridItemConstrainedMedium>
-        <StatusCode script={script}>{statusCode}</StatusCode>
-        <Heading id="content" script={script} service={service} tabIndex="-1">
-          {title}
-        </Heading>
-        <CustomParagraph script={script} service={service}>
-          {message}
-        </CustomParagraph>
-        <ul>
-          {solutions.map(text => (
-            <CustomParagraph
-              script={script}
-              service={service}
-              as="li"
-              key={idSanitiser(text)}
-            >
-              {text}
-            </CustomParagraph>
-          ))}
-        </ul>
-        <CustomParagraph script={script} service={service}>
-          {callToActionFirst}
-          <InlineLink href={callToActionLinkUrl}>
-            {callToActionLinkText}
-          </InlineLink>
-          {callToActionLast}
-        </CustomParagraph>
-      </LongGridItemConstrainedMedium>
-    </GhostGrid>
-  </main>
+  <StyledGhostGelPageGrid
+    forwardedAs="main"
+    role="main"
+    dir={dir}
+    columns={{
+      group0: 6,
+      group1: 6,
+      group2: 6,
+      group3: 6,
+      group4: 8,
+      group5: 20,
+    }}
+    enableGelGutters
+  >
+    <Grid
+      dir={dir}
+      item
+      startOffset={{
+        group0: 1,
+        group1: 1,
+        group2: 1,
+        group3: 1,
+        group4: 2,
+        group5: 5,
+      }}
+      columns={{
+        group0: 6,
+        group1: 6,
+        group2: 6,
+        group3: 6,
+        group4: 6,
+        group5: 12,
+      }}
+      margins={{ group0: true, group1: true, group2: true, group3: true }}
+    >
+      <StatusCode script={script}>{statusCode}</StatusCode>
+      <Heading id="content" script={script} service={service} tabIndex="-1">
+        {title}
+      </Heading>
+      <CustomParagraph script={script} service={service}>
+        {message}
+      </CustomParagraph>
+      <ul>
+        {solutions.map(text => (
+          <CustomParagraph
+            script={script}
+            service={service}
+            as="li"
+            key={idSanitiser(text)}
+          >
+            {text}
+          </CustomParagraph>
+        ))}
+      </ul>
+      <CustomParagraph script={script} service={service}>
+        {callToActionFirst}
+        <InlineLink href={callToActionLinkUrl}>
+          {callToActionLinkText}
+        </InlineLink>
+        {callToActionLast}
+      </CustomParagraph>
+    </Grid>
+  </StyledGhostGelPageGrid>
 );
 
 ErrorPage.propTypes = {
@@ -93,6 +126,7 @@ ErrorPage.propTypes = {
   callToActionLinkText: string.isRequired,
   callToActionLinkUrl: string.isRequired,
   callToActionLast: string,
+  dir: oneOf(['ltr', 'rtl']).isRequired,
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
 };

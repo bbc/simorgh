@@ -6,6 +6,7 @@ jest.mock('#lib/utilities/preprocessor', () => jest.fn());
 preprocess.mockImplementation(data => data);
 
 const fetchData = require('./index').default;
+const { getUrl } = require('./index');
 
 describe('fetchData', () => {
   const mockSuccessfulResponse = {
@@ -49,7 +50,7 @@ describe('fetchData', () => {
     jest.clearAllMocks();
   });
 
-  describe('Succesful fetch', () => {
+  describe('Successful fetch', () => {
     it('should call fetch with correct url', async () => {
       await callfetchData({});
 
@@ -293,7 +294,9 @@ describe('fetchData', () => {
 
   describe('Request returns 200 status code, but invalid JSON', () => {
     it('should return a 502 error code', async () => {
-      const response = await callfetchData({ mockFetch: mockFetchInvalidJSON });
+      const response = await callfetchData({
+        mockFetch: mockFetchInvalidJSON,
+      });
 
       expect(preprocess).not.toHaveBeenCalled();
 
@@ -334,6 +337,91 @@ describe('fetchData', () => {
         status: 502,
         error: Error(),
       });
+    });
+  });
+});
+
+describe('getUrl', () => {
+  it('should return empty string when pathname empty', () => {
+    expect(getUrl('')).toEqual('');
+  });
+
+  it('should return empty string when pathname null', () => {
+    expect(getUrl(null)).toEqual('');
+  });
+
+  it('should return empty string when pathname undefined', () => {
+    expect(getUrl(undefined)).toEqual('');
+  });
+
+  it('should return url', () => {
+    expect(getUrl('/test/article')).toEqual(
+      'http://localhost/test/article.json',
+    );
+  });
+
+  it('should remove .amp from url', () => {
+    expect(getUrl('/test/article.amp')).toEqual(
+      'http://localhost/test/article.json',
+    );
+  });
+
+  describe('where application environment', () => {
+    describe('is not live', () => {
+      beforeEach(() => {
+        process.env.SIMORGH_APP_ENV = 'not-live';
+      });
+
+      it('should append single query string parameter', () => {
+        expect(getUrl('/test/article?param=test')).toEqual(
+          'http://localhost/test/article.json?param=test',
+        );
+      });
+
+      it('should append multiple query string parameters', () => {
+        expect(getUrl('/test/article?first=1&second=2')).toEqual(
+          'http://localhost/test/article.json?first=1&second=2',
+        );
+      });
+
+      it('should remove .amp from url with params', () => {});
+      expect(getUrl('/test/article.amp?param=test')).toEqual(
+        'http://localhost/test/article.json?param=test',
+      );
+    });
+
+    describe('is live', () => {
+      beforeEach(() => {
+        process.env.SIMORGH_APP_ENV = 'live';
+      });
+
+      it('should remove single query string parameter from url', () => {
+        expect(getUrl('/test/article?param=test')).toEqual(
+          'http://localhost/test/article.json',
+        );
+      });
+
+      it('should remove multiple query string parameter from url', () => {
+        expect(getUrl('/test/article?first=1&second=2')).toEqual(
+          'http://localhost/test/article.json',
+        );
+      });
+
+      it('should remove .amp and single query string parameter from url', () => {
+        expect(getUrl('/test/article.amp?param=test')).toEqual(
+          'http://localhost/test/article.json',
+        );
+      });
+
+      it('should remove .amp and multiple query string parameters from url', () => {
+        expect(getUrl('/test/article.amp?first=1&second=2')).toEqual(
+          'http://localhost/test/article.json',
+        );
+      });
+    });
+
+    afterAll(() => {
+      delete process.env.SIMORGH_APP_ENV;
     });
   });
 });

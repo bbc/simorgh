@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import {
   shouldMatchSnapshot,
   isNull,
@@ -8,10 +9,8 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import CpsAssetMediaPlayerContainer from '.';
-import {
-  validAresMediaVideoBlock,
-  defaultToggles,
-} from '../MediaPlayer/fixtureData';
+import { defaultToggles } from '../MediaPlayer/fixtureData';
+import videoBlock from './fixtures';
 
 const GenerateMediaPlayer = ({
   /* eslint-disable react/prop-types */
@@ -33,22 +32,20 @@ const GenerateMediaPlayer = ({
       <ToggleContext.Provider
         value={{ toggleState: defaultToggles, toggleDispatch: jest.fn() }}
       >
-        <CpsAssetMediaPlayerContainer blocks={blocks} assetUri={assetUri} />
+        <BrowserRouter>
+          <CpsAssetMediaPlayerContainer blocks={blocks} assetUri={assetUri} />
+        </BrowserRouter>
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
 );
 
 describe('MediaPlayer', () => {
-  beforeEach(() => {
-    process.env.SIMORGH_EMBEDS_BASE_URL = 'https://embed-host.bbc.com';
-  });
-
   shouldMatchSnapshot(
     'render the canonical player without a placeholder',
     <GenerateMediaPlayer
       platform="canonical"
-      blocks={[validAresMediaVideoBlock]}
+      blocks={[videoBlock]}
       assetUri="/pidgin/123456789"
     />,
   );
@@ -57,7 +54,7 @@ describe('MediaPlayer', () => {
     'render the amp player',
     <GenerateMediaPlayer
       platform="amp"
-      blocks={[validAresMediaVideoBlock]}
+      blocks={[videoBlock]}
       assetUri="/pidgin/123456789"
     />,
   );
@@ -65,9 +62,6 @@ describe('MediaPlayer', () => {
   suppressPropWarnings(['assetUri']);
   isNull(
     'is Null when assetUri is not provided',
-    <GenerateMediaPlayer
-      platform="canonical"
-      blocks={[validAresMediaVideoBlock]}
-    />,
+    <GenerateMediaPlayer platform="canonical" blocks={[videoBlock]} />,
   );
 });

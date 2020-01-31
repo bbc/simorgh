@@ -35,7 +35,7 @@ export const testsThatFollowSmokeTestConfig = ({
         cy.get('meta[name="article:author"]').should(
           'have.attr',
           'content',
-          appConfig[service][variant].articleAuthor,
+          appConfig[config[service].name][variant].articleAuthor,
         );
       });
 
@@ -149,11 +149,7 @@ export const testsThatFollowSmokeTestConfig = ({
         );
       });
 
-      if (
-        serviceHasInlineLink(service) &&
-        (Cypress.env('APP_ENV') === 'local' ||
-          Cypress.env('APP_ENV') === 'test')
-      ) {
+      if (serviceHasInlineLink(service) && Cypress.env('APP_ENV') === 'local') {
         it('should have an inlink link to an article page', () => {
           cy.get('[class^="InlineLink"]')
             .eq(1)
@@ -184,7 +180,10 @@ export const testsThatFollowSmokeTestConfig = ({
               if (lastPublished !== firstPublished) {
                 cy.get('time')
                   .eq(1)
-                  .should('contain', appConfig[service].articleTimestampPrefix);
+                  .should(
+                    'contain',
+                    appConfig[config[service].name].articleTimestampPrefix,
+                  );
               }
             },
           );
