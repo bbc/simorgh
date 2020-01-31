@@ -136,7 +136,6 @@ export const service = {
         },
       },
       media: {
-        noJs: 'તમારું ડિવાઇસ મીડિયા પ્લેબૅક સપોર્ટ નથી કરતું',
         audio: 'ઓડિયો',
         photogallery: 'ફોટો ગૅલરી',
         video: 'વીડિયો',

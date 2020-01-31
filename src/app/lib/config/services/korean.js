@@ -131,7 +131,6 @@ export const service = {
         },
       },
       media: {
-        noJs: '사용 기기에서 미디어 재생이 지원되지 않습니다',
         audio: '오디오',
         photogallery: '사진 갤러리',
         video: '비디오',

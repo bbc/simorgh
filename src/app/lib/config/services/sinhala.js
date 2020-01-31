@@ -140,7 +140,6 @@ export const service = {
         },
       },
       media: {
-        noJs: "Multimedia o'ynash bu qurilmada dastaklanmaydi",
         audio: 'හඬ',
         photogallery: 'ඡායාරූප ගැලරිය ',
         video: 'වීඩියෝ',

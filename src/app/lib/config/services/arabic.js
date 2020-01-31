@@ -142,7 +142,6 @@ export const service = {
         },
       },
       media: {
-        noJs: 'جهازك لا يدعم تشغيل الفيديو',
         audio: 'تسجيل صوتي',
         photogallery: 'معرض الصور',
         video: 'فيديو',
