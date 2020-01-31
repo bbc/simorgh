@@ -143,7 +143,6 @@ export const service = {
         },
       },
       media: {
-        noJs: '',
         audio: 'Audio',
         photogallery: 'Galería de fotos',
         video: 'Video',

@@ -138,7 +138,6 @@ export const service = {
         },
       },
       media: {
-        noJs: 'Àwọn àmúyẹ fun gbígbọ́ orin ko le ṣiṣẹ lori ẹ̀rọ rẹ',
         audio: 'Orin',
         photogallery: 'Àtẹ Àwòrán',
         video: 'Fídíò',
