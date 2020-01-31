@@ -146,39 +146,6 @@ const genServices = appEnv => ({
       },
     },
   },
-  archive: {
-    name: 'archive',
-    font: 'Reith',
-    isWorldService: false,
-    variant: 'default',
-    pageTypes: {
-      articles: {
-        path: isLive(appEnv)
-          ? '/archive/articles/c413ngjk87wo'
-          : '/archive/articles/cqv9w00mgjpo',
-        smoke: false,
-      },
-      errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/archive/articles/c123456abcdo',
-        smoke: false,
-      },
-      frontPage: {
-        path: undefined,
-        smoke: false,
-      },
-      liveRadio: {
-        path: undefined,
-        smoke: false,
-      },
-      mediaAssetPage: {
-        path: undefined,
-        smoke: false,
-      },
-    },
-  },
   azeri: {
     name: 'azeri',
     font: undefined,
@@ -387,7 +354,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       liveRadio: {
-        path: isLive(appEnv) ? undefined : '/hausa/bbc_hausa_radio/liveradio',
+        path: '/hausa/bbc_hausa_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
@@ -1073,7 +1040,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       liveRadio: {
-        path: isLive(appEnv) ? undefined : '/somali/bbc_somali_radio/liveradio',
+        path: '/somali/bbc_somali_radio/liveradio',
         smoke: false,
       },
       mediaAssetPage: {
