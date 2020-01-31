@@ -33,25 +33,10 @@ const config = {
     alwaysCheckForFallback: true,
   },
   local: {
-    baseUrl: 'http://localhost',
-    dataUrl: 'http://localhost',
-    assetUrl: 'http://localhost',
-    assetOrigin: 'http://localhost',
-    atiUrl: 'https://logws1363.ati-host.net?',
-    chartbeatEnabled: false,
-    avEmbedBaseUrl: 'https://polling.test.bbc.co.uk',
-    standaloneErrorPages: true,
-    alwaysCheckForFallback: false,
-  },
-  heroku: {
-    baseUrl: `${process.env.SIMORGH_PROTOCOL || 'http'}://${process.env
-      .SIMORGH_HOST_URL || 'localhost'}.com`,
-    dataUrl: `${process.env.SIMORGH_PROTOCOL || 'http'}://${process.env
-      .SIMORGH_HOST_URL || 'localhost'}.com`,
-    assetUrl: `${process.env.SIMORGH_PROTOCOL || 'http'}://${process.env
-      .SIMORGH_HOST_URL || 'localhost'}.com`,
-    assetOrigin: `${process.env.SIMORGH_PROTOCOL || 'http'}://${process.env
-      .SIMORGH_HOST_URL || 'localhost'}.com`,
+    baseUrl: 'http://localhost:7080',
+    dataUrl: 'http://localhost:7080',
+    assetUrl: 'http://localhost:7080',
+    assetOrigin: 'http://localhost:7080',
     atiUrl: 'https://logws1363.ati-host.net?',
     chartbeatEnabled: false,
     avEmbedBaseUrl: 'https://polling.test.bbc.co.uk',
