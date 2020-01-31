@@ -262,4 +262,22 @@ export const getComponentInfo = ({ result, componentName, componentData }) => {
   };
 };
 
+export const getThingAttributes = (attribute, articleData) => {
+  const things = pathOr(null, ['metadata', 'tags', 'about'], articleData);
+
+  if (things) {
+    const attributes = [];
+
+    things.forEach(thing => {
+      if (thing[attribute]) {
+        attributes.push(thing[attribute].trim().replace(/\s/g, '+'));
+      }
+    });
+
+    return attributes.join('~') || null;
+  }
+
+  return null;
+};
+
 export const LIBRARY_VERSION = 'simorgh';

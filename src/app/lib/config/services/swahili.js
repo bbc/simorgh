@@ -135,6 +135,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Huwezi kusikiliza tena',
         audio: 'Sauti',
         photogallery: 'Mkusanyiko wa picha',
         video: 'Video',
