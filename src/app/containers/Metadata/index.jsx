@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string, node } from 'prop-types';
+import { string, node, shape, arrayOf } from 'prop-types';
 import Helmet from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -28,11 +28,18 @@ const iconSizes = {
   icon: ['72x72', '96x96', '192x192'],
 };
 
+const renderTags = tags =>
+  tags.map(({ thingLabel: content }) => (
+    <meta name="article:tag" content={content} key={content} />
+  ));
+
 const MetadataContainer = ({
   title,
   lang,
   description,
   openGraphType,
+  aboutTags,
+  mentionsTags,
   image,
   imageAltText,
   children,
@@ -136,6 +143,8 @@ const MetadataContainer = ({
       <meta name="twitter:image:src" content={metaImage} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={pageTitle} />
+      {Boolean(aboutTags && aboutTags.length) && renderTags(aboutTags)}
+      {Boolean(mentionsTags && mentionsTags.length) && renderTags(mentionsTags)}
       <link rel="apple-touch-icon" href={appleTouchIcon} />
       {getIconLinks(service, iconSizes)}
       <link
@@ -148,17 +157,32 @@ const MetadataContainer = ({
   );
 };
 
+const tagPropTypes = shape({
+  thingUri: string,
+  topicId: string,
+  topicName: string,
+  curationType: arrayOf(string),
+  thingId: string,
+  thingLabel: string,
+  thingType: arrayOf(string),
+  thingSameAs: arrayOf(string),
+});
+
 MetadataContainer.propTypes = {
   title: string.isRequired,
   lang: string.isRequired,
   description: string.isRequired,
   openGraphType: string.isRequired,
+  aboutTags: arrayOf(tagPropTypes),
+  mentionsTags: arrayOf(tagPropTypes),
   image: string,
   imageAltText: string,
   children: node,
 };
 
 MetadataContainer.defaultProps = {
+  aboutTags: [],
+  mentionsTags: [],
   image: null,
   imageAltText: null,
   children: null,
