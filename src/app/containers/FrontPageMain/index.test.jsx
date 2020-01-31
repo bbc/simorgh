@@ -2,7 +2,7 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import FrontPageMain from '.';
-import frontPageDataPidgin from '#data/pidgin/frontpage';
+import frontPageDataPidgin from '#data/pidgin/frontpage/index-light.json';
 import preprocessor from '#lib/utilities/preprocessor';
 import { indexPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
 import { RequestContextProvider } from '#contexts/RequestContext';
