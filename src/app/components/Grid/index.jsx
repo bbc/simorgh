@@ -37,17 +37,14 @@ export const GhostGelPageGrid = styled(Grid)`
   background-color: ${C_GHOST};
 `;
 
-export const GridMaxWidthGroup5 = styled(Grid)`
+export const GridMaxWidthGroup4 = styled(Grid)`
   margin: 0 auto;
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     max-width: ${group4WrapperMaxWidth};
   }
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    max-width: ${group5WrapperMaxWidth};
-  }
 `;
 
-export const FrontPageGrid = styled(GridMaxWidthGroup5)`
+export const FrontPageGrid = styled(GridMaxWidthGroup4)`
   padding-bottom: ${GEL_SPACING_QUAD};
   margin-top: ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {

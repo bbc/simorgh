@@ -149,12 +149,6 @@ exports[`Grid should render GridMaxWidthGroup5 with columns 1`] = `
   }
 }
 
-@media (min-width:80rem) {
-  .c1 {
-    max-width: 80rem;
-  }
-}
-
 <div
   class="c0 c1"
   dir="ltr"

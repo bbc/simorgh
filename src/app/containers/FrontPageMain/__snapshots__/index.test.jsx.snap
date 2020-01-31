@@ -585,12 +585,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   }
 }
 
-@media (min-width:80rem) {
-  .c2 {
-    max-width: 80rem;
-  }
-}
-
 @media (min-width:25rem) {
   .c2 {
     margin-top: 1rem;
