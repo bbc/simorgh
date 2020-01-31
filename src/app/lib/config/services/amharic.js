@@ -133,6 +133,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'የእርሶ መሳሪያ ሚዲያ ፕሌይ ባክን ማጫወት ኣልተቻለም።',
         audio: 'ድምጽ',
         photogallery: 'የፎቶ መድብሎች',
         video: 'ቪዲዮ',
