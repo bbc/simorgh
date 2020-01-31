@@ -103,7 +103,7 @@ const sendDataFile = (res, dataFilePath, next) => {
   });
 };
 
-if (process.env.SIMORGH_APP_ENV !== 'local') {
+if (process.env.SIMORGH_APP_ENV === 'local') {
   server
     .use((req, res, next) => {
       if (req.url.substr(-1) === '/' && req.url.length > 1)
