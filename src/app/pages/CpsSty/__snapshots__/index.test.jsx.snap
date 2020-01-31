@@ -265,7 +265,6 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 .c33 {
-  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -680,6 +679,12 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 @media (min-width:37.5rem) {
   .c26 {
     margin-top: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c33 {
+    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
@@ -1559,7 +1564,6 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c35 {
-  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -1992,6 +1996,12 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) {
   .c28 {
     margin-top: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c35 {
+    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 

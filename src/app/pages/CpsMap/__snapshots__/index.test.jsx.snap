@@ -998,17 +998,17 @@ exports[`CPS MAP Page should render component 1`] = `
                   role="list"
                 >
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+                    class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
                     role="listitem"
                   >
                     <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
+                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
                     >
                       <div
-                        class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
+                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
                       >
                         <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
+                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                         >
                           <div
                             class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
@@ -1018,25 +1018,25 @@ exports[`CPS MAP Page should render component 1`] = `
                             />
                           </div>
                           <div
-                            class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
+                            class="InlineMediaIndicator-sc-1dvfmi3-2 hEHXpJ"
                           />
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
+                        class="TextGridItem-sc-1lkbq5i-0 eyxIXC"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-4 cWuUJx"
+                          class="Headline-sc-1dvfmi3-3 bunGcv"
                         >
                           <a
-                            class="Link-sc-1dvfmi3-7 iSHpco"
+                            class="Link-sc-1dvfmi3-5 yQgSu"
                             href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                           >
                             Police Arrest 3 ontop Anambra Church Attack
                           </a>
                         </h3>
                         <p
-                          class="Summary-sc-1dvfmi3-5 itgvLR"
+                          class="Summary-sc-1dvfmi3-4 eaCWBB"
                         >
                           Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
                         </p>
@@ -1050,17 +1050,17 @@ exports[`CPS MAP Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+                    class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
                     role="listitem"
                   >
                     <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
+                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
                     >
                       <div
-                        class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
+                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
                       >
                         <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
+                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                         >
                           <div
                             class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
@@ -1070,25 +1070,25 @@ exports[`CPS MAP Page should render component 1`] = `
                             />
                           </div>
                           <div
-                            class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
+                            class="InlineMediaIndicator-sc-1dvfmi3-2 hEHXpJ"
                           />
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
+                        class="TextGridItem-sc-1lkbq5i-0 eyxIXC"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-4 cWuUJx"
+                          class="Headline-sc-1dvfmi3-3 bunGcv"
                         >
                           <a
-                            class="Link-sc-1dvfmi3-7 iSHpco"
+                            class="Link-sc-1dvfmi3-5 yQgSu"
                             href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                           >
                             Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
                           </a>
                         </h3>
                         <p
-                          class="Summary-sc-1dvfmi3-5 itgvLR"
+                          class="Summary-sc-1dvfmi3-4 eaCWBB"
                         >
                           The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.
                         </p>
@@ -1102,23 +1102,23 @@ exports[`CPS MAP Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+                    class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
                     role="listitem"
                   >
                     <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
+                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
                     >
                       <div
-                        class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
+                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
                       >
                         <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
+                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                         >
                           <div
                             class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                           />
                           <div
-                            class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
+                            class="InlineMediaIndicator-sc-1dvfmi3-2 hEHXpJ"
                           >
                             <div
                               aria-hidden="true"
@@ -1150,13 +1150,13 @@ exports[`CPS MAP Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
+                        class="TextGridItem-sc-1lkbq5i-0 eyxIXC"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-4 cWuUJx"
+                          class="Headline-sc-1dvfmi3-3 bunGcv"
                         >
                           <a
-                            class="Link-sc-1dvfmi3-7 iSHpco"
+                            class="Link-sc-1dvfmi3-5 yQgSu"
                             href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                           >
                             <span
@@ -1174,7 +1174,7 @@ exports[`CPS MAP Page should render component 1`] = `
                           </a>
                         </h3>
                         <p
-                          class="Summary-sc-1dvfmi3-5 itgvLR"
+                          class="Summary-sc-1dvfmi3-4 eaCWBB"
                         >
                           This na some of the picture wey our eye see as Kenya people go vote for election today
                         </p>
@@ -1188,17 +1188,17 @@ exports[`CPS MAP Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+                    class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
                     role="listitem"
                   >
                     <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
+                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
                     >
                       <div
-                        class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
+                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
                       >
                         <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
+                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                         >
                           <div
                             class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
@@ -1208,7 +1208,7 @@ exports[`CPS MAP Page should render component 1`] = `
                             />
                           </div>
                           <div
-                            class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
+                            class="InlineMediaIndicator-sc-1dvfmi3-2 hEHXpJ"
                           >
                             <div
                               aria-hidden="true"
@@ -1244,13 +1244,13 @@ exports[`CPS MAP Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
+                        class="TextGridItem-sc-1lkbq5i-0 eyxIXC"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-4 cWuUJx"
+                          class="Headline-sc-1dvfmi3-3 bunGcv"
                         >
                           <a
-                            class="Link-sc-1dvfmi3-7 iSHpco"
+                            class="Link-sc-1dvfmi3-5 yQgSu"
                             href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                           >
                             <span
@@ -1273,7 +1273,7 @@ exports[`CPS MAP Page should render component 1`] = `
                           </a>
                         </h3>
                         <p
-                          class="Summary-sc-1dvfmi3-5 itgvLR"
+                          class="Summary-sc-1dvfmi3-4 eaCWBB"
                         >
                           All di local and world tori wey you suppose know in 60 seconds!
                         </p>

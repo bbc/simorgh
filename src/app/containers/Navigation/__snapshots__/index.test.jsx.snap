@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Navigation Container snapshots should render a Navigation with igbo links correctly 1`] = `
-.c8 {
+.c7 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -20,62 +20,13 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
 }
 
 .c2 {
-  position: absolute;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  padding: 0.75rem 0.5rem;
-  background-color: #ffffff;
-  border: 0.1875rem solid #000;
-  color: #333;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c2:focus {
-  -webkit-clip-path: none;
-  clip-path: none;
-  -webkit-clip: auto;
-  clip: auto;
-  height: auto;
-  width: auto;
-  top: -3rem;
-  left: 0.5rem;
-}
-
-.c3 {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
-  overflow: hidden;
 }
 
 .c5 {
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-}
-
-.c5::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 80rem;
-  border-bottom: 0.0625rem solid #eab3b3;
-  z-index: -1;
-}
-
-.c6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -86,10 +37,10 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
 }
 
-.c6:hover::after {
+.c5:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -99,7 +50,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c6:focus::after {
+.c5:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -110,7 +61,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   border: 0.25rem solid #FFFFFF;
 }
 
-.c9 {
+.c8 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -121,10 +72,10 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
 }
 
-.c9:hover::after {
+.c8:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -133,7 +84,7 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c9:focus::after {
+.c8:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -144,7 +95,13 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   border: 0.25rem solid #FFFFFF;
 }
 
-.c7::after {
+.c4 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.c6::after {
   content: '';
   position: absolute;
   left: 0;
@@ -154,76 +111,75 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
 }
 
 .c0 {
+  position: relative;
   background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
 }
 
-.c0 .c4::after {
+.c0 .c3::after {
   left: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (min-width:37.5rem) {
   .c2 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2:focus {
-    top: -4rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2:focus {
-    left: 0;
+    overflow: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c5 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (max-width:24.9375rem) {
-  .c6 {
+@media (max-width:37.4375rem) {
+  .c5 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (max-width:24.9375rem) {
-  .c9 {
+@media (max-width:37.4375rem) {
+  .c8 {
     padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c4:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
   }
 }
 
@@ -235,30 +191,25 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   <div
     class="c1"
   >
-    <a
-      class="c2"
-      href="#content"
-    >
-      Wụga n’ọdịnaya
-    </a>
     <ul
-      class="c3"
+      class="c2"
       role="list"
     >
       <li
-        class="c4 c5"
+        class="c3 c4"
+        dir="ltr"
         role="listitem"
       >
         <a
-          class="c6"
+          class="c5"
           href="/igbo"
         >
           <span
-            class="c7"
+            class="c6"
             role="text"
           >
             <span
-              class="c8"
+              class="c7"
             >
               Peegi ị nọ ugbua
               , 
@@ -268,33 +219,36 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
         </a>
       </li>
       <li
-        class="c4 c5"
+        class="c3 c4"
+        dir="ltr"
         role="listitem"
       >
         <a
-          class="c9"
+          class="c8"
           href="/igbo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
         >
           Egwuregwu
         </a>
       </li>
       <li
-        class="c4 c5"
+        class="c3 c4"
+        dir="ltr"
         role="listitem"
       >
         <a
-          class="c9"
+          class="c8"
           href="/igbo/media/video"
         >
           Ihe nkiri
         </a>
       </li>
       <li
-        class="c4 c5"
+        class="c3 c4"
+        dir="ltr"
         role="listitem"
       >
         <a
-          class="c9"
+          class="c8"
           href="/igbo/popular/read"
         >
           Nke ka ewuewu
