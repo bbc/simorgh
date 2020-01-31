@@ -132,6 +132,7 @@ export const service = {
         },
       },
       media: {
+        noJs: '',
         audio: 'ਔਡੀਓ',
         photogallery: 'ਫੋਟੋ ਗੈਲਰੀ',
         video: 'ਵੀਡੀਓ',

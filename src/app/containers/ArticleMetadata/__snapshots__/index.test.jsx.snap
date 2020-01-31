@@ -215,18 +215,6 @@ exports[`should match snapshot for News & International 1`] = `
       name="twitter:title"
     />
     <meta
-      content="https://www.facebook.com/bbcnews"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:published_time"
-    />
-    <meta
       content="Royal Wedding 2018"
       name="article:tag"
     />
@@ -237,6 +225,18 @@ exports[`should match snapshot for News & International 1`] = `
     <meta
       content="Queen Victoria"
       name="article:tag"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
+      content="2018-01-01T13:00:00.000Z"
+      name="article:modified_time"
+    />
+    <meta
+      content="2018-01-01T12:01:00.000Z"
+      name="article:published_time"
     />
   </head>
   <body>
