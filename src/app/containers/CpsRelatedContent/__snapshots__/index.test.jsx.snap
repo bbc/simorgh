@@ -11,7 +11,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
       class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 ebGqUw"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP StyledSectionLabel-sc-1itct8j-1 cftGzF"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP StyledSectionLabel-sc-1itct8j-1 hlmzdc"
       >
         <div
           class="Bar-sc-1x4gwjz-0 qaAlR"
@@ -224,7 +224,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
       class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 ebGqUw"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP StyledSectionLabel-sc-1itct8j-1 cftGzF"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP StyledSectionLabel-sc-1itct8j-1 hlmzdc"
       >
         <div
           class="Bar-sc-1x4gwjz-0 qaAlR"

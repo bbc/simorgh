@@ -290,7 +290,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 .c27 {
-  margin-top: 0rem;
+  margin-top: 0;
 }
 
 .c0 {
