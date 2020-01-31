@@ -2936,6 +2936,14 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
       name="twitter:title"
     />
     <meta
+      content="History"
+      name="article:tag"
+    />
+    <meta
+      content="Addis Ababa"
+      name="article:tag"
+    />
+    <meta
       content="https://www.facebook.com/bbcnews"
       name="article:author"
     />
