@@ -142,6 +142,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.',
         audio: 'Audio',
         photogallery: 'Image gallery',
         video: 'Video',

@@ -27,6 +27,7 @@ import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
   getFirstPublished,
   getLastPublished,
+  getAboutTags,
 } from '#lib/utilities/parseAssetData';
 
 // Page Handlers
@@ -55,6 +56,7 @@ const CpsMapContainer = ({ pageData }) => {
   const indexImageAltText = path(['promo', 'indexImage', 'altText'], pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
+  const aboutTags = getAboutTags(pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -98,6 +100,7 @@ const CpsMapContainer = ({ pageData }) => {
         lastPublished={lastPublished}
         imageLocator={indexImageLocator}
         imageAltText={indexImageAltText}
+        aboutTags={aboutTags}
       />
       <LinkedData
         type="Article"
@@ -106,6 +109,7 @@ const CpsMapContainer = ({ pageData }) => {
         showAuthor
         datePublished={firstPublished}
         dateModified={lastPublished}
+        aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
       <StyledGhostGrid as="main" role="main">
