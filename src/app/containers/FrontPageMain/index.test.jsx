@@ -80,7 +80,7 @@ describe('FrontPageMain', () => {
       );
       const sections = container.querySelectorAll('section');
 
-      expect(sections).toHaveLength(7);
+      expect(sections).toHaveLength(2);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
