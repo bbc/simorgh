@@ -133,7 +133,6 @@ export const service = {
         },
       },
       media: {
-        noJs: 'ትጥቀምሉ ዘለኹም መሳርሒ ኣይተቐበሎን።',
         audio: 'ድምፂ',
         photogallery: 'ስእልታት',
         video: 'ቪድዮ',
