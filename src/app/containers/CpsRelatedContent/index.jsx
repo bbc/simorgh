@@ -29,7 +29,7 @@ const Wrapper = styled(GridItemConstrainedLarge)`
 `;
 
 const StyledSectionLabel = styled(SectionLabel)`
-  margin-top: 0rem;
+  margin-top: 0;
 `;
 
 const formatItem = (item, env) => {
