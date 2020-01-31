@@ -16,7 +16,7 @@ const toggles = {
       enabled: false,
     },
     radioSchedule: {
-      enabled: false,
+      enabled: true,
     },
   },
   test: {
