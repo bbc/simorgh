@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Grid, { GridMaxWidthGroup5 } from '.';
+import Grid, { GridMaxWidthGroup4 } from '.';
 
 const outerGridProps = {
   columns: {
@@ -46,10 +46,10 @@ storiesOf('Components|Grid', module)
   })
   .add('GridMaxWidthGroup5', () => {
     return (
-      <GridMaxWidthGroup5 {...outerGridProps}>
+      <GridMaxWidthGroup4 {...outerGridProps}>
         <Grid {...gridItemProps}>
-          <p>Grid item inside parent grid with a defined max-width of group5</p>
+          <p>Grid item inside parent grid with a defined max-width of group4</p>
         </Grid>
-      </GridMaxWidthGroup5>
+      </GridMaxWidthGroup4>
     );
   });
