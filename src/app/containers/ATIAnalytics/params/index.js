@@ -12,24 +12,53 @@ import {
   buildCpsAssetPageATIUrl,
 } from './cpsAssetPage/buildParams';
 
+const ARTICLE_MEDIA_ASSET = 'article-media-asset';
+const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
+
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
   frontPage: buildFrontPageATIUrl,
   media: buildRadioATIUrl,
-  MAP: buildCpsAssetPageATIUrl,
+  MAP: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIUrl(
+      data,
+      requestContext,
+      serviceContext,
+      ARTICLE_MEDIA_ASSET,
+    ),
+  PGL: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIUrl(
+      data,
+      requestContext,
+      serviceContext,
+      ARTICLE_PHOTO_GALLERY,
+    ),
 };
 
 const pageTypeParamBuilders = {
   article: buildArticleATIParams,
   frontPage: buildFrontPageATIParams,
   media: buildRadioATIParams,
-  MAP: buildCpsAssetPageATIParams,
+  MAP: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIParams(
+      data,
+      requestContext,
+      serviceContext,
+      ARTICLE_MEDIA_ASSET,
+    ),
+  PGL: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIParams(
+      data,
+      requestContext,
+      serviceContext,
+      ARTICLE_PHOTO_GALLERY,
+    ),
 };
 
-const createBuilderFactory = (requestContext, pageTypeHandlers = {}) => {
+const createBuilderFactory = (requestContext, pageTypeHandlers) => {
   const { pageType } = requestContext;
 
-  return pageTypeHandlers[pageType] || (() => null);
+  return pageTypeHandlers[pageType];
 };
 
 export const buildATIUrl = (data, requestContext, serviceContext) => {
