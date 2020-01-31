@@ -143,6 +143,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Dem no support media player for your device',
         audio: 'صدا',
         photogallery: 'عکس',
         video: 'ویدیو',
