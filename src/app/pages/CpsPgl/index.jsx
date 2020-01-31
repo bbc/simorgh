@@ -86,6 +86,7 @@ const CpsPglContainer = ({ pageData }) => {
         lastPublished={lastPublished}
         imageLocator={indexImageLocator}
         imageAltText={indexImageAltText}
+        aboutTags={aboutTags}
       />
       <LinkedData
         type="Article"

@@ -3,13 +3,13 @@ import { buildATIPageTrackPath } from '../../atiUrl';
 import {
   getPublishedDatetime,
   LIBRARY_VERSION,
+  getThingAttributes,
 } from '../../../../lib/analyticsUtils';
 import {
   getLanguage,
   getContentId,
   getPageIdentifier,
   getPromoHeadline,
-  getThingAttributes,
 } from '../../../../lib/analyticsUtils/article';
 
 export const buildArticleATIParams = (
