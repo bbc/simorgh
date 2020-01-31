@@ -135,7 +135,6 @@ export const service = {
         },
       },
       media: {
-        noJs: 'Sizin qurğunuzda yenidən səsləndirmə mümkün deyil',
         audio: 'Audio',
         photogallery: 'Foto-qalereya',
         video: 'Video',
