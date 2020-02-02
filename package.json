@@ -82,7 +82,7 @@
     "@bbc/psammead-section-label": "^3.0.12",
     "@bbc/psammead-sitewide-links": "^4.0.6",
     "@bbc/psammead-story-promo": "^2.7.18",
-    "@bbc/psammead-story-promo-list": "^2.1.26",
+    "@bbc/psammead-story-promo-list": "^3.0.1",
     "@bbc/psammead-styles": "^4.2.0",
     "@bbc/psammead-timestamp-container": "^2.6.20",
     "@bbc/psammead-useful-links": "^1.0.13",
