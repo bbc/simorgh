@@ -763,7 +763,10 @@ const genServices = appEnv => ({
         path:
           isLive(appEnv) || isTest(appEnv)
             ? undefined
-            : '/persian/bbc_persian_radio/liveradio',
+            : [
+                '/persian/bbc_persian_radio/liveradio',
+                '/persian/bbc_dari_radio/liveradio',
+              ],
         smoke: false,
       },
       mediaAssetPage: {
