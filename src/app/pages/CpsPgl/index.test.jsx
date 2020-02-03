@@ -9,11 +9,9 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import CpsAssetPage from '.';
-import pidginPageData from '#data/pidgin/cpsAssets/sport-23252855';
-import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
-import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
-import preprocessor from '#lib/utilities/preprocessor';
-import { cpsAssetPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
+import pidginPageData from './fixtures/pidginPageData';
+import igboPageData from './fixtures/igboPageData';
+import pglAboutData from './fixtures/pglAboutData';
 
 const toggleState = {
   local: {
@@ -105,38 +103,28 @@ jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
 describe('CPS PGL Page', () => {
   describe('snapshots', () => {
     it('should match snapshot for PGL', async () => {
-      const pageData = await preprocessor(
-        pidginPageData,
-        cpsAssetPreprocessorRules,
-      );
-      const page = createAssetPage({ pageData }, 'pidgin');
+      const page = createAssetPage({ pageData: pidginPageData }, 'pidgin');
       await matchSnapshotAsync(page);
     });
 
     it('should match snapshot for PGL with about tags', async () => {
-      const pageData = await preprocessor(
-        pglAboutData,
-        cpsAssetPreprocessorRules,
-      );
-      const page = createAssetPage({ pageData }, 'afaanoromoo');
+      const page = createAssetPage({ pageData: pglAboutData }, 'afaanoromoo');
       await matchSnapshotAsync(page);
     });
   });
 
-  it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
-    const pageData = await preprocessor(
-      igboPageData,
-      cpsAssetPreprocessorRules,
+  it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', () => {
+    const { getByText } = render(
+      createAssetPage({ pageData: igboPageData }, 'igbo'),
     );
-    const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
     expect(getByText('23 Ọktọba 2019')).toBeInTheDocument();
   });
 
-  it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
+  it('should not show the pop-out timestamp when allowDateStamp is false', () => {
     const pageDataWithHiddenTimestamp = assocPath(
       ['metadata', 'options', 'allowDateStamp'],
       false,
-      await preprocessor(igboPageData, cpsAssetPreprocessorRules),
+      igboPageData,
     );
 
     const { asFragment } = render(

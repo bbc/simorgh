@@ -1,0 +1,1719 @@
+{
+  "metadata": {
+    "firstPublished": 1571834370000,
+    "lastPublished": 1571834372000,
+    "lastUpdated": 1571834379488,
+    "id": "urn:bbc:ares::asset:pidgin/world-23252817",
+    "locators": {
+      "assetUri": "/pidgin/world-23252817",
+      "cpsUrn": "urn:bbc:content:assetUri:pidgin/world-23252817",
+      "curie": "http://www.bbc.co.uk/asset/740a2911-be7a-d945-a968-d812272c2147"
+    },
+    "type": "STY",
+    "createdBy": "pidgin-v6",
+    "language": "pcm",
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "pidgin.world.story.23252817.page",
+      "cps_asset_id": "23252817"
+    },
+    "tags": {},
+    "version": "v1.1.2",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "list",
+      "social_embed",
+      "media",
+      "heading",
+      "crosshead"
+    ],
+    "includeComments": false
+  },
+  "relatedContent": {
+    "groups": [
+      {
+        "promos": [
+          {
+            "name": "The pidgin map asset",
+            "uri": "https://www.test.bbc.com/pidgin/23248703",
+            "type": "link"
+          }
+        ]
+      }
+    ],
+    "section": {
+      "subType": "index",
+      "name": "World",
+      "uri": "/pidgin/world",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Pidgin",
+      "uri": "/pidgin",
+      "type": "simple"
+    }
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "STY - Blood pressure drugs dey work better",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "STY - Blood pressure drugs dey work better",
+                              "attributes": []
+                            },
+                            "id": "fb695195-d849-4aa5-91f9-e4177619a920",
+                            "position": [
+                              1,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "4b868fb8-3c46-48e3-a28a-92c1d06143e8",
+                      "position": [
+                        1,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "8c9d5709-6a14-426a-a783-7da6501996ef",
+                "position": [
+                  1,
+                  1
+                ]
+              }
+            ]
+          },
+          "type": "headline",
+          "id": "e43cf2ae-0e63-4bf0-a6f4-c89eb1fc70ec",
+          "position": [
+            1
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Some people went to the NTA awards recently.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Some people went to the NTA awards recently.",
+                                    "attributes": []
+                                  },
+                                  "id": "0cfc898d-9803-41cb-84a0-5fed035b434e",
+                                  "position": [
+                                    2,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "d7630d2b-ffc4-441c-b8be-2a6cb09e9df1",
+                            "position": [
+                              2,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "7844e114-1495-4906-9d2e-134cc98c8000",
+                      "position": [
+                        2,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "c39e8baa-b8a5-4de6-af73-004bf5098009",
+                "position": [
+                  2,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Some people at the NTA awards",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Some people at the NTA awards",
+                                    "attributes": []
+                                  },
+                                  "id": "905ba9f8-b650-4616-a8ab-009a64f4d5d5",
+                                  "position": [
+                                    2,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "864431f9-6702-4be4-a534-e9101c264bbb",
+                            "position": [
+                              2,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "51cfe7bf-52b9-436e-a450-8428e7e17131",
+                      "position": [
+                        2,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "f59dd4f9-4b00-4c91-bc68-51dd43a578eb",
+                "position": [
+                  2,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Joe Maher",
+                  "height": 549,
+                  "locator": "6ACE/test/_63724372_gettyimages-1098075358.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 976
+                },
+                "id": "1f453093-fb41-4e8b-b391-d4ce773133f5",
+                "position": [
+                  2,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "92391252-242d-4a12-a8ed-21eef2080fb2",
+          "position": [
+            2
+          ]
+        },
+        {
+          "type": "timestamp",
+          "model": {
+            "firstPublished": 1571834370000,
+            "lastPublished": 1571834372000
+          },
+          "id": "6aa35881-0a8e-4a6d-a790-58f2244bdcb1",
+          "position": [
+            3
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": " This is introduction text, it should be bold by default, but also support inline links to other pages.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " This is introduction text, it should be bold by default, but also support ",
+                        "attributes": [
+                          "bold"
+                        ]
+                      },
+                      "id": "1e775bd3-49d0-4954-8756-490fced2ebf9",
+                      "position": [
+                        4,
+                        1,
+                        1
+                      ]
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "inline links",
+                        "locator": "https://bbc.com/pidgin/23248703",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "inline links",
+                              "attributes": []
+                            },
+                            "id": "3712dafd-6b1f-4bff-929a-e1ebdd993aa0",
+                            "position": [
+                              4,
+                              1,
+                              2,
+                              1
+                            ]
+                          }
+                        ],
+                        "isExternal": false
+                      },
+                      "id": "8993da3b-fd2a-40fa-9eae-bb8ba5230a49",
+                      "position": [
+                        4,
+                        1,
+                        2
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " to other pages.",
+                        "attributes": [
+                          "bold"
+                        ]
+                      },
+                      "id": "a95ff88c-1640-4602-8630-e31e5b960fc8",
+                      "position": [
+                        4,
+                        1,
+                        3
+                      ]
+                    }
+                  ]
+                },
+                "id": "e70a748a-f175-428a-9b18-a98176af7c90",
+                "position": [
+                  4,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "3e6f32a5-9a5d-4a0f-b625-4c07efec5c64",
+          "position": [
+            4
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "This is a subheadline! that has a link",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "This is a subheadline! that has ",
+                        "attributes": [
+                          "bold",
+                          "italic"
+                        ]
+                      },
+                      "id": "79c5a494-8853-44aa-87c0-42054d8e3ee9",
+                      "position": [
+                        5,
+                        1,
+                        1
+                      ]
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "a link",
+                        "locator": "https://bbc.com/pidgin/23248703",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "a link",
+                              "attributes": []
+                            },
+                            "id": "c4b7f3f8-1201-461a-a418-7d5a0f2c760d",
+                            "position": [
+                              5,
+                              1,
+                              2,
+                              1
+                            ]
+                          }
+                        ],
+                        "isExternal": false
+                      },
+                      "id": "389c69a1-d7ea-4766-b32e-19a11cf7d013",
+                      "position": [
+                        5,
+                        1,
+                        2
+                      ]
+                    }
+                  ]
+                },
+                "id": "59235e0c-6ca1-442a-8acf-8e198a28fe86",
+                "position": [
+                  5,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "5da58e11-7b0e-457e-a6d9-29a064ce7b7d",
+          "position": [
+            5
+          ]
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is a unordered list",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This is a unordered list",
+                                    "attributes": []
+                                  },
+                                  "id": "359f2363-5a13-4c75-8e1a-731cba49fc23",
+                                  "position": [
+                                    6,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "f6c7d72e-9b43-4c02-86f4-35766112f593",
+                            "position": [
+                              6,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "e35da473-f1e2-4926-8b45-a93b420d4f11",
+                      "position": [
+                        6,
+                        1,
+                        1
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "It can have bold text in it",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "It can have ",
+                                    "attributes": []
+                                  },
+                                  "id": "b179defa-de05-4982-bc7d-ec58f047cdae",
+                                  "position": [
+                                    6,
+                                    1,
+                                    2,
+                                    1,
+                                    1
+                                  ]
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "bold text",
+                                    "attributes": [
+                                      "bold"
+                                    ]
+                                  },
+                                  "id": "2ee30f54-3b83-4af2-ab80-9be614ba1ba7",
+                                  "position": [
+                                    6,
+                                    1,
+                                    2,
+                                    1,
+                                    2
+                                  ]
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": " in it",
+                                    "attributes": []
+                                  },
+                                  "id": "f9eab037-1e41-4f9f-9218-e5d6b35b4491",
+                                  "position": [
+                                    6,
+                                    1,
+                                    2,
+                                    1,
+                                    3
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "a0b27a27-c5e1-4b18-93d9-b16b3e385218",
+                            "position": [
+                              6,
+                              1,
+                              2,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "e547202d-60a8-46c7-9630-8b86ef525edb",
+                      "position": [
+                        6,
+                        1,
+                        2
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "It can also have links",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "It can also have links",
+                                    "locator": "https://bbc.com/pidgin/23248703",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "It can also have links",
+                                          "attributes": []
+                                        },
+                                        "id": "0ea50277-3f61-45b9-9d38-b22e700ef121",
+                                        "position": [
+                                          6,
+                                          1,
+                                          3,
+                                          1,
+                                          1,
+                                          1
+                                        ]
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  },
+                                  "id": "979db8a2-6bd8-468f-a6e9-a0c62c470f7e",
+                                  "position": [
+                                    6,
+                                    1,
+                                    3,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "1deab5c5-7006-4d53-8d22-b95ea935ace8",
+                            "position": [
+                              6,
+                              1,
+                              3,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "18b5de0c-c3a9-480d-9f51-7ee0ad0a4cc8",
+                      "position": [
+                        6,
+                        1,
+                        3
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "It can even have italic text in it!",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "It can even have italic text in it!",
+                                    "attributes": [
+                                      "italic"
+                                    ]
+                                  },
+                                  "id": "7ff2bf0b-edf7-4f5d-93d0-8a44e5f1e654",
+                                  "position": [
+                                    6,
+                                    1,
+                                    4,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "74a0c7e6-bd0b-4758-a54d-ed6f0c0257a4",
+                            "position": [
+                              6,
+                              1,
+                              4,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "a6c686fa-d20d-4c26-9af5-3fd80e211d71",
+                      "position": [
+                        6,
+                        1,
+                        4
+                      ]
+                    }
+                  ]
+                },
+                "type": "unorderedList",
+                "id": "e1fa9621-ac3d-408e-92d0-6a8873549276",
+                "position": [
+                  6,
+                  1
+                ]
+              }
+            ]
+          },
+          "type": "text",
+          "id": "9e2b3c76-7924-4988-8483-778f3c7ae720",
+          "position": [
+            6
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Feta the big cheese macaroni cheese. Caerphilly danish fontina queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. Cow cheeseburger stilton emmental.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Feta the big cheese macaroni cheese. ",
+                        "attributes": []
+                      },
+                      "id": "4eccfc68-4697-49ee-b2a2-555063569fad",
+                      "position": [
+                        7,
+                        1,
+                        1
+                      ]
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "Caerphilly danish fontina",
+                        "locator": "https://bbc.com/pidgin/23248703",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Caerphilly danish fontina",
+                              "attributes": []
+                            },
+                            "id": "96176176-32f3-4229-81b4-eae45b1658c3",
+                            "position": [
+                              7,
+                              1,
+                              2,
+                              1
+                            ]
+                          }
+                        ],
+                        "isExternal": false
+                      },
+                      "id": "1bcb4b80-cd19-4fbb-a4c9-5819ff64a7dd",
+                      "position": [
+                        7,
+                        1,
+                        2
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. ",
+                        "attributes": []
+                      },
+                      "id": "974edf60-eb7d-4dee-b280-7cb5ccb7d100",
+                      "position": [
+                        7,
+                        1,
+                        3
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Cow cheeseburger",
+                        "attributes": [
+                          "bold"
+                        ]
+                      },
+                      "id": "74d1182e-ebd2-4f0b-9792-37d178f0c3b0",
+                      "position": [
+                        7,
+                        1,
+                        4
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " stilton emmental.",
+                        "attributes": []
+                      },
+                      "id": "c1443076-6346-4d2b-939a-61e277ad560b",
+                      "position": [
+                        7,
+                        1,
+                        5
+                      ]
+                    }
+                  ]
+                },
+                "id": "66792bf4-f5f7-400b-8d18-f648c3fa343d",
+                "position": [
+                  7,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "3cf8407f-f663-48c3-b254-c9874a51cc52",
+          "position": [
+            7
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "That guy from bodyguard at the NTAs",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "That guy from bodyguard at the NTAs",
+                                    "attributes": []
+                                  },
+                                  "id": "fd70720c-7c2c-4673-9344-43c4a0084772",
+                                  "position": [
+                                    8,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "0ea7f8ea-0a32-40d7-b53f-3cad8231e907",
+                            "position": [
+                              8,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "8d779437-b882-4482-817d-3e48332f688e",
+                      "position": [
+                        8,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "dcc2bf00-e330-4196-a9f1-7e3d07c99466",
+                "position": [
+                  8,
+                  1
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Joe Maher",
+                  "height": 549,
+                  "locator": "B8EE/test/_63724374_gettyimages-1098050396.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 976
+                },
+                "id": "3b437379-5489-45ad-b5f6-a1eb146879db",
+                "position": [
+                  8,
+                  2
+                ]
+              }
+            ]
+          },
+          "id": "b2a133af-aa2f-4623-8c5f-0b9f15c174df",
+          "position": [
+            8
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Start of localised text",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Start of localised text",
+                        "attributes": [
+                          "bold"
+                        ]
+                      },
+                      "id": "9e3f2c34-0637-4bce-b20c-cd9365b6450f",
+                      "position": [
+                        9,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "94c71189-941d-4f67-aa7f-2a4dd1b894b4",
+                "position": [
+                  9,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "f464d356-9bf1-4371-ac84-425b8ce7d907",
+          "position": [
+            9
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.",
+                        "attributes": []
+                      },
+                      "id": "430d483c-44c8-4552-ab83-6de5e1db5297",
+                      "position": [
+                        10,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "a22a9553-3f9a-476f-b7f5-ec5ea8c532ba",
+                "position": [
+                  10,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "d6a2c789-5813-4a44-9c15-98dc4e07c355",
+          "position": [
+            10
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "End of localised text",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "End of localised text",
+                        "attributes": [
+                          "bold"
+                        ]
+                      },
+                      "id": "26d1eb7b-097e-4705-931a-9644c0aaa3ec",
+                      "position": [
+                        11,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "378f7b20-c854-4013-a3b9-00e9f746fc44",
+                "position": [
+                  11,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "1eb79c55-fd95-4f86-9eba-2b61088d4681",
+          "position": [
+            11
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Rubber cheese macaroni cheese cottage cheese. Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Rubber cheese macaroni ",
+                        "attributes": []
+                      },
+                      "id": "3861039b-56ef-496f-8032-78640ab9be99",
+                      "position": [
+                        12,
+                        1,
+                        1
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "cheese cottage cheese",
+                        "attributes": [
+                          "italic"
+                        ]
+                      },
+                      "id": "72159861-5ffb-4d77-8e30-8253ee4a827d",
+                      "position": [
+                        12,
+                        1,
+                        2
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ". Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.",
+                        "attributes": []
+                      },
+                      "id": "be24910e-6021-42ed-9dac-954d6e0eddb0",
+                      "position": [
+                        12,
+                        1,
+                        3
+                      ]
+                    }
+                  ]
+                },
+                "id": "fa291f2d-527c-4ad3-a3a4-8f5337ae3eeb",
+                "position": [
+                  12,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "656133e0-27e1-49ac-873a-154fe460cf47",
+          "position": [
+            12
+          ]
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is a ordered list",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This is a ordered list",
+                                    "attributes": []
+                                  },
+                                  "id": "542c6f33-15ac-4e4b-a63d-582fa673f8dd",
+                                  "position": [
+                                    13,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "2cce06d6-aa1f-429d-98ee-1aa1ec07738b",
+                            "position": [
+                              13,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "2a9f7135-41a1-4b23-b126-f924b3c71efb",
+                      "position": [
+                        13,
+                        1,
+                        1
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "It can have bold text in it",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "It can have ",
+                                    "attributes": []
+                                  },
+                                  "id": "d9b742d4-5630-4817-98ca-8d68c7275fb6",
+                                  "position": [
+                                    13,
+                                    1,
+                                    2,
+                                    1,
+                                    1
+                                  ]
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "bold text",
+                                    "attributes": [
+                                      "bold"
+                                    ]
+                                  },
+                                  "id": "30cf7dfe-8beb-49ac-8013-29a3609b6ae3",
+                                  "position": [
+                                    13,
+                                    1,
+                                    2,
+                                    1,
+                                    2
+                                  ]
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": " in it",
+                                    "attributes": []
+                                  },
+                                  "id": "ed11f49b-bd23-4b7c-9cd9-ad5f4adf2174",
+                                  "position": [
+                                    13,
+                                    1,
+                                    2,
+                                    1,
+                                    3
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "88d63ced-66b4-4e64-bdbb-495df33e0dc1",
+                            "position": [
+                              13,
+                              1,
+                              2,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "1800954b-a678-4a19-b9b8-599320e2a7f4",
+                      "position": [
+                        13,
+                        1,
+                        2
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "It can also have links",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "It can also have links",
+                                    "locator": "https://bbc.com/pidgin/23248703",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "It can also have links",
+                                          "attributes": []
+                                        },
+                                        "id": "638357ef-7c11-4d9e-a93b-eacf01d1e797",
+                                        "position": [
+                                          13,
+                                          1,
+                                          3,
+                                          1,
+                                          1,
+                                          1
+                                        ]
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  },
+                                  "id": "7ae48964-475b-442a-a4f2-34b33cc75d55",
+                                  "position": [
+                                    13,
+                                    1,
+                                    3,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "72cf3ad5-01e2-447d-8afc-517fa304fccd",
+                            "position": [
+                              13,
+                              1,
+                              3,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "64848809-2015-46cf-b393-7925443014cc",
+                      "position": [
+                        13,
+                        1,
+                        3
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "It can even have italic text in it!",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "It can even have italic text in it!",
+                                    "attributes": [
+                                      "italic"
+                                    ]
+                                  },
+                                  "id": "33773afd-1e58-4e0e-a0ce-e58b7b54cdb2",
+                                  "position": [
+                                    13,
+                                    1,
+                                    4,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "d0610cea-dd8b-4468-a0c4-15b0431e6c00",
+                            "position": [
+                              13,
+                              1,
+                              4,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "d8b101e1-4de1-4a26-a7b3-9b6fa0b8218c",
+                      "position": [
+                        13,
+                        1,
+                        4
+                      ]
+                    }
+                  ]
+                },
+                "type": "orderedList",
+                "id": "5a1c48b7-d136-46e1-9fa7-166ab66dacf1",
+                "position": [
+                  13,
+                  1
+                ]
+              }
+            ]
+          },
+          "type": "text",
+          "id": "8bf7b52d-ca95-42fe-9b7e-fee4eaa227b4",
+          "position": [
+            13
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.",
+                        "attributes": []
+                      },
+                      "id": "cbfedcd2-da51-4c87-8430-9ee89316a0c9",
+                      "position": [
+                        14,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "b7052fc8-7607-4228-afbe-95ed39b617cc",
+                "position": [
+                  14,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "8cef1296-595b-4efb-b7f1-b80378b88584",
+          "position": [
+            14
+          ]
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01mr6r7",
+            "blocks": [
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "aresMediaMetadata",
+                      "blockId": "urn:bbc:ares::clip:p01mr6r7",
+                      "model": {
+                        "advertising": true,
+                        "embedding": true,
+                        "format": "audio",
+                        "id": "p01mr6r7",
+                        "imageCopyright": "Getty Images",
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mr7dp.jpg",
+                        "subType": "clip",
+                        "synopses": {
+                          "short": "Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов."
+                        },
+                        "title": "Подкаст \"Разговоры с арбитром\": чемпионский парад \"Ливерпуля\"",
+                        "versions": [
+                          {
+                            "versionId": "p01mr6r9",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 1961,
+                            "durationISO8601": "PT32M41S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1559819809000
+                          }
+                        ]
+                      },
+                      "id": "7e73c0ed-d145-4582-b27b-d6dc6876a78d",
+                      "position": [
+                        15,
+                        1,
+                        1
+                      ]
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "copyrightHolder": "Getty Images",
+                              "locator": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg",
+                              "originCode": "pips"
+                            },
+                            "id": "37f57489-2ed4-4b71-93bb-8c674b1efdec",
+                            "position": [
+                              15,
+                              1,
+                              2,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "d3bcebfe-9df1-4b3f-9a21-6ee2b02d0cde",
+                      "position": [
+                        15,
+                        1,
+                        2
+                      ]
+                    }
+                  ]
+                },
+                "id": "58b9cfbd-c7ec-4339-aebf-d2950ba1db50",
+                "position": [
+                  15,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "285e9915-37c8-4ffa-b213-f5dd61059878",
+          "position": [
+            15
+          ]
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "This is a heading!",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "This is a heading!",
+                              "attributes": []
+                            },
+                            "id": "1e9e059a-a8d6-4bfb-8da4-c201ae20f50b",
+                            "position": [
+                              16,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "aad3810e-bcbd-4715-ba70-11767edd888a",
+                      "position": [
+                        16,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "b96a8b43-8685-4d8c-9b39-321fbe562894",
+                "position": [
+                  16,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "a138e191-f6f0-4d70-a9b9-eb226d682803",
+          "position": [
+            16
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.",
+                        "attributes": []
+                      },
+                      "id": "0fe1725f-8dd4-4eb0-8b6e-641921984a68",
+                      "position": [
+                        17,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "beea47d7-5be9-40dd-98d4-f550d88b62a7",
+                "position": [
+                  17,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "6323d399-069f-4592-98a3-8351324ae42f",
+          "position": [
+            17
+          ]
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "This is a crosshead!",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "This is a crosshead!",
+                              "attributes": []
+                            },
+                            "id": "6cbfc700-a305-4340-9c3c-2d95b48715a5",
+                            "position": [
+                              18,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "254467c6-532b-4790-87df-30e8fc5e5a3b",
+                      "position": [
+                        18,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "66e12685-a653-4495-b904-017ef45a02ce",
+                "position": [
+                  18,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "f9b07b6a-894d-40b8-aaca-a3afc9a711f2",
+          "position": [
+            18
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.",
+                        "attributes": []
+                      },
+                      "id": "41cdb8e8-1bfd-4b1f-9e4e-ade833318575",
+                      "position": [
+                        19,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "ae93debf-fed6-44e3-b7c0-939499453410",
+                "position": [
+                  19,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "2d55a999-aa72-4c1e-ac18-10f7a48a6de5",
+          "position": [
+            19
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "This is an external link to google!",
+                  "blocks": [
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "This is an external link to google!",
+                        "locator": "https://www.google.com/",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "This is an external link to google!",
+                              "attributes": []
+                            },
+                            "id": "ad705631-6fc1-4992-8174-65288b0c297e",
+                            "position": [
+                              20,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ],
+                        "isExternal": true
+                      },
+                      "id": "06e27131-bd23-4693-b02e-95a0cd620943",
+                      "position": [
+                        20,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "f6208ea2-c4ac-42c6-a497-f997bf7d1f28",
+                "position": [
+                  20,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "7e675134-1e40-4a87-993a-dff3059a2967",
+          "position": [
+            20
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.",
+                        "attributes": []
+                      },
+                      "id": "a54f39ff-a30b-4339-a92d-ffa36c87f84c",
+                      "position": [
+                        21,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "129ced8d-331a-45af-b37b-53ea7962b028",
+                "position": [
+                  21,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "12fe755b-aff8-493d-a0f3-f7075f87de0a",
+          "position": [
+            21
+          ]
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "STY - Blood pressure drugs dey work better",
+      "headline": "STY - Blood pressure drugs dey work better"
+    },
+    "locators": {
+      "assetUri": "/pidgin/world-23252817",
+      "cpsUrn": "urn:bbc:content:assetUri:pidgin/world-23252817",
+      "curie": "http://www.bbc.co.uk/asset/740a2911-be7a-d945-a968-d812272c2147"
+    },
+    "summary": "This is a test asset used in Simorgh, please do not edit it without asking.",
+    "timestamp": 1571834379488,
+    "byline": {
+      "name": "By Andrew Overtyped Marr",
+      "title": "BBC News - Overtyped",
+      "persons": [
+        {
+          "name": "Andrew Marr",
+          "function": "BBC News",
+          "thumbnail": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/50002000/jpg/_50002170_andrew_marr_112_bbc.jpg"
+        }
+      ]
+    },
+    "passport": {},
+    "id": "urn:bbc:ares::asset:pidgin/world-23252817",
+    "type": "cps"
+  }
+}

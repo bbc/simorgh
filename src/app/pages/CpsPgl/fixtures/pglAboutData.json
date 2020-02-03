@@ -1,0 +1,2286 @@
+{
+  "metadata": {
+    "firstPublished": 1505967874000,
+    "lastPublished": 1505968091000,
+    "lastUpdated": 1563495743899,
+    "id": "urn:bbc:ares::asset:afaanoromoo/oduu-41217768",
+    "locators": {
+      "assetUri": "/afaanoromoo/oduu-41217768",
+      "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-41217768",
+      "curie": "http://www.bbc.co.uk/asset/114f54f2-1c3f-5d41-8988-c3330e0c204c"
+    },
+    "type": "PGL",
+    "createdBy": "afaan-oromoo-v6",
+    "language": "om",
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "afaanoromoo.news.photo_gallery.41217768.page",
+      "cps_asset_id": "41217768"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "History",
+          "thingUri": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
+          "thingId": "03eb3674-6190-4cd7-8104-1a00991d67a3",
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/History",
+            "http://www.wikidata.org/entity/Q309"
+          ],
+          "topicName": "Seenaa",
+          "topicId": "cz74k705q39t",
+          "curationList": [
+            {
+              "curationId": "cdab1c78-4525-4512-9698-7b9e88a04506",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Addis Ababa",
+          "thingUri": "http://www.bbc.co.uk/things/8a760184-c272-42ec-b898-858f069e4422#id",
+          "thingId": "8a760184-c272-42ec-b898-858f069e4422",
+          "thingType": [
+            "Place",
+            "Thing",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/344979/"
+          ],
+          "topicName": "Finfinnee",
+          "topicId": "cg72670d4dpt",
+          "curationList": [
+            {
+              "curationId": "c299510a-b7c6-4b1c-86fc-b3027924940c",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan",
+                              "attributes": []
+                            },
+                            "id": "fb91b302-3ee4-47dd-b48c-bec5dd28fec5",
+                            "position": [
+                              1,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "6480d65c-7654-46f1-9459-e701166e6415",
+                      "position": [
+                        1,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "bf0f5fea-5e4d-4169-88f3-49a3d3909805",
+                "position": [
+                  1,
+                  1
+                ]
+              }
+            ]
+          },
+          "type": "headline",
+          "id": "69264e17-cccd-401f-94d8-0fa380fb5bdd",
+          "position": [
+            1
+          ]
+        },
+        {
+          "type": "timestamp",
+          "model": {
+            "firstPublished": 1505967874000,
+            "lastPublished": 1505968091000
+          },
+          "id": "e82e3c2c-8a74-46b5-81b4-1b59c31a046a",
+          "position": [
+            2
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan",
+                        "attributes": []
+                      },
+                      "id": "2cb5c495-f38a-4516-baab-f5a1229c3ac1",
+                      "position": [
+                        3,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "73f9c1d6-f1cb-4359-9809-e97a828255ef",
+                "position": [
+                  3,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "e30ee405-6fe4-4952-b757-a06ac7393169",
+          "position": [
+            3
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "1. Masaraa Aaxee Minilik Manni durii kunis kan bara 1875tti Aaxee Minilkiin ijaarame yoo ta'u, seenaa magaalaa Finfinnee keessattis masaraa jalqabaati. Mana seena qabeessa kanas wayita ammaa kanatti waldaa Qidista Maariyaam Tawaahido Ortodoksii Itoophiyaatu bulchaa jira. Irra caalaan mana kanaas dhoqqee fi dhakaa irraa kan ijaarame yoo ta'u, dhaabbiin isaa muka gaattiiraati. Dagaleen isaas kan hidhame gogaa qotiyyootiin ture.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "1. Masaraa Aaxee Minilik Manni durii kunis kan bara 1875tti Aaxee Minilkiin ijaarame yoo ta'u, seenaa magaalaa Finfinnee keessattis masaraa jalqabaati. Mana seena qabeessa kanas wayita ammaa kanatti waldaa Qidista Maariyaam Tawaahido Ortodoksii Itoophiyaatu bulchaa jira. Irra caalaan mana kanaas dhoqqee fi dhakaa irraa kan ijaarame yoo ta'u, dhaabbiin isaa muka gaattiiraati. Dagaleen isaas kan hidhame gogaa qotiyyootiin ture.",
+                                    "attributes": []
+                                  },
+                                  "id": "5ee520f4-fc62-4490-95eb-be4c7e9e3988",
+                                  "position": [
+                                    4,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "6c130e7a-b096-4dc0-9bcd-1ac4938c03a4",
+                            "position": [
+                              4,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "da2d441f-9045-44d9-aaec-78e90914b556",
+                      "position": [
+                        4,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "76fa2ba7-0c14-4ba8-86fe-473dd0ea7691",
+                "position": [
+                  4,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Masaraa Aaxee Minilik",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Masaraa Aaxee Minilik",
+                                    "attributes": []
+                                  },
+                                  "id": "e4232e94-921b-4a4b-88ef-00e7682ddaa3",
+                                  "position": [
+                                    4,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "76432f68-13be-4644-9b50-93bcd416c7f6",
+                            "position": [
+                              4,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "da5e9112-795c-4836-818e-7c0db30adbc1",
+                      "position": [
+                        4,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "e03ca939-39d8-448a-a566-06a6bdf519f0",
+                "position": [
+                  4,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 549,
+                  "locator": "CB33/production/_97491025_img_1060.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 976
+                },
+                "id": "36aaa571-cade-498d-95f7-68ca1ff068f9",
+                "position": [
+                  4,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "01041085-4e93-4a13-a213-b9af7af1a131",
+          "position": [
+            4
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Dallaa masaraa keessattis manneen sadi ni argamu. Inni jalqabaas mana itti boqonnaa keessummaa yoo ta'u, inni lammaffaan mana ciisaa mootii fi giiftii akkasumas mana faayaan garaa garaa fi meeshaan waraanaa ka'amuudha. Inni sadaffaan ammookutaalee walgahii, bakka itti nyaatamuu, fi bakka dammii fi foon itti olkaa'amuu ammalleenni mul'atu.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Dallaa masaraa keessattis manneen sadi ni argamu. Inni jalqabaas mana itti boqonnaa keessummaa yoo ta'u, inni lammaffaan mana ciisaa mootii fi giiftii akkasumas mana faayaan garaa garaa fi meeshaan waraanaa ka'amuudha. Inni sadaffaan ammookutaalee walgahii, bakka itti nyaatamuu, fi bakka dammii fi foon itti olkaa'amuu ammalleenni mul'atu.",
+                                    "attributes": []
+                                  },
+                                  "id": "9029d254-3993-4a7a-8226-a637cb7c8920",
+                                  "position": [
+                                    5,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "831e64a3-d284-4345-b13e-97323d4c9804",
+                            "position": [
+                              5,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "b621a978-20a7-4b7a-8262-3b75a5c0f1ee",
+                      "position": [
+                        5,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "19ec9380-4ccc-449e-b366-0e2e292c1d56",
+                "position": [
+                  5,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Masaraa Aaxee Minilik",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Masaraa Aaxee Minilik",
+                                    "attributes": []
+                                  },
+                                  "id": "7de37164-02b7-42b9-a848-cb8052c3e208",
+                                  "position": [
+                                    5,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "1a8e5d68-38e6-43b7-8dec-0b1eb41249db",
+                            "position": [
+                              5,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "db12d670-6d80-4fe4-9327-697be87c1aa3",
+                      "position": [
+                        5,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "e1fb10bb-64bf-48dc-8c98-021a0e230954",
+                "position": [
+                  5,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 549,
+                  "locator": "F243/production/_97491026_img_1135.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 976
+                },
+                "id": "5cec73f0-8e85-45bb-8034-740fb80c93a3",
+                "position": [
+                  5,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "5b6f8c17-4d39-4ed0-b7b3-449cf5bf51ae",
+          "position": [
+            5
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Akka daawwachistoonni naannawichaa jedhanittis, Aaxee Minilik gara Adawaatti kan duulan masaraadhuma kanaa ka'uun injofannoon boodas asumatti deebii'an jedhama. Kana malees, baargamoon dallaa keessatti mul'atu kanas baargamoowwan Aaxee Minilik biyya Awusitraaliyaatii fidan keessaa akka ta'e dubbatama.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Akka daawwachistoonni naannawichaa jedhanittis, Aaxee Minilik gara Adawaatti kan duulan masaraadhuma kanaa ka'uun injofannoon boodas asumatti deebii'an jedhama. Kana malees, baargamoon dallaa keessatti mul'atu kanas baargamoowwan Aaxee Minilik biyya Awusitraaliyaatii fidan keessaa akka ta'e dubbatama.",
+                                    "attributes": []
+                                  },
+                                  "id": "e3d6ae7c-a84f-4f8b-b7d6-f7d059690082",
+                                  "position": [
+                                    6,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "0f42d581-3cd2-40ca-b8fa-2e0f879de8d4",
+                            "position": [
+                              6,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "b63666a6-0a38-4c86-bed6-75543b193fff",
+                      "position": [
+                        6,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "9695134a-1bab-4a70-adb2-123368da15e2",
+                "position": [
+                  6,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Masaraa Aaxee Minilik",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Masaraa Aaxee Minilik",
+                                    "attributes": []
+                                  },
+                                  "id": "40b172e3-fec2-47d4-ac3f-03ca1f94863c",
+                                  "position": [
+                                    6,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "5b0ff6c6-6a92-4b35-9678-d35ae7f5d47f",
+                            "position": [
+                              6,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "e4874785-0ef8-412d-a488-5d38a19a4922",
+                      "position": [
+                        6,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "c61bda7c-bc6d-494f-8a0a-0928ae0d8a04",
+                "position": [
+                  6,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 4032,
+                  "locator": "3547/production/_97493631_img_1065.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 3024
+                },
+                "id": "a49c30cf-33d6-478a-9b41-87a47b2b6b17",
+                "position": [
+                  6,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "3523e999-249e-4da1-b61c-b0b215dd3dd0",
+          "position": [
+            6
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "2. Mana Raas Tasamaa Naadoo Manni kunis Kutaa magaalaa Lidataa Aanaa 07 naanawa Hospitaala Tiqur Anbasaa Noki bakka gaaziin itti gurguramutti argama. Wayita ammaa kanattis mana barnoota Sadarkaa tokkooffaa Mejar Janaraal YaaYilom Arayaa ta'uun tajaajilaa jira. Bara isaattis faayaawwanii fi ibsaawwan isaa Awuroppaadhaa fiduun kan itti galfaman yoo ta'u, bareeda isaatiin kan ka'ees moggaasa 'Shawaan dinqisiifate' (Shawaan Garamawu) jedhu argate ture. Akkasumas Aaxe Hayilasillaaseen tibba qohpii addaa masaraa isaanitti qabaatan faayaa fi ambooloota asii ergifachaa akka turan illeen ni himama.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "2. Mana Raas Tasamaa Naadoo Manni kunis Kutaa magaalaa Lidataa Aanaa 07 naanawa Hospitaala Tiqur Anbasaa Noki bakka gaaziin itti gurguramutti argama. Wayita ammaa kanattis mana barnoota Sadarkaa tokkooffaa Mejar Janaraal YaaYilom Arayaa ta'uun tajaajilaa jira. Bara isaattis faayaawwanii fi ibsaawwan isaa Awuroppaadhaa fiduun kan itti galfaman yoo ta'u, bareeda isaatiin kan ka'ees moggaasa 'Shawaan dinqisiifate' (Shawaan Garamawu) jedhu argate ture. Akkasumas Aaxe Hayilasillaaseen tibba qohpii addaa masaraa isaanitti qabaatan faayaa fi ambooloota asii ergifachaa akka turan illeen ni himama.",
+                                    "attributes": []
+                                  },
+                                  "id": "a4dbf3b6-fab1-4cdc-b5b7-9956df357a1b",
+                                  "position": [
+                                    7,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "1f92b273-6f5a-4197-82ed-7dbed60cc4e5",
+                            "position": [
+                              7,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "d94513da-03bd-49cc-8b3e-e26837e3ad01",
+                      "position": [
+                        7,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "b989f26e-54a8-41fb-92b3-f2dd5fc2e595",
+                "position": [
+                  7,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Mana Raas Tasamaa Naadoo",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Mana Raas Tasamaa Naadoo",
+                                    "attributes": []
+                                  },
+                                  "id": "bdf34199-16a4-467c-bcb8-e06554882ffa",
+                                  "position": [
+                                    7,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "18b12d52-bd68-4340-8968-36044abccc8a",
+                            "position": [
+                              7,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "8b21eea8-30c2-4cd6-a335-cf9528b71663",
+                      "position": [
+                        7,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "de1c910d-1390-4e5f-ace7-26854c3fae46",
+                "position": [
+                  7,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 3024,
+                  "locator": "16B64/production/_97482039_img_1473.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 4032
+                },
+                "id": "50dd16eb-5244-4535-8fa6-380bf5ca4995",
+                "position": [
+                  7,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "959ee797-bcf2-4930-82de-9fd14292616f",
+          "position": [
+            7
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Ambooloonni ibsaa Awuroppaadhaa dhufan isaan kanneen ta'u isaanitiif ragaa qabaachu yoo baatame illeen ammalleen manicha keessatti eddoo garaa garaatti raraafamanii ni mul'atu.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Ambooloonni ibsaa Awuroppaadhaa dhufan isaan kanneen ta'u isaanitiif ragaa qabaachu yoo baatame illeen ammalleen manicha keessatti eddoo garaa garaatti raraafamanii ni mul'atu.",
+                                    "attributes": []
+                                  },
+                                  "id": "8b45fac4-8814-4d7d-a864-30cc19aa91f0",
+                                  "position": [
+                                    8,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "25655e68-7d28-447e-b168-660d766ccd75",
+                            "position": [
+                              8,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "f554a33f-61fb-487c-afc5-9cb7c970b37e",
+                      "position": [
+                        8,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "549a7ac9-9aa8-4848-af93-aacc6cd44077",
+                "position": [
+                  8,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Mana Raas Tasamaa Naadoo",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Mana Raas Tasamaa Naadoo",
+                                    "attributes": []
+                                  },
+                                  "id": "437a183d-8f4e-40ec-9419-dec7387457b9",
+                                  "position": [
+                                    8,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "8e068905-ebbe-40d2-aad1-e6fcc533bba1",
+                            "position": [
+                              8,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "b0d9993a-e9db-41b9-b016-46d0ccd34177",
+                      "position": [
+                        8,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "a8c3ecf9-ee94-4312-97f5-b530d2d6e6d5",
+                "position": [
+                  8,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 549,
+                  "locator": "14063/production/_97491028_img_1454.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 976
+                },
+                "id": "ecbd1336-8ec1-42d5-acd2-7524f9bcc385",
+                "position": [
+                  8,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "975f186b-d8c8-4c7b-9a5e-22ca6a81b83d",
+          "position": [
+            8
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "3. Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi Manni durii kunis kan argamu kutaa magaalaa Qiirqoos naannawa Kaazaanchis jedhamutti yoo ta'u, wayita ammaa kanattis mana barnootaa Yelibe Faanaa jedhamuun tajaajilaa jira. Manni kunis bara 1884tti kan ijaarame yoo ta'u, abbaan qabeenya manichaa Axinaafuu Sagadi lola Xaaliyaanii waliin taasifameen Maacoorratti du'aniiru.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "3. Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi Manni durii kunis kan argamu kutaa magaalaa Qiirqoos naannawa Kaazaanchis jedhamutti yoo ta'u, wayita ammaa kanattis mana barnootaa Yelibe Faanaa jedhamuun tajaajilaa jira. Manni kunis bara 1884tti kan ijaarame yoo ta'u, abbaan qabeenya manichaa Axinaafuu Sagadi lola Xaaliyaanii waliin taasifameen Maacoorratti du'aniiru.",
+                                    "attributes": []
+                                  },
+                                  "id": "759b2d01-56a4-48c6-95f9-9a27aa1e3da5",
+                                  "position": [
+                                    9,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "d3dd6c07-61df-4099-b3e3-725f7f6d0ce6",
+                            "position": [
+                              9,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "51f99795-4fc3-41f9-bd70-c56d8ee3dc51",
+                      "position": [
+                        9,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "c3d01316-c51b-4b3c-8761-ff07e982f99b",
+                "position": [
+                  9,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi",
+                                    "attributes": []
+                                  },
+                                  "id": "bce9ba78-5c9e-4cbc-84c6-663620f72b64",
+                                  "position": [
+                                    9,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "b8ff9cbd-3f4b-4f74-ad4d-1101f9b8807e",
+                            "position": [
+                              9,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "7fd5c935-0f90-4d93-9276-34fee83bfe08",
+                      "position": [
+                        9,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "bfa18320-02d6-49df-a5b1-d90914ca46b0",
+                "position": [
+                  9,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 3024,
+                  "locator": "1163C/production/_97482217_img_1620.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 4032
+                },
+                "id": "a9584288-f5e9-47bb-a2a4-00d0f7911c40",
+                "position": [
+                  9,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "bab96653-67db-420c-b457-d28ea59ff048",
+          "position": [
+            9
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Irra caalaan mana kanaas dhakkaa adii fi simintoodhaan kan ijaarameedha. Kutaan jalaa mana durii kanaatis bakka itti bilcheefamu ta'uun tajaajila ture. Dizaayinariin mana kanaas nama Mahaammad Walee jedhamu akka ture ragaaleen ni mul'isu.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Irra caalaan mana kanaas dhakkaa adii fi simintoodhaan kan ijaarameedha. Kutaan jalaa mana durii kanaatis bakka itti bilcheefamu ta'uun tajaajila ture. Dizaayinariin mana kanaas nama Mahaammad Walee jedhamu akka ture ragaaleen ni mul'isu.",
+                                    "attributes": []
+                                  },
+                                  "id": "479df30e-bbb9-498d-81a8-0133de5776a9",
+                                  "position": [
+                                    10,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "498aaafd-20df-4c1d-908b-4bde11351646",
+                            "position": [
+                              10,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "20816333-f9b2-4d97-b208-dfbb3c92bdf3",
+                      "position": [
+                        10,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "ca4dd380-814f-4ebc-9365-dfd38ad81afc",
+                "position": [
+                  10,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi",
+                                    "attributes": []
+                                  },
+                                  "id": "71f79e37-248c-4dd7-9ad1-3741d5971c09",
+                                  "position": [
+                                    10,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "a23ccd0f-da0f-47d0-86ea-e30fbdeb8f75",
+                            "position": [
+                              10,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "fccf4adc-9ef9-4d23-95b2-a89244ec28be",
+                      "position": [
+                        10,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "8bd6d83a-6c7a-4fc2-9992-3af1893c4478",
+                "position": [
+                  10,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 549,
+                  "locator": "B03F/production/_97491154_img_1576.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 976
+                },
+                "id": "0cf54995-f818-4851-9c99-0dca7deb05c3",
+                "position": [
+                  10,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "f8d3747b-d7d0-406a-b3fb-7f9c05ce888d",
+          "position": [
+            10
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Kana malees, darbii isa gubbaa irraa kan ittiin gadi gara kuttaa lafa jalaatti bu'amuun sadarkaawwan bareedaas alaa fi keessaan kan ijaarameef yoo ta'u, sababii umurii isaatiin amma duloomaa jira.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Kana malees, darbii isa gubbaa irraa kan ittiin gadi gara kuttaa lafa jalaatti bu'amuun sadarkaawwan bareedaas alaa fi keessaan kan ijaarameef yoo ta'u, sababii umurii isaatiin amma duloomaa jira.",
+                                    "attributes": []
+                                  },
+                                  "id": "eaa437a9-0b09-407c-8dbd-23ed5d003e66",
+                                  "position": [
+                                    11,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "b9bbf596-fcbd-41dc-89f9-f5b154803675",
+                            "position": [
+                              11,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "52ef94c1-250b-4b51-9500-0e800150ee0c",
+                      "position": [
+                        11,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "bbea2f87-aac2-4b52-8555-d261506e151b",
+                "position": [
+                  11,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi",
+                                    "attributes": []
+                                  },
+                                  "id": "1dfd8c55-8632-40b1-b613-f2cd1e0f0b02",
+                                  "position": [
+                                    11,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "f1f3e2a4-1992-4ba9-8ca5-a81338f7354a",
+                            "position": [
+                              11,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "d13d17ca-6571-4866-a40a-ad4faab57306",
+                      "position": [
+                        11,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "c1f06ff8-c102-4195-b5da-02c1e32fe1e4",
+                "position": [
+                  11,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 360,
+                  "locator": "D74F/production/_97491155_img_1537.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 640
+                },
+                "id": "c3ec56cb-b0fb-415d-8725-1c5c4d78310d",
+                "position": [
+                  11,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "96f78ce7-bb1b-4220-a642-36515689b97c",
+          "position": [
+            11
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "4. Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo Manni kunis kutaa magaalaa Araadaa Aaanaa 07 keessatti kan argamu yoo ta'u, kan ijaaramees bara 1898tti. Abbaa manaa kan turan Dubbii Hiimaa Mootii Nasiibuu Masqaloonis, mootii Aaxee Minilik yammu jalqabaaf mana marii ministirootaa hundeessanitti nama Ministira Murtii jalqabaa ta'uun kan mudamaniidha. Murtiin Dubbii Hiimaa Mootii Nasiibuu Masqaloo dabarsan yeroodhaa gara yerootti cimaa waan tureef himatamtoonni isaan duratti dhiyaachu hin barbaadan ture.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "4. Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo Manni kunis kutaa magaalaa Araadaa Aaanaa 07 keessatti kan argamu yoo ta'u, kan ijaaramees bara 1898tti. Abbaa manaa kan turan Dubbii Hiimaa Mootii Nasiibuu Masqaloonis, mootii Aaxee Minilik yammu jalqabaaf mana marii ministirootaa hundeessanitti nama Ministira Murtii jalqabaa ta'uun kan mudamaniidha. Murtiin Dubbii Hiimaa Mootii Nasiibuu Masqaloo dabarsan yeroodhaa gara yerootti cimaa waan tureef himatamtoonni isaan duratti dhiyaachu hin barbaadan ture.",
+                                    "attributes": []
+                                  },
+                                  "id": "4a5792c2-310f-4766-8da4-365e6aa139e3",
+                                  "position": [
+                                    12,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "59b58976-f3a9-4789-ac8d-ed429b98ce1b",
+                            "position": [
+                              12,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "249a54c6-0aba-4615-a451-ea35768fb0cf",
+                      "position": [
+                        12,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "eba0f537-6198-4c6b-9e0d-6ec28bfb82ff",
+                "position": [
+                  12,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Dubbii Hiimaa Mootii Nasiibuu Masqaloo",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Dubbii Hiimaa Mootii Nasiibuu Masqaloo",
+                                    "attributes": []
+                                  },
+                                  "id": "3b461899-b277-4a35-8799-4d1f0814fc1d",
+                                  "position": [
+                                    12,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "5c3c1643-5999-4dde-a027-d3b82431bb0d",
+                            "position": [
+                              12,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "b45e80c8-76ec-4210-ace2-fdcca917e6af",
+                      "position": [
+                        12,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "ce3c7b46-821c-41ad-bfef-02b5b77f4160",
+                "position": [
+                  12,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 549,
+                  "locator": "5027/production/_97491502_img_1386.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 976
+                },
+                "id": "43dc8c28-2967-43c2-af13-575a75481362",
+                "position": [
+                  12,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "4e3412d7-c17e-424e-af13-23f53a714e19",
+          "position": [
+            12
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Mannii durii kun abbaa darbii tokko yoo ta'u, jalli isaa akka gola itti bilcheefataniitti tajaajilaa ture. Kutaan jala manichaa ammoo bu'uura cimaa irratti kan ijaarame yoo ta'eeyyuu umurii fi kunuunsi gahaan waan hin tasifamneef baayyee dadhabaa jira.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Mannii durii kun abbaa darbii tokko yoo ta'u, jalli isaa akka gola itti bilcheefataniitti tajaajilaa ture. Kutaan jala manichaa ammoo bu'uura cimaa irratti kan ijaarame yoo ta'eeyyuu umurii fi kunuunsi gahaan waan hin tasifamneef baayyee dadhabaa jira.",
+                                    "attributes": []
+                                  },
+                                  "id": "0e010723-f49b-448b-953f-01fa08a055ca",
+                                  "position": [
+                                    13,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "b57fe68a-895e-4e54-a258-6457fbf75508",
+                            "position": [
+                              13,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "7ebad290-b65c-4fdb-bbb5-b8e805b191c8",
+                      "position": [
+                        13,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "b69fb482-84df-4c1c-9ec9-66b7a5a86c12",
+                "position": [
+                  13,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Dubbii Hiimaa Mootii Nasiibuu Masqaloo",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Dubbii Hiimaa Mootii Nasiibuu Masqaloo",
+                                    "attributes": []
+                                  },
+                                  "id": "462e48ad-8d12-4b19-a7e9-91dba432ce84",
+                                  "position": [
+                                    13,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "7f7f93ef-d728-4038-9067-f580322b567f",
+                            "position": [
+                              13,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "c80b3789-bf6d-4eac-a553-9b8c9172471b",
+                      "position": [
+                        13,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "06b93d1b-91bf-4362-a79d-025c9a6be995",
+                "position": [
+                  13,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 549,
+                  "locator": "7737/production/_97491503_img_1391.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 976
+                },
+                "id": "506988e8-dd0d-4917-a8b5-3cfc4d88d6fb",
+                "position": [
+                  13,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "5f0c8c66-cccb-4ce2-b0be-7fb99eb478d8",
+          "position": [
+            13
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Wayita ammaa kanattis maatiin 40 olitu mana keessa jiraachaa jira. Naannawa manichaattis manneen dabalataa walitti qabatan baayyeen ijaaramanii jiru. Kana malees, foddaa fi karriwwan mana kanaa irra caalaan sibilatti geedaramanii jiru.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Wayita ammaa kanattis maatiin 40 olitu mana keessa jiraachaa jira. Naannawa manichaattis manneen dabalataa walitti qabatan baayyeen ijaaramanii jiru. Kana malees, foddaa fi karriwwan mana kanaa irra caalaan sibilatti geedaramanii jiru.",
+                                    "attributes": []
+                                  },
+                                  "id": "07799328-7552-41fb-923c-7917179b53ec",
+                                  "position": [
+                                    14,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "0045316f-8b29-47b8-8ffc-cdf927470393",
+                            "position": [
+                              14,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "fe53d9f7-d209-40c4-9dac-d96eab077665",
+                      "position": [
+                        14,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "cde42492-8395-4c03-ae20-2a23ca0ef485",
+                "position": [
+                  14,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Dubbii Hiimaa Mootii Nasiibuu Masqaloo",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Dubbii Hiimaa Mootii Nasiibuu Masqaloo",
+                                    "attributes": []
+                                  },
+                                  "id": "f2843791-8b15-4509-bda4-c0f8025fd98e",
+                                  "position": [
+                                    14,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "354a6406-2fbf-4d04-850d-20d8d508c75f",
+                            "position": [
+                              14,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "e69a1e83-09b2-44a8-9a4a-83e483f3ae56",
+                      "position": [
+                        14,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "abc65e99-f406-4058-95e5-ba0ea45a5e63",
+                "position": [
+                  14,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 549,
+                  "locator": "EFEB/production/_97491416_img_1371.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 976
+                },
+                "id": "2bd18f62-9576-4a29-ac8b-c5b652c45052",
+                "position": [
+                  14,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "013df25b-771d-4a4f-a8f6-631827a5b26f",
+          "position": [
+            14
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo kanaaf foyya'iinsi atattamaa yoo taasifame malee manichis ta'e namoonni achi keessa jiraatan balaaf saaxilamu malu.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo kanaaf foyya'iinsi atattamaa yoo taasifame malee manichis ta'e namoonni achi keessa jiraatan balaaf saaxilamu malu.",
+                                    "attributes": []
+                                  },
+                                  "id": "9a3e27c0-c848-43c1-9219-4b8e5c4f7e3f",
+                                  "position": [
+                                    15,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "e0012602-a5fd-4a93-bc48-c5e79c753e3d",
+                            "position": [
+                              15,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "2c4e6d6a-ddb2-47ec-a6c0-28566388829d",
+                      "position": [
+                        15,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "fbaa5f9d-d1f0-4c3e-a48a-06e52e8da69a",
+                "position": [
+                  15,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Dubbii Hiimaa Mootii Nasiibuu Masqaloo",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Dubbii Hiimaa Mootii Nasiibuu Masqaloo",
+                                    "attributes": []
+                                  },
+                                  "id": "cbc6e186-97f4-4c12-9314-f006ee448589",
+                                  "position": [
+                                    15,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "f7da2f73-b457-41e5-9e8f-12890d1d9aa9",
+                            "position": [
+                              15,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "522d6467-3d0d-4039-bd9f-84a00a861680",
+                      "position": [
+                        15,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "e2bd5295-e6fa-47b8-85ef-c951347b10b7",
+                "position": [
+                  15,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 549,
+                  "locator": "12B4B/production/_97491667_img_1394.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 976
+                },
+                "id": "a73c1b40-2b3d-4813-9012-784595b87f11",
+                "position": [
+                  15,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "b0616503-e8bf-4c42-9aab-1b6ac7741f95",
+          "position": [
+            15
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "5. Mana Luli Raas Siyum Mangashaa Manneen duraan ilaalle dabalate, manni maastar plaanii magaalaatiin akka qabeenyaatti galmeefame kun, mana Luli Raas Siyum Mangashaa naannawa Faransaayitti argamuuhda. Kunis mana viilaa durii isa guddaadha. Haalli ijaarsa isaas kan oggummaa ijaarsa manaa bara sanaa agarsiisuudha.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "5. Mana Luli Raas Siyum Mangashaa Manneen duraan ilaalle dabalate, manni maastar plaanii magaalaatiin akka qabeenyaatti galmeefame kun, mana Luli Raas Siyum Mangashaa naannawa Faransaayitti argamuuhda. Kunis mana viilaa durii isa guddaadha. Haalli ijaarsa isaas kan oggummaa ijaarsa manaa bara sanaa agarsiisuudha.",
+                                    "attributes": []
+                                  },
+                                  "id": "8e1c1f04-3eed-4c09-a71f-30266f2dd87c",
+                                  "position": [
+                                    16,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "6d73fc3f-dc5d-45ce-9ceb-09250f2ae029",
+                            "position": [
+                              16,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "41b560ea-3c80-4f8a-a8ab-a87da57d63c4",
+                      "position": [
+                        16,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "b1f64a20-f58b-4588-aa18-cbfdb100674f",
+                "position": [
+                  16,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Mana Luli Raas Siyum Mangashaa",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Mana Luli Raas Siyum Mangashaa",
+                                    "attributes": []
+                                  },
+                                  "id": "d200eca9-e155-4093-ac69-706b1a9aeffa",
+                                  "position": [
+                                    16,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "6f1cc5fc-71cd-40e4-b8b9-2f100e2de602",
+                            "position": [
+                              16,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "e1c8303b-05b0-4ef4-9e5a-3683e73543dc",
+                      "position": [
+                        16,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "334ce3ca-e3bf-4c5d-8b2f-8ea9a6b26ab6",
+                "position": [
+                  16,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 549,
+                  "locator": "46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 976
+                },
+                "id": "6e8f87c2-881b-4569-89ca-11653dadfe6e",
+                "position": [
+                  16,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "daabd606-c3c7-40bb-842e-8038fcf85ccb",
+          "position": [
+            16
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Akkuma Dubbii Hiimaa Mootii Nasiibuu Masqaloo, asis abbootii warraa baayyeetu jiraataachaa jira. Manni tibba tokko mana jireenyaa nama tokko turees har'aa abbootii warraa 30 olitu keessa jiraachaa jira. Naannawa manichaattis manneen hedduun ijaaramanii jiru.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Akkuma Dubbii Hiimaa Mootii Nasiibuu Masqaloo, asis abbootii warraa baayyeetu jiraataachaa jira. Manni tibba tokko mana jireenyaa nama tokko turees har'aa abbootii warraa 30 olitu keessa jiraachaa jira. Naannawa manichaattis manneen hedduun ijaaramanii jiru.",
+                                    "attributes": []
+                                  },
+                                  "id": "647dbbdb-482a-4057-bb8b-f612c3540b58",
+                                  "position": [
+                                    17,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "bd7c8f67-ba6a-44df-82f8-a88f3cb5ecd8",
+                            "position": [
+                              17,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "2cf7def5-f52e-4822-9c58-d0e2d499d71c",
+                      "position": [
+                        17,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "6162842f-b49f-4949-8a7d-1b638c2f4aee",
+                "position": [
+                  17,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Mana Luli Raas Siyum Mangashaa",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Mana Luli Raas Siyum Mangashaa",
+                                    "attributes": []
+                                  },
+                                  "id": "4f32245a-5a73-4582-b944-3ab1c3031452",
+                                  "position": [
+                                    17,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "194a4138-fd37-4859-9a1a-e3fe8d7e3906",
+                            "position": [
+                              17,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "3ddd5b7e-2099-4c35-8b90-d20024c90a97",
+                      "position": [
+                        17,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "82aadb5b-f222-49e8-bb3e-3d75e47430f1",
+                "position": [
+                  17,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 360,
+                  "locator": "6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 640
+                },
+                "id": "c454cc2c-23f4-48c7-b7dc-e229853a88da",
+                "position": [
+                  17,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "a41e5ff5-8fe9-4d57-940b-91b758c46a97",
+          "position": [
+            17
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Manneen durii kanneeniif yoo haaromsi atattamaa taasifame malee jireenyi namoota keessa jiraatanii balaa irratti argama",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Manneen durii kanneeniif yoo haaromsi atattamaa taasifame malee jireenyi namoota keessa jiraatanii balaa irratti argama",
+                                    "attributes": []
+                                  },
+                                  "id": "26325a74-fcf1-4963-ac7a-38d628e8b7fb",
+                                  "position": [
+                                    18,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "a9494d08-a688-4331-b0b7-81b9b9bc2c38",
+                            "position": [
+                              18,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "112566a4-17db-45ec-b4ad-a5683c6454a5",
+                      "position": [
+                        18,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "7789bf1b-7be8-41fc-85d1-c67cb46a6b38",
+                "position": [
+                  18,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Mana Luli Raas Siyum Mangashaa",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Mana Luli Raas Siyum Mangashaa",
+                                    "attributes": []
+                                  },
+                                  "id": "3360270d-2d33-4797-a477-9154b0832398",
+                                  "position": [
+                                    18,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "ceec6592-5f72-4838-b2b5-1326660b94c2",
+                            "position": [
+                              18,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "b94c470b-813a-41d9-9bf2-5c837c555c4b",
+                      "position": [
+                        18,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "7bd2a554-bebd-43a4-aeb7-025dbfcd4247",
+                "position": [
+                  18,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "BBC",
+                  "height": 549,
+                  "locator": "9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 976
+                },
+                "id": "9f54bbc7-44c1-4ddb-b459-4d924a683a09",
+                "position": [
+                  18,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "97653d1b-8ccc-4c62-b556-f30febf4a277",
+          "position": [
+            18
+          ]
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan",
+      "headline": "Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan"
+    },
+    "locators": {
+      "assetUri": "/afaanoromoo/oduu-41217768",
+      "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-41217768",
+      "curie": "http://www.bbc.co.uk/asset/114f54f2-1c3f-5d41-8988-c3330e0c204c"
+    },
+    "summary": "Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan",
+    "timestamp": 1563495743899,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      }
+    },
+    "indexImage": {
+      "id": "97739292",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/726D/production/_97739292_img_1620.jpg",
+      "path": "/cpsprodpb/726D/production/_97739292_img_1620.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:afaanoromoo/oduu-41217768",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Oduu",
+      "uri": "/afaanoromoo/oduu",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Afaan Oromoo",
+      "uri": "/afaanoromoo",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
