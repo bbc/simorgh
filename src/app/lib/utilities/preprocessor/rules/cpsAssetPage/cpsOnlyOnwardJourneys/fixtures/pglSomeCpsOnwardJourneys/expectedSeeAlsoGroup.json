@@ -1,0 +1,246 @@
+{
+  "type": "see-alsos",
+  "promos": [
+    {
+      "headlines": {
+        "shortHeadline": "ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası",
+        "headline": "ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası"
+      },
+      "locators": {
+        "assetUri": "/azeri/azerbaijan-44124647",
+        "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-44124647"
+      },
+      "summary": "Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edir.",
+      "timestamp": 1526553848,
+      "cpsType": "STY",
+      "indexImage": {
+        "id": "100713334",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/A943/production/_100713334_officersandsoldiers.jpg",
+        "path": "/cpsprodpb/A943/production/_100713334_officersandsoldiers.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Azərbaycan Xalq Cümhuriyyətinin zabit və əsgərləri",
+        "caption": "ADR-ın zabit və əsgərləri",
+        "copyrightHolder": "Milli Arxiv",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:azeri/azerbaijan-44124647",
+      "type": "cps"
+    },
+    {
+      "headlines": {
+        "shortHeadline": "ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi",
+        "headline": "ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi"
+      },
+      "locators": {
+        "assetUri": "/azeri/azerbaijan-43540056",
+        "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-43540056"
+      },
+      "summary": "ADR-100 layihəmizdə növbəti yazı: 1918-ci il martın 3-də Bolşeviklər Almaniya, Bolqarıstan, Avstriya-Macarıstan və Osmanlı nümayəndələri ilə Brest-Litovsk Sülh Sazişi imzalayır. İmzalanma Bakının azadlığı ilə nəticələnən bir sıra hadisələrə səbəb olur.",
+      "timestamp": 1522167836,
+      "cpsType": "STY",
+      "indexImage": {
+        "id": "100567146",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/FAB0/production/_100567146_aghayev1.jpg",
+        "path": "/cpsprodpb/FAB0/production/_100567146_aghayev1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Əhməd Ağayevin şəkli",
+        "caption": "Azərbaycan Xalq Cümhüriyyətində millət vəkili olan Əhməd Bəy Ağayev, Azərbaycana gələn Türk ordusunun komandanı, Nuru Paşanın müavini olub",
+        "copyrightHolder": "Milli Arxiv",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:azeri/azerbaijan-43540056",
+      "type": "cps"
+    },
+    {
+      "headlines": {
+        "shortHeadline": "Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz",
+        "headline": "Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz"
+      },
+      "locators": {
+        "assetUri": "/azeri/azerbaijan-44022776",
+        "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-44022776"
+      },
+      "summary": "#ADR100 layihəmizdə: 1918-1920-ci illərdə Gürcüstanla Azərbaycan arasında əməkdaşlıq yeni respublikalar üçün olduqca mühüm idi. Eyni zamanda Bakı ilə Tbilisi arasında gərginlik yaradan məsələlər mövcud idi. Belə məsələlərdən biri də ərazi mübahisələri idi.",
+      "timestamp": 1525930091,
+      "cpsType": "STY",
+      "indexImage": {
+        "id": "101240680",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/219C/production/_101240680_gettyimages-98040059.jpg",
+        "path": "/cpsprodpb/219C/production/_101240680_gettyimages-98040059.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Marneuli",
+        "caption": "Marneuli və ya keçmiş Borçalının əhalisinin əksəriyyəti azərbaycanlılardır.",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:azeri/azerbaijan-44022776",
+      "type": "cps"
+    },
+    {
+      "headlines": {
+        "shortHeadline": "Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri",
+        "headline": "Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri"
+      },
+      "locators": {
+        "assetUri": "/azeri/azerbaijan-43713137",
+        "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-43713137"
+      },
+      "summary": "1918-ci il mayın 28-də Azərbaycanın istiqlaliyyəti elan olunanda bu hadisədən bir gün əvvəl dağılmış Zaqafqaziya Seyminin 44 nəfər müsəlman nümayəndəsi Tiflisdə toplanır və özlərini Azərbaycanın Milli Şurası elan edirlər.",
+      "timestamp": 1523357059,
+      "cpsType": "STY",
+      "indexImage": {
+        "id": "100780968",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/1537C/production/_100780968_xoyski2.jpg",
+        "path": "/cpsprodpb/1537C/production/_100780968_xoyski2.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Fətəli Xan Xoyski",
+        "caption": "Fətəli Xan Xoyski",
+        "copyrightHolder": "Milli Arxiv",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:azeri/azerbaijan-43713137",
+      "type": "cps"
+    },
+    {
+      "headlines": {
+        "shortHeadline": "1918-1991: Bir müstəqilliyin iki bəyanı",
+        "headline": "1918-1991: Bir müstəqilliyin iki bəyanı"
+      },
+      "locators": {
+        "assetUri": "/azeri/azerbaijan-37688691",
+        "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-37688691"
+      },
+      "summary": "25 il əvvəl bu gün Azərbaycan çökməkdə olan Sovet İttifaqından özünün müstəqillyini bəyan edib. Bu, Azərbaycan Respublikasının ikinci doğuluşu idi.",
+      "timestamp": 1476780870,
+      "cpsType": "STY",
+      "indexImage": {
+        "id": "91964456",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/FFA6/production/_91964456_gettyimages-52022706.jpg",
+        "path": "/cpsprodpb/FFA6/production/_91964456_gettyimages-52022706.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Bakı 1991",
+        "caption": "Moskvada çevrilişin iflasından iki ay sonra, 1991-ci il, oktyabrın 18-də Azərbaycan da öz müstəqillyiini elan edib",
+        "copyrightHolder": "ANATOLY SAPRONENKO/ Getty",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:azeri/azerbaijan-37688691",
+      "type": "cps"
+    },
+    {
+      "headlines": {
+        "shortHeadline": "Müstəqillik sizə nə verib? - sorğu",
+        "headline": "Bakı sakinləri müstəqillik barədə danışır"
+      },
+      "locators": {
+        "assetUri": "/azeri/azerbaijan-37691096",
+        "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-37691096"
+      },
+      "summary": "Çərşənbə axşamı şəhər sakinləri BBC Azərbaycancanın \"Müstəqillik sizə nə verib?\" sualını cavablandırıb.",
+      "timestamp": 1476806574,
+      "cpsType": "MAP",
+      "indexImage": {
+        "id": "91973882",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/70A5/production/_91973882_p04cfdmb.jpg",
+        "path": "/cpsprodpb/70A5/production/_91973882_p04cfdmb.jpg",
+        "height": 576,
+        "width": 1024,
+        "altText": "sakin",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:azeri/azerbaijan-37691096",
+      "type": "cps"
+    },
+    {
+      "headlines": {
+        "shortHeadline": "1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?",
+        "headline": "1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?"
+      },
+      "locators": {
+        "assetUri": "/azeri/azerbaijan-43499221",
+        "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-43499221"
+      },
+      "summary": "Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edəcək.",
+      "timestamp": 1521736027,
+      "cpsType": "STY",
+      "indexImage": {
+        "id": "100522730",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/0E8A/production/_100522730_gettyimages-3296459-1.jpg",
+        "path": "/cpsprodpb/0E8A/production/_100522730_gettyimages-3296459-1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Bakı neft yataqları",
+        "caption": "Bakı, 1 dekabr 1918: Qırmızı, yaxud Ağ, Rusiya vətəndaş müharibəsinin qalibi tez, ya gec Bakını ələ almağa çalışacaqdı",
+        "copyrightHolder": "Topical Press Agency",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:azeri/azerbaijan-43499221",
+      "type": "cps"
+    },
+    {
+      "headlines": {
+        "shortHeadline": "Zaqatala: Azərbaycanın qalib gəldiyi mübahisə",
+        "headline": "#ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə"
+      },
+      "locators": {
+        "assetUri": "/azeri/azerbaijan-44004471",
+        "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-44004471"
+      },
+      "summary": "Bir çox azərbaycanlı və gürcüstanlı siyasətçiləri anlayırdılar ki, onların içində olduğu həssas dövrdən salamat çıxmaq üçün iqtisadi, siyasi və hərbi müttəfiqlik vacibdir. Eyni zamanda hər iki respublika arasında bir sıra mübahisələr də mövcud idi.",
+      "timestamp": 1525432932,
+      "cpsType": "STY",
+      "indexImage": {
+        "id": "101168620",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg",
+        "path": "/cpsprodpb/0A7E/production/_101168620_4e70b0c9c347b14fc02b9b3c2897bab0.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Zaqatala",
+        "copyrightHolder": "Zaqata Rayon İcra Hakimiyyəti",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:azeri/azerbaijan-44004471",
+      "type": "cps"
+    },
+    {
+      "headlines": {
+        "shortHeadline": "Cümhuriyyət hökumətinin İranla əlaqələri necə idi?",
+        "headline": "Cümhuriyyət hökumətinin İranla əlaqələri necə idi?"
+      },
+      "locators": {
+        "assetUri": "/azeri/azerbaijan-43870815",
+        "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-43870815"
+      },
+      "summary": "İranın Xəzər sahilinə çıxan bölgələrində Azərbaycan Respublikasını böyük ticari imkanlar gözləyirdi. İran ixracatının 60-70 faizinin istehsalı ənənəvi olaraq məhz həmin regionun payına düşüb. Azərbaycan və xüsusilə Bakı-Batumi dəhlizi isə Avropa bazarına aparan təbii çıxış idi. Bəs milli hökümət iqtisadi imkanları gəlirli xarici ticarətə çevirə bildimi?",
+      "timestamp": 1524969295,
+      "cpsType": "STY",
+      "indexImage": {
+        "id": "101070770",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/1E1B/production/_101070770_gettyimages-3348212.jpg",
+        "path": "/cpsprodpb/1E1B/production/_101070770_gettyimages-3348212.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "İran hərbçiləri, 1911-ci il Tehran",
+        "caption": "İran Azərbaycanı yaranmaqda olan bufer zonası kimi görürdü - Azərbaycan faktoru İranı Rusiya ilə ümumi sərhədi bölüşmək ehtiyacından azad edirdi. (Arxiv foto: 1911-ci il Tehran, İran hərbçiləri)",
+        "copyrightHolder": "Topical Press Agency",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:azeri/azerbaijan-43870815",
+      "type": "cps"
+    }
+  ]
+}
