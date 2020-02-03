@@ -23,7 +23,8 @@ const CanonicalMostRead = ({ endpoint }) => {
     const handleResponse = async response => {
       const mostReadData = await response.json();
 
-      // do not show most read if lastRecordUpdated is greater than 35min
+      // do not show most read if lastRecordUpdated is greater than 35min as this means PopAPI has failed twice
+      // in succession. This suggests ATI may be having issues, hence risk of stale data.
       if (!mostReadRecordIsFresh(mostReadData.lastRecordTimeStamp)) {
         return;
       }
