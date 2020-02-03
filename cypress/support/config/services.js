@@ -172,38 +172,6 @@ const genServices = appEnv => ({
       },
     },
   },
-  archive: {
-    name: 'archive',
-    font: 'Reith',
-    isWorldService: false,
-    variant: 'default',
-    pageTypes: {
-      articles: {
-        path: undefined,
-        smoke: false,
-      },
-      errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/archive/articles/c123456abcdo',
-        smoke: false,
-      },
-      frontPage: {
-        path: undefined,
-        smoke: false,
-      },
-      liveRadio: {
-        path: undefined,
-        smoke: false,
-      },
-      mediaAssetPage: {
-        path: undefined,
-        smoke: false,
-      },
-      photoGalleryPage: { path: undefined, smoke: false },
-    },
-  },
   azeri: {
     name: 'azeri',
     font: undefined,
