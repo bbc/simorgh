@@ -24,9 +24,7 @@
             },
             "duration": 5,
             "durationISO8601": "PT5S",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "versionId": "p01kx42v",
             "warnings": {}
           }
@@ -130,13 +128,7 @@
       "cps_asset_id": "23256797",
       "cps_asset_type": "map"
     },
-    "blockTypes": [
-      "media",
-      "paragraph",
-      "heading",
-      "list",
-      "image"
-    ],
+    "blockTypes": ["media", "paragraph", "heading", "list", "image"],
     "createdBy": "yoruba-v6",
     "firstPublished": 1574857137000,
     "id": "urn:bbc:ares::asset:yoruba/media-23256797",
@@ -176,9 +168,9 @@
       "altText": "connectionAltText",
       "copyrightHolder": "BBC",
       "height": 576,
-      "href": "http://b.files.bbci.co.uk/A4B2/test/_63726124_p01kx435.jpg",
+      "href": "http://c.files.bbci.co.uk/17713/production/_104991069_9.jpg",
       "id": "63726124",
-      "path": "/cpsdevpb/A4B2/test/_63726124_p01kx435.jpg",
+      "path": "/cpsprodpb/17713/production/_104991069_9.jpg",
       "subType": "index",
       "type": "image",
       "width": 1024
@@ -211,9 +203,7 @@
           },
           "duration": 5,
           "durationISO8601": "PT5S",
-          "types": [
-            "Original"
-          ],
+          "types": ["Original"],
           "versionId": "p01kx42v",
           "warnings": {}
         }
@@ -256,9 +246,9 @@
               "altText": "Keyframe #2",
               "copyrightHolder": "BBC",
               "height": 576,
-              "href": "http://b.files.bbci.co.uk/1DD3/test/_63653670_p01g417p.jpg",
+              "href": "http://c.files.bbci.co.uk/17713/production/_104991069_9.jpg",
               "id": "63653670",
-              "path": "/cpsdevpb/1DD3/test/_63653670_p01g417p.jpg",
+              "path": "/cpsprodpb/17713/production/_104991069_9.jpg",
               "subType": "index",
               "type": "image",
               "width": 1024
@@ -291,9 +281,7 @@
                   },
                   "duration": 152,
                   "durationISO8601": "PT2M32S",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "versionId": "p01g40g8",
                   "warnings": {}
                 }

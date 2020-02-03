@@ -24,9 +24,7 @@
             },
             "duration": 5,
             "durationISO8601": "PT5S",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "versionId": "p01kx42v",
             "warnings": {}
           }
@@ -581,9 +579,9 @@
       "altText": "connectionAltText",
       "copyrightHolder": "BBC",
       "height": 360,
-      "href": "http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg",
+      "href": "http://c.files.bbci.co.uk/17713/production/_104991069_9.jpg",
       "id": "63721682",
-      "path": "/cpsdevpb/6FC4/test/_63721682_p01kx435.jpg",
+      "path": "/cpsprodpb/17713/production/_104991069_9.jpg",
       "subType": "index",
       "type": "image",
       "width": 640
@@ -616,9 +614,7 @@
           },
           "duration": 5,
           "durationISO8601": "PT5S",
-          "types": [
-            "Original"
-          ],
+          "types": ["Original"],
           "versionId": "p01kx42v",
           "warnings": {}
         }
@@ -665,9 +661,9 @@
               "caption": "Di attack happen for inside St. Philip Catholic Chirch Ozubulu",
               "copyrightHolder": "BBC",
               "height": 351,
-              "href": "http://b.files.bbci.co.uk/5C06/test/_63585532_ozubuluchurch.jpg",
+              "href": "http://c.files.bbci.co.uk/17713/production/_104991069_9.jpg",
               "id": "63585532",
-              "path": "/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg",
+              "path": "/cpsprodpb/17713/production/_104991069_9.jpg",
               "subType": "index",
               "type": "image",
               "width": 624
@@ -692,9 +688,9 @@
               "caption": "Homosexuality dey illegal for Nigeria",
               "copyrightHolder": "AFP",
               "height": 351,
-              "href": "http://b.files.bbci.co.uk/13644/test/_63582497_black-gay.jpg",
+              "href": "http://c.files.bbci.co.uk/17713/production/_104991069_9.jpg",
               "id": "63582497",
-              "path": "/cpsdevpb/13644/test/_63582497_black-gay.jpg",
+              "path": "/cpsprodpb/17713/production/_104991069_9.jpg",
               "subType": "index",
               "type": "image",
               "width": 624
@@ -734,9 +730,9 @@
               "caption": "BBC Pidgin minute",
               "copyrightHolder": "BBC",
               "height": 576,
-              "href": "http://b.files.bbci.co.uk/B7E8/test/_63708074_mediaitem63708073.png",
+              "href": "http://c.files.bbci.co.uk/17713/production/_104991069_9.jpg",
               "id": "63708074",
-              "path": "/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png",
+              "path": "/cpsprodpb/17713/production/_104991069_9.jpg",
               "subType": "index",
               "type": "image",
               "width": 1024
@@ -770,9 +766,7 @@
                   },
                   "duration": 15,
                   "durationISO8601": "PT15S",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "versionId": "p01cqyct",
                   "warnings": {}
                 }
