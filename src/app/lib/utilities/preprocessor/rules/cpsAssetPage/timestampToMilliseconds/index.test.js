@@ -64,6 +64,7 @@ describe('timestampToMilliseconds - related content', () => {
       relatedContent: {
         groups: [
           {
+            type: 'see-alsos',
             promos: [
               {
                 timestamp: 123456789,
@@ -81,6 +82,7 @@ describe('timestampToMilliseconds - related content', () => {
       relatedContent: {
         groups: [
           {
+            type: 'see-alsos',
             promos: [
               {
                 timestamp: 123456789000,

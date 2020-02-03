@@ -143,7 +143,7 @@ export const service = {
         },
       },
       media: {
-        noJs: 'Dem no support media player for your device',
+        noJs: 'پخش این فایل در دستگاه شما پشتیبانی نمی شود.',
         audio: 'صدا',
         photogallery: 'عکس',
         video: 'ویدیو',
