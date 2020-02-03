@@ -135,7 +135,9 @@ const genServices = appEnv => ({
       },
       liveRadio: {
         path:
-          isLive(appEnv) || isTest(appEnv) || Cypress.env('APP_ENV') === 'local'
+          isLive(appEnv) ||
+          isTest(appEnv) ||
+          Cypress.env('SIMORGH_APP_ENV') === 'local'
             ? undefined
             : '/arabic/bbc_arabic_radio/liveradio',
         smoke: false,
@@ -388,7 +390,9 @@ const genServices = appEnv => ({
       },
       liveRadio: {
         path:
-          isLive(appEnv) || isTest(appEnv) || Cypress.env('APP_ENV') === 'local'
+          isLive(appEnv) ||
+          isTest(appEnv) ||
+          Cypress.env('SIMORGH_APP_ENV') === 'local'
             ? undefined
             : '/hindi/bbc_hindi_radio/liveradio',
         smoke: false,
@@ -923,21 +927,24 @@ const genServices = appEnv => ({
     pageTypes: {
       articles: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('SIMORGH_APP_ENV') === 'live' ||
+          Cypress.env('SIMORGH_APP_ENV') === 'test'
             ? undefined
             : '/serbian/articles/c805k05kr73o/cyr',
         smoke: true,
       },
       errorPage404: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('SIMORGH_APP_ENV') === 'live' ||
+          Cypress.env('SIMORGH_APP_ENV') === 'test'
             ? undefined
             : '/serbian/articles/cabcdefghijo/cyr',
         smoke: true,
       },
       frontPage: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('SIMORGH_APP_ENV') === 'live' ||
+          Cypress.env('SIMORGH_APP_ENV') === 'test'
             ? undefined
             : '/serbian/cyr',
         smoke: true,
@@ -945,7 +952,8 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('SIMORGH_APP_ENV') === 'live' ||
+          Cypress.env('SIMORGH_APP_ENV') === 'test'
             ? undefined
             : undefined, // '/serbian/srbija-49427344/cyr'
         smoke: false,
@@ -1292,21 +1300,24 @@ const genServices = appEnv => ({
     pageTypes: {
       articles: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('SIMORGH_APP_ENV') === 'live' ||
+          Cypress.env('SIMORGH_APP_ENV') === 'test'
             ? undefined
             : '/ukchina/articles/c0e8weny66ko/trad',
         smoke: true,
       },
       errorPage404: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('SIMORGH_APP_ENV') === 'live' ||
+          Cypress.env('SIMORGH_APP_ENV') === 'test'
             ? undefined
             : '/ukchina/articles/cabcdefghijo/trad',
         smoke: true,
       },
       frontPage: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('SIMORGH_APP_ENV') === 'live' ||
+          Cypress.env('SIMORGH_APP_ENV') === 'test'
             ? undefined
             : '/ukchina/trad',
         smoke: true,
@@ -1314,7 +1325,8 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('SIMORGH_APP_ENV') === 'live' ||
+          Cypress.env('SIMORGH_APP_ENV') === 'test'
             ? undefined
             : undefined, // '/ukchina/49375846/trad'
         smoke: false,
@@ -1376,7 +1388,9 @@ const genServices = appEnv => ({
       },
       liveRadio: {
         path:
-          isLive(appEnv) || isTest(appEnv) || Cypress.env('APP_ENV') === 'local'
+          isLive(appEnv) ||
+          isTest(appEnv) ||
+          Cypress.env('SIMORGH_APP_ENV') === 'local'
             ? undefined
             : '/urdu/bbc_urdu_radio/liveradio',
         smoke: false,
@@ -1413,7 +1427,9 @@ const genServices = appEnv => ({
       },
       liveRadio: {
         path:
-          isLive(appEnv) || isTest(appEnv) || Cypress.env('APP_ENV') === 'local'
+          isLive(appEnv) ||
+          isTest(appEnv) ||
+          Cypress.env('SIMORGH_APP_ENV') === 'local'
             ? undefined
             : '/uzbek/bbc_uzbek_radio/liveradio',
         smoke: false,
@@ -1525,21 +1541,24 @@ const genServices = appEnv => ({
     pageTypes: {
       articles: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('SIMORGH_APP_ENV') === 'live' ||
+          Cypress.env('SIMORGH_APP_ENV') === 'test'
             ? undefined
             : '/zhongwen/articles/c3xd4x9prgyo/trad',
         smoke: true,
       },
       errorPage404: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('SIMORGH_APP_ENV') === 'live' ||
+          Cypress.env('SIMORGH_APP_ENV') === 'test'
             ? undefined
             : '/zhongwen/articles/cabcdefghijo/trad',
         smoke: true,
       },
       frontPage: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('SIMORGH_APP_ENV') === 'live' ||
+          Cypress.env('SIMORGH_APP_ENV') === 'test'
             ? undefined
             : '/zhongwen/trad',
         smoke: true,
@@ -1547,7 +1566,8 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
+          Cypress.env('SIMORGH_APP_ENV') === 'live' ||
+          Cypress.env('SIMORGH_APP_ENV') === 'test'
             ? undefined
             : undefined, // '/zhongwen/chinese-news-49631219/trad'
         smoke: false,
@@ -1558,7 +1578,7 @@ const genServices = appEnv => ({
 
 // Allow runs to be limited to a single service via the CYPRESS_ONLY_SERVICE env var
 const runOnlyService = Cypress.env('ONLY_SERVICE');
-const environment = serviceMapper(Cypress.env('APP_ENV'));
+const environment = serviceMapper(Cypress.env('SIMORGH_APP_ENV'));
 
 if (
   runOnlyService &&

@@ -14,7 +14,7 @@ Object.keys(services).forEach(service => {
   }
 
   // Do not run the redirect tests on the local environment
-  if (Cypress.env('APP_ENV') === 'local') {
+  if (Cypress.env('SIMORGH_APP_ENV') === 'local') {
     return;
   }
 

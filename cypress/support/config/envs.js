@@ -58,5 +58,5 @@ const geoLocate = (conf, isUk = false) => {
 
 module.exports =
   typeof Cypress !== 'undefined'
-    ? geoLocate(config[Cypress.env('APP_ENV')], Cypress.env('UK'))
+    ? geoLocate(config[Cypress.env('SIMORGH_APP_ENV')], Cypress.env('UK'))
     : (env, uk) => geoLocate(config[env], uk);

@@ -188,8 +188,14 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
            */
           if (
             service !== 'naidheachdan' &&
-            !(service === 'afaanoromoo' && Cypress.env('APP_ENV') === 'test') &&
-            !(service === 'tigrinya' && Cypress.env('APP_ENV') === 'test')
+            !(
+              service === 'afaanoromoo' &&
+              Cypress.env('SIMORGH_APP_ENV') === 'test'
+            ) &&
+            !(
+              service === 'tigrinya' &&
+              Cypress.env('SIMORGH_APP_ENV') === 'test'
+            )
           ) {
             cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
               ({ body }) => {
@@ -428,7 +434,7 @@ export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
   pageType,
 }) => {
   describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {
-    if (Cypress.env('APP_ENV') === 'live') {
+    if (Cypress.env('SIMORGH_APP_ENV') === 'live') {
       describe('Page links test', () => {
         it('Top navigation links should not 404', () => {
           cy.get('header a').each(element => {

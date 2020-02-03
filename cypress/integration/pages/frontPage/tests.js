@@ -142,7 +142,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
 
         if (
           serviceHasPublishedPromo(service) &&
-          Cypress.env('APP_ENV') !== 'local'
+          Cypress.env('SIMORGH_APP_ENV') !== 'local'
         ) {
           it('individual promo should link to corresponding article pages and back navigation should link to frontpage', () => {
             let currentURL = null;
