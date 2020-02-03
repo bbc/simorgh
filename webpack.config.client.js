@@ -64,7 +64,10 @@ module.exports = ({
     optimization: {
       minimizer: [
         new TerserPlugin({
-          terserOptions: { keep_fnames: IS_PROD_PROFILE },
+          terserOptions: {
+            keep_classnames: IS_PROD_PROFILE,
+            keep_fnames: IS_PROD_PROFILE,
+          },
         }),
       ],
       // specify min/max file sizes for each JS chunk for optimal performance
