@@ -145,6 +145,8 @@ export const service = {
         },
       },
       media: {
+        noJs:
+          'A reprodução deste formato de vídeo não é compatível com seu dispositivo',
         audio: 'Áudio',
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',
