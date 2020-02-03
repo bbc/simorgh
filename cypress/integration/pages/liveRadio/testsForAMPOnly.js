@@ -1,5 +1,4 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 import getMappedServiceId from './helper';
 

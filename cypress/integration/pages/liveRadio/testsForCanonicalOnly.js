@@ -1,6 +1,5 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import config from '../../../support/config/services';
 import getMappedServiceId from './helper';
 
 // For testing important features that differ between services, e.g. Timestamps.
