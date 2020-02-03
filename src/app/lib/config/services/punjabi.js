@@ -171,6 +171,10 @@ export const service = {
         title: 'ਕੌਮਾਂਤਰੀ',
         url: '/punjabi/international',
       },
+      {
+        title: '#ISWOTY',
+        url: '/punjabi/resources/idt-681afed0-03f5-4d5f-a640-3011a722d1c8',
+      },
     ],
     footer: {
       trustProjectLink: {
