@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
 library 'Simorgh'
 
-// Run latest every 3 hours
-def cron_string = env.BRANCH_NAME == "latest" ? "0 0,6,9,12,15,18,21 * * *" : ""
+// Run latest every 6 hours
+def cron_string = env.BRANCH_NAME == "latest" ? "0 */6 * * *" : ""
 
 node {
     properties(
@@ -21,7 +21,7 @@ node {
             )
         ]
     )
-    timeout(time: 240, unit: 'MINUTES') {
+    timeout(time: 360, unit: 'MINUTES') {
         withEnv([
             'CI=true'
         ]) {
