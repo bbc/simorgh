@@ -1,0 +1,496 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::index:pidgin/front_page/desktop/domestic",
+    "locators": {
+      "assetUri": "/pidgin/front_page",
+      "cpsUrn": "urn:bbc:content:assetUri:pidgin/front_page",
+      "curie": "http://www.bbc.co.uk/asset/52f3c7b1-83ed-2338-e050-17ac8045cd94/desktop/domestic"
+    },
+    "type": "IDX",
+    "createdBy": "pidgin-v6",
+    "language": "pcm",
+    "lastUpdated": 1560249022470,
+    "firstPublished": 1499440608,
+    "lastPublished": 1560249011,
+    "options": {
+      "allowAdvertising": true
+    },
+    "analyticsLabels": {
+      "counterName": "pidgin.page",
+      "cps_asset_id": "40423314",
+      "cps_asset_type": "idx"
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": [
+      "responsive-top-stories",
+      "responsive-cluster",
+      "responsive-must-see",
+      "responsive-inspire",
+      "responsive-in-depth",
+      "special-reports",
+      "featured-site-top-stories"
+    ],
+    "title": "Domot",
+    "summary": "We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join."
+  },
+  "content": {
+    "groups": [
+      {
+        "type": "responsive-top-stories",
+        "title": "Top Stories",
+        "maxRelatedLinks": 3,
+        "items": [
+          {
+            "headlines": {
+              "headline": "Senators don begin vote for Senate President"
+            },
+            "locators": {
+              "assetUri": "/pidgin/live/tori-48591362",
+              "cpsUrn": "urn:bbc:content:assetUri:pidgin/live/tori-48591362"
+            },
+            "summary": "Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.",
+            "timestamp": 1560234412000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                },
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "LIV",
+            "indexImage": {
+              "id": "107328539",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg",
+              "path": "/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Senator Ahmad Lawan and Ali Ndume",
+              "caption": "Senator Ahmad Lawan and Senator Ali Ndume dey contest to become di senate president",
+              "copyrightHolder": "Other"
+            },
+            "commentary": {
+              "order": "descending",
+              "assetUUID": "A8F17B8D05CD9549B2905B8C4E2C5019",
+              "channels": {
+                "enhancedmobile": "bbc.cps.asset.48591365_EnhancedMobile",
+                "desktop": "bbc.cps.asset.48591365_HighWeb",
+                "highweb": "bbc.cps.asset.48591365_HighWeb",
+                "mobile": "bbc.cps.asset.48591365_EnhancedMobile"
+              }
+            },
+            "isLive": true,
+            "imageThumbnail": {
+              "id": "107329104",
+              "subType": "index-thumbnail",
+              "href": "http://c.files.bbci.co.uk/9D00/production/_107329104_ninthnationalassemblypidgin_senate_reps_1080.jpg",
+              "path": "/cpsprodpb/9D00/production/_107329104_ninthnationalassemblypidgin_senate_reps_1080.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "Senator Ahmad Lawan and Ali Ndume",
+              "caption": "Senator Ahmad Lawan and Senator Ali Ndume dey contest to become di senate president",
+              "copyrightHolder": "Other"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "relatedItems": [
+              {
+                "headlines": {
+                  "headline": "Who go lead di Ninth National Assembly?"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/tori-48591361",
+                  "cpsUrn": "urn:bbc:content:assetUri:/pidgin/tori-48591361"
+                },
+                "summary": "Nigeria go do inauguration to welcome im tear rubber lawmakers into di Ninth Assembly.",
+                "timestamp": 1560229039000,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:pidgin/tori-48591361",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "4 tins wey go determine who become di next Senate President, Speaker"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/tori-47603701",
+                  "cpsUrn": "urn:bbc:content:assetUri:/pidgin/tori-47603701"
+                },
+                "summary": "Efritin don set for di battle for di leadership battle of di kontri National Assembly during dia 9th assembly.",
+                "timestamp": 1552922728000,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:pidgin/tori-47603701",
+                "type": "cps"
+              }
+            ],
+            "id": "urn:bbc:ares::asset:pidgin/live/tori-48591362",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "BBC Pidgin Minute"
+            },
+            "locators": {
+              "assetUri": "/pidgin/media-44221514",
+              "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-44221514"
+            },
+            "summary": "All di local and world tori wey you suppose know in 60 seconds!",
+            "timestamp": 1560244488000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                },
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                },
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                },
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07ct6cd",
+              "subType": "clip",
+              "format": "audio",
+              "title": "BBC Pidgin Minute",
+              "synopses": {
+                "short": "BBC Pidgin Minute",
+                "medium": "All di local and world tori wey you suppose know in 60 seconds!"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07ct6pt.jpg",
+              "embedding": false,
+              "advertising": false,
+              "caption": "BBC Pidgin Minute",
+              "versions": [
+                {
+                  "versionId": "p07ct6cg",
+                  "types": ["Original"],
+                  "duration": 59,
+                  "durationISO8601": "PT59S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableUntil": 1560330010,
+                  "availableFrom": 1560243610
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "107315302",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/4F7F/production/_107315302_p07cr6sy.jpg",
+              "path": "/cpsprodpb/4F7F/production/_107315302_p07cr6sy.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "BBC Pidgin Minute",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "id": "urn:bbc:ares::asset:pidgin/media-44221514",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Majid Waris no get ‘sɛlɛ’ for Coach Kwesi Appiah en Black Stars Afcon squad"
+            },
+            "locators": {
+              "assetUri": "/pidgin/tori-48591366",
+              "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48591366"
+            },
+            "summary": "Major shocker wey come out be sey dem drop striker, Majeed Waris who dem replace plus U-23 striker, Kwabena Owusu.",
+            "timestamp": 1560248900000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107331410",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/0585/production/_107331410_ghana2019afconsquad.jpg",
+              "path": "/cpsprodpb/0585/production/_107331410_ghana2019afconsquad.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Di Black Stars",
+              "copyrightHolder": "Facebook/Ghana Football Association"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "id": "urn:bbc:ares::asset:pidgin/tori-48591366",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Woman write exam 30 minutes afta she born"
+            },
+            "locators": {
+              "assetUri": "/pidgin/tori-48579283",
+              "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-48579283"
+            },
+            "summary": "Di 21-year-old Ethiopian woman don take one of her secondary school leaving exams 30 minutes afta she born.",
+            "timestamp": 1560247904000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107329121",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2FA0/production/_107329121_34ba0903-191f-4410-a575-16ca72c6ce2c.jpg",
+              "path": "/cpsprodpb/2FA0/production/_107329121_34ba0903-191f-4410-a575-16ca72c6ce2c.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "New mama dey write exam",
+              "caption": "Di 21 year old mama get plan to go university",
+              "copyrightHolder": "Ilu Abba Bor Zone communication office"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "id": "urn:bbc:ares::asset:pidgin/tori-48579283",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Top tori"
+        },
+        "semanticGroupName": "Top Stories"
+      },
+      {
+        "type": "featured-site-top-stories",
+        "title": "Frequency info",
+        "items": [
+          {
+            "name": "Take dis predictor choose who go reach World Cup final",
+            "indexImage": {
+              "id": "101999926",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/F617/production/_101999926_messiiwobironaldo.jpg",
+              "path": "/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Messi, Iwobi, Ronaldo",
+              "copyrightHolder": "Getty Images"
+            },
+            "uri": "https://www.bbc.com/pidgin/sport-44416820",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1528968307000,
+            "type": "link"
+          },
+          {
+            "name": "Audio promo",
+            "summary": "Summary",
+            "indexImage": {
+              "id": "63692548",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg",
+              "path": "/cpsdevpb/14A31/test/_63692548_000327537-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "A lone Koala perches in a eucalyptus tree",
+              "caption": "Koalas are from Australia",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "http://www.bbc.com/pidgin",
+            "contentType": "Audio",
+            "assetTypeCode": "PRO",
+            "timestamp": 1565097889000,
+            "type": "link"
+          },
+          {
+            "name": "World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?",
+            "indexImage": {
+              "id": "101972889",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1820B/production/_101972889_gettyimages-227910.jpg",
+              "path": "/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Rashidi",
+              "caption": "Rashidi Yekini na im score Nigeria first goal for World Cup",
+              "copyrightHolder": "David Cannon"
+            },
+            "uri": "https://www.bbc.com/pidgin/sport-44439411",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1528975335000,
+            "type": "link"
+          },
+          {
+            "name": "Select your best ever African 11 players for World Cup",
+            "indexImage": {
+              "id": "101952925",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/CEBD/production/_101952925_wcbanner-2.png",
+              "path": "/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png",
+              "height": 549,
+              "width": 976,
+              "altText": "all-time African XI promo image",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.com/pidgin/sport-44425543",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1528978068000,
+            "type": "link"
+          },
+          {
+            "name": "Select your best ever African 11 players for World Cup as a feature",
+            "indexImage": {
+              "id": "101952925",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/CEBD/production/_101952925_wcbanner-2.png",
+              "path": "/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png",
+              "height": 549,
+              "width": 976,
+              "altText": "all-time African XI promo image",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.com/pidgin/sport-44425543",
+            "contentType": "Feature",
+            "assetTypeCode": "PRO",
+            "timestamp": 1528978068001,
+            "type": "link"
+          },
+          {
+            "name": "Select your best ever African 11 players for World Cup - Video",
+            "indexImage": {
+              "id": "101952925",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/CEBD/production/_101952925_wcbanner-2.png",
+              "path": "/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png",
+              "height": 549,
+              "width": 976,
+              "altText": "all-time African XI promo image",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.com/pidgin/sport-44425543",
+            "contentType": "Video",
+            "assetTypeCode": "PRO",
+            "timestamp": 1528978068000,
+            "type": "link"
+          },
+          {
+            "name": "World Cup 2018: Di top stars wey no dey go World Cup",
+            "indexImage": {
+              "id": "101890910",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/0775/production/_101890910_gettyimages-964924372.jpg",
+              "path": "/cpsprodpb/0775/production/_101890910_gettyimages-964924372.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Sane",
+              "copyrightHolder": "Getty Images"
+            },
+            "uri": "https://www.bbc.com/pidgin/sport-44214129",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1528978790000,
+            "type": "link"
+          },
+          {
+            "name": "Gallery promo",
+            "indexImage": {
+              "id": "63692548",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg",
+              "path": "/cpsdevpb/14A31/test/_63692548_000327537-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "A lone Koala perches in a eucalyptus tree",
+              "caption": "Koalas are from Australia",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "http://www.bbc.com/azeri",
+            "contentType": "Gallery",
+            "assetTypeCode": "PRO",
+            "timestamp": 1565192199000,
+            "type": "link"
+          }
+        ],
+        "strapline": {
+          "name": "2018 World Cup"
+        },
+        "semanticGroupName": "Frequency info"
+      }
+    ]
+  },
+  "promo": {
+    "subType": "IDX",
+    "name": "Domot",
+    "uri": "/pidgin/front_page",
+    "id": "urn:bbc:ares::index:pidgin/front_page/desktop/domestic",
+    "type": "simple"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Domot",
+      "uri": "/pidgin/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Pidgin",
+      "uri": "/pidgin",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
