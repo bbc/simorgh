@@ -87,13 +87,25 @@ const renderPromoList = (items, isFirstSection, dir) => {
     />
   ));
 
+  // Only use StoryPromoUl and Li if there is only one story in one row
+  const sectionHasSingleStory =
+    rows.length === 1 && rows[0].stories.length === 1;
+
+  if (sectionHasSingleStory) {
+    return (
+      <MarginWrapper firstSection={isFirstSection} oneItem dir={dir}>
+        <TopRow stories={items} sectionHasSingleStory dir={dir} />
+      </MarginWrapper>
+    );
+  }
+
   return (
-    <MarginWrapper firstSection={isFirstSection}>
+    <MarginWrapper firstSection={isFirstSection} dir={dir}>
       <Grid
         columns={fullWidthColumns}
         enableGelGutters
-        as={StoryPromoUl}
         dir={dir}
+        as={StoryPromoUl}
       >
         {renderedRows}
       </Grid>
@@ -108,13 +120,7 @@ const sectionBody = (group, items, script, service, isFirstSection, dir) => {
     );
   }
 
-  return items.length > 1 ? (
-    renderPromoList(items, isFirstSection, dir)
-  ) : (
-    <MarginWrapper firstSection={isFirstSection} oneItem dir={dir}>
-      <TopRow stories={items} sectionHasSingleStory dir={dir} />
-    </MarginWrapper>
-  );
+  return renderPromoList(items, isFirstSection, dir);
 };
 
 const removeFirstSlotRadioBulletin = dropWhile(
