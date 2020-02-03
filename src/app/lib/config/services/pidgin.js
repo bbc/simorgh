@@ -139,8 +139,7 @@ export const service = {
         },
       },
       media: {
-        noJs:
-          'A reprodução deste formato de vídeo não é compatível com seu dispositivo',
+        noJs: 'Dem no support media player for your device',
         audio: 'Audio',
         photogallery: 'Image gallery',
         video: 'Video',
