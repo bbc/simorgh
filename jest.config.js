@@ -1,6 +1,7 @@
 const { jestDirAlias } = require('./dirAlias');
 
 module.exports = {
+  reporters: ['default', 'jest-junit'],
   collectCoverageFrom: [
     '**/(src|scripts)/**/*.{js,jsx}',
     '!**/src/testHelpers/**',
