@@ -10,15 +10,15 @@ Examples:
 | pidgin/23248703     |
 # | pidgin/23248703.amp |
 
-# Scenario Outline: Verify MAP page with audio content
-#  Given I navigate to <URL>
+Scenario Outline: Verify MAP page with audio content
+ Given I navigate to <URL>
 #  Then the correct headline is displayed
-#  When I click the play audio button
-#  Then the audio plays
-# Examples:
-#  | URL                       |
-#  | pidgin/world-23252817     |
-# #  | pidgin/world-23252817.amp |
+ When I click the play audio button
+ Then the audio plays
+Examples:
+ | URL                       |
+ | pidgin/world-23252817     |
+#  | pidgin/world-23252817.amp |
 
 # Scenario Outline: Verify subheadings / crossheads etc
 #  Given I navigate to <URL>
