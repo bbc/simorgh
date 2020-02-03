@@ -137,6 +137,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'प्लेबैक आपके उपकरण पर नहीं हो पा रहा',
         audio: 'ऑडियो',
         photogallery: 'फ़ोटो गैलरी',
         video: 'वीडियो',
@@ -239,6 +240,10 @@ export const service = {
       {
         title: 'बीबीसी स्पेशल',
         url: '/hindi/in_depth',
+      },
+      {
+        title: '#ISWOTY',
+        url: '/hindi/resources/idt-a6da5349-3698-4f42-9e5b-35513c8c0537',
       },
     ],
     navigationSection: 'सेक्शन',

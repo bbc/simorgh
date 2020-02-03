@@ -28,6 +28,10 @@ const Wrapper = styled(GridItemConstrainedLarge)`
   z-index: 0;
 `;
 
+const StyledSectionLabel = styled(SectionLabel)`
+  margin-top: 0;
+`;
+
 const formatItem = (item, env) => {
   if (env === 'live') return item;
 
@@ -51,14 +55,14 @@ const CpsRelatedContent = ({ content }) => {
       aria-labelledby="related-content-heading"
     >
       <Wrapper>
-        <SectionLabel
+        <StyledSectionLabel
           script={script}
           service={service}
           dir={dir}
           labelId="related-content-heading"
         >
           {translations.relatedContent}
-        </SectionLabel>
+        </StyledSectionLabel>
 
         <StoryPromoUl>
           {content
