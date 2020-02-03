@@ -42,6 +42,7 @@ const tagPropTypes = shape({
 });
 
 ArticleMetadata.propTypes = {
+  articleId: string,
   title: string.isRequired,
   author: string.isRequired,
   firstPublished: string.isRequired,
@@ -55,6 +56,7 @@ ArticleMetadata.propTypes = {
 };
 
 ArticleMetadata.defaultProps = {
+  articleId: '',
   section: '',
   aboutTags: [],
   mentionsTags: [],
