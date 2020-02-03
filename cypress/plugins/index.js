@@ -17,5 +17,12 @@ module.exports = (on, config) => {
 
   on('file:preprocessor', cucumber());
 
+  on('task', {
+    error(err) {
+      console.error(err);
+      return null;
+    },
+  });
+
   return config;
 };

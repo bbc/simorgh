@@ -7,3 +7,9 @@ Then("the headline is '{}'", headline => {
 Then("the subheadline '{}' is displayed", subheadline => {
   cy.get('h2').contains(subheadline);
 });
+
+Then('the correct headline is displayed', () => {
+  cy.fixture('data').then(({ body }) => {
+    cy.get('h1').contains(body.promo.headlines.headline);
+  });
+});
