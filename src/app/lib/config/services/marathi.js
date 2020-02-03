@@ -216,6 +216,10 @@ export const service = {
         title: 'लोकप्रिय',
         url: '/marathi/popular/read',
       },
+      {
+        title: '#ISWOTY',
+        url: '/marathi/resources/idt-43ff5603-f85f-47c1-972f-097e67eeb035',
+      },
     ],
     navigationSection: 'विभाग',
   },
