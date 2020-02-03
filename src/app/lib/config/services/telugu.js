@@ -216,6 +216,10 @@ export const service = {
         title: 'అంతర్జాతీయం',
         url: '/telugu/international',
       },
+      {
+        title: '#ISWOTY',
+        url: '/telugu/resources/idt-47054a9b-b97c-4190-bed0-0416210e698b',
+      },
     ],
     navigationSection: 'విభాగాలు',
   },

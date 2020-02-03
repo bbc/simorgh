@@ -251,6 +251,10 @@ export const service = {
         title: 'முந்தைய தொலைக்காட்சி நிகழ்ச்சிகள்',
         url: '/tamil/media-38734063',
       },
+      {
+        title: '#ISWOTY',
+        url: '/tamil/resources/idt-ce219e77-9003-42b8-b276-1214e232fdc0',
+      },
     ],
     navigationSection: 'பிரிவுகள்',
   },
