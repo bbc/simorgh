@@ -137,6 +137,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'మీ పరికరంలో మీడియా ప్లేబ్యాక్ సదుపాయం లేదు.',
         audio: 'ఆడియో',
         photogallery: 'ఫొటో గ్యాలరీ',
         video: 'వీడియో',
@@ -214,6 +215,10 @@ export const service = {
       {
         title: 'అంతర్జాతీయం',
         url: '/telugu/international',
+      },
+      {
+        title: '#ISWOTY',
+        url: '/telugu/resources/idt-47054a9b-b97c-4190-bed0-0416210e698b',
       },
     ],
     navigationSection: 'విభాగాలు',
