@@ -65,6 +65,8 @@ module.exports = ({
       minimizer: [
         new TerserPlugin({
           terserOptions: {
+            // These options are enabled in production profile builds only and
+            // prevent the discarding or mangling of class and function names.
             keep_classnames: IS_PROD_PROFILE,
             keep_fnames: IS_PROD_PROFILE,
           },
