@@ -78,21 +78,28 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
             const mediaAssetPageType = 'mediaAssetPage';
             const articlesPageType = 'articles';
+            const photoGalleryPageType = 'photoGalleryPage';
 
             const { indexImage } = body.promo;
             const imagePath = indexImage ? indexImage.path : null;
+
             const imageAltText =
-              indexImage && pageType === mediaAssetPageType
+              (indexImage && pageType === mediaAssetPageType) ||
+              (indexImage && pageType === photoGalleryPageType)
                 ? indexImage.altText
                 : appConfig[config[service].name][variant].defaultImageAltText;
 
             const imageSrc =
-              imagePath && pageType === mediaAssetPageType
+              (imagePath && pageType === mediaAssetPageType) ||
+              (imagePath && pageType === photoGalleryPageType)
                 ? getBrandedImage(imagePath, service)
                 : appConfig[config[service].name][variant].defaultImage;
-            const ogType = [articlesPageType, mediaAssetPageType].includes(
-              pageType,
-            )
+
+            const ogType = [
+              articlesPageType,
+              mediaAssetPageType,
+              photoGalleryPageType,
+            ].includes(pageType)
               ? 'article'
               : 'website';
 
@@ -206,6 +213,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     title = body.promo.name;
                     break;
                   case 'mediaAssetPage':
+                    description = body.promo.summary;
+                    title = body.promo.headlines.headline;
+                    break;
+                  case 'photoGalleryPage':
                     description = body.promo.summary;
                     title = body.promo.headlines.headline;
                     break;
@@ -414,6 +425,42 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           );
       });
     });
+    if (pageType === 'mediaAssetPage' || pageType === 'photoGalleryPage') {
+      describe('CPS PGL and MAP Tests', () => {
+        // Expects a second timestamp only if lastPublished is 1 minute later than firstPublished.
+        // This is due to a CPS asset bug, see issue simorgh#5065
+        it('should render a timestamp', () => {
+          cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+            ({ body }) => {
+              const { lastPublished, firstPublished } = body.metadata;
+              const timeDifferenceMinutes =
+                (lastPublished - firstPublished) / 1000 / 60;
+              const minutesTolerance = 1;
+              const hasTimestampPrefix =
+                timeDifferenceMinutes > minutesTolerance;
+              cy.get('time')
+                .eq(0)
+                .should('be.visible')
+                .should('have.attr', 'datetime')
+                .should('not.be.empty');
+
+              if (hasTimestampPrefix) {
+                cy.get('time')
+                  .eq(1)
+                  .should('be.visible')
+                  .should(
+                    'contain',
+                    appConfig[config[service].name].default
+                      .articleTimestampPrefix,
+                  )
+                  .should('have.attr', 'datetime');
+              }
+            },
+          );
+        });
+      });
+    }
+    // End of block (pageType === 'mediaAssetPage' || pageType === 'photoGalleryPage')
   });
 };
 
