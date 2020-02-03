@@ -2,7 +2,11 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import FrontPageMain from '.';
+
+// 'index-light' is a lighter version of front page data that improves the
+// speed of this suite by reducing the amount of pre-processing required.
 import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
+
 import preprocessor from '#lib/utilities/preprocessor';
 import { indexPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
 import { RequestContextProvider } from '#contexts/RequestContext';
