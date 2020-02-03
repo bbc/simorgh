@@ -138,6 +138,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'သငျ့စကျတှငျ ဒီမီဒီယာဖိုငျကို ဖှငျ့၍ မရပါ။',
         audio: 'အသံ',
         photogallery: 'ဓာတ်ပုံများ',
         video: 'ဗီဒီယို',
