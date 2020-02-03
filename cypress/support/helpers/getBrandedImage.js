@@ -1,7 +1,10 @@
-import getBrandedImage from '../../../src/app/containers/CpsMetadata/utils/getBrandedImage';
 import { getImageParts } from '../../../src/app/lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks/blocks/image/helpers';
 
 export default (imagePath, service) => {
   const [, locator] = getImageParts(imagePath);
-  return getBrandedImage(locator, service);
+  const iChefHost =
+    Cypress('APP_ENV') === 'live'
+      ? 'http://ichef.bbci.co.uk'
+      : 'http://ichef.test.bbci.co.uk';
+  return `${iChefHost}/news/1024/branded_${service}/${locator}`;
 };
