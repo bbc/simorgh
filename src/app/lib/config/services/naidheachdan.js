@@ -147,6 +147,7 @@ export const service = {
         },
       },
       media: {
+        noJs: '',
         audio: 'Fuaim',
         photogallery: 'Gailearaidh dhealbhan',
         video: 'Bhidio',

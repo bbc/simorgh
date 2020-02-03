@@ -140,6 +140,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'මෙහි කිසිවක් අඩංගු නැත.',
         audio: 'හඬ',
         photogallery: 'ඡායාරූප ගැලරිය ',
         video: 'වීඩියෝ',

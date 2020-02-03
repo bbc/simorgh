@@ -211,6 +211,8 @@ export const service = {
         },
       },
       media: {
+        noJs:
+          'Reprodukovanje multimedijskog sadržaja na vašem uređaju nije podržano',
         audio: 'Audio',
         photogallery: 'Foto galerija',
         video: 'Video',
@@ -398,6 +400,8 @@ export const service = {
         },
       },
       media: {
+        noJs:
+          'Репродуковање мултимедијског садржаја на вашем уређају није подржано',
         audio: 'Аудио',
         photogallery: 'Фото галерија',
         video: 'Видео',

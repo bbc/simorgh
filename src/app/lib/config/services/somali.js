@@ -138,6 +138,8 @@ export const service = {
         },
       },
       media: {
+        noJs:
+          'Qalabkan aad haysato kuma ciyaari kartid maqalkan iyo muuqaalkan',
         audio: 'Maqal',
         photogallery: 'Albamka sawirrada',
         video: 'Muuqaal',

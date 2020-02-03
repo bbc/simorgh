@@ -144,6 +144,7 @@ export const service = {
         },
       },
       media: {
+        noJs: '',
         audio: 'Аудио',
         photogallery: 'Фотогалерея',
         video: 'Видео',

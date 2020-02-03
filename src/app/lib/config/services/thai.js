@@ -137,6 +137,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'อุปกรณ์ของท่านไม่สามารถใช้งานเครื่องเล่นสื่อได้',
         audio: 'เสียง',
         photogallery: 'แกลเลอรีภาพ',
         video: 'วิดีโอ',

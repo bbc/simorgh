@@ -132,6 +132,7 @@ export const service = {
         },
       },
       media: {
+        noJs: "Na'urarku na da matsalar sauraren sauti",
         audio: 'Sauti',
         photogallery: 'Rumbun hotuna',
         video: 'Bidiyo',

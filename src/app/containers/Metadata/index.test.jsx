@@ -20,6 +20,8 @@ const getArticleMetadataProps = data => ({
   lang: data.metadata.passport.language,
   description: data.promo.summary,
   openGraphType: 'article',
+  aboutTags: articleDataNews.metadata.tags.about,
+  mentionsTags: articleDataNews.metadata.tags.mentions,
 });
 
 const newsArticleMetadataProps = getArticleMetadataProps(articleDataNews);
@@ -39,6 +41,8 @@ const MetadataWithContext = ({
   openGraphType,
   image,
   imageAltText,
+  aboutTags,
+  mentionsTags,
   /* eslint-enable react/prop-types */
 }) => {
   const serviceConfig = services[service].default;
@@ -59,6 +63,8 @@ const MetadataWithContext = ({
           lang={lang}
           description={description}
           openGraphType={openGraphType}
+          aboutTags={aboutTags}
+          mentionsTags={mentionsTags}
           image={image}
           imageAltText={imageAltText}
         />
@@ -426,6 +432,25 @@ it('should render the twitter metatags', async () => {
     },
     { content: '@BBCNews', name: 'twitter:site' },
     { content: 'Article Headline for SEO - BBC News', name: 'twitter:title' },
+  ];
+
+  expect(actual).toEqual(expected);
+});
+
+it('should render the LDP tags', async () => {
+  await renderMetadataToDocument();
+
+  const actual = Array.from(
+    document.querySelectorAll('head > meta[name^="article:tag"]'),
+  ).map(tag => ({
+    name: tag.getAttribute('name'),
+    content: tag.getAttribute('content'),
+  }));
+
+  const expected = [
+    { content: 'Royal Wedding 2018', name: 'article:tag' },
+    { content: 'Duchess of Sussex', name: 'article:tag' },
+    { content: 'Queen Victoria', name: 'article:tag' },
   ];
 
   expect(actual).toEqual(expected);

@@ -133,6 +133,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'お使いの端末ではメディアプレイバックはご利用になれません',
         audio: '音声',
         photogallery: '写真ギャラリー',
         video: 'ビデオ',

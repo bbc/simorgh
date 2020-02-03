@@ -140,6 +140,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'আপনার ডিভাইস মিডিয়া প্লেব্যাক সমর্থন করে না',
         audio: 'অডিও',
         photogallery: 'ফটো গ্যালারি',
         video: 'ভিডিও',
