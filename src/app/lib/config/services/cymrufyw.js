@@ -145,6 +145,7 @@ export const service = {
         },
       },
       media: {
+        noJs: '',
         audio: 'Sain',
         photogallery: 'Oriel luniau',
         video: 'Fideo',

@@ -140,6 +140,7 @@ export const service = {
         },
       },
       media: {
+        noJs: '',
         audio: 'Audio',
         photogallery: 'Galerie de photos',
         video: 'Vidéo',

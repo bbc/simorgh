@@ -137,6 +137,7 @@ export const service = {
         },
       },
       media: {
+        noJs: "Meeshaan kee Miidiyaa taphachiisuu hin danda'u",
         audio: 'Sagalee',
         photogallery: 'Kuusaa suuraa',
         video: 'Viidiyoo',

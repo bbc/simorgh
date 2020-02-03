@@ -137,6 +137,7 @@ export const service = {
         },
       },
       media: {
+        noJS: 'Мултимедиа ўйнаш бу қурилмада дастакланмайди',
         audio: 'Аудио',
         photogallery: 'Фото галерея',
         video: 'Видео',

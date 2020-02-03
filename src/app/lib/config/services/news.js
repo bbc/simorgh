@@ -143,6 +143,8 @@ export const service = {
         },
       },
       media: {
+        noJs:
+          'To play this content, please enable JavaScript, or try a different browser',
         audio: 'Audio',
         photogallery: 'Image gallery',
         video: 'Video',

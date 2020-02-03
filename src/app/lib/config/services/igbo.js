@@ -143,6 +143,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Ngwaọrụ gị akwadoghi ọkpụkpọ mgbasa ozi',
         audio: 'Ọdịyo',
         photogallery: 'Image gallery',
         video: 'Vidio',

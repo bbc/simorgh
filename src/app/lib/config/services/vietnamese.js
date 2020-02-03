@@ -134,6 +134,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Máy của bạn không hỗ trợ nghe xem',
         audio: 'Âm thanh',
         photogallery: 'Gallery hình ảnh',
         video: 'Video',

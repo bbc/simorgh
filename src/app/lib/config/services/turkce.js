@@ -144,6 +144,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Cihazınızda ses/video gösterim programı bulunamadı',
         audio: 'Ses dosyası',
         photogallery: 'Fotoğraf galerisi',
         video: 'Video',

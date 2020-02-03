@@ -140,6 +140,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Dem no support media player for your device',
         audio: 'Audio',
         photogallery: 'Image gallery',
         video: 'Video',

@@ -137,6 +137,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'मीडिया प्लेबॅक आपल्या डिव्हाइसवर असमर्थित आहे',
         audio: 'ऑडिओ',
         photogallery: 'फोटो गॅलरी',
         video: 'व्हीडिओ',
