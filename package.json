@@ -138,7 +138,7 @@
     "@storybook/addon-knobs": "^5.3.9",
     "@storybook/react": "^5.3.9",
     "@storybook/theming": "^5.3.9",
-    "@testing-library/jest-dom": "^5.0.2",
+    "@testing-library/jest-dom": "^5.1.0",
     "@testing-library/react": "^9.4.0",
     "@testing-library/react-hooks": "^3.2.1",
     "amphtml-validator": "^1.0.29",
