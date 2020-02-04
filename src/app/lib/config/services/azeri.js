@@ -49,7 +49,6 @@ export const service = {
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
-      sections: 'Bölümlər',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -219,6 +218,7 @@ export const service = {
         url: '/azeri/media/video',
       },
     ],
+    navigationSection: 'Bölümlər',
   },
 };
 
