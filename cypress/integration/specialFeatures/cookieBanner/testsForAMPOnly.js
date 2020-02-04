@@ -48,8 +48,8 @@ const getCookieBannerReject = (service, variant) =>
 
 const makeArray = arrayOrString => [].concat(arrayOrString);
 
-const visitPage = (pageType, pageTypePath) => {
-  cy.visit(`${pageTypePath}.amp`, {
+const visitPage = (pageType, path) => {
+  cy.visit(`${path}.amp`, {
     failOnStatusCode: !pageType.includes('error'),
   });
 };
@@ -60,15 +60,13 @@ Object.keys(config)
     Object.keys(config[service].pageTypes)
       .filter(pageType => filterPageTypes(service, pageType))
       .forEach(pageType => {
-        const pageTypePaths = makeArray(
-          config[service].pageTypes[pageType].path,
-        );
-        pageTypePaths.forEach(pageTypePath => {
+        const paths = makeArray(config[service].pageTypes[pageType].path);
+        paths.forEach(path => {
           describeForEuOnly(
-            `Amp Cookie Banner Test for ${service} ${pageType} ${pageTypePath}`,
+            `Amp Cookie Banner Test for ${service} ${pageType} ${path}`,
             () => {
               beforeEach(() => {
-                visitPage(pageType, pageTypePath);
+                visitPage(pageType, path);
               });
 
               const { variant } = config[service];
@@ -91,7 +89,7 @@ Object.keys(config)
               it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
                 getPrivacyBannerAccept(service, variant).click();
 
-                visitPage(pageType, pageTypePath);
+                visitPage(pageType, path);
 
                 getPrivacyBanner(service, variant).should('be.visible');
                 getCookieBanner(service, variant).should('not.be.visible');
@@ -101,7 +99,7 @@ Object.keys(config)
                 getPrivacyBannerAccept(service, variant).click();
                 getCookieBannerAccept(service, variant).click();
 
-                visitPage(pageType, pageTypePath);
+                visitPage(pageType, path);
 
                 getPrivacyBanner(service, variant).should('not.be.visible');
                 getCookieBanner(service, variant).should('not.be.visible');
@@ -114,7 +112,7 @@ Object.keys(config)
                 getPrivacyBannerAccept(service, variant).click();
                 getCookieBannerReject(service, variant).click();
 
-                visitPage(pageType, pageTypePath);
+                visitPage(pageType, path);
 
                 getPrivacyBanner(service, variant).should('not.be.visible');
                 getCookieBanner(service, variant).should('not.be.visible');
