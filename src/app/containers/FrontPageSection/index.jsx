@@ -127,6 +127,11 @@ const removeFirstSlotRadioBulletin = dropWhile(
   item => item.contentType === 'RadioBulletin',
 );
 
+const isNotTVBulletin = item => item.contentType !== 'TVBulletin';
+
+const removeTVBulletinsIfNotAVLiveStream = ({ items, type }) =>
+  type === 'av-live-streams' ? items : items.filter(isNotTVBulletin);
+
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
@@ -134,9 +139,17 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const strapline = pathOr(null, ['strapline', 'name'], group);
   const isLink = pathOr(null, ['strapline', 'type'], group) === 'LINK';
   const href = pathOr(null, ['strapline', 'links', 'mobile'], group);
-  const items = removeFirstSlotRadioBulletin(pathOr(null, ['items'], group));
+  const type = pathOr(null, ['type'], group);
   const seeAll = pathOr(null, ['seeAll'], translations);
   const isFirstSection = sectionNumber === 0;
+
+  const updatedItems = removeFirstSlotRadioBulletin(
+    pathOr(null, ['items'], group),
+  );
+  const items = removeTVBulletinsIfNotAVLiveStream({
+    items: updatedItems,
+    type,
+  });
 
   // The current implementation of SectionLabel *requires* a strapline to be
   // present in order to render. It is currently *not possible* to render a
