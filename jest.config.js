@@ -1,7 +1,18 @@
 const { jestDirAlias } = require('./dirAlias');
 
 module.exports = {
-  reporters: ['default', 'jest-junit'],
+  reporters: [
+    'default',
+    [
+      'jest-junit',
+      {
+        suiteName: 'Jest Tests',
+        outputDirectory: 'reports',
+        uniqueOutputName: 'true',
+        ancestorSeparator: ' › ',
+      },
+    ],
+  ],
   collectCoverageFrom: [
     '**/(src|scripts)/**/*.{js,jsx}',
     '!**/src/testHelpers/**',
