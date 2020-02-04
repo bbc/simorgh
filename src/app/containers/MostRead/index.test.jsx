@@ -30,7 +30,7 @@ describe('MostReadContainerCanonical', () => {
   });
 
   Object.keys(services).forEach(service => {
-    it(`test most read renders as expected on canonical for ${service}`, async () => {
+    it(`renders most read as expected on canonical for ${service}`, async () => {
       const { variant, data: mostReadData } = services[service];
 
       fetch.mockResponse(JSON.stringify(setFreshPromoTimestamp(mostReadData)));

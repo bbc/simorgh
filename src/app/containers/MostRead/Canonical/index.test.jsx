@@ -53,7 +53,7 @@ describe('MostReadContainerCanonical', () => {
       expect(container.innerHTML).toEqual('');
     });
 
-    it(`should not render items with timestamps older than 60 days for ${service}`, async () => {
+    it(`should render items without timestamps for ${service}`, async () => {
       const { variant, data: mostReadData, config } = services[service];
       const mostReadHeader = config.mostRead.header;
       fetch.mockResponse(JSON.stringify(setFreshPromoTimestamp(mostReadData)));
@@ -73,7 +73,7 @@ describe('MostReadContainerCanonical', () => {
       expect(container.querySelectorAll('time').length).toEqual(0);
     });
 
-    it(`should render items with timestamps older than 60 days for ${service}`, async () => {
+    it(`should render items with timestamps as they are older than 60 days for ${service}`, async () => {
       const {
         variant,
         data: mostReadData,
