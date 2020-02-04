@@ -5,6 +5,7 @@ import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import path from 'ramda/src/path';
 import assocPath from 'ramda/src/assocPath';
+import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -306,6 +307,30 @@ it('should not show the timestamp when allowDateStamp is false', async () => {
   render(createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'pidgin'));
 
   expect(document.querySelector('main time')).toBeNull();
+});
+
+it('should not show the iframe when available is false', async () => {
+  const uzbekDataExpiredLivestream = mergeDeepLeft(
+    {
+      content: {
+        blocks: [
+          {
+            available: false,
+          },
+        ],
+      },
+    },
+    uzbekPageData,
+  );
+
+  const pageDataWithExpiredLiveStream = await preprocessor(
+    uzbekDataExpiredLivestream,
+    cpsAssetPreprocessorRules,
+  );
+
+  render(createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'));
+
+  expect(document.querySelector('iframe')).toBeNull();
 });
 
 it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {

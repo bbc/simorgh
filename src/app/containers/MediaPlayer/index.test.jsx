@@ -1,3 +1,6 @@
+import React from 'react';
+import '@testing-library/jest-dom/extend-expect';
+import { render } from '@testing-library/react';
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import {
   VideoCanonicalWithPlaceholder,
@@ -36,4 +39,11 @@ describe('MediaPlayer', () => {
     isNull('there is no versionId', VideoCanonicalNoVersionId);
     isNull('component is toggled off', VideoCanonicalToggledOff);
   });
+});
+
+it('should display the media caption', () => {
+  const { getByText } = render(VideoAmpWithCaption);
+
+  const message = getByText('Media Player With Caption');
+  expect(message).toBeInTheDocument();
 });
