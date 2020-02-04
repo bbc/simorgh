@@ -7,6 +7,7 @@ import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
 import MetadataContainer from '../Metadata';
+import MostReadContainer from '../MostRead';
 import LinkedData from '../LinkedData';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
@@ -94,6 +95,7 @@ const FrontPageMain = ({ frontPageData }) => {
                 sectionNumber={index}
               />
             ))}
+            <MostReadContainer />
           </Grid>
         </FrontPageGrid>
       </main>
