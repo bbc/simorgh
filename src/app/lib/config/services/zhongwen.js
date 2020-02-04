@@ -129,13 +129,13 @@ export const service = {
         url: 'http://www.bbc.co.uk/ukchina/simp',
       },
     ],
-    navigationSection: '分类',
     translations: {
       seeAll: '浏览全部',
       home: '主页',
       currentPage: '目前页面',
       skipLinkText: '跳过此内容',
       relatedContent: '更多相关内容',
+      sections: '分类',
       mediaAssetPage: {
         mediaPlayer: '多媒体播放器',
         audioPlayer: '音频播放器',
@@ -319,13 +319,13 @@ export const service = {
         url: 'http://www.bbc.co.uk/ukchina/trad',
       },
     ],
-    navigationSection: '分類',
     translations: {
       seeAll: '瀏覽全部',
       home: '主頁',
       currentPage: '目前頁面',
       skipLinkText: '跳過此內容',
       relatedContent: '更多相關內容',
+      sections: '分類',
       mediaAssetPage: {
         mediaPlayer: '多媒體播放器',
         audioPlayer: '音頻播放器',
