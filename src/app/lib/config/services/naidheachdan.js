@@ -58,7 +58,6 @@ export const service = {
       currentPage: 'An duilleag seo',
       skipLinkText: 'Air adhart',
       relatedContent: 'Co-cheangailte',
-      sections: 'Earrannan',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -219,6 +218,7 @@ export const service = {
         url: '/news/scotland',
       },
     ],
+    navigationSection: 'Earrannan',
   },
 };
 
