@@ -49,7 +49,6 @@ export const service = {
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',
       relatedContent: 'Berita terkait',
-      sections: 'Kategori',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -211,6 +210,7 @@ export const service = {
         url: '/indonesia/laporan-khusus-51267199',
       },
     ],
+    navigationSection: 'Kategori',
     timezone: 'Asia/Jakarta',
   },
 };

@@ -49,7 +49,6 @@ export const service = {
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
       relatedContent: 'Lire plus',
-      sections: 'Rubriques',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -252,6 +251,7 @@ export const service = {
         url: '/afrique/nos_emissions/radio',
       },
     ],
+    navigationSection: 'Rubriques',
   },
 };
 
