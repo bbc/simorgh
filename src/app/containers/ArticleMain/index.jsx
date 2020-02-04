@@ -25,6 +25,7 @@ import {
   getMentions,
   getLang,
 } from '#lib/utilities/parseAssetData';
+import MostReadContainer from '../MostRead';
 
 const componentsToRender = {
   headline: headings,
@@ -81,6 +82,7 @@ const ArticleMain = ({ articleData: data }) => {
           />
         </GhostGrid>
       </StyledMain>
+      <MostReadContainer />
     </>
   );
 };

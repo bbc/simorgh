@@ -95,8 +95,20 @@ const FrontPageMain = ({ frontPageData }) => {
                 sectionNumber={index}
               />
             ))}
-            <MostReadContainer />
           </Grid>
+        </FrontPageGrid>
+        <FrontPageGrid
+          columns={{
+            group0: 1,
+            group1: 1,
+            group2: 1,
+            group3: 1,
+            group4: 20,
+            group5: 20,
+          }}
+          enableGelGutters
+        >
+          <MostReadContainer />
         </FrontPageGrid>
       </main>
     </>
