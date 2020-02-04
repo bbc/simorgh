@@ -289,39 +289,14 @@ const numberOfStories = {
   },
 };
 
-const returnRightStories = (value, message) => {
-  it(message, () =>
-    expect(getRows(numberOfStories[value].input, true)).toStrictEqual(
-      numberOfStories[value].expectedFirstSection,
-    ),
-  );
-
-  it(message, () =>
-    expect(getRows(numberOfStories[value].input, false)).toStrictEqual(
-      numberOfStories[value].expectedNotFirstSection,
-    ),
-  );
-
-  it(message, () =>
-    expect(getAllowedItems(numberOfStories[value].input, true)).toStrictEqual(
-      numberOfStories[value].expectedFrontSectionAllowedItems,
-    ),
-  );
-
-  it(message, () =>
-    expect(getAllowedItems(numberOfStories[value].input, false)).toStrictEqual(
-      numberOfStories[value].expectedNotFrontSectionAllowedItems,
-    ),
-  );
-};
-
 describe('getRows for first section', () => {
   describe('assertions', () => {
     Object.keys(numberOfStories).forEach(value =>
-      returnRightStories(
-        value,
-        `should return right splitting for ${value} stories`,
-      ),
+      it(`should return right splitting for ${value} stories`, () => {
+        expect(getRows(numberOfStories[value].input, true)).toStrictEqual(
+          numberOfStories[value].expectedFirstSection,
+        );
+      }),
     );
   });
 });
@@ -329,10 +304,11 @@ describe('getRows for first section', () => {
 describe('getRows for non-first section', () => {
   describe('assertions', () => {
     Object.keys(numberOfStories).forEach(value =>
-      returnRightStories(
-        value,
-        `should return right splitting for ${value} stories`,
-      ),
+      it(`should return right splitting for ${value} stories`, () => {
+        expect(getRows(numberOfStories[value].input, false)).toStrictEqual(
+          numberOfStories[value].expectedNotFirstSection,
+        );
+      }),
     );
   });
 });
@@ -340,10 +316,13 @@ describe('getRows for non-first section', () => {
 describe('getAllowedItems for first section', () => {
   describe('assertions', () => {
     Object.keys(numberOfStories).forEach(value =>
-      returnRightStories(
-        value,
-        `should return right allowed items for ${value} stories`,
-      ),
+      it(`should return right allowed items for ${value} stories`, () => {
+        expect(
+          getAllowedItems(numberOfStories[value].input, true),
+        ).toStrictEqual(
+          numberOfStories[value].expectedFrontSectionAllowedItems,
+        );
+      }),
     );
   });
 });
@@ -351,10 +330,13 @@ describe('getAllowedItems for first section', () => {
 describe('getAllowedItems for non-first section', () => {
   describe('assertions', () => {
     Object.keys(numberOfStories).forEach(value =>
-      returnRightStories(
-        value,
-        `should return right allowed items for ${value} stories`,
-      ),
+      it(`should return right allowed items for ${value} stories`, () => {
+        expect(
+          getAllowedItems(numberOfStories[value].input, false),
+        ).toStrictEqual(
+          numberOfStories[value].expectedNotFrontSectionAllowedItems,
+        );
+      }),
     );
   });
 });
