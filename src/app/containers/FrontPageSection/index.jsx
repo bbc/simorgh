@@ -77,6 +77,10 @@ const renderPromoList = (items, isFirstSection, dir) => {
   const allowedItems = getAllowedItems(items, isFirstSection);
   const rows = getRowDetails(getRows(allowedItems, isFirstSection));
 
+  // Only use StoryPromoUl and Li if there is only one story in one row
+  const sectionHasSingleStory =
+    rows.length === 1 && rows[0].stories.length === 1;
+
   const renderedRows = rows.map(row => (
     <row.RowComponent
       key={row.stories[0].id}
@@ -87,28 +91,24 @@ const renderPromoList = (items, isFirstSection, dir) => {
     />
   ));
 
-  // Only use StoryPromoUl and Li if there is only one story in one row
-  const sectionHasSingleStory =
-    rows.length === 1 && rows[0].stories.length === 1;
-
-  if (sectionHasSingleStory) {
-    return (
-      <MarginWrapper firstSection={isFirstSection} oneItem dir={dir}>
-        <TopRow stories={items} sectionHasSingleStory dir={dir} />
-      </MarginWrapper>
-    );
-  }
-
   return (
-    <MarginWrapper firstSection={isFirstSection} dir={dir}>
-      <Grid
-        columns={fullWidthColumns}
-        enableGelGutters
-        dir={dir}
-        as={StoryPromoUl}
-      >
-        {renderedRows}
-      </Grid>
+    <MarginWrapper
+      firstSection={isFirstSection}
+      dir={dir}
+      oneItem={!!sectionHasSingleStory}
+    >
+      {sectionHasSingleStory ? (
+        <TopRow stories={items} sectionHasSingleStory dir={dir} />
+      ) : (
+        <Grid
+          columns={fullWidthColumns}
+          enableGelGutters
+          dir={dir}
+          as={StoryPromoUl}
+        >
+          {renderedRows}
+        </Grid>
+      )}
     </MarginWrapper>
   );
 };
