@@ -51,7 +51,6 @@ export const service = {
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       relatedContent: 'อ่านข่าวนี้เพิ่มเติม',
-      sections: 'หมวดข่าว',
       mediaAssetPage: {
         mediaPlayer: 'มีเดีย เพลเยอร์',
         audioPlayer: 'ออดิโอ เพลเยอร์',
@@ -185,6 +184,7 @@ export const service = {
         url: '/thai/popular/read',
       },
     ],
+    navigationSection: 'หมวดข่าว',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/thai/institutional-49281839',
