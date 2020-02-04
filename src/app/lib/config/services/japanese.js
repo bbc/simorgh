@@ -50,6 +50,7 @@ export const service = {
       currentPage: '現在のページ',
       skipLinkText: 'コンテンツへ移動',
       relatedContent: '関連コンテンツ',
+      sections: 'ジャンル',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -224,7 +225,6 @@ export const service = {
         url: 'https://www.bbcworldnews-japan.com/',
       },
     ],
-    navigationSection: 'ジャンル',
   },
 };
 

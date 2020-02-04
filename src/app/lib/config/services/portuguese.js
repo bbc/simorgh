@@ -59,6 +59,7 @@ export const service = {
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',
+      sections: 'Seções',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -253,7 +254,6 @@ export const service = {
         url: '/portuguese/media/video',
       },
     ],
-    navigationSection: 'Seções',
   },
 };
 
