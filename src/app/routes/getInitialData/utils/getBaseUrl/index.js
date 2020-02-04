@@ -2,7 +2,11 @@ const getBaseUrl = origin => {
   let base = 'https://www.bbc';
   let tld = '.com';
 
-  if (origin.includes('localhost')) {
+  if (
+    (process.env.SIMORGH_HOST_URL &&
+      origin.includes(process.env.SIMORGH_HOST_URL)) ||
+    origin.includes('localhost')
+  ) {
     return origin;
   }
 
