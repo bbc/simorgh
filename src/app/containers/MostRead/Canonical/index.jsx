@@ -5,7 +5,7 @@ import { MostRead } from '@bbc/psammead-most-read';
 import { ServiceContext } from '#contexts/ServiceContext';
 import webLogger from '#lib/logger.web';
 import { mostReadRecordIsFresh } from '../utilities';
-import LastUpdated from './lastUpdated';
+import LastUpdated from './LastUpdated';
 
 const logger = webLogger();
 
