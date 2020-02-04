@@ -51,4 +51,18 @@ describe('convertToSubheadline', () => {
       expect(await convertToSubheadline(input)).toEqual(expected);
     });
   });
+  it(`should not convert a non CPS heading block to Optimo format`, async () => {
+    const input = {
+      model: {
+        copyrightHolder: 'Joe Maher',
+        height: 549,
+        locator: '729E/test/_63724392_gettyimages-1098075358.jpg',
+        originCode: 'cpsdevpb',
+        width: 976,
+      },
+      type: 'rawImage',
+    };
+
+    expect(await convertToSubheadline(input)).toBeNull();
+  });
 });
