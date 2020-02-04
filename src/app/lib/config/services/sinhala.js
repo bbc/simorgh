@@ -150,8 +150,8 @@ export const service = {
           subtitle:
             'බීබීසී සිංහල ඔස්සේ ශ්‍රී ලාංකීය, දකුණු ආසියාතික සහ ජාත්‍යන්තර පුවත්, විශ්ලේෂණ සහ ක්‍රීඩා පුවත්',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'සවන්දෙන්න',
+        watch: 'නරඹන්න',
         liveLabel: 'සජීවී.',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
