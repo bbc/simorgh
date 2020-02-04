@@ -14,7 +14,7 @@ exports[`FrontPageStoryRows Container snapshots LeadingRow 1`] = `
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 66.67%;
+  width: 100%;
 }
 
 .c13 {
@@ -27,7 +27,7 @@ exports[`FrontPageStoryRows Container snapshots LeadingRow 1`] = `
 .c3 {
   display: inline-block;
   vertical-align: top;
-  width: 33.33%;
+  width: 100%;
 }
 
 .c17 {
@@ -184,11 +184,23 @@ exports[`FrontPageStoryRows Container snapshots LeadingRow 1`] = `
   }
 }
 
+@media (min-width:37.5rem) {
+  .c7 {
+    width: 50%;
+  }
+}
+
+@media (min-width:63rem) {
+  .c7 {
+    width: 66.67%;
+  }
+}
+
 @supports (grid-template-columns:fit-content(200px)) {
   .c7 {
     width: initial;
-    grid-template-columns: repeat(4,1fr);
-    grid-column-end: span 4;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-end: span 6;
   }
 }
 
@@ -206,14 +218,32 @@ exports[`FrontPageStoryRows Container snapshots LeadingRow 1`] = `
   }
 }
 
+@media (min-width:37.5rem) {
+  .c3 {
+    width: 50%;
+  }
+}
+
+@media (min-width:63rem) {
+  .c3 {
+    width: 33.33%;
+  }
+}
+
 @supports (grid-template-columns:fit-content(200px)) {
   .c3 {
     display: block;
     width: initial;
     padding: initial;
     width: 100%;
-    grid-template-columns: repeat(2,1fr);
-    grid-column-end: span 2;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-end: span 6;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c3 >time {
+    padding-bottom: 0.5rem;
   }
 }
 
