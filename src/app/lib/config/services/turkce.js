@@ -57,7 +57,6 @@ export const service = {
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
       relatedContent: 'İlgili haberler',
-      sections: 'Kategoriler',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -238,6 +237,7 @@ export const service = {
         url: '/turkce/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
       },
     ],
+    navigationSection: 'Kategoriler',
   },
 };
 
