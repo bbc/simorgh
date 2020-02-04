@@ -193,14 +193,14 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 .c20 {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .c20 figure {
   padding-bottom: 0;
 }
 
-.c29 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -210,7 +210,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   flex-direction: column;
 }
 
-.c30 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -229,7 +229,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   align-items: baseline;
 }
 
-.c31 {
+.c32 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -249,7 +249,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   align-items: center;
 }
 
-.c27 {
+.c28 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
@@ -259,26 +259,26 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   margin-top: 2rem;
 }
 
-.c28 {
+.c29 {
   margin: 0;
   padding: 0;
 }
 
-.c33 {
+.c34 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c33:first-child {
+.c34:first-child {
   padding-top: 0;
 }
 
-.c33:last-child {
+.c34:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c32 {
+.c33 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -289,6 +289,10 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   z-index: 0;
 }
 
+.c27 {
+  margin-top: 0;
+}
+
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -297,6 +301,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  padding-bottom: 1.5rem;
 }
 
 .c22 {
@@ -620,6 +625,12 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
+@media (min-width:25rem) {
+  .c20 {
+    margin-top: 1rem;
+  }
+}
+
 @media (min-width:63rem) {
   .c20 {
     padding-top: 0.5rem;
@@ -628,7 +639,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -637,39 +648,39 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c31 {
+  .c32 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c32 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c32 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c32 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c27 {
+  .c28 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c28 {
     position: absolute;
     left: 0;
     right: 0;
@@ -684,25 +695,25 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c34 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c33 {
+  .c34 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33:first-child {
+  .c34:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c33:first-child {
+  .c34:first-child {
     padding-top: 1.5rem;
   }
 }
@@ -780,6 +791,12 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
     display: grid;
     max-width: initial;
     margin: initial;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding-bottom: 2rem;
   }
 }
 
@@ -1236,22 +1253,22 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                 class="c25"
               >
                 <div
-                  class="c26"
+                  class="c26 c27"
                 >
                   <div
-                    class="c27"
+                    class="c28"
                   />
                   <h2
-                    class="c28"
+                    class="c29"
                   >
                     <div
-                      class="c29"
+                      class="c30"
                     >
                       <span
-                        class="c30"
+                        class="c31"
                       >
                         <span
-                          class="c31"
+                          class="c32"
                           dir="ltr"
                           id="related-content-heading"
                         >
@@ -1262,11 +1279,11 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                   </h2>
                 </div>
                 <ul
-                  class="c32"
+                  class="c33"
                   role="list"
                 >
                   <li
-                    class="c33"
+                    class="c34"
                     role="listitem"
                   />
                 </ul>
@@ -1487,14 +1504,14 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c22 {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .c22 figure {
   padding-bottom: 0;
 }
 
-.c31 {
+.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1504,7 +1521,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.c32 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1523,7 +1540,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   align-items: baseline;
 }
 
-.c33 {
+.c34 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1543,7 +1560,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   align-items: center;
 }
 
-.c29 {
+.c30 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
@@ -1553,26 +1570,26 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   margin-top: 2rem;
 }
 
-.c30 {
+.c31 {
   margin: 0;
   padding: 0;
 }
 
-.c35 {
+.c36 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c35:first-child {
+.c36:first-child {
   padding-top: 0;
 }
 
-.c35:last-child {
+.c36:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c34 {
+.c35 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -1583,8 +1600,8 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   z-index: 0;
 }
 
-.c14 {
-  padding-bottom: 1rem;
+.c29 {
+  margin-top: 0;
 }
 
 .c0 {
@@ -1595,6 +1612,11 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  padding-bottom: 1.5rem;
+}
+
+.c14 {
+  padding-bottom: 1rem;
 }
 
 .c24 {
@@ -1932,6 +1954,12 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
+@media (min-width:25rem) {
+  .c22 {
+    margin-top: 1rem;
+  }
+}
+
 @media (min-width:63rem) {
   .c22 {
     padding-top: 0.5rem;
@@ -1940,7 +1968,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c33 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1949,39 +1977,39 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c33 {
+  .c34 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c34 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c34 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c34 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c29 {
+  .c30 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c30 {
     position: absolute;
     left: 0;
     right: 0;
@@ -1996,25 +2024,25 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c35 {
+  .c36 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c35 {
+  .c36 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c35:first-child {
+  .c36:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c35:first-child {
+  .c36:first-child {
     padding-top: 1.5rem;
   }
 }
@@ -2055,12 +2083,6 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) {
-  .c14 {
-    padding-bottom: 1.5rem;
-  }
-}
-
 @media (max-width:37.4375rem) {
   .c0 {
     grid-column-gap: 0.5rem;
@@ -2098,6 +2120,18 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
     display: grid;
     max-width: initial;
     margin: initial;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c14 {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -2776,22 +2810,22 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     class="c27"
                   >
                     <div
-                      class="c28"
+                      class="c28 c29"
                     >
                       <div
-                        class="c29"
+                        class="c30"
                       />
                       <h2
-                        class="c30"
+                        class="c31"
                       >
                         <div
-                          class="c31"
+                          class="c32"
                         >
                           <span
-                            class="c32"
+                            class="c33"
                           >
                             <span
-                              class="c33"
+                              class="c34"
                               dir="ltr"
                               id="related-content-heading"
                             >
@@ -2802,11 +2836,11 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                       </h2>
                     </div>
                     <ul
-                      class="c34"
+                      class="c35"
                       role="list"
                     >
                       <li
-                        class="c35"
+                        class="c36"
                         role="listitem"
                       />
                     </ul>
