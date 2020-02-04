@@ -28,7 +28,7 @@ exports[`MediaPlayer render the amp player 1`] = `
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .c0 figure {
@@ -62,6 +62,12 @@ exports[`MediaPlayer render the amp player 1`] = `
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    margin-top: 1rem;
   }
 }
 
@@ -125,7 +131,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .c0 figure {
@@ -169,6 +175,12 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    margin-top: 1rem;
   }
 }
 

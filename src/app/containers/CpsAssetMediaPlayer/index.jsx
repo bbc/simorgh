@@ -1,7 +1,10 @@
 import React from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -17,7 +20,11 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 
 const Wrapper = styled(GridItemConstrainedLarge)`
-  margin-top: ${GEL_SPACING_DBL};
+  margin-top: ${GEL_SPACING};
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_DBL};
+  }
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding-top: ${GEL_SPACING};
