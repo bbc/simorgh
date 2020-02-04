@@ -132,7 +132,7 @@ const MediaPlayerContainer = ({
       <StyledMessageContainer>
         <MediaMessage
           service={service}
-          noJsMessage={contentNotAvailableMessage}
+          message={contentNotAvailableMessage}
           placeholderSrc={placeholderSrc}
           placeholderSrcset={placeholderSrcset}
         />
