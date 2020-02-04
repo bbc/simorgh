@@ -354,6 +354,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 .c12 {
+  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -749,12 +750,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 @media (min-width:37.5rem) {
   .c10 {
     margin-top: 0.5rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c12 {
-    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
