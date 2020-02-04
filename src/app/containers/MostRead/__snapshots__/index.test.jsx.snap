@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MostReadContainerCanonical test most read renders as expected on canonical for news 1`] = `
+exports[`MostReadContainerCanonical renders most read as expected on canonical for news 1`] = `
 <div>
   <section
     aria-labelledby="Most-Read"
@@ -380,7 +380,7 @@ exports[`MostReadContainerCanonical test most read renders as expected on canoni
 </div>
 `;
 
-exports[`MostReadContainerCanonical test most read renders as expected on canonical for zhongwen 1`] = `
+exports[`MostReadContainerCanonical renders most read as expected on canonical for zhongwen 1`] = `
 <div>
   <section
     aria-labelledby="Most-Read"
