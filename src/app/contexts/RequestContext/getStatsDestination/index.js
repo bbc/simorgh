@@ -19,6 +19,9 @@ const getStatsDestination = ({ isUK = true, env = 'test', service }) => {
     case 'scotland':
       destination = 'PLACEHOLDER';
       break;
+    case 'learningenglish':
+      destination = 'WS_LEARNING_ENGLISH';
+      break;
     case 'archive':
       destination = 'BBC_ARCHIVE_PS';
       break;

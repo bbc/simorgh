@@ -19,6 +19,7 @@ const loadableConfig = {
   japanese: loadable(() => import('./japanese.js')),
   korean: loadable(() => import('./korean.js')),
   kyrgyz: loadable(() => import('./kyrgyz.js')),
+  learningenglish: loadable(() => import('./learningenglish.js')),
   marathi: loadable(() => import('./marathi.js')),
   mundo: loadable(() => import('./mundo.js')),
   naidheachdan: loadable(() => import('./naidheachdan.js')),

@@ -23,6 +23,7 @@ import { service as indonesia } from '../../../app/lib/config/services/indonesia
 import { service as japanese } from '../../../app/lib/config/services/japanese';
 import { service as korean } from '../../../app/lib/config/services/korean';
 import { service as kyrgyz } from '../../../app/lib/config/services/kyrgyz';
+import { service as learningenglish } from '../../../app/lib/config/services/learningenglish';
 import { service as marathi } from '../../../app/lib/config/services/marathi';
 import { service as mundo } from '../../../app/lib/config/services/mundo';
 import { service as naidheachdan } from '../../../app/lib/config/services/naidheachdan';
@@ -71,6 +72,7 @@ export default {
   japanese,
   korean,
   kyrgyz,
+  learningenglish,
   marathi,
   mundo,
   naidheachdan,

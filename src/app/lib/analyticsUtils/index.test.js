@@ -89,12 +89,22 @@ describe('getDestination', () => {
     {
       statsDestination: 'BBC_ARCHIVE_PS',
       expected: 605565,
-      summary: 'should return for live Scotland',
+      summary: 'should return for live Archive',
     },
     {
       statsDestination: 'BBC_ARCHIVE_PS_TEST',
       expected: 605566,
-      summary: 'should return for test Scotland',
+      summary: 'should return for test Archive',
+    },
+    {
+      statsDestination: 'WS_LEARNING_ENGLISH',
+      expected: 598340,
+      summary: 'should return for live Learning English',
+    },
+    {
+      statsDestination: 'WS_LEARNING_ENGLISH_TEST',
+      expected: 598341,
+      summary: 'should return for test Learning English',
     },
     {
       statsDestination: undefined,

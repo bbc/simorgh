@@ -19,6 +19,8 @@ export const getDestination = statsDestination => {
     PLACEHOLDER_TEST: 598297,
     BBC_ARCHIVE_PS: 605565,
     BBC_ARCHIVE_PS_TEST: 605566,
+    WS_LEARNING_ENGLISH: 598340,
+    WS_LEARNING_ENGLISH_TEST: 598341,
   };
 
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;

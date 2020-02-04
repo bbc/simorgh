@@ -443,6 +443,70 @@ describe('getStatsDestination', () => {
       expected: 'BBC_ARCHIVE_PS_TEST',
       summary: 'should return for Archive test UK when env undefined',
     },
+
+    {
+      isUK: true,
+      env: 'live',
+      service: 'learningenglish',
+      expected: 'WS_LEARNING_ENGLISH',
+      summary: 'should return for LE live UK',
+    },
+    {
+      isUK: false,
+      env: 'live',
+      service: 'learningenglish',
+      expected: 'WS_LEARNING_ENGLISH',
+      summary: 'should return for LE live international',
+    },
+    {
+      isUK: true,
+      env: 'test',
+      service: 'learningenglish',
+      expected: 'WS_LEARNING_ENGLISH_TEST',
+      summary: 'should return for LE test UK',
+    },
+    {
+      isUK: false,
+      env: 'test',
+      service: 'learningenglish',
+      expected: 'WS_LEARNING_ENGLISH_TEST',
+      summary: 'should return for LE test international',
+    },
+    {
+      isUK: true,
+      env: 'foobar',
+      service: 'learningenglish',
+      expected: 'WS_LEARNING_ENGLISH_TEST',
+      summary: 'should return for LE test UK when env unknown',
+    },
+    {
+      isUK: true,
+      env: null,
+      service: 'learningenglish',
+      expected: 'WS_LEARNING_ENGLISH_TEST',
+      summary: 'should return for LE test UK when env null',
+    },
+    {
+      isUK: true,
+      env: undefined,
+      service: 'learningenglish',
+      expected: 'WS_LEARNING_ENGLISH_TEST',
+      summary: 'should return for LE test UK when env undefined',
+    },
+    {
+      isUK: null,
+      env: 'live',
+      service: 'learningenglish',
+      expected: 'WS_LEARNING_ENGLISH',
+      summary: 'should return for LE live UK when isUK is null',
+    },
+    {
+      isUK: undefined,
+      env: 'live',
+      service: 'learningenglish',
+      expected: 'WS_LEARNING_ENGLISH',
+      summary: 'should return for LE live UK when isUK is undefined',
+    },
   ];
 
   testScenarios.forEach(({ isUK, env, service, expected, summary }) => {
