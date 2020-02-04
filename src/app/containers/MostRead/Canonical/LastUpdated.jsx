@@ -14,6 +14,7 @@ const LastUpdated = ({ locale, prefix, script, service, timestamp }) =>
       script={script}
       service={service}
       locale={locale}
+      padding={false}
     />
   );
 
