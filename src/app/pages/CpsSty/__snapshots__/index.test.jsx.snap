@@ -92,7 +92,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 .c18 > li::before {
-  content: ' ';
+  content: ' ';
   display: inline-block;
   width: 2rem;
   background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
@@ -265,7 +265,6 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 .c34 {
-  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -691,6 +690,12 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 @media (min-width:37.5rem) {
   .c26 {
     margin-top: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c34 {
+    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
@@ -1403,7 +1408,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c20 > li::before {
-  content: ' ';
+  content: ' ';
   display: inline-block;
   width: 2rem;
   background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
@@ -1576,7 +1581,6 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c36 {
-  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -2020,6 +2024,12 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) {
   .c28 {
     margin-top: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c36 {
+    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 

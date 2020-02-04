@@ -92,7 +92,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 .c18 > li::before {
-  content: ' ';
+  content: ' ';
   display: inline-block;
   width: 2rem;
   background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
@@ -265,7 +265,6 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 .c34 {
-  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -691,6 +690,12 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 @media (min-width:37.5rem) {
   .c26 {
     margin-top: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c34 {
+    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
@@ -3194,7 +3199,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
 }
 
 .c25 {
-  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -3213,10 +3217,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   padding: 0;
 }
 
-.c26 {
-  position: relative;
-}
-
 .c27 {
   display: inline-block;
   vertical-align: top;
@@ -3224,19 +3224,30 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   width: 33.33%;
 }
 
+.c30 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c26 {
+  position: relative;
+}
+
 .c28 {
   position: relative;
 }
 
 .c31 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c33 {
@@ -3248,13 +3259,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c30 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
 }
 
 .c32 {
@@ -3666,6 +3670,12 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
+@media (max-width:62.9375rem) {
+  .c25 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c25 {
     padding: 1rem 0 1rem;
@@ -3690,25 +3700,48 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
+@media (min-width:63rem) {
+  .c27 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c27 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c30 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c30 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c30 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
 @supports (grid-template-columns:fit-content(200px)) {
   .c26 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c27 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c27 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 2;
   }
 }
 
@@ -3733,13 +3766,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
-@media (min-width:37.5rem) {
-  .c31 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c33 {
     font-size: 0.9375rem;
@@ -3761,24 +3787,10 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
-@media (min-width:37.5rem) {
-  .c30 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c30 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c30 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c33 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -6312,7 +6324,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
 }
 
 .c44 {
-  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -6331,10 +6342,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   padding: 0;
 }
 
-.c45 {
-  position: relative;
-}
-
 .c46 {
   display: inline-block;
   vertical-align: top;
@@ -6342,19 +6349,30 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   width: 33.33%;
 }
 
+.c50 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c45 {
+  position: relative;
+}
+
 .c47 {
   position: relative;
 }
 
 .c51 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c53 {
@@ -6366,13 +6384,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c50 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
 }
 
 .c52 {
@@ -6910,6 +6921,12 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
+@media (max-width:62.9375rem) {
+  .c44 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c44 {
     padding: 1rem 0 1rem;
@@ -6934,25 +6951,48 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
+@media (min-width:63rem) {
+  .c46 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c46 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c50 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c50 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c50 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
 @supports (grid-template-columns:fit-content(200px)) {
   .c45 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c46 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c46 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 2;
   }
 }
 
@@ -6977,13 +7017,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (min-width:37.5rem) {
-  .c51 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c53 {
     font-size: 0.9375rem;
@@ -7005,24 +7038,10 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (min-width:37.5rem) {
-  .c50 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c50 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c50 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c53 {
+    display: none;
+    visibility: hidden;
   }
 }
 

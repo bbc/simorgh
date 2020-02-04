@@ -19,7 +19,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   margin-top: 0.5rem;
 }
 
-.c40 {
+.c35 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -28,7 +28,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 0.75rem;
 }
 
-.c34 {
+.c32 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -37,7 +37,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 0.75rem;
 }
 
-.c41 {
+.c36 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -113,7 +113,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   width: 1px;
 }
 
-.c39 {
+.c34 {
   position: relative;
   margin-top: 2rem;
 }
@@ -129,54 +129,37 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   padding: 0;
 }
 
-.c13 {
-  position: relative;
-}
-
 .c14 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  margin-bottom: 0.5rem;
-  width: 100%;
-}
-
-.c30 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
+.c19 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c13 {
+  position: relative;
+}
+
 .c15 {
   position: relative;
 }
 
-.c18 {
-  position: absolute;
-  bottom: 0;
-}
-
 .c20 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c37 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
 }
 
 .c23 {
@@ -188,29 +171,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c38 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c19 {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.c36 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
 }
 
 .c21 {
@@ -280,7 +240,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   font-style: normal;
 }
 
-.c32 {
+.c30 {
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
@@ -293,7 +253,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 2rem;
 }
 
-.c33 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -305,7 +265,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 100%;
 }
 
-.c35 {
+.c33 {
   vertical-align: middle;
   margin: 0 0.25rem;
 }
@@ -354,7 +314,6 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 .c12 {
-  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -525,8 +484,45 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:37.5rem) {
-  .c39 {
+  .c34 {
     margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c14 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c14 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c19 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c19 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -538,43 +534,8 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   }
 }
 
-@media (min-width:37.5rem) {
-  .c14 {
-    width: 50%;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width:80rem) {
-  .c14 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c14 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c30 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c30 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
 @media (min-width:25rem) {
-  .c31 {
+  .c18 {
     position: absolute;
     bottom: 0;
   }
@@ -582,43 +543,15 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c20 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c20 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c20 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c37 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c37 {
+  .c20 {
     font-size: 1rem;
     line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c37 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
   }
 }
 
@@ -631,84 +564,22 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 
 @media (min-width:37.5rem) {
   .c23 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c23 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c38 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c38 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c38 {
+  .c23 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c19 {
-    width: 50%;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c19 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c19 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c36 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c36 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c23 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -727,7 +598,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (max-width:24.9375rem) {
-  .c32 {
+  .c30 {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
@@ -750,6 +621,12 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 @media (min-width:37.5rem) {
   .c10 {
     margin-top: 0.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c12 {
+    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
@@ -1186,7 +1063,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       class="c13"
                     >
                       <div
-                        class="c30"
+                        class="c14"
                       >
                         <div
                           class="c15"
@@ -1199,18 +1076,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                             />
                           </div>
                           <div
-                            class="c31"
+                            class="c18"
                           >
                             <div
                               aria-hidden="true"
-                              class="c32"
+                              class="c30"
                             >
                               <div
-                                class="c33"
+                                class="c31"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="c34"
+                                  class="c32"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 13 12"
@@ -1224,7 +1101,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                                   />
                                 </svg>
                                 <time
-                                  class="c35"
+                                  class="c33"
                                   datetime="PT59S"
                                 >
                                   0:59
@@ -1235,10 +1112,10 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                         </div>
                       </div>
                       <div
-                        class="c36"
+                        class="c19"
                       >
                         <h3
-                          class="c37"
+                          class="c20"
                         >
                           <a
                             class="c21"
@@ -1265,7 +1142,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           </a>
                         </h3>
                         <p
-                          class="c38"
+                          class="c23"
                         >
                           All di local and world tori wey you suppose know in 60 seconds!
                         </p>
@@ -1286,7 +1163,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       class="c13"
                     >
                       <div
-                        class="c30"
+                        class="c14"
                       >
                         <div
                           class="c15"
@@ -1299,15 +1176,15 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                             />
                           </div>
                           <div
-                            class="c31"
+                            class="c18"
                           />
                         </div>
                       </div>
                       <div
-                        class="c36"
+                        class="c19"
                       >
                         <h3
-                          class="c37"
+                          class="c20"
                         >
                           <a
                             class="c21"
@@ -1317,7 +1194,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           </a>
                         </h3>
                         <p
-                          class="c38"
+                          class="c23"
                         >
                           Major shocker wey come out be sey dem drop striker, Majeed Waris who dem replace plus U-23 striker, Kwabena Owusu.
                         </p>
@@ -1338,7 +1215,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       class="c13"
                     >
                       <div
-                        class="c30"
+                        class="c14"
                       >
                         <div
                           class="c15"
@@ -1351,15 +1228,15 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                             />
                           </div>
                           <div
-                            class="c31"
+                            class="c18"
                           />
                         </div>
                       </div>
                       <div
-                        class="c36"
+                        class="c19"
                       >
                         <h3
-                          class="c37"
+                          class="c20"
                         >
                           <a
                             class="c21"
@@ -1369,7 +1246,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           </a>
                         </h3>
                         <p
-                          class="c38"
+                          class="c23"
                         >
                           Di 21-year-old Ethiopian woman don take one of her secondary school leaving exams 30 minutes afta she born.
                         </p>
@@ -1390,7 +1267,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               role="region"
             >
               <div
-                class="c39"
+                class="c34"
               >
                 <div
                   class="c5"
@@ -1427,7 +1304,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     class="c13"
                   >
                     <div
-                      class="c30"
+                      class="c14"
                     >
                       <div
                         class="c15"
@@ -1440,15 +1317,15 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           />
                         </div>
                         <div
-                          class="c31"
+                          class="c18"
                         />
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c19"
                     >
                       <h3
-                        class="c37"
+                        class="c20"
                       >
                         <a
                           class="c21"
@@ -1474,7 +1351,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     class="c13"
                   >
                     <div
-                      class="c30"
+                      class="c14"
                     >
                       <div
                         class="c15"
@@ -1487,18 +1364,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           />
                         </div>
                         <div
-                          class="c31"
+                          class="c18"
                         >
                           <div
                             aria-hidden="true"
-                            class="c32"
+                            class="c30"
                           >
                             <div
-                              class="c33"
+                              class="c31"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="c34"
+                                class="c32"
                                 focusable="false"
                                 height="12px"
                                 viewBox="0 0 13 12"
@@ -1517,10 +1394,10 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c19"
                     >
                       <h3
-                        class="c37"
+                        class="c20"
                       >
                         <a
                           class="c21"
@@ -1530,7 +1407,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                         </a>
                       </h3>
                       <p
-                        class="c38"
+                        class="c23"
                       >
                         Summary
                       </p>
@@ -1551,7 +1428,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     class="c13"
                   >
                     <div
-                      class="c30"
+                      class="c14"
                     >
                       <div
                         class="c15"
@@ -1564,15 +1441,15 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           />
                         </div>
                         <div
-                          class="c31"
+                          class="c18"
                         />
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c19"
                     >
                       <h3
-                        class="c37"
+                        class="c20"
                       >
                         <a
                           class="c21"
@@ -1598,7 +1475,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     class="c13"
                   >
                     <div
-                      class="c30"
+                      class="c14"
                     >
                       <div
                         class="c15"
@@ -1611,15 +1488,15 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           />
                         </div>
                         <div
-                          class="c31"
+                          class="c18"
                         />
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c19"
                     >
                       <h3
-                        class="c37"
+                        class="c20"
                       >
                         <a
                           class="c21"
@@ -1645,7 +1522,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     class="c13"
                   >
                     <div
-                      class="c30"
+                      class="c14"
                     >
                       <div
                         class="c15"
@@ -1658,15 +1535,15 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           />
                         </div>
                         <div
-                          class="c31"
+                          class="c18"
                         />
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c19"
                     >
                       <h3
-                        class="c37"
+                        class="c20"
                       >
                         <a
                           class="c21"
@@ -1692,7 +1569,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     class="c13"
                   >
                     <div
-                      class="c30"
+                      class="c14"
                     >
                       <div
                         class="c15"
@@ -1705,18 +1582,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           />
                         </div>
                         <div
-                          class="c31"
+                          class="c18"
                         >
                           <div
                             aria-hidden="true"
-                            class="c32"
+                            class="c30"
                           >
                             <div
-                              class="c33"
+                              class="c31"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="c40"
+                                class="c35"
                                 focusable="false"
                                 height="12px"
                                 viewBox="0 0 32 32"
@@ -1732,10 +1609,10 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c19"
                     >
                       <h3
-                        class="c37"
+                        class="c20"
                       >
                         <a
                           class="c21"
@@ -1761,7 +1638,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     class="c13"
                   >
                     <div
-                      class="c30"
+                      class="c14"
                     >
                       <div
                         class="c15"
@@ -1774,15 +1651,15 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           />
                         </div>
                         <div
-                          class="c31"
+                          class="c18"
                         />
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c19"
                     >
                       <h3
-                        class="c37"
+                        class="c20"
                       >
                         <a
                           class="c21"
@@ -1808,7 +1685,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     class="c13"
                   >
                     <div
-                      class="c30"
+                      class="c14"
                     >
                       <div
                         class="c15"
@@ -1821,18 +1698,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           />
                         </div>
                         <div
-                          class="c31"
+                          class="c18"
                         >
                           <div
                             aria-hidden="true"
-                            class="c32"
+                            class="c30"
                           >
                             <div
-                              class="c33"
+                              class="c31"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="c41"
+                                class="c36"
                                 focusable="false"
                                 height="13px"
                                 viewBox="0 0 32 26"
@@ -1853,10 +1730,10 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c19"
                     >
                       <h3
-                        class="c37"
+                        class="c20"
                       >
                         <a
                           class="c21"
