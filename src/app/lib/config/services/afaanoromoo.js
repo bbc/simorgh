@@ -50,7 +50,6 @@ export const service = {
       currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
       relatedContent: 'Odeessa kana irratti dabalata',
-      sections: 'Kutaawwan',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -207,6 +206,7 @@ export const service = {
         url: '/afaanoromoo/popular/read',
       },
     ],
+    navigationSection: 'Kutaawwan',
     timezone: 'Africa/Addis_Ababa',
     liveRadio: {
       externalIdOverrides: { bbc_oromo_radio: 'bbc_afaanoromoo_radio' },
