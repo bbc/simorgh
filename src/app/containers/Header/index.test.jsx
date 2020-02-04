@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import HeaderContainer from './index';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -92,16 +91,5 @@ describe(`Header`, () => {
       }),
     );
     expect(document.querySelector(`header nav`)).toBeNull();
-  });
-
-  it('should render a Brand with a Skip to content link, linking to #content', () => {
-    render(
-      HeaderContainerWithContext({
-        pageType: 'frontPage',
-      }),
-    );
-
-    const skipLink = document.querySelector("a[href$='#content']");
-    expect(skipLink).toBeVisible();
   });
 });
