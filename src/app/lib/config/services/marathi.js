@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
       relatedContent: 'संबंधित मजकूर',
+      sections: 'विभाग',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिओ प्लेयर',
@@ -215,8 +216,11 @@ export const service = {
         title: 'लोकप्रिय',
         url: '/marathi/popular/read',
       },
+      {
+        title: '#ISWOTY',
+        url: '/marathi/resources/idt-43ff5603-f85f-47c1-972f-097e67eeb035',
+      },
     ],
-    navigationSection: 'विभाग',
   },
 };
 

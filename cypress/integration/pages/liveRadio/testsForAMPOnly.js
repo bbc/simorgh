@@ -1,5 +1,4 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 import getMappedServiceId from './helper';
 
@@ -19,7 +18,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     describe('AMP Status', () => {
       it('should return a 200 response', () => {
         cy.testResponseCodeAndType(
-          `${config[service].pageTypes.liveRadio.path}.amp`,
+          `${Cypress.env('currentPath')}.amp`,
           200,
           'text/html',
         );
@@ -34,16 +33,14 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       });
 
       it('should render an audio player embed', () => {
-        cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
-          ({ body }) => {
-            const { id, externalId } = body.content.blocks[2];
-            const serviceId = getMappedServiceId(externalId);
-            const { lang } = appConfig[service][variant];
-            cy.get(
-              `amp-iframe[src="${envConfig.avEmbedBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/${lang}/amp"]`,
-            ).should('be.visible');
-          },
-        );
+        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+          const { id, externalId } = body.content.blocks[2];
+          const serviceId = getMappedServiceId(externalId);
+          const { lang } = appConfig[service][variant];
+          cy.get(
+            `amp-iframe[src="${envConfig.avEmbedBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/${lang}/amp"]`,
+          ).should('be.visible');
+        });
       });
     });
 

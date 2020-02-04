@@ -50,6 +50,7 @@ export const service = {
       currentPage: 'தற்போதுள்ள பக்கம்',
       skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',
       relatedContent: 'தொடர்புடைய உள்ளடக்கம்',
+      sections: 'பிரிவுகள்',
       mediaAssetPage: {
         mediaPlayer: 'ஊடக இயக்கி',
         audioPlayer: 'கேட்பொலி பிளேயர்',
@@ -251,8 +252,11 @@ export const service = {
         title: 'முந்தைய தொலைக்காட்சி நிகழ்ச்சிகள்',
         url: '/tamil/media-38734063',
       },
+      {
+        title: '#ISWOTY',
+        url: '/tamil/resources/idt-ce219e77-9003-42b8-b276-1214e232fdc0',
+      },
     ],
-    navigationSection: 'பிரிவுகள்',
   },
 };
 

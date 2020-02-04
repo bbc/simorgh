@@ -51,6 +51,7 @@ export const service = {
       currentPage: 'Ojú ewé to wà yìí',
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
       relatedContent: 'Àwọn afíkun lórí ìròyìn yìí',
+      sections: 'Àwọn abala',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -213,7 +214,6 @@ export const service = {
         url: '/yoruba/popular/read',
       },
     ],
-    navigationSection: 'Àwọn abala',
   },
 };
 
