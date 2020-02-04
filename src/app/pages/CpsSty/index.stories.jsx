@@ -10,7 +10,7 @@ const styStories = storiesOf('Pages|Story Page', module);
 
 styStories.addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
-styStories.add('Pidgin', () => {
+styStories.add('Mundo', () => {
   return (
     <BrowserRouter>
       <CPSsty
@@ -19,7 +19,7 @@ styStories.add('Pidgin', () => {
         pathname="/path"
         status={200}
         pageData={pageData}
-        service="azeri"
+        service="mundo"
       />
     </BrowserRouter>
   );
