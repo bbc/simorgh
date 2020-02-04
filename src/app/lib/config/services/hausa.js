@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',
+      sections: 'Sassa',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -229,7 +230,6 @@ export const service = {
         url: '/hausa/media/photogalleries',
       },
     ],
-    navigationSection: 'Sassa',
   },
 };
 
