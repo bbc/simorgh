@@ -13,6 +13,7 @@ module.exports = (shell = {}) => {
   const IS_PROD = process.env.NODE_ENV === 'production';
   const IS_CI = process.env.CI;
   const START_DEV_SERVER = !IS_PROD;
+  const IS_PROD_PROFILE = process.env.IS_PROD_PROFILE === 'true';
   const CONFIG_FILE = shell.config;
   const stats = IS_PROD
     ? {}
@@ -43,6 +44,10 @@ module.exports = (shell = {}) => {
            It tells it to use a single version, in a single location.
         */
         isarray: path.resolve(__dirname, 'node_modules/isarray'),
+        ...(IS_PROD_PROFILE && {
+          'react-dom$': 'react-dom/profiling',
+          'scheduler/tracing': 'scheduler/tracing-profiling',
+        }),
       },
     },
     devServer: {
@@ -116,6 +121,7 @@ module.exports = (shell = {}) => {
       IS_PROD,
       IS_CI,
       START_DEV_SERVER,
+      IS_PROD_PROFILE,
     });
     return merge(baseConfig, specialisedConfig);
   };
