@@ -136,6 +136,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'तपाईंको उपकरणमा मिडिया प्लेब्याक सपोर्ट छैन',
         audio: 'अडिओ',
         photogallery: 'तस्बिर सङ्ग्रह',
         video: 'भिडिओ',
@@ -159,7 +160,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/nepali/institutional-50318130',
         text: 'बीबीसीको विश्वसनीयता',
       },
       externalLink: {

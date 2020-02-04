@@ -133,11 +133,11 @@ exports[`should match for AMP News & UK origin 1`] = `
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -153,35 +153,35 @@ exports[`should match for AMP News & UK origin 1`] = `
     />
     <meta
       content="Article summary."
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="BBC News"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="en_GB"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="Article Headline for SEO - BBC News"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="article"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.bbc.com/news/articles/c0000000001o"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
@@ -210,6 +210,18 @@ exports[`should match for AMP News & UK origin 1`] = `
     <meta
       content="Article Headline for SEO - BBC News"
       name="twitter:title"
+    />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
     />
   </head>
   <body>
@@ -354,11 +366,11 @@ exports[`should match for Canonical News & international origin 1`] = `
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -374,35 +386,35 @@ exports[`should match for Canonical News & international origin 1`] = `
     />
     <meta
       content="Article summary."
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="BBC News"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="en_GB"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="Article Headline for SEO - BBC News"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="article"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.bbc.com/news/articles/c0000000001o"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
@@ -431,6 +443,18 @@ exports[`should match for Canonical News & international origin 1`] = `
     <meta
       content="Article Headline for SEO - BBC News"
       name="twitter:title"
+    />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
     />
   </head>
   <body>
@@ -557,11 +581,11 @@ exports[`should match for Persian News & UK origin 1`] = `
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -577,35 +601,35 @@ exports[`should match for Persian News & UK origin 1`] = `
     />
     <meta
       content="خلاصه مقاله"
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="BBC News فارسی"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="fa"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News فارسی"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="سرصفحه مقاله - BBC News فارسی"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="article"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.bbc.com/persian/articles/c4vlle3q337o"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
@@ -634,6 +658,18 @@ exports[`should match for Persian News & UK origin 1`] = `
     <meta
       content="سرصفحه مقاله - BBC News فارسی"
       name="twitter:title"
+    />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
     />
   </head>
   <body>
@@ -764,11 +800,11 @@ exports[`should match for Persian News & international origin 1`] = `
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -784,35 +820,35 @@ exports[`should match for Persian News & international origin 1`] = `
     />
     <meta
       content="خلاصه مقاله"
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="BBC News فارسی"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="fa"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News فارسی"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="سرصفحه مقاله - BBC News فارسی"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="article"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.bbc.com/persian/articles/c4vlle3q337o"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
@@ -841,6 +877,18 @@ exports[`should match for Persian News & international origin 1`] = `
     <meta
       content="سرصفحه مقاله - BBC News فارسی"
       name="twitter:title"
+    />
+    <meta
+      content="Royal Wedding 2018"
+      name="article:tag"
+    />
+    <meta
+      content="Duchess of Sussex"
+      name="article:tag"
+    />
+    <meta
+      content="Queen Victoria"
+      name="article:tag"
     />
   </head>
   <body>
@@ -976,11 +1024,11 @@ exports[`should match for WS Frontpages 1`] = `
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -996,35 +1044,35 @@ exports[`should match for WS Frontpages 1`] = `
     />
     <meta
       content="BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji."
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="BBC News Ìgbò"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="ig"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News Ìgbò"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="Ogbako - BBC News Ìgbò"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="website"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.bbc.com/igbo"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
@@ -1183,11 +1231,11 @@ exports[`should match for WS Media liveradio 1`] = `
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -1203,35 +1251,35 @@ exports[`should match for WS Media liveradio 1`] = `
     />
     <meta
       content="세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="BBC News 코리아"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="ko-KO"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News 코리아"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="BBC 코리아 라디오 - BBC News 코리아"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="website"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.bbc.com/korean/bbc_korean_radio/liveradio"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"

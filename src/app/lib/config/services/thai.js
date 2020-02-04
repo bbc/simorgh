@@ -137,6 +137,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'อุปกรณ์ของท่านไม่สามารถใช้งานเครื่องเล่นสื่อได้',
         audio: 'เสียง',
         photogallery: 'แกลเลอรีภาพ',
         video: 'วิดีโอ',
@@ -186,7 +187,7 @@ export const service = {
     navigationSection: 'หมวดข่าว',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/thai/institutional-49281839',
         text: 'ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้',
       },
       externalLink: {

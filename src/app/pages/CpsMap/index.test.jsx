@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, waitForDomChange } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import path from 'ramda/src/path';
@@ -132,6 +132,48 @@ describe('CPS MAP Page', () => {
     ({ asFragment, getByText } = render(
       createAssetPage({ pageData }, 'pidgin'),
     ));
+  });
+
+  afterEach(() => {
+    delete process.env.SIMORGH_APP_ENV;
+  });
+
+  it('should render the index image as metadata image', async () => {
+    await waitForDomChange({
+      container: document.querySelector('head'),
+    });
+
+    const actual = Array.from(
+      document.querySelectorAll(
+        'head > meta[property*="image"], head > meta[name*="image"]',
+      ),
+    ).map(tag =>
+      tag.hasAttribute('property')
+        ? {
+            property: tag.getAttribute('property'),
+            content: tag.getAttribute('content'),
+          }
+        : {
+            name: tag.getAttribute('name'),
+            content: tag.getAttribute('content'),
+          },
+    );
+    const expected = [
+      {
+        property: 'og:image',
+        content:
+          'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+      },
+      { property: 'og:image:alt', content: 'connectionAltText' },
+      { name: 'twitter:image:alt', content: 'connectionAltText' },
+      {
+        name: 'twitter:image:src',
+        content:
+          'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
+      },
+    ];
+
+    expect(actual).toEqual(expected);
   });
 
   it('should render component', () => {

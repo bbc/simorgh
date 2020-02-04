@@ -140,6 +140,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'আপনার ডিভাইস মিডিয়া প্লেব্যাক সমর্থন করে না',
         audio: 'অডিও',
         photogallery: 'ফটো গ্যালারি',
         video: 'ভিডিও',
@@ -163,7 +164,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/bengali/institutional-50409861',
         text: 'বিবিসির ওপর কেন আপনি আস্থা রাখতে পারেন',
       },
       externalLink: {

@@ -19,7 +19,7 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
           >
             <noscript />
             <main
-              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-sc-10y88yd-0 cYTtjw"
+              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-sc-10y88yd-0 gLWwCc"
               role="main"
             >
               <h1
@@ -30,7 +30,7 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                 Ўзбек деҳқонининг косаси нега оқармайдиshort
               </h1>
               <div
-                class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-7tc6v2-0 iIHKoO"
+                class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-7tc6v2-0 lfkajS"
               >
                 <figure
                   class="Figure-sc-6a3dhy-0 gJUCFc"
@@ -204,92 +204,100 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
               <div
                 class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
-                <ul
-                  class="BulletedList-sc-13z0d8v-0 zkoYd"
-                  dir="ltr"
-                  role="list"
+                <div
+                  class="Wrapper-e2169q-0 kopXQT"
                 >
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
+                  <ul
+                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    dir="ltr"
+                    role="list"
                   >
-                    Ўзбек деҳқонининг косаси нега оқармайди
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    Ўзбек деҳқонининг косаси нега оқармайди
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    <b>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
                       Ўзбек деҳқонининг косаси нега оқармайди
-                    </b>
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    Ўзбек деҳқонининг косаси нега оқармайди
-                  </li>
-                </ul>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      Ўзбек деҳқонининг косаси нега оқармайди
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <b>
+                        Ўзбек деҳқонининг косаси нега оқармайди
+                      </b>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      Ўзбек деҳқонининг косаси нега оқармайди
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div
                 class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
-                <ul
-                  class="BulletedList-sc-13z0d8v-0 zkoYd"
-                  dir="ltr"
-                  role="list"
+                <div
+                  class="Wrapper-e2169q-0 kopXQT"
                 >
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
+                  <ul
+                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    dir="ltr"
+                    role="list"
                   >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="https://bbc.com/uzbek"
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      Ўзбек деҳқонининг косаси нега оқармайди
-                    </a>
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="https://bbc.com/uzbek"
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/uzbek"
+                      >
+                        Ўзбек деҳқонининг косаси нега оқармайди
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      Ўзбек деҳқонининг косаси нега оқармайди
-                    </a>
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="https://bbc.com/uzbek"
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/uzbek"
+                      >
+                        Ўзбек деҳқонининг косаси нега оқармайди
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      Ўзбек деҳқонининг косаси нега оқармайди
-                    </a>
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="https://bbc.com/uzbek"
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/uzbek"
+                      >
+                        Ўзбек деҳқонининг косаси нега оқармайди
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      Ўзбек деҳқонининг косаси нега оқармайди
-                    </a>
-                  </li>
-                </ul>
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/uzbek"
+                      >
+                        Ўзбек деҳқонининг косаси нега оқармайди
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div
                 class="GridItemConstrainedLargeNoMargin-sc-12lwanc-6 kXuCUa"
@@ -379,7 +387,7 @@ exports[`CPS MAP Page should render component 1`] = `
           >
             <noscript />
             <main
-              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-sc-10y88yd-0 cYTtjw"
+              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-sc-10y88yd-0 gLWwCc"
               role="main"
             >
               <h1
@@ -390,7 +398,7 @@ exports[`CPS MAP Page should render component 1`] = `
                 Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
               </h1>
               <div
-                class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-7tc6v2-0 iIHKoO"
+                class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-7tc6v2-0 lfkajS"
               >
                 <figure
                   class="Figure-sc-6a3dhy-0 gJUCFc"
@@ -500,78 +508,82 @@ exports[`CPS MAP Page should render component 1`] = `
               <div
                 class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
-                <ul
-                  class="BulletedList-sc-13z0d8v-0 zkoYd"
-                  dir="ltr"
-                  role="list"
+                <div
+                  class="Wrapper-e2169q-0 kopXQT"
                 >
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
+                  <ul
+                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    dir="ltr"
+                    role="list"
                   >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="http://www.bbc.com/afrique/23248423"
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      &lt;Media Asset Page&gt;
-                    </a>
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="http://www.bbc.com/afrique/23248423"
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="http://www.bbc.com/afrique/23248423"
+                      >
+                        &lt;Media Asset Page&gt;
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      &lt;Media Asset Page&gt;
-                    </a>
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="http://www.bbc.com/afrique/23248423"
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="http://www.bbc.com/afrique/23248423"
+                      >
+                        &lt;Media Asset Page&gt;
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      &lt;Media Asset Page&gt;
-                    </a>
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="https://bbc.com/pidgin"
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="http://www.bbc.com/afrique/23248423"
+                      >
+                        &lt;Media Asset Page&gt;
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      this is the link text
-                    </a>
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="https://bbc.com/pidgin"
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/pidgin"
+                      >
+                        this is the link text
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      this is the link text
-                    </a>
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="https://bbc.com/pidgin"
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/pidgin"
+                      >
+                        this is the link text
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      this is the link text
-                    </a>
-                  </li>
-                </ul>
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/pidgin"
+                      >
+                        this is the link text
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div
                 class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
@@ -585,78 +597,82 @@ exports[`CPS MAP Page should render component 1`] = `
               <div
                 class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
-                <ul
-                  class="BulletedList-sc-13z0d8v-0 zkoYd"
-                  dir="ltr"
-                  role="list"
+                <div
+                  class="Wrapper-e2169q-0 kopXQT"
                 >
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
+                  <ul
+                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    dir="ltr"
+                    role="list"
                   >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="http://www.bbc.com/afrique/23248423"
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      &lt;Media Asset Page&gt;
-                    </a>
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="http://www.bbc.com/afrique/23248423"
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="http://www.bbc.com/afrique/23248423"
+                      >
+                        &lt;Media Asset Page&gt;
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      &lt;Media Asset Page&gt;
-                    </a>
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="http://www.bbc.com/afrique/23248423"
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="http://www.bbc.com/afrique/23248423"
+                      >
+                        &lt;Media Asset Page&gt;
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      &lt;Media Asset Page&gt;
-                    </a>
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="https://bbc.com/pidgin"
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="http://www.bbc.com/afrique/23248423"
+                      >
+                        &lt;Media Asset Page&gt;
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      this is the link text
-                    </a>
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="https://bbc.com/pidgin"
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/pidgin"
+                      >
+                        this is the link text
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      this is the link text
-                    </a>
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    <a
-                      class="InlineLink-hkwpaz-0 idscKS"
-                      href="https://bbc.com/pidgin"
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/pidgin"
+                      >
+                        this is the link text
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
                     >
-                      this is the link text
-                    </a>
-                  </li>
-                </ul>
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/pidgin"
+                      >
+                        this is the link text
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div
                 class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
@@ -889,36 +905,40 @@ exports[`CPS MAP Page should render component 1`] = `
               <div
                 class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
               >
-                <ul
-                  class="BulletedList-sc-13z0d8v-0 zkoYd"
-                  dir="ltr"
-                  role="list"
+                <div
+                  class="Wrapper-e2169q-0 kopXQT"
                 >
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
+                  <ul
+                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    dir="ltr"
+                    role="list"
                   >
-                    sunt in culpa qui officia deserunt mollit anim id est laborum
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    sunt in culpa qui officia deserunt mollit anim id est laborum
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    sunt in culpa qui officia deserunt mollit anim id est laborum
-                  </li>
-                  <li
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                    role="listitem"
-                  >
-                    v3 draft
-                  </li>
-                </ul>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      v3 draft
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div
                 class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
@@ -948,7 +968,7 @@ exports[`CPS MAP Page should render component 1`] = `
                 class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 ebGqUw"
               >
                 <div
-                  class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
+                  class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP StyledSectionLabel-sc-1itct8j-1 hlmzdc"
                 >
                   <div
                     class="Bar-sc-1x4gwjz-0 qaAlR"

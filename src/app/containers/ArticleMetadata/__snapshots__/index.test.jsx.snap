@@ -136,11 +136,11 @@ exports[`should match snapshot for News & International 1`] = `
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -156,35 +156,35 @@ exports[`should match snapshot for News & International 1`] = `
     />
     <meta
       content="Article Headline for SEO"
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="BBC News"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="en_GB"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="Article Headline for SEO - BBC News"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="article"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.test.bbc.com/pathname"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"
@@ -215,18 +215,6 @@ exports[`should match snapshot for News & International 1`] = `
       name="twitter:title"
     />
     <meta
-      content="https://www.facebook.com/bbcnews"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:published_time"
-    />
-    <meta
       content="Royal Wedding 2018"
       name="article:tag"
     />
@@ -237,6 +225,18 @@ exports[`should match snapshot for News & International 1`] = `
     <meta
       content="Queen Victoria"
       name="article:tag"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
+      content="2018-01-01T13:00:00.000Z"
+      name="article:modified_time"
+    />
+    <meta
+      content="2018-01-01T12:01:00.000Z"
+      name="article:published_time"
     />
   </head>
   <body>
@@ -366,11 +366,11 @@ exports[`should match snapshot for Persian News & UK origin 1`] = `
     />
     <meta
       content="100004154058350"
-      name="fb:admins"
+      property="fb:admins"
     />
     <meta
       content="1609039196070050"
-      name="fb:app_id"
+      property="fb:app_id"
     />
     <meta
       content="yes"
@@ -386,35 +386,35 @@ exports[`should match snapshot for Persian News & UK origin 1`] = `
     />
     <meta
       content="سرصفحه مقاله"
-      name="og:description"
+      property="og:description"
     />
     <meta
       content="https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"
-      name="og:image"
+      property="og:image"
     />
     <meta
       content="BBC News فارسی"
-      name="og:image:alt"
+      property="og:image:alt"
     />
     <meta
       content="fa"
-      name="og:locale"
+      property="og:locale"
     />
     <meta
       content="BBC News فارسی"
-      name="og:site_name"
+      property="og:site_name"
     />
     <meta
       content="سرصفحه مقاله - BBC News فارسی"
-      name="og:title"
+      property="og:title"
     />
     <meta
       content="article"
-      name="og:type"
+      property="og:type"
     />
     <meta
       content="https://www.test.bbc.com/pathname"
-      name="og:url"
+      property="og:url"
     />
     <meta
       content="summary_large_image"

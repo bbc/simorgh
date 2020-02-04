@@ -4,12 +4,14 @@ import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { GhostGrid } from '#lib/styledGrid';
-import MetadataContainer from '#containers/Metadata';
+import { getImageParts } from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks/blocks/image/helpers';
+import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
@@ -25,6 +27,7 @@ import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
   getFirstPublished,
   getLastPublished,
+  getAboutTags,
 } from '#lib/utilities/parseAssetData';
 
 // Page Handlers
@@ -46,8 +49,14 @@ const CpsStyContainer = ({ pageData }) => {
     ['relatedContent', 'groups', 0, 'promos'],
     pageData,
   );
+  const indexImagePath = path(['promo', 'indexImage', 'path'], pageData);
+  const indexImageLocator = indexImagePath
+    ? getImageParts(indexImagePath)[1]
+    : null;
+  const indexImageAltText = path(['promo', 'indexImage', 'altText'], pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
+  const aboutTags = getAboutTags(pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -66,19 +75,33 @@ const CpsStyContainer = ({ pageData }) => {
 
   const StyledGhostGrid = styled(GhostGrid)`
     flex-grow: 1;
+    padding-bottom: ${GEL_SPACING_TRPL};
+
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding-bottom: ${GEL_SPACING_QUAD};
+    }
+  `;
+
+  const StyledTimestamp = styled(Timestamp)`
+    padding-bottom: ${GEL_SPACING_DBL};
+
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding-bottom: ${GEL_SPACING_TRPL};
+    }
   `;
 
   return (
     <>
-      <MetadataContainer
+      <CpsMetadata
         title={title}
-        lang={metadata.language}
+        language={metadata.language}
         description={summary}
-        openGraphType="website"
-      >
-        <meta name="article:published_time" content={firstPublished} />
-        <meta name="article:modified_time" content={lastPublished} />
-      </MetadataContainer>
+        firstPublished={firstPublished}
+        lastPublished={lastPublished}
+        imageLocator={indexImageLocator}
+        imageAltText={indexImageAltText}
+        aboutTags={aboutTags}
+      />
       <LinkedData
         type="Article"
         seoTitle={title}
@@ -86,6 +109,7 @@ const CpsStyContainer = ({ pageData }) => {
         showAuthor
         datePublished={firstPublished}
         dateModified={lastPublished}
+        aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
       <StyledGhostGrid as="main" role="main">
@@ -95,14 +119,6 @@ const CpsStyContainer = ({ pageData }) => {
     </>
   );
 };
-
-const StyledTimestamp = styled(Timestamp)`
-  padding-bottom: ${GEL_SPACING_DBL};
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-bottom: ${GEL_SPACING_TRPL};
-  }
-`;
 
 CpsStyContainer.propTypes = cpsAssetPagePropTypes;
 
