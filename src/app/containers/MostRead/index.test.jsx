@@ -1,5 +1,7 @@
 import newsMostReadData from '#data/news/mostRead';
 import zhongwenSimpMostReadData from '#data/zhongwen/mostRead/simp';
+import { service as newsConfig } from '#app/lib/config/services/news';
+import { service as zhongwenConfig } from '#app/lib/config/services/zhongwen';
 import {
   setFreshPromoTimestamp,
   renderMostReadContainer,
@@ -11,10 +13,12 @@ const services = {
   news: {
     variant: null,
     data: newsMostReadData,
+    config: newsConfig.default,
   },
   zhongwen: {
     variant: 'simp',
     data: zhongwenSimpMostReadData,
+    config: zhongwenConfig.simp,
   },
 };
 
@@ -31,8 +35,8 @@ describe('MostReadContainerCanonical', () => {
 
   Object.keys(services).forEach(service => {
     it(`renders most read as expected on canonical for ${service}`, async () => {
-      const { variant, data: mostReadData } = services[service];
-
+      const { variant, data: mostReadData, config } = services[service];
+      const mostReadHeader = config.mostRead.header;
       fetch.mockResponse(JSON.stringify(setFreshPromoTimestamp(mostReadData)));
 
       await renderMostReadContainer({
@@ -43,6 +47,10 @@ describe('MostReadContainerCanonical', () => {
         mostReadToggle: true,
       });
 
+      expect(container.querySelector('h2').textContent).toEqual(mostReadHeader);
+      expect(container.querySelectorAll('li').length).toEqual(
+        config.mostRead.numberOfItems,
+      );
       expect(container).toMatchSnapshot();
     });
 
@@ -55,6 +63,7 @@ describe('MostReadContainerCanonical', () => {
         service,
         variant,
       });
+      expect(container.querySelectorAll('li').length).toEqual(0);
       expect(container.innerHTML).toEqual('');
     });
   });
