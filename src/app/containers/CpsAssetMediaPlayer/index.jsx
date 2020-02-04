@@ -1,4 +1,5 @@
 import React from 'react';
+import path from 'ramda/src/path';
 import { string } from 'prop-types';
 import styled from 'styled-components';
 import {
@@ -41,11 +42,11 @@ const CpsAssetMediaPlayerContainer = ({ blocks, assetUri }) => {
 
   const mediaBlock = filterForBlockType(blocks, 'aresMedia');
   const metadataBlock = filterForBlockType(
-    mediaBlock.model.blocks,
+    path(['model', 'blocks'], mediaBlock),
     'aresMediaMetadata',
   );
 
-  const { available } = metadataBlock.model;
+  const available = path(['model', 'available'], metadataBlock);
 
   return (
     <Wrapper>
