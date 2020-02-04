@@ -2,7 +2,11 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import FrontPageMain from '.';
-import frontPageDataPidgin from '#data/pidgin/frontpage';
+
+// 'index-light' is a lighter version of front page data that improves the
+// speed of this suite by reducing the amount of pre-processing required.
+import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
+
 import preprocessor from '#lib/utilities/preprocessor';
 import { indexPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -43,10 +47,16 @@ const FrontPageMainWithContext = props => (
 );
 
 describe('FrontPageMain', () => {
+  let frontPageData;
+
+  beforeAll(async () => {
+    frontPageData = await processedPidgin();
+  });
+
   describe('snapshots', () => {
     it('should render a pidgin frontpage correctly', async () => {
       await matchSnapshotAsync(
-        <FrontPageMainWithContext frontPageData={await processedPidgin()} />,
+        <FrontPageMainWithContext frontPageData={frontPageData} />,
       );
     });
   });
@@ -56,7 +66,7 @@ describe('FrontPageMain', () => {
 
     it('should render visually hidden text as h1', async () => {
       const { container } = render(
-        <FrontPageMainWithContext frontPageData={await processedPidgin()} />,
+        <FrontPageMainWithContext frontPageData={frontPageData} />,
       );
       const h1 = container.querySelector('h1');
       const content = h1.getAttribute('id');
@@ -76,11 +86,11 @@ describe('FrontPageMain', () => {
 
     it('should render front page sections', async () => {
       const { container } = render(
-        <FrontPageMainWithContext frontPageData={await processedPidgin()} />,
+        <FrontPageMainWithContext frontPageData={frontPageData} />,
       );
       const sections = container.querySelectorAll('section');
 
-      expect(sections).toHaveLength(7);
+      expect(sections).toHaveLength(2);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
