@@ -193,7 +193,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 .c20 {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .c20 figure {
@@ -621,6 +621,12 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c20 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c20 {
+    margin-top: 1rem;
   }
 }
 
