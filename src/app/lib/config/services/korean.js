@@ -49,6 +49,7 @@ export const service = {
       currentPage: '현재 페이지',
       skipLinkText: '내용으로 건너뛰기',
       relatedContent: '관련 기사 더 보기',
+      sections: '섹션',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -201,7 +202,6 @@ export const service = {
         url: '/korean/popular/read',
       },
     ],
-    navigationSection: '섹션',
     timezone: 'Asia/Seoul',
   },
 };

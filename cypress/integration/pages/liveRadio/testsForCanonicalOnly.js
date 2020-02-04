@@ -1,6 +1,5 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import config from '../../../support/config/services';
 import getMappedServiceId from './helper';
 
 // For testing important features that differ between services, e.g. Timestamps.
@@ -18,16 +17,14 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
     describe('live radio body', () => {
       it('should render an audio player embed', () => {
-        cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
-          ({ body }) => {
-            const { id, externalId } = body.content.blocks[2];
-            const serviceId = getMappedServiceId(externalId);
-            const { lang } = appConfig[service][variant];
-            cy.get(
-              `iframe[src="${envConfig.avEmbedBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/${lang}"]`,
-            ).should('be.visible');
-          },
-        );
+        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+          const { id, externalId } = body.content.blocks[2];
+          const serviceId = getMappedServiceId(externalId);
+          const { lang } = appConfig[service][variant];
+          cy.get(
+            `iframe[src="${envConfig.avEmbedBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/${lang}"]`,
+          ).should('be.visible');
+        });
       });
     });
 
