@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
+      sections: 'Qaybaha',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -240,7 +241,6 @@ export const service = {
         url: '/somali/media/photogalleries',
       },
     ],
-    navigationSection: 'Qaybaha',
   },
 };
 
