@@ -1159,6 +1159,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                       src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
                       title="Media player"
                     />
+                    <noscript />
                   </div>
                 </figure>
               </div>
@@ -2721,6 +2722,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                           src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                           title="Media player"
                         />
+                        <noscript />
                       </div>
                     </figure>
                   </div>

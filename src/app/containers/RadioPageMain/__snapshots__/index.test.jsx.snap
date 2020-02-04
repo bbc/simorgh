@@ -446,6 +446,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
                     src="http://localhost:7080/images/amp_audio_placeholder.png"
                     width="9"
                   />
+                  <noscript />
                 </amp-iframe>
               </div>
             </div>
@@ -895,6 +896,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
                   title="Audio player"
                 />
+                <noscript />
               </div>
             </div>
           </div>

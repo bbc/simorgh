@@ -73,6 +73,8 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
             title={iframeTitle}
             id={idAttr}
             skin="audio"
+            service={service}
+            noJsMessage={noJsMessage}
           />
         ) : (
           <CanonicalMediaPlayer

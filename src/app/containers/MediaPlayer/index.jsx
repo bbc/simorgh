@@ -150,6 +150,8 @@ const MediaPlayerContainer = ({
             placeholderSrc={placeholderSrc}
             placeholderSrcset={placeholderSrcset}
             title={iframeTitle}
+            service={service}
+            noJsMessage={noJsMessage}
           />
         ) : (
           <CanonicalMediaPlayer
