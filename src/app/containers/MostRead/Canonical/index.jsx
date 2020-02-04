@@ -51,20 +51,16 @@ const CanonicalMostRead = ({ endpoint }) => {
     fetchMostReadData(endpoint);
   }, [endpoint, numberOfItems, datetimeLocale, lastUpdated, script, service]);
 
-  return (
-    <>
-      {items.length !== 0 && (
-        <MostRead
-          items={items}
-          header={header}
-          service={service}
-          script={script}
-          dir={dir}
-          labelId="Most-Read"
-        />
-      )}
-    </>
-  );
+  return items.length ? (
+    <MostRead
+      items={items}
+      header={header}
+      service={service}
+      script={script}
+      dir={dir}
+      labelId="Most-Read"
+    />
+  ) : null;
 };
 
 CanonicalMostRead.propTypes = {
