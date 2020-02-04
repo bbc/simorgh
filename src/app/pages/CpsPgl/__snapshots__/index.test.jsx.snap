@@ -200,7 +200,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   padding-bottom: 0;
 }
 
-.c29 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -210,7 +210,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   flex-direction: column;
 }
 
-.c30 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -229,7 +229,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   align-items: baseline;
 }
 
-.c31 {
+.c32 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -249,7 +249,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   align-items: center;
 }
 
-.c27 {
+.c28 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
@@ -259,26 +259,26 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   margin-top: 2rem;
 }
 
-.c28 {
+.c29 {
   margin: 0;
   padding: 0;
 }
 
-.c33 {
+.c34 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c33:first-child {
+.c34:first-child {
   padding-top: 0;
 }
 
-.c33:last-child {
+.c34:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c32 {
+.c33 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -289,6 +289,10 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   z-index: 0;
 }
 
+.c27 {
+  margin-top: 0;
+}
+
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -297,6 +301,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  padding-bottom: 1.5rem;
 }
 
 .c22 {
@@ -634,7 +639,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -643,39 +648,39 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c31 {
+  .c32 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c32 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c32 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c32 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c27 {
+  .c28 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c28 {
     position: absolute;
     left: 0;
     right: 0;
@@ -690,25 +695,25 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c34 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c33 {
+  .c34 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33:first-child {
+  .c34:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c33:first-child {
+  .c34:first-child {
     padding-top: 1.5rem;
   }
 }
@@ -786,6 +791,12 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
     display: grid;
     max-width: initial;
     margin: initial;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding-bottom: 2rem;
   }
 }
 
@@ -1242,22 +1253,22 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
                 class="c25"
               >
                 <div
-                  class="c26"
+                  class="c26 c27"
                 >
                   <div
-                    class="c27"
+                    class="c28"
                   />
                   <h2
-                    class="c28"
+                    class="c29"
                   >
                     <div
-                      class="c29"
+                      class="c30"
                     >
                       <span
-                        class="c30"
+                        class="c31"
                       >
                         <span
-                          class="c31"
+                          class="c32"
                           dir="ltr"
                           id="related-content-heading"
                         >
@@ -1268,11 +1279,11 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
                   </h2>
                 </div>
                 <ul
-                  class="c32"
+                  class="c33"
                   role="list"
                 >
                   <li
-                    class="c33"
+                    class="c34"
                     role="listitem"
                   />
                 </ul>
@@ -1649,10 +1660,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c4 {
-  padding-bottom: 1rem;
-}
-
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -1661,6 +1668,11 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  padding-bottom: 1.5rem;
+}
+
+.c4 {
+  padding-bottom: 1rem;
 }
 
 @media (max-width:25rem) {
@@ -2035,12 +2047,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
   }
 }
 
-@media (min-width:63rem) {
-  .c4 {
-    padding-bottom: 1.5rem;
-  }
-}
-
 @media (max-width:37.4375rem) {
   .c0 {
     grid-column-gap: 0.5rem;
@@ -2078,6 +2084,18 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
     display: grid;
     max-width: initial;
     margin: initial;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -2980,7 +2998,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
     </script>
   </head>
   <body>
-    .c36 {
+    .c37 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -3035,7 +3053,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   padding-bottom: 1rem;
 }
 
-.c33 {
+.c34 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -3111,7 +3129,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3121,7 +3139,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   flex-direction: column;
 }
 
-.c21 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3140,7 +3158,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   align-items: baseline;
 }
 
-.c22 {
+.c23 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3160,7 +3178,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   align-items: center;
 }
 
-.c18 {
+.c19 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
@@ -3170,47 +3188,47 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   margin-top: 2rem;
 }
 
-.c19 {
-  margin: 0;
-  padding: 0;
-}
-
-.c24 {
-  border-bottom: 0.0625rem solid #F2F2F2;
-  padding: 0.5rem 0 1rem;
-}
-
-.c24:first-child {
-  padding-top: 0;
-}
-
-.c24:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
-.c23 {
-  list-style-type: none;
+.c20 {
   margin: 0;
   padding: 0;
 }
 
 .c25 {
-  position: relative;
+  border-bottom: 0.0625rem solid #F2F2F2;
+  padding: 0.5rem 0 1rem;
+}
+
+.c25:first-child {
+  padding-top: 0;
+}
+
+.c25:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c24 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .c26 {
+  position: relative;
+}
+
+.c27 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c27 {
+.c28 {
   position: relative;
 }
 
-.c30 {
+.c31 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3221,7 +3239,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   padding-bottom: 0.5rem;
 }
 
-.c32 {
+.c33 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3232,21 +3250,21 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   padding-bottom: 0.5rem;
 }
 
-.c29 {
+.c30 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c31 {
+.c32 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c31:before {
+.c32:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -3258,17 +3276,17 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   z-index: 1;
 }
 
-.c31:hover,
-.c31:focus {
+.c32:hover,
+.c32:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c31:visited {
+.c32:visited {
   color: #6E6E73;
 }
 
-.c34 {
+.c35 {
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
@@ -3281,7 +3299,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   height: 2rem;
 }
 
-.c35 {
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3298,8 +3316,8 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   z-index: 0;
 }
 
-.c4 {
-  padding-bottom: 1rem;
+.c18 {
+  margin-top: 0;
 }
 
 .c0 {
@@ -3310,6 +3328,11 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  padding-bottom: 1.5rem;
+}
+
+.c4 {
+  padding-bottom: 1rem;
 }
 
 @media (max-width:37.4375rem) {
@@ -3534,14 +3557,14 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c33 {
+  .c34 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c34 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -3588,7 +3611,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
 }
 
 @media (min-width:37.5rem) {
-  .c21 {
+  .c22 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -3597,39 +3620,39 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c23 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c23 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c23 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c23 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c18 {
+  .c19 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c19 {
     position: absolute;
     left: 0;
     right: 0;
@@ -3644,31 +3667,31 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
 }
 
 @media (min-width:37.5rem) {
-  .c24 {
+  .c25 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c24 {
+  .c25 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c24:first-child {
+  .c25:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c24:first-child {
+  .c25:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c25 {
+  .c26 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -3676,13 +3699,13 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
 }
 
 @media (min-width:80rem) {
-  .c26 {
+  .c27 {
     width: 33.33%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c26 {
+  .c27 {
     display: block;
     width: initial;
     grid-column: 1 / span 2;
@@ -3690,68 +3713,68 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
 }
 
 @media (min-width:25rem) {
-  .c28 {
+  .c29 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c30 {
+  .c31 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c32 {
+  .c33 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c33 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c32 {
+  .c33 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c30 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c29 {
+  .c30 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c29 {
+  .c30 {
     display: block;
     width: initial;
     padding: initial;
@@ -3760,7 +3783,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
 }
 
 @media (max-width:24.9375rem) {
-  .c34 {
+  .c35 {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
@@ -3802,12 +3825,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
-@media (min-width:63rem) {
-  .c4 {
-    padding-bottom: 1.5rem;
-  }
-}
-
 @media (max-width:37.4375rem) {
   .c0 {
     grid-column-gap: 0.5rem;
@@ -3845,6 +3862,18 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
     display: grid;
     max-width: initial;
     margin: initial;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -4356,22 +4385,22 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
                     class="c16"
                   >
                     <div
-                      class="c17"
+                      class="c17 c18"
                     >
                       <div
-                        class="c18"
+                        class="c19"
                       />
                       <h2
-                        class="c19"
+                        class="c20"
                       >
                         <div
-                          class="c20"
+                          class="c21"
                         >
                           <span
-                            class="c21"
+                            class="c22"
                           >
                             <span
-                              class="c22"
+                              class="c23"
                               dir="ltr"
                               id="related-content-heading"
                             >
@@ -4382,21 +4411,21 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
                       </h2>
                     </div>
                     <ul
-                      class="c23"
+                      class="c24"
                       role="list"
                     >
                       <li
-                        class="c24"
+                        class="c25"
                         role="listitem"
                       >
                         <div
-                          class="c25"
+                          class="c26"
                         >
                           <div
-                            class="c26"
+                            class="c27"
                           >
                             <div
-                              class="c27"
+                              class="c28"
                             >
                               <div
                                 class="c11"
@@ -4406,18 +4435,18 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
                                 />
                               </div>
                               <div
-                                class="c28"
+                                class="c29"
                               />
                             </div>
                           </div>
                           <div
-                            class="c29"
+                            class="c30"
                           >
                             <h3
-                              class="c30"
+                              class="c31"
                             >
                               <a
-                                class="c31"
+                                class="c32"
                                 href="/pidgin/media-45132087?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                               >
                                 <span
@@ -4435,12 +4464,12 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
                               </a>
                             </h3>
                             <p
-                              class="c32"
+                              class="c33"
                             >
                               Bole festival showcase di different types of bole dem.
                             </p>
                             <time
-                              class="c33"
+                              class="c34"
                               datetime="2018-08-09"
                             >
                               9th August 2018
@@ -4449,34 +4478,34 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
                         </div>
                       </li>
                       <li
-                        class="c24"
+                        class="c25"
                         role="listitem"
                       >
                         <div
-                          class="c25"
+                          class="c26"
                         >
                           <div
-                            class="c26"
+                            class="c27"
                           >
                             <div
-                              class="c27"
+                              class="c28"
                             >
                               <div
                                 class="c11"
                               />
                               <div
-                                class="c28"
+                                class="c29"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="c34"
+                                  class="c35"
                                 >
                                   <div
-                                    class="c35"
+                                    class="c36"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="c36"
+                                      class="c37"
                                       focusable="false"
                                       height="13px"
                                       viewBox="0 0 32 26"
@@ -4497,13 +4526,13 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
                             </div>
                           </div>
                           <div
-                            class="c29"
+                            class="c30"
                           >
                             <h3
-                              class="c30"
+                              class="c31"
                             >
                               <a
-                                class="c31"
+                                class="c32"
                                 href="/pidgin/tori-45242255?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                               >
                                 <span
@@ -4522,12 +4551,12 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
                               </a>
                             </h3>
                             <p
-                              class="c32"
+                              class="c33"
                             >
                               Jollof Festival happun for Lagos Nigeria on Sunday and na time for pipo wey show to sample West Africa fine food dem.
                             </p>
                             <time
-                              class="c33"
+                              class="c34"
                               datetime="2018-08-19"
                             >
                               19th August 2018
@@ -4669,10 +4698,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c4 {
-  padding-bottom: 1rem;
-}
-
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -4681,6 +4706,11 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  padding-bottom: 1.5rem;
+}
+
+.c4 {
+  padding-bottom: 1rem;
 }
 
 @media (max-width:25rem) {
@@ -4904,12 +4934,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
   }
 }
 
-@media (min-width:63rem) {
-  .c4 {
-    padding-bottom: 1.5rem;
-  }
-}
-
 @media (max-width:37.4375rem) {
   .c0 {
     grid-column-gap: 0.5rem;
@@ -4947,6 +4971,18 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
     display: grid;
     max-width: initial;
     margin: initial;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -5926,7 +5962,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   padding-bottom: 1rem;
 }
 
-.c53 {
+.c54 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -6003,7 +6039,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   font-style: normal;
 }
 
-.c47 {
+.c48 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -6211,7 +6247,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c39 {
+.c40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6221,7 +6257,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   flex-direction: column;
 }
 
-.c40 {
+.c41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6240,7 +6276,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   align-items: baseline;
 }
 
-.c41 {
+.c42 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6260,7 +6296,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   align-items: center;
 }
 
-.c37 {
+.c38 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
@@ -6270,47 +6306,47 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   margin-top: 2rem;
 }
 
-.c38 {
-  margin: 0;
-  padding: 0;
-}
-
-.c43 {
-  border-bottom: 0.0625rem solid #F2F2F2;
-  padding: 0.5rem 0 1rem;
-}
-
-.c43:first-child {
-  padding-top: 0;
-}
-
-.c43:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
-.c42 {
-  list-style-type: none;
+.c39 {
   margin: 0;
   padding: 0;
 }
 
 .c44 {
-  position: relative;
+  border-bottom: 0.0625rem solid #F2F2F2;
+  padding: 0.5rem 0 1rem;
+}
+
+.c44:first-child {
+  padding-top: 0;
+}
+
+.c44:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c43 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .c45 {
+  position: relative;
+}
+
+.c46 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c46 {
+.c47 {
   position: relative;
 }
 
-.c50 {
+.c51 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6321,7 +6357,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   padding-bottom: 0.5rem;
 }
 
-.c52 {
+.c53 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6332,21 +6368,21 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   padding-bottom: 0.5rem;
 }
 
-.c49 {
+.c50 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c51 {
+.c52 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c51:before {
+.c52:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -6358,13 +6394,13 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   z-index: 1;
 }
 
-.c51:hover,
-.c51:focus {
+.c52:hover,
+.c52:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c51:visited {
+.c52:visited {
   color: #6E6E73;
 }
 
@@ -6373,8 +6409,8 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   z-index: 0;
 }
 
-.c4 {
-  padding-bottom: 1rem;
+.c37 {
+  margin-top: 0;
 }
 
 .c0 {
@@ -6385,6 +6421,11 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  padding-bottom: 1.5rem;
+}
+
+.c4 {
+  padding-bottom: 1rem;
 }
 
 @media (max-width:37.4375rem) {
@@ -6760,14 +6801,14 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c53 {
+  .c54 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c53 {
+  .c54 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -6814,7 +6855,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
 }
 
 @media (min-width:37.5rem) {
-  .c40 {
+  .c41 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -6823,39 +6864,39 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c41 {
+  .c42 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c41 {
+  .c42 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c41 {
+  .c42 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c41 {
+  .c42 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c37 {
+  .c38 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c37 {
+  .c38 {
     position: absolute;
     left: 0;
     right: 0;
@@ -6870,31 +6911,31 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
 }
 
 @media (min-width:37.5rem) {
-  .c43 {
+  .c44 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c43 {
+  .c44 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c43:first-child {
+  .c44:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c43:first-child {
+  .c44:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c44 {
+  .c45 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -6902,13 +6943,13 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
 }
 
 @media (min-width:80rem) {
-  .c45 {
+  .c46 {
     width: 33.33%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c45 {
+  .c46 {
     display: block;
     width: initial;
     grid-column: 1 / span 2;
@@ -6916,68 +6957,68 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
 }
 
 @media (min-width:25rem) {
-  .c48 {
+  .c49 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c50 {
+  .c51 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c50 {
+  .c51 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c50 {
+  .c51 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c52 {
+  .c53 {
     font-size: 0.9375rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c52 {
+  .c53 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c52 {
+  .c53 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c49 {
+  .c50 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c49 {
+  .c50 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c49 {
+  .c50 {
     display: block;
     width: initial;
     padding: initial;
@@ -7021,12 +7062,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (min-width:63rem) {
-  .c4 {
-    padding-bottom: 1.5rem;
-  }
-}
-
 @media (max-width:37.4375rem) {
   .c0 {
     grid-column-gap: 0.5rem;
@@ -7064,6 +7099,18 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
     display: grid;
     max-width: initial;
     margin: initial;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -8173,22 +8220,22 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
                     class="c35"
                   >
                     <div
-                      class="c36"
+                      class="c36 c37"
                     >
                       <div
-                        class="c37"
+                        class="c38"
                       />
                       <h2
-                        class="c38"
+                        class="c39"
                       >
                         <div
-                          class="c39"
+                          class="c40"
                         >
                           <span
-                            class="c40"
+                            class="c41"
                           >
                             <span
-                              class="c41"
+                              class="c42"
                               dir="ltr"
                               id="related-content-heading"
                             >
@@ -8199,54 +8246,54 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
                       </h2>
                     </div>
                     <ul
-                      class="c42"
+                      class="c43"
                       role="list"
                     >
                       <li
-                        class="c43"
+                        class="c44"
                         role="listitem"
                       >
                         <div
-                          class="c44"
+                          class="c45"
                         >
                           <div
-                            class="c45"
+                            class="c46"
                           >
                             <div
-                              class="c46"
+                              class="c47"
                             >
                               <div
-                                class="c47"
+                                class="c48"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c48"
+                                class="c49"
                               />
                             </div>
                           </div>
                           <div
-                            class="c49"
+                            class="c50"
                           >
                             <h3
-                              class="c50"
+                              class="c51"
                             >
                               <a
-                                class="c51"
+                                class="c52"
                                 href="/azeri/azerbaijan-44124647?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                               >
                                 ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
                               </a>
                             </h3>
                             <p
-                              class="c52"
+                              class="c53"
                             >
                               Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edir.
                             </p>
                             <time
-                              class="c53"
+                              class="c54"
                               datetime="2018-05-17"
                             >
                               17 May 2018
@@ -8255,50 +8302,50 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
                         </div>
                       </li>
                       <li
-                        class="c43"
+                        class="c44"
                         role="listitem"
                       >
                         <div
-                          class="c44"
+                          class="c45"
                         >
                           <div
-                            class="c45"
+                            class="c46"
                           >
                             <div
-                              class="c46"
+                              class="c47"
                             >
                               <div
-                                class="c47"
+                                class="c48"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c48"
+                                class="c49"
                               />
                             </div>
                           </div>
                           <div
-                            class="c49"
+                            class="c50"
                           >
                             <h3
-                              class="c50"
+                              class="c51"
                             >
                               <a
-                                class="c51"
+                                class="c52"
                                 href="/azeri/azerbaijan-43540056?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                               >
                                 ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
                               </a>
                             </h3>
                             <p
-                              class="c52"
+                              class="c53"
                             >
                               ADR-100 layihəmizdə növbəti yazı: 1918-ci il martın 3-də Bolşeviklər Almaniya, Bolqarıstan, Avstriya-Macarıstan və Osmanlı nümayəndələri ilə Brest-Litovsk Sülh Sazişi imzalayır. İmzalanma Bakının azadlığı ilə nəticələnən bir sıra hadisələrə səbəb olur.
                             </p>
                             <time
-                              class="c53"
+                              class="c54"
                               datetime="2018-03-27"
                             >
                               27 Mart 2018
@@ -8307,50 +8354,50 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
                         </div>
                       </li>
                       <li
-                        class="c43"
+                        class="c44"
                         role="listitem"
                       >
                         <div
-                          class="c44"
+                          class="c45"
                         >
                           <div
-                            class="c45"
+                            class="c46"
                           >
                             <div
-                              class="c46"
+                              class="c47"
                             >
                               <div
-                                class="c47"
+                                class="c48"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c48"
+                                class="c49"
                               />
                             </div>
                           </div>
                           <div
-                            class="c49"
+                            class="c50"
                           >
                             <h3
-                              class="c50"
+                              class="c51"
                             >
                               <a
-                                class="c51"
+                                class="c52"
                                 href="/azeri/azerbaijan-44022776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                               >
                                 Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
                               </a>
                             </h3>
                             <p
-                              class="c52"
+                              class="c53"
                             >
                               #ADR100 layihəmizdə: 1918-1920-ci illərdə Gürcüstanla Azərbaycan arasında əməkdaşlıq yeni respublikalar üçün olduqca mühüm idi. Eyni zamanda Bakı ilə Tbilisi arasında gərginlik yaradan məsələlər mövcud idi. Belə məsələlərdən biri də ərazi mübahisələri idi.
                             </p>
                             <time
-                              class="c53"
+                              class="c54"
                               datetime="2018-05-10"
                             >
                               10 May 2018
@@ -8359,50 +8406,50 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
                         </div>
                       </li>
                       <li
-                        class="c43"
+                        class="c44"
                         role="listitem"
                       >
                         <div
-                          class="c44"
+                          class="c45"
                         >
                           <div
-                            class="c45"
+                            class="c46"
                           >
                             <div
-                              class="c46"
+                              class="c47"
                             >
                               <div
-                                class="c47"
+                                class="c48"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c48"
+                                class="c49"
                               />
                             </div>
                           </div>
                           <div
-                            class="c49"
+                            class="c50"
                           >
                             <h3
-                              class="c50"
+                              class="c51"
                             >
                               <a
-                                class="c51"
+                                class="c52"
                                 href="/azeri/azerbaijan-43713137?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                               >
                                 Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
                               </a>
                             </h3>
                             <p
-                              class="c52"
+                              class="c53"
                             >
                               1918-ci il mayın 28-də Azərbaycanın istiqlaliyyəti elan olunanda bu hadisədən bir gün əvvəl dağılmış Zaqafqaziya Seyminin 44 nəfər müsəlman nümayəndəsi Tiflisdə toplanır və özlərini Azərbaycanın Milli Şurası elan edirlər.
                             </p>
                             <time
-                              class="c53"
+                              class="c54"
                               datetime="2018-04-10"
                             >
                               10 Aprel 2018
@@ -8411,50 +8458,50 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
                         </div>
                       </li>
                       <li
-                        class="c43"
+                        class="c44"
                         role="listitem"
                       >
                         <div
-                          class="c44"
+                          class="c45"
                         >
                           <div
-                            class="c45"
+                            class="c46"
                           >
                             <div
-                              class="c46"
+                              class="c47"
                             >
                               <div
-                                class="c47"
+                                class="c48"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c48"
+                                class="c49"
                               />
                             </div>
                           </div>
                           <div
-                            class="c49"
+                            class="c50"
                           >
                             <h3
-                              class="c50"
+                              class="c51"
                             >
                               <a
-                                class="c51"
+                                class="c52"
                                 href="/azeri/azerbaijan-37688691?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                               >
                                 1918-1991: Bir müstəqilliyin iki bəyanı
                               </a>
                             </h3>
                             <p
-                              class="c52"
+                              class="c53"
                             >
                               25 il əvvəl bu gün Azərbaycan çökməkdə olan Sovet İttifaqından özünün müstəqillyini bəyan edib. Bu, Azərbaycan Respublikasının ikinci doğuluşu idi.
                             </p>
                             <time
-                              class="c53"
+                              class="c54"
                               datetime="2016-10-18"
                             >
                               18 Oktyabr 2016
@@ -8463,38 +8510,38 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
                         </div>
                       </li>
                       <li
-                        class="c43"
+                        class="c44"
                         role="listitem"
                       >
                         <div
-                          class="c44"
+                          class="c45"
                         >
                           <div
-                            class="c45"
+                            class="c46"
                           >
                             <div
-                              class="c46"
+                              class="c47"
                             >
                               <div
-                                class="c47"
+                                class="c48"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c48"
+                                class="c49"
                               />
                             </div>
                           </div>
                           <div
-                            class="c49"
+                            class="c50"
                           >
                             <h3
-                              class="c50"
+                              class="c51"
                             >
                               <a
-                                class="c51"
+                                class="c52"
                                 href="/azeri/azerbaijan-37691096?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                               >
                                 <span
@@ -8512,12 +8559,12 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
                               </a>
                             </h3>
                             <p
-                              class="c52"
+                              class="c53"
                             >
                               Çərşənbə axşamı şəhər sakinləri BBC Azərbaycancanın "Müstəqillik sizə nə verib?" sualını cavablandırıb.
                             </p>
                             <time
-                              class="c53"
+                              class="c54"
                               datetime="2016-10-18"
                             >
                               18 Oktyabr 2016
@@ -8526,50 +8573,50 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
                         </div>
                       </li>
                       <li
-                        class="c43"
+                        class="c44"
                         role="listitem"
                       >
                         <div
-                          class="c44"
+                          class="c45"
                         >
                           <div
-                            class="c45"
+                            class="c46"
                           >
                             <div
-                              class="c46"
+                              class="c47"
                             >
                               <div
-                                class="c47"
+                                class="c48"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c48"
+                                class="c49"
                               />
                             </div>
                           </div>
                           <div
-                            class="c49"
+                            class="c50"
                           >
                             <h3
-                              class="c50"
+                              class="c51"
                             >
                               <a
-                                class="c51"
+                                class="c52"
                                 href="/azeri/azerbaijan-43499221?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                               >
                                 1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
                               </a>
                             </h3>
                             <p
-                              class="c52"
+                              class="c53"
                             >
                               Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edəcək.
                             </p>
                             <time
-                              class="c53"
+                              class="c54"
                               datetime="2018-03-22"
                             >
                               22 Mart 2018
@@ -8578,50 +8625,50 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
                         </div>
                       </li>
                       <li
-                        class="c43"
+                        class="c44"
                         role="listitem"
                       >
                         <div
-                          class="c44"
+                          class="c45"
                         >
                           <div
-                            class="c45"
+                            class="c46"
                           >
                             <div
-                              class="c46"
+                              class="c47"
                             >
                               <div
-                                class="c47"
+                                class="c48"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c48"
+                                class="c49"
                               />
                             </div>
                           </div>
                           <div
-                            class="c49"
+                            class="c50"
                           >
                             <h3
-                              class="c50"
+                              class="c51"
                             >
                               <a
-                                class="c51"
+                                class="c52"
                                 href="/azeri/azerbaijan-44004471?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                               >
                                 #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
                               </a>
                             </h3>
                             <p
-                              class="c52"
+                              class="c53"
                             >
                               Bir çox azərbaycanlı və gürcüstanlı siyasətçiləri anlayırdılar ki, onların içində olduğu həssas dövrdən salamat çıxmaq üçün iqtisadi, siyasi və hərbi müttəfiqlik vacibdir. Eyni zamanda hər iki respublika arasında bir sıra mübahisələr də mövcud idi.
                             </p>
                             <time
-                              class="c53"
+                              class="c54"
                               datetime="2018-05-04"
                             >
                               4 May 2018
@@ -8630,50 +8677,50 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
                         </div>
                       </li>
                       <li
-                        class="c43"
+                        class="c44"
                         role="listitem"
                       >
                         <div
-                          class="c44"
+                          class="c45"
                         >
                           <div
-                            class="c45"
+                            class="c46"
                           >
                             <div
-                              class="c46"
+                              class="c47"
                             >
                               <div
-                                class="c47"
+                                class="c48"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c48"
+                                class="c49"
                               />
                             </div>
                           </div>
                           <div
-                            class="c49"
+                            class="c50"
                           >
                             <h3
-                              class="c50"
+                              class="c51"
                             >
                               <a
-                                class="c51"
+                                class="c52"
                                 href="/azeri/azerbaijan-43870815?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                               >
                                 Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
                               </a>
                             </h3>
                             <p
-                              class="c52"
+                              class="c53"
                             >
                               İranın Xəzər sahilinə çıxan bölgələrində Azərbaycan Respublikasını böyük ticari imkanlar gözləyirdi. İran ixracatının 60-70 faizinin istehsalı ənənəvi olaraq məhz həmin regionun payına düşüb. Azərbaycan və xüsusilə Bakı-Batumi dəhlizi isə Avropa bazarına aparan təbii çıxış idi. Bəs milli hökümət iqtisadi imkanları gəlirli xarici ticarətə çevirə bildimi?
                             </p>
                             <time
-                              class="c53"
+                              class="c54"
                               datetime="2018-04-29"
                             >
                               29 Aprel 2018
