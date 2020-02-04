@@ -53,7 +53,6 @@ export const service = {
       currentPage: 'ህሉው ገጽ',
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽል',
       relatedContent: 'ተዛማዲ ትሕዝቶ',
-      sections: 'ክፍልታት',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -200,6 +199,7 @@ export const service = {
         url: '/tigrinya/popular/read',
       },
     ],
+    navigationSection: 'ክፍልታት',
     timezone: 'Africa/Addis_Ababa',
   },
 };

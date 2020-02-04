@@ -49,7 +49,6 @@ export const service = {
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
       relatedContent: 'Ibindi bisa n’ibi',
-      sections: 'Imice',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -216,6 +215,7 @@ export const service = {
         url: '/gahuza/media/video',
       },
     ],
+    navigationSection: 'Imice',
   },
 };
 

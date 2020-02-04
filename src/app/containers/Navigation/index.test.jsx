@@ -1,72 +1,43 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
-import { service as newsConfig } from '#lib/config/services/news';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-import Navigation from './index';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import NavigationContainer from './index';
+import { service as igboConfig } from '#lib/config/services/igbo';
+
+jest.mock('react', () => {
+  const original = jest.requireActual('react');
+  return {
+    ...original,
+    useContext: jest.fn(),
+  };
+});
+
+const { useContext } = jest.requireMock('react');
 
 describe('Navigation Container', () => {
-  shouldMatchSnapshot(
-    'should correctly render amp navigation',
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp
-        pageType="article"
-        service="news"
-        statusCode={200}
-        pathname="/pathname"
-      >
-        <Navigation />
-      </RequestContextProvider>
-    </ServiceContextProvider>,
-  );
+  beforeEach(() => {
+    useContext.mockReturnValue(igboConfig.default);
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render canonical navigation',
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp={false}
-        pageType="article"
-        service="news"
-        statusCode={200}
-        pathname="/pathname"
-      >
-        <Navigation />
-      </RequestContextProvider>
-    </ServiceContextProvider>,
-  );
+  afterEach(() => {
+    useContext.mockReset();
+  });
 
-  it('should render navigation links in the correct format', () => {
-    const { navigation } = newsConfig.default;
-
-    const navigationComponent = (
-      <ServiceContextProvider service="news">
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp={false}
-          pageType="article"
-          service="news"
-          statusCode={200}
-          pathname="/pathname"
-        >
-          <Navigation />
-        </RequestContextProvider>
-      </ServiceContextProvider>
+  describe('snapshots', () => {
+    shouldMatchSnapshot(
+      'should render a Navigation with igbo links correctly',
+      <NavigationContainer />,
     );
+  });
 
-    const { getAllByRole } = render(navigationComponent);
-    const listItems = getAllByRole('listitem');
+  describe('assertions', () => {
+    it('should render a Navigation with a Skip to content link, linking to #content', () => {
+      const { container } = render(<NavigationContainer />);
 
-    navigation.forEach((navItem, index) => {
-      const link = listItems[index].querySelector('a');
-      const href = link.getAttribute('href');
-      expect(href).toEqual(navItem.url);
+      const skipLink = container.querySelector('a');
+      const skipLinkHref = skipLink.getAttribute('href');
+
+      expect(skipLinkHref).toBe('#content');
     });
   });
 });

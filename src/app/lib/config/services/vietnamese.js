@@ -50,7 +50,6 @@ export const service = {
       currentPage: 'Trang hiện nay',
       skipLinkText: 'Bỏ qua để xem nội dung',
       relatedContent: 'Tin liên quan',
-      sections: 'Mục',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -235,6 +234,7 @@ export const service = {
         url: '/vietnamese/media/video',
       },
     ],
+    navigationSection: 'Mục',
   },
 };
 

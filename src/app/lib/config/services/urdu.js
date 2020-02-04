@@ -54,7 +54,6 @@ export const service = {
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
       relatedContent: 'اسی بارے میں',
-      sections: 'سیکشن',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -239,6 +238,7 @@ export const service = {
         url: '/urdu/media/photogalleries',
       },
     ],
+    navigationSection: 'سیکشن',
   },
 };
 
