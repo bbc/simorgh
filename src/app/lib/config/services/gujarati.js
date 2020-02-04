@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'વર્તમાન પેજ',
       skipLinkText: 'સામગ્રી પર જાઓ',
       relatedContent: 'સંબંધિત સમાચાર',
+      sections: 'વિભાગો',
       mediaAssetPage: {
         mediaPlayer: 'મીડિયા પ્લેયર',
         audioPlayer: 'ઓડિયો પ્લેયર',
@@ -219,7 +220,6 @@ export const service = {
         url: '/gujarati/resources/idt-0370808c-2dea-4f55-b69f-309a2881ef25',
       },
     ],
-    navigationSection: 'વિભાગો',
   },
 };
 
