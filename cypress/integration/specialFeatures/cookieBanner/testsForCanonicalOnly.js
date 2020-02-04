@@ -90,7 +90,7 @@ Object.keys(config)
         paths.forEach(path => {
           const { variant } = config[service];
 
-          describe(`Canonical Cookie Banner Test for ${service} ${pageType}`, () => {
+          describe(`Canonical Cookie Banner Test for ${service} ${pageType} ${path}`, () => {
             it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
               cy.clearCookies();
               visitPage(pageType, path);
