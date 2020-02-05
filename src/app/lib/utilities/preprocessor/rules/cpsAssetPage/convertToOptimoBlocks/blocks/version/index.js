@@ -1,5 +1,6 @@
 import pick from 'ramda/src/pick';
 import path from 'ramda/src/path';
+import isNil from 'ramda/src/isNil';
 
 const generateVideoBlock = block => {
   const generatedBlock = {
@@ -7,6 +8,8 @@ const generateVideoBlock = block => {
     blockId: `urn:bbc:ares::${block.subType}:${block.id}`,
     model: {
       ...pick(['embedding', 'id', 'subType', 'live'], block),
+      // If available is undefined, the video is available
+      available: isNil(block.available) ? true : block.available,
       format: block.format === 'video' ? 'audio_video' : block.format,
       title: block.caption,
       imageCopyright: path(['image', 'copyrightHolder'], block),
