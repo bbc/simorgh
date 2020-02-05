@@ -163,6 +163,7 @@ export const service = {
     mostRead: {
       header: 'As motha leughte',
       lastUpdated: 'Air ùrachadh mu dheireadh: ',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

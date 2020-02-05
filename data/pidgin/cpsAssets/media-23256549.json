@@ -1,0 +1,130 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "available": false,
+        "caption": "Test",
+        "duration": "PT0S",
+        "embedding": false,
+        "externalId": "bbc_one_hd",
+        "format": "video",
+        "id": "63501280",
+        "image": {
+          "altText": "test images",
+          "copyrightHolder": "Google",
+          "height": 360,
+          "href": "http://b.files.bbci.co.uk/13CA6/test/_63726018_test66.jpg",
+          "id": "63501280",
+          "path": "/cpsdevpb/13CA6/test/_63726018_test66.jpg",
+          "subType": "thumbnail",
+          "type": "image",
+          "width": 640
+        },
+        "live": true,
+        "subType": "primary",
+        "type": "version"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "News International Video Worldwide Expired",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "pidgin.embedded_media.media_asset.23256549.page",
+      "cps_asset_id": "23256549",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["version", "paragraph"],
+    "createdBy": "pidgin-v6",
+    "firstPublished": 1574703355000,
+    "id": "urn:bbc:ares::asset:pidgin/media-23256549",
+    "includeComments": false,
+    "language": "pcm",
+    "lastPublished": 1576164972000,
+    "lastUpdated": 1576164980459,
+    "locators": {
+      "assetUri": "/pidgin/media-23256549",
+      "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-23256549",
+      "curie": "http://www.bbc.co.uk/asset/b9b9ec2e-206e-8f4c-84db-82450c7ee29e"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasContentWarning": false,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false,
+      "suitableForSyndication": true
+    },
+    "tags": {},
+    "timestamp": 1574703355000,
+    "type": "MAP",
+    "version": "v1.1.4"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "News International Video Worldwide Expired",
+      "shortHeadline": "News International Video Worldwide Expired"
+    },
+    "id": "urn:bbc:ares::asset:pidgin/media-23256549",
+    "locators": {
+      "assetUri": "/pidgin/media-23256549",
+      "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-23256549",
+      "curie": "http://www.bbc.co.uk/asset/b9b9ec2e-206e-8f4c-84db-82450c7ee29e"
+    },
+    "media": {
+      "available": false,
+      "caption": "Test",
+      "duration": "PT0S",
+      "embedding": false,
+      "externalId": "bbc_one_hd",
+      "format": "video",
+      "id": "63501280",
+      "image": {
+        "altText": "test images",
+        "copyrightHolder": "Google",
+        "height": 360,
+        "href": "http://b.files.bbci.co.uk/13CA6/test/_63726018_test66.jpg",
+        "id": "63501280",
+        "path": "/cpsdevpb/13CA6/test/_63726018_test66.jpg",
+        "subType": "thumbnail",
+        "type": "image",
+        "width": 640
+      },
+      "live": true,
+      "subType": "primary",
+      "type": "version"
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "News International Video Worldwide Expired",
+    "timestamp": 1574703355000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Media",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/pidgin/media"
+    },
+    "site": {
+      "name": "BBC Pidgin",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/pidgin"
+    }
+  }
+}

@@ -156,6 +156,7 @@ export const service = {
     mostRead: {
       header: 'Ibisomwa cane',
       lastUpdated: 'Ibiheruka kuvugururwa: ',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {
