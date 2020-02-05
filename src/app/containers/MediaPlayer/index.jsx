@@ -116,10 +116,8 @@ const MediaPlayerContainer = ({
   );
 
   const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
-  const portraitRatio = '177.78%'; // (16/9)*100 = 9:16
   const StyledMessageContainer = styled.div`
-    padding-top: ${({ portrait }) =>
-      portrait ? portraitRatio : landscapeRatio};
+    padding-top: ${landscapeRatio};
     position: relative;
     overflow: hidden;
   `;
