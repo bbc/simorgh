@@ -134,6 +134,7 @@ export const service = {
       },
       media: {
         noJs: 'የእርሶ መሳሪያ ሚዲያ ፕሌይ ባክን ማጫወት ኣልተቻለም።',
+        contentExpired: 'ይህንን ካሁን በኋላ ማግኘት አይችሉም፡፡',
         audio: 'ድምጽ',
         photogallery: 'የፎቶ መድብሎች',
         video: 'ቪዲዮ',

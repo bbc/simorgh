@@ -134,6 +134,7 @@ export const service = {
       },
       media: {
         noJs: 'お使いの端末ではメディアプレイバックはご利用になれません',
+        contentExpired: 'このコンテンツはもうご利用いただけません。',
         audio: '音声',
         photogallery: '写真ギャラリー',
         video: 'ビデオ',

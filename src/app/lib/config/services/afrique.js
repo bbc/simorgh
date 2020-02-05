@@ -140,6 +140,7 @@ export const service = {
       },
       media: {
         noJs: '',
+        contentExpired: 'This content is no longer available',
         audio: 'Audio',
         photogallery: 'Galerie de photos',
         video: 'Vidéo',

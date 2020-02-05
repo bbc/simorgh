@@ -133,6 +133,7 @@ export const service = {
       },
       media: {
         noJs: "Na'urarku na da matsalar sauraren sauti",
+        contentExpired: 'Yanzu an daina samar da wannan shiri.',
         audio: 'Sauti',
         photogallery: 'Rumbun hotuna',
         video: 'Bidiyo',

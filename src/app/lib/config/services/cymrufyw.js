@@ -145,6 +145,7 @@ export const service = {
       },
       media: {
         noJs: '',
+        contentExpired: 'This content is no longer avilable',
         audio: 'Sain',
         photogallery: 'Oriel luniau',
         video: 'Fideo',

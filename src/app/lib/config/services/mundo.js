@@ -144,6 +144,7 @@ export const service = {
       },
       media: {
         noJs: '',
+        contentExpired: 'Este contenido ya no está disponible.',
         audio: 'Audio',
         photogallery: 'Galería de fotos',
         video: 'Video',

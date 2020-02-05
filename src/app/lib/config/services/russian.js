@@ -145,6 +145,7 @@ export const service = {
       },
       media: {
         noJs: '',
+        contentExpired: 'Контент больше не доступен.',
         audio: 'Аудио',
         photogallery: 'Фотогалерея',
         video: 'Видео',

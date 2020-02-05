@@ -138,6 +138,7 @@ export const service = {
       },
       media: {
         noJs: 'اپ کی ڈیوائس پر پلے بیک سپورٹ دستیاب نہیں',
+        contentExpired: 'یہ مواد اب دستیاب نہیں',
         audio: 'آڈیو',
         photogallery: 'تصاویری گیلری',
         video: 'ویڈیو',

@@ -136,6 +136,7 @@ export const service = {
       },
       media: {
         noJs: 'Ntibishobora gukina mu cuma cawe',
+        contentExpired: 'Ibi ntibikiboneka.',
         audio: 'Umviriza',
         photogallery: 'Amasanamu',
         video: 'Video',
