@@ -39,7 +39,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/afaanoromoo/23149891',
+        path: '/afaanoromoo/23149891',
         smoke: false,
       },
       photoGalleryPage: {
@@ -119,7 +119,7 @@ const genServices = appEnv => ({
         smoke: true,
       },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/amharic/news-23263266',
+        path: '/amharic/news-23263266',
         smoke: false,
       },
       photoGalleryPage: {
@@ -377,7 +377,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/gujarati/other-news-23130286',
+        path: '/gujarati/other-news-23130286',
         smoke: false,
       },
       photoGalleryPage: {
@@ -608,7 +608,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/korean/media-23248686',
+        path: '/korean/media-23248686',
         smoke: false,
       },
       photoGalleryPage: {
@@ -685,7 +685,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/marathi/media-23127353',
+        path: '/marathi/media-23127353',
         smoke: false,
       },
       photoGalleryPage: {
@@ -1003,7 +1003,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/punjabi/media-23248705',
+        path: '/punjabi/media-23248705',
         smoke: false,
       },
       photoGalleryPage: {
@@ -1386,7 +1386,7 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/thai/thailand-23248713',
+        path: '/thai/thailand-23248713',
         smoke: false,
       },
       photoGalleryPage: {
@@ -1426,7 +1426,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/tigrinya/news-23263262',
+        path: '/tigrinya/news-23263262',
         smoke: false,
       },
       photoGalleryPage: {
