@@ -5,7 +5,6 @@ import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import path from 'ramda/src/path';
 import assocPath from 'ramda/src/assocPath';
-import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -310,16 +309,9 @@ it('should not show the timestamp when allowDateStamp is false', async () => {
 });
 
 it('should not show the iframe when available is false', async () => {
-  const uzbekDataExpiredLivestream = mergeDeepLeft(
-    {
-      content: {
-        blocks: [
-          {
-            available: false,
-          },
-        ],
-      },
-    },
+  const uzbekDataExpiredLivestream = assocPath(
+    ['content', 'blocks', 0, 'available'],
+    false,
     uzbekPageData,
   );
 
@@ -331,6 +323,25 @@ it('should not show the iframe when available is false', async () => {
   render(createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'));
 
   expect(document.querySelector('iframe')).toBeNull();
+});
+
+it('should show the media message when available is false', async () => {
+  const uzbekDataExpiredLivestream = assocPath(
+    ['content', 'blocks', 0, 'available'],
+    false,
+    uzbekPageData,
+  );
+
+  const pageDataWithExpiredLiveStream = await preprocessor(
+    uzbekDataExpiredLivestream,
+    cpsAssetPreprocessorRules,
+  );
+
+  const { getByText } = render(
+    createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),
+  );
+
+  expect(getByText('This content is no longer available')).toBeInTheDocument();
 });
 
 it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
