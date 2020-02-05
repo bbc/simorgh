@@ -1,67 +1,63 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::ws_live:bbc_uzbek_radio",
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_uzbek_radio"
+  "metadata" : {
+    "id" : "urn:bbc:ares:ws_media:live:bbc_uzbek_radio",
+    "locators" : {
+      "pipsUrn" : "urn:bbc:pips:bbc_uzbek_radio"
     },
-    "type": "WS-LIVE",
-    "createdBy": "uzbek",
-    "language": "uz",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "BBC Uzbek Radio - BBC News O'zbek",
-      "pageIdentifier": "uzbek.bbc_uzbek_radio.liveradio.page",
-      "producerId": "96",
-      "contentType": "player-live",
-      "producer": "UZBEK"
+    "type" : "WS-LIVE",
+    "createdBy" : "uzbek",
+    "language" : "uz",
+    "lastUpdated" : 0,
+    "firstPublished" : 0,
+    "lastPublished" : 0,
+    "options" : { },
+    "analyticsLabels" : {
+      "pageTitle" : "BBC Uzbek Radio - BBC News O'zbek",
+      "pageIdentifier" : "uzbek.bbc_uzbek_radio.liveradio.page",
+      "producerId" : "96",
+      "contentType" : "player-live",
+      "producer" : "UZBEK"
     },
-    "tags": {},
-    "version": "1.1.2",
-    "blockTypes": ["heading", "version", "paragraph"]
+    "tags" : { },
+    "version" : "1.1.2",
+    "blockTypes" : [ "heading", "version", "paragraph" ]
   },
-  "content": {
-    "blocks": [
-      {
-        "text": "",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_uzbek_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
-      }
-    ]
+  "content" : {
+    "blocks" : [ {
+      "text" : "BBC Uzbek Radio Dasturi",
+      "markupType" : "plain_text",
+      "type" : "heading"
+    }, {
+      "text" : "O’zbekiston, mintaqa va dunyo yangiliklari O’zbek tilida",
+      "type" : "paragraph"
+    }, {
+      "id" : "liveradio",
+      "subType" : "primary",
+      "format" : "audio",
+      "externalId" : "bbc_uzbek_radio",
+      "duration" : "PT0S",
+      "caption" : "",
+      "embedding" : false,
+      "available" : true,
+      "live" : true,
+      "type" : "version"
+    } ]
   },
-  "promo": {
-    "name": "",
-    "summary": "",
-    "uri": "/uzbek/bbc_uzbek_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_uzbek_radio",
-    "type": "link"
+  "promo" : {
+    "name" : "BBC Uzbek Radio Dasturi",
+    "summary" : "O’zbekiston, mintaqa va dunyo yangiliklari O’zbek tilida",
+    "uri" : "/uzbek/bbc_uzbek_radio/liveradio",
+    "contentType" : "WS-LIVE",
+    "id" : "urn:bbc:ares:ws_media:live:bbc_uzbek_radio",
+    "type" : "link"
   },
-  "relatedContent": {
-    "site": {
-      "subType": "simple",
-      "name": "uzbek",
-      "uri": "/uzbek",
-      "type": "simple"
+  "relatedContent" : {
+    "site" : {
+      "subType" : "simple",
+      "name" : "uzbek",
+      "uri" : "/uzbek",
+      "type" : "simple"
     },
-    "groups": []
+    "groups" : [ ]
   }
 }

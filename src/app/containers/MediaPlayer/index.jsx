@@ -5,9 +5,11 @@ import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import Figure from '@bbc/psammead-figure';
+import styled from 'styled-components';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
+  MediaMessage,
 } from '@bbc/psammead-media-player';
 import Caption from '../Caption';
 import Metadata from './Metadata';
@@ -30,6 +32,7 @@ const MediaPlayerContainer = ({
   assetId,
   assetType,
   showPlaceholder,
+  available,
 }) => {
   const { isAmp } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
@@ -112,7 +115,28 @@ const MediaPlayerContainer = ({
     translations,
   );
 
-  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable Javascript or try a different browser.`;
+  const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
+  const StyledMessageContainer = styled.div`
+    padding-top: ${landscapeRatio};
+    position: relative;
+    overflow: hidden;
+  `;
+
+  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
+  const contentNotAvailableMessage = `This content is no longer available`;
+
+  if (!available) {
+    return (
+      <StyledMessageContainer>
+        <MediaMessage
+          service={service}
+          message={contentNotAvailableMessage}
+          placeholderSrc={placeholderSrc}
+          placeholderSrcset={placeholderSrcset}
+        />
+      </StyledMessageContainer>
+    );
+  }
 
   return (
     <>
@@ -124,11 +148,13 @@ const MediaPlayerContainer = ({
             placeholderSrc={placeholderSrc}
             placeholderSrcset={placeholderSrcset}
             title={iframeTitle}
+            noJsMessage={noJsMessage}
+            service={service}
           />
         ) : (
           <CanonicalMediaPlayer
             src={embedSource}
-            placeholderSrc={showPlaceholder ? placeholderSrc : null}
+            placeholderSrc={placeholderSrc}
             placeholderSrcset={placeholderSrcset}
             showPlaceholder={showPlaceholder}
             title={iframeTitle}
@@ -149,9 +175,11 @@ MediaPlayerContainer.propTypes = {
   assetId: string.isRequired,
   assetType: string.isRequired,
   showPlaceholder: bool.isRequired,
+  available: bool,
 };
 MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
+  available: true,
 };
 
 export default MediaPlayerContainer;

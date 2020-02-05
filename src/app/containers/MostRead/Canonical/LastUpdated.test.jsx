@@ -15,7 +15,7 @@ describe('MostReadCanonical - LastUpdated', () => {
     container = null;
   });
 
-  it(`test LastUpdated renders when timestamp > 60 days`, () => {
+  it(`should render LastUpdated when timestamp when > 60 days`, () => {
     ReactDOM.render(
       <LastUpdated
         timestamp={864691200}
@@ -32,7 +32,7 @@ describe('MostReadCanonical - LastUpdated', () => {
     );
   });
 
-  it(`test LastUpdated does not renders when timestamp < 60 days`, () => {
+  it(`should not render LastUpdated when timestamp < 60 days`, () => {
     const freshDate = new Date();
 
     ReactDOM.render(
