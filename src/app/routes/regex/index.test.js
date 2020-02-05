@@ -257,6 +257,8 @@ describe('cpsAssetPagePath', () => {
   const validRoutes = [
     '/pidgin/12345678',
     '/pidgin/12345678.amp',
+    '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl',
+    '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery',
     '/pidgin/tori-49450859',
     '/pidgin/tori-49450859.amp',
     '/yoruba/media-49450859',
