@@ -13,12 +13,14 @@ import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
 import filterGroupsWithoutStraplines from '#lib/utilities/preprocessor/rules/filterGroupsWithoutStraplines';
 import addSummaryBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addSummaryBlock';
 import cpsOnlyOnwardJourneys from '#lib/utilities/preprocessor/rules/cpsAssetPage/cpsOnlyOnwardJourneys';
+import addBylineBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addBylineBlock';
 
 export const cpsAssetPreprocessorRules = [
   parseInternalLinks,
   timestampToMilliseconds,
   convertToOptimoBlocks,
   addHeadlineBlock,
+  addBylineBlock,
   addSummaryBlock,
   applyTimestampRules,
   addIdsToBlocks,
