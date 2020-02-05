@@ -1,0 +1,204 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": true,
+        "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+        "embedding": true,
+        "format": "video",
+        "id": "p01k6msm",
+        "imageCopyright": "BBC",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+        "subType": "clip",
+        "synopses": {
+          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+        },
+        "title": "Five things ants can teach us about management",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1540218932000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "duration": 191,
+            "durationISO8601": "PT3M11S",
+            "types": ["Original"],
+            "versionId": "p01k6msp",
+            "warnings": {
+              "long": "Contains strong language and adult humour.",
+              "short": "Contains strong language and adult humour."
+            }
+          }
+        ]
+      },
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "Ants Ants Ants",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Test Heading",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Test Subheading",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Test Crosshead",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "No poster image ",
+        "type": "paragraph"
+      },
+      {
+        "items": [
+          { "markupType": "plain_text", "text": "Ants", "type": "listItem" },
+          {
+            "markupType": "plain_text",
+            "text": "More ants",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "So many ants",
+            "type": "listItem"
+          }
+        ],
+        "numbered": false,
+        "type": "list"
+      },
+      {
+        "items": [
+          { "markupType": "plain_text", "text": "One ant", "type": "listItem" },
+          { "markupType": "plain_text", "text": "Two ant", "type": "listItem" },
+          {
+            "markupType": "plain_text",
+            "text": "Three ant",
+            "type": "listItem"
+          }
+        ],
+        "numbered": true,
+        "type": "list"
+      },
+      {
+        "altText": "Ant",
+        "copyrightHolder": "Shutterstock",
+        "height": 549,
+        "href": "http://b.files.bbci.co.uk/46B7/test/_63730181_ant.png",
+        "id": "63730181",
+        "path": "/cpsdevpb/46B7/test/_63730181_ant.png",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "telugu.international.media_asset.23263261.page",
+      "cps_asset_id": "23263261",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph", "list", "image"],
+    "createdBy": "telugu-v6",
+    "firstPublished": 1580303105000,
+    "id": "urn:bbc:ares::asset:telugu/international-23263261",
+    "includeComments": false,
+    "language": "te",
+    "lastPublished": 1580303106000,
+    "lastUpdated": 1580303113108,
+    "locators": {
+      "assetUri": "/telugu/international-23263261",
+      "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23263261",
+      "curie": "http://www.bbc.co.uk/asset/4aeed9e6-5f64-344e-89c8-b17e31301b9f"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "timestamp": 1580303105000,
+    "type": "MAP",
+    "version": "v1.1.4"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Test Telugu MAP",
+      "shortHeadline": "Test Telugu MAP"
+    },
+    "id": "urn:bbc:ares::asset:telugu/international-23263261",
+    "locators": {
+      "assetUri": "/telugu/international-23263261",
+      "cpsUrn": "urn:bbc:content:assetUri:telugu/international-23263261",
+      "curie": "http://www.bbc.co.uk/asset/4aeed9e6-5f64-344e-89c8-b17e31301b9f"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+      "embedding": true,
+      "format": "video",
+      "id": "p01k6msm",
+      "imageCopyright": "BBC",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+      "subType": "clip",
+      "synopses": {
+        "short": "They may be tiny, but us humans could learn a thing or two from ants."
+      },
+      "title": "Five things ants can teach us about management",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1540218932000,
+          "availableTerritories": { "nonUk": true, "uk": true, "world": false },
+          "duration": 191,
+          "durationISO8601": "PT3M11S",
+          "types": ["Original"],
+          "versionId": "p01k6msp",
+          "warnings": {
+            "long": "Contains strong language and adult humour.",
+            "short": "Contains strong language and adult humour."
+          }
+        }
+      ]
+    },
+    "passport": { "taggings": [] },
+    "summary": "Ants...",
+    "timestamp": 1580303105000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "అంతర్జాతీయం",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/telugu/international"
+    },
+    "site": {
+      "name": "BBC తెలుగు",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/telugu"
+    }
+  }
+}
