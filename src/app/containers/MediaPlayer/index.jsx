@@ -122,7 +122,7 @@ const MediaPlayerContainer = ({
     overflow: hidden;
   `;
 
-  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable Javascript or try a different browser.`;
+  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
   const contentNotAvailableMessage = `This content is no longer available`;
 
   if (!available) {
