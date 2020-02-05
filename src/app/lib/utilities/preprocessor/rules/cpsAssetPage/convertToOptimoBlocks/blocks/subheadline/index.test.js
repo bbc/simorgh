@@ -51,7 +51,7 @@ describe('convertToSubheadline', () => {
       expect(await convertToSubheadline(input)).toEqual(expected);
     });
   });
-  it(`should not convert a non CPS heading block to Optimo format`, async () => {
+  it(`should not convert a non-heading CPS block to Optimo format`, async () => {
     const input = {
       model: {
         copyrightHolder: 'Joe Maher',
