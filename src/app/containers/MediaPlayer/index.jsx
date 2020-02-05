@@ -128,12 +128,16 @@ const MediaPlayerContainer = ({
   const translatedNoJSMessage =
     path(['media', 'noJs'], translations) || noJsMessage;
 
+  const translatedExpiredContentMessage =
+    path(['media', 'contentExpired'], translations) ||
+    contentNotAvailableMessage;
+
   if (!available) {
     return (
       <StyledMessageContainer>
         <MediaMessage
           service={service}
-          message={contentNotAvailableMessage}
+          message={translatedExpiredContentMessage}
           placeholderSrc={placeholderSrc}
           placeholderSrcset={placeholderSrcset}
         />
