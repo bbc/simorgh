@@ -170,6 +170,7 @@ export const service = {
     mostRead: {
       header: 'Самое популярное',
       lastUpdated: 'Последнее обновление: ',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

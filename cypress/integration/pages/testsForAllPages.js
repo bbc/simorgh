@@ -92,7 +92,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             const imageSrc =
               (imagePath && pageType === mediaAssetPageType) ||
               (imagePath && pageType === photoGalleryPageType)
-                ? getBrandedImage(imagePath, service)
+                ? getBrandedImage({
+                    imagePath,
+                    serviceName: config[service].name,
+                  })
                 : appConfig[config[service].name][variant].defaultImage;
 
             const ogType = [
