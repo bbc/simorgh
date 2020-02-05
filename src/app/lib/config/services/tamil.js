@@ -214,7 +214,7 @@ export const service = {
       },
       {
         title: 'இந்தியா',
-        url: '/tamil/topics/c2dwqdn01v5ta',
+        url: '/tamil/topics/c2dwqdn01v5t',
       },
       {
         title: 'இலங்கை',
