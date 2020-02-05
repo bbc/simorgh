@@ -164,6 +164,7 @@ export const service = {
     mostRead: {
       header: 'အဖတ်အများဆုံး',
       lastUpdated: 'နောက်ဆုံးအသစ်တင်ချိန်: ',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

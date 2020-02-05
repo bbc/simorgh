@@ -158,6 +158,7 @@ export const service = {
     mostRead: {
       header: 'De one we dem de read well well',
       lastUpdated: 'De one we dem update for ',
+      numberOfItems: 5,
     },
     navigation: [
       {
