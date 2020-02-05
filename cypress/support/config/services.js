@@ -31,7 +31,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) ? undefined : '/afaanoromoo',
+        path: '/afaanoromoo',
         smoke: false,
       },
       liveRadio: {
@@ -111,7 +111,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) ? undefined : '/amharic',
+        path: '/amharic',
         smoke: false,
       },
       liveRadio: {
@@ -226,7 +226,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) ? undefined : '/bengali',
+        path: '/bengali',
         smoke: false,
       },
       liveRadio: {
@@ -783,7 +783,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) ? undefined : '/nepali',
+        path: '/nepali',
         smoke: false,
       },
       liveRadio: {
@@ -1154,7 +1154,7 @@ const genServices = appEnv => ({
         path:
           isLive(appEnv) || isTest(appEnv)
             ? undefined
-            : 'serbian/srbija-46748932/lat',
+            : '/serbian/srbija-46748932/lat',
         smoke: false,
       },
     },
@@ -1179,7 +1179,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) ? undefined : '/sinhala',
+        path: '/sinhala',
         smoke: false,
       },
       liveRadio: {
@@ -1427,7 +1427,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) ? undefined : '/tigrinya',
+        path: '/tigrinya',
         smoke: false,
       },
       liveRadio: {
@@ -1558,7 +1558,7 @@ const genServices = appEnv => ({
         path:
           isLive(appEnv) || isTest(appEnv)
             ? undefined
-            : 'ukchina/cool-britannia-38434549/trad',
+            : '/ukchina/cool-britannia-38434549/trad',
         smoke: false,
       },
     },
@@ -1831,8 +1831,8 @@ const genServices = appEnv => ({
         path:
           isLive(appEnv) || isTest(appEnv)
             ? undefined
-            : 'zhongwen/chinese-news-49065935/trad',
-        smoke: false,
+            : '/zhongwen/chinese-news-49065935/trad',
+        smoke: true,
       },
     },
   },
