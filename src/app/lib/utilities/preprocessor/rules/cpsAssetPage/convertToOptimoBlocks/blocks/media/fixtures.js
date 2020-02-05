@@ -47,6 +47,7 @@ export const optimoVideoBlock = {
               blockId: 'urn:bbc:ares::clip:p07jl3lv',
               model: {
                 advertising: true,
+                available: true,
                 embedding: true,
                 format: 'audio_video',
                 id: 'p07jl3lv',

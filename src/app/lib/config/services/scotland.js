@@ -158,6 +158,7 @@ export const service = {
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated: ',
+      numberOfItems: 5,
     },
     footer: {
       externalLink: {
