@@ -149,6 +149,7 @@ export const service = {
     mostRead: {
       header: 'ብበዝሒ ዝተነበበ',
       lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ: ',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

@@ -164,6 +164,7 @@ export const service = {
     mostRead: {
       header: 'அதிகம் படிக்கப்பட்டது',
       lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது: ',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {
@@ -213,7 +214,7 @@ export const service = {
       },
       {
         title: 'இந்தியா',
-        url: '/tamil/topics/c2dwqdn01v5ta',
+        url: '/tamil/topics/c2dwqdn01v5t',
       },
       {
         title: 'இலங்கை',
