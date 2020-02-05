@@ -1,0 +1,168 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": false,
+        "caption": "Some audio from a supermarket checkout in Birmingham",
+        "embedding": false,
+        "format": "audio",
+        "id": "p01m7d07",
+        "imageCopyright": "Getty Images",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+        "subType": "clip",
+        "synopses": {
+          "short": "Some audio from a supermarket checkout in Birmingham"
+        },
+        "title": "Birmingham checkout",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1555067395000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "duration": 127,
+            "durationISO8601": "PT2M7S",
+            "types": ["Original"],
+            "versionId": "p01m7d09",
+            "warnings": {
+              "long": "Contains some strong language.",
+              "short": "Contains some strong language."
+            }
+          }
+        ]
+      },
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "Tigrinya introduction &lt;lalala&gt;&amp;blabla",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<bold>Tigrinya </bold><bold>heading</bold><bold> &lt;lalala&gt;&amp;blabla</bold>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<link><caption>Mystery test link&amp;</caption><altText>link</altText><url href=\"https://en.wikipedia.org/wiki/Hamster\" platform=\"highweb\"/></link>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<link><caption>Link</caption><altText>Link to another &lt;map&gt;</altText><url href=\"https://www.bbc.com/pidgin/tori-51268839\" platform=\"highweb\"/></link>",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "tigrinya.news.media_asset.23263262.page",
+      "cps_asset_id": "23263262",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph"],
+    "createdBy": "tigrinya-v6",
+    "firstPublished": 1580304209000,
+    "id": "urn:bbc:ares::asset:tigrinya/news-23263262",
+    "includeComments": false,
+    "language": "ti",
+    "lastPublished": 1580304211000,
+    "lastUpdated": 1580304220417,
+    "locators": {
+      "assetUri": "/tigrinya/news-23263262",
+      "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23263262",
+      "curie": "http://www.bbc.co.uk/asset/2494dfe3-6374-414a-91d4-8a62cb9c7152"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "timestamp": 1580304209000,
+    "type": "MAP",
+    "version": "v1.1.4"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Test Tigrinya Audio MAP Some audio from a supermarket checkout in Birmingham",
+      "shortHeadline": "Test Tigrinya Audio MAP Birmingham checkout"
+    },
+    "id": "urn:bbc:ares::asset:tigrinya/news-23263262",
+    "indexImage": {
+      "altText": "England star Fran Kirby",
+      "copyrightHolder": "Getty Images",
+      "height": 576,
+      "href": "http://b.files.bbci.co.uk/6DC7/test/_63730182_p01mt2kt.jpg",
+      "id": "63730182",
+      "path": "/cpsdevpb/6DC7/test/_63730182_p01mt2kt.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 1024
+    },
+    "locators": {
+      "assetUri": "/tigrinya/news-23263262",
+      "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23263262",
+      "curie": "http://www.bbc.co.uk/asset/2494dfe3-6374-414a-91d4-8a62cb9c7152"
+    },
+    "media": {
+      "advertising": false,
+      "caption": "Some audio from a supermarket checkout in Birmingham",
+      "embedding": false,
+      "format": "audio",
+      "id": "p01m7d07",
+      "imageCopyright": "Getty Images",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+      "subType": "clip",
+      "synopses": {
+        "short": "Some audio from a supermarket checkout in Birmingham"
+      },
+      "title": "Birmingham checkout",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1555067395000,
+          "availableTerritories": { "nonUk": true, "uk": true, "world": false },
+          "duration": 127,
+          "durationISO8601": "PT2M7S",
+          "types": ["Original"],
+          "versionId": "p01m7d09",
+          "warnings": {
+            "long": "Contains some strong language.",
+            "short": "Contains some strong language."
+          }
+        }
+      ]
+    },
+    "passport": { "taggings": [] },
+    "summary": "audio",
+    "timestamp": 1580304209000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "ዜና",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/tigrinya/news"
+    },
+    "site": {
+      "name": "BBC ትግርኛ",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/tigrinya"
+    }
+  }
+}
