@@ -16,26 +16,18 @@ const getBylineBlock = json => {
 const insertBylineBlock = originalJson => {
   const json = deepClone(originalJson);
   const type = path(['metadata', 'type'], json);
-  const bylineBlock = convertToBylineBlock(getBylineBlock(json));
+
   const blocks = path(['content', 'model', 'blocks'], json);
 
   if (!blocks) {
     return json;
   }
 
-  console.log(bylineBlock);
-
-  // if (type === 'STY') {
-  //   json.content.model.blocks = [
-  //     visuallyHiddenHeadlineBlock,
-  //     blocks.shift(),
-  //     fauxHeadlineBlock,
-  //     ...blocks,
-  //   ];
-  // } else {
-  //   json.content.model.blocks = [bylineBlock, ...blocks];
-  // }
-  json.content.model.blocks = [blocks.shift(), bylineBlock, ...blocks];
+  if (type === 'STY') {
+    // add after headline block
+    const bylineBlock = convertToBylineBlock(getBylineBlock(json));
+    json.content.model.blocks = [blocks.shift(), bylineBlock, ...blocks];
+  }
 
   return json;
 };
