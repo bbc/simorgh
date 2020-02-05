@@ -1154,7 +1154,7 @@ const genServices = appEnv => ({
         path:
           isLive(appEnv) || isTest(appEnv)
             ? undefined
-            : 'serbian/srbija-46748932/lat',
+            : '/serbian/srbija-46748932/lat',
         smoke: false,
       },
     },
@@ -1558,7 +1558,7 @@ const genServices = appEnv => ({
         path:
           isLive(appEnv) || isTest(appEnv)
             ? undefined
-            : 'ukchina/cool-britannia-38434549/trad',
+            : '/ukchina/cool-britannia-38434549/trad',
         smoke: false,
       },
     },
@@ -1831,8 +1831,8 @@ const genServices = appEnv => ({
         path:
           isLive(appEnv) || isTest(appEnv)
             ? undefined
-            : 'zhongwen/chinese-news-49065935/trad',
-        smoke: false,
+            : '/zhongwen/chinese-news-49065935/trad',
+        smoke: true,
       },
     },
   },
