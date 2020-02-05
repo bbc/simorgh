@@ -140,6 +140,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'මෙහි කිසිවක් අඩංගු නැත.',
         audio: 'හඬ',
         photogallery: 'ඡායාරූප ගැලරිය ',
         video: 'වීඩියෝ',
@@ -148,8 +149,8 @@ export const service = {
           subtitle:
             'බීබීසී සිංහල ඔස්සේ ශ්‍රී ලාංකීය, දකුණු ආසියාතික සහ ජාත්‍යන්තර පුවත්, විශ්ලේෂණ සහ ක්‍රීඩා පුවත්',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'සවන්දෙන්න',
+        watch: 'නරඹන්න',
         liveLabel: 'සජීවී.',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -163,7 +164,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/sinhala/institutional-50288553',
         text: 'ඔබට බීබීසී විශ්වාස කළ හැක්කේ ඇයි',
       },
       externalLink: {

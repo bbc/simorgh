@@ -132,6 +132,7 @@ export const service = {
         },
       },
       media: {
+        noJs: "Na'urarku na da matsalar sauraren sauti",
         audio: 'Sauti',
         photogallery: 'Rumbun hotuna',
         video: 'Bidiyo',
@@ -160,7 +161,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/hausa/game-da-mu-49283501',
         text: 'Me yasa za ka aminta da BBC',
       },
       externalLink: {

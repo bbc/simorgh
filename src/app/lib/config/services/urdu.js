@@ -137,6 +137,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'اپ کی ڈیوائس پر پلے بیک سپورٹ دستیاب نہیں',
         audio: 'آڈیو',
         photogallery: 'تصاویری گیلری',
         video: 'ویڈیو',
@@ -155,7 +156,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/urdu/institutional-49282935',
         text: 'جانیے کہ آپ بی بی سی نیوز پر کیوں اعتماد کر سکتے ہیں',
       },
       externalLink: {

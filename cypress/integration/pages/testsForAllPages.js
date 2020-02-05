@@ -2,6 +2,7 @@ import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
 import appConfig from '../../../src/server/utilities/serviceConfigs';
 import describeForEuOnly from '../../support/helpers/describeForEuOnly';
+import getBrandedImage from '../../support/helpers/getBrandedImage';
 import useAppToggles from '../../support/helpers/useAppToggles';
 
 // For testing important features that differ between services, e.g. Timestamps.
@@ -50,7 +51,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           cy.get('head link[rel="canonical"]').should(
             'have.attr',
             'href',
-            `${envConfig.baseUrl}${config[service].pageTypes[pageType].path}`,
+            `${envConfig.baseUrl}${Cypress.env('currentPath')}`,
           );
         });
 
@@ -63,92 +64,119 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         });
 
         it('should have lang attribute matching payload data', () => {
-          cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-            ({ body }) => {
-              const lang =
-                pageType === 'articles'
-                  ? body.metadata.passport.language
-                  : body.metadata.language;
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const lang =
+              pageType === 'articles'
+                ? body.metadata.passport.language
+                : body.metadata.language;
 
-              cy.get('html').should('have.attr', 'lang', lang);
-            },
-          );
+            cy.get('html').should('have.attr', 'lang', lang);
+          });
         });
 
         it('should have the correct shared metadata', () => {
-          cy.get('head').within(() => {
-            cy.get('meta[name="fb:admins"]').should(
-              'have.attr',
-              'content',
-              '100004154058350',
-            );
-            cy.get('meta[name="fb:app_id"]').should(
-              'have.attr',
-              'content',
-              '1609039196070050',
-            );
-            cy.get('meta[name="og:image"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].defaultImage,
-            );
-            cy.get('meta[name="og:image:alt"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].defaultImageAltText,
-            );
-            cy.get('meta[name="og:locale"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].locale,
-            );
-            cy.get('meta[name="og:type"]').should(
-              'have.attr',
-              'content',
-              pageType === 'articles' ? 'article' : 'website',
-            );
-            cy.get('meta[name="og:url"]').should(
-              'have.attr',
-              'content',
-              `${envConfig.baseUrl}${config[service].pageTypes[pageType].path}`,
-            );
-            cy.get('meta[name="og:site_name"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].brandName,
-            );
-            cy.get('meta[name="twitter:card"]').should(
-              'have.attr',
-              'content',
-              'summary_large_image',
-            );
-            cy.get('meta[name="twitter:creator"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].twitterCreator,
-            );
-            cy.get('meta[name="twitter:image:alt"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].defaultImageAltText,
-            );
-            cy.get('meta[name="twitter:image:src"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].defaultImage,
-            );
-            cy.get('meta[name="twitter:site"]').should(
-              'have.attr',
-              'content',
-              appConfig[config[service].name][variant].twitterSite,
-            );
-            cy.get('link[rel="apple-touch-icon"]').each(link => {
-              const url = link.attr('href');
-              cy.request({
-                url,
-                failOnStatusCode: false,
-              }).then(resp => {
-                expect(resp.status).to.equal(200);
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const mediaAssetPageType = 'mediaAssetPage';
+            const articlesPageType = 'articles';
+            const photoGalleryPageType = 'photoGalleryPage';
+
+            const { indexImage } = body.promo;
+            const imagePath = indexImage ? indexImage.path : null;
+
+            const imageAltText =
+              (indexImage && pageType === mediaAssetPageType) ||
+              (indexImage && pageType === photoGalleryPageType)
+                ? indexImage.altText
+                : appConfig[config[service].name][variant].defaultImageAltText;
+
+            const imageSrc =
+              (imagePath && pageType === mediaAssetPageType) ||
+              (imagePath && pageType === photoGalleryPageType)
+                ? getBrandedImage(imagePath, service)
+                : appConfig[config[service].name][variant].defaultImage;
+
+            const ogType = [
+              articlesPageType,
+              mediaAssetPageType,
+              photoGalleryPageType,
+            ].includes(pageType)
+              ? 'article'
+              : 'website';
+
+            cy.get('head').within(() => {
+              cy.get('meta[property="fb:admins"]').should(
+                'have.attr',
+                'content',
+                '100004154058350',
+              );
+              cy.get('meta[property="fb:app_id"]').should(
+                'have.attr',
+                'content',
+                '1609039196070050',
+              );
+              cy.get('meta[property="og:image"]').should(
+                'have.attr',
+                'content',
+                imageSrc,
+              );
+              cy.get('meta[property="og:image:alt"]').should(
+                'have.attr',
+                'content',
+                imageAltText,
+              );
+              cy.get('meta[property="og:locale"]').should(
+                'have.attr',
+                'content',
+                appConfig[config[service].name][variant].locale,
+              );
+              cy.get('meta[property="og:type"]').should(
+                'have.attr',
+                'content',
+                ogType,
+              );
+              cy.get('meta[property="og:url"]').should(
+                'have.attr',
+                'content',
+                `${envConfig.baseUrl}${Cypress.env('currentPath')}`,
+              );
+              cy.get('meta[property="og:site_name"]').should(
+                'have.attr',
+                'content',
+                appConfig[config[service].name][variant].brandName,
+              );
+              cy.get('meta[name="twitter:card"]').should(
+                'have.attr',
+                'content',
+                'summary_large_image',
+              );
+              cy.get('meta[name="twitter:creator"]').should(
+                'have.attr',
+                'content',
+                appConfig[config[service].name][variant].twitterCreator,
+              );
+              cy.get('meta[name="twitter:image:alt"]').should(
+                'have.attr',
+                'content',
+                imageAltText,
+              );
+              cy.get('meta[name="twitter:image:src"]').should(
+                'have.attr',
+                'content',
+                imageSrc,
+              );
+              cy.get('meta[name="twitter:site"]').should(
+                'have.attr',
+                'content',
+                appConfig[config[service].name][variant].twitterSite,
+              );
+              cy.get('link[rel="apple-touch-icon"]').each(link => {
+                const url = link.attr('href');
+                cy.request({
+                  url,
+                  failOnStatusCode: false,
+                }).then(resp => {
+                  expect(resp.status).to.equal(200);
+                });
               });
             });
           });
@@ -165,7 +193,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             !(service === 'afaanoromoo' && Cypress.env('APP_ENV') === 'test') &&
             !(service === 'tigrinya' && Cypress.env('APP_ENV') === 'test')
           ) {
-            cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+            cy.request(`${Cypress.env('currentPath')}.json`).then(
               ({ body }) => {
                 let description;
                 let title;
@@ -188,6 +216,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     description = body.promo.summary;
                     title = body.promo.headlines.headline;
                     break;
+                  case 'photoGalleryPage':
+                    description = body.promo.summary;
+                    title = body.promo.headlines.headline;
+                    break;
                   default:
                     description = '';
                     title = '';
@@ -199,12 +231,12 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
 
                 cy.get('head').within(() => {
                   cy.title().should('eq', pageTitle);
-                  cy.get('meta[name="og:description"]').should(
+                  cy.get('meta[property="og:description"]').should(
                     'have.attr',
                     'content',
                     description,
                   );
-                  cy.get('meta[name="og:title"]').should(
+                  cy.get('meta[property="og:title"]').should(
                     'have.attr',
                     'content',
                     pageTitle,
@@ -393,6 +425,42 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           );
       });
     });
+    if (pageType === 'mediaAssetPage' || pageType === 'photoGalleryPage') {
+      describe('CPS PGL and MAP Tests', () => {
+        // Expects a second timestamp only if lastPublished is 1 minute later than firstPublished.
+        // This is due to a CPS asset bug, see issue simorgh#5065
+        it('should render a timestamp', () => {
+          cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+            ({ body }) => {
+              const { lastPublished, firstPublished } = body.metadata;
+              const timeDifferenceMinutes =
+                (lastPublished - firstPublished) / 1000 / 60;
+              const minutesTolerance = 1;
+              const hasTimestampPrefix =
+                timeDifferenceMinutes > minutesTolerance;
+              cy.get('time')
+                .eq(0)
+                .should('be.visible')
+                .should('have.attr', 'datetime')
+                .should('not.be.empty');
+
+              if (hasTimestampPrefix) {
+                cy.get('time')
+                  .eq(1)
+                  .should('be.visible')
+                  .should(
+                    'contain',
+                    appConfig[config[service].name].default
+                      .articleTimestampPrefix,
+                  )
+                  .should('have.attr', 'datetime');
+              }
+            },
+          );
+        });
+      });
+    }
+    // End of block (pageType === 'mediaAssetPage' || pageType === 'photoGalleryPage')
   });
 };
 

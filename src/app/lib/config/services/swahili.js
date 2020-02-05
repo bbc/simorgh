@@ -135,6 +135,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Huwezi kusikiliza tena',
         audio: 'Sauti',
         photogallery: 'Mkusanyiko wa picha',
         video: 'Video',
@@ -163,7 +164,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/swahili/taasisi-49283417',
         text: 'Kwanini unaweza kuiamini BBC News',
       },
       externalLink: {

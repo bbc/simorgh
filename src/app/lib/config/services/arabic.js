@@ -142,6 +142,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'جهازك لا يدعم تشغيل الفيديو',
         audio: 'تسجيل صوتي',
         photogallery: 'معرض الصور',
         video: 'فيديو',
@@ -165,7 +166,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/arabic/institutional-49283069',
         text: 'لماذا يمكنك الإعتماد على أخبار بي بي سي',
       },
       externalLink: {

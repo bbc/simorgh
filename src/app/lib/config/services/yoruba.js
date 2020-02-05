@@ -138,6 +138,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Àwọn àmúyẹ fun gbígbọ́ orin ko le ṣiṣẹ lori ẹ̀rọ rẹ',
         audio: 'Orin',
         photogallery: 'Àtẹ Àwòrán',
         video: 'Fídíò',
@@ -160,7 +161,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/yoruba/institutional-48528718',
         text: 'Ìdí tí ẹ fi le è nígbàagbọ́ nínú ìròyìn BBC',
       },
       externalLink: {

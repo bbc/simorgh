@@ -13,7 +13,13 @@ if (DOT_ENV_CONFIG.error) {
   throw DOT_ENV_CONFIG.error;
 }
 
-module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
+module.exports = ({
+  resolvePath,
+  IS_CI,
+  IS_PROD,
+  START_DEV_SERVER,
+  IS_PROD_PROFILE,
+}) => {
   const APP_ENV = process.env.SIMORGH_APP_ENV || 'live';
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
   const prodPublicPath =
@@ -56,7 +62,16 @@ module.exports = ({ resolvePath, IS_CI, IS_PROD, START_DEV_SERVER }) => {
         : prodPublicPath,
     },
     optimization: {
-      minimizer: [new TerserPlugin()],
+      minimizer: [
+        new TerserPlugin({
+          terserOptions: {
+            // These options are enabled in production profile builds only and
+            // prevent the discarding or mangling of class and function names.
+            keep_classnames: IS_PROD_PROFILE,
+            keep_fnames: IS_PROD_PROFILE,
+          },
+        }),
+      ],
       // specify min/max file sizes for each JS chunk for optimal performance
       splitChunks: {
         chunks: 'initial',

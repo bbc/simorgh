@@ -138,6 +138,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.',
         audio: 'غږ',
         photogallery: 'د عکسونو البوم',
         video: 'ویډیو',
@@ -166,7 +167,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/pashto/institutional-49283007',
         text: 'ولې تاسې پر بي بي سي خبرونو باور کولی شئ',
       },
       externalLink: {

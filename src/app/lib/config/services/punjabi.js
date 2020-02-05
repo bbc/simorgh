@@ -132,6 +132,7 @@ export const service = {
         },
       },
       media: {
+        noJs: "ਮੀਡੀਆ ਪਲੇਬੈਕ ਤੁਹਾਡੀ ਡਿਵਾਈਸ 'ਤੇ ਸਪੋਰਟ ਨਹੀਂ ਕਰਦਾ",
         audio: 'ਔਡੀਓ',
         photogallery: 'ਫੋਟੋ ਗੈਲਰੀ',
         video: 'ਵੀਡੀਓ',
@@ -169,11 +170,15 @@ export const service = {
         title: 'ਕੌਮਾਂਤਰੀ',
         url: '/punjabi/international',
       },
+      {
+        title: '#ISWOTY',
+        url: '/punjabi/resources/idt-681afed0-03f5-4d5f-a640-3011a722d1c8',
+      },
     ],
     navigationSection: 'ਸੈਕਸ਼ਨਜ਼',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/punjabi/institutional-49282853',
         text: "ਤੁਸੀਂ ਬੀਬੀਸੀ 'ਤੇ ਕਿਉਂ ਵਿਸ਼ਵਾਸ਼ ਕਰ ਸਕਦੇ ਹੋ",
       },
       externalLink: {

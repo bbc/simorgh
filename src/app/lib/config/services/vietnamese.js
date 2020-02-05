@@ -133,6 +133,7 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Máy của bạn không hỗ trợ nghe xem',
         audio: 'Âm thanh',
         photogallery: 'Gallery hình ảnh',
         video: 'Video',
@@ -151,7 +152,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/vietnamese/institutional-49283563',
         text: 'Tại sao bạn có thể tin tưởng BBC News',
       },
       externalLink: {

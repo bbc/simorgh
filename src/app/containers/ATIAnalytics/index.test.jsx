@@ -3,6 +3,8 @@ import { node, string } from 'prop-types';
 import { render } from '@testing-library/react';
 import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import { articleDataNews } from '#pages/Article/fixtureData';
+import mapAssetData from '#pages/CpsMap/fixtureData.json';
+import pglAssetData from '#pages/CpsPgl/fixtureData.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
@@ -176,6 +178,160 @@ describe('ATI Analytics Container', () => {
       render(
         <ContextWrap platform="amp" pageType="frontPage">
           <ATIAnalytics data={articleDataNews} />
+        </ContextWrap>,
+      );
+
+      expect(mockAmp.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+  });
+
+  describe('pageType=MAP', () => {
+    it('should call CanonicalATIAnalytics when platform is canonical', () => {
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=media_asset::pidgin.media_asset.23248703.page',
+        'r=0x0x24x24',
+        're=1024x768',
+        'hl=00-00-00',
+        'lng=en-US',
+        'x1=[urn:bbc:ares::asset:pidgin/23248703]',
+        'x2=[responsive]',
+        'x3=[news]',
+        'x4=[pcm]',
+        'x5=[http://localhost/]',
+        'x7=[article-media-asset]',
+        'x8=[simorgh]',
+        'x9=[Simorgh:+Media+Pod+Build+First+CPS+Media+Asset+Page+in+Simorgh+with+the+Help+of+Drew+',
+        '+<+>+-+BBC+News]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]',
+        'x17=[Opinion]',
+      ].join('&');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      canonical.default = mockCanonical;
+
+      render(
+        <ContextWrap platform="canonical" pageType="MAP">
+          <ATIAnalytics data={mapAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockCanonical.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+
+    it('should call AmpATIAnalytics when platform is Amp', () => {
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=media_asset::pidgin.media_asset.23248703.page',
+        `r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
+        `re=\${availableScreenWidth}x\${availableScreenHeight}`,
+        'hl=00-00-00',
+        `lng=\${browserLanguage}`,
+        'x1=[urn:bbc:ares::asset:pidgin/23248703]',
+        'x2=[amp]',
+        'x3=[news]',
+        'x4=[pcm]',
+        `x5=[\${sourceUrl}]`,
+        `x6=[\${documentReferrer}]`,
+        'x7=[article-media-asset]',
+        'x8=[simorgh]',
+        'x9=[Simorgh:+Media+Pod+Build+First+CPS+Media+Asset+Page+in+Simorgh+with+the+Help+of+Drew+',
+        '+<+>+-+BBC+News]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]',
+        'x17=[Opinion]',
+      ].join('&');
+      const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      amp.default = mockAmp;
+
+      render(
+        <ContextWrap platform="amp" pageType="MAP">
+          <ATIAnalytics data={mapAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockAmp.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+  });
+
+  describe('pageType=PGL', () => {
+    it('should call CanonicalATIAnalytics when platform is canonical', () => {
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=azerbaijan::azeri.azerbaijan.photo_gallery.44208474.page',
+        'r=0x0x24x24',
+        're=1024x768',
+        'hl=00-00-00',
+        'lng=en-US',
+        'x1=[urn:bbc:ares::asset:azeri/azerbaijan-44208474]',
+        'x2=[responsive]',
+        'x3=[news]',
+        'x4=[az]',
+        'x5=[http://localhost/]',
+        'x7=[article-photo-gallery]',
+        'x8=[simorgh]',
+        'x9=[Azərbaycan+Xalq+Cümhuriyyəti+-+Fotolarda+-+BBC+News]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x13=[History~Azerbaijan~Society~Culture~Politics~Human+rights~Azerbaijan+Democratic+Republic+100th+anniversary~Caucasus~Law+and+order]',
+        'x14=[03eb3674-6190-4cd7-8104-1a00991d67a3~0f8e45e2-6499-44b1-be1f-1a3dd81e8af7~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6a73afa3-ea6b-45c1-80bb-49060b99f864~75612fa6-147c-4a43-97fa-fcf70d9cced3~8b04c2e8-5409-4e7d-9877-3ccaf04727af~9e6f8e15-894a-45cb-9db9-d8881e8e6ae2~a86bc15e-ccd0-4ea9-9903-df3d4575a176~d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa]',
+        'x17=[News]',
+      ].join('&');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      canonical.default = mockCanonical;
+
+      render(
+        <ContextWrap platform="canonical" pageType="PGL">
+          <ATIAnalytics data={pglAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockCanonical.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+
+    it('should call AmpATIAnalytics when platform is Amp', () => {
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=azerbaijan::azeri.azerbaijan.photo_gallery.44208474.page',
+        `r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
+        `re=\${availableScreenWidth}x\${availableScreenHeight}`,
+        'hl=00-00-00',
+        `lng=\${browserLanguage}`,
+        'x1=[urn:bbc:ares::asset:azeri/azerbaijan-44208474]',
+        'x2=[amp]',
+        'x3=[news]',
+        'x4=[az]',
+        `x5=[\${sourceUrl}]`,
+        `x6=[\${documentReferrer}]`,
+        'x7=[article-photo-gallery]',
+        'x8=[simorgh]',
+        'x9=[Azərbaycan+Xalq+Cümhuriyyəti+-+Fotolarda+-+BBC+News]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x13=[History~Azerbaijan~Society~Culture~Politics~Human+rights~Azerbaijan+Democratic+Republic+100th+anniversary~Caucasus~Law+and+order]',
+        'x14=[03eb3674-6190-4cd7-8104-1a00991d67a3~0f8e45e2-6499-44b1-be1f-1a3dd81e8af7~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6a73afa3-ea6b-45c1-80bb-49060b99f864~75612fa6-147c-4a43-97fa-fcf70d9cced3~8b04c2e8-5409-4e7d-9877-3ccaf04727af~9e6f8e15-894a-45cb-9db9-d8881e8e6ae2~a86bc15e-ccd0-4ea9-9903-df3d4575a176~d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa]',
+        'x17=[News]',
+      ].join('&');
+      const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      amp.default = mockAmp;
+
+      render(
+        <ContextWrap platform="amp" pageType="PGL">
+          <ATIAnalytics data={pglAssetData} />
         </ContextWrap>,
       );
 

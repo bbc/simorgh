@@ -135,11 +135,12 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Media playback tidak ada di perangkat Anda',
         audio: 'Audio',
         photogallery: 'Galeri Foto',
         video: 'Video',
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Dengar',
+        watch: 'Tonton',
         liveLabel: 'LANGSUNG',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -153,7 +154,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/indonesia/institutional-49283175',
         text: 'Alasan Anda dapat mempercayai BBC News',
       },
       externalLink: {
@@ -193,48 +194,20 @@ export const service = {
         url: '/indonesia',
       },
       {
+        title: 'Indonesia',
+        url: '/indonesia/topics/cjgn7k8yx4gt',
+      },
+      {
         title: 'Dunia',
         url: '/indonesia/dunia',
       },
       {
-        title: 'Indonesia',
-        url: '/indonesia/indonesia',
+        title: 'Viral',
+        url: '/indonesia/topics/cn5w7g2nq6dt',
       },
       {
-        title: 'Olahraga',
-        url: '/indonesia/olahraga',
-      },
-      {
-        title: 'Majalah',
-        url: '/indonesia/majalah',
-      },
-      {
-        title: '#TrenSosial',
-        url: '/indonesia/trensosial',
-      },
-      {
-        title: 'Video',
-        url: '/indonesia/media/video',
-      },
-      {
-        title: 'Audio',
-        url: '/indonesia/media/audio',
-      },
-      {
-        title: 'Galeri',
-        url: '/indonesia/media/photogalleries',
-      },
-      {
-        title: 'Karangan khas',
-        url: '/indonesia/karangan_khas',
-      },
-      {
-        title: 'Laporan khusus',
-        url: '/indonesia/in_depth',
-      },
-      {
-        title: 'Belajar Bahasa Inggris',
-        url: '/indonesia/bahasa_inggris',
+        title: 'Liputan Mendalam',
+        url: '/indonesia/laporan-khusus-51267199',
       },
     ],
     navigationSection: 'Kategori',
