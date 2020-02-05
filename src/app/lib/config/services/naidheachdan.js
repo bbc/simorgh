@@ -147,7 +147,8 @@ export const service = {
         },
       },
       media: {
-        noJs: '',
+        noJs:
+          'To play this content, please enable JavaScript, or try a different browser',
         contentExpired: '',
         audio: 'Fuaim',
         photogallery: 'Gailearaidh dhealbhan',

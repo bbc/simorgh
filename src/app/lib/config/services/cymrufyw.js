@@ -144,7 +144,8 @@ export const service = {
         },
       },
       media: {
-        noJs: '',
+        noJs:
+          'To play this content, please enable JavaScript, or try a different browser',
         contentExpired: 'This content is no longer avilable',
         audio: 'Sain',
         photogallery: 'Oriel luniau',

@@ -139,7 +139,8 @@ export const service = {
         },
       },
       media: {
-        noJs: '',
+        noJs:
+          'Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.',
         contentExpired: 'This content is no longer available',
         audio: 'Audio',
         photogallery: 'Galerie de photos',
