@@ -6,9 +6,11 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
+import { C_CHALK } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
+import Grid from '@bbc/psammead-grid';
 import { GhostGrid } from '#lib/styledGrid';
 import { getImageParts } from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
@@ -73,15 +75,6 @@ const CpsStyContainer = ({ pageData }) => {
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };
 
-  const StyledGhostGrid = styled(GhostGrid)`
-    flex-grow: 1;
-    padding-bottom: ${GEL_SPACING_TRPL};
-
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      padding-bottom: ${GEL_SPACING_QUAD};
-    }
-  `;
-
   const StyledTimestamp = styled(Timestamp)`
     padding-bottom: ${GEL_SPACING_DBL};
 
@@ -89,6 +82,61 @@ const CpsStyContainer = ({ pageData }) => {
       padding-bottom: ${GEL_SPACING_TRPL};
     }
   `;
+
+  const StyledSide = styled.div`
+    margin-top: ${GEL_SPACING_QUAD};
+  `;
+
+  const Component = styled.div`
+    background: ${C_CHALK};
+    padding: ${GEL_SPACING_DBL};
+    margin-top: ${GEL_SPACING_DBL};
+  `;
+
+  const gridColumns = {
+    group0: 8,
+    group1: 8,
+    group2: 8,
+    group3: 8,
+    group4: 12,
+    group5: 12,
+  };
+
+  const gridMargins = {
+    group0: false,
+    group1: false,
+    group2: false,
+    group3: false,
+    group4: true,
+    group5: true,
+  };
+
+  const gridOffset = {
+    group0: 1,
+    group1: 1,
+    group2: 1,
+    group3: 1,
+    group4: 2,
+    group5: 3,
+  };
+
+  const gridColsMain = {
+    group0: 8,
+    group1: 8,
+    group2: 8,
+    group3: 8,
+    group4: 7,
+    group5: 5,
+  };
+
+  const gridColsSecondary = {
+    group0: 8,
+    group1: 8,
+    group2: 8,
+    group3: 8,
+    group4: 3,
+    group5: 3,
+  };
 
   return (
     <>
@@ -112,9 +160,26 @@ const CpsStyContainer = ({ pageData }) => {
         aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
-      <StyledGhostGrid as="main" role="main">
-        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </StyledGhostGrid>
+
+      <Grid columns={gridColumns} enableGelGutters margins={gridMargins}>
+        <Grid
+          item
+          columns={gridColsMain}
+          startOffset={gridOffset}
+          as="main"
+          role="main"
+        >
+          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+        </Grid>
+        <Grid item columns={gridColsSecondary}>
+          <StyledSide>
+            <Component>This is a component in the second column</Component>
+            <Component>This is a component in the second column</Component>
+            <Component>This is a component in the second column</Component>
+            <Component>This is a component in the second column</Component>
+          </StyledSide>
+        </Grid>
+      </Grid>
       <CpsRelatedContent content={relatedContent} />
     </>
   );
