@@ -163,7 +163,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'As motha leughte',
-      lastUpdated: 'Air ùrachadh mu dheireadh: ',
+      lastUpdated: 'Air ùrachadh mu dheireadh:',
       numberOfItems: 5,
     },
     footer: {
