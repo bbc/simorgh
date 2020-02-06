@@ -1,4 +1,4 @@
-// positions a block next to the headline block
+// positions a block after the headline block
 const insertBlockAfterHeadline = (targetBlock, blocks) => {
   const headlineBlock = blocks.find(({ type }) =>
     ['headline', 'fauxHeadline'].includes(type),
