@@ -421,7 +421,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       photoGalleryPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '',
+        path: undefined,
         smoke: false,
       },
     },
