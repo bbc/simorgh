@@ -10,7 +10,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
 import webLogger from '#lib/logger.web';
-import { mostReadRecordIsFresh } from '../utilities';
+import { mostReadRecordIsFresh, shouldRenderLastUpdated } from '../utilities';
 import LastUpdated from './LastUpdated';
 
 const logger = webLogger();
@@ -48,7 +48,7 @@ const CanonicalMostRead = ({ endpoint }) => {
           id,
           title: headlines.shortHeadline,
           href: locators.assetUri,
-          timestamp: (
+          timestamp: shouldRenderLastUpdated(timestamp) && (
             <LastUpdated
               prefix={lastUpdated}
               script={script}
