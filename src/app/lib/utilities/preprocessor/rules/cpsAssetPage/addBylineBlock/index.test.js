@@ -60,11 +60,6 @@ describe('addBylineBlock', () => {
                   {
                     name: 'Foo Bar',
                     title: 'BBC News Title',
-                    persons: [
-                      {
-                        name: 'Foo Bar',
-                      },
-                    ],
                   },
                 ],
               },
@@ -79,6 +74,56 @@ describe('addBylineBlock', () => {
         },
       },
     };
+
+    expect(addBylineBlock(input)).toEqual(expected);
+  });
+
+  it('should add a block of type byline using the persons array when byline has no title and name properties', async () => {
+    const input = deepClone(styInput);
+    delete input.promo.byline.name;
+    delete input.promo.byline.title;
+
+    input.promo.byline.persons[0].function = 'BBC News Title';
+    const expected = {
+      metadata: { type: 'STY' },
+      promo: {
+        byline: {
+          persons: [
+            {
+              name: 'Foo Bar',
+            },
+          ],
+        },
+      },
+      content: {
+        model: {
+          blocks: [
+            {
+              type: 'headline',
+            },
+            {
+              type: 'byline',
+              model: {
+                blocks: [
+                  {
+                    name: 'Foo Bar',
+                    title: 'BBC News Title',
+                  },
+                ],
+              },
+            },
+            {
+              type: 'image',
+            },
+            {
+              type: 'timestamp',
+            },
+          ],
+        },
+      },
+    };
+
+    expected.promo.byline.persons[0].function = 'BBC News Title';
 
     expect(addBylineBlock(input)).toEqual(expected);
   });
