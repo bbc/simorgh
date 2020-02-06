@@ -152,7 +152,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'ได้รับความนิยมสูงสุด',
-      lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา ',
+      lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา',
       numberOfItems: 5,
     },
     navigation: [

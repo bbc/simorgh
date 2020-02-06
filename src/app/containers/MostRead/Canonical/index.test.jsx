@@ -15,7 +15,7 @@ const services = {
     variant: null,
     data: newsMostReadData,
     config: newsConfig.default,
-    expectedLastUpdated: 'Last updated:  11 January 1970',
+    expectedLastUpdated: 'Last updated: 11 January 1970',
   },
   zhongwen: {
     variant: 'simp',
