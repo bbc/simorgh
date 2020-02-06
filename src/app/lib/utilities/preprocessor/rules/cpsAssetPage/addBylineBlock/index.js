@@ -1,7 +1,7 @@
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import deepClone from 'ramda/src/clone';
-import convertToBylineBlock from './models';
+import insertBlockAfterHeadline from '../helpers';
 
 const getBylineBlock = json => {
   const byline = pathOr(null, ['promo', 'byline'], json);
@@ -10,11 +10,22 @@ const getBylineBlock = json => {
     return null;
   }
 
-  return {
-    name: path(['name'], byline) || path(['persons', '0', 'name'], byline),
-    title:
-      path(['title'], byline) || path(['persons', '0', 'function'], byline),
+  const bylineBlock = {
+    model: {
+      blocks: [
+        {
+          name:
+            path(['name'], byline) || path(['persons', '0', 'name'], byline),
+          title:
+            path(['title'], byline) ||
+            path(['persons', '0', 'function'], byline),
+        },
+      ],
+    },
+    type: 'byline',
   };
+
+  return bylineBlock;
 };
 
 const addBylineBlock = originalJson => {
@@ -27,19 +38,9 @@ const addBylineBlock = originalJson => {
     return json;
   }
 
-  const byline = getBylineBlock(json);
-  if (byline) {
-    const bylineBlock = convertToBylineBlock(byline);
-
-    const headline = blocks.find(({ type }) =>
-      ['headline', 'fauxHeadline'].includes(type),
-    );
-
-    const remainingBlocks = blocks.filter(
-      ({ type }) => !['headline', 'fauxHeadline'].includes(type),
-    );
-
-    json.content.model.blocks = [headline, bylineBlock, ...remainingBlocks];
+  const bylineBlock = getBylineBlock(json);
+  if (bylineBlock) {
+    json.content.model.blocks = insertBlockAfterHeadline(bylineBlock, blocks);
   }
 
   return json;
