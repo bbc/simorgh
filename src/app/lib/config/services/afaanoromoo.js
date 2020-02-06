@@ -152,7 +152,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: "Baay'ee kan dubbifame",
-      lastUpdated: 'Yeroo dhuma kan haaromfame: ',
+      lastUpdated: 'Yeroo dhuma kan haaromfame:',
       numberOfItems: 5,
     },
     footer: {

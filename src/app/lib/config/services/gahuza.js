@@ -156,7 +156,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Ibisomwa cane',
-      lastUpdated: 'Ibiheruka kuvugururwa: ',
+      lastUpdated: 'Ibiheruka kuvugururwa:',
       numberOfItems: 5,
     },
     footer: {

@@ -149,7 +149,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'ብዙ የተነበቡ',
-      lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት ',
+      lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት',
       numberOfItems: 5,
     },
     footer: {

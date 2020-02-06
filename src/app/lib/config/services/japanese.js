@@ -149,7 +149,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: '一番人気',
-      lastUpdated: 'Last updated: ',
+      lastUpdated: 'Last updated:',
       numberOfItems: 5,
     },
     footer: {

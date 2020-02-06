@@ -149,7 +149,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'ብብዝሒ ዝተነበ',
-      lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ: ',
+      lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ:',
       numberOfItems: 5,
     },
     footer: {

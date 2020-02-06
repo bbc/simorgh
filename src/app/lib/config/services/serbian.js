@@ -279,7 +279,7 @@ export const service = {
     },
     mostRead: {
       header: 'Најчитаније',
-      lastUpdated: 'Последњи пут ажурирано: ',
+      lastUpdated: 'Последњи пут ажурирано:',
       numberOfItems: 5,
     },
     navigation: [

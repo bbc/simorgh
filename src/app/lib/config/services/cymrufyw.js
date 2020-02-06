@@ -161,7 +161,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Mwyaf poblogaidd',
-      lastUpdated: 'Diweddariad diwethaf: ',
+      lastUpdated: 'Diweddariad diwethaf:',
       numberOfItems: 5,
     },
     footer: {

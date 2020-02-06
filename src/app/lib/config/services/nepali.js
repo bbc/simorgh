@@ -157,7 +157,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'धेरै पढिएको',
-      lastUpdated: 'अन्तिम चोटि अद्यावधिक गरिएको मिति: ',
+      lastUpdated: 'अन्तिम चोटि अद्यावधिक गरिएको मिति:',
       numberOfItems: 5,
     },
     footer: {
