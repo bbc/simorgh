@@ -125,6 +125,9 @@ const MediaPlayerContainer = ({
   const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
   const contentNotAvailableMessage = `This content is no longer available`;
 
+  const translatedNoJSMessage =
+    path(['media', 'noJs'], translations) || noJsMessage;
+
   if (!available) {
     return (
       <StyledMessageContainer>
@@ -148,7 +151,7 @@ const MediaPlayerContainer = ({
             placeholderSrc={placeholderSrc}
             placeholderSrcset={placeholderSrcset}
             title={iframeTitle}
-            noJsMessage={noJsMessage}
+            noJsMessage={translatedNoJSMessage}
             service={service}
           />
         ) : (
@@ -160,7 +163,7 @@ const MediaPlayerContainer = ({
             title={iframeTitle}
             service={service}
             mediaInfo={mediaInfo}
-            noJsMessage={noJsMessage}
+            noJsMessage={translatedNoJSMessage}
             noJsClassName="no-js"
           />
         )}
