@@ -4,7 +4,7 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
 <div>
   <section
     aria-labelledby="Most-Read"
-    class="StyledSection-sc-1vo7scf-0 hnJSoe"
+    class="StyledSection-sc-1vo7scf-0 hnJSoe StyledMostRead-sc-6bm912-0 hDnFBF"
     role="region"
   >
     <div
@@ -384,7 +384,7 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
 <div>
   <section
     aria-labelledby="Most-Read"
-    class="StyledSection-sc-1vo7scf-0 hnJSoe"
+    class="StyledSection-sc-1vo7scf-0 hnJSoe StyledMostRead-sc-6bm912-0 hDnFBF"
     role="region"
   >
     <div
