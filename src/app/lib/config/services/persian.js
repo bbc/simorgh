@@ -173,7 +173,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'پربیننده‌ترین‌ها',
-      lastUpdated: 'به روز شده در ',
+      lastUpdated: 'به روز شده در',
       numberOfItems: 5,
     },
     footer: {

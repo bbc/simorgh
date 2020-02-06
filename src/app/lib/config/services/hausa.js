@@ -157,7 +157,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Wanda aka fi karantawa',
-      lastUpdated: 'Na baya-bayan nan ',
+      lastUpdated: 'Na baya-bayan nan',
       numberOfItems: 5,
     },
     footer: {
