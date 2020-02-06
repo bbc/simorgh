@@ -96,7 +96,6 @@ describe('MostReadContainerCanonical', () => {
       expect(container.querySelectorAll('li').length).toEqual(
         config.mostRead.numberOfItems,
       );
-      console.log(container.querySelectorAll('time')[0].textContent);
       expect(container.querySelectorAll('time')[0].textContent).toEqual(
         expectedLastUpdated,
       );
