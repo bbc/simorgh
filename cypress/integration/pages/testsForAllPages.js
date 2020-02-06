@@ -453,7 +453,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   .should('be.visible')
                   .should(
                     'contain',
-                    appConfig[config[service].name].default
+                    appConfig[config[service].name][variant || 'default']
                       .articleTimestampPrefix,
                   )
                   .should('have.attr', 'datetime');
