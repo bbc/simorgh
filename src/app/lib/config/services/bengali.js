@@ -149,8 +149,8 @@ export const service = {
           subtitle:
             'বাংলাদেশ, তার প্রতিবেশী এবং গোটা বিশ্বের সংবাদ পরিবেশন করে। সংবাদদাতার প্রতিবেদন ছাড়াও আছে সাক্ষাৎকার, সংবাদপত্র পর্যালোচনা এবং সরাসরি ফোন-ইন।',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'শুনুন',
+        watch: 'দেখুন',
         liveLabel: 'লাইভ',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -161,6 +161,7 @@ export const service = {
     mostRead: {
       header: 'সর্বাধিক পঠিত',
       lastUpdated: 'সর্বশেষ আপডেট হয়েছে: ',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

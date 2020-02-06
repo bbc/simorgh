@@ -139,8 +139,8 @@ export const service = {
         audio: 'Audio',
         photogallery: 'Galeri Foto',
         video: 'Video',
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Dengar',
+        watch: 'Tonton',
         liveLabel: 'LANGSUNG',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -151,6 +151,7 @@ export const service = {
     mostRead: {
       header: 'Paling banyak dibaca',
       lastUpdated: 'Terakhir diperbarui: ',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

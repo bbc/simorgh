@@ -1,4 +1,5 @@
 import React from 'react';
+import path from 'ramda/src/path';
 import { string } from 'prop-types';
 import styled from 'styled-components';
 import {
@@ -17,6 +18,7 @@ import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
+import filterForBlockType from '#lib/utilities/blockHandlers';
 
 const Wrapper = styled(GridItemConstrainedLarge)`
   margin-top: ${GEL_SPACING};
@@ -38,6 +40,14 @@ const Wrapper = styled(GridItemConstrainedLarge)`
 const CpsAssetMediaPlayerContainer = ({ blocks, assetUri }) => {
   if (!assetUri) return null;
 
+  const mediaBlock = filterForBlockType(blocks, 'aresMedia');
+  const metadataBlock = filterForBlockType(
+    path(['model', 'blocks'], mediaBlock),
+    'aresMediaMetadata',
+  );
+
+  const available = path(['model', 'available'], metadataBlock);
+
   return (
     <Wrapper>
       <MediaPlayerContainer
@@ -45,6 +55,7 @@ const CpsAssetMediaPlayerContainer = ({ blocks, assetUri }) => {
         assetId={assetUri.substr(1)}
         assetType="cps"
         showPlaceholder={false}
+        available={available}
       />
     </Wrapper>
   );

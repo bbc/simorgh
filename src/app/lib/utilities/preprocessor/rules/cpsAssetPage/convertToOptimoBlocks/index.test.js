@@ -7,7 +7,7 @@ import {
   optimoOrderedListBlock,
 } from './blocks/list/fixtures';
 import convertToOptimoBlocks from '.';
-import { optimoTextWithParagraph } from './utils/helpers';
+import { optimoTextWithParagraph, optimoSubheadline } from './utils/helpers';
 
 describe('convertToOptimoBlocks', () => {
   it('should convert CPS data into Optimo format', async () => {
@@ -250,5 +250,43 @@ describe('convertToOptimoBlocks', () => {
       output.content.model.blocks[1].model.blocks[0].model.blocks[0].model
         .attributes,
     ).toEqual(['bold']);
+  });
+
+  ['crosshead', 'heading', 'subheading'].forEach(type => {
+    it(`should convert a plain_text ${type} to Optimo format`, async () => {
+      const input = {
+        content: {
+          blocks: [
+            {
+              text: 'A plain text block',
+              markupType: 'plain_text',
+              type,
+            },
+          ],
+        },
+      };
+
+      const expected = {
+        content: {
+          model: {
+            blocks: [
+              optimoSubheadline([
+                {
+                  fragments: [
+                    {
+                      fragment: 'A plain text block',
+                      attributes: [],
+                    },
+                  ],
+                  text: 'A plain text block',
+                },
+              ]),
+            ],
+          },
+        },
+      };
+
+      expect(await convertToOptimoBlocks(input)).toEqual(expected);
+    });
   });
 });
