@@ -139,7 +139,8 @@ export const service = {
         },
       },
       media: {
-        noJs: '',
+        noJs:
+          'Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.',
         audio: 'Audio',
         photogallery: 'Galerie de photos',
         video: 'Vidéo',
@@ -164,6 +165,7 @@ export const service = {
     mostRead: {
       header: 'Les plus lus',
       lastUpdated: 'Dernière mise à jour: ',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {
