@@ -9,8 +9,8 @@ import { ToggleContext } from '#contexts/ToggleContext';
 
 const staticMostReadURL = (service, variant) =>
   variant !== 'default'
-    ? `/data/${service}/mostRead/${variant}.json`
-    : `/data/${service}/mostRead/index.json`;
+    ? `./data/${service}/mostRead/${variant}.json`
+    : `./data/${service}/mostRead/index.json`;
 
 const getToggleState = enabled => ({
   local: { mostRead: { enabled } },
