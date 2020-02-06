@@ -147,6 +147,7 @@ export const service = {
       media: {
         noJs:
           'A reprodução deste formato de vídeo não é compatível com seu dispositivo',
+        contentExpired: 'Este conteúdo não está mais disponível.',
         audio: 'Áudio',
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',

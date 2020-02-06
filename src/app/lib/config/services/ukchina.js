@@ -186,6 +186,7 @@ export const service = {
       },
       media: {
         noJs: '你的器材不支持播放多媒体材料',
+        contentExpired: '此内容已不存在',
         audio: '音频',
         photogallery: '图辑专页',
         video: '视频',
@@ -345,6 +346,7 @@ export const service = {
       },
       media: {
         noJs: '你的器材不支持播放多媒體材料',
+        contentExpired: '有關內容已經不再向讀者觀眾提供。',
         audio: '音頻',
         photogallery: '圖輯專頁',
         video: '視頻',
