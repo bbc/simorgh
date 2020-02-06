@@ -164,7 +164,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Ugu akhris badan',
-      lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay',
+      lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay:',
       numberOfItems: 5,
     },
     footer: {
