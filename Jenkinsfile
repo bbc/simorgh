@@ -283,6 +283,7 @@ pipeline {
       script {
         getCommitInfo()
       }
+      junit 'reports/jest/*.xml'
       // Clean the workspace
       cleanWs()
     }
