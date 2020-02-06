@@ -341,7 +341,9 @@ it('should show the media message when available is false', async () => {
     createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),
   );
 
-  expect(getByText('This content is no longer available')).toBeInTheDocument();
+  expect(
+    getByText('Бу контентни ортиқ тинглаб/томоша қилиб бўлмайди.'),
+  ).toBeInTheDocument();
 });
 
 it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
