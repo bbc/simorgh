@@ -9,9 +9,9 @@
     "type": "STY",
     "createdBy": "mundo-v6",
     "language": "es",
-    "lastUpdated": 1580917481465,
+    "lastUpdated": 1580922784342,
     "firstPublished": 1580745507000,
-    "lastPublished": 1580917471000,
+    "lastPublished": 1580922773000,
     "timestamp": 1580745507000,
     "options": {
       "isIgorSeoTagsEnabled": false,
@@ -45,7 +45,25 @@
           "campaignName": "Amuse me"
         }
       ],
-      "taggings": []
+      "language": "es",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+      "passportId": "d7d7cd86-30b1-412f-8c9e-712f806c7357",
+      "locator": "urn:bbc:cps:asset:23263889",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/coreconcepts/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/passport/predicate/About",
+          "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/passport/predicate/About",
+          "value": "http://www.bbc.co.uk/things/b9bb453a-a3e2-46b4-9d20-35efa09d72b8#id"
+        }
+      ]
     },
     "tags": {
       "about": [
@@ -122,7 +140,12 @@
         "type": "crosshead"
       },
       {
-        "text": "Paragraphs can contain <bold>bold </bold>and <italic>italic </italic>in CPS at the moment, and these are rendered on the page as <bold>bold </bold>and <italic>it</italic><italic>alic.</italic>",
+        "text": "Paragraphs can contain <bold>bold </bold>and <italic>italic </italic>in CPS at the moment, and these are rendered on the page as <bold>bold </bold>and <italic>italic</italic><italic> </italic>or <bold><italic>both</italic></bold>.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold><italic>Bold and italic can also be rendered together.</italic></bold>",
         "markupType": "candy_xml",
         "type": "paragraph"
       },
