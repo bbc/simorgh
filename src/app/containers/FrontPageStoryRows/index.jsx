@@ -1,16 +1,6 @@
 import React from 'react';
 import Grid from '@bbc/psammead-grid';
 import { arrayOf, shape, bool, oneOf } from 'prop-types';
-import styled, { css } from 'styled-components';
-
-import {
-  GEL_GROUP_1_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
-import {
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
 import { StoryPromoLi } from '@bbc/psammead-story-promo-list';
 import {
   topStoryColumns,
@@ -21,18 +11,6 @@ import {
 import { storyItem } from '#models/propTypes/storyItem';
 import BulletinContainer from '../Bulletin';
 import StoryPromoContainer from '../StoryPromo';
-
-const StoryPromoListItem = styled(StoryPromoLi)`
-  ${({ isBulletin, isFirstPromo }) =>
-    isBulletin &&
-    css`
-      @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-        ${isFirstPromo
-          ? `padding-bottom: ${GEL_SPACING_TRPL};`
-          : `padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_TRPL};`}
-      }
-    `}
-`;
 
 const isBulletin = item =>
   item.contentType === 'TVBulletin' || item.contentType === 'RadioBulletin';
@@ -84,7 +62,7 @@ export const TopRow = ({
   <Grid
     item
     columns={topStoryColumns}
-    as={!sectionHasSingleStory && StoryPromoListItem}
+    as={!sectionHasSingleStory && StoryPromoLi}
     dir={dir}
   >
     {renderPromo(stories[0], { promoType: 'top', isFirstSection })}
@@ -108,7 +86,7 @@ export const LeadingRow = ({ stories, dir }) => (
     <Grid
       item
       columns={leadingStoryColumns}
-      as={StoryPromoListItem}
+      as={StoryPromoLi}
       isBulletin={isBulletin(stories[0])}
       dir={dir}
     >
@@ -117,7 +95,7 @@ export const LeadingRow = ({ stories, dir }) => (
     <Grid
       item
       columns={regularStoryColumns}
-      as={StoryPromoListItem}
+      as={StoryPromoLi}
       isBulletin={isBulletin(stories[1])}
       dir={dir}
     >
@@ -141,7 +119,7 @@ export const RegularRow = ({ stories, displayImages, dir }) => (
         item
         columns={displayImages ? regularStoryColumns : noImageStoryColumns}
         key={story.id}
-        as={StoryPromoListItem}
+        as={StoryPromoLi}
         isBulletin={isBulletin(story)}
         dir={dir}
       >
