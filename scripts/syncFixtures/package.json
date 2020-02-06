@@ -9,6 +9,7 @@
   "author": "ryanmccombe",
   "license": "ISC",
   "dependencies": {
+    "fs-extra": "^8.1.0",
     "json-beautify": "^1.1.1",
     "node-cmd": "^3.0.0"
   }

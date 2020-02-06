@@ -2,7 +2,7 @@
 /* eslint-disable max-classes-per-file */
 const cmd = require('node-cmd');
 const beautify = require('json-beautify');
-const fs = require('fs');
+const fse = require('fs-extra');
 
 const { ENVIRONMENTS, ARES_URLS, CERTS } = require('./config');
 
@@ -38,7 +38,7 @@ class PageFixture {
           return reject(curlError);
         }
         const prettifiedData = beautify(JSON.parse(data), null, 2, 100);
-        fs.writeFile(this.outputPath, prettifiedData, () => {
+        fse.outputFile(this.outputPath, prettifiedData, () => {
           return resolve(data);
         });
       });
