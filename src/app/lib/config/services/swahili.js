@@ -160,7 +160,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Iliyosomwa zaidi',
-      lastUpdated: 'Imeboreshwa mwisho: ',
+      lastUpdated: 'Imeboreshwa mwisho:',
       numberOfItems: 5,
     },
     footer: {
