@@ -11,10 +11,10 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
       class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 ebGqUw"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP StyledSectionLabel-sc-1itct8j-1 hlmzdc"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc StyledSectionLabel-sc-1itct8j-1 hlmzdc"
       >
         <div
-          class="Bar-sc-1x4gwjz-0 qaAlR"
+          class="Bar-sc-1x4gwjz-0 jsgdXU"
         />
         <h2
           class="Heading-sc-1x4gwjz-2 eZofTG"
@@ -41,7 +41,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
         role="list"
       >
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
           role="listitem"
         >
           <div
@@ -104,7 +104,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
           role="listitem"
         >
           <div
@@ -156,7 +156,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
           role="listitem"
         >
           <div
@@ -224,10 +224,10 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
       class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 ebGqUw"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP StyledSectionLabel-sc-1itct8j-1 hlmzdc"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc StyledSectionLabel-sc-1itct8j-1 hlmzdc"
       >
         <div
-          class="Bar-sc-1x4gwjz-0 qaAlR"
+          class="Bar-sc-1x4gwjz-0 jsgdXU"
         />
         <h2
           class="Heading-sc-1x4gwjz-2 eZofTG"
@@ -254,7 +254,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
         role="list"
       >
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
           role="listitem"
         >
           <div
@@ -317,7 +317,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
           role="listitem"
         >
           <div
@@ -369,7 +369,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dDNuxe"
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
           role="listitem"
         >
           <div

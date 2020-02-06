@@ -566,15 +566,9 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c31:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c31:first-child {
-    padding-top: 1.5rem;
   }
 }
 

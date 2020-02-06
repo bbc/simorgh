@@ -693,6 +693,12 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
+@media (min-width:63rem) {
+  .c26 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (max-width:62.9375rem) {
   .c34 {
     border-bottom: 0.0625rem solid #F2F2F2;
@@ -707,19 +713,13 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 
 @media (min-width:63rem) {
   .c34 {
-    padding: 1.5rem 0 1.5rem;
+    padding: 0 0 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c34:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c34:first-child {
-    padding-top: 1.5rem;
   }
 }
 
@@ -2027,6 +2027,12 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
+@media (min-width:63rem) {
+  .c28 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (max-width:62.9375rem) {
   .c36 {
     border-bottom: 0.0625rem solid #F2F2F2;
@@ -2041,19 +2047,13 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) {
   .c36 {
-    padding: 1.5rem 0 1.5rem;
+    padding: 0 0 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c36:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c36:first-child {
-    padding-top: 1.5rem;
   }
 }
 

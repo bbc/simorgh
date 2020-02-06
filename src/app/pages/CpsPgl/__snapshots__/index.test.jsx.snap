@@ -693,6 +693,12 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
+@media (min-width:63rem) {
+  .c26 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (max-width:62.9375rem) {
   .c34 {
     border-bottom: 0.0625rem solid #F2F2F2;
@@ -707,19 +713,13 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 
 @media (min-width:63rem) {
   .c34 {
-    padding: 1.5rem 0 1.5rem;
+    padding: 0 0 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c34:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c34:first-child {
-    padding-top: 1.5rem;
   }
 }
 
@@ -3670,6 +3670,12 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
+@media (min-width:63rem) {
+  .c17 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (max-width:62.9375rem) {
   .c25 {
     border-bottom: 0.0625rem solid #F2F2F2;
@@ -3684,19 +3690,13 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
 
 @media (min-width:63rem) {
   .c25 {
-    padding: 1.5rem 0 1.5rem;
+    padding: 0 0 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c25:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c25:first-child {
-    padding-top: 1.5rem;
   }
 }
 
@@ -6921,6 +6921,12 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
+@media (min-width:63rem) {
+  .c36 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (max-width:62.9375rem) {
   .c44 {
     border-bottom: 0.0625rem solid #F2F2F2;
@@ -6935,19 +6941,13 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
 
 @media (min-width:63rem) {
   .c44 {
-    padding: 1.5rem 0 1.5rem;
+    padding: 0 0 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c44:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c44:first-child {
-    padding-top: 1.5rem;
   }
 }
 

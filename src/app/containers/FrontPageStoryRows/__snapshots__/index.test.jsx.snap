@@ -202,15 +202,9 @@ exports[`FrontPageStoryRows Container snapshots LeadingRow 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c0:first-child {
-    padding-top: 1.5rem;
   }
 }
 
@@ -698,15 +692,9 @@ exports[`FrontPageStoryRows Container snapshots RegularRow with images 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c0:first-child {
-    padding-top: 1.5rem;
   }
 }
 
@@ -1195,15 +1183,9 @@ exports[`FrontPageStoryRows Container snapshots RegularRow without images 1`] = 
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c0:first-child {
-    padding-top: 1.5rem;
   }
 }
 
@@ -1549,15 +1531,9 @@ exports[`FrontPageStoryRows Container snapshots TopRow 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c0:first-child {
-    padding-top: 1.5rem;
   }
 }
 

@@ -318,15 +318,9 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c9:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c9:first-child {
-    padding-top: 1.5rem;
   }
 }
 
@@ -1149,15 +1143,9 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c8:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c8:first-child {
-    padding-top: 1.5rem;
   }
 }
 
@@ -2229,15 +2217,9 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c7:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c7:first-child {
-    padding-top: 1.5rem;
   }
 }
 
