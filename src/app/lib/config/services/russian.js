@@ -146,6 +146,7 @@ export const service = {
       media: {
         noJs:
           'To play this content, please enable JavaScript, or try a different browser',
+        contentExpired: 'Контент больше не доступен.',
         audio: 'Аудио',
         photogallery: 'Фотогалерея',
         video: 'Видео',

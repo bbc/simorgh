@@ -149,6 +149,7 @@ export const service = {
       media: {
         noJs:
           'To play this content, please enable JavaScript, or try a different browser',
+        contentExpired: 'This content is no longer available',
         audio: 'Fuaim',
         photogallery: 'Gailearaidh dhealbhan',
         video: 'Bhidio',

@@ -137,6 +137,7 @@ export const service = {
       },
       media: {
         noJs: 'तपाईंको उपकरणमा मिडिया प्लेब्याक सपोर्ट छैन',
+        contentExpired: 'यो सामग्री उपलब्ध छैन',
         audio: 'अडिओ',
         photogallery: 'तस्बिर सङ्ग्रह',
         video: 'भिडिओ',
