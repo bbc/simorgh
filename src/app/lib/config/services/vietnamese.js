@@ -148,7 +148,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Đọc nhiều nhất',
-      lastUpdated: 'Cập nhật gần nhất: ',
+      lastUpdated: 'Cập nhật gần nhất:',
       numberOfItems: 5,
     },
     footer: {

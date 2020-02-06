@@ -19,7 +19,7 @@ describe('MostReadCanonical - LastUpdated', () => {
     ReactDOM.render(
       <LastUpdated
         timestamp={864691200}
-        prefix="Last Updated: "
+        prefix="Last Updated:"
         script={latin}
         service="news"
         locale="en-gb"
@@ -28,7 +28,7 @@ describe('MostReadCanonical - LastUpdated', () => {
     );
 
     expect(container.querySelector('time').textContent).toEqual(
-      'Last Updated:  11 January 1970',
+      'Last Updated: 11 January 1970',
     );
   });
 
@@ -38,7 +38,7 @@ describe('MostReadCanonical - LastUpdated', () => {
     ReactDOM.render(
       <LastUpdated
         timestamp={freshDate.getTime()}
-        prefix="Last Updated: "
+        prefix="Last Updated:"
         script={latin}
         service="news"
         locale="en-gb"
