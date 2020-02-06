@@ -92,7 +92,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             const imageSrc =
               (imagePath && pageType === mediaAssetPageType) ||
               (imagePath && pageType === photoGalleryPageType)
-                ? getBrandedImage(imagePath, service)
+                ? getBrandedImage({
+                    imagePath,
+                    serviceName: config[service].name,
+                  })
                 : appConfig[config[service].name][variant].defaultImage;
 
             const ogType = [
@@ -450,7 +453,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   .should('be.visible')
                   .should(
                     'contain',
-                    appConfig[config[service].name].default
+                    appConfig[config[service].name][variant || 'default']
                       .articleTimestampPrefix,
                   )
                   .should('have.attr', 'datetime');

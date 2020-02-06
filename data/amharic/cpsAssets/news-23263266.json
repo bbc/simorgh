@@ -1,0 +1,156 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": true,
+        "caption": "A vertical video pretending to be a cat short synopsis",
+        "embedding": true,
+        "format": "video",
+        "id": "p01n40vn",
+        "imageCopyright": "BBC",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n71w7.jpg",
+        "subType": "clip",
+        "synopses": {
+          "short": "A vertical video pretending to be a cat short synopsis"
+        },
+        "title": "A vertical video pretending to be a cat title",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1563017501000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "duration": 11,
+            "durationISO8601": "PT11S",
+            "types": ["Portrait"],
+            "versionId": "p01n40vq",
+            "warnings": {}
+          }
+        ]
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Random cat text",
+        "type": "heading"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "My left donut is missing, as is my right more napping, more napping all the napping is exhausting. Lick yarn hanging out of own butt. Weigh eight pounds but take up a full-size bed stare at ceiling light or claw drapes making bread on the bathrobe annoy the old grumpy cat, start a fight and then retreat to wash when i lose sleep. Sleep everywhere, but not in my bed scratch at door to be let outside, get let out then scratch at door immmediately after to be let back in meeeeouw good morning sunshine. I is not fat, i is fluffy scratch the box but meowzer that box?",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Munch on tasty moths being gorgeous with belly side up stuff and things yet hunt by meowing loudly at 5am next to human slave food dispenser lick the curtain just to be annoying so favor packaging over toy and cats go for world domination. More napping, more napping all the napping is exhausting lounge in doorway. Somehow manage to catch a bird but have no idea what to do next,",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "amharic.news.media_asset.23263266.page",
+      "cps_asset_id": "23263266",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "heading", "paragraph"],
+    "createdBy": "amharic-v6",
+    "firstPublished": 1580305097000,
+    "id": "urn:bbc:ares::asset:amharic/news-23263266",
+    "includeComments": false,
+    "language": "am",
+    "lastPublished": 1580305098000,
+    "lastUpdated": 1580305109175,
+    "locators": {
+      "assetUri": "/amharic/news-23263266",
+      "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23263266",
+      "curie": "http://www.bbc.co.uk/asset/1d1cb419-974b-8241-99b1-a13a7c5220fe"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "timestamp": 1580305097000,
+    "type": "MAP",
+    "version": "v1.1.4"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Amharic test MAP A vertical video pretending to be a cat short synopsis",
+      "shortHeadline": "Amharic test MAP A vertical video pretending to be a cat title"
+    },
+    "id": "urn:bbc:ares::asset:amharic/news-23263266",
+    "indexImage": {
+      "altText": "Cat",
+      "copyrightHolder": "BBC",
+      "height": 1152,
+      "href": "http://b.files.bbci.co.uk/C41B/test/_63730205_p01n71w7.jpg",
+      "id": "63730205",
+      "path": "/cpsdevpb/C41B/test/_63730205_p01n71w7.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 2048
+    },
+    "locators": {
+      "assetUri": "/amharic/news-23263266",
+      "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23263266",
+      "curie": "http://www.bbc.co.uk/asset/1d1cb419-974b-8241-99b1-a13a7c5220fe"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "A vertical video pretending to be a cat short synopsis",
+      "embedding": true,
+      "format": "video",
+      "id": "p01n40vn",
+      "imageCopyright": "BBC",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n71w7.jpg",
+      "subType": "clip",
+      "synopses": {
+        "short": "A vertical video pretending to be a cat short synopsis"
+      },
+      "title": "A vertical video pretending to be a cat title",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1563017501000,
+          "availableTerritories": { "nonUk": true, "uk": true, "world": false },
+          "duration": 11,
+          "durationISO8601": "PT11S",
+          "types": ["Portrait"],
+          "versionId": "p01n40vq",
+          "warnings": {}
+        }
+      ]
+    },
+    "passport": { "taggings": [] },
+    "summary": "amharic test",
+    "timestamp": 1580305097000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "ዜና",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/amharic/news"
+    },
+    "site": {
+      "name": "BBC አማርኛ",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/amharic"
+    }
+  }
+}

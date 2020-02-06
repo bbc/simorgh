@@ -82,6 +82,7 @@ export const service = {
     mostRead: {
       header: '热读',
       lastUpdated: '最近更新：',
+      numberOfItems: 5,
     },
     navigation: [
       {
@@ -184,7 +185,7 @@ export const service = {
         },
       },
       media: {
-        noJS: '你的器材不支持播放多媒体材料',
+        noJs: '你的器材不支持播放多媒体材料',
         audio: '音频',
         photogallery: '图辑专页',
         video: '视频',
@@ -240,6 +241,7 @@ export const service = {
     mostRead: {
       header: '熱讀',
       lastUpdated: '最近更新：',
+      numberOfItems: 5,
     },
     navigation: [
       {
@@ -342,7 +344,7 @@ export const service = {
         },
       },
       media: {
-        noJS: '你的器材不支持播放多媒體材料',
+        noJs: '你的器材不支持播放多媒體材料',
         audio: '音頻',
         photogallery: '圖輯專頁',
         video: '視頻',
