@@ -145,6 +145,7 @@ export const service = {
       media: {
         noJs:
           'To play this content, please enable JavaScript, or try a different browser',
+        contentExpired: 'Este contenido ya no está disponible.',
         audio: 'Audio',
         photogallery: 'Galería de fotos',
         video: 'Video',
@@ -159,7 +160,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Más leídas',
-      lastUpdated: 'Última actualización: ',
+      lastUpdated: 'Última actualización:',
       numberOfItems: 5,
     },
     footer: {

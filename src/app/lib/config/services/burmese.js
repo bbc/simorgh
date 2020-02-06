@@ -139,6 +139,7 @@ export const service = {
       },
       media: {
         noJs: 'သငျ့စကျတှငျ ဒီမီဒီယာဖိုငျကို ဖှငျ့၍ မရပါ။',
+        contentExpired: 'ဒီအစီအစဉျမရှိတော့ပါဘူး။',
         audio: 'အသံ',
         photogallery: 'ဓာတ်ပုံများ',
         video: 'ဗီဒီယို',
@@ -163,7 +164,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'အဖတ်အများဆုံး',
-      lastUpdated: 'နောက်ဆုံးအသစ်တင်ချိန်: ',
+      lastUpdated: 'နောက်ဆုံးအသစ်တင်ချိန်:',
       numberOfItems: 5,
     },
     footer: {

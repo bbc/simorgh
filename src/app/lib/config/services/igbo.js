@@ -143,6 +143,7 @@ export const service = {
       },
       media: {
         noJs: 'Ngwaọrụ gị akwadoghi ọkpụkpọ mgbasa ozi',
+        contentExpired: 'Ọdịnaya a adịghịzị',
         audio: 'Ọdịyo',
         photogallery: 'Image gallery',
         video: 'Vidio',
@@ -160,7 +161,7 @@ export const service = {
     },
     mostRead: {
       header: 'Akachasị Gụọ',
-      lastUpdated: 'Emelitere ikpeazụ na ',
+      lastUpdated: 'Emelitere ikpeazụ na:',
       numberOfItems: 5,
     },
     navigation: [

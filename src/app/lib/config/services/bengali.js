@@ -141,6 +141,7 @@ export const service = {
       },
       media: {
         noJs: 'আপনার ডিভাইস মিডিয়া প্লেব্যাক সমর্থন করে না',
+        contentExpired: 'এই ফাইলটি আর পাওয়া যাবে না',
         audio: 'অডিও',
         photogallery: 'ফটো গ্যালারি',
         video: 'ভিডিও',
@@ -160,7 +161,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'সর্বাধিক পঠিত',
-      lastUpdated: 'সর্বশেষ আপডেট হয়েছে: ',
+      lastUpdated: 'সর্বশেষ আপডেট হয়েছে:',
       numberOfItems: 5,
     },
     footer: {
