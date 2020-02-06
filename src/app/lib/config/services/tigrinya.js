@@ -134,6 +134,7 @@ export const service = {
       },
       media: {
         noJs: 'ትጥቀምሉ ዘለኹም መሳርሒ ኣይተቐበሎን።',
+        contentExpired: 'እዚ እትደልይዎ ዘለኹም ትሕዝቶ የለን',
         audio: 'ድምጺ',
         photogallery: 'ስእልታት',
         video: 'ቪድዮ',
@@ -148,7 +149,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'ብብዝሒ ዝተነበ',
-      lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ: ',
+      lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ:',
       numberOfItems: 5,
     },
     footer: {

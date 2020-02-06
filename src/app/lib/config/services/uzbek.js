@@ -136,7 +136,8 @@ export const service = {
         },
       },
       media: {
-        noJS: 'Мултимедиа ўйнаш бу қурилмада дастакланмайди',
+        noJs: 'Мултимедиа ўйнаш бу қурилмада дастакланмайди',
+        contentExpired: 'Бу контентни ортиқ тинглаб/томоша қилиб бўлмайди.',
         audio: 'Аудио',
         photogallery: 'Фото галерея',
         video: 'Видео',
@@ -160,7 +161,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Энг кўп ўқилган',
-      lastUpdated: 'Сўнгги янгиланиш: ',
+      lastUpdated: 'Сўнгги янгиланиш:',
       numberOfItems: 5,
     },
     footer: {

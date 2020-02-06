@@ -139,6 +139,7 @@ export const service = {
       },
       media: {
         noJs: 'په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.',
+        contentExpired: 'دغه فایل نور د لاسرسي وړ نه دی.',
         audio: 'غږ',
         photogallery: 'د عکسونو البوم',
         video: 'ویډیو',
@@ -163,7 +164,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'ډېر لوستل شوي',
-      lastUpdated: 'د خپرېدو نیټه ',
+      lastUpdated: 'د خپرېدو نیټه',
       numberOfItems: 10,
     },
     footer: {
