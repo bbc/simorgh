@@ -143,7 +143,8 @@ export const service = {
         },
       },
       media: {
-        noJs: '',
+        noJs:
+          'To play this content, please enable JavaScript, or try a different browser',
         audio: 'Audio',
         photogallery: 'Galería de fotos',
         video: 'Video',
@@ -158,7 +159,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Más leídas',
-      lastUpdated: 'Última actualización: ',
+      lastUpdated: 'Última actualización:',
       numberOfItems: 5,
     },
     footer: {

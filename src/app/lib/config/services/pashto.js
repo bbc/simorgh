@@ -163,7 +163,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'ډېر لوستل شوي',
-      lastUpdated: 'د خپرېدو نیټه ',
+      lastUpdated: 'د خپرېدو نیټه',
       numberOfItems: 10,
     },
     footer: {

@@ -39,7 +39,9 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/afaanoromoo/23149891',
+        path: isLive(appEnv)
+          ? '/afaanoromoo/oduu-51248626'
+          : '/afaanoromoo/23149891',
         smoke: false,
       },
       photoGalleryPage: {
@@ -119,7 +121,9 @@ const genServices = appEnv => ({
         smoke: true,
       },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/amharic/news-23263266',
+        path: isLive(appEnv)
+          ? '/amharic/news-51270657'
+          : '/amharic/news-23263266',
         smoke: false,
       },
       photoGalleryPage: {
@@ -377,7 +381,9 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/gujarati/other-news-23130286',
+        path: isLive(appEnv)
+          ? '/gujarati/media-51389006'
+          : '/gujarati/other-news-23130286',
         smoke: false,
       },
       photoGalleryPage: {
@@ -421,7 +427,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       photoGalleryPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '',
+        path: undefined,
         smoke: false,
       },
     },
@@ -608,7 +614,9 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/korean/media-23248686',
+        path: isLive(appEnv)
+          ? '/korean/international-51367672'
+          : '/korean/media-23248686',
         smoke: false,
       },
       photoGalleryPage: {
@@ -685,7 +693,9 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/marathi/media-23127353',
+        path: isLive(appEnv)
+          ? '/marathi/media-51314817'
+          : '/marathi/media-23127353',
         smoke: false,
       },
       photoGalleryPage: {
@@ -1003,7 +1013,9 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/punjabi/media-23248705',
+        path: isLive(appEnv)
+          ? '/punjabi/india-51325361'
+          : '/punjabi/media-23248705',
         smoke: false,
       },
       photoGalleryPage: {
@@ -1349,7 +1361,9 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/telugu/international-23263261',
+        path: isLive(appEnv)
+          ? '/telugu/india-51309092'
+          : '/telugu/international-23263261',
         smoke: false,
       },
       photoGalleryPage: {
@@ -1386,7 +1400,9 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/thai/thailand-23248713',
+        path: isLive(appEnv)
+          ? '/thai/international-51285795'
+          : '/thai/thailand-23248713',
         smoke: false,
       },
       photoGalleryPage: {
@@ -1426,7 +1442,9 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv) ? undefined : '/tigrinya/news-23263262',
+        path: isLive(appEnv)
+          ? '/tigrinya/news-51249937'
+          : '/tigrinya/news-23263262',
         smoke: false,
       },
       photoGalleryPage: {

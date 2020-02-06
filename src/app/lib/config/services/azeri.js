@@ -150,7 +150,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Ən çox oxunan',
-      lastUpdated: 'Ən son yeniləmə: ',
+      lastUpdated: 'Ən son yeniləmə:',
       numberOfItems: 5,
     },
     footer: {
