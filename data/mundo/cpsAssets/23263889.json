@@ -9,9 +9,9 @@
     "type": "STY",
     "createdBy": "mundo-v6",
     "language": "es",
-    "lastUpdated": 1580922784342,
+    "lastUpdated": 1580987946995,
     "firstPublished": 1580745507000,
-    "lastPublished": 1580922773000,
+    "lastPublished": 1580987938000,
     "timestamp": 1580745507000,
     "options": {
       "isIgorSeoTagsEnabled": false,
@@ -140,7 +140,7 @@
         "type": "crosshead"
       },
       {
-        "text": "Paragraphs can contain <bold>bold </bold>and <italic>italic </italic>in CPS at the moment, and these are rendered on the page as <bold>bold </bold>and <italic>italic</italic><italic> </italic>or <bold><italic>both</italic></bold>.",
+        "text": "Paragraphs can contain <bold>bold </bold>and <italic>italic </italic>in CPS at the moment, and these are rendered on the page as <bold>bold </bold>and <italic>italic</italic>or <bold><italic>both</italic></bold>.",
         "markupType": "candy_xml",
         "type": "paragraph"
       },
@@ -386,6 +386,70 @@
       },
       {
         "text": "Includes: IDT2",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Here come some different shape images:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Square:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "63731104",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/9CB1/test/_63731104_hi000087716.jpg",
+        "path": "/cpsdevpb/9CB1/test/_63731104_hi000087716.jpg",
+        "height": 1546,
+        "width": 1546,
+        "altText": "Prince Charles",
+        "caption": "Prince Charles at a party",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Portrait:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "63731107",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/111E1/test/_63731107_tv000191235.jpg",
+        "path": "/cpsdevpb/111E1/test/_63731107_tv000191235.jpg",
+        "height": 768,
+        "width": 576,
+        "altText": "Patrick Stewart",
+        "caption": "Is this Captain Picard or Hercule Poirot?",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Random:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "63731109",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/16001/test/_63731109_tv000050092.jpg",
+        "path": "/cpsdevpb/16001/test/_63731109_tv000050092.jpg",
+        "height": 549,
+        "width": 700,
+        "altText": "Centre Court at Wimbledon",
+        "caption": "This image is a random shape",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "This is the end",
         "markupType": "plain_text",
         "type": "paragraph"
       }
