@@ -134,7 +134,7 @@ export const service = {
       },
       media: {
         noJs: 'ትጥቀምሉ ዘለኹም መሳርሒ ኣይተቐበሎን።',
-        contentExpired: 'This content is no longer available',
+        contentExpired: 'እዚ እትደልይዎ ዘለኹም ትሕዝቶ የለን',
         audio: 'ድምጺ',
         photogallery: 'ስእልታት',
         video: 'ቪድዮ',
