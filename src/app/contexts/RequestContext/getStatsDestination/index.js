@@ -17,7 +17,7 @@ const getStatsDestination = ({ isUK = true, env = 'test', service }) => {
       destination = 'NEWS_LANGUAGES_GNL';
       break;
     case 'scotland':
-      destination = 'PLACEHOLDER';
+      destination = 'PS_HOMEPAGE';
       break;
     case 'archive':
       destination = 'BBC_ARCHIVE_PS';
