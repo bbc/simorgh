@@ -15,10 +15,11 @@ const getBylineBlock = json => {
       blocks: [
         {
           name:
-            path(['name'], byline) || path(['persons', '0', 'name'], byline),
+            path(['name'], byline) ||
+            pathOr(null, ['persons', '0', 'name'], byline),
           title:
             path(['title'], byline) ||
-            path(['persons', '0', 'function'], byline),
+            pathOr(null, ['persons', '0', 'function'], byline),
         },
       ],
     },
