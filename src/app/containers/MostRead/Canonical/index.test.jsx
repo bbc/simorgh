@@ -21,7 +21,7 @@ const services = {
     variant: 'simp',
     data: zhongwenSimpMostReadData,
     config: zhongwenConfig.simp,
-    expectedLastUpdated: '最近更新：1970年1月11日',
+    expectedLastUpdated: '最近更新： 1970年1月11日',
   },
 };
 
@@ -96,6 +96,7 @@ describe('MostReadContainerCanonical', () => {
       expect(container.querySelectorAll('li').length).toEqual(
         config.mostRead.numberOfItems,
       );
+      console.log(container.querySelectorAll('time')[0].textContent);
       expect(container.querySelectorAll('time')[0].textContent).toEqual(
         expectedLastUpdated,
       );
