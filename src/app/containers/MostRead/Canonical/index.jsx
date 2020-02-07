@@ -4,10 +4,14 @@ import 'isomorphic-fetch';
 import { string } from 'prop-types';
 import { MostRead } from '@bbc/psammead-most-read';
 import {
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_MARGIN_ABOVE_400PX,
+  GEL_MARGIN_BELOW_400PX,
+} from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 import webLogger from '#lib/logger.web';
 import { mostReadRecordIsFresh, shouldRenderLastUpdated } from '../utilities';
@@ -16,14 +20,14 @@ import LastUpdated from './LastUpdated';
 const logger = webLogger();
 
 const StyledMostRead = styled(MostRead)`
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    margin: 0 auto;
-    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+    margin: 0 ${GEL_MARGIN_ABOVE_400PX};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     margin: 0 auto;
     max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
   }
+  margin: 0 ${GEL_MARGIN_BELOW_400PX};
 `;
 
 const CanonicalMostRead = ({ endpoint }) => {
