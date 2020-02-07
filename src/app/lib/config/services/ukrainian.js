@@ -138,6 +138,7 @@ export const service = {
       },
       media: {
         noJs: 'Ваш пристрій не підтримує відтворення мультимедійних файлів',
+        contentExpired: 'Контент більше не доступний',
         audio: 'Аудіо',
         photogallery: 'Фотогалерея',
         video: 'Відео',
