@@ -141,6 +141,7 @@ export const service = {
       media: {
         noJs:
           'Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.',
+        contentExpired: "Ce contenu n'est pas disponible",
         audio: 'Audio',
         photogallery: 'Galerie de photos',
         video: 'Vidéo',
