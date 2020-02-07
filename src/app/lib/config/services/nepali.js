@@ -137,6 +137,7 @@ export const service = {
       },
       media: {
         noJs: 'तपाईंको उपकरणमा मिडिया प्लेब्याक सपोर्ट छैन',
+        contentExpired: 'यो सामग्री उपलब्ध छैन',
         audio: 'अडिओ',
         photogallery: 'तस्बिर सङ्ग्रह',
         video: 'भिडिओ',
@@ -156,7 +157,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'धेरै पढिएको',
-      lastUpdated: 'अन्तिम चोटि अद्यावधिक गरिएको मिति: ',
+      lastUpdated: 'अन्तिम चोटि अद्यावधिक गरिएको मिति:',
       numberOfItems: 5,
     },
     footer: {

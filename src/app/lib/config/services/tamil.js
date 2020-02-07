@@ -139,6 +139,7 @@ export const service = {
       },
       media: {
         noJs: 'ஒலிபரப்பு மென்பொருள் உங்கள் கணினியில் இல்லை',
+        contentExpired: 'இந்த நிகழ்ச்சி இனி கிடைக்காது.',
         audio: 'ஒலி',
         photogallery: 'படத் தொகுப்பு',
         video: 'காணொளி',
@@ -163,7 +164,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'அதிகம் படிக்கப்பட்டது',
-      lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது: ',
+      lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது:',
       numberOfItems: 5,
     },
     footer: {

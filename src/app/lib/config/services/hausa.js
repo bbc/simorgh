@@ -133,6 +133,7 @@ export const service = {
       },
       media: {
         noJs: "Na'urarku na da matsalar sauraren sauti",
+        contentExpired: 'Yanzu an daina samar da wannan shiri.',
         audio: 'Sauti',
         photogallery: 'Rumbun hotuna',
         video: 'Bidiyo',
@@ -157,7 +158,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Wanda aka fi karantawa',
-      lastUpdated: 'Na baya-bayan nan ',
+      lastUpdated: 'Na baya-bayan nan:',
       numberOfItems: 5,
     },
     footer: {
