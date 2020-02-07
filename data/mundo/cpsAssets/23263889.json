@@ -427,6 +427,17 @@
       ],
       "taggings": []
     },
+    "indexImage": {
+      "id": "63730607",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+      "path": "/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Some cool looking dogs on the beach.",
+      "copyrightHolder": "Kaylee Garrick",
+      "type": "image"
+    },
     "id": "urn:bbc:ares::asset:mundo/23263889",
     "type": "cps"
   },
