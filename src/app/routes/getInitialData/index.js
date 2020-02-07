@@ -11,6 +11,7 @@ import isLive from '#lib/utilities/isLive';
 const logger = nodeLogger(__filename);
 const STATUS_CODE_OK = 200;
 const STATUS_CODE_BAD_GATEWAY = 502;
+const STATUS_CODE_INTERNAL_SERVER_ERROR = 500;
 const STATUS_CODE_NOT_FOUND = 404;
 const upstreamStatusCodesToPropagate = [STATUS_CODE_OK, STATUS_CODE_NOT_FOUND];
 
@@ -56,7 +57,7 @@ const checkForError = pathname => ({ status, pageData }) => {
   if (isHandledStatus) {
     return { status, pageData };
   }
-  logger.warn(
+  logger.error(
     `Unexpected upstream response (HTTP status code ${status}) when requesting ${pathname}`,
   );
   throw new Error();
@@ -66,7 +67,12 @@ const handleError = error => {
   if (error.message) {
     logger.error(error.message);
   }
-  return { error, status: STATUS_CODE_BAD_GATEWAY };
+
+  const status = onClient()
+    ? STATUS_CODE_BAD_GATEWAY
+    : STATUS_CODE_INTERNAL_SERVER_ERROR;
+
+  return { error, status };
 };
 
 const fetchData = pathname => {
