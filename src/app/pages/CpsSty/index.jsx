@@ -177,10 +177,18 @@ const CpsStyContainer = ({ pageData }) => {
         </Grid>
         <Grid item columns={gridColsSecondary}>
           <StyledSide>
-            <Component>This is a component in the second column</Component>
-            <Component>This is a component in the second column</Component>
-            <Component>This is a component in the second column</Component>
-            <Component>This is a component in the second column</Component>
+            <Component>
+              <h2>This is a component in the second column</h2>
+            </Component>
+            <Component>
+              <h2>This is a component in the second column</h2>
+            </Component>
+            <Component>
+              <h2>This is a component in the second column</h2>
+            </Component>
+            <Component>
+              <h2>This is a component in the second column</h2>
+            </Component>
           </StyledSide>
         </Grid>
       </StyledGrid>
