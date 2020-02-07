@@ -242,6 +242,15 @@ describe('StoryPromo Container', () => {
       `should render ${name} correctly for amp`,
       <WrappedStoryPromo platform="amp" item={data} />,
     );
+
+    shouldMatchSnapshot(
+      `should render ${name} promoType top on amp`,
+      <WrappedStoryPromo platform="amp" item={data} promoType="top" />,
+    );
+    shouldMatchSnapshot(
+      `should render ${name} promoType leading on amp`,
+      <WrappedStoryPromo platform="amp" item={data} promoType="leading" />,
+    );
   });
 
   shouldMatchSnapshot(
