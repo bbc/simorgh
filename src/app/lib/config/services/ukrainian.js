@@ -138,6 +138,7 @@ export const service = {
       },
       media: {
         noJs: 'Ваш пристрій не підтримує відтворення мультимедійних файлів',
+        contentExpired: 'Контент більше не доступний',
         audio: 'Аудіо',
         photogallery: 'Фотогалерея',
         video: 'Відео',
@@ -157,7 +158,8 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Найпопулярніше',
-      lastUpdated: 'Останнє оновлення: ',
+      lastUpdated: 'Останнє оновлення:',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

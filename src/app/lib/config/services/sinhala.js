@@ -141,6 +141,8 @@ export const service = {
       },
       media: {
         noJs: 'මෙහි කිසිවක් අඩංගු නැත.',
+        contentExpired:
+          'ඔබේ දුරකථනයේ හෝ පරිගණකයේ මෙය වාදනය කිරීමට අදාළ මෘදුකාංග නැත',
         audio: 'හඬ',
         photogallery: 'ඡායාරූප ගැලරිය ',
         video: 'වීඩියෝ',
@@ -160,7 +162,8 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'වැඩිපුරම කියැවූ',
-      lastUpdated: 'අවසන් යාවත්කාලීනවීම: ',
+      lastUpdated: 'අවසන් යාවත්කාලීනවීම:',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

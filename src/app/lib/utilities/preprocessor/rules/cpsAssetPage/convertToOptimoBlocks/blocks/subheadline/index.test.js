@@ -51,4 +51,25 @@ describe('convertToSubheadline', () => {
       expect(await convertToSubheadline(input)).toEqual(expected);
     });
   });
+
+  it(`should not convert a non-heading CPS block to Optimo format`, async () => {
+    const originalConsoleLog = global.console.log;
+    global.console.log = jest.fn();
+    const input = {
+      model: {
+        copyrightHolder: 'Joe Maher',
+        height: 549,
+        locator: '729E/test/_63724392_gettyimages-1098075358.jpg',
+        originCode: 'cpsdevpb',
+        width: 976,
+      },
+      type: 'rawImage',
+    };
+
+    expect(await convertToSubheadline(input)).toBeNull();
+    expect(global.console.log).toHaveBeenCalledWith(
+      'Incorrect block type rawImage',
+    );
+    global.console.log = originalConsoleLog;
+  });
 });
