@@ -37,15 +37,6 @@ const itemMargins = {
   group4: true,
 };
 
-const startOffsets = {
-  group0: 1,
-  group1: 1,
-  group2: 1,
-  group3: 1,
-  group4: 1,
-  group5: 1,
-};
-
 const FrontPageMain = ({ frontPageData }) => {
   const {
     dir,
@@ -83,13 +74,7 @@ const FrontPageMain = ({ frontPageData }) => {
           {offScreenText}
         </VisuallyHiddenText>
         <FrontPageGrid columns={mainColumns} dir={dir} enableGelGutters>
-          <Grid
-            item
-            columns={itemColumns}
-            dir={dir}
-            startOffset={startOffsets}
-            margins={itemMargins}
-          >
+          <Grid item columns={itemColumns} dir={dir} margins={itemMargins}>
             {groups.map((group, index) => (
               <FrontPageSection
                 key={group.title}

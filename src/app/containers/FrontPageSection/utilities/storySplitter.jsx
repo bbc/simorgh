@@ -1,15 +1,21 @@
 import { splitEvery, splitAt, take } from 'ramda';
 
+const MAX_ALLOWED_ITEMS_FIRST_SECTION = 13;
+const MAX_ALLOWED_ITEMS = 10;
+
 export const getAllowedItems = (items, isFirstSection) =>
-  isFirstSection ? take(13, items) : take(10, items);
+  isFirstSection
+    ? take(MAX_ALLOWED_ITEMS_FIRST_SECTION, items)
+    : take(MAX_ALLOWED_ITEMS, items);
 
 // Split the top row stories out into their own list
 const splitFirstRow = (items, isFirstSection) => {
-  // First section always has a single top story
-  if (isFirstSection || items.length % 4 === 1) {
+  const shouldHaveOneItemInFirstRow = isFirstSection || items.length % 4 === 1;
+  const shouldHaveTwoItemsInFirstRow = items.length % 4 > 1;
+  if (shouldHaveOneItemInFirstRow) {
     return splitAt(1, items);
   }
-  if (items.length % 4 > 1) {
+  if (shouldHaveTwoItemsInFirstRow) {
     return splitAt(2, items);
   }
   return splitAt(0, items);

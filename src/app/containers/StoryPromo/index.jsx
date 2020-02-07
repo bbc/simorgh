@@ -22,7 +22,7 @@ import MediaIndicator from './MediaIndicator';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
 
-const PROMO_TYPES = oneOf(['top', 'regular', 'leading']);
+const PROMO_TYPES = ['top', 'regular', 'leading'];
 
 const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   if (!imageValues) {
@@ -206,7 +206,7 @@ const StoryPromoContainer = ({
 
 StoryPromoContainer.propTypes = {
   item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
-  promoType: PROMO_TYPES,
+  promoType: oneOf(PROMO_TYPES),
   lazyLoadImage: bool,
   displayImage: bool,
 };

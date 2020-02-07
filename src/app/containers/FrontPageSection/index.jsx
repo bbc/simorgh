@@ -21,7 +21,6 @@ import groupShape from '#models/propTypes/frontPageGroup';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { getAllowedItems, getRows } from './utilities/storySplitter';
 import getRowDetails from './utilities/rowDetails';
-import fullWidthColumns from './utilities/gridColumns';
 import { TopRow } from '../FrontPageStoryRows';
 
 // Apply the right margin-top to the first section of the page when there is one or multiple items.
@@ -73,6 +72,7 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
 };
 
 const renderPromoList = (items, isFirstSection, dir) => {
+  // We have a cap on the number of allowed items per section
   const allowedItems = getAllowedItems(items, isFirstSection);
   const rows = getRowDetails(getRows(allowedItems, isFirstSection));
 
@@ -100,7 +100,14 @@ const renderPromoList = (items, isFirstSection, dir) => {
         <TopRow stories={items} sectionHasSingleStory dir={dir} />
       ) : (
         <Grid
-          columns={fullWidthColumns}
+          columns={{
+            group0: 6,
+            group1: 6,
+            group2: 6,
+            group3: 6,
+            group4: 8,
+            group5: 8,
+          }}
           enableGelGutters
           dir={dir}
           as={StoryPromoUl}
