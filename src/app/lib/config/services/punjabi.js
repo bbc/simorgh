@@ -133,6 +133,7 @@ export const service = {
       },
       media: {
         noJs: "ਮੀਡੀਆ ਪਲੇਬੈਕ ਤੁਹਾਡੀ ਡਿਵਾਈਸ 'ਤੇ ਸਪੋਰਟ ਨਹੀਂ ਕਰਦਾ",
+        contentExpired: 'ਇਹ ਸਮੱਗਰੀ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।',
         audio: 'ਔਡੀਓ',
         photogallery: 'ਫੋਟੋ ਗੈਲਰੀ',
         video: 'ਵੀਡੀਓ',
@@ -147,7 +148,8 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'ਸਭ ਤੋਂ ਵੱਧ ਪੜ੍ਹਿਆ ਗਿਆ',
-      lastUpdated: 'ਆਖ਼ਰੀ ਅਪਡੇਟ: ',
+      lastUpdated: 'ਆਖ਼ਰੀ ਅਪਡੇਟ:',
+      numberOfItems: 5,
     },
     navigation: [
       {

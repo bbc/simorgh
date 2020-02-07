@@ -36,6 +36,7 @@ export const optimoVersionBlock = {
               blockId: 'urn:bbc:ares::primary:63501296',
               model: {
                 embedding: false,
+                available: true,
                 format: 'audio_video',
                 live: true,
                 id: '63501296',

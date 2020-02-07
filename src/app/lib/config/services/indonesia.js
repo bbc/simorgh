@@ -136,6 +136,7 @@ export const service = {
       },
       media: {
         noJs: 'Media playback tidak ada di perangkat Anda',
+        contentExpired: 'Konten ini sudah tidak tersedia lagi.',
         audio: 'Audio',
         photogallery: 'Galeri Foto',
         video: 'Video',
@@ -150,7 +151,8 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Paling banyak dibaca',
-      lastUpdated: 'Terakhir diperbarui: ',
+      lastUpdated: 'Terakhir diperbarui:',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

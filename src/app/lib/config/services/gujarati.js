@@ -137,6 +137,7 @@ export const service = {
       },
       media: {
         noJs: 'તમારું ડિવાઇસ મીડિયા પ્લેબૅક સપોર્ટ નથી કરતું',
+        contentExpired: 'આ સામગ્રી હવેથી ઉપલબ્ધ નથી.',
         audio: 'ઓડિયો',
         photogallery: 'ફોટો ગૅલરી',
         video: 'વીડિયો',
@@ -156,7 +157,8 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'સૌથી વધારે વંચાયેલા સમાચાર',
-      lastUpdated: 'લાસ્ટ અપડેટ: ',
+      lastUpdated: 'લાસ્ટ અપડેટ:',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

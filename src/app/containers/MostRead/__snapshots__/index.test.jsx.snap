@@ -1,0 +1,546 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MostReadContainerCanonical renders most read as expected on canonical for news 1`] = `
+<div>
+  <section
+    aria-labelledby="Most-Read"
+    class="StyledSection-sc-1vo7scf-0 hnJSoe"
+    role="region"
+  >
+    <div
+      class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
+    >
+      <h2
+        class="Heading-sc-1x4gwjz-2 eZofTG"
+      >
+        <div
+          class="FlexColumn-wx5kdp-0 dgpsiS"
+        >
+          <span
+            class="FlexRow-wx5kdp-2 dVBNyZ"
+          >
+            <span
+              class="Title-wx5kdp-4 frglla"
+              dir="ltr"
+              id="Most-Read"
+            >
+              Most read
+            </span>
+          </span>
+        </div>
+      </h2>
+    </div>
+    <ol
+      class="GridComponent-nf79gm-0 iUNUcT StyledGrid-sc-1ofyujo-0 iUmfRN"
+      dir="ltr"
+      role="list"
+    >
+      <li
+        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="ItemWrapper-u0d8kd-3 juBlKT"
+        >
+          <div
+            class="StyledWrapper-fs4y6m-0 efQjRq"
+            dir="ltr"
+          >
+            <span
+              class="StyledSpan-fs4y6m-1 kQXLWt"
+            >
+              1
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-1 ihPUFl"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 fIQnQI"
+              href="/news/election-2019-50319044"
+            >
+              Labour bans three candidates from standing
+            </a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="ItemWrapper-u0d8kd-3 juBlKT"
+        >
+          <div
+            class="StyledWrapper-fs4y6m-0 joapIi"
+            dir="ltr"
+          >
+            <span
+              class="StyledSpan-fs4y6m-1 kQXLWt"
+            >
+              2
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-1 ihPUFl"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 fIQnQI"
+              href="/news/election-2019-50318810"
+            >
+              Bercow: Brexit 'biggest foreign policy mistake'
+            </a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="ItemWrapper-u0d8kd-3 juBlKT"
+        >
+          <div
+            class="StyledWrapper-fs4y6m-0 efQjRq"
+            dir="ltr"
+          >
+            <span
+              class="StyledSpan-fs4y6m-1 kQXLWt"
+            >
+              3
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-1 ihPUFl"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 fIQnQI"
+              href="/news/business-50313824"
+            >
+              Virgin Media switches phone customers from BT
+            </a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="ItemWrapper-u0d8kd-3 juBlKT"
+        >
+          <div
+            class="StyledWrapper-fs4y6m-0 joapIi"
+            dir="ltr"
+          >
+            <span
+              class="StyledSpan-fs4y6m-1 kQXLWt"
+            >
+              4
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-1 ihPUFl"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 fIQnQI"
+              href="/news/live/election-2019-50313404"
+            >
+              Latest on day one of campaign as minister resigns
+            </a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="ItemWrapper-u0d8kd-3 juBlKT"
+        >
+          <div
+            class="StyledWrapper-fs4y6m-0 fqCBaQ"
+            dir="ltr"
+          >
+            <span
+              class="StyledSpan-fs4y6m-1 kQXLWt"
+            >
+              5
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-1 ihPUFl"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 fIQnQI"
+              href="/news/education-50317690"
+            >
+              Nativity play warning over school polling stations
+            </a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="ItemWrapper-u0d8kd-3 juBlKT"
+        >
+          <div
+            class="StyledWrapper-fs4y6m-0 iEwnJq"
+            dir="ltr"
+          >
+            <span
+              class="StyledSpan-fs4y6m-1 kQXLWt"
+            >
+              6
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-1 ihPUFl"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 fIQnQI"
+              href="/news/newsbeat-50304072"
+            >
+              Prisoner backed by Rihanna 'scared' of execution
+            </a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="ItemWrapper-u0d8kd-3 juBlKT"
+        >
+          <div
+            class="StyledWrapper-fs4y6m-0 jXbaUI"
+            dir="ltr"
+          >
+            <span
+              class="StyledSpan-fs4y6m-1 kQXLWt"
+            >
+              7
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-1 ihPUFl"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 fIQnQI"
+              href="/news/uk-50320800"
+            >
+              Catholic Church 'shocked to core' by child abuse
+            </a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="ItemWrapper-u0d8kd-3 juBlKT"
+        >
+          <div
+            class="StyledWrapper-fs4y6m-0 iEwnJq"
+            dir="ltr"
+          >
+            <span
+              class="StyledSpan-fs4y6m-1 kQXLWt"
+            >
+              8
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-1 ihPUFl"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 fIQnQI"
+              href="/news/uk-wales-politics-50302173"
+            >
+              Minister quits in aide's rape trial 'sabotage' row
+            </a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="ItemWrapper-u0d8kd-3 juBlKT"
+        >
+          <div
+            class="StyledWrapper-fs4y6m-0 jXbaUI"
+            dir="ltr"
+          >
+            <span
+              class="StyledSpan-fs4y6m-1 kQXLWt"
+            >
+              9
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-1 ihPUFl"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 fIQnQI"
+              href="/news/uk-scotland-scotland-business-50157515"
+            >
+              'Being a good guy boss left me £1.2m in debt'
+            </a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="ItemWrapper-u0d8kd-3 juBlKT"
+        >
+          <div
+            class="StyledWrapper-fs4y6m-0 iEwnJq"
+            dir="ltr"
+          >
+            <span
+              class="StyledSpan-fs4y6m-1 kQXLWt"
+            >
+              10
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-1 ihPUFl"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 fIQnQI"
+              href="/news/world-latin-america-50314700"
+            >
+              US boy walked 23km for help after Mexico ambush
+            </a>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </section>
+</div>
+`;
+
+exports[`MostReadContainerCanonical renders most read as expected on canonical for zhongwen 1`] = `
+<div>
+  <section
+    aria-labelledby="Most-Read"
+    class="StyledSection-sc-1vo7scf-0 hnJSoe"
+    role="region"
+  >
+    <div
+      class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
+    >
+      <h2
+        class="Heading-sc-1x4gwjz-2 eZofTG"
+      >
+        <div
+          class="FlexColumn-wx5kdp-0 dgpsiS"
+        >
+          <span
+            class="FlexRow-wx5kdp-2 dVBNyZ"
+          >
+            <span
+              class="Title-wx5kdp-4 bkfSEj"
+              dir="ltr"
+              id="Most-Read"
+            >
+              热读
+            </span>
+          </span>
+        </div>
+      </h2>
+    </div>
+    <ol
+      class="GridComponent-nf79gm-0 iUNUcT StyledGrid-sc-1ofyujo-0 labiJP"
+      dir="ltr"
+      role="list"
+    >
+      <li
+        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="ItemWrapper-u0d8kd-3 juBlKT"
+        >
+          <div
+            class="StyledWrapper-fs4y6m-0 detGYC"
+            dir="ltr"
+          >
+            <span
+              class="StyledSpan-fs4y6m-1 lkhpcW"
+            >
+              1
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-1 ihPUFl"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 gZYLRU"
+              href="/zhongwen/simp/chinese-news-50312750"
+            >
+              何君尧被刺伤 香港再有地方选举候选人遭袭
+            </a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="ItemWrapper-u0d8kd-3 juBlKT"
+        >
+          <div
+            class="StyledWrapper-fs4y6m-0 detGYC"
+            dir="ltr"
+          >
+            <span
+              class="StyledSpan-fs4y6m-1 lkhpcW"
+            >
+              2
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-1 ihPUFl"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 gZYLRU"
+              href="/zhongwen/simp/uk-50313393"
+            >
+              英国大学“受专制国家干预” 中国影响成为议会报告聚焦点
+            </a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="ItemWrapper-u0d8kd-3 juBlKT"
+        >
+          <div
+            class="StyledWrapper-fs4y6m-0 detGYC"
+            dir="ltr"
+          >
+            <span
+              class="StyledSpan-fs4y6m-1 lkhpcW"
+            >
+              3
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-1 ihPUFl"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 gZYLRU"
+              href="/zhongwen/simp/world-49630566"
+            >
+              成人网站Pornhub“坐收复仇式色情影片之利”　
+            </a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="ItemWrapper-u0d8kd-3 juBlKT"
+        >
+          <div
+            class="StyledWrapper-fs4y6m-0 detGYC"
+            dir="ltr"
+          >
+            <span
+              class="StyledSpan-fs4y6m-1 lkhpcW"
+            >
+              4
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-1 ihPUFl"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 gZYLRU"
+              href="/zhongwen/simp/chinese-news-50292336"
+            >
+              中国人脸识别第一案：技术、法律与国际争议
+            </a>
+          </div>
+        </div>
+      </li>
+      <li
+        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="ItemWrapper-u0d8kd-3 juBlKT"
+        >
+          <div
+            class="StyledWrapper-fs4y6m-0 detGYC"
+            dir="ltr"
+          >
+            <span
+              class="StyledSpan-fs4y6m-1 lkhpcW"
+            >
+              5
+            </span>
+          </div>
+          <div
+            class="StyledItem-u0d8kd-1 ihPUFl"
+            dir="ltr"
+          >
+            <a
+              class="StyledLink-u0d8kd-0 gZYLRU"
+              href="/zhongwen/simp/world-50320490"
+            >
+              英国大选2019：竞选打响第一枪 各党亮出承诺
+            </a>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </section>
+</div>
+`;

@@ -6,21 +6,24 @@ const generateVideoBlock = block => {
   const generatedBlock = {
     type: 'aresMediaMetadata',
     blockId: `urn:bbc:ares::${block.subType}:${block.id}`,
-    model: pick(
-      [
-        'advertising',
-        'embedding',
-        'format',
-        'id',
-        'imageCopyright',
-        'imageUrl',
-        'subType',
-        'synopses',
-        'title',
-        'versions',
-      ],
-      block,
-    ),
+    model: {
+      ...pick(
+        [
+          'advertising',
+          'embedding',
+          'format',
+          'id',
+          'imageCopyright',
+          'imageUrl',
+          'subType',
+          'synopses',
+          'title',
+          'versions',
+        ],
+        block,
+      ),
+      available: true,
+    },
   };
 
   if (generatedBlock.model.format === 'video') {
