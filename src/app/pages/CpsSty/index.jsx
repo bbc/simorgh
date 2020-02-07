@@ -86,6 +86,10 @@ const CpsStyContainer = ({ pageData }) => {
     margin-top: ${GEL_SPACING_QUAD};
   `;
 
+  const StyledGrid = styled(Grid)`
+    flex-grow: 1;
+  `;
+
   const Component = styled.div`
     background: ${C_CHALK};
     padding: ${GEL_SPACING_DBL};
@@ -160,7 +164,7 @@ const CpsStyContainer = ({ pageData }) => {
       />
       <ATIAnalytics data={pageData} />
 
-      <Grid columns={gridColumns} enableGelGutters margins={gridMargins}>
+      <StyledGrid columns={gridColumns} enableGelGutters margins={gridMargins}>
         <Grid
           item
           columns={gridColsMain}
@@ -179,7 +183,7 @@ const CpsStyContainer = ({ pageData }) => {
             <Component>This is a component in the second column</Component>
           </StyledSide>
         </Grid>
-      </Grid>
+      </StyledGrid>
     </>
   );
 };
