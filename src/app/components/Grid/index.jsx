@@ -58,4 +58,17 @@ export const FrontPageGrid = styled(GridMaxWidthGroup5)`
   }
 `;
 
+export const SecondaryColumn = styled.div`
+  margin-top: ${GEL_SPACING_QUAD};
+`;
+
+export const ColSecondaryLayout = {
+  group0: 8,
+  group1: 8,
+  group2: 8,
+  group3: 8,
+  group4: 3,
+  group5: 3,
+};
+
 export default Grid;
