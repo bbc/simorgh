@@ -9,7 +9,7 @@ Then("the subheadline '{}' is displayed", subheadline => {
 });
 
 Then('the correct headline is displayed', () => {
-  cy.fixture('data').then(({ body }) => {
+  cy.fixture(Cypress.env('currentPath')).then(({ body }) => {
     cy.get('h1').contains(body.promo.headlines.headline);
   });
 });
