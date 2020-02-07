@@ -134,6 +134,7 @@ export const service = {
       },
       media: {
         noJs: 'Máy của bạn không hỗ trợ nghe xem',
+        contentExpired: 'Chương trình không còn nữa.',
         audio: 'Âm thanh',
         photogallery: 'Gallery hình ảnh',
         video: 'Video',
