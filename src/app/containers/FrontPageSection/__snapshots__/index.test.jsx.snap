@@ -542,6 +542,12 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   }
 }
 
+@media (min-width:63rem) {
+  .c6 {
+    margin-top: 2rem;
+  }
+}
+
 <section
   aria-labelledby="Top-Stories"
   role="region"
