@@ -1,6 +1,6 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import getMappedServiceId from './helper';
+import getMappedServiceId from './helpers';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
