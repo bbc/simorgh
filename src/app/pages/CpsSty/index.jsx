@@ -11,7 +11,6 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import Grid from '@bbc/psammead-grid';
-import { GhostGrid } from '#lib/styledGrid';
 import { getImageParts } from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -170,6 +169,7 @@ const CpsStyContainer = ({ pageData }) => {
           role="main"
         >
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+          <CpsRelatedContent content={relatedContent} />
         </Grid>
         <Grid item columns={gridColsSecondary}>
           <StyledSide>
@@ -180,7 +180,6 @@ const CpsStyContainer = ({ pageData }) => {
           </StyledSide>
         </Grid>
       </Grid>
-      <CpsRelatedContent content={relatedContent} />
     </>
   );
 };
