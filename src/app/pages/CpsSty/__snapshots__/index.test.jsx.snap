@@ -2279,11 +2279,11 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
       property="og:description"
     />
     <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
+      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
       property="og:image"
     />
     <meta
-      content="BBC News Pidgin"
+      content="Some people at the NTA awards"
       property="og:image:alt"
     />
     <meta
@@ -2319,11 +2319,11 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
       name="twitter:description"
     />
     <meta
-      content="BBC News Pidgin"
+      content="Some people at the NTA awards"
       name="twitter:image:alt"
     />
     <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
+      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
       name="twitter:image:src"
     />
     <meta
