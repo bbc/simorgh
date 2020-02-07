@@ -138,6 +138,7 @@ export const service = {
       },
       media: {
         noJs: 'อุปกรณ์ของท่านไม่สามารถใช้งานเครื่องเล่นสื่อได้',
+        contentExpired: 'เนื้อหานี้ไม่สามารถใช้งานได้แล้ว',
         audio: 'เสียง',
         photogallery: 'แกลเลอรีภาพ',
         video: 'วิดีโอ',

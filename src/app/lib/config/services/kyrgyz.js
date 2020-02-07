@@ -136,6 +136,7 @@ export const service = {
       },
       media: {
         noJs: 'Жабдыгыңыз медианын бул түрүн ойнотууга ылайыктуу эмес.',
+        contentExpired: 'Бул маалымат мындан ары ачылбайт',
         audio: 'Аудио',
         photogallery: 'Көз ирмем',
         video: 'Видео',

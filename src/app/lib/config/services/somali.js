@@ -140,6 +140,8 @@ export const service = {
       media: {
         noJs:
           'Qalabkan aad haysato kuma ciyaari kartid maqalkan iyo muuqaalkan',
+        contentExpired:
+          'Adeeggani hadda iyo wixii ka danbeeya ma jiro oo ma heli kartid',
         audio: 'Maqal',
         photogallery: 'Albamka sawirrada',
         video: 'Muuqaal',
