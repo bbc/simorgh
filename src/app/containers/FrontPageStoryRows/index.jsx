@@ -15,15 +15,12 @@ import StoryPromoContainer from '../StoryPromo';
 const isBulletin = item =>
   item.contentType === 'TVBulletin' || item.contentType === 'RadioBulletin';
 
-const renderPromo = (
+const renderPromo = ({
   item,
-  optional = {
-    promoType: 'regular',
-    isFirstSection: false,
-    displayImage: true,
-  },
-) => {
-  const { promoType, displayImage, isFirstSection } = optional;
+  promoType = 'regular',
+  isFirstSection = false,
+  displayImage = true,
+}) => {
   const lazyLoadImage = !(promoType === 'top' && isFirstSection); // don't lazy load image if it is a top story
   const renderedPromo = isBulletin(item) ? (
     <BulletinContainer item={item} lazyLoadImage={lazyLoadImage} />
@@ -65,7 +62,7 @@ export const TopRow = ({
     as={!sectionHasSingleStory && StoryPromoLi}
     dir={dir}
   >
-    {renderPromo(stories[0], { promoType: 'top', isFirstSection })}
+    {renderPromo({ item: stories[0], promoType: 'top', isFirstSection })}
   </Grid>
 );
 
@@ -90,7 +87,7 @@ export const LeadingRow = ({ stories, dir }) => (
       isBulletin={isBulletin(stories[0])}
       dir={dir}
     >
-      {renderPromo(stories[0], { promoType: 'leading' })}
+      {renderPromo({ item: stories[0], promoType: 'leading' })}
     </Grid>
     <Grid
       item
@@ -99,7 +96,7 @@ export const LeadingRow = ({ stories, dir }) => (
       isBulletin={isBulletin(stories[1])}
       dir={dir}
     >
-      {renderPromo(stories[1], { promoType: 'regular' })}
+      {renderPromo({ item: stories[1], promoType: 'regular' })}
     </Grid>
   </>
 );
@@ -123,7 +120,8 @@ export const RegularRow = ({ stories, displayImages, dir }) => (
         isBulletin={isBulletin(story)}
         dir={dir}
       >
-        {renderPromo(story, {
+        {renderPromo({
+          item: story,
           promoType: 'regular',
           displayImage: displayImages,
         })}
