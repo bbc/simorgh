@@ -23,16 +23,28 @@ const getRow = (Type, service, dir, number) => (
   </ServiceContextProvider>
 );
 
-describe('FrontPageStoryRows Container', () =>
-  describe('snapshots', () => {
-    shouldMatchSnapshot('TopRow', getRow(TopRow, 'news', 'ltr', 1));
-    shouldMatchSnapshot('LeadingRow', getRow(LeadingRow, 'news', 'ltr', 2));
-    shouldMatchSnapshot(
-      'RegularRow with images',
-      getRow(ImageRow, 'news', 'ltr', 4),
-    );
-    shouldMatchSnapshot(
-      'RegularRow without images',
-      getRow(NoImageRow, 'news', 'ltr', 4),
-    );
-  }));
+describe('FrontPageStoryRows Container - snapshots', () => {
+  shouldMatchSnapshot('TopRow', getRow(TopRow, 'news', 'ltr', 1));
+  shouldMatchSnapshot('LeadingRow', getRow(LeadingRow, 'news', 'ltr', 2));
+  shouldMatchSnapshot(
+    'RegularRow with images',
+    getRow(ImageRow, 'news', 'ltr', 4),
+  );
+  shouldMatchSnapshot(
+    'RegularRow without images',
+    getRow(NoImageRow, 'news', 'ltr', 4),
+  );
+  shouldMatchSnapshot('TopRow - rtl', getRow(TopRow, 'arabic', 'rtl', 1));
+  shouldMatchSnapshot(
+    'LeadingRow - rtl',
+    getRow(LeadingRow, 'arabic', 'rtl', 2),
+  );
+  shouldMatchSnapshot(
+    'RegularRow with images - rtl',
+    getRow(ImageRow, 'arabic', 'rtl', 4),
+  );
+  shouldMatchSnapshot(
+    'RegularRow without images - rtl',
+    getRow(NoImageRow, 'arabic', 'rtl', 4),
+  );
+});
