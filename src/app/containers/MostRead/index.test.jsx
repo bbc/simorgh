@@ -2,6 +2,7 @@ import newsMostReadData from '#data/news/mostRead';
 import zhongwenSimpMostReadData from '#data/zhongwen/mostRead/simp';
 import { service as newsConfig } from '#app/lib/config/services/news';
 import { service as zhongwenConfig } from '#app/lib/config/services/zhongwen';
+
 import {
   setFreshPromoTimestamp,
   renderMostReadContainer,
@@ -54,9 +55,8 @@ describe('MostReadContainerCanonical', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it(`should return empty string when mostRead toggle is disabled - ${service}`, async () => {
-      const { variant, data: mostReadData } = services[service];
-      fetch.mockResponse(JSON.stringify(mostReadData));
+    it(`should return empty string when mostRead feature toggle is disabled - ${service}`, async () => {
+      const { variant } = services[service];
       await renderMostReadContainer({
         container,
         isAmp: false,
@@ -66,5 +66,15 @@ describe('MostReadContainerCanonical', () => {
       expect(container.querySelectorAll('li').length).toEqual(0);
       expect(container.innerHTML).toEqual('');
     });
+  });
+
+  it(`should return empty string when mostRead service toggle is disabled`, async () => {
+    await renderMostReadContainer({
+      container,
+      isAmp: false,
+      service: 'archive', // hasMostRead = false for this service
+    });
+    expect(container.querySelectorAll('li').length).toEqual(0);
+    expect(container.innerHTML).toEqual('');
   });
 });
