@@ -19,7 +19,7 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
           >
             <noscript />
             <main
-              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-sc-10y88yd-0 dJygcZ"
+              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-oo43dv-0 gqbGSn"
               role="main"
             >
               <h1
@@ -388,7 +388,7 @@ exports[`CPS MAP Page should render component 1`] = `
           >
             <noscript />
             <main
-              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-sc-10y88yd-0 dJygcZ"
+              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-oo43dv-0 gqbGSn"
               role="main"
             >
               <h1
