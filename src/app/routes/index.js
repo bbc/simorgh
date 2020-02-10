@@ -5,7 +5,7 @@ import getInitialData from './getInitialData';
 import Article from '#pages/Article';
 import FrontPage from '#pages/FrontPage';
 import RadioPage from '#pages/RadioPage';
-import CpsMap from '#pages/CpsMap';
+import MediaAssetPage from '#pages/MediaAssetPage';
 import CpsSty from '#pages/CpsSty';
 import CpsPgl from '#pages/CpsPgl';
 import ErrorPage from '#pages/Error';
@@ -17,6 +17,7 @@ import {
   cpsAssetPagePath,
   errorPagePath,
   radioAndTvPath,
+  legacyAssetPagePath,
 } from './regex';
 
 // Page Types
@@ -27,8 +28,8 @@ import {
   PHOTO_GALLERY_PAGE,
 } from './pageTypes';
 
-// CPS Asset Mapping to PageType
-const CpsAsset = props => {
+// CPS / TC2 Asset Mapping to PageType
+const Asset = props => {
   const type = path(['pageData', 'metadata', 'type'], props);
 
   switch (type) {
@@ -37,7 +38,7 @@ const CpsAsset = props => {
     case PHOTO_GALLERY_PAGE:
       return CpsPgl({ ...props, pageType: type });
     case MEDIA_ASSET_PAGE:
-      return CpsMap({ ...props, pageType: type });
+      return MediaAssetPage({ ...props, pageType: type });
     case FEATURE_INDEX_PAGE: // TODO: Create FIX Page if required
       return FrontPage({ ...props, pageType: type });
     default:
@@ -71,9 +72,16 @@ const routes = [
   {
     path: cpsAssetPagePath,
     exact: true,
-    component: CpsAsset,
+    component: Asset,
     getInitialData,
     pageType: 'cpsAsset',
+  },
+  {
+    path: legacyAssetPagePath,
+    exact: true,
+    component: Asset,
+    getInitialData,
+    pageType: 'legacyAsset',
   },
   {
     path: errorPagePath,

@@ -1,9 +1,17 @@
 import routes from './index';
-import { cpsAssetPagePath } from './regex';
+import { cpsAssetPagePath, legacyAssetPagePath } from './regex';
+import {
+  MEDIA_ASSET_PAGE,
+  STORY_PAGE,
+  PHOTO_GALLERY_PAGE,
+  FEATURE_INDEX_PAGE,
+} from './pageTypes';
 
 jest.mock('#pages/FrontPage', () => jest.fn());
 jest.mock('#pages/RadioPage', () => jest.fn());
-jest.mock('#pages/CpsMap', () => jest.fn());
+jest.mock('#pages/MediaAssetPage', () => jest.fn());
+jest.mock('#pages/CpsSty', () => jest.fn());
+jest.mock('#pages/CpsPgl', () => jest.fn());
 
 const generateFixtureData = type => ({
   pageData: {
@@ -12,6 +20,11 @@ const generateFixtureData = type => ({
     },
   },
 });
+
+const mediaPage = jest.requireMock('#pages/MediaAssetPage');
+const frontPage = jest.requireMock('#pages/FrontPage');
+const storyPage = jest.requireMock('#pages/CpsSty');
+const photoGalleryPage = jest.requireMock('#pages/CpsPgl');
 
 describe('Routes', () => {
   test('It should be an array', () => {
@@ -43,23 +56,72 @@ describe('Routes', () => {
       jest.resetAllMocks();
     });
 
-    const mediaPage = jest.requireMock('#pages/CpsMap');
-    const frontPage = jest.requireMock('#pages/FrontPage');
-
-    it('should route to CpsMap component', () => {
-      const data = generateFixtureData('MAP');
+    it('should route to MediaAssetPage component', () => {
+      const data = generateFixtureData(MEDIA_ASSET_PAGE);
       Component(data);
 
       expect(mediaPage).toHaveBeenCalled();
       expect(frontPage).not.toHaveBeenCalled();
     });
 
+    it('should route to CpsSty component', () => {
+      const data = generateFixtureData(STORY_PAGE);
+      Component(data);
+
+      expect(storyPage).toHaveBeenCalled();
+      expect(frontPage).not.toHaveBeenCalled();
+    });
+
+    it('should route to CpsPgl component', () => {
+      const data = generateFixtureData(PHOTO_GALLERY_PAGE);
+      Component(data);
+
+      expect(photoGalleryPage).toHaveBeenCalled();
+      expect(frontPage).not.toHaveBeenCalled();
+    });
+
     it('should route to FrontPage component', () => {
-      const data = generateFixtureData('FIX');
+      const data = generateFixtureData(FEATURE_INDEX_PAGE);
       Component(data);
 
       expect(mediaPage).not.toHaveBeenCalled();
       expect(frontPage).toHaveBeenCalled();
+    });
+  });
+
+  describe('Legacy Assets', () => {
+    const legacyRoute = routes.filter(
+      route => route.path === legacyAssetPagePath,
+    );
+
+    const Component = legacyRoute[0].component;
+
+    beforeEach(() => {
+      jest.resetAllMocks();
+    });
+
+    it('should route to MediaAssetPage component', () => {
+      const data = generateFixtureData(MEDIA_ASSET_PAGE);
+      Component(data);
+
+      expect(mediaPage).toHaveBeenCalled();
+      expect(frontPage).not.toHaveBeenCalled();
+    });
+
+    it('should route to CpsSty component', () => {
+      const data = generateFixtureData(STORY_PAGE);
+      Component(data);
+
+      expect(storyPage).toHaveBeenCalled();
+      expect(frontPage).not.toHaveBeenCalled();
+    });
+
+    it('should route to CpsPgl component', () => {
+      const data = generateFixtureData(PHOTO_GALLERY_PAGE);
+      Component(data);
+
+      expect(photoGalleryPage).toHaveBeenCalled();
+      expect(frontPage).not.toHaveBeenCalled();
     });
   });
 });
