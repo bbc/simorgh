@@ -1,6 +1,6 @@
 import categoryMap from './index';
 
-test('should return the correct value', () => {
+test('should return the correct mapping when category recognised', () => {
   expect(categoryMap('Analysis')).toEqual('AnalysisNewsArticle');
 });
 
