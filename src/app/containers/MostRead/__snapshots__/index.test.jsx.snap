@@ -4,12 +4,14 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
 <div>
   <section
     aria-labelledby="Most-Read"
-    class="StyledSection-sc-1vo7scf-0 hnJSoe StyledMostRead-sc-6bm912-0 jiICiy"
     role="region"
   >
     <div
       class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
     >
+      <div
+        class="Bar-sc-1x4gwjz-0 qaAlR"
+      />
       <h2
         class="Heading-sc-1x4gwjz-2 eZofTG"
       >
@@ -354,12 +356,14 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
 <div>
   <section
     aria-labelledby="Most-Read"
-    class="StyledSection-sc-1vo7scf-0 hnJSoe StyledMostRead-sc-6bm912-0 jiICiy"
     role="region"
   >
     <div
       class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
     >
+      <div
+        class="Bar-sc-1x4gwjz-0 fDhhto"
+      />
       <h2
         class="Heading-sc-1x4gwjz-2 eZofTG"
       >
