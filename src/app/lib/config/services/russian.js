@@ -57,6 +57,7 @@ export const service = {
       currentPage: 'Текущая страница',
       skipLinkText: 'Перейти к содержанию',
       relatedContent: 'Новости по теме',
+      sections: 'Разделы',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плеер',
         audioPlayer: 'Аудио плеер',
@@ -239,7 +240,6 @@ export const service = {
         url: '/russian/media-47937790',
       },
     ],
-    navigationSection: 'Разделы',
   },
 };
 

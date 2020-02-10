@@ -57,6 +57,7 @@ export const service = {
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
+      sections: 'Secciones',
       mediaAssetPage: {
         mediaPlayer: 'Reproductor multimedia',
         audioPlayer: 'Reproductor de audio',
@@ -256,7 +257,6 @@ export const service = {
         url: '/mundo/noticias-43826245',
       },
     ],
-    navigationSection: 'Secciones',
   },
 };
 
