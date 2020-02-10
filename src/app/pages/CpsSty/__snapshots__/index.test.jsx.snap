@@ -293,15 +293,15 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   margin-top: 0;
 }
 
-.c38 {
-  margin-top: 2rem;
-}
-
 .c1 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c38 {
+  margin-top: 2rem;
 }
 
 .c39 {
@@ -1410,22 +1410,30 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                   <div
                     class="c39"
                   >
-                    This is a component in the second column
+                    <h2>
+                      This is a component in the second column
+                    </h2>
                   </div>
                   <div
                     class="c39"
                   >
-                    This is a component in the second column
+                    <h2>
+                      This is a component in the second column
+                    </h2>
                   </div>
                   <div
                     class="c39"
                   >
-                    This is a component in the second column
+                    <h2>
+                      This is a component in the second column
+                    </h2>
                   </div>
                   <div
                     class="c39"
                   >
-                    This is a component in the second column
+                    <h2>
+                      This is a component in the second column
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -1749,15 +1757,15 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 1rem;
 }
 
-.c40 {
-  margin-top: 2rem;
-}
-
 .c1 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c40 {
+  margin-top: 2rem;
 }
 
 .c41 {
@@ -3108,22 +3116,30 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                       <div
                         class="c41"
                       >
-                        This is a component in the second column
+                        <h2>
+                          This is a component in the second column
+                        </h2>
                       </div>
                       <div
                         class="c41"
                       >
-                        This is a component in the second column
+                        <h2>
+                          This is a component in the second column
+                        </h2>
                       </div>
                       <div
                         class="c41"
                       >
-                        This is a component in the second column
+                        <h2>
+                          This is a component in the second column
+                        </h2>
                       </div>
                       <div
                         class="c41"
                       >
-                        This is a component in the second column
+                        <h2>
+                          This is a component in the second column
+                        </h2>
                       </div>
                     </div>
                   </div>

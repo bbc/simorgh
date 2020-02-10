@@ -4,15 +4,13 @@ import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import { C_CHALK } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import Grid, {
-  SecondaryColumn,
-  ColSecondaryLayout,
-} from '#app/components/Grid';
+import Grid from '@bbc/psammead-grid';
 import { getImageParts } from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -88,6 +86,10 @@ const CpsStyContainer = ({ pageData }) => {
     flex-grow: 1;
   `;
 
+  const SecondaryColumn = styled.div`
+    margin-top: ${GEL_SPACING_QUAD};
+  `;
+
   const Component = styled.div`
     background: ${C_CHALK};
     padding: ${GEL_SPACING_DBL};
@@ -130,6 +132,15 @@ const CpsStyContainer = ({ pageData }) => {
     group5: 5,
   };
 
+  const gridColsSecondary = {
+    group0: 8,
+    group1: 8,
+    group2: 8,
+    group3: 8,
+    group4: 3,
+    group5: 3,
+  };
+
   return (
     <>
       <CpsMetadata
@@ -164,7 +175,7 @@ const CpsStyContainer = ({ pageData }) => {
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           <CpsRelatedContent content={relatedContent} />
         </Grid>
-        <Grid item columns={ColSecondaryLayout}>
+        <Grid item columns={gridColsSecondary}>
           <SecondaryColumn>
             <Component>
               <h2>This is a component in the second column</h2>
