@@ -29,6 +29,7 @@ import {
   getLastPublished,
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
+import categoryType from './categoryMap/index';
 
 // Page Handlers
 import withContexts from '#containers/PageHandlers/withContexts';
@@ -39,11 +40,10 @@ import withData from '#containers/PageHandlers/withData';
 
 const CpsStyContainer = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
-  const type = path(
+  const category = path(
     ['promo', 'passport', 'category', 'categoryName'],
     pageData,
   );
-  console.log(type);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
   const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
@@ -108,9 +108,8 @@ const CpsStyContainer = ({ pageData }) => {
         aboutTags={aboutTags}
       />
       <LinkedData
-        type="Article"
+        type={categoryType(category)}
         seoTitle={title}
-        category={type}
         headline={title}
         description={summary}
         showAuthor
