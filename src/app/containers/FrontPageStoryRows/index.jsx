@@ -78,7 +78,7 @@ TopRow.defaultProps = {
   sectionHasSingleStory: false,
 };
 
-export const LeadingRow = ({ stories, dir }) => (
+export const LeadingRow = ({ stories, dir, parentColumns }) => (
   <>
     <Grid
       item
@@ -86,6 +86,7 @@ export const LeadingRow = ({ stories, dir }) => (
       as={StoryPromoLi}
       isBulletin={isBulletin(stories[0])}
       dir={dir}
+      parentColumns={parentColumns}
     >
       {renderPromo({ item: stories[0], promoType: 'leading' })}
     </Grid>
@@ -95,6 +96,7 @@ export const LeadingRow = ({ stories, dir }) => (
       as={StoryPromoLi}
       isBulletin={isBulletin(stories[1])}
       dir={dir}
+      parentColumns={parentColumns}
     >
       {renderPromo({ item: stories[1], promoType: 'regular' })}
     </Grid>
@@ -109,7 +111,7 @@ LeadingRow.defaultProps = {
   ...rowDefaultProps,
 };
 
-export const RegularRow = ({ stories, displayImages, dir }) => (
+export const RegularRow = ({ stories, displayImages, dir, parentColumns }) => (
   <>
     {stories.map(story => (
       <Grid
@@ -119,6 +121,7 @@ export const RegularRow = ({ stories, displayImages, dir }) => (
         as={StoryPromoLi}
         isBulletin={isBulletin(story)}
         dir={dir}
+        parentColumns={parentColumns}
       >
         {renderPromo({
           item: story,

@@ -68,6 +68,15 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
   return children;
 };
 
+const parentGridColumns = {
+  group0: 6,
+  group1: 6,
+  group2: 6,
+  group3: 6,
+  group4: 8,
+  group5: 8,
+};
+
 const renderPromoList = (items, isFirstSection, dir) => {
   // We have a cap on the number of allowed items per section
   const allowedItems = getAllowedItems(items, isFirstSection);
@@ -84,6 +93,7 @@ const renderPromoList = (items, isFirstSection, dir) => {
       isFirstSection={isFirstSection}
       displayImages={row.displayImages}
       dir={dir}
+      parentColumns={parentGridColumns}
     />
   ));
 
@@ -97,14 +107,7 @@ const renderPromoList = (items, isFirstSection, dir) => {
         <TopRow stories={items} sectionHasSingleStory dir={dir} />
       ) : (
         <Grid
-          columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: 8,
-            group5: 8,
-          }}
+          columns={parentGridColumns}
           enableGelGutters
           dir={dir}
           as={StoryPromoUl}
