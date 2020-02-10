@@ -60,9 +60,7 @@ export const TopRow = ({
 }) => {
   if (sectionHasSingleStory) {
     return (
-      <div dir={dir}>
-        {renderPromo({ item: stories[0], promoType: 'top', isFirstSection })}
-      </div>
+      <>{renderPromo({ item: stories[0], promoType: 'top', isFirstSection })}</>
     );
   }
   return (

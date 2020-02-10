@@ -2094,55 +2094,50 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
     class="c6"
   >
     <div
-      class=""
-      dir="ltr"
+      class="c7"
     >
       <div
-        class="c7"
+        class="c8"
       >
         <div
-          class="c8"
+          class="c9"
         >
           <div
-            class="c9"
+            class="c10"
           >
             <div
-              class="c10"
-            >
-              <div
-                class="lazyload-placeholder"
-              />
-            </div>
-            <div
-              class="c11"
+              class="lazyload-placeholder"
             />
           </div>
+          <div
+            class="c11"
+          />
         </div>
-        <div
-          class="c12"
+      </div>
+      <div
+        class="c12"
+      >
+        <h3
+          class="c13"
         >
-          <h3
-            class="c13"
+          <a
+            class="c14"
+            href="https://www.bbc.co.uk"
           >
-            <a
-              class="c14"
-              href="https://www.bbc.co.uk"
-            >
-              Top Story 1 headline
-            </a>
-          </h3>
-          <p
-            class="c15"
-          >
-            Summary text 1
-          </p>
-          <time
-            class="c16"
-            datetime="1970-01-19"
-          >
-            19 January 1970
-          </time>
-        </div>
+            Top Story 1 headline
+          </a>
+        </h3>
+        <p
+          class="c15"
+        >
+          Summary text 1
+        </p>
+        <time
+          class="c16"
+          datetime="1970-01-19"
+        >
+          19 January 1970
+        </time>
       </div>
     </div>
   </div>
