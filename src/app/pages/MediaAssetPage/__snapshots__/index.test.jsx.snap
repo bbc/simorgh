@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = `
+exports[`Media Asset Page AV player should render version (live audio stream) 1`] = `
 <DocumentFragment>
   <div
     id="ContextsContainer"
@@ -369,7 +369,7 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
 </DocumentFragment>
 `;
 
-exports[`CPS MAP Page should render component 1`] = `
+exports[`Media Asset Page should render component 1`] = `
 <DocumentFragment>
   <div
     id="ContextsContainer"
