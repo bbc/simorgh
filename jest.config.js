@@ -7,7 +7,7 @@ module.exports = {
       'jest-junit',
       {
         suiteName: 'Jest Tests',
-        outputDirectory: 'reports/jest',
+        outputDirectory: './reports/jest',
         uniqueOutputName: 'true',
         ancestorSeparator: ' › ',
       },
