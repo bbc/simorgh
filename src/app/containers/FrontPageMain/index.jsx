@@ -66,6 +66,9 @@ const FrontPageMain = ({ frontPageData }) => {
     </span>
   );
 
+  const hasUsefulLinks =
+    groups.findIndex(group => group.semanticGroupName === 'Useful links') > -1;
+
   return (
     <>
       <ATIAnalytics data={frontPageData} />
@@ -89,15 +92,20 @@ const FrontPageMain = ({ frontPageData }) => {
             margins={itemMargins}
           >
             {groups.map((group, index) => (
-              <FrontPageSection
-                key={group.title}
-                group={group}
-                sectionNumber={index}
-              />
+              <>
+                {group.semanticGroupName === 'Useful links' && (
+                  <MostReadContainer />
+                )}
+                <FrontPageSection
+                  key={group.title}
+                  group={group}
+                  sectionNumber={index}
+                />
+              </>
             ))}
+            {!hasUsefulLinks && <MostReadContainer />}
           </Grid>
         </FrontPageGrid>
-        <MostReadContainer />
       </main>
     </>
   );
