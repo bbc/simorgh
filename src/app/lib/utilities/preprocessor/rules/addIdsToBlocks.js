@@ -1,5 +1,5 @@
 import uuid from 'uuid';
-import compose from 'ramda/src/compose';
+import pipe from 'ramda/src/pipe';
 import pathOr from 'ramda/src/pathOr';
 
 let mapIdsToBlocks;
@@ -39,11 +39,11 @@ const mergeJsonRawWithBlocks = blocksWithIds => jsonRaw => ({
 });
 
 export default jsonRaw => {
-  const addIdsToBlocks = compose(
-    mergeJsonRawWithBlocks,
-    mapIdsToBlocks,
-    getBlocks,
+  const addIdsToBlocks = pipe(
     getJsonContent,
+    getBlocks,
+    mapIdsToBlocks,
+    mergeJsonRawWithBlocks,
   )(jsonRaw);
 
   return addIdsToBlocks(jsonRaw);
