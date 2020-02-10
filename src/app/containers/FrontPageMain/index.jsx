@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import path from 'ramda/src/path';
 import Grid, { FrontPageGrid } from '#app/components/Grid';
@@ -92,16 +92,12 @@ const FrontPageMain = ({ frontPageData }) => {
             margins={itemMargins}
           >
             {groups.map((group, index) => (
-              <>
+              <Fragment key={group.title}>
                 {group.semanticGroupName === 'Useful links' && (
                   <MostReadContainer />
                 )}
-                <FrontPageSection
-                  key={group.title}
-                  group={group}
-                  sectionNumber={index}
-                />
-              </>
+                <FrontPageSection group={group} sectionNumber={index} />
+              </Fragment>
             ))}
             {!hasUsefulLinks && <MostReadContainer />}
           </Grid>
