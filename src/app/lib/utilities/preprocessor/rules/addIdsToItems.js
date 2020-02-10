@@ -1,5 +1,5 @@
 import uuid from 'uuid';
-import compose from 'ramda/src/compose';
+import pipe from 'ramda/src/pipe';
 import path from 'ramda/src/path';
 
 const getGroups = path(['content', 'groups']);
@@ -22,10 +22,10 @@ const mergeContentWithAddedIdItems = itemsWithIds => jsonRaw => ({
 });
 
 export default jsonRaw => {
-  const addIdsToItems = compose(
-    mergeContentWithAddedIdItems,
-    mapGroups,
+  const addIdsToItems = pipe(
     getGroups,
+    mapGroups,
+    mergeContentWithAddedIdItems,
   )(jsonRaw);
 
   return addIdsToItems(jsonRaw);
