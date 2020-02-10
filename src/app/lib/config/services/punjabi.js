@@ -150,6 +150,7 @@ export const service = {
       header: 'ਸਭ ਤੋਂ ਵੱਧ ਪੜ੍ਹਿਆ ਗਿਆ',
       lastUpdated: 'ਆਖ਼ਰੀ ਅਪਡੇਟ:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     navigation: [
       {

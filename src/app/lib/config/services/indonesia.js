@@ -153,6 +153,7 @@ export const service = {
       header: 'Paling banyak dibaca',
       lastUpdated: 'Terakhir diperbarui:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {

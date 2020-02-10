@@ -163,6 +163,7 @@ export const service = {
       header: 'Akachasị Gụọ',
       lastUpdated: 'Emelitere ikpeazụ na:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     navigation: [
       {

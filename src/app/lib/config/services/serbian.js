@@ -91,6 +91,7 @@ export const service = {
       header: 'Najčitanije',
       lastUpdated: 'Poslednji put ažurirano ',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     navigation: [
       {
@@ -281,6 +282,7 @@ export const service = {
       header: 'Најчитаније',
       lastUpdated: 'Последњи пут ажурирано:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     navigation: [
       {

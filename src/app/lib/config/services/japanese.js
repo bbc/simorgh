@@ -151,6 +151,7 @@ export const service = {
       header: '一番人気',
       lastUpdated: 'Last updated:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
