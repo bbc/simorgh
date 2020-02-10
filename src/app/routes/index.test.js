@@ -75,8 +75,8 @@ describe('Routes', () => {
     Component(data);
 
     expect(errorPage).toHaveBeenCalled();
-    expect(frontPage).not.toHaveBeenCalled();
   });
+
   it('should route to FrontPage component', () => {
     const frontPageRoute = routes.filter(route => route.path === frontPagePath);
 
@@ -97,7 +97,6 @@ describe('Routes', () => {
     Component(data);
 
     expect(articlePage).toHaveBeenCalled();
-    expect(frontPage).not.toHaveBeenCalled();
   });
 
   it('should route to RadioPage component', () => {
@@ -109,7 +108,6 @@ describe('Routes', () => {
     Component(data);
 
     expect(radioPage).toHaveBeenCalled();
-    expect(frontPage).not.toHaveBeenCalled();
   });
 
   describe('CPS Assets', () => {
@@ -122,7 +120,6 @@ describe('Routes', () => {
       Component(data);
 
       expect(mediaPage).toHaveBeenCalled();
-      expect(frontPage).not.toHaveBeenCalled();
     });
 
     it('should route to CpsSty component', () => {
@@ -130,7 +127,6 @@ describe('Routes', () => {
       Component(data);
 
       expect(storyPage).toHaveBeenCalled();
-      expect(frontPage).not.toHaveBeenCalled();
     });
 
     it('should route to CpsPgl component', () => {
@@ -138,7 +134,6 @@ describe('Routes', () => {
       Component(data);
 
       expect(photoGalleryPage).toHaveBeenCalled();
-      expect(frontPage).not.toHaveBeenCalled();
     });
 
     it('should route to FrontPage component', () => {
@@ -168,7 +163,6 @@ describe('Routes', () => {
       Component(data);
 
       expect(mediaPage).toHaveBeenCalled();
-      expect(frontPage).not.toHaveBeenCalled();
     });
 
     it('should route to CpsSty component', () => {
@@ -176,7 +170,6 @@ describe('Routes', () => {
       Component(data);
 
       expect(storyPage).toHaveBeenCalled();
-      expect(frontPage).not.toHaveBeenCalled();
     });
 
     it('should route to CpsPgl component', () => {
@@ -184,7 +177,6 @@ describe('Routes', () => {
       Component(data);
 
       expect(photoGalleryPage).toHaveBeenCalled();
-      expect(frontPage).not.toHaveBeenCalled();
     });
 
     it('should route to FrontPage component', () => {
