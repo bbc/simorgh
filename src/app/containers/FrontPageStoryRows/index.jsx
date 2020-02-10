@@ -1,9 +1,9 @@
 import React from 'react';
 import Grid from '@bbc/psammead-grid';
+import styled from 'styled-components';
 import { arrayOf, shape, bool, oneOf } from 'prop-types';
 import { StoryPromoLi } from '@bbc/psammead-story-promo-list';
 import {
-  topStoryColumns,
   leadingStoryColumns,
   regularStoryColumns,
   noImageStoryColumns,
@@ -50,24 +50,17 @@ const rowDefaultProps = {
   dir: 'ltr',
 };
 
+const StyledDiv = styled.div``; // using this so we can use the helpful `as` syntax
+
 export const TopRow = ({
   stories,
   isFirstSection,
   sectionHasSingleStory,
   dir,
-  parentColumns,
-  parentEnableGelGutters,
 }) => (
-  <Grid
-    item
-    columns={topStoryColumns}
-    as={!sectionHasSingleStory && StoryPromoLi}
-    dir={dir}
-    parentColumns={parentColumns}
-    parentEnableGelGutters={parentEnableGelGutters}
-  >
+  <StyledDiv as={!sectionHasSingleStory && StoryPromoLi} dir={dir}>
     {renderPromo({ item: stories[0], promoType: 'top', isFirstSection })}
-  </Grid>
+  </StyledDiv>
 );
 
 TopRow.propTypes = {
