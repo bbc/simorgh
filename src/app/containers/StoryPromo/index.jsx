@@ -18,7 +18,7 @@ import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 
 import LinkContents from './LinkContents';
-import MediaIndicator from './MediaIndicator';
+import MediaIndicatorContainer from './MediaIndicator';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
 
@@ -191,13 +191,15 @@ const StoryPromoContainer = ({
     />
   );
 
+  const MediaIndicator = (
+    <MediaIndicatorContainer script={script} service={service} item={item} />
+  );
+
   return (
     <StoryPromo
       image={Image}
       info={Info}
-      mediaIndicator={
-        <MediaIndicator item={item} topStory={topStory} service={service} />
-      }
+      mediaIndicator={MediaIndicator}
       promoType={promoType}
       displayImage={displayImage}
     />

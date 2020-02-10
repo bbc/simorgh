@@ -3240,6 +3240,11 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   position: relative;
 }
 
+.c29 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
 .c31 {
   color: #222222;
   margin: 0;
@@ -3292,16 +3297,14 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
 }
 
 .c35 {
-  padding: 0.5rem 0.25rem;
+  color: #222222;
   background-color: #FFFFFF;
-  display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #222222;
-  height: 2rem;
+  display: block;
 }
 
 .c36 {
@@ -3753,6 +3756,13 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
+@media (max-width:24.9375rem) {
+  .c29 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c31 {
     font-size: 1rem;
@@ -3795,10 +3805,17 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c35 {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c35 {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
@@ -6365,6 +6382,11 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   position: relative;
 }
 
+.c49 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
 .c51 {
   color: #222222;
   margin: 0;
@@ -7001,6 +7023,13 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   .c49 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c49 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 

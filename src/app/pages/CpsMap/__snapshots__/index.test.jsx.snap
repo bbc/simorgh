@@ -1020,7 +1020,7 @@ exports[`CPS MAP Page should render component 1`] = `
                             />
                           </div>
                           <div
-                            class="InlineMediaIndicator-sc-1dvfmi3-2 hEHXpJ"
+                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
                           />
                         </div>
                       </div>
@@ -1028,7 +1028,7 @@ exports[`CPS MAP Page should render component 1`] = `
                         class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-3 bunGcv"
+                          class="Headline-sc-1dvfmi3-3 hSJrur"
                         >
                           <a
                             class="Link-sc-1dvfmi3-5 yQgSu"
@@ -1072,7 +1072,7 @@ exports[`CPS MAP Page should render component 1`] = `
                             />
                           </div>
                           <div
-                            class="InlineMediaIndicator-sc-1dvfmi3-2 hEHXpJ"
+                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
                           />
                         </div>
                       </div>
@@ -1080,7 +1080,7 @@ exports[`CPS MAP Page should render component 1`] = `
                         class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-3 bunGcv"
+                          class="Headline-sc-1dvfmi3-3 hSJrur"
                         >
                           <a
                             class="Link-sc-1dvfmi3-5 yQgSu"
@@ -1120,11 +1120,11 @@ exports[`CPS MAP Page should render component 1`] = `
                             class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                           />
                           <div
-                            class="InlineMediaIndicator-sc-1dvfmi3-2 hEHXpJ"
+                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
                           >
                             <div
                               aria-hidden="true"
-                              class="MediaIndicatorWrapper-sc-1p6h86b-0 hRcKme"
+                              class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
                             >
                               <div
                                 class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
@@ -1155,7 +1155,7 @@ exports[`CPS MAP Page should render component 1`] = `
                         class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-3 bunGcv"
+                          class="Headline-sc-1dvfmi3-3 hSJrur"
                         >
                           <a
                             class="Link-sc-1dvfmi3-5 yQgSu"
@@ -1210,11 +1210,11 @@ exports[`CPS MAP Page should render component 1`] = `
                             />
                           </div>
                           <div
-                            class="InlineMediaIndicator-sc-1dvfmi3-2 hEHXpJ"
+                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
                           >
                             <div
                               aria-hidden="true"
-                              class="MediaIndicatorWrapper-sc-1p6h86b-0 hRcKme"
+                              class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
                             >
                               <div
                                 class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
@@ -1235,7 +1235,7 @@ exports[`CPS MAP Page should render component 1`] = `
                                   />
                                 </svg>
                                 <time
-                                  class="TimeDuration-sc-1p6h86b-2 dLCVKn"
+                                  class="StyledTime-jpt91x-0 bYtFje"
                                   datetime="PT15S"
                                 >
                                   0:15
@@ -1249,7 +1249,7 @@ exports[`CPS MAP Page should render component 1`] = `
                         class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-3 bunGcv"
+                          class="Headline-sc-1dvfmi3-3 hSJrur"
                         >
                           <a
                             class="Link-sc-1dvfmi3-5 yQgSu"

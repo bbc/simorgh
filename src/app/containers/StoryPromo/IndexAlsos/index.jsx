@@ -25,12 +25,17 @@ const getMediaType = (cpsType, mediaType) => {
   return isPGL ? 'photogallery' : media.toLowerCase();
 };
 
-const buildIndexAlsosMediaIndicator = (cpsType, mediaType, service) => {
+const buildIndexAlsosMediaIndicator = (cpsType, mediaType, script, service) => {
   const indexAlsosMediaType = getMediaType(cpsType, mediaType);
 
   return (
     indexAlsosMediaType && (
-      <MediaIndicator service={service} type={indexAlsosMediaType} indexAlsos />
+      <MediaIndicator
+        script={script}
+        service={service}
+        type={indexAlsosMediaType}
+        isInline
+      />
     )
   );
 };
@@ -57,6 +62,7 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
           const indexAlsoMediaIndicator = buildIndexAlsosMediaIndicator(
             cpsType,
             mediaType,
+            script,
             service,
           );
           const indexAlsoMediaType =

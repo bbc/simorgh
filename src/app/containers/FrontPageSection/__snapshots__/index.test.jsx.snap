@@ -136,6 +136,16 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   bottom: 0;
 }
 
+.c16 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c25 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
 .c18 {
   color: #222222;
   margin: 0;
@@ -550,6 +560,13 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   .c25 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c25 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 
@@ -1067,7 +1084,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   width: 100%;
 }
 
-.c23 {
+.c24 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -1092,7 +1109,22 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   position: relative;
 }
 
-.c24 {
+.c19 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c19 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c23 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c25 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1425,13 +1457,13 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c24 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c23 {
+  .c24 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1439,7 +1471,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c23 {
+  .c24 {
     display: block;
     width: initial;
     padding: initial;
@@ -1493,21 +1525,28 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 }
 
 @media (min-width:25rem) {
-  .c19 {
+  .c23 {
     position: absolute;
     bottom: 0;
   }
 }
 
+@media (max-width:24.9375rem) {
+  .c23 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
+  .c25 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c24 {
+  .c25 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
@@ -1679,15 +1718,15 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
               />
             </div>
             <div
-              class="c19"
+              class="c23"
             />
           </div>
         </div>
         <div
-          class="c23"
+          class="c24"
         >
           <h3
-            class="c24"
+            class="c25"
           >
             <a
               class="c13"
@@ -1811,6 +1850,11 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 .c11 {
   position: absolute;
   bottom: 0;
+}
+
+.c11 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
 }
 
 .c13 {
@@ -2267,6 +2311,16 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   bottom: 0;
 }
 
+.c13 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c22 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
 .c15 {
   color: #222222;
   margin: 0;
@@ -2660,6 +2714,13 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   .c22 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c22 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 

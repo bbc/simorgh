@@ -66,6 +66,11 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   position: relative;
 }
 
+.c18 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
 .c23 {
   color: #222222;
   margin: 0;
@@ -241,16 +246,14 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 }
 
 .c19 {
-  padding: 0.5rem 0.25rem;
+  color: #222222;
   background-color: #FFFFFF;
-  display: block;
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #222222;
-  height: 2rem;
+  display: block;
 }
 
 .c20 {
@@ -350,6 +353,13 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   .c18 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c18 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 
@@ -509,10 +519,17 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c19 {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
@@ -691,7 +708,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   border: none;
 }
 
-.c16 {
+.c17 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -720,7 +737,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   width: 100%;
 }
 
-.c17 {
+.c18 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -739,6 +756,21 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   position: relative;
 }
 
+.c10 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c10 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c14 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
 .c4 {
   color: #222222;
   margin: 0;
@@ -750,7 +782,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   line-height: 1.375rem;
 }
 
-.c18 {
+.c19 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -761,7 +793,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   line-height: 1.25rem;
 }
 
-.c19 {
+.c20 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -824,20 +856,18 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   font-style: normal;
 }
 
-.c14 {
-  padding: 0.5rem 0.25rem;
+.c15 {
+  color: #222222;
   background-color: #FFFFFF;
-  display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #222222;
-  height: 2rem;
+  display: block;
 }
 
-.c15 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -949,13 +979,13 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c18 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c17 {
+  .c18 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -963,7 +993,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c17 {
+  .c18 {
     display: block;
     width: initial;
     padding: initial;
@@ -988,9 +1018,16 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c10 {
+  .c14 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c14 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 
@@ -1009,42 +1046,42 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
+  .c19 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c19 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c19 {
+  .c20 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19 {
+  .c20 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c19 {
+  .c20 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c19 {
+  .c20 {
     display: none;
     visibility: hidden;
   }
@@ -1064,10 +1101,17 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   }
 }
 
-@media (max-width:24.9375rem) {
-  .c14 {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c15 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
@@ -1142,18 +1186,18 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
             />
           </div>
           <div
-            class="c10"
+            class="c14"
           >
             <div
               aria-hidden="true"
-              class="c14"
+              class="c15"
             >
               <div
-                class="c15"
+                class="c16"
               >
                 <svg
                   aria-hidden="true"
-                  class="c16"
+                  class="c17"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -1172,10 +1216,10 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
         </div>
       </div>
       <div
-        class="c17"
+        class="c18"
       >
         <h3
-          class="c18"
+          class="c19"
         >
           <a
             class="c5"
@@ -1185,7 +1229,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
           </a>
         </h3>
         <p
-          class="c19"
+          class="c20"
         >
           Summary
         </p>
@@ -1265,6 +1309,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 
 .c15 {
   position: relative;
+}
+
+.c17 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
 }
 
 .c22 {
@@ -1442,16 +1491,14 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 }
 
 .c18 {
-  padding: 0.5rem 0.25rem;
+  color: #222222;
   background-color: #FFFFFF;
-  display: block;
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #222222;
-  height: 2rem;
+  display: block;
 }
 
 .c19 {
@@ -1545,6 +1592,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   .c17 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c17 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 
@@ -1704,10 +1758,17 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c18 {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c18 {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
@@ -2023,6 +2084,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   position: relative;
 }
 
+.c6 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
 .c8 {
   color: #222222;
   margin: 0;
@@ -2098,16 +2164,14 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
 }
 
 .c11 {
-  padding: 0.5rem 0.25rem;
+  color: #222222;
   background-color: #FFFFFF;
-  display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #222222;
-  height: 2rem;
+  display: block;
 }
 
 .c12 {
@@ -2204,6 +2268,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   }
 }
 
+@media (max-width:24.9375rem) {
+  .c6 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c8 {
     font-size: 1rem;
@@ -2260,10 +2331,17 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c11 {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
@@ -2551,8 +2629,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 .c14 >div {
   display: inline-block;
-  padding: 0;
   vertical-align: initial;
+}
+
+.c14 svg {
+  margin: 0;
 }
 
 .c13 {
@@ -2568,6 +2649,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   font-style: normal;
   font-size: 1rem;
   line-height: 1.625rem;
+  display: inline;
 }
 
 .c7 {
@@ -2710,16 +2792,14 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 .c15 {
-  padding: 0.5rem 0.25rem;
+  color: #222222;
   background-color: #FFFFFF;
-  display: block;
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #222222;
-  height: 2rem;
+  display: block;
 }
 
 .c16 {
@@ -2924,10 +3004,17 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c15 {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
@@ -3165,8 +3252,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 .c3 >div {
   display: inline-block;
-  padding: 0;
   vertical-align: initial;
+}
+
+.c3 svg {
+  margin: 0;
 }
 
 .c2 {
@@ -3182,6 +3272,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
+  display: inline;
 }
 
 .c5 {
@@ -3224,16 +3315,14 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 }
 
 .c7 {
-  padding: 0.5rem 0.25rem;
+  color: #222222;
   background-color: #FFFFFF;
-  display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #222222;
-  height: 2rem;
+  display: block;
 }
 
 .c8 {
@@ -3338,10 +3427,17 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   }
 }
 
-@media (max-width:24.9375rem) {
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c7 {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
@@ -3909,6 +4005,11 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
 .c6 {
   position: absolute;
   bottom: 0;
+}
+
+.c6 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
 }
 
 .c8 {
