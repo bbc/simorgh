@@ -66,10 +66,10 @@ const CanonicalMostRead = ({ endpoint }) => {
     <>
       {items.length ? (
         // eslint-disable-next-line jsx-a11y/no-redundant-roles
-        <section role="region" aria-labelledby="Most-read">
+        <section role="region" aria-labelledby="Most-Read">
           <SectionLabel
             script={script}
-            labelId="Most-read"
+            labelId="Most-Read"
             service={service}
             dir={dir}
           >
