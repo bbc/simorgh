@@ -7,6 +7,7 @@ const categoryType = category => {
     'Newsbeat Investigates': 'ReportageNewsArticle',
     Summary: 'ReportageNewsArticle',
     'You what?': 'ReportageNewsArticle',
+    Quiz: 'ReportageNewsArticle',
     Explainer: 'BackgroundNewsArticle',
     Analysis: 'AnalysisNewsArticle',
     Opinion: 'OpinionNewsArticle',
