@@ -9,9 +9,9 @@
     "type": "STY",
     "createdBy": "mundo-v6",
     "language": "es",
-    "lastUpdated": 1580749723227,
+    "lastUpdated": 1580922784342,
     "firstPublished": 1580745507000,
-    "lastPublished": 1580749716000,
+    "lastPublished": 1580922773000,
     "timestamp": 1580745507000,
     "options": {
       "isIgorSeoTagsEnabled": false,
@@ -45,7 +45,25 @@
           "campaignName": "Amuse me"
         }
       ],
-      "taggings": []
+      "language": "es",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+      "passportId": "d7d7cd86-30b1-412f-8c9e-712f806c7357",
+      "locator": "urn:bbc:cps:asset:23263889",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/coreconcepts/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/passport/predicate/About",
+          "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/passport/predicate/About",
+          "value": "http://www.bbc.co.uk/things/b9bb453a-a3e2-46b4-9d20-35efa09d72b8#id"
+        }
+      ]
     },
     "tags": {
       "about": [
@@ -53,20 +71,14 @@
           "thingLabel": "Life",
           "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
           "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": []
         },
         {
           "thingLabel": "Fake news",
           "thingUri": "http://www.bbc.co.uk/things/e7539dc8-5cfb-413a-b4fe-0ad77bc665aa#id",
           "thingId": "e7539dc8-5cfb-413a-b4fe-0ad77bc665aa",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Fake_news",
             "http://www.wikidata.org/entity/Q28549308"
@@ -91,6 +103,7 @@
       "heading",
       "subheading",
       "social_embed",
+      "media",
       "include"
     ],
     "includeComments": false
@@ -127,7 +140,12 @@
         "type": "crosshead"
       },
       {
-        "text": "Paragraphs can contain <bold>bold </bold>and <italic>italic </italic>in CPS at the moment, and these are rendered on the page as <bold>bold </bold>and <italic>it</italic><italic>alic.</italic>",
+        "text": "Paragraphs can contain <bold>bold </bold>and <italic>italic </italic>in CPS at the moment, and these are rendered on the page as <bold>bold </bold>and <italic>italic</italic><italic> </italic>or <bold><italic>both</italic></bold>.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold><italic>Bold and italic can also be rendered together.</italic></bold>",
         "markupType": "candy_xml",
         "type": "paragraph"
       },
@@ -136,6 +154,16 @@
         "items": [
           {
             "text": "This is a bulleted list",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "Bullet 2",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "Bullet 3",
             "markupType": "plain_text",
             "type": "listItem"
           }
@@ -166,7 +194,12 @@
             "type": "listItem"
           },
           {
-            "text": "And so on",
+            "text": "Number 2",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "Number 3, and so on",
             "markupType": "plain_text",
             "type": "listItem"
           }
@@ -264,9 +297,80 @@
         "type": "social_embed"
       },
       {
-        "text": "Includes: IDT2",
+        "text": "Embedded MAP: video",
         "markupType": "plain_text",
         "type": "paragraph"
+      },
+      {
+        "id": "p01k6msm",
+        "subType": "clip",
+        "format": "video",
+        "title": "Five things ants can teach us about management",
+        "synopses": {
+          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+        },
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+        "versions": [
+          {
+            "versionId": "p01k6msp",
+            "types": ["Original"],
+            "duration": 191,
+            "durationISO8601": "PT3M11S",
+            "warnings": {
+              "short": "Contains strong language and adult humour.",
+              "long": "Contains strong language and adult humour."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1540218932000
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "Embedded MAP: audio",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "p01m7d07",
+        "subType": "clip",
+        "format": "audio",
+        "title": "Birmingham checkout",
+        "synopses": {
+          "short": "Some audio from a supermarket checkout in Birmingham"
+        },
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+        "embedding": false,
+        "advertising": false,
+        "caption": "Some audio from a supermarket checkout in Birmingham",
+        "versions": [
+          {
+            "versionId": "p01m7d09",
+            "types": ["Original"],
+            "duration": 127,
+            "durationISO8601": "PT2M7S",
+            "warnings": {
+              "short": "Contains some strong language.",
+              "long": "Contains some strong language."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1555067395000
+          }
+        ],
+        "imageCopyright": "Getty Images",
+        "type": "media"
       },
       {
         "text": "Includes: VisJo",
@@ -281,7 +385,7 @@
         "type": "include"
       },
       {
-        "text": "Below is some audio/video via an embedded MAP",
+        "text": "Includes: IDT2",
         "markupType": "plain_text",
         "type": "paragraph"
       }
@@ -322,6 +426,17 @@
         }
       ],
       "taggings": []
+    },
+    "indexImage": {
+      "id": "63730607",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+      "path": "/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Some cool looking dogs on the beach.",
+      "copyrightHolder": "Kaylee Garrick",
+      "type": "image"
     },
     "id": "urn:bbc:ares::asset:mundo/23263889",
     "type": "cps"

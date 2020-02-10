@@ -138,6 +138,7 @@ export const service = {
       },
       media: {
         noJs: 'อุปกรณ์ของท่านไม่สามารถใช้งานเครื่องเล่นสื่อได้',
+        contentExpired: 'เนื้อหานี้ไม่สามารถใช้งานได้แล้ว',
         audio: 'เสียง',
         photogallery: 'แกลเลอรีภาพ',
         video: 'วิดีโอ',
@@ -152,7 +153,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'ได้รับความนิยมสูงสุด',
-      lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา ',
+      lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา',
       numberOfItems: 5,
     },
     navigation: [

@@ -136,6 +136,7 @@ export const service = {
       },
       media: {
         noJs: 'Жабдыгыңыз медианын бул түрүн ойнотууга ылайыктуу эмес.',
+        contentExpired: 'Бул маалымат мындан ары ачылбайт',
         audio: 'Аудио',
         photogallery: 'Көз ирмем',
         video: 'Видео',
@@ -160,7 +161,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Эң көп окулгандар',
-      lastUpdated: 'Акыркы жаңылоо: ',
+      lastUpdated: 'Акыркы жаңылоо:',
       numberOfItems: 5,
     },
     footer: {

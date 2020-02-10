@@ -134,6 +134,7 @@ export const service = {
       },
       media: {
         noJs: 'お使いの端末ではメディアプレイバックはご利用になれません',
+        contentExpired: 'このコンテンツはもうご利用いただけません。',
         audio: '音声',
         photogallery: '写真ギャラリー',
         video: 'ビデオ',
@@ -148,7 +149,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: '一番人気',
-      lastUpdated: 'Last updated: ',
+      lastUpdated: 'Last updated:',
       numberOfItems: 5,
     },
     footer: {
