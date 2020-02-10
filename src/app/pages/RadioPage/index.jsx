@@ -1,5 +1,5 @@
 import React from 'react';
-import compose from 'ramda/src/compose';
+import pipe from 'ramda/src/pipe';
 import RadioPageMain from '../../containers/RadioPageMain';
 
 import withContexts from '../../containers/PageHandlers/withContexts';
@@ -12,12 +12,12 @@ const RadioContainer = props => {
   return <RadioPageMain {...props} />;
 };
 
-const EnhancedRadioContainer = compose(
-  withContexts,
-  withPageWrapper,
-  withLoading,
-  withError,
+const EnhancedRadioContainer = pipe(
   withData,
+  withError,
+  withLoading,
+  withPageWrapper,
+  withContexts,
 )(RadioContainer);
 
 export default EnhancedRadioContainer;
