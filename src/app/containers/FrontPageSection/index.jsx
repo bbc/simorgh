@@ -94,6 +94,7 @@ const renderPromoList = (items, isFirstSection, dir) => {
       displayImages={row.displayImages}
       dir={dir}
       parentColumns={parentGridColumns}
+      parentEnableGelGutters
     />
   ));
 

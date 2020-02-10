@@ -446,7 +446,8 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 
 @media (max-width:14.9375rem) {
   .c32 {
-    width: calc(100%);
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
     display: inline-block;
     vertical-align: top;
   }
@@ -454,7 +455,8 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c32 {
-    width: calc(100%);
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
     display: inline-block;
     vertical-align: top;
   }
@@ -462,7 +464,8 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c32 {
-    width: calc(100%);
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
     display: inline-block;
     vertical-align: top;
   }
@@ -470,7 +473,8 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c32 {
-    width: calc(100%);
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
     display: inline-block;
     vertical-align: top;
   }
@@ -478,7 +482,8 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 
 @media (min-width:63rem) and (max-width:80rem) {
   .c32 {
-    width: calc(25%);
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
     display: inline-block;
     vertical-align: top;
   }
@@ -486,7 +491,8 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 
 @media (min-width:80rem) {
   .c32 {
-    width: calc(25%);
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
     display: inline-block;
     vertical-align: top;
   }

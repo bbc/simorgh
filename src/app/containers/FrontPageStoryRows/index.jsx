@@ -55,12 +55,16 @@ export const TopRow = ({
   isFirstSection,
   sectionHasSingleStory,
   dir,
+  parentColumns,
+  parentEnableGelGutters,
 }) => (
   <Grid
     item
     columns={topStoryColumns}
     as={!sectionHasSingleStory && StoryPromoLi}
     dir={dir}
+    parentColumns={parentColumns}
+    parentEnableGelGutters={parentEnableGelGutters}
   >
     {renderPromo({ item: stories[0], promoType: 'top', isFirstSection })}
   </Grid>
@@ -78,7 +82,12 @@ TopRow.defaultProps = {
   sectionHasSingleStory: false,
 };
 
-export const LeadingRow = ({ stories, dir, parentColumns }) => (
+export const LeadingRow = ({
+  stories,
+  dir,
+  parentColumns,
+  parentEnableGelGutters,
+}) => (
   <>
     <Grid
       item
@@ -87,6 +96,7 @@ export const LeadingRow = ({ stories, dir, parentColumns }) => (
       isBulletin={isBulletin(stories[0])}
       dir={dir}
       parentColumns={parentColumns}
+      parentEnableGelGutters={parentEnableGelGutters}
     >
       {renderPromo({ item: stories[0], promoType: 'leading' })}
     </Grid>
@@ -97,6 +107,7 @@ export const LeadingRow = ({ stories, dir, parentColumns }) => (
       isBulletin={isBulletin(stories[1])}
       dir={dir}
       parentColumns={parentColumns}
+      parentEnableGelGutters={parentEnableGelGutters}
     >
       {renderPromo({ item: stories[1], promoType: 'regular' })}
     </Grid>
@@ -111,7 +122,13 @@ LeadingRow.defaultProps = {
   ...rowDefaultProps,
 };
 
-export const RegularRow = ({ stories, displayImages, dir, parentColumns }) => (
+export const RegularRow = ({
+  stories,
+  displayImages,
+  dir,
+  parentColumns,
+  parentEnableGelGutters,
+}) => (
   <>
     {stories.map(story => (
       <Grid
@@ -122,6 +139,7 @@ export const RegularRow = ({ stories, displayImages, dir, parentColumns }) => (
         isBulletin={isBulletin(story)}
         dir={dir}
         parentColumns={parentColumns}
+        parentEnableGelGutters={parentEnableGelGutters}
       >
         {renderPromo({
           item: story,
