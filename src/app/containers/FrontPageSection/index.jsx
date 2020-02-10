@@ -94,7 +94,7 @@ const renderPromoList = (items, isFirstSection, dir) => {
       displayImages={row.displayImages}
       dir={dir}
       parentColumns={parentGridColumns}
-      parentEnableGelGutters
+      parentEnableGelGutters // value is set to true here and passed to each Row component's Grid item
     />
   ));
 
