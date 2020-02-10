@@ -68,4 +68,22 @@ describe('processBlock', () => {
 
     expect(processBlock(input)).toEqual(expected);
   });
+
+  it('should convert plain_text markup to candy_xml when the <link> tag is present', () => {
+    const input = {
+      text:
+        'paragraph including link <link><caption>this is a caption</caption><url href="www.example/com" platform="highweb"/></link>',
+      markupType: 'plain_text',
+      type: 'paragraph',
+    };
+
+    const expected = {
+      text:
+        'paragraph including link <link><caption>this is a caption</caption><url href="www.example/com" platform="highweb"/></link>',
+      markupType: 'candy_xml',
+      type: 'paragraph',
+    };
+
+    expect(processBlock(input)).toEqual(expected);
+  });
 });
