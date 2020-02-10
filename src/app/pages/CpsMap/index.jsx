@@ -1,5 +1,5 @@
 import React from 'react';
-import compose from 'ramda/src/compose';
+import pipe from 'ramda/src/pipe';
 import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
@@ -121,12 +121,12 @@ const CpsMapContainer = ({ pageData }) => {
 
 CpsMapContainer.propTypes = cpsAssetPagePropTypes;
 
-const EnhancedCpsMapContainer = compose(
-  withContexts,
-  withPageWrapper,
-  withLoading,
-  withError,
+const EnhancedCpsMapContainer = pipe(
   withData,
+  withError,
+  withLoading,
+  withPageWrapper,
+  withContexts,
 )(CpsMapContainer);
 
 export default EnhancedCpsMapContainer;
