@@ -74,9 +74,8 @@ const CpsMapContainer = ({ pageData }) => {
   };
 
   const StyledGhostGrid = styled(GhostGrid)`
-    flex-grow: 1;
+    width: 100%;
     padding-bottom: ${GEL_SPACING_TRPL};
-
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       padding-bottom: ${GEL_SPACING_QUAD};
     }
