@@ -1119,116 +1119,111 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 class="c10"
               >
                 <div
-                  class=""
-                  dir="ltr"
+                  class="c11"
                 >
                   <div
-                    class="c11"
+                    class="c12"
                   >
                     <div
-                      class="c12"
+                      class="c13"
                     >
                       <div
-                        class="c13"
+                        class="c14"
                       >
                         <div
-                          class="c14"
-                        >
-                          <div
-                            class="lazyload-placeholder"
-                          />
-                        </div>
-                        <div
-                          class="c15"
+                          class="lazyload-placeholder"
                         />
                       </div>
+                      <div
+                        class="c15"
+                      />
                     </div>
-                    <div
-                      class="c16"
+                  </div>
+                  <div
+                    class="c16"
+                  >
+                    <h3
+                      class="c17"
                     >
-                      <h3
-                        class="c17"
+                      <a
+                        class="c18"
+                        href="/pidgin/live/tori-48591362"
                       >
-                        <a
-                          class="c18"
-                          href="/pidgin/live/tori-48591362"
+                        <span
+                          role="text"
                         >
                           <span
-                            role="text"
+                            aria-hidden="true"
+                            class="c19"
+                            dir="ltr"
                           >
-                            <span
-                              aria-hidden="true"
-                              class="c19"
-                              dir="ltr"
-                            >
-                              LIVE
-                            </span>
-                            <span
-                              class="c0"
-                              lang="en-GB"
-                            >
-                              Live, 
-                            </span>
-                            Senators don begin vote for Senate President
+                            LIVE
                           </span>
-                        </a>
-                      </h3>
-                      <p
-                        class="c20"
-                      >
-                        Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
-                      </p>
-                      <time
-                        class="c21"
-                        datetime="2019-06-11"
-                      >
-                        11 Juun 2019
-                      </time>
-                      <div
-                        class="c22"
-                        data-e2e="index-alsos"
-                      >
-                        <h4
-                          class="c0"
-                        >
-                          Ihe ndị ọzọ n'akụkọ a
-                        </h4>
-                        <ul
-                          class="c23"
-                          role="list"
-                        >
-                          <li
-                            class="c24"
-                            role="listitem"
+                          <span
+                            class="c0"
+                            lang="en-GB"
                           >
-                            <a
-                              class="c25"
-                              href="/pidgin/tori-48591361"
-                            >
-                              <span
-                                class="c26"
-                              >
-                                Who go lead di Ninth National Assembly?
-                              </span>
-                            </a>
-                          </li>
-                          <li
-                            class="c24"
-                            role="listitem"
+                            Live, 
+                          </span>
+                          Senators don begin vote for Senate President
+                        </span>
+                      </a>
+                    </h3>
+                    <p
+                      class="c20"
+                    >
+                      Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
+                    </p>
+                    <time
+                      class="c21"
+                      datetime="2019-06-11"
+                    >
+                      11 Juun 2019
+                    </time>
+                    <div
+                      class="c22"
+                      data-e2e="index-alsos"
+                    >
+                      <h4
+                        class="c0"
+                      >
+                        Ihe ndị ọzọ n'akụkọ a
+                      </h4>
+                      <ul
+                        class="c23"
+                        role="list"
+                      >
+                        <li
+                          class="c24"
+                          role="listitem"
+                        >
+                          <a
+                            class="c25"
+                            href="/pidgin/tori-48591361"
                           >
-                            <a
-                              class="c25"
-                              href="/pidgin/tori-47603701"
+                            <span
+                              class="c26"
                             >
-                              <span
-                                class="c26"
-                              >
-                                4 tins wey go determine who become di next Senate President, Speaker
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
+                              Who go lead di Ninth National Assembly?
+                            </span>
+                          </a>
+                        </li>
+                        <li
+                          class="c24"
+                          role="listitem"
+                        >
+                          <a
+                            class="c25"
+                            href="/pidgin/tori-47603701"
+                          >
+                            <span
+                              class="c26"
+                            >
+                              4 tins wey go determine who become di next Senate President, Speaker
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
