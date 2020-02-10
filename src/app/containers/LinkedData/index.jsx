@@ -59,6 +59,7 @@ const LinkedData = ({
   const linkedData = {
     '@context': 'http://schema.org',
     '@type': type,
+    type,
     url: canonicalNonUkLink,
     publisher,
     image,

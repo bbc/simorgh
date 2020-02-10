@@ -39,6 +39,11 @@ import withData from '#containers/PageHandlers/withData';
 
 const CpsStyContainer = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
+  const type = path(
+    ['promo', 'passport', 'category', 'categoryName'],
+    pageData,
+  );
+  console.log(type);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
   const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
@@ -105,6 +110,7 @@ const CpsStyContainer = ({ pageData }) => {
       <LinkedData
         type="Article"
         seoTitle={title}
+        category={type}
         headline={title}
         description={summary}
         showAuthor
