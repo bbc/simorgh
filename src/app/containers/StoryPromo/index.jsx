@@ -94,7 +94,7 @@ const StoryPromoContainer = ({ item, lazyLoadImage, topStory }) => {
     ServiceContext,
   );
   const isAssetTypeCode = pathOr(null, ['assetTypeCode'], item);
-  const isContentTypePodcast =
+  const isStoryPromoPodcast =
     isAssetTypeCode === 'PRO' &&
     pathOr(null, ['contentType'], item) === 'Podcast';
   let headline;
@@ -142,7 +142,7 @@ const StoryPromoContainer = ({ item, lazyLoadImage, topStory }) => {
           {summary}
         </Summary>
       )}
-      {timestamp && !isContentTypePodcast && (
+      {timestamp && !isStoryPromoPodcast && (
         <Timestamp
           locale={datetimeLocale}
           timestamp={timestamp}
