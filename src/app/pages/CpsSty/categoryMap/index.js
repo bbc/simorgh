@@ -15,7 +15,7 @@ const categoryType = category => {
     Review: 'ReviewNewsArticle',
     'Ask the Audience': 'AskPublicNewsArticle',
   };
-  return dictonary[category] ?? 'NewsArticle';
+  return dictonary[category] ? dictonary[category] : 'NewsArticle';
 };
 
 export default categoryType;
