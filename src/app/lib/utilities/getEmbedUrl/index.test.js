@@ -57,7 +57,7 @@ const testCases = [
   },
   {
     description: `should build a CANONICAL url for articles in test environment with live override`,
-    expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
+    expected: `https://www.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -80,7 +80,7 @@ const testCases = [
   },
   {
     description: `should build a CANONICAL url for articles in live environment`,
-    expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
+    expected: `https://www.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
     environment: 'live',
     before: setEnvironment,
     embedObject: {
@@ -103,7 +103,7 @@ const testCases = [
   },
   {
     description: `should build a CANONICAL url for articles in live environment with test override`,
-    expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
+    expected: `https://www.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
     environment: 'live',
     before: setEnvironment,
     embedObject: {
@@ -126,7 +126,7 @@ const testCases = [
   },
   {
     description: `should build a CANONICAL url for articles in live environment with live override`,
-    expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
+    expected: `https://www.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
     environment: 'live',
     before: setEnvironment,
     embedObject: {
