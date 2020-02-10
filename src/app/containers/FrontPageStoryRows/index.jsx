@@ -57,18 +57,27 @@ export const TopRow = ({
   dir,
   parentColumns,
   parentEnableGelGutters,
-}) => (
-  <Grid
-    item
-    columns={topStoryColumns}
-    as={!sectionHasSingleStory && StoryPromoLi}
-    dir={dir}
-    parentColumns={parentColumns}
-    parentEnableGelGutters={parentEnableGelGutters}
-  >
-    {renderPromo({ item: stories[0], promoType: 'top', isFirstSection })}
-  </Grid>
-);
+}) => {
+  if (sectionHasSingleStory) {
+    return (
+      <div dir={dir}>
+        {renderPromo({ item: stories[0], promoType: 'top', isFirstSection })}
+      </div>
+    );
+  }
+  return (
+    <Grid
+      item
+      columns={topStoryColumns}
+      as={StoryPromoLi}
+      dir={dir}
+      parentColumns={parentColumns}
+      parentEnableGelGutters={parentEnableGelGutters}
+    >
+      {renderPromo({ item: stories[0], promoType: 'top', isFirstSection })}
+    </Grid>
+  );
+};
 
 TopRow.propTypes = {
   ...rowPropTypes,

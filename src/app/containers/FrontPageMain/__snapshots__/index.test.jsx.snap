@@ -19,7 +19,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   margin-top: 0.5rem;
 }
 
-.c42 {
+.c41 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -28,7 +28,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 0.75rem;
 }
 
-.c40 {
+.c39 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -37,7 +37,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 0.75rem;
 }
 
-.c43 {
+.c42 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -113,7 +113,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   width: 1px;
 }
 
-.c28 {
+.c27 {
   position: relative;
   margin-top: 2rem;
 }
@@ -123,26 +123,26 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   padding: 0;
 }
 
-.c31 {
+.c30 {
   padding: 0.5rem 0 1rem;
 }
 
-.c31:first-child {
+.c30:first-child {
   padding-top: 0;
 }
 
-.c31:last-child {
+.c30:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c29 {
+.c28 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c13 {
+.c12 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -150,43 +150,43 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   width: 100%;
 }
 
-.c34 {
+.c33 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c17 {
+.c16 {
   display: inline-block;
   vertical-align: top;
 }
 
-.c36 {
+.c35 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c12 {
+.c11 {
   position: relative;
 }
 
-.c33 {
+.c32 {
   position: relative;
 }
 
-.c14 {
+.c13 {
   position: relative;
 }
 
-.c16 {
+.c15 {
   position: absolute;
   bottom: 0;
 }
 
-.c18 {
+.c17 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -197,7 +197,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   line-height: 1.5rem;
 }
 
-.c37 {
+.c36 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -208,7 +208,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   line-height: 1.25rem;
 }
 
-.c21 {
+.c20 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -219,7 +219,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   padding-bottom: 0.5rem;
 }
 
-.c41 {
+.c40 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -230,14 +230,14 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   padding-bottom: 0.5rem;
 }
 
-.c19 {
+.c18 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c19:before {
+.c18:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -249,17 +249,17 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   z-index: 1;
 }
 
-.c19:hover,
-.c19:focus {
+.c18:hover,
+.c18:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c19:visited {
+.c18:visited {
   color: #6E6E73;
 }
 
-.c20 {
+.c19 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -268,7 +268,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   margin-right: 0.5rem;
 }
 
-.c15 {
+.c14 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -281,7 +281,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c22 {
+.c21 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -291,7 +291,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   font-style: normal;
 }
 
-.c38 {
+.c37 {
   padding: 0.5rem 0.25rem;
   background-color: #FFFFFF;
   display: block;
@@ -304,7 +304,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 2rem;
 }
 
-.c39 {
+.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -316,29 +316,29 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   height: 100%;
 }
 
-.c23 {
+.c22 {
   position: relative;
   z-index: 2;
   padding: 1rem 0 0;
 }
 
-.c25 {
+.c24 {
   border-top: 1px solid #F2F2F2;
   padding: 0.5rem 0;
 }
 
-.c24 {
+.c23 {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.c27 {
+.c26 {
   display: inline;
   vertical-align: middle;
 }
 
-.c26 {
+.c25 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -349,13 +349,13 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   text-decoration: none;
 }
 
-.c26:hover,
-.c26:focus {
+.c25:hover,
+.c25:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c26:visited {
+.c25:visited {
   color: #6E6E73;
 }
 
@@ -432,20 +432,14 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @supports (display:grid) {
-  .c11 {
-    display: block;
-  }
-}
-
-@supports (display:grid) {
-  .c30 {
+  .c29 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c32 {
+  .c31 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -454,7 +448,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c32 {
+  .c31 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -463,7 +457,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c32 {
+  .c31 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -472,7 +466,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c32 {
+  .c31 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -481,7 +475,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c32 {
+  .c31 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -490,7 +484,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:80rem) {
-  .c32 {
+  .c31 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -499,7 +493,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @supports (display:grid) {
-  .c32 {
+  .c31 {
     display: block;
   }
 }
@@ -585,90 +579,90 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:37.5rem) {
-  .c28 {
+  .c27 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c28 {
+  .c27 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c31 {
+  .c30 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c30 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c31 {
+  .c30 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c31:first-child {
+  .c30:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c12 {
     width: calc(50% - 0.5rem);
     margin-bottom: 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c13 {
+  .c12 {
     width: calc(50% - 0.5rem);
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c13 {
+  .c12 {
     width: initial;
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) {
-  .c34 {
+  .c33 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c34 {
+  .c33 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c16 {
     width: 50%;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c17 {
+  .c16 {
     width: 50%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c17 {
+  .c16 {
     display: block;
     width: initial;
     padding: initial;
@@ -677,13 +671,13 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:37.5rem) {
-  .c36 {
+  .c35 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c36 {
+  .c35 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -691,7 +685,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c36 {
+  .c35 {
     display: block;
     width: initial;
     padding: initial;
@@ -700,7 +694,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c12 {
+  .c11 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -708,7 +702,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c33 {
+  .c32 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -716,119 +710,119 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 }
 
 @media (min-width:25rem) {
-  .c35 {
+  .c34 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
+  .c17 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c17 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c37 {
+  .c36 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c37 {
+  .c36 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c21 {
+  .c20 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c21 {
+  .c20 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c21 {
+  .c20 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c41 {
+  .c40 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c41 {
+  .c40 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c41 {
+  .c40 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c41 {
+  .c40 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c21 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c21 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c38 {
+  .c37 {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c26 {
+  .c25 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c26 {
+  .c25 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -1125,38 +1119,38 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 class="c10"
               >
                 <div
-                  class="c11"
+                  class=""
                   dir="ltr"
                 >
                   <div
-                    class="c12"
+                    class="c11"
                   >
                     <div
-                      class="c13"
+                      class="c12"
                     >
                       <div
-                        class="c14"
+                        class="c13"
                       >
                         <div
-                          class="c15"
+                          class="c14"
                         >
                           <div
                             class="lazyload-placeholder"
                           />
                         </div>
                         <div
-                          class="c16"
+                          class="c15"
                         />
                       </div>
                     </div>
                     <div
-                      class="c17"
+                      class="c16"
                     >
                       <h3
-                        class="c18"
+                        class="c17"
                       >
                         <a
-                          class="c19"
+                          class="c18"
                           href="/pidgin/live/tori-48591362"
                         >
                           <span
@@ -1164,7 +1158,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           >
                             <span
                               aria-hidden="true"
-                              class="c20"
+                              class="c19"
                               dir="ltr"
                             >
                               LIVE
@@ -1180,18 +1174,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                         </a>
                       </h3>
                       <p
-                        class="c21"
+                        class="c20"
                       >
                         Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
                       </p>
                       <time
-                        class="c22"
+                        class="c21"
                         datetime="2019-06-11"
                       >
                         11 Juun 2019
                       </time>
                       <div
-                        class="c23"
+                        class="c22"
                         data-e2e="index-alsos"
                       >
                         <h4
@@ -1200,34 +1194,34 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           Ihe ndị ọzọ n'akụkọ a
                         </h4>
                         <ul
-                          class="c24"
+                          class="c23"
                           role="list"
                         >
                           <li
-                            class="c25"
+                            class="c24"
                             role="listitem"
                           >
                             <a
-                              class="c26"
+                              class="c25"
                               href="/pidgin/tori-48591361"
                             >
                               <span
-                                class="c27"
+                                class="c26"
                               >
                                 Who go lead di Ninth National Assembly?
                               </span>
                             </a>
                           </li>
                           <li
-                            class="c25"
+                            class="c24"
                             role="listitem"
                           >
                             <a
-                              class="c26"
+                              class="c25"
                               href="/pidgin/tori-47603701"
                             >
                               <span
-                                class="c27"
+                                class="c26"
                               >
                                 4 tins wey go determine who become di next Senate President, Speaker
                               </span>
@@ -1245,7 +1239,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               role="region"
             >
               <div
-                class="c28"
+                class="c27"
               >
                 <div
                   class="c5"
@@ -1271,51 +1265,51 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </h2>
               </div>
               <ul
-                class="c29 c30"
+                class="c28 c29"
                 dir="ltr"
                 role="list"
               >
                 <li
-                  class="c31 c32"
+                  class="c30 c31"
                   dir="ltr"
                   role="listitem"
                 >
                   <div
-                    class="c33"
+                    class="c32"
                   >
                     <div
-                      class="c34"
+                      class="c33"
                     >
                       <div
-                        class="c14"
+                        class="c13"
                       >
                         <div
-                          class="c15"
+                          class="c14"
                         >
                           <div
                             class="lazyload-placeholder"
                           />
                         </div>
                         <div
-                          class="c35"
+                          class="c34"
                         />
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c35"
                     >
                       <h3
-                        class="c37"
+                        class="c36"
                       >
                         <a
-                          class="c19"
+                          class="c18"
                           href="https://www.bbc.com/pidgin/sport-44416820"
                         >
                           Take dis predictor choose who go reach World Cup final
                         </a>
                       </h3>
                       <time
-                        class="c22"
+                        class="c21"
                         datetime="2018-06-14"
                       >
                         14 Juun 2018
@@ -1324,39 +1318,39 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   </div>
                 </li>
                 <li
-                  class="c31 c32"
+                  class="c30 c31"
                   dir="ltr"
                   role="listitem"
                 >
                   <div
-                    class="c33"
+                    class="c32"
                   >
                     <div
-                      class="c34"
+                      class="c33"
                     >
                       <div
-                        class="c14"
+                        class="c13"
                       >
                         <div
-                          class="c15"
+                          class="c14"
                         >
                           <div
                             class="lazyload-placeholder"
                           />
                         </div>
                         <div
-                          class="c35"
+                          class="c34"
                         >
                           <div
                             aria-hidden="true"
-                            class="c38"
+                            class="c37"
                           >
                             <div
-                              class="c39"
+                              class="c38"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="c40"
+                                class="c39"
                                 focusable="false"
                                 height="12px"
                                 viewBox="0 0 13 12"
@@ -1375,25 +1369,25 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c35"
                     >
                       <h3
-                        class="c37"
+                        class="c36"
                       >
                         <a
-                          class="c19"
+                          class="c18"
                           href="http://www.bbc.com/pidgin"
                         >
                           Audio promo
                         </a>
                       </h3>
                       <p
-                        class="c41"
+                        class="c40"
                       >
                         Summary
                       </p>
                       <time
-                        class="c22"
+                        class="c21"
                         datetime="2019-08-06"
                       >
                         6 Ọgọọst 2019
@@ -1402,46 +1396,46 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   </div>
                 </li>
                 <li
-                  class="c31 c32"
+                  class="c30 c31"
                   dir="ltr"
                   role="listitem"
                 >
                   <div
-                    class="c33"
+                    class="c32"
                   >
                     <div
-                      class="c34"
+                      class="c33"
                     >
                       <div
-                        class="c14"
+                        class="c13"
                       >
                         <div
-                          class="c15"
+                          class="c14"
                         >
                           <div
                             class="lazyload-placeholder"
                           />
                         </div>
                         <div
-                          class="c35"
+                          class="c34"
                         />
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c35"
                     >
                       <h3
-                        class="c37"
+                        class="c36"
                       >
                         <a
-                          class="c19"
+                          class="c18"
                           href="https://www.bbc.com/pidgin/sport-44439411"
                         >
                           World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
                         </a>
                       </h3>
                       <time
-                        class="c22"
+                        class="c21"
                         datetime="2018-06-14"
                       >
                         14 Juun 2018
@@ -1450,46 +1444,46 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   </div>
                 </li>
                 <li
-                  class="c31 c32"
+                  class="c30 c31"
                   dir="ltr"
                   role="listitem"
                 >
                   <div
-                    class="c33"
+                    class="c32"
                   >
                     <div
-                      class="c34"
+                      class="c33"
                     >
                       <div
-                        class="c14"
+                        class="c13"
                       >
                         <div
-                          class="c15"
+                          class="c14"
                         >
                           <div
                             class="lazyload-placeholder"
                           />
                         </div>
                         <div
-                          class="c35"
+                          class="c34"
                         />
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c35"
                     >
                       <h3
-                        class="c37"
+                        class="c36"
                       >
                         <a
-                          class="c19"
+                          class="c18"
                           href="https://www.bbc.com/pidgin/sport-44425543"
                         >
                           Select your best ever African 11 players for World Cup
                         </a>
                       </h3>
                       <time
-                        class="c22"
+                        class="c21"
                         datetime="2018-06-14"
                       >
                         14 Juun 2018
@@ -1498,46 +1492,46 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   </div>
                 </li>
                 <li
-                  class="c31 c32"
+                  class="c30 c31"
                   dir="ltr"
                   role="listitem"
                 >
                   <div
-                    class="c33"
+                    class="c32"
                   >
                     <div
-                      class="c34"
+                      class="c33"
                     >
                       <div
-                        class="c14"
+                        class="c13"
                       >
                         <div
-                          class="c15"
+                          class="c14"
                         >
                           <div
                             class="lazyload-placeholder"
                           />
                         </div>
                         <div
-                          class="c35"
+                          class="c34"
                         />
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c35"
                     >
                       <h3
-                        class="c37"
+                        class="c36"
                       >
                         <a
-                          class="c19"
+                          class="c18"
                           href="https://www.bbc.com/pidgin/sport-44425543"
                         >
                           Select your best ever African 11 players for World Cup as a feature
                         </a>
                       </h3>
                       <time
-                        class="c22"
+                        class="c21"
                         datetime="2018-06-14"
                       >
                         14 Juun 2018
@@ -1546,39 +1540,39 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   </div>
                 </li>
                 <li
-                  class="c31 c32"
+                  class="c30 c31"
                   dir="ltr"
                   role="listitem"
                 >
                   <div
-                    class="c33"
+                    class="c32"
                   >
                     <div
-                      class="c34"
+                      class="c33"
                     >
                       <div
-                        class="c14"
+                        class="c13"
                       >
                         <div
-                          class="c15"
+                          class="c14"
                         >
                           <div
                             class="lazyload-placeholder"
                           />
                         </div>
                         <div
-                          class="c35"
+                          class="c34"
                         >
                           <div
                             aria-hidden="true"
-                            class="c38"
+                            class="c37"
                           >
                             <div
-                              class="c39"
+                              class="c38"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="c42"
+                                class="c41"
                                 focusable="false"
                                 height="12px"
                                 viewBox="0 0 32 32"
@@ -1594,20 +1588,20 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c35"
                     >
                       <h3
-                        class="c37"
+                        class="c36"
                       >
                         <a
-                          class="c19"
+                          class="c18"
                           href="https://www.bbc.com/pidgin/sport-44425543"
                         >
                           Select your best ever African 11 players for World Cup - Video
                         </a>
                       </h3>
                       <time
-                        class="c22"
+                        class="c21"
                         datetime="2018-06-14"
                       >
                         14 Juun 2018
@@ -1616,46 +1610,46 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   </div>
                 </li>
                 <li
-                  class="c31 c32"
+                  class="c30 c31"
                   dir="ltr"
                   role="listitem"
                 >
                   <div
-                    class="c33"
+                    class="c32"
                   >
                     <div
-                      class="c34"
+                      class="c33"
                     >
                       <div
-                        class="c14"
+                        class="c13"
                       >
                         <div
-                          class="c15"
+                          class="c14"
                         >
                           <div
                             class="lazyload-placeholder"
                           />
                         </div>
                         <div
-                          class="c35"
+                          class="c34"
                         />
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c35"
                     >
                       <h3
-                        class="c37"
+                        class="c36"
                       >
                         <a
-                          class="c19"
+                          class="c18"
                           href="https://www.bbc.com/pidgin/sport-44214129"
                         >
                           World Cup 2018: Di top stars wey no dey go World Cup
                         </a>
                       </h3>
                       <time
-                        class="c22"
+                        class="c21"
                         datetime="2018-06-14"
                       >
                         14 Juun 2018
@@ -1664,39 +1658,39 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   </div>
                 </li>
                 <li
-                  class="c31 c32"
+                  class="c30 c31"
                   dir="ltr"
                   role="listitem"
                 >
                   <div
-                    class="c33"
+                    class="c32"
                   >
                     <div
-                      class="c34"
+                      class="c33"
                     >
                       <div
-                        class="c14"
+                        class="c13"
                       >
                         <div
-                          class="c15"
+                          class="c14"
                         >
                           <div
                             class="lazyload-placeholder"
                           />
                         </div>
                         <div
-                          class="c35"
+                          class="c34"
                         >
                           <div
                             aria-hidden="true"
-                            class="c38"
+                            class="c37"
                           >
                             <div
-                              class="c39"
+                              class="c38"
                             >
                               <svg
                                 aria-hidden="true"
-                                class="c43"
+                                class="c42"
                                 focusable="false"
                                 height="13px"
                                 viewBox="0 0 32 26"
@@ -1717,20 +1711,20 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       </div>
                     </div>
                     <div
-                      class="c36"
+                      class="c35"
                     >
                       <h3
-                        class="c37"
+                        class="c36"
                       >
                         <a
-                          class="c19"
+                          class="c18"
                           href="http://www.bbc.com/azeri"
                         >
                           Gallery promo
                         </a>
                       </h3>
                       <time
-                        class="c22"
+                        class="c21"
                         datetime="2019-08-07"
                       >
                         7 Ọgọọst 2019
