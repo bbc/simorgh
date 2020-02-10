@@ -1,6 +1,6 @@
 import React from 'react';
 import { shape } from 'prop-types';
-import compose from 'ramda/src/compose';
+import pipe from 'ramda/src/pipe';
 import frontPagePropTypes from '#models/propTypes/frontPage';
 import FrontPageMain from '../../containers/FrontPageMain';
 
@@ -23,13 +23,13 @@ FrontPageContainer.defaultProps = {
   pageData: null,
 };
 
-const EnhancedFrontPageContainer = compose(
-  withVariant,
-  withContexts,
-  withPageWrapper,
-  withLoading,
-  withError,
+const EnhancedFrontPageContainer = pipe(
   withData,
+  withError,
+  withLoading,
+  withPageWrapper,
+  withContexts,
+  withVariant,
 )(FrontPageContainer);
 
 export default EnhancedFrontPageContainer;
