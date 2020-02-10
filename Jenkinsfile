@@ -283,7 +283,7 @@ pipeline {
       script {
         getCommitInfo()
       }
-      junit "${env.APP_DIRECTORY}/reports/jest/*.xml"
+      junit "**/reports/jest/*.xml"
       // Clean the workspace
       cleanWs()
     }
