@@ -39,7 +39,7 @@ const Asset = props => {
       return CpsPgl({ ...props, pageType: type });
     case MEDIA_ASSET_PAGE:
       return MediaAssetPage({ ...props, pageType: type });
-    case FEATURE_INDEX_PAGE: // TODO: Create FIX Page if required
+    case FEATURE_INDEX_PAGE:
       return FrontPage({ ...props, pageType: type });
     default:
       // Return 404 error page if page type does not match those above
