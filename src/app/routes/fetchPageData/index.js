@@ -1,11 +1,8 @@
 import 'isomorphic-fetch';
-import path from 'ramda/src/path';
 import nodeLogger from '#lib/logger.node';
-import preprocess from '#lib/utilities/preprocessor';
 import onClient from '#lib/utilities/onClient';
 import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
 import getBaseUrl from './utils/getBaseUrl';
-import getPreprocessorRules from './utils/getPreprocessorRules';
 import isLive from '#lib/utilities/isLive';
 
 const logger = nodeLogger(__filename);
@@ -33,22 +30,12 @@ export const getUrl = pathname => {
 
 const handleResponse = async response => {
   const { status } = response;
+  const isOK = status === STATUS_CODE_OK;
 
-  if (status === STATUS_CODE_OK) {
-    const pageData = await response.json();
-    const type = path(['metadata', 'type'], pageData);
-    const processedPageData = await preprocess(
-      pageData,
-      getPreprocessorRules(type),
-    );
-
-    return {
-      status,
-      pageData: processedPageData,
-    };
-  }
-
-  return { status };
+  return {
+    status,
+    ...(isOK && { pageData: await response.json() }),
+  };
 };
 
 const checkForError = pathname => ({ status, pageData }) => {
