@@ -142,17 +142,17 @@ pipeline {
             }
           }
         }
-        stage ('Test Production') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            runProductionTests()
-          }
-        }
+        // stage ('Test Production') {
+        //   agent {
+        //     docker {
+        //       image "${nodeImage}"
+        //       args '-u root -v /etc/pki:/certs'
+        //     }
+        //   }
+        //   steps {
+        //     runProductionTests()
+        //   }
+        // }
       }
       post {
         always {
@@ -182,50 +182,50 @@ pipeline {
             }
           }
         }
-        stage ('Test Production and Zip Production') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            // Testing
-            runProductionTests()
+        // stage ('Test Production and Zip Production') {
+        //   agent {
+        //     docker {
+        //       image "${nodeImage}"
+        //       args '-u root -v /etc/pki:/certs'
+        //     }
+        //   }
+        //   steps {
+        //     // Testing
+        //     runProductionTests()
 
-            script {
-              getCommitInfo()
-              Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
-            }
+        //     script {
+        //       getCommitInfo()
+        //       Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
+        //     }
 
-            // Moving files necessary for production to `pack` directory.
-            sh "./scripts/jenkinsProductionFiles.sh"
+        //     // Moving files necessary for production to `pack` directory.
+        //     sh "./scripts/jenkinsProductionFiles.sh"
 
-            script {
-              sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
-            }
+        //     script {
+        //       sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
+        //     }
 
-            sh "rm -f ${packageName}"
-            zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
-            stash name: 'simorgh', includes: packageName
-            sh "rm -rf pack"
-          }
-        }
-        stage ('Build storybook dist') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            sh "rm -f storybook.zip"
-            sh 'make install'
-            sh 'make buildStorybook'
-            zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
-            stash name: 'simorgh_storybook', includes: storybookDist
-          }
-        }
+        //     sh "rm -f ${packageName}"
+        //     zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
+        //     stash name: 'simorgh', includes: packageName
+        //     sh "rm -rf pack"
+        //   }
+        // }
+        // stage ('Build storybook dist') {
+        //   agent {
+        //     docker {
+        //       image "${nodeImage}"
+        //       args '-u root -v /etc/pki:/certs'
+        //     }
+        //   }
+        //   steps {
+        //     sh "rm -f storybook.zip"
+        //     sh 'make install'
+        //     sh 'make buildStorybook'
+        //     zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
+        //     stash name: 'simorgh_storybook', includes: storybookDist
+        //   }
+        // }
         stage ('Build Static Assets') {
           agent {
             docker {
@@ -283,7 +283,7 @@ pipeline {
       script {
         getCommitInfo()
       }
-      junit "**/reports/jest/*.xml"
+      junit "./reports/*.xml"
       // Clean the workspace
       // cleanWs()
     }

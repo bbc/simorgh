@@ -8,7 +8,7 @@ module.exports = {
       {
         suiteName: 'Jest Tests',
         outputDirectory: './reports/jest',
-        uniqueOutputName: 'true',
+        // uniqueOutputName: 'true',
         ancestorSeparator: ' › ',
       },
     ],
