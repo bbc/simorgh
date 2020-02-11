@@ -285,7 +285,7 @@ pipeline {
       }
       junit "**/reports/jest/*.xml"
       // Clean the workspace
-      cleanWs()
+      // cleanWs()
     }
     aborted {
       script {
