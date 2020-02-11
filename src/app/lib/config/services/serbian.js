@@ -90,7 +90,7 @@ export const service = {
     mostRead: {
       header: 'Najčitanije',
       lastUpdated: 'Poslednji put ažurirano ',
-      numberOfItems: 5,
+      numberOfItems: 10,
       hasMostRead: true,
     },
     navigation: [
@@ -281,7 +281,7 @@ export const service = {
     mostRead: {
       header: 'Најчитаније',
       lastUpdated: 'Последњи пут ажурирано:',
-      numberOfItems: 5,
+      numberOfItems: 10,
       hasMostRead: true,
     },
     navigation: [

@@ -150,7 +150,7 @@ export const service = {
     mostRead: {
       header: 'Đọc nhiều nhất',
       lastUpdated: 'Cập nhật gần nhất:',
-      numberOfItems: 5,
+      numberOfItems: 10,
       hasMostRead: true,
     },
     footer: {

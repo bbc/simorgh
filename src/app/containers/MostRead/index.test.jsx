@@ -66,6 +66,18 @@ describe('MostReadContainerCanonical', () => {
       expect(container.querySelectorAll('li').length).toEqual(0);
       expect(container.innerHTML).toEqual('');
     });
+
+    it(`should return empty string on AMP pages - ${service}`, async () => {
+      const { variant } = services[service];
+      await renderMostReadContainer({
+        container,
+        isAmp: true,
+        service,
+        variant,
+      });
+      expect(container.querySelectorAll('li').length).toEqual(0);
+      expect(container.innerHTML).toEqual('');
+    });
   });
 
   it(`should return empty string when mostRead service toggle is disabled`, async () => {

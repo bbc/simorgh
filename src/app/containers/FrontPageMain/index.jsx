@@ -2,6 +2,7 @@
 import React, { Fragment, useContext } from 'react';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import path from 'ramda/src/path';
+import findIndex from 'ramda/src/findIndex';
 import Grid, { FrontPageGrid } from '#app/components/Grid';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -66,8 +67,9 @@ const FrontPageMain = ({ frontPageData }) => {
     </span>
   );
 
+  // Most Read is required to render above useful-links if it exists
   const hasUsefulLinks =
-    groups.findIndex(group => group.type === 'useful links') > -1;
+    findIndex(group => group.type === 'useful-links')(groups) > -1;
 
   return (
     <>
@@ -93,9 +95,7 @@ const FrontPageMain = ({ frontPageData }) => {
           >
             {groups.map((group, index) => (
               <Fragment key={group.title}>
-                {group.semanticGroupName === 'Useful links' && (
-                  <MostReadContainer />
-                )}
+                {group.type === 'useful-links' && <MostReadContainer />}
                 <FrontPageSection group={group} sectionNumber={index} />
               </Fragment>
             ))}

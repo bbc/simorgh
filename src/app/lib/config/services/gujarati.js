@@ -158,7 +158,7 @@ export const service = {
     mostRead: {
       header: 'સૌથી વધારે વંચાયેલા સમાચાર',
       lastUpdated: 'લાસ્ટ અપડેટ:',
-      numberOfItems: 5,
+      numberOfItems: 10,
       hasMostRead: true,
     },
     footer: {

@@ -162,7 +162,7 @@ export const service = {
     mostRead: {
       header: 'Más leídas',
       lastUpdated: 'Última actualización:',
-      numberOfItems: 5,
+      numberOfItems: 10,
       hasMostRead: true,
     },
     footer: {
