@@ -77,16 +77,17 @@ const parentGridColumns = {
   group5: 8,
 };
 
-const renderPromoList = (items, isFirstSection, dir) => {
+const renderPromos = (items, isFirstSection, dir) => {
   // We have a cap on the number of allowed items per section
   const allowedItems = getAllowedItems(items, isFirstSection);
-  const rows = getRowDetails(getRows(allowedItems, isFirstSection));
+  const rows = getRows(allowedItems, isFirstSection);
+  const rowsDetails = getRowDetails(rows);
 
   // Only use StoryPromoUl and Li if there is only one story in one row
   const sectionHasSingleStory =
-    rows.length === 1 && rows[0].stories.length === 1;
+    rowsDetails.length === 1 && rowsDetails[0].stories.length === 1;
 
-  const renderedRows = rows.map(row => (
+  const renderedRows = rowsDetails.map(row => (
     <row.RowComponent
       key={row.stories[0].id}
       stories={row.stories}
@@ -105,7 +106,7 @@ const renderPromoList = (items, isFirstSection, dir) => {
       oneItem={!!sectionHasSingleStory}
     >
       {sectionHasSingleStory ? (
-        <TopRow stories={items} sectionHasSingleStory dir={dir} />
+        <TopRow stories={items} dir={dir} sectionHasSingleStory />
       ) : (
         <Grid
           columns={parentGridColumns}
@@ -127,7 +128,7 @@ const sectionBody = (group, items, script, service, isFirstSection, dir) => {
     );
   }
 
-  return renderPromoList(items, isFirstSection, dir);
+  return renderPromos(items, isFirstSection, dir);
 };
 
 const removeFirstSlotRadioBulletin = dropWhile(

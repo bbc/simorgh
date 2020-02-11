@@ -41,6 +41,7 @@ const renderPromo = ({
  * They all take in an array of story items and a dir.
  */
 
+// These propTypes are common to the three Row Types
 const rowPropTypes = {
   stories: arrayOf(shape(storyItem)).isRequired,
   dir: oneOf(['ltr', 'rtl']),
@@ -116,7 +117,7 @@ export const LeadingRow = ({
       parentColumns={parentColumns}
       parentEnableGelGutters={parentEnableGelGutters}
     >
-      {renderPromo({ item: stories[1], promoType: 'regular' })}
+      {renderPromo({ item: stories[1] })}
     </Grid>
   </>
 );
@@ -150,7 +151,6 @@ export const RegularRow = ({
       >
         {renderPromo({
           item: story,
-          promoType: 'regular',
           displayImage: displayImages,
         })}
       </Grid>
