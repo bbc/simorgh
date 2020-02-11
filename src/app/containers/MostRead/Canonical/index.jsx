@@ -64,45 +64,41 @@ const CanonicalMostRead = ({ endpoint }) => {
     fetchMostReadData(endpoint);
   }, [endpoint, numberOfItems, datetimeLocale, lastUpdated, script, service]);
 
-  return (
-    <>
-      {items.length ? (
-        // eslint-disable-next-line jsx-a11y/no-redundant-roles
-        <section role="region" aria-labelledby="Most-Read">
-          <SectionLabel
-            script={script}
-            labelId="Most-Read"
-            service={service}
-            dir={dir}
-          >
-            {header}
-          </SectionLabel>
-          <MostReadList numberOfItems={items.length} dir={dir}>
-            {items.map((item, i) => (
-              <MostReadItemWrapper dir={dir} key={item.id}>
-                <MostReadRank
-                  service={service}
-                  script={script}
-                  listIndex={i + 1}
-                  numberOfItems={items.length}
-                  dir={dir}
-                />
-                <MostReadLink
-                  dir={dir}
-                  service={service}
-                  script={script}
-                  title={item.title}
-                  href={item.href}
-                >
-                  {item.timestamp}
-                </MostReadLink>
-              </MostReadItemWrapper>
-            ))}
-          </MostReadList>
-        </section>
-      ) : null}
-    </>
-  );
+  return items.length ? (
+    // eslint-disable-next-line jsx-a11y/no-redundant-roles
+    <section role="region" aria-labelledby="Most-Read">
+      <SectionLabel
+        script={script}
+        labelId="Most-Read"
+        service={service}
+        dir={dir}
+      >
+        {header}
+      </SectionLabel>
+      <MostReadList numberOfItems={items.length} dir={dir}>
+        {items.map((item, i) => (
+          <MostReadItemWrapper dir={dir} key={item.id}>
+            <MostReadRank
+              service={service}
+              script={script}
+              listIndex={i + 1}
+              numberOfItems={items.length}
+              dir={dir}
+            />
+            <MostReadLink
+              dir={dir}
+              service={service}
+              script={script}
+              title={item.title}
+              href={item.href}
+            >
+              {item.timestamp}
+            </MostReadLink>
+          </MostReadItemWrapper>
+        ))}
+      </MostReadList>
+    </section>
+  ) : null;
 };
 
 CanonicalMostRead.propTypes = {
