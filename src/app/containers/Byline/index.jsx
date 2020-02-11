@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import Byline from '@bbc/psammead-byline';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { string } from 'prop-types';
+import bylineBlockPropTypes from '#models/propTypes/byline';
 
 const BylineContainer = ({ blocks }) => {
+  const { service } = useContext(ServiceContext);
+
   if (!blocks) {
     return null;
   }
-
-  const { service } = useContext(ServiceContext);
 
   const { name, title } = blocks[0];
 
@@ -18,9 +18,6 @@ const BylineContainer = ({ blocks }) => {
   return null;
 };
 
-BylineContainer.propTypes = {
-  name: string,
-  title: string,
-};
+BylineContainer.propTypes = bylineBlockPropTypes;
 
 export default BylineContainer;
