@@ -79,7 +79,15 @@ const CanonicalMostRead = ({ endpoint }) => {
         .then(handleResponse)
         .catch(e => logger.error(`HTTP Error: "${e}"`));
     fetchMostReadData(endpoint);
-  }, [endpoint, numberOfItems, datetimeLocale, lastUpdated, script, service]);
+  }, [
+    endpoint,
+    numberOfItems,
+    datetimeLocale,
+    lastUpdated,
+    script,
+    service,
+    timezone,
+  ]);
 
   return items.length ? (
     // eslint-disable-next-line jsx-a11y/no-redundant-roles
