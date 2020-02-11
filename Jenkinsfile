@@ -283,7 +283,7 @@ pipeline {
       script {
         getCommitInfo()
       }
-      junit "./reports/*.xml"
+      junit "reports/*.xml"
       // Clean the workspace
       // cleanWs()
     }
