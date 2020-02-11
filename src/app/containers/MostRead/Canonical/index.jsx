@@ -23,6 +23,7 @@ const CanonicalMostRead = ({ endpoint }) => {
     script,
     dir,
     datetimeLocale,
+    timezone,
     mostRead: { header, lastUpdated, numberOfItems },
   } = useContext(ServiceContext);
 
@@ -49,6 +50,7 @@ const CanonicalMostRead = ({ endpoint }) => {
                 service={service}
                 timestamp={timestamp}
                 locale={datetimeLocale}
+                timezone={timezone}
               />
             ),
           }));
