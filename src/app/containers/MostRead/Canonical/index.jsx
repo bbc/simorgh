@@ -1,34 +1,20 @@
 import React, { useEffect, useState, useContext } from 'react';
-import styled from 'styled-components';
+
 import 'isomorphic-fetch';
 import { string } from 'prop-types';
-import { MostRead } from '@bbc/psammead-most-read';
 import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MAX,
-  GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
-import {
-  GEL_MARGIN_ABOVE_400PX,
-  GEL_MARGIN_BELOW_400PX,
-} from '@bbc/gel-foundations/spacings';
+  MostReadList,
+  MostReadItemWrapper,
+  MostReadRank,
+  MostReadLink,
+} from '@bbc/psammead-most-read';
+import SectionLabel from '@bbc/psammead-section-label';
 import { ServiceContext } from '#contexts/ServiceContext';
 import webLogger from '#lib/logger.web';
 import { mostReadRecordIsFresh, shouldRenderLastUpdated } from '../utilities';
 import LastUpdated from './LastUpdated';
 
 const logger = webLogger();
-
-const StyledMostRead = styled(MostRead)`
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX};
-  }
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    margin: 0 auto;
-    max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
-  }
-  margin: 0 ${GEL_MARGIN_BELOW_400PX};
-`;
 
 const CanonicalMostRead = ({ endpoint }) => {
   const [items, setItems] = useState([]);
@@ -37,6 +23,7 @@ const CanonicalMostRead = ({ endpoint }) => {
     script,
     dir,
     datetimeLocale,
+    timezone,
     mostRead: { header, lastUpdated, numberOfItems },
   } = useContext(ServiceContext);
 
@@ -63,6 +50,7 @@ const CanonicalMostRead = ({ endpoint }) => {
                 service={service}
                 timestamp={timestamp}
                 locale={datetimeLocale}
+                timezone={timezone}
               />
             ),
           }));
@@ -76,16 +64,45 @@ const CanonicalMostRead = ({ endpoint }) => {
     fetchMostReadData(endpoint);
   }, [endpoint, numberOfItems, datetimeLocale, lastUpdated, script, service]);
 
-  return items.length ? (
-    <StyledMostRead
-      items={items}
-      header={header}
-      service={service}
-      script={script}
-      dir={dir}
-      labelId="Most-Read"
-    />
-  ) : null;
+  return (
+    <>
+      {items.length ? (
+        // eslint-disable-next-line jsx-a11y/no-redundant-roles
+        <section role="region" aria-labelledby="Most-Read">
+          <SectionLabel
+            script={script}
+            labelId="Most-Read"
+            service={service}
+            dir={dir}
+          >
+            {header}
+          </SectionLabel>
+          <MostReadList numberOfItems={items.length} dir={dir}>
+            {items.map((item, i) => (
+              <MostReadItemWrapper dir={dir} key={item.id}>
+                <MostReadRank
+                  service={service}
+                  script={script}
+                  listIndex={i + 1}
+                  numberOfItems={items.length}
+                  dir={dir}
+                />
+                <MostReadLink
+                  dir={dir}
+                  service={service}
+                  script={script}
+                  title={item.title}
+                  href={item.href}
+                >
+                  {item.timestamp}
+                </MostReadLink>
+              </MostReadItemWrapper>
+            ))}
+          </MostReadList>
+        </section>
+      ) : null}
+    </>
+  );
 };
 
 CanonicalMostRead.propTypes = {

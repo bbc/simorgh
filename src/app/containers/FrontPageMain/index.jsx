@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import path from 'ramda/src/path';
 import Grid, { FrontPageGrid } from '#app/components/Grid';
@@ -66,6 +66,9 @@ const FrontPageMain = ({ frontPageData }) => {
     </span>
   );
 
+  const hasUsefulLinks =
+    groups.findIndex(group => group.type === 'useful links') > -1;
+
   return (
     <>
       <ATIAnalytics data={frontPageData} />
@@ -89,15 +92,16 @@ const FrontPageMain = ({ frontPageData }) => {
             margins={itemMargins}
           >
             {groups.map((group, index) => (
-              <FrontPageSection
-                key={group.title}
-                group={group}
-                sectionNumber={index}
-              />
+              <Fragment key={group.title}>
+                {group.semanticGroupName === 'Useful links' && (
+                  <MostReadContainer />
+                )}
+                <FrontPageSection group={group} sectionNumber={index} />
+              </Fragment>
             ))}
+            {!hasUsefulLinks && <MostReadContainer />}
           </Grid>
         </FrontPageGrid>
-        <MostReadContainer />
       </main>
     </>
   );
