@@ -1,4 +1,6 @@
 import express from 'express';
+// eslint-disable-next-line no-unused-vars
+import axios from 'axios';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
 import path from 'path';
