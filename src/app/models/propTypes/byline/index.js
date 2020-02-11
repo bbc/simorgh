@@ -1,5 +1,12 @@
-import { blocksWithTypes } from '../general';
+import { string, shape, arrayOf } from 'prop-types';
 
-const bylineBlockPropTypes = blocksWithTypes(['title', 'name']);
+const bylineBlockPropTypes = {
+  blocks: arrayOf(
+    shape({
+      title: string,
+      name: string,
+    }),
+  ),
+};
 
 export default bylineBlockPropTypes;
