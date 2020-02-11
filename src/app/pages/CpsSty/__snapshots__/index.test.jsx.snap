@@ -405,60 +405,6 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c37 {
-    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c37 {
-    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c37 {
-    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c37 {
-    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c37 {
-    width: calc(3/12*(100% - 12 * 1rem) + 2 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c37 {
-    width: calc(3/12*(100% - 12 * 1rem) + 2 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
 @supports (display:grid) {
   .c37 {
     display: block;
@@ -1401,40 +1347,36 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                 </aside>
               </main>
               <div
-                class="c37"
+                class="c37 c38"
                 dir="ltr"
               >
                 <div
-                  class="c38"
+                  class="c39"
                 >
-                  <div
-                    class="c39"
-                  >
-                    <h2>
-                      This is a component in the second column
-                    </h2>
-                  </div>
-                  <div
-                    class="c39"
-                  >
-                    <h2>
-                      This is a component in the second column
-                    </h2>
-                  </div>
-                  <div
-                    class="c39"
-                  >
-                    <h2>
-                      This is a component in the second column
-                    </h2>
-                  </div>
-                  <div
-                    class="c39"
-                  >
-                    <h2>
-                      This is a component in the second column
-                    </h2>
-                  </div>
+                  <h2>
+                    This is a component in the second column
+                  </h2>
+                </div>
+                <div
+                  class="c39"
+                >
+                  <h2>
+                    This is a component in the second column
+                  </h2>
+                </div>
+                <div
+                  class="c39"
+                >
+                  <h2>
+                    This is a component in the second column
+                  </h2>
+                </div>
+                <div
+                  class="c39"
+                >
+                  <h2>
+                    This is a component in the second column
+                  </h2>
                 </div>
               </div>
             </div>
@@ -1866,60 +1808,6 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .c2 {
     display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c39 {
-    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c39 {
-    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c39 {
-    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c39 {
-    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c39 {
-    width: calc(3/12*(100% - 12 * 1rem) + 2 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c39 {
-    width: calc(3/12*(100% - 12 * 1rem) + 2 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -3107,40 +2995,36 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </aside>
                   </main>
                   <div
-                    class="c39"
+                    class="c39 c40"
                     dir="ltr"
                   >
                     <div
-                      class="c40"
+                      class="c41"
                     >
-                      <div
-                        class="c41"
-                      >
-                        <h2>
-                          This is a component in the second column
-                        </h2>
-                      </div>
-                      <div
-                        class="c41"
-                      >
-                        <h2>
-                          This is a component in the second column
-                        </h2>
-                      </div>
-                      <div
-                        class="c41"
-                      >
-                        <h2>
-                          This is a component in the second column
-                        </h2>
-                      </div>
-                      <div
-                        class="c41"
-                      >
-                        <h2>
-                          This is a component in the second column
-                        </h2>
-                      </div>
+                      <h2>
+                        This is a component in the second column
+                      </h2>
+                    </div>
+                    <div
+                      class="c41"
+                    >
+                      <h2>
+                        This is a component in the second column
+                      </h2>
+                    </div>
+                    <div
+                      class="c41"
+                    >
+                      <h2>
+                        This is a component in the second column
+                      </h2>
+                    </div>
+                    <div
+                      class="c41"
+                    >
+                      <h2>
+                        This is a component in the second column
+                      </h2>
                     </div>
                   </div>
                 </div>

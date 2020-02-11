@@ -91,11 +91,11 @@ const CpsStyContainer = ({ pageData }) => {
     flex-grow: 1;
   `;
 
-  const SecondaryColumn = styled.div`
+  const GridSecondaryColumn = styled(Grid)`
     margin-top: ${GEL_SPACING_QUAD};
   `;
 
-  const Component = styled.div`
+  const ComponentWrapper = styled.div`
     background: ${C_CHALK};
     padding: ${GEL_SPACING_DBL};
     margin-top: ${GEL_SPACING_DBL};
@@ -181,22 +181,20 @@ const CpsStyContainer = ({ pageData }) => {
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           <CpsRelatedContent content={relatedContent} />
         </Grid>
-        <Grid item columns={gridColsSecondary}>
-          <SecondaryColumn>
-            <Component>
-              <h2>This is a component in the second column</h2>
-            </Component>
-            <Component>
-              <h2>This is a component in the second column</h2>
-            </Component>
-            <Component>
-              <h2>This is a component in the second column</h2>
-            </Component>
-            <Component>
-              <h2>This is a component in the second column</h2>
-            </Component>
-          </SecondaryColumn>
-        </Grid>
+        <GridSecondaryColumn item columns={gridColsSecondary}>
+          <ComponentWrapper>
+            <h2>This is a component in the second column</h2>
+          </ComponentWrapper>
+          <ComponentWrapper>
+            <h2>This is a component in the second column</h2>
+          </ComponentWrapper>
+          <ComponentWrapper>
+            <h2>This is a component in the second column</h2>
+          </ComponentWrapper>
+          <ComponentWrapper>
+            <h2>This is a component in the second column</h2>
+          </ComponentWrapper>
+        </GridSecondaryColumn>
       </StyledGrid>
     </>
   );
