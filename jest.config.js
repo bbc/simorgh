@@ -10,7 +10,6 @@ module.exports = {
         outputDirectory: 'reports',
         // uniqueOutputName: 'true',
         ancestorSeparator: ' › ',
-        addFileAttribute: 'true',
       },
     ],
   ],

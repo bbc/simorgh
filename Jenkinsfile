@@ -283,7 +283,7 @@ pipeline {
       script {
         getCommitInfo()
       }
-      sh 'chown -R jenkins:jenkins $WORKSPACE/reports/*.xml'
+      sh 'rsync --archive --chown=jenkins:jenkins reports $WORKSPACE/reports'
       junit "reports/*.xml"
       // Clean the workspace
       // cleanWs()
