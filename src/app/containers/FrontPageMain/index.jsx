@@ -66,6 +66,7 @@ const FrontPageMain = ({ frontPageData }) => {
     </span>
   );
 
+  // Most Read is required to render above useful-links if it exists
   const hasUsefulLinks =
     groups.findIndex(group => group.type === 'useful-links') > -1;
 
