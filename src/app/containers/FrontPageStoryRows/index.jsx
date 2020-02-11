@@ -101,7 +101,6 @@ export const LeadingRow = ({
       item
       columns={leadingStoryColumns}
       as={StoryPromoLi}
-      isBulletin={isBulletin(stories[0])}
       dir={dir}
       parentColumns={parentColumns}
       parentEnableGelGutters={parentEnableGelGutters}
@@ -112,7 +111,6 @@ export const LeadingRow = ({
       item
       columns={regularStoryColumns}
       as={StoryPromoLi}
-      isBulletin={isBulletin(stories[1])}
       dir={dir}
       parentColumns={parentColumns}
       parentEnableGelGutters={parentEnableGelGutters}
@@ -144,7 +142,6 @@ export const RegularRow = ({
         columns={displayImages ? regularStoryColumns : noImageStoryColumns}
         key={story.id}
         as={StoryPromoLi}
-        isBulletin={isBulletin(story)}
         dir={dir}
         parentColumns={parentColumns}
         parentEnableGelGutters={parentEnableGelGutters}
