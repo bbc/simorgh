@@ -42,9 +42,7 @@ const radioPage = jest.requireMock('#pages/RadioPage');
 const errorPage = jest.requireMock('#pages/Error');
 
 describe('Routes', () => {
-  beforeEach(() => {
-    jest.resetAllMocks();
-  });
+  beforeEach(jest.resetAllMocks);
 
   test('It should be an array', () => {
     expect(routes).toEqual(expect.any(Array));
@@ -69,7 +67,7 @@ describe('Routes', () => {
   it('should route to Error component', () => {
     const errorRoute = routes.filter(route => route.path === errorPagePath);
 
-    const Component = errorRoute[0].component;
+    const [{ component: Component }] = errorRoute;
 
     const data = generateFixtureData('ERROR');
     Component(data);
@@ -80,7 +78,7 @@ describe('Routes', () => {
   it('should route to FrontPage component', () => {
     const frontPageRoute = routes.filter(route => route.path === frontPagePath);
 
-    const Component = frontPageRoute[0].component;
+    const [{ component: Component }] = frontPageRoute;
 
     const data = generateFixtureData(INDEX_PAGE);
     Component(data);
@@ -91,7 +89,7 @@ describe('Routes', () => {
   it('should route to Article component', () => {
     const articleRoute = routes.filter(route => route.path === articlePath);
 
-    const Component = articleRoute[0].component;
+    const [{ component: Component }] = articleRoute;
 
     const data = generateFixtureData(ARTICLE_PAGE);
     Component(data);
@@ -102,7 +100,7 @@ describe('Routes', () => {
   it('should route to RadioPage component', () => {
     const radioRoute = routes.filter(route => route.path === radioAndTvPath);
 
-    const Component = radioRoute[0].component;
+    const [{ component: Component }] = radioRoute;
 
     const data = generateFixtureData(LIVE_RADIO_PAGE);
     Component(data);
@@ -113,7 +111,7 @@ describe('Routes', () => {
   describe('CPS Assets', () => {
     const cpsRoute = routes.filter(route => route.path === cpsAssetPagePath);
 
-    const Component = cpsRoute[0].component;
+    const [{ component: Component }] = cpsRoute;
 
     it('should route to MediaAssetPage component', () => {
       const data = generateFixtureData(MEDIA_ASSET_PAGE);
@@ -156,7 +154,7 @@ describe('Routes', () => {
       route => route.path === legacyAssetPagePath,
     );
 
-    const Component = legacyRoute[0].component;
+    const [{ component: Component }] = legacyRoute;
 
     it('should route to MediaAssetPage component', () => {
       const data = generateFixtureData(MEDIA_ASSET_PAGE);
