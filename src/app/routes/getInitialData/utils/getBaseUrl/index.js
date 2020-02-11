@@ -14,8 +14,15 @@ const getBaseUrl = origin => {
     base = 'https://www.test.bbc';
   }
 
+
   if (origin.includes('.co.uk')) {
     tld = '.co.uk';
+  }
+
+  /* TODO: Remove this from the PR prior to merging! */
+  if (origin.includes('simorgh-infrastructure')) {
+    base = 'https://www.test.bbc';
+    tld = '.com';
   }
 
   return base + tld;
