@@ -93,9 +93,7 @@ const FrontPageMain = ({ frontPageData }) => {
           >
             {groups.map((group, index) => (
               <Fragment key={group.title}>
-                {group.semanticGroupName === 'Useful links' && (
-                  <MostReadContainer />
-                )}
+                {group.type === 'useful-links' && <MostReadContainer />}
                 <FrontPageSection group={group} sectionNumber={index} />
               </Fragment>
             ))}
