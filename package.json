@@ -188,7 +188,7 @@
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "start-server-webpack-plugin": "^2.2.5",
-    "storybook-chromatic": "^3.4.1",
+    "storybook-chromatic": "^3.5.1",
     "stylelint": "^13.1.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
