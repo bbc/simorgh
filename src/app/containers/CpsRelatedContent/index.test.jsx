@@ -9,7 +9,7 @@ import CpsRelatedContent from '.';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 
 import preprocessor from '#lib/utilities/preprocessor';
-import { cpsAssetPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
+import { cpsAssetPreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
 
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
 

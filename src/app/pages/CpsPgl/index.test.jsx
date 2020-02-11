@@ -15,7 +15,7 @@ import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
 import preprocessor from '#lib/utilities/preprocessor';
-import { cpsAssetPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
+import { cpsAssetPreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
 
 const toggleState = {
   local: {
