@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:tamil/global/2014/07/140713_animalsvideo",
+    "locators": {
+      "assetUri": "/tamil/global/2014/07/140713_animalsvideo",
+      "cpsUrn": "urn:bbc:content:assetUri:tamil/global/2014/07/140713_animalsvideo",
+      "curie": "http://www.bbc.co.uk/asset/2f987bde-0ab1-11e4-b65a-5c823db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "tamil",
+    "language": "ta",
+    "lastUpdated": 1550396303304,
+    "firstPublished": 1405271858,
+    "lastPublished": 1405271858,
+    "options": {
+      "allowDateStamp": true,
+      "includeComments": false,
+      "allowAdvertising": false,
+      "suitableForSyndication": false
+    },
+    "analyticsLabels": { "cps_asset_type": "map" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "33349847",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/tamil/meta/dps/2014/07/emp/140713_animalsvideo.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "உலகிலுள்ள பாலூட்டி விலங்குகளில் கால்வாசி அளவானவை தற்போது அழிவை எதிர்நோக்குவதாக இயற்கைப் பாதுகாப்புக்கான சர்வதேச ஒன்றியம் கூறுகிறது.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "உலகம் எதிர்நோக்கும் இந்த அச்சுறுத்தலை நிஜமாக புரிந்துகொள்ள பல்வேறு விலங்கினங்களின் எண்ணிக்கை,  இனப்பெருக்கம் ஆகியவை பற்றி நாம் அறிந்துகொள்ள வேண்டியது அவசியம்.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "எனவே காட்டிலுள்ள விலங்குகளை கணக்கெடுப்பது எப்படி என்று கற்றுக்கொள்வதற்காக உலகின் பல்வேறு பாகங்களிலிருந்தும் ஆர்வலர்கள் அமெரிக்காவின் விர்ஜீனியா மாநிலத்திலுள்ள  விலங்கியல் மையம் ஒன்றுக்கு சென்றுள்ளனர்.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "அவர்கள் என்ன கற்றுக்கொள்கிறார்கள் என்று காட்டும் வீடியோ இது.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "காட்டு விலங்குகளின் எண்ணிக்கையை கணக்கெடுப்பது எப்படி?",
+      "headline": "காட்டு விலங்குகளின் எண்ணிக்கையை கணக்கெடுப்பது எப்படி?"
+    },
+    "locators": {
+      "assetUri": "/tamil/global/2014/07/140713_animalsvideo",
+      "cpsUrn": "urn:bbc:content:assetUri:tamil/global/2014/07/140713_animalsvideo",
+      "curie": "http://www.bbc.co.uk/asset/2f987bde-0ab1-11e4-b65a-5c823db9bd6e"
+    },
+    "summary": "காட்டில் வாழும் உயிரினங்களின் எண்ணிக்கையை கணக்கெடுக்கும் வழிமுறைகள் பற்றி அறிந்துகொள்வதற்காக சர்வதேச நாடுகளைச் சேர்ந்த ஆர்வலர்கள் அமெரிக்காவுக்கு சென்றுள்ளதைக் காட்டும் காணொளி.",
+    "timestamp": 1550396303304,
+    "passport": {},
+    "media": {
+      "id": "33349847",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/tamil/meta/dps/2014/07/emp/140713_animalsvideo.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e217",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/07/13/140713171321_chipmunk_weighing_144x81_bbc_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2014/07/13/140713171321_chipmunk_weighing_144x81_bbc_nocredit.jpg",
+      "height": 81,
+      "width": 144,
+      "altText": "அணில்களின் எடையை அளந்து அவற்றின் எண்ணிக்கையை கணக்கிடுகிறார்கள்",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:tamil/global/2014/07/140713_animalsvideo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": { "subType": "index", "name": "உலகம்", "uri": "/tamil/global", "type": "simple" },
+    "site": { "subType": "site", "name": "BBCTamil.com", "uri": "/tamil", "type": "simple" },
+    "groups": []
+  }
+}
