@@ -159,6 +159,7 @@ pipeline {
           script {
             stageName = env.STAGE_NAME
           }
+          junit "reports/*.xml"
         }
       }
     }
@@ -246,6 +247,7 @@ pipeline {
           script {
             stageName = env.STAGE_NAME
           }
+          // junit "reports/*.xml"
         }
       }
     }
@@ -283,10 +285,10 @@ pipeline {
       script {
         getCommitInfo()
       }
-      sh 'rsync --archive --chown=jenkins:jenkins reports $WORKSPACE/reports'
-      junit "reports/*.xml"
+      // sh 'rsync --archive --chown=jenkins:jenkins reports $WORKSPACE/reports'
+      // junit "reports/*.xml"
       // Clean the workspace
-      // cleanWs()
+      cleanWs()
     }
     aborted {
       script {
