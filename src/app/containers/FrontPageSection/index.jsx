@@ -20,7 +20,8 @@ import UsefulLinksComponent from './UsefulLinks';
 import { ServiceContext } from '#contexts/ServiceContext';
 import groupShape from '#models/propTypes/frontPageGroup';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import { getAllowedItems, getRows } from './utilities/storySplitter';
+import getAllowedItems from './utilities/storyAllowedItems';
+import getRows from './utilities/storyRowsSplitter';
 import getRowDetails from './utilities/rowDetails';
 import { TopRow } from '../FrontPageStoryRows';
 
@@ -78,9 +79,7 @@ const parentGridColumns = {
 };
 
 const renderPromos = (items, isFirstSection, dir) => {
-  // We have a cap on the number of allowed items per section
-  const allowedItems = getAllowedItems(items, isFirstSection);
-  const rows = getRows(allowedItems, isFirstSection);
+  const rows = getRows(items, isFirstSection);
   const rowsDetails = getRowDetails(rows);
 
   // Only use StoryPromoUl and Li if there is only one story in one row
@@ -121,7 +120,14 @@ const renderPromos = (items, isFirstSection, dir) => {
   );
 };
 
-const sectionBody = (group, items, script, service, isFirstSection, dir) => {
+const sectionBody = ({
+  group,
+  items,
+  script,
+  service,
+  isFirstSection,
+  dir,
+}) => {
   if (group.semanticGroupName === 'Useful links') {
     return (
       <UsefulLinksComponent items={items} script={script} service={service} />
@@ -154,10 +160,14 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const updatedItems = removeFirstSlotRadioBulletin(
     pathOr(null, ['items'], group),
   );
+
   const items = removeTVBulletinsIfNotAVLiveStream({
     items: updatedItems,
     type,
   });
+
+  // We have a cap on the number of allowed items per section
+  const allowedItems = getAllowedItems(items, isFirstSection);
 
   // The current implementation of SectionLabel *requires* a strapline to be
   // present in order to render. It is currently *not possible* to render a
@@ -189,7 +199,14 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
       >
         {group.strapline.name}
       </SectionLabel>
-      {sectionBody(group, items, script, service, isFirstSection, dir)}
+      {sectionBody({
+        group,
+        items: allowedItems,
+        script,
+        service,
+        isFirstSection,
+        dir,
+      })}
     </section>
   );
 };

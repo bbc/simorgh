@@ -1,5 +1,5 @@
 import { range } from 'ramda';
-import { getRows, getAllowedItems } from './storySplitter';
+import getRows from './storyRowsSplitter';
 
 const numberOfStories = {
   0: {
@@ -14,8 +14,6 @@ const numberOfStories = {
       regularRows: [],
       noImageRow: [],
     },
-    expectedFrontSectionAllowedItems: [],
-    expectedNotFrontSectionAllowedItems: [],
   },
   1: {
     input: range(0, 1),
@@ -29,8 +27,6 @@ const numberOfStories = {
       regularRows: [],
       noImageRow: [],
     },
-    expectedFrontSectionAllowedItems: range(0, 1),
-    expectedNotFrontSectionAllowedItems: range(0, 1),
   },
   2: {
     input: range(0, 2),
@@ -44,8 +40,6 @@ const numberOfStories = {
       regularRows: [],
       noImageRow: [],
     },
-    expectedFrontSectionAllowedItems: range(0, 2),
-    expectedNotFrontSectionAllowedItems: range(0, 2),
   },
   3: {
     input: range(0, 3),
@@ -59,8 +53,6 @@ const numberOfStories = {
       regularRows: [],
       noImageRow: [],
     },
-    expectedFrontSectionAllowedItems: range(0, 3),
-    expectedNotFrontSectionAllowedItems: range(0, 3),
   },
   4: {
     input: range(0, 4),
@@ -74,8 +66,6 @@ const numberOfStories = {
       regularRows: [[0, 1, 2, 3]],
       noImageRow: [],
     },
-    expectedFrontSectionAllowedItems: range(0, 4),
-    expectedNotFrontSectionAllowedItems: range(0, 4),
   },
   5: {
     input: range(0, 5),
@@ -89,8 +79,6 @@ const numberOfStories = {
       regularRows: [[1, 2, 3, 4]],
       noImageRow: [],
     },
-    expectedFrontSectionAllowedItems: range(0, 5),
-    expectedNotFrontSectionAllowedItems: range(0, 5),
   },
   6: {
     input: range(0, 6),
@@ -104,8 +92,6 @@ const numberOfStories = {
       regularRows: [[2, 3, 4, 5]],
       noImageRow: [],
     },
-    expectedFrontSectionAllowedItems: range(0, 6),
-    expectedNotFrontSectionAllowedItems: range(0, 6),
   },
   7: {
     input: range(0, 7),
@@ -119,8 +105,6 @@ const numberOfStories = {
       regularRows: [[2, 3, 4, 5]],
       noImageRow: [],
     },
-    expectedFrontSectionAllowedItems: range(0, 7),
-    expectedNotFrontSectionAllowedItems: range(0, 7),
   },
   8: {
     input: range(0, 8),
@@ -137,8 +121,6 @@ const numberOfStories = {
       ],
       noImageRow: [],
     },
-    expectedFrontSectionAllowedItems: range(0, 8),
-    expectedNotFrontSectionAllowedItems: range(0, 8),
   },
   9: {
     input: range(0, 9),
@@ -158,8 +140,6 @@ const numberOfStories = {
       ],
       noImageRow: [],
     },
-    expectedFrontSectionAllowedItems: range(0, 9),
-    expectedNotFrontSectionAllowedItems: range(0, 9),
   },
   10: {
     input: range(0, 10),
@@ -179,8 +159,6 @@ const numberOfStories = {
       ],
       noImageRow: [],
     },
-    expectedFrontSectionAllowedItems: range(0, 10),
-    expectedNotFrontSectionAllowedItems: range(0, 10),
   },
   11: {
     input: range(0, 11),
@@ -200,8 +178,6 @@ const numberOfStories = {
       ],
       noImageRow: [],
     },
-    expectedFrontSectionAllowedItems: range(0, 11),
-    expectedNotFrontSectionAllowedItems: range(0, 10),
   },
   12: {
     input: range(0, 12),
@@ -214,15 +190,13 @@ const numberOfStories = {
       noImageRow: [],
     },
     expectedNotFirstSection: {
-      firstRow: [0, 1],
+      firstRow: [],
       regularRows: [
-        [2, 3, 4, 5],
-        [6, 7, 8, 9],
+        [0, 1, 2, 3],
+        [4, 5, 6, 7],
       ],
-      noImageRow: [],
+      noImageRow: [8, 9, 10, 11],
     },
-    expectedFrontSectionAllowedItems: range(0, 12),
-    expectedNotFrontSectionAllowedItems: range(0, 10),
   },
   13: {
     input: range(0, 13),
@@ -235,15 +209,13 @@ const numberOfStories = {
       noImageRow: [9, 10, 11, 12],
     },
     expectedNotFirstSection: {
-      firstRow: [0, 1],
+      firstRow: [0],
       regularRows: [
-        [2, 3, 4, 5],
-        [6, 7, 8, 9],
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
       ],
-      noImageRow: [],
+      noImageRow: [9, 10, 11, 12],
     },
-    expectedFrontSectionAllowedItems: range(0, 13),
-    expectedNotFrontSectionAllowedItems: range(0, 10),
   },
   14: {
     input: range(0, 14),
@@ -261,10 +233,8 @@ const numberOfStories = {
         [2, 3, 4, 5],
         [6, 7, 8, 9],
       ],
-      noImageRow: [],
+      noImageRow: [10, 11, 12, 13],
     },
-    expectedFrontSectionAllowedItems: range(0, 13),
-    expectedNotFrontSectionAllowedItems: range(0, 10),
   },
   20: {
     input: range(0, 20),
@@ -277,19 +247,17 @@ const numberOfStories = {
       noImageRow: [9, 10, 11, 12],
     },
     expectedNotFirstSection: {
-      firstRow: [0, 1],
+      firstRow: [],
       regularRows: [
-        [2, 3, 4, 5],
-        [6, 7, 8, 9],
+        [0, 1, 2, 3],
+        [4, 5, 6, 7],
       ],
-      noImageRow: [],
+      noImageRow: [8, 9, 10, 11],
     },
-    expectedFrontSectionAllowedItems: range(0, 13),
-    expectedNotFrontSectionAllowedItems: range(0, 10),
   },
 };
 
-const getRowsTest = value => {
+const rowsTest = value => {
   it(`should return right splitting for ${value} stories for first section`, () => {
     expect(getRows(numberOfStories[value].input, true)).toStrictEqual(
       numberOfStories[value].expectedFirstSection,
@@ -303,28 +271,10 @@ const getRowsTest = value => {
   });
 };
 
-const getAllowedItemsTest = value => {
-  it(`should return right allowed items for ${value} stories for first section`, () => {
-    expect(getAllowedItems(numberOfStories[value].input, true)).toStrictEqual(
-      numberOfStories[value].expectedFrontSectionAllowedItems,
-    );
-  });
-
-  it(`should return right allowed items for ${value} stories for non-first section`, () => {
-    expect(getAllowedItems(numberOfStories[value].input, false)).toStrictEqual(
-      numberOfStories[value].expectedNotFrontSectionAllowedItems,
-    );
-  });
-};
-
-describe('Story Splitter', () => {
+describe('Story rows splitter', () => {
   describe('assertions', () => {
     describe('getRows', () => {
-      Object.keys(numberOfStories).forEach(value => getRowsTest(value));
-    });
-
-    describe('getAllowedItems', () => {
-      Object.keys(numberOfStories).forEach(value => getAllowedItemsTest(value));
+      Object.keys(numberOfStories).forEach(value => rowsTest(value));
     });
   });
 });
