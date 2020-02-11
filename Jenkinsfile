@@ -138,28 +138,31 @@ pipeline {
             withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID'), string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
               runDevelopmentTests()
               sh './cc-test-reporter after-build -t lcov --debug --exit-code 0'
-
+            }
+          }
+          post {
+            always {
+              junit "reports/jest/*.xml"
             }
           }
         }
-        // stage ('Test Production') {
-        //   agent {
-        //     docker {
-        //       image "${nodeImage}"
-        //       args '-u root -v /etc/pki:/certs'
-        //     }
-        //   }
-        //   steps {
-        //     runProductionTests()
-        //   }
-        // }
+        stage ('Test Production') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            runProductionTests()
+          }
+        }
       }
       post {
         always {
           script {
             stageName = env.STAGE_NAME
           }
-          junit "reports/*.xml"
         }
       }
     }
@@ -183,50 +186,50 @@ pipeline {
             }
           }
         }
-        // stage ('Test Production and Zip Production') {
-        //   agent {
-        //     docker {
-        //       image "${nodeImage}"
-        //       args '-u root -v /etc/pki:/certs'
-        //     }
-        //   }
-        //   steps {
-        //     // Testing
-        //     runProductionTests()
+        stage ('Test Production and Zip Production') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            // Testing
+            runProductionTests()
 
-        //     script {
-        //       getCommitInfo()
-        //       Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
-        //     }
+            script {
+              getCommitInfo()
+              Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
+            }
 
-        //     // Moving files necessary for production to `pack` directory.
-        //     sh "./scripts/jenkinsProductionFiles.sh"
+            // Moving files necessary for production to `pack` directory.
+            sh "./scripts/jenkinsProductionFiles.sh"
 
-        //     script {
-        //       sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
-        //     }
+            script {
+              sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
+            }
 
-        //     sh "rm -f ${packageName}"
-        //     zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
-        //     stash name: 'simorgh', includes: packageName
-        //     sh "rm -rf pack"
-        //   }
-        // }
-        // stage ('Build storybook dist') {
-        //   agent {
-        //     docker {
-        //       image "${nodeImage}"
-        //       args '-u root -v /etc/pki:/certs'
-        //     }
-        //   }
-        //   steps {
-        //     sh "rm -f storybook.zip"
-        //     sh 'make install'
-        //     sh 'make buildStorybook'
-        //     zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
-        //     stash name: 'simorgh_storybook', includes: storybookDist
-        //   }
-        // }
+            sh "rm -f ${packageName}"
+            zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
+            stash name: 'simorgh', includes: packageName
+            sh "rm -rf pack"
+          }
+        }
+        stage ('Build storybook dist') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            sh "rm -f storybook.zip"
+            sh 'make install'
+            sh 'make buildStorybook'
+            zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
+            stash name: 'simorgh_storybook', includes: storybookDist
+          }
+        }
         stage ('Build Static Assets') {
           agent {
             docker {
@@ -247,7 +250,6 @@ pipeline {
           script {
             stageName = env.STAGE_NAME
           }
-          // junit "reports/*.xml"
         }
       }
     }
@@ -285,10 +287,8 @@ pipeline {
       script {
         getCommitInfo()
       }
-      // sh 'rsync --archive --chown=jenkins:jenkins reports $WORKSPACE/reports'
-      // junit "reports/*.xml"
       // Clean the workspace
-      cleanWs()
+      // cleanWs()
     }
     aborted {
       script {
