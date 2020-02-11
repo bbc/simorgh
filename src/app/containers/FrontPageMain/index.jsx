@@ -67,7 +67,7 @@ const FrontPageMain = ({ frontPageData }) => {
   );
 
   const hasUsefulLinks =
-    groups.findIndex(group => group.type === 'useful links') > -1;
+    groups.findIndex(group => group.type === 'useful-links') > -1;
 
   return (
     <>
