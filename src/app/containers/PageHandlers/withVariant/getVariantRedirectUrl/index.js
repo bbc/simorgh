@@ -1,10 +1,11 @@
-import pathToRegexp from 'path-to-regexp';
 import {
   getVariant,
   variantSanitiser,
   variants,
 } from '#lib/utilities/variantHandler';
 import { getPreferredVariant } from '#app/contexts/UserContext/cookies';
+
+const { compile } = require('path-to-regexp');
 
 const getVariantRedirectUrl = ({ path, params, service, variant }) => {
   if (!path) return null;
@@ -15,7 +16,7 @@ const getVariantRedirectUrl = ({ path, params, service, variant }) => {
     variant: variantSanitiser(variant),
   });
 
-  const pathTo = pathToRegexp.compile(path);
+  const pathTo = compile(path);
 
   const isCookieVariantRedirect =
     cookieVariant &&
