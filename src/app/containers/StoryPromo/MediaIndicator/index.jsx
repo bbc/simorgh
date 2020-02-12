@@ -47,7 +47,7 @@ const StyledTime = styled.time`
   padding: 0 ${GEL_SPACING_HLF};
 `;
 
-const MediaIndicatorContainer = ({ dir, script, service, item }) => {
+const MediaIndicatorContainer = ({ item, script, service, dir }) => {
   const type = getMediaType(item);
 
   if (!type) {
@@ -62,22 +62,22 @@ const MediaIndicatorContainer = ({ dir, script, service, item }) => {
     const durationString = formatDuration({ duration });
     const isoDuration = duration.toISOString();
     return (
-      <MediaIndicator dir={dir} script={script} service={service} type={type}>
+      <MediaIndicator type={type} script={script} service={service} dir={dir}>
         <StyledTime dateTime={isoDuration}>{durationString}</StyledTime>
       </MediaIndicator>
     );
   }
 
   return (
-    <MediaIndicator dir={dir} script={script} service={service} type={type} />
+    <MediaIndicator type={type} script={script} service={service} dir={dir} />
   );
 };
 
 MediaIndicatorContainer.propTypes = {
-  dir: oneOf(['ltr', 'rtl']),
+  item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
-  item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
+  dir: oneOf(['ltr', 'rtl']),
 };
 
 MediaIndicatorContainer.defaultProps = {
