@@ -1125,6 +1125,7 @@ exports[`CPS MAP Page should render component 1`] = `
                             <div
                               aria-hidden="true"
                               class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                              dir="ltr"
                             >
                               <div
                                 class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
@@ -1215,6 +1216,7 @@ exports[`CPS MAP Page should render component 1`] = `
                             <div
                               aria-hidden="true"
                               class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                              dir="ltr"
                             >
                               <div
                                 class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
