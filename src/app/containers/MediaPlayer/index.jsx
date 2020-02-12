@@ -1,5 +1,5 @@
 import React, { useContext, memo } from 'react';
-import { string, bool } from 'prop-types';
+import { string, bool, shape } from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
@@ -218,10 +218,13 @@ MemoizedCanonicalMediaPlayer.propTypes = {
   src: string.isRequired,
   placeholderSrc: string.isRequired,
   placeholderSrcset: string.isRequired,
-  showPlaceholder: string.isRequired,
+  showPlaceholder: bool.isRequired,
   title: string.isRequired,
   service: string.isRequired,
-  mediaInfo: string.isRequired,
+  mediaInfo: shape({
+    title: string,
+    type: string,
+  }).isRequired,
   noJsMessage: string.isRequired,
   noJsClassName: string.isRequired,
 };
