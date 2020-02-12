@@ -204,6 +204,7 @@
   "relatedContent": {
     "groups": [
       {
+        "type": "see-alsos",
         "promos": [
           {
             "headlines": {
@@ -367,21 +368,6 @@
             "type": "cps"
           },
           {
-            "name": "21-ci ilin Qars müqaviləsi: bu necə baş verdi?",
-            "uri": "http://www.bbc.com/azeri/azerbaijan/2014/10/141014_kars_agreement",
-            "type": "link"
-          },
-          {
-            "name": "Azərbaycana sovet təcrübəsi lazım idimi?",
-            "uri": "http://www.bbc.com/azeri/azerbaijan/2014/11/141103_russian_revolution_azerbaijan",
-            "type": "link"
-          },
-          {
-            "name": "\"Qafqazın Pensilvaniyası\" - Bakı və I Dünya Müharibəsi",
-            "uri": "http://www.bbc.com/azeri/azerbaijan/2014/08/140801_azerbaijan_ww1",
-            "type": "link"
-          },
-          {
             "headlines": {
               "shortHeadline": "1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?",
               "headline": "1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?"
@@ -498,7 +484,7 @@
                               "text": "Azərbaycan Xalq Cümhuriyyəti - Fotolarda",
                               "attributes": []
                             },
-                            "id": "99610202-fe7a-49d9-807d-f7e7fe6159cc",
+                            "id": "a3f717ca-d156-4cef-bdd1-47d7f7d12fa0",
                             "position": [
                               1,
                               1,
@@ -508,7 +494,7 @@
                           }
                         ]
                       },
-                      "id": "d6d7563f-c306-43a0-89ab-215740f5d128",
+                      "id": "1d5932e6-4cdd-482b-80ee-20f4c11d72f9",
                       "position": [
                         1,
                         1,
@@ -517,7 +503,7 @@
                     }
                   ]
                 },
-                "id": "87159f3b-c6ef-42a4-95f1-f5aec71f107a",
+                "id": "e69226ea-6091-43ef-b384-6752914d298f",
                 "position": [
                   1,
                   1
@@ -526,7 +512,7 @@
             ]
           },
           "type": "headline",
-          "id": "84d437e3-261d-4817-81d3-1805e1cdb2ed",
+          "id": "36687563-7b07-4325-99d8-58fdbfda2f35",
           "position": [
             1
           ]
@@ -537,7 +523,7 @@
             "firstPublished": 1527410055000,
             "lastPublished": 1527410057000
           },
-          "id": "a9448f41-757f-420d-83b1-ea818a075c2d",
+          "id": "72ac3b19-4e82-49a5-a945-fa1114da1060",
           "position": [
             2
           ]
@@ -557,7 +543,7 @@
                         "text": "Bu il mayın 28-də Azərbaycan Xalq Cümhuriyyətinin elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca həmin dövrün siyasi xadimlərinin və hadisələrin arxiv fotolarını təqdim edir.",
                         "attributes": []
                       },
-                      "id": "9d6cf54c-f89b-458c-b6d5-af556b9b90f3",
+                      "id": "4546bc68-63d0-42d9-beac-2be86e649831",
                       "position": [
                         3,
                         1,
@@ -566,7 +552,7 @@
                     }
                   ]
                 },
-                "id": "5facae6f-c238-4e76-a71b-1f6384374b96",
+                "id": "54b27a39-ad90-47d5-a0f0-e80e473787d0",
                 "position": [
                   3,
                   1
@@ -574,7 +560,7 @@
               }
             ]
           },
-          "id": "c77cd874-dc76-4961-ab1d-10a15e377a7e",
+          "id": "5faa3ed2-4fd1-4778-be74-26da793c51ea",
           "position": [
             3
           ]
@@ -602,7 +588,7 @@
                                     "text": "AXC parlamentinin birinci iclasının açılışı. Bu il mayın 28-də Azərbaycan Xalq Cümhuriyyətinin elan edilməsinin 100 illik yubileyidir.",
                                     "attributes": []
                                   },
-                                  "id": "2cbebb51-0eb0-48de-8d4d-013476b5cd71",
+                                  "id": "cc179180-42fd-4064-be3a-849ae3b85f8e",
                                   "position": [
                                     4,
                                     1,
@@ -613,7 +599,7 @@
                                 }
                               ]
                             },
-                            "id": "69440b3b-b628-4b33-a0ae-6696feffbf72",
+                            "id": "985f12d2-f1c7-4974-8bce-b67c3e1f63c5",
                             "position": [
                               4,
                               1,
@@ -623,7 +609,7 @@
                           }
                         ]
                       },
-                      "id": "7a72e38d-de21-4b8e-ad35-0d627d0cc20f",
+                      "id": "188ac5a5-80b6-41be-9875-f8b9859ce2ee",
                       "position": [
                         4,
                         1,
@@ -632,7 +618,7 @@
                     }
                   ]
                 },
-                "id": "43cde99e-e95d-4d34-bfd1-f24271459f16",
+                "id": "1652aca9-234c-4a04-bd7c-53ae23f4a285",
                 "position": [
                   4,
                   1
@@ -657,7 +643,7 @@
                                     "text": "AXC parlamentinin birinci iclasının açılışı",
                                     "attributes": []
                                   },
-                                  "id": "61c06885-bdd1-4fdb-b8c5-40b5f2532140",
+                                  "id": "4d47da42-7f39-4854-8fcc-a3c28f536dff",
                                   "position": [
                                     4,
                                     2,
@@ -668,7 +654,7 @@
                                 }
                               ]
                             },
-                            "id": "e66c1d49-a9e5-4193-a9ed-977df4a42400",
+                            "id": "bcf0e453-b54b-486b-83c6-546e08f40e12",
                             "position": [
                               4,
                               2,
@@ -678,7 +664,7 @@
                           }
                         ]
                       },
-                      "id": "529d94e1-d15a-4987-9f13-f93b9ea15a1b",
+                      "id": "ab5da5c9-1db1-46d2-99d5-3caf8fe61894",
                       "position": [
                         4,
                         2,
@@ -687,7 +673,7 @@
                     }
                   ]
                 },
-                "id": "0d99e5b5-e676-49b5-a1ec-a720ef8c92c7",
+                "id": "1efeba22-b942-4b9f-b930-e8cff2e25b02",
                 "position": [
                   4,
                   2
@@ -702,7 +688,7 @@
                   "originCode": "cpsprodpb",
                   "width": 976
                 },
-                "id": "49fbad45-06e7-44d7-a3ff-4aa670bfaf45",
+                "id": "6ec283f8-b348-4b54-bfe7-51f26f9c76de",
                 "position": [
                   4,
                   3
@@ -710,7 +696,7 @@
               }
             ]
           },
-          "id": "a4c79f62-19e5-492f-8a42-e7193f76b1d0",
+          "id": "ea3c051e-09ba-4a7d-a19f-edb17a4230ca",
           "position": [
             4
           ]
@@ -738,7 +724,7 @@
                                     "text": "28 may 1918-ci il suverenliyi haqqında bəyənnamə. Azərbaycan Xalq Cümhuriyyəti cəmi 2 ildən sonra süquta uğrasa da, ölkə tarixinin ən mühüm hadisələrindən biri sayılır.",
                                     "attributes": []
                                   },
-                                  "id": "cf00ab61-8932-416b-9a9a-a9fd04635156",
+                                  "id": "c22c7bc4-efda-4c34-b566-6b9a28a538ff",
                                   "position": [
                                     5,
                                     1,
@@ -749,7 +735,7 @@
                                 }
                               ]
                             },
-                            "id": "7c625047-faa9-4431-ae47-3e135f252614",
+                            "id": "a73975c1-de1f-4622-9282-414eade1c584",
                             "position": [
                               5,
                               1,
@@ -759,7 +745,7 @@
                           }
                         ]
                       },
-                      "id": "c7c7e283-a903-45e8-93a5-39dca3a43471",
+                      "id": "f11826f9-da1f-41e5-9309-5e24bda39602",
                       "position": [
                         5,
                         1,
@@ -768,7 +754,7 @@
                     }
                   ]
                 },
-                "id": "be3c873b-a67c-4fc8-963f-a1ccdbc9786a",
+                "id": "4725f522-74ec-4683-83b1-f57b5ae53bf4",
                 "position": [
                   5,
                   1
@@ -793,7 +779,7 @@
                                     "text": "28 may 1918-ci il suverenliyi haqqında bəyənnamə",
                                     "attributes": []
                                   },
-                                  "id": "00d04a99-41fa-49fb-886f-c59c0f28c132",
+                                  "id": "d47deb83-7a81-4ada-a3b3-a8679eb0c6e4",
                                   "position": [
                                     5,
                                     2,
@@ -804,7 +790,7 @@
                                 }
                               ]
                             },
-                            "id": "03a426a9-cd6c-4c14-aafc-67d0e153dddf",
+                            "id": "2f48f67c-8918-4b17-9617-37504cd3c029",
                             "position": [
                               5,
                               2,
@@ -814,7 +800,7 @@
                           }
                         ]
                       },
-                      "id": "b3696ed3-f60d-4786-bcd5-84f5dedc12cb",
+                      "id": "0985c5cb-215b-482d-9e01-f1b5b8c67403",
                       "position": [
                         5,
                         2,
@@ -823,7 +809,7 @@
                     }
                   ]
                 },
-                "id": "3f9319a9-4cc6-48fc-af3d-d16ac5cfef39",
+                "id": "2ea82d64-7c44-41da-a818-665272c20708",
                 "position": [
                   5,
                   2
@@ -838,7 +824,7 @@
                   "originCode": "cpsprodpb",
                   "width": 1000
                 },
-                "id": "e47a86be-6c61-49e6-b4e7-586fc5d09342",
+                "id": "ae67fae5-1fe3-4c6c-ab00-a430b65ca953",
                 "position": [
                   5,
                   3
@@ -846,7 +832,7 @@
               }
             ]
           },
-          "id": "65051fda-3eb4-495e-855e-160e3db6eecd",
+          "id": "506ab273-8c70-4ebc-9613-ec7f333284c3",
           "position": [
             5
           ]
@@ -874,7 +860,7 @@
                                     "text": "AXC Nazrilər Şurasının sədri və daxili işlər naziri vəzifələrini icra etmiş Fətəli Xan Xoyski. 1875-ci ildə doğulan Xoyski ADR-nin (Azərbaycan Demokratik Respublikası) yaradıcılarından biridir. O, Zaqafqaziya Federativ Respublikası hökumətində maarif naziri, Milli Hökumətin birinci və üçüncü kabinetlərində baş nazir, beşinci kabinetində isə xarici işlər naziri vəzifəsini tutub. Xoyski türk (Azərbaycan) dilinin dövlət dili elan edilməsi haqqında 27 iyun 1918-ci il tarixli qərara imza atıb. O, 1920-ci ildə qətlə yetirilib.",
                                     "attributes": []
                                   },
-                                  "id": "681ccc9f-e071-4549-97d2-46c128c18200",
+                                  "id": "b640c85c-fb9f-4076-ae82-ba9ca05ef945",
                                   "position": [
                                     6,
                                     1,
@@ -885,7 +871,7 @@
                                 }
                               ]
                             },
-                            "id": "bff9ebe3-cc39-43bd-99aa-64d9b1021171",
+                            "id": "7c0e3ca8-0740-42e9-bf0a-ab504924cbb0",
                             "position": [
                               6,
                               1,
@@ -895,7 +881,7 @@
                           }
                         ]
                       },
-                      "id": "7661d308-1d72-475e-885e-80ecd17e8804",
+                      "id": "7a2487ef-d7ad-43f0-a1b1-2c738c16acbb",
                       "position": [
                         6,
                         1,
@@ -904,7 +890,7 @@
                     }
                   ]
                 },
-                "id": "599ca2e5-9cf7-412b-95fb-4269b1d25009",
+                "id": "6fd4707b-8686-42ae-994f-5963da08f116",
                 "position": [
                   6,
                   1
@@ -929,7 +915,7 @@
                                     "text": "Fətəli Xan Xoyski",
                                     "attributes": []
                                   },
-                                  "id": "96ba1a36-782e-4cfa-994e-ffdb060058ca",
+                                  "id": "74e48336-bfc1-4a30-97a3-a69c1e6d4a78",
                                   "position": [
                                     6,
                                     2,
@@ -940,7 +926,7 @@
                                 }
                               ]
                             },
-                            "id": "4e9406d4-fabc-4c30-91b7-3e74e1f4e85c",
+                            "id": "4305915a-af02-49fa-99e0-965f1777c5d9",
                             "position": [
                               6,
                               2,
@@ -950,7 +936,7 @@
                           }
                         ]
                       },
-                      "id": "c3e978cc-70fa-42d3-b0aa-e51c1b8b2652",
+                      "id": "43e26326-7461-4668-b557-9f7d8f3be566",
                       "position": [
                         6,
                         2,
@@ -959,7 +945,7 @@
                     }
                   ]
                 },
-                "id": "669f7f4d-f49f-49a6-8dbc-23afd5e55dae",
+                "id": "fed47956-ac20-450f-9984-c6cacb898b50",
                 "position": [
                   6,
                   2
@@ -974,7 +960,7 @@
                   "originCode": "cpsprodpb",
                   "width": 900
                 },
-                "id": "e12d4e54-6db9-4fb5-b1a5-42bbc40039ca",
+                "id": "b91c644a-7579-4ebd-93a3-8597b4581004",
                 "position": [
                   6,
                   3
@@ -982,7 +968,7 @@
               }
             ]
           },
-          "id": "996cab2e-566c-418e-83e0-487e62f05511",
+          "id": "cf3b6a7b-2db9-4a60-a3f6-46c0f322eb0a",
           "position": [
             6
           ]
@@ -1010,7 +996,7 @@
                                     "text": "Məmməd Əmin Rəsulzadə - Müsavat partiyasının lideri, AXC Milli şurasının sədri.",
                                     "attributes": []
                                   },
-                                  "id": "c423f606-56c6-4cb2-ae2d-6c2ddb2aeec5",
+                                  "id": "3eb90231-6920-4f8a-bd10-a28e57100475",
                                   "position": [
                                     7,
                                     1,
@@ -1021,7 +1007,7 @@
                                 }
                               ]
                             },
-                            "id": "b1cb77e0-cc1b-4e6b-8544-382363c09618",
+                            "id": "3671f7e5-d465-4d90-8f14-d8dfa3e9c670",
                             "position": [
                               7,
                               1,
@@ -1031,7 +1017,7 @@
                           }
                         ]
                       },
-                      "id": "69385801-fb71-4a66-950e-10c6ad9180d9",
+                      "id": "ec7ddfa9-4ac6-40e0-865c-6457d18765d6",
                       "position": [
                         7,
                         1,
@@ -1040,7 +1026,7 @@
                     }
                   ]
                 },
-                "id": "4d9baeaa-4147-4a5b-992f-a35e62ed46f5",
+                "id": "43df54eb-40ab-4dbe-b65a-cad036ffb583",
                 "position": [
                   7,
                   1
@@ -1065,7 +1051,7 @@
                                     "text": "Məmməd Əmin Rəsulzadə Müsavat partiyasının lideri, AXC Milli şurasının sədri",
                                     "attributes": []
                                   },
-                                  "id": "1426a099-514b-41ca-9bc5-8dbf93268ebb",
+                                  "id": "43d92c58-221f-41ab-b0e8-4a13c1e1c143",
                                   "position": [
                                     7,
                                     2,
@@ -1076,7 +1062,7 @@
                                 }
                               ]
                             },
-                            "id": "7a63c284-fed9-4d45-ad96-e8e77f2fc7bd",
+                            "id": "db01667e-781c-42ab-90ed-ebd617f6e5a3",
                             "position": [
                               7,
                               2,
@@ -1086,7 +1072,7 @@
                           }
                         ]
                       },
-                      "id": "180189f0-d3fb-4b60-8bef-aedebd57d4be",
+                      "id": "49249f51-13c9-45d6-b3a9-063d1557a1dd",
                       "position": [
                         7,
                         2,
@@ -1095,7 +1081,7 @@
                     }
                   ]
                 },
-                "id": "a6e59bd2-f2f1-4115-957e-1dfa14816b39",
+                "id": "bf7e0318-213b-41eb-b602-9b810016e28a",
                 "position": [
                   7,
                   2
@@ -1110,7 +1096,7 @@
                   "originCode": "cpsprodpb",
                   "width": 900
                 },
-                "id": "257fa792-d0ad-4c63-939f-47fbc5f2407a",
+                "id": "905e4906-d2c7-4807-828a-a6ce06ed0f11",
                 "position": [
                   7,
                   3
@@ -1118,7 +1104,7 @@
               }
             ]
           },
-          "id": "b0ac259d-d700-4fb2-95f3-27f4b7db8891",
+          "id": "2ca5e96a-20cf-4885-a61f-4bdd391db87a",
           "position": [
             7
           ]
@@ -1146,7 +1132,7 @@
                                     "text": "Əlimərdan bəy Topşubaşov - AXC hökumətinin üzvü və parlamentin sədri. Paris sülh konfransına getmiş nümayəndə heyətinin üzvü.",
                                     "attributes": []
                                   },
-                                  "id": "e0c8e2e0-8770-498f-8ab2-5d2dff6ccff7",
+                                  "id": "1c499087-8cb6-49eb-84bf-e0b1c0477189",
                                   "position": [
                                     8,
                                     1,
@@ -1157,7 +1143,7 @@
                                 }
                               ]
                             },
-                            "id": "78035d81-4394-4334-a4c8-3fb32b1ffbb0",
+                            "id": "4ef60299-c05c-40c9-a406-a0a57a8f4ecf",
                             "position": [
                               8,
                               1,
@@ -1167,7 +1153,7 @@
                           }
                         ]
                       },
-                      "id": "2ee6bdc7-69df-4b94-902e-8094fa1a3e2a",
+                      "id": "d4069b90-0c71-4cd7-a2a3-94e660651477",
                       "position": [
                         8,
                         1,
@@ -1176,7 +1162,7 @@
                     }
                   ]
                 },
-                "id": "87341955-b72e-4de9-a464-72215c717b2f",
+                "id": "67b6fca2-7606-41fa-b91c-6ec4448a4bd3",
                 "position": [
                   8,
                   1
@@ -1201,7 +1187,7 @@
                                     "text": "Əlimərdan bəy Topşubaşov - ADR hökumətinin üzvü və parlamentin sədri. Paris sülh konfransına getmiş nümayəndə heyətinin üzvü.",
                                     "attributes": []
                                   },
-                                  "id": "9593b190-ab64-4e0c-94e0-111550496bcc",
+                                  "id": "22259769-09be-462b-8130-826de221ee9a",
                                   "position": [
                                     8,
                                     2,
@@ -1212,7 +1198,7 @@
                                 }
                               ]
                             },
-                            "id": "bfbf2b4e-b31c-4539-b76e-6b9a595232ee",
+                            "id": "2f1bf0e1-df04-45b1-8bf1-b5d38157c777",
                             "position": [
                               8,
                               2,
@@ -1222,7 +1208,7 @@
                           }
                         ]
                       },
-                      "id": "ea5e27b9-3c7b-4726-98ad-b8e51b72a5bb",
+                      "id": "4446b62d-2e89-4f93-9cea-3c20700de222",
                       "position": [
                         8,
                         2,
@@ -1231,7 +1217,7 @@
                     }
                   ]
                 },
-                "id": "7f700443-0737-479b-98de-6f33e0990e08",
+                "id": "75b8dbf9-f08f-490f-bf7d-e0b593edca95",
                 "position": [
                   8,
                   2
@@ -1246,7 +1232,7 @@
                   "originCode": "cpsprodpb",
                   "width": 600
                 },
-                "id": "3283e931-a511-4513-a4d3-1b620d9b4674",
+                "id": "7e4f3027-3ff3-4e5e-a4e3-328f730ba913",
                 "position": [
                   8,
                   3
@@ -1254,7 +1240,7 @@
               }
             ]
           },
-          "id": "f6b7c1c2-8f8e-4b18-93e5-957764828f47",
+          "id": "b32a0062-4ea7-4f06-97ab-fff162136028",
           "position": [
             8
           ]
@@ -1282,7 +1268,7 @@
                                     "text": "Həsən bəy Ağayev Müsavat partiyasının üzvü olub. 1918-ci ildə ADR parlament sədrinin ilk müavini seçilir. Qafqazda kifayət qədər nüfuzlu şəxs sayılıb və Azərbaycanı Şimali Qafqaz Dağlılar qurultayında təmsil edib. O, 1919-cu ildə vəzifəsinə yenidən seçilə bilmir və Məmməd Yusif Cəfərov onun yerinə sədr müavini olur.",
                                     "attributes": []
                                   },
-                                  "id": "f9f47d8e-e563-4645-aa93-6bec45d227c1",
+                                  "id": "669a6e0d-8a23-4fb6-b11a-2884d28a6041",
                                   "position": [
                                     9,
                                     1,
@@ -1293,7 +1279,7 @@
                                 }
                               ]
                             },
-                            "id": "d0db6559-df40-4e88-b3df-15d3ae19ded9",
+                            "id": "021a1550-3372-476c-9518-e34a5c02a9c5",
                             "position": [
                               9,
                               1,
@@ -1303,7 +1289,7 @@
                           }
                         ]
                       },
-                      "id": "33536622-bcf8-43cc-b395-14766d78bb1e",
+                      "id": "09024c3e-dd42-42f3-85f4-1cc67f4250d1",
                       "position": [
                         9,
                         1,
@@ -1312,7 +1298,7 @@
                     }
                   ]
                 },
-                "id": "1074fcac-51b9-462a-b24e-ca84b19bc702",
+                "id": "49114a33-e86b-4edb-bd32-8c890df5979a",
                 "position": [
                   9,
                   1
@@ -1337,7 +1323,7 @@
                                     "text": "Həsən bəy Ağaev Azərbaycan parlamenti sədrinin 1-ci müavini sədr əvəzi",
                                     "attributes": []
                                   },
-                                  "id": "a01d903d-e3e3-4286-a8ac-0e9a359aaad6",
+                                  "id": "36786502-877b-4a66-95d6-bec076e7742c",
                                   "position": [
                                     9,
                                     2,
@@ -1348,7 +1334,7 @@
                                 }
                               ]
                             },
-                            "id": "61e94035-ba5e-4f8e-ac84-d0c25f5e3805",
+                            "id": "42aa5b1d-0c68-4750-b1ad-a95561e77990",
                             "position": [
                               9,
                               2,
@@ -1358,7 +1344,7 @@
                           }
                         ]
                       },
-                      "id": "c1205faf-aa17-4c0a-aa99-2cc15fca0fa9",
+                      "id": "f0f08d0d-0c35-4812-b473-b94fdf8c7720",
                       "position": [
                         9,
                         2,
@@ -1367,7 +1353,7 @@
                     }
                   ]
                 },
-                "id": "40f5fa2a-d88f-4adf-8665-760fa2ad7468",
+                "id": "22651586-dbcb-49b7-a844-f219a5c733b0",
                 "position": [
                   9,
                   2
@@ -1382,7 +1368,7 @@
                   "originCode": "cpsprodpb",
                   "width": 900
                 },
-                "id": "73d862e3-73a8-48f1-8ea8-d032bcafe58a",
+                "id": "02704d13-7212-47fc-b39e-dccf4f094141",
                 "position": [
                   9,
                   3
@@ -1390,7 +1376,7 @@
               }
             ]
           },
-          "id": "107448a7-2ffe-4385-8085-12c6b2808483",
+          "id": "c26170bb-1a4c-4e35-82e7-33e08c14a914",
           "position": [
             9
           ]
@@ -1418,7 +1404,7 @@
                                     "text": "Məmməd Yusif Cəfərov da Qafqazdakı nüfuzlu siyasi xadimlərdən biri idi. O, Milli Şuraya daxil olmuşdu. Rusiya Müəssislər Məclisinə keçirilən seçkilərdə uğur qazanmışdı. Həsən bəy Ağayevdən sonra ADR parlamentinin sədrinin birinci müavini vəzifəsinə seçilir. Bundan başqa cumhuriyyət dövründə o, müxtəlif vaxtlarda daxili və xarici işlər naziri vəzifələrində də olub.",
                                     "attributes": []
                                   },
-                                  "id": "d0a53597-6b0f-42b3-a541-a9ac4e761624",
+                                  "id": "dc7df8e1-9ab9-45d4-bd57-933125981292",
                                   "position": [
                                     10,
                                     1,
@@ -1429,7 +1415,7 @@
                                 }
                               ]
                             },
-                            "id": "39e85363-c43c-47cb-b983-100dd302967c",
+                            "id": "6ed4b32d-c320-4be0-ace5-f1c3c063392c",
                             "position": [
                               10,
                               1,
@@ -1439,7 +1425,7 @@
                           }
                         ]
                       },
-                      "id": "5f9e40b2-4ae5-4992-a342-2b5952a3946a",
+                      "id": "0a192660-0c0d-4601-893b-e4fbe98f5e6c",
                       "position": [
                         10,
                         1,
@@ -1448,7 +1434,7 @@
                     }
                   ]
                 },
-                "id": "b034afe4-bec0-4a24-acba-3592339ae3a7",
+                "id": "b1f6d576-0131-4b2f-b1fa-15473b83bf82",
                 "position": [
                   10,
                   1
@@ -1473,7 +1459,7 @@
                                     "text": "Məmməd Yusif Cəfərov",
                                     "attributes": []
                                   },
-                                  "id": "7995a0fb-8893-49a6-85b6-bd8345081250",
+                                  "id": "f124a8c2-634f-4ff3-aa9d-b33d725be161",
                                   "position": [
                                     10,
                                     2,
@@ -1484,7 +1470,7 @@
                                 }
                               ]
                             },
-                            "id": "30cbcb02-accf-4bd3-91bf-371a120ccfb3",
+                            "id": "ddac50b6-2a33-407a-8e2f-8616287abb61",
                             "position": [
                               10,
                               2,
@@ -1494,7 +1480,7 @@
                           }
                         ]
                       },
-                      "id": "98d35dd8-f440-411a-a0d2-2ebcf390e841",
+                      "id": "6136e94d-b033-487a-982e-c05fb41406bc",
                       "position": [
                         10,
                         2,
@@ -1503,7 +1489,7 @@
                     }
                   ]
                 },
-                "id": "7a24127b-db7f-4c34-b316-8eaa763a856f",
+                "id": "8cb25acc-9dfa-4436-a5ab-72a1920ecf3d",
                 "position": [
                   10,
                   2
@@ -1518,7 +1504,7 @@
                   "originCode": "cpsprodpb",
                   "width": 900
                 },
-                "id": "ee5af4aa-391d-441f-972e-5a66b7bb8721",
+                "id": "a254e75b-5955-46cf-bf99-e4fe6f6cdeee",
                 "position": [
                   10,
                   3
@@ -1526,7 +1512,7 @@
               }
             ]
           },
-          "id": "04b338a4-6cad-4d73-a86d-79c76891550a",
+          "id": "8ddaca9b-c1fc-4224-ae85-0db8b407d668",
           "position": [
             10
           ]
@@ -1554,7 +1540,7 @@
                                     "text": "AXC parlamentinin iclasından foto. Birinci sırada ADR-in Milli Şurasının sədri Məmməd Əmin Rəsulzadə əyləşib.",
                                     "attributes": []
                                   },
-                                  "id": "c8805541-9824-4150-b9f6-615a8e426373",
+                                  "id": "fe025b82-99cd-4b50-8ce7-9e3cab2f1d34",
                                   "position": [
                                     11,
                                     1,
@@ -1565,7 +1551,7 @@
                                 }
                               ]
                             },
-                            "id": "2dcb15ed-0f19-4b62-849b-b331fa0e269e",
+                            "id": "2ba96cda-030c-4345-aaf0-7b38997a38df",
                             "position": [
                               11,
                               1,
@@ -1575,7 +1561,7 @@
                           }
                         ]
                       },
-                      "id": "3dd4a46c-1747-4c6e-aece-604f71c3ed4d",
+                      "id": "3257078a-99bb-45cd-adc3-cef1492b5110",
                       "position": [
                         11,
                         1,
@@ -1584,7 +1570,7 @@
                     }
                   ]
                 },
-                "id": "fb1269ee-e853-4e73-a60e-1d3da902405b",
+                "id": "3bfd5273-5e5a-46e7-b62e-9a52f0785438",
                 "position": [
                   11,
                   1
@@ -1609,7 +1595,7 @@
                                     "text": "AXC parlamentinin iclası - Birinci sırada ADR-in Milli Şurasının sədri M. Rəsulzadə",
                                     "attributes": []
                                   },
-                                  "id": "2c607ceb-9ffb-4a1d-8661-8274c3b3b361",
+                                  "id": "2798b1d2-e736-4c37-8485-984eabfc20c5",
                                   "position": [
                                     11,
                                     2,
@@ -1620,7 +1606,7 @@
                                 }
                               ]
                             },
-                            "id": "7e1493bc-dcb9-4b04-be57-bf1b4535beee",
+                            "id": "4762e8ad-cb78-4352-bf24-0978333eeedb",
                             "position": [
                               11,
                               2,
@@ -1630,7 +1616,7 @@
                           }
                         ]
                       },
-                      "id": "ea0e01bf-652d-4a64-9801-bfb881c7daa7",
+                      "id": "9fd096b6-b4fe-41b8-ac9a-76f2709e3216",
                       "position": [
                         11,
                         2,
@@ -1639,7 +1625,7 @@
                     }
                   ]
                 },
-                "id": "20f0e434-14ef-42f7-8a2f-3ebf9a739148",
+                "id": "4babd7b9-53fb-4c16-9c17-bda31054bb96",
                 "position": [
                   11,
                   2
@@ -1654,7 +1640,7 @@
                   "originCode": "cpsprodpb",
                   "width": 970
                 },
-                "id": "39a45a1f-9d50-42c6-b8a4-e7f5512ecaed",
+                "id": "54d59b5e-a0a5-49a7-b191-33e49e86ff57",
                 "position": [
                   11,
                   3
@@ -1662,7 +1648,7 @@
               }
             ]
           },
-          "id": "0f62399b-c044-4b50-84e5-16928bfdaf45",
+          "id": "b0a8adfa-d604-4838-8584-3fffdbae9abe",
           "position": [
             11
           ]
@@ -1690,7 +1676,7 @@
                                     "text": "Azərbaycan nümayəndə heyəti üzvlərinin Paris sülh konfransı günlərində iclası.",
                                     "attributes": []
                                   },
-                                  "id": "32e49de2-cc76-43be-9292-f4055c1bc8ec",
+                                  "id": "534c417f-3d59-4996-aab3-e06d10371ecf",
                                   "position": [
                                     12,
                                     1,
@@ -1701,7 +1687,7 @@
                                 }
                               ]
                             },
-                            "id": "2572b028-cbf6-4a5c-8945-4afebdf4c421",
+                            "id": "5302565f-c98d-481a-a557-04d6f5b94ea5",
                             "position": [
                               12,
                               1,
@@ -1711,7 +1697,7 @@
                           }
                         ]
                       },
-                      "id": "75d656d1-f65e-46f5-9aa1-481008774dca",
+                      "id": "27537d1a-ac49-4761-89a5-44c9698bb664",
                       "position": [
                         12,
                         1,
@@ -1720,7 +1706,7 @@
                     }
                   ]
                 },
-                "id": "96d8747d-8cca-469d-ba8d-dbdb0d026050",
+                "id": "cc58a985-fd61-4ef9-bf39-e687ac25d4e1",
                 "position": [
                   12,
                   1
@@ -1745,7 +1731,7 @@
                                     "text": "Azərbaycan nümayəndə üzvlərinin Parisdə sülh konfransı günlərində iclası",
                                     "attributes": []
                                   },
-                                  "id": "d94c8dc0-2a49-4199-a8a6-3eb49940ce2f",
+                                  "id": "2aab2413-9bb2-4d62-81ec-8ad69158a56b",
                                   "position": [
                                     12,
                                     2,
@@ -1756,7 +1742,7 @@
                                 }
                               ]
                             },
-                            "id": "14051f1f-a91c-496e-8970-df8017ff3117",
+                            "id": "f60c4960-63f3-4c33-aacc-7b9694ea4fdb",
                             "position": [
                               12,
                               2,
@@ -1766,7 +1752,7 @@
                           }
                         ]
                       },
-                      "id": "2bf7c1b7-abfc-44a9-92a4-02604fc0a7a2",
+                      "id": "d290efcb-8164-4931-8154-1b937c389ce2",
                       "position": [
                         12,
                         2,
@@ -1775,7 +1761,7 @@
                     }
                   ]
                 },
-                "id": "9503bc1d-42d4-4e17-8d67-ef3812d74190",
+                "id": "6cb3891b-03d2-47ee-9674-733a724a6b1f",
                 "position": [
                   12,
                   2
@@ -1790,7 +1776,7 @@
                   "originCode": "cpsprodpb",
                   "width": 580
                 },
-                "id": "ea78d5f5-0e6a-4b35-9323-b4b68a7ba74c",
+                "id": "e0594b78-af10-43b7-8f80-fcc16d8c6fdf",
                 "position": [
                   12,
                   3
@@ -1798,7 +1784,7 @@
               }
             ]
           },
-          "id": "7ce3b9dc-3146-4b40-9623-7e2e7a36476a",
+          "id": "3919d315-e643-4e86-9805-10fecfb30dff",
           "position": [
             12
           ]
@@ -1826,7 +1812,7 @@
                                     "text": "Səməd bəy Mehmandarov, hərbi və dövlət xadimi, artilleriya generalı olub. 15 fevral 1918-ci ildən 27 aprel 1920-ci ilə qədər Milli Hökumətin hərbi naziri vəzifəsini icra edib.",
                                     "attributes": []
                                   },
-                                  "id": "3fce984d-ddb2-4f60-b751-41bd76ee9a7f",
+                                  "id": "be16dd1b-8ad8-4728-a2d8-d3fd4893b5cb",
                                   "position": [
                                     13,
                                     1,
@@ -1837,7 +1823,7 @@
                                 }
                               ]
                             },
-                            "id": "e2015611-65ff-4aef-b767-a717cfbcfd2e",
+                            "id": "72bc9f5d-beee-43a2-8172-3897b5e88fa8",
                             "position": [
                               13,
                               1,
@@ -1847,7 +1833,7 @@
                           }
                         ]
                       },
-                      "id": "d874cf1e-2b4d-4477-9ec8-9ea81ecd48e6",
+                      "id": "0b1fef91-f94b-45d4-8cc0-43d315708423",
                       "position": [
                         13,
                         1,
@@ -1856,7 +1842,7 @@
                     }
                   ]
                 },
-                "id": "17ec5c41-b4fe-4845-ac8a-6a291cc775ac",
+                "id": "3bafafb4-f1a8-45fd-96eb-97d07ed0e385",
                 "position": [
                   13,
                   1
@@ -1881,7 +1867,7 @@
                                     "text": "Səməd bəy Mehmandarov- hərbi və dövlət xadimi, artilleriya generalı, 15 fgevral 1918-ci ildən 27 aprel 1920-ci ilə qədər Milli hökumətin hərbi naziri, 1920",
                                     "attributes": []
                                   },
-                                  "id": "1cfa9696-dab9-44ac-b5ce-c8443222e217",
+                                  "id": "16f3ed2c-cb72-4ce0-bc49-8192411fe287",
                                   "position": [
                                     13,
                                     2,
@@ -1892,7 +1878,7 @@
                                 }
                               ]
                             },
-                            "id": "aaa7e70f-a2d7-47a7-bf9a-da3f0cca6a81",
+                            "id": "d6541764-84eb-462e-b9ce-3ca75b299f9e",
                             "position": [
                               13,
                               2,
@@ -1902,7 +1888,7 @@
                           }
                         ]
                       },
-                      "id": "e0b914c1-35c9-412d-9087-e7f749d618ed",
+                      "id": "68c0fb2d-6579-48a5-9153-3ae95de3c0af",
                       "position": [
                         13,
                         2,
@@ -1911,7 +1897,7 @@
                     }
                   ]
                 },
-                "id": "b43df952-0359-48b6-a21c-c0ba56b80491",
+                "id": "dabc92ee-49c3-4dc5-b3cf-3deb58459ccf",
                 "position": [
                   13,
                   2
@@ -1926,7 +1912,7 @@
                   "originCode": "cpsprodpb",
                   "width": 950
                 },
-                "id": "90ba6c00-ca33-4ec6-a77f-29d3d91a50e4",
+                "id": "9d15eb78-9c7b-4fd1-89d2-f265db7d1b6d",
                 "position": [
                   13,
                   3
@@ -1934,7 +1920,7 @@
               }
             ]
           },
-          "id": "d48fbbf8-a856-45a6-a0fa-1f266df2d730",
+          "id": "3408cbd1-8a95-4269-894d-0611259581b5",
           "position": [
             13
           ]
@@ -1962,7 +1948,7 @@
                                     "text": "Əli Ağa Şıxlınski - Rusiya İmperiyası ordusunda general-leytenant, Azərbaycan Xalq Cümhuriyyətinin Hərbi nazirinin müavini 1917.",
                                     "attributes": []
                                   },
-                                  "id": "1d3cf16a-9ce7-445d-86c3-105b9ea4f1ac",
+                                  "id": "8631d384-542a-4886-86c2-ab6cd6695f62",
                                   "position": [
                                     14,
                                     1,
@@ -1973,7 +1959,7 @@
                                 }
                               ]
                             },
-                            "id": "22350e54-7d10-45ac-a8a8-479e5a73e32f",
+                            "id": "3c4a1c64-9774-46cc-b0d8-1a8d18b49b59",
                             "position": [
                               14,
                               1,
@@ -1983,7 +1969,7 @@
                           }
                         ]
                       },
-                      "id": "c374b07f-29fd-41bc-9a39-68e4772778de",
+                      "id": "32c40763-647d-4956-8c51-56cd0a2e5e6f",
                       "position": [
                         14,
                         1,
@@ -1992,7 +1978,7 @@
                     }
                   ]
                 },
-                "id": "8a448d1e-b320-4ae3-9b31-11996cf89df7",
+                "id": "102f2f3f-051d-47d8-a2e5-2453260660aa",
                 "position": [
                   14,
                   1
@@ -2017,7 +2003,7 @@
                                     "text": "Əli Ağa Şıxlınski -artilleriyanın general leytinantı, 1917",
                                     "attributes": []
                                   },
-                                  "id": "9ed9a3b5-c921-446c-8631-7855256c6379",
+                                  "id": "dc79f1a8-f668-4db9-b799-f9de012ed3bd",
                                   "position": [
                                     14,
                                     2,
@@ -2028,7 +2014,7 @@
                                 }
                               ]
                             },
-                            "id": "47222219-80c4-41c0-b14c-333b8b87222c",
+                            "id": "c0be515c-d9a2-4b2a-a0c5-5d348d9c511a",
                             "position": [
                               14,
                               2,
@@ -2038,7 +2024,7 @@
                           }
                         ]
                       },
-                      "id": "f5ed7078-7344-4454-b40e-e755cc025957",
+                      "id": "d4f4d115-6cf6-4168-b4ff-2ffd64877a46",
                       "position": [
                         14,
                         2,
@@ -2047,7 +2033,7 @@
                     }
                   ]
                 },
-                "id": "e87141ad-fa0d-4720-b0f0-48bb1d49820e",
+                "id": "6850420f-41fc-4606-b470-c2903e40fbcf",
                 "position": [
                   14,
                   2
@@ -2062,7 +2048,7 @@
                   "originCode": "cpsprodpb",
                   "width": 1000
                 },
-                "id": "03073ae0-406b-4f72-a0fd-dca5c724b04f",
+                "id": "fe7b6912-3afc-4fa1-931d-06b00772e37e",
                 "position": [
                   14,
                   3
@@ -2070,7 +2056,7 @@
               }
             ]
           },
-          "id": "515cffe1-4ec9-4de6-87f0-aaaae9858281",
+          "id": "f6031209-568d-46ee-800c-018516a68b4a",
           "position": [
             14
           ]
@@ -2098,7 +2084,7 @@
                                     "text": "AXC ordusunun zabit və əsgərləri.",
                                     "attributes": []
                                   },
-                                  "id": "fe09d812-4cee-4218-938b-eab49666e809",
+                                  "id": "2b4fdbf2-0bb4-490b-a855-8d1e2934e7c1",
                                   "position": [
                                     15,
                                     1,
@@ -2109,7 +2095,7 @@
                                 }
                               ]
                             },
-                            "id": "694b9fa0-435e-40b1-928a-e2286d1965dc",
+                            "id": "f34e155c-a538-43ec-bb07-271c5b0ce440",
                             "position": [
                               15,
                               1,
@@ -2119,7 +2105,7 @@
                           }
                         ]
                       },
-                      "id": "4d9da0ec-c5d0-4ad9-a4f4-edd5ed1503df",
+                      "id": "ae5322ca-31a2-4fee-be1d-1a94db37eb1e",
                       "position": [
                         15,
                         1,
@@ -2128,7 +2114,7 @@
                     }
                   ]
                 },
-                "id": "968a2013-80e6-4f27-a342-50e41819db43",
+                "id": "956b7eef-6bae-41a7-9aee-c51781c01e7c",
                 "position": [
                   15,
                   1
@@ -2153,7 +2139,7 @@
                                     "text": "AXC ordusunun zabit və əsgərləri",
                                     "attributes": []
                                   },
-                                  "id": "0a34c259-7f96-4540-a3e3-07314522a2cb",
+                                  "id": "817efdbc-c02a-49b5-9e59-35d03f090b8f",
                                   "position": [
                                     15,
                                     2,
@@ -2164,7 +2150,7 @@
                                 }
                               ]
                             },
-                            "id": "bfcbd181-207b-455c-bac9-7e00ef04b203",
+                            "id": "2306e4a2-1350-404e-b0aa-f9b110c8e88b",
                             "position": [
                               15,
                               2,
@@ -2174,7 +2160,7 @@
                           }
                         ]
                       },
-                      "id": "a7e5140b-20e7-425e-a15f-1db7143055dd",
+                      "id": "7b1216b4-f984-43fb-b025-8ea88d691813",
                       "position": [
                         15,
                         2,
@@ -2183,7 +2169,7 @@
                     }
                   ]
                 },
-                "id": "7f84c8f1-b341-402c-9d6e-661fb70b0fca",
+                "id": "6d4a4343-f963-41d4-a373-ee1d4ce1c0e8",
                 "position": [
                   15,
                   2
@@ -2198,7 +2184,7 @@
                   "originCode": "cpsprodpb",
                   "width": 990
                 },
-                "id": "b4612ff5-cbb1-47e8-adfc-7fb9a5a82c0f",
+                "id": "8f6bcff0-6697-404e-a0f8-e861796ab180",
                 "position": [
                   15,
                   3
@@ -2206,7 +2192,7 @@
               }
             ]
           },
-          "id": "d98b4e2f-d864-4f1e-b8a3-3ec30789f4d9",
+          "id": "4f8be73e-dfa9-4b39-9893-e5a00d658ed1",
           "position": [
             15
           ]
@@ -2234,7 +2220,7 @@
                                     "text": "Gəncə yunkerlər məktəbinin zabit və kursantları.",
                                     "attributes": []
                                   },
-                                  "id": "db1be2c0-06aa-46a9-9c11-37a3972ed4dd",
+                                  "id": "e28f93bc-1c43-4798-9a4e-cbbf2ef1dbc0",
                                   "position": [
                                     16,
                                     1,
@@ -2245,7 +2231,7 @@
                                 }
                               ]
                             },
-                            "id": "76fb36df-575d-4470-9842-a5559ba0ad3c",
+                            "id": "8d961a89-64cf-4f06-934b-addc88b592da",
                             "position": [
                               16,
                               1,
@@ -2255,7 +2241,7 @@
                           }
                         ]
                       },
-                      "id": "45a2e44b-bc15-4a1d-9927-e2bd5627f173",
+                      "id": "14a251a5-c947-4216-8392-83f35aed1294",
                       "position": [
                         16,
                         1,
@@ -2264,7 +2250,7 @@
                     }
                   ]
                 },
-                "id": "52abdeb1-9da0-406b-b3f5-4c6d626125ec",
+                "id": "96cf56df-f8c3-4faf-973d-d0f12839344c",
                 "position": [
                   16,
                   1
@@ -2289,7 +2275,7 @@
                                     "text": "Gəncə yunkerlər məktəbinin zabit və kursantları",
                                     "attributes": []
                                   },
-                                  "id": "0edcff6f-2df4-4bfc-929f-04877e093958",
+                                  "id": "a10b4689-6509-4c20-ade2-37bda1ad5bb6",
                                   "position": [
                                     16,
                                     2,
@@ -2300,7 +2286,7 @@
                                 }
                               ]
                             },
-                            "id": "0908fc6d-0420-4d20-a274-1196a6cb9b89",
+                            "id": "0331725f-b524-4f92-8468-d4b1168b8051",
                             "position": [
                               16,
                               2,
@@ -2310,7 +2296,7 @@
                           }
                         ]
                       },
-                      "id": "ffe0fc76-44ad-4ccb-8be1-8b5eabc493fc",
+                      "id": "2ef27ca3-07ec-42ea-9739-d1facf8da905",
                       "position": [
                         16,
                         2,
@@ -2319,7 +2305,7 @@
                     }
                   ]
                 },
-                "id": "69431ce7-1505-47c4-aa3c-f9a851f6a5af",
+                "id": "3178617b-b653-4779-9645-f61b802ed4e7",
                 "position": [
                   16,
                   2
@@ -2334,7 +2320,7 @@
                   "originCode": "cpsprodpb",
                   "width": 976
                 },
-                "id": "c8b970d6-e789-434e-a7a1-97d1b1031227",
+                "id": "49793637-b2b5-4d7c-b75c-7865b41428b9",
                 "position": [
                   16,
                   3
@@ -2342,7 +2328,7 @@
               }
             ]
           },
-          "id": "9f416be8-63cd-4a27-aa9e-a199759b45e1",
+          "id": "3311ecc6-8499-4fa2-833b-08d0bb683118",
           "position": [
             16
           ]
@@ -2370,7 +2356,7 @@
                                     "text": "Azərbaycan Xalq Cümhuriyyəti parlamentinin binası, 1919-cu il.",
                                     "attributes": []
                                   },
-                                  "id": "e8dfe870-8207-4576-a624-dde579e89a9a",
+                                  "id": "5e0053f9-15fe-4102-8316-0b784118fa7f",
                                   "position": [
                                     17,
                                     1,
@@ -2381,7 +2367,7 @@
                                 }
                               ]
                             },
-                            "id": "91b00325-71d0-48d2-b32d-d91a77cc93df",
+                            "id": "fa2a4a1c-9724-4cd7-8ecb-4be4a52366a9",
                             "position": [
                               17,
                               1,
@@ -2391,7 +2377,7 @@
                           }
                         ]
                       },
-                      "id": "b6bb8eb7-2db4-4f34-abd1-be5116866b81",
+                      "id": "13eee0c8-2428-4fe3-beb0-d3a07daefaa9",
                       "position": [
                         17,
                         1,
@@ -2400,7 +2386,7 @@
                     }
                   ]
                 },
-                "id": "505a2e82-fb70-42ae-85b4-36866d089464",
+                "id": "30f3c704-d801-4053-b020-db5b9ae4cbf9",
                 "position": [
                   17,
                   1
@@ -2425,7 +2411,7 @@
                                     "text": "Azərbaycan Xalq Cumhuriyyəti parlamentinin binası, 1919",
                                     "attributes": []
                                   },
-                                  "id": "10dbbebf-8bca-410e-9829-24083ccf647a",
+                                  "id": "5e327d2c-68c9-4f0f-aa0f-20e9a66992ec",
                                   "position": [
                                     17,
                                     2,
@@ -2436,7 +2422,7 @@
                                 }
                               ]
                             },
-                            "id": "4b97a6cb-20ff-4fa5-84d9-8f5a01a3ac30",
+                            "id": "6f44a79e-c454-411f-a604-8810304607a6",
                             "position": [
                               17,
                               2,
@@ -2446,7 +2432,7 @@
                           }
                         ]
                       },
-                      "id": "d8f2a4f0-08af-4f79-b092-bb7f1796e535",
+                      "id": "7eedf912-905f-4b64-86ca-73860c2a05f8",
                       "position": [
                         17,
                         2,
@@ -2455,7 +2441,7 @@
                     }
                   ]
                 },
-                "id": "bd371f30-0554-4b82-9c59-823834885462",
+                "id": "3aa23619-d365-4d1b-bac8-611edf2bb375",
                 "position": [
                   17,
                   2
@@ -2470,7 +2456,7 @@
                   "originCode": "cpsprodpb",
                   "width": 996
                 },
-                "id": "74305094-6175-4dfa-a812-f2584ea71753",
+                "id": "2203550b-36cc-4af9-bf56-e79d570319f7",
                 "position": [
                   17,
                   3
@@ -2478,7 +2464,7 @@
               }
             ]
           },
-          "id": "c1ed1a0f-4215-455b-9850-4444bbffb1da",
+          "id": "b45ee077-ec69-4d1c-b723-ac07a1a36803",
           "position": [
             17
           ]
@@ -2506,7 +2492,7 @@
                                     "text": "AXC-nin yaradılmasının ildönümünə həsr edilmiş Azərbaycan ordusunun hərbi paradı, 1919-cu il.",
                                     "attributes": []
                                   },
-                                  "id": "03d13f58-ea8b-4b91-9783-7aff1b3b9818",
+                                  "id": "16b65a7f-baab-43e6-92ac-86ded117236c",
                                   "position": [
                                     18,
                                     1,
@@ -2517,7 +2503,7 @@
                                 }
                               ]
                             },
-                            "id": "d2e1e2f1-0c9e-40af-bf9d-f50ecd68e4da",
+                            "id": "1146068d-216f-4da0-bbc3-0f4c4a914ae0",
                             "position": [
                               18,
                               1,
@@ -2527,7 +2513,7 @@
                           }
                         ]
                       },
-                      "id": "4683cf74-0a7e-4c59-9c8d-626d3e614d7c",
+                      "id": "904793f4-a504-4008-8f33-26c5e39cd3d8",
                       "position": [
                         18,
                         1,
@@ -2536,7 +2522,7 @@
                     }
                   ]
                 },
-                "id": "553aaaae-8a53-4574-ab60-4b19d7b46ec7",
+                "id": "6bed9ce7-1e81-4cda-8b25-fab52ec24b39",
                 "position": [
                   18,
                   1
@@ -2561,7 +2547,7 @@
                                     "text": "AXC-nin yaradılmasının ildönümünə həsr edilmiş Azərbaycan ordusunun hərbi paradı",
                                     "attributes": []
                                   },
-                                  "id": "59290c4e-b974-4cab-a94e-adbbf76693f2",
+                                  "id": "74f9993b-840b-483a-b504-33dfb7ba8c4c",
                                   "position": [
                                     18,
                                     2,
@@ -2572,7 +2558,7 @@
                                 }
                               ]
                             },
-                            "id": "548e888c-4fcb-44a9-a40c-579875fc8a74",
+                            "id": "195c9698-bd36-485c-9290-358e6fc16e20",
                             "position": [
                               18,
                               2,
@@ -2582,7 +2568,7 @@
                           }
                         ]
                       },
-                      "id": "a3d45c55-55dd-457d-9b26-909a4b01a281",
+                      "id": "3e37c340-0836-4a5e-8697-fcc53be58464",
                       "position": [
                         18,
                         2,
@@ -2591,7 +2577,7 @@
                     }
                   ]
                 },
-                "id": "31ee20fd-70d3-4c19-bd33-8e1ece8e3b66",
+                "id": "4e995135-78df-4bf7-9621-90c9650aea6c",
                 "position": [
                   18,
                   2
@@ -2606,7 +2592,7 @@
                   "originCode": "cpsprodpb",
                   "width": 996
                 },
-                "id": "ddf06c4f-37ac-4668-983a-8438aff54703",
+                "id": "e33e46cb-4a71-4960-bcd7-e400c1c160d0",
                 "position": [
                   18,
                   3
@@ -2614,7 +2600,7 @@
               }
             ]
           },
-          "id": "ec8f5af5-3fe8-49b9-a0d4-5dabc2f1e5bc",
+          "id": "bb8a553a-0a40-454f-b0aa-db888daeb77a",
           "position": [
             18
           ]
@@ -2642,7 +2628,7 @@
                                     "text": "AXC Nazirlər Sovetinin heyəti. Ortada - Nazirlər Sovetinin sədri Usub bəy Nəsirbəyov, hərbi nazir Səməd ağa Mehmandarov. Sağdan-sola: maliyyə naziri Əliağa Həsənov, xarici işlər naziri Fətəli xan Xoyski, əmək və ədliyyə naziri A. Səfirkürdski, portfelsiz nazir Amastor, səhiyyə naziri Taskanov, Nazirlər Sovetinin iş icraçısı Mirzə Qacar. Soldan-sağa: yol-nəqliyyat naziri Məlik Aslanov, teleqraf naziri Camo bəy Hacınski, nəzarət naziri Nəriman bəy Nərimanbəyov, ədliyyə nazirinin köməkçisi Teymur bəy Makinski, yol-nəqliyyat nazirinin köməkçisi Yusif Məmmədbəyov, əkinçilik nazirinin köməkçisi Hidayət bəy Sultanov, xarici işlər nazirinin köməkçisi Adilxan Ziyadxanov, 1919-cu il.",
                                     "attributes": []
                                   },
-                                  "id": "76190c46-dd62-4c18-a952-09a26aa866e4",
+                                  "id": "ae896d08-1dec-41fa-8ba7-e7721ae8df8f",
                                   "position": [
                                     19,
                                     1,
@@ -2653,7 +2639,7 @@
                                 }
                               ]
                             },
-                            "id": "26653fc0-24d2-4e23-8701-2d7f829f4f98",
+                            "id": "23870289-eb1f-41f5-966f-871f0810fd0c",
                             "position": [
                               19,
                               1,
@@ -2663,7 +2649,7 @@
                           }
                         ]
                       },
-                      "id": "a948149e-ab4c-4329-a36d-59cab1a11b6a",
+                      "id": "4b9ca728-6255-4e0b-81f0-c95f5d2766c5",
                       "position": [
                         19,
                         1,
@@ -2672,7 +2658,7 @@
                     }
                   ]
                 },
-                "id": "442a4187-7c3a-4a21-bc0f-88121b86b482",
+                "id": "a54fe5b3-3df2-4a58-97f8-eb86e4c29cdd",
                 "position": [
                   19,
                   1
@@ -2697,7 +2683,7 @@
                                     "text": "AXC Nazirlər sovetinin heyəti",
                                     "attributes": []
                                   },
-                                  "id": "eaaf31fa-7c02-415d-a89f-e721bd75594e",
+                                  "id": "6bfb6ec2-ce56-4911-922f-82d3e23e5698",
                                   "position": [
                                     19,
                                     2,
@@ -2708,7 +2694,7 @@
                                 }
                               ]
                             },
-                            "id": "8f609b8e-3958-4a76-805d-575c570decce",
+                            "id": "496d5e19-2720-4309-adad-21a6045223d7",
                             "position": [
                               19,
                               2,
@@ -2718,7 +2704,7 @@
                           }
                         ]
                       },
-                      "id": "78a77c4b-edda-4968-8671-aefd12ab34d4",
+                      "id": "83c17636-6082-4190-b6c4-4b5f3a935abd",
                       "position": [
                         19,
                         2,
@@ -2727,7 +2713,7 @@
                     }
                   ]
                 },
-                "id": "e069f490-a52b-4b83-b57e-ad2fd47ecc3b",
+                "id": "02a12119-dbc4-4ab7-bd04-4790bd2463db",
                 "position": [
                   19,
                   2
@@ -2742,7 +2728,7 @@
                   "originCode": "cpsprodpb",
                   "width": 976
                 },
-                "id": "d84aa9ac-16de-425b-8c6d-7006bfb789b3",
+                "id": "8302927d-d77c-4a19-8647-a1cd3cec3fd8",
                 "position": [
                   19,
                   3
@@ -2750,7 +2736,7 @@
               }
             ]
           },
-          "id": "26c1dcaa-b6c6-4575-9399-e861d4726c61",
+          "id": "b2581959-103d-4c71-9712-cd01f3af7eae",
           "position": [
             19
           ]
@@ -2778,7 +2764,7 @@
                                     "text": "Azərbaycan parlamentinin üzvləri: Ortada: AXC Nazirlər Sovetinin sədri Fətəli xan Xoyski və Azərbaycan parlamentinin sədr müavini Həsənbəy Ağayev.",
                                     "attributes": []
                                   },
-                                  "id": "92263f26-8d8a-4d04-ad74-69afe91318df",
+                                  "id": "d9d1a856-0281-4269-acaa-24aa9a90bff7",
                                   "position": [
                                     20,
                                     1,
@@ -2789,7 +2775,7 @@
                                 }
                               ]
                             },
-                            "id": "31d832ee-f60b-48d7-9bbe-85bdfea10e19",
+                            "id": "2c93f143-7781-4e8a-8ced-17bb9ad01617",
                             "position": [
                               20,
                               1,
@@ -2799,7 +2785,7 @@
                           }
                         ]
                       },
-                      "id": "9eb4bf10-f87a-4d09-8b2d-812c03b9298a",
+                      "id": "b0699268-0afb-4a65-8b4c-c54902a8b380",
                       "position": [
                         20,
                         1,
@@ -2808,7 +2794,7 @@
                     }
                   ]
                 },
-                "id": "021a3718-9e41-4516-b5eb-a86e5b0578c9",
+                "id": "2bdb1f9e-30d8-451c-b9b4-4862741a4990",
                 "position": [
                   20,
                   1
@@ -2833,7 +2819,7 @@
                                     "text": "Azərbaycan parlamentinin üzvləri: Ortada - AXC Nazirlər Sovetinin sədri F. Xoyski və Azərbaycan parlamentinin sədr müavini H. Ağayev",
                                     "attributes": []
                                   },
-                                  "id": "e839d726-aeac-44ef-9d86-20965b6240f5",
+                                  "id": "72ab9792-1681-44a4-9cbe-c678f1f89db6",
                                   "position": [
                                     20,
                                     2,
@@ -2844,7 +2830,7 @@
                                 }
                               ]
                             },
-                            "id": "1411ba9d-3689-4da6-9568-5a98a8386952",
+                            "id": "2715db65-307d-468d-8d83-591613f21999",
                             "position": [
                               20,
                               2,
@@ -2854,7 +2840,7 @@
                           }
                         ]
                       },
-                      "id": "47d40af8-b52f-4db7-9ff5-9347b06177ed",
+                      "id": "97e9c2bd-c0a9-4f89-9426-0b52fe2c5134",
                       "position": [
                         20,
                         2,
@@ -2863,7 +2849,7 @@
                     }
                   ]
                 },
-                "id": "a51ce70a-f195-4461-b141-bd3cdd3ce209",
+                "id": "1db3476f-6655-4db1-827b-e2534ed0d0ed",
                 "position": [
                   20,
                   2
@@ -2878,7 +2864,7 @@
                   "originCode": "cpsprodpb",
                   "width": 976
                 },
-                "id": "d9b1b819-ed00-4f41-87dc-d5f620fec01f",
+                "id": "ab8b40bc-15c2-4a23-97d4-05858a364d1e",
                 "position": [
                   20,
                   3
@@ -2886,7 +2872,7 @@
               }
             ]
           },
-          "id": "c896bec1-bf32-42a7-b0b5-8c1b6b7cc4eb",
+          "id": "f089ed16-b854-4397-8a6d-5384287104b5",
           "position": [
             20
           ]
@@ -2914,7 +2900,7 @@
                                     "text": "Əhməd bəy Ağayev - 1875-1939. Azərbaycanın 20-ci əsr ictimai-siyasi tarixinin fikir nəhənglərindən biri, publisist maarifçi, 1918-ci ildə Azərbaycanı xilas etməyə gələn türk ordusunun komandanı Nuru Paşanın müavini kimi vətənə dönmüş, milli parlamentin üzvü olmuşdur. Milli Hökumət dövründə xüsusi qərarla Türkiyədən ölkəmizə müəllim dəvət olunmasında, dərslik gətirilməsində böyük xidmətləri var.",
                                     "attributes": []
                                   },
-                                  "id": "175f613c-c29a-45c2-8fd2-52b0c82bd699",
+                                  "id": "ab52ec12-c6f3-4f8b-b149-05e3842a00f0",
                                   "position": [
                                     21,
                                     1,
@@ -2925,7 +2911,7 @@
                                 }
                               ]
                             },
-                            "id": "20ff87f7-c5f5-4695-ab85-c5548a0b5830",
+                            "id": "5986ef2a-7491-48dd-9102-19401c9c1e40",
                             "position": [
                               21,
                               1,
@@ -2935,7 +2921,7 @@
                           }
                         ]
                       },
-                      "id": "65d13666-c8d4-4e84-88cc-3c481732fde0",
+                      "id": "f90d0461-71b0-4c28-86ce-4eec78f98abf",
                       "position": [
                         21,
                         1,
@@ -2944,7 +2930,7 @@
                     }
                   ]
                 },
-                "id": "e09df7b9-9f4c-4e3e-b234-1341c45330a0",
+                "id": "6a2608ba-730d-4534-8c4e-05ab81c8cb47",
                 "position": [
                   21,
                   1
@@ -2969,7 +2955,7 @@
                                     "text": "Əhməd bəy Ağayev",
                                     "attributes": []
                                   },
-                                  "id": "4f213e10-8fba-4ac9-b065-4cd6f329e510",
+                                  "id": "3487141a-8782-49cd-b376-6dfc2b81c4c4",
                                   "position": [
                                     21,
                                     2,
@@ -2980,7 +2966,7 @@
                                 }
                               ]
                             },
-                            "id": "2fab356f-543b-4520-b89e-4646df1c02e4",
+                            "id": "0e46baa3-bdb4-450e-85a6-39775cfbac88",
                             "position": [
                               21,
                               2,
@@ -2990,7 +2976,7 @@
                           }
                         ]
                       },
-                      "id": "1bb31588-be9e-46fa-985d-3b5a6a76d616",
+                      "id": "d7fc06be-8a8e-47b5-b537-a69c383782ad",
                       "position": [
                         21,
                         2,
@@ -2999,7 +2985,7 @@
                     }
                   ]
                 },
-                "id": "d93d0819-e93e-443b-97de-ee0951a196fa",
+                "id": "4d8f655c-6895-4bbc-be6c-462e0a552a6f",
                 "position": [
                   21,
                   2
@@ -3014,7 +3000,7 @@
                   "originCode": "cpsprodpb",
                   "width": 900
                 },
-                "id": "e34aa516-e721-4748-9520-e45727956671",
+                "id": "e5b3bc92-099c-4eb3-b431-9d5fcdde633c",
                 "position": [
                   21,
                   3
@@ -3022,7 +3008,7 @@
               }
             ]
           },
-          "id": "fd0fabb4-6eba-4e8f-a536-c5078871f055",
+          "id": "4437803f-d848-46ed-aac3-357704a81583",
           "position": [
             21
           ]
@@ -3050,7 +3036,7 @@
                                     "text": "Məmməd Həsən Hacinski AXC-nin birinci və ikinci kabinetlərində XİN rəhbəri, 2-ci kabinetində maliyyə naziri vəzifəsini icra edib. Hacınski Müsavat partiyasın üzvü olub, parlamentdə fraksiyalardan birinin lideri olub. Tarixçi-alim Altay Göyüşovun sözlərinə görə, 1920-ci ilin əvvəllərində Nazirlər Şurasının sədri Nəsib bəy Yusifbəyov istefaya getdikdən sonra yeni hökumətin təşkili Hacınskiyə tapşırılıb.",
                                     "attributes": []
                                   },
-                                  "id": "8472b82a-f0e3-48ae-8f19-75b3af2a43fb",
+                                  "id": "e3e44d8f-80a3-40ca-9467-6f33759f9334",
                                   "position": [
                                     22,
                                     1,
@@ -3061,7 +3047,7 @@
                                 }
                               ]
                             },
-                            "id": "0097723f-3cbc-4441-8cdb-f0a4e10095b6",
+                            "id": "a0120923-a6e8-4684-990b-608becc6c980",
                             "position": [
                               22,
                               1,
@@ -3071,7 +3057,7 @@
                           }
                         ]
                       },
-                      "id": "725d8ff4-4a22-4925-898b-eb7059b56eba",
+                      "id": "15f45ee9-de72-461a-b8b3-cfeef6f23c91",
                       "position": [
                         22,
                         1,
@@ -3080,7 +3066,7 @@
                     }
                   ]
                 },
-                "id": "e2639c6d-470f-45a5-8928-6c61f402ade9",
+                "id": "67d4a5c0-ded1-4d0b-8d69-3ca8343b45f3",
                 "position": [
                   22,
                   1
@@ -3105,7 +3091,7 @@
                                     "text": "M.H. Hacinski AXC-nin 1, 2 kabinetlərində XİN rəhbəri, 2-ci kabinetində maliyyə naziri",
                                     "attributes": []
                                   },
-                                  "id": "fda528b8-27dc-475a-a0ad-aa1085a7c172",
+                                  "id": "d4d37dba-c52f-424a-8993-2262e5d21721",
                                   "position": [
                                     22,
                                     2,
@@ -3116,7 +3102,7 @@
                                 }
                               ]
                             },
-                            "id": "9902789a-8650-4cbb-bea9-44c35144acf2",
+                            "id": "3672524c-a2c9-4e78-9409-653c184c49b1",
                             "position": [
                               22,
                               2,
@@ -3126,7 +3112,7 @@
                           }
                         ]
                       },
-                      "id": "3c739ee8-389f-4901-9118-a84b92e29392",
+                      "id": "5b772358-3075-45c7-aea4-3c43df5eca4d",
                       "position": [
                         22,
                         2,
@@ -3135,7 +3121,7 @@
                     }
                   ]
                 },
-                "id": "ce4aeb54-2787-4baa-92a1-854226c334b5",
+                "id": "01a3e1af-556f-49d8-bc67-20813da096ce",
                 "position": [
                   22,
                   2
@@ -3150,7 +3136,7 @@
                   "originCode": "cpsprodpb",
                   "width": 900
                 },
-                "id": "cf8b4b9b-79d5-4f97-a47f-f605006c5cc5",
+                "id": "e0afcf56-f75c-460e-9ef2-d0463f198412",
                 "position": [
                   22,
                   3
@@ -3158,7 +3144,7 @@
               }
             ]
           },
-          "id": "5ee9f064-72ed-4a27-b4fb-7fbe8b8af686",
+          "id": "cfab0903-0fed-4ffe-b72c-c5e7b7070dfd",
           "position": [
             22
           ]
