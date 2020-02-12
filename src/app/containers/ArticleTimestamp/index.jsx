@@ -13,8 +13,10 @@ import {
   formatType,
   isValidDateTime,
   isSameDay,
-  isToday,
 } from './helpers';
+
+const FirstPublishedTimestamp = Timestamp;
+const LastUpdatedTimestamp = Timestamp;
 
 const ArticleTimestamp = ({
   firstPublished,
@@ -63,15 +65,20 @@ const ArticleTimestamp = ({
 
   const publishedAndUpdatedOnSameDay = isSameDay(firstPublished, lastPublished);
 
-  const publishedToday = isToday(firstPublished);
+  const updatedLessThanTenHoursAgo = isLastRelative(lastPublished);
 
-  const hideUpdatedTimestamp = publishedAndUpdatedOnSameDay && !publishedToday;
+  const publishedAndUpdatedOnSameDayOverTenHoursAgo =
+    publishedAndUpdatedOnSameDay && !updatedLessThanTenHoursAgo;
+
+  const showLastUpdatedTimeStamp =
+    !publishedAndUpdatedOnSameDayOverTenHoursAgo &&
+    timeDifferenceMinutes > minutesTolerance;
 
   return (
     <Wrapper className={className}>
-      <Timestamp {...timestampProps} {...firstPublishedProps} />
-      {!hideUpdatedTimestamp && timeDifferenceMinutes > minutesTolerance && (
-        <Timestamp {...timestampProps} {...lastPublishedProps} />
+      <FirstPublishedTimestamp {...timestampProps} {...firstPublishedProps} />
+      {showLastUpdatedTimeStamp && (
+        <LastUpdatedTimestamp {...timestampProps} {...lastPublishedProps} />
       )}
     </Wrapper>
   );
