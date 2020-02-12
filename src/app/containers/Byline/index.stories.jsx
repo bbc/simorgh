@@ -14,6 +14,9 @@ const stories = storiesOf('Containers|Byline', module)
   .addDecorator(withServicesKnob());
 
 stories.add('default', ({ service }) => {
+  const blocks = [
+    { name: text('name', 'John Smith'), title: text('title', 'Art Editor') },
+  ];
   return (
     <ServiceContextProvider service={service}>
       <RequestContextProvider
@@ -24,11 +27,7 @@ stories.add('default', ({ service }) => {
         bbcOrigin="https://www.test.bbc.com"
         pathname="/pathname"
       >
-        <BylineContainer
-          service={service}
-          name={text('name', 'John Smith')}
-          title={text('title', 'Art Editor')}
-        />
+        <BylineContainer service={service} blocks={blocks} />
       </RequestContextProvider>
     </ServiceContextProvider>
   );
