@@ -292,7 +292,7 @@ describe('CPS MAP Page', () => {
 
   it('has a single "main" element, and a single "complementary" element (a11y)', async () => {
     expect(document.querySelectorAll(`[role='main']`).length).toBe(1);
-    expect(document.querySelectorAll(`[role='complementary']`).length).toBe(1);
+    expect(document.querySelectorAll(`[role='region']`).length).toBe(1);
   });
 });
 

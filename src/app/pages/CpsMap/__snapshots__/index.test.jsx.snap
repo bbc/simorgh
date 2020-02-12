@@ -961,10 +961,10 @@ exports[`CPS MAP Page should render component 1`] = `
                 </p>
               </div>
             </main>
-            <aside
+            <section
               aria-labelledby="related-content-heading"
               class="GhostGrid-sc-12lwanc-1 gfRQD"
-              role="complementary"
+              role="region"
             >
               <div
                 class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 ebGqUw"
@@ -1290,7 +1290,7 @@ exports[`CPS MAP Page should render component 1`] = `
                   </li>
                 </ul>
               </div>
-            </aside>
+            </section>
           </div>
         </div>
       </div>
