@@ -2,6 +2,7 @@ import pathOr from 'ramda/src/pathOr';
 import deepClone from 'ramda/src/clone';
 import path from 'ramda/src/path';
 import { singleTextBlock } from '#app/models/blocks';
+import insertBlockAfterHeadline from '../helpers';
 
 const getSummary = json => {
   const summary = pathOr(null, ['promo', 'summary'], json);
@@ -22,17 +23,9 @@ const addSummaryBlocks = originalJson => {
     return json;
   }
 
-  const headline = blocks.find(({ type }) =>
-    ['headline', 'fauxHeadline'].includes(type),
-  );
-
   const summary = singleTextBlock(getSummary(json));
 
-  const remainingBlocks = blocks.filter(({ type }) => {
-    return !['headline', 'fauxHeadline'].includes(type);
-  });
-
-  json.content.model.blocks = [headline, summary, ...remainingBlocks];
+  json.content.model.blocks = insertBlockAfterHeadline(summary, blocks);
 
   return json;
 };
