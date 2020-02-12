@@ -13,6 +13,7 @@ import {
   formatType,
   isValidDateTime,
   isSameDay,
+  isToday,
 } from './helpers';
 
 const FirstPublishedTimestamp = Timestamp;
@@ -65,13 +66,19 @@ const ArticleTimestamp = ({
 
   const publishedAndUpdatedOnSameDay = isSameDay(firstPublished, lastPublished);
 
+  const publishedToday = isToday(firstPublished);
+
   const updatedLessThanTenHoursAgo = isLastRelative(lastPublished);
+
+  const publishedAndUpdatedToday =
+    publishedAndUpdatedOnSameDay && publishedToday;
 
   const publishedAndUpdatedOnSameDayOverTenHoursAgo =
     publishedAndUpdatedOnSameDay && !updatedLessThanTenHoursAgo;
 
   const showLastUpdatedTimestamp =
-    !publishedAndUpdatedOnSameDayOverTenHoursAgo &&
+    (publishedAndUpdatedToday ||
+      !publishedAndUpdatedOnSameDayOverTenHoursAgo) &&
     timeDifferenceMinutes > minutesTolerance;
 
   return (
