@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment-timezone';
 import styled from 'styled-components';
-import { shape, string, oneOfType } from 'prop-types';
+import { shape, string, oneOf, oneOfType } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import MediaIndicator from '@bbc/psammead-media-indicator';
 import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
@@ -47,7 +47,7 @@ const StyledTime = styled.time`
   padding: 0 ${GEL_SPACING_HLF};
 `;
 
-const MediaIndicatorContainer = ({ script, service, item }) => {
+const MediaIndicatorContainer = ({ dir, script, service, item }) => {
   const type = getMediaType(item);
 
   if (!type) {
@@ -62,19 +62,25 @@ const MediaIndicatorContainer = ({ script, service, item }) => {
     const durationString = formatDuration({ duration });
     const isoDuration = duration.toISOString();
     return (
-      <MediaIndicator script={script} service={service} type={type}>
+      <MediaIndicator dir={dir} script={script} service={service} type={type}>
         <StyledTime dateTime={isoDuration}>{durationString}</StyledTime>
       </MediaIndicator>
     );
   }
 
-  return <MediaIndicator script={script} service={service} type={type} />;
+  return (
+    <MediaIndicator dir={dir} script={script} service={service} type={type} />
+  );
 };
 
 MediaIndicatorContainer.propTypes = {
+  dir: oneOf(['ltr', 'rtl']),
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
   item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
 };
 
+MediaIndicatorContainer.defaultProps = {
+  dir: 'ltr',
+};
 export default MediaIndicatorContainer;

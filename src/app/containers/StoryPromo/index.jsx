@@ -192,7 +192,12 @@ const StoryPromoContainer = ({
   );
 
   const MediaIndicator = (
-    <MediaIndicatorContainer script={script} service={service} item={item} />
+    <MediaIndicatorContainer
+      dir={dir}
+      script={script}
+      service={service}
+      item={item}
+    />
   );
 
   return (

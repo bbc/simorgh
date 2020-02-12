@@ -97,22 +97,29 @@ const noMediaFormat = {
 describe('Story Promo Media Indicator', () => {
   shouldMatchSnapshot(
     'should render an audio item correctly',
-    <MediaIndicator item={audioItem} script={latin} service="news" />,
+    <MediaIndicator dir="ltr" item={audioItem} script={latin} service="news" />,
   );
 
   shouldMatchSnapshot(
     'should render a video item correctly',
-    <MediaIndicator item={videoItem} script={latin} service="news" />,
+    <MediaIndicator dir="ltr" item={videoItem} script={latin} service="news" />,
   );
 
   shouldMatchSnapshot(
     'should render video indicator correctly when inline',
-    <MediaIndicator item={videoItem} script={latin} service="news" isInline />,
+    <MediaIndicator
+      dir="ltr"
+      item={videoItem}
+      script={latin}
+      service="news"
+      isInline
+    />,
   );
 
   shouldMatchSnapshot(
     'should render video indicator correctly when inline on RTL',
     <MediaIndicator
+      dir="rtl"
       item={videoItem}
       script={arabic}
       service="persian"
@@ -121,26 +128,51 @@ describe('Story Promo Media Indicator', () => {
   );
   shouldMatchSnapshot(
     'should render a photo gallery item correctly',
-    <MediaIndicator item={photogalleryItem} script={latin} service="news" />,
+    <MediaIndicator
+      dir="ltr"
+      item={photogalleryItem}
+      script={latin}
+      service="news"
+    />,
   );
 
   shouldMatchSnapshot(
     'should render correctly even without duration',
-    <MediaIndicator item={noDurationItem} script={latin} service="news" />,
+    <MediaIndicator
+      dir="ltr"
+      item={noDurationItem}
+      script={latin}
+      service="news"
+    />,
   );
 
   isNull(
     'should not render if item media object has no format',
-    <MediaIndicator item={noMediaFormat} script={latin} service="news" />,
+    <MediaIndicator
+      dir="ltr"
+      item={noMediaFormat}
+      script={latin}
+      service="news"
+    />,
   );
 
   isNull(
     'should not render if item is not media',
-    <MediaIndicator item={nonMediaItem} script={latin} service="news" />,
+    <MediaIndicator
+      dir="ltr"
+      item={nonMediaItem}
+      script={latin}
+      service="news"
+    />,
   );
 
   isNull(
     'should not render if item media object is missing',
-    <MediaIndicator item={noMediaObject} script={latin} service="news" />,
+    <MediaIndicator
+      dir="ltr"
+      item={noMediaObject}
+      script={latin}
+      service="news"
+    />,
   );
 });
