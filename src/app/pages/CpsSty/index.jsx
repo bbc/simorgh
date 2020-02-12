@@ -124,7 +124,7 @@ const CpsStyContainer = ({ pageData }) => {
     group1: 1,
     group2: 1,
     group3: 1,
-    group4: 2,
+    group4: 1,
     group5: 3,
   };
 
@@ -133,7 +133,7 @@ const CpsStyContainer = ({ pageData }) => {
     group1: 8,
     group2: 8,
     group3: 8,
-    group4: 7,
+    group4: 8,
     group5: 5,
   };
 
@@ -142,7 +142,7 @@ const CpsStyContainer = ({ pageData }) => {
     group1: 8,
     group2: 8,
     group3: 8,
-    group4: 3,
+    group4: 4,
     group5: 3,
   };
 
