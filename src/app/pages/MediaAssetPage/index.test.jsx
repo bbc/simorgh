@@ -122,7 +122,7 @@ const getBlockTextAtIndex = (index, originalPageData) => {
   return path(['content', 'blocks', index, 'text'], originalPageData);
 };
 
-describe('CPS MAP Page', () => {
+describe('Media Asset Page', () => {
   let pageData;
   let asFragment;
   let getByText;

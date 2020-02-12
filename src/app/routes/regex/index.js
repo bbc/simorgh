@@ -9,6 +9,7 @@ import {
   getCpsAssetRegex,
   getRadioAndTVRegex,
   getErrorPageRegex,
+  getLegacyAssetRegex,
 } from './utils';
 
 const allServices = Object.keys(services);
@@ -36,3 +37,6 @@ export const radioAndTvDataPath = `${radioAndTvPath}.json`;
 
 export const errorPagePath = getErrorPageRegex(allServices);
 export const mostReadDataRegexPath = `/:service(${serviceRegex})/${mostRead}:variant(${variantRegex})?.json`;
+
+export const legacyAssetPagePath = getLegacyAssetRegex(allServices);
+export const legacyAssetPageDataPath = `${legacyAssetPagePath}.json`;
