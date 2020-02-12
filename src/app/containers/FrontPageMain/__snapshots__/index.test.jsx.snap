@@ -1365,6 +1365,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           <div
                             aria-hidden="true"
                             class="c37"
+                            dir="ltr"
                           >
                             <div
                               class="c38"
@@ -1587,6 +1588,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           <div
                             aria-hidden="true"
                             class="c37"
+                            dir="ltr"
                           >
                             <div
                               class="c38"
@@ -1705,6 +1707,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                           <div
                             aria-hidden="true"
                             class="c37"
+                            dir="ltr"
                           >
                             <div
                               class="c38"

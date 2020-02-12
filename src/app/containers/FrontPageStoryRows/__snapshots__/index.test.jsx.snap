@@ -643,6 +643,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
             <div
               aria-hidden="true"
               class="c19"
+              dir="rtl"
             >
               <div
                 class="c20"
@@ -1191,6 +1192,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
             <div
               aria-hidden="true"
               class="c15"
+              dir="ltr"
             >
               <div
                 class="c16"
@@ -1882,6 +1884,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
             <div
               aria-hidden="true"
               class="c18"
+              dir="rtl"
             >
               <div
                 class="c19"
@@ -2421,6 +2424,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
             <div
               aria-hidden="true"
               class="c11"
+              dir="ltr"
             >
               <div
                 class="c12"
@@ -3115,6 +3119,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
         <div
           aria-hidden="true"
           class="c15"
+          dir="rtl"
         >
           <div
             class="c16"
@@ -3486,6 +3491,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
         <div
           aria-hidden="true"
           class="c7"
+          dir="ltr"
         >
           <div
             class="c8"

@@ -50,6 +50,7 @@ exports[`Story Promo Media Indicator should render a photo gallery item correctl
 <div
   aria-hidden="true"
   class="c0"
+  dir="ltr"
 >
   <div
     class="c1"
@@ -129,6 +130,7 @@ exports[`Story Promo Media Indicator should render a video item correctly 1`] = 
 <div
   aria-hidden="true"
   class="c0"
+  dir="ltr"
 >
   <div
     class="c1"
@@ -209,6 +211,7 @@ exports[`Story Promo Media Indicator should render an audio item correctly 1`] =
 <div
   aria-hidden="true"
   class="c0"
+  dir="ltr"
 >
   <div
     class="c1"
@@ -288,6 +291,7 @@ exports[`Story Promo Media Indicator should render correctly even without durati
 <div
   aria-hidden="true"
   class="c0"
+  dir="ltr"
 >
   <div
     class="c1"
@@ -362,6 +366,7 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
 <div
   aria-hidden="true"
   class="c0"
+  dir="ltr"
 >
   <div
     class="c1"
@@ -442,6 +447,7 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
 <div
   aria-hidden="true"
   class="c0"
+  dir="rtl"
 >
   <div
     class="c1"

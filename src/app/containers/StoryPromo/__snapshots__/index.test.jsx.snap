@@ -306,6 +306,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
         <div
           aria-hidden="true"
           class="c5"
+          dir="ltr"
         >
           <div
             class="c6"
@@ -682,6 +683,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
         <div
           aria-hidden="true"
           class="c5"
+          dir="ltr"
         >
           <div
             class="c6"
@@ -1107,6 +1109,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
         <div
           aria-hidden="true"
           class="c11"
+          dir="ltr"
         >
           <div
             class="c12"
@@ -1434,6 +1437,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
         <div
           aria-hidden="true"
           class="c5"
+          dir="ltr"
         >
           <div
             class="c6"
@@ -1811,6 +1815,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
         <div
           aria-hidden="true"
           class="c5"
+          dir="ltr"
         >
           <div
             class="c6"
@@ -2172,6 +2177,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
         <div
           aria-hidden="true"
           class="c5"
+          dir="ltr"
         >
           <div
             class="c6"
@@ -2577,6 +2583,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
         <div
           aria-hidden="true"
           class="c11"
+          dir="ltr"
         >
           <div
             class="c12"
@@ -2894,6 +2901,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
         <div
           aria-hidden="true"
           class="c5"
+          dir="ltr"
         >
           <div
             class="c6"
@@ -6681,6 +6689,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
             <div
               aria-hidden="true"
               class="c15"
+              dir="ltr"
             >
               <div
                 class="c16"
@@ -9182,6 +9191,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
         <div
           aria-hidden="true"
           class="c5"
+          dir="ltr"
         >
           <div
             class="c6"
@@ -9555,6 +9565,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
         <div
           aria-hidden="true"
           class="c5"
+          dir="ltr"
         >
           <div
             class="c6"
@@ -9977,6 +9988,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
         <div
           aria-hidden="true"
           class="c11"
+          dir="ltr"
         >
           <div
             class="c12"
@@ -10301,6 +10313,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
         <div
           aria-hidden="true"
           class="c5"
+          dir="ltr"
         >
           <div
             class="c6"

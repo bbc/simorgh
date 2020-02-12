@@ -146,6 +146,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
         <div
           aria-hidden="true"
           class="c5"
+          dir="ltr"
         >
           <div
             class="c6"
@@ -336,6 +337,7 @@ exports[`Index Alsos should render one correctly 1`] = `
       <div
         aria-hidden="true"
         class="c4"
+        dir="ltr"
       >
         <div
           class="c5"
