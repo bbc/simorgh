@@ -1,12 +1,14 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import path from 'ramda/src/path';
+import findIndex from 'ramda/src/findIndex';
 import Grid, { FrontPageGrid } from '#app/components/Grid';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
 import MetadataContainer from '../Metadata';
+import MostReadContainer from '../MostRead';
 import LinkedData from '../LinkedData';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
@@ -58,6 +60,10 @@ const FrontPageMain = ({ frontPageData }) => {
     </span>
   );
 
+  // Most Read is required to render above useful-links if it exists
+  const hasUsefulLinks =
+    findIndex(group => group.type === 'useful-links')(groups) > -1;
+
   return (
     <>
       <ATIAnalytics data={frontPageData} />
@@ -76,12 +82,12 @@ const FrontPageMain = ({ frontPageData }) => {
         <FrontPageGrid columns={mainColumns} dir={dir} enableGelGutters>
           <Grid item columns={itemColumns} dir={dir} margins={itemMargins}>
             {groups.map((group, index) => (
-              <FrontPageSection
-                key={group.title}
-                group={group}
-                sectionNumber={index}
-              />
+              <Fragment key={group.title}>
+                {group.type === 'useful-links' && <MostReadContainer />}
+                <FrontPageSection group={group} sectionNumber={index} />
+              </Fragment>
             ))}
+            {!hasUsefulLinks && <MostReadContainer />}
           </Grid>
         </FrontPageGrid>
       </main>

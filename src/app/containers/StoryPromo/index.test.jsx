@@ -163,6 +163,16 @@ const featureLinkItem = {
   type: 'link',
 };
 
+const podcastLinkItem = {
+  name: 'Test indonesian podcast',
+  summary: 'BBC Indonesia',
+  uri: 'https://www.bbc.com/indonesia/media-45640737',
+  contentType: 'Podcast',
+  assetTypeCode: 'PRO',
+  timestamp: 1537952309000,
+  type: 'link',
+};
+
 const itemWithoutImage = {
   headlines: {
     headline: 'A headline',
@@ -208,6 +218,7 @@ const fixtures = {
   standardLink: standardLinkItem,
   featureLink: featureLinkItem,
   'item without an image': itemWithoutImage,
+  podcastLink: podcastLinkItem,
 };
 
 // eslint-disable-next-line react/prop-types
