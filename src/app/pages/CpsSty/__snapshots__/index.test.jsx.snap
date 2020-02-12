@@ -820,6 +820,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
           <div
             id="DataContainer"
           >
+            <noscript />
             <main
               class="c0"
               role="main"
@@ -2384,6 +2385,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
               <div
                 id="DataContainer"
               >
+                <noscript />
                 <main
                   class="c0"
                   role="main"
