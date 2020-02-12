@@ -10,6 +10,7 @@ const contentTypes = [
   'Guide',
   'TVBulletin',
   'RadioBulletin',
+  'Podcast',
 ];
 
 const filterUnknownContentTypes = data => {
