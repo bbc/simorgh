@@ -139,8 +139,8 @@ export const service = {
         },
       },
       media: {
-        noJs:
-          'A reprodução deste formato de vídeo não é compatível com seu dispositivo',
+        noJs: 'Dem no support media player for your device',
+        contentExpired: 'Dis thing no dey again',
         audio: 'Audio',
         photogallery: 'Image gallery',
         video: 'Video',
@@ -158,7 +158,8 @@ export const service = {
     },
     mostRead: {
       header: 'De one we dem de read well well',
-      lastUpdated: 'De one we dem update for ',
+      lastUpdated: 'De one we dem update for:',
+      numberOfItems: 5,
     },
     navigation: [
       {

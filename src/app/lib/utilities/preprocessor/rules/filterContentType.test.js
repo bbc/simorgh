@@ -124,6 +124,16 @@ const FeatureAssetType = {
   assetTypeCode: 'PRO',
 };
 
+const PodcastAssetType = {
+  name: 'Test indonesian podcast',
+  summary: 'BBC Indonesia',
+  uri: 'https://www.bbc.com/indonesia/media-45640737',
+  contentType: 'Podcast',
+  assetTypeCode: 'PRO',
+  timestamp: 1537952309000,
+  type: 'link',
+};
+
 const usefulLinksItems = [
   {
     name: 'Ethiopia: Ndị uweojii agba gbuola ndị mmadụ',
@@ -435,6 +445,7 @@ describe('filterUnknownContentTypes', () => {
             GalleryAssetType,
             TVBulletinAssetType,
             RadioBulletinAssetType,
+            PodcastAssetType,
           ],
         },
       };
@@ -448,6 +459,7 @@ describe('filterUnknownContentTypes', () => {
             GalleryAssetType,
             TVBulletinAssetType,
             RadioBulletinAssetType,
+            PodcastAssetType,
           ],
         },
       };
@@ -512,6 +524,7 @@ describe('filterUnknownContentTypes', () => {
                 TextAssetType,
                 AudioAssetType,
                 FeatureAssetType,
+                PodcastAssetType,
                 TVBulletinAssetType,
                 RadioBulletinAssetType,
               ],
@@ -527,6 +540,7 @@ describe('filterUnknownContentTypes', () => {
                 TextAssetType,
                 AudioAssetType,
                 FeatureAssetType,
+                PodcastAssetType,
                 TVBulletinAssetType,
                 RadioBulletinAssetType,
               ],

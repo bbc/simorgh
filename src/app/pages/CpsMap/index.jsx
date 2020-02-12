@@ -1,9 +1,10 @@
 import React from 'react';
-import compose from 'ramda/src/compose';
+import pipe from 'ramda/src/pipe';
 import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
@@ -73,7 +74,19 @@ const CpsMapContainer = ({ pageData }) => {
   };
 
   const StyledGhostGrid = styled(GhostGrid)`
-    flex-grow: 1;
+    width: 100%;
+    padding-bottom: ${GEL_SPACING_TRPL};
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding-bottom: ${GEL_SPACING_QUAD};
+    }
+  `;
+
+  const StyledTimestamp = styled(Timestamp)`
+    padding-bottom: ${GEL_SPACING_DBL};
+
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding-bottom: ${GEL_SPACING_TRPL};
+    }
   `;
 
   return (
@@ -106,22 +119,14 @@ const CpsMapContainer = ({ pageData }) => {
   );
 };
 
-const StyledTimestamp = styled(Timestamp)`
-  padding-bottom: ${GEL_SPACING_DBL};
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-bottom: ${GEL_SPACING_TRPL};
-  }
-`;
-
 CpsMapContainer.propTypes = cpsAssetPagePropTypes;
 
-const EnhancedCpsMapContainer = compose(
-  withContexts,
-  withPageWrapper,
-  withLoading,
-  withError,
+const EnhancedCpsMapContainer = pipe(
   withData,
+  withError,
+  withLoading,
+  withPageWrapper,
+  withContexts,
 )(CpsMapContainer);
 
 export default EnhancedCpsMapContainer;

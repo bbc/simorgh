@@ -138,6 +138,7 @@ export const service = {
       },
       media: {
         noJs: 'మీ పరికరంలో మీడియా ప్లేబ్యాక్ సదుపాయం లేదు.',
+        contentExpired: 'ఈ కంటెంట్ ఇప్పుడు అందుబాటులో లేదు.',
         audio: 'ఆడియో',
         photogallery: 'ఫొటో గ్యాలరీ',
         video: 'వీడియో',
@@ -157,7 +158,8 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'ఎక్కువమంది చదివినవి',
-      lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ: ',
+      lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ:',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {
@@ -215,6 +217,10 @@ export const service = {
       {
         title: 'అంతర్జాతీయం',
         url: '/telugu/international',
+      },
+      {
+        title: '#ISWOTY',
+        url: '/telugu/resources/idt-47054a9b-b97c-4190-bed0-0416210e698b',
       },
     ],
     navigationSection: 'విభాగాలు',

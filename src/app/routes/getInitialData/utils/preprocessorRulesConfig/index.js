@@ -12,6 +12,8 @@ import applySquashTopstories from '#lib/utilities/preprocessor/rules/topstories'
 import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
 import filterGroupsWithoutStraplines from '#lib/utilities/preprocessor/rules/filterGroupsWithoutStraplines';
 import addSummaryBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addSummaryBlock';
+import cpsOnlyOnwardJourneys from '#lib/utilities/preprocessor/rules/cpsAssetPage/cpsOnlyOnwardJourneys';
+import addBylineBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addBylineBlock';
 
 export const cpsAssetPreprocessorRules = [
   parseInternalLinks,
@@ -20,8 +22,10 @@ export const cpsAssetPreprocessorRules = [
   addHeadlineBlock,
   addSummaryBlock,
   applyTimestampRules,
+  addBylineBlock,
   addIdsToBlocks,
   applyBlockPositioning,
+  cpsOnlyOnwardJourneys,
 ];
 
 export const articlesPreprocessorRules = [

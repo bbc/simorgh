@@ -1,17 +1,18 @@
 {
   "metadata": {
-    "firstPublished": 1571834370000,
-    "lastPublished": 1571834372000,
-    "lastUpdated": 1571834379488,
-    "id": "urn:bbc:ares::asset:pidgin/world-23252817",
+    "firstPublished": 1580745507000,
+    "lastPublished": 1580922773000,
+    "lastUpdated": 1580922784342,
+    "id": "urn:bbc:ares::asset:mundo/23263889",
     "locators": {
-      "assetUri": "/pidgin/world-23252817",
-      "cpsUrn": "urn:bbc:content:assetUri:pidgin/world-23252817",
-      "curie": "http://www.bbc.co.uk/asset/740a2911-be7a-d945-a968-d812272c2147"
+      "assetUri": "/mundo/23263889",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/23263889",
+      "curie": "http://www.bbc.co.uk/asset/f776ad93-e486-b14a-b5ea-55955dd0644f"
     },
     "type": "STY",
-    "createdBy": "pidgin-v6",
-    "language": "pcm",
+    "createdBy": "mundo-v6",
+    "language": "es",
+    "timestamp": 1580745507000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -30,29 +31,102 @@
     },
     "analyticsLabels": {
       "cps_asset_type": "sty",
-      "counterName": "pidgin.world.story.23252817.page",
-      "cps_asset_id": "23252817"
+      "counterName": "mundo.story.23263889.page",
+      "cps_asset_id": "23263889"
     },
-    "tags": {},
-    "version": "v1.1.2",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5ad86270c93a9f000eecb255",
+          "campaignName": "Amuse me"
+        }
+      ],
+      "language": "es",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+      "passportId": "d7d7cd86-30b1-412f-8c9e-712f806c7357",
+      "locator": "urn:bbc:cps:asset:23263889",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/coreconcepts/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/passport/predicate/About",
+          "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/passport/predicate/About",
+          "value": "http://www.bbc.co.uk/things/b9bb453a-a3e2-46b4-9d20-35efa09d72b8#id"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Life",
+          "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+          "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
+          "thingSameAs": []
+        },
+        {
+          "thingLabel": "Fake news",
+          "thingUri": "http://www.bbc.co.uk/things/e7539dc8-5cfb-413a-b4fe-0ad77bc665aa#id",
+          "thingId": "e7539dc8-5cfb-413a-b4fe-0ad77bc665aa",
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Fake_news",
+            "http://www.wikidata.org/entity/Q28549308"
+          ],
+          "topicName": "Noticias falsas",
+          "topicId": "c0wr1lxyeqet",
+          "curationList": [
+            {
+              "curationId": "86ded5f5-6950-4ae5-9de0-72c44cc2f2ea",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.5",
     "blockTypes": [
       "image",
       "paragraph",
+      "crosshead",
       "list",
+      "heading",
+      "subheading",
       "social_embed",
       "media",
-      "heading",
-      "crosshead"
+      "include"
     ],
     "includeComments": false
   },
   "relatedContent": {
     "groups": [
       {
+        "type": "related-urls",
         "promos": [
           {
-            "name": "The pidgin map asset",
-            "uri": "https://www.test.bbc.com/pidgin/23248703",
+            "name": "Related URL Link 1",
+            "uri": "http://www.bbc.co.uk",
+            "type": "link"
+          },
+          {
+            "name": "Related URL Link 2",
+            "uri": "http://www.bbc.co.uk/news",
             "type": "link"
           }
         ]
@@ -60,14 +134,14 @@
     ],
     "section": {
       "subType": "index",
-      "name": "World",
-      "uri": "/pidgin/world",
+      "name": "Noticias",
+      "uri": "/mundo/front_page",
       "type": "simple"
     },
     "site": {
       "subType": "site",
-      "name": "BBC Pidgin",
-      "uri": "/pidgin",
+      "name": "BBC Mundo",
+      "uri": "/mundo",
       "type": "simple"
     }
   },
@@ -84,15 +158,15 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "STY - Blood pressure drugs dey work better",
+                        "text": "WS STY TEST - Full Headline",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "STY - Blood pressure drugs dey work better",
+                              "text": "WS STY TEST - Full Headline",
                               "attributes": []
                             },
-                            "id": "b8135b47-5496-426a-8bb5-50e28f1498d1",
+                            "id": "81416772-42c3-44d8-8dd9-32e0001dd3f5",
                             "position": [
                               1,
                               1,
@@ -102,7 +176,7 @@
                           }
                         ]
                       },
-                      "id": "b14077d1-8933-4dad-a696-dc3c6228b100",
+                      "id": "c2dcbadd-c6ec-4112-a9a6-56a3c6df40f7",
                       "position": [
                         1,
                         1,
@@ -111,7 +185,7 @@
                     }
                   ]
                 },
-                "id": "7a81cdad-f6eb-448f-8f59-eb0e71703769",
+                "id": "987bb7f4-0776-4f30-a398-cd1c9dd47ff0",
                 "position": [
                   1,
                   1
@@ -120,9 +194,29 @@
             ]
           },
           "type": "headline",
-          "id": "128243cc-ff87-4e42-a676-1df568f6279a",
+          "id": "654c0ebd-c639-4080-ab4f-13b4ee3088c5",
           "position": [
             1
+          ]
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "name": "James Bond",
+                "title": "Spy",
+                "id": "8b0cd910-d30f-48c5-935e-d2673c3fe442",
+                "position": [
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          "type": "byline",
+          "id": "0dd65bfb-ecb4-45f7-82bd-af4907a96518",
+          "position": [
+            2
           ]
         },
         {
@@ -140,17 +234,17 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Some people went to the NTA awards recently.",
+                              "text": "Index Image Large",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "Some people went to the NTA awards recently.",
+                                    "text": "Index Image Large",
                                     "attributes": []
                                   },
-                                  "id": "cf2745ed-e214-4761-bbef-1cc79215e908",
+                                  "id": "ec0069fe-feb6-4882-8349-360888a5cac7",
                                   "position": [
-                                    2,
+                                    3,
                                     1,
                                     1,
                                     1,
@@ -159,9 +253,9 @@
                                 }
                               ]
                             },
-                            "id": "048b8faf-1c32-4df5-b14a-af836ba87d2e",
+                            "id": "e492a52a-54ff-441c-89ad-0b1512058604",
                             "position": [
-                              2,
+                              3,
                               1,
                               1,
                               1
@@ -169,18 +263,18 @@
                           }
                         ]
                       },
-                      "id": "b3a5edcd-8316-49f0-b59c-d7944dccf542",
+                      "id": "86dab815-f5d5-4b32-9b74-d01b34e7d525",
                       "position": [
-                        2,
+                        3,
                         1,
                         1
                       ]
                     }
                   ]
                 },
-                "id": "e7169fb7-f7f8-495f-a088-c0f74cbad04a",
+                "id": "8559985a-98c3-48f7-a821-25db4c337632",
                 "position": [
-                  2,
+                  3,
                   1
                 ]
               },
@@ -195,17 +289,17 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Some people at the NTA awards",
+                              "text": "Index image large",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "Some people at the NTA awards",
+                                    "text": "Index image large",
                                     "attributes": []
                                   },
-                                  "id": "139e6bed-acc2-4685-9b67-0172fd9deb0d",
+                                  "id": "1b9305df-5e34-4a83-9fce-0f2d1373c0f3",
                                   "position": [
-                                    2,
+                                    3,
                                     2,
                                     1,
                                     1,
@@ -214,9 +308,9 @@
                                 }
                               ]
                             },
-                            "id": "c225e969-88c0-4907-b376-935d05de9e6e",
+                            "id": "555abfeb-d5f2-4425-ac91-0b0f3f54c3bb",
                             "position": [
-                              2,
+                              3,
                               2,
                               1,
                               1
@@ -224,134 +318,50 @@
                           }
                         ]
                       },
-                      "id": "b98df0c4-7425-49d0-9099-821870259aeb",
+                      "id": "f6e75266-387d-4628-a58c-60204c4e680e",
                       "position": [
-                        2,
+                        3,
                         2,
                         1
                       ]
                     }
                   ]
                 },
-                "id": "8b9d8dda-08df-4a3c-8fef-6f9c7bf63061",
+                "id": "43ff120a-06b0-4d4f-8d04-9fd055265bee",
                 "position": [
-                  2,
+                  3,
                   2
                 ]
               },
               {
                 "type": "rawImage",
                 "model": {
-                  "copyrightHolder": "Joe Maher",
+                  "copyrightHolder": "Kaylee Garrick",
                   "height": 549,
-                  "locator": "6ACE/test/_63724372_gettyimages-1098075358.jpg",
+                  "locator": "113CB/test/_63730607_dogs2-kayleegarrick.jpg",
                   "originCode": "cpsdevpb",
                   "width": 976
                 },
-                "id": "2b27686f-aac7-4d64-ac48-3916f77beaed",
+                "id": "5874c5e8-4460-4cf5-9575-6a8b9456e152",
                 "position": [
-                  2,
+                  3,
                   3
                 ]
               }
             ]
           },
-          "id": "f7b8a756-b111-4046-9193-51d740041c9a",
-          "position": [
-            2
-          ]
-        },
-        {
-          "type": "timestamp",
-          "model": {
-            "firstPublished": 1571834370000,
-            "lastPublished": 1571834372000
-          },
-          "id": "1e1c70ff-f66c-49dc-9f6f-749cddd68274",
+          "id": "da4b828e-9043-4102-99de-39f5c70c7087",
           "position": [
             3
           ]
         },
         {
-          "type": "text",
+          "type": "timestamp",
           "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": " This is introduction text, it should be bold by default, but also support inline links to other pages.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": " This is introduction text, it should be bold by default, but also support ",
-                        "attributes": [
-                          "bold"
-                        ]
-                      },
-                      "id": "39186153-7352-4b48-9b97-168040b85c9f",
-                      "position": [
-                        4,
-                        1,
-                        1
-                      ]
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "inline links",
-                        "locator": "https://bbc.com/pidgin/23248703",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "inline links",
-                              "attributes": []
-                            },
-                            "id": "4fb1aa64-6aab-478b-8a21-d54692b3bc4a",
-                            "position": [
-                              4,
-                              1,
-                              2,
-                              1
-                            ]
-                          }
-                        ],
-                        "isExternal": false
-                      },
-                      "id": "2a823684-a1b1-42fc-ba16-1c59f497f8bc",
-                      "position": [
-                        4,
-                        1,
-                        2
-                      ]
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": " to other pages.",
-                        "attributes": [
-                          "bold"
-                        ]
-                      },
-                      "id": "427fc443-2302-4b52-b33e-66b8648b2960",
-                      "position": [
-                        4,
-                        1,
-                        3
-                      ]
-                    }
-                  ]
-                },
-                "id": "52af4cd6-abc1-4104-8478-536258f58be6",
-                "position": [
-                  4,
-                  1
-                ]
-              }
-            ]
+            "firstPublished": 1580745507000,
+            "lastPublished": 1580922773000
           },
-          "id": "e69270a5-12b1-4bd2-b486-793f260762db",
+          "id": "0cecc952-82f5-4491-9fa7-6a8bded6138c",
           "position": [
             4
           ]
@@ -363,57 +373,26 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "This is a subheadline! that has a link",
+                  "text": "The first paragraph is manually marked up as an \"introduction\", which renders it in bold.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "This is a subheadline! that has ",
+                        "text": "The first paragraph is manually marked up as an \"introduction\", which renders it in bold.",
                         "attributes": [
-                          "bold",
-                          "italic"
+                          "bold"
                         ]
                       },
-                      "id": "706074d0-b982-407e-9d83-11836b983226",
+                      "id": "3e7d96fc-3326-49d6-8c6c-d2f5bfd06ccd",
                       "position": [
                         5,
                         1,
                         1
                       ]
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "a link",
-                        "locator": "https://bbc.com/pidgin/23248703",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "a link",
-                              "attributes": []
-                            },
-                            "id": "3e395882-749f-4a3c-b990-705055a94b88",
-                            "position": [
-                              5,
-                              1,
-                              2,
-                              1
-                            ]
-                          }
-                        ],
-                        "isExternal": false
-                      },
-                      "id": "5a3411c7-278d-49b4-bfbb-6d95543d9146",
-                      "position": [
-                        5,
-                        1,
-                        2
-                      ]
                     }
                   ]
                 },
-                "id": "086042dd-4ebd-4a6c-ac4b-21554dc16768",
+                "id": "a9058c59-3fb4-40c4-adcc-673021fcda9e",
                 "position": [
                   5,
                   1
@@ -421,257 +400,9 @@
               }
             ]
           },
-          "id": "a99fb8d9-5a94-45af-b3b0-479b9dd789e7",
+          "id": "02f25938-5b16-4d5c-903f-103e8d94b323",
           "position": [
             5
-          ]
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "listItem",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "This is a unordered list",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "This is a unordered list",
-                                    "attributes": []
-                                  },
-                                  "id": "23a47539-8683-48d0-b3cf-ce0a1393bf2f",
-                                  "position": [
-                                    6,
-                                    1,
-                                    1,
-                                    1,
-                                    1
-                                  ]
-                                }
-                              ]
-                            },
-                            "id": "8a88d43d-a274-4633-b355-a02333e77bd7",
-                            "position": [
-                              6,
-                              1,
-                              1,
-                              1
-                            ]
-                          }
-                        ]
-                      },
-                      "id": "7420d54a-b850-409f-8caa-c71244ed2886",
-                      "position": [
-                        6,
-                        1,
-                        1
-                      ]
-                    },
-                    {
-                      "type": "listItem",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "It can have bold text in it",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "It can have ",
-                                    "attributes": []
-                                  },
-                                  "id": "aea9eb8b-e32d-41c4-ab59-d5ea73fc2a5b",
-                                  "position": [
-                                    6,
-                                    1,
-                                    2,
-                                    1,
-                                    1
-                                  ]
-                                },
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "bold text",
-                                    "attributes": [
-                                      "bold"
-                                    ]
-                                  },
-                                  "id": "19d7ec99-3097-4a98-b2fd-2f5bf16a5710",
-                                  "position": [
-                                    6,
-                                    1,
-                                    2,
-                                    1,
-                                    2
-                                  ]
-                                },
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": " in it",
-                                    "attributes": []
-                                  },
-                                  "id": "7079001f-704a-46ca-853b-a0c4e6e04d10",
-                                  "position": [
-                                    6,
-                                    1,
-                                    2,
-                                    1,
-                                    3
-                                  ]
-                                }
-                              ]
-                            },
-                            "id": "a628ac3e-153b-4adf-9c41-adba26bff16d",
-                            "position": [
-                              6,
-                              1,
-                              2,
-                              1
-                            ]
-                          }
-                        ]
-                      },
-                      "id": "d1011a1d-1a84-4cea-89ad-82f8a319ff2c",
-                      "position": [
-                        6,
-                        1,
-                        2
-                      ]
-                    },
-                    {
-                      "type": "listItem",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "It can also have links",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "It can also have links",
-                                    "locator": "https://bbc.com/pidgin/23248703",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "It can also have links",
-                                          "attributes": []
-                                        },
-                                        "id": "3e8e3b73-d16b-4e85-af27-c627a1f88c03",
-                                        "position": [
-                                          6,
-                                          1,
-                                          3,
-                                          1,
-                                          1,
-                                          1
-                                        ]
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  },
-                                  "id": "4fb4a65e-46fa-4097-a883-850337906390",
-                                  "position": [
-                                    6,
-                                    1,
-                                    3,
-                                    1,
-                                    1
-                                  ]
-                                }
-                              ]
-                            },
-                            "id": "0ed1babb-27fa-4b7c-b15e-660f029dd93e",
-                            "position": [
-                              6,
-                              1,
-                              3,
-                              1
-                            ]
-                          }
-                        ]
-                      },
-                      "id": "64f0c664-7a30-451c-bf1e-28ee92b40069",
-                      "position": [
-                        6,
-                        1,
-                        3
-                      ]
-                    },
-                    {
-                      "type": "listItem",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "It can even have italic text in it!",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "It can even have italic text in it!",
-                                    "attributes": [
-                                      "italic"
-                                    ]
-                                  },
-                                  "id": "38981b92-96ed-4ace-b59a-2984fe78e5d0",
-                                  "position": [
-                                    6,
-                                    1,
-                                    4,
-                                    1,
-                                    1
-                                  ]
-                                }
-                              ]
-                            },
-                            "id": "04f4b3e5-ac53-4a28-a793-f818a098fa83",
-                            "position": [
-                              6,
-                              1,
-                              4,
-                              1
-                            ]
-                          }
-                        ]
-                      },
-                      "id": "8a7ec824-c7e2-4590-98c4-d6f8d6e58f4d",
-                      "position": [
-                        6,
-                        1,
-                        4
-                      ]
-                    }
-                  ]
-                },
-                "type": "unorderedList",
-                "id": "cc63c7e3-e7da-4737-9f67-34f54575e55e",
-                "position": [
-                  6,
-                  1
-                ]
-              }
-            ]
-          },
-          "type": "text",
-          "id": "67f45c0a-0c83-42dd-9180-b5fc9f3c781e",
-          "position": [
-            6
           ]
         },
         {
@@ -681,17 +412,1065 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Feta the big cheese macaroni cheese. Caerphilly danish fontina queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. Cow cheeseburger stilton emmental.",
+                  "text": "The next paragraph isn't marked up in any way - it's just \"normal\".",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Feta the big cheese macaroni cheese. ",
+                        "text": "The next paragraph isn't marked up in any way - it's just \"normal\".",
                         "attributes": []
                       },
-                      "id": "ec222909-fd61-4661-adff-70b5ef84a7c9",
+                      "id": "259b9460-b792-49c4-b1b1-b3ebf1429efa",
+                      "position": [
+                        6,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "30402c84-41e4-4ed3-8a9c-e9eeb839bca0",
+                "position": [
+                  6,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "0259d59f-1564-46e2-83fc-4c2ec4c2a01d",
+          "position": [
+            6
+          ]
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "This is a crosshead",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "This is a crosshead",
+                              "attributes": []
+                            },
+                            "id": "a3357ae9-225a-47ed-9779-3181bf24ab06",
+                            "position": [
+                              7,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "6ef19ea3-7992-4810-8fa8-da82f56e0088",
                       "position": [
                         7,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "1da64d7e-5c74-4a4a-904b-aa4d1f3ec834",
+                "position": [
+                  7,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "8ae45c2c-038a-45e4-9296-86d48063e724",
+          "position": [
+            7
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Paragraphs can contain bold and italic in CPS at the moment, and these are rendered on the page as bold and italic or both.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Paragraphs can contain ",
+                        "attributes": []
+                      },
+                      "id": "8689545b-b2de-4c07-ab01-0d367f99082f",
+                      "position": [
+                        8,
+                        1,
+                        1
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "bold ",
+                        "attributes": [
+                          "bold"
+                        ]
+                      },
+                      "id": "a5228724-5d12-4771-8381-e2c1202c10b7",
+                      "position": [
+                        8,
+                        1,
+                        2
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "and ",
+                        "attributes": []
+                      },
+                      "id": "3f2296f3-eea8-4662-ac31-65868a75775e",
+                      "position": [
+                        8,
+                        1,
+                        3
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "italic ",
+                        "attributes": [
+                          "italic"
+                        ]
+                      },
+                      "id": "041c25eb-658a-4e4d-8cdf-a8d3b7c67651",
+                      "position": [
+                        8,
+                        1,
+                        4
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "in CPS at the moment, and these are rendered on the page as ",
+                        "attributes": []
+                      },
+                      "id": "61fcc66f-109f-490a-8d28-4fd0e336fcc9",
+                      "position": [
+                        8,
+                        1,
+                        5
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "bold ",
+                        "attributes": [
+                          "bold"
+                        ]
+                      },
+                      "id": "d2a136e5-a87f-4038-bdbc-cce3ad767dd9",
+                      "position": [
+                        8,
+                        1,
+                        6
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "and ",
+                        "attributes": []
+                      },
+                      "id": "c78bd8d3-75f4-4c87-a2ec-4cadb6774e12",
+                      "position": [
+                        8,
+                        1,
+                        7
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "italic",
+                        "attributes": [
+                          "italic"
+                        ]
+                      },
+                      "id": "7f16e1d6-6c11-4158-b02b-2f6eef6ba9a7",
+                      "position": [
+                        8,
+                        1,
+                        8
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " ",
+                        "attributes": [
+                          "italic"
+                        ]
+                      },
+                      "id": "d345d71b-38c8-4bb7-bd86-366bf79dfef2",
+                      "position": [
+                        8,
+                        1,
+                        9
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "or ",
+                        "attributes": []
+                      },
+                      "id": "8a12f8b3-c5ef-4838-84a6-626030f42734",
+                      "position": [
+                        8,
+                        1,
+                        10
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "both",
+                        "attributes": [
+                          "bold",
+                          "italic"
+                        ]
+                      },
+                      "id": "3ee3f7b5-95bd-4eae-99cd-8e266e88bc8d",
+                      "position": [
+                        8,
+                        1,
+                        11
+                      ]
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ".",
+                        "attributes": []
+                      },
+                      "id": "88020eaf-855d-4cef-b4ea-95acb9b3f0c2",
+                      "position": [
+                        8,
+                        1,
+                        12
+                      ]
+                    }
+                  ]
+                },
+                "id": "51fd8cfc-ba38-46ad-a453-f8096036682b",
+                "position": [
+                  8,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "d47ec881-2d3a-44e4-aa31-83beb68b1fd2",
+          "position": [
+            8
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Bold and italic can also be rendered together.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Bold and italic can also be rendered together.",
+                        "attributes": [
+                          "bold",
+                          "italic"
+                        ]
+                      },
+                      "id": "6895190c-bd16-44d8-b73c-f05a44a622cd",
+                      "position": [
+                        9,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "905ac7a4-cc37-4561-9411-74b6acce1bb8",
+                "position": [
+                  9,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "40908429-7e51-4f11-a959-aaa0be29d7c4",
+          "position": [
+            9
+          ]
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is a bulleted list",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This is a bulleted list",
+                                    "attributes": []
+                                  },
+                                  "id": "a3bcc403-14af-46a3-9158-4c22ffb1966d",
+                                  "position": [
+                                    10,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "bde0b08e-1b07-4fc1-be89-7eabe1569b4d",
+                            "position": [
+                              10,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "61673c6b-f919-45ec-86f3-68e974219790",
+                      "position": [
+                        10,
+                        1,
+                        1
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Bullet 2",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Bullet 2",
+                                    "attributes": []
+                                  },
+                                  "id": "aa7f7f87-a472-4536-b19d-3ebdb5ea685e",
+                                  "position": [
+                                    10,
+                                    1,
+                                    2,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "5143f88e-858f-447f-bf96-1b115d885880",
+                            "position": [
+                              10,
+                              1,
+                              2,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "2ddf3571-c226-4f77-97a4-f2317b328645",
+                      "position": [
+                        10,
+                        1,
+                        2
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Bullet 3",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Bullet 3",
+                                    "attributes": []
+                                  },
+                                  "id": "3d7f914e-6b00-44b6-b890-e7b3e648499c",
+                                  "position": [
+                                    10,
+                                    1,
+                                    3,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "7df5dee7-3a09-4837-8a9f-abb24f91e8ce",
+                            "position": [
+                              10,
+                              1,
+                              3,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "b03bbc9d-6af3-44dc-b8d9-3fe25f50a651",
+                      "position": [
+                        10,
+                        1,
+                        3
+                      ]
+                    }
+                  ]
+                },
+                "type": "unorderedList",
+                "id": "0ab813dc-8abf-4415-9c31-02d7d1ab4379",
+                "position": [
+                  10,
+                  1
+                ]
+              }
+            ]
+          },
+          "type": "text",
+          "id": "2f1bb598-31dd-4f22-959a-0f98b10005da",
+          "position": [
+            10
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "This is a normal paragraph again.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "This is a normal paragraph again.",
+                        "attributes": []
+                      },
+                      "id": "913c8489-3b5c-463f-8f3b-41ff70a56e9b",
+                      "position": [
+                        11,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "d98b13c8-afc3-492e-ae1e-33e9d5e7915c",
+                "position": [
+                  11,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "2afb6558-f551-4a78-a78f-b1c179408daa",
+          "position": [
+            11
+          ]
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "This is a Heading",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "This is a Heading",
+                              "attributes": []
+                            },
+                            "id": "cdc31988-8725-4e6c-b452-5151b93dbe5b",
+                            "position": [
+                              12,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "f9b2d3da-a199-4a78-b0be-c85f23ba1cd6",
+                      "position": [
+                        12,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "e434990d-e10f-462c-8a6a-76355fa36c3f",
+                "position": [
+                  12,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "98c55bbd-1f26-40c5-8fc6-7185e01a53db",
+          "position": [
+            12
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Normal paragraph.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Normal paragraph.",
+                        "attributes": []
+                      },
+                      "id": "a298064e-9b6f-4569-8471-e4e4c922eea7",
+                      "position": [
+                        13,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "64c7faba-6a21-41f2-9928-841edb356aa1",
+                "position": [
+                  13,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "a9362cc5-add2-43bc-a965-b308d2d6bdc4",
+          "position": [
+            13
+          ]
+        },
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is a numbered list",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "This is a numbered list",
+                                    "attributes": []
+                                  },
+                                  "id": "27b0108e-f6a5-45d8-98db-43a20abf843c",
+                                  "position": [
+                                    14,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "21645256-bc13-43ae-ada7-4342a51a27f8",
+                            "position": [
+                              14,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "40a1a9d9-ac24-4262-9a94-602d7c091324",
+                      "position": [
+                        14,
+                        1,
+                        1
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Number 2",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Number 2",
+                                    "attributes": []
+                                  },
+                                  "id": "1d4edda8-5171-4958-9d55-9a3f699d60c9",
+                                  "position": [
+                                    14,
+                                    1,
+                                    2,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "f7d6f07b-ea28-4604-9409-ddb3636220bd",
+                            "position": [
+                              14,
+                              1,
+                              2,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "61f844d9-96c3-40de-80d1-35ea9e5279f3",
+                      "position": [
+                        14,
+                        1,
+                        2
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Number 3, and so on",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Number 3, and so on",
+                                    "attributes": []
+                                  },
+                                  "id": "8a35dbd8-76c6-4cf3-b561-e4619c3e9406",
+                                  "position": [
+                                    14,
+                                    1,
+                                    3,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "5cd76564-5e25-4885-8d70-140cd4244701",
+                            "position": [
+                              14,
+                              1,
+                              3,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "8d40df2d-0028-4cd7-98e7-0ff154e0357c",
+                      "position": [
+                        14,
+                        1,
+                        3
+                      ]
+                    }
+                  ]
+                },
+                "type": "orderedList",
+                "id": "0cf26197-5dfb-4427-82b6-fed7785ff264",
+                "position": [
+                  14,
+                  1
+                ]
+              }
+            ]
+          },
+          "type": "text",
+          "id": "c421799c-9ad1-42ea-8125-be3c8b9d8e26",
+          "position": [
+            14
+          ]
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Body image #1 with caption",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Body image #1 with caption",
+                                    "attributes": []
+                                  },
+                                  "id": "262c27fe-d108-4938-9963-c9c654b65633",
+                                  "position": [
+                                    15,
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "813da526-0780-4fa2-9f6c-fcca1b2d73eb",
+                            "position": [
+                              15,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "c279d29c-e651-488f-94f0-be32bb935d67",
+                      "position": [
+                        15,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "bf949986-9b2e-4fce-9031-c274962a3c07",
+                "position": [
+                  15,
+                  1
+                ]
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "image",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "image",
+                                    "attributes": []
+                                  },
+                                  "id": "1f52974d-b002-4742-8df4-99f21bb27fb2",
+                                  "position": [
+                                    15,
+                                    2,
+                                    1,
+                                    1,
+                                    1
+                                  ]
+                                }
+                              ]
+                            },
+                            "id": "8c208606-415b-41b3-8867-d43540bcb6b7",
+                            "position": [
+                              15,
+                              2,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "bb3fe401-db82-4b79-906b-47d23c74544d",
+                      "position": [
+                        15,
+                        2,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "279d3e87-3510-4d46-ad83-72adf0d8bdda",
+                "position": [
+                  15,
+                  2
+                ]
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Getty Images",
+                  "height": 549,
+                  "locator": "E67B/test/_63730095_b8013ff8-b115-4364-8f1a-67459cd8d9d9.jpg",
+                  "originCode": "cpsdevpb",
+                  "width": 976
+                },
+                "id": "fd49615e-696a-4572-9eb5-f736da69459d",
+                "position": [
+                  15,
+                  3
+                ]
+              }
+            ]
+          },
+          "id": "2513068a-6dc7-465c-b306-9086be3d8597",
+          "position": [
+            15
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. ",
+                        "attributes": []
+                      },
+                      "id": "ea717494-2419-4a49-9bba-df6161db9e04",
+                      "position": [
+                        16,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "399a0dfb-a4e2-4c1b-a7d9-45b45e86565f",
+                "position": [
+                  16,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "64b80281-95df-4937-a2a9-5a380eab28b0",
+          "position": [
+            16
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Another paragraph of body text.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Another paragraph of body text.",
+                        "attributes": []
+                      },
+                      "id": "198b7a8a-ff3a-4df1-9b3f-300b794efb5f",
+                      "position": [
+                        17,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "f048d8c4-a6fc-4a1e-a72f-29dd4b9e21c0",
+                "position": [
+                  17,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "5d2f73b7-4bf4-43e8-9963-a7d26e548403",
+          "position": [
+            17
+          ]
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "This is a Subheading",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "This is a Subheading",
+                              "attributes": []
+                            },
+                            "id": "cab8f00e-3023-4fe2-926c-5cf91f76da5f",
+                            "position": [
+                              18,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "id": "d8db32ad-6db6-4c05-a793-bdc596a39980",
+                      "position": [
+                        18,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "d03da4cd-3caf-48c4-a7c1-19b4a3d102e3",
+                "position": [
+                  18,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "d3dadac9-766d-4888-8c7b-86464467566f",
+          "position": [
+            18
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "A grey line appears after a subheading.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "A grey line appears after a subheading.",
+                        "attributes": []
+                      },
+                      "id": "ff76a9db-7dd4-43c7-844a-90b2b6368117",
+                      "position": [
+                        19,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "d8fd3e33-7f79-496a-b3b9-3b89d0ddc364",
+                "position": [
+                  19,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "d0612875-35e4-4063-a942-3c3cafb45b6d",
+          "position": [
+            19
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "This is a paragraph with an inline link to an internal site. Here's a link to an external site.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "This is a paragraph with an ",
+                        "attributes": []
+                      },
+                      "id": "0c0f032a-3138-46bd-9f28-e19c1a1392f0",
+                      "position": [
+                        20,
                         1,
                         1
                       ]
@@ -699,18 +1478,18 @@
                     {
                       "type": "urlLink",
                       "model": {
-                        "text": "Caerphilly danish fontina",
-                        "locator": "https://bbc.com/pidgin/23248703",
+                        "text": "inline link",
+                        "locator": "https://www.bbc.co.uk/news/uk-scotland-north-east-orkney-shetland-51190283",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Caerphilly danish fontina",
+                              "text": "inline link",
                               "attributes": []
                             },
-                            "id": "fc2ce1de-5f81-449f-bb10-5ea14166b2bb",
+                            "id": "cfd2b0db-8c09-46fa-84e5-0b6fe7d94409",
                             "position": [
-                              7,
+                              20,
                               1,
                               2,
                               1
@@ -719,9 +1498,9 @@
                         ],
                         "isExternal": false
                       },
-                      "id": "b0dbd6d8-ac86-4966-aa86-87c91c0056fb",
+                      "id": "eb0e8ada-7731-4b93-baa1-d9ac2a5aadc8",
                       "position": [
-                        7,
+                        20,
                         1,
                         2
                       ]
@@ -729,27 +1508,42 @@
                     {
                       "type": "fragment",
                       "model": {
-                        "text": " queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. ",
+                        "text": " to an internal site. Here's a link to an ",
                         "attributes": []
                       },
-                      "id": "b7445234-6c7d-48cc-a247-f1002868e339",
+                      "id": "d5e2b1e3-7f77-4c60-822d-8a7b88e4d364",
                       "position": [
-                        7,
+                        20,
                         1,
                         3
                       ]
                     },
                     {
-                      "type": "fragment",
+                      "type": "urlLink",
                       "model": {
-                        "text": "Cow cheeseburger",
-                        "attributes": [
-                          "bold"
-                        ]
+                        "text": "external site",
+                        "locator": "http://www.google.com",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "external site",
+                              "attributes": []
+                            },
+                            "id": "77ba277f-4cef-4128-bb03-5859d56921c7",
+                            "position": [
+                              20,
+                              1,
+                              4,
+                              1
+                            ]
+                          }
+                        ],
+                        "isExternal": true
                       },
-                      "id": "73fe2017-dfa4-443f-b20c-dc906f841870",
+                      "id": "fbae426a-7cd6-4ef8-aae5-22d3656feaa0",
                       "position": [
-                        7,
+                        20,
                         1,
                         4
                       ]
@@ -757,29 +1551,66 @@
                     {
                       "type": "fragment",
                       "model": {
-                        "text": " stilton emmental.",
+                        "text": ".",
                         "attributes": []
                       },
-                      "id": "95f600ea-7a6f-48ae-9b6f-eda76f2aaad2",
+                      "id": "2a080cc4-def3-45c7-9a45-14c88d342278",
                       "position": [
-                        7,
+                        20,
                         1,
                         5
                       ]
                     }
                   ]
                 },
-                "id": "d1cce7b1-4562-4e8e-ab0c-b5bd48a98961",
+                "id": "6089b8d9-8365-429d-a956-f502a2b3c97d",
                 "position": [
-                  7,
+                  20,
                   1
                 ]
               }
             ]
           },
-          "id": "ead844c2-479c-44f4-9340-8ad878c84bb8",
+          "id": "b33e2e01-802a-48be-98ef-5bd74b606760",
           "position": [
-            7
+            20
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "More normal paragraph text. The body image below doesn't have a caption, but does have copyright.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "More normal paragraph text. The body image below doesn't have a caption, but does have copyright.",
+                        "attributes": []
+                      },
+                      "id": "fbf0b51f-e3c0-4945-8efe-ec20d1ee2b31",
+                      "position": [
+                        21,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "1eb98783-10eb-434a-89be-8ae3b6f7bed8",
+                "position": [
+                  21,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "dca39a82-27ef-4996-8671-789709590831",
+          "position": [
+            21
           ]
         },
         {
@@ -797,17 +1628,17 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "That guy from bodyguard at the NTAs",
+                              "text": "Dogs",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "That guy from bodyguard at the NTAs",
+                                    "text": "Dogs",
                                     "attributes": []
                                   },
-                                  "id": "3655aba3-ad56-46bc-9a39-1e3a60b63bd7",
+                                  "id": "91617f9b-0cd6-44dc-a9c0-4f415e664838",
                                   "position": [
-                                    8,
+                                    22,
                                     1,
                                     1,
                                     1,
@@ -816,9 +1647,9 @@
                                 }
                               ]
                             },
-                            "id": "d69d6f2c-0a06-41c3-88ca-47f505678ed6",
+                            "id": "d7f4163b-72c7-485e-9778-a10fcad69b9f",
                             "position": [
-                              8,
+                              22,
                               1,
                               1,
                               1
@@ -826,41 +1657,41 @@
                           }
                         ]
                       },
-                      "id": "42fda8aa-7baf-4928-af89-e31fbc1e1a1d",
+                      "id": "37ad79ed-ba27-4b4f-b913-1b6287d11300",
                       "position": [
-                        8,
+                        22,
                         1,
                         1
                       ]
                     }
                   ]
                 },
-                "id": "a8f7e072-193b-4fe1-9abd-6a29690b2577",
+                "id": "f3743487-65dc-4e10-a293-5008e9cd8fbb",
                 "position": [
-                  8,
+                  22,
                   1
                 ]
               },
               {
                 "type": "rawImage",
                 "model": {
-                  "copyrightHolder": "Joe Maher",
+                  "copyrightHolder": "Kaylee Garrick",
                   "height": 549,
-                  "locator": "B8EE/test/_63724374_gettyimages-1098050396.jpg",
+                  "locator": "778B/test/_63730603_dogs-kayleegarrick.jpg",
                   "originCode": "cpsdevpb",
                   "width": 976
                 },
-                "id": "dbf09c6a-141d-4ecc-9a8a-bd273abafe52",
+                "id": "d31823f9-24b5-487d-a298-cce2f3991959",
                 "position": [
-                  8,
+                  22,
                   2
                 ]
               }
             ]
           },
-          "id": "c3070703-fb0e-4ca3-afcc-22aefd495b7c",
+          "id": "01d4c17f-ca35-4092-9762-2a5a0c3a1e3c",
           "position": [
-            8
+            22
           ]
         },
         {
@@ -870,73 +1701,34 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Start of localised text",
+                  "text": "Social embed examples below for Twitter, YouTube and Instagram.",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Start of localised text",
-                        "attributes": [
-                          "bold"
-                        ]
-                      },
-                      "id": "9d9f54d6-bba2-4cce-97fd-7138705b0b5c",
-                      "position": [
-                        9,
-                        1,
-                        1
-                      ]
-                    }
-                  ]
-                },
-                "id": "6c2a9ce2-6ac4-4744-8dcc-365d944975c3",
-                "position": [
-                  9,
-                  1
-                ]
-              }
-            ]
-          },
-          "id": "6064ec55-c924-4784-9df2-86aa42b5e43d",
-          "position": [
-            9
-          ]
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.",
+                        "text": "Social embed examples below for Twitter, YouTube and Instagram.",
                         "attributes": []
                       },
-                      "id": "08b4f08a-371d-465a-b92a-830c002aec03",
+                      "id": "b0060f72-e9b1-4dfd-a08a-6385e96cb59b",
                       "position": [
-                        10,
+                        23,
                         1,
                         1
                       ]
                     }
                   ]
                 },
-                "id": "5e174b3b-3cc1-4a38-bb1f-33ce6daea170",
+                "id": "a7623ad1-027d-400b-8f1a-220a7222a693",
                 "position": [
-                  10,
+                  23,
                   1
                 ]
               }
             ]
           },
-          "id": "b0cb17f3-eab4-4cbd-8910-36b6d9bd44a5",
+          "id": "c5d83f44-4a95-4d8d-bed2-49d043a03f1e",
           "position": [
-            10
+            23
           ]
         },
         {
@@ -946,36 +1738,34 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "End of localised text",
+                  "text": "Twitter",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "End of localised text",
-                        "attributes": [
-                          "bold"
-                        ]
+                        "text": "Twitter",
+                        "attributes": []
                       },
-                      "id": "a544a63a-46f5-42f1-9646-0e195f2d0ba4",
+                      "id": "f82c44fb-9799-421c-93de-73184cd42b2b",
                       "position": [
-                        11,
+                        24,
                         1,
                         1
                       ]
                     }
                   ]
                 },
-                "id": "2319af7b-1363-4165-9724-1b332f084ef5",
+                "id": "8a8f27fd-a93a-4632-866b-abe73f44af7d",
                 "position": [
-                  11,
+                  24,
                   1
                 ]
               }
             ]
           },
-          "id": "6bd09fdc-aef3-41c5-89e2-fec144b48d4d",
+          "id": "1aad51f3-84bb-4622-a7bb-6d24596f89a3",
           "position": [
-            11
+            24
           ]
         },
         {
@@ -985,310 +1775,34 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Rubber cheese macaroni cheese cottage cheese. Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.",
+                  "text": "YouTube",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Rubber cheese macaroni ",
+                        "text": "YouTube",
                         "attributes": []
                       },
-                      "id": "b42a9422-b7fd-4731-99b9-a32a2e1679ea",
+                      "id": "40b125eb-ab14-4015-a21d-cc38b8b9c9b8",
                       "position": [
-                        12,
+                        25,
                         1,
                         1
-                      ]
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "cheese cottage cheese",
-                        "attributes": [
-                          "italic"
-                        ]
-                      },
-                      "id": "89266d0e-c4f8-4851-9e9c-f6c60307a6e3",
-                      "position": [
-                        12,
-                        1,
-                        2
-                      ]
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": ". Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.",
-                        "attributes": []
-                      },
-                      "id": "2d5345aa-becc-4408-9a04-6a929a1965a5",
-                      "position": [
-                        12,
-                        1,
-                        3
                       ]
                     }
                   ]
                 },
-                "id": "5134d4ec-dd8e-47d1-8c1f-27f57d09b3d2",
+                "id": "db177924-03cd-4a0e-8574-e2d4e30244a7",
                 "position": [
-                  12,
+                  25,
                   1
                 ]
               }
             ]
           },
-          "id": "ebef4be2-0512-4a8b-84d6-c6f65b6e867b",
+          "id": "1be5ad42-39d8-4d9f-80e8-d3c86cbb4c86",
           "position": [
-            12
-          ]
-        },
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "listItem",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "This is a ordered list",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "This is a ordered list",
-                                    "attributes": []
-                                  },
-                                  "id": "79cf959b-db19-40fe-be1c-ce3aaab7a692",
-                                  "position": [
-                                    13,
-                                    1,
-                                    1,
-                                    1,
-                                    1
-                                  ]
-                                }
-                              ]
-                            },
-                            "id": "06820e9f-78c4-4d9a-aa68-b3d4f2ae8fd7",
-                            "position": [
-                              13,
-                              1,
-                              1,
-                              1
-                            ]
-                          }
-                        ]
-                      },
-                      "id": "4a0b6482-d7a7-4852-be23-6c4d3d6aa505",
-                      "position": [
-                        13,
-                        1,
-                        1
-                      ]
-                    },
-                    {
-                      "type": "listItem",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "It can have bold text in it",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "It can have ",
-                                    "attributes": []
-                                  },
-                                  "id": "4248c398-cc6c-4163-8c7d-bd8385ea8370",
-                                  "position": [
-                                    13,
-                                    1,
-                                    2,
-                                    1,
-                                    1
-                                  ]
-                                },
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "bold text",
-                                    "attributes": [
-                                      "bold"
-                                    ]
-                                  },
-                                  "id": "e969c948-30c1-4d56-a0e5-3ad7b48e792c",
-                                  "position": [
-                                    13,
-                                    1,
-                                    2,
-                                    1,
-                                    2
-                                  ]
-                                },
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": " in it",
-                                    "attributes": []
-                                  },
-                                  "id": "08c4224e-0713-4c4f-a651-982349c875a2",
-                                  "position": [
-                                    13,
-                                    1,
-                                    2,
-                                    1,
-                                    3
-                                  ]
-                                }
-                              ]
-                            },
-                            "id": "89963077-d094-40c4-be12-4ac9ecfc7522",
-                            "position": [
-                              13,
-                              1,
-                              2,
-                              1
-                            ]
-                          }
-                        ]
-                      },
-                      "id": "ea453eb6-3d97-40b7-a3b8-a3181e97cfa9",
-                      "position": [
-                        13,
-                        1,
-                        2
-                      ]
-                    },
-                    {
-                      "type": "listItem",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "It can also have links",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "It can also have links",
-                                    "locator": "https://bbc.com/pidgin/23248703",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "It can also have links",
-                                          "attributes": []
-                                        },
-                                        "id": "a67424d6-a6fb-4c39-baac-d02d32f33616",
-                                        "position": [
-                                          13,
-                                          1,
-                                          3,
-                                          1,
-                                          1,
-                                          1
-                                        ]
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  },
-                                  "id": "e51dadf7-f548-42d1-b89b-87565d727f58",
-                                  "position": [
-                                    13,
-                                    1,
-                                    3,
-                                    1,
-                                    1
-                                  ]
-                                }
-                              ]
-                            },
-                            "id": "ee85c9dc-364c-4b78-bd84-cac358d88c1c",
-                            "position": [
-                              13,
-                              1,
-                              3,
-                              1
-                            ]
-                          }
-                        ]
-                      },
-                      "id": "617a0fcb-9ab5-4e2e-af77-d84040369786",
-                      "position": [
-                        13,
-                        1,
-                        3
-                      ]
-                    },
-                    {
-                      "type": "listItem",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "It can even have italic text in it!",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "It can even have italic text in it!",
-                                    "attributes": [
-                                      "italic"
-                                    ]
-                                  },
-                                  "id": "d1206961-9cf5-4d0e-8cc6-c30b5ec0c3c0",
-                                  "position": [
-                                    13,
-                                    1,
-                                    4,
-                                    1,
-                                    1
-                                  ]
-                                }
-                              ]
-                            },
-                            "id": "68ef8195-ce9d-4612-9fb9-a4f4d93e89eb",
-                            "position": [
-                              13,
-                              1,
-                              4,
-                              1
-                            ]
-                          }
-                        ]
-                      },
-                      "id": "9f2f2c6b-d37f-4c3c-b8eb-8755bdcaba7e",
-                      "position": [
-                        13,
-                        1,
-                        4
-                      ]
-                    }
-                  ]
-                },
-                "type": "orderedList",
-                "id": "51fc1687-b078-47ba-8b3d-358ae5b8340a",
-                "position": [
-                  13,
-                  1
-                ]
-              }
-            ]
-          },
-          "type": "text",
-          "id": "050fb36f-a80a-4f0c-8e5a-cd93ff8f33c8",
-          "position": [
-            13
+            25
           ]
         },
         {
@@ -1298,40 +1812,77 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.",
+                  "text": "Instagram",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.",
+                        "text": "Instagram",
                         "attributes": []
                       },
-                      "id": "066ac053-2be0-42d8-a47c-f5ff6842ebb3",
+                      "id": "b6476833-09ba-4a60-84bb-6b0fdaf39044",
                       "position": [
-                        14,
+                        26,
                         1,
                         1
                       ]
                     }
                   ]
                 },
-                "id": "2acb72e3-ab25-48a4-b2db-36c61184434e",
+                "id": "f2428ccb-0ad7-4e03-bc5d-238bf8f428c5",
                 "position": [
-                  14,
+                  26,
                   1
                 ]
               }
             ]
           },
-          "id": "7c51906b-acdc-4e0e-96a4-f5ea4798b51b",
+          "id": "8de490f8-bf5c-4d8f-892f-3663af00c814",
           "position": [
-            14
+            26
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Embedded MAP: video",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Embedded MAP: video",
+                        "attributes": []
+                      },
+                      "id": "8e9097b1-7191-494b-8621-8767cb36b3ff",
+                      "position": [
+                        27,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "741076c1-b802-4702-80c1-f7ea94914cc7",
+                "position": [
+                  27,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "75cd7de0-894b-43fa-874c-a0283faa01e5",
+          "position": [
+            27
           ]
         },
         {
           "type": "video",
           "model": {
-            "locator": "urn:bbc:pips:pid:p01mr6r7",
+            "locator": "urn:bbc:pips:pid:p01k6msm",
             "blocks": [
               {
                 "type": "aresMedia",
@@ -1339,39 +1890,177 @@
                   "blocks": [
                     {
                       "type": "aresMediaMetadata",
-                      "blockId": "urn:bbc:ares::clip:p01mr6r7",
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
                       "model": {
                         "advertising": true,
                         "embedding": true,
-                        "format": "audio",
-                        "id": "p01mr6r7",
-                        "imageCopyright": "Getty Images",
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mr7dp.jpg",
+                        "format": "audio_video",
+                        "id": "p01k6msm",
+                        "imageCopyright": "BBC",
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
                         "subType": "clip",
                         "synopses": {
-                          "short": "Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов."
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
                         },
-                        "title": "Подкаст \"Разговоры с арбитром\": чемпионский парад \"Ливерпуля\"",
+                        "title": "Five things ants can teach us about management",
                         "versions": [
                           {
-                            "versionId": "p01mr6r9",
+                            "versionId": "p01k6msp",
                             "types": [
                               "Original"
                             ],
-                            "duration": 1961,
-                            "durationISO8601": "PT32M41S",
-                            "warnings": {},
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
                             "availableTerritories": {
                               "uk": true,
-                              "nonUk": true
+                              "nonUk": true,
+                              "world": false
                             },
-                            "availableFrom": 1559819809000
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "available": true
+                      },
+                      "id": "c65e45d8-4980-47fb-9393-4d9798d89854",
+                      "position": [
+                        28,
+                        1,
+                        1
+                      ]
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "copyrightHolder": "BBC",
+                              "locator": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg",
+                              "originCode": "pips"
+                            },
+                            "id": "755a6dde-9360-4a9d-9915-a207871b70d7",
+                            "position": [
+                              28,
+                              1,
+                              2,
+                              1
+                            ]
                           }
                         ]
                       },
-                      "id": "c380f5b0-e197-4bbd-be5c-0779813cd1ca",
+                      "id": "141a7615-282c-4ac1-ad3a-f4ad92a7ba44",
                       "position": [
-                        15,
+                        28,
+                        1,
+                        2
+                      ]
+                    }
+                  ]
+                },
+                "id": "cbd9c131-fc21-4f34-bf81-495457246c94",
+                "position": [
+                  28,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "fd3bc533-b0c2-45ce-a500-6db1ebc150f6",
+          "position": [
+            28
+          ]
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Embedded MAP: audio",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Embedded MAP: audio",
+                        "attributes": []
+                      },
+                      "id": "5916c572-af47-40a2-b4a1-22c06e8af485",
+                      "position": [
+                        29,
+                        1,
+                        1
+                      ]
+                    }
+                  ]
+                },
+                "id": "78b46fb2-34cf-4da9-a4aa-31a8b95e229d",
+                "position": [
+                  29,
+                  1
+                ]
+              }
+            ]
+          },
+          "id": "875203e1-3394-4c98-839a-3771c8933fe1",
+          "position": [
+            29
+          ]
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01m7d07",
+            "blocks": [
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "aresMediaMetadata",
+                      "blockId": "urn:bbc:ares::clip:p01m7d07",
+                      "model": {
+                        "advertising": false,
+                        "embedding": false,
+                        "format": "audio",
+                        "id": "p01m7d07",
+                        "imageCopyright": "Getty Images",
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+                        "subType": "clip",
+                        "synopses": {
+                          "short": "Some audio from a supermarket checkout in Birmingham"
+                        },
+                        "title": "Birmingham checkout",
+                        "versions": [
+                          {
+                            "versionId": "p01m7d09",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 127,
+                            "durationISO8601": "PT2M7S",
+                            "warnings": {
+                              "short": "Contains some strong language.",
+                              "long": "Contains some strong language."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true,
+                              "world": false
+                            },
+                            "availableFrom": 1555067395000
+                          }
+                        ],
+                        "available": true
+                      },
+                      "id": "1b50e6ad-0105-42e7-b000-e7a359b48fdb",
+                      "position": [
+                        30,
                         1,
                         1
                       ]
@@ -1384,12 +2073,12 @@
                             "type": "rawImage",
                             "model": {
                               "copyrightHolder": "Getty Images",
-                              "locator": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg",
+                              "locator": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mt2kt.jpg",
                               "originCode": "pips"
                             },
-                            "id": "77f00b94-e56c-439d-b76a-71fdc25df6fb",
+                            "id": "a73300d6-8c79-4722-8db2-5b0b88bbcfc1",
                             "position": [
-                              15,
+                              30,
                               1,
                               2,
                               1
@@ -1397,77 +2086,26 @@
                           }
                         ]
                       },
-                      "id": "bbfa9647-d979-4dda-8e38-9a238370d513",
+                      "id": "cc6a08fd-cc0d-4419-9358-6b7f97dd807e",
                       "position": [
-                        15,
+                        30,
                         1,
                         2
                       ]
                     }
                   ]
                 },
-                "id": "8c5bdd46-6a0f-4b91-b397-36172f73b6c0",
+                "id": "944b7116-a4e1-4f2b-938b-825be691fcbb",
                 "position": [
-                  15,
+                  30,
                   1
                 ]
               }
             ]
           },
-          "id": "4ead216e-0ab9-453f-8d30-bb963a7cf3a3",
+          "id": "789ff470-d6ea-4c2f-ab8f-d81cd732c76f",
           "position": [
-            15
-          ]
-        },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "This is a heading!",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "This is a heading!",
-                              "attributes": []
-                            },
-                            "id": "3a0f479c-671e-424c-b2a4-bd71dfbd5e1a",
-                            "position": [
-                              16,
-                              1,
-                              1,
-                              1
-                            ]
-                          }
-                        ]
-                      },
-                      "id": "ce6f2eb1-51e7-4295-9736-574985b3356f",
-                      "position": [
-                        16,
-                        1,
-                        1
-                      ]
-                    }
-                  ]
-                },
-                "id": "11e45aff-634c-4dd6-bfbd-fe586df5cc63",
-                "position": [
-                  16,
-                  1
-                ]
-              }
-            ]
-          },
-          "id": "9b086369-8eda-4f29-95bb-6c850af2fba6",
-          "position": [
-            16
+            30
           ]
         },
         {
@@ -1477,85 +2115,34 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.",
+                  "text": "Includes: VisJo",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.",
+                        "text": "Includes: VisJo",
                         "attributes": []
                       },
-                      "id": "b588cef5-32ca-4df6-8bc9-511160fd4d80",
+                      "id": "7dbf9fa9-e45d-438c-8cf0-7a8c668b715a",
                       "position": [
-                        17,
+                        31,
                         1,
                         1
                       ]
                     }
                   ]
                 },
-                "id": "b7fdfef1-57e1-4814-82e3-bf9f328470bf",
+                "id": "b16e0fe3-fb09-4d3b-8372-5dd69c48f634",
                 "position": [
-                  17,
+                  31,
                   1
                 ]
               }
             ]
           },
-          "id": "4c85cc8a-6ac8-4831-9770-5d5e1a3061ad",
+          "id": "5a8c4559-93f3-4b80-a6fa-62433c2476d0",
           "position": [
-            17
-          ]
-        },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "This is a crosshead!",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "This is a crosshead!",
-                              "attributes": []
-                            },
-                            "id": "c6cfedd3-3152-4435-ac2a-c6f7005ec4b9",
-                            "position": [
-                              18,
-                              1,
-                              1,
-                              1
-                            ]
-                          }
-                        ]
-                      },
-                      "id": "f181d289-7998-4ad4-84a2-b0ed562e6aa6",
-                      "position": [
-                        18,
-                        1,
-                        1
-                      ]
-                    }
-                  ]
-                },
-                "id": "ed9da6e0-8973-4100-98e7-d7f480e8ffdf",
-                "position": [
-                  18,
-                  1
-                ]
-              }
-            ]
-          },
-          "id": "f01e7c64-fc11-4c09-9390-3e4fa34a1f99",
-          "position": [
-            18
+            31
           ]
         },
         {
@@ -1565,125 +2152,34 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": "Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.",
+                  "text": "Includes: IDT2",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": "Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.",
+                        "text": "Includes: IDT2",
                         "attributes": []
                       },
-                      "id": "b2e6c39f-3a66-4a69-8fd9-e49c62466936",
+                      "id": "d7d828a1-d73c-4b16-94ac-4cba1e625a44",
                       "position": [
-                        19,
+                        32,
                         1,
                         1
                       ]
                     }
                   ]
                 },
-                "id": "c4aff109-b426-4f70-b598-165176230613",
+                "id": "87fba884-adba-4018-9229-4fb9fc156bc6",
                 "position": [
-                  19,
+                  32,
                   1
                 ]
               }
             ]
           },
-          "id": "7a4e0537-731e-417e-815d-a730fcfc1cfd",
+          "id": "7eac3f39-5738-4b12-9d3d-02d8f8ea45bd",
           "position": [
-            19
-          ]
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "This is an external link to google!",
-                  "blocks": [
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "This is an external link to google!",
-                        "locator": "https://www.google.com/",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "This is an external link to google!",
-                              "attributes": []
-                            },
-                            "id": "077be840-4b47-4d29-9969-f6c778aae90e",
-                            "position": [
-                              20,
-                              1,
-                              1,
-                              1
-                            ]
-                          }
-                        ],
-                        "isExternal": true
-                      },
-                      "id": "0a487583-f051-442d-b260-e728cf5d682f",
-                      "position": [
-                        20,
-                        1,
-                        1
-                      ]
-                    }
-                  ]
-                },
-                "id": "865c7bd9-ab83-4fa2-8364-ec20051698a9",
-                "position": [
-                  20,
-                  1
-                ]
-              }
-            ]
-          },
-          "id": "fc1e1cbb-85d1-4491-a934-9205ec455849",
-          "position": [
-            20
-          ]
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.",
-                        "attributes": []
-                      },
-                      "id": "66d0e6b5-b117-4cb0-8782-f3de4b64def3",
-                      "position": [
-                        21,
-                        1,
-                        1
-                      ]
-                    }
-                  ]
-                },
-                "id": "a7649931-a5e0-4aa1-b1cb-74af390b02c4",
-                "position": [
-                  21,
-                  1
-                ]
-              }
-            ]
-          },
-          "id": "a665b8f4-8008-4bde-90fe-fd108f882a94",
-          "position": [
-            21
+            32
           ]
         }
       ]
@@ -1691,29 +2187,52 @@
   },
   "promo": {
     "headlines": {
-      "shortHeadline": "STY - Blood pressure drugs dey work better",
-      "headline": "STY - Blood pressure drugs dey work better"
+      "shortHeadline": "WS STY TEST - Headline",
+      "headline": "WS STY TEST - Full Headline"
     },
     "locators": {
-      "assetUri": "/pidgin/world-23252817",
-      "cpsUrn": "urn:bbc:content:assetUri:pidgin/world-23252817",
-      "curie": "http://www.bbc.co.uk/asset/740a2911-be7a-d945-a968-d812272c2147"
+      "assetUri": "/mundo/23263889",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/23263889",
+      "curie": "http://www.bbc.co.uk/asset/f776ad93-e486-b14a-b5ea-55955dd0644f"
     },
-    "summary": "This is a test asset used in Simorgh, please do not edit it without asking.",
-    "timestamp": 1571834379488,
+    "summary": "This is the summary",
+    "timestamp": 1580745507000,
+    "language": "es",
     "byline": {
-      "name": "By Andrew Overtyped Marr",
-      "title": "BBC News - Overtyped",
+      "name": "James Bond",
+      "title": "Spy",
       "persons": [
         {
-          "name": "Andrew Marr",
-          "function": "BBC News",
-          "thumbnail": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/50002000/jpg/_50002170_andrew_marr_112_bbc.jpg"
+          "name": "James Bond",
+          "function": "Spy"
         }
       ]
     },
-    "passport": {},
-    "id": "urn:bbc:ares::asset:pidgin/world-23252817",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5ad86270c93a9f000eecb255",
+          "campaignName": "Amuse me"
+        }
+      ],
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "63730607",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+      "path": "/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Some cool looking dogs on the beach.",
+      "copyrightHolder": "Kaylee Garrick",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:mundo/23263889",
     "type": "cps"
   }
 }

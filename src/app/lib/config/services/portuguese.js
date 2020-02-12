@@ -145,7 +145,9 @@ export const service = {
         },
       },
       media: {
-        noJs: "ਮੀਡੀਆ ਪਲੇਬੈਕ ਤੁਹਾਡੀ ਡਿਵਾਈਸ 'ਤੇ ਸਪੋਰਟ ਨਹੀਂ ਕਰਦਾ",
+        noJs:
+          'A reprodução deste formato de vídeo não é compatível com seu dispositivo',
+        contentExpired: 'Este conteúdo não está mais disponível.',
         audio: 'Áudio',
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',
@@ -160,7 +162,8 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Mais lidas',
-      lastUpdated: 'Última atualização: ',
+      lastUpdated: 'Última atualização:',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

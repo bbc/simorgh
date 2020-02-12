@@ -137,6 +137,7 @@ export const service = {
       },
       media: {
         noJs: 'मीडिया प्लेबॅक आपल्या डिव्हाइसवर असमर्थित आहे',
+        contentExpired: 'ही सामग्री यापुढे उपलब्ध नाही',
         audio: 'ऑडिओ',
         photogallery: 'फोटो गॅलरी',
         video: 'व्हीडिओ',
@@ -156,7 +157,8 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'सर्वाधिक वाचलेले',
-      lastUpdated: 'शेवटचा अपडेट: ',
+      lastUpdated: 'शेवटचा अपडेट:',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {
@@ -214,6 +216,10 @@ export const service = {
       {
         title: 'लोकप्रिय',
         url: '/marathi/popular/read',
+      },
+      {
+        title: '#ISWOTY',
+        url: '/marathi/resources/idt-43ff5603-f85f-47c1-972f-097e67eeb035',
       },
     ],
     navigationSection: 'विभाग',

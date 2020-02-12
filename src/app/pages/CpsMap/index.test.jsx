@@ -308,6 +308,44 @@ it('should not show the timestamp when allowDateStamp is false', async () => {
   expect(document.querySelector('main time')).toBeNull();
 });
 
+it('should not show the iframe when available is false', async () => {
+  const uzbekDataExpiredLivestream = assocPath(
+    ['content', 'blocks', 0, 'available'],
+    false,
+    uzbekPageData,
+  );
+
+  const pageDataWithExpiredLiveStream = await preprocessor(
+    uzbekDataExpiredLivestream,
+    cpsAssetPreprocessorRules,
+  );
+
+  render(createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'));
+
+  expect(document.querySelector('iframe')).toBeNull();
+});
+
+it('should show the media message when available is false', async () => {
+  const uzbekDataExpiredLivestream = assocPath(
+    ['content', 'blocks', 0, 'available'],
+    false,
+    uzbekPageData,
+  );
+
+  const pageDataWithExpiredLiveStream = await preprocessor(
+    uzbekDataExpiredLivestream,
+    cpsAssetPreprocessorRules,
+  );
+
+  const { getByText } = render(
+    createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),
+  );
+
+  expect(
+    getByText('Бу контентни ортиқ тинглаб/томоша қилиб бўлмайди.'),
+  ).toBeInTheDocument();
+});
+
 it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
   const pageData = await preprocessor(igboPageData, cpsAssetPreprocessorRules);
 

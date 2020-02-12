@@ -1,6 +1,6 @@
 import path from 'ramda/src/path';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
-import compose from 'ramda/src/compose';
+import pipe from 'ramda/src/pipe';
 
 // ARES sometimes reports timestamps in seconds; sometimes in milliseconds
 // This standardises that by assuming any timestamp before 1973 needs converted to ms
@@ -29,22 +29,26 @@ const standardiseMetadataTimestamps = json => {
   );
 };
 
-const standardiseRelatedContentTimestamp = item => ({
+const standardisePromoTimestamp = item => ({
   ...item,
   timestamp: standardiseTimestamp(item.timestamp),
 });
 
-const standardiseRelatedContentTimestamps = json => {
-  const relatedContent = path(['relatedContent', 'groups', 0, 'promos'], json);
+const standardisePromoTimestamps = json => {
+  const relatedContentGroup = path(['relatedContent', 'groups', 0], json);
 
-  if (!Array.isArray(relatedContent)) return json;
+  if (!relatedContentGroup || !Array.isArray(relatedContentGroup.promos))
+    return json;
+
+  const { promos } = relatedContentGroup;
 
   return mergeDeepLeft(
     {
       relatedContent: {
         groups: [
           {
-            promos: relatedContent.map(standardiseRelatedContentTimestamp),
+            ...relatedContentGroup,
+            promos: promos.map(standardisePromoTimestamp),
           },
         ],
       },
@@ -53,7 +57,4 @@ const standardiseRelatedContentTimestamps = json => {
   );
 };
 
-export default compose(
-  standardiseMetadataTimestamps,
-  standardiseRelatedContentTimestamps,
-);
+export default pipe(standardisePromoTimestamps, standardiseMetadataTimestamps);

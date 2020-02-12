@@ -140,7 +140,9 @@ export const service = {
         },
       },
       media: {
-        noJs: "Multimedia o'ynash bu qurilmada dastaklanmaydi",
+        noJs: 'මෙහි කිසිවක් අඩංගු නැත.',
+        contentExpired:
+          'ඔබේ දුරකථනයේ හෝ පරිගණකයේ මෙය වාදනය කිරීමට අදාළ මෘදුකාංග නැත',
         audio: 'හඬ',
         photogallery: 'ඡායාරූප ගැලරිය ',
         video: 'වීඩියෝ',
@@ -149,8 +151,8 @@ export const service = {
           subtitle:
             'බීබීසී සිංහල ඔස්සේ ශ්‍රී ලාංකීය, දකුණු ආසියාතික සහ ජාත්‍යන්තර පුවත්, විශ්ලේෂණ සහ ක්‍රීඩා පුවත්',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'සවන්දෙන්න',
+        watch: 'නරඹන්න',
         liveLabel: 'සජීවී.',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -160,7 +162,8 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'වැඩිපුරම කියැවූ',
-      lastUpdated: 'අවසන් යාවත්කාලීනවීම: ',
+      lastUpdated: 'අවසන් යාවත්කාලීනවීම:',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

@@ -1,9 +1,10 @@
 import React from 'react';
-import compose from 'ramda/src/compose';
+import pipe from 'ramda/src/pipe';
 import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
@@ -28,6 +29,7 @@ import {
   getLastPublished,
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
+import categoryType from './categoryMap/index';
 
 // Page Handlers
 import withContexts from '#containers/PageHandlers/withContexts';
@@ -38,6 +40,10 @@ import withData from '#containers/PageHandlers/withData';
 
 const CpsStyContainer = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
+  const category = path(
+    ['promo', 'passport', 'category', 'categoryName'],
+    pageData,
+  );
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
   const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
@@ -74,6 +80,19 @@ const CpsStyContainer = ({ pageData }) => {
 
   const StyledGhostGrid = styled(GhostGrid)`
     flex-grow: 1;
+    padding-bottom: ${GEL_SPACING_TRPL};
+
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding-bottom: ${GEL_SPACING_QUAD};
+    }
+  `;
+
+  const StyledTimestamp = styled(Timestamp)`
+    padding-bottom: ${GEL_SPACING_DBL};
+
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding-bottom: ${GEL_SPACING_TRPL};
+    }
   `;
 
   return (
@@ -89,9 +108,10 @@ const CpsStyContainer = ({ pageData }) => {
         aboutTags={aboutTags}
       />
       <LinkedData
-        type="Article"
+        type={categoryType(category)}
         seoTitle={title}
         headline={title}
+        description={summary}
         showAuthor
         datePublished={firstPublished}
         dateModified={lastPublished}
@@ -106,22 +126,14 @@ const CpsStyContainer = ({ pageData }) => {
   );
 };
 
-const StyledTimestamp = styled(Timestamp)`
-  padding-bottom: ${GEL_SPACING_DBL};
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-bottom: ${GEL_SPACING_TRPL};
-  }
-`;
-
 CpsStyContainer.propTypes = cpsAssetPagePropTypes;
 
-const EnhancedCpsStyContainer = compose(
-  withContexts,
-  withPageWrapper,
-  withLoading,
-  withError,
+const EnhancedCpsStyContainer = pipe(
   withData,
+  withError,
+  withLoading,
+  withPageWrapper,
+  withContexts,
 )(CpsStyContainer);
 
 export default EnhancedCpsStyContainer;

@@ -90,6 +90,7 @@ export const service = {
     mostRead: {
       header: 'Najčitanije',
       lastUpdated: 'Poslednji put ažurirano ',
+      numberOfItems: 5,
     },
     navigation: [
       {
@@ -210,6 +211,9 @@ export const service = {
         },
       },
       media: {
+        noJs:
+          'Reprodukovanje multimedijskog sadržaja na vašem uređaju nije podržano',
+        contentExpired: 'Ovaj sadržaj više nije dostupan.',
         audio: 'Audio',
         photogallery: 'Foto galerija',
         video: 'Video',
@@ -275,7 +279,8 @@ export const service = {
     },
     mostRead: {
       header: 'Најчитаније',
-      lastUpdated: 'Последњи пут ажурирано: ',
+      lastUpdated: 'Последњи пут ажурирано:',
+      numberOfItems: 5,
     },
     navigation: [
       {
@@ -396,6 +401,9 @@ export const service = {
         },
       },
       media: {
+        noJs:
+          'Репродуковање мултимедијског садржаја на вашем уређају није подржано',
+        contentExpired: 'Овај садржај више није доступан.',
         audio: 'Аудио',
         photogallery: 'Фото галерија',
         video: 'Видео',
