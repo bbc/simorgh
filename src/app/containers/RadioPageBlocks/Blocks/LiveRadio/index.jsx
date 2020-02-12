@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, memo } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
-import { string } from 'prop-types';
+import { string, bool, shape } from 'prop-types';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
@@ -28,6 +28,42 @@ const MediaPlayerInnerWrapper = styled.div`
   width: 50rem;
   max-width: calc(100vw - ${GEL_SPACING_QUAD});
 `;
+
+const MemoizedMediaPlayer = memo(
+  ({
+    showPlaceholder,
+    src,
+    title,
+    id,
+    skin,
+    service,
+    mediaInfo,
+    noJsMessage,
+    noJsClassName,
+  }) => (
+    <CanonicalMediaPlayer
+      showPlaceholder={showPlaceholder}
+      src={src}
+      title={title}
+      id={id}
+      skin={skin}
+      service={service}
+      mediaInfo={mediaInfo}
+      noJsMessage={noJsMessage}
+      noJsClassName={noJsClassName}
+    />
+  ),
+  (prevProps, nextProps) => {
+    /*
+     * `useLocation` hook state change causes the MediaPlayer to reload
+     * when the hash changes e.g. when skipping to content. This will ensure
+     * the MediaPlayer only rerenders when `src` or `showPlaceholder` changes.
+     */
+    if (prevProps.src === nextProps.src) return true;
+    if (prevProps.showPlaceholder === nextProps.showPlaceholder) return true;
+    return false;
+  },
+);
 
 const LiveRadioContainer = ({ idAttr, externalId, id }) => {
   const { isAmp, platform } = useContext(RequestContext);
@@ -77,7 +113,7 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
             service={service}
           />
         ) : (
-          <CanonicalMediaPlayer
+          <MemoizedMediaPlayer
             showPlaceholder={false}
             src={embedSource}
             title={iframeTitle}
@@ -92,6 +128,21 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
       </MediaPlayerInnerWrapper>
     </MediaPlayerOuterWrapper>
   );
+};
+
+MemoizedMediaPlayer.propTypes = {
+  showPlaceholder: bool.isRequired,
+  src: string.isRequired,
+  title: string.isRequired,
+  id: string.isRequired,
+  skin: string.isRequired,
+  service: string.isRequired,
+  mediaInfo: shape({
+    title: string,
+    type: string,
+  }).isRequired,
+  noJsMessage: string.isRequired,
+  noJsClassName: string.isRequired,
 };
 
 LiveRadioContainer.propTypes = {
