@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import path from 'ramda/src/path';
 import getInitialData from '../getInitialData';
 import CpsMap from '#pages/CpsMap';
@@ -13,8 +14,14 @@ import {
   PHOTO_GALLERY_PAGE,
 } from '../pageTypes';
 
+const assetTypeIsSame = (prevProps, nextProps) => {
+  const prevType = path(['pageData', 'metadata', 'type'], prevProps);
+  const nextType = path(['pageData', 'metadata', 'type'], nextProps);
+  return prevType === nextType;
+};
+
 // CPS Asset Mapping to PageType
-const CpsAsset = props => {
+const CpsAsset = memo(props => {
   const type = path(['pageData', 'metadata', 'type'], props);
 
   switch (type) {
@@ -30,7 +37,7 @@ const CpsAsset = props => {
       // Return 404 error page if page type does not match those above
       return ErrorPage({ ...props, pageType: 'error', status: 404 });
   }
-};
+}, assetTypeIsSame);
 
 export default {
   path: cpsAssetPagePath,

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, memo } from 'react';
 import { string, bool } from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import moment from 'moment-timezone';
@@ -27,6 +27,38 @@ import {
 } from '#models/propTypes';
 
 const DEFAULT_WIDTH = 512;
+
+const Blah = memo(
+  ({
+    src,
+    placeholderSrc,
+    placeholderSrcset,
+    showPlaceholder,
+    title,
+    service,
+    mediaInfo,
+    noJsMessage,
+    noJsClassName,
+  }) => (
+    <CanonicalMediaPlayer
+      src={src}
+      placeholderSrc={placeholderSrc}
+      placeholderSrcset={placeholderSrcset}
+      showPlaceholder={showPlaceholder}
+      title={title}
+      service={service}
+      mediaInfo={mediaInfo}
+      noJsMessage={noJsMessage}
+      noJsClassName={noJsClassName}
+    />
+  ),
+  (prevProps, nextProps) => {
+    if (prevProps.src === nextProps.src) return true;
+    if (prevProps.showPlaceholder === nextProps.showPlaceholder) return true;
+    return false;
+  },
+);
+
 const MediaPlayerContainer = ({
   blocks,
   assetId,
@@ -37,7 +69,7 @@ const MediaPlayerContainer = ({
   const { isAmp } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
-  const location = useLocation();
+  const { search: queryString } = useLocation();
 
   if (!enabled || !blocks) {
     return null;
@@ -107,7 +139,7 @@ const MediaPlayerContainer = ({
     mediaId: `${assetId}/${versionId}/${lang}`,
     type: assetType,
     isAmp,
-    queryString: location.search,
+    queryString,
   });
   const iframeTitle = pathOr(
     'Media player',
@@ -159,7 +191,7 @@ const MediaPlayerContainer = ({
             service={service}
           />
         ) : (
-          <CanonicalMediaPlayer
+          <Blah
             src={embedSource}
             placeholderSrc={placeholderSrc}
             placeholderSrcset={placeholderSrcset}
