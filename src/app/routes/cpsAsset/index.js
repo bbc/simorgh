@@ -14,35 +14,32 @@ import {
   PHOTO_GALLERY_PAGE,
 } from '../pageTypes';
 
-const assetTypeIsSame = (prevProps, nextProps) => {
-  const prevType = path(['pageData', 'metadata', 'type'], prevProps);
-  const nextType = path(['pageData', 'metadata', 'type'], nextProps);
-  return prevType === nextType;
-};
+const getAssetType = path(['pageData', 'metadata', 'type']);
+
+const assetTypeIsSame = (prevProps, nextProps) =>
+  getAssetType(prevProps) === getAssetType(nextProps);
 
 // CPS Asset Mapping to PageType
-const CpsAsset = memo(props => {
-  const type = path(['pageData', 'metadata', 'type'], props);
+const CpsAssets = {
+  [STORY_PAGE]: CpsSty,
+  [PHOTO_GALLERY_PAGE]: CpsPgl,
+  [MEDIA_ASSET_PAGE]: CpsMap,
+  [FEATURE_INDEX_PAGE]: FrontPage,
+};
 
-  switch (type) {
-    case STORY_PAGE:
-      return CpsSty({ ...props, pageType: type });
-    case PHOTO_GALLERY_PAGE:
-      return CpsPgl({ ...props, pageType: type });
-    case MEDIA_ASSET_PAGE:
-      return CpsMap({ ...props, pageType: type });
-    case FEATURE_INDEX_PAGE: // TODO: Create FIX Page if required
-      return FrontPage({ ...props, pageType: type });
-    default:
-      // Return 404 error page if page type does not match those above
-      return ErrorPage({ ...props, pageType: 'error', status: 404 });
-  }
+const Component = memo(props => {
+  const type = getAssetType(props);
+  const CpsAsset = CpsAssets[type];
+
+  return CpsAsset
+    ? CpsAsset({ ...props, pageType: type })
+    : ErrorPage({ ...props, pageType: 'error', status: 404 });
 }, assetTypeIsSame);
 
 export default {
   path: cpsAssetPagePath,
   exact: true,
-  component: CpsAsset,
+  component: Component,
   getInitialData,
   pageType: 'cpsAsset',
 };
