@@ -144,6 +144,7 @@ export const service = {
       },
       media: {
         noJs: 'پخش این فایل در دستگاه شما پشتیبانی نمی شود.',
+        contentExpired: 'این محتوا دیگر قابل دسترس نیست.',
         audio: 'صدا',
         photogallery: 'عکس',
         video: 'ویدیو',
@@ -173,7 +174,8 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'پربیننده‌ترین‌ها',
-      lastUpdated: 'به روز شده در ',
+      lastUpdated: 'به روز شده در',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

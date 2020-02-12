@@ -1,5 +1,5 @@
 import React from 'react';
-import compose from 'ramda/src/compose';
+import pipe from 'ramda/src/pipe';
 import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
@@ -74,9 +74,8 @@ const CpsMapContainer = ({ pageData }) => {
   };
 
   const StyledGhostGrid = styled(GhostGrid)`
-    flex-grow: 1;
+    width: 100%;
     padding-bottom: ${GEL_SPACING_TRPL};
-
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       padding-bottom: ${GEL_SPACING_QUAD};
     }
@@ -122,12 +121,12 @@ const CpsMapContainer = ({ pageData }) => {
 
 CpsMapContainer.propTypes = cpsAssetPagePropTypes;
 
-const EnhancedCpsMapContainer = compose(
-  withContexts,
-  withPageWrapper,
-  withLoading,
-  withError,
+const EnhancedCpsMapContainer = pipe(
   withData,
+  withError,
+  withLoading,
+  withPageWrapper,
+  withContexts,
 )(CpsMapContainer);
 
 export default EnhancedCpsMapContainer;

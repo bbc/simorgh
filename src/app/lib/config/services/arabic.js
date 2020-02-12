@@ -143,6 +143,7 @@ export const service = {
       },
       media: {
         noJs: 'جهازك لا يدعم تشغيل الفيديو',
+        contentExpired: 'هذا المحتوى لم يعد متوفراً',
         audio: 'تسجيل صوتي',
         photogallery: 'معرض الصور',
         video: 'فيديو',
@@ -162,7 +163,8 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'الأكثر قراءة',
-      lastUpdated: 'آخر تحديث ',
+      lastUpdated: 'آخر تحديث',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

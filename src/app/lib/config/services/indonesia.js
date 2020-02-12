@@ -50,9 +50,9 @@ export const service = {
       skipLinkText: 'Langsung ke konten',
       relatedContent: 'Berita terkait',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'Pemutar Media',
+        audioPlayer: 'Pemutar Audio',
+        videoPlayer: 'Pemutar Video',
       },
       error: {
         404: {
@@ -135,22 +135,25 @@ export const service = {
         },
       },
       media: {
-        noJs: 'Media playback tidak ada di perangkat Anda',
+        noJs:
+          'Untuk memutar video ini, aktifkan JavaScript atau coba di mesin pencari lain',
+        contentExpired: 'Konten ini sudah tidak tersedia lagi.',
         audio: 'Audio',
         photogallery: 'Galeri Foto',
         video: 'Video',
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Dengar',
+        watch: 'Tonton',
         liveLabel: 'LANGSUNG',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        previousRadioShow: 'Siaran radio sebelumnya',
+        nextRadioShow: 'Siaran radio berikutnya',
+        duration: 'Durasi',
       },
     },
     brandSVG,
     mostRead: {
       header: 'Paling banyak dibaca',
-      lastUpdated: 'Terakhir diperbarui: ',
+      lastUpdated: 'Terakhir diperbarui:',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

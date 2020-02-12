@@ -138,6 +138,7 @@ export const service = {
       },
       media: {
         noJs: 'प्लेबैक आपके उपकरण पर नहीं हो पा रहा',
+        contentExpired: 'यह सामग्री अब उपलब्ध नहीं है.',
         audio: 'ऑडियो',
         photogallery: 'फ़ोटो गैलरी',
         video: 'वीडियो',
@@ -162,7 +163,8 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'सबसे अधिक पढ़ी गईं',
-      lastUpdated: 'अंतिम अपडेट: ',
+      lastUpdated: 'अंतिम अपडेट:',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {

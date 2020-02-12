@@ -134,6 +134,7 @@ export const service = {
       },
       media: {
         noJs: 'የእርሶ መሳሪያ ሚዲያ ፕሌይ ባክን ማጫወት ኣልተቻለም።',
+        contentExpired: 'ይህንን ካሁን በኋላ ማግኘት አይችሉም፡፡',
         audio: 'ድምጽ',
         photogallery: 'የፎቶ መድብሎች',
         video: 'ቪዲዮ',
@@ -148,7 +149,8 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'ብዙ የተነበቡ',
-      lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት ',
+      lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት',
+      numberOfItems: 5,
     },
     footer: {
       trustProjectLink: {
