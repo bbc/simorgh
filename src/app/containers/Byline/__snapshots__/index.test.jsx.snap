@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Byline should render correctly for STY pages with name and title 1`] = `
-.c0 {
+.c1 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -12,7 +12,7 @@ exports[`Byline should render correctly for STY pages with name and title 1`] = 
   display: flex;
 }
 
-.c1 {
+.c2 {
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
@@ -25,39 +25,86 @@ exports[`Byline should render correctly for STY pages with name and title 1`] = 
   line-height: 1.125rem;
 }
 
-.c2 {
+.c3 {
   color: #404040;
 }
 
-.c3 {
+.c4 {
   color: #5A5A5A;
 }
 
+.c0 {
+  grid-column: 1 / span 6;
+}
+
 @media (min-width:37.5rem) {
-  .c1 {
+  .c2 {
     font-size: 0.875rem;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
   }
 }
 
 <div
   class="c0"
 >
-  <ul
+  <div
     class="c1"
-    role="list"
   >
-    <li
+    <ul
       class="c2"
-      role="listitem"
+      role="list"
     >
-      John Smith
-    </li>
-    <li
-      class="c3"
-      role="listitem"
-    >
-      Art Editor
-    </li>
-  </ul>
+      <li
+        class="c3"
+        role="listitem"
+      >
+        John Smith
+      </li>
+      <li
+        class="c4"
+        role="listitem"
+      >
+        Art Editor
+      </li>
+    </ul>
+  </div>
 </div>
 `;

@@ -7,6 +7,7 @@ const bylineBlockPropTypes = {
       name: string,
     }),
   ),
+  className: string,
 };
 
 export default bylineBlockPropTypes;
