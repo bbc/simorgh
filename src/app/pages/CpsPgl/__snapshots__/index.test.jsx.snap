@@ -2141,13 +2141,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
                     >
                       21 Fuulbaana 2017
                     </time>
-                    <time
-                      class="c5"
-                      datetime="2017-09-21"
-                    >
-                      Haaromsameera 
-                      21 Fuulbaana 2017
-                    </time>
                   </div>
                   <div
                     class="c3"
@@ -3919,13 +3912,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
                     >
                       3 August 2019
                     </time>
-                    <time
-                      class="c5"
-                      datetime="2019-08-03"
-                    >
-                      New Informate 
-                      3 August 2019
-                    </time>
                   </div>
                   <div
                     class="c3"
@@ -5243,13 +5229,6 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
                       class="c5"
                       datetime="2019-10-23"
                     >
-                      23 October 2019
-                    </time>
-                    <time
-                      class="c5"
-                      datetime="2019-10-23"
-                    >
-                      New Informate 
                       23 October 2019
                     </time>
                   </div>
