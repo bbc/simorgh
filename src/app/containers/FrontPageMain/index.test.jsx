@@ -11,6 +11,8 @@ import preprocessor from '#lib/utilities/preprocessor';
 import { indexPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import newsMostReadData from '#data/news/mostRead';
 
 const processedPidgin = () =>
   preprocessor(frontPageDataPidgin, indexPreprocessorRules);
@@ -39,11 +41,13 @@ const requestContextData = {
 };
 
 const FrontPageMainWithContext = props => (
-  <RequestContextProvider {...requestContextData}>
-    <ServiceContextProvider service="igbo">
-      <FrontPageMain {...props} />
-    </ServiceContextProvider>
-  </RequestContextProvider>
+  <ToggleContextProvider>
+    <RequestContextProvider {...requestContextData}>
+      <ServiceContextProvider service="igbo">
+        <FrontPageMain {...props} />
+      </ServiceContextProvider>
+    </RequestContextProvider>
+  </ToggleContextProvider>
 );
 
 describe('FrontPageMain', () => {
@@ -51,6 +55,7 @@ describe('FrontPageMain', () => {
 
   beforeAll(async () => {
     frontPageData = await processedPidgin();
+    fetch.mockResponse(JSON.stringify(newsMostReadData));
   });
 
   describe('snapshots', () => {
