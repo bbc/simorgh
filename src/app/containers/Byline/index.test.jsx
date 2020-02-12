@@ -43,11 +43,12 @@ describe('Byline', () => {
     }),
   );
 
-  it('should render nothing if name and title are null', () => {
+  it('should render nothing if name or title are null', () => {
     render(
       BylineContainerWithContext({
         pageType: 'STY',
         service: 'pidgin',
+        name: 'John Smith',
       }),
     );
 
