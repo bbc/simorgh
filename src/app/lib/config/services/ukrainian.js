@@ -160,7 +160,7 @@ export const service = {
       header: 'Найпопулярніше',
       lastUpdated: 'Останнє оновлення:',
       numberOfItems: 10,
-      hasMostRead: true,
+      hasMostRead: false,
     },
     footer: {
       trustProjectLink: {
