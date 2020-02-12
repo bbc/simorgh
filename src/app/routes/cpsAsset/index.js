@@ -15,9 +15,10 @@ import {
 } from '../pageTypes';
 
 const getAssetType = path(['pageData', 'metadata', 'type']);
+const getAssetId = path(['pageData', 'metadata', 'id']);
 
-const assetTypeIsSame = (prevProps, nextProps) =>
-  getAssetType(prevProps) === getAssetType(nextProps);
+const pageIsSame = (prevProps, nextProps) =>
+  getAssetId(prevProps) === getAssetId(nextProps);
 
 // CPS Asset Mapping to PageType
 const CpsAssets = {
@@ -27,19 +28,19 @@ const CpsAssets = {
   [FEATURE_INDEX_PAGE]: FrontPage,
 };
 
-const Component = memo(props => {
+const MemoizedCpsAsset = memo(props => {
   const type = getAssetType(props);
   const CpsAsset = CpsAssets[type];
 
   return CpsAsset
     ? CpsAsset({ ...props, pageType: type })
     : ErrorPage({ ...props, pageType: 'error', status: 404 });
-}, assetTypeIsSame);
+}, pageIsSame);
 
 export default {
   path: cpsAssetPagePath,
   exact: true,
-  component: Component,
+  component: MemoizedCpsAsset,
   getInitialData,
   pageType: 'cpsAsset',
 };
