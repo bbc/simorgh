@@ -12,6 +12,7 @@ describe('MostReadCanonical - LastUpdated', () => {
       script={latin}
       service="news"
       locale="en-gb"
+      timezone="Europe/London"
     />,
   );
 });
