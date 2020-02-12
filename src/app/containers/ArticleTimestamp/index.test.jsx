@@ -181,7 +181,7 @@ describe('ArticleTimestamp', () => {
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={1530947280000}
-        lastPublished={1530947406000}
+        lastPublished={1531047280000}
         minutesTolerance={1}
       />,
     );

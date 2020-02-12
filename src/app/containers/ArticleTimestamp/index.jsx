@@ -70,14 +70,14 @@ const ArticleTimestamp = ({
   const publishedAndUpdatedOnSameDayOverTenHoursAgo =
     publishedAndUpdatedOnSameDay && !updatedLessThanTenHoursAgo;
 
-  const showLastUpdatedTimeStamp =
+  const showLastUpdatedTimestamp =
     !publishedAndUpdatedOnSameDayOverTenHoursAgo &&
     timeDifferenceMinutes > minutesTolerance;
 
   return (
     <Wrapper className={className}>
       <FirstPublishedTimestamp {...timestampProps} {...firstPublishedProps} />
-      {showLastUpdatedTimeStamp && (
+      {showLastUpdatedTimestamp && (
         <LastUpdatedTimestamp {...timestampProps} {...lastPublishedProps} />
       )}
     </Wrapper>
