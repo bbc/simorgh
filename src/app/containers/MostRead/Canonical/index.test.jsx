@@ -6,7 +6,7 @@ import {
   setStalePromoTimestamp,
   setFreshPromoTimestamp,
   renderMostReadContainer,
-} from '../utilities/testHelper';
+} from '../utilities/testHelpers';
 
 let container;
 

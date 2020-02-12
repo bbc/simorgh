@@ -6,7 +6,7 @@ import { service as zhongwenConfig } from '#app/lib/config/services/zhongwen';
 import {
   setFreshPromoTimestamp,
   renderMostReadContainer,
-} from './utilities/testHelper';
+} from './utilities/testHelpers';
 
 let container;
 
