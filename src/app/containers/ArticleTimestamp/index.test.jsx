@@ -263,6 +263,18 @@ describe('ArticleTimestamp', () => {
     expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
   });
 
+  it('should render one timestamp - published: date when both the published and updated date is the same and today is > 10 hrs after the article was published', () => {
+    const renderedWrapper = renderedTimestamps(
+      <WrappedArticleTimestamp
+        firstPublished={1400140005000}
+        lastPublished={1400153537000}
+      />,
+    );
+
+    expect(renderedWrapper.length).toEqual(1);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
+  });
+
   describe('With different timezones', () => {
     it('should show the correct local date', () => {
       const props = {

@@ -12,6 +12,8 @@ import {
   isLastRelative,
   formatType,
   isValidDateTime,
+  isSameDay,
+  isToday,
 } from './helpers';
 
 const ArticleTimestamp = ({
@@ -59,10 +61,16 @@ const ArticleTimestamp = ({
 
   const timeDifferenceMinutes = (lastPublished - firstPublished) / 1000 / 60;
 
+  const publishedAndUpdatedOnSameDay = isSameDay(firstPublished, lastPublished);
+
+  const publishedToday = isToday(firstPublished);
+
+  const hideUpdatedTimestamp = publishedAndUpdatedOnSameDay && !publishedToday;
+
   return (
     <Wrapper className={className}>
       <Timestamp {...timestampProps} {...firstPublishedProps} />
-      {timeDifferenceMinutes > minutesTolerance && (
+      {!hideUpdatedTimestamp && timeDifferenceMinutes > minutesTolerance && (
         <Timestamp {...timestampProps} {...lastPublishedProps} />
       )}
     </Wrapper>
