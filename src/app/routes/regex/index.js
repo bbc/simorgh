@@ -14,7 +14,7 @@ import {
 const allServices = Object.keys(services);
 const serviceRegex = Object.keys(services).join('|');
 const variantRegex = '/simp|/trad|/cyr|/lat';
-const mostRead = 'most_read';
+const mostRead = 'mostread';
 
 export const articlePath = getArticleRegex(allServices);
 export const articleDataPath = `${articlePath}.json`;
