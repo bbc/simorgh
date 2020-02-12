@@ -141,6 +141,11 @@ pipeline {
 
             }
           }
+          post {
+            always {
+              junit allowEmptyResults: true, testResults: 'reports/jest/*.xml'
+            }
+          }
         }
         stage ('Test Production') {
           agent {
@@ -179,6 +184,11 @@ pipeline {
             withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID'), string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
               runDevelopmentTests()
               sh './cc-test-reporter after-build -t lcov --debug --exit-code 0'
+            }
+          }
+          post {
+            always {
+              junit allowEmptyResults: true, testResults: 'reports/jest/*.xml'
             }
           }
         }
@@ -283,7 +293,6 @@ pipeline {
       script {
         getCommitInfo()
       }
-      junit "${env.APP_DIRECTORY}/reports/jest/*.xml"
       // Clean the workspace
       cleanWs()
     }
