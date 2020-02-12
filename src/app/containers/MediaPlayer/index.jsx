@@ -28,7 +28,7 @@ import {
 
 const DEFAULT_WIDTH = 512;
 
-const Blah = memo(
+const MemoizedCanonicalMediaPlayer = memo(
   ({
     src,
     placeholderSrc,
@@ -53,6 +53,11 @@ const Blah = memo(
     />
   ),
   (prevProps, nextProps) => {
+    /*
+     * `useLocation` hook state change causes the MediaPlayer to reload
+     * when the hash changes e.g. when skipping to content. This will ensure
+     * the MediaPlayer only rerenders when `src` or `showPlaceholder` changes.
+     */
     if (prevProps.src === nextProps.src) return true;
     if (prevProps.showPlaceholder === nextProps.showPlaceholder) return true;
     return false;
@@ -191,7 +196,7 @@ const MediaPlayerContainer = ({
             service={service}
           />
         ) : (
-          <Blah
+          <MemoizedCanonicalMediaPlayer
             src={embedSource}
             placeholderSrc={placeholderSrc}
             placeholderSrcset={placeholderSrcset}
@@ -209,6 +214,18 @@ const MediaPlayerContainer = ({
   );
 };
 
+MemoizedCanonicalMediaPlayer.propTypes = {
+  src: string.isRequired,
+  placeholderSrc: string.isRequired,
+  placeholderSrcset: string.isRequired,
+  showPlaceholder: string.isRequired,
+  title: string.isRequired,
+  service: string.isRequired,
+  mediaInfo: string.isRequired,
+  noJsMessage: string.isRequired,
+  noJsClassName: string.isRequired,
+};
+
 MediaPlayerContainer.propTypes = {
   ...mediaPlayerPropTypes,
   assetId: string.isRequired,
@@ -216,6 +233,7 @@ MediaPlayerContainer.propTypes = {
   showPlaceholder: bool.isRequired,
   available: bool,
 };
+
 MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
   available: true,
