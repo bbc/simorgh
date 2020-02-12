@@ -10,6 +10,11 @@ import {
 
 let container;
 
+// Most Read is currently turned off for these services because data is not available for them,
+// but once they are enabled, these overrides can be removed.
+newsConfig.default.mostRead.hasMostRead = true;
+zhongwenConfig.simp.mostRead.hasMostRead = true;
+
 const services = {
   news: {
     variant: null,
