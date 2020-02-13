@@ -1,4 +1,4 @@
-import getInitialData from '../getInitialData';
+import getInitialData from '../fetchPageData';
 import FrontPage from '#pages/FrontPage';
 import { frontPagePath } from '../regex';
 
