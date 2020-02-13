@@ -57,7 +57,7 @@
   },
   "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
-    "@bbc/gel-foundations": "^3.4.3",
+    "@bbc/gel-foundations": "4.0.0",
     "@bbc/moment-timezone-include": "^1.1.2",
     "@bbc/psammead-amp-geo": "^1.1.2",
     "@bbc/psammead-assets": "^2.13.0",
