@@ -1,4 +1,4 @@
-import newsMostReadData from '#data/news/mostRead';
+import arabicMostReadData from '#data/arabic/mostRead';
 import { service as arabicConfig } from '#app/lib/config/services/arabic';
 import {
   setStalePromoTimestamp,
@@ -6,18 +6,17 @@ import {
   renderMostReadContainer,
 } from '../utilities/testHelpers';
 
-let container;
-
 const services = {
   arabic: {
     variant: null,
-    data: newsMostReadData,
+    data: arabicMostReadData,
     config: arabicConfig.default,
     expectedLastUpdated: 'آخر تحديث 11 يناير/ كانون الثاني 1970',
   },
 };
 
 describe('MostReadContainerCanonical', () => {
+  let container;
   beforeEach(() => {
     container = document.createElement('div');
     document.body.appendChild(container);

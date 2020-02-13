@@ -1,34 +1,22 @@
-import newsMostReadData from '#data/news/mostRead';
-import zhongwenSimpMostReadData from '#data/zhongwen/mostRead/simp';
-import { service as newsConfig } from '#app/lib/config/services/news';
-import { service as zhongwenConfig } from '#app/lib/config/services/zhongwen';
+import arabicMostReadData from '#data/arabic/mostRead';
 
 import {
   setFreshPromoTimestamp,
   renderMostReadContainer,
 } from './utilities/testHelpers';
-
-let container;
-
-// Most Read is currently turned off for these services because data is not available for them,
-// but once they are enabled, these overrides can be removed.
-newsConfig.default.mostRead.hasMostRead = true;
-zhongwenConfig.simp.mostRead.hasMostRead = true;
+import { service as arabicConfig } from '#lib/config/services/arabic';
 
 const services = {
-  news: {
+  arabic: {
     variant: null,
-    data: newsMostReadData,
-    config: newsConfig.default,
-  },
-  zhongwen: {
-    variant: 'simp',
-    data: zhongwenSimpMostReadData,
-    config: zhongwenConfig.simp,
+    data: arabicMostReadData,
+    config: arabicConfig.default,
+    expectedLastUpdated: 'آخر تحديث 11 يناير/ كانون الثاني 1970',
   },
 };
 
 describe('MostReadContainerCanonical', () => {
+  let container;
   beforeEach(() => {
     container = document.createElement('div');
     document.body.appendChild(container);
