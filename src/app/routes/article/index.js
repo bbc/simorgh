@@ -1,4 +1,4 @@
-import getInitialData from '../getInitialData';
+import getInitialData from '../fetchPageData';
 import Article from '#pages/Article';
 import { articlePath } from '../regex';
 

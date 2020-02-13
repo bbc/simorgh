@@ -12,7 +12,7 @@ import CpsAssetPage from '.';
 import pidginPageData from '#data/pidgin/cpsAssets/world-23252817';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import preprocessor from '#lib/utilities/preprocessor';
-import { cpsAssetPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
+import { cpsAssetPreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
 
 const toggleState = {
   local: {
