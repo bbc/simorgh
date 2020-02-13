@@ -62,9 +62,9 @@ describe('CpsRelatedContent', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should have a "complementary" role (a11y)', () => {
+  it('should have a "region" role (a11y)', () => {
     renderRelatedContent();
-    expect(document.querySelectorAll(`[role='complementary']`).length).toBe(1);
+    expect(document.querySelectorAll(`[role='region']`).length).toBe(1);
   });
 
   it('should render timestamps in milliseconds when page data has timestamps in seconds', async () => {

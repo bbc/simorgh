@@ -3,7 +3,14 @@ import { number, string, shape } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import Timestamp from '@bbc/psammead-timestamp-container';
 
-const LastUpdated = ({ locale, prefix, script, service, timestamp }) => (
+const LastUpdated = ({
+  locale,
+  prefix,
+  script,
+  service,
+  timestamp,
+  timezone,
+}) => (
   <Timestamp
     timestamp={timestamp}
     dateTimeFormat="YYYY-MM-DD"
@@ -12,6 +19,7 @@ const LastUpdated = ({ locale, prefix, script, service, timestamp }) => (
     script={script}
     service={service}
     locale={locale}
+    timezone={timezone}
     padding={false}
   />
 );
@@ -22,6 +30,7 @@ LastUpdated.propTypes = {
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
   timestamp: number.isRequired,
+  timezone: string.isRequired,
 };
 
 export default LastUpdated;
