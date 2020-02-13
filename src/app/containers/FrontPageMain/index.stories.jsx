@@ -26,6 +26,11 @@ const stories = storiesOf('Main|Front Page', module).addDecorator(story => (
   <WithTimeMachine>{story()}</WithTimeMachine>
 ));
 
+const mostReadOverrides = service => ({
+  endpointOverride: `./data/${service}/mostRead/index.json`,
+  ignoreRecordIsFresh: true,
+});
+
 Object.keys(serviceDataSets).forEach(service => {
   stories.add(`Front Page - ${service}`, () => (
     <ToggleContextProvider>
@@ -36,7 +41,10 @@ Object.keys(serviceDataSets).forEach(service => {
           service={service}
         >
           <UserContextProvider>
-            <FrontPageMain frontPageData={serviceDataSets[service]} />
+            <FrontPageMain
+              frontPageData={serviceDataSets[service]}
+              mostReadOverrides={mostReadOverrides(service)}
+            />
           </UserContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>

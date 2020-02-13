@@ -1,5 +1,5 @@
 import React from 'react';
-import { shape } from 'prop-types';
+import { bool, string, shape } from 'prop-types';
 import pipe from 'ramda/src/pipe';
 import frontPagePropTypes from '#models/propTypes/frontPage';
 import FrontPageMain from '../../containers/FrontPageMain';
@@ -11,16 +11,24 @@ import withLoading from '../../containers/PageHandlers/withLoading';
 import withError from '../../containers/PageHandlers/withError';
 import withData from '../../containers/PageHandlers/withData';
 
-const FrontPageContainer = ({ pageData }) => (
-  <FrontPageMain frontPageData={pageData} />
+const FrontPageContainer = ({ pageData, mostReadOverrides }) => (
+  <FrontPageMain
+    frontPageData={pageData}
+    mostReadOverrides={mostReadOverrides}
+  />
 );
 
 FrontPageContainer.propTypes = {
   pageData: shape(frontPagePropTypes),
+  mostReadOverrides: shape({
+    endpointOverride: string,
+    ignoreRecordIsFresh: bool,
+  }),
 };
 
 FrontPageContainer.defaultProps = {
   pageData: null,
+  mostReadOverrides: null,
 };
 
 const EnhancedFrontPageContainer = pipe(

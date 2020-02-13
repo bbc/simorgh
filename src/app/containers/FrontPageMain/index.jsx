@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
+import { bool, string, shape } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
@@ -47,7 +48,10 @@ const startOffsets = {
   group5: 5,
 };
 
-const FrontPageMain = ({ frontPageData }) => {
+const FrontPageMain = ({
+  frontPageData,
+  mostReadOverrides: { endpointOverride, ignoreRecordIsFresh },
+}) => {
   const {
     product,
     serviceLocalizedName,
@@ -95,11 +99,21 @@ const FrontPageMain = ({ frontPageData }) => {
           >
             {groups.map((group, index) => (
               <Fragment key={group.title}>
-                {group.type === 'useful-links' && <MostReadContainer />}
+                {group.type === 'useful-links' && (
+                  <MostReadContainer
+                    endpointOverride={endpointOverride}
+                    ignoreRecordIsFresh={ignoreRecordIsFresh}
+                  />
+                )}
                 <FrontPageSection group={group} sectionNumber={index} />
               </Fragment>
             ))}
-            {!hasUsefulLinks && <MostReadContainer />}
+            {!hasUsefulLinks && (
+              <MostReadContainer
+                endpointOverride={endpointOverride}
+                ignoreRecordIsFresh={ignoreRecordIsFresh}
+              />
+            )}
           </Grid>
         </FrontPageGrid>
       </main>
@@ -109,6 +123,17 @@ const FrontPageMain = ({ frontPageData }) => {
 
 FrontPageMain.propTypes = {
   frontPageData: frontPageDataPropTypes.isRequired,
+  mostReadOverrides: shape({
+    endpointOverride: string,
+    ignoreRecordIsFresh: bool,
+  }),
+};
+
+FrontPageMain.defaultProps = {
+  mostReadOverrides: shape({
+    endpointOverride: null,
+    ignoreRecordIsFresh: false,
+  }),
 };
 
 export default FrontPageMain;

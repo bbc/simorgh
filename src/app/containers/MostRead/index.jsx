@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '../Toggle/useToggle';
@@ -10,7 +10,7 @@ const getMostReadEndpoint = ({ service, variant }) =>
     ? `/${service}/mostread/${variant}.json`
     : `/${service}/mostread.json`;
 
-const MostReadContainer = ({ endpointOverride }) => {
+const MostReadContainer = ({ endpointOverride, ignoreRecordIsFresh }) => {
   const { variant, isAmp } = useContext(RequestContext);
   const {
     service,
@@ -28,15 +28,19 @@ const MostReadContainer = ({ endpointOverride }) => {
   const endpoint =
     endpointOverride || getMostReadEndpoint({ service, variant });
 
-  return <Canonical endpoint={endpoint} />;
+  return (
+    <Canonical endpoint={endpoint} ignoreRecordIsFresh={ignoreRecordIsFresh} />
+  );
 };
 
 MostReadContainer.propTypes = {
   endpointOverride: string,
+  ignoreRecordIsFresh: bool,
 };
 
 MostReadContainer.defaultProps = {
   endpointOverride: null,
+  ignoreRecordIsFresh: false,
 };
 
 export default MostReadContainer;

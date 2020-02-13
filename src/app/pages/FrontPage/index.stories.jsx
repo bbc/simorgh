@@ -44,6 +44,11 @@ const stories = storiesOf('Pages|Front Page', module).addDecorator(story => (
   <WithTimeMachine>{story()}</WithTimeMachine>
 ));
 
+const mostReadOverrides = service => ({
+  endpointOverride: `./data/${service}/mostRead/index.json`,
+  ignoreRecordIsFresh: true,
+});
+
 Object.keys(serviceDatasets).forEach(service => {
   stories.add(service, () => {
     return (
@@ -53,6 +58,7 @@ Object.keys(serviceDatasets).forEach(service => {
             {frontPageData => (
               <FrontPage
                 pageData={frontPageData}
+                mostReadOverrides={mostReadOverrides(service)}
                 status={200}
                 service={service}
                 isAmp={false}

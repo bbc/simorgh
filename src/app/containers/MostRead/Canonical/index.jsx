@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
 import styled from 'styled-components';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -33,7 +33,7 @@ const MarginWrapper = styled.div`
   }
 `;
 
-const CanonicalMostRead = ({ endpoint }) => {
+const CanonicalMostRead = ({ endpoint, ignoreRecordIsFresh }) => {
   const [items, setItems] = useState([]);
   const {
     service,
@@ -47,11 +47,11 @@ const CanonicalMostRead = ({ endpoint }) => {
   useEffect(() => {
     const handleResponse = async response => {
       const mostReadData = await response.json();
-      const isLocalEnv = process.env.SIMORGH_APP_ENV === 'local';
-      // do not show most read if lastRecordUpdated is greater than 35min as this means PopAPI has failed twice
+
+      // Do not show most read if lastRecordUpdated is greater than 35min as this means PopAPI has failed twice
       // in succession. This suggests ATI may be having issues, hence risk of stale data.
       if (
-        isLocalEnv ||
+        ignoreRecordIsFresh ||
         mostReadRecordIsFresh(mostReadData.lastRecordTimeStamp)
       ) {
         const mostReadItems = mostReadData.records
@@ -87,6 +87,7 @@ const CanonicalMostRead = ({ endpoint }) => {
     script,
     service,
     timezone,
+    ignoreRecordIsFresh,
   ]);
 
   return items.length ? (
@@ -130,6 +131,11 @@ const CanonicalMostRead = ({ endpoint }) => {
 
 CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
+  ignoreRecordIsFresh: bool,
+};
+
+CanonicalMostRead.defaultProps = {
+  ignoreRecordIsFresh: false,
 };
 
 export default CanonicalMostRead;
