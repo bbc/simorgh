@@ -18,58 +18,38 @@ const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)
   : process.env.SIMORGH_BASE_URL;
 
+const isOK = status => status === STATUS_CODE_OK;
+
 export const getUrl = pathname => {
   if (!pathname) return '';
 
   const params = isLive() ? '' : getQueryString(pathname);
-
   const basePath = getUrlPath(pathname);
 
-  return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`;
+  return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
 
-const handleResponse = async response => {
-  const { status } = response;
-  const isOK = status === STATUS_CODE_OK;
-
-  return {
-    status,
-    ...(isOK && { pageData: await response.json() }),
-  };
-};
-
-const checkForError = pathname => ({ status, pageData }) => {
-  const isHandledStatus = upstreamStatusCodesToPropagate.includes(status);
-
-  if (isHandledStatus) {
-    return { status, pageData };
-  }
+const getStatus = (status, pathname) => {
   logger.error(
     `Unexpected upstream response (HTTP status code ${status}) when requesting ${pathname}`,
   );
-  throw new Error();
-};
 
-const handleError = error => {
-  if (error.message) {
-    logger.error(error.message);
-  }
-
-  const status = onClient()
+  return onClient()
     ? STATUS_CODE_BAD_GATEWAY
     : STATUS_CODE_INTERNAL_SERVER_ERROR;
-
-  return { error, status };
 };
 
-const fetchData = pathname => {
-  const url = getUrl(pathname); // Remove .amp at the end of pathnames for AMP pages.
+export default async pathname => {
+  const url = getUrl(pathname);
+  const response = await fetch(url);
+  const { status } = response;
+
   logger.info(`DataRequest: [${url}]`);
 
-  return fetch(url)
-    .then(handleResponse)
-    .then(checkForError(url))
-    .catch(handleError);
+  return {
+    status: upstreamStatusCodesToPropagate.includes(status)
+      ? status
+      : getStatus(status, pathname),
+    ...(isOK(status) && { json: await response.json() }),
+  };
 };
-
-export default fetchData;

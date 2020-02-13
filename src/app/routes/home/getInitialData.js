@@ -6,7 +6,7 @@ import applySquashTopstories from '#lib/utilities/preprocessor/rules/topstories'
 import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
 import filterGroupsWithoutStraplines from '#lib/utilities/preprocessor/rules/filterGroupsWithoutStraplines';
 
-const processPageData = pipe(
+const processJson = pipe(
   filterUnknownContentTypes,
   filterEmptyGroupItems,
   addIdsToItems,
@@ -15,8 +15,12 @@ const processPageData = pipe(
 );
 
 export default async path => {
-  const { pageData: rawPageData, ...rest } = await fetchPageData(path);
-  const processedPageData = processPageData(rawPageData);
+  const { json, status } = await fetchPageData(path);
 
-  return { pageData: processedPageData, ...rest };
+  return {
+    status,
+    ...(json && {
+      pageData: processJson(json),
+    }),
+  };
 };

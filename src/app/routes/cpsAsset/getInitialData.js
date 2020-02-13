@@ -21,12 +21,19 @@ const processOptimoBlocks = pipe(
   applyBlockPositioning,
   cpsOnlyOnwardJourneys,
 );
+const processJson = async json => {
+  const formattedPageData = formatPageData(json);
+  const optimoBlocks = await convertToOptimoBlocks(formattedPageData);
+  return processOptimoBlocks(optimoBlocks);
+};
 
 export default async path => {
-  const { pageData: rawPageData, ...rest } = await fetchPageData(path);
-  const formattedPageData = formatPageData(rawPageData);
-  const optimoBlocks = await convertToOptimoBlocks(formattedPageData);
-  const processedPageData = processOptimoBlocks(optimoBlocks);
+  const { json, status } = await fetchPageData(path);
 
-  return { pageData: processedPageData, ...rest };
+  return {
+    status,
+    ...(json && {
+      pageData: processJson(json),
+    }),
+  };
 };
