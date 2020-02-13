@@ -1,6 +1,7 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import applySquashTopstories from '../../../../src/app/lib/utilities/preprocessor/rules/topstories';
+import toggles from '../../../../src/app/lib/config/toggles';
 
 const serviceJsonPath = service =>
   `${config[service].pageTypes.frontPage.path}.json`;
@@ -9,6 +10,8 @@ const serviceJsonPath = service =>
 const serviceHasIndexAlsos = service => service === 'thai';
 // Limiting to one service for now
 const serviceHasPublishedPromo = service => service === 'persian';
+//Limiting to two services
+const serviceHasMostRead = service => ['pidgin', 'persian'].includes(service);
 
 // Check for valid useful links
 const isValidUsefulLinks = pageData => {
@@ -262,6 +265,13 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
             }
           });
         });
+        if (serviceHasMostRead(service) && Cypress.env('APP_ENV') === 'local') {
+          it('should contain most read component if the toggle is enabled', () => {
+            if (toggles[Cypress.env('APP_ENV')].mostRead) {
+              cy.get('[aria-labelledby="Most-Read"]').should('be.visible');
+            }
+          });
+        }
       });
     });
   });
