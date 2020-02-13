@@ -37,7 +37,7 @@ import withError from '#containers/PageHandlers/withError';
 import withLoading from '#containers/PageHandlers/withLoading';
 import withData from '#containers/PageHandlers/withData';
 
-const CpsMapContainer = ({ pageData }) => {
+const MediaAssetPageContainer = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
@@ -119,14 +119,14 @@ const CpsMapContainer = ({ pageData }) => {
   );
 };
 
-CpsMapContainer.propTypes = cpsAssetPagePropTypes;
+MediaAssetPageContainer.propTypes = cpsAssetPagePropTypes;
 
-const EnhancedCpsMapContainer = pipe(
+const EnhancedMediaAssetPageContainer = pipe(
   withData,
   withError,
   withLoading,
   withPageWrapper,
   withContexts,
-)(CpsMapContainer);
+)(MediaAssetPageContainer);
 
-export default EnhancedCpsMapContainer;
+export default EnhancedMediaAssetPageContainer;
