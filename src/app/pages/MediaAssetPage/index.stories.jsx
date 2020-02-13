@@ -5,7 +5,7 @@ import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import CPSMap from '.';
+import MediaAssetPage from '.';
 import pageData from './fixtureData';
 
 const defaultToggles = {
@@ -35,7 +35,7 @@ platforms.forEach(platform => {
     return (
       <ToggleContextProvider value={{ toggleState: defaultToggles }}>
         <BrowserRouter>
-          <CPSMap
+          <MediaAssetPage
             pageType="MAP"
             isAmp={isAmp(platform)}
             pathname="/pathname"

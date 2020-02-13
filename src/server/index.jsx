@@ -16,10 +16,11 @@ import {
   cpsAssetPageDataPath,
   radioAndTvDataPath,
   mostReadDataRegexPath,
+  legacyAssetPageDataPath,
 } from '../app/routes/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
-import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
+import getRouteProps from '#app/routes/fetchPageData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
 import injectCspHeader, {
   localInjectHostCspHeader,
@@ -168,6 +169,18 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
 
       const dataFilePath = constructDataFilePath({
         pageType: 'cpsAssets',
+        service,
+        id,
+        variant,
+      });
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(legacyAssetPageDataPath, async ({ params }, res, next) => {
+      const { service, assetUri: id, variant } = params;
+
+      const dataFilePath = constructDataFilePath({
+        pageType: 'legacyAssets',
         service,
         id,
         variant,
