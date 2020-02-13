@@ -290,7 +290,7 @@ describe('Media Asset Page', () => {
     expect(getByText('New Informate 20 November 2019')).toBeInTheDocument();
   });
 
-  it('has a single "main" element, and a single "complementary" element (a11y)', async () => {
+  it('has a single "main" element, and a single "region" element (a11y)', async () => {
     expect(document.querySelectorAll(`[role='main']`).length).toBe(1);
     expect(document.querySelectorAll(`[role='region']`).length).toBe(1);
   });
