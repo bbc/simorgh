@@ -8,7 +8,7 @@ import FrontPageMain from '.';
 import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
 
 import preprocessor from '#lib/utilities/preprocessor';
-import { indexPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
+import { indexPreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
