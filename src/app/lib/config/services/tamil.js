@@ -170,7 +170,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/tamil/institutional-50435459',
+        href: 'https://www.bbc.com/tamil/institutional-50288575',
         text: 'நீங்கள் ஏன் பிபிசி மீது நம்பிக்கை வைக்க முடியும்?',
       },
       externalLink: {

@@ -7,7 +7,7 @@ import RadioPageMain from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 import preprocessor from '#lib/utilities/preprocessor';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { radioPagePreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
+import { radioPagePreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
 
 analyticsUtils.getAtUserId = jest.fn();
 

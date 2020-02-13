@@ -1,5 +1,5 @@
 import path from 'ramda/src/path';
-import getInitialData from '../getInitialData';
+import getInitialData from '../fetchPageData';
 import MediaAssetPage from '#pages/MediaAssetPage';
 import CpsSty from '#pages/CpsSty';
 import CpsPgl from '#pages/CpsPgl';

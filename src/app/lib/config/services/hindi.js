@@ -169,7 +169,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/hindi/institutional-50223932',
         text: 'आप बीबीसी पर क्यों भरोसा कर सकते हैं',
       },
       externalLink: {

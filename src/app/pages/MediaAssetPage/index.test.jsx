@@ -13,7 +13,7 @@ import mapPageData from '#data/pidgin/cpsAssets/23248703';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import preprocessor from '#lib/utilities/preprocessor';
-import { cpsAssetPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
+import { cpsAssetPreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
 
 const toggleState = {
   local: {
@@ -290,9 +290,9 @@ describe('Media Asset Page', () => {
     expect(getByText('New Informate 20 November 2019')).toBeInTheDocument();
   });
 
-  it('has a single "main" element, and a single "complementary" element (a11y)', async () => {
+  it('has a single "main" element, and a single "region" element (a11y)', async () => {
     expect(document.querySelectorAll(`[role='main']`).length).toBe(1);
-    expect(document.querySelectorAll(`[role='complementary']`).length).toBe(1);
+    expect(document.querySelectorAll(`[role='region']`).length).toBe(1);
   });
 });
 

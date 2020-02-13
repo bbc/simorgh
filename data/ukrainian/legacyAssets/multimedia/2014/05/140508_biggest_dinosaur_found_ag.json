@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
+    "locators": {
+      "assetUri": "/ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
+      "curie": "http://www.bbc.co.uk/asset/1aed307c-df77-11e3-a678-7db43db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "ukrainian",
+    "language": "uk",
+    "lastUpdated": 1550260586924,
+    "firstPublished": 1400518838,
+    "lastPublished": 1400519347,
+    "options": {
+      "allowDateStamp": true,
+      "includeComments": false,
+      "allowAdvertising": false,
+      "suitableForSyndication": false
+    },
+    "analyticsLabels": { "cps_asset_type": "map" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "32104630",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/ukrainian/meta/dps/2014/05/emp/140508_biggest_dinosaur_found_ag.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "В Аргентині палеонтологи знайшли кістки динозавра, який ймовірно був найбільшою істотою, що будь-коли існувала на Землі.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Археологи кажуть, що за попередніми підрахунками, ящур мав 20 метрів заввишки, що дорівнює висоті семиповерхового будинку.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Важив він 77 тон, що можна порівняти із вагою 14 африканських слонів.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Репортаж кореспондента ВВС Паллаба Гоша.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Як виглядав найбільший динозавр у світі",
+      "headline": "Як виглядав найбільший динозавр у світі"
+    },
+    "locators": {
+      "assetUri": "/ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
+      "curie": "http://www.bbc.co.uk/asset/1aed307c-df77-11e3-a678-7db43db9bd6e"
+    },
+    "summary": "В Аргентині палеонтологи знайшли кістки динозавра, який ймовірно був найбільшою істотою, що будь-коли існувала на Землі.",
+    "timestamp": 1550260586924,
+    "passport": {},
+    "media": {
+      "id": "32104630",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/ukrainian/meta/dps/2014/05/emp/140508_biggest_dinosaur_found_ag.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e239",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/05/19/140519162906_biggest_dinosaur_bones_144x81_bbc_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2014/05/19/140519162906_biggest_dinosaur_bones_144x81_bbc_nocredit.jpg",
+      "height": 81,
+      "width": 144,
+      "altText": "кістка найбільшого динозавра у світі",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Відео і Фото",
+      "uri": "/ukrainian/multimedia",
+      "type": "simple"
+    },
+    "site": { "subType": "site", "name": "BBCUkrainian.com", "uri": "/ukrainian", "type": "simple" },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "В Токіо показали робота-динозавра і змію",
+              "headline": "В Токіо показали робота-динозавра і змію"
+            },
+            "locators": {
+              "assetUri": "/ukrainian/multimedia/2013/11/131108_robots_japan_expo_video_as",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/multimedia/2013/11/131108_robots_japan_expo_video_as"
+            },
+            "summary": "У Міжнародній токійській виставці роботів цього року бере участь рекордна кількість компаній-розробників. ",
+            "timestamp": 1383900407,
+            "cpsType": "MAP",
+            "id": "urn:bbc:ares::asset:ukrainian/multimedia/2013/11/131108_robots_japan_expo_video_as",
+            "type": "cps"
+          },
+          {
+            "name": "У Росії знайшли найкраще збереженого мамонта",
+            "uri": "http://www.bbc.co.uk/ukrainian/multimedia/2012/10/121005_mammoth_russia_find_video_ak.shtml",
+            "type": "link"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Болгарія: археологи знайшли стародавні прикраси ",
+              "headline": "Болгарія: археологи знайшли стародавні прикраси "
+            },
+            "locators": {
+              "assetUri": "/ukrainian/multimedia/2012/11/121112_bulgaria_treasure_ek",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/multimedia/2012/11/121112_bulgaria_treasure_ek"
+            },
+            "summary": "У Болгарії археологи виявили старовинні золоті артефакти під час розкопок на півночі країни.",
+            "timestamp": 1352721005,
+            "cpsType": "MAP",
+            "id": "urn:bbc:ares::asset:ukrainian/multimedia/2012/11/121112_bulgaria_treasure_ek",
+            "type": "cps"
+          },
+          {
+            "name": "Археологи кажуть, що знайшли найстаріший бюстгальтер",
+            "uri": "http://www.bbc.co.uk/ukrainian/multimedia/2012/07/120731_oldest_bra_video_ak.shtml",
+            "type": "link"
+          }
+        ]
+      }
+    ]
+  }
+}
