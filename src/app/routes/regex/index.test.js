@@ -12,6 +12,8 @@ import {
   cpsAssetPageDataPath,
   radioAndTvPath,
   mostReadDataRegexPath,
+  legacyAssetPagePath,
+  legacyAssetPageDataPath,
 } from './index';
 
 jest.mock('#server/utilities/serviceConfigs', () => ({
@@ -206,14 +208,14 @@ describe('radioAndTvPath', () => {
 });
 
 describe('mostReadDataRegexPath', () => {
-  const validRoutes = ['/news/most_read.json', '/zhongwen/most_read/simp.json'];
+  const validRoutes = ['/news/mostread.json', '/zhongwen/mostread/simp.json'];
   shouldMatchValidRoutes(validRoutes, mostReadDataRegexPath);
 
   const invalidRoutes = [
-    '/foobar/most_read.json',
-    '/foobar/most_read',
-    '/foobar/most_read.js',
-    '/news/trad/most_read.json',
+    '/foobar/mostread.json',
+    '/foobar/mostread',
+    '/foobar/mostread.js',
+    '/news/trad/mostread.json',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, mostReadDataRegexPath);
 });
@@ -257,8 +259,6 @@ describe('cpsAssetPagePath', () => {
   const validRoutes = [
     '/pidgin/12345678',
     '/pidgin/12345678.amp',
-    '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl',
-    '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery',
     '/pidgin/tori-49450859',
     '/pidgin/tori-49450859.amp',
     '/yoruba/media-49450859',
@@ -284,6 +284,9 @@ describe('cpsAssetPagePath', () => {
     '/pidgin/test-49450859/.amp',
     '/pidgin/test-49450859/',
     '/pidgin/test-494859.amp',
+    // Below are legacy asset routes - should not match CPS routes
+    '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl',
+    '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery',
   ];
   shouldNotMatchInvalidRoutes(inValidRoutes, cpsAssetPagePath);
 });
@@ -309,6 +312,43 @@ describe('cpsAssetPageDataPath', () => {
     '/pidgin/test-49450859',
     '/pidgin/test-49450859/.json',
     '/pidgin/test-494859.amp.json',
+    // Below are legacy asset routes - should not match CPS routes
+    '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl.json',
+    '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery.json',
   ];
   shouldNotMatchInvalidRoutes(inValidRoutes, cpsAssetPageDataPath);
+});
+
+describe('legacyAssetPagePath', () => {
+  const validRoutes = [
+    '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl',
+    '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery',
+  ];
+
+  shouldMatchValidRoutes(validRoutes, legacyAssetPagePath);
+
+  const inValidRoutes = [
+    // Must be a 4 digit year after category
+    '/sinhala/category/15/02/150218_mahinda_rally_sl',
+    // Asset URI begin with a 6 digit date
+    '/hausa/multimedia/2014/05/hip_hop_40years_gallery',
+  ];
+  shouldNotMatchInvalidRoutes(inValidRoutes, legacyAssetPagePath);
+});
+
+describe('legacyAssetPageDataPath', () => {
+  const validRoutes = [
+    '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl.json',
+    '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery.json',
+  ];
+
+  shouldMatchValidRoutes(validRoutes, legacyAssetPageDataPath);
+
+  const inValidRoutes = [
+    // Must be a 4 digit year after category
+    '/sinhala/category/15/02/150218_mahinda_rally_sl.json',
+    // Asset URI begin with a 6 digit date
+    '/hausa/multimedia/2014/05/hip_hop_40years_gallery.json',
+  ];
+  shouldNotMatchInvalidRoutes(inValidRoutes, legacyAssetPageDataPath);
 });

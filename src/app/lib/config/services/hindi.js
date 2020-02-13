@@ -164,11 +164,11 @@ export const service = {
     mostRead: {
       header: 'सबसे अधिक पढ़ी गईं',
       lastUpdated: 'अंतिम अपडेट:',
-      numberOfItems: 5,
+      numberOfItems: 10,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/hindi/institutional-50223932',
         text: 'आप बीबीसी पर क्यों भरोसा कर सकते हैं',
       },
       externalLink: {

@@ -8,7 +8,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import RadioPageBlocks from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 import preprocessor from '#lib/utilities/preprocessor';
-import { radioPagePreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
+import { radioPagePreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
 
 const serviceContextMock = {
   service: 'amharic',
