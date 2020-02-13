@@ -1,16 +1,17 @@
 import getInitialData from './getInitialData';
-import rawMapData from '../../../../data/pidgin/cpsAssets/media-23256549.json';
+import mapJson from '../../../../data/pidgin/cpsAssets/media-23256549.json';
 import fetchPageData from '../fetchPageData';
 
 jest.mock('../fetchPageData');
 
 fetchPageData.mockImplementation(() => ({
-  pageData: rawMapData,
+  status: 200,
+  pageData: mapJson,
 }));
 
 it('should fetch page data, process the data and return it', async () => {
   const { pageData } = await getInitialData('mock-map-path');
-  const isProcessedPageData = pageData !== rawMapData;
+  const isProcessedPageData = pageData !== mapJson;
 
   expect(isProcessedPageData).toBeTruthy();
 });

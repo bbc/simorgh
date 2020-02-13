@@ -1,16 +1,17 @@
 import getInitialData from './getInitialData';
-import rawArticleData from '../../../../data/pidgin/articles/cwl08rd38l6o.json';
+import articleJson from '../../../../data/pidgin/articles/cwl08rd38l6o.json';
 import fetchPageData from '../fetchPageData';
 
 jest.mock('../fetchPageData');
 
 fetchPageData.mockImplementation(() => ({
-  pageData: rawArticleData,
+  status: 200,
+  json: articleJson,
 }));
 
 it('should fetch page data, process the data and return it', async () => {
   const { pageData } = await getInitialData('mock-article-path');
-  const isProcessedPageData = pageData !== rawArticleData;
+  const isProcessedPageData = pageData !== articleJson;
 
   expect(isProcessedPageData).toBeTruthy();
 });

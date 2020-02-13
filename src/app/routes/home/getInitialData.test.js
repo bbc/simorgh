@@ -1,16 +1,17 @@
 import getInitialData from './getInitialData';
-import rawFrontPageData from '../../../../data/pidgin/frontpage/index.json';
+import frontPageJson from '../../../../data/pidgin/frontpage/index.json';
 import fetchPageData from '../fetchPageData';
 
 jest.mock('../fetchPageData');
 
 fetchPageData.mockImplementation(() => ({
-  pageData: rawFrontPageData,
+  status: 200,
+  pageData: frontPageJson,
 }));
 
 it('should fetch page data, process the data and return it', async () => {
   const { pageData } = await getInitialData('mock-frontpage-path');
-  const isProcessedPageData = pageData !== rawFrontPageData;
+  const isProcessedPageData = pageData !== frontPageJson;
 
   expect(isProcessedPageData).toBeTruthy();
 });

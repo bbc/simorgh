@@ -1,16 +1,17 @@
 import getInitialData from './getInitialData';
-import rawLiveRadioData from '../../../../data/korean/bbc_korean_radio/liveradio.json';
+import liveRadioJson from '../../../../data/korean/bbc_korean_radio/liveradio.json';
 import fetchPageData from '../fetchPageData';
 
 jest.mock('../fetchPageData');
 
 fetchPageData.mockImplementation(() => ({
-  pageData: rawLiveRadioData,
+  status: 200,
+  pageData: liveRadioJson,
 }));
 
 it('should fetch page data, process the data and return it', async () => {
   const { pageData } = await getInitialData('mock-live-radio-path');
-  const isProcessedPageData = pageData !== rawLiveRadioData;
+  const isProcessedPageData = pageData !== liveRadioJson;
 
   expect(isProcessedPageData).toBeTruthy();
 });
