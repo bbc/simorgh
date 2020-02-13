@@ -1,0 +1,206 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:persian/arts/2011/08/110802_doublage_sherlock_promo",
+    "locators": {
+      "assetUri": "/persian/arts/2011/08/110802_doublage_sherlock_promo",
+      "cpsUrn": "urn:bbc:content:assetUri:persian/arts/2011/08/110802_doublage_sherlock_promo",
+      "curie": "http://www.bbc.co.uk/asset/131958a6-6c8e-11e2-8c45-c518a79c3f60"
+    },
+    "type": "MAP",
+    "createdBy": "persian",
+    "language": "fa",
+    "lastUpdated": 1579270250757,
+    "firstPublished": 1312286661000,
+    "lastPublished": 1361289354000,
+    "timestamp": 1361289354000,
+    "options": {
+      "allowDateStamp": true,
+      "includeComments": false,
+      "allowAdvertising": false,
+      "suitableForSyndication": false
+    },
+    "analyticsLabels": { "cps_asset_type": "map" },
+    "tags": {},
+    "version": "v1.1.4",
+    "blockTypes": [ "legacyMedia", "paragraph", "table" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "12097833",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "href": "http://www.bbc.co.uk/persian/meta/dps/2011/08/emp/110802_doublage_sherlock_promo.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "نزدیک به صد و پنجاه سال از انتشار اولین مجموعه داستانهای شرلوک هولمز می گذرد، از زمانی که سر آرتور کانون دویل، این شخصیت خیالی جذاب و زیرک را به عرصه ادبیات کاراگاهی جنایی هدیه کرد.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "شرلوک اما به دلیل جذابیت و غیر قابل پیش بینی بودنش، خیلی زود راهش را به دنیای صنعت سینما و تلویزیون باز کرد، کارآگاه خصوصی لاغر اندام با پیپی بلند که موقع فکر کردن یه طرز ناشیانه ای ویلون می زند.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "شرلوک هولمز قدرتی بی نظیر در مشاهده جزئیات بسیار کوچک دارد. مشاهده ای که سپس به نتیجه گیری منطقی و در سرانجام کشف راز معماهای جنایی می شود.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "مجموعه ای که بزودی با نام &quot; شرلوک&quot; از تلویزیون فارسی بی بی سی بیننده آن خواهید بود، برداشتی امروزی از مجموعه داستانهای شرلوک هولمز است. طبیعی است که شباهتهای زیادی در انگیزه های ارتکاب به جنایت بشرقرن نوزدهم و بیست ویکم وجود دارد، اما این مجموعه برداشتی مدرن است که ساخت و پرداخت آن از ضرب آهنگ و الگوهای مجموعه های تلویریونی امروزی پیروی می کند.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "شرلوک این مجموعه جدید را بندیکت کمبربچ بازی میکند. نقش دکتر واتسون را هم مارتین فریمن به عهده دارد. او امسال برای ایفای این نقش ، موفق به دریافت جایزه بفتا (جایزه فیلم و تلویزیون بریتانیا) برای نقش مکمل مرد شد.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "دوبله این مجموعه به دلیل چند شاخه بودن و پیچدگی قصه ها وهمچنین بازی های پیچیده بازیگران کار ساده ای نبود. به خصوص بندیکت کمبربچ در نقش شرلوک که از تکنیک مونولوگهای بلند و سریع ، برای صحنه های کشف و شهود و استنتاج خود به طرز ماهرانه ای بهره برده که بازسازی آن کاربسیار دشواری بود.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "این سریال در اصل در سه قسمت نود دقیقه ای است که ما به دلیل محدویت زمانی جدول پخشمان آن را به شش قسمت تقریبا پنجاه دقیقه ای تبدیل کرده ایم. امیدواریم از تماشای این مجموعه که دوبله آن حاصل تلاش همکارانمان در بخش دوبلاژ بی بی سی فارسی است و به زودی پخش خواهد شد، لذت ببرید.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "با ما از طریق صفحه فیس\u200cبوک بخش دوبلاژ \n<link type=\"page\"><caption>\n\nfacebook.com/bbcpersian.dubbing</caption><url href=\"http://www.facebook.com/bbcpersian.dubbing\" platform=\"highweb\"/></link> و یاآدرس ایمیل Doublage@bbc.co.uk در ارتباط باشید و نظرات و پیشنهادهای خود را در میان بگذارید.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "rows": [
+          [
+            {
+              "content": [ { "text": "جمعه", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۲۱:۱۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۲۲:۱۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۲۲:۴۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۱۷:۴۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            }
+          ],
+          [
+            {
+              "content": [ { "text": "تکرار شنبه", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۱۱:۰۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۱۲:۰۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۱۲:۳۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۰۷:۳۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            }
+          ],
+          [
+            {
+              "content": [ { "text": "تکرار شنبه", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۰۰:۱۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۰۱:۱۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۰۱:۴۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۲۰:۴۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            }
+          ],
+          [
+            {
+              "content": [ { "text": "تکرار دوشنبه", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۱۶:۰۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۱۷:۰۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۱۷:۳۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            },
+            {
+              "content": [ { "text": "۱۲:۳۰", "markupType": "plain_text", "type": "paragraph" } ],
+              "cellType": "cell"
+            }
+          ]
+        ],
+        "height": 4,
+        "width": 5,
+        "type": "table"
+      },
+      {
+        "text": "*ممکن است هنگام پخش خبر فوری، زمان پخش این برنامه بدون اعلام قبلی تغییر کند.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "shortHeadline": "مجموعه داستانهای شرلوک", "headline": "مجموعه داستانهای شرلوک" },
+    "locators": {
+      "assetUri": "/persian/arts/2011/08/110802_doublage_sherlock_promo",
+      "cpsUrn": "urn:bbc:content:assetUri:persian/arts/2011/08/110802_doublage_sherlock_promo",
+      "curie": "http://www.bbc.co.uk/asset/131958a6-6c8e-11e2-8c45-c518a79c3f60"
+    },
+    "summary": "نزدیک به صد و پنجاه سال از انتشار اولین مجموعه داستانهای شرلوک هولمز می گذرد، مجموعه ای با نام \" شرلوک\" برداشتی امروزی از داستانهای شرلوک هولمز است. ",
+    "timestamp": 1361289354000,
+    "passport": { "taggings": [] },
+    "media": {
+      "id": "12097833",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "href": "http://www.bbc.co.uk/persian/meta/dps/2011/08/emp/110802_doublage_sherlock_promo.emp.xml",
+      "type": "legacyMedia"
+    },
+    "id": "urn:bbc:ares::asset:persian/arts/2011/08/110802_doublage_sherlock_promo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": { "subType": "index", "name": "فرهنگ و هنر", "uri": "/persian", "type": "simple" },
+    "site": { "subType": "site", "name": "BBCPersian.com", "uri": "/persian", "type": "simple" },
+    "groups": []
+  }
+}
