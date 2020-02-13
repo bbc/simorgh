@@ -3,7 +3,7 @@ import { node, string } from 'prop-types';
 import { render } from '@testing-library/react';
 import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import { articleDataNews } from '#pages/Article/fixtureData';
-import mapAssetData from '#pages/CpsMap/fixtureData.json';
+import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
 import pglAssetData from '#pages/CpsPgl/fixtureData.json';
 import styAssetData from '#pages/CpsSty/fixtureData.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
