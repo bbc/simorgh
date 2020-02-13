@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment-timezone';
 import styled from 'styled-components';
-import { shape, string, oneOf, oneOfType } from 'prop-types';
+import { shape, string, oneOf, oneOfType, bool } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import MediaIndicator from '@bbc/psammead-media-indicator';
 import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
@@ -47,7 +47,7 @@ const StyledTime = styled.time`
   padding: 0 ${GEL_SPACING_HLF};
 `;
 
-const MediaIndicatorContainer = ({ item, script, service, dir }) => {
+const MediaIndicatorContainer = ({ item, script, service, dir, isInline }) => {
   const type = getMediaType(item);
 
   if (!type) {
@@ -57,7 +57,7 @@ const MediaIndicatorContainer = ({ item, script, service, dir }) => {
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = path(['media', 'versions', 0, 'duration'], item);
 
-  if (rawDuration) {
+  if (rawDuration && !isInline) {
     const duration = moment.duration(rawDuration, 'seconds');
     const durationString = formatDuration({ duration });
     const isoDuration = duration.toISOString();
@@ -69,7 +69,13 @@ const MediaIndicatorContainer = ({ item, script, service, dir }) => {
   }
 
   return (
-    <MediaIndicator type={type} script={script} service={service} dir={dir} />
+    <MediaIndicator
+      type={type}
+      script={script}
+      service={service}
+      dir={dir}
+      isInline={isInline}
+    />
   );
 };
 
@@ -78,9 +84,11 @@ MediaIndicatorContainer.propTypes = {
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
   dir: oneOf(['ltr', 'rtl']),
+  isInline: bool,
 };
 
 MediaIndicatorContainer.defaultProps = {
   dir: 'ltr',
+  isInline: false,
 };
 export default MediaIndicatorContainer;

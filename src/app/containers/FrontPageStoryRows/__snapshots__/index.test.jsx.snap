@@ -2803,7 +2803,9 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 0.5rem;
 }
 
 .c16 {
@@ -3327,7 +3329,9 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 0.5rem;
 }
 
 .c8 {

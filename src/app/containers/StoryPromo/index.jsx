@@ -200,6 +200,7 @@ const StoryPromoContainer = ({
       script={script}
       service={service}
       dir={dir}
+      isInline={!displayImage}
     />
   );
 

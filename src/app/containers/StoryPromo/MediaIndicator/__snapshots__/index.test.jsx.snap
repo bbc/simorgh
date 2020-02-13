@@ -330,7 +330,9 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 0.5rem;
 }
 
 .c1 {
@@ -343,10 +345,6 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
   -ms-flex-align: center;
   align-items: center;
   height: 100%;
-}
-
-.c3 {
-  padding: 0 0.25rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -383,12 +381,6 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
         points="3,32 29,16 3,0"
       />
     </svg>
-    <time
-      class="c3"
-      datetime="PT1H33M20S"
-    >
-      1:33:20
-    </time>
   </div>
 </div>
 `;
@@ -411,7 +403,9 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 0.5rem;
 }
 
 .c1 {
@@ -424,10 +418,6 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
   -ms-flex-align: center;
   align-items: center;
   height: 100%;
-}
-
-.c3 {
-  padding: 0 0.25rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -464,12 +454,6 @@ exports[`Story Promo Media Indicator should render video indicator correctly whe
         points="3,32 29,16 3,0"
       />
     </svg>
-    <time
-      class="c3"
-      datetime="PT1H33M20S"
-    >
-      1:33:20
-    </time>
   </div>
 </div>
 `;
