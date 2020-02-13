@@ -11,7 +11,7 @@ const getMostReadEndpoint = ({ service, variant }) =>
     : `/${service}/mostread.json`;
 
 const MostReadContainer = ({ endpointOverride, ignoreRecordIsFresh }) => {
-  const { variant, isAmp } = useContext(RequestContext);
+  const { variant, isAmp, env } = useContext(RequestContext);
   const {
     service,
     mostRead: { hasMostRead },
@@ -25,11 +25,16 @@ const MostReadContainer = ({ endpointOverride, ignoreRecordIsFresh }) => {
     return null;
   }
 
+  const isLocalAndTest = env === 'test' || env === 'local';
+
   const endpoint =
     endpointOverride || getMostReadEndpoint({ service, variant });
 
   return (
-    <Canonical endpoint={endpoint} ignoreRecordIsFresh={ignoreRecordIsFresh} />
+    <Canonical
+      endpoint={endpoint}
+      ignoreRecordIsFresh={ignoreRecordIsFresh || isLocalAndTest}
+    />
   );
 };
 
