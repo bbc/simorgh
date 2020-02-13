@@ -82,7 +82,7 @@ export const service = {
     mostRead: {
       header: '热读',
       lastUpdated: '最近更新：',
-      numberOfItems: 5,
+      numberOfItems: 10,
     },
     navigation: [
       {
@@ -274,7 +274,7 @@ export const service = {
     mostRead: {
       header: '熱讀',
       lastUpdated: '最近更新：',
-      numberOfItems: 5,
+      numberOfItems: 10,
     },
     navigation: [
       {
