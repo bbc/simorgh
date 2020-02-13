@@ -18,6 +18,7 @@ const typesToConvert = {
   list,
   media,
   version,
+  legacyMedia: block => block,
 };
 
 const parseBlockByType = block => {

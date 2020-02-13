@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import pipe from 'ramda/src/pipe';
 import styled from 'styled-components';
 import {
+  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+
+import {
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
+
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { GhostGrid } from '#lib/styledGrid';
+import { MediaMessage } from '@bbc/psammead-media-player';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { GhostGrid, GridItemConstrainedLarge } from '#lib/styledGrid';
 import { getImageParts } from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -58,6 +66,32 @@ const MediaAssetPageContainer = ({ pageData }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
 
+  const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
+  const StyledMessageContainer = styled.div`
+    padding-top: ${landscapeRatio};
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  `;
+
+  const Wrapper = styled(GridItemConstrainedLarge)`
+    margin-top: ${GEL_SPACING};
+
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+      margin-top: ${GEL_SPACING_DBL};
+    }
+
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding-top: ${GEL_SPACING};
+      margin-top: ${GEL_SPACING_QUAD};
+    }
+  `;
+
+  const { translations, service } = useContext(ServiceContext);
+  const contentNotAvailableMessage =
+    path(['media', 'contentExpired'], translations) ||
+    'This content is not available';
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -71,6 +105,16 @@ const MediaAssetPageContainer = ({ pageData }) => {
       ) : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
+    legacyMedia: () => (
+      <Wrapper>
+        <StyledMessageContainer>
+          <MediaMessage
+            service={service}
+            message={contentNotAvailableMessage}
+          />
+        </StyledMessageContainer>
+      </Wrapper>
+    ),
   };
 
   const StyledGhostGrid = styled(GhostGrid)`
