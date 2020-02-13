@@ -1,7 +1,5 @@
 import newsMostReadData from '#data/news/mostRead';
-import zhongwenSimpMostReadData from '#data/zhongwen/mostRead/simp';
-import { service as newsConfig } from '#app/lib/config/services/news';
-import { service as zhongwenConfig } from '#app/lib/config/services/zhongwen';
+import { service as arabicConfig } from '#app/lib/config/services/arabic';
 import {
   setStalePromoTimestamp,
   setFreshPromoTimestamp,
@@ -10,23 +8,12 @@ import {
 
 let container;
 
-// Most Read is currently turned off for these services because data is not available for them,
-// but once they are enabled, these overrides can be removed.
-newsConfig.default.mostRead.hasMostRead = true;
-zhongwenConfig.simp.mostRead.hasMostRead = true;
-
 const services = {
-  news: {
+  arabic: {
     variant: null,
     data: newsMostReadData,
-    config: newsConfig.default,
-    expectedLastUpdated: 'Last updated: 11 January 1970',
-  },
-  zhongwen: {
-    variant: 'simp',
-    data: zhongwenSimpMostReadData,
-    config: zhongwenConfig.simp,
-    expectedLastUpdated: '最近更新： 1970年1月11日',
+    config: arabicConfig.default,
+    expectedLastUpdated: 'آخر تحديث 11 يناير/ كانون الثاني 1970',
   },
 };
 
