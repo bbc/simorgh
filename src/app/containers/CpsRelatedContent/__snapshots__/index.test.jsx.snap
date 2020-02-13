@@ -2,10 +2,10 @@
 
 exports[`CpsRelatedContent should render Story Promo components in Live environment 1`] = `
 <DocumentFragment>
-  <aside
+  <section
     aria-labelledby="related-content-heading"
     class="GhostGrid-sc-12lwanc-1 gfRQD"
-    role="complementary"
+    role="region"
   >
     <div
       class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 ebGqUw"
@@ -209,16 +209,16 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
         </li>
       </ul>
     </div>
-  </aside>
+  </section>
 </DocumentFragment>
 `;
 
 exports[`CpsRelatedContent should render Story Promo components when given appropriate data 1`] = `
 <DocumentFragment>
-  <aside
+  <section
     aria-labelledby="related-content-heading"
     class="GhostGrid-sc-12lwanc-1 gfRQD"
-    role="complementary"
+    role="region"
   >
     <div
       class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 ebGqUw"
@@ -422,6 +422,6 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
         </li>
       </ul>
     </div>
-  </aside>
+  </section>
 </DocumentFragment>
 `;

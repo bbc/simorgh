@@ -4291,10 +4291,10 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
                     </figure>
                   </div>
                 </main>
-                <aside
+                <section
                   aria-labelledby="related-content-heading"
                   class="c15"
-                  role="complementary"
+                  role="region"
                 >
                   <div
                     class="c16"
@@ -4482,7 +4482,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
                       </li>
                     </ul>
                   </div>
-                </aside>
+                </section>
               </div>
             </div>
           </div>
@@ -8146,10 +8146,10 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
                     </figure>
                   </div>
                 </main>
-                <aside
+                <section
                   aria-labelledby="related-content-heading"
                   class="c34"
-                  role="complementary"
+                  role="region"
                 >
                   <div
                     class="c35"
@@ -8665,7 +8665,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
                       </li>
                     </ul>
                   </div>
-                </aside>
+                </section>
               </div>
             </div>
           </div>
