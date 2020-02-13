@@ -10,7 +10,7 @@ const getMostReadEndpoint = ({ service, variant }) =>
     ? `/${service}/mostread/${variant}.json`
     : `/${service}/mostread.json`;
 
-const MostReadContainer = ({ endpointOverride, ignoreRecordIsFresh }) => {
+const MostReadContainer = ({ mostReadEndpointOverride, forceMostRead }) => {
   const { variant, isAmp, env } = useContext(RequestContext);
   const {
     service,
@@ -25,27 +25,27 @@ const MostReadContainer = ({ endpointOverride, ignoreRecordIsFresh }) => {
     return null;
   }
 
-  const isLocalAndTest = env === 'test' || env === 'local';
+  const isTestOrLocal = env === 'test' || env === 'local';
 
   const endpoint =
-    endpointOverride || getMostReadEndpoint({ service, variant });
+    mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
 
   return (
     <Canonical
       endpoint={endpoint}
-      ignoreRecordIsFresh={ignoreRecordIsFresh || isLocalAndTest}
+      ignoreRecordIsFresh={forceMostRead || isTestOrLocal}
     />
   );
 };
 
 MostReadContainer.propTypes = {
-  endpointOverride: string,
-  ignoreRecordIsFresh: bool,
+  mostReadEndpointOverride: string,
+  forceMostRead: bool,
 };
 
 MostReadContainer.defaultProps = {
-  endpointOverride: null,
-  ignoreRecordIsFresh: false,
+  mostReadEndpointOverride: null,
+  forceMostRead: false,
 };
 
 export default MostReadContainer;

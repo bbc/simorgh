@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
-import { bool, string, shape } from 'prop-types';
+import { bool, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
@@ -50,7 +50,8 @@ const startOffsets = {
 
 const FrontPageMain = ({
   frontPageData,
-  mostReadOverrides: { endpointOverride, ignoreRecordIsFresh },
+  mostReadEndpointOverride,
+  forceMostRead,
 }) => {
   const {
     product,
@@ -101,8 +102,8 @@ const FrontPageMain = ({
               <Fragment key={group.title}>
                 {group.type === 'useful-links' && (
                   <MostReadContainer
-                    endpointOverride={endpointOverride}
-                    ignoreRecordIsFresh={ignoreRecordIsFresh}
+                    mostReadEndpointOverride={mostReadEndpointOverride}
+                    forceMostRead={forceMostRead}
                   />
                 )}
                 <FrontPageSection group={group} sectionNumber={index} />
@@ -110,8 +111,8 @@ const FrontPageMain = ({
             ))}
             {!hasUsefulLinks && (
               <MostReadContainer
-                endpointOverride={endpointOverride}
-                ignoreRecordIsFresh={ignoreRecordIsFresh}
+                mostReadEndpointOverride={mostReadEndpointOverride}
+                forceMostRead={forceMostRead}
               />
             )}
           </Grid>
@@ -123,17 +124,13 @@ const FrontPageMain = ({
 
 FrontPageMain.propTypes = {
   frontPageData: frontPageDataPropTypes.isRequired,
-  mostReadOverrides: shape({
-    endpointOverride: string,
-    ignoreRecordIsFresh: bool,
-  }),
+  mostReadEndpointOverride: string,
+  forceMostRead: bool,
 };
 
 FrontPageMain.defaultProps = {
-  mostReadOverrides: shape({
-    endpointOverride: null,
-    ignoreRecordIsFresh: false,
-  }),
+  mostReadEndpointOverride: null,
+  forceMostRead: false,
 };
 
 export default FrontPageMain;

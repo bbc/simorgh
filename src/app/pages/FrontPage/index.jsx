@@ -11,24 +11,28 @@ import withLoading from '../../containers/PageHandlers/withLoading';
 import withError from '../../containers/PageHandlers/withError';
 import withData from '../../containers/PageHandlers/withData';
 
-const FrontPageContainer = ({ pageData, mostReadOverrides }) => (
+const FrontPageContainer = ({
+  pageData,
+  mostReadEndpointOverride,
+  forceMostRead,
+}) => (
   <FrontPageMain
     frontPageData={pageData}
-    mostReadOverrides={mostReadOverrides}
+    mostReadEndpointOverride={mostReadEndpointOverride}
+    forceMostRead={forceMostRead}
   />
 );
 
 FrontPageContainer.propTypes = {
   pageData: shape(frontPagePropTypes),
-  mostReadOverrides: shape({
-    endpointOverride: string,
-    ignoreRecordIsFresh: bool,
-  }),
+  mostReadEndpointOverride: string,
+  forceMostRead: bool,
 };
 
 FrontPageContainer.defaultProps = {
   pageData: null,
-  mostReadOverrides: null,
+  mostReadEndpointOverride: null,
+  forceMostRead: false,
 };
 
 const EnhancedFrontPageContainer = pipe(
