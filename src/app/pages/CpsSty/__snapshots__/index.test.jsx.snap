@@ -295,7 +295,6 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 
 .c0 {
   margin: 0 auto;
-  background: #FDFDFD;
   padding-bottom: 2rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -1608,7 +1607,6 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
 
 .c0 {
   margin: 0 auto;
-  background: #FDFDFD;
   padding-bottom: 2rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
