@@ -35,7 +35,7 @@ const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   const ratio = (height / width) * 100;
   const originCode = getOriginCode(path);
   const locator = getLocator(path);
-  const imageResolutions = [70, 95, 144, 183, 240, 320, 480, 624];
+  const imageResolutions = [70, 95, 144, 183, 240, 320, 496, 624];
   const srcset = createSrcset(originCode, locator, width, imageResolutions);
   const sizes = topStory
     ? '(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px'
