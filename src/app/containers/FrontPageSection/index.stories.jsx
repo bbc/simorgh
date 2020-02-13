@@ -6,6 +6,7 @@ import FrontPageSection from '.';
 
 import igboData from '#data/igbo/frontpage/index.json';
 import pidginData from '#data/pidgin/frontpage/index.json';
+import russianData from '#data/russian/frontpage/index.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
@@ -42,8 +43,8 @@ storiesOf('Containers|Front Page Section/Canonical', module)
   .add('useful links', () =>
     getCanonicalSection(
       'igbo',
-      igboData.content.groups.find(
-        sec => pathOr(null, ['strapline', 'name'], sec) === 'Useful links',
+      russianData.content.groups.find(
+        sec => pathOr(null, ['semanticGroupName'], sec) === 'Useful links',
       ),
     ),
   );
@@ -66,8 +67,8 @@ storiesOf('Containers|Front Page Section/AMP', module)
   .add('useful links - amp', () =>
     getAmpSection(
       'igbo',
-      igboData.content.groups.find(
-        sec => pathOr(null, ['strapline', 'name'], sec) === 'Useful links',
+      russianData.content.groups.find(
+        sec => pathOr(null, ['semanticGroupName'], sec) === 'Useful links',
       ),
     ),
   );
