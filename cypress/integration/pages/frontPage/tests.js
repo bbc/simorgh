@@ -10,7 +10,7 @@ const serviceJsonPath = service =>
 const serviceHasIndexAlsos = service => service === 'thai';
 // Limiting to one service for now
 const serviceHasPublishedPromo = service => service === 'persian';
-//Limiting to two services
+// Limiting to two services
 const serviceHasMostRead = service => ['pidgin', 'persian'].includes(service);
 
 // Check for valid useful links
