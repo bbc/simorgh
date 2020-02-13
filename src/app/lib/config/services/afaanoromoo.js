@@ -153,7 +153,7 @@ export const service = {
     mostRead: {
       header: "Baay'ee kan dubbifame",
       lastUpdated: 'Yeroo dhuma kan haaromfame:',
-      numberOfItems: 5,
+      numberOfItems: 10,
     },
     footer: {
       trustProjectLink: {

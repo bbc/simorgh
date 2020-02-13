@@ -20,7 +20,7 @@ import {
 } from '../app/routes/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
-import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
+import getRouteProps from '#app/routes/fetchPageData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
 import injectCspHeader, {
   localInjectHostCspHeader,

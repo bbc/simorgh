@@ -3,7 +3,7 @@ import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
-import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
+import getRouteProps from '../app/routes/fetchPageData/utils/getRouteProps';
 import Document from './Document/component';
 import routes from '../app/routes';
 import { localBaseUrl } from '../testHelpers/config';
@@ -48,7 +48,7 @@ jest.mock('@loadable/server', () => ({
   }),
 }));
 
-jest.mock('../app/routes/getInitialData/utils/getRouteProps');
+jest.mock('../app/routes/fetchPageData/utils/getRouteProps');
 
 const mockRouteProps = ({
   id,
@@ -553,19 +553,19 @@ describe('Server', () => {
 
   describe('Most Read json', () => {
     it('should serve a file for valid service paths with variants', async () => {
-      const { body } = await makeRequest('/zhongwen/most_read/trad.json');
+      const { body } = await makeRequest('/zhongwen/mostread/trad.json');
       expect(body).toEqual(
         expect.objectContaining({ records: expect.any(Object) }),
       );
     });
     it('should serve a file for valid service paths without variants', async () => {
-      const { body } = await makeRequest('/news/most_read.json');
+      const { body } = await makeRequest('/news/mostread.json');
       expect(body).toEqual(
         expect.objectContaining({ records: expect.any(Object) }),
       );
     });
     it('should respond with a 500 for non-existing services', async () => {
-      const { statusCode } = await makeRequest('/some-service/most_read.json');
+      const { statusCode } = await makeRequest('/some-service/mostread.json');
       expect(statusCode).toEqual(500);
     });
   });

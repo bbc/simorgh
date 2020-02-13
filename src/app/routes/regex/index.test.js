@@ -208,14 +208,14 @@ describe('radioAndTvPath', () => {
 });
 
 describe('mostReadDataRegexPath', () => {
-  const validRoutes = ['/news/most_read.json', '/zhongwen/most_read/simp.json'];
+  const validRoutes = ['/news/mostread.json', '/zhongwen/mostread/simp.json'];
   shouldMatchValidRoutes(validRoutes, mostReadDataRegexPath);
 
   const invalidRoutes = [
-    '/foobar/most_read.json',
-    '/foobar/most_read',
-    '/foobar/most_read.js',
-    '/news/trad/most_read.json',
+    '/foobar/mostread.json',
+    '/foobar/mostread',
+    '/foobar/mostread.js',
+    '/news/trad/mostread.json',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, mostReadDataRegexPath);
 });

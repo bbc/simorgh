@@ -40,6 +40,7 @@ const videoPromo = promoFixture('Video');
 const featurePromo = promoFixture('Feature');
 const audioPromo = promoFixture('Audio');
 const galleryPromo = promoFixture('Gallery');
+const podcastPromo = promoFixture('Podcast');
 
 const getStoryPromo = platform => item => (
   <ServiceContextProvider service="news">
@@ -68,7 +69,8 @@ storiesOf('Containers|Story Promo/Canonical', module)
   .add('feature link promo', () => getCanonicalStoryPromo(featurePromo))
   .add('video link promo', () => getCanonicalStoryPromo(videoPromo))
   .add('audio link promo', () => getCanonicalStoryPromo(audioPromo))
-  .add('gallery link promo', () => getCanonicalStoryPromo(galleryPromo));
+  .add('gallery link promo', () => getCanonicalStoryPromo(galleryPromo))
+  .add('podcast link promo', () => getCanonicalStoryPromo(podcastPromo));
 
 storiesOf('Containers|Story Promo/AMP', module)
   .addParameters({ chromatic: { disable: true } })
@@ -80,4 +82,5 @@ storiesOf('Containers|Story Promo/AMP', module)
   .add('video link promo - amp', () => getAmpStoryPromo(videoPromo))
   .add('feature link promo - amp', () => getAmpStoryPromo(featurePromo))
   .add('audio link promo - amp', () => getAmpStoryPromo(audioPromo))
-  .add('gallery link promo - amp', () => getAmpStoryPromo(galleryPromo));
+  .add('gallery link promo - amp', () => getAmpStoryPromo(galleryPromo))
+  .add('podcast link promo - amp', () => getAmpStoryPromo(podcastPromo));
