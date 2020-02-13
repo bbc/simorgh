@@ -18,10 +18,17 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     it('should not have an AMP attribute', () => {
       cy.get('html').should('not.have.attr', 'amp');
     });
+    // Once the most read is implemented for amp and all other pages this test will be moved to testforallpages
     if (serviceHasMostRead(service) && Cypress.env('APP_ENV') === 'local') {
       it('should contain most read component if the toggle is enabled', () => {
         if (toggles[Cypress.env('APP_ENV')].mostRead) {
-          cy.get('[aria-labelledby="Most-Read"]').should('be.visible');
+          cy.get('[aria-labelledby="Most-Read"]')
+            .should('be.visible')
+            .within(() => {
+              cy.get('li')
+                .should('have.length.of.at.least', 1)
+                .should('be.visible');
+            });
         }
       });
     }
