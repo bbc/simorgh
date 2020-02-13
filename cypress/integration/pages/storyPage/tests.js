@@ -1,5 +1,3 @@
-import config from '../../../support/config/services';
-
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
@@ -8,15 +6,7 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
-  describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
-    it('should render a H1, which displays the headline', () => {
-      cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-        ({ body }) => {
-          cy.get('h1').should('contain', body.promo.headlines.headline);
-        },
-      );
-    });
-  });
+  describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {});
 };
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
