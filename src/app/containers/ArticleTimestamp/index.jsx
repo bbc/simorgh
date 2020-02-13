@@ -63,7 +63,10 @@ const ArticleTimestamp = ({
     <Wrapper className={className}>
       <Timestamp {...timestampProps} {...firstPublishedProps} />
       {timeDifferenceMinutes > minutesTolerance && (
-        <Timestamp {...timestampProps} {...lastPublishedProps} />
+        <>
+          <br />
+          <Timestamp {...timestampProps} {...lastPublishedProps} />
+        </>
       )}
     </Wrapper>
   );
