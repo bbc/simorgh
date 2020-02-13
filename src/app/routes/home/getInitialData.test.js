@@ -6,7 +6,7 @@ jest.mock('../fetchPageData');
 
 fetchPageData.mockImplementation(() => ({
   status: 200,
-  pageData: frontPageJson,
+  json: frontPageJson,
 }));
 
 it('should fetch page data, process the data and return it', async () => {
