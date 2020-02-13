@@ -9,7 +9,7 @@ import {
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { GhostGrid } from '#lib/styledGrid';
+import { Grid } from '#lib/styledGrid';
 import { getImageParts } from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -78,7 +78,7 @@ const CpsStyContainer = ({ pageData }) => {
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };
 
-  const StyledGhostGrid = styled(GhostGrid)`
+  const StyledGrid = styled(Grid)`
     flex-grow: 1;
     padding-bottom: ${GEL_SPACING_TRPL};
 
@@ -118,9 +118,9 @@ const CpsStyContainer = ({ pageData }) => {
         aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
-      <StyledGhostGrid as="main" role="main">
+      <StyledGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </StyledGhostGrid>
+      </StyledGrid>
       <CpsRelatedContent content={relatedContent} />
     </>
   );
