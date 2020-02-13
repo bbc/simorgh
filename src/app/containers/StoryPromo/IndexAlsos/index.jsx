@@ -27,20 +27,20 @@ const getMediaType = (cpsType, mediaType) => {
 
 const buildIndexAlsosMediaIndicator = ({
   cpsType,
-  dir,
   mediaType,
   script,
   service,
+  dir,
 }) => {
   const indexAlsosMediaType = getMediaType(cpsType, mediaType);
 
   return (
     indexAlsosMediaType && (
       <MediaIndicator
-        dir={dir}
+        type={indexAlsosMediaType}
         script={script}
         service={service}
-        type={indexAlsosMediaType}
+        dir={dir}
         isInline
       />
     )
@@ -49,10 +49,10 @@ const buildIndexAlsosMediaIndicator = ({
 
 buildIndexAlsosMediaIndicator.propTypes = {
   cpsType: string.isRequired,
-  dir: oneOf(['ltr', 'rtl']),
   mediaType: string.isRequired,
   script: string.isRequired,
   service: string.isRequired,
+  dir: oneOf(['ltr', 'rtl']),
 };
 
 buildIndexAlsosMediaIndicator.defaultProps = {
@@ -80,10 +80,10 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
           const url = pathOr(null, ['locators', 'assetUri'], item);
           const indexAlsoMediaIndicator = buildIndexAlsosMediaIndicator({
             cpsType,
-            dir,
             mediaType,
             script,
             service,
+            dir,
           });
           const indexAlsoMediaType =
             mediaTranslations[getMediaType(cpsType, mediaType)];

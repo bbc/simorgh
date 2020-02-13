@@ -101,6 +101,9 @@ const StoryPromoContainer = ({
     ServiceContext,
   );
   const isAssetTypeCode = pathOr(null, ['assetTypeCode'], item);
+  const isStoryPromoPodcast =
+    isAssetTypeCode === 'PRO' &&
+    pathOr(null, ['contentType'], item) === 'Podcast';
   let headline;
   let url;
   let isLive;
@@ -158,7 +161,7 @@ const StoryPromoContainer = ({
           {summary}
         </Summary>
       )}
-      {timestamp && (
+      {timestamp && !isStoryPromoPodcast && (
         <Timestamp
           locale={datetimeLocale}
           timestamp={timestamp}
@@ -193,10 +196,10 @@ const StoryPromoContainer = ({
 
   const MediaIndicator = (
     <MediaIndicatorContainer
-      dir={dir}
+      item={item}
       script={script}
       service={service}
-      item={item}
+      dir={dir}
     />
   );
 

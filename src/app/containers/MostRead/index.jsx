@@ -7,15 +7,18 @@ import Canonical from './Canonical';
 
 const getMostReadEndpoint = ({ service, variant }) =>
   variant
-    ? `/${service}/most_read/${variant}.json`
-    : `/${service}/most_read.json`;
+    ? `/${service}/mostread/${variant}.json`
+    : `/${service}/mostread.json`;
 
 const MostReadContainer = ({ endpointOverride }) => {
-  const { variant } = useContext(RequestContext);
+  const { variant, isAmp } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
 
   const { enabled } = useToggle('mostRead');
-  if (!enabled) {
+
+  const mostReadEnabled = !isAmp && enabled;
+
+  if (!mostReadEnabled) {
     return null;
   }
 

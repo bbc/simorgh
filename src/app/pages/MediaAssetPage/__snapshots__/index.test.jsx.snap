@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = `
+exports[`Media Asset Page AV player should render version (live audio stream) 1`] = `
 <DocumentFragment>
   <div
     id="ContextsContainer"
@@ -19,7 +19,7 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
           >
             <noscript />
             <main
-              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-sc-10y88yd-0 dJygcZ"
+              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-oo43dv-0 gqbGSn"
               role="main"
             >
               <h1
@@ -61,7 +61,7 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
                 </strong>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX StyledTimestamp-sc-10y88yd-1 jtbZwP"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX StyledTimestamp-oo43dv-1 jqCfrG"
               >
                 <time
                   class="StyledTimestamp-um718p-0 bAgcOD"
@@ -369,7 +369,7 @@ exports[`CPS MAP Page AV player should render version (live audio stream) 1`] = 
 </DocumentFragment>
 `;
 
-exports[`CPS MAP Page should render component 1`] = `
+exports[`Media Asset Page should render component 1`] = `
 <DocumentFragment>
   <div
     id="ContextsContainer"
@@ -388,7 +388,7 @@ exports[`CPS MAP Page should render component 1`] = `
           >
             <noscript />
             <main
-              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-sc-10y88yd-0 dJygcZ"
+              class="GhostGrid-sc-12lwanc-1 StyledGhostGrid-oo43dv-0 gqbGSn"
               role="main"
             >
               <h1
@@ -430,7 +430,7 @@ exports[`CPS MAP Page should render component 1`] = `
                 </strong>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX StyledTimestamp-sc-10y88yd-1 jtbZwP"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX StyledTimestamp-oo43dv-1 jqCfrG"
               >
                 <time
                   class="StyledTimestamp-um718p-0 bAgcOD"
@@ -961,10 +961,10 @@ exports[`CPS MAP Page should render component 1`] = `
                 </p>
               </div>
             </main>
-            <aside
+            <section
               aria-labelledby="related-content-heading"
               class="GhostGrid-sc-12lwanc-1 gfRQD"
-              role="complementary"
+              role="region"
             >
               <div
                 class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 ebGqUw"
@@ -1292,7 +1292,7 @@ exports[`CPS MAP Page should render component 1`] = `
                   </li>
                 </ul>
               </div>
-            </aside>
+            </section>
           </div>
         </div>
       </div>

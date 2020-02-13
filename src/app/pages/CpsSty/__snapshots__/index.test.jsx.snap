@@ -820,6 +820,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
           <div
             id="DataContainer"
           >
+            <noscript />
             <main
               class="c0"
               role="main"
@@ -1250,10 +1251,10 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                 </p>
               </div>
             </main>
-            <aside
+            <section
               aria-labelledby="related-content-heading"
               class="c24"
-              role="complementary"
+              role="region"
             >
               <div
                 class="c25"
@@ -1294,7 +1295,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                   />
                 </ul>
               </div>
-            </aside>
+            </section>
           </div>
         </div>
       </div>
@@ -2384,6 +2385,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
               <div
                 id="DataContainer"
               >
+                <noscript />
                 <main
                   class="c0"
                   role="main"
@@ -2813,10 +2815,10 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </p>
                   </div>
                 </main>
-                <aside
+                <section
                   aria-labelledby="related-content-heading"
                   class="c26"
-                  role="complementary"
+                  role="region"
                 >
                   <div
                     class="c27"
@@ -2857,7 +2859,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                       />
                     </ul>
                   </div>
-                </aside>
+                </section>
               </div>
             </div>
           </div>
