@@ -1,4 +1,4 @@
-import getInitialData from '../getInitialData';
+import getInitialData from '../fetchPageData';
 import RadioPage from '#pages/RadioPage';
 import { radioAndTvPath } from '../regex';
 
