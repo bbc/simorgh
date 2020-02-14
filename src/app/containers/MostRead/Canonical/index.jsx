@@ -33,7 +33,7 @@ const MarginWrapper = styled.div`
   }
 `;
 
-const CanonicalMostRead = ({ endpoint, ignoreRecordIsFresh }) => {
+const CanonicalMostRead = ({ endpoint, forceMostRead }) => {
   const [items, setItems] = useState([]);
   const {
     service,
@@ -51,7 +51,7 @@ const CanonicalMostRead = ({ endpoint, ignoreRecordIsFresh }) => {
       // Do not show most read if lastRecordUpdated is greater than 35min as this means PopAPI has failed twice
       // in succession. This suggests ATI may be having issues, hence risk of stale data.
       if (
-        ignoreRecordIsFresh ||
+        forceMostRead ||
         mostReadRecordIsFresh(mostReadData.lastRecordTimeStamp)
       ) {
         const mostReadItems = mostReadData.records
@@ -87,7 +87,7 @@ const CanonicalMostRead = ({ endpoint, ignoreRecordIsFresh }) => {
     script,
     service,
     timezone,
-    ignoreRecordIsFresh,
+    forceMostRead,
   ]);
 
   return items.length ? (
@@ -131,11 +131,11 @@ const CanonicalMostRead = ({ endpoint, ignoreRecordIsFresh }) => {
 
 CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
-  ignoreRecordIsFresh: bool,
+  forceMostRead: bool,
 };
 
 CanonicalMostRead.defaultProps = {
-  ignoreRecordIsFresh: false,
+  forceMostRead: false,
 };
 
 export default CanonicalMostRead;

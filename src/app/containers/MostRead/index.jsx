@@ -11,7 +11,7 @@ const getMostReadEndpoint = ({ service, variant }) =>
     : `/${service}/mostread.json`;
 
 const MostReadContainer = ({ mostReadEndpointOverride, forceMostRead }) => {
-  const { variant, isAmp, env } = useContext(RequestContext);
+  const { variant, isAmp } = useContext(RequestContext);
   const {
     service,
     mostRead: { hasMostRead },
@@ -25,7 +25,9 @@ const MostReadContainer = ({ mostReadEndpointOverride, forceMostRead }) => {
     return null;
   }
 
-  const isTestOrLocal = env === 'test' || env === 'local';
+  const isTestOrLocal =
+    process.env.SIMORGH_APP_ENV === 'test' ||
+    process.env.SIMORGH_APP_ENV === 'local';
 
   const endpoint =
     mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
@@ -33,7 +35,7 @@ const MostReadContainer = ({ mostReadEndpointOverride, forceMostRead }) => {
   return (
     <Canonical
       endpoint={endpoint}
-      ignoreRecordIsFresh={forceMostRead || isTestOrLocal}
+      forceMostRead={forceMostRead || isTestOrLocal}
     />
   );
 };
