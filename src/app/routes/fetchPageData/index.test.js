@@ -1,17 +1,17 @@
 import { setWindowValue, resetWindowValue } from '@bbc/psammead-test-helpers';
-import loggerMock from '#testHelpers/loggerMock'; // Must be imported before getInitialData
+import loggerMock from '#testHelpers/loggerMock'; // Must be imported before fetchPageData
 import fetchPageData, { getUrl } from '.';
 
+const expectedBaseUrl = 'http://localhost';
+const requestedPathname = '/path/to/asset';
+const expectedUrl = `${expectedBaseUrl}${requestedPathname}.json`;
+
+afterEach(() => {
+  jest.clearAllMocks();
+  fetch.resetMocks();
+});
+
 describe('fetchPageData', () => {
-  const expectedBaseUrl = 'http://localhost';
-  const requestedPathname = '/path/to/asset';
-  const expectedUrl = `${expectedBaseUrl}${requestedPathname}.json`;
-
-  afterEach(() => {
-    jest.clearAllMocks();
-    fetch.resetMocks();
-  });
-
   describe('Successful fetch', () => {
     beforeEach(() => {
       fetch.mockResponse(
