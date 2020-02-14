@@ -8,7 +8,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import CpsRelatedContent from '.';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 
-import getInitialData from '../../routes/cpsAsset/getInitialData';
+import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import fetchPageData from '#app/routes/fetchPageData';
 
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);

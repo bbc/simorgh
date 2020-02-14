@@ -73,6 +73,8 @@ describe('fetchPageData', () => {
 
         const response = await fetchPageData(requestedPathname);
 
+        expect(loggerMock.error).toHaveBeenCalled();
+
         expect(response.status).toEqual(500);
       });
     });
@@ -82,6 +84,8 @@ describe('fetchPageData', () => {
         setWindowValue('location', true);
 
         const response = await fetchPageData(requestedPathname);
+
+        expect(loggerMock.error).toHaveBeenCalled();
 
         expect(response.status).toEqual(502);
       });

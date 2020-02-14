@@ -29,7 +29,7 @@ export const getUrl = pathname => {
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
 
-const getStatus = (status, url) => {
+const getErrorStatus = (status, url) => {
   if (status && url) {
     logger.error(
       `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`,
@@ -42,8 +42,9 @@ const getStatus = (status, url) => {
 };
 
 export default async pathname => {
+  const url = getUrl(pathname);
+
   try {
-    const url = getUrl(pathname);
     const response = await fetch(url);
     const { status } = response;
 
@@ -52,16 +53,18 @@ export default async pathname => {
     return {
       status: upstreamStatusCodesToPropagate.includes(status)
         ? status
-        : getStatus(status, url),
+        : getErrorStatus(status, url),
       ...(isOK(status) && {
         json: await response.json(),
       }),
     };
   } catch (error) {
-    // is offline
+    // is offline or invalid json
+    logger.error({ url, error });
+
     return {
       error,
-      status: getStatus(),
+      status: getErrorStatus(),
     };
   }
 };
