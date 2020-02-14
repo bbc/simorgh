@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
+    "locators": {
+      "assetUri": "/mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
+      "curie": "http://www.bbc.co.uk/asset/b013a8ba-108b-11e6-86c7-c88b3db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "mundo",
+    "language": "es",
+    "lastUpdated": 1550159966544,
+    "firstPublished": 1462287598,
+    "lastPublished": 1462349898,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "allowAdvertising": true,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": { "cps_asset_id": "43666343", "cps_asset_type": "map" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "paragraph", "list" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "43666343",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/mundo/meta/dps/2016/05/emp/160502_video_apnea_record_rubridge_nezolandes_amv.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "El neozelandés William Trubridge rompió este lunes el récord mundial de apnea: alcanzó 124 metros en 4 minutos y 34 segundos.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Trubridge ha roto 17 veces su propio récord. Este fue conseguido en las playas de la isla de Bahamas, cerca de Estados Unidos.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Fue bastante difícil, especialmente el ascenso. Algo se me enredo después de tocar el fondo donde debía llegar metros. Fue terrible&quot;, posteó en la <link type=\"page\"><caption>\n\npágina de Facebook de Vertical Club</caption><url href=\"https://www.facebook.com/verticalblue/?fref=ts\" platform=\"highweb\"/></link>.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Durante el fin de semana el neozelandés había roto el récord mundial cuando alcanzó los 122 metros. Pero en un nuevo intento el lunes llegó dos metros más profundo.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Estas son las imágenes del descenso que realizó el fin de semana.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link type=\"page\"><caption>\n\nDesaparece en el mar Natalia Molchanova, la apneísta con más récords de la historia</caption><url href=\"http://www.bbc.com/mundo/noticias/2015/08/150804_deportes_desaparece_buzo_apnea_natalia_molchanova_ng\" platform=\"highweb\"/></link>",
+            "markupType": "plain_text",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "El increíble récord mundial de apnea",
+      "headline": "El increíble récord mundial de apnea"
+    },
+    "locators": {
+      "assetUri": "/mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
+      "curie": "http://www.bbc.co.uk/asset/b013a8ba-108b-11e6-86c7-c88b3db9bd6e"
+    },
+    "summary": "El apneísta neozelandés William Trubridge ha roto su récord 16 veces. En esta ocasión alcanzó una profundidad de 122 metros en 4 minutos y 24 segundos en la isla de Bahamas, en el mar Caribe. ",
+    "timestamp": 1550159966544,
+    "passport": {},
+    "media": {
+      "id": "43666343",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/mundo/meta/dps/2016/05/emp/160502_video_apnea_record_rubridge_nezolandes_amv.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e232",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/02/160502172014_vertical_club_vertical_144x81_verticalclub_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2016/05/02/160502172014_vertical_club_vertical_144x81_verticalclub_nocredit.jpg",
+      "height": 81,
+      "width": 144,
+      "altText": "vertical",
+      "copyrightHolder": "Vertical Club",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": { "subType": "index", "name": "Video y Fotos", "uri": "/mundo/video_fotos", "type": "simple" },
+    "site": { "subType": "site", "name": "BBCMundo.com", "uri": "/mundo", "type": "simple" },
+    "groups": []
+  }
+}
