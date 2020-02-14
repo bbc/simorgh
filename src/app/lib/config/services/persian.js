@@ -176,6 +176,7 @@ export const service = {
       header: 'پربیننده‌ترین‌ها',
       lastUpdated: 'به روز شده در',
       numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
