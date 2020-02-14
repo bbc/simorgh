@@ -6,19 +6,17 @@ import getBaseUrl from './utils/getBaseUrl';
 import isLive from '#lib/utilities/isLive';
 
 const logger = nodeLogger(__filename);
-const STATUS_CODE_OK = 200;
-const STATUS_CODE_BAD_GATEWAY = 502;
-const STATUS_CODE_INTERNAL_SERVER_ERROR = 500;
-const STATUS_CODE_NOT_FOUND = 404;
-const upstreamStatusCodesToPropagate = [STATUS_CODE_OK, STATUS_CODE_NOT_FOUND];
+const STATUS_OK = 200;
+const STATUS_BAD_GATEWAY = 502;
+const STATUS_INTERNAL_SERVER_ERROR = 500;
+const STATUS_NOT_FOUND = 404;
+const upstreamStatusCodesToPropagate = [STATUS_OK, STATUS_NOT_FOUND];
 
-const ampRegex = /(.amp)$/;
+const ampRegex = /.amp$/;
 
 const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)
   : process.env.SIMORGH_BASE_URL;
-
-const isOK = status => status === STATUS_CODE_OK;
 
 export const getUrl = pathname => {
   if (!pathname) return '';
@@ -29,42 +27,46 @@ export const getUrl = pathname => {
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
 
-const getErrorStatus = (status, url) => {
-  if (status && url) {
-    logger.error(
-      `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`,
-    );
-  }
+const handleResponse = pathname => async response => {
+  const { status } = response;
 
-  return onClient()
-    ? STATUS_CODE_BAD_GATEWAY
-    : STATUS_CODE_INTERNAL_SERVER_ERROR;
-};
-
-export default async pathname => {
-  const url = getUrl(pathname);
-
-  try {
-    const response = await fetch(url);
-    const { status } = response;
-
-    logger.info(`DataRequest: [${url}]`);
+  if (upstreamStatusCodesToPropagate.includes(status)) {
+    if (status === STATUS_NOT_FOUND) {
+      logger.error(`Data not found when requesting ${pathname}`);
+    }
 
     return {
-      status: upstreamStatusCodesToPropagate.includes(status)
-        ? status
-        : getErrorStatus(status, url),
-      ...(isOK(status) && {
+      status,
+      ...(status === STATUS_OK && {
         json: await response.json(),
       }),
     };
-  } catch (error) {
-    // is offline or invalid json
-    logger.error({ url, error });
-
-    return {
-      error,
-      status: getErrorStatus(),
-    };
   }
+
+  throw new Error(
+    `Unexpected upstream response (HTTP status code ${status}) when requesting ${pathname}`,
+  );
 };
+
+const handleError = e => {
+  const error = e.toString();
+
+  logger.error(error);
+
+  return {
+    error,
+    status: onClient() ? STATUS_BAD_GATEWAY : STATUS_INTERNAL_SERVER_ERROR,
+  };
+};
+
+const fetchData = pathname => {
+  const url = getUrl(pathname);
+
+  logger.info(`DataRequest: [${url}]`);
+
+  return fetch(url)
+    .then(handleResponse(url))
+    .catch(handleError);
+};
+
+export default fetchData;
