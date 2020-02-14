@@ -198,7 +198,10 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: undefined,
+        path:
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/azeri/multimedia/2012/09/120919_georgia_prison_video',
         smoke: false,
       },
       photoGalleryPage: {
@@ -344,7 +347,10 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path:
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/gahuza/video/2015/12/151201_100womenburundi',
         smoke: false,
       },
       photoGalleryPage: {
@@ -656,7 +662,10 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path:
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/kyrgyz/entertainment/2014/07/140725_egypt_tentmaking',
         smoke: false,
       },
       photoGalleryPage: {
@@ -906,7 +915,10 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path:
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/persian/arts/2011/08/110802_doublage_sherlock_promo',
         smoke: false,
       },
       photoGalleryPage: {
@@ -1194,7 +1206,10 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path:
-          isLive(appEnv) || isTest(appEnv) ? undefined : '/sinhala/23248970',
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292',
+
         smoke: false,
       },
       photoGalleryPage: {
@@ -1718,7 +1733,10 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: undefined,
+        path:
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/vietnamese/multimedia/2015/04/150428_david_wheat_interview',
         smoke: false,
       },
       photoGalleryPage: {
