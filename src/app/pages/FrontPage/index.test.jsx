@@ -163,10 +163,16 @@ describe('FrontPageContainer', () => {
           />,
         );
 
-        expect(frontPageMainMock.mock.calls).toHaveLength(1);
-        expect(frontPageMainMock.mock.calls[0][0]).toEqual({
+        console.log(container.textContent);
+
+        const expectProps = {
           frontPageData: igboData,
-        });
+          mostReadEndpointOverride: null,
+          forceMostRead: false,
+        };
+
+        expect(frontPageMainMock.mock.calls).toHaveLength(1);
+        expect(frontPageMainMock.mock.calls[0][0]).toEqual(expectProps);
         expect(container.textContent).toEqual('FrontPageMain');
       });
     });
