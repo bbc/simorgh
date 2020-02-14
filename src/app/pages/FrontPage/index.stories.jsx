@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import fetchMock from 'fetch-mock';
 import { storiesOf } from '@storybook/react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import igboData from '#data/igbo/frontpage';
@@ -8,10 +9,7 @@ import yorubaData from '#data/yoruba/frontpage';
 import punjabiData from '#data/punjabi/frontpage';
 import FrontPage from '.';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
-import fetchPageData from '#app/routes/fetchPageData';
 import getInitialData from '#app/routes/home/getInitialData';
-
-jest.mock('#app/routes/fetchPageData');
 
 const serviceDatasets = {
   igbo: igboData,
@@ -27,11 +25,12 @@ const DataWrapper = ({ service, children }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      fetchPageData.mockResolvedValue({
-        status: 200,
-        json: serviceDatasets[service],
-      });
-      const { pageData } = await getInitialData();
+      fetchMock.getOnce(
+        `${window.location.origin}/${service}.json`,
+        serviceDatasets[service],
+      );
+      const { pageData } = await getInitialData(service);
+      fetchMock.restore();
       setData(pageData);
     };
     fetchData();
