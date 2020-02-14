@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
-import { string, bool } from 'prop-types';
+import { string } from 'prop-types';
 import styled from 'styled-components';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -33,7 +33,7 @@ const MarginWrapper = styled.div`
   }
 `;
 
-const CanonicalMostRead = ({ endpoint, forceMostRead }) => {
+const CanonicalMostRead = ({ endpoint }) => {
   const [items, setItems] = useState([]);
   const {
     service,
@@ -48,12 +48,12 @@ const CanonicalMostRead = ({ endpoint, forceMostRead }) => {
     const handleResponse = async response => {
       const mostReadData = await response.json();
 
+      // The ARES test endpoint for most read renders fixture data, so the data is stale
+      const isTest = process.env.SIMORGH_APP_ENV === 'test';
+
       // Do not show most read if lastRecordUpdated is greater than 35min as this means PopAPI has failed twice
       // in succession. This suggests ATI may be having issues, hence risk of stale data.
-      if (
-        forceMostRead ||
-        mostReadRecordIsFresh(mostReadData.lastRecordTimeStamp)
-      ) {
+      if (!isTest || mostReadRecordIsFresh(mostReadData.lastRecordTimeStamp)) {
         const mostReadItems = mostReadData.records
           .slice(0, numberOfItems)
           .map(({ id, promo: { headlines, locators, timestamp } }) => ({
@@ -87,7 +87,6 @@ const CanonicalMostRead = ({ endpoint, forceMostRead }) => {
     script,
     service,
     timezone,
-    forceMostRead,
   ]);
 
   return items.length ? (
@@ -131,11 +130,8 @@ const CanonicalMostRead = ({ endpoint, forceMostRead }) => {
 
 CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
-  forceMostRead: bool,
 };
 
-CanonicalMostRead.defaultProps = {
-  forceMostRead: false,
-};
+CanonicalMostRead.defaultProps = {};
 
 export default CanonicalMostRead;

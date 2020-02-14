@@ -25,14 +25,10 @@ const MostReadContainer = ({ mostReadEndpointOverride }) => {
     return null;
   }
 
-  const isTestOrLocal =
-    process.env.SIMORGH_APP_ENV === 'test' ||
-    process.env.SIMORGH_APP_ENV === 'local';
-
   const endpoint =
     mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
 
-  return <Canonical endpoint={endpoint} forceMostRead={isTestOrLocal} />;
+  return <Canonical endpoint={endpoint} />;
 };
 
 MostReadContainer.propTypes = {
