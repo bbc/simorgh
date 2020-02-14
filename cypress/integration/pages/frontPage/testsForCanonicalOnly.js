@@ -1,6 +1,6 @@
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
-import toggles from '../../../../src/app/lib/config/toggles';
+import useAppToggles from '../../../support/helpers/useAppToggles';
 
 // Limiting to two services
 const serviceHasMostRead = service => ['pidgin', 'persian'].includes(service);
@@ -21,7 +21,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     // Once the most read is implemented for amp and all other pages this test will be moved to testforallpages
     if (serviceHasMostRead(service) && Cypress.env('APP_ENV') === 'local') {
       it('should contain most read component if the toggle is enabled', () => {
-        if (toggles[Cypress.env('APP_ENV')].mostRead) {
+        if (useAppToggles.mostRead) {
           cy.get('[aria-labelledby="Most-Read"]')
             .should('be.visible')
             .within(() => {
