@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
-import { bool, string } from 'prop-types';
+import { string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
@@ -48,11 +48,7 @@ const startOffsets = {
   group5: 5,
 };
 
-const FrontPageMain = ({
-  frontPageData,
-  mostReadEndpointOverride,
-  forceMostRead,
-}) => {
+const FrontPageMain = ({ frontPageData, mostReadEndpointOverride }) => {
   const {
     product,
     serviceLocalizedName,
@@ -103,7 +99,6 @@ const FrontPageMain = ({
                 {group.type === 'useful-links' && (
                   <MostReadContainer
                     mostReadEndpointOverride={mostReadEndpointOverride}
-                    forceMostRead={forceMostRead}
                   />
                 )}
                 <FrontPageSection group={group} sectionNumber={index} />
@@ -112,7 +107,6 @@ const FrontPageMain = ({
             {!hasUsefulLinks && (
               <MostReadContainer
                 mostReadEndpointOverride={mostReadEndpointOverride}
-                forceMostRead={forceMostRead}
               />
             )}
           </Grid>
@@ -125,12 +119,10 @@ const FrontPageMain = ({
 FrontPageMain.propTypes = {
   frontPageData: frontPageDataPropTypes.isRequired,
   mostReadEndpointOverride: string,
-  forceMostRead: bool,
 };
 
 FrontPageMain.defaultProps = {
   mostReadEndpointOverride: null,
-  forceMostRead: false,
 };
 
 export default FrontPageMain;

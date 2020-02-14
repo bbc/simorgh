@@ -166,7 +166,6 @@ describe('FrontPageContainer', () => {
         const expectedProps = {
           frontPageData: igboData,
           mostReadEndpointOverride: null,
-          forceMostRead: false,
         };
 
         expect(frontPageMainMock.mock.calls).toHaveLength(1);
