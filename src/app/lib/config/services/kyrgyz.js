@@ -163,6 +163,7 @@ export const service = {
       header: 'Эң көп окулгандар',
       lastUpdated: 'Акыркы жаңылоо:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {

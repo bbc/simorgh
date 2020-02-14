@@ -151,6 +151,7 @@ export const service = {
       header: 'Đọc nhiều nhất',
       lastUpdated: 'Cập nhật gần nhất:',
       numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
