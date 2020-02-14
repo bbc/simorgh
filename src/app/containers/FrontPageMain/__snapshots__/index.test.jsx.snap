@@ -367,6 +367,84 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
   border: none;
 }
 
+.c43 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+}
+
+.c48 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+}
+
+.c50 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.c50:hover,
+.c50:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c50:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c49 {
+  padding-top: 0.375rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.c51 {
+  padding-top: 0.5rem;
+}
+
+.c46 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.c45 {
+  position: relative;
+}
+
 @supports (display:grid) {
   .c1 {
     display: grid;
@@ -440,6 +518,60 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 
 @supports (display:grid) {
   .c3 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c44 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c44 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c44 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c44 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c44 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c44 {
+    width: calc(20%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c44 {
     display: block;
   }
 }
@@ -774,6 +906,222 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
 @media (min-width:63rem) {
   .c12:first-child {
     padding-top: 1.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c43 {
+    grid-template-rows: repeat( 10,[col-start] auto [col-end] );
+  }
+}
+
+@media (min-width:80rem) {
+  .c43 {
+    grid-auto-flow: row;
+    grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c47 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c47 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c47 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c47 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c47 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c52 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c52 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c52 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c52 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c52 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c53 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c53 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c53 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c53 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c53 {
+    min-width: 4rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c54 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c54 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c54 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c54 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c54 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c55 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c55 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c55 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c55 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c55 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c48 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c48 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c50 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c50 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c50 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c49 {
+    padding-right: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c42 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c42 {
+    margin-top: 1.5rem;
   }
 }
 
@@ -1875,6 +2223,467 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   </div>
                 </li>
               </ul>
+            </section>
+            <section
+              aria-labelledby="Most-Read"
+              role="region"
+            >
+              <div
+                class="c39"
+              >
+                <div
+                  class="c5"
+                />
+                <h2
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <span
+                      class="c8"
+                    >
+                      <span
+                        class="c9"
+                        dir="ltr"
+                        id="Most-Read"
+                      >
+                        Akachasị Gụọ
+                      </span>
+                    </span>
+                  </div>
+                </h2>
+              </div>
+              <div
+                class="c42"
+              >
+                <ol
+                  class="c1 c43"
+                  dir="ltr"
+                  role="list"
+                >
+                  <li
+                    class="c44 c45"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <div
+                      class="c46"
+                    >
+                      <div
+                        class="c47"
+                        dir="ltr"
+                      >
+                        <span
+                          class="c48"
+                        >
+                          1
+                        </span>
+                      </div>
+                      <div
+                        class="c49"
+                        dir="ltr"
+                      >
+                        <a
+                          class="c50"
+                          href="/news/election-2019-50319044"
+                        >
+                          Labour bans three candidates from standing
+                        </a>
+                        <div
+                          class="c51"
+                        >
+                          <time
+                            class="c24"
+                            datetime="2019-11-06"
+                          >
+                            Emelitere ikpeazụ na: 
+                            6 Nọvemba 2019
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="c44 c45"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <div
+                      class="c46"
+                    >
+                      <div
+                        class="c52"
+                        dir="ltr"
+                      >
+                        <span
+                          class="c48"
+                        >
+                          2
+                        </span>
+                      </div>
+                      <div
+                        class="c49"
+                        dir="ltr"
+                      >
+                        <a
+                          class="c50"
+                          href="/news/election-2019-50318810"
+                        >
+                          Bercow: Brexit 'biggest foreign policy mistake'
+                        </a>
+                        <div
+                          class="c51"
+                        >
+                          <time
+                            class="c24"
+                            datetime="2019-11-06"
+                          >
+                            Emelitere ikpeazụ na: 
+                            6 Nọvemba 2019
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="c44 c45"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <div
+                      class="c46"
+                    >
+                      <div
+                        class="c47"
+                        dir="ltr"
+                      >
+                        <span
+                          class="c48"
+                        >
+                          3
+                        </span>
+                      </div>
+                      <div
+                        class="c49"
+                        dir="ltr"
+                      >
+                        <a
+                          class="c50"
+                          href="/news/business-50313824"
+                        >
+                          Virgin Media switches phone customers from BT
+                        </a>
+                        <div
+                          class="c51"
+                        >
+                          <time
+                            class="c24"
+                            datetime="2019-11-06"
+                          >
+                            Emelitere ikpeazụ na: 
+                            6 Nọvemba 2019
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="c44 c45"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <div
+                      class="c46"
+                    >
+                      <div
+                        class="c52"
+                        dir="ltr"
+                      >
+                        <span
+                          class="c48"
+                        >
+                          4
+                        </span>
+                      </div>
+                      <div
+                        class="c49"
+                        dir="ltr"
+                      >
+                        <a
+                          class="c50"
+                          href="/news/live/election-2019-50313404"
+                        >
+                          Latest on day one of campaign as minister resigns
+                        </a>
+                        <div
+                          class="c51"
+                        >
+                          <time
+                            class="c24"
+                            datetime="2019-11-06"
+                          >
+                            Emelitere ikpeazụ na: 
+                            6 Nọvemba 2019
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="c44 c45"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <div
+                      class="c46"
+                    >
+                      <div
+                        class="c53"
+                        dir="ltr"
+                      >
+                        <span
+                          class="c48"
+                        >
+                          5
+                        </span>
+                      </div>
+                      <div
+                        class="c49"
+                        dir="ltr"
+                      >
+                        <a
+                          class="c50"
+                          href="/news/education-50317690"
+                        >
+                          Nativity play warning over school polling stations
+                        </a>
+                        <div
+                          class="c51"
+                        >
+                          <time
+                            class="c24"
+                            datetime="2019-11-06"
+                          >
+                            Emelitere ikpeazụ na: 
+                            6 Nọvemba 2019
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="c44 c45"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <div
+                      class="c46"
+                    >
+                      <div
+                        class="c54"
+                        dir="ltr"
+                      >
+                        <span
+                          class="c48"
+                        >
+                          6
+                        </span>
+                      </div>
+                      <div
+                        class="c49"
+                        dir="ltr"
+                      >
+                        <a
+                          class="c50"
+                          href="/news/newsbeat-50304072"
+                        >
+                          Prisoner backed by Rihanna 'scared' of execution
+                        </a>
+                        <div
+                          class="c51"
+                        >
+                          <time
+                            class="c24"
+                            datetime="2019-11-06"
+                          >
+                            Emelitere ikpeazụ na: 
+                            6 Nọvemba 2019
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="c44 c45"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <div
+                      class="c46"
+                    >
+                      <div
+                        class="c55"
+                        dir="ltr"
+                      >
+                        <span
+                          class="c48"
+                        >
+                          7
+                        </span>
+                      </div>
+                      <div
+                        class="c49"
+                        dir="ltr"
+                      >
+                        <a
+                          class="c50"
+                          href="/news/uk-50320800"
+                        >
+                          Catholic Church 'shocked to core' by child abuse
+                        </a>
+                        <div
+                          class="c51"
+                        >
+                          <time
+                            class="c24"
+                            datetime="2019-11-06"
+                          >
+                            Emelitere ikpeazụ na: 
+                            6 Nọvemba 2019
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="c44 c45"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <div
+                      class="c46"
+                    >
+                      <div
+                        class="c54"
+                        dir="ltr"
+                      >
+                        <span
+                          class="c48"
+                        >
+                          8
+                        </span>
+                      </div>
+                      <div
+                        class="c49"
+                        dir="ltr"
+                      >
+                        <a
+                          class="c50"
+                          href="/news/uk-wales-politics-50302173"
+                        >
+                          Minister quits in aide's rape trial 'sabotage' row
+                        </a>
+                        <div
+                          class="c51"
+                        >
+                          <time
+                            class="c24"
+                            datetime="2019-11-06"
+                          >
+                            Emelitere ikpeazụ na: 
+                            6 Nọvemba 2019
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="c44 c45"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <div
+                      class="c46"
+                    >
+                      <div
+                        class="c55"
+                        dir="ltr"
+                      >
+                        <span
+                          class="c48"
+                        >
+                          9
+                        </span>
+                      </div>
+                      <div
+                        class="c49"
+                        dir="ltr"
+                      >
+                        <a
+                          class="c50"
+                          href="/news/uk-scotland-scotland-business-50157515"
+                        >
+                          'Being a good guy boss left me £1.2m in debt'
+                        </a>
+                        <div
+                          class="c51"
+                        >
+                          <time
+                            class="c24"
+                            datetime="2019-11-06"
+                          >
+                            Emelitere ikpeazụ na: 
+                            6 Nọvemba 2019
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="c44 c45"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <div
+                      class="c46"
+                    >
+                      <div
+                        class="c54"
+                        dir="ltr"
+                      >
+                        <span
+                          class="c48"
+                        >
+                          10
+                        </span>
+                      </div>
+                      <div
+                        class="c49"
+                        dir="ltr"
+                      >
+                        <a
+                          class="c50"
+                          href="/news/world-latin-america-50314700"
+                        >
+                          US boy walked 23km for help after Mexico ambush
+                        </a>
+                        <div
+                          class="c51"
+                        >
+                          <time
+                            class="c24"
+                            datetime="2019-11-06"
+                          >
+                            Emelitere ikpeazụ na: 
+                            6 Nọvemba 2019
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
             </section>
           </div>
         </div>
