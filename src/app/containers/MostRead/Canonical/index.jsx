@@ -53,7 +53,7 @@ const CanonicalMostRead = ({ endpoint }) => {
 
       // Do not show most read if lastRecordUpdated is greater than 35min as this means PopAPI has failed twice
       // in succession. This suggests ATI may be having issues, hence risk of stale data.
-      if (!isTest || mostReadRecordIsFresh(mostReadData.lastRecordTimeStamp)) {
+      if (isTest || mostReadRecordIsFresh(mostReadData.lastRecordTimeStamp)) {
         const mostReadItems = mostReadData.records
           .slice(0, numberOfItems)
           .map(({ id, promo: { headlines, locators, timestamp } }) => ({
