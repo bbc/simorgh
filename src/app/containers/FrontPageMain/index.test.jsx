@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, wait } from '@testing-library/react';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import FrontPageMain from '.';
 
@@ -73,6 +73,7 @@ describe('FrontPageMain', () => {
       const { container } = render(
         <FrontPageMainWithContext frontPageData={frontPageData} />,
       );
+
       const h1 = container.querySelector('h1');
       const content = h1.getAttribute('id');
       const tabIndex = h1.getAttribute('tabIndex');
@@ -87,6 +88,8 @@ describe('FrontPageMain', () => {
       const langSpan = span.querySelector('span');
       expect(langSpan.getAttribute('lang')).toEqual('en-GB');
       expect(langSpan.textContent).toEqual('BBC News');
+
+      await wait();
     });
 
     it('should render front page sections', async () => {
@@ -99,6 +102,7 @@ describe('FrontPageMain', () => {
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
+      await wait();
     });
   });
 });
