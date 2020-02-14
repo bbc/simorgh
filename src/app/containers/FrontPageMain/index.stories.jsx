@@ -1,32 +1,34 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import WithTimeMachine from '../../../testHelpers/withTimeMachine';
-import newsData from '../../../../data/news/frontpage';
-import igboData from '../../../../data/igbo/frontpage';
-import pidginData from '../../../../data/pidgin/frontpage';
-import thaiData from '../../../../data/thai/frontpage';
-import yorubaData from '../../../../data/yoruba/frontpage';
-import punjabiData from '../../../../data/punjabi/frontpage';
+import WithTimeMachine from '#testHelpers/withTimeMachine';
+import newsData from '#data/news/frontpage';
+import igboData from '#data/igbo/frontpage';
+import pidginData from '#data/pidgin/frontpage';
+import thaiData from '#data/thai/frontpage';
+import yorubaData from '#data/yoruba/frontpage';
+import punjabiData from '#data/punjabi/frontpage';
+import zhongwenSimpData from '#data/zhongwen/frontpage/simp';
 import FrontPageMain from '.';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 
-const serviceDataSets = {
-  news: newsData,
-  igbo: igboData,
-  yoruba: yorubaData,
-  pidgin: pidginData,
-  thai: thaiData,
-  punjabi: punjabiData,
+const serviceSets = {
+  news: { data: newsData, variant: null },
+  igbo: { data: igboData, variant: null },
+  yoruba: { data: yorubaData, variant: null },
+  pidgin: { data: pidginData, variant: null },
+  thai: { data: thaiData, variant: null },
+  punjabi: { data: punjabiData, variant: null },
+  zhongwen: { data: zhongwenSimpData, variant: 'simp' },
 };
 
 const stories = storiesOf('Main|Front Page', module).addDecorator(story => (
   <WithTimeMachine>{story()}</WithTimeMachine>
 ));
 
-Object.keys(serviceDataSets).forEach(service => {
+Object.keys(serviceSets).forEach(service => {
   stories.add(`Front Page - ${service}`, () => (
     <ToggleContextProvider>
       <ServiceContextProvider service={service}>
@@ -37,8 +39,10 @@ Object.keys(serviceDataSets).forEach(service => {
         >
           <UserContextProvider>
             <FrontPageMain
-              frontPageData={serviceDataSets[service]}
-              mostReadEndpointOverride={`./data/${service}/mostRead/index.json`}
+              frontPageData={serviceSets[service].data}
+              mostReadEndpointOverride={`./data/${service}/mostRead/${
+                serviceSets[service].variant ? 'variant' : 'index'
+              }.json`}
               forceMostRead
             />
           </UserContextProvider>
