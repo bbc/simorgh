@@ -1,18 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import WithTimeMachine from '../../../testHelpers/withTimeMachine';
-import newsData from '../../../../data/news/frontpage';
-import igboData from '../../../../data/igbo/frontpage';
-import pidginData from '../../../../data/pidgin/frontpage';
-import thaiData from '../../../../data/thai/frontpage';
-import yorubaData from '../../../../data/yoruba/frontpage';
-import punjabiData from '../../../../data/punjabi/frontpage';
-import serbianCyrData from '../../../../data/serbian/frontpage/cyr';
-import serbianLatData from '../../../../data/serbian/frontpage/lat';
+import WithTimeMachine from '#testHelpers/withTimeMachine';
+import newsData from '#data/news/frontpage';
+import igboData from '#data/igbo/frontpage';
+import pidginData from '#data/pidgin/frontpage';
+import thaiData from '#data/thai/frontpage';
+import yorubaData from '#data/yoruba/frontpage';
+import punjabiData from '#data/punjabi/frontpage';
+import serbianCyrData from '#data/serbian/frontpage/cyr';
+import serbianLatData from '#data/serbian/frontpage/lat';
 import FrontPageMain from '.';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import { ToggleContextProvider } from '../../contexts/ToggleContext';
-import { RequestContextProvider } from '../../contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 
 const serviceDataSets = {
