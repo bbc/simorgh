@@ -18,7 +18,7 @@
     "cypress:ci": "rm -rf cypress/results; xvfb-run -a cypress run --reporter cypress-multi-reporters --reporter-options configFile=cypress/reporter-config.json",
     "cypress:interactive": "cypress open",
     "cypress:3rdParty": "npm run cypress -- --project ./3rdPartyCypress/.",
-    "cypress:cucumber": "cypress run --headed --spec **/features/*.feature",
+    "cypress:cucumber": "cypress run --spec **/features/**/*.feature",
     "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
     "lighthouse": "./scripts/lighthouseRun.sh",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
