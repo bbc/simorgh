@@ -157,6 +157,7 @@ export const service = {
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated:',
+      hasMostRead: false,
     },
     footer: {
       externalLink: {
