@@ -69,6 +69,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 >
                   13 сентябр 2019
                 </time>
+                <br />
                 <time
                   class="StyledTimestamp-um718p-0 bAgcOD"
                   datetime="2019-11-06"
@@ -438,6 +439,7 @@ exports[`Media Asset Page should render component 1`] = `
                 >
                   13 September 2019
                 </time>
+                <br />
                 <time
                   class="StyledTimestamp-um718p-0 bAgcOD"
                   datetime="2019-11-20"
