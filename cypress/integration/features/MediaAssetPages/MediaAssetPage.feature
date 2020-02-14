@@ -1,19 +1,16 @@
-Feature: Media Asset Page
+Feature: Media Asset Page (CPS)
 
-    Scenario Outline: Verify MAP page with video content
-        Given I navigate to <URL>
+    Scenario: Verify MAP page renders
+        Given I navigate to pidgin/23248703
         Then the correct headline is displayed
+
+    Scenario: Verify MAP page can play video
+        Given I navigate to igbo/media-23256786
         When I click the play video button
         Then the video plays
-        Examples:
-            | URL                 |
-            | igbo/media-23256786 |
 
-    Scenario Outline: Verify MAP page with audio content
-        Given I navigate to <URL>
-        Then the correct headline is displayed
+    Scenario: Verify MAP page can play audio
+        Given I navigate to gujarati/other-news-23130286
         When I click the play audio button
         Then the audio plays
-        Examples:
-            | URL                          |
-            | gujarati/other-news-23130286 |
+

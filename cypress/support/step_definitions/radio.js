@@ -1,5 +1,5 @@
 import { When, Then } from 'cypress-cucumber-preprocessor/steps';
-import assertMediaIsPlaying from './media';
+import { assertMediaIsPlaying } from './media';
 
 When('I click the play radio button', () => {
   cy.get('iframe').then(iframe => {

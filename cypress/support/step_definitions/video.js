@@ -1,7 +1,11 @@
 import { When, Then } from 'cypress-cucumber-preprocessor/steps';
-import assertMediaIsPlaying from './media';
+import { assertMediaIsPlaying, assertMediaPlayerIsReady } from './media';
 
 const playVideo = () => {
+  cy.get(
+    'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
+  ).then($iframe => assertMediaPlayerIsReady($iframe));
+
   cy.get('iframe').then(iframe => {
     cy.wrap(iframe.contents().find('iframe'))
       .should(inner => expect(inner.contents().find('button.p_cta')).to.exist)
