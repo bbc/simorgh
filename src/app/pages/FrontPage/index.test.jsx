@@ -163,8 +163,6 @@ describe('FrontPageContainer', () => {
           />,
         );
 
-        console.log(container.textContent);
-
         const expectedProps = {
           frontPageData: igboData,
           mostReadEndpointOverride: null,
