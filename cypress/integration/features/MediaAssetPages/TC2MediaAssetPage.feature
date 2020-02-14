@@ -1,6 +1,5 @@
 Feature: Legacy Media Asset Page (TC2)
 
-    @focus
     Scenario Outline: Verify Legacy MAP page without video content
         Given I navigate to <URL>
         Then the correct headline is displayed
