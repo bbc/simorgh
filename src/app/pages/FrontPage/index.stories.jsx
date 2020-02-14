@@ -24,11 +24,11 @@ const preprocessorRules = [
 ];
 
 const serviceDatasets = {
-  igbo: { index: igboData },
-  yoruba: { index: yorubaData },
-  pidgin: { index: pidginData },
-  thai: { index: thaiData },
-  punjabi: { index: punjabiData },
+  igbo: { default: igboData },
+  yoruba: { default: yorubaData },
+  pidgin: { default: pidginData },
+  thai: { default: thaiData },
+  punjabi: { default: punjabiData },
   serbian: {
     cyr: serbianCyrData,
     lat: serbianLatData,
@@ -54,7 +54,7 @@ const stories = storiesOf('Pages|Front Page', module).addDecorator(story => (
 
 Object.keys(serviceDatasets).forEach(service => {
   Object.keys(serviceDatasets[service]).forEach(variant => {
-    stories.add(`${service} ${variant === 'index' ? '' : variant}`, () => {
+    stories.add(`${service} ${variant === 'default' ? '' : variant}`, () => {
       return (
         <BrowserRouter>
           <Route path="/:service">

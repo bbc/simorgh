@@ -16,12 +16,12 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 
 const serviceDataSets = {
-  news: { index: newsData },
-  igbo: { index: igboData },
-  yoruba: { index: yorubaData },
-  pidgin: { index: pidginData },
-  thai: { index: thaiData },
-  punjabi: { index: punjabiData },
+  news: { default: newsData },
+  igbo: { default: igboData },
+  yoruba: { default: yorubaData },
+  pidgin: { default: pidginData },
+  thai: { default: thaiData },
+  punjabi: { default: punjabiData },
   serbian: {
     cyr: serbianCyrData,
     lat: serbianLatData,
@@ -34,7 +34,7 @@ const stories = storiesOf('Main|Front Page', module).addDecorator(story => (
 
 Object.keys(serviceDataSets).forEach(service => {
   Object.keys(serviceDataSets[service]).forEach(variant => {
-    stories.add(`${service} ${variant === 'index' ? '' : variant}`, () => (
+    stories.add(`${service} ${variant === 'default' ? '' : variant}`, () => (
       <ToggleContextProvider>
         <ServiceContextProvider service={service}>
           <RequestContextProvider
