@@ -159,6 +159,7 @@ export const service = {
       header: 'સૌથી વધારે વંચાયેલા સમાચાર',
       lastUpdated: 'લાસ્ટ અપડેટ:',
       numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
