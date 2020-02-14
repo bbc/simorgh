@@ -34,26 +34,23 @@ const stories = storiesOf('Main|Front Page', module).addDecorator(story => (
 
 Object.keys(serviceDataSets).forEach(service => {
   Object.keys(serviceDataSets[service]).forEach(variant => {
-    stories.add(
-      `Front Page - ${service} ${variant === 'index' ? '' : variant}`,
-      () => (
-        <ToggleContextProvider>
-          <ServiceContextProvider service={service}>
-            <RequestContextProvider
-              isAmp={false}
-              pageType="frontPage"
-              service={service}
-              variant={variant}
-            >
-              <UserContextProvider>
-                <FrontPageMain
-                  frontPageData={serviceDataSets[service][variant]}
-                />
-              </UserContextProvider>
-            </RequestContextProvider>
-          </ServiceContextProvider>
-        </ToggleContextProvider>
-      ),
-    );
+    stories.add(`${service} ${variant === 'index' ? '' : variant}`, () => (
+      <ToggleContextProvider>
+        <ServiceContextProvider service={service}>
+          <RequestContextProvider
+            isAmp={false}
+            pageType="frontPage"
+            service={service}
+            variant={variant}
+          >
+            <UserContextProvider>
+              <FrontPageMain
+                frontPageData={serviceDataSets[service][variant]}
+              />
+            </UserContextProvider>
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>
+    ));
   });
 });
