@@ -11,10 +11,10 @@ const processJson = pipe(
 );
 
 export default async path => {
-  const { json, status } = await fetchPageData(path);
+  const { json, ...rest } = await fetchPageData(path);
 
   return {
-    status,
+    ...rest,
     ...(json && {
       pageData: processJson(json),
     }),
