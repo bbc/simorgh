@@ -1,150 +1,98 @@
 import { setWindowValue, resetWindowValue } from '@bbc/psammead-test-helpers';
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before getInitialData
-import preprocess from '#lib/utilities/preprocessor';
-import getPreprocessorRules from './utils/getPreprocessorRules';
+import fetchPageData, { getUrl } from '.';
 
-jest.mock('#lib/utilities/preprocessor', () => jest.fn());
-preprocess.mockImplementation(data => data);
-
-const fetchData = require('./index').default;
-const { getUrl } = require('./index');
-
-const windowLocation = window.location;
-
-describe('fetchData', () => {
-  const mockSuccessfulResponse = {
-    metadata: {},
-    content: {},
-    promo: {},
-  };
-
-  const mockFetchSuccess = () =>
-    fetch.mockResponseOnce(JSON.stringify(mockSuccessfulResponse));
-
-  const mockFetchSuccessWithData = data =>
-    fetch.mockResponseOnce(JSON.stringify(data));
-
-  const mockFetchFailure = () => fetch.mockReject(true);
-
-  const mockFetchInvalidJSON = () => fetch.mockReject('Some Invalid: { JSON');
-
-  const mockFetchNotFoundStatus = () =>
-    fetch.mockResponseOnce(JSON.stringify({}), { status: 404 });
-
-  const mockFetchTeapotStatus = () =>
-    fetch.mockResponseOnce(JSON.stringify({}), { status: 418 });
-
-  const mockInternalServerErrorStatus = () =>
-    fetch.mockResponseOnce(JSON.stringify({}), { status: 500 });
-
+describe('fetchPageData', () => {
   const expectedBaseUrl = 'http://localhost';
   const requestedPathname = '/path/to/asset';
   const expectedUrl = `${expectedBaseUrl}${requestedPathname}.json`;
 
-  const callfetchData = ({ pathname = requestedPathname, mockFetch }) => {
-    if (mockFetch) {
-      mockFetch();
-    } else {
-      mockFetchSuccess();
-    }
-
-    return fetchData(pathname);
-  };
-
   afterEach(() => {
-    fetch.resetMocks();
     jest.clearAllMocks();
+    fetch.resetMocks();
   });
 
   describe('Successful fetch', () => {
+    beforeEach(() => {
+      fetch.mockResponse(
+        JSON.stringify({
+          metadata: {},
+          content: {},
+          promo: {},
+        }),
+      );
+    });
+
     it('should call fetch with correct url', async () => {
-      await callfetchData({});
+      await fetchPageData(requestedPathname);
 
       expect(fetch).toHaveBeenCalledWith(expectedUrl);
     });
 
     it('should call fetch on amp pages without .amp in pathname', async () => {
-      await callfetchData({ pathname: `${requestedPathname}.amp` });
+      await fetchPageData(requestedPathname);
 
       expect(fetch).toHaveBeenCalledWith(expectedUrl);
     });
 
-    it('should return an empty object', async () => {
-      const response = await callfetchData({});
-
-      expect(preprocess).toHaveBeenCalledWith(response.pageData, []);
+    it('should return expected response', async () => {
+      const response = await fetchPageData(requestedPathname);
 
       expect(response).toEqual({
-        pageData: mockSuccessfulResponse,
+        json: {
+          metadata: {},
+          content: {},
+          promo: {},
+        },
         status: 200,
       });
     });
   });
 
   describe('Rejected fetch', () => {
-    it('should return an empty object', async () => {
-      const response = await callfetchData({ mockFetch: mockFetchFailure });
-
-      expect(preprocess).not.toHaveBeenCalled();
+    it('should return handle a rejected fetch', async () => {
+      fetch.mockReject('TypeError: Failed to fetch');
+      const response = await fetchPageData(requestedPathname);
 
       expect(response).toEqual({
         status: 502,
-        error: true,
+        error: 'TypeError: Failed to fetch',
       });
     });
   });
 
   describe('Request returns 200 status code, but invalid JSON', () => {
     afterAll(() => {
-      resetWindowValue('location', windowLocation);
+      resetWindowValue('location', window.location);
     });
+    fetch.mockResponse('Some Invalid JSON');
 
     describe('on server', () => {
-      beforeEach(() => {
-        setWindowValue('location', false);
-      });
-
       it('should return a 500 error code', async () => {
-        const response = await callfetchData({
-          mockFetch: mockFetchInvalidJSON,
-        });
+        setWindowValue('location', false);
 
-        expect(preprocess).not.toHaveBeenCalled();
+        const response = await fetchPageData(requestedPathname);
 
-        expect(response).toEqual({
-          status: 500,
-          error: 'Some Invalid: { JSON',
-        });
+        expect(response.status).toEqual(500);
       });
     });
 
     describe('on client', () => {
-      beforeEach(() => {
-        setWindowValue('location', true);
-      });
-
       it('should return a 502 error code', async () => {
-        const response = await callfetchData({
-          mockFetch: mockFetchInvalidJSON,
-        });
+        setWindowValue('location', true);
 
-        expect(preprocess).not.toHaveBeenCalled();
+        const response = await fetchPageData(requestedPathname);
 
-        expect(response).toEqual({
-          status: 502,
-          error: 'Some Invalid: { JSON',
-        });
+        expect(response.status).toEqual(502);
       });
     });
   });
 
   describe('Request returns a 404 status code', () => {
     it('should return the status code as 404', async () => {
-      const response = await callfetchData({
-        mockFetch: mockFetchNotFoundStatus,
-      });
+      fetch.mockResponse('Not found', { status: 404 });
 
-      expect(preprocess).not.toHaveBeenCalled();
+      const response = await fetchPageData(requestedPathname);
 
       expect(response).toEqual({
         status: 404,
@@ -154,7 +102,7 @@ describe('fetchData', () => {
 
   describe('Request returns a non-200, non-404 status code', () => {
     afterAll(() => {
-      resetWindowValue('location', windowLocation);
+      resetWindowValue('location', window.location);
     });
 
     describe('on server', () => {
@@ -163,11 +111,9 @@ describe('fetchData', () => {
       });
 
       it('should log, and return the status code as 500', async () => {
-        const response = await callfetchData({
-          mockFetch: mockFetchTeapotStatus,
-        });
+        fetch.mockResponse("I'm a teapot", { status: 418 });
 
-        expect(preprocess).not.toHaveBeenCalled();
+        const response = await fetchPageData(requestedPathname);
 
         expect(loggerMock.error).toBeCalledWith(
           `Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
@@ -175,16 +121,13 @@ describe('fetchData', () => {
 
         expect(response).toEqual({
           status: 500,
-          error: Error(),
         });
       });
 
       it('should log, and propogate the status code as 500', async () => {
-        const response = await callfetchData({
-          mockFetch: mockInternalServerErrorStatus,
-        });
+        fetch.mockResponse('Error', { status: 500 });
 
-        expect(preprocess).not.toHaveBeenCalled();
+        const response = await fetchPageData(requestedPathname);
 
         expect(loggerMock.error).toBeCalledWith(
           `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
@@ -192,7 +135,6 @@ describe('fetchData', () => {
 
         expect(response).toEqual({
           status: 500,
-          error: Error(),
         });
       });
     });
@@ -203,11 +145,9 @@ describe('fetchData', () => {
     });
 
     it('should log, and return the status code as 502', async () => {
-      const response = await callfetchData({
-        mockFetch: mockFetchTeapotStatus,
-      });
+      fetch.mockResponse("I'm a teapot", { status: 418 });
 
-      expect(preprocess).not.toHaveBeenCalled();
+      const response = await fetchPageData(requestedPathname);
 
       expect(loggerMock.error).toBeCalledWith(
         `Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
@@ -215,16 +155,13 @@ describe('fetchData', () => {
 
       expect(response).toEqual({
         status: 502,
-        error: Error(),
       });
     });
 
     it('should log, and propogate the status code as 502', async () => {
-      const response = await callfetchData({
-        mockFetch: mockInternalServerErrorStatus,
-      });
+      fetch.mockResponse('Internal server error', { status: 500 });
 
-      expect(preprocess).not.toHaveBeenCalled();
+      const response = await fetchPageData(requestedPathname);
 
       expect(loggerMock.error).toBeCalledWith(
         `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
@@ -232,7 +169,6 @@ describe('fetchData', () => {
 
       expect(response).toEqual({
         status: 502,
-        error: Error(),
       });
     });
   });

@@ -29,10 +29,12 @@ export const getUrl = pathname => {
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
 
-const getStatus = (status, pathname) => {
-  logger.error(
-    `Unexpected upstream response (HTTP status code ${status}) when requesting ${pathname}`,
-  );
+const getStatus = (status, url) => {
+  if (status && url) {
+    logger.error(
+      `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`,
+    );
+  }
 
   return onClient()
     ? STATUS_CODE_BAD_GATEWAY
@@ -40,16 +42,26 @@ const getStatus = (status, pathname) => {
 };
 
 export default async pathname => {
-  const url = getUrl(pathname);
-  const response = await fetch(url);
-  const { status } = response;
+  try {
+    const url = getUrl(pathname);
+    const response = await fetch(url);
+    const { status } = response;
 
-  logger.info(`DataRequest: [${url}]`);
+    logger.info(`DataRequest: [${url}]`);
 
-  return {
-    status: upstreamStatusCodesToPropagate.includes(status)
-      ? status
-      : getStatus(status, pathname),
-    ...(isOK(status) && { json: await response.json() }),
-  };
+    return {
+      status: upstreamStatusCodesToPropagate.includes(status)
+        ? status
+        : getStatus(status, url),
+      ...(isOK(status) && {
+        json: await response.json(),
+      }),
+    };
+  } catch (error) {
+    // is offline
+    return {
+      error,
+      status: getStatus(),
+    };
+  }
 };

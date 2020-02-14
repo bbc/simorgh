@@ -12,8 +12,10 @@ import CpsMapPage from '.';
 import mapPageData from '#data/pidgin/cpsAssets/23248703';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
-import preprocessor from '#lib/utilities/preprocessor';
-import { cpsAssetPreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
+import fetchPageData from '#app/routes/fetchPageData';
+import getInitialData from '#app/routes/cpsAsset/getInitialData';
+
+jest.mock('#app/routes/fetchPageData');
 
 const toggleState = {
   local: {
@@ -127,7 +129,12 @@ describe('Media Asset Page', () => {
   let asFragment;
   let getByText;
   beforeEach(async () => {
-    pageData = await preprocessor(mapPageData, cpsAssetPreprocessorRules);
+    fetchPageData.mockResolvedValue({
+      status: 200,
+      json: mapPageData,
+    });
+    const response = await getInitialData();
+    pageData = response.pageData;
 
     ({ asFragment, getByText } = render(
       createAssetPage({ pageData }, 'pidgin'),
@@ -220,7 +227,12 @@ describe('Media Asset Page', () => {
     };
 
     it('should render version (live audio stream)', async () => {
-      pageData = await preprocessor(uzbekPageData, cpsAssetPreprocessorRules);
+      fetchPageData.mockResolvedValue({
+        status: 200,
+        json: uzbekPageData,
+      });
+      const response = await getInitialData();
+      pageData = response.pageData;
       const liveStreamBlock = getLiveStreamBlock(pageData);
       liveStreamSource = getLiveStreamSource(liveStreamBlock);
       expect(liveStreamBlock.type).toBe('version');
@@ -297,10 +309,15 @@ describe('Media Asset Page', () => {
 });
 
 it('should not show the timestamp when allowDateStamp is false', async () => {
+  fetchPageData.mockResolvedValue({
+    status: 200,
+    json: mapPageData,
+  });
+  const { pageData } = await getInitialData();
   const pageDataWithHiddenTimestamp = assocPath(
     ['metadata', 'options', 'allowDateStamp'],
     false,
-    await preprocessor(mapPageData, cpsAssetPreprocessorRules),
+    pageData,
   );
 
   render(createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'pidgin'));
@@ -309,16 +326,22 @@ it('should not show the timestamp when allowDateStamp is false', async () => {
 });
 
 it('should not show the iframe when available is false', async () => {
+  fetchPageData.mockResolvedValue({
+    status: 200,
+    json: uzbekPageData,
+  });
+  const { pageData } = await getInitialData();
   const uzbekDataExpiredLivestream = assocPath(
     ['content', 'blocks', 0, 'available'],
     false,
-    uzbekPageData,
+    pageData,
   );
 
-  const pageDataWithExpiredLiveStream = await preprocessor(
-    uzbekDataExpiredLivestream,
-    cpsAssetPreprocessorRules,
-  );
+  fetchPageData.mockResolvedValue({
+    status: 200,
+    json: uzbekDataExpiredLivestream,
+  });
+  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData();
 
   render(createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'));
 
@@ -332,11 +355,11 @@ it('should show the media message when available is false', async () => {
     uzbekPageData,
   );
 
-  const pageDataWithExpiredLiveStream = await preprocessor(
-    uzbekDataExpiredLivestream,
-    cpsAssetPreprocessorRules,
-  );
-
+  fetchPageData.mockResolvedValue({
+    status: 200,
+    json: uzbekDataExpiredLivestream,
+  });
+  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData();
   const { getByText } = render(
     createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),
   );
@@ -347,7 +370,11 @@ it('should show the media message when available is false', async () => {
 });
 
 it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
-  const pageData = await preprocessor(igboPageData, cpsAssetPreprocessorRules);
+  fetchPageData.mockResolvedValue({
+    status: 200,
+    json: igboPageData,
+  });
+  const { pageData } = await getInitialData();
 
   const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
 

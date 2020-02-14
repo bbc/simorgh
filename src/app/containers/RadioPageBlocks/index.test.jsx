@@ -7,8 +7,8 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import RadioPageBlocks from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
-import preprocessor from '#lib/utilities/preprocessor';
-import { radioPagePreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
+import fetchPageData from '#app/routes/fetchPageData';
+import getInitialData from '#app/routes/radio/getInitialData';
 
 const serviceContextMock = {
   service: 'amharic',
@@ -17,12 +17,17 @@ const serviceContextMock = {
   translations: { mediaAssetPage: { audioPlayer: 'Audio player' } },
 };
 
+jest.mock('#app/routes/fetchPageData');
+
+fetchPageData.mockResolvedValue({
+  status: 200,
+  json: amharicPageData,
+});
+
 describe('Radio Page Blocks', () => {
   it('should match snapshot for Canonical', async () => {
-    const pageData = await preprocessor(
-      amharicPageData,
-      radioPagePreprocessorRules,
-    );
+    const { pageData } = await getInitialData();
+
     const blocks = path(['content', 'blocks'], pageData);
 
     await matchSnapshotAsync(
@@ -44,10 +49,7 @@ describe('Radio Page Blocks', () => {
   });
 
   it('should match snapshot for AMP', async () => {
-    const pageData = await preprocessor(
-      amharicPageData,
-      radioPagePreprocessorRules,
-    );
+    const { pageData } = await getInitialData();
     const blocks = path(['content', 'blocks'], pageData);
 
     await matchSnapshotAsync(

@@ -6,16 +6,19 @@ import FrontPageMain from '.';
 // 'index-light' is a lighter version of front page data that improves the
 // speed of this suite by reducing the amount of pre-processing required.
 import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
-
-import preprocessor from '#lib/utilities/preprocessor';
-import { indexPreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import newsMostReadData from '#data/news/mostRead';
+// import newsMostReadData from '#data/news/mostRead';
+import fetchPageData from '#app/routes/fetchPageData';
+import getInitialData from '#app/routes/home/getInitialData';
 
-const processedPidgin = () =>
-  preprocessor(frontPageDataPidgin, indexPreprocessorRules);
+jest.mock('#app/routes/fetchPageData');
+
+fetchPageData.mockResolvedValue({
+  status: 200,
+  json: frontPageDataPidgin,
+});
 
 jest.mock('uuid', () =>
   (() => {
@@ -51,15 +54,10 @@ const FrontPageMainWithContext = props => (
 );
 
 describe('FrontPageMain', () => {
-  let frontPageData;
-
-  beforeAll(async () => {
-    frontPageData = await processedPidgin();
-    fetch.mockResponse(JSON.stringify(newsMostReadData));
-  });
-
   describe('snapshots', () => {
     it('should render a pidgin frontpage correctly', async () => {
+      const { pageData: frontPageData } = await getInitialData();
+
       await matchSnapshotAsync(
         <FrontPageMainWithContext frontPageData={frontPageData} />,
       );
@@ -70,6 +68,8 @@ describe('FrontPageMain', () => {
     afterEach(cleanup);
 
     it('should render visually hidden text as h1', async () => {
+      const { pageData: frontPageData } = await getInitialData();
+
       const { container } = render(
         <FrontPageMainWithContext frontPageData={frontPageData} />,
       );
@@ -90,6 +90,8 @@ describe('FrontPageMain', () => {
     });
 
     it('should render front page sections', async () => {
+      const { pageData: frontPageData } = await getInitialData();
+
       const { container } = render(
         <FrontPageMainWithContext frontPageData={frontPageData} />,
       );

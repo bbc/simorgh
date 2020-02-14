@@ -8,10 +8,12 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import CpsRelatedContent from '.';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 
-import preprocessor from '#lib/utilities/preprocessor';
-import { cpsAssetPreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
+import getInitialData from '../../routes/cpsAsset/getInitialData';
+import fetchPageData from '#app/routes/fetchPageData';
 
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
+
+jest.mock('#app/routes/fetchPageData');
 
 // eslint-disable-next-line react/prop-types
 const renderRelatedContent = ({
@@ -75,13 +77,15 @@ describe('CpsRelatedContent', () => {
       },
     ];
 
-    const pageData = await preprocessor(
-      {
+    fetchPageData.mockResolvedValue({
+      status: 200,
+      json: {
         ...pidginPageData,
         relatedContent: { groups: [{ promos: initialPromo }] },
       },
-      cpsAssetPreprocessorRules,
-    );
+    });
+
+    const { pageData } = await getInitialData();
 
     const transformedPromos = path(
       ['relatedContent', 'groups', 0, 'promos'],

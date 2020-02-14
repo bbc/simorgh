@@ -3,23 +3,15 @@ import { storiesOf } from '@storybook/react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import igboData from '#data/igbo/frontpage';
 import pidginData from '#data/pidgin/frontpage';
-import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
 import thaiData from '#data/thai/frontpage';
 import yorubaData from '#data/yoruba/frontpage';
 import punjabiData from '#data/punjabi/frontpage';
-import filterUnknownContentTypes from '#lib/utilities/preprocessor/rules/filterContentType';
-import filterEmptyGroupItems from '#lib/utilities/preprocessor/rules/filterEmptyGroupItems';
-import applySquashTopstories from '#lib/utilities/preprocessor/rules/topstories';
-import preprocess from '#lib/utilities/preprocessor';
 import FrontPage from '.';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
+import fetchPageData from '#app/routes/fetchPageData';
+import getInitialData from '#app/routes/home/getInitialData';
 
-const preprocessorRules = [
-  filterUnknownContentTypes,
-  addIdsToItems,
-  filterEmptyGroupItems,
-  applySquashTopstories,
-];
+jest.mock('#app/routes/fetchPageData');
 
 const serviceDatasets = {
   igbo: igboData,
@@ -34,7 +26,15 @@ const DataWrapper = ({ service, children }) => {
   const [data, setData] = useState();
 
   useEffect(() => {
-    preprocess(serviceDatasets[service], preprocessorRules).then(setData);
+    const fetchData = async () => {
+      fetchPageData.mockResolvedValue({
+        status: 200,
+        json: serviceDatasets[service],
+      });
+      const { pageData } = await getInitialData();
+      setData(pageData);
+    };
+    fetchData();
   }, [service]);
 
   return data ? children(data) : null;

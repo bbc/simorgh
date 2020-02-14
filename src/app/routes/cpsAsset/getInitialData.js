@@ -33,7 +33,7 @@ export default async path => {
   return {
     status,
     ...(json && {
-      pageData: processJson(json),
+      pageData: await processJson(json),
     }),
   };
 };
