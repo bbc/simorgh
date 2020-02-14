@@ -10,7 +10,7 @@ phases:
       - npm run build
   build:
     commands:
-      - CYPRESS_SMOKE=false CYPRESS_APP_ENV=test npm run cypress:ci
+      - npm run cypress:ci
 reports:
   JunitReportsTest:
     files:
