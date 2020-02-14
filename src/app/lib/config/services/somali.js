@@ -168,6 +168,7 @@ export const service = {
       header: 'Ugu akhris badan',
       lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {

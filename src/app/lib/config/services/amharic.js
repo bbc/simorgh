@@ -151,6 +151,7 @@ export const service = {
       header: 'ብዙ የተነበቡ',
       lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት',
       numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
