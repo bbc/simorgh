@@ -1,31 +1,22 @@
-import newsMostReadData from '#data/news/mostRead';
-import zhongwenSimpMostReadData from '#data/zhongwen/mostRead/simp';
-import { service as newsConfig } from '#app/lib/config/services/news';
-import { service as zhongwenConfig } from '#app/lib/config/services/zhongwen';
+import arabicMostReadData from '#data/arabic/mostRead';
+import { service as arabicConfig } from '#app/lib/config/services/arabic';
 import {
   setStalePromoTimestamp,
   setFreshPromoTimestamp,
   renderMostReadContainer,
-} from '../utilities/testHelper';
-
-let container;
+} from '../utilities/testHelpers';
 
 const services = {
-  news: {
+  arabic: {
     variant: null,
-    data: newsMostReadData,
-    config: newsConfig.default,
-    expectedLastUpdated: 'Last updated: 11 January 1970',
-  },
-  zhongwen: {
-    variant: 'simp',
-    data: zhongwenSimpMostReadData,
-    config: zhongwenConfig.simp,
-    expectedLastUpdated: '最近更新： 1970年1月11日',
+    data: arabicMostReadData,
+    config: arabicConfig.default,
+    expectedLastUpdated: 'آخر تحديث 11 يناير/ كانون الثاني 1970',
   },
 };
 
 describe('MostReadContainerCanonical', () => {
+  let container;
   beforeEach(() => {
     container = document.createElement('div');
     document.body.appendChild(container);
