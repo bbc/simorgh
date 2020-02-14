@@ -1,23 +1,18 @@
 import React, { useContext } from 'react';
+import path from 'ramda/src/path';
 import pipe from 'ramda/src/pipe';
 import styled from 'styled-components';
 import {
-  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 
-import {
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 
-import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { MediaMessage } from '@bbc/psammead-media-player';
-import { ServiceContext } from '#contexts/ServiceContext';
-import { GhostGrid, GridItemConstrainedLarge } from '#lib/styledGrid';
+import MediaMessage from './MediaMessage';
+import { GhostGrid } from '#lib/styledGrid';
 import { getImageParts } from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -38,6 +33,8 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 
+import { RequestContext } from '#contexts/RequestContext';
+
 // Page Handlers
 import withContexts from '#containers/PageHandlers/withContexts';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
@@ -45,7 +42,15 @@ import withError from '#containers/PageHandlers/withError';
 import withLoading from '#containers/PageHandlers/withLoading';
 import withData from '#containers/PageHandlers/withData';
 
+const isLegacyAsset = url => {
+  console.log('xxx', url, url.split('/').length);
+
+  return url.split('/').length > 7;
+};
+
 const MediaAssetPageContainer = ({ pageData }) => {
+  const requestContext = useContext(RequestContext);
+  console.log(requestContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
@@ -66,32 +71,6 @@ const MediaAssetPageContainer = ({ pageData }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
 
-  const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
-  const StyledMessageContainer = styled.div`
-    padding-top: ${landscapeRatio};
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-  `;
-
-  const Wrapper = styled(GridItemConstrainedLarge)`
-    margin-top: ${GEL_SPACING};
-
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-      margin-top: ${GEL_SPACING_DBL};
-    }
-
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      padding-top: ${GEL_SPACING};
-      margin-top: ${GEL_SPACING_QUAD};
-    }
-  `;
-
-  const { translations, service } = useContext(ServiceContext);
-  const contentNotAvailableMessage =
-    path(['media', 'contentExpired'], translations) ||
-    'This content is not available';
-
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -103,18 +82,11 @@ const MediaAssetPageContainer = ({ pageData }) => {
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
       ) : null,
-    video: props => <MediaPlayer {...props} assetUri={assetUri} />,
+    video: isLegacyAsset(requestContext.canonicalLink)
+      ? MediaMessage
+      : props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    legacyMedia: () => (
-      <Wrapper>
-        <StyledMessageContainer>
-          <MediaMessage
-            service={service}
-            message={contentNotAvailableMessage}
-          />
-        </StyledMessageContainer>
-      </Wrapper>
-    ),
+    legacyMedia: () => <MediaMessage />,
   };
 
   const StyledGhostGrid = styled(GhostGrid)`
