@@ -42,15 +42,10 @@ import withError from '#containers/PageHandlers/withError';
 import withLoading from '#containers/PageHandlers/withLoading';
 import withData from '#containers/PageHandlers/withData';
 
-const isLegacyAsset = url => {
-  console.log('xxx', url, url.split('/').length);
-
-  return url.split('/').length > 7;
-};
+const isLegacyAsset = url => url.split('/').length > 7;
 
 const MediaAssetPageContainer = ({ pageData }) => {
   const requestContext = useContext(RequestContext);
-  console.log(requestContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
@@ -86,7 +81,7 @@ const MediaAssetPageContainer = ({ pageData }) => {
       ? MediaMessage
       : props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    legacyMedia: () => <MediaMessage />,
+    legacyMedia: MediaMessage,
   };
 
   const StyledGhostGrid = styled(GhostGrid)`
