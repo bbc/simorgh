@@ -1,13 +1,7 @@
 import getInitialData from './getInitialData';
 import frontPageJson from '../../../../data/pidgin/frontpage/index.json';
-import fetchPageData from '../fetchPageData';
 
-jest.mock('../fetchPageData');
-
-fetchPageData.mockResolvedValue({
-  status: 200,
-  json: frontPageJson,
-});
+fetch.mockResponse(JSON.stringify(frontPageJson));
 
 it('should fetch page data, process the data and return it', async () => {
   const { pageData } = await getInitialData('mock-frontpage-path');

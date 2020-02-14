@@ -7,7 +7,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import RadioPageBlocks from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
-import fetchPageData from '#app/routes/fetchPageData';
 import getInitialData from '#app/routes/radio/getInitialData';
 
 const serviceContextMock = {
@@ -17,16 +16,11 @@ const serviceContextMock = {
   translations: { mediaAssetPage: { audioPlayer: 'Audio player' } },
 };
 
-jest.mock('#app/routes/fetchPageData');
-
-fetchPageData.mockResolvedValue({
-  status: 200,
-  json: amharicPageData,
-});
+fetch.mockResponse(JSON.stringify(amharicPageData));
 
 describe('Radio Page Blocks', () => {
   it('should match snapshot for Canonical', async () => {
-    const { pageData } = await getInitialData();
+    const { pageData } = await getInitialData('some-live-radio-path');
 
     const blocks = path(['content', 'blocks'], pageData);
 
@@ -49,7 +43,7 @@ describe('Radio Page Blocks', () => {
   });
 
   it('should match snapshot for AMP', async () => {
-    const { pageData } = await getInitialData();
+    const { pageData } = await getInitialData('some-live-radio-path');
     const blocks = path(['content', 'blocks'], pageData);
 
     await matchSnapshotAsync(

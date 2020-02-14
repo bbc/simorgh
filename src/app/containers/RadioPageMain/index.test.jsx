@@ -6,21 +6,15 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import RadioPageMain from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import fetchPageData from '#app/routes/fetchPageData';
 import getInitialData from '#app/routes/radio/getInitialData';
 
-jest.mock('#app/routes/fetchPageData');
-
-fetchPageData.mockResolvedValue({
-  status: 200,
-  json: amharicPageData,
-});
+fetch.mockResponse(JSON.stringify(amharicPageData));
 
 analyticsUtils.getAtUserId = jest.fn();
 
 describe('Radio Page Main', () => {
   it('should match snapshot for Canonical', async () => {
-    const { pageData } = await getInitialData();
+    const { pageData } = await getInitialData('some-live-radio-path');
 
     await matchSnapshotAsync(
       <ServiceContextProvider service="amharic">
@@ -41,7 +35,7 @@ describe('Radio Page Main', () => {
   });
 
   it('should match snapshot for AMP', async () => {
-    const { pageData } = await getInitialData();
+    const { pageData } = await getInitialData('some-live-radio-path');
 
     await matchSnapshotAsync(
       <ServiceContextProvider service="amharic">

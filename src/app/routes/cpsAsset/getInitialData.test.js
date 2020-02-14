@@ -1,13 +1,7 @@
 import getInitialData from './getInitialData';
 import mapJson from '../../../../data/pidgin/cpsAssets/media-23256549.json';
-import fetchPageData from '../fetchPageData';
 
-jest.mock('../fetchPageData');
-
-fetchPageData.mockResolvedValue({
-  status: 200,
-  json: mapJson,
-});
+fetch.mockResponse(JSON.stringify(mapJson));
 
 it('should fetch page data, process the data and return it', async () => {
   const { pageData } = await getInitialData('mock-map-path');

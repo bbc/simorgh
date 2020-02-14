@@ -11,10 +11,7 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import CpsAssetPage from '.';
 import pidginPageData from '#data/pidgin/cpsAssets/world-23252817';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
-import fetchPageData from '#app/routes/fetchPageData';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
-
-jest.mock('#app/routes/fetchPageData');
 
 const toggleState = {
   local: {
@@ -106,34 +103,25 @@ jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
 describe('CPS STY Page', () => {
   describe('snapshots', () => {
     it('should match snapshot for STY', async () => {
-      fetchPageData.mockResolvedValue({
-        status: 200,
-        json: pidginPageData,
-      });
+      fetch.mockResponse(JSON.stringify(pidginPageData));
 
-      const { pageData } = await getInitialData();
+      const { pageData } = await getInitialData('some-cps-sty-path');
       const page = createAssetPage({ pageData }, 'pidgin');
       await matchSnapshotAsync(page);
     });
   });
   it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
-    fetchPageData.mockResolvedValue({
-      status: 200,
-      json: igboPageData,
-    });
+    fetch.mockResponse(JSON.stringify(igboPageData));
 
-    const { pageData } = await getInitialData();
+    const { pageData } = await getInitialData('some-cps-sty-path');
     const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
     expect(getByText('23 Ọktọba 2019')).toBeInTheDocument();
   });
 
   it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
-    fetchPageData.mockResolvedValue({
-      status: 200,
-      json: igboPageData,
-    });
+    fetch.mockResponse(JSON.stringify(igboPageData));
 
-    const { pageData } = await getInitialData();
+    const { pageData } = await getInitialData('some-cps-sty-path');
     const pageDataWithHiddenTimestamp = assocPath(
       ['metadata', 'options', 'allowDateStamp'],
       false,

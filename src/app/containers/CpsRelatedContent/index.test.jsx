@@ -9,11 +9,8 @@ import CpsRelatedContent from '.';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
-import fetchPageData from '#app/routes/fetchPageData';
 
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
-
-jest.mock('#app/routes/fetchPageData');
 
 // eslint-disable-next-line react/prop-types
 const renderRelatedContent = ({
@@ -77,15 +74,14 @@ describe('CpsRelatedContent', () => {
       },
     ];
 
-    fetchPageData.mockResolvedValue({
-      status: 200,
-      json: {
+    fetch.mockResponse(
+      JSON.stringify({
         ...pidginPageData,
         relatedContent: { groups: [{ promos: initialPromo }] },
-      },
-    });
+      }),
+    );
 
-    const { pageData } = await getInitialData();
+    const { pageData } = await getInitialData('some-cps-path');
 
     const transformedPromos = path(
       ['relatedContent', 'groups', 0, 'promos'],

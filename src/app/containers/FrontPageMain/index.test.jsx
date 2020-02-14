@@ -9,15 +9,9 @@ import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import fetchPageData from '#app/routes/fetchPageData';
 import getInitialData from '#app/routes/home/getInitialData';
 
-jest.mock('#app/routes/fetchPageData');
-
-fetchPageData.mockResolvedValue({
-  status: 200,
-  json: frontPageDataPidgin,
-});
+fetch.mockResponse(JSON.stringify(frontPageDataPidgin));
 
 jest.mock('uuid', () =>
   (() => {
@@ -55,7 +49,9 @@ const FrontPageMainWithContext = props => (
 describe('FrontPageMain', () => {
   describe('snapshots', () => {
     it('should render a pidgin frontpage correctly', async () => {
-      const { pageData: frontPageData } = await getInitialData();
+      const { pageData: frontPageData } = await getInitialData(
+        'some-front-page-path',
+      );
 
       await matchSnapshotAsync(
         <FrontPageMainWithContext frontPageData={frontPageData} />,
@@ -67,7 +63,9 @@ describe('FrontPageMain', () => {
     afterEach(cleanup);
 
     it('should render visually hidden text as h1', async () => {
-      const { pageData: frontPageData } = await getInitialData();
+      const { pageData: frontPageData } = await getInitialData(
+        'some-front-page-path',
+      );
 
       const { container } = render(
         <FrontPageMainWithContext frontPageData={frontPageData} />,
@@ -89,7 +87,9 @@ describe('FrontPageMain', () => {
     });
 
     it('should render front page sections', async () => {
-      const { pageData: frontPageData } = await getInitialData();
+      const { pageData: frontPageData } = await getInitialData(
+        'some-front-page-path',
+      );
 
       const { container } = render(
         <FrontPageMainWithContext frontPageData={frontPageData} />,

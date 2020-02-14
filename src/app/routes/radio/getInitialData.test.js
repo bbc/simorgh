@@ -1,13 +1,7 @@
 import getInitialData from './getInitialData';
 import liveRadioJson from '../../../../data/korean/bbc_korean_radio/liveradio.json';
-import fetchPageData from '../fetchPageData';
 
-jest.mock('../fetchPageData');
-
-fetchPageData.mockResolvedValue({
-  status: 200,
-  json: liveRadioJson,
-});
+fetch.mockResponse(JSON.stringify(liveRadioJson));
 
 it('should fetch page data, process the data and return it', async () => {
   const { pageData } = await getInitialData('mock-live-radio-path');

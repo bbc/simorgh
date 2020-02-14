@@ -1,13 +1,7 @@
 import getInitialData from './getInitialData';
 import articleJson from '../../../../data/pidgin/articles/cwl08rd38l6o.json';
-import fetchPageData from '../fetchPageData';
 
-jest.mock('../fetchPageData');
-
-fetchPageData.mockResolvedValue({
-  status: 200,
-  json: articleJson,
-});
+fetch.mockResponse(JSON.stringify(articleJson));
 
 it('should fetch page data, process the data and return it', async () => {
   const { pageData } = await getInitialData('mock-article-path');
