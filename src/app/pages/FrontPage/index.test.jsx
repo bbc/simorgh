@@ -165,14 +165,14 @@ describe('FrontPageContainer', () => {
 
         console.log(container.textContent);
 
-        const expectProps = {
+        const expectedProps = {
           frontPageData: igboData,
           mostReadEndpointOverride: null,
           forceMostRead: false,
         };
 
         expect(frontPageMainMock.mock.calls).toHaveLength(1);
-        expect(frontPageMainMock.mock.calls[0][0]).toEqual(expectProps);
+        expect(frontPageMainMock.mock.calls[0][0]).toEqual(expectedProps);
         expect(container.textContent).toEqual('FrontPageMain');
       });
     });
