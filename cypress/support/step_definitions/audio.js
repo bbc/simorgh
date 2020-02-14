@@ -1,18 +1,11 @@
 import { When, Then } from 'cypress-cucumber-preprocessor/steps';
-import { playMedia, assertMediaIsPlaying } from './media';
+import assertMediaIsPlaying from './media';
+import playVideo from './video';
 
 When('I click the play audio button', () => {
-  playMedia();
-});
-
-When('I click the play radio button', () => {
-  playMedia();
+  playVideo();
 });
 
 Then('the audio plays', () => {
-  assertMediaIsPlaying();
-});
-
-Then('the radio plays', () => {
   assertMediaIsPlaying();
 });

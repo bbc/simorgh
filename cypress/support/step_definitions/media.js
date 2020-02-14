@@ -1,17 +1,6 @@
 const iframeSelector = 'iframe';
 
-export const playMedia = () => {
-  // const iframeSelector =
-  //   cy.location('pathname').indexOf('.amp') >= 0 ? 'amp-iframe' : 'iframe';
-
-  cy.get(iframeSelector).then(iframe => {
-    cy.wrap(iframe.contents().find('iframe'))
-      .should(inner => expect(inner.contents().find('button.p_cta')).to.exist)
-      .then(inner => cy.wrap(inner.contents().find('button.p_cta')).click());
-  });
-};
-
-export const assertMediaIsPlaying = () => {
+export default () => {
   cy.get(iframeSelector).then($iframe => {
     cy.wrap($iframe.prop('contentWindow'), {
       // `timeout` only applies to the methods chained below.
