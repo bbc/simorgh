@@ -9,7 +9,6 @@ import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-// import newsMostReadData from '#data/news/mostRead';
 import fetchPageData from '#app/routes/fetchPageData';
 import getInitialData from '#app/routes/home/getInitialData';
 

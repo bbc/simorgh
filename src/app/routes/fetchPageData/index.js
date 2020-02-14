@@ -27,12 +27,12 @@ export const getUrl = pathname => {
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
 
-const handleResponse = pathname => async response => {
+const handleResponse = url => async response => {
   const { status } = response;
 
   if (upstreamStatusCodesToPropagate.includes(status)) {
     if (status === STATUS_NOT_FOUND) {
-      logger.error(`Data not found when requesting ${pathname}`);
+      logger.error(`Data not found when requesting ${url}`);
     }
 
     return {
@@ -44,7 +44,7 @@ const handleResponse = pathname => async response => {
   }
 
   throw new Error(
-    `Unexpected upstream response (HTTP status code ${status}) when requesting ${pathname}`,
+    `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`,
   );
 };
 
