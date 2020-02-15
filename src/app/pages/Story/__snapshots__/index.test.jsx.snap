@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp is false 1`] = `
+exports[`Story Page should not show the pop-out timestamp when allowDateStamp is false 1`] = `
 <DocumentFragment>
   .c24 {
   margin: 0 auto;
@@ -1299,7 +1299,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
 </DocumentFragment>
 `;
 
-exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
+exports[`Story Page snapshots should match snapshot for STY 1`] = `
 .c26 {
   margin: 0 auto;
   background: #FDFDFD;

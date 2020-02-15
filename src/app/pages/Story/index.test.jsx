@@ -101,7 +101,7 @@ jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
   return ContextsContainer;
 });
 
-describe('CPS STY Page', () => {
+describe('Story Page', () => {
   describe('snapshots', () => {
     it('should match snapshot for STY', async () => {
       const pageData = await preprocessor(
