@@ -79,7 +79,7 @@
     "@bbc/psammead-media-indicator": "^2.6.27",
     "@bbc/psammead-media-player": "^2.7.2",
     "@bbc/psammead-navigation": "^3.0.5",
-    "@bbc/psammead-paragraph": "^2.2.24",
+    "@bbc/psammead-paragraph": "^2.2.25",
     "@bbc/psammead-rich-text-transforms": "^2.0.0",
     "@bbc/psammead-section-label": "^3.0.13",
     "@bbc/psammead-sitewide-links": "^4.0.6",
