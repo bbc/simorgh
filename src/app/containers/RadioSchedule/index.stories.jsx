@@ -6,6 +6,7 @@ import RadioScheduleContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 // Currently, only these services have radio schedule data
 const validServices = [
@@ -39,6 +40,7 @@ const renderRadioScheduleContainer = service => (
 
 const stories = storiesOf('Containers|RadioSchedule', module)
   .addDecorator(withKnobs)
+  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(
     withServicesKnob({
       defaultService: 'arabic',
