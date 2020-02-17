@@ -7,13 +7,8 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
 export const setStalePromoTimestamp = mostReadData => {
-  const freshDate = new Date();
-
   const oldTimestamp = 864691200; // 27/05/1997
   const updatedMostReadData = mostReadData;
-
-  // Updates the lastRecordTimeStamp value to be equal to the current date/time
-  updatedMostReadData.lastRecordTimeStamp = freshDate;
 
   // set first promo to have an old timestamp
   updatedMostReadData.records[0].promo.timestamp = oldTimestamp;
@@ -25,13 +20,17 @@ export const setFreshPromoTimestamp = mostReadData => {
   const freshDate = new Date();
   const updatedMostReadData = mostReadData;
 
-  // Updates the lastRecordTimeStamp value to be equal to the current date/time
-  updatedMostReadData.lastRecordTimeStamp = freshDate;
-
   // Updates first 10 promos to have a fresh date
   for (let i = 0; i < 10; i += 1) {
     updatedMostReadData.records[i].promo.timestamp = freshDate.getTime();
   }
+
+  return updatedMostReadData;
+};
+
+export const setStaleLastRecordTimeStamp = mostReadData => {
+  const updatedMostReadData = mostReadData;
+  updatedMostReadData.lastRecordTimeStamp = '2019-11-06T16:28:00Z';
 
   return updatedMostReadData;
 };

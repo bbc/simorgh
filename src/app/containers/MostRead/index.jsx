@@ -10,7 +10,7 @@ const getMostReadEndpoint = ({ service, variant }) =>
     ? `/${service}/mostread/${variant}.json`
     : `/${service}/mostread.json`;
 
-const MostReadContainer = ({ endpointOverride }) => {
+const MostReadContainer = ({ mostReadEndpointOverride }) => {
   const { variant, isAmp } = useContext(RequestContext);
   const {
     service,
@@ -26,17 +26,17 @@ const MostReadContainer = ({ endpointOverride }) => {
   }
 
   const endpoint =
-    endpointOverride || getMostReadEndpoint({ service, variant });
+    mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
 
   return <Canonical endpoint={endpoint} />;
 };
 
 MostReadContainer.propTypes = {
-  endpointOverride: string,
+  mostReadEndpointOverride: string,
 };
 
 MostReadContainer.defaultProps = {
-  endpointOverride: null,
+  mostReadEndpointOverride: null,
 };
 
 export default MostReadContainer;
