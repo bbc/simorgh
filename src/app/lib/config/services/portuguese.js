@@ -7,6 +7,7 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
+  F_REITH_SERIF_LIGHT,
 } from '@bbc/psammead-styles/fonts';
 import { portuguese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/America/Sao_Paulo';
@@ -59,7 +60,6 @@ export const service = {
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',
-      sections: 'Seções',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -148,6 +148,7 @@ export const service = {
       media: {
         noJs:
           'A reprodução deste formato de vídeo não é compatível com seu dispositivo',
+        contentExpired: 'Este conteúdo não está mais disponível.',
         audio: 'Áudio',
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',
@@ -162,7 +163,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Mais lidas',
-      lastUpdated: 'Última atualização: ',
+      lastUpdated: 'Última atualização:',
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -205,6 +208,7 @@ export const service = {
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
       F_REITH_SERIF_MEDIUM_ITALIC,
+      F_REITH_SERIF_LIGHT,
     ],
     timezone: 'America/Sao_Paulo',
     navigation: [
@@ -253,6 +257,7 @@ export const service = {
         url: '/portuguese/media/video',
       },
     ],
+    navigationSection: 'Seções',
   },
 };
 

@@ -2,38 +2,18 @@
 
 exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp is false 1`] = `
 <DocumentFragment>
-  .c24 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c13 {
+  .c3 {
   grid-column: 1 / span 6;
 }
 
-.c5 {
+.c7 {
   display: grid;
   grid-column-gap: 1rem;
 }
 
-.c23 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.c16 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-family: inherit;
-  font-weight: inherit;
+.c14 {
+  display: grid;
+  grid-column-gap: 1rem;
 }
 
 .c2 {
@@ -52,7 +32,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   outline: none;
 }
 
-.c14 {
+.c4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -63,57 +43,13 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   margin: 0;
 }
 
-.c15 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c15:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
-}
-
-.c15:focus,
-.c15:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
-}
-
-.c18 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 0;
-  list-style-type: none;
-}
-
-.c18 > li::before {
-  content: ' ';
-  display: inline-block;
-  width: 2rem;
-  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
-  margin-left: -2rem;
-}
-
-.c19 {
-  margin-bottom: 1rem;
-}
-
-.c17 {
-  margin-bottom: 1.5rem;
-}
-
-.c4 {
+.c6 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.c10 {
+.c12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -125,21 +61,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   margin: 0;
 }
 
-.c9 {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  background-color: rgba(34,34,34,0.75);
-  text-transform: uppercase;
-  color: #FFFFFF;
-  padding: 0.25rem 0.5rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  position: absolute;
-  bottom: 0;
-  margin: 0;
-  left: 0;
-}
-
-.c12 {
+.c11 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -150,20 +72,20 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   width: 100%;
 }
 
-.c12 > p {
+.c11 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c12 > p:last-child {
+.c11 > p:last-child {
   padding-bottom: 0;
 }
 
-.c12 i {
+.c11 i {
   font-style: normal;
 }
 
-.c7 {
+.c9 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -176,121 +98,30 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c8 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-  -webkit-animation: eMLfYp 0.2s linear;
-  animation: eMLfYp 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
-}
-
-.c21 {
-  padding-top: 56.25%;
+.c16 {
   position: relative;
+  height: 0;
   overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 133.33333333333331%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c20 {
-  margin-top: 0.5rem;
-}
-
-.c20 figure {
-  padding-bottom: 0;
-}
-
-.c30 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c32 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FFFFFF;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c28 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c26 {
+.c18 {
   position: relative;
-  margin-top: 2rem;
-}
-
-.c29 {
-  margin: 0;
-  padding: 0;
-}
-
-.c34 {
-  border-bottom: 0.0625rem solid #F2F2F2;
-  padding: 0.5rem 0 1rem;
-}
-
-.c34:first-child {
-  padding-top: 0;
-}
-
-.c34:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
-.c33 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c25 {
-  margin-bottom: 1rem;
-  z-index: 0;
-}
-
-.c27 {
-  margin-top: 0;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 75%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
 .c0 {
@@ -304,56 +135,6 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   padding-bottom: 1.5rem;
 }
 
-.c22 {
-  border: 0;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-@media (max-width:37.4375rem) {
-  .c24 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c24 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c24 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c24 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c24 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
 @media (max-width:25rem) {
   .c13 {
     padding: 0 0.5rem;
@@ -366,29 +147,83 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:37.5rem) {
+@media (max-width:25rem) {
   .c13 {
+    grid-column: 1 / span 6;
+    padding: 0 0px;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c13 {
+    grid-column: 1 / span 4;
+    max-width: 66.67%;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c13 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+    padding: 0 0px;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c13 {
+    grid-column: 3 / span 4;
+    max-width: 30rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c13 {
+    grid-column: 6 / span 8;
+    max-width: 30.6rem;
+  }
+}
+
+@supports (display:grid) {
+  .c13 {
+    max-width: initial;
+  }
+}
+
+@media (max-width:25rem) {
+  .c3 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
     grid-column: 1 / span 5;
     max-width: 83.33%;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c13 {
+  .c3 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c13 {
+  .c3 {
     grid-column: 6 / span 10;
     max-width: 38.5rem;
   }
 }
 
 @supports (display:grid) {
-  .c13 {
+  .c3 {
     max-width: initial;
   }
 }
@@ -424,100 +259,177 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 @media (max-width:63rem) {
-  .c3 {
+  .c5 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c3 {
+  .c5 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c3 {
+  .c5 {
     grid-column: 6 / span 12;
   }
 }
 
+@media (max-width:24.9375rem) {
+  .c15 {
+    grid-column: 1 / span 4;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c15 {
+    grid-column: 1 / span 4;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c15 {
+    grid-column: 1 / span 4;
+    margin-left: 1em;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c15 {
+    grid-column: 1 / span 4;
+  }
+}
+
+@media (min-width:80rem) {
+  .c15 {
+    grid-column: 1 / span 8;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c17 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c17 {
+    grid-column: 1 / span 4;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c17 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c17 {
+    grid-column: 1 / span 4;
+  }
+}
+
+@media (min-width:80rem) {
+  .c17 {
+    grid-column: 1 / span 8;
+  }
+}
+
 @media (max-width:37.4375rem) {
-  .c6 {
+  .c8 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c6 {
+  .c8 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c6 {
+  .c8 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c6 {
+  .c8 {
     grid-column: 1 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c11 {
+  .c10 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11 {
+  .c10 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c11 {
+  .c10 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c11 {
+  .c10 {
     grid-column: 1 / span 10;
   }
 }
 
 @media (max-width:80rem) {
-  .c5 {
+  .c7 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c5 {
+  .c7 {
     grid-template-columns: repeat(12,1fr);
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+@media (max-width:25rem) {
+  .c14 {
+    grid-template-columns: repeat(6,1fr);
   }
 }
 
-@media (min-width:37.5rem) {
-  .c23 {
-    font-size: 2rem;
-    line-height: 2.25rem;
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c14 {
+    grid-template-columns: repeat(4,1fr);
   }
 }
 
-@media (min-width:37.5rem) {
-  .c23 {
-    padding-top: 2rem;
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c14 {
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c14 {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c14 {
+    grid-template-columns: repeat(8,1fr);
+  }
+}
+
+@supports (display:grid) {
+  .c14 {
+    max-width: initial;
   }
 }
 
@@ -542,215 +454,42 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c14 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c18 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c11 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c11 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c12 {
+  .c11 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c12 {
+  .c11 {
     padding: 0.5rem 0 0;
-  }
-}
-
-@media (max-width:63rem) {
-  .c20 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c20 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c20 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c20 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c20 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c20 {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c20 {
-    padding-top: 0.5rem;
-    margin-top: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c31 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c32 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c32 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c32 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c32 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c28 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c28 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c34 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c34 {
-    padding: 1.5rem 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c34:first-child {
-    padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c34:first-child {
-    padding-top: 1.5rem;
-  }
-}
-
-@media (max-width:63rem) {
-  .c25 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c25 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c25 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c25 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c25 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c25 {
-    margin-bottom: 1.5rem;
   }
 }
 
@@ -815,6 +554,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
           <div
             id="DataContainer"
           >
+            <noscript />
             <main
               class="c0"
               role="main"
@@ -827,61 +567,92 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
                   id="content"
                   tabindex="-1"
                 >
-                  STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
+                  Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan
                 </h1>
               </div>
               <div
                 class="c3"
               >
-                <figure
+                <p
                   class="c4"
                 >
+                  Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan
+                </p>
+              </div>
+              <div
+                class="c5"
+              >
+                <figure
+                  class="c6"
+                >
                   <div
-                    class="c5"
+                    class="c7"
                   >
                     <div
-                      class="c6"
+                      class="c8"
                     >
                       <div
-                        class="c7"
+                        class="c9"
                       >
-                        <img
-                          alt="Some people at the NTA awards"
-                          class="c8"
-                          src="https://ichef.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
-                          srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
-                          width="976"
+                        <div
+                          class="lazyload-placeholder"
                         />
-                        <p
-                          class="c9"
-                          role="text"
-                        >
-                          <span
-                            class="c10"
-                          >
-                            Wia dis foto come from, 
-                          </span>
-                          <span
-                            lang="en-GB"
-                          >
-                            Joe Maher
-                          </span>
-                        </p>
+                        <noscript />
                       </div>
                     </div>
                     <div
-                      class="c11"
+                      class="c10"
                     >
                       <figcaption
-                        class="c12"
+                        class="c11"
                       >
                         <span
-                          class="c10"
+                          class="c12"
                         >
-                          Wetin we call dis foto, 
+                          Ibsa waa'ee suuraa, 
                         </span>
                         <p>
-                          Some people went to the NTA awards recently.
+                          1. Masaraa Aaxee Minilik Manni durii kunis kan bara 1875tti Aaxee Minilkiin ijaarame yoo ta'u, seenaa magaalaa Finfinnee keessattis masaraa jalqabaati. Mana seena qabeessa kanas wayita ammaa kanatti waldaa Qidista Maariyaam Tawaahido Ortodoksii Itoophiyaatu bulchaa jira. Irra caalaan mana kanaas dhoqqee fi dhakaa irraa kan ijaarame yoo ta'u, dhaabbiin isaa muka gaattiiraati. Dagaleen isaas kan hidhame gogaa qotiyyootiin ture.
+                        </p>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="c5"
+              >
+                <figure
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      <div
+                        class="c9"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                      </div>
+                    </div>
+                    <div
+                      class="c10"
+                    >
+                      <figcaption
+                        class="c11"
+                      >
+                        <span
+                          class="c12"
+                        >
+                          Ibsa waa'ee suuraa, 
+                        </span>
+                        <p>
+                          Dallaa masaraa keessattis manneen sadi ni argamu. Inni jalqabaas mana itti boqonnaa keessummaa yoo ta'u, inni lammaffaan mana ciisaa mootii fi giiftii akkasumas mana faayaan garaa garaa fi meeshaan waraanaa ka'amuudha. Inni sadaffaan ammookutaalee walgahii, bakka itti nyaatamuu, fi bakka dammii fi foon itti olkaa'amuu ammalleenni mul'atu.
                         </p>
                       </figcaption>
                     </div>
@@ -891,404 +662,524 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
               <div
                 class="c13"
               >
-                <p
-                  class="c14"
-                >
-                  <b>
-                     This is introduction text, it should be bold by default, but also support 
-                  </b>
-                  <a
-                    class="c15"
-                    href="https://bbc.com/pidgin/23248703"
-                  >
-                    inline links
-                  </a>
-                  <b>
-                     to other pages.
-                  </b>
-                </p>
-              </div>
-              <div
-                class="c13"
-              >
-                <p
-                  class="c14"
-                >
-                  <i
-                    class="c16"
-                  >
-                    <b>
-                      This is a subheadline! that has 
-                    </b>
-                  </i>
-                  <a
-                    class="c15"
-                    href="https://bbc.com/pidgin/23248703"
-                  >
-                    a link
-                  </a>
-                </p>
-              </div>
-              <div
-                class="c13"
-              >
-                <div
-                  class="c17"
-                >
-                  <ul
-                    class="c18"
-                    dir="ltr"
-                    role="list"
-                  >
-                    <li
-                      class="c19"
-                      role="listitem"
-                    >
-                      This is a unordered list
-                    </li>
-                    <li
-                      class="c19"
-                      role="listitem"
-                    >
-                      It can have 
-                      <b>
-                        bold text
-                      </b>
-                       in it
-                    </li>
-                    <li
-                      class="c19"
-                      role="listitem"
-                    >
-                      <a
-                        class="c15"
-                        href="https://bbc.com/pidgin/23248703"
-                      >
-                        It can also have links
-                      </a>
-                    </li>
-                    <li
-                      class="c19"
-                      role="listitem"
-                    >
-                      <i
-                        class="c16"
-                      >
-                        It can even have italic text in it!
-                      </i>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                class="c13"
-              >
-                <p
-                  class="c14"
-                >
-                  Feta the big cheese macaroni cheese. 
-                  <a
-                    class="c15"
-                    href="https://bbc.com/pidgin/23248703"
-                  >
-                    Caerphilly danish fontina
-                  </a>
-                   queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
-                  <b>
-                    Cow cheeseburger
-                  </b>
-                   stilton emmental.
-                </p>
-              </div>
-              <div
-                class="c3"
-              >
                 <figure
-                  class="c4"
+                  class="c6"
                 >
                   <div
-                    class="c5"
+                    class="c14"
                   >
                     <div
-                      class="c6"
+                      class="c15"
                     >
                       <div
-                        class="c7"
+                        class="c16"
                       >
                         <div
                           class="lazyload-placeholder"
                         />
                         <noscript />
-                        <p
-                          class="c9"
-                          role="text"
-                        >
-                          <span
-                            class="c10"
-                          >
-                            Wia dis foto come from, 
-                          </span>
-                          <span
-                            lang="en-GB"
-                          >
-                            Joe Maher
-                          </span>
-                        </p>
                       </div>
                     </div>
                     <div
-                      class="c11"
-                    />
-                  </div>
-                </figure>
-              </div>
-              <div
-                class="c13"
-              >
-                <p
-                  class="c14"
-                >
-                  <b>
-                    Start of localised text
-                  </b>
-                </p>
-              </div>
-              <div
-                class="c13"
-              >
-                <p
-                  class="c14"
-                >
-                  Minista nọ n'isi ụlọọrụ ahụ bụ Hadi Sirika sị na ya agaghị atụrụ ndị mmadụ asị na ya gaghaị arụcha ya bụ ọdọụgbọelụ na Disemba dịka ha kwuburu mana ya ga-eburu isi ụlọọrụ ya ga-gwunye n'Enugu ịhụ na ha rụchara n'Apreelụ.
-                </p>
-              </div>
-              <div
-                class="c13"
-              >
-                <p
-                  class="c14"
-                >
-                  <b>
-                    End of localised text
-                  </b>
-                </p>
-              </div>
-              <div
-                class="c13"
-              >
-                <p
-                  class="c14"
-                >
-                  Rubber cheese macaroni 
-                  <i
-                    class="c16"
-                  >
-                    cheese cottage cheese
-                  </i>
-                  . Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.
-                </p>
-              </div>
-              <div
-                class="c13"
-              >
-                <div
-                  class="c17"
-                >
-                  <ul
-                    class="c18"
-                    dir="ltr"
-                    role="list"
-                  >
-                    <li
-                      class="c19"
-                      role="listitem"
+                      class="c17"
                     >
-                      This is a ordered list
-                    </li>
-                    <li
-                      class="c19"
-                      role="listitem"
-                    >
-                      It can have 
-                      <b>
-                        bold text
-                      </b>
-                       in it
-                    </li>
-                    <li
-                      class="c19"
-                      role="listitem"
-                    >
-                      <a
-                        class="c15"
-                        href="https://bbc.com/pidgin/23248703"
-                      >
-                        It can also have links
-                      </a>
-                    </li>
-                    <li
-                      class="c19"
-                      role="listitem"
-                    >
-                      <i
-                        class="c16"
-                      >
-                        It can even have italic text in it!
-                      </i>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                class="c13"
-              >
-                <p
-                  class="c14"
-                >
-                  Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
-                </p>
-              </div>
-              <div
-                class="c20"
-              >
-                <figure
-                  class="c4"
-                >
-                  <div
-                    class="c21"
-                  >
-                    <iframe
-                      allow="autoplay; fullscreen"
-                      allowfullscreen=""
-                      class="c22"
-                      scrolling="no"
-                      src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
-                      title="Media player"
-                    />
-                  </div>
-                </figure>
-              </div>
-              <div
-                class="c13"
-              >
-                <h2
-                  class="c23"
-                  id="This-is-a-heading"
-                  tabindex="-1"
-                >
-                  This is a heading!
-                </h2>
-              </div>
-              <div
-                class="c13"
-              >
-                <h2
-                  class="c23"
-                  id="This-is-a-subheading"
-                  tabindex="-1"
-                >
-                  This is a subheading!
-                </h2>
-              </div>
-              <div
-                class="c13"
-              >
-                <p
-                  class="c14"
-                >
-                  Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
-                </p>
-              </div>
-              <div
-                class="c13"
-              >
-                <h2
-                  class="c23"
-                  id="This-is-a-crosshead"
-                  tabindex="-1"
-                >
-                  This is a crosshead!
-                </h2>
-              </div>
-              <div
-                class="c13"
-              >
-                <p
-                  class="c14"
-                >
-                  Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
-                </p>
-              </div>
-              <div
-                class="c13"
-              >
-                <p
-                  class="c14"
-                >
-                  <a
-                    aria-label="This is an external link to google!, outside"
-                    class="c15"
-                    href="https://www.google.com/"
-                  >
-                    This is an external link to google!
-                  </a>
-                </p>
-              </div>
-              <div
-                class="c13"
-              >
-                <p
-                  class="c14"
-                >
-                  Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
-                </p>
-              </div>
-            </main>
-            <aside
-              aria-labelledby="related-content-heading"
-              class="c24"
-              role="complementary"
-            >
-              <div
-                class="c25"
-              >
-                <div
-                  class="c26 c27"
-                >
-                  <div
-                    class="c28"
-                  />
-                  <h2
-                    class="c29"
-                  >
-                    <div
-                      class="c30"
-                    >
-                      <span
-                        class="c31"
+                      <figcaption
+                        class="c11"
                       >
                         <span
-                          class="c32"
-                          dir="ltr"
-                          id="related-content-heading"
+                          class="c12"
                         >
-                          Another thing we de for inside dis tori
+                          Ibsa waa'ee suuraa, 
                         </span>
-                      </span>
+                        <p>
+                          Akka daawwachistoonni naannawichaa jedhanittis, Aaxee Minilik gara Adawaatti kan duulan masaraadhuma kanaa ka'uun injofannoon boodas asumatti deebii'an jedhama. Kana malees, baargamoon dallaa keessatti mul'atu kanas baargamoowwan Aaxee Minilik biyya Awusitraaliyaatii fidan keessaa akka ta'e dubbatama.
+                        </p>
+                      </figcaption>
                     </div>
-                  </h2>
-                </div>
-                <ul
-                  class="c33"
-                  role="list"
-                >
-                  <li
-                    class="c34"
-                    role="listitem"
-                  />
-                </ul>
+                  </div>
+                </figure>
               </div>
-            </aside>
+              <div
+                class="c5"
+              >
+                <figure
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      <div
+                        class="c18"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                      </div>
+                    </div>
+                    <div
+                      class="c10"
+                    >
+                      <figcaption
+                        class="c11"
+                      >
+                        <span
+                          class="c12"
+                        >
+                          Ibsa waa'ee suuraa, 
+                        </span>
+                        <p>
+                          2. Mana Raas Tasamaa Naadoo Manni kunis Kutaa magaalaa Lidataa Aanaa 07 naanawa Hospitaala Tiqur Anbasaa Noki bakka gaaziin itti gurguramutti argama. Wayita ammaa kanattis mana barnoota Sadarkaa tokkooffaa Mejar Janaraal YaaYilom Arayaa ta'uun tajaajilaa jira. Bara isaattis faayaawwanii fi ibsaawwan isaa Awuroppaadhaa fiduun kan itti galfaman yoo ta'u, bareeda isaatiin kan ka'ees moggaasa 'Shawaan dinqisiifate' (Shawaan Garamawu) jedhu argate ture. Akkasumas Aaxe Hayilasillaaseen tibba qohpii addaa masaraa isaanitti qabaatan faayaa fi ambooloota asii ergifachaa akka turan illeen ni himama.
+                        </p>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="c5"
+              >
+                <figure
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      <div
+                        class="c9"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                      </div>
+                    </div>
+                    <div
+                      class="c10"
+                    >
+                      <figcaption
+                        class="c11"
+                      >
+                        <span
+                          class="c12"
+                        >
+                          Ibsa waa'ee suuraa, 
+                        </span>
+                        <p>
+                          Ambooloonni ibsaa Awuroppaadhaa dhufan isaan kanneen ta'u isaanitiif ragaa qabaachu yoo baatame illeen ammalleen manicha keessatti eddoo garaa garaatti raraafamanii ni mul'atu.
+                        </p>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="c5"
+              >
+                <figure
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      <div
+                        class="c18"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                      </div>
+                    </div>
+                    <div
+                      class="c10"
+                    >
+                      <figcaption
+                        class="c11"
+                      >
+                        <span
+                          class="c12"
+                        >
+                          Ibsa waa'ee suuraa, 
+                        </span>
+                        <p>
+                          3. Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi Manni durii kunis kan argamu kutaa magaalaa Qiirqoos naannawa Kaazaanchis jedhamutti yoo ta'u, wayita ammaa kanattis mana barnootaa Yelibe Faanaa jedhamuun tajaajilaa jira. Manni kunis bara 1884tti kan ijaarame yoo ta'u, abbaan qabeenya manichaa Axinaafuu Sagadi lola Xaaliyaanii waliin taasifameen Maacoorratti du'aniiru.
+                        </p>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="c5"
+              >
+                <figure
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      <div
+                        class="c9"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                      </div>
+                    </div>
+                    <div
+                      class="c10"
+                    >
+                      <figcaption
+                        class="c11"
+                      >
+                        <span
+                          class="c12"
+                        >
+                          Ibsa waa'ee suuraa, 
+                        </span>
+                        <p>
+                          Irra caalaan mana kanaas dhakkaa adii fi simintoodhaan kan ijaarameedha. Kutaan jalaa mana durii kanaatis bakka itti bilcheefamu ta'uun tajaajila ture. Dizaayinariin mana kanaas nama Mahaammad Walee jedhamu akka ture ragaaleen ni mul'isu.
+                        </p>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="c5"
+              >
+                <figure
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      <div
+                        class="c9"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                      </div>
+                    </div>
+                    <div
+                      class="c10"
+                    >
+                      <figcaption
+                        class="c11"
+                      >
+                        <span
+                          class="c12"
+                        >
+                          Ibsa waa'ee suuraa, 
+                        </span>
+                        <p>
+                          Kana malees, darbii isa gubbaa irraa kan ittiin gadi gara kuttaa lafa jalaatti bu'amuun sadarkaawwan bareedaas alaa fi keessaan kan ijaarameef yoo ta'u, sababii umurii isaatiin amma duloomaa jira.
+                        </p>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="c5"
+              >
+                <figure
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      <div
+                        class="c9"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                      </div>
+                    </div>
+                    <div
+                      class="c10"
+                    >
+                      <figcaption
+                        class="c11"
+                      >
+                        <span
+                          class="c12"
+                        >
+                          Ibsa waa'ee suuraa, 
+                        </span>
+                        <p>
+                          4. Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo Manni kunis kutaa magaalaa Araadaa Aaanaa 07 keessatti kan argamu yoo ta'u, kan ijaaramees bara 1898tti. Abbaa manaa kan turan Dubbii Hiimaa Mootii Nasiibuu Masqaloonis, mootii Aaxee Minilik yammu jalqabaaf mana marii ministirootaa hundeessanitti nama Ministira Murtii jalqabaa ta'uun kan mudamaniidha. Murtiin Dubbii Hiimaa Mootii Nasiibuu Masqaloo dabarsan yeroodhaa gara yerootti cimaa waan tureef himatamtoonni isaan duratti dhiyaachu hin barbaadan ture.
+                        </p>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="c5"
+              >
+                <figure
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      <div
+                        class="c9"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                      </div>
+                    </div>
+                    <div
+                      class="c10"
+                    >
+                      <figcaption
+                        class="c11"
+                      >
+                        <span
+                          class="c12"
+                        >
+                          Ibsa waa'ee suuraa, 
+                        </span>
+                        <p>
+                          Mannii durii kun abbaa darbii tokko yoo ta'u, jalli isaa akka gola itti bilcheefataniitti tajaajilaa ture. Kutaan jala manichaa ammoo bu'uura cimaa irratti kan ijaarame yoo ta'eeyyuu umurii fi kunuunsi gahaan waan hin tasifamneef baayyee dadhabaa jira.
+                        </p>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="c5"
+              >
+                <figure
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      <div
+                        class="c9"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                      </div>
+                    </div>
+                    <div
+                      class="c10"
+                    >
+                      <figcaption
+                        class="c11"
+                      >
+                        <span
+                          class="c12"
+                        >
+                          Ibsa waa'ee suuraa, 
+                        </span>
+                        <p>
+                          Wayita ammaa kanattis maatiin 40 olitu mana keessa jiraachaa jira. Naannawa manichaattis manneen dabalataa walitti qabatan baayyeen ijaaramanii jiru. Kana malees, foddaa fi karriwwan mana kanaa irra caalaan sibilatti geedaramanii jiru.
+                        </p>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="c5"
+              >
+                <figure
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      <div
+                        class="c9"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                      </div>
+                    </div>
+                    <div
+                      class="c10"
+                    >
+                      <figcaption
+                        class="c11"
+                      >
+                        <span
+                          class="c12"
+                        >
+                          Ibsa waa'ee suuraa, 
+                        </span>
+                        <p>
+                          Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo kanaaf foyya'iinsi atattamaa yoo taasifame malee manichis ta'e namoonni achi keessa jiraatan balaaf saaxilamu malu.
+                        </p>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="c5"
+              >
+                <figure
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      <div
+                        class="c9"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                      </div>
+                    </div>
+                    <div
+                      class="c10"
+                    >
+                      <figcaption
+                        class="c11"
+                      >
+                        <span
+                          class="c12"
+                        >
+                          Ibsa waa'ee suuraa, 
+                        </span>
+                        <p>
+                          5. Mana Luli Raas Siyum Mangashaa Manneen duraan ilaalle dabalate, manni maastar plaanii magaalaatiin akka qabeenyaatti galmeefame kun, mana Luli Raas Siyum Mangashaa naannawa Faransaayitti argamuuhda. Kunis mana viilaa durii isa guddaadha. Haalli ijaarsa isaas kan oggummaa ijaarsa manaa bara sanaa agarsiisuudha.
+                        </p>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="c5"
+              >
+                <figure
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      <div
+                        class="c9"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                      </div>
+                    </div>
+                    <div
+                      class="c10"
+                    >
+                      <figcaption
+                        class="c11"
+                      >
+                        <span
+                          class="c12"
+                        >
+                          Ibsa waa'ee suuraa, 
+                        </span>
+                        <p>
+                          Akkuma Dubbii Hiimaa Mootii Nasiibuu Masqaloo, asis abbootii warraa baayyeetu jiraataachaa jira. Manni tibba tokko mana jireenyaa nama tokko turees har'aa abbootii warraa 30 olitu keessa jiraachaa jira. Naannawa manichaattis manneen hedduun ijaaramanii jiru.
+                        </p>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="c5"
+              >
+                <figure
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      <div
+                        class="c9"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                      </div>
+                    </div>
+                    <div
+                      class="c10"
+                    >
+                      <figcaption
+                        class="c11"
+                      >
+                        <span
+                          class="c12"
+                        >
+                          Ibsa waa'ee suuraa, 
+                        </span>
+                        <p>
+                          Manneen durii kanneeniif yoo haaromsi atattamaa taasifame malee jireenyi namoota keessa jiraatanii balaa irratti argama
+                        </p>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+            </main>
           </div>
         </div>
       </div>
@@ -4376,10 +4267,10 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
                     </figure>
                   </div>
                 </main>
-                <aside
+                <section
                   aria-labelledby="related-content-heading"
                   class="c15"
-                  role="complementary"
+                  role="region"
                 >
                   <div
                     class="c16"
@@ -4566,7 +4457,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
                       </li>
                     </ul>
                   </div>
-                </aside>
+                </section>
               </div>
             </div>
           </div>
@@ -8211,10 +8102,10 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
                     </figure>
                   </div>
                 </main>
-                <aside
+                <section
                   aria-labelledby="related-content-heading"
                   class="c34"
-                  role="complementary"
+                  role="region"
                 >
                   <div
                     class="c35"
@@ -8730,7 +8621,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
                       </li>
                     </ul>
                   </div>
-                </aside>
+                </section>
               </div>
             </div>
           </div>

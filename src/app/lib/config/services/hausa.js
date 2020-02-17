@@ -49,7 +49,6 @@ export const service = {
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',
-      sections: 'Sassa',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -134,6 +133,7 @@ export const service = {
       },
       media: {
         noJs: "Na'urarku na da matsalar sauraren sauti",
+        contentExpired: 'Yanzu an daina samar da wannan shiri.',
         audio: 'Sauti',
         photogallery: 'Rumbun hotuna',
         video: 'Bidiyo',
@@ -158,7 +158,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Wanda aka fi karantawa',
-      lastUpdated: 'Na baya-bayan nan ',
+      lastUpdated: 'Na baya-bayan nan:',
+      numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -230,6 +232,7 @@ export const service = {
         url: '/hausa/media/photogalleries',
       },
     ],
+    navigationSection: 'Sassa',
   },
 };
 

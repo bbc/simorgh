@@ -51,7 +51,6 @@ export const service = {
       currentPage: 'Ojú ewé to wà yìí',
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
       relatedContent: 'Àwọn afíkun lórí ìròyìn yìí',
-      sections: 'Àwọn abala',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -140,6 +139,7 @@ export const service = {
       },
       media: {
         noJs: 'Àwọn àmúyẹ fun gbígbọ́ orin ko le ṣiṣẹ lori ẹ̀rọ rẹ',
+        contentExpired: 'Nnkan yìí kò sí mọ́.',
         audio: 'Orin',
         photogallery: 'Àtẹ Àwòrán',
         video: 'Fídíò',
@@ -158,7 +158,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Èyítí A Ń Kà Jùlọ',
-      lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní ',
+      lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní:',
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -214,6 +216,7 @@ export const service = {
         url: '/yoruba/popular/read',
       },
     ],
+    navigationSection: 'Àwọn abala',
   },
 };
 

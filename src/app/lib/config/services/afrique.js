@@ -49,7 +49,6 @@ export const service = {
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
       relatedContent: 'Lire plus',
-      sections: 'Rubriques',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -140,7 +139,9 @@ export const service = {
         },
       },
       media: {
-        noJs: '',
+        noJs:
+          'Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.',
+        contentExpired: "Ce contenu n'est pas disponible",
         audio: 'Audio',
         photogallery: 'Galerie de photos',
         video: 'Vidéo',
@@ -164,7 +165,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Les plus lus',
-      lastUpdated: 'Dernière mise à jour: ',
+      lastUpdated: 'Dernière mise à jour:',
+      numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -252,6 +255,7 @@ export const service = {
         url: '/afrique/nos_emissions/radio',
       },
     ],
+    navigationSection: 'Rubriques',
   },
 };
 

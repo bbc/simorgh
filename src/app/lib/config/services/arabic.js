@@ -53,7 +53,6 @@ export const service = {
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
       relatedContent: 'المزيد حول هذه القصة',
-      sections: 'أقسام',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -144,6 +143,7 @@ export const service = {
       },
       media: {
         noJs: 'جهازك لا يدعم تشغيل الفيديو',
+        contentExpired: 'هذا المحتوى لم يعد متوفراً',
         audio: 'تسجيل صوتي',
         photogallery: 'معرض الصور',
         video: 'فيديو',
@@ -163,7 +163,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'الأكثر قراءة',
-      lastUpdated: 'آخر تحديث ',
+      lastUpdated: 'آخر تحديث',
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -271,6 +273,7 @@ export const service = {
         url: '/arabic/in_depth',
       },
     ],
+    navigationSection: 'أقسام',
   },
 };
 

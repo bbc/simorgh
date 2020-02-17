@@ -49,7 +49,6 @@ export const service = {
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
-      sections: 'Bölümlər',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -137,6 +136,7 @@ export const service = {
       },
       media: {
         noJs: 'Sizin qurğunuzda yenidən səsləndirmə mümkün deyil',
+        contentExpired: 'Bu proqramı izləmək/dinləmək artıq mümkün deyil.',
         audio: 'Audio',
         photogallery: 'Foto-qalereya',
         video: 'Video',
@@ -151,7 +151,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Ən çox oxunan',
-      lastUpdated: 'Ən son yeniləmə: ',
+      lastUpdated: 'Ən son yeniləmə:',
+      numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -219,6 +221,7 @@ export const service = {
         url: '/azeri/media/video',
       },
     ],
+    navigationSection: 'Bölümlər',
   },
 };
 

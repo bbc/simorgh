@@ -224,6 +224,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   height: 165px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c6 {
@@ -350,6 +351,12 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:63rem) {
+  .c7 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
   .c5 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -446,6 +453,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
                     src="http://localhost:7080/images/amp_audio_placeholder.png"
                     width="9"
                   />
+                  <noscript />
                 </amp-iframe>
               </div>
             </div>
@@ -474,6 +482,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   height: 165px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c6 {
@@ -606,6 +615,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 @media (min-width:37.5rem) {
   .c3 {
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c7 {
+    margin-bottom: 2rem;
   }
 }
 
@@ -895,6 +910,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
                   title="Audio player"
                 />
+                <noscript />
               </div>
             </div>
           </div>

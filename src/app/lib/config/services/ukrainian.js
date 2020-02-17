@@ -49,7 +49,6 @@ export const service = {
       currentPage: 'Поточна сторінка',
       skipLinkText: 'Перейти до змісту',
       relatedContent: 'Статті на цю ж тему',
-      sections: 'Розділи',
       mediaAssetPage: {
         mediaPlayer: 'Медіаплеєр',
         audioPlayer: 'Аудіоплеєр',
@@ -139,6 +138,7 @@ export const service = {
       },
       media: {
         noJs: 'Ваш пристрій не підтримує відтворення мультимедійних файлів',
+        contentExpired: 'Контент більше не доступний',
         audio: 'Аудіо',
         photogallery: 'Фотогалерея',
         video: 'Відео',
@@ -158,7 +158,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Найпопулярніше',
-      lastUpdated: 'Останнє оновлення: ',
+      lastUpdated: 'Останнє оновлення:',
+      numberOfItems: 10,
+      hasMostRead: false,
     },
     footer: {
       trustProjectLink: {
@@ -266,6 +268,7 @@ export const service = {
         url: '/ukrainian/learning_english',
       },
     ],
+    navigationSection: 'Розділи',
   },
 };
 

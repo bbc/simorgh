@@ -90,6 +90,8 @@ export const service = {
     mostRead: {
       header: 'Najčitanije',
       lastUpdated: 'Poslednji put ažurirano ',
+      numberOfItems: 10,
+      hasMostRead: false,
     },
     navigation: [
       {
@@ -117,13 +119,13 @@ export const service = {
         url: '/serbian/lat/popular/read',
       },
     ],
+    navigationSection: 'Odeljci',
     translations: {
       seeAll: 'Pogledajte sve',
       home: 'Glavna stranica',
       currentPage: 'Otvorena stranica',
       skipLinkText: 'Pređite na sadržaj',
       relatedContent: 'Povezano',
-      sections: 'Odeljci',
       mediaAssetPage: {
         mediaPlayer: 'Media plejer',
         audioPlayer: 'Audio plejer',
@@ -212,6 +214,7 @@ export const service = {
       media: {
         noJs:
           'Reprodukovanje multimedijskog sadržaja na vašem uređaju nije podržano',
+        contentExpired: 'Ovaj sadržaj više nije dostupan.',
         audio: 'Audio',
         photogallery: 'Foto galerija',
         video: 'Video',
@@ -277,7 +280,9 @@ export const service = {
     },
     mostRead: {
       header: 'Најчитаније',
-      lastUpdated: 'Последњи пут ажурирано: ',
+      lastUpdated: 'Последњи пут ажурирано:',
+      numberOfItems: 10,
+      hasMostRead: false,
     },
     navigation: [
       {
@@ -305,13 +310,13 @@ export const service = {
         url: '/serbian/cyr/popular/read',
       },
     ],
+    navigationSection: 'Одељци',
     translations: {
       seeAll: 'Погледајте све',
       home: 'Главна страница',
       currentPage: 'Отворена страница',
       skipLinkText: 'Пређите на садржај',
       relatedContent: 'Повезано',
-      sections: 'Одељци',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плејер',
         audioPlayer: 'Аудио плејер',
@@ -400,6 +405,7 @@ export const service = {
       media: {
         noJs:
           'Репродуковање мултимедијског садржаја на вашем уређају није подржано',
+        contentExpired: 'Овај садржај више није доступан.',
         audio: 'Аудио',
         photogallery: 'Фото галерија',
         video: 'Видео',

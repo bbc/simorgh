@@ -54,7 +54,6 @@ export const service = {
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
       relatedContent: 'اسی بارے میں',
-      sections: 'سیکشن',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -139,6 +138,7 @@ export const service = {
       },
       media: {
         noJs: 'اپ کی ڈیوائس پر پلے بیک سپورٹ دستیاب نہیں',
+        contentExpired: 'یہ مواد اب دستیاب نہیں',
         audio: 'آڈیو',
         photogallery: 'تصاویری گیلری',
         video: 'ویڈیو',
@@ -153,7 +153,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'سب سے زیادہ پڑھی جانے والی',
-      lastUpdated: 'آخری اپ ڈیٹ ',
+      lastUpdated: 'آخری اپ ڈیٹ',
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -238,6 +240,7 @@ export const service = {
         url: '/urdu/media/photogalleries',
       },
     ],
+    navigationSection: 'سیکشن',
   },
 };
 

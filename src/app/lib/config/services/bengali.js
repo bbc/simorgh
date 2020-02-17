@@ -54,7 +54,6 @@ export const service = {
       currentPage: 'বর্তমান পেজ',
       skipLinkText: 'সরাসরি কনটেন্টে যান',
       relatedContent: 'এই খবর নিয়ে আরো তথ্য',
-      sections: 'সেকশন',
       mediaAssetPage: {
         mediaPlayer: 'মিডিয়া প্লেয়ার',
         audioPlayer: 'অডিও প্লেয়ার',
@@ -142,6 +141,7 @@ export const service = {
       },
       media: {
         noJs: 'আপনার ডিভাইস মিডিয়া প্লেব্যাক সমর্থন করে না',
+        contentExpired: 'এই ফাইলটি আর পাওয়া যাবে না',
         audio: 'অডিও',
         photogallery: 'ফটো গ্যালারি',
         video: 'ভিডিও',
@@ -150,8 +150,8 @@ export const service = {
           subtitle:
             'বাংলাদেশ, তার প্রতিবেশী এবং গোটা বিশ্বের সংবাদ পরিবেশন করে। সংবাদদাতার প্রতিবেদন ছাড়াও আছে সাক্ষাৎকার, সংবাদপত্র পর্যালোচনা এবং সরাসরি ফোন-ইন।',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'শুনুন',
+        watch: 'দেখুন',
         liveLabel: 'লাইভ',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -161,7 +161,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'সর্বাধিক পঠিত',
-      lastUpdated: 'সর্বশেষ আপডেট হয়েছে: ',
+      lastUpdated: 'সর্বশেষ আপডেট হয়েছে:',
+      numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -221,6 +223,7 @@ export const service = {
         url: '/bengali/media/photogalleries',
       },
     ],
+    navigationSection: 'সেকশন',
   },
 };
 

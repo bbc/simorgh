@@ -7,6 +7,7 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
+  F_REITH_SERIF_LIGHT,
 } from '@bbc/psammead-styles/fonts';
 import { mundo as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -57,7 +58,6 @@ export const service = {
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
-      sections: 'Secciones',
       mediaAssetPage: {
         mediaPlayer: 'Reproductor multimedia',
         audioPlayer: 'Reproductor de audio',
@@ -144,7 +144,9 @@ export const service = {
         },
       },
       media: {
-        noJs: '',
+        noJs:
+          'To play this content, please enable JavaScript, or try a different browser',
+        contentExpired: 'Este contenido ya no está disponible.',
         audio: 'Audio',
         photogallery: 'Galería de fotos',
         video: 'Video',
@@ -159,7 +161,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Más leídas',
-      lastUpdated: 'Última actualización: ',
+      lastUpdated: 'Última actualización:',
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -202,6 +206,7 @@ export const service = {
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
       F_REITH_SERIF_MEDIUM_ITALIC,
+      F_REITH_SERIF_LIGHT,
     ],
     timezone: 'GMT',
     navigation: [
@@ -254,6 +259,7 @@ export const service = {
         url: '/mundo/noticias-43826245',
       },
     ],
+    navigationSection: 'Secciones',
   },
 };
 

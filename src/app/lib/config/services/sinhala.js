@@ -53,7 +53,6 @@ export const service = {
       currentPage: 'දැන් සිටින පිටුව',
       skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
       relatedContent: 'මේ පුවතට සම්බන්ධ තවත් විස්තර',
-      sections: 'අංශ',
       mediaAssetPage: {
         mediaPlayer: 'මීඩියා ධාවකය',
         audioPlayer: 'හඬ වාදකය',
@@ -142,6 +141,8 @@ export const service = {
       },
       media: {
         noJs: 'මෙහි කිසිවක් අඩංගු නැත.',
+        contentExpired:
+          'ඔබේ දුරකථනයේ හෝ පරිගණකයේ මෙය වාදනය කිරීමට අදාළ මෘදුකාංග නැත',
         audio: 'හඬ',
         photogallery: 'ඡායාරූප ගැලරිය ',
         video: 'වීඩියෝ',
@@ -150,8 +151,8 @@ export const service = {
           subtitle:
             'බීබීසී සිංහල ඔස්සේ ශ්‍රී ලාංකීය, දකුණු ආසියාතික සහ ජාත්‍යන්තර පුවත්, විශ්ලේෂණ සහ ක්‍රීඩා පුවත්',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'සවන්දෙන්න',
+        watch: 'නරඹන්න',
         liveLabel: 'සජීවී.',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -161,7 +162,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'වැඩිපුරම කියැවූ',
-      lastUpdated: 'අවසන් යාවත්කාලීනවීම: ',
+      lastUpdated: 'අවසන් යාවත්කාලීනවීම:',
+      numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -228,6 +231,7 @@ export const service = {
         url: '/sinhala/media/video',
       },
     ],
+    navigationSection: 'අංශ',
   },
 };
 

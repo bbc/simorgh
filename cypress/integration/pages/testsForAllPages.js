@@ -11,7 +11,7 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {});
 };
 
-// For testing features that may differ across services but share a common logic e.g. translated strings.
+// For testing feastures that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigforAllPages = ({
   service,
   pageType,
@@ -92,7 +92,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             const imageSrc =
               (imagePath && pageType === mediaAssetPageType) ||
               (imagePath && pageType === photoGalleryPageType)
-                ? getBrandedImage(imagePath, service)
+                ? getBrandedImage({
+                    imagePath,
+                    serviceName: config[service].name,
+                  })
                 : appConfig[config[service].name][variant].defaultImage;
 
             const ogType = [
@@ -335,7 +338,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         });
       }
 
-      it('should have a visible banner, with a skip to content link', () => {
+      it('should have a visible banner', () => {
         cy.get('header')
           .should('have.lengthOf', 1)
           .find('div[class^="Banner"]')
@@ -345,9 +348,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           .should('have.attr', 'href', `/${config[service].name}`)
           .find('svg')
           .should('be.visible');
-        cy.get('div[class^="Banner"]')
-          .find('a[class^="SkipLink"]')
-          .should('have.attr', 'href', '#content');
       });
 
       if (appConfig[config[service].name][variant].navigation) {
@@ -355,11 +355,14 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           pageType !== 'articles' ||
           (pageType === 'articles' && useAppToggles.navOnArticles.enabled)
         ) {
-          it('should have one visible navigation', () => {
+          it('should have one visible navigation with a skiplink to h1', () => {
             cy.get('nav')
               .should('have.lengthOf', 1)
               .should('be.visible')
-              .find('a[class^="StyledLink"]')
+              .find('a[class^="SkipLink"]')
+              .should('have.lengthOf', 1)
+              .should('have.attr', 'href', '#content');
+            cy.get('nav a[class^="StyledLink"]')
               .should(
                 'have.attr',
                 'href',
@@ -373,34 +376,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
               .should('have.lengthOf', 1)
               .should('have.attr', 'id', 'content');
           });
-
-          const serviceName = config[service].name;
-          // limit number of tests to 2 services for navigation toggling
-          const testMobileNav =
-            serviceName === 'ukchina' || serviceName === 'persian';
-
-          if (testMobileNav) {
-            it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
-              cy.viewport(320, 480);
-              cy.get('nav')
-                .find('div[class^="StyledScrollableNav"]')
-                .should('be.visible');
-
-              cy.get('nav')
-                .find('ul[class^="DropdownUl"]')
-                .should('not.be.visible');
-
-              cy.get('nav button').click();
-
-              cy.get('nav')
-                .find('div[class^="StyledScrollableNav"]')
-                .should('not.be.visible');
-
-              cy.get('nav')
-                .find('ul[class^="DropdownUl"]')
-                .should('be.visible');
-            });
-          }
         }
       }
     });
@@ -478,7 +453,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   .should('be.visible')
                   .should(
                     'contain',
-                    appConfig[config[service].name].default
+                    appConfig[config[service].name][variant || 'default']
                       .articleTimestampPrefix,
                   )
                   .should('have.attr', 'datetime');

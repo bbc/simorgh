@@ -53,7 +53,6 @@ export const service = {
       currentPage: 'Peegi ị nọ ugbua',
       skipLinkText: 'Wụga n’ọdịnaya',
       relatedContent: "Ihe ndị ọzọ n'akụkọ a",
-      sections: 'Ngalaba',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -144,6 +143,7 @@ export const service = {
       },
       media: {
         noJs: 'Ngwaọrụ gị akwadoghi ọkpụkpọ mgbasa ozi',
+        contentExpired: 'Ọdịnaya a adịghịzị',
         audio: 'Ọdịyo',
         photogallery: 'Image gallery',
         video: 'Vidio',
@@ -161,7 +161,9 @@ export const service = {
     },
     mostRead: {
       header: 'Akachasị Gụọ',
-      lastUpdated: 'Emelitere ikpeazụ na ',
+      lastUpdated: 'Emelitere ikpeazụ na:',
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     navigation: [
       {
@@ -212,6 +214,7 @@ export const service = {
           text: 'Kpọtụrụ BBC',
         },
       ],
+      navigationSection: 'Ngalaba',
       copyrightText:
         'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
     },

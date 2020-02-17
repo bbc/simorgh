@@ -291,6 +291,7 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
             src="https://polling.test.bbc.co.uk/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"
             title="Media player"
           />
+          <noscript />
         </div>
       </figure>
     </div>
@@ -351,6 +352,7 @@ exports[`MediaPlayer Renders the AMP player when platform is AMP 1`] = `
               srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
               width="9"
             />
+            <noscript />
           </amp-iframe>
         </div>
       </figure>
@@ -474,6 +476,7 @@ exports[`MediaPlayer Renders the AMP player with a caption 1`] = `
               srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
               width="9"
             />
+            <noscript />
           </amp-iframe>
         </div>
         <figcaption

@@ -58,7 +58,6 @@ export const service = {
       currentPage: 'Y dudalen bresennol',
       skipLinkText: `Neidio i'r cynnwys`,
       relatedContent: 'Cynnwys perthnasol',
-      sections: 'Adrannau',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -145,7 +144,9 @@ export const service = {
         },
       },
       media: {
-        noJs: '',
+        noJs:
+          'To play this content, please enable JavaScript, or try a different browser',
+        contentExpired: 'This content is no longer available',
         audio: 'Sain',
         photogallery: 'Oriel luniau',
         video: 'Fideo',
@@ -160,7 +161,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Mwyaf poblogaidd',
-      lastUpdated: 'Diweddariad diwethaf: ',
+      lastUpdated: 'Diweddariad diwethaf:',
+      numberOfItems: 5,
+      hasMostRead: false,
     },
     footer: {
       trustProjectLink: {
@@ -239,6 +242,7 @@ export const service = {
         url: '/news/wales',
       },
     ],
+    navigationSection: 'Adrannau',
   },
 };
 

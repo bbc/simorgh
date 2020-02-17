@@ -49,7 +49,6 @@ export const service = {
       currentPage: '현재 페이지',
       skipLinkText: '내용으로 건너뛰기',
       relatedContent: '관련 기사 더 보기',
-      sections: '섹션',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -133,6 +132,7 @@ export const service = {
       },
       media: {
         noJs: '사용 기기에서 미디어 재생이 지원되지 않습니다',
+        contentExpired: '더 이상 이용할 수 없는 콘텐츠입니다.',
         audio: '오디오',
         photogallery: '사진 갤러리',
         video: '비디오',
@@ -148,6 +148,8 @@ export const service = {
     mostRead: {
       header: 'TOP 뉴스',
       lastUpdated: '최종 송고일',
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -202,6 +204,7 @@ export const service = {
         url: '/korean/popular/read',
       },
     ],
+    navigationSection: '섹션',
     timezone: 'Asia/Seoul',
   },
 };

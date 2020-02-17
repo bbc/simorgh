@@ -49,7 +49,6 @@ export const service = {
       currentPage: 'Ачылып турган баракча',
       skipLinkText: 'Сайтка өтүү',
       relatedContent: 'Тема боюнча башка макалалар',
-      sections: 'Бөлүмдөр',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -137,6 +136,7 @@ export const service = {
       },
       media: {
         noJs: 'Жабдыгыңыз медианын бул түрүн ойнотууга ылайыктуу эмес.',
+        contentExpired: 'Бул маалымат мындан ары ачылбайт',
         audio: 'Аудио',
         photogallery: 'Көз ирмем',
         video: 'Видео',
@@ -161,7 +161,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Эң көп окулгандар',
-      lastUpdated: 'Акыркы жаңылоо: ',
+      lastUpdated: 'Акыркы жаңылоо:',
+      numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -238,6 +240,7 @@ export const service = {
         url: '/kyrgyz/blog',
       },
     ],
+    navigationSection: 'Бөлүмдөр',
   },
 };
 

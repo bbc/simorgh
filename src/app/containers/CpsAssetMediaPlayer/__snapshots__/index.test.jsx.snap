@@ -107,6 +107,7 @@ exports[`MediaPlayer render the amp player 1`] = `
                 srcset="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 240w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 320w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 480w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 624w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 800w"
                 width="9"
               />
+              <noscript />
             </amp-iframe>
           </div>
         </figure>
@@ -217,6 +218,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
               src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB"
               title="Media player"
             />
+            <noscript />
           </div>
         </figure>
       </div>
