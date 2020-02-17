@@ -1,6 +1,8 @@
 const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
 const assetUriRegex = '[a-z-_]{0,}[0-9]{8,}';
+const legacyAssetUriRegex =
+  '[a-z-_]{1,}/[0-9]{4}/[0-9]{2}/[0-9]{6}[a-z0-9-_]{0,}';
 const variantRegex = '/simp|/trad|/cyr|/lat';
 const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
 const mediaIdRegex = '[a-z0-9]+';
@@ -42,6 +44,11 @@ export const getManifestRegex = services => {
 export const getCpsAssetRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/:assetUri(${assetUriRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+};
+
+export const getLegacyAssetRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex})/:assetUri(${legacyAssetUriRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
 export const getRadioAndTVRegex = services => {

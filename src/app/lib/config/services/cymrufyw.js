@@ -163,6 +163,7 @@ export const service = {
       header: 'Mwyaf poblogaidd',
       lastUpdated: 'Diweddariad diwethaf:',
       numberOfItems: 5,
+      hasMostRead: false,
     },
     footer: {
       trustProjectLink: {

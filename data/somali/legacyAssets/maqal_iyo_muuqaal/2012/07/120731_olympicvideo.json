@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
+    "locators": {
+      "assetUri": "/somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
+      "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
+      "curie": "http://www.bbc.co.uk/asset/2f538cba-7cc6-11e7-9ef6-4e843db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "somali",
+    "language": "so",
+    "lastUpdated": 1550415991760,
+    "firstPublished": 1343718151,
+    "lastPublished": 1343719646,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": false,
+      "previouslyArchived": null,
+      "allowAdvertising": false,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "18949484" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "18949484",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/somali/meta/dps/2012/07/emp/120731_olympicvideo.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "Orodyahaanka Kenya ayaa ku tabaranayey magaalada Iten, ka hor inta aanay u ambabixin magaalada London si ay ugu qeyb-galaan cayaaraha Olympics-ka.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Video: Halkey ku tababaranayeen orodyahanka Kenya?",
+      "headline": "Video: Halkey ku tababaranayeen orodyahanka Kenya?"
+    },
+    "locators": {
+      "assetUri": "/somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
+      "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
+      "curie": "http://www.bbc.co.uk/asset/2f538cba-7cc6-11e7-9ef6-4e843db9bd6e"
+    },
+    "summary": "Magaalada Iten oo ah magaalo ku taallo goob aad u sareysa ayay orodyaanka Kenya ku tababaranayeen.",
+    "timestamp": 1550415991760,
+    "passport": {},
+    "media": {
+      "id": "18949484",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/somali/meta/dps/2012/07/emp/120731_olympicvideo.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d7e277",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/08/10/120810132353_rudisha_640_640x360_bbc_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2012/08/10/120810132353_rudisha_640_640x360_bbc_nocredit.jpg",
+      "height": 360,
+      "width": 640,
+      "altText": "Kenya",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Maqal iyo Muuqaal",
+      "uri": "/somali/maqal_iyo_muuqaal",
+      "type": "simple"
+    },
+    "site": { "subType": "site", "name": "BBCSomali.com", "uri": "/somali", "type": "simple" },
+    "groups": []
+  }
+}

@@ -851,6 +851,18 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
+@media (min-width:24.9375rem) {
+  .c1 {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width:24.9375rem) {
+  .c38 {
+    margin-top: 0;
+  }
+}
+
 <div
     id="ContextsContainer"
   >
@@ -866,6 +878,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
           <div
             id="DataContainer"
           >
+            <noscript />
             <div
               class="c0 c1"
               dir="ltr"
@@ -1300,10 +1313,10 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                     Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
                   </p>
                 </div>
-                <aside
+                <section
                   aria-labelledby="related-content-heading"
                   class="c26"
-                  role="complementary"
+                  role="region"
                 >
                   <div
                     class="c27"
@@ -1344,7 +1357,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                       />
                     </ul>
                   </div>
-                </aside>
+                </section>
               </main>
               <div
                 class="c37 c38"
@@ -2277,6 +2290,18 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
+@media (min-width:24.9375rem) {
+  .c1 {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width:24.9375rem) {
+  .c40 {
+    margin-top: 0;
+  }
+}
+
 <html
   dir="ltr"
   lang="pcm"
@@ -2515,6 +2540,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
               <div
                 id="DataContainer"
               >
+                <noscript />
                 <div
                   class="c0 c1"
                   dir="ltr"
@@ -2948,10 +2974,10 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                         Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
                       </p>
                     </div>
-                    <aside
+                    <section
                       aria-labelledby="related-content-heading"
                       class="c28"
-                      role="complementary"
+                      role="region"
                     >
                       <div
                         class="c29"
@@ -2992,7 +3018,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                           />
                         </ul>
                       </div>
-                    </aside>
+                    </section>
                   </main>
                   <div
                     class="c39 c40"

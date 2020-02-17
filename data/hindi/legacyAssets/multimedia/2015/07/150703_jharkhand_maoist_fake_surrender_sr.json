@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:hindi/multimedia/2015/07/150703_jharkhand_maoist_fake_surrender_sr",
+    "locators": {
+      "assetUri": "/hindi/multimedia/2015/07/150703_jharkhand_maoist_fake_surrender_sr",
+      "cpsUrn": "urn:bbc:content:assetUri:hindi/multimedia/2015/07/150703_jharkhand_maoist_fake_surrender_sr",
+      "curie": "http://www.bbc.co.uk/asset/0ec02ed2-21a5-11e5-b055-a1a63db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "hindi",
+    "language": "hi",
+    "lastUpdated": 1550159732212,
+    "firstPublished": 1435943810,
+    "lastPublished": 1435943810,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": false,
+      "allowAdvertising": true,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": { "cps_asset_id": "39483912", "cps_asset_type": "map" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "39483912",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/hindi/meta/dps/2015/07/emp/150703_jharkhand_maoist_fake_surrender_sr.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "झारखंड के आदिवासी बहुल इलाकों के रहने वाले 500 से ऊपर नौजवानों को पुलिस ने लालच देकर माओवादी के रूप में सरेंडर करा दिया गया.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "इन नौजवानों को पुलिस में नौकरी का लालच दिया गया था.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "लेकिन जब नौजवानों को ठगे जाने का एहसास हुआ तब जाकर यह बात प्रकाश में आई.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "देखें, झारखंड के ऐसे ही नौजवानों पर <bold>बीबीसी</bold> संवाददाता सलमान रावी की यह रिपोर्ट. ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "आदिवासी युवाओं को कौन बना रहा है माओवादी?" },
+    "locators": {
+      "assetUri": "/hindi/multimedia/2015/07/150703_jharkhand_maoist_fake_surrender_sr",
+      "cpsUrn": "urn:bbc:content:assetUri:hindi/multimedia/2015/07/150703_jharkhand_maoist_fake_surrender_sr",
+      "curie": "http://www.bbc.co.uk/asset/0ec02ed2-21a5-11e5-b055-a1a63db9bd6e"
+    },
+    "summary": "नौकरी की लालच देकर आदिवासी युवाओं का कराया गया सरेंडर.",
+    "timestamp": 1550159732212,
+    "passport": {},
+    "media": {
+      "id": "39483912",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/hindi/meta/dps/2015/07/emp/150703_jharkhand_maoist_fake_surrender_sr.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e246",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/07/03/150703154211_jharkhand_lure_to_surrender_as_maoist_112x63_bbc_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2015/07/03/150703154211_jharkhand_lure_to_surrender_as_maoist_112x63_bbc_nocredit.jpg",
+      "height": 63,
+      "width": 112,
+      "altText": "आदिवासी युवा",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:hindi/multimedia/2015/07/150703_jharkhand_maoist_fake_surrender_sr",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": { "subType": "index", "name": "फ़ोटो-वीडियो", "uri": "/hindi/multimedia", "type": "simple" },
+    "site": { "subType": "site", "name": "BBCHindi.com", "uri": "/hindi", "type": "simple" },
+    "groups": []
+  }
+}
