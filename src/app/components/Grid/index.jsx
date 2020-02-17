@@ -33,6 +33,7 @@ export const GhostGelPageGrid = styled(Grid)`
 export const StyledFrontPageMain = styled.main`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
+  width: 100%; /* Needed for IE11 */
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     max-width: ${group4WrapperMaxWidth};
   }
