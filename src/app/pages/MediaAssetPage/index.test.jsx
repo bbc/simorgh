@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { render, waitForDomChange } from '@testing-library/react';
-import { suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import path from 'ramda/src/path';
@@ -356,9 +355,8 @@ it('should only render firstPublished timestamp for Igbo when lastPublished is l
   expect(getByText('23 Ọktọba 2019')).toBeInTheDocument();
 });
 
-xdescribe('Legacy Media Asset Page', () => {
+describe('Legacy Media Asset Page', () => {
   it('displays a media message placeholder in place of video', async () => {
-    suppressPropWarnings(['model', 'supplied']);
     const legacyMapData = await preprocessor(
       legacyPageData,
       cpsAssetPreprocessorRules,
