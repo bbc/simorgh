@@ -3,13 +3,6 @@ import liveRadioJson from '../../../../data/korean/bbc_korean_radio/liveradio.js
 
 fetch.mockResponse(JSON.stringify(liveRadioJson));
 
-it('should fetch page data, process the data and return it', async () => {
-  const { pageData } = await getInitialData('mock-live-radio-path');
-  const isProcessedPageData = pageData !== liveRadioJson;
-
-  expect(isProcessedPageData).toBeTruthy();
-});
-
 it('should return essential data for a page to render', async () => {
   const { pageData } = await getInitialData('mock-live-radio-path');
 

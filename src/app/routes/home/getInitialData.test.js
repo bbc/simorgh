@@ -3,13 +3,6 @@ import frontPageJson from '../../../../data/pidgin/frontpage/index.json';
 
 fetch.mockResponse(JSON.stringify(frontPageJson));
 
-it('should fetch page data, process the data and return it', async () => {
-  const { pageData } = await getInitialData('mock-frontpage-path');
-  const isProcessedPageData = pageData !== frontPageJson;
-
-  expect(isProcessedPageData).toBeTruthy();
-});
-
 it('should return essential data for a page to render', async () => {
   const { pageData } = await getInitialData('mock-frontpage-path');
 

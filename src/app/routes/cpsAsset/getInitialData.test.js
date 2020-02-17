@@ -3,13 +3,6 @@ import mapJson from '../../../../data/pidgin/cpsAssets/media-23256549.json';
 
 fetch.mockResponse(JSON.stringify(mapJson));
 
-it('should fetch page data, process the data and return it', async () => {
-  const { pageData } = await getInitialData('mock-map-path');
-  const isProcessedPageData = pageData !== mapJson;
-
-  expect(isProcessedPageData).toBeTruthy();
-});
-
 it('should return essential data for a page to render', async () => {
   const { pageData } = await getInitialData('mock-map-path');
 

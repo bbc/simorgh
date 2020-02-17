@@ -3,13 +3,6 @@ import articleJson from '../../../../data/pidgin/articles/cwl08rd38l6o.json';
 
 fetch.mockResponse(JSON.stringify(articleJson));
 
-it('should fetch page data, process the data and return it', async () => {
-  const { pageData } = await getInitialData('mock-article-path');
-  const isProcessedPageData = pageData !== articleJson;
-
-  expect(isProcessedPageData).toBeTruthy();
-});
-
 it('should return essential data for a page to render', async () => {
   const { pageData } = await getInitialData('mock-article-path');
 
