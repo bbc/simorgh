@@ -1,6 +1,6 @@
 import path from 'ramda/src/path';
-import getInitialData from '../getInitialData';
-import CpsMap from '#pages/CpsMap';
+import getInitialData from '../fetchPageData';
+import MediaAssetPage from '#pages/MediaAssetPage';
 import CpsSty from '#pages/CpsSty';
 import CpsPgl from '#pages/CpsPgl';
 import FrontPage from '#pages/FrontPage';
@@ -23,8 +23,8 @@ const CpsAsset = props => {
     case PHOTO_GALLERY_PAGE:
       return CpsPgl({ ...props, pageType: type });
     case MEDIA_ASSET_PAGE:
-      return CpsMap({ ...props, pageType: type });
-    case FEATURE_INDEX_PAGE: // TODO: Create FIX Page if required
+      return MediaAssetPage({ ...props, pageType: type });
+    case FEATURE_INDEX_PAGE:
       return FrontPage({ ...props, pageType: type });
     default:
       // Return 404 error page if page type does not match those above
