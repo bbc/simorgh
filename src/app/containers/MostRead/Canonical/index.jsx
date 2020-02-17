@@ -132,6 +132,4 @@ CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
 };
 
-CanonicalMostRead.defaultProps = {};
-
 export default CanonicalMostRead;
