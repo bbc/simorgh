@@ -1,17 +1,10 @@
 import styled, { css } from 'styled-components';
 import Grid from '@bbc/psammead-grid';
 import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-} from '@bbc/gel-foundations/spacings';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 
 const group4WrapperMaxWidth = `63rem`; // 1008px
@@ -37,21 +30,11 @@ export const GhostGelPageGrid = styled(Grid)`
   background-color: ${C_GHOST};
 `;
 
-export const GridMaxWidthGroup4 = styled(Grid)`
+export const StyledFrontPageMain = styled.main`
+  /* To centre page layout for Group 4+ */
   margin: 0 auto;
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     max-width: ${group4WrapperMaxWidth};
-  }
-`;
-
-export const FrontPageGrid = styled(GridMaxWidthGroup4)`
-  padding-bottom: ${GEL_SPACING_QUAD};
-  margin-top: ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-top: 0;
   }
 `;
 
