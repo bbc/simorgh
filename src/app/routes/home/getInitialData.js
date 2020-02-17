@@ -5,6 +5,7 @@ import filterEmptyGroupItems from '#lib/utilities/preprocessor/rules/filterEmpty
 import applySquashTopstories from '#lib/utilities/preprocessor/rules/topstories';
 import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
 import filterGroupsWithoutStraplines from '#lib/utilities/preprocessor/rules/filterGroupsWithoutStraplines';
+import memoizeProcessor from '../memoizeProcessor';
 
 const processJson = pipe(
   filterUnknownContentTypes,
@@ -14,13 +15,22 @@ const processJson = pipe(
   filterGroupsWithoutStraplines,
 );
 
+const pathToId = ['metadata', 'id'];
+const pathToLastUpdated = ['metadata', 'lastUpdated'];
+
+const memoizedProcessor = memoizeProcessor(
+  pathToId,
+  pathToLastUpdated,
+  processJson,
+);
+
 export default async path => {
   const { json, ...rest } = await fetchPageData(path);
 
   return {
     ...rest,
     ...(json && {
-      pageData: processJson(json),
+      pageData: memoizedProcessor(json),
     }),
   };
 };
