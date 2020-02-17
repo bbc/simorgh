@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
+import { string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
@@ -42,7 +43,8 @@ export const StyledFrontPageDiv = styled.div`
     margin-top: 0;
   }
 `;
-const FrontPageMain = ({ frontPageData }) => {
+
+const FrontPageMain = ({ frontPageData, mostReadEndpointOverride }) => {
   const {
     product,
     serviceLocalizedName,
@@ -84,11 +86,19 @@ const FrontPageMain = ({ frontPageData }) => {
         <StyledFrontPageDiv>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
-              {group.type === 'useful-links' && <MostReadContainer />}
+              {group.type === 'useful-links' && (
+                <MostReadContainer
+                  mostReadEndpointOverride={mostReadEndpointOverride}
+                />
+              )}
               <FrontPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}
-          {!hasUsefulLinks && <MostReadContainer />}
+          {!hasUsefulLinks && (
+            <MostReadContainer
+              mostReadEndpointOverride={mostReadEndpointOverride}
+            />
+          )}
         </StyledFrontPageDiv>
       </StyledFrontPageMain>
     </>
@@ -97,6 +107,11 @@ const FrontPageMain = ({ frontPageData }) => {
 
 FrontPageMain.propTypes = {
   frontPageData: frontPageDataPropTypes.isRequired,
+  mostReadEndpointOverride: string,
+};
+
+FrontPageMain.defaultProps = {
+  mostReadEndpointOverride: null,
 };
 
 export default FrontPageMain;
