@@ -1,4 +1,4 @@
-import { clone, pathOr, path, identity } from 'ramda';
+import { clone, pathOr, path } from 'ramda';
 import paragraph from './blocks/paragraph';
 import media from './blocks/media';
 import image from './blocks/image';
@@ -18,7 +18,7 @@ const typesToConvert = {
   list,
   media,
   version,
-  legacyMedia: identity,
+  legacyMedia: block => ({ model: {}, ...block }),
 };
 
 const parseBlockByType = block => {
