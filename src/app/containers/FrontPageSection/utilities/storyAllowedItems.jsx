@@ -1,11 +1,9 @@
-import take from 'ramda/src/take';
-
 const MAX_ALLOWED_ITEMS_FIRST_SECTION = 13;
 const MAX_ALLOWED_ITEMS = 10;
 
 const getAllowedItems = (items, isFirstSection) =>
   isFirstSection
-    ? take(MAX_ALLOWED_ITEMS_FIRST_SECTION, items)
-    : take(MAX_ALLOWED_ITEMS, items);
+    ? items.slice(0, MAX_ALLOWED_ITEMS_FIRST_SECTION)
+    : items.slice(0, MAX_ALLOWED_ITEMS);
 
 export default getAllowedItems;
