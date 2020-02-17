@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape } from 'prop-types';
+import { arrayOf, shape, bool } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from 'styled-components';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
@@ -43,18 +43,26 @@ const formatItem = (item, env) => {
   return assocPath(['locators', 'assetUri'], `${baseUri}${uriSuffix}`, item);
 };
 
-const CpsRelatedContent = ({ content }) => {
+const CpsRelatedContent = ({ content, isSTY }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const { env } = useContext(RequestContext);
+  const ConditionalWrapper = ({ condition, wrapper, children }) =>
+    condition ? wrapper(children) : children;
+  const a11yAttributes = {
+    as: 'section',
+    role: 'region',
+    ariaLabelledby: 'related-content-heading',
+  };
   if (!content.length) return null;
 
   return (
-    <GhostGrid
-      as="aside"
-      role="complementary"
-      aria-labelledby="related-content-heading"
+    <ConditionalWrapper
+      condition={!isSTY}
+      wrapper={children => (
+        <GhostGrid {...a11yAttributes}>{children}</GhostGrid>
+      )}
     >
-      <Wrapper>
+      <Wrapper {...(isSTY ? a11yAttributes : {})}>
         <StyledSectionLabel
           script={script}
           service={service}
@@ -74,7 +82,7 @@ const CpsRelatedContent = ({ content }) => {
             ))}
         </StoryPromoUl>
       </Wrapper>
-    </GhostGrid>
+    </ConditionalWrapper>
   );
 };
 
@@ -83,10 +91,12 @@ CpsRelatedContent.propTypes = {
   // Both pages use CPS, so the data schema is the same
   // This can be found under CPS ARES payloads: relatedContent.groups[0].promos
   content: arrayOf(shape(storyItem)),
+  isSTY: bool,
 };
 
 CpsRelatedContent.defaultProps = {
   content: [],
+  isSTY: false,
 };
 
 export default CpsRelatedContent;
