@@ -76,11 +76,6 @@ const ArticleTimestamp = ({
   const publishedAndUpdatedOnSameDayAndNotRelative =
     publishedAndUpdatedOnSameDay && !isLastRelative(lastPublished);
 
-  // const showLastUpdatedTimestamp =
-  //   (publishedAndUpdatedToday ||
-  //     !publishedAndUpdatedOnSameDayOverTenHoursAgo) &&
-  //   hasBeenUpdated;
-
   const showLastUpdatedTimestamp =
     hasBeenUpdated &&
     (publishedAndUpdatedToday || !publishedAndUpdatedOnSameDayAndNotRelative);
