@@ -50,7 +50,7 @@ const CpsRelatedContent = ({ content, isSTY }) => {
   const a11yAttributes = {
     as: 'section',
     role: 'region',
-    ariaLabelledby: 'related-content-heading',
+    'aria-labelledby': 'related-content-heading',
   };
   if (!content.length) return null;
 
