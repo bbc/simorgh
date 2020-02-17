@@ -64,22 +64,26 @@ const ArticleTimestamp = ({
 
   const timeDifferenceMinutes = (lastPublished - firstPublished) / 1000 / 60;
 
+  const hasBeenUpdated = timeDifferenceMinutes > minutesTolerance;
+
   const publishedAndUpdatedOnSameDay = isSameDay(firstPublished, lastPublished);
 
   const publishedToday = isToday(firstPublished);
 
-  const updatedLessThanTenHoursAgo = isLastRelative(lastPublished);
-
   const publishedAndUpdatedToday =
     publishedAndUpdatedOnSameDay && publishedToday;
 
-  const publishedAndUpdatedOnSameDayOverTenHoursAgo =
-    publishedAndUpdatedOnSameDay && !updatedLessThanTenHoursAgo;
+  const publishedAndUpdatedOnSameDayAndNotRelative =
+    publishedAndUpdatedOnSameDay && !isLastRelative(lastPublished);
+
+  // const showLastUpdatedTimestamp =
+  //   (publishedAndUpdatedToday ||
+  //     !publishedAndUpdatedOnSameDayOverTenHoursAgo) &&
+  //   hasBeenUpdated;
 
   const showLastUpdatedTimestamp =
-    (publishedAndUpdatedToday ||
-      !publishedAndUpdatedOnSameDayOverTenHoursAgo) &&
-    timeDifferenceMinutes > minutesTolerance;
+    hasBeenUpdated &&
+    (publishedAndUpdatedToday || !publishedAndUpdatedOnSameDayAndNotRelative);
 
   return (
     <Wrapper className={className}>
