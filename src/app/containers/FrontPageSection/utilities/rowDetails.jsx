@@ -1,6 +1,4 @@
 import flatten from 'ramda/src/flatten';
-import isEmpty from 'ramda/src/isEmpty';
-import isNil from 'ramda/src/isNil';
 import { TopRow, LeadingRow, RegularRow } from '../../FrontPageStoryRows';
 
 /* Flattens the structure created in the storySplitter function,
@@ -43,7 +41,7 @@ const getRowDetails = rows => {
   };
 
   return flatten([firstRow, regularRows, noImageRow]).filter(
-    row => !isEmpty(row.stories) && !isNil(row.stories),
+    row => row.stories !== null && row.stories.length !== 0,
   );
 };
 
