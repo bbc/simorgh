@@ -1,4 +1,6 @@
-import { clone, pathOr, path } from 'ramda';
+import clone from 'ramda/src/clone';
+import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import paragraph from './blocks/paragraph';
 import media from './blocks/media';
 import image from './blocks/image';

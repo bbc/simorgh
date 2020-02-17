@@ -1,4 +1,5 @@
-import { pathOr, take } from 'ramda';
+import pathOr from 'ramda/src/pathOr';
+import take from 'ramda/src/take';
 import uuid from 'uuid';
 import fixture from '#data/pidgin/frontpage';
 import rtlFixture from '#data/urdu/frontpage';

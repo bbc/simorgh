@@ -1,4 +1,6 @@
-import { flatten, isEmpty, isNil } from 'ramda';
+import flatten from 'ramda/src/flatten';
+import isEmpty from 'ramda/src/isEmpty';
+import isNil from 'ramda/src/isNil';
 import { TopRow, LeadingRow, RegularRow } from '../../FrontPageStoryRows';
 
 /* Flattens the structure created in the storySplitter function,

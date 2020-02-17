@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
 import styled, { css } from 'styled-components';
+import pathOr from 'ramda/src/pathOr';
+import dropWhile from 'ramda/src/dropWhile';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
@@ -15,7 +17,6 @@ import {
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import Grid from '@bbc/psammead-grid';
-import { pathOr, dropWhile } from 'ramda';
 import UsefulLinksComponent from './UsefulLinks';
 import { ServiceContext } from '#contexts/ServiceContext';
 import groupShape from '#models/propTypes/frontPageGroup';

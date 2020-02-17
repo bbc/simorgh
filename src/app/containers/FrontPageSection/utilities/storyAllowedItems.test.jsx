@@ -1,4 +1,4 @@
-import { range } from 'ramda';
+import range from 'ramda/src/range';
 import getAllowedItems from './storyAllowedItems';
 
 const numberOfStories = {
