@@ -167,13 +167,14 @@ exports[`ArticleTimestamp should render both a 'created' and an 'updated' Timest
   >
     7 July 2018
   </time>
-  <br />
-  <time
-    class="c1"
-    datetime="2019-03-15"
-  >
-    Updated 
-    15 March 2019
-  </time>
+  <div>
+    <time
+      class="c1"
+      datetime="2019-03-15"
+    >
+      Updated 
+      15 March 2019
+    </time>
+  </div>
 </div>
 `;

@@ -20,7 +20,7 @@ const regexUpdatedDatetime = /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9
 const regexUpdatedDate = /^Updated [0-9]{1,2} \w+ [0-9]{4}$/;
 
 const firstChild = wrapper => wrapper[0].children[0].data;
-const thirdChild = wrapper => wrapper[2].children[0].data;
+const secondChild = wrapper => wrapper[1].children[0].children[0].data;
 
 const renderedTimestamps = jsx => render(jsx).get(0).children; // helper as output is wrapped in a grid
 
@@ -185,7 +185,7 @@ describe('ArticleTimestamp', () => {
         minutesTolerance={1}
       />,
     );
-    expect(renderedWrapper.length).toEqual(3);
+    expect(renderedWrapper.length).toEqual(2);
     expect(firstChild(renderedWrapper)).toMatch(regexDate);
   });
 
@@ -204,9 +204,9 @@ describe('ArticleTimestamp', () => {
         lastPublished={threeHoursAgo}
       />,
     );
-    expect(renderedWrapper.length).toEqual(3);
+    expect(renderedWrapper.length).toEqual(2);
     expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
-    expect(thirdChild(renderedWrapper)).toMatch('3 hours ago');
+    expect(secondChild(renderedWrapper)).toMatch('3 hours ago');
   });
 
   it('should render two timestamps - published: date & time, updated: date & time when both are today and > 10 hours ago', () => {
@@ -224,9 +224,9 @@ describe('ArticleTimestamp', () => {
         lastPublished={elevenHoursAgo}
       />,
     );
-    expect(renderedWrapper.length).toEqual(3);
+    expect(renderedWrapper.length).toEqual(2);
     expect(firstChild(renderedWrapper)).toMatch(regexDatetime);
-    expect(thirdChild(renderedWrapper)).toMatch(regexUpdatedDatetime);
+    expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDatetime);
   });
 
   it('should render two timestamps - published: date, updated: date when firstPublished before today and lastPublished before today, but not same day as firstPublished', () => {
@@ -240,9 +240,9 @@ describe('ArticleTimestamp', () => {
         lastPublished={twoDaysAgo}
       />,
     );
-    expect(renderedWrapper.length).toEqual(3);
+    expect(renderedWrapper.length).toEqual(2);
     expect(firstChild(renderedWrapper)).toMatch(regexDate);
-    expect(thirdChild(renderedWrapper)).toMatch(regexUpdatedDate);
+    expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
   });
 
   it('should render two timestamps - published: date, updated: date when firstPublished before today and lastPublished today and > 10 hrs ago', () => {
@@ -258,9 +258,9 @@ describe('ArticleTimestamp', () => {
         lastPublished={elevenHoursAgo}
       />,
     );
-    expect(renderedWrapper.length).toEqual(3);
+    expect(renderedWrapper.length).toEqual(2);
     expect(firstChild(renderedWrapper)).toMatch(regexDate);
-    expect(thirdChild(renderedWrapper)).toMatch(regexUpdatedDate);
+    expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
   });
 
   describe('With different timezones', () => {
