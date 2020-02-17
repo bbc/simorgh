@@ -102,7 +102,7 @@ const renderPromos = (items, isFirstSection, dir) => {
     <MarginWrapper
       firstSection={isFirstSection}
       dir={dir}
-      oneItem={!!sectionHasSingleStory}
+      oneItem={sectionHasSingleStory}
     >
       {sectionHasSingleStory ? (
         <TopRow stories={items} dir={dir} sectionHasSingleStory />

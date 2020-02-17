@@ -547,7 +547,7 @@ describe('FrontPageSection Container', () => {
     it('should render useful links when the semantic group name is "Useful links"', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={usefulLinks} sectionNumber={1} />,
+          <FrontPageSection group={usefulLinks} sectionNumber={1} />
         </ServiceContextProvider>,
       );
 
