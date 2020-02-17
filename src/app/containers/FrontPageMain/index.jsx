@@ -3,7 +3,18 @@ import React, { Fragment, useContext } from 'react';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
-import Grid, { FrontPageGrid } from '#app/components/Grid';
+import styled from 'styled-components';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_QUAD,
+  GEL_MARGIN_BELOW_400PX,
+  GEL_MARGIN_ABOVE_400PX,
+} from '@bbc/gel-foundations/spacings';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
@@ -12,36 +23,27 @@ import MostReadContainer from '../MostRead';
 import LinkedData from '../LinkedData';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
+import { StyledFrontPageMain } from '#app/components/Grid';
 
-const mainColumns = {
-  group0: 6,
-  group1: 6,
-  group2: 6,
-  group3: 6,
-  group4: 8,
-  group5: 20,
-};
+export const StyledFrontPageDiv = styled.div`
+  /* To add GEL Margins */
+  margin: 0 ${GEL_MARGIN_BELOW_400PX};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin: 0 ${GEL_MARGIN_ABOVE_400PX};
+  }
 
-const itemColumns = {
-  group0: 6,
-  group1: 6,
-  group2: 6,
-  group3: 6,
-  group4: 8,
-  group5: 20,
-};
-
-const itemMargins = {
-  group0: true,
-  group1: true,
-  group2: true,
-  group3: true,
-  group4: true,
-};
-
+  /* To add extra spacing */
+  padding-bottom: ${GEL_SPACING_QUAD};
+  margin-top: ${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-top: 0;
+  }
+`;
 const FrontPageMain = ({ frontPageData }) => {
   const {
-    dir,
     product,
     serviceLocalizedName,
     translations,
@@ -75,22 +77,20 @@ const FrontPageMain = ({ frontPageData }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <main role="main">
+      <StyledFrontPageMain role="main">
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
-        <FrontPageGrid columns={mainColumns} dir={dir} enableGelGutters>
-          <Grid item columns={itemColumns} dir={dir} margins={itemMargins}>
-            {groups.map((group, index) => (
-              <Fragment key={group.title}>
-                {group.type === 'useful-links' && <MostReadContainer />}
-                <FrontPageSection group={group} sectionNumber={index} />
-              </Fragment>
-            ))}
-            {!hasUsefulLinks && <MostReadContainer />}
-          </Grid>
-        </FrontPageGrid>
-      </main>
+        <StyledFrontPageDiv>
+          {groups.map((group, index) => (
+            <Fragment key={group.title}>
+              {group.type === 'useful-links' && <MostReadContainer />}
+              <FrontPageSection group={group} sectionNumber={index} />
+            </Fragment>
+          ))}
+          {!hasUsefulLinks && <MostReadContainer />}
+        </StyledFrontPageDiv>
+      </StyledFrontPageMain>
     </>
   );
 };
