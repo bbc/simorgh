@@ -21,7 +21,7 @@ import UsefulLinksComponent from './UsefulLinks';
 import { ServiceContext } from '#contexts/ServiceContext';
 import groupShape from '#models/propTypes/frontPageGroup';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import getAllowedItems from './utilities/storyAllowedItems';
+import getAllowedItems from './utilities/getAllowedItems';
 import getRows from './utilities/storyRowsSplitter';
 import getRowDetails from './utilities/rowDetails';
 import { TopRow } from '../FrontPageStoryRows';
@@ -83,7 +83,7 @@ const renderPromos = (items, isFirstSection, dir) => {
   const rows = getRows(items, isFirstSection);
   const rowsDetails = getRowDetails(rows);
 
-  // Only use StoryPromoUl and Li if there is only one story in one row
+  // Don't use StoryPromoUl and Li if there is only one story in one row
   const sectionHasSingleStory =
     rowsDetails.length === 1 && rowsDetails[0].stories.length === 1;
 

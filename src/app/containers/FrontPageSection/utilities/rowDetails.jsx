@@ -1,6 +1,17 @@
 import flatten from 'ramda/src/flatten';
 import { TopRow, LeadingRow, RegularRow } from '../../FrontPageStoryRows';
 
+const getFirstRowComponent = rowLength => {
+  switch (rowLength) {
+    case 1:
+      return TopRow;
+    case 2:
+      return LeadingRow;
+    default:
+      return null; // This is necessary for when firstRow is empty
+  }
+};
+
 /* Flattens the structure created in the storySplitter function,
  * allowing the resulting array to be easily mapped over.
  * Returns an array of objects in the format:
@@ -11,17 +22,6 @@ import { TopRow, LeadingRow, RegularRow } from '../../FrontPageStoryRows';
  * }]
  */
 const getRowDetails = rows => {
-  const getFirstRowComponent = rowLength => {
-    switch (rowLength) {
-      case 1:
-        return TopRow;
-      case 2:
-        return LeadingRow;
-      default:
-        return null; // This is necessary for when firstRow is empty
-    }
-  };
-
   const firstRow = {
     stories: rows.firstRow,
     RowComponent: getFirstRowComponent(rows.firstRow.length),
