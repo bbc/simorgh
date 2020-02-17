@@ -26,7 +26,7 @@ const renderMostReadContainer = (service, variant) => (
     >
       <ServiceContextProvider service={service} variant={variant}>
         <MostReadContainer
-          endpointOverride={staticMostReadURL(service, variant)}
+          mostReadEndpointOverride={staticMostReadURL(service, variant)}
         />
       </ServiceContextProvider>
     </RequestContextProvider>
@@ -35,7 +35,7 @@ const renderMostReadContainer = (service, variant) => (
 
 const stories = storiesOf('Containers|MostRead', module)
   .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob())
+  .addDecorator(withServicesKnob({ defaultService: 'arabic' }))
   .addParameters({
     chromatic: { disable: true },
   });
