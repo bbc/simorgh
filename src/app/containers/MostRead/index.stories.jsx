@@ -27,7 +27,6 @@ const renderMostReadContainer = (service, variant) => (
       <ServiceContextProvider service={service} variant={variant}>
         <MostReadContainer
           mostReadEndpointOverride={staticMostReadURL(service, variant)}
-          forceMostRead
         />
       </ServiceContextProvider>
     </RequestContextProvider>
