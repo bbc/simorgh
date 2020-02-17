@@ -1321,7 +1321,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
             </main>
             <section
               aria-labelledby="related-content-heading"
-              class="c24"
+              class="c29"
               role="region"
             >
               <div
@@ -2953,7 +2953,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                 </main>
                 <section
                   aria-labelledby="related-content-heading"
-                  class="c26"
+                  class="c31"
                   role="region"
                 >
                   <div
