@@ -64,7 +64,7 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -176,7 +176,7 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;

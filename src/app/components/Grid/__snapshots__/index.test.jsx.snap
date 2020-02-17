@@ -40,7 +40,7 @@ exports[`Grid should render Grid with columns 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     width: calc(33.333333333333336%);
     display: inline-block;
@@ -121,7 +121,7 @@ exports[`Grid should render GridMaxWidthGroup5 with columns 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
     width: calc(33.333333333333336%);
     display: inline-block;
