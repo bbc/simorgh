@@ -172,8 +172,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
           <span
             class="c1"
           >
-            Bidiyo
-            , 
+            Bidiyo, 
           </span>
           <span
             class="c8"
@@ -363,8 +362,7 @@ exports[`Index Alsos should render one correctly 1`] = `
         <span
           class="c1"
         >
-          Bidiyo
-          , 
+          Bidiyo, 
         </span>
         <span
           class="c7"
