@@ -130,7 +130,7 @@ When adding a new page type there are several parts required.
 #### 4) Add new pre-processing rules if required.
 
 - If required for the new page type you can add pre-processing rules [here](https://github.com/bbc/simorgh/tree/latest/src/app/lib/utilities/preprocessor/rules). These are needed for use cases where we want to manipulate the data before it is received by the container for the page.
-  - EG: On the articles routes [unique ID's](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/getInitialData/article/index.js#L19) are added to each block in the payload
+  - EG: On the articles routes [unique ID's](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/fetchPageData/article/index.js#L19) are added to each block in the payload
 
 #### 5) Add a new route to the react router config
 

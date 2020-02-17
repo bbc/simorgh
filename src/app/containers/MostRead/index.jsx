@@ -12,11 +12,14 @@ const getMostReadEndpoint = ({ service, variant }) =>
 
 const MostReadContainer = ({ endpointOverride }) => {
   const { variant, isAmp } = useContext(RequestContext);
-  const { service } = useContext(ServiceContext);
+  const {
+    service,
+    mostRead: { hasMostRead },
+  } = useContext(ServiceContext);
 
   const { enabled } = useToggle('mostRead');
 
-  const mostReadEnabled = !isAmp && enabled;
+  const mostReadEnabled = !isAmp && enabled && hasMostRead;
 
   if (!mostReadEnabled) {
     return null;
