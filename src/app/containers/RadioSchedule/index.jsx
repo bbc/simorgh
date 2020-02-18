@@ -3,12 +3,13 @@ import 'isomorphic-fetch';
 import { string } from 'prop-types';
 import { latin } from '@bbc/gel-foundations/scripts';
 import RadioSchedule from '@bbc/psammead-radio-schedule';
-import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '../Toggle/useToggle';
-import webLogger from '#lib/logger.web';
 import moment from 'moment';
 import findLastIndex from 'ramda/src/findLastIndex';
 import propSatisfies from 'ramda/src/propSatisfies';
+import { ServiceContext } from '#contexts/ServiceContext';
+import useToggle from '../Toggle/useToggle';
+import webLogger from '#lib/logger.web';
+
 const logger = webLogger();
 
 const RadioScheduleContainer = ({ endpoint }) => {
@@ -30,14 +31,12 @@ const RadioScheduleContainer = ({ endpoint }) => {
 
     console.log(latestProgrammeIndex);
 
-    console.log(
-      new Date(radioScheduleData.schedules[latestProgrammeIndex].transmissionTimeStart),
-    );
-
     const radioScheduleData1 =
       radioScheduleData.schedules[latestProgrammeIndex];
 
-    console.log(new Date());
+    console.log('current time', new Date());
+
+    console.log('current time from var', new Date(currentTime));
 
     const schedules = [
       {

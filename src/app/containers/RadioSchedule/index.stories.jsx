@@ -46,6 +46,7 @@ const stories = storiesOf('Containers|RadioSchedule', module)
       defaultService: 'arabic',
       services: validServices,
     }),
+    console.log('current time in stories', new Date()),
   )
   .addParameters({
     chromatic: { disable: true },
