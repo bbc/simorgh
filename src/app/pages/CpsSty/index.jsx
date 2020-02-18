@@ -190,7 +190,7 @@ const CpsStyContainer = ({ pageData }) => {
           role="main"
         >
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-          <CpsRelatedContent content={relatedContent} isSTY />
+          <CpsRelatedContent content={relatedContent} noGhostGrid />
         </Grid>
         <GridSecondaryColumn item columns={gridColsSecondary}>
           <ComponentWrapper>
