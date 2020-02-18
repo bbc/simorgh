@@ -19,55 +19,12 @@ const RadioScheduleContainer = ({ endpoint }) => {
 
   const [schedule, setRadioSchedule] = useState([]);
 
-  const handleResponse = async response => {
-    const radioScheduleData = await response.json();
-
-    const currentTime = parseInt(moment.utc().format('x'), 10);
-    // finding latest programme, that may or may not still be live. this is because there isn't
-    // always a live programme, in which case we show the most recently played programme on demand.
-    const latestProgrammeIndex = findLastIndex(
-      propSatisfies(time => time < currentTime, 'publishedTimeStart'),
-    )(radioScheduleData.schedules);
-
-    console.log(latestProgrammeIndex);
-
-    const latestProgram =
-      radioScheduleData.schedules[latestProgrammeIndex];
-
-    console.log('current time', new Date());
-
-    console.log('current time from var', new Date(currentTime));
-
-    const currentState = getProgramState(
-      currentTime,
-      latestProgram.publishedTimeStart,
-      latestProgram.publishedTimeEnd,
-    );
-
-    const schedules = [
-      {
-        id: 1,
-        state: currentState,
-        stateLabel: 'Live',
-        startTime: latestProgram.publishedTimeStart,
-        link: getLink(currentState, latestProgram),
-        brandTitle: latestProgram.brand.title,
-        episodeTitle: latestProgram.episode.presentationTitle,
-        summary: latestProgram.episode.synopses.short,
-        duration: latestProgram.publishedTimeDuration,
-        durationLabel: 'Duration',
-      },
-    ];
-
-    setRadioSchedule(schedules);
-  };
-
   const getProgramState = (currentTime, startTime, endTime) => {
     // live - currentTime < endTime && currentTime > startTime
     if (currentTime < endTime && currentTime > startTime) {
       return 'live';
     }
-     // onDemand - is live that just ended
+    // onDemand - is live that just ended
     if (currentTime > endTime) {
       return 'onDemand';
     }
@@ -79,7 +36,51 @@ const RadioScheduleContainer = ({ endpoint }) => {
     const url = `/${service}/${latestProgram.serviceId}`;
     return state === 'live'
       ? `${url}/liveradio`
-      : `${url}/${latestProgram.episode.pid}`;
+      : `${url}/${latestProgram.broadcast.pid}`;
+  };
+
+  const handleResponse = async response => {
+    const radioScheduleData = await response.json();
+
+    const currentTime = parseInt(moment.utc().format('x'), 10);
+    // finding latest programme, that may or may not still be live. this is because there isn't
+    // always a live programme, in which case we show the most recently played programme on demand.
+    const latestProgrammeIndex = findLastIndex(
+      propSatisfies(time => time < currentTime, 'publishedTimeStart'),
+    )(radioScheduleData.schedules);
+
+    console.log(latestProgrammeIndex);
+    
+    const schedulesToShow = radioScheduleData.schedules.slice(
+      latestProgrammeIndex - 2,
+      latestProgrammeIndex + 2,
+    );
+    const latestProgram = radioScheduleData.schedules[latestProgrammeIndex];
+
+    console.log('current time', new Date());
+
+    console.log('current time from var', new Date(currentTime));
+
+    const schedules = schedulesToShow.map(program => {
+      const currentState = getProgramState(
+        currentTime,
+        program.publishedTimeStart,
+        program.publishedTimeEnd,
+      );
+      return {
+        id: program.broadcast.pid,
+        state: currentState,
+        stateLabel: 'Live',
+        startTime: program.publishedTimeStart,
+        link: getLink(currentState, program),
+        brandTitle: program.brand.title,
+        episodeTitle: program.episode.presentationTitle,
+        summary: program.episode.synopses.short,
+        duration: program.publishedTimeDuration,
+        durationLabel: 'Duration',
+      };
+    });
+    setRadioSchedule(schedules);
   };
 
   useEffect(() => {
