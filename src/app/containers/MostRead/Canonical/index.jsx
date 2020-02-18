@@ -101,7 +101,7 @@ const CanonicalMostRead = ({ endpoint }) => {
         {header}
       </SectionLabel>
       <MarginWrapper>
-        <MostReadList numberOfItems={items.length} dir={dir}>
+        <MostReadList numberOfItems={items.length} dir={dir} maxTwoColumns>
           {items.map((item, i) => (
             <MostReadItemWrapper dir={dir} key={item.id}>
               <MostReadRank
@@ -110,6 +110,7 @@ const CanonicalMostRead = ({ endpoint }) => {
                 listIndex={i + 1}
                 numberOfItems={items.length}
                 dir={dir}
+                maxTwoColumns
               />
               <MostReadLink
                 dir={dir}

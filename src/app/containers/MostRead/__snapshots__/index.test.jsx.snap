@@ -7,10 +7,10 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
     role="region"
   >
     <div
-      class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
+      class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc"
     >
       <div
-        class="Bar-sc-1x4gwjz-0 fDhhto"
+        class="Bar-sc-1x4gwjz-0 kXOyLn"
       />
       <h2
         class="Heading-sc-1x4gwjz-2 eZofTG"
@@ -36,12 +36,12 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
       class="MarginWrapper-sc-6bm912-0 bmzrWW"
     >
       <ol
-        class="GridComponent-nf79gm-0 iUNUcT StyledGrid-sc-1ofyujo-0 iUmfRN"
+        class="GridComponent-nf79gm-0 gjgzxV TwoColumnGrid-sc-1ofyujo-0 ewnImn"
         dir="rtl"
         role="list"
       >
         <li
-          class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
           dir="rtl"
           role="listitem"
         >
@@ -49,11 +49,11 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="StyledWrapper-fs4y6m-0 eopofa"
+              class="TwoColumnWrapper-fs4y6m-0 dRKgta"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-1 cavpjS"
+                class="StyledSpan-fs4y6m-2 jELxsI"
               >
                 ۱
               </span>
@@ -72,7 +72,7 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
           </div>
         </li>
         <li
-          class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
           dir="rtl"
           role="listitem"
         >
@@ -80,11 +80,11 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="StyledWrapper-fs4y6m-0 iebfvn"
+              class="TwoColumnWrapper-fs4y6m-0 jhGKZl"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-1 cavpjS"
+                class="StyledSpan-fs4y6m-2 jELxsI"
               >
                 ۲
               </span>
@@ -103,7 +103,7 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
           </div>
         </li>
         <li
-          class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
           dir="rtl"
           role="listitem"
         >
@@ -111,11 +111,11 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="StyledWrapper-fs4y6m-0 eopofa"
+              class="TwoColumnWrapper-fs4y6m-0 dRKgta"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-1 cavpjS"
+                class="StyledSpan-fs4y6m-2 jELxsI"
               >
                 ۳
               </span>
@@ -134,7 +134,7 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
           </div>
         </li>
         <li
-          class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
           dir="rtl"
           role="listitem"
         >
@@ -142,11 +142,11 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="StyledWrapper-fs4y6m-0 iebfvn"
+              class="TwoColumnWrapper-fs4y6m-0 jhGKZl"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-1 cavpjS"
+                class="StyledSpan-fs4y6m-2 jELxsI"
               >
                 ۴
               </span>
@@ -165,7 +165,7 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
           </div>
         </li>
         <li
-          class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
           dir="rtl"
           role="listitem"
         >
@@ -173,11 +173,11 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="StyledWrapper-fs4y6m-0 hgqrxc"
+              class="TwoColumnWrapper-fs4y6m-0 dRKgta"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-1 cavpjS"
+                class="StyledSpan-fs4y6m-2 jELxsI"
               >
                 ۵
               </span>
@@ -196,7 +196,7 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
           </div>
         </li>
         <li
-          class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
           dir="rtl"
           role="listitem"
         >
@@ -204,11 +204,11 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="StyledWrapper-fs4y6m-0 feDolZ"
+              class="TwoColumnWrapper-fs4y6m-0 kxSdzl"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-1 cavpjS"
+                class="StyledSpan-fs4y6m-2 jELxsI"
               >
                 ۶
               </span>
@@ -227,7 +227,7 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
           </div>
         </li>
         <li
-          class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
           dir="rtl"
           role="listitem"
         >
@@ -235,11 +235,11 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="StyledWrapper-fs4y6m-0 jiCQU"
+              class="TwoColumnWrapper-fs4y6m-0 etAVoR"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-1 cavpjS"
+                class="StyledSpan-fs4y6m-2 jELxsI"
               >
                 ۷
               </span>
@@ -258,7 +258,7 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
           </div>
         </li>
         <li
-          class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
           dir="rtl"
           role="listitem"
         >
@@ -266,11 +266,11 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="StyledWrapper-fs4y6m-0 feDolZ"
+              class="TwoColumnWrapper-fs4y6m-0 kxSdzl"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-1 cavpjS"
+                class="StyledSpan-fs4y6m-2 jELxsI"
               >
                 ۸
               </span>
@@ -289,7 +289,7 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
           </div>
         </li>
         <li
-          class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
           dir="rtl"
           role="listitem"
         >
@@ -297,11 +297,11 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="StyledWrapper-fs4y6m-0 jiCQU"
+              class="TwoColumnWrapper-fs4y6m-0 etAVoR"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-1 cavpjS"
+                class="StyledSpan-fs4y6m-2 jELxsI"
               >
                 ۹
               </span>
@@ -320,7 +320,7 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
           </div>
         </li>
         <li
-          class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
           dir="rtl"
           role="listitem"
         >
@@ -328,11 +328,11 @@ exports[`MostReadContainerCanonical renders most read as expected on canonical f
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="StyledWrapper-fs4y6m-0 feDolZ"
+              class="TwoColumnWrapper-fs4y6m-0 kxSdzl"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-1 cavpjS"
+                class="StyledSpan-fs4y6m-2 jELxsI"
               >
                 ۱۰
               </span>
