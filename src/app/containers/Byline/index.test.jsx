@@ -12,10 +12,8 @@ const BylineContainerWithContext = ({
   service,
   serviceContext = pidginServiceConfig.default,
   bbcOrigin = 'https://www.test.bbc.com',
-  name,
-  title,
+  blocks,
 }) => {
-  const blocks = [{ name, title }];
   return (
     <ServiceContext.Provider value={serviceContext}>
       <RequestContextProvider
@@ -38,8 +36,7 @@ describe('Byline', () => {
     BylineContainerWithContext({
       pageType: 'STY',
       service: 'pidgin',
-      name: 'John Smith',
-      title: 'Art Editor',
+      blocks: [{ name: 'John Smith', title: 'Art Editor' }],
     }),
   );
 
@@ -48,7 +45,19 @@ describe('Byline', () => {
       BylineContainerWithContext({
         pageType: 'STY',
         service: 'pidgin',
-        name: 'John Smith',
+        blocks: [{ name: 'John Smith' }],
+      }),
+    );
+
+    expect(document.querySelector(`div ul li`)).toBeNull();
+  });
+
+  it('should render nothing if blocks is null', () => {
+    render(
+      BylineContainerWithContext({
+        pageType: 'STY',
+        service: 'pidgin',
+        blocks: null,
       }),
     );
 
