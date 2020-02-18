@@ -24,13 +24,11 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
-import Byline from '#containers/Byline';
 import {
+  getAboutTags,
   getFirstPublished,
   getLastPublished,
-  getAboutTags,
 } from '#lib/utilities/parseAssetData';
-import categoryType from './categoryMap/index';
 
 // Page Handlers
 import withContexts from '#containers/PageHandlers/withContexts';
@@ -39,12 +37,8 @@ import withError from '#containers/PageHandlers/withError';
 import withLoading from '#containers/PageHandlers/withLoading';
 import withData from '#containers/PageHandlers/withData';
 
-const CpsStyContainer = ({ pageData }) => {
+const PhotoGalleryPageContainer = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
-  const category = path(
-    ['promo', 'passport', 'category', 'categoryName'],
-    pageData,
-  );
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
   const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
@@ -77,7 +71,6 @@ const CpsStyContainer = ({ pageData }) => {
       ) : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    byline: props => <StyledByline {...props} />,
   };
 
   const StyledGhostGrid = styled(GhostGrid)`
@@ -90,14 +83,6 @@ const CpsStyContainer = ({ pageData }) => {
   `;
 
   const StyledTimestamp = styled(Timestamp)`
-    padding-bottom: ${GEL_SPACING_DBL};
-
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      padding-bottom: ${GEL_SPACING_TRPL};
-    }
-  `;
-
-  const StyledByline = styled(Byline)`
     padding-bottom: ${GEL_SPACING_DBL};
 
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -118,7 +103,7 @@ const CpsStyContainer = ({ pageData }) => {
         aboutTags={aboutTags}
       />
       <LinkedData
-        type={categoryType(category)}
+        type="Article"
         seoTitle={title}
         headline={title}
         description={summary}
@@ -136,14 +121,14 @@ const CpsStyContainer = ({ pageData }) => {
   );
 };
 
-CpsStyContainer.propTypes = cpsAssetPagePropTypes;
+PhotoGalleryPageContainer.propTypes = cpsAssetPagePropTypes;
 
-const EnhancedCpsStyContainer = pipe(
+const EnhancedPhotoGalleryPageContainer = pipe(
   withData,
   withError,
   withLoading,
   withPageWrapper,
   withContexts,
-)(CpsStyContainer);
+)(PhotoGalleryPageContainer);
 
-export default EnhancedCpsStyContainer;
+export default EnhancedPhotoGalleryPageContainer;
