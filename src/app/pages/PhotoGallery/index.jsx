@@ -25,11 +25,10 @@ import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
+  getAboutTags,
   getFirstPublished,
   getLastPublished,
-  getAboutTags,
 } from '#lib/utilities/parseAssetData';
-import categoryType from './categoryMap/index';
 
 // Page Handlers
 import withContexts from '#containers/PageHandlers/withContexts';
@@ -38,12 +37,8 @@ import withError from '#containers/PageHandlers/withError';
 import withLoading from '#containers/PageHandlers/withLoading';
 import withData from '#containers/PageHandlers/withData';
 
-const CpsStyContainer = ({ pageData }) => {
+const PhotoGalleryPageContainer = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
-  const category = path(
-    ['promo', 'passport', 'category', 'categoryName'],
-    pageData,
-  );
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
   const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
@@ -108,7 +103,7 @@ const CpsStyContainer = ({ pageData }) => {
         aboutTags={aboutTags}
       />
       <LinkedData
-        type={categoryType(category)}
+        type="Article"
         seoTitle={title}
         headline={title}
         description={summary}
@@ -126,14 +121,14 @@ const CpsStyContainer = ({ pageData }) => {
   );
 };
 
-CpsStyContainer.propTypes = cpsAssetPagePropTypes;
+PhotoGalleryPageContainer.propTypes = cpsAssetPagePropTypes;
 
-const EnhancedCpsStyContainer = pipe(
+const EnhancedPhotoGalleryPageContainer = pipe(
   withData,
   withError,
   withLoading,
   withPageWrapper,
   withContexts,
-)(CpsStyContainer);
+)(PhotoGalleryPageContainer);
 
-export default EnhancedCpsStyContainer;
+export default EnhancedPhotoGalleryPageContainer;
