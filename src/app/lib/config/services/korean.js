@@ -148,7 +148,8 @@ export const service = {
     mostRead: {
       header: 'TOP 뉴스',
       lastUpdated: '최종 송고일',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {

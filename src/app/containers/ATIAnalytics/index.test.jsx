@@ -4,7 +4,8 @@ import { render } from '@testing-library/react';
 import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import { articleDataNews } from '#pages/Article/fixtureData';
 import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
-import pglAssetData from '#pages/CpsPgl/fixtureData.json';
+import pglAssetData from '#pages/PhotoGallery/fixtureData.json';
+import styAssetData from '#pages/Story/fixtureData.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
@@ -332,6 +333,85 @@ describe('ATI Analytics Container', () => {
       render(
         <ContextWrap platform="amp" pageType="PGL">
           <ATIAnalytics data={pglAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockAmp.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+  });
+
+  describe('pageType=STY', () => {
+    it('should call CanonicalATIAnalytics when platform is canonical', () => {
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=story::mundo.story.23263889.page',
+        'r=0x0x24x24',
+        're=1024x768',
+        'hl=00-00-00',
+        'lng=en-US',
+        'x1=[urn:bbc:ares::asset:mundo/23263889]',
+        'x2=[responsive]',
+        'x3=[news]',
+        'x4=[es]',
+        'x5=[http://localhost/]',
+        'x7=[article]',
+        'x8=[simorgh]',
+        'x9=[WS+STY+TEST+-+Full+Headline+-+BBC+News]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x13=[Life~Fake+news]',
+        'x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]',
+        'x16=[Amuse%20me]',
+        'x17=[News]',
+      ].join('&');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      canonical.default = mockCanonical;
+
+      render(
+        <ContextWrap platform="canonical" pageType="STY">
+          <ATIAnalytics data={styAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockCanonical.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+
+    it('should call AmpATIAnalytics when platform is Amp', () => {
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=story::mundo.story.23263889.page',
+        `r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
+        `re=\${availableScreenWidth}x\${availableScreenHeight}`,
+        'hl=00-00-00',
+        `lng=\${browserLanguage}`,
+        'x1=[urn:bbc:ares::asset:mundo/23263889]',
+        'x2=[amp]',
+        'x3=[news]',
+        'x4=[es]',
+        `x5=[\${sourceUrl}]`,
+        `x6=[\${documentReferrer}]`,
+        'x7=[article]',
+        'x8=[simorgh]',
+        'x9=[WS+STY+TEST+-+Full+Headline+-+BBC+News]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x13=[Life~Fake+news]',
+        'x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]',
+        'x16=[Amuse%20me]',
+        'x17=[News]',
+      ].join('&');
+      const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      amp.default = mockAmp;
+
+      render(
+        <ContextWrap platform="amp" pageType="STY">
+          <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
 

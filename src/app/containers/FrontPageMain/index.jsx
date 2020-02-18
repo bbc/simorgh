@@ -1,12 +1,15 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
+import { string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import path from 'ramda/src/path';
+import findIndex from 'ramda/src/findIndex';
 import Grid, { FrontPageGrid } from '#app/components/Grid';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '../FrontPageSection';
 import MetadataContainer from '../Metadata';
+import MostReadContainer from '../MostRead';
 import LinkedData from '../LinkedData';
 import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
@@ -45,7 +48,7 @@ const startOffsets = {
   group5: 5,
 };
 
-const FrontPageMain = ({ frontPageData }) => {
+const FrontPageMain = ({ frontPageData, mostReadEndpointOverride }) => {
   const {
     product,
     serviceLocalizedName,
@@ -64,6 +67,10 @@ const FrontPageMain = ({ frontPageData }) => {
       <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
     </span>
   );
+
+  // Most Read is required to render above useful-links if it exists
+  const hasUsefulLinks =
+    findIndex(group => group.type === 'useful-links')(groups) > -1;
 
   return (
     <>
@@ -88,12 +95,20 @@ const FrontPageMain = ({ frontPageData }) => {
             margins={itemMargins}
           >
             {groups.map((group, index) => (
-              <FrontPageSection
-                key={group.title}
-                group={group}
-                sectionNumber={index}
-              />
+              <Fragment key={group.title}>
+                {group.type === 'useful-links' && (
+                  <MostReadContainer
+                    mostReadEndpointOverride={mostReadEndpointOverride}
+                  />
+                )}
+                <FrontPageSection group={group} sectionNumber={index} />
+              </Fragment>
             ))}
+            {!hasUsefulLinks && (
+              <MostReadContainer
+                mostReadEndpointOverride={mostReadEndpointOverride}
+              />
+            )}
           </Grid>
         </FrontPageGrid>
       </main>
@@ -103,6 +118,11 @@ const FrontPageMain = ({ frontPageData }) => {
 
 FrontPageMain.propTypes = {
   frontPageData: frontPageDataPropTypes.isRequired,
+  mostReadEndpointOverride: string,
+};
+
+FrontPageMain.defaultProps = {
+  mostReadEndpointOverride: null,
 };
 
 export default FrontPageMain;
