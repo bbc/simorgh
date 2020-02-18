@@ -17,6 +17,11 @@ const services = {
   },
 };
 
+const expectEmptyContainer = container => {
+  expect(container.querySelectorAll('li').length).toEqual(0);
+  expect(container.innerHTML).toEqual('');
+};
+
 describe('MostReadContainerCanonical Assertion', () => {
   afterEach(() => {
     fetch.resetMocks();
@@ -29,7 +34,6 @@ describe('MostReadContainerCanonical Assertion', () => {
 
       await matchSnapshotAsync(
         <MostReadWithContext
-          isAmp={false}
           service={service}
           variant={variant}
           mostReadToggle
@@ -44,7 +48,6 @@ describe('MostReadContainerCanonical Assertion', () => {
 
       const { container } = render(
         <MostReadWithContext
-          isAmp={false}
           service={service}
           variant={variant}
           mostReadToggle
@@ -64,18 +67,10 @@ describe('MostReadContainerCanonical Assertion', () => {
     it(`should return empty string when mostRead feature toggle is disabled - ${service}`, async () => {
       const { variant } = services[service];
       const { container } = render(
-        <MostReadWithContext
-          isAmp={false}
-          service={service}
-          variant={variant}
-          mostReadToggle={false}
-        />,
+        <MostReadWithContext service={service} variant={variant} />,
       );
 
-      await wait(() => {
-        expect(container.querySelectorAll('li').length).toEqual(0);
-        expect(container.innerHTML).toEqual('');
-      });
+      await wait(expectEmptyContainer(container));
     });
 
     it(`should return empty string on AMP pages - ${service}`, async () => {
@@ -89,24 +84,17 @@ describe('MostReadContainerCanonical Assertion', () => {
         />,
       );
 
-      await wait(() => {
-        expect(container.querySelectorAll('li').length).toEqual(0);
-        expect(container.innerHTML).toEqual('');
-      });
+      await wait(expectEmptyContainer(container));
     });
   });
 
   it(`should return empty string when mostRead service toggle is disabled`, async () => {
     const { container } = render(
       <MostReadWithContext
-        isAmp={false}
         service="archive" // hasMostRead = false for this service
       />,
     );
 
-    await wait(() => {
-      expect(container.querySelectorAll('li').length).toEqual(0);
-      expect(container.innerHTML).toEqual('');
-    });
+    await wait(expectEmptyContainer(container));
   });
 });

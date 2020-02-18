@@ -32,7 +32,6 @@ describe('MostReadContainerCanonical', () => {
 
       const { container } = render(
         <MostReadWithContext
-          isAmp={false}
           service={service}
           variant={variant}
           mostReadToggle
