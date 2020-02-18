@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 const isLive = appEnv => appEnv === 'live';
 
 const isTest = appEnv => appEnv === 'test';
@@ -198,10 +199,11 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/azeri/multimedia/2012/09/120919_georgia_prison_video',
+        path: isLive(appEnv)
+          ? undefined
+          : isTest(appEnv)
+          ? '/azeri/multimedia/2015/08/150804_azeri_test'
+          : '/azeri/multimedia/2012/09/120919_georgia_prison_video',
         smoke: false,
       },
       photoGalleryPage: {
@@ -347,10 +349,11 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/gahuza/video/2015/12/151201_100womenburundi',
+        path: isLive(appEnv)
+          ? undefined
+          : isTest(appEnv)
+          ? '/gahuza/video/2015/12/151217_test_long'
+          : '/gahuza/video/2015/12/151201_100womenburundi',
         smoke: false,
       },
       photoGalleryPage: {
@@ -662,10 +665,11 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/kyrgyz/entertainment/2014/07/140725_egypt_tentmaking',
+        path: isLive(appEnv)
+          ? undefined
+          : isTest(appEnv)
+          ? '/kyrgyz/multimedia/2015/03/150330_map_test'
+          : '/kyrgyz/entertainment/2014/07/140725_egypt_tentmaking',
         smoke: false,
       },
       photoGalleryPage: {
@@ -872,7 +876,11 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: isLive(appEnv)
+          ? undefined
+          : isTest(appEnv)
+          ? '/pashto/world/2016/09/160921_tc2_testmap1'
+          : '/pashto/multimedia/2012/09/120928_naghma_video',
         smoke: false,
       },
       photoGalleryPage: {
@@ -1733,10 +1741,12 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/vietnamese/multimedia/2015/04/150428_david_wheat_interview',
+        // eslint-disable-next-line no-nested-ternary
+        path: isLive(appEnv)
+          ? undefined
+          : isTest(appEnv)
+          ? '/vietnamese/sport/2016/09/160922_tc2_testmap2'
+          : '/vietnamese/multimedia/2015/04/150428_david_wheat_interview',
         smoke: false,
       },
       photoGalleryPage: {
