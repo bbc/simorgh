@@ -14,7 +14,7 @@ const logger = webLogger();
 
 const RadioScheduleContainer = ({ endpoint }) => {
   const { enabled } = useToggle('radioSchedule');
-  const { hasRadioSchedule } = useContext(ServiceContext);
+  const { hasRadioSchedule, service } = useContext(ServiceContext);
   const radioScheduleEnabled = enabled && hasRadioSchedule;
 
   const [schedule, setRadioSchedule] = useState([]);
@@ -26,34 +26,60 @@ const RadioScheduleContainer = ({ endpoint }) => {
     // finding latest programme, that may or may not still be live. this is because there isn't
     // always a live programme, in which case we show the most recently played programme on demand.
     const latestProgrammeIndex = findLastIndex(
-      propSatisfies(time => time < currentTime, 'transmissionTimeStart'),
+      propSatisfies(time => time < currentTime, 'publishedTimeStart'),
     )(radioScheduleData.schedules);
 
     console.log(latestProgrammeIndex);
 
-    const radioScheduleData1 =
+    const latestProgram =
       radioScheduleData.schedules[latestProgrammeIndex];
 
     console.log('current time', new Date());
 
     console.log('current time from var', new Date(currentTime));
 
+    const currentState = getProgramState(
+      currentTime,
+      latestProgram.publishedTimeStart,
+      latestProgram.publishedTimeEnd,
+    );
+
     const schedules = [
       {
         id: 1,
-        state: 'live',
+        state: currentState,
         stateLabel: 'Live',
-        startTime: radioScheduleData1.publishedTimeStart,
-        link: 'www.bbc.co.uk',
-        brandTitle: radioScheduleData1.brand.title,
-        episodeTitle: radioScheduleData1.episode.presentationTitle,
-        summary: radioScheduleData1.episode.synopses.short,
-        duration: radioScheduleData1.publishedTimeDuration,
+        startTime: latestProgram.publishedTimeStart,
+        link: getLink(currentState, latestProgram),
+        brandTitle: latestProgram.brand.title,
+        episodeTitle: latestProgram.episode.presentationTitle,
+        summary: latestProgram.episode.synopses.short,
+        duration: latestProgram.publishedTimeDuration,
         durationLabel: 'Duration',
       },
     ];
 
     setRadioSchedule(schedules);
+  };
+
+  const getProgramState = (currentTime, startTime, endTime) => {
+    // live - currentTime < endTime && currentTime > startTime
+    if (currentTime < endTime && currentTime > startTime) {
+      return 'live';
+    }
+     // onDemand - is live that just ended
+    if (currentTime > endTime) {
+      return 'onDemand';
+    }
+    // next - is immedeately after what's live
+    return 'next';
+  };
+
+  const getLink = (state, latestProgram) => {
+    const url = `/${service}/${latestProgram.serviceId}`;
+    return state === 'live'
+      ? `${url}/liveradio`
+      : `${url}/${latestProgram.episode.pid}`;
   };
 
   useEffect(() => {

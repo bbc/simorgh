@@ -43,7 +43,7 @@ const stories = storiesOf('Containers|RadioSchedule', module)
   .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(
     withServicesKnob({
-      defaultService: 'arabic',
+      defaultService: 'korean',
       services: validServices,
     }),
     console.log('current time in stories', new Date()),
