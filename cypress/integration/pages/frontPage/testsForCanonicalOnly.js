@@ -20,7 +20,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       cy.get('html').should('not.have.attr', 'amp');
     });
     // Once the most read is implemented for amp and all other pages this test will be moved to testforallpages
-    if (serviceHasMostRead(service) && Cypress.env('APP_ENV') !== 'live') {
+    if (serviceHasMostRead(service)) {
       it('should contain most read component if the toggle is enabled', () => {
         if (useAppToggles.mostRead) {
           cy.get('[aria-labelledby="Most-Read"]')
