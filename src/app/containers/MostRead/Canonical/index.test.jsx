@@ -3,6 +3,7 @@ import { service as arabicConfig } from '#app/lib/config/services/arabic';
 import {
   setStalePromoTimestamp,
   setFreshPromoTimestamp,
+  setStaleLastRecordTimeStamp,
   renderMostReadContainer,
 } from '../utilities/testHelpers';
 
@@ -28,22 +29,6 @@ describe('MostReadContainerCanonical', () => {
   });
 
   Object.keys(services).forEach(service => {
-    it(`should not render most read when lastRecordTimeStamp is not fresh for ${service}`, async () => {
-      const { variant, data: mostReadData } = services[service];
-
-      fetch.mockResponse(JSON.stringify(mostReadData));
-
-      await renderMostReadContainer({
-        container,
-        isAmp: false,
-        service,
-        variant,
-        mostReadToggle: true,
-      });
-
-      expect(container.innerHTML).toEqual('');
-    });
-
     it(`should render items without timestamps for ${service}`, async () => {
       const { variant, data: mostReadData, config } = services[service];
       const mostReadHeader = config.mostRead.header;
@@ -90,6 +75,24 @@ describe('MostReadContainerCanonical', () => {
       expect(container.querySelectorAll('time')[0].textContent).toEqual(
         expectedLastUpdated,
       );
+    });
+
+    it(`should not render most read when lastRecordTimeStamp is not fresh for ${service}`, async () => {
+      const { variant, data: mostReadData } = services[service];
+
+      fetch.mockResponse(
+        JSON.stringify(setStaleLastRecordTimeStamp(mostReadData)),
+      );
+
+      await renderMostReadContainer({
+        container,
+        isAmp: false,
+        service,
+        variant,
+        mostReadToggle: true,
+      });
+
+      expect(container.innerHTML).toEqual('');
     });
   });
 });
