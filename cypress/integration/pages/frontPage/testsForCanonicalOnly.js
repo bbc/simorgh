@@ -4,7 +4,7 @@ import useAppToggles from '../../../support/helpers/useAppToggles';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
 // Limiting to two services
-const serviceHasMostRead = service => ['persian', 'yoruba'].includes(service);
+const serviceHasMostRead = service => ['burmese', 'yoruba'].includes(service);
 
 export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service} ${pageType}`, () => {});
