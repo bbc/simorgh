@@ -38,7 +38,7 @@ import withError from '#containers/PageHandlers/withError';
 import withLoading from '#containers/PageHandlers/withLoading';
 import withData from '#containers/PageHandlers/withData';
 
-const CpsStyContainer = ({ pageData }) => {
+const StoryPageContainer = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const category = path(
     ['promo', 'passport', 'category', 'categoryName'],
@@ -126,14 +126,14 @@ const CpsStyContainer = ({ pageData }) => {
   );
 };
 
-CpsStyContainer.propTypes = cpsAssetPagePropTypes;
+StoryPageContainer.propTypes = cpsAssetPagePropTypes;
 
-const EnhancedCpsStyContainer = pipe(
+const EnhancedStoryPageContainer = pipe(
   withData,
   withError,
   withLoading,
   withPageWrapper,
   withContexts,
-)(CpsStyContainer);
+)(StoryPageContainer);
 
-export default EnhancedCpsStyContainer;
+export default EnhancedStoryPageContainer;
