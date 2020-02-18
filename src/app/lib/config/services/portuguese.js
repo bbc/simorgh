@@ -7,6 +7,7 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
+  F_REITH_SERIF_LIGHT,
 } from '@bbc/psammead-styles/fonts';
 import { portuguese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/America/Sao_Paulo';
@@ -164,7 +165,8 @@ export const service = {
     mostRead: {
       header: 'Mais lidas',
       lastUpdated: 'Última atualização:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -207,6 +209,7 @@ export const service = {
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
       F_REITH_SERIF_MEDIUM_ITALIC,
+      F_REITH_SERIF_LIGHT,
     ],
     timezone: 'America/Sao_Paulo',
     navigation: [

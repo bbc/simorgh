@@ -164,6 +164,7 @@ export const service = {
       header: 'Iliyosomwa zaidi',
       lastUpdated: 'Imeboreshwa mwisho:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {

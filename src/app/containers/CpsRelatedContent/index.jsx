@@ -50,8 +50,8 @@ const CpsRelatedContent = ({ content }) => {
 
   return (
     <GhostGrid
-      as="aside"
-      role="complementary"
+      as="section"
+      role="region"
       aria-labelledby="related-content-heading"
     >
       <Wrapper>

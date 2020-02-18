@@ -47,6 +47,7 @@ const pageTypes = {
     '/html/head/iframe',
     "//div[@id='root']/main/div/div/div/div/iframe",
   ],
+  photoGalleryPage: ['/html/head/iframe'],
 };
 
 Object.keys(pageTypes).forEach(pageType => {

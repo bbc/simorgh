@@ -167,10 +167,11 @@ export const service = {
       header: 'அதிகம் படிக்கப்பட்டது',
       lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/tamil/institutional-50435459',
+        href: 'https://www.bbc.com/tamil/institutional-50288575',
         text: 'நீங்கள் ஏன் பிபிசி மீது நம்பிக்கை வைக்க முடியும்?',
       },
       externalLink: {

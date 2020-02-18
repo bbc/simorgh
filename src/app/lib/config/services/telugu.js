@@ -160,7 +160,8 @@ export const service = {
     mostRead: {
       header: 'ఎక్కువమంది చదివినవి',
       lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {

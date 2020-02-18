@@ -815,6 +815,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
           <div
             id="DataContainer"
           >
+            <noscript />
             <main
               class="c0"
               role="main"
@@ -1245,10 +1246,10 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                 </p>
               </div>
             </main>
-            <aside
+            <section
               aria-labelledby="related-content-heading"
               class="c24"
-              role="complementary"
+              role="region"
             >
               <div
                 class="c25"
@@ -1289,7 +1290,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
                   />
                 </ul>
               </div>
-            </aside>
+            </section>
           </div>
         </div>
       </div>
@@ -2349,7 +2350,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
+      {"@context":"http://schema.org","@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
     </script>
     <script
       type="application/ld+json"
@@ -2374,6 +2375,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
               <div
                 id="DataContainer"
               >
+                <noscript />
                 <main
                   class="c0"
                   role="main"
@@ -2803,10 +2805,10 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                     </p>
                   </div>
                 </main>
-                <aside
+                <section
                   aria-labelledby="related-content-heading"
                   class="c26"
-                  role="complementary"
+                  role="region"
                 >
                   <div
                     class="c27"
@@ -2847,7 +2849,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
                       />
                     </ul>
                   </div>
-                </aside>
+                </section>
               </div>
             </div>
           </div>

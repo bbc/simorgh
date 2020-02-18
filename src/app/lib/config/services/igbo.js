@@ -163,7 +163,8 @@ export const service = {
     mostRead: {
       header: 'Akachasị Gụọ',
       lastUpdated: 'Emelitere ikpeazụ na:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     navigation: [
       {

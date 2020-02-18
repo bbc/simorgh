@@ -1,5 +1,5 @@
 import React from 'react';
-import compose from 'ramda/src/compose';
+import pipe from 'ramda/src/pipe';
 import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
@@ -123,12 +123,12 @@ const CpsPglContainer = ({ pageData }) => {
 
 CpsPglContainer.propTypes = cpsAssetPagePropTypes;
 
-const EnhancedCpsPglContainer = compose(
-  withContexts,
-  withPageWrapper,
-  withLoading,
-  withError,
+const EnhancedCpsPglContainer = pipe(
   withData,
+  withError,
+  withLoading,
+  withPageWrapper,
+  withContexts,
 )(CpsPglContainer);
 
 export default EnhancedCpsPglContainer;

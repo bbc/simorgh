@@ -8,6 +8,7 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
+  F_REITH_SERIF_LIGHT,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/en-gb';
 import '@bbc/moment-timezone-include/tz/Europe/London';
@@ -162,6 +163,7 @@ export const service = {
       header: 'Most read',
       lastUpdated: 'Last updated:',
       numberOfItems: 10,
+      hasMostRead: false,
     },
     footer: {
       trustProjectLink: {
@@ -208,6 +210,7 @@ export const service = {
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
       F_REITH_SERIF_MEDIUM_ITALIC,
+      F_REITH_SERIF_LIGHT,
     ],
     timezone: 'Europe/London',
     navigation: [
