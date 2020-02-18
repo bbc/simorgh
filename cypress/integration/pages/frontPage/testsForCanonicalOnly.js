@@ -1,9 +1,10 @@
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 import useAppToggles from '../../../support/helpers/useAppToggles';
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
 // Limiting to two services
-const serviceHasMostRead = service => ['pidgin', 'persian'].includes(service);
+const serviceHasMostRead = service => ['persian', 'yoruba'].includes(service);
 
 export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service} ${pageType}`, () => {});
@@ -26,7 +27,10 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             .should('be.visible')
             .within(() => {
               cy.get('li')
-                .should('have.length.of.at.least', 1)
+                .should(
+                  'to.have.lengthOf',
+                  appConfig[service].default.mostRead.numberOfItems,
+                )
                 .should('be.visible');
             });
         }
