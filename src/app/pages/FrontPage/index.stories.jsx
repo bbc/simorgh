@@ -65,6 +65,7 @@ Object.keys(serviceDatasets).forEach(service => {
                   loading={false}
                   error={null}
                   pageType="frontPage"
+                  mostReadEndpointOverride={`./data/${service}/mostRead/index.json`}
                 />
               )}
             </DataWrapper>
