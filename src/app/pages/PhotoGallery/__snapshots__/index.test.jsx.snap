@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp is false 1`] = `
+exports[`Photo Gallery Page should not show the pop-out timestamp when allowDateStamp is false 1`] = `
 <DocumentFragment>
   .c3 {
   grid-column: 1 / span 6;
@@ -1188,7 +1188,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
 </DocumentFragment>
 `;
 
-exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`] = `
+exports[`Photo Gallery Page snapshots should match snapshot for PGL with about tags 1`] = `
 <html
   dir="ltr"
   lang="om"
@@ -2661,7 +2661,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
 </html>
 `;
 
-exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onward journeys 1`] = `
+exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS onward journeys 1`] = `
 <html
   dir="ltr"
   lang="pcm"
@@ -4472,7 +4472,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
 </html>
 `;
 
-exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward journeys 1`] = `
+exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onward journeys 1`] = `
 .c3 {
   grid-column: 1 / span 6;
 }
@@ -5554,7 +5554,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
 </html>
 `;
 
-exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onward journeys filtered 1`] = `
+exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS onward journeys filtered 1`] = `
 <html
   dir="ltr"
   lang="az"

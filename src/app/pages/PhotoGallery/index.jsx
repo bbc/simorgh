@@ -37,7 +37,7 @@ import withError from '#containers/PageHandlers/withError';
 import withLoading from '#containers/PageHandlers/withLoading';
 import withData from '#containers/PageHandlers/withData';
 
-const CpsPglContainer = ({ pageData }) => {
+const PhotoGalleryPageContainer = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
@@ -121,14 +121,14 @@ const CpsPglContainer = ({ pageData }) => {
   );
 };
 
-CpsPglContainer.propTypes = cpsAssetPagePropTypes;
+PhotoGalleryPageContainer.propTypes = cpsAssetPagePropTypes;
 
-const EnhancedCpsPglContainer = pipe(
+const EnhancedPhotoGalleryPageContainer = pipe(
   withData,
   withError,
   withLoading,
   withPageWrapper,
   withContexts,
-)(CpsPglContainer);
+)(PhotoGalleryPageContainer);
 
-export default EnhancedCpsPglContainer;
+export default EnhancedPhotoGalleryPageContainer;
