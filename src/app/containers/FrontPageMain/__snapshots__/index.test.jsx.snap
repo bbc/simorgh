@@ -1,782 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] = `
-.c0 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c2 {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-  margin-top: 0.5rem;
-}
-
-.c40 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.c34 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.8125rem;
-  height: 0.75rem;
-}
-
-.c41 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 1rem;
-  height: 0.8125rem;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c9 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FFFFFF;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c5 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c4 {
-  position: relative;
-  margin-top: 2rem;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-}
-
-.c39 {
-  position: relative;
-  margin-top: 2rem;
-}
-
-.c6 {
-  margin: 0;
-  padding: 0;
-}
-
-.c11 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c13 {
-  position: relative;
-}
-
-.c14 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  margin-bottom: 0.5rem;
-  width: 100%;
-}
-
-.c30 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 33.33%;
-}
-
-.c15 {
-  position: relative;
-}
-
-.c18 {
-  position: absolute;
-  bottom: 0;
-}
-
-.c20 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c37 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c23 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c38 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c19 {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.c36 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-.c21 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c21:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c21:hover,
-.c21:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c21:visited {
-  color: #6E6E73;
-}
-
-.c22 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #B80000;
-  display: inline-block;
-  margin-right: 0.5rem;
-}
-
-.c16 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #ECEAE7;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-.c17 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.c24 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c32 {
-  padding: 0.5rem 0.25rem;
-  background-color: #FFFFFF;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  color: #222222;
-  height: 2rem;
-}
-
-.c33 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.c35 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-}
-
-.c25 {
-  position: relative;
-  z-index: 2;
-  padding: 1rem 0 0;
-}
-
-.c27 {
-  border-top: 1px solid #F2F2F2;
-  padding: 0.5rem 0;
-}
-
-.c26 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.c29 {
-  display: inline;
-  vertical-align: middle;
-}
-
-.c28 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c28:hover,
-.c28:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c28:visited {
-  color: #6E6E73;
-}
-
-.c12 {
-  border-bottom: 0.0625rem solid #F2F2F2;
-  padding: 0.5rem 0 1rem;
-}
-
-.c12:first-child {
-  padding-top: 0;
-}
-
-.c12:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
-@supports (display:grid) {
-  .c1 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c3 {
-    padding: 0 0.5rem;
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c3 {
-    padding: 0 0.5rem;
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c3 {
-    padding: 0 1rem;
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c3 {
-    padding: 0 1rem;
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c3 {
-    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 12.5%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c3 {
-    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 20%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c3 {
-    display: block;
-  }
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    max-width: 80rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c2 {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    margin-top: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c5 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    margin-top: 1.5rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c13 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    width: 50%;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width:80rem) {
-  .c14 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c14 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c30 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c30 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
-@media (min-width:25rem) {
-  .c31 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c20 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c20 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c37 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c37 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c37 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c23 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c38 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c38 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c38 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c19 {
-    width: 50%;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c19 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c19 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c36 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c36 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .c32 {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c28 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c28 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    margin-top: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c12 {
-    padding: 1.5rem 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12:first-child {
-    padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c12:first-child {
-    padding-top: 1.5rem;
-  }
-}
-
 <div>
   <noscript />
   <div>
@@ -786,7 +10,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
     role="main"
   >
     <h1
-      class="c0"
+      class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
       id="content"
       tabindex="-1"
     >
@@ -805,11 +29,11 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
       </span>
     </h1>
     <div
-      class="c1 c2"
+      class="GridComponent-nf79gm-0 iUNUcT GridMaxWidthGroup5-ylca1m-2 FrontPageGrid-ylca1m-3 jlqJlc"
       dir="ltr"
     >
       <div
-        class="c3"
+        class="GridComponent-nf79gm-0 eplZSI"
         dir="ltr"
       >
         <section
@@ -817,22 +41,22 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
           role="region"
         >
           <div
-            class="c4"
+            class="SectionLabelWrapper-sc-1x4gwjz-1 eTvmJZ"
           >
             <div
-              class="c5"
+              class="Bar-sc-1x4gwjz-0 qaAlR"
             />
             <h2
-              class="c6"
+              class="Heading-sc-1x4gwjz-2 eZofTG"
             >
               <div
-                class="c7"
+                class="FlexColumn-wx5kdp-0 dgpsiS"
               >
                 <span
-                  class="c8"
+                  class="FlexRow-wx5kdp-2 dVBNyZ"
                 >
                   <span
-                    class="c9"
+                    class="Title-wx5kdp-4 jiurmA"
                     dir="ltr"
                     id="Top-stories"
                   >
@@ -843,31 +67,31 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             </h2>
           </div>
           <div
-            class="c10"
+            class="FirstSectionTopMargin-sc-1t555e8-0 eLhUTq"
           >
             <ul
-              class="c11"
+              class="StoryPromoUl-sc-171lqjd-1 isCYWc"
               role="list"
             >
               <li
-                class="c12"
+                class="StoryPromoLi-sc-171lqjd-0 StoryPromoListItem-sc-1t555e8-2 eziCdL"
                 role="listitem"
               >
                 <div
-                  class="c13"
+                  class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
                 >
                   <div
-                    class="c14"
+                    class="ImageGridItem-sc-1dvfmi3-1 fGNqEF"
                   >
                     <div
-                      class="c15"
+                      class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                     >
                       <div
-                        class="c16"
+                        class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                       >
                         <img
                           alt="Senator Ahmad Lawan and Ali Ndume"
-                          class="c17"
+                          class="StyledImg-sc-7vx2mr-0 hIxkbt"
                           sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
                           src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
                           srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 624w"
@@ -875,18 +99,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                         />
                       </div>
                       <div
-                        class="c18"
+                        class="InlineMediaIndicator-sc-1dvfmi3-3 kXebfZ"
                       />
                     </div>
                   </div>
                   <div
-                    class="c19"
+                    class="TextGridItem-sc-1dvfmi3-6 cLkEbv"
                   >
                     <h3
-                      class="c20"
+                      class="Headline-sc-1dvfmi3-4 kZxQqx"
                     >
                       <a
-                        class="c21"
+                        class="Link-sc-1dvfmi3-7 iSHpco"
                         href="/pidgin/live/tori-48591362"
                       >
                         <span
@@ -894,13 +118,13 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                         >
                           <span
                             aria-hidden="true"
-                            class="c22"
+                            class="LiveLabel-sc-1dvfmi3-8 bEAciG"
                             dir="ltr"
                           >
                             LIVE
                           </span>
                           <span
-                            class="c0"
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
                             lang="en-GB"
                           >
                             Live, 
@@ -910,54 +134,54 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       </a>
                     </h3>
                     <p
-                      class="c23"
+                      class="Summary-sc-1dvfmi3-5 bvtNvj"
                     >
                       Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
                     </p>
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 kVWTyt"
                       datetime="2019-06-11"
                     >
                       11 Juun 2019
                     </time>
                     <div
-                      class="c25"
+                      class="StyledIndexAlsos-xsqyvb-0 cMpdvs"
                       data-e2e="index-alsos"
                     >
                       <h4
-                        class="c0"
+                        class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
                       >
                         Ihe ndị ọzọ n'akụkọ a
                       </h4>
                       <ul
-                        class="c26"
+                        class="StyledIndexAlsosUl-xsqyvb-2 jXaBOE"
                         role="list"
                       >
                         <li
-                          class="c27"
+                          class="StyledIndexAlso-xsqyvb-1 kZPHaK"
                           role="listitem"
                         >
                           <a
-                            class="c28"
+                            class="StyledIndexAlsosLink-xsqyvb-6 bRILCU"
                             href="/pidgin/tori-48591361"
                           >
                             <span
-                              class="c29"
+                              class="IndexAlsosText-xsqyvb-5 dnJhgN"
                             >
                               Who go lead di Ninth National Assembly?
                             </span>
                           </a>
                         </li>
                         <li
-                          class="c27"
+                          class="StyledIndexAlso-xsqyvb-1 kZPHaK"
                           role="listitem"
                         >
                           <a
-                            class="c28"
+                            class="StyledIndexAlsosLink-xsqyvb-6 bRILCU"
                             href="/pidgin/tori-47603701"
                           >
                             <span
-                              class="c29"
+                              class="IndexAlsosText-xsqyvb-5 dnJhgN"
                             >
                               4 tins wey go determine who become di next Senate President, Speaker
                             </span>
@@ -969,38 +193,38 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </div>
               </li>
               <li
-                class="c12"
+                class="StoryPromoLi-sc-171lqjd-0 StoryPromoListItem-sc-1t555e8-2 eziCdL"
                 role="listitem"
               >
                 <div
-                  class="c13"
+                  class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
                 >
                   <div
-                    class="c30"
+                    class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
                   >
                     <div
-                      class="c15"
+                      class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                     >
                       <div
-                        class="c16"
+                        class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                       >
                         <div
                           class="lazyload-placeholder"
                         />
                       </div>
                       <div
-                        class="c31"
+                        class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                       >
                         <div
                           aria-hidden="true"
-                          class="c32"
+                          class="MediaIndicatorWrapper-sc-1p6h86b-0 hRcKme"
                         >
                           <div
-                            class="c33"
+                            class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
                           >
                             <svg
                               aria-hidden="true"
-                              class="c34"
+                              class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
                               focusable="false"
                               height="12px"
                               viewBox="0 0 13 12"
@@ -1014,7 +238,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                               />
                             </svg>
                             <time
-                              class="c35"
+                              class="TimeDuration-sc-1p6h86b-2 dLCVKn"
                               datetime="PT59S"
                             >
                               0:59
@@ -1025,20 +249,20 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     </div>
                   </div>
                   <div
-                    class="c36"
+                    class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
                   >
                     <h3
-                      class="c37"
+                      class="Headline-sc-1dvfmi3-4 cWuUJx"
                     >
                       <a
-                        class="c21"
+                        class="Link-sc-1dvfmi3-7 iSHpco"
                         href="/pidgin/media-44221514"
                       >
                         <span
                           role="text"
                         >
                           <span
-                            class="c0"
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
                           >
                             Ọdịyo
                             , 
@@ -1047,7 +271,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                             BBC Pidgin Minute
                           </span>
                           <span
-                            class="c0"
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
                           >
                             , 0,59
                           </span>
@@ -1055,12 +279,12 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                       </a>
                     </h3>
                     <p
-                      class="c38"
+                      class="Summary-sc-1dvfmi3-5 itgvLR"
                     >
                       All di local and world tori wey you suppose know in 60 seconds!
                     </p>
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 kVWTyt"
                       datetime="2019-06-11"
                     >
                       11 Juun 2019
@@ -1069,50 +293,50 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </div>
               </li>
               <li
-                class="c12"
+                class="StoryPromoLi-sc-171lqjd-0 StoryPromoListItem-sc-1t555e8-2 eziCdL"
                 role="listitem"
               >
                 <div
-                  class="c13"
+                  class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
                 >
                   <div
-                    class="c30"
+                    class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
                   >
                     <div
-                      class="c15"
+                      class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                     >
                       <div
-                        class="c16"
+                        class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                       >
                         <div
                           class="lazyload-placeholder"
                         />
                       </div>
                       <div
-                        class="c31"
+                        class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                       />
                     </div>
                   </div>
                   <div
-                    class="c36"
+                    class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
                   >
                     <h3
-                      class="c37"
+                      class="Headline-sc-1dvfmi3-4 cWuUJx"
                     >
                       <a
-                        class="c21"
+                        class="Link-sc-1dvfmi3-7 iSHpco"
                         href="/pidgin/tori-48591366"
                       >
                         Majid Waris no get ‘sɛlɛ’ for Coach Kwesi Appiah en Black Stars Afcon squad
                       </a>
                     </h3>
                     <p
-                      class="c38"
+                      class="Summary-sc-1dvfmi3-5 itgvLR"
                     >
                       Major shocker wey come out be sey dem drop striker, Majeed Waris who dem replace plus U-23 striker, Kwabena Owusu.
                     </p>
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 kVWTyt"
                       datetime="2019-06-11"
                     >
                       11 Juun 2019
@@ -1121,50 +345,50 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </div>
               </li>
               <li
-                class="c12"
+                class="StoryPromoLi-sc-171lqjd-0 StoryPromoListItem-sc-1t555e8-2 eziCdL"
                 role="listitem"
               >
                 <div
-                  class="c13"
+                  class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
                 >
                   <div
-                    class="c30"
+                    class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
                   >
                     <div
-                      class="c15"
+                      class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                     >
                       <div
-                        class="c16"
+                        class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                       >
                         <div
                           class="lazyload-placeholder"
                         />
                       </div>
                       <div
-                        class="c31"
+                        class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                       />
                     </div>
                   </div>
                   <div
-                    class="c36"
+                    class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
                   >
                     <h3
-                      class="c37"
+                      class="Headline-sc-1dvfmi3-4 cWuUJx"
                     >
                       <a
-                        class="c21"
+                        class="Link-sc-1dvfmi3-7 iSHpco"
                         href="/pidgin/tori-48579283"
                       >
                         Woman write exam 30 minutes afta she born
                       </a>
                     </h3>
                     <p
-                      class="c38"
+                      class="Summary-sc-1dvfmi3-5 itgvLR"
                     >
                       Di 21-year-old Ethiopian woman don take one of her secondary school leaving exams 30 minutes afta she born.
                     </p>
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 kVWTyt"
                       datetime="2019-06-11"
                     >
                       11 Juun 2019
@@ -1180,22 +404,22 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
           role="region"
         >
           <div
-            class="c39"
+            class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
           >
             <div
-              class="c5"
+              class="Bar-sc-1x4gwjz-0 qaAlR"
             />
             <h2
-              class="c6"
+              class="Heading-sc-1x4gwjz-2 eZofTG"
             >
               <div
-                class="c7"
+                class="FlexColumn-wx5kdp-0 dgpsiS"
               >
                 <span
-                  class="c8"
+                  class="FlexRow-wx5kdp-2 dVBNyZ"
                 >
                   <span
-                    class="c9"
+                    class="Title-wx5kdp-4 jiurmA"
                     dir="ltr"
                     id="Frequency-info"
                   >
@@ -1206,49 +430,49 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             </h2>
           </div>
           <ul
-            class="c11"
+            class="StoryPromoUl-sc-171lqjd-1 isCYWc"
             role="list"
           >
             <li
-              class="c12"
+              class="StoryPromoLi-sc-171lqjd-0 StoryPromoListItem-sc-1t555e8-2 eziCdL"
               role="listitem"
             >
               <div
-                class="c13"
+                class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
               >
                 <div
-                  class="c30"
+                  class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
                 >
                   <div
-                    class="c15"
+                    class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                   >
                     <div
-                      class="c16"
+                      class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                     >
                       <div
                         class="lazyload-placeholder"
                       />
                     </div>
                     <div
-                      class="c31"
+                      class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                     />
                   </div>
                 </div>
                 <div
-                  class="c36"
+                  class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
                 >
                   <h3
-                    class="c37"
+                    class="Headline-sc-1dvfmi3-4 cWuUJx"
                   >
                     <a
-                      class="c21"
+                      class="Link-sc-1dvfmi3-7 iSHpco"
                       href="https://www.bbc.com/pidgin/sport-44416820"
                     >
                       Take dis predictor choose who go reach World Cup final
                     </a>
                   </h3>
                   <time
-                    class="c24"
+                    class="StyledTimestamp-um718p-0 kVWTyt"
                     datetime="2018-06-14"
                   >
                     14 Juun 2018
@@ -1257,38 +481,38 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               </div>
             </li>
             <li
-              class="c12"
+              class="StoryPromoLi-sc-171lqjd-0 StoryPromoListItem-sc-1t555e8-2 eziCdL"
               role="listitem"
             >
               <div
-                class="c13"
+                class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
               >
                 <div
-                  class="c30"
+                  class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
                 >
                   <div
-                    class="c15"
+                    class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                   >
                     <div
-                      class="c16"
+                      class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                     >
                       <div
                         class="lazyload-placeholder"
                       />
                     </div>
                     <div
-                      class="c31"
+                      class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                     >
                       <div
                         aria-hidden="true"
-                        class="c32"
+                        class="MediaIndicatorWrapper-sc-1p6h86b-0 hRcKme"
                       >
                         <div
-                          class="c33"
+                          class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
                         >
                           <svg
                             aria-hidden="true"
-                            class="c34"
+                            class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
                             focusable="false"
                             height="12px"
                             viewBox="0 0 13 12"
@@ -1307,25 +531,25 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   </div>
                 </div>
                 <div
-                  class="c36"
+                  class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
                 >
                   <h3
-                    class="c37"
+                    class="Headline-sc-1dvfmi3-4 cWuUJx"
                   >
                     <a
-                      class="c21"
+                      class="Link-sc-1dvfmi3-7 iSHpco"
                       href="http://www.bbc.com/pidgin"
                     >
                       Audio promo
                     </a>
                   </h3>
                   <p
-                    class="c38"
+                    class="Summary-sc-1dvfmi3-5 itgvLR"
                   >
                     Summary
                   </p>
                   <time
-                    class="c24"
+                    class="StyledTimestamp-um718p-0 kVWTyt"
                     datetime="2019-08-06"
                   >
                     6 Ọgọọst 2019
@@ -1334,45 +558,45 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               </div>
             </li>
             <li
-              class="c12"
+              class="StoryPromoLi-sc-171lqjd-0 StoryPromoListItem-sc-1t555e8-2 eziCdL"
               role="listitem"
             >
               <div
-                class="c13"
+                class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
               >
                 <div
-                  class="c30"
+                  class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
                 >
                   <div
-                    class="c15"
+                    class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                   >
                     <div
-                      class="c16"
+                      class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                     >
                       <div
                         class="lazyload-placeholder"
                       />
                     </div>
                     <div
-                      class="c31"
+                      class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                     />
                   </div>
                 </div>
                 <div
-                  class="c36"
+                  class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
                 >
                   <h3
-                    class="c37"
+                    class="Headline-sc-1dvfmi3-4 cWuUJx"
                   >
                     <a
-                      class="c21"
+                      class="Link-sc-1dvfmi3-7 iSHpco"
                       href="https://www.bbc.com/pidgin/sport-44439411"
                     >
                       World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
                     </a>
                   </h3>
                   <time
-                    class="c24"
+                    class="StyledTimestamp-um718p-0 kVWTyt"
                     datetime="2018-06-14"
                   >
                     14 Juun 2018
@@ -1381,45 +605,45 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               </div>
             </li>
             <li
-              class="c12"
+              class="StoryPromoLi-sc-171lqjd-0 StoryPromoListItem-sc-1t555e8-2 eziCdL"
               role="listitem"
             >
               <div
-                class="c13"
+                class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
               >
                 <div
-                  class="c30"
+                  class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
                 >
                   <div
-                    class="c15"
+                    class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                   >
                     <div
-                      class="c16"
+                      class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                     >
                       <div
                         class="lazyload-placeholder"
                       />
                     </div>
                     <div
-                      class="c31"
+                      class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                     />
                   </div>
                 </div>
                 <div
-                  class="c36"
+                  class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
                 >
                   <h3
-                    class="c37"
+                    class="Headline-sc-1dvfmi3-4 cWuUJx"
                   >
                     <a
-                      class="c21"
+                      class="Link-sc-1dvfmi3-7 iSHpco"
                       href="https://www.bbc.com/pidgin/sport-44425543"
                     >
                       Select your best ever African 11 players for World Cup
                     </a>
                   </h3>
                   <time
-                    class="c24"
+                    class="StyledTimestamp-um718p-0 kVWTyt"
                     datetime="2018-06-14"
                   >
                     14 Juun 2018
@@ -1428,45 +652,45 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               </div>
             </li>
             <li
-              class="c12"
+              class="StoryPromoLi-sc-171lqjd-0 StoryPromoListItem-sc-1t555e8-2 eziCdL"
               role="listitem"
             >
               <div
-                class="c13"
+                class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
               >
                 <div
-                  class="c30"
+                  class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
                 >
                   <div
-                    class="c15"
+                    class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                   >
                     <div
-                      class="c16"
+                      class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                     >
                       <div
                         class="lazyload-placeholder"
                       />
                     </div>
                     <div
-                      class="c31"
+                      class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                     />
                   </div>
                 </div>
                 <div
-                  class="c36"
+                  class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
                 >
                   <h3
-                    class="c37"
+                    class="Headline-sc-1dvfmi3-4 cWuUJx"
                   >
                     <a
-                      class="c21"
+                      class="Link-sc-1dvfmi3-7 iSHpco"
                       href="https://www.bbc.com/pidgin/sport-44425543"
                     >
                       Select your best ever African 11 players for World Cup as a feature
                     </a>
                   </h3>
                   <time
-                    class="c24"
+                    class="StyledTimestamp-um718p-0 kVWTyt"
                     datetime="2018-06-14"
                   >
                     14 Juun 2018
@@ -1475,38 +699,38 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               </div>
             </li>
             <li
-              class="c12"
+              class="StoryPromoLi-sc-171lqjd-0 StoryPromoListItem-sc-1t555e8-2 eziCdL"
               role="listitem"
             >
               <div
-                class="c13"
+                class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
               >
                 <div
-                  class="c30"
+                  class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
                 >
                   <div
-                    class="c15"
+                    class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                   >
                     <div
-                      class="c16"
+                      class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                     >
                       <div
                         class="lazyload-placeholder"
                       />
                     </div>
                     <div
-                      class="c31"
+                      class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                     >
                       <div
                         aria-hidden="true"
-                        class="c32"
+                        class="MediaIndicatorWrapper-sc-1p6h86b-0 hRcKme"
                       >
                         <div
-                          class="c33"
+                          class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
                         >
                           <svg
                             aria-hidden="true"
-                            class="c40"
+                            class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
                             focusable="false"
                             height="12px"
                             viewBox="0 0 32 32"
@@ -1522,20 +746,20 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   </div>
                 </div>
                 <div
-                  class="c36"
+                  class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
                 >
                   <h3
-                    class="c37"
+                    class="Headline-sc-1dvfmi3-4 cWuUJx"
                   >
                     <a
-                      class="c21"
+                      class="Link-sc-1dvfmi3-7 iSHpco"
                       href="https://www.bbc.com/pidgin/sport-44425543"
                     >
                       Select your best ever African 11 players for World Cup - Video
                     </a>
                   </h3>
                   <time
-                    class="c24"
+                    class="StyledTimestamp-um718p-0 kVWTyt"
                     datetime="2018-06-14"
                   >
                     14 Juun 2018
@@ -1544,45 +768,45 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               </div>
             </li>
             <li
-              class="c12"
+              class="StoryPromoLi-sc-171lqjd-0 StoryPromoListItem-sc-1t555e8-2 eziCdL"
               role="listitem"
             >
               <div
-                class="c13"
+                class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
               >
                 <div
-                  class="c30"
+                  class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
                 >
                   <div
-                    class="c15"
+                    class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                   >
                     <div
-                      class="c16"
+                      class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                     >
                       <div
                         class="lazyload-placeholder"
                       />
                     </div>
                     <div
-                      class="c31"
+                      class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                     />
                   </div>
                 </div>
                 <div
-                  class="c36"
+                  class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
                 >
                   <h3
-                    class="c37"
+                    class="Headline-sc-1dvfmi3-4 cWuUJx"
                   >
                     <a
-                      class="c21"
+                      class="Link-sc-1dvfmi3-7 iSHpco"
                       href="https://www.bbc.com/pidgin/sport-44214129"
                     >
                       World Cup 2018: Di top stars wey no dey go World Cup
                     </a>
                   </h3>
                   <time
-                    class="c24"
+                    class="StyledTimestamp-um718p-0 kVWTyt"
                     datetime="2018-06-14"
                   >
                     14 Juun 2018
@@ -1591,38 +815,38 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
               </div>
             </li>
             <li
-              class="c12"
+              class="StoryPromoLi-sc-171lqjd-0 StoryPromoListItem-sc-1t555e8-2 eziCdL"
               role="listitem"
             >
               <div
-                class="c13"
+                class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
               >
                 <div
-                  class="c30"
+                  class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
                 >
                   <div
-                    class="c15"
+                    class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
                   >
                     <div
-                      class="c16"
+                      class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                     >
                       <div
                         class="lazyload-placeholder"
                       />
                     </div>
                     <div
-                      class="c31"
+                      class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
                     >
                       <div
                         aria-hidden="true"
-                        class="c32"
+                        class="MediaIndicatorWrapper-sc-1p6h86b-0 hRcKme"
                       >
                         <div
-                          class="c33"
+                          class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
                         >
                           <svg
                             aria-hidden="true"
-                            class="c41"
+                            class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
                             focusable="false"
                             height="13px"
                             viewBox="0 0 32 26"
@@ -1643,20 +867,20 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   </div>
                 </div>
                 <div
-                  class="c36"
+                  class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
                 >
                   <h3
-                    class="c37"
+                    class="Headline-sc-1dvfmi3-4 cWuUJx"
                   >
                     <a
-                      class="c21"
+                      class="Link-sc-1dvfmi3-7 iSHpco"
                       href="http://www.bbc.com/azeri"
                     >
                       Gallery promo
                     </a>
                   </h3>
                   <time
-                    class="c24"
+                    class="StyledTimestamp-um718p-0 kVWTyt"
                     datetime="2019-08-07"
                   >
                     7 Ọgọọst 2019
