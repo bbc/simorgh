@@ -1,7 +1,11 @@
 import { Then } from 'cypress-cucumber-preprocessor/steps';
 
-Then("the headline is '{}'", headline => {
+const hasHeadline = headline => {
   cy.get('h1').contains(headline);
+};
+
+Then("the headline is '{}'", headline => {
+  hasHeadline(headline);
 });
 
 Then("the subheadline '{}' is displayed", subheadline => {
@@ -10,6 +14,8 @@ Then("the subheadline '{}' is displayed", subheadline => {
 
 Then('the correct headline is displayed', () => {
   cy.get('@pageData').then(({ body }) => {
-    cy.get('h1').contains(body.promo.headlines.headline);
+    hasHeadline(body.promo.headlines.headline);
   });
 });
+
+export default hasHeadline;
