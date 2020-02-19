@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, wait } from '@testing-library/react';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import FrontPageMain from '.';
 
@@ -8,9 +8,11 @@ import FrontPageMain from '.';
 import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
 
 import preprocessor from '#lib/utilities/preprocessor';
-import { indexPreprocessorRules } from '#app/routes/getInitialData/utils/preprocessorRulesConfig';
+import { indexPreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import pidginMostReadData from '#data/pidgin/mostRead';
 
 const processedPidgin = () =>
   preprocessor(frontPageDataPidgin, indexPreprocessorRules);
@@ -39,11 +41,13 @@ const requestContextData = {
 };
 
 const FrontPageMainWithContext = props => (
-  <RequestContextProvider {...requestContextData}>
-    <ServiceContextProvider service="igbo">
-      <FrontPageMain {...props} />
-    </ServiceContextProvider>
-  </RequestContextProvider>
+  <ToggleContextProvider>
+    <RequestContextProvider {...requestContextData}>
+      <ServiceContextProvider service="igbo">
+        <FrontPageMain {...props} />
+      </ServiceContextProvider>
+    </RequestContextProvider>
+  </ToggleContextProvider>
 );
 
 describe('FrontPageMain', () => {
@@ -51,6 +55,7 @@ describe('FrontPageMain', () => {
 
   beforeAll(async () => {
     frontPageData = await processedPidgin();
+    fetch.mockResponse(JSON.stringify(pidginMostReadData));
   });
 
   describe('snapshots', () => {
@@ -68,6 +73,7 @@ describe('FrontPageMain', () => {
       const { container } = render(
         <FrontPageMainWithContext frontPageData={frontPageData} />,
       );
+
       const h1 = container.querySelector('h1');
       const content = h1.getAttribute('id');
       const tabIndex = h1.getAttribute('tabIndex');
@@ -82,6 +88,8 @@ describe('FrontPageMain', () => {
       const langSpan = span.querySelector('span');
       expect(langSpan.getAttribute('lang')).toEqual('en-GB');
       expect(langSpan.textContent).toEqual('BBC News');
+
+      await wait();
     });
 
     it('should render front page sections', async () => {
@@ -94,6 +102,7 @@ describe('FrontPageMain', () => {
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
+      await wait();
     });
   });
 });

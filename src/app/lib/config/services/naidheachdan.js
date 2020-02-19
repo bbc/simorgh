@@ -166,6 +166,7 @@ export const service = {
       header: 'As motha leughte',
       lastUpdated: 'Air ùrachadh mu dheireadh:',
       numberOfItems: 5,
+      hasMostRead: false,
     },
     footer: {
       trustProjectLink: {

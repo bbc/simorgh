@@ -1,28 +1,22 @@
-import newsMostReadData from '#data/news/mostRead';
-import zhongwenSimpMostReadData from '#data/zhongwen/mostRead/simp';
-import { service as newsConfig } from '#app/lib/config/services/news';
-import { service as zhongwenConfig } from '#app/lib/config/services/zhongwen';
+import arabicMostReadData from '#data/arabic/mostRead';
+
 import {
   setFreshPromoTimestamp,
   renderMostReadContainer,
-} from './utilities/testHelper';
-
-let container;
+} from './utilities/testHelpers';
+import { service as arabicConfig } from '#lib/config/services/arabic';
 
 const services = {
-  news: {
+  arabic: {
     variant: null,
-    data: newsMostReadData,
-    config: newsConfig.default,
-  },
-  zhongwen: {
-    variant: 'simp',
-    data: zhongwenSimpMostReadData,
-    config: zhongwenConfig.simp,
+    data: arabicMostReadData,
+    config: arabicConfig.default,
+    expectedLastUpdated: 'آخر تحديث 11 يناير/ كانون الثاني 1970',
   },
 };
 
 describe('MostReadContainerCanonical', () => {
+  let container;
   beforeEach(() => {
     container = document.createElement('div');
     document.body.appendChild(container);
@@ -54,9 +48,8 @@ describe('MostReadContainerCanonical', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it(`should return empty string when mostRead toggle is disabled - ${service}`, async () => {
-      const { variant, data: mostReadData } = services[service];
-      fetch.mockResponse(JSON.stringify(mostReadData));
+    it(`should return empty string when mostRead feature toggle is disabled - ${service}`, async () => {
+      const { variant } = services[service];
       await renderMostReadContainer({
         container,
         isAmp: false,
@@ -66,5 +59,27 @@ describe('MostReadContainerCanonical', () => {
       expect(container.querySelectorAll('li').length).toEqual(0);
       expect(container.innerHTML).toEqual('');
     });
+
+    it(`should return empty string on AMP pages - ${service}`, async () => {
+      const { variant } = services[service];
+      await renderMostReadContainer({
+        container,
+        isAmp: true,
+        service,
+        variant,
+      });
+      expect(container.querySelectorAll('li').length).toEqual(0);
+      expect(container.innerHTML).toEqual('');
+    });
+  });
+
+  it(`should return empty string when mostRead service toggle is disabled`, async () => {
+    await renderMostReadContainer({
+      container,
+      isAmp: false,
+      service: 'archive', // hasMostRead = false for this service
+    });
+    expect(container.querySelectorAll('li').length).toEqual(0);
+    expect(container.innerHTML).toEqual('');
   });
 });
