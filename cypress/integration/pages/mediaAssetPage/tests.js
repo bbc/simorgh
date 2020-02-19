@@ -38,9 +38,15 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
     it('should render a paragraph, which contains/displays styled text', () => {
       cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
         ({ body }) => {
-          const text = getParagraphText(body.content.blocks);
-
-          cy.get('p').should('contain', text);
+          const textCheck = body.content.blocks.find(
+            el => el.type === 'paragraph' && el.markupType === 'plain_text',
+          );
+          if (textCheck) {
+            const text = getParagraphText(body.content.blocks);
+            cy.get('p').should('contain', text);
+          } else {
+            cy.log('No paragraph text present');
+          }
         },
       );
     });
