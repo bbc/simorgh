@@ -169,7 +169,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c13 {
     grid-column: 3 / span 4;
     max-width: 30rem;
@@ -208,7 +208,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c3 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -234,7 +234,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     grid-column: 3 / span 6;
   }
@@ -264,7 +264,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c5 {
     grid-column: 3 / span 6;
   }
@@ -295,7 +295,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c15 {
     grid-column: 1 / span 4;
   }
@@ -325,7 +325,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c17 {
     grid-column: 1 / span 4;
   }
@@ -349,7 +349,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c8 {
     grid-column: 1 / span 6;
   }
@@ -373,7 +373,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c10 {
     grid-column: 1 / span 5;
   }
@@ -385,7 +385,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (max-width:80rem) {
+@media (max-width:79.9375rem) {
   .c7 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -415,7 +415,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c14 {
     grid-template-columns: repeat(4,1fr);
   }
@@ -511,7 +511,7 @@ exports[`CPS PGL Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -1600,7 +1600,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c15 {
     grid-column: 3 / span 4;
     max-width: 30rem;
@@ -1639,7 +1639,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c3 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -1665,7 +1665,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     grid-column: 3 / span 6;
   }
@@ -1695,7 +1695,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c7 {
     grid-column: 3 / span 6;
   }
@@ -1726,7 +1726,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c17 {
     grid-column: 1 / span 4;
   }
@@ -1756,7 +1756,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c19 {
     grid-column: 1 / span 4;
   }
@@ -1780,7 +1780,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c10 {
     grid-column: 1 / span 6;
   }
@@ -1804,7 +1804,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c12 {
     grid-column: 1 / span 5;
   }
@@ -1816,7 +1816,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
   }
 }
 
-@media (max-width:80rem) {
+@media (max-width:79.9375rem) {
   .c9 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -1846,7 +1846,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c16 {
     grid-template-columns: repeat(4,1fr);
   }
@@ -1956,7 +1956,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with about tags 1`
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -3244,7 +3244,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c15 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -3285,7 +3285,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c3 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -3311,7 +3311,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     grid-column: 3 / span 6;
   }
@@ -3341,7 +3341,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c7 {
     grid-column: 3 / span 6;
   }
@@ -3365,7 +3365,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c10 {
     grid-column: 1 / span 6;
   }
@@ -3389,7 +3389,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c12 {
     grid-column: 1 / span 5;
   }
@@ -3401,7 +3401,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
-@media (max-width:80rem) {
+@media (max-width:79.9375rem) {
   .c9 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -3686,7 +3686,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c16 {
     grid-column: 3 / span 6;
   }
@@ -3734,7 +3734,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with all CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -4623,7 +4623,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c3 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -4649,7 +4649,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     grid-column: 3 / span 6;
   }
@@ -4679,7 +4679,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c7 {
     grid-column: 3 / span 6;
   }
@@ -4703,7 +4703,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c10 {
     grid-column: 1 / span 6;
   }
@@ -4727,7 +4727,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c14 {
     grid-column: 1 / span 5;
   }
@@ -4739,7 +4739,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
   }
 }
 
-@media (max-width:80rem) {
+@media (max-width:79.9375rem) {
   .c9 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -4843,7 +4843,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with no onward jou
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -6337,7 +6337,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c34 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -6393,7 +6393,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c16 {
     grid-column: 3 / span 4;
     max-width: 30rem;
@@ -6432,7 +6432,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c3 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -6458,7 +6458,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     grid-column: 3 / span 6;
   }
@@ -6488,7 +6488,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c7 {
     grid-column: 3 / span 6;
   }
@@ -6519,7 +6519,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c18 {
     grid-column: 1 / span 4;
   }
@@ -6549,7 +6549,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c20 {
     grid-column: 1 / span 4;
   }
@@ -6573,7 +6573,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c10 {
     grid-column: 1 / span 6;
   }
@@ -6597,7 +6597,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c14 {
     grid-column: 1 / span 5;
   }
@@ -6609,7 +6609,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (max-width:80rem) {
+@media (max-width:79.9375rem) {
   .c9 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -6639,7 +6639,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c17 {
     grid-template-columns: repeat(4,1fr);
   }
@@ -6923,7 +6923,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c35 {
     grid-column: 3 / span 6;
   }
@@ -6971,7 +6971,7 @@ exports[`CPS PGL Page snapshots should match snapshot for PGL with non-CPS onwar
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;

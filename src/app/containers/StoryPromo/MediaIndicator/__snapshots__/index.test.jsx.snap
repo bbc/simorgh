@@ -291,7 +291,7 @@ exports[`Story Promo Media Indicator should render correctly even without durati
 `;
 
 exports[`Story Promo Media Indicator with Index Alsos should render a video indicator correctly 1`] = `
-.c1 {
+.c2 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -300,25 +300,57 @@ exports[`Story Promo Media Indicator with Index Alsos should render a video indi
   height: 0.75rem;
 }
 
-.c0 > svg {
-  margin: 0;
+.c0 {
+  padding: 0.5rem 0.25rem;
+  background-color: #FFFFFF;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #222222;
+  height: 2rem;
 }
 
-<span
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media (max-width:24.9375rem) {
+  .c0 {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+<div
   aria-hidden="true"
   class="c0"
 >
-  <svg
-    aria-hidden="true"
+  <div
     class="c1"
-    focusable="false"
-    height="12px"
-    viewBox="0 0 32 32"
-    width="12px"
   >
-    <polygon
-      points="3,32 29,16 3,0"
-    />
-  </svg>
-</span>
+    <svg
+      aria-hidden="true"
+      class="c2"
+      focusable="false"
+      height="12px"
+      viewBox="0 0 32 32"
+      width="12px"
+    >
+      <polygon
+        points="3,32 29,16 3,0"
+      />
+    </svg>
+  </div>
+</div>
 `;

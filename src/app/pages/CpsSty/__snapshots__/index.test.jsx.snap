@@ -332,7 +332,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c24 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -373,7 +373,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c13 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -399,7 +399,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     grid-column: 3 / span 6;
   }
@@ -429,7 +429,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c3 {
     grid-column: 3 / span 6;
   }
@@ -453,7 +453,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c6 {
     grid-column: 1 / span 6;
   }
@@ -477,7 +477,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c11 {
     grid-column: 1 / span 5;
   }
@@ -489,7 +489,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (max-width:80rem) {
+@media (max-width:79.9375rem) {
   .c5 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -601,7 +601,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c20 {
     grid-column: 3 / span 6;
   }
@@ -724,7 +724,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c25 {
     grid-column: 3 / span 6;
   }
@@ -772,7 +772,7 @@ exports[`CPS STY Page should not show the pop-out timestamp when allowDateStamp 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -1649,7 +1649,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c26 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -1690,7 +1690,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c13 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -1716,7 +1716,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     grid-column: 3 / span 6;
   }
@@ -1746,7 +1746,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c3 {
     grid-column: 3 / span 6;
   }
@@ -1770,7 +1770,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c6 {
     grid-column: 1 / span 6;
   }
@@ -1794,7 +1794,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c11 {
     grid-column: 1 / span 5;
   }
@@ -1806,7 +1806,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (max-width:80rem) {
+@media (max-width:79.9375rem) {
   .c5 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -1932,7 +1932,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c22 {
     grid-column: 3 / span 6;
   }
@@ -2055,7 +2055,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c27 {
     grid-column: 3 / span 6;
   }
@@ -2103,7 +2103,7 @@ exports[`CPS STY Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
