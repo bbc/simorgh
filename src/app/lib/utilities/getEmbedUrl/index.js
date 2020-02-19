@@ -2,7 +2,7 @@ import isLive from '../isLive';
 
 const AV_ROUTE = 'ws/av-embeds';
 
-const LIVE_URL = 'https://www.bbc.co.uk';
+const LIVE_URL = 'https://www.bbc.com';
 const LIVE_URL_AMP = 'https://polling.bbc.co.uk';
 const TEST_URL = 'https://polling.test.bbc.co.uk';
 
