@@ -14,8 +14,10 @@ import filterGroupsWithoutStraplines from '#lib/utilities/preprocessor/rules/fil
 import addSummaryBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addSummaryBlock';
 import cpsOnlyOnwardJourneys from '#lib/utilities/preprocessor/rules/cpsAssetPage/cpsOnlyOnwardJourneys';
 import addBylineBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addBylineBlock';
+import addAnalyticsCounterName from '#lib/utilities/preprocessor/rules/cpsAssetPage/addAnalyticsCounterName';
 
 export const cpsAssetPreprocessorRules = [
+  addAnalyticsCounterName,
   parseInternalLinks,
   timestampToMilliseconds,
   convertToOptimoBlocks,
