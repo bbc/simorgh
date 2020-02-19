@@ -23,4 +23,18 @@ Then('the video plays', () => {
   assertMediaIsPlaying();
 });
 
+When('I click the video placeholder', () => {
+  cy.get('div[class^="StyledVideoContainer"]')
+    .within(() => {
+      cy.get('button');
+    })
+    .click()
+    .should('not.exist')
+    .then(() => {
+      cy.get('iframe').then($iframe => {
+        assertMediaPlayerIsReady($iframe);
+      });
+    });
+});
+
 export default playVideo;
