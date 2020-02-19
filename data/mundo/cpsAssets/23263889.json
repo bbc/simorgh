@@ -10,9 +10,9 @@
     "type": "STY",
     "createdBy": "mundo-v6",
     "language": "es",
-    "lastUpdated": 1582105282332,
+    "lastUpdated": 1582107815082,
     "firstPublished": 1580745507000,
-    "lastPublished": 1582105273000,
+    "lastPublished": 1582107805000,
     "timestamp": 1580745507000,
     "options": {
       "isIgorSeoTagsEnabled": false,
@@ -502,6 +502,18 @@
         }
       ],
       "taggings": []
+    },
+    "indexImage": {
+      "id": "63730607",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+      "path": "/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Index image large",
+      "caption": "Index Image Large",
+      "copyrightHolder": "Kaylee Garrick",
+      "type": "image"
     },
     "id": "urn:bbc:ares::asset:mundo/23263889",
     "type": "cps"
