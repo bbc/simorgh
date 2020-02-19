@@ -13,7 +13,7 @@ export const removeFirstSlotRadioBulletin = dropWhile(
   item => item.contentType === 'RadioBulletin',
 );
 
-export const isNotTVBulletin = item => item.contentType !== 'TVBulletin';
+const isNotTVBulletin = item => item.contentType !== 'TVBulletin';
 
 export const removeTVBulletinsIfNotAVLiveStream = ({ items, type }) =>
   type === 'av-live-streams' ? items : items.filter(isNotTVBulletin);

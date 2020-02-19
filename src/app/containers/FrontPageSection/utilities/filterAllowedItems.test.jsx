@@ -1,5 +1,8 @@
 import range from 'ramda/src/range';
-import { getAllowedItems } from './filterAllowedItems';
+import {
+  getAllowedItems,
+  removeFirstSlotRadioBulletin,
+} from './filterAllowedItems';
 
 const numberOfStories = {
   0: {
@@ -84,6 +87,84 @@ const numberOfStories = {
   },
 };
 
+const radioBulletinFirst = [
+  {
+    contentType: 'RadioBulletin',
+  },
+  {
+    contentType: 'NotRadioBulletin',
+  },
+  {
+    contentType: 'NotRadioBulletin',
+  },
+  {
+    contentType: 'NotRadioBulletin',
+  },
+  {
+    contentType: 'RadioBulletin',
+  },
+];
+
+const multipleRadioBulletinsFirst = [
+  {
+    contentType: 'RadioBulletin',
+  },
+  {
+    contentType: 'RadioBulletin',
+  },
+  {
+    contentType: 'NotRadioBulletin',
+  },
+  {
+    contentType: 'NotRadioBulletin',
+  },
+  {
+    contentType: 'NotRadioBulletin',
+  },
+  {
+    contentType: 'RadioBulletin',
+  },
+];
+
+const nonRadioBulletinFirst = [
+  {
+    contentType: 'NotRadioBulletin',
+  },
+  {
+    contentType: 'RadioBulletin',
+  },
+  {
+    contentType: 'NotRadioBulletin',
+  },
+  {
+    contentType: 'NotRadioBulletin',
+  },
+  {
+    contentType: 'NotRadioBulletin',
+  },
+  {
+    contentType: 'RadioBulletin',
+  },
+];
+
+const onlyRadioBulletins = [
+  {
+    contentType: 'RadioBulletin',
+  },
+  {
+    contentType: 'RadioBulletin',
+  },
+  {
+    contentType: 'RadioBulletin',
+  },
+  {
+    contentType: 'RadioBulletin',
+  },
+  {
+    contentType: 'RadioBulletin',
+  },
+];
+
 const allowedItemsTest = value => {
   it(`should return right allowed items for ${value} stories for first section`, () => {
     expect(getAllowedItems(numberOfStories[value].input, true)).toStrictEqual(
@@ -102,6 +183,28 @@ describe('Story allowed items', () => {
   describe('assertions', () => {
     describe('getAllowedItems', () => {
       Object.keys(numberOfStories).forEach(value => allowedItemsTest(value));
+    });
+
+    describe('removeFirstSlotRadioBulletin', () => {
+      it('should remove the first radio bulletin', () => {
+        expect(removeFirstSlotRadioBulletin(radioBulletinFirst).length).toBe(4);
+      });
+
+      it('should remove multiple first radio bulletins', () => {
+        expect(
+          removeFirstSlotRadioBulletin(multipleRadioBulletinsFirst).length,
+        ).toBe(4);
+      });
+
+      it('should not remove anything when not radio bulletin first', () => {
+        expect(removeFirstSlotRadioBulletin(nonRadioBulletinFirst).length).toBe(
+          6,
+        );
+      });
+
+      it('should remove anything when only radio bulletins', () => {
+        expect(removeFirstSlotRadioBulletin(onlyRadioBulletins).length).toBe(0);
+      });
     });
   });
 });
