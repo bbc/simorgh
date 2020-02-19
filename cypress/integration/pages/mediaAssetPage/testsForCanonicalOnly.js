@@ -51,57 +51,22 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
           if (!media) throw new Error('no media');
 
-        cy.get(
-          'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
-        ).then($iframe => {
-          cy.wrap($iframe.prop('contentWindow'), {
-            // `timeout` only applies to the methods chained below.
-            // `its()` benefits from this, and will wait up to 8s
-            // for the mediaPlayer instance to become available.
-            timeout: 8000,
-          })
-            .its('embeddedMedia.playerInstances.mediaPlayer.ready')
-            .should('eq', true);
-        });
-      }
-    })
-  });
-
-    it('should play the media', () => {
-      cy.window().then(win => {
-        const media =
-          getBlockData('video', win.SIMORGH_DATA.pageData) ||
-          getBlockData('version', win.SIMORGH_DATA.pageData);
-
-        if (!media) throw new Error('No media');
-
-        cy.get('iframe').then(iframe => {
-          cy.wrap(iframe.contents().find('iframe'))
-            .should(
-              inner => expect(inner.contents().find('button.p_cta')).to.exist,
-            )
-            .then(inner =>
-              cy.wrap(inner.contents().find('button.p_cta')).click(),
-            )
-            .then(() => {
-              cy.wrap(iframe.prop('contentWindow'), {
-          if (media) {
-            cy.get(
-              'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
-            ).then($iframe => {
-              cy.wrap($iframe.prop('contentWindow'), {
-                // `timeout` only applies to the methods chained below.
-                // `its()` benefits from this, and will wait up to 8s
-                // for the mediaPlayer instance to become available.
-                timeout: 8000,
-              })
-                .its('embeddedMedia.playerInstances.mediaPlayer')
-                .invoke('currentTime')
-                .should('be.gt', 0);
-            });
-        });
+          cy.get(
+            'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
+          ).then($iframe => {
+            cy.wrap($iframe.prop('contentWindow'), {
+              // `timeout` only applies to the methods chained below.
+              // `its()` benefits from this, and will wait up to 8s
+              // for the mediaPlayer instance to become available.
+              timeout: 8000,
+            })
+              .its('embeddedMedia.playerInstances.mediaPlayer.ready')
+              .should('eq', true);
+          });
+        }
       });
     });
+  });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({
