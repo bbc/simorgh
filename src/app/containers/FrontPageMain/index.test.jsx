@@ -57,14 +57,14 @@ describe('FrontPageMain', () => {
     fetch.mockResponse(JSON.stringify(pidginMostReadData));
   });
 
-  // TODO: This is temporarily due to most read issues and will be added back in ASAP
-  // describe('snapshots', () => {
-  //   it('should render a pidgin frontpage correctly', async () => {
-  //     await matchSnapshotAsync(
-  //       <FrontPageMainWithContext frontPageData={frontPageData} />,
-  //     );
-  //   });
-  // });
+  describe('snapshots', () => {
+    it('should render a pidgin frontpage correctly', () => {
+      const { container } = render(
+        <FrontPageMainWithContext frontPageData={frontPageData} />,
+      );
+      expect(container).toMatchSnapshot();
+    });
+  });
 
   describe('assertions', () => {
     afterEach(cleanup);
