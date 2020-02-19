@@ -1,18 +1,12 @@
 import { When, Then } from 'cypress-cucumber-preprocessor/steps';
-import { assertMediaIsPlaying, assertMediaPlayerIsReady } from './media';
+import {
+  assertMediaIsPlaying,
+  playMedia,
+  playMediaWithPlaceholder,
+} from './media';
 
 const playVideo = () => {
-  // Ensure the video player is ready
-  cy.get(
-    'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
-  ).then($iframe => assertMediaPlayerIsReady($iframe));
-
-  // Click the play button
-  cy.get('iframe').then(iframe => {
-    cy.wrap(iframe.contents().find('iframe'))
-      .should(inner => expect(inner.contents().find('button.p_cta')).to.exist)
-      .then(inner => cy.wrap(inner.contents().find('button.p_cta')).click());
-  });
+  playMedia('StyledVideoContainer', 'button.p_cta');
 };
 
 When('I click the play video button', () => {
@@ -24,17 +18,7 @@ Then('the video plays', () => {
 });
 
 When('I click the video placeholder', () => {
-  cy.get('div[class^="StyledVideoContainer"]')
-    .within(() => {
-      cy.get('button');
-    })
-    .click()
-    .should('not.exist')
-    .then(() => {
-      cy.get('iframe').then($iframe => {
-        assertMediaPlayerIsReady($iframe);
-      });
-    });
+  playMediaWithPlaceholder('StyledVideoContainer', 'button');
 });
 
 export default playVideo;
