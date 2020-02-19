@@ -147,6 +147,15 @@ const isNotTVBulletin = item => item.contentType !== 'TVBulletin';
 const removeTVBulletinsIfNotAVLiveStream = ({ items, type }) =>
   type === 'av-live-streams' ? items : items.filter(isNotTVBulletin);
 
+const removeItemsWithoutUrlOrHeadline = items =>
+  items.filter(item =>
+    pathOr(null, ['assetTypeCode'], item) !== null
+      ? pathOr(null, ['name'], item) && pathOr(null, ['uri'], item) && item
+      : pathOr(null, ['headlines', 'headline'], item) &&
+        pathOr(null, ['locators', 'assetUri'], item) &&
+        item,
+  );
+
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
@@ -158,14 +167,16 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const seeAll = pathOr(null, ['seeAll'], translations);
   const isFirstSection = sectionNumber === 0;
 
-  const updatedItems = removeFirstSlotRadioBulletin(
+  const radioFilteredItems = removeFirstSlotRadioBulletin(
     pathOr(null, ['items'], group),
   );
 
-  const items = removeTVBulletinsIfNotAVLiveStream({
-    items: updatedItems,
+  const bulletinFilteredItems = removeTVBulletinsIfNotAVLiveStream({
+    items: radioFilteredItems,
     type,
   });
+
+  const items = removeItemsWithoutUrlOrHeadline(bulletinFilteredItems);
 
   // We have a cap on the number of allowed items per section
   const allowedItems = getAllowedItems(items, isFirstSection);
