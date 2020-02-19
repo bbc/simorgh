@@ -1,3 +1,6 @@
+import { Then } from 'cypress-cucumber-preprocessor/steps';
+import serviceConfig from '../../../src/server/utilities/serviceConfigs';
+
 const iframeSelector = 'iframe';
 
 export const assertMediaIsPlaying = () => {
@@ -41,3 +44,20 @@ export const playMediaWithPlaceholder = (outerIFrameClass, playButton) => {
       });
     });
 };
+
+Then(
+  'a placeholder with the text "content is unavailable" is displayed',
+  () => {
+    // Get translation for "content is unavailable" from service config
+    const contentIsUnavailableTranslation =
+      serviceConfig[Cypress.env('service')].default.translations.media
+        .contentExpired;
+
+    cy.get('strong[class^="StyledMessage"]').then(message => {
+      const contentIsUnavailableMessage = message.text();
+      expect(contentIsUnavailableTranslation).to.eq(
+        contentIsUnavailableMessage,
+      );
+    });
+  },
+);
