@@ -21,12 +21,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-weight: inherit;
 }
 
-.c31 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
 .c5 {
   grid-column: 1 / span 6;
 }
@@ -200,7 +194,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-bottom: 0;
 }
 
-.c37 {
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -210,7 +204,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   flex-direction: column;
 }
 
-.c38 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -229,7 +223,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   align-items: baseline;
 }
 
-.c39 {
+.c38 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -249,47 +243,47 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   align-items: center;
 }
 
-.c35 {
+.c34 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c33 {
+.c32 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c36 {
+.c35 {
   margin: 0;
   padding: 0;
 }
 
-.c41 {
+.c40 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c41:first-child {
+.c40:first-child {
   padding-top: 0;
 }
 
-.c41:last-child {
+.c40:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c40 {
+.c39 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c32 {
+.c31 {
   margin-bottom: 1rem;
   z-index: 0;
 }
 
-.c34 {
+.c33 {
   margin-top: 0;
 }
 
@@ -336,11 +330,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   flex-grow: 1;
 }
 
-.c43 {
+.c42 {
   margin-top: 2rem;
 }
 
-.c44 {
+.c43 {
   background: #ECEAE7;
   padding: 1rem;
   margin-top: 1rem;
@@ -442,7 +436,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (display:grid) {
-  .c42 {
+  .c41 {
     display: block;
   }
 }
@@ -464,46 +458,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @media (min-width:37.5rem) {
   .c30 {
     padding-top: 2rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c31 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c31 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c31 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c31 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c31 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c31 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
   }
 }
 
@@ -772,7 +726,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:37.5rem) {
-  .c38 {
+  .c37 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -781,39 +735,39 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c39 {
+  .c38 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c39 {
+  .c38 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c39 {
+  .c38 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c39 {
+  .c38 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c35 {
+  .c34 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c35 {
+  .c34 {
     position: absolute;
     left: 0;
     right: 0;
@@ -822,67 +776,67 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c32 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c41 {
+  .c40 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c41 {
+  .c40 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c41:first-child {
+  .c40:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c41:first-child {
+  .c40:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c32 {
+  .c31 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c32 {
+  .c31 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c32 {
+  .c31 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c32 {
+  .c31 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c32 {
+  .c31 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c31 {
     margin-bottom: 1.5rem;
   }
 }
@@ -906,7 +860,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:24.9375rem) {
-  .c43 {
+  .c42 {
     margin-top: 0;
   }
 }
@@ -1392,73 +1346,69 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   role="region"
                 >
                   <div
-                    class="c32"
+                    class="c32 c33"
                   >
                     <div
-                      class="c33 c34"
+                      class="c34"
+                    />
+                    <h2
+                      class="c35"
                     >
                       <div
-                        class="c35"
-                      />
-                      <h2
                         class="c36"
                       >
-                        <div
+                        <span
                           class="c37"
                         >
                           <span
                             class="c38"
+                            dir="ltr"
+                            id="related-content-heading"
                           >
-                            <span
-                              class="c39"
-                              dir="ltr"
-                              id="related-content-heading"
-                            >
-                              Another thing we de for inside dis tori
-                            </span>
+                            Another thing we de for inside dis tori
                           </span>
-                        </div>
-                      </h2>
-                    </div>
-                    <ul
-                      class="c40"
-                      role="list"
-                    >
-                      <li
-                        class="c41"
-                        role="listitem"
-                      />
-                    </ul>
+                        </span>
+                      </div>
+                    </h2>
                   </div>
+                  <ul
+                    class="c39"
+                    role="list"
+                  >
+                    <li
+                      class="c40"
+                      role="listitem"
+                    />
+                  </ul>
                 </section>
               </main>
               <div
-                class="c42 c43"
+                class="c41 c42"
                 dir="ltr"
               >
                 <div
-                  class="c44"
+                  class="c43"
                 >
                   <h2>
                     This is a component in the second column
                   </h2>
                 </div>
                 <div
-                  class="c44"
+                  class="c43"
                 >
                   <h2>
                     This is a component in the second column
                   </h2>
                 </div>
                 <div
-                  class="c44"
+                  class="c43"
                 >
                   <h2>
                     This is a component in the second column
                   </h2>
                 </div>
                 <div
-                  class="c44"
+                  class="c43"
                 >
                   <h2>
                     This is a component in the second column
@@ -1492,12 +1442,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-style: italic;
   font-family: inherit;
   font-weight: inherit;
-}
-
-.c33 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
 }
 
 .c5 {
@@ -1688,7 +1632,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 0;
 }
 
-.c39 {
+.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1698,7 +1642,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.c40 {
+.c39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1717,7 +1661,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   align-items: baseline;
 }
 
-.c41 {
+.c40 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1737,47 +1681,47 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   align-items: center;
 }
 
-.c37 {
+.c36 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c35 {
+.c34 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c38 {
+.c37 {
   margin: 0;
   padding: 0;
 }
 
-.c43 {
+.c42 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c43:first-child {
+.c42:first-child {
   padding-top: 0;
 }
 
-.c43:last-child {
+.c42:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c42 {
+.c41 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c34 {
+.c33 {
   margin-bottom: 1rem;
   z-index: 0;
 }
 
-.c36 {
+.c35 {
   margin-top: 0;
 }
 
@@ -1828,11 +1772,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   flex-grow: 1;
 }
 
-.c45 {
+.c44 {
   margin-top: 2rem;
 }
 
-.c46 {
+.c45 {
   background: #ECEAE7;
   padding: 1rem;
   margin-top: 1rem;
@@ -1934,7 +1878,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (display:grid) {
-  .c44 {
+  .c43 {
     display: block;
   }
 }
@@ -1956,46 +1900,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) {
   .c32 {
     padding-top: 2rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c33 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c33 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c33 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c33 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c33 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c33 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
   }
 }
 
@@ -2278,7 +2182,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c40 {
+  .c39 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -2287,39 +2191,39 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c41 {
+  .c40 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c41 {
+  .c40 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c41 {
+  .c40 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c41 {
+  .c40 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c37 {
+  .c36 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c37 {
+  .c36 {
     position: absolute;
     left: 0;
     right: 0;
@@ -2328,67 +2232,67 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c35 {
+  .c34 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c43 {
+  .c42 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c43 {
+  .c42 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c43:first-child {
+  .c42:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c43:first-child {
+  .c42:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c34 {
+  .c33 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c34 {
+  .c33 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c34 {
+  .c33 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c34 {
+  .c33 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c34 {
+  .c33 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c34 {
+  .c33 {
     margin-bottom: 1.5rem;
   }
 }
@@ -2418,7 +2322,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:24.9375rem) {
-  .c45 {
+  .c44 {
     margin-top: 0;
   }
 }
@@ -3126,73 +3030,69 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       role="region"
                     >
                       <div
-                        class="c34"
+                        class="c34 c35"
                       >
                         <div
-                          class="c35 c36"
+                          class="c36"
+                        />
+                        <h2
+                          class="c37"
                         >
                           <div
-                            class="c37"
-                          />
-                          <h2
                             class="c38"
                           >
-                            <div
+                            <span
                               class="c39"
                             >
                               <span
                                 class="c40"
+                                dir="ltr"
+                                id="related-content-heading"
                               >
-                                <span
-                                  class="c41"
-                                  dir="ltr"
-                                  id="related-content-heading"
-                                >
-                                  Another thing we de for inside dis tori
-                                </span>
+                                Another thing we de for inside dis tori
                               </span>
-                            </div>
-                          </h2>
-                        </div>
-                        <ul
-                          class="c42"
-                          role="list"
-                        >
-                          <li
-                            class="c43"
-                            role="listitem"
-                          />
-                        </ul>
+                            </span>
+                          </div>
+                        </h2>
                       </div>
+                      <ul
+                        class="c41"
+                        role="list"
+                      >
+                        <li
+                          class="c42"
+                          role="listitem"
+                        />
+                      </ul>
                     </section>
                   </main>
                   <div
-                    class="c44 c45"
+                    class="c43 c44"
                     dir="ltr"
                   >
                     <div
-                      class="c46"
+                      class="c45"
                     >
                       <h2>
                         This is a component in the second column
                       </h2>
                     </div>
                     <div
-                      class="c46"
+                      class="c45"
                     >
                       <h2>
                         This is a component in the second column
                       </h2>
                     </div>
                     <div
-                      class="c46"
+                      class="c45"
                     >
                       <h2>
                         This is a component in the second column
                       </h2>
                     </div>
                     <div
-                      class="c46"
+                      class="c45"
                     >
                       <h2>
                         This is a component in the second column
