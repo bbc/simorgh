@@ -51,18 +51,20 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
           if (!media) throw new Error('no media');
 
-          cy.get(
-            'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
-          ).then($iframe => {
-            cy.wrap($iframe.prop('contentWindow'), {
-              // `timeout` only applies to the methods chained below.
-              // `its()` benefits from this, and will wait up to 8s
-              // for the mediaPlayer instance to become available.
-              timeout: 8000,
-            })
-              .its('embeddedMedia.playerInstances.mediaPlayer.ready')
-              .should('eq', true);
-          });
+          if (media) {
+            cy.get(
+              'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
+            ).then($iframe => {
+              cy.wrap($iframe.prop('contentWindow'), {
+                // `timeout` only applies to the methods chained below.
+                // `its()` benefits from this, and will wait up to 8s
+                // for the mediaPlayer instance to become available.
+                timeout: 8000,
+              })
+                .its('embeddedMedia.playerInstances.mediaPlayer.ready')
+                .should('eq', true);
+            });
+          }
         }
       });
     });
