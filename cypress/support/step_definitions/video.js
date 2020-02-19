@@ -5,12 +5,8 @@ import {
   playMediaWithPlaceholder,
 } from './media';
 
-const playVideo = () => {
-  playMedia('StyledVideoContainer', 'button.p_cta');
-};
-
 When('I click the play video button', () => {
-  playVideo();
+  playMedia('StyledVideoContainer', 'button.p_cta');
 });
 
 Then('the video plays', () => {
@@ -20,5 +16,3 @@ Then('the video plays', () => {
 When('I click the video placeholder', () => {
   playMediaWithPlaceholder('StyledVideoContainer', 'button');
 });
-
-export default playVideo;
