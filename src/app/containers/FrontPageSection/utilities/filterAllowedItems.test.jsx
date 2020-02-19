@@ -89,135 +89,9 @@ const numberOfStories = {
   },
 };
 
-const radioBulletinFirst = [
-  {
-    contentType: 'RadioBulletin',
-  },
-  {
-    contentType: 'NotRadioBulletin',
-  },
-  {
-    contentType: 'NotRadioBulletin',
-  },
-  {
-    contentType: 'NotRadioBulletin',
-  },
-  {
-    contentType: 'RadioBulletin',
-  },
-];
+const radioBulletin = { contentType: 'RadioBulletin' };
 
-const multipleRadioBulletinsFirst = [
-  {
-    contentType: 'RadioBulletin',
-  },
-  {
-    contentType: 'RadioBulletin',
-  },
-  {
-    contentType: 'NotRadioBulletin',
-  },
-  {
-    contentType: 'NotRadioBulletin',
-  },
-  {
-    contentType: 'NotRadioBulletin',
-  },
-  {
-    contentType: 'RadioBulletin',
-  },
-];
-
-const nonRadioBulletinFirst = [
-  {
-    contentType: 'NotRadioBulletin',
-  },
-  {
-    contentType: 'RadioBulletin',
-  },
-  {
-    contentType: 'NotRadioBulletin',
-  },
-  {
-    contentType: 'NotRadioBulletin',
-  },
-  {
-    contentType: 'NotRadioBulletin',
-  },
-  {
-    contentType: 'RadioBulletin',
-  },
-];
-
-const onlyRadioBulletins = [
-  {
-    contentType: 'RadioBulletin',
-  },
-  {
-    contentType: 'RadioBulletin',
-  },
-  {
-    contentType: 'RadioBulletin',
-  },
-  {
-    contentType: 'RadioBulletin',
-  },
-  {
-    contentType: 'RadioBulletin',
-  },
-];
-
-const onlyTVBulletin = {
-  input: [{ contentType: 'TVBulletin' }],
-  'av-live-streams': [{ contentType: 'TVBulletin' }],
-  'not-av-live-streams': [],
-};
-
-const multipleTVBulletins = {
-  input: [
-    { contentType: 'TVBulletin' },
-    { contentType: 'TVBulletin' },
-    { contentType: 'TVBulletin' },
-  ],
-  'av-live-streams': [
-    { contentType: 'TVBulletin' },
-    { contentType: 'TVBulletin' },
-    { contentType: 'TVBulletin' },
-  ],
-  'not-av-live-streams': [],
-};
-
-const mixedTVBulletin = {
-  input: [
-    { contentType: 'TVBulletin' },
-    { contentType: 'NotTVBulletin' },
-    { contentType: 'TVBulletin' },
-  ],
-  'av-live-streams': [
-    { contentType: 'TVBulletin' },
-    { contentType: 'NotTVBulletin' },
-    { contentType: 'TVBulletin' },
-  ],
-  'not-av-live-streams': [{ contentType: 'NotTVBulletin' }],
-};
-
-const nonTVBulletins = {
-  input: [
-    { contentType: 'NotTVBulletin' },
-    { contentType: 'NotTVBulletin' },
-    { contentType: 'NotTVBulletin' },
-  ],
-  'av-live-streams': [
-    { contentType: 'NotTVBulletin' },
-    { contentType: 'NotTVBulletin' },
-    { contentType: 'NotTVBulletin' },
-  ],
-  'not-av-live-streams': [
-    { contentType: 'NotTVBulletin' },
-    { contentType: 'NotTVBulletin' },
-    { contentType: 'NotTVBulletin' },
-  ],
-};
+const someOtherPromo = { contentType: 'SomeOtherPromo' };
 
 const normalItem = {
   assetTypeCode: 'Something',
@@ -225,27 +99,20 @@ const normalItem = {
   uri: 'www.bbc.co.uk',
 };
 
-const noUrlItem = {
-  assetTypeCode: 'Something',
-  name: 'A headline',
-};
+const noUrlItem = { ...normalItem, uri: undefined };
 
-const noHeadlineItem = {
-  assetTypeCode: 'Something',
-  uri: 'www.bbc.co.uk',
-};
+const noHeadlineItem = { ...normalItem, name: undefined };
 
 const normalNoAssetTypeItem = {
   headlines: { headline: 'A headline' },
   locators: { assetUri: 'www.bbc.co.uk' },
 };
 
-const noUrlNoAssetTypeItem = {
-  headlines: { headline: 'A headline' },
-};
+const noUrlNoAssetTypeItem = { ...normalNoAssetTypeItem, locators: undefined };
 
 const noHeadlineNoAssetTypeItem = {
-  locators: { assetUri: 'www.bbc.co.uk' },
+  ...normalNoAssetTypeItem,
+  headlines: undefined,
 };
 
 const allowedItemsTest = value => {
@@ -270,97 +137,203 @@ describe('Story allowed items', () => {
 
     describe('removeFirstSlotRadioBulletin', () => {
       it('should remove the first radio bulletin', () => {
-        expect(removeFirstSlotRadioBulletin(radioBulletinFirst).length).toBe(4);
+        expect(
+          removeFirstSlotRadioBulletin([
+            radioBulletin,
+            someOtherPromo,
+            someOtherPromo,
+            radioBulletin,
+            someOtherPromo,
+          ]),
+        ).toStrictEqual([
+          someOtherPromo,
+          someOtherPromo,
+          radioBulletin,
+          someOtherPromo,
+        ]);
       });
 
       it('should remove multiple first radio bulletins', () => {
         expect(
-          removeFirstSlotRadioBulletin(multipleRadioBulletinsFirst).length,
-        ).toBe(4);
+          removeFirstSlotRadioBulletin([
+            radioBulletin,
+            radioBulletin,
+            radioBulletin,
+            someOtherPromo,
+            radioBulletin,
+            radioBulletin,
+            radioBulletin,
+          ]),
+        ).toStrictEqual([
+          someOtherPromo,
+          radioBulletin,
+          radioBulletin,
+          radioBulletin,
+        ]);
       });
 
       it('should not remove anything when not radio bulletin first', () => {
-        expect(removeFirstSlotRadioBulletin(nonRadioBulletinFirst).length).toBe(
-          6,
-        );
+        expect(
+          removeFirstSlotRadioBulletin([
+            someOtherPromo,
+            radioBulletin,
+            someOtherPromo,
+            someOtherPromo,
+            radioBulletin,
+            radioBulletin,
+          ]),
+        ).toStrictEqual([
+          someOtherPromo,
+          radioBulletin,
+          someOtherPromo,
+          someOtherPromo,
+          radioBulletin,
+          radioBulletin,
+        ]);
       });
 
-      it('should remove anything when only radio bulletins', () => {
-        expect(removeFirstSlotRadioBulletin(onlyRadioBulletins).length).toBe(0);
+      it('should remove everything when only radio bulletins', () => {
+        expect(
+          removeFirstSlotRadioBulletin([
+            radioBulletin,
+            radioBulletin,
+            radioBulletin,
+          ]),
+        ).toStrictEqual([]);
       });
     });
 
     describe('removeTVBulletinsIfNotAVLiveStream', () => {
-      it('should leave single TVBulletin for av-live-streams', () => {
-        expect(
-          removeTVBulletinsIfNotAVLiveStream({
-            items: onlyTVBulletin.input,
-            type: 'av-live-streams',
-          }),
-        ).toStrictEqual(onlyTVBulletin['av-live-streams']);
+      describe('single TVBulletin', () => {
+        const onlyTVBulletin = {
+          input: [{ contentType: 'TVBulletin' }],
+          'av-live-streams': [{ contentType: 'TVBulletin' }],
+          'not-av-live-streams': [],
+        };
+
+        it('should leave single TVBulletin for av-live-streams', () => {
+          expect(
+            removeTVBulletinsIfNotAVLiveStream({
+              items: onlyTVBulletin.input,
+              type: 'av-live-streams',
+            }),
+          ).toStrictEqual(onlyTVBulletin['av-live-streams']);
+        });
+
+        it('should filter single TVBulletin for not-av-live-streams', () => {
+          expect(
+            removeTVBulletinsIfNotAVLiveStream({
+              items: onlyTVBulletin.input,
+              type: 'not-av-live-streams',
+            }),
+          ).toStrictEqual(onlyTVBulletin['not-av-live-streams']);
+        });
       });
 
-      it('should filter single TVBulletin for not-av-live-streams', () => {
-        expect(
-          removeTVBulletinsIfNotAVLiveStream({
-            items: onlyTVBulletin.input,
-            type: 'not-av-live-streams',
-          }),
-        ).toStrictEqual(onlyTVBulletin['not-av-live-streams']);
+      describe('multiple TVBulletins', () => {
+        const multipleTVBulletins = {
+          input: [
+            { contentType: 'TVBulletin' },
+            { contentType: 'TVBulletin' },
+            { contentType: 'TVBulletin' },
+          ],
+          'av-live-streams': [
+            { contentType: 'TVBulletin' },
+            { contentType: 'TVBulletin' },
+            { contentType: 'TVBulletin' },
+          ],
+          'not-av-live-streams': [],
+        };
+
+        it('should leave multiple TVBulletins for av-live-streams', () => {
+          expect(
+            removeTVBulletinsIfNotAVLiveStream({
+              items: multipleTVBulletins.input,
+              type: 'av-live-streams',
+            }),
+          ).toStrictEqual(multipleTVBulletins['av-live-streams']);
+        });
+
+        it('should filter all TVBulletin for not-av-live-streams', () => {
+          expect(
+            removeTVBulletinsIfNotAVLiveStream({
+              items: multipleTVBulletins.input,
+              type: 'not-av-live-streams',
+            }),
+          ).toStrictEqual(multipleTVBulletins['not-av-live-streams']);
+        });
       });
 
-      it('should leave multiple TVBulletins for av-live-streams', () => {
-        expect(
-          removeTVBulletinsIfNotAVLiveStream({
-            items: multipleTVBulletins.input,
-            type: 'av-live-streams',
-          }),
-        ).toStrictEqual(multipleTVBulletins['av-live-streams']);
+      describe('mixed TVBulletins and non-TVBulletins', () => {
+        const mixedTVBulletin = {
+          input: [
+            { contentType: 'TVBulletin' },
+            { contentType: 'NotTVBulletin' },
+            { contentType: 'TVBulletin' },
+          ],
+          'av-live-streams': [
+            { contentType: 'TVBulletin' },
+            { contentType: 'NotTVBulletin' },
+            { contentType: 'TVBulletin' },
+          ],
+          'not-av-live-streams': [{ contentType: 'NotTVBulletin' }],
+        };
+
+        it('should leave all types for av-live-streams', () => {
+          expect(
+            removeTVBulletinsIfNotAVLiveStream({
+              items: mixedTVBulletin.input,
+              type: 'av-live-streams',
+            }),
+          ).toStrictEqual(mixedTVBulletin['av-live-streams']);
+        });
+
+        it('should filter all TVBulletins and leave non-TVBulletins for not-av-live-streams', () => {
+          expect(
+            removeTVBulletinsIfNotAVLiveStream({
+              items: mixedTVBulletin.input,
+              type: 'not-av-live-streams',
+            }),
+          ).toStrictEqual(mixedTVBulletin['not-av-live-streams']);
+        });
       });
 
-      it('should filter all TVBulletin for not-av-live-streams', () => {
-        expect(
-          removeTVBulletinsIfNotAVLiveStream({
-            items: multipleTVBulletins.input,
-            type: 'not-av-live-streams',
-          }),
-        ).toStrictEqual(multipleTVBulletins['not-av-live-streams']);
-      });
+      describe('no TVBulletins', () => {
+        const nonTVBulletins = {
+          input: [
+            { contentType: 'NotTVBulletin' },
+            { contentType: 'NotTVBulletin' },
+            { contentType: 'NotTVBulletin' },
+          ],
+          'av-live-streams': [
+            { contentType: 'NotTVBulletin' },
+            { contentType: 'NotTVBulletin' },
+            { contentType: 'NotTVBulletin' },
+          ],
+          'not-av-live-streams': [
+            { contentType: 'NotTVBulletin' },
+            { contentType: 'NotTVBulletin' },
+            { contentType: 'NotTVBulletin' },
+          ],
+        };
 
-      it('should leave all types for av-live-streams', () => {
-        expect(
-          removeTVBulletinsIfNotAVLiveStream({
-            items: mixedTVBulletin.input,
-            type: 'av-live-streams',
-          }),
-        ).toStrictEqual(mixedTVBulletin['av-live-streams']);
-      });
+        it('should leave all non-TVBulletins for av-live-streams', () => {
+          expect(
+            removeTVBulletinsIfNotAVLiveStream({
+              items: nonTVBulletins.input,
+              type: 'av-live-streams',
+            }),
+          ).toStrictEqual(nonTVBulletins['av-live-streams']);
+        });
 
-      it('should filter all TVBulletins and leave non-TVBulletins for not-av-live-streams', () => {
-        expect(
-          removeTVBulletinsIfNotAVLiveStream({
-            items: mixedTVBulletin.input,
-            type: 'not-av-live-streams',
-          }),
-        ).toStrictEqual(mixedTVBulletin['not-av-live-streams']);
-      });
-
-      it('should leave all non-TVBulletins for av-live-streams', () => {
-        expect(
-          removeTVBulletinsIfNotAVLiveStream({
-            items: nonTVBulletins.input,
-            type: 'av-live-streams',
-          }),
-        ).toStrictEqual(nonTVBulletins['av-live-streams']);
-      });
-
-      it('should leave non-TVBulletins for not-av-live-streams', () => {
-        expect(
-          removeTVBulletinsIfNotAVLiveStream({
-            items: nonTVBulletins.input,
-            type: 'not-av-live-streams',
-          }),
-        ).toStrictEqual(nonTVBulletins['not-av-live-streams']);
+        it('should leave non-TVBulletins for not-av-live-streams', () => {
+          expect(
+            removeTVBulletinsIfNotAVLiveStream({
+              items: nonTVBulletins.input,
+              type: 'not-av-live-streams',
+            }),
+          ).toStrictEqual(nonTVBulletins['not-av-live-streams']);
+        });
       });
     });
 
