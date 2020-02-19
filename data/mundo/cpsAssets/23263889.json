@@ -4,14 +4,15 @@
     "locators": {
       "assetUri": "/mundo/23263889",
       "cpsUrn": "urn:bbc:content:assetUri:mundo/23263889",
-      "curie": "http://www.bbc.co.uk/asset/f776ad93-e486-b14a-b5ea-55955dd0644f"
+      "curie": "http://www.bbc.co.uk/asset/f776ad93-e486-b14a-b5ea-55955dd0644f",
+      "assetId": "23263889"
     },
     "type": "STY",
     "createdBy": "mundo-v6",
     "language": "es",
-    "lastUpdated": 1580922784342,
+    "lastUpdated": 1582105282332,
     "firstPublished": 1580745507000,
-    "lastPublished": 1580922773000,
+    "lastPublished": 1582105273000,
     "timestamp": 1580745507000,
     "options": {
       "isIgorSeoTagsEnabled": false,
@@ -71,14 +72,20 @@
           "thingLabel": "Life",
           "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
           "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
-          "thingType": ["Theme", "Thing"],
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
           "thingSameAs": []
         },
         {
           "thingLabel": "Fake news",
           "thingUri": "http://www.bbc.co.uk/things/e7539dc8-5cfb-413a-b4fe-0ad77bc665aa#id",
           "thingId": "e7539dc8-5cfb-413a-b4fe-0ad77bc665aa",
-          "thingType": ["Theme", "Thing"],
+          "thingType": [
+            "Theme",
+            "Thing"
+          ],
           "thingSameAs": [
             "http://dbpedia.org/resource/Fake_news",
             "http://www.wikidata.org/entity/Q28549308"
@@ -94,7 +101,7 @@
         }
       ]
     },
-    "version": "v1.1.5",
+    "version": "v1.1.6",
     "blockTypes": [
       "image",
       "paragraph",
@@ -140,7 +147,7 @@
         "type": "crosshead"
       },
       {
-        "text": "Paragraphs can contain <bold>bold </bold>and <italic>italic </italic>in CPS at the moment, and these are rendered on the page as <bold>bold </bold>and <italic>italic</italic><italic> </italic>or <bold><italic>both</italic></bold>.",
+        "text": "Paragraphs can contain <bold>bold </bold>and <italic>italic </italic>in CPS at the moment, and these are rendered on the page as <bold>bold </bold>and <italic>italic</italic>or <bold><italic>both</italic></bold>.",
         "markupType": "candy_xml",
         "type": "paragraph"
       },
@@ -316,7 +323,9 @@
         "versions": [
           {
             "versionId": "p01k6msp",
-            "types": ["Original"],
+            "types": [
+              "Original"
+            ],
             "duration": 191,
             "durationISO8601": "PT3M11S",
             "warnings": {
@@ -354,7 +363,9 @@
         "versions": [
           {
             "versionId": "p01m7d09",
-            "types": ["Original"],
+            "types": [
+              "Original"
+            ],
             "duration": 127,
             "durationISO8601": "PT2M7S",
             "warnings": {
@@ -388,6 +399,70 @@
         "text": "Includes: IDT2",
         "markupType": "plain_text",
         "type": "paragraph"
+      },
+      {
+        "text": "Here come some different shape images:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Square:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "63731104",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/9CB1/test/_63731104_hi000087716.jpg",
+        "path": "/cpsdevpb/9CB1/test/_63731104_hi000087716.jpg",
+        "height": 1546,
+        "width": 1546,
+        "altText": "Prince Charles",
+        "caption": "Prince Charles at a party",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Portrait:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "63731107",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/111E1/test/_63731107_tv000191235.jpg",
+        "path": "/cpsdevpb/111E1/test/_63731107_tv000191235.jpg",
+        "height": 768,
+        "width": 576,
+        "altText": "Patrick Stewart",
+        "caption": "Is this Captain Picard or Hercule Poirot?",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Random:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "63731109",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/16001/test/_63731109_tv000050092.jpg",
+        "path": "/cpsdevpb/16001/test/_63731109_tv000050092.jpg",
+        "height": 549,
+        "width": 700,
+        "altText": "Centre Court at Wimbledon",
+        "caption": "This image is a random shape",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "This is the end",
+        "markupType": "plain_text",
+        "type": "paragraph"
       }
     ]
   },
@@ -399,7 +474,8 @@
     "locators": {
       "assetUri": "/mundo/23263889",
       "cpsUrn": "urn:bbc:content:assetUri:mundo/23263889",
-      "curie": "http://www.bbc.co.uk/asset/f776ad93-e486-b14a-b5ea-55955dd0644f"
+      "curie": "http://www.bbc.co.uk/asset/f776ad93-e486-b14a-b5ea-55955dd0644f",
+      "assetId": "23263889"
     },
     "summary": "This is the summary",
     "timestamp": 1580745507000,
@@ -427,17 +503,6 @@
       ],
       "taggings": []
     },
-    "indexImage": {
-      "id": "63730607",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
-      "path": "/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
-      "height": 549,
-      "width": 976,
-      "altText": "Some cool looking dogs on the beach.",
-      "copyrightHolder": "Kaylee Garrick",
-      "type": "image"
-    },
     "id": "urn:bbc:ares::asset:mundo/23263889",
     "type": "cps"
   },
@@ -455,6 +520,77 @@
       "type": "simple"
     },
     "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Wapinzani waafikiana nchini South Sudan",
+              "headline": "Mambo makuu kuhusu makubaliano mapya ya amani Sudan Kusini"
+            },
+            "locators": {
+              "assetUri": "/swahili/23210641",
+              "cpsUrn": "urn:bbc:content:assetUri:/swahili/23210641"
+            },
+            "summary": "Mahasimu nchini Sudan Kusini wameweka saini makubaliano ya kugawana madaraka huku Rais Salva Kirr akitoa wito wa kutaka kuwepo amani kwenye nchi ambapo vita vya wenyewe kwa wenyewe vimesababisha vifo vya maelfu ya watu.",
+            "timestamp": 1533557370000,
+            "language": "sw",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63685549",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/1715E/test/_63685549_c5daa10f-fea1-48bb-9570-dd61904a22bc.jpg",
+              "path": "/cpsdevpb/1715E/test/_63685549_c5daa10f-fea1-48bb-9570-dd61904a22bc.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "A Sudanese man gathers branches to build his destroyed house in Abyei.",
+              "caption": "A Sudanese man gathers branches as he a builds a new roof for his destroyed house in Abyei.",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:swahili/23210641",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Audio map page test",
+              "headline": "Audio map page test"
+            },
+            "locators": {
+              "assetUri": "/mundo/23245765",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/23245765"
+            },
+            "summary": "Audio map page test",
+            "timestamp": 1564757533000,
+            "language": "es",
+            "cpsType": "MAP",
+            "mediaType": "Audio",
+            "id": "urn:bbc:ares::asset:mundo/23245765",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Your pictures: Breakfast",
+              "headline": "Your pictures: Breakfast"
+            },
+            "locators": {
+              "assetUri": "/mundo/noticias-america-latina-23048887",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-america-latina-23048887"
+            },
+            "summary": "Readers' photos on the theme breakfast.",
+            "timestamp": 1464780136000,
+            "language": "es",
+            "cpsType": "PGL",
+            "id": "urn:bbc:ares::asset:mundo/noticias-america-latina-23048887",
+            "type": "cps"
+          },
+          {
+            "name": "I am a podcast",
+            "uri": "https://www.bbc.com",
+            "type": "link"
+          }
+        ]
+      },
       {
         "type": "related-urls",
         "promos": [
