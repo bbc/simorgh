@@ -10,8 +10,13 @@ import timestampToMilliseconds from '#lib/utilities/preprocessor/rules/cpsAssetP
 import addSummaryBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addSummaryBlock';
 import cpsOnlyOnwardJourneys from '#lib/utilities/preprocessor/rules/cpsAssetPage/cpsOnlyOnwardJourneys';
 import addBylineBlock from '#lib/utilities/preprocessor/rules/cpsAssetPage/addBylineBlock';
+import addAnalyticsCounterName from '#lib/utilities/preprocessor/rules/cpsAssetPage/addAnalyticsCounterName';
 
-const formatPageData = pipe(parseInternalLinks, timestampToMilliseconds);
+const formatPageData = pipe(
+  addAnalyticsCounterName,
+  parseInternalLinks,
+  timestampToMilliseconds,
+);
 const processOptimoBlocks = pipe(
   addHeadlineBlock,
   addSummaryBlock,
