@@ -24,6 +24,7 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
+import Byline from '#containers/Byline';
 import {
   getFirstPublished,
   getLastPublished,
@@ -76,6 +77,7 @@ const StoryPageContainer = ({ pageData }) => {
       ) : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
+    byline: props => <StyledByline {...props} />,
   };
 
   const StyledGhostGrid = styled(GhostGrid)`
@@ -88,6 +90,14 @@ const StoryPageContainer = ({ pageData }) => {
   `;
 
   const StyledTimestamp = styled(Timestamp)`
+    padding-bottom: ${GEL_SPACING_DBL};
+
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding-bottom: ${GEL_SPACING_TRPL};
+    }
+  `;
+
+  const StyledByline = styled(Byline)`
     padding-bottom: ${GEL_SPACING_DBL};
 
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
