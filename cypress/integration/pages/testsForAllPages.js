@@ -91,7 +91,9 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             const imagePath = indexImage ? indexImage.path : null;
 
             const imageAltText =
-              indexImage && cpsPageTypes.includes(pageType)
+              indexImage &&
+              cpsPageTypes.includes(pageType) &&
+              indexImage.altText
                 ? indexImage.altText
                 : appConfig[config[service].name][variant].defaultImageAltText;
 
@@ -243,7 +245,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                 }`;
 
                 cy.get('head').within(() => {
-                  cy.title().should('eq', pageTitle);
+                  cy.title().should('eq', pageTitle.replace(/ +/g, ' '));
                   cy.get('meta[property="og:description"]').should(
                     'have.attr',
                     'content',
