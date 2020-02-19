@@ -1,16 +1,18 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
-import { render } from '@testing-library/react';
-import assocPath from 'ramda/src/assocPath';
-import '@testing-library/jest-dom/extend-expect';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import CpsAssetPage from '.';
-import pidginPageData from '#data/pidgin/cpsAssets/world-23252817';
-import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
+import PhotoGalleryPage from '.';
+import noOnwardJourneys from '#data/pidgin/cpsAssets/sport-23252855';
+import someCpsOnwardJourneys from '#data/azeri/cpsAssets/azerbaijan-44208474.json';
+import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
+import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
 import preprocessor from '#lib/utilities/preprocessor';
 import { cpsAssetPreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
 
@@ -44,7 +46,7 @@ const createAssetPage = ({ pageData }, service) => (
           service={service}
           statusCode={200}
         >
-          <CpsAssetPage service={service} pageData={pageData} />
+          <PhotoGalleryPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContext.Provider>
@@ -101,35 +103,63 @@ jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
   return ContextsContainer;
 });
 
-describe('CPS STY Page', () => {
+describe('Photo Gallery Page', () => {
   describe('snapshots', () => {
-    it('should match snapshot for STY', async () => {
+    it('should match snapshot for PGL with no onward journeys', async () => {
       const pageData = await preprocessor(
-        pidginPageData,
+        noOnwardJourneys,
+        cpsAssetPreprocessorRules,
+      );
+      const page = createAssetPage({ pageData }, 'pidgin');
+      await matchSnapshotAsync(page);
+    });
+
+    it('should match snapshot for PGL with about tags', async () => {
+      const pageData = await preprocessor(
+        pglAboutData,
+        cpsAssetPreprocessorRules,
+      );
+      const page = createAssetPage({ pageData }, 'afaanoromoo');
+      await matchSnapshotAsync(page);
+    });
+
+    it('should match snapshot for PGL with non-CPS onward journeys filtered', async () => {
+      const pageData = await preprocessor(
+        someCpsOnwardJourneys,
+        cpsAssetPreprocessorRules,
+      );
+      const page = createAssetPage({ pageData }, 'azeri');
+      await matchSnapshotAsync(page);
+    });
+
+    it('should match snapshot for PGL with all CPS onward journeys', async () => {
+      const pageData = await preprocessor(
+        allCpsOnwardJourneys,
         cpsAssetPreprocessorRules,
       );
       const page = createAssetPage({ pageData }, 'pidgin');
       await matchSnapshotAsync(page);
     });
   });
+
   it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
     const pageData = await preprocessor(
-      igboPageData,
+      pglAboutData,
       cpsAssetPreprocessorRules,
     );
-    const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
-    expect(getByText('23 Ọktọba 2019')).toBeInTheDocument();
+    const { getByText } = render(createAssetPage({ pageData }, 'afaanoromoo'));
+    expect(getByText('21 Fuulbaana 2017')).toBeInTheDocument();
   });
 
   it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
     const pageDataWithHiddenTimestamp = assocPath(
       ['metadata', 'options', 'allowDateStamp'],
       false,
-      await preprocessor(igboPageData, cpsAssetPreprocessorRules),
+      await preprocessor(pglAboutData, cpsAssetPreprocessorRules),
     );
 
     const { asFragment } = render(
-      createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'pidgin'),
+      createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'afaanoromoo'),
     );
 
     expect(document.querySelector('main time')).toBeNull();
