@@ -27,7 +27,7 @@ export const getUrl = pathname => {
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
 
-const handleResponse = async (url, response) => {
+const handleResponse = url => async response => {
   const { status } = response;
 
   if (upstreamStatusCodesToPropagate.includes(status)) {
@@ -59,18 +59,14 @@ const handleError = e => {
   };
 };
 
-const fetchData = async pathname => {
+const fetchData = pathname => {
   const url = getUrl(pathname);
 
   logger.info(`DataRequest: [${url}]`);
 
-  try {
-    const response = await fetch(url);
-
-    return handleResponse(url, response);
-  } catch (error) {
-    return handleError(error);
-  }
+  return fetch(url)
+    .then(handleResponse(url))
+    .catch(handleError);
 };
 
 export default fetchData;
