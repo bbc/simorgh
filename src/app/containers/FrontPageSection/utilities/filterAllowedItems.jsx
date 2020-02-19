@@ -1,5 +1,8 @@
-import pathOr from 'ramda/src/pathOr';
 import dropWhile from 'ramda/src/dropWhile';
+import {
+  getAssetTypeCode,
+  getHeadlineUrlAndLive,
+} from '#lib/utilities/getStoryPromoInfo';
 
 const MAX_ALLOWED_ITEMS_FIRST_SECTION = 13;
 const MAX_ALLOWED_ITEMS = 10;
@@ -19,10 +22,10 @@ export const removeTVBulletinsIfNotAVLiveStream = ({ items, type }) =>
   type === 'av-live-streams' ? items : items.filter(isNotTVBulletin);
 
 export const removeItemsWithoutUrlOrHeadline = items =>
-  items.filter(item =>
-    pathOr(null, ['assetTypeCode'], item) !== null
-      ? pathOr(null, ['name'], item) && pathOr(null, ['uri'], item) && item
-      : pathOr(null, ['headlines', 'headline'], item) &&
-        pathOr(null, ['locators', 'assetUri'], item) &&
-        item,
-  );
+  items.filter(item => {
+    const { headline, url } = getHeadlineUrlAndLive(
+      item,
+      getAssetTypeCode(item),
+    );
+    return headline && url;
+  });

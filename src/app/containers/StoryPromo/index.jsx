@@ -16,7 +16,10 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { createSrcset } from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
-
+import {
+  getAssetTypeCode,
+  getHeadlineUrlAndLive,
+} from '#lib/utilities/getStoryPromoInfo';
 import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
@@ -100,23 +103,15 @@ const StoryPromoContainer = ({
   const { script, datetimeLocale, service, timezone, dir } = useContext(
     ServiceContext,
   );
-  const isAssetTypeCode = pathOr(null, ['assetTypeCode'], item);
+  const isAssetTypeCode = getAssetTypeCode(item);
   const isStoryPromoPodcast =
     isAssetTypeCode === 'PRO' &&
     pathOr(null, ['contentType'], item) === 'Podcast';
-  let headline;
-  let url;
-  let isLive;
 
-  if (isAssetTypeCode !== null) {
-    headline = pathOr(null, ['name'], item);
-    url = pathOr(null, ['uri'], item);
-  } else {
-    headline = pathOr(null, ['headlines', 'headline'], item);
-    url = pathOr(null, ['locators', 'assetUri'], item);
-    isLive = pathOr(null, ['cpsType'], item) === 'LIV';
-  }
-
+  const { headline, url, isLive } = getHeadlineUrlAndLive(
+    item,
+    isAssetTypeCode,
+  );
   const summary = pathOr(null, ['summary'], item);
   const timestamp = pathOr(null, ['timestamp'], item);
   const relatedItems = pathOr(null, ['relatedItems'], item);
