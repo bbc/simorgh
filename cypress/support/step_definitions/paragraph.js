@@ -8,4 +8,8 @@ Then("the paragraph '{}' is displayed", paragraph => {
   hasParagraph(paragraph);
 });
 
+Then('paragraph with <link> tag is rendered as <a> tag', () => {
+  cy.log('NotImplemented');
+});
+
 export default hasParagraph;
