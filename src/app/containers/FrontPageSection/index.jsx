@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
 import styled, { css } from 'styled-components';
 import pathOr from 'ramda/src/pathOr';
-import dropWhile from 'ramda/src/dropWhile';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
@@ -21,7 +20,12 @@ import UsefulLinksComponent from './UsefulLinks';
 import { ServiceContext } from '#contexts/ServiceContext';
 import groupShape from '#models/propTypes/frontPageGroup';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import getAllowedItems from './utilities/getAllowedItems';
+import {
+  getAllowedItems,
+  removeFirstSlotRadioBulletin,
+  removeTVBulletinsIfNotAVLiveStream,
+  removeItemsWithoutUrlOrHeadline,
+} from './utilities/filterAllowedItems';
 import getRows from './utilities/storyRowsSplitter';
 import getRowDetails from './utilities/rowDetails';
 import { TopRow } from '../FrontPageStoryRows';
@@ -137,24 +141,6 @@ const sectionBody = ({
 
   return renderPromos(items, isFirstSection, dir);
 };
-
-const removeFirstSlotRadioBulletin = dropWhile(
-  item => item.contentType === 'RadioBulletin',
-);
-
-const isNotTVBulletin = item => item.contentType !== 'TVBulletin';
-
-const removeTVBulletinsIfNotAVLiveStream = ({ items, type }) =>
-  type === 'av-live-streams' ? items : items.filter(isNotTVBulletin);
-
-const removeItemsWithoutUrlOrHeadline = items =>
-  items.filter(item =>
-    pathOr(null, ['assetTypeCode'], item) !== null
-      ? pathOr(null, ['name'], item) && pathOr(null, ['uri'], item) && item
-      : pathOr(null, ['headlines', 'headline'], item) &&
-        pathOr(null, ['locators', 'assetUri'], item) &&
-        item,
-  );
 
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
