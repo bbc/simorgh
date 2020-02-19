@@ -23,7 +23,7 @@
     "analyticsLabels": { "cps_asset_id": "43666343", "cps_asset_type": "map" },
     "tags": {},
     "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph", "list" ],
+    "blockTypes": ["legacyMedia", "paragraph", "list"],
     "includeComments": false
   },
   "content": {
@@ -112,8 +112,18 @@
     "type": "cps"
   },
   "relatedContent": {
-    "section": { "subType": "index", "name": "Video y Fotos", "uri": "/mundo/video_fotos", "type": "simple" },
-    "site": { "subType": "site", "name": "BBCMundo.com", "uri": "/mundo", "type": "simple" },
+    "section": {
+      "subType": "index",
+      "name": "Video y Fotos",
+      "uri": "/mundo/video_fotos",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBCMundo.com",
+      "uri": "/mundo",
+      "type": "simple"
+    },
     "groups": []
   }
 }
