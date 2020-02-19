@@ -3,6 +3,7 @@ import {
   getAllowedItems,
   removeFirstSlotRadioBulletin,
   removeTVBulletinsIfNotAVLiveStream,
+  removeItemsWithoutUrlOrHeadline,
 } from './filterAllowedItems';
 
 const numberOfStories = {
@@ -218,6 +219,35 @@ const nonTVBulletins = {
   ],
 };
 
+const normalItem = {
+  assetTypeCode: 'Something',
+  name: 'A headline',
+  uri: 'www.bbc.co.uk',
+};
+
+const noUrlItem = {
+  assetTypeCode: 'Something',
+  name: 'A headline',
+};
+
+const noHeadlineItem = {
+  assetTypeCode: 'Something',
+  uri: 'www.bbc.co.uk',
+};
+
+const normalNoAssetTypeItem = {
+  headlines: { headline: 'A headline' },
+  locators: { assetUri: 'www.bbc.co.uk' },
+};
+
+const noUrlNoAssetTypeItem = {
+  headlines: { headline: 'A headline' },
+};
+
+const noHeadlineNoAssetTypeItem = {
+  locators: { assetUri: 'www.bbc.co.uk' },
+};
+
 const allowedItemsTest = value => {
   it(`should return right allowed items for ${value} stories for first section`, () => {
     expect(getAllowedItems(numberOfStories[value].input, true)).toStrictEqual(
@@ -331,6 +361,43 @@ describe('Story allowed items', () => {
             type: 'not-av-live-streams',
           }),
         ).toStrictEqual(nonTVBulletins['not-av-live-streams']);
+      });
+    });
+
+    describe('removeItemsWithoutUrlOrHeadline', () => {
+      it('should filter out items with no URL', () => {
+        expect(
+          removeItemsWithoutUrlOrHeadline([noUrlItem, normalItem]),
+        ).toStrictEqual([normalItem]);
+      });
+
+      it('should filter out items with no headline', () => {
+        expect(
+          removeItemsWithoutUrlOrHeadline([
+            normalItem,
+            noHeadlineItem,
+            normalNoAssetTypeItem,
+          ]),
+        ).toStrictEqual([normalItem, normalNoAssetTypeItem]);
+      });
+
+      it('should filter out items with no assetTypeCode and no URL', () => {
+        expect(
+          removeItemsWithoutUrlOrHeadline([
+            normalNoAssetTypeItem,
+            noUrlNoAssetTypeItem,
+          ]),
+        ).toStrictEqual([normalNoAssetTypeItem]);
+      });
+
+      it('should filter out items with no assetTypeCode and no headline', () => {
+        expect(
+          removeItemsWithoutUrlOrHeadline([
+            normalItem,
+            noHeadlineNoAssetTypeItem,
+            normalNoAssetTypeItem,
+          ]),
+        ).toStrictEqual([normalItem, normalNoAssetTypeItem]);
       });
     });
   });
