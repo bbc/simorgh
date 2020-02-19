@@ -8,7 +8,7 @@ import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import CpsAssetPage from '.';
+import PhotoGalleryPage from '.';
 import noOnwardJourneys from '#data/pidgin/cpsAssets/sport-23252855';
 import someCpsOnwardJourneys from '#data/azeri/cpsAssets/azerbaijan-44208474.json';
 import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
@@ -45,7 +45,7 @@ const createAssetPage = ({ pageData }, service) => (
           service={service}
           statusCode={200}
         >
-          <CpsAssetPage service={service} pageData={pageData} />
+          <PhotoGalleryPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContext.Provider>
@@ -102,7 +102,7 @@ jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
   return ContextsContainer;
 });
 
-describe('CPS PGL Page', () => {
+describe('Photo Gallery Page', () => {
   describe('snapshots', () => {
     it('should match snapshot for PGL with no onward journeys', async () => {
       fetch.mockResponse(JSON.stringify(noOnwardJourneys));

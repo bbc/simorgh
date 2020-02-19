@@ -8,7 +8,7 @@ import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import CpsAssetPage from '.';
+import StoryPage from '.';
 import pidginPageData from '#data/pidgin/cpsAssets/world-23252817';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
@@ -43,7 +43,7 @@ const createAssetPage = ({ pageData }, service) => (
           service={service}
           statusCode={200}
         >
-          <CpsAssetPage service={service} pageData={pageData} />
+          <StoryPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContext.Provider>
@@ -100,7 +100,7 @@ jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
   return ContextsContainer;
 });
 
-describe('CPS STY Page', () => {
+describe('Story Page', () => {
   describe('snapshots', () => {
     it('should match snapshot for STY', async () => {
       fetch.mockResponse(JSON.stringify(pidginPageData));
