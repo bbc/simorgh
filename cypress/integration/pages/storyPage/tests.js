@@ -26,6 +26,27 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
         },
       );
     });
+
+    it('should render a byline for the page', () => {
+      cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+        ({ body }) => {
+          const { name, title, persons } = body.promo.byline;
+          const [person] = persons;
+
+          if (name) {
+            cy.get('main ul li').should('contain', name);
+          } else {
+            cy.get('main ul li').should('contain', person.name);
+          }
+
+          if (title) {
+            cy.get('main ul li').should('contain', title);
+          } else {
+            cy.get('main ul li').should('contain', person.function);
+          }
+        },
+      );
+    });
   });
 };
 
