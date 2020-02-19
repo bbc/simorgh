@@ -165,6 +165,7 @@ export const service = {
       header: 'الأكثر قراءة',
       lastUpdated: 'آخر تحديث',
       numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
