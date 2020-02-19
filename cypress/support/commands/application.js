@@ -41,12 +41,3 @@ Cypress.Commands.add(
     );
   },
 );
-
-Cypress.Commands.add('iframe', (iframeSelector, innerElement) => {
-  return cy
-    .get(iframeSelector, { timeout: 10000 })
-    .should($iframe => expect($iframe.contents().find(innerElement)).to.exist)
-    .then($iframe => {
-      return cy.wrap($iframe.contents().find(innerElement), { timeout: 10000 });
-    });
-});
