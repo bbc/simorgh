@@ -5361,7 +5361,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
             class="c9"
             lang="en-GB"
           >
-            Live, 
+             Live, 
           </span>
           A live item
         </span>
@@ -5665,7 +5665,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
             class="c9"
             lang="en-GB"
           >
-            Live, 
+             Live, 
           </span>
           A live item
         </span>
@@ -5953,7 +5953,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
             class="c5"
             lang="en-GB"
           >
-            Live, 
+             Live, 
           </span>
           A live item
         </span>
@@ -6273,7 +6273,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
             class="c9"
             lang="en-GB"
           >
-            Live, 
+             Live, 
           </span>
           A live item
         </span>
