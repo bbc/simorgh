@@ -1,0 +1,90 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "entityType": "Clip",
+        "externalId": "p010l641",
+        "format": "video",
+        "id": "17694770",
+        "statusCode": 404,
+        "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+        "subType": "primary",
+        "type": "external_vpid"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Test Panorama (Long synopsis)",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_id": "17694770", "cps_asset_type": "map" },
+    "blockTypes": ["external_vpid", "paragraph"],
+    "createdBy": "greatlakes",
+    "firstPublished": 1450350361000,
+    "id": "urn:bbc:ares::asset:gahuza/video/2015/12/151217_test_long",
+    "includeComments": false,
+    "language": "rw",
+    "lastPublished": 1455103442000,
+    "lastUpdated": 1582030676261,
+    "locators": {
+      "assetId": "17694770",
+      "assetUri": "/gahuza/video/2015/12/151217_test_long",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2015/12/151217_test_long",
+      "curie": "http://www.bbc.co.uk/asset/fe263dc8-a4ad-11e5-a72f-33a878c49305"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1450350361000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": { "headline": "Test Panorama" },
+    "id": "urn:bbc:ares::asset:gahuza/video/2015/12/151217_test_long",
+    "language": "rw",
+    "locators": {
+      "assetId": "17694770",
+      "assetUri": "/gahuza/video/2015/12/151217_test_long",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2015/12/151217_test_long",
+      "curie": "http://www.bbc.co.uk/asset/fe263dc8-a4ad-11e5-a72f-33a878c49305"
+    },
+    "media": {
+      "entityType": "Clip",
+      "externalId": "p010l641",
+      "format": "video",
+      "id": "17694770",
+      "statusCode": 404,
+      "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+      "subType": "primary",
+      "type": "external_vpid"
+    },
+    "passport": { "taggings": [] },
+    "summary": "Test Panorama (Short synopsis) ",
+    "timestamp": 1450350361000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Video",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/gahuza/video"
+    },
+    "site": {
+      "name": "BBCGahuza.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/gahuza"
+    }
+  }
+}
