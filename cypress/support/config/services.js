@@ -923,10 +923,11 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/persian/arts/2011/08/110802_doublage_sherlock_promo',
+        path: isLive(appEnv)
+          ? undefined
+          : isTest(appEnv)
+          ? '/persian/iran/2016/09/160907_tc2_testmap1'
+          : '/persian/arts/2011/08/110802_doublage_sherlock_promo',
         smoke: false,
       },
       photoGalleryPage: {
