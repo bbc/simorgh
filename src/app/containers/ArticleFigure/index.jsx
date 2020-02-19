@@ -35,6 +35,7 @@ const ArticleFigure = ({
 }) => {
   const imageSpan = {
     default: '6',
+    group1: '6',
     group5: '12',
   };
   let ParentWrapper = NestedGridParentLarge;
