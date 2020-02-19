@@ -41,7 +41,7 @@ exports[`MediaPlayer render the amp player 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c0 {
     grid-column: 3 / span 6;
   }
@@ -154,7 +154,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c0 {
     grid-column: 3 / span 6;
   }

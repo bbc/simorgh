@@ -169,7 +169,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c13 {
     grid-column: 3 / span 4;
     max-width: 30rem;
@@ -208,7 +208,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c3 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -234,7 +234,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c1 {
     grid-column: 3 / span 6;
   }
@@ -264,7 +264,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c5 {
     grid-column: 3 / span 6;
   }
@@ -295,7 +295,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c15 {
     grid-column: 1 / span 4;
   }
@@ -325,7 +325,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c17 {
     grid-column: 1 / span 4;
   }
@@ -349,7 +349,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c8 {
     grid-column: 1 / span 6;
   }
@@ -373,7 +373,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c10 {
     grid-column: 1 / span 5;
   }
@@ -385,7 +385,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-@media (max-width:79.9375rem) {
+@media (max-width:80rem) {
   .c7 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -415,7 +415,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c14 {
     grid-template-columns: repeat(4,1fr);
   }
@@ -511,7 +511,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -1600,7 +1600,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c15 {
     grid-column: 3 / span 4;
     max-width: 30rem;
@@ -1639,7 +1639,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c3 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -1665,7 +1665,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c1 {
     grid-column: 3 / span 6;
   }
@@ -1695,7 +1695,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c7 {
     grid-column: 3 / span 6;
   }
@@ -1726,7 +1726,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c17 {
     grid-column: 1 / span 4;
   }
@@ -1756,7 +1756,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c19 {
     grid-column: 1 / span 4;
   }
@@ -1780,7 +1780,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c10 {
     grid-column: 1 / span 6;
   }
@@ -1804,7 +1804,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c12 {
     grid-column: 1 / span 5;
   }
@@ -1816,7 +1816,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-@media (max-width:79.9375rem) {
+@media (max-width:80rem) {
   .c9 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -1846,7 +1846,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c16 {
     grid-template-columns: repeat(4,1fr);
   }
@@ -1956,7 +1956,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -3246,7 +3246,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c15 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -3287,7 +3287,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c3 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -3313,7 +3313,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c1 {
     grid-column: 3 / span 6;
   }
@@ -3343,7 +3343,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c7 {
     grid-column: 3 / span 6;
   }
@@ -3367,7 +3367,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c10 {
     grid-column: 1 / span 6;
   }
@@ -3391,7 +3391,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c12 {
     grid-column: 1 / span 5;
   }
@@ -3403,7 +3403,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-@media (max-width:79.9375rem) {
+@media (max-width:80rem) {
   .c9 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -3688,7 +3688,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c16 {
     grid-column: 3 / span 6;
   }
@@ -3736,7 +3736,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -4627,7 +4627,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c3 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -4653,7 +4653,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c1 {
     grid-column: 3 / span 6;
   }
@@ -4683,7 +4683,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c7 {
     grid-column: 3 / span 6;
   }
@@ -4707,7 +4707,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c10 {
     grid-column: 1 / span 6;
   }
@@ -4731,7 +4731,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c14 {
     grid-column: 1 / span 5;
   }
@@ -4743,7 +4743,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   }
 }
 
-@media (max-width:79.9375rem) {
+@media (max-width:80rem) {
   .c9 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -4847,7 +4847,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -6343,7 +6343,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c34 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -6399,7 +6399,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c16 {
     grid-column: 3 / span 4;
     max-width: 30rem;
@@ -6438,7 +6438,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c3 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -6464,7 +6464,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c1 {
     grid-column: 3 / span 6;
   }
@@ -6494,7 +6494,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c7 {
     grid-column: 3 / span 6;
   }
@@ -6525,7 +6525,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c18 {
     grid-column: 1 / span 4;
   }
@@ -6555,7 +6555,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c20 {
     grid-column: 1 / span 4;
   }
@@ -6579,7 +6579,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c10 {
     grid-column: 1 / span 6;
   }
@@ -6603,7 +6603,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c14 {
     grid-column: 1 / span 5;
   }
@@ -6615,7 +6615,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (max-width:79.9375rem) {
+@media (max-width:80rem) {
   .c9 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -6645,7 +6645,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c17 {
     grid-template-columns: repeat(4,1fr);
   }
@@ -6929,7 +6929,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c35 {
     grid-column: 3 / span 6;
   }
@@ -6977,7 +6977,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;

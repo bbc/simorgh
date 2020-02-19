@@ -368,7 +368,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c29 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -409,7 +409,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c3 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -435,7 +435,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c1 {
     grid-column: 3 / span 6;
   }
@@ -465,7 +465,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c9 {
     grid-column: 3 / span 6;
   }
@@ -489,7 +489,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c12 {
     grid-column: 1 / span 6;
   }
@@ -513,7 +513,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c17 {
     grid-column: 1 / span 5;
   }
@@ -525,7 +525,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (max-width:79.9375rem) {
+@media (max-width:80rem) {
   .c11 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -637,7 +637,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c25 {
     grid-column: 3 / span 6;
   }
@@ -760,7 +760,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c30 {
     grid-column: 3 / span 6;
   }
@@ -814,7 +814,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -1758,7 +1758,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c31 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -1799,7 +1799,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c3 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -1825,7 +1825,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c1 {
     grid-column: 3 / span 6;
   }
@@ -1855,7 +1855,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c9 {
     grid-column: 3 / span 6;
   }
@@ -1879,7 +1879,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c12 {
     grid-column: 1 / span 6;
   }
@@ -1903,7 +1903,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c17 {
     grid-column: 1 / span 5;
   }
@@ -1915,7 +1915,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (max-width:79.9375rem) {
+@media (max-width:80rem) {
   .c11 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -2041,7 +2041,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c27 {
     grid-column: 3 / span 6;
   }
@@ -2164,7 +2164,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c32 {
     grid-column: 3 / span 6;
   }
@@ -2218,7 +2218,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) and (max-width:80rem) {
   .c0 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
