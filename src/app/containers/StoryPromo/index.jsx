@@ -121,7 +121,7 @@ const StoryPromoContainer = ({
   const timestamp = pathOr(null, ['timestamp'], item);
   const relatedItems = pathOr(null, ['relatedItems'], item);
 
-  const linkcontents = <LinkContents item={item} />;
+  const linkcontents = <LinkContents item={item} isInline={!displayImage} />;
 
   if (!headline || !url) {
     return null;
