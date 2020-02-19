@@ -19,6 +19,7 @@ const requestContext = {
   statsDestination: 'statsDestination',
   previousPath: 'previousPath',
   origin: 'origin',
+  canonicalLink: 'https://www.bbc.com/pidgin/51536047',
 };
 
 const serviceContext = {
@@ -32,7 +33,7 @@ const expectation = {
   appName: serviceContext.atiAnalyticsAppName,
   categoryName: 'News',
   campaigns: payload.metadata.passport.campaigns,
-  contentId: payload.metadata.id,
+  contentId: 'urn:bbc:cps:a753e377-f11b-5646-9c9b-4775bfa4e692',
   contentType: 'test-content-type',
   language: payload.metadata.language,
   libraryVersion: analyticsUtils.LIBRARY_VERSION,
