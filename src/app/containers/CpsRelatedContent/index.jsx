@@ -61,7 +61,7 @@ const CpsRelatedContent = ({ content, noGhostGrid }) => {
         <GhostGrid {...a11yAttributes}>{children}</GhostGrid>
       )}
     >
-      <Wrapper {...(noGhostGrid ? a11yAttributes : {})}>
+      <Wrapper {...(noGhostGrid && a11yAttributes)}>
         <StyledSectionLabel
           script={script}
           service={service}
