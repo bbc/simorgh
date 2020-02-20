@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { string } from 'prop-types';
 import OEmbed from '#app/components/OEmbed';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 import twitter from './fixtures/twitter.json';
 
 const SocialEmbed = ({ source, className }) => {
+  const { service } = useContext(ServiceContext);
   const [embed, setEmbed] = useState(null);
 
   useEffect(() => {
@@ -15,7 +17,7 @@ const SocialEmbed = ({ source, className }) => {
 
   return embed ? (
     <GridItemConstrainedMedium className={className}>
-      <OEmbed {...embed} />
+      <OEmbed service={service} {...embed} />
     </GridItemConstrainedMedium>
   ) : null;
 };
