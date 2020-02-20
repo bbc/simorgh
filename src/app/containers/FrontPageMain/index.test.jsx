@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, wait } from '@testing-library/react';
+import { render, wait, waitForElement } from '@testing-library/react';
 import FrontPageMain from '.';
 
 // 'index-light' is a lighter version of front page data that improves the
@@ -55,14 +55,19 @@ beforeEach(async () => {
 });
 
 describe('FrontPageMain', () => {
-  // TODO: This is temporarily due to most read issues and will be added back in ASAP
-  // describe('snapshots', () => {
-  //   it('should render a pidgin frontpage correctly', async () => {
-  //     await matchSnapshotAsync(
-  //       <FrontPageMainWithContext frontPageData={pageData} />,
-  //     );
-  //   });
-  // });
+  describe('snapshots', () => {
+    it('should render a pidgin frontpage correctly', async () => {
+      const { container } = render(
+        <FrontPageMainWithContext frontPageData={pageData} />,
+      );
+
+      // Waiting to ensure most read data is loaded and element is rendered
+      // The data is loaded separately which was previously causing snapshots to fail
+      await waitForElement(() => container.querySelector('#Most-Read'));
+
+      expect(container).toMatchSnapshot();
+    });
+  });
 
   describe('assertions', () => {
     it('should render visually hidden text as h1', async () => {

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import fetchMock from 'fetch-mock';
 import { storiesOf } from '@storybook/react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import igboData from '#data/igbo/frontpage';
@@ -25,21 +24,24 @@ const serviceDatasets = {
   },
 };
 
+const getPageData = async (service, variant) => {
+  const { fetch } = window;
+  window.fetch = () =>
+    Promise.resolve({
+      status: 200,
+      json: () => serviceDatasets[service][variant],
+    }); // stub fetch
+  const { pageData } = await getInitialData('some-front-page-path');
+  window.fetch = fetch; // restore fetch
+  return pageData;
+};
+
 // eslint-disable-next-line react/prop-types
 const DataWrapper = ({ service, variant, children }) => {
   const [data, setData] = useState();
 
   useEffect(() => {
-    const fetchData = async () => {
-      fetchMock.getOnce(
-        `${window.location.origin}/${service}/${variant}.json`,
-        serviceDatasets[service][variant],
-      );
-      const { pageData } = await getInitialData(`${service}/${variant}`);
-      fetchMock.restore();
-      setData(pageData);
-    };
-    fetchData();
+    (async () => setData(await getPageData(service, variant)))();
   }, [service, variant]);
 
   return data ? children(data) : null;
