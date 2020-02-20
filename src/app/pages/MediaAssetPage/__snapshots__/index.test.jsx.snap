@@ -1012,6 +1012,7 @@ exports[`Media Asset Page should render component 1`] = `
                     >
                       <div
                         class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                        dir="ltr"
                       >
                         <div
                           class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1030,6 +1031,7 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                       <div
                         class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                        dir="ltr"
                       >
                         <h3
                           class="Headline-sc-1dvfmi3-3 hSJrur"
@@ -1064,6 +1066,7 @@ exports[`Media Asset Page should render component 1`] = `
                     >
                       <div
                         class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                        dir="ltr"
                       >
                         <div
                           class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1082,6 +1085,7 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                       <div
                         class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                        dir="ltr"
                       >
                         <h3
                           class="Headline-sc-1dvfmi3-3 hSJrur"
@@ -1116,6 +1120,7 @@ exports[`Media Asset Page should render component 1`] = `
                     >
                       <div
                         class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                        dir="ltr"
                       >
                         <div
                           class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1158,6 +1163,7 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                       <div
                         class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                        dir="ltr"
                       >
                         <h3
                           class="Headline-sc-1dvfmi3-3 hSJrur"
@@ -1203,6 +1209,7 @@ exports[`Media Asset Page should render component 1`] = `
                     >
                       <div
                         class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                        dir="ltr"
                       >
                         <div
                           class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1253,6 +1260,7 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                       <div
                         class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                        dir="ltr"
                       >
                         <h3
                           class="Headline-sc-1dvfmi3-3 hSJrur"

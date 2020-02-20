@@ -4342,6 +4342,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         >
                           <div
                             class="c27"
+                            dir="ltr"
                           >
                             <div
                               class="c28"
@@ -4360,6 +4361,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           </div>
                           <div
                             class="c30"
+                            dir="ltr"
                           >
                             <h3
                               class="c31"
@@ -4405,6 +4407,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         >
                           <div
                             class="c27"
+                            dir="ltr"
                           >
                             <div
                               class="c28"
@@ -4447,6 +4450,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           </div>
                           <div
                             class="c30"
+                            dir="ltr"
                           >
                             <h3
                               class="c31"
@@ -8199,6 +8203,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8217,6 +8222,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8251,6 +8257,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8269,6 +8276,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8303,6 +8311,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8321,6 +8330,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8355,6 +8365,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8373,6 +8384,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8407,6 +8419,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8425,6 +8438,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8459,6 +8473,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8477,6 +8492,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8522,6 +8538,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8540,6 +8557,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8574,6 +8592,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8592,6 +8611,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8626,6 +8646,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8644,6 +8665,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"

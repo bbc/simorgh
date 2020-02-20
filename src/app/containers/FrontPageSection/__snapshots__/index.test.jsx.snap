@@ -721,6 +721,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
         >
           <div
             class="c12"
+            dir="ltr"
           >
             <div
               class="c13"
@@ -744,6 +745,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
           </div>
           <div
             class="c17"
+            dir="ltr"
           >
             <h3
               class="c18"
@@ -779,6 +781,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
         >
           <div
             class="c24"
+            dir="ltr"
           >
             <div
               class="c13"
@@ -797,6 +800,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
           </div>
           <div
             class="c26"
+            dir="ltr"
           >
             <h3
               class="c27"
@@ -832,6 +836,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
         >
           <div
             class="c24"
+            dir="ltr"
           >
             <div
               class="c13"
@@ -850,6 +855,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
           </div>
           <div
             class="c26"
+            dir="ltr"
           >
             <h3
               class="c27"
@@ -885,6 +891,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
         >
           <div
             class="c24"
+            dir="ltr"
           >
             <div
               class="c13"
@@ -903,6 +910,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
           </div>
           <div
             class="c26"
+            dir="ltr"
           >
             <h3
               class="c27"
@@ -938,6 +946,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
         >
           <div
             class="c24"
+            dir="ltr"
           >
             <div
               class="c13"
@@ -956,6 +965,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
           </div>
           <div
             class="c26"
+            dir="ltr"
           >
             <h3
               class="c27"
@@ -1438,6 +1448,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:37.5rem) {
   .c16 {
+    padding-left: 0.5rem;
     width: 50%;
   }
 }
@@ -1451,6 +1462,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 @supports (grid-template-columns:fit-content(200px)) {
   .c16 {
     width: initial;
+    padding: 0;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
   }
@@ -1481,6 +1493,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 
 @media (min-width:37.5rem) {
   .c11 {
+    padding-right: 0.5rem;
     width: 50%;
   }
 }
@@ -1496,6 +1509,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
     display: block;
     width: initial;
     padding: initial;
+    padding: 0;
     width: 100%;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
@@ -1653,6 +1667,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
       >
         <div
           class="c11"
+          dir="ltr"
         >
           <h3
             class="c12"
@@ -1678,6 +1693,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
         </div>
         <div
           class="c16"
+          dir="ltr"
         >
           <div
             class="c17"
@@ -1706,6 +1722,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
       >
         <div
           class="c22"
+          dir="ltr"
         >
           <div
             class="c17"
@@ -1724,6 +1741,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
         </div>
         <div
           class="c24"
+          dir="ltr"
         >
           <h3
             class="c25"
@@ -2142,6 +2160,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
     >
       <div
         class="c8"
+        dir="ltr"
       >
         <div
           class="c9"
@@ -2160,6 +2179,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
       </div>
       <div
         class="c12"
+        dir="ltr"
       >
         <h3
           class="c13"
@@ -2857,6 +2877,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
       >
         <div
           class="c10"
+          dir="ltr"
         >
           <div
             class="c11"
@@ -2875,6 +2896,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
         </div>
         <div
           class="c14"
+          dir="ltr"
         >
           <h3
             class="c15"
@@ -2910,6 +2932,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
       >
         <div
           class="c21"
+          dir="ltr"
         >
           <div
             class="c11"
@@ -2928,6 +2951,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
         </div>
         <div
           class="c23"
+          dir="ltr"
         >
           <h3
             class="c24"
@@ -2963,6 +2987,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
       >
         <div
           class="c21"
+          dir="ltr"
         >
           <div
             class="c11"
@@ -2981,6 +3006,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
         </div>
         <div
           class="c23"
+          dir="ltr"
         >
           <h3
             class="c24"
@@ -3016,6 +3042,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
       >
         <div
           class="c21"
+          dir="ltr"
         >
           <div
             class="c11"
@@ -3034,6 +3061,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
         </div>
         <div
           class="c23"
+          dir="ltr"
         >
           <h3
             class="c24"
@@ -3069,6 +3097,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
       >
         <div
           class="c21"
+          dir="ltr"
         >
           <div
             class="c11"
@@ -3087,6 +3116,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
         </div>
         <div
           class="c23"
+          dir="ltr"
         >
           <h3
             class="c24"

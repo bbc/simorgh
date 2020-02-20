@@ -49,6 +49,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
           >
             <div
               class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+              dir="ltr"
             >
               <div
                 class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -67,6 +68,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
             </div>
             <div
               class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+              dir="ltr"
             >
               <h3
                 class="Headline-sc-1dvfmi3-3 hSJrur"
@@ -112,6 +114,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
           >
             <div
               class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+              dir="ltr"
             >
               <div
                 class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -130,6 +133,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
             </div>
             <div
               class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+              dir="ltr"
             >
               <h3
                 class="Headline-sc-1dvfmi3-3 hSJrur"
@@ -164,6 +168,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
           >
             <div
               class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+              dir="ltr"
             >
               <div
                 class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -182,6 +187,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
             </div>
             <div
               class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+              dir="ltr"
             >
               <h3
                 class="Headline-sc-1dvfmi3-3 hSJrur"
@@ -262,6 +268,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           >
             <div
               class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+              dir="ltr"
             >
               <div
                 class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -280,6 +287,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
             </div>
             <div
               class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+              dir="ltr"
             >
               <h3
                 class="Headline-sc-1dvfmi3-3 hSJrur"
@@ -325,6 +333,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           >
             <div
               class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+              dir="ltr"
             >
               <div
                 class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -343,6 +352,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
             </div>
             <div
               class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+              dir="ltr"
             >
               <h3
                 class="Headline-sc-1dvfmi3-3 hSJrur"
@@ -377,6 +387,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           >
             <div
               class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+              dir="ltr"
             >
               <div
                 class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -395,6 +406,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
             </div>
             <div
               class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+              dir="ltr"
             >
               <h3
                 class="Headline-sc-1dvfmi3-3 hSJrur"

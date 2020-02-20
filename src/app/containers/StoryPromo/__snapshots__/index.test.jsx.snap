@@ -284,6 +284,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -339,6 +340,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   </div>
   <div
     class="c9"
+    dir="ltr"
   >
     <h3
       class="c10"
@@ -666,6 +668,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -716,6 +719,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   </div>
   <div
     class="c9"
+    dir="ltr"
   >
     <h3
       class="c10"
@@ -915,6 +919,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
 
 @media (min-width:37.5rem) {
   .c7 {
+    padding-left: 0.5rem;
     width: 50%;
   }
 }
@@ -928,6 +933,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
 @supports (grid-template-columns:fit-content(200px)) {
   .c7 {
     width: initial;
+    padding: 0;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
   }
@@ -935,6 +941,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
 
 @media (min-width:37.5rem) {
   .c1 {
+    padding-right: 0.5rem;
     width: 50%;
   }
 }
@@ -950,6 +957,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
     display: block;
     width: initial;
     padding: initial;
+    padding: 0;
     width: 100%;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
@@ -1045,6 +1053,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <h3
       class="c2"
@@ -1087,6 +1096,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   </div>
   <div
     class="c7"
+    dir="ltr"
   >
     <div
       class="c8"
@@ -1415,6 +1425,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -1470,6 +1481,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
   </div>
   <div
     class="c9"
+    dir="ltr"
   >
     <h3
       class="c10"
@@ -1793,6 +1805,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -1842,6 +1855,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   </div>
   <div
     class="c8"
+    dir="ltr"
   >
     <h3
       class="c9"
@@ -2160,6 +2174,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -2204,6 +2219,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   </div>
   <div
     class="c8"
+    dir="ltr"
   >
     <h3
       class="c9"
@@ -2394,6 +2410,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
 
 @media (min-width:37.5rem) {
   .c7 {
+    padding-left: 0.5rem;
     width: 50%;
   }
 }
@@ -2407,6 +2424,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
 @supports (grid-template-columns:fit-content(200px)) {
   .c7 {
     width: initial;
+    padding: 0;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
   }
@@ -2414,6 +2432,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
 
 @media (min-width:37.5rem) {
   .c1 {
+    padding-right: 0.5rem;
     width: 50%;
   }
 }
@@ -2429,6 +2448,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
     display: block;
     width: initial;
     padding: initial;
+    padding: 0;
     width: 100%;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
@@ -2524,6 +2544,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <h3
       class="c2"
@@ -2561,6 +2582,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   </div>
   <div
     class="c7"
+    dir="ltr"
   >
     <div
       class="c8"
@@ -2879,6 +2901,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -2928,6 +2951,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   </div>
   <div
     class="c8"
+    dir="ltr"
   >
     <h3
       class="c9"
@@ -3188,6 +3212,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -3211,6 +3236,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -3459,6 +3485,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -3477,6 +3504,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -3611,6 +3639,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
 
 @media (min-width:37.5rem) {
   .c6 {
+    padding-left: 0.5rem;
     width: 50%;
   }
 }
@@ -3624,6 +3653,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
 @supports (grid-template-columns:fit-content(200px)) {
   .c6 {
     width: initial;
+    padding: 0;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
   }
@@ -3631,6 +3661,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
 
 @media (min-width:37.5rem) {
   .c1 {
+    padding-right: 0.5rem;
     width: 50%;
   }
 }
@@ -3646,6 +3677,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
     display: block;
     width: initial;
     padding: initial;
+    padding: 0;
     width: 100%;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
@@ -3727,6 +3759,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <h3
       class="c2"
@@ -3752,6 +3785,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
   </div>
   <div
     class="c6"
+    dir="ltr"
   >
     <div
       class="c7"
@@ -3986,6 +4020,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -4009,6 +4044,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -4257,6 +4293,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -4271,6 +4308,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -4519,6 +4557,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -4533,6 +4572,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -4667,6 +4707,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
 
 @media (min-width:37.5rem) {
   .c6 {
+    padding-left: 0.5rem;
     width: 50%;
   }
 }
@@ -4680,6 +4721,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
 @supports (grid-template-columns:fit-content(200px)) {
   .c6 {
     width: initial;
+    padding: 0;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
   }
@@ -4687,6 +4729,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
 
 @media (min-width:37.5rem) {
   .c1 {
+    padding-right: 0.5rem;
     width: 50%;
   }
 }
@@ -4702,6 +4745,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
     display: block;
     width: initial;
     padding: initial;
+    padding: 0;
     width: 100%;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
@@ -4783,6 +4827,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <h3
       class="c2"
@@ -4808,6 +4853,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
   </div>
   <div
     class="c6"
+    dir="ltr"
   >
     <div
       class="c7"
@@ -5033,6 +5079,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -5047,6 +5094,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -5316,6 +5364,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -5339,6 +5388,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -5625,6 +5675,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -5643,6 +5694,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -5815,6 +5867,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 
 @media (min-width:37.5rem) {
   .c8 {
+    padding-left: 0.5rem;
     width: 50%;
   }
 }
@@ -5828,6 +5881,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 @supports (grid-template-columns:fit-content(200px)) {
   .c8 {
     width: initial;
+    padding: 0;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
   }
@@ -5835,6 +5889,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 
 @media (min-width:37.5rem) {
   .c1 {
+    padding-right: 0.5rem;
     width: 50%;
   }
 }
@@ -5850,6 +5905,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
     display: block;
     width: initial;
     padding: initial;
+    padding: 0;
     width: 100%;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
@@ -5931,6 +5987,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <h3
       class="c2"
@@ -5973,6 +6030,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   </div>
   <div
     class="c8"
+    dir="ltr"
   >
     <div
       class="c9"
@@ -6228,6 +6286,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -6251,6 +6310,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -6625,6 +6685,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -6643,6 +6704,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -6944,6 +7006,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -6958,6 +7021,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -7176,6 +7240,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -7190,6 +7255,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -7308,6 +7374,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
 
 @media (min-width:37.5rem) {
   .c5 {
+    padding-left: 0.5rem;
     width: 50%;
   }
 }
@@ -7321,6 +7388,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
 @supports (grid-template-columns:fit-content(200px)) {
   .c5 {
     width: initial;
+    padding: 0;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
   }
@@ -7328,6 +7396,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
 
 @media (min-width:37.5rem) {
   .c1 {
+    padding-right: 0.5rem;
     width: 50%;
   }
 }
@@ -7343,6 +7412,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
     display: block;
     width: initial;
     padding: initial;
+    padding: 0;
     width: 100%;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
@@ -7410,6 +7480,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <h3
       class="c2"
@@ -7429,6 +7500,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <div
       class="c6"
@@ -7630,6 +7702,7 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -7644,6 +7717,7 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -7886,6 +7960,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -7909,6 +7984,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -8157,6 +8233,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -8175,6 +8252,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -8309,6 +8387,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
 
 @media (min-width:37.5rem) {
   .c6 {
+    padding-left: 0.5rem;
     width: 50%;
   }
 }
@@ -8322,6 +8401,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
 @supports (grid-template-columns:fit-content(200px)) {
   .c6 {
     width: initial;
+    padding: 0;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
   }
@@ -8329,6 +8409,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
 
 @media (min-width:37.5rem) {
   .c1 {
+    padding-right: 0.5rem;
     width: 50%;
   }
 }
@@ -8344,6 +8425,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
     display: block;
     width: initial;
     padding: initial;
+    padding: 0;
     width: 100%;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
@@ -8425,6 +8507,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <h3
       class="c2"
@@ -8450,6 +8533,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
   </div>
   <div
     class="c6"
+    dir="ltr"
   >
     <div
       class="c7"
@@ -8684,6 +8768,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -8707,6 +8792,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -8955,6 +9041,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -8978,6 +9065,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -9226,6 +9314,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -9244,6 +9333,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -9378,6 +9468,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
 
 @media (min-width:37.5rem) {
   .c6 {
+    padding-left: 0.5rem;
     width: 50%;
   }
 }
@@ -9391,6 +9482,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
 @supports (grid-template-columns:fit-content(200px)) {
   .c6 {
     width: initial;
+    padding: 0;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
   }
@@ -9398,6 +9490,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
 
 @media (min-width:37.5rem) {
   .c1 {
+    padding-right: 0.5rem;
     width: 50%;
   }
 }
@@ -9413,6 +9506,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
     display: block;
     width: initial;
     padding: initial;
+    padding: 0;
     width: 100%;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
@@ -9494,6 +9588,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <h3
       class="c2"
@@ -9519,6 +9614,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
   </div>
   <div
     class="c6"
+    dir="ltr"
   >
     <div
       class="c7"
@@ -9753,6 +9849,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -9776,6 +9873,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
   </div>
   <div
     class="c5"
+    dir="ltr"
   >
     <h3
       class="c6"
@@ -10086,6 +10184,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -10138,6 +10237,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   </div>
   <div
     class="c9"
+    dir="ltr"
   >
     <h3
       class="c10"
@@ -10465,6 +10565,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -10512,6 +10613,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   </div>
   <div
     class="c9"
+    dir="ltr"
   >
     <h3
       class="c10"
@@ -10711,6 +10813,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 
 @media (min-width:37.5rem) {
   .c7 {
+    padding-left: 0.5rem;
     width: 50%;
   }
 }
@@ -10724,6 +10827,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 @supports (grid-template-columns:fit-content(200px)) {
   .c7 {
     width: initial;
+    padding: 0;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
   }
@@ -10731,6 +10835,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 
 @media (min-width:37.5rem) {
   .c1 {
+    padding-right: 0.5rem;
     width: 50%;
   }
 }
@@ -10746,6 +10851,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
     display: block;
     width: initial;
     padding: initial;
+    padding: 0;
     width: 100%;
     grid-template-columns: repeat(6,1fr);
     grid-column-end: span 6;
@@ -10841,6 +10947,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <h3
       class="c2"
@@ -10883,6 +10990,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   </div>
   <div
     class="c7"
+    dir="ltr"
   >
     <div
       class="c8"
@@ -11208,6 +11316,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
 >
   <div
     class="c1"
+    dir="ltr"
   >
     <div
       class="c2"
@@ -11260,6 +11369,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   </div>
   <div
     class="c9"
+    dir="ltr"
   >
     <h3
       class="c10"
