@@ -1,9 +1,11 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import { string } from 'prop-types';
+import DOMPurify from 'dompurify';
 
 const OEmbed = ({ html }) => {
-  // eslint-disable-next-line react/no-danger
-  return <div dangerouslySetInnerHTML={{ __html: html }} />;
+  const sanitizedHtml = DOMPurify.sanitize(html);
+  return <div dangerouslySetInnerHTML={{ __html: sanitizedHtml }} />;
 };
 
 OEmbed.propTypes = {
