@@ -6,7 +6,7 @@ import {
   applyBlockPositioning,
 } from '../utils/sharedTransformers';
 
-const processJson = pipe(
+const transformJson = pipe(
   augmentWithTimestamp,
   addIdsToBlocks,
   applyBlockPositioning,
@@ -18,7 +18,7 @@ export default async path => {
   return {
     ...rest,
     ...(json && {
-      pageData: processJson(json),
+      pageData: transformJson(json),
     }),
   };
 };

@@ -8,7 +8,7 @@ import {
   filterGroupsWithoutStraplines,
 } from './transformers';
 
-const processJson = pipe(
+const transformJson = pipe(
   filterUnknownContentTypes,
   filterEmptyGroupItems,
   addIdsToItems,
@@ -22,7 +22,7 @@ export default async path => {
   return {
     ...rest,
     ...(json && {
-      pageData: processJson(json),
+      pageData: transformJson(json),
     }),
   };
 };

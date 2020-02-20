@@ -30,7 +30,7 @@ const processOptimoBlocks = pipe(
   applyBlockPositioning,
   cpsOnlyOnwardJourneys,
 );
-const processJson = async json => {
+const transformJson = async json => {
   const formattedPageData = formatPageData(json);
   const optimoBlocks = await convertToOptimoBlocks(formattedPageData);
   return processOptimoBlocks(optimoBlocks);
@@ -42,7 +42,7 @@ export default async path => {
   return {
     ...rest,
     ...(json && {
-      pageData: await processJson(json),
+      pageData: await transformJson(json),
     }),
   };
 };
