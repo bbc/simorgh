@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import fetchMock from 'fetch-mock';
 import { storiesOf } from '@storybook/react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import igboData from '#data/igbo/frontpage';
@@ -12,6 +11,8 @@ import serbianLatData from '#data/serbian/frontpage/lat';
 import FrontPage from '.';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import getInitialData from '#app/routes/home/getInitialData';
+
+const { fetch } = window;
 
 const serviceDatasets = {
   igbo: { default: igboData },
@@ -31,12 +32,9 @@ const DataWrapper = ({ service, variant, children }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      fetchMock.getOnce(
-        `${window.location.origin}/${service}/${variant}.json`,
-        serviceDatasets[service][variant],
-      );
+      window.fetch = () => serviceDatasets[service][variant];
       const { pageData } = await getInitialData(`${service}/${variant}`);
-      fetchMock.restore();
+      window.fetch = fetch;
       setData(pageData);
     };
     fetchData();
