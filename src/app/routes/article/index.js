@@ -1,5 +1,5 @@
-import getInitialData from '../fetchPageData';
 import Article from '#pages/Article';
+import getInitialData from './getInitialData';
 import { articlePath } from '../regex';
 
 export default {

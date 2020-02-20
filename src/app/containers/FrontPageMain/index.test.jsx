@@ -1,30 +1,23 @@
 import React from 'react';
-import { render, cleanup, wait, waitForElement } from '@testing-library/react';
+import { render, wait, waitForElement } from '@testing-library/react';
 import FrontPageMain from '.';
 
 // 'index-light' is a lighter version of front page data that improves the
 // speed of this suite by reducing the amount of pre-processing required.
-import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
-
-import preprocessor from '#lib/utilities/preprocessor';
-import { indexPreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
 import pidginMostReadData from '#data/pidgin/mostRead';
+import getInitialData from '#app/routes/home/getInitialData';
 
-const processedPidgin = () =>
-  preprocessor(frontPageDataPidgin, indexPreprocessorRules);
-
-jest.mock('uuid', () =>
-  (() => {
-    let x = 1;
-    return () => {
-      x += 1;
-      return `mockid-${x}`;
-    };
-  })(),
-);
+jest.mock('uuid', () => {
+  let x = 1;
+  return () => {
+    x += 1;
+    return `mockid-${x}`;
+  };
+});
 
 jest.mock('../ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
@@ -49,18 +42,23 @@ const FrontPageMainWithContext = props => (
   </ToggleContextProvider>
 );
 
+let pageData;
+
+beforeEach(async () => {
+  fetch.mockResponse(JSON.stringify(frontPageDataPidgin));
+
+  const response = await getInitialData('some-front-page-path');
+
+  pageData = response.pageData;
+
+  fetch.mockResponse(JSON.stringify(pidginMostReadData));
+});
+
 describe('FrontPageMain', () => {
-  let frontPageData;
-
-  beforeAll(async () => {
-    frontPageData = await processedPidgin();
-    fetch.mockResponse(JSON.stringify(pidginMostReadData));
-  });
-
   describe('snapshots', () => {
     it('should render a pidgin frontpage correctly', async () => {
       const { container } = render(
-        <FrontPageMainWithContext frontPageData={frontPageData} />,
+        <FrontPageMainWithContext frontPageData={pageData} />,
       );
 
       // Waiting to ensure most read data is loaded and element is rendered
@@ -72,11 +70,9 @@ describe('FrontPageMain', () => {
   });
 
   describe('assertions', () => {
-    afterEach(cleanup);
-
     it('should render visually hidden text as h1', async () => {
       const { container } = render(
-        <FrontPageMainWithContext frontPageData={frontPageData} />,
+        <FrontPageMainWithContext frontPageData={pageData} />,
       );
 
       const h1 = container.querySelector('h1');
@@ -99,7 +95,7 @@ describe('FrontPageMain', () => {
 
     it('should render front page sections', async () => {
       const { container } = render(
-        <FrontPageMainWithContext frontPageData={frontPageData} />,
+        <FrontPageMainWithContext frontPageData={pageData} />,
       );
       const sections = container.querySelectorAll('section');
 
