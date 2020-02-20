@@ -1,5 +1,5 @@
 import path from 'ramda/src/path';
-import getInitialData from '../fetchPageData';
+import getInitialData from './getInitialData';
 import MediaAssetPage from '#pages/MediaAssetPage';
 import StoryPage from '#pages/Story';
 import PhotoGalleryPage from '#pages/PhotoGallery';
