@@ -1,5 +1,5 @@
-import fetchPageData from '../fetchPageData';
-import radioPageAddIdsToBlocks from '#lib/utilities/preprocessor/rules/radioPage/addIdsToBlocks';
+import fetchPageData from '../utils/fetchPageData';
+import addIdsToBlocks from './transformers/addIdsToBlocks';
 
 export default async path => {
   const { json, ...rest } = await fetchPageData(path);
@@ -7,7 +7,7 @@ export default async path => {
   return {
     ...rest,
     ...(json && {
-      pageData: radioPageAddIdsToBlocks(json),
+      pageData: addIdsToBlocks(json),
     }),
   };
 };

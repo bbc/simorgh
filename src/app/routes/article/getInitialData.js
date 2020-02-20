@@ -1,11 +1,13 @@
 import pipe from 'ramda/src/pipe';
-import fetchPageData from '../fetchPageData';
-import applyTimestampRules from '#lib/utilities/preprocessor/rules/timestamp';
-import addIdsToBlocks from '#lib/utilities/preprocessor/rules/addIdsToBlocks';
-import applyBlockPositioning from '#lib/utilities/preprocessor/rules/blockPositioning';
+import fetchPageData from '../utils/fetchPageData';
+import {
+  augmentWithTimestamp,
+  addIdsToBlocks,
+  applyBlockPositioning,
+} from '../utils/sharedTransformers';
 
 const processJson = pipe(
-  applyTimestampRules,
+  augmentWithTimestamp,
   addIdsToBlocks,
   applyBlockPositioning,
 );

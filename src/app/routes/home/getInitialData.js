@@ -1,16 +1,18 @@
 import pipe from 'ramda/src/pipe';
-import fetchPageData from '../fetchPageData';
-import filterUnknownContentTypes from '#lib/utilities/preprocessor/rules/filterContentType';
-import filterEmptyGroupItems from '#lib/utilities/preprocessor/rules/filterEmptyGroupItems';
-import applySquashTopstories from '#lib/utilities/preprocessor/rules/topstories';
-import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
-import filterGroupsWithoutStraplines from '#lib/utilities/preprocessor/rules/filterGroupsWithoutStraplines';
+import fetchPageData from '../utils/fetchPageData';
+import {
+  filterUnknownContentTypes,
+  filterEmptyGroupItems,
+  squashTopStories,
+  addIdsToItems,
+  filterGroupsWithoutStraplines,
+} from './transformers';
 
 const processJson = pipe(
   filterUnknownContentTypes,
   filterEmptyGroupItems,
   addIdsToItems,
-  applySquashTopstories,
+  squashTopStories,
   filterGroupsWithoutStraplines,
 );
 

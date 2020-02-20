@@ -13,7 +13,7 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import MediaMessage from './MediaMessage';
 import { GhostGrid } from '#lib/styledGrid';
-import { getImageParts } from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks/blocks/image/helpers';
+import { getImageParts } from '#app/routes/cpsAsset/transformers/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
