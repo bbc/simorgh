@@ -201,9 +201,7 @@ const genServices = appEnv => ({
       mediaAssetPage: {
         path: isLive(appEnv)
           ? undefined
-          : isTest(appEnv)
-          ? '/azeri/multimedia/2015/08/150804_azeri_test'
-          : '/azeri/multimedia/2012/09/120919_georgia_prison_video',
+          : '/azeri/multimedia/2015/08/150804_azeri_test',
         smoke: false,
       },
       photoGalleryPage: {
@@ -275,7 +273,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/burmese',
+        path: '/burmese',
         smoke: false,
       },
       liveRadio: {
@@ -341,7 +339,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/gahuza',
+        path: '/gahuza',
         smoke: false,
       },
       liveRadio: {
@@ -351,9 +349,7 @@ const genServices = appEnv => ({
       mediaAssetPage: {
         path: isLive(appEnv)
           ? undefined
-          : isTest(appEnv)
-          ? '/gahuza/video/2015/12/151217_test_long'
-          : '/gahuza/video/2015/12/151201_100womenburundi',
+          : '/gahuza/video/2015/12/151217_test_long',
         smoke: false,
       },
       photoGalleryPage: {
@@ -667,9 +663,7 @@ const genServices = appEnv => ({
       mediaAssetPage: {
         path: isLive(appEnv)
           ? undefined
-          : isTest(appEnv)
-          ? '/kyrgyz/multimedia/2015/03/150330_map_test'
-          : '/kyrgyz/entertainment/2014/07/140725_egypt_tentmaking',
+          : '/kyrgyz/multimedia/2015/03/150330_map_test',
         smoke: false,
       },
       photoGalleryPage: {
@@ -878,9 +872,7 @@ const genServices = appEnv => ({
       mediaAssetPage: {
         path: isLive(appEnv)
           ? undefined
-          : isTest(appEnv)
-          ? '/pashto/world/2016/09/160921_tc2_testmap1'
-          : '/pashto/multimedia/2012/09/120928_naghma_video',
+          : '/pashto/world/2016/09/160921_tc2_testmap1',
         smoke: false,
       },
       photoGalleryPage: {
@@ -923,10 +915,9 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/persian/arts/2011/08/110802_doublage_sherlock_promo',
+        path: isLive(appEnv)
+          ? undefined
+          : '/persian/iran/2016/09/160907_tc2_testmap1',
         smoke: false,
       },
       photoGalleryPage: {
@@ -1744,9 +1735,7 @@ const genServices = appEnv => ({
         // eslint-disable-next-line no-nested-ternary
         path: isLive(appEnv)
           ? undefined
-          : isTest(appEnv)
-          ? '/vietnamese/sport/2016/09/160922_tc2_testmap2'
-          : '/vietnamese/multimedia/2015/04/150428_david_wheat_interview',
+          : '/vietnamese/sport/2016/09/160922_tc2_testmap2',
         smoke: false,
       },
       photoGalleryPage: {
