@@ -24,11 +24,11 @@ const serviceDatasets = {
   },
 };
 
-const fetchStub = async (service, variant) => {
+const getPageData = async (service, variant) => {
   const { fetch } = window;
-  window.fetch = () => serviceDatasets[service][variant];
+  window.fetch = () => serviceDatasets[service][variant]; // stub fetch
   const { pageData } = await getInitialData('some-front-page-path');
-  window.fetch = fetch;
+  window.fetch = fetch; // restore fetch
   return pageData;
 };
 
@@ -37,7 +37,7 @@ const DataWrapper = ({ service, variant, children }) => {
   const [data, setData] = useState();
 
   useEffect(() => {
-    (async () => setData(await fetchStub(service, variant)))();
+    (async () => setData(await getPageData(service, variant)))();
   }, [service, variant]);
 
   return data ? children(data) : null;
