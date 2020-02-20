@@ -1,5 +1,5 @@
-import getInitialData from './getInitialData';
-import frontPageJson from '../../../../data/pidgin/frontpage/index.json';
+import getInitialData from '.';
+import frontPageJson from '../../../../../data/pidgin/frontpage/index.json';
 
 fetch.mockResponse(JSON.stringify(frontPageJson));
 

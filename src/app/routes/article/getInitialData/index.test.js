@@ -1,5 +1,5 @@
-import getInitialData from './getInitialData';
-import articleJson from '../../../../data/pidgin/articles/cwl08rd38l6o.json';
+import getInitialData from '.';
+import articleJson from '../../../../../data/pidgin/articles/cwl08rd38l6o.json';
 
 fetch.mockResponse(JSON.stringify(articleJson));
 

@@ -1,5 +1,5 @@
-import getInitialData from './getInitialData';
-import liveRadioJson from '../../../../data/korean/bbc_korean_radio/liveradio.json';
+import getInitialData from '.';
+import liveRadioJson from '../../../../../data/korean/bbc_korean_radio/liveradio.json';
 
 fetch.mockResponse(JSON.stringify(liveRadioJson));
 

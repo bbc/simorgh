@@ -1,11 +1,11 @@
 import pipe from 'ramda/src/pipe';
-import fetchPageData from '../utils/fetchPageData';
+import fetchPageData from '../../utils/fetchPageData';
 import {
   augmentWithTimestamp,
   addIdsToBlocks,
   applyBlockPositioning,
-} from '../utils/sharedTransformers';
-import parseInternalLinks from './transformers/convertToOptimoBlocks/blocks/internalLinks';
+} from '../../utils/sharedTransformers';
+import parseInternalLinks from '../transformers/convertToOptimoBlocks/blocks/internalLinks';
 import {
   addHeadlineBlock,
   timestampToMilliseconds,
@@ -14,7 +14,7 @@ import {
   addBylineBlock,
   addAnalyticsCounterName,
   convertToOptimoBlocks,
-} from './transformers';
+} from '../transformers';
 
 const formatPageData = pipe(
   addAnalyticsCounterName,

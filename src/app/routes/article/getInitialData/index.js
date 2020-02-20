@@ -1,10 +1,10 @@
 import pipe from 'ramda/src/pipe';
-import fetchPageData from '../utils/fetchPageData';
+import fetchPageData from '../../utils/fetchPageData';
 import {
   augmentWithTimestamp,
   addIdsToBlocks,
   applyBlockPositioning,
-} from '../utils/sharedTransformers';
+} from '../../utils/sharedTransformers';
 
 const transformJson = pipe(
   augmentWithTimestamp,

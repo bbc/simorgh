@@ -1,12 +1,12 @@
 import pipe from 'ramda/src/pipe';
-import fetchPageData from '../utils/fetchPageData';
+import fetchPageData from '../../utils/fetchPageData';
 import {
   filterUnknownContentTypes,
   filterEmptyGroupItems,
   squashTopStories,
   addIdsToItems,
   filterGroupsWithoutStraplines,
-} from './transformers';
+} from '../transformers';
 
 const transformJson = pipe(
   filterUnknownContentTypes,
