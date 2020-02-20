@@ -26,7 +26,11 @@ const serviceDatasets = {
 
 const getPageData = async (service, variant) => {
   const { fetch } = window;
-  window.fetch = () => serviceDatasets[service][variant]; // stub fetch
+  window.fetch = () =>
+    Promise.resolve({
+      status: 200,
+      json: () => serviceDatasets[service][variant],
+    }); // stub fetch
   const { pageData } = await getInitialData('some-front-page-path');
   window.fetch = fetch; // restore fetch
   return pageData;
