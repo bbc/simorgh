@@ -12,8 +12,6 @@ import FrontPage from '.';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import getInitialData from '#app/routes/home/getInitialData';
 
-const { fetch } = window;
-
 const serviceDatasets = {
   igbo: { default: igboData },
   yoruba: { default: yorubaData },
@@ -26,18 +24,20 @@ const serviceDatasets = {
   },
 };
 
+const fetchStub = async (service, variant) => {
+  const { fetch } = window;
+  window.fetch = () => serviceDatasets[service][variant];
+  const { pageData } = await getInitialData('some-front-page-path');
+  window.fetch = fetch;
+  return pageData;
+};
+
 // eslint-disable-next-line react/prop-types
 const DataWrapper = ({ service, variant, children }) => {
   const [data, setData] = useState();
 
   useEffect(() => {
-    const fetchData = async () => {
-      window.fetch = () => serviceDatasets[service][variant];
-      const { pageData } = await getInitialData(`${service}/${variant}`);
-      window.fetch = fetch;
-      setData(pageData);
-    };
-    fetchData();
+    (async () => setData(await fetchStub(service, variant)))();
   }, [service, variant]);
 
   return data ? children(data) : null;
