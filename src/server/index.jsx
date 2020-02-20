@@ -235,6 +235,7 @@ server
       logger.info(`Headers: ${JSON.stringify(headers, null, 2)}`);
 
       data.path = urlPath;
+      data.timeOnServer = Date.now();
 
       const result = await renderDocument({
         bbcOrigin,
