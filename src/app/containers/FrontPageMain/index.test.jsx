@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup, wait } from '@testing-library/react';
+import { render, cleanup, wait, waitForElement } from '@testing-library/react';
 import FrontPageMain from '.';
 
 // 'index-light' is a lighter version of front page data that improves the
@@ -58,10 +58,13 @@ describe('FrontPageMain', () => {
   });
 
   describe('snapshots', () => {
-    it('should render a pidgin frontpage correctly', () => {
+    it('should render a pidgin frontpage correctly', async () => {
       const { container } = render(
         <FrontPageMainWithContext frontPageData={frontPageData} />,
       );
+
+      await waitForElement(() => container.querySelector('#Most-Read'));
+
       expect(container).toMatchSnapshot();
     });
   });

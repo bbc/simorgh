@@ -890,6 +890,467 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             </li>
           </ul>
         </section>
+        <section
+          aria-labelledby="Most-Read"
+          role="region"
+        >
+          <div
+            class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
+          >
+            <div
+              class="Bar-sc-1x4gwjz-0 qaAlR"
+            />
+            <h2
+              class="Heading-sc-1x4gwjz-2 eZofTG"
+            >
+              <div
+                class="FlexColumn-wx5kdp-0 dgpsiS"
+              >
+                <span
+                  class="FlexRow-wx5kdp-2 dVBNyZ"
+                >
+                  <span
+                    class="Title-wx5kdp-4 jiurmA"
+                    dir="ltr"
+                    id="Most-Read"
+                  >
+                    Akachasị Gụọ
+                  </span>
+                </span>
+              </div>
+            </h2>
+          </div>
+          <div
+            class="MarginWrapper-sc-6bm912-0 bmzrWW"
+          >
+            <ol
+              class="GridComponent-nf79gm-0 iUNUcT StyledGrid-sc-1ofyujo-0 iUmfRN"
+              dir="ltr"
+              role="list"
+            >
+              <li
+                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="ItemWrapper-u0d8kd-3 juBlKT"
+                >
+                  <div
+                    class="StyledWrapper-fs4y6m-0 efQjRq"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                    >
+                      1
+                    </span>
+                  </div>
+                  <div
+                    class="StyledItem-u0d8kd-1 ihPUFl"
+                    dir="ltr"
+                  >
+                    <a
+                      class="StyledLink-u0d8kd-0 iVuzjN"
+                      href="/pidgin/tori-46729879"
+                    >
+                      Public Holidays wey go happun for 2019
+                    </a>
+                    <div
+                      class="TimestampWrapper-u0d8kd-2 hlECaE"
+                    >
+                      <time
+                        class="StyledTimestamp-um718p-0 kVWTyt"
+                        datetime="2019-05-21"
+                      >
+                        Emelitere ikpeazụ na: 
+                        21 Mee 2019
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="ItemWrapper-u0d8kd-3 juBlKT"
+                >
+                  <div
+                    class="StyledWrapper-fs4y6m-0 joapIi"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                    >
+                      2
+                    </span>
+                  </div>
+                  <div
+                    class="StyledItem-u0d8kd-1 ihPUFl"
+                    dir="ltr"
+                  >
+                    <a
+                      class="StyledLink-u0d8kd-0 iVuzjN"
+                      href="/pidgin/tori-50304653"
+                    >
+                      Liberia banks don run out of money
+                    </a>
+                    <div
+                      class="TimestampWrapper-u0d8kd-2 hlECaE"
+                    >
+                      <time
+                        class="StyledTimestamp-um718p-0 kVWTyt"
+                        datetime="2019-11-05"
+                      >
+                        Emelitere ikpeazụ na: 
+                        5 Nọvemba 2019
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="ItemWrapper-u0d8kd-3 juBlKT"
+                >
+                  <div
+                    class="StyledWrapper-fs4y6m-0 efQjRq"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                    >
+                      3
+                    </span>
+                  </div>
+                  <div
+                    class="StyledItem-u0d8kd-1 ihPUFl"
+                    dir="ltr"
+                  >
+                    <a
+                      class="StyledLink-u0d8kd-0 iVuzjN"
+                      href="/pidgin/tori-50298882"
+                    >
+                      Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
+                    </a>
+                    <div
+                      class="TimestampWrapper-u0d8kd-2 hlECaE"
+                    >
+                      <time
+                        class="StyledTimestamp-um718p-0 kVWTyt"
+                        datetime="2019-11-05"
+                      >
+                        Emelitere ikpeazụ na: 
+                        5 Nọvemba 2019
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="ItemWrapper-u0d8kd-3 juBlKT"
+                >
+                  <div
+                    class="StyledWrapper-fs4y6m-0 joapIi"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                    >
+                      4
+                    </span>
+                  </div>
+                  <div
+                    class="StyledItem-u0d8kd-1 ihPUFl"
+                    dir="ltr"
+                  >
+                    <a
+                      class="StyledLink-u0d8kd-0 iVuzjN"
+                      href="/pidgin/tori-50315150"
+                    >
+                      Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
+                    </a>
+                    <div
+                      class="TimestampWrapper-u0d8kd-2 hlECaE"
+                    >
+                      <time
+                        class="StyledTimestamp-um718p-0 kVWTyt"
+                        datetime="2019-11-06"
+                      >
+                        Emelitere ikpeazụ na: 
+                        6 Nọvemba 2019
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="ItemWrapper-u0d8kd-3 juBlKT"
+                >
+                  <div
+                    class="StyledWrapper-fs4y6m-0 fIElbG"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                    >
+                      5
+                    </span>
+                  </div>
+                  <div
+                    class="StyledItem-u0d8kd-1 ihPUFl"
+                    dir="ltr"
+                  >
+                    <a
+                      class="StyledLink-u0d8kd-0 iVuzjN"
+                      href="/pidgin/tori-50315157"
+                    >
+                      How Balogun market fire kill Policeman for Lagos
+                    </a>
+                    <div
+                      class="TimestampWrapper-u0d8kd-2 hlECaE"
+                    >
+                      <time
+                        class="StyledTimestamp-um718p-0 kVWTyt"
+                        datetime="2019-11-06"
+                      >
+                        Emelitere ikpeazụ na: 
+                        6 Nọvemba 2019
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="ItemWrapper-u0d8kd-3 juBlKT"
+                >
+                  <div
+                    class="StyledWrapper-fs4y6m-0 iEwnJq"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                    >
+                      6
+                    </span>
+                  </div>
+                  <div
+                    class="StyledItem-u0d8kd-1 ihPUFl"
+                    dir="ltr"
+                  >
+                    <a
+                      class="StyledLink-u0d8kd-0 iVuzjN"
+                      href="/pidgin/tori-50093818"
+                    >
+                      Labour, FG finally agree minimum wage salary adjustment
+                    </a>
+                    <div
+                      class="TimestampWrapper-u0d8kd-2 hlECaE"
+                    >
+                      <time
+                        class="StyledTimestamp-um718p-0 kVWTyt"
+                        datetime="2019-10-18"
+                      >
+                        Emelitere ikpeazụ na: 
+                        18 Ọktọba 2019
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="ItemWrapper-u0d8kd-3 juBlKT"
+                >
+                  <div
+                    class="StyledWrapper-fs4y6m-0 jXbaUI"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                    >
+                      7
+                    </span>
+                  </div>
+                  <div
+                    class="StyledItem-u0d8kd-1 ihPUFl"
+                    dir="ltr"
+                  >
+                    <a
+                      class="StyledLink-u0d8kd-0 iVuzjN"
+                      href="/pidgin/tori-50187218"
+                    >
+                      Naira Marley na 'Bad Influence'?
+                    </a>
+                    <div
+                      class="TimestampWrapper-u0d8kd-2 hlECaE"
+                    >
+                      <time
+                        class="StyledTimestamp-um718p-0 kVWTyt"
+                        datetime="2019-10-25"
+                      >
+                        Emelitere ikpeazụ na: 
+                        25 Ọktọba 2019
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="ItemWrapper-u0d8kd-3 juBlKT"
+                >
+                  <div
+                    class="StyledWrapper-fs4y6m-0 iEwnJq"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                    >
+                      8
+                    </span>
+                  </div>
+                  <div
+                    class="StyledItem-u0d8kd-1 ihPUFl"
+                    dir="ltr"
+                  >
+                    <a
+                      class="StyledLink-u0d8kd-0 iVuzjN"
+                      href="/pidgin/tori-48347911"
+                    >
+                      Tins you suppose know about Naira Marley
+                    </a>
+                    <div
+                      class="TimestampWrapper-u0d8kd-2 hlECaE"
+                    >
+                      <time
+                        class="StyledTimestamp-um718p-0 kVWTyt"
+                        datetime="2019-05-23"
+                      >
+                        Emelitere ikpeazụ na: 
+                        23 Mee 2019
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="ItemWrapper-u0d8kd-3 juBlKT"
+                >
+                  <div
+                    class="StyledWrapper-fs4y6m-0 jXbaUI"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                    >
+                      9
+                    </span>
+                  </div>
+                  <div
+                    class="StyledItem-u0d8kd-1 ihPUFl"
+                    dir="ltr"
+                  >
+                    <a
+                      class="StyledLink-u0d8kd-0 iVuzjN"
+                      href="/pidgin/sport-50312710"
+                    >
+                      Golden Eaglets crash out of Fifa U17 World Cup
+                    </a>
+                    <div
+                      class="TimestampWrapper-u0d8kd-2 hlECaE"
+                    >
+                      <time
+                        class="StyledTimestamp-um718p-0 kVWTyt"
+                        datetime="2019-11-06"
+                      >
+                        Emelitere ikpeazụ na: 
+                        6 Nọvemba 2019
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="ItemWrapper-u0d8kd-3 juBlKT"
+                >
+                  <div
+                    class="StyledWrapper-fs4y6m-0 iEwnJq"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                    >
+                      10
+                    </span>
+                  </div>
+                  <div
+                    class="StyledItem-u0d8kd-1 ihPUFl"
+                    dir="ltr"
+                  >
+                    <a
+                      class="StyledLink-u0d8kd-0 iVuzjN"
+                      href="/pidgin/tori-42945173"
+                    >
+                      Tiger nut drink fit wake up your sex drive - Nutritionist
+                    </a>
+                    <div
+                      class="TimestampWrapper-u0d8kd-2 hlECaE"
+                    >
+                      <time
+                        class="StyledTimestamp-um718p-0 kVWTyt"
+                        datetime="2019-05-21"
+                      >
+                        Emelitere ikpeazụ na: 
+                        21 Mee 2019
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </section>
       </div>
     </div>
   </main>
