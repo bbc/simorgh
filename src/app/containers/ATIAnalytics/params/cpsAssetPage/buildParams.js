@@ -30,12 +30,12 @@ export const buildCpsAssetPageATIParams = (
   const chapter1 = isValidPage ? getChapter1(page) : false;
   const ldpThingIds = getThingAttributes('thingId', pageData);
   const ldpThingLabels = getThingAttributes('thingLabel', pageData);
-  const isLegacyMediaAssetPage = url => url.split('/').length > 7;
+  const isLegacyAsset = url => url.split('/').length > 7;
 
   return {
     appName: atiAnalyticsAppName,
     contentId: getContentId(
-      isLegacyMediaAssetPage(requestContext.canonicalLink) ? 'topcat' : 'cps',
+      isLegacyAsset(requestContext.canonicalLink) ? 'topcat' : 'cps',
       pageData,
     ),
     contentType,

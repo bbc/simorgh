@@ -63,13 +63,10 @@ const expectation = {
 
 const expectationLegacy = {
   appName: serviceContext.atiAnalyticsAppName,
-  categoryName: undefined,
-  campaigns: undefined,
   contentId: 'urn:bbc:topcat:3ed6950e-b63b-11e5-b876-9dc73db9bd6e',
   contentType: 'test-content-type',
   language: payloadLegacy.metadata.language,
   libraryVersion: analyticsUtils.LIBRARY_VERSION,
-  pageIdentifier: undefined,
   pageTitle: `${payloadLegacy.promo.headlines.headline} - ${serviceContext.brandName}`,
   platform: requestContextLegacy.platform,
   producerId: serviceContext.atiAnalyticsProducerId,
