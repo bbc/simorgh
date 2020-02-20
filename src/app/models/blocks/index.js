@@ -108,3 +108,12 @@ export const simpleListBlock = (listItems, isOrdered) => ({
     },
   },
 });
+
+export const includeBlock = (tile, href, platform) => ({
+  type: 'include',
+  model: {
+    type: platform,
+    href,
+    tile,
+  },
+});
