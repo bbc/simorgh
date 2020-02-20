@@ -1,6 +1,6 @@
 import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import config from '../../../support/config/services';
-import appConfig from '#server/utilities/serviceConfigs';
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockByType, getBlockData } from './helpers';
 

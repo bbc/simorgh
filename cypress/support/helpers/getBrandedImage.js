@@ -1,4 +1,4 @@
-import { getImageParts } from '#app/routes/cpsAsset/transformers/convertToOptimoBlocks/blocks/image/helpers';
+import { getImageParts } from '../../../src/app/routes/cpsAsset/transformers/convertToOptimoBlocks/blocks/image/helpers';
 
 export default ({ imagePath, serviceName }) => {
   const [, locator] = getImageParts(imagePath);

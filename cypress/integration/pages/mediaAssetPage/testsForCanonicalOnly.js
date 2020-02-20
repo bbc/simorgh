@@ -1,6 +1,6 @@
 import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
-import appConfig from '#server/utilities/serviceConfigs';
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getBlockData } from './helpers';
 
 // For testing important features that differ between services, e.g. Timestamps.
