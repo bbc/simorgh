@@ -48,10 +48,6 @@ module.exports = (shell = {}) => {
           'react-dom$': 'react-dom/profiling',
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
-        '@bbc/gel-foundations': path.resolve(
-          __dirname,
-          'node_modules/@bbc/gel-foundations',
-        ),
       },
     },
     devServer: {
