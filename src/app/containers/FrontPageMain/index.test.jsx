@@ -63,6 +63,8 @@ describe('FrontPageMain', () => {
         <FrontPageMainWithContext frontPageData={frontPageData} />,
       );
 
+      // Waiting to ensure most read data is loaded and element is rendered
+      // The data is loaded separately which was previously causing snapshots to fail
       await waitForElement(() => container.querySelector('#Most-Read'));
 
       expect(container).toMatchSnapshot();
