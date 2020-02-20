@@ -206,6 +206,13 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   }
 }
 
+@media (min-width:80rem) {
+  .c8 {
+    grid-auto-flow: row;
+    grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+  }
+}
+
 @media (max-width:14.9375rem) {
   .c12 {
     min-width: 2.5rem;
@@ -225,6 +232,12 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 }
 
 @media (min-width:37.5rem) {
+  .c12 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
   .c12 {
     min-width: auto;
   }
@@ -254,6 +267,12 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   }
 }
 
+@media (min-width:80rem) {
+  .c16 {
+    min-width: auto;
+  }
+}
+
 @media (max-width:14.9375rem) {
   .c17 {
     min-width: 2.5rem;
@@ -274,30 +293,72 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (min-width:37.5rem) {
   .c17 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c17 {
+    min-width: 3.7rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c18 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c18 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c18 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c18 {
     min-width: 4rem;
   }
 }
 
-@media (max-width:14.9375rem) {
+@media (min-width:80rem) {
   .c18 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c19 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c18 {
+  .c19 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c18 {
+  .c19 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c19 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
     min-width: auto;
   }
 }
@@ -582,7 +643,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
           class="c11"
         >
           <div
-            class="c12"
+            class="c17"
             dir="rtl"
           >
             <span
@@ -613,7 +674,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
           class="c11"
         >
           <div
-            class="c17"
+            class="c18"
             dir="rtl"
           >
             <span
@@ -644,7 +705,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
           class="c11"
         >
           <div
-            class="c18"
+            class="c19"
             dir="rtl"
           >
             <span
@@ -675,7 +736,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
           class="c11"
         >
           <div
-            class="c17"
+            class="c18"
             dir="rtl"
           >
             <span
@@ -706,7 +767,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
           class="c11"
         >
           <div
-            class="c18"
+            class="c19"
             dir="rtl"
           >
             <span
@@ -737,7 +798,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
           class="c11"
         >
           <div
-            class="c17"
+            class="c18"
             dir="rtl"
           >
             <span
