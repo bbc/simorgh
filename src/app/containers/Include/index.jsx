@@ -10,7 +10,7 @@ const StyledIframe = styled.iframe`
 `;
 
 const Include = ({ href }) => {
-  const includeUrl = `https://smallprox.vj.tools.bbc.co.uk${href}`;
+  const includeUrl = `${href}`;
   return (
     <GridItemConstrainedMedium>
       <StyledIframe height="600px" src={includeUrl} />
