@@ -1,7 +1,10 @@
 import React from 'react';
-import { render, waitForDomChange } from '@testing-library/react';
+import {
+  render,
+  waitForDomChange,
+  waitForElement,
+} from '@testing-library/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import ArticleMain from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -11,6 +14,9 @@ import {
   articleDataPersian,
   articleDataPidgin,
 } from '#pages/Article/fixtureData';
+import newsMostReadData from '#data/news/mostRead';
+import persianMostReadData from '#data/persian/mostRead';
+import pidginMostReadData from '#data/pidgin/mostRead';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
@@ -40,6 +46,10 @@ const Context = ({ service, children }) => (
   </ToggleContextProvider>
 );
 
+beforeEach(() => {
+  fetch.resetMocks();
+});
+
 it('should use headline for meta description if summary does not exist', async () => {
   const articleDataNewsWithSummary = mergeDeepLeft(
     { promo: { summary: '' } },
@@ -61,23 +71,45 @@ it('should use headline for meta description if summary does not exist', async (
   ).toEqual('Article Headline for SEO');
 });
 
-shouldMatchSnapshot(
-  'should render a news article correctly',
-  <Context service="news">
-    <ArticleMain articleData={articleDataNews} />
-  </Context>,
-);
+it('should render a news article correctly', async () => {
+  fetch.mockResponse(JSON.stringify(newsMostReadData));
 
-shouldMatchSnapshot(
-  'should render a persian article correctly',
-  <Context service="persian">
-    <ArticleMain articleData={articleDataPersian} />
-  </Context>,
-);
+  const { container } = render(
+    <Context service="news">
+      <ArticleMain articleData={articleDataNews} />
+    </Context>,
+  );
 
-shouldMatchSnapshot(
-  'should render a pidgin article correctly (with navigation)',
-  <Context service="pidgin">
-    <ArticleMain articleData={articleDataPidgin} />
-  </Context>,
-);
+  await waitForElement(() => container.querySelector('#Most-Read'));
+
+  expect(container).toMatchSnapshot();
+});
+
+it('should render a persian article correctly', async () => {
+  fetch.mockResponse(JSON.stringify(persianMostReadData));
+
+  const { container } = render(
+    <Context service="persian">
+      <ArticleMain articleData={articleDataPersian} />
+    </Context>,
+  );
+
+  await waitForElement(() => container.querySelector('#Most-Read'));
+
+  expect(container).toMatchSnapshot();
+});
+
+// TODO: Is this change removing navigation?
+it('should render a pidgin article correctly (with navigation)', async () => {
+  fetch.mockResponse(JSON.stringify(pidginMostReadData));
+
+  const { container } = render(
+    <Context service="pidgin">
+      <ArticleMain articleData={articleDataPidgin} />
+    </Context>,
+  );
+
+  await waitForElement(() => container.querySelector('#Most-Read'));
+
+  expect(container).toMatchSnapshot();
+});

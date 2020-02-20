@@ -38,6 +38,162 @@ exports[`should render a news article correctly 1`] = `
   margin: 0;
 }
 
+.c24 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c12 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FFFFFF;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c7 {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.c9 {
+  margin: 0;
+  padding: 0;
+}
+
+.c15 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+}
+
+.c20 {
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+}
+
+.c22 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.c22:hover,
+.c22:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c22:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c21 {
+  padding-top: 0.375rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.c23 {
+  padding-top: 0.5rem;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.c17 {
+  position: relative;
+}
+
+.c6 {
+  margin: 0 0.5rem;
+}
+
 .c0 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -188,508 +344,870 @@ exports[`should render a news article correctly 1`] = `
   }
 }
 
-<html
-  dir="ltr"
-  lang="en-gb"
->
-  <head>
-    <title>
-      Article Headline for SEO - BBC News
-    </title>
-    <link
-      href="https://www.test.bbc.com/pathname"
-      rel="canonical"
-    />
-    <link
-      href="https://www.test.bbc.com/pathname"
-      hreflang="x-default"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.com/pathname"
-      hreflang="en"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pathname"
-      hreflang="en-gb"
-      rel="alternate"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pathname.amp"
-      rel="amphtml"
-    />
-    <link
-      href="http://localhost:7080/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      content="IE=edge"
-      http-equiv="X-UA-Compatible"
-    />
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      content="noodp,noydir"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      name="viewport"
-    />
-    <meta
-      content="BBC News"
-      name="apple-mobile-web-app-title"
-    />
-    <meta
-      content="BBC News"
-      name="application-name"
-    />
-    <meta
-      content="Article summary."
-      name="description"
-    />
-    <meta
-      content="100004154058350"
-      property="fb:admins"
-    />
-    <meta
-      content="1609039196070050"
-      property="fb:app_id"
-    />
-    <meta
-      content="yes"
-      name="mobile-web-app-capable"
-    />
-    <meta
-      content="#B80000"
-      name="msapplication-TileColor"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png"
-      name="msapplication-TileImage"
-    />
-    <meta
-      content="Article summary."
-      property="og:description"
-    />
-    <meta
-      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
-      property="og:image"
-    />
-    <meta
-      content="BBC News"
-      property="og:image:alt"
-    />
-    <meta
-      content="en_GB"
-      property="og:locale"
-    />
-    <meta
-      content="BBC News"
-      property="og:site_name"
-    />
-    <meta
-      content="Article Headline for SEO - BBC News"
-      property="og:title"
-    />
-    <meta
-      content="article"
-      property="og:type"
-    />
-    <meta
-      content="https://www.test.bbc.com/pathname"
-      property="og:url"
-    />
-    <meta
-      content="summary_large_image"
-      name="twitter:card"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:creator"
-    />
-    <meta
-      content="Article summary."
-      name="twitter:description"
-    />
-    <meta
-      content="BBC News"
-      name="twitter:image:alt"
-    />
-    <meta
-      content="https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"
-      name="twitter:image:src"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:site"
-    />
-    <meta
-      content="Article Headline for SEO - BBC News"
-      name="twitter:title"
-    />
-    <meta
-      content="Royal Wedding 2018"
-      name="article:tag"
-    />
-    <meta
-      content="Duchess of Sussex"
-      name="article:tag"
-    />
-    <meta
-      content="Queen Victoria"
-      name="article:tag"
-    />
-    <meta
-      content="https://www.facebook.com/bbcnews"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:published_time"
-    />
-    <script
-      type="application/ld+json"
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c24 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c24 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c8 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    margin-top: 1.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c14 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c16 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c16 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c16 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c16 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c16 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c16 {
+    width: calc(20%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c16 {
+    display: block;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c15 {
+    grid-template-rows: repeat( 10,[col-start] auto [col-end] );
+  }
+}
+
+@media (min-width:80rem) {
+  .c15 {
+    grid-auto-flow: row;
+    grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c19 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c19 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c19 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c19 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c25 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c25 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c25 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c25 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c25 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c26 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c26 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c26 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c26 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c26 {
+    min-width: 4.25rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c27 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c27 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c27 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c27 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c27 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c28 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c28 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c28 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c28 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c28 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c20 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c22 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c22 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c21 {
+    padding-right: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c13 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:80rem) {
+  .c6 {
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c6 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+<div>
+  <noscript />
+  <div>
+    chartbeat
+  </div>
+  <main
+    class="c0"
+    role="main"
+  >
+    <div
+      class="c1"
     >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Article Headline for SEO"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","about":[{"@type":"Thing","name":"Royal Wedding 2018","sameAs":["http://dbpedia.org/resource/Queen_Victoria"]},{"@type":"Person","name":"Duchess of Sussex"}],"author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
-    </script>
-  </head>
-  <body>
-    <div>
-      <noscript />
-      <div>
-        chartbeat
+      <div
+        class="c2"
+      >
+        <h1
+          class="c3"
+          id="content"
+          tabindex="-1"
+        >
+          Article Headline
+        </h1>
       </div>
-      <main
-        class="c0"
-        role="main"
+      <div
+        class="c4"
+      >
+        <p
+          class="c5"
+        >
+          A paragraph.
+        </p>
+      </div>
+    </div>
+    <div
+      class="c6"
+    >
+      <section
+        aria-labelledby="Most-Read"
+        role="region"
       >
         <div
-          class="c1"
+          class="c7"
         >
           <div
-            class="c2"
+            class="c8"
+          />
+          <h2
+            class="c9"
           >
-            <h1
-              class="c3"
-              id="content"
-              tabindex="-1"
+            <div
+              class="c10"
             >
-              Article Headline
-            </h1>
-          </div>
-          <div
-            class="c4"
-          >
-            <p
-              class="c5"
-            >
-              A paragraph.
-            </p>
-          </div>
+              <span
+                class="c11"
+              >
+                <span
+                  class="c12"
+                  dir="ltr"
+                  id="Most-Read"
+                >
+                  Most read
+                </span>
+              </span>
+            </div>
+          </h2>
         </div>
-      </main>
+        <div
+          class="c13"
+        >
+          <ol
+            class="c14 c15"
+            dir="ltr"
+            role="list"
+          >
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c19"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    1
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/news/election-2019-50319044"
+                  >
+                    Labour bans three candidates from standing
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      Last updated: 
+                      6 November 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c25"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    2
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/news/election-2019-50318810"
+                  >
+                    Bercow: Brexit 'biggest foreign policy mistake'
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      Last updated: 
+                      6 November 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c19"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    3
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/news/business-50313824"
+                  >
+                    Virgin Media switches phone customers from BT
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      Last updated: 
+                      6 November 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c25"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    4
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/news/live/election-2019-50313404"
+                  >
+                    Latest on day one of campaign as minister resigns
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      Last updated: 
+                      6 November 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c26"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    5
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/news/education-50317690"
+                  >
+                    Nativity play warning over school polling stations
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      Last updated: 
+                      6 November 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c27"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    6
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/news/newsbeat-50304072"
+                  >
+                    Prisoner backed by Rihanna 'scared' of execution
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      Last updated: 
+                      6 November 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c28"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    7
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/news/uk-50320800"
+                  >
+                    Catholic Church 'shocked to core' by child abuse
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      Last updated: 
+                      6 November 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c27"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    8
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/news/uk-wales-politics-50302173"
+                  >
+                    Minister quits in aide's rape trial 'sabotage' row
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      Last updated: 
+                      6 November 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c28"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    9
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/news/uk-scotland-scotland-business-50157515"
+                  >
+                    'Being a good guy boss left me £1.2m in debt'
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      Last updated: 
+                      6 November 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c27"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    10
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/news/world-latin-america-50314700"
+                  >
+                    US boy walked 23km for help after Mexico ambush
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      Last updated: 
+                      6 November 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
     </div>
-  </body>
-</html>
+  </main>
+</div>
 `;
 
 exports[`should render a persian article correctly 1`] = `
-<html
-  dir="rtl"
-  lang="fa"
->
-  <head>
-    <title>
-      سرصفحه مقاله - BBC News فارسی
-    </title>
-    <link
-      href="https://www.test.bbc.com/pathname"
-      rel="canonical"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pathname.amp"
-      rel="amphtml"
-    />
-    <link
-      href="http://localhost:7080/persian/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      content="IE=edge"
-      http-equiv="X-UA-Compatible"
-    />
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      content="noodp,noydir"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      name="viewport"
-    />
-    <meta
-      content="BBC News فارسی"
-      name="apple-mobile-web-app-title"
-    />
-    <meta
-      content="BBC News فارسی"
-      name="application-name"
-    />
-    <meta
-      content="خلاصه مقاله"
-      name="description"
-    />
-    <meta
-      content="100004154058350"
-      property="fb:admins"
-    />
-    <meta
-      content="1609039196070050"
-      property="fb:app_id"
-    />
-    <meta
-      content="yes"
-      name="mobile-web-app-capable"
-    />
-    <meta
-      content="#B80000"
-      name="msapplication-TileColor"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png"
-      name="msapplication-TileImage"
-    />
-    <meta
-      content="خلاصه مقاله"
-      property="og:description"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"
-      property="og:image"
-    />
-    <meta
-      content="BBC News فارسی"
-      property="og:image:alt"
-    />
-    <meta
-      content="fa"
-      property="og:locale"
-    />
-    <meta
-      content="BBC News فارسی"
-      property="og:site_name"
-    />
-    <meta
-      content="سرصفحه مقاله - BBC News فارسی"
-      property="og:title"
-    />
-    <meta
-      content="article"
-      property="og:type"
-    />
-    <meta
-      content="https://www.test.bbc.com/pathname"
-      property="og:url"
-    />
-    <meta
-      content="summary_large_image"
-      name="twitter:card"
-    />
-    <meta
-      content="@bbcpersian"
-      name="twitter:creator"
-    />
-    <meta
-      content="خلاصه مقاله"
-      name="twitter:description"
-    />
-    <meta
-      content="BBC News فارسی"
-      name="twitter:image:alt"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"
-      name="twitter:image:src"
-    />
-    <meta
-      content="@bbcpersian"
-      name="twitter:site"
-    />
-    <meta
-      content="سرصفحه مقاله - BBC News فارسی"
-      name="twitter:title"
-    />
-    <meta
-      content="https://www.facebook.com/bbcnews"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:published_time"
-    />
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News فارسی","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"سرصفحه مقاله"},"headline":"سرصفحه مقاله","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News فارسی","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
-    </script>
-  </head>
-  <body>
-    .c1 {
+.c1 {
   margin: 0 auto;
   background: #FDFDFD;
   padding-bottom: 2rem;
@@ -724,6 +1242,162 @@ exports[`should render a persian article correctly 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+}
+
+.c24 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #6E6E73;
+  display: block;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c12 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FFFFFF;
+  margin: 1rem 0;
+  padding-left: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c7 {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.c9 {
+  margin: 0;
+  padding: 0;
+}
+
+.c15 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+}
+
+.c20 {
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+}
+
+.c22 {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.c22:hover,
+.c22:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c22:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c21 {
+  padding-top: 0.375rem;
+  padding-bottom: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c23 {
+  padding-top: 0.5rem;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.c17 {
+  position: relative;
+}
+
+.c6 {
+  margin: 0 0.5rem;
 }
 
 .c0 {
@@ -876,264 +1550,870 @@ exports[`should render a persian article correctly 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c24 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c24 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1.625rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c8 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    margin-top: 1.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c14 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c16 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c16 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c16 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c16 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c16 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c16 {
+    width: calc(20%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c16 {
+    display: block;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c15 {
+    grid-template-rows: repeat( 10,[col-start] auto [col-end] );
+  }
+}
+
+@media (min-width:80rem) {
+  .c15 {
+    grid-auto-flow: row;
+    grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c19 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c19 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c19 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c19 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c25 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c25 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c25 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c25 {
+    min-width: 1.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c25 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c26 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c26 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c26 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c26 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c26 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c27 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c27 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c27 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c27 {
+    min-width: 1.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c27 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c28 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c28 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c28 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c28 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c28 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c20 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c22 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c22 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c21 {
+    padding-left: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c13 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:80rem) {
+  .c6 {
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c6 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 <div>
-      <noscript />
-      <div>
-        chartbeat
+  <noscript />
+  <div>
+    chartbeat
+  </div>
+  <main
+    class="c0"
+    role="main"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <h1
+          class="c3"
+          id="content"
+          tabindex="-1"
+        >
+          سرصفحه مقاله
+        </h1>
       </div>
-      <main
-        class="c0"
-        role="main"
+      <div
+        class="c4"
+      >
+        <p
+          class="c5"
+        >
+          یک پاراگراف.
+        </p>
+      </div>
+    </div>
+    <div
+      class="c6"
+    >
+      <section
+        aria-labelledby="Most-Read"
+        role="region"
       >
         <div
-          class="c1"
+          class="c7"
         >
           <div
-            class="c2"
+            class="c8"
+          />
+          <h2
+            class="c9"
           >
-            <h1
-              class="c3"
-              id="content"
-              tabindex="-1"
+            <div
+              class="c10"
             >
-              سرصفحه مقاله
-            </h1>
-          </div>
-          <div
-            class="c4"
-          >
-            <p
-              class="c5"
-            >
-              یک پاراگراف.
-            </p>
-          </div>
+              <span
+                class="c11"
+              >
+                <span
+                  class="c12"
+                  dir="rtl"
+                  id="Most-Read"
+                >
+                  پربیننده‌ترین‌ها
+                </span>
+              </span>
+            </div>
+          </h2>
         </div>
-      </main>
+        <div
+          class="c13"
+        >
+          <ol
+            class="c14 c15"
+            dir="rtl"
+            role="list"
+          >
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c19"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۱
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/world-50317704"
+                  >
+                    توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c25"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۲
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/iran-50319870"
+                  >
+                    فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c19"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۳
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/world-50320610"
+                  >
+                    ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c25"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۴
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/world-50316456"
+                  >
+                    غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c26"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۵
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/magazine-50249226"
+                  >
+                    دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c27"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۶
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/world-50317700"
+                  >
+                    انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c28"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۷
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/sport-50322486"
+                  >
+                    عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c27"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۸
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/iran-features-50310665"
+                  >
+                    آیا تهران بازی هسته ای را به هم می‌زند؟
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c28"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۹
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/world-50316450"
+                  >
+                    آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c27"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۱۰
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/sport-50318030"
+                  >
+                    فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
     </div>
-  </body>
-</html>
+  </main>
+</div>
 `;
 
 exports[`should render a pidgin article correctly (with navigation) 1`] = `
-<html
-  dir="ltr"
-  lang="pcm"
->
-  <head>
-    <title>
-      Article Headline for SEO in Pidgin - BBC News Pidgin
-    </title>
-    <link
-      href="https://www.test.bbc.com/pathname"
-      rel="canonical"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pathname.amp"
-      rel="amphtml"
-    />
-    <link
-      href="http://localhost:7080/pidgin/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      content="IE=edge"
-      http-equiv="X-UA-Compatible"
-    />
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      content="noodp,noydir"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      name="viewport"
-    />
-    <meta
-      content="BBC News Pidgin"
-      name="apple-mobile-web-app-title"
-    />
-    <meta
-      content="BBC News Pidgin"
-      name="application-name"
-    />
-    <meta
-      content="Article summary in Pidgin"
-      name="description"
-    />
-    <meta
-      content="100004154058350"
-      property="fb:admins"
-    />
-    <meta
-      content="1609039196070050"
-      property="fb:app_id"
-    />
-    <meta
-      content="yes"
-      name="mobile-web-app-capable"
-    />
-    <meta
-      content="#B80000"
-      name="msapplication-TileColor"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
-      name="msapplication-TileImage"
-    />
-    <meta
-      content="Article summary in Pidgin"
-      property="og:description"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
-      property="og:image"
-    />
-    <meta
-      content="BBC News Pidgin"
-      property="og:image:alt"
-    />
-    <meta
-      content="pcm"
-      property="og:locale"
-    />
-    <meta
-      content="BBC News Pidgin"
-      property="og:site_name"
-    />
-    <meta
-      content="Article Headline for SEO in Pidgin - BBC News Pidgin"
-      property="og:title"
-    />
-    <meta
-      content="article"
-      property="og:type"
-    />
-    <meta
-      content="https://www.test.bbc.com/pathname"
-      property="og:url"
-    />
-    <meta
-      content="summary_large_image"
-      name="twitter:card"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:creator"
-    />
-    <meta
-      content="Article summary in Pidgin"
-      name="twitter:description"
-    />
-    <meta
-      content="BBC News Pidgin"
-      name="twitter:image:alt"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
-      name="twitter:image:src"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:site"
-    />
-    <meta
-      content="Article Headline for SEO in Pidgin - BBC News Pidgin"
-      name="twitter:title"
-    />
-    <meta
-      content="https://www.facebook.com/bbcnews"
-      name="article:author"
-    />
-    <meta
-      content="2018-01-01T13:00:00.000Z"
-      name="article:modified_time"
-    />
-    <meta
-      content="2018-01-01T12:01:00.000Z"
-      name="article:published_time"
-    />
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Article Headline for SEO in Pidgin"},"headline":"Article Headline for SEO in Pidgin","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
-    </script>
-  </head>
-  <body>
-    .c1 {
+.c1 {
   margin: 0 auto;
   background: #FDFDFD;
   padding-bottom: 2rem;
@@ -1168,6 +2448,162 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+}
+
+.c24 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c12 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FFFFFF;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c7 {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.c9 {
+  margin: 0;
+  padding: 0;
+}
+
+.c15 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+}
+
+.c20 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+}
+
+.c22 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.c22:hover,
+.c22:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c22:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c21 {
+  padding-top: 0.375rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.c23 {
+  padding-top: 0.5rem;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.c17 {
+  position: relative;
+}
+
+.c6 {
+  margin: 0 0.5rem;
 }
 
 .c0 {
@@ -1320,41 +2756,2070 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c24 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c24 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c8 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    margin-top: 1.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c14 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c16 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c16 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c16 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c16 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c16 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c16 {
+    width: calc(20%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c16 {
+    display: block;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c15 {
+    grid-template-rows: repeat( 10,[col-start] auto [col-end] );
+  }
+}
+
+@media (min-width:80rem) {
+  .c15 {
+    grid-auto-flow: row;
+    grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c19 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c19 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c19 {
+    min-width: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c19 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c25 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c25 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c25 {
+    min-width: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c25 {
+    min-width: 3.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c25 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c26 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c26 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c26 {
+    min-width: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c26 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c26 {
+    min-width: 4rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c27 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c27 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c27 {
+    min-width: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c27 {
+    min-width: 3.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c27 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c28 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c28 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c28 {
+    min-width: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c28 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c28 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c20 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c22 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c22 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c21 {
+    padding-right: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c13 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:80rem) {
+  .c6 {
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c6 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 <div>
-      <noscript />
-      <div>
-        chartbeat
+  <noscript />
+  <div>
+    chartbeat
+  </div>
+  <main
+    class="c0"
+    role="main"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <h1
+          class="c3"
+          id="content"
+          tabindex="-1"
+        >
+          Article Headline in Pidgin
+        </h1>
       </div>
-      <main
-        class="c0"
-        role="main"
+      <div
+        class="c4"
+      >
+        <p
+          class="c5"
+        >
+          A paragraph in Pidgin.
+        </p>
+      </div>
+    </div>
+    <div
+      class="c6"
+    >
+      <section
+        aria-labelledby="Most-Read"
+        role="region"
       >
         <div
-          class="c1"
+          class="c7"
         >
           <div
-            class="c2"
+            class="c8"
+          />
+          <h2
+            class="c9"
           >
-            <h1
-              class="c3"
-              id="content"
-              tabindex="-1"
+            <div
+              class="c10"
             >
-              Article Headline in Pidgin
-            </h1>
-          </div>
-          <div
-            class="c4"
-          >
-            <p
-              class="c5"
-            >
-              A paragraph in Pidgin.
-            </p>
-          </div>
+              <span
+                class="c11"
+              >
+                <span
+                  class="c12"
+                  dir="ltr"
+                  id="Most-Read"
+                >
+                  De one we dem de read well well
+                </span>
+              </span>
+            </div>
+          </h2>
         </div>
-      </main>
+        <div
+          class="c13"
+        >
+          <ol
+            class="c14 c15"
+            dir="ltr"
+            role="list"
+          >
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c19"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    1
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/pidgin/tori-46729879"
+                  >
+                    Public Holidays wey go happun for 2019
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-05-21"
+                    >
+                      De one we dem update for: 
+                      21st May 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c25"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    2
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/pidgin/tori-50304653"
+                  >
+                    Liberia banks don run out of money
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-05"
+                    >
+                      De one we dem update for: 
+                      5th November 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c19"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    3
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/pidgin/tori-50298882"
+                  >
+                    Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-05"
+                    >
+                      De one we dem update for: 
+                      5th November 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c25"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    4
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/pidgin/tori-50315150"
+                  >
+                    Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      De one we dem update for: 
+                      6th November 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c26"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    5
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/pidgin/tori-50315157"
+                  >
+                    How Balogun market fire kill Policeman for Lagos
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      De one we dem update for: 
+                      6th November 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c27"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    6
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/pidgin/tori-50093818"
+                  >
+                    Labour, FG finally agree minimum wage salary adjustment
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-10-18"
+                    >
+                      De one we dem update for: 
+                      18th October 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c28"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    7
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/pidgin/tori-50187218"
+                  >
+                    Naira Marley na 'Bad Influence'?
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-10-25"
+                    >
+                      De one we dem update for: 
+                      25th October 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c27"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    8
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/pidgin/tori-48347911"
+                  >
+                    Tins you suppose know about Naira Marley
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-05-23"
+                    >
+                      De one we dem update for: 
+                      23rd May 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c28"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    9
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/pidgin/sport-50312710"
+                  >
+                    Golden Eaglets crash out of Fifa U17 World Cup
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      De one we dem update for: 
+                      6th November 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c27"
+                  dir="ltr"
+                >
+                  <span
+                    class="c20"
+                  >
+                    10
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="ltr"
+                >
+                  <a
+                    class="c22"
+                    href="/pidgin/tori-42945173"
+                  >
+                    Tiger nut drink fit wake up your sex drive - Nutritionist
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-05-21"
+                    >
+                      De one we dem update for: 
+                      21st May 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
     </div>
-  </body>
-</html>
+  </main>
+</div>
+`;
+
+exports[`should render a pidgin article correctly (with navigation) 2`] = `
+.c1 {
+  margin: 0 auto;
+  background: #FDFDFD;
+  padding-bottom: 2rem;
+}
+
+.c4 {
+  grid-column: 1 / span 6;
+}
+
+.c3 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c5 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c24 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #6E6E73;
+  display: block;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c12 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FFFFFF;
+  margin: 1rem 0;
+  padding-left: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c7 {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.c9 {
+  margin: 0;
+  padding: 0;
+}
+
+.c15 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+}
+
+.c20 {
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+}
+
+.c22 {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.c22:hover,
+.c22:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c22:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c21 {
+  padding-top: 0.375rem;
+  padding-bottom: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c23 {
+  padding-top: 0.5rem;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.c17 {
+  position: relative;
+}
+
+.c6 {
+  margin: 0 0.5rem;
+}
+
+.c0 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+@media (max-width:37.4375rem) {
+  .c1 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c1 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c1 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:25rem) {
+  .c4 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c4 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c4 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c4 {
+    max-width: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c2 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c2 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c2 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 2.75rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c24 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c24 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1.625rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c8 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    margin-top: 1.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c14 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c16 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c16 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c16 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c16 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:80rem) {
+  .c16 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c16 {
+    width: calc(20%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c16 {
+    display: block;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c15 {
+    grid-template-rows: repeat( 10,[col-start] auto [col-end] );
+  }
+}
+
+@media (min-width:80rem) {
+  .c15 {
+    grid-auto-flow: row;
+    grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c19 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c19 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c19 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c19 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c25 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c25 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c25 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c25 {
+    min-width: 1.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c25 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c26 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c26 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c26 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c26 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c26 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c27 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c27 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c27 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c27 {
+    min-width: 1.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c27 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c28 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c28 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c28 {
+    min-width: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:80rem) {
+  .c28 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c28 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c20 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c22 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c22 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c21 {
+    padding-left: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c13 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:80rem) {
+  .c6 {
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c6 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+<div>
+  <noscript />
+  <div>
+    chartbeat
+  </div>
+  <main
+    class="c0"
+    role="main"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <h1
+          class="c3"
+          id="content"
+          tabindex="-1"
+        >
+          سرصفحه مقاله
+        </h1>
+      </div>
+      <div
+        class="c4"
+      >
+        <p
+          class="c5"
+        >
+          یک پاراگراف.
+        </p>
+      </div>
+    </div>
+    <div
+      class="c6"
+    >
+      <section
+        aria-labelledby="Most-Read"
+        role="region"
+      >
+        <div
+          class="c7"
+        >
+          <div
+            class="c8"
+          />
+          <h2
+            class="c9"
+          >
+            <div
+              class="c10"
+            >
+              <span
+                class="c11"
+              >
+                <span
+                  class="c12"
+                  dir="rtl"
+                  id="Most-Read"
+                >
+                  پربیننده‌ترین‌ها
+                </span>
+              </span>
+            </div>
+          </h2>
+        </div>
+        <div
+          class="c13"
+        >
+          <ol
+            class="c14 c15"
+            dir="rtl"
+            role="list"
+          >
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c19"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۱
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/world-50317704"
+                  >
+                    توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c25"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۲
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/iran-50319870"
+                  >
+                    فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c19"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۳
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/world-50320610"
+                  >
+                    ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c25"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۴
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/world-50316456"
+                  >
+                    غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c26"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۵
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/magazine-50249226"
+                  >
+                    دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c27"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۶
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/world-50317700"
+                  >
+                    انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c28"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۷
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/sport-50322486"
+                  >
+                    عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c27"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۸
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/iran-features-50310665"
+                  >
+                    آیا تهران بازی هسته ای را به هم می‌زند؟
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c28"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۹
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/world-50316450"
+                  >
+                    آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c16 c17"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="c18"
+              >
+                <div
+                  class="c27"
+                  dir="rtl"
+                >
+                  <span
+                    class="c20"
+                  >
+                    ۱۰
+                  </span>
+                </div>
+                <div
+                  class="c21"
+                  dir="rtl"
+                >
+                  <a
+                    class="c22"
+                    href="/persian/sport-50318030"
+                  >
+                    فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
+                  </a>
+                  <div
+                    class="c23"
+                  >
+                    <time
+                      class="c24"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در 
+                      ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
 `;
