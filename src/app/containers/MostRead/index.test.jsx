@@ -1,10 +1,12 @@
-import arabicMostReadData from '#data/arabic/mostRead';
-
+import React from 'react';
+import { render, wait } from '@testing-library/react';
+import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import {
   setFreshPromoTimestamp,
-  renderMostReadContainer,
+  MostReadWithContext,
 } from './utilities/testHelpers';
 import { service as arabicConfig } from '#lib/config/services/arabic';
+import arabicMostReadData from '#data/arabic/mostRead';
 
 const services = {
   arabic: {
@@ -15,71 +17,84 @@ const services = {
   },
 };
 
-describe('MostReadContainerCanonical', () => {
-  let container;
-  beforeEach(() => {
-    container = document.createElement('div');
-    document.body.appendChild(container);
-  });
+const expectEmptyContainer = container => {
+  expect(container.querySelectorAll('li').length).toEqual(0);
+  expect(container.innerHTML).toEqual('');
+};
 
+describe('MostReadContainerCanonical Assertion', () => {
   afterEach(() => {
-    container = null;
     fetch.resetMocks();
   });
 
   Object.keys(services).forEach(service => {
-    it(`renders most read as expected on canonical for ${service}`, async () => {
+    it(`should render most read correctly for ${service}`, async () => {
+      const { variant, data: mostReadData } = services[service];
+      fetch.mockResponse(JSON.stringify(setFreshPromoTimestamp(mostReadData)));
+
+      await matchSnapshotAsync(
+        <MostReadWithContext
+          service={service}
+          variant={variant}
+          mostReadToggle
+        />,
+      );
+    });
+
+    it(`should render most read as expected on canonical for ${service}`, async () => {
       const { variant, data: mostReadData, config } = services[service];
       const mostReadHeader = config.mostRead.header;
       fetch.mockResponse(JSON.stringify(setFreshPromoTimestamp(mostReadData)));
 
-      await renderMostReadContainer({
-        container,
-        isAmp: false,
-        service,
-        variant,
-        mostReadToggle: true,
-      });
-
-      expect(container.querySelector('h2').textContent).toEqual(mostReadHeader);
-      expect(container.querySelectorAll('li').length).toEqual(
-        config.mostRead.numberOfItems,
+      const { container } = render(
+        <MostReadWithContext
+          service={service}
+          variant={variant}
+          mostReadToggle
+        />,
       );
-      expect(container).toMatchSnapshot();
+
+      await wait(() => {
+        expect(container.querySelector('h2').textContent).toEqual(
+          mostReadHeader,
+        );
+        expect(container.querySelectorAll('li').length).toEqual(
+          config.mostRead.numberOfItems,
+        );
+      });
     });
 
     it(`should return empty string when mostRead feature toggle is disabled - ${service}`, async () => {
       const { variant } = services[service];
-      await renderMostReadContainer({
-        container,
-        isAmp: false,
-        service,
-        variant,
-      });
-      expect(container.querySelectorAll('li').length).toEqual(0);
-      expect(container.innerHTML).toEqual('');
+      const { container } = render(
+        <MostReadWithContext service={service} variant={variant} />,
+      );
+
+      await wait(expectEmptyContainer(container));
     });
 
     it(`should return empty string on AMP pages - ${service}`, async () => {
       const { variant } = services[service];
-      await renderMostReadContainer({
-        container,
-        isAmp: true,
-        service,
-        variant,
-      });
-      expect(container.querySelectorAll('li').length).toEqual(0);
-      expect(container.innerHTML).toEqual('');
+      const { container } = render(
+        <MostReadWithContext
+          isAmp
+          service={service}
+          variant={variant}
+          mostReadToggle
+        />,
+      );
+
+      await wait(expectEmptyContainer(container));
     });
   });
 
   it(`should return empty string when mostRead service toggle is disabled`, async () => {
-    await renderMostReadContainer({
-      container,
-      isAmp: false,
-      service: 'archive', // hasMostRead = false for this service
-    });
-    expect(container.querySelectorAll('li').length).toEqual(0);
-    expect(container.innerHTML).toEqual('');
+    const { container } = render(
+      <MostReadWithContext
+        service="archive" // hasMostRead = false for this service
+      />,
+    );
+
+    await wait(expectEmptyContainer(container));
   });
 });
