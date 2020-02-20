@@ -42,7 +42,7 @@ import withError from '#containers/PageHandlers/withError';
 import withLoading from '#containers/PageHandlers/withLoading';
 import withData from '#containers/PageHandlers/withData';
 
-const isLegacyMAP = url => url.split('/').length > 7;
+const isLegacyMediaAssetPage = url => url.split('/').length > 7;
 
 const MediaAssetPageContainer = ({ pageData }) => {
   const requestContext = useContext(RequestContext);
@@ -77,7 +77,7 @@ const MediaAssetPageContainer = ({ pageData }) => {
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
       ) : null,
-    video: isLegacyMAP(requestContext.canonicalLink)
+    video: isLegacyMediaAssetPage(requestContext.canonicalLink)
       ? MediaMessage
       : props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
