@@ -1,0 +1,102 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/pashto/meta/dps/junk/2016/09/emp/160921_tc2_testmap1.emp.xml",
+        "id": "17698414",
+        "live": false,
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "په افغانستان کې د ملي وحدت پر اوسني حکومت دوه کاله اوړي. دا حکومت له لانجمنو ټاکنو وروسته واک ته ورسېد. خو دا چې عام ولس د دې حکومت لاسته راوړنې څه گڼي او په کومو برخو کې يې پاتې بولي په همدې تړاو د بي بي سي ازاده جرگه جوړه شوې ده.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_id": "17698414", "cps_asset_type": "map" },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "pashto",
+    "firstPublished": 1474472581000,
+    "id": "urn:bbc:ares::asset:pashto/world/2016/09/160921_tc2_testmap1",
+    "includeComments": false,
+    "language": "ps",
+    "lastPublished": 1474472581000,
+    "lastUpdated": 1582030879332,
+    "locators": {
+      "assetId": "17698414",
+      "assetUri": "/pashto/world/2016/09/160921_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:pashto/world/2016/09/160921_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/cb3cbe10-8011-11e6-a923-003d34ba44a4"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1474472581000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "ازاده جرګه: د ملي وحدت حکومت لاسته راوړنې او نيمګړتياوې",
+      "shortHeadline": "ازاده جرګه: د ملي وحدت حکومت لاسته راوړنې او نيمګړتياوې"
+    },
+    "id": "urn:bbc:ares::asset:pashto/world/2016/09/160921_tc2_testmap1",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "BBC",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
+      "id": "d5e212",
+      "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "ps",
+    "locators": {
+      "assetId": "17698414",
+      "assetUri": "/pashto/world/2016/09/160921_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:pashto/world/2016/09/160921_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/cb3cbe10-8011-11e6-a923-003d34ba44a4"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/pashto/meta/dps/junk/2016/09/emp/160921_tc2_testmap1.emp.xml",
+      "id": "17698414",
+      "live": false,
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": { "taggings": [] },
+    "summary": "په افغانستان کې د ملي وحدت پر اوسني حکومت دوه کاله اوړي. دا حکومت له لانجمنو ټاکنو وروسته واک ته ورسېد.",
+    "timestamp": 1474472581000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "نړۍ",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/pashto/world"
+    },
+    "site": {
+      "name": "BBCPashto.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/pashto"
+    }
+  }
+}
