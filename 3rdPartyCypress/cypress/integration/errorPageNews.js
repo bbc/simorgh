@@ -1,4 +1,4 @@
-import { service as news } from '#app/lib/config/services/news';
+import { service as news } from '../../../src/app/lib/config/services/news';
 
 // This is a 3rd party test, but if it fails we should arrange for it to be fixed.
 describe('Test the mozart 404 page', () => {
