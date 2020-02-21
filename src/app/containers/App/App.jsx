@@ -16,7 +16,6 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   } = getRouteProps(routes, location.pathname);
 
   const { pageData, status, error, timeOnServer } = initialData;
-  console.log('Inside App ++++++', initialData);
 
   const [state, setState] = useState({
     pageData,

@@ -15,7 +15,6 @@ const NavigationContainer = () => {
   if (!navigation || navigation.length === 0) {
     return null;
   }
-  console.log('Inside NavigationContainer -----', Date.now());
 
   return (
     <Navigation
