@@ -54,6 +54,7 @@ export const service = {
       currentPage: 'বর্তমান পেজ',
       skipLinkText: 'সরাসরি কনটেন্টে যান',
       relatedContent: 'এই খবর নিয়ে আরো তথ্য',
+      sections: 'সেকশন',
       mediaAssetPage: {
         mediaPlayer: 'মিডিয়া প্লেয়ার',
         audioPlayer: 'অডিও প্লেয়ার',
@@ -223,7 +224,6 @@ export const service = {
         url: '/bengali/media/photogalleries',
       },
     ],
-    navigationSection: 'সেকশন',
   },
 };
 
