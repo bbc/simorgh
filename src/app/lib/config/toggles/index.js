@@ -70,7 +70,7 @@ const toggles = {
       enabled: true,
     },
     navOnArticles: {
-      enabled: false,
+      enabled: true,
     },
     mostRead: {
       enabled: false,
