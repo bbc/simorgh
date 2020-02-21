@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
       relatedContent: 'संबंधित मजकूर',
+      sections: 'विभाग',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिओ प्लेयर',
@@ -158,7 +159,8 @@ export const service = {
     mostRead: {
       header: 'सर्वाधिक वाचलेले',
       lastUpdated: 'शेवटचा अपडेट:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -222,7 +224,6 @@ export const service = {
         url: '/marathi/resources/idt-43ff5603-f85f-47c1-972f-097e67eeb035',
       },
     ],
-    navigationSection: 'विभाग',
   },
 };
 

@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'Поточна сторінка',
       skipLinkText: 'Перейти до змісту',
       relatedContent: 'Статті на цю ж тему',
+      sections: 'Розділи',
       mediaAssetPage: {
         mediaPlayer: 'Медіаплеєр',
         audioPlayer: 'Аудіоплеєр',
@@ -159,7 +160,8 @@ export const service = {
     mostRead: {
       header: 'Найпопулярніше',
       lastUpdated: 'Останнє оновлення:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: false,
     },
     footer: {
       trustProjectLink: {
@@ -267,7 +269,6 @@ export const service = {
         url: '/ukrainian/learning_english',
       },
     ],
-    navigationSection: 'Розділи',
   },
 };
 

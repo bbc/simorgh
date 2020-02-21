@@ -55,6 +55,7 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
+      sections: 'صفحه ها',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -175,7 +176,8 @@ export const service = {
     mostRead: {
       header: 'پربیننده‌ترین‌ها',
       lastUpdated: 'به روز شده در',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -286,7 +288,6 @@ export const service = {
         url: '/persian/learningenglish',
       },
     ],
-    navigationSection: 'صفحه ها',
   },
 };
 

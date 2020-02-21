@@ -54,6 +54,7 @@ export const service = {
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
       relatedContent: 'اسی بارے میں',
+      sections: 'سیکشن',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -154,7 +155,8 @@ export const service = {
     mostRead: {
       header: 'سب سے زیادہ پڑھی جانے والی',
       lastUpdated: 'آخری اپ ڈیٹ',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -239,7 +241,6 @@ export const service = {
         url: '/urdu/media/photogalleries',
       },
     ],
-    navigationSection: 'سیکشن',
   },
 };
 

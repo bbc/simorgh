@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
       relatedContent: 'Ibindi bisa n’ibi',
+      sections: 'Imice',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -158,6 +159,7 @@ export const service = {
       header: 'Ibisomwa cane',
       lastUpdated: 'Ibiheruka kuvugururwa:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -216,7 +218,6 @@ export const service = {
         url: '/gahuza/media/video',
       },
     ],
-    navigationSection: 'Imice',
   },
 };
 

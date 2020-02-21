@@ -50,6 +50,7 @@ export const service = {
       currentPage: 'Trang hiện nay',
       skipLinkText: 'Bỏ qua để xem nội dung',
       relatedContent: 'Tin liên quan',
+      sections: 'Mục',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -150,7 +151,8 @@ export const service = {
     mostRead: {
       header: 'Đọc nhiều nhất',
       lastUpdated: 'Cập nhật gần nhất:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -235,7 +237,6 @@ export const service = {
         url: '/vietnamese/media/video',
       },
     ],
-    navigationSection: 'Mục',
   },
 };
 

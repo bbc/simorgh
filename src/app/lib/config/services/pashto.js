@@ -55,6 +55,7 @@ export const service = {
       currentPage: 'اوسنۍ پاڼه',
       skipLinkText: 'مطلب ته ورشئ',
       relatedContent: 'اسی بارے میں',
+      sections: 'برخې',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -166,6 +167,7 @@ export const service = {
       header: 'ډېر لوستل شوي',
       lastUpdated: 'د خپرېدو نیټه',
       numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -244,7 +246,6 @@ export const service = {
         url: '/pashto/columns',
       },
     ],
-    navigationSection: 'برخې',
   },
 };
 

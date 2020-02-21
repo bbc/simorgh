@@ -63,7 +63,10 @@ const ArticleTimestamp = ({
     <Wrapper className={className}>
       <Timestamp {...timestampProps} {...firstPublishedProps} />
       {timeDifferenceMinutes > minutesTolerance && (
-        <Timestamp {...timestampProps} {...lastPublishedProps} />
+        // Div has been used for No CSS formatting see #5554
+        <div>
+          <Timestamp {...timestampProps} {...lastPublishedProps} />
+        </div>
       )}
     </Wrapper>
   );

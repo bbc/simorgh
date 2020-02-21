@@ -51,6 +51,7 @@ export const service = {
       currentPage: 'လက်ရှိကြည့်နေသော စာမျက်နှာ',
       skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားရန်',
       relatedContent: 'ဒီသတင်းနဲ့ ပတ်သက်သမျှ',
+      sections: 'ကဏ္ဍများ',
       mediaAssetPage: {
         mediaPlayer: 'မီဒီယာ ပလေယာ',
         audioPlayer: 'အသံဖိုင်ပလေယာ',
@@ -166,10 +167,11 @@ export const service = {
       header: 'အဖတ်အများဆုံး',
       lastUpdated: 'နောက်ဆုံးအသစ်တင်ချိန်:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/burmese/institutional-51387206',
         text: 'ဘီဘီစီကို ဘာကြောင့် ယုံကြည်နိုင်သလဲ။',
       },
       externalLink: {
@@ -238,7 +240,6 @@ export const service = {
         url: '/burmese/media/photogalleries',
       },
     ],
-    navigationSection: 'ကဏ္ဍများ',
   },
 };
 

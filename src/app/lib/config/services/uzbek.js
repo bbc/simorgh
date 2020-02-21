@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'Жорий саҳифа',
       skipLinkText: 'Саҳифага ўтиш',
       relatedContent: 'Бу мавзуда батафсилроқ',
+      sections: 'Бўлимлар',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плейер',
         audioPlayer: 'Аудио плейер',
@@ -163,6 +164,7 @@ export const service = {
       header: 'Энг кўп ўқилган',
       lastUpdated: 'Сўнгги янгиланиш:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -234,7 +236,6 @@ export const service = {
         url: '/uzbek/media/video',
       },
     ],
-    navigationSection: 'Бўлимлар',
   },
 };
 

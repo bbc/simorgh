@@ -50,6 +50,7 @@ export const service = {
       currentPage: 'தற்போதுள்ள பக்கம்',
       skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',
       relatedContent: 'தொடர்புடைய உள்ளடக்கம்',
+      sections: 'பிரிவுகள்',
       mediaAssetPage: {
         mediaPlayer: 'ஊடக இயக்கி',
         audioPlayer: 'கேட்பொலி பிளேயர்',
@@ -166,10 +167,11 @@ export const service = {
       header: 'அதிகம் படிக்கப்பட்டது',
       lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/tamil/institutional-50435459',
+        href: 'https://www.bbc.com/tamil/institutional-50288575',
         text: 'நீங்கள் ஏன் பிபிசி மீது நம்பிக்கை வைக்க முடியும்?',
       },
       externalLink: {
@@ -242,7 +244,6 @@ export const service = {
         url: '/tamil/resources/idt-ce219e77-9003-42b8-b276-1214e232fdc0',
       },
     ],
-    navigationSection: 'பிரிவுகள்',
   },
 };
 

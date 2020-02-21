@@ -53,6 +53,7 @@ export const service = {
       currentPage: 'መነሻ ገፅ',
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
+      sections: 'ክፍሎች',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -150,7 +151,8 @@ export const service = {
     mostRead: {
       header: 'ብዙ የተነበቡ',
       lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -204,7 +206,6 @@ export const service = {
         url: '/amharic/popular/read',
       },
     ],
-    navigationSection: 'ክፍሎች',
     timezone: 'Africa/Addis_Ababa',
   },
 };

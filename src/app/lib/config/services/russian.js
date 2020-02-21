@@ -7,6 +7,7 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
+  F_REITH_SERIF_LIGHT,
 } from '@bbc/psammead-styles/fonts';
 import { russian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -57,6 +58,7 @@ export const service = {
       currentPage: 'Текущая страница',
       skipLinkText: 'Перейти к содержанию',
       relatedContent: 'Новости по теме',
+      sections: 'Разделы',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плеер',
         audioPlayer: 'Аудио плеер',
@@ -172,7 +174,8 @@ export const service = {
     mostRead: {
       header: 'Самое популярное',
       lastUpdated: 'Последнее обновление:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: false,
     },
     footer: {
       trustProjectLink: {
@@ -215,6 +218,7 @@ export const service = {
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
       F_REITH_SERIF_MEDIUM_ITALIC,
+      F_REITH_SERIF_LIGHT,
     ],
     timezone: 'GMT',
     navigation: [
@@ -239,7 +243,6 @@ export const service = {
         url: '/russian/media-47937790',
       },
     ],
-    navigationSection: 'Разделы',
   },
 };
 

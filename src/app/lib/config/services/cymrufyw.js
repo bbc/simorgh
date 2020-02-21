@@ -58,6 +58,7 @@ export const service = {
       currentPage: 'Y dudalen bresennol',
       skipLinkText: `Neidio i'r cynnwys`,
       relatedContent: 'Cynnwys perthnasol',
+      sections: 'Adrannau',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -163,6 +164,7 @@ export const service = {
       header: 'Mwyaf poblogaidd',
       lastUpdated: 'Diweddariad diwethaf:',
       numberOfItems: 5,
+      hasMostRead: false,
     },
     footer: {
       trustProjectLink: {
@@ -241,7 +243,6 @@ export const service = {
         url: '/news/wales',
       },
     ],
-    navigationSection: 'Adrannau',
   },
 };
 

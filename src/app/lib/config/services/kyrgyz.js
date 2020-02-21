@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'Ачылып турган баракча',
       skipLinkText: 'Сайтка өтүү',
       relatedContent: 'Тема боюнча башка макалалар',
+      sections: 'Бөлүмдөр',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -163,6 +164,7 @@ export const service = {
       header: 'Эң көп окулгандар',
       lastUpdated: 'Акыркы жаңылоо:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -239,7 +241,6 @@ export const service = {
         url: '/kyrgyz/blog',
       },
     ],
-    navigationSection: 'Бөлүмдөр',
   },
 };
 

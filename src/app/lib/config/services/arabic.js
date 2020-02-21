@@ -53,6 +53,7 @@ export const service = {
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
       relatedContent: 'المزيد حول هذه القصة',
+      sections: 'أقسام',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -164,7 +165,8 @@ export const service = {
     mostRead: {
       header: 'الأكثر قراءة',
       lastUpdated: 'آخر تحديث',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -272,7 +274,6 @@ export const service = {
         url: '/arabic/in_depth',
       },
     ],
-    navigationSection: 'أقسام',
   },
 };
 

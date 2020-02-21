@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'Ukurasa uliopo',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
+      sections: 'Yaliyomo',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -163,6 +164,7 @@ export const service = {
       header: 'Iliyosomwa zaidi',
       lastUpdated: 'Imeboreshwa mwisho:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -226,7 +228,6 @@ export const service = {
         url: '/swahili/media/photogalleries',
       },
     ],
-    navigationSection: 'Yaliyomo',
   },
 };
 

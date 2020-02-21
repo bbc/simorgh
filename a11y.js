@@ -30,12 +30,27 @@ const getUrls = pageType =>
 // '//div[@id='root']/main/div/div/div/div/iframe' Added to hide
 // iframe errors to be fixed in https://github.com/bbc/bbc-a11y/issues/298
 
+// '//div[@id='root']/header/nav/div/div[1]/div/ul' Added to hide
+// errors in scrollable navigation for RTL languages to be fixed in
+// https://github.com/bbc/simorgh/issues/5222
+
 const pageTypes = {
-  frontPage: ['/html/head/iframe'],
-  articles: ['/html/head/iframe'],
+  frontPage: [
+    '/html/head/iframe',
+    "//div[@id='root']/header/nav/div/div[1]/div/ul",
+  ],
+  articles: [
+    '/html/head/iframe',
+    "//div[@id='root']/header/nav/div/div[1]/div/ul",
+  ],
   liveRadio: [
     '/html/head/iframe',
     "//div[@id='root']/main/div/div/div/div/iframe",
+    "//div[@id='root']/header/nav/div/div[1]/div/ul",
+  ],
+  photoGalleryPage: [
+    '/html/head/iframe',
+    "//div[@id='root']/header/nav/div/div[1]/div/ul",
   ],
 };
 

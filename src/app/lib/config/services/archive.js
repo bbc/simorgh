@@ -56,6 +56,7 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
       relatedContent: 'Related content',
+      sections: 'Sections',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -157,6 +158,7 @@ export const service = {
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated:',
+      hasMostRead: false,
     },
     footer: {
       externalLink: {
