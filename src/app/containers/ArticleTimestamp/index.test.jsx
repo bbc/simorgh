@@ -20,7 +20,7 @@ const regexUpdatedDatetime = /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9
 const regexUpdatedDate = /^Updated [0-9]{1,2} \w+ [0-9]{4}$/;
 
 const firstChild = wrapper => wrapper[0].children[0].data;
-const secondChild = wrapper => wrapper[1].children[0].data;
+const secondChild = wrapper => wrapper[1].children[0].children[0].data;
 
 const renderedTimestamps = jsx => render(jsx).get(0).children; // helper as output is wrapped in a grid
 

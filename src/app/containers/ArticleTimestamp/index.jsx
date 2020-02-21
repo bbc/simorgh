@@ -71,7 +71,10 @@ const ArticleTimestamp = ({
     <Wrapper className={className}>
       <FirstPublishedTimestamp {...timestampProps} {...firstPublishedProps} />
       {showLastUpdatedTimestamp && (
-        <LastUpdatedTimestamp {...timestampProps} {...lastPublishedProps} />
+        // Div has been used for No CSS formatting see #5554
+        <div>
+          <LastUpdatedTimestamp {...timestampProps} {...lastPublishedProps} />
+        </div>
       )}
     </Wrapper>
   );
