@@ -19,16 +19,18 @@ const renderPromo = ({
   item,
   promoType = 'regular',
   isFirstSection = false,
+  dir,
   displayImage = true,
 }) => {
   const lazyLoadImage = !(promoType === 'top' && isFirstSection); // don't lazy load image if it is a top story
   const renderedPromo = isBulletin(item) ? (
-    <BulletinContainer item={item} lazyLoadImage={lazyLoadImage} />
+    <BulletinContainer item={item} lazyLoadImage={lazyLoadImage} dir={dir} />
   ) : (
     <StoryPromoContainer
       item={item}
       promoType={promoType}
       lazyLoadImage={lazyLoadImage}
+      dir={dir}
       displayImage={displayImage}
     />
   );
@@ -61,7 +63,14 @@ export const TopRow = ({
 }) => {
   if (sectionHasSingleStory) {
     return (
-      <>{renderPromo({ item: stories[0], promoType: 'top', isFirstSection })}</>
+      <>
+        {renderPromo({
+          item: stories[0],
+          promoType: 'top',
+          isFirstSection,
+          dir,
+        })}
+      </>
     );
   }
   return (
@@ -73,7 +82,7 @@ export const TopRow = ({
       parentColumns={parentColumns}
       parentEnableGelGutters={parentEnableGelGutters}
     >
-      {renderPromo({ item: stories[0], promoType: 'top', isFirstSection })}
+      {renderPromo({ item: stories[0], promoType: 'top', isFirstSection, dir })}
     </Grid>
   );
 };
@@ -105,7 +114,7 @@ export const LeadingRow = ({
       parentColumns={parentColumns}
       parentEnableGelGutters={parentEnableGelGutters}
     >
-      {renderPromo({ item: stories[0], promoType: 'leading' })}
+      {renderPromo({ item: stories[0], promoType: 'leading', dir })}
     </Grid>
     <Grid
       item
@@ -115,7 +124,7 @@ export const LeadingRow = ({
       parentColumns={parentColumns}
       parentEnableGelGutters={parentEnableGelGutters}
     >
-      {renderPromo({ item: stories[1] })}
+      {renderPromo({ item: stories[1], dir })}
     </Grid>
   </>
 );
@@ -148,6 +157,7 @@ export const RegularRow = ({
       >
         {renderPromo({
           item: story,
+          dir,
           displayImage: displayImages,
         })}
       </Grid>
