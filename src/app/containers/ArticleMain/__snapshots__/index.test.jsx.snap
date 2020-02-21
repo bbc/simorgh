@@ -1207,726 +1207,23 @@ exports[`should render a news article correctly 1`] = `
 `;
 
 exports[`should render a persian article correctly 1`] = `
-.c1 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c4 {
-  grid-column: 1 / span 6;
-}
-
-.c3 {
-  font-size: 2rem;
-  line-height: 2.625rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-.c3:focus {
-  outline: none;
-}
-
-.c5 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c24 {
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #6E6E73;
-  display: block;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c12 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FFFFFF;
-  margin: 1rem 0;
-  padding-left: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c8 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c7 {
-  position: relative;
-  margin-top: 2rem;
-}
-
-.c9 {
-  margin: 0;
-  padding: 0;
-}
-
-.c15 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  grid-auto-flow: column;
-  grid-template-rows: repeat( 5,[col-start] auto [col-end] );
-}
-
-.c20 {
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
-  position: relative;
-  color: #B80000;
-  margin: 0;
-  padding: 0;
-}
-
-.c22 {
-  font-size: 1rem;
-  line-height: 1.625rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-}
-
-.c22:hover,
-.c22:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c22:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c21 {
-  padding-top: 0.375rem;
-  padding-bottom: 1.5rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-.c23 {
-  padding-top: 0.5rem;
-}
-
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-}
-
-.c17 {
-  position: relative;
-}
-
-.c6 {
-  margin: 0 0.5rem;
-}
-
-.c0 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-@media (max-width:37.4375rem) {
-  .c1 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c1 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:25rem) {
-  .c4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c4 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 2.375rem;
-    line-height: 2.875rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 2.75rem;
-    line-height: 3.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    padding-left: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c8 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    margin-top: 1.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c14 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c16 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c16 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c16 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c16 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c16 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c16 {
-    width: calc(20%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c16 {
-    display: block;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c15 {
-    grid-template-rows: repeat( 10,[col-start] auto [col-end] );
-  }
-}
-
-@media (min-width:80rem) {
-  .c15 {
-    grid-auto-flow: row;
-    grid-template-rows: repeat( 5,[col-start] auto [col-end] );
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c19 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c19 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c19 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:80rem) {
-  .c19 {
-    min-width: auto;
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    min-width: auto;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c25 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c25 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c25 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:80rem) {
-  .c25 {
-    min-width: 1.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c25 {
-    min-width: auto;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c26 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c26 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c26 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:80rem) {
-  .c26 {
-    min-width: auto;
-  }
-}
-
-@media (min-width:80rem) {
-  .c26 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c27 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c27 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c27 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:80rem) {
-  .c27 {
-    min-width: 1.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c27 {
-    min-width: auto;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c28 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c28 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c28 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:80rem) {
-  .c28 {
-    min-width: auto;
-  }
-}
-
-@media (min-width:80rem) {
-  .c28 {
-    min-width: auto;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
-    font-size: 2.5rem;
-    line-height: 2.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c20 {
-    font-size: 3.5rem;
-    line-height: 3.75rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c22 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c22 {
-    font-size: 1.375rem;
-    line-height: 1.75rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c21 {
-    padding-left: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c13 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:80rem) {
-  .c6 {
-    margin: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c6 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
 <div>
   <noscript />
   <div>
     chartbeat
   </div>
   <main
-    class="c0"
+    class="StyledMain-sc-1we5ejh-0 hruWCP"
     role="main"
   >
     <div
-      class="c1"
+      class="GhostGrid-sc-12lwanc-1 gfRQD"
     >
       <div
-        class="c2"
+        class="GridItemConstrainedLarge-sc-12lwanc-5 eXdLFq"
       >
         <h1
-          class="c3"
+          class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 bYbRDq"
           id="content"
           tabindex="-1"
         >
@@ -1934,39 +1231,39 @@ exports[`should render a persian article correctly 1`] = `
         </h1>
       </div>
       <div
-        class="c4"
+        class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
       >
         <p
-          class="c5"
+          class="Paragraph-k859h4-0 jfPMLX"
         >
           یک پاراگراف.
         </p>
       </div>
     </div>
     <div
-      class="c6"
+      class="MaxWidthWrapper-sc-6bm912-1 eubtpj"
     >
       <section
         aria-labelledby="Most-Read"
         role="region"
       >
         <div
-          class="c7"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
         >
           <div
-            class="c8"
+            class="Bar-sc-1x4gwjz-0 fDhhto"
           />
           <h2
-            class="c9"
+            class="Heading-sc-1x4gwjz-2 eZofTG"
           >
             <div
-              class="c10"
+              class="FlexColumn-wx5kdp-0 dgpsiS"
             >
               <span
-                class="c11"
+                class="FlexRow-wx5kdp-2 dVBNyZ"
               >
                 <span
-                  class="c12"
+                  class="Title-wx5kdp-4 dAMIcO"
                   dir="rtl"
                   id="Most-Read"
                 >
@@ -1977,46 +1274,46 @@ exports[`should render a persian article correctly 1`] = `
           </h2>
         </div>
         <div
-          class="c13"
+          class="MarginWrapper-sc-6bm912-0 bmzrWW"
         >
           <ol
-            class="c14 c15"
+            class="GridComponent-nf79gm-0 iUNUcT StyledGrid-sc-1ofyujo-0 iUmfRN"
             dir="rtl"
             role="list"
           >
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c19"
+                  class="StyledWrapper-fs4y6m-0 hPPErW"
                   dir="rtl"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 ehMjlp"
                   >
                     ۱
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 cCyPWK"
                   dir="rtl"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 dpugAO"
                     href="/persian/world-50317704"
                   >
                     توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 fMHMrb"
                       datetime="2019-11-06"
                     >
                       به روز شده در 
@@ -2027,38 +1324,38 @@ exports[`should render a persian article correctly 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c25"
+                  class="StyledWrapper-fs4y6m-0 bOujke"
                   dir="rtl"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 ehMjlp"
                   >
                     ۲
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 cCyPWK"
                   dir="rtl"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 dpugAO"
                     href="/persian/iran-50319870"
                   >
                     فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 fMHMrb"
                       datetime="2019-11-06"
                     >
                       به روز شده در 
@@ -2069,38 +1366,38 @@ exports[`should render a persian article correctly 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c19"
+                  class="StyledWrapper-fs4y6m-0 hPPErW"
                   dir="rtl"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 ehMjlp"
                   >
                     ۳
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 cCyPWK"
                   dir="rtl"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 dpugAO"
                     href="/persian/world-50320610"
                   >
                     ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 fMHMrb"
                       datetime="2019-11-06"
                     >
                       به روز شده در 
@@ -2111,38 +1408,38 @@ exports[`should render a persian article correctly 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c25"
+                  class="StyledWrapper-fs4y6m-0 bOujke"
                   dir="rtl"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 ehMjlp"
                   >
                     ۴
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 cCyPWK"
                   dir="rtl"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 dpugAO"
                     href="/persian/world-50316456"
                   >
                     غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 fMHMrb"
                       datetime="2019-11-06"
                     >
                       به روز شده در 
@@ -2153,38 +1450,38 @@ exports[`should render a persian article correctly 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c26"
+                  class="StyledWrapper-fs4y6m-0 iwMSVK"
                   dir="rtl"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 ehMjlp"
                   >
                     ۵
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 cCyPWK"
                   dir="rtl"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 dpugAO"
                     href="/persian/magazine-50249226"
                   >
                     دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 fMHMrb"
                       datetime="2019-11-06"
                     >
                       به روز شده در 
@@ -2195,38 +1492,38 @@ exports[`should render a persian article correctly 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c27"
+                  class="StyledWrapper-fs4y6m-0 bNvxc"
                   dir="rtl"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 ehMjlp"
                   >
                     ۶
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 cCyPWK"
                   dir="rtl"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 dpugAO"
                     href="/persian/world-50317700"
                   >
                     انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 fMHMrb"
                       datetime="2019-11-06"
                     >
                       به روز شده در 
@@ -2237,38 +1534,38 @@ exports[`should render a persian article correctly 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c28"
+                  class="StyledWrapper-fs4y6m-0 ivtlYo"
                   dir="rtl"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 ehMjlp"
                   >
                     ۷
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 cCyPWK"
                   dir="rtl"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 dpugAO"
                     href="/persian/sport-50322486"
                   >
                     عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 fMHMrb"
                       datetime="2019-11-06"
                     >
                       به روز شده در 
@@ -2279,38 +1576,38 @@ exports[`should render a persian article correctly 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c27"
+                  class="StyledWrapper-fs4y6m-0 bNvxc"
                   dir="rtl"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 ehMjlp"
                   >
                     ۸
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 cCyPWK"
                   dir="rtl"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 dpugAO"
                     href="/persian/iran-features-50310665"
                   >
                     آیا تهران بازی هسته ای را به هم می‌زند؟
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 fMHMrb"
                       datetime="2019-11-06"
                     >
                       به روز شده در 
@@ -2321,38 +1618,38 @@ exports[`should render a persian article correctly 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c28"
+                  class="StyledWrapper-fs4y6m-0 ivtlYo"
                   dir="rtl"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 ehMjlp"
                   >
                     ۹
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 cCyPWK"
                   dir="rtl"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 dpugAO"
                     href="/persian/world-50316450"
                   >
                     آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 fMHMrb"
                       datetime="2019-11-06"
                     >
                       به روز شده در 
@@ -2363,38 +1660,38 @@ exports[`should render a persian article correctly 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c27"
+                  class="StyledWrapper-fs4y6m-0 bNvxc"
                   dir="rtl"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 ehMjlp"
                   >
                     ۱۰
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 cCyPWK"
                   dir="rtl"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 dpugAO"
                     href="/persian/sport-50318030"
                   >
                     فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 fMHMrb"
                       datetime="2019-11-06"
                     >
                       به روز شده در 
@@ -2413,726 +1710,23 @@ exports[`should render a persian article correctly 1`] = `
 `;
 
 exports[`should render a pidgin article correctly (with navigation) 1`] = `
-.c1 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c4 {
-  grid-column: 1 / span 6;
-}
-
-.c3 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-.c3:focus {
-  outline: none;
-}
-
-.c5 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c24 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c12 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FFFFFF;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c8 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c7 {
-  position: relative;
-  margin-top: 2rem;
-}
-
-.c9 {
-  margin: 0;
-  padding: 0;
-}
-
-.c15 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  grid-auto-flow: column;
-  grid-template-rows: repeat( 5,[col-start] auto [col-end] );
-}
-
-.c20 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
-  position: relative;
-  color: #B80000;
-  margin: 0;
-  padding: 0;
-}
-
-.c22 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-}
-
-.c22:hover,
-.c22:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c22:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c21 {
-  padding-top: 0.375rem;
-  padding-bottom: 1.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.c23 {
-  padding-top: 0.5rem;
-}
-
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-}
-
-.c17 {
-  position: relative;
-}
-
-.c6 {
-  margin: 0 0.5rem;
-}
-
-.c0 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-@media (max-width:37.4375rem) {
-  .c1 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c1 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:25rem) {
-  .c4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c4 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 2.75rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c8 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    margin-top: 1.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c14 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c16 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c16 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c16 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c16 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c16 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c16 {
-    width: calc(20%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c16 {
-    display: block;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c15 {
-    grid-template-rows: repeat( 10,[col-start] auto [col-end] );
-  }
-}
-
-@media (min-width:80rem) {
-  .c15 {
-    grid-auto-flow: row;
-    grid-template-rows: repeat( 5,[col-start] auto [col-end] );
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c19 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c19 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c19 {
-    min-width: 2.75rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:80rem) {
-  .c19 {
-    min-width: auto;
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    min-width: auto;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c25 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c25 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c25 {
-    min-width: 2.75rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:80rem) {
-  .c25 {
-    min-width: 3.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c25 {
-    min-width: auto;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c26 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c26 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c26 {
-    min-width: 2.75rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:80rem) {
-  .c26 {
-    min-width: auto;
-  }
-}
-
-@media (min-width:80rem) {
-  .c26 {
-    min-width: 4rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c27 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c27 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c27 {
-    min-width: 2.75rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:80rem) {
-  .c27 {
-    min-width: 3.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c27 {
-    min-width: auto;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c28 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c28 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c28 {
-    min-width: 2.75rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:80rem) {
-  .c28 {
-    min-width: auto;
-  }
-}
-
-@media (min-width:80rem) {
-  .c28 {
-    min-width: auto;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
-    font-size: 2.5rem;
-    line-height: 2.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c20 {
-    font-size: 3.5rem;
-    line-height: 3.75rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c22 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c22 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c21 {
-    padding-right: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c13 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:80rem) {
-  .c6 {
-    margin: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c6 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
 <div>
   <noscript />
   <div>
     chartbeat
   </div>
   <main
-    class="c0"
+    class="StyledMain-sc-1we5ejh-0 hruWCP"
     role="main"
   >
     <div
-      class="c1"
+      class="GhostGrid-sc-12lwanc-1 gfRQD"
     >
       <div
-        class="c2"
+        class="GridItemConstrainedLarge-sc-12lwanc-5 eXdLFq"
       >
         <h1
-          class="c3"
+          class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
           id="content"
           tabindex="-1"
         >
@@ -3140,39 +1734,39 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
         </h1>
       </div>
       <div
-        class="c4"
+        class="GridItemConstrainedMedium-sc-12lwanc-3 fexpEX"
       >
         <p
-          class="c5"
+          class="Paragraph-k859h4-0 hymSIv"
         >
           A paragraph in Pidgin.
         </p>
       </div>
     </div>
     <div
-      class="c6"
+      class="MaxWidthWrapper-sc-6bm912-1 eubtpj"
     >
       <section
         aria-labelledby="Most-Read"
         role="region"
       >
         <div
-          class="c7"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
         >
           <div
-            class="c8"
+            class="Bar-sc-1x4gwjz-0 qaAlR"
           />
           <h2
-            class="c9"
+            class="Heading-sc-1x4gwjz-2 eZofTG"
           >
             <div
-              class="c10"
+              class="FlexColumn-wx5kdp-0 dgpsiS"
             >
               <span
-                class="c11"
+                class="FlexRow-wx5kdp-2 dVBNyZ"
               >
                 <span
-                  class="c12"
+                  class="Title-wx5kdp-4 jiurmA"
                   dir="ltr"
                   id="Most-Read"
                 >
@@ -3183,46 +1777,46 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
           </h2>
         </div>
         <div
-          class="c13"
+          class="MarginWrapper-sc-6bm912-0 bmzrWW"
         >
           <ol
-            class="c14 c15"
+            class="GridComponent-nf79gm-0 iUNUcT StyledGrid-sc-1ofyujo-0 iUmfRN"
             dir="ltr"
             role="list"
           >
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c19"
+                  class="StyledWrapper-fs4y6m-0 crPSkP"
                   dir="ltr"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 jEBnPJ"
                   >
                     1
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 ihPUFl"
                   dir="ltr"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 iVuzjN"
                     href="/pidgin/tori-46729879"
                   >
                     Public Holidays wey go happun for 2019
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 kVWTyt"
                       datetime="2019-05-21"
                     >
                       De one we dem update for: 
@@ -3233,38 +1827,38 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c25"
+                  class="StyledWrapper-fs4y6m-0 kzUlMT"
                   dir="ltr"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 jEBnPJ"
                   >
                     2
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 ihPUFl"
                   dir="ltr"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 iVuzjN"
                     href="/pidgin/tori-50304653"
                   >
                     Liberia banks don run out of money
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 kVWTyt"
                       datetime="2019-11-05"
                     >
                       De one we dem update for: 
@@ -3275,38 +1869,38 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c19"
+                  class="StyledWrapper-fs4y6m-0 crPSkP"
                   dir="ltr"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 jEBnPJ"
                   >
                     3
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 ihPUFl"
                   dir="ltr"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 iVuzjN"
                     href="/pidgin/tori-50298882"
                   >
                     Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 kVWTyt"
                       datetime="2019-11-05"
                     >
                       De one we dem update for: 
@@ -3317,38 +1911,38 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c25"
+                  class="StyledWrapper-fs4y6m-0 kzUlMT"
                   dir="ltr"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 jEBnPJ"
                   >
                     4
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 ihPUFl"
                   dir="ltr"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 iVuzjN"
                     href="/pidgin/tori-50315150"
                   >
                     Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 kVWTyt"
                       datetime="2019-11-06"
                     >
                       De one we dem update for: 
@@ -3359,38 +1953,38 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c26"
+                  class="StyledWrapper-fs4y6m-0 aZfY"
                   dir="ltr"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 jEBnPJ"
                   >
                     5
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 ihPUFl"
                   dir="ltr"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 iVuzjN"
                     href="/pidgin/tori-50315157"
                   >
                     How Balogun market fire kill Policeman for Lagos
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 kVWTyt"
                       datetime="2019-11-06"
                     >
                       De one we dem update for: 
@@ -3401,38 +1995,38 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c27"
+                  class="StyledWrapper-fs4y6m-0 gzzFDc"
                   dir="ltr"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 jEBnPJ"
                   >
                     6
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 ihPUFl"
                   dir="ltr"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 iVuzjN"
                     href="/pidgin/tori-50093818"
                   >
                     Labour, FG finally agree minimum wage salary adjustment
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 kVWTyt"
                       datetime="2019-10-18"
                     >
                       De one we dem update for: 
@@ -3443,38 +2037,38 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c28"
+                  class="StyledWrapper-fs4y6m-0 kTmSGv"
                   dir="ltr"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 jEBnPJ"
                   >
                     7
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 ihPUFl"
                   dir="ltr"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 iVuzjN"
                     href="/pidgin/tori-50187218"
                   >
                     Naira Marley na 'Bad Influence'?
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 kVWTyt"
                       datetime="2019-10-25"
                     >
                       De one we dem update for: 
@@ -3485,38 +2079,38 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c27"
+                  class="StyledWrapper-fs4y6m-0 gzzFDc"
                   dir="ltr"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 jEBnPJ"
                   >
                     8
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 ihPUFl"
                   dir="ltr"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 iVuzjN"
                     href="/pidgin/tori-48347911"
                   >
                     Tins you suppose know about Naira Marley
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 kVWTyt"
                       datetime="2019-05-23"
                     >
                       De one we dem update for: 
@@ -3527,38 +2121,38 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c28"
+                  class="StyledWrapper-fs4y6m-0 kTmSGv"
                   dir="ltr"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 jEBnPJ"
                   >
                     9
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 ihPUFl"
                   dir="ltr"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 iVuzjN"
                     href="/pidgin/sport-50312710"
                   >
                     Golden Eaglets crash out of Fifa U17 World Cup
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 kVWTyt"
                       datetime="2019-11-06"
                     >
                       De one we dem update for: 
@@ -3569,1248 +2163,42 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
               </div>
             </li>
             <li
-              class="c16 c17"
+              class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="c18"
+                class="ItemWrapper-u0d8kd-3 juBlKT"
               >
                 <div
-                  class="c27"
+                  class="StyledWrapper-fs4y6m-0 gzzFDc"
                   dir="ltr"
                 >
                   <span
-                    class="c20"
+                    class="StyledSpan-fs4y6m-1 jEBnPJ"
                   >
                     10
                   </span>
                 </div>
                 <div
-                  class="c21"
+                  class="StyledItem-u0d8kd-1 ihPUFl"
                   dir="ltr"
                 >
                   <a
-                    class="c22"
+                    class="StyledLink-u0d8kd-0 iVuzjN"
                     href="/pidgin/tori-42945173"
                   >
                     Tiger nut drink fit wake up your sex drive - Nutritionist
                   </a>
                   <div
-                    class="c23"
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
                     <time
-                      class="c24"
+                      class="StyledTimestamp-um718p-0 kVWTyt"
                       datetime="2019-05-21"
                     >
                       De one we dem update for: 
                       21st May 2019
-                    </time>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-    </div>
-  </main>
-</div>
-`;
-
-exports[`should render a pidgin article correctly (with navigation) 2`] = `
-.c1 {
-  margin: 0 auto;
-  background: #FDFDFD;
-  padding-bottom: 2rem;
-}
-
-.c4 {
-  grid-column: 1 / span 6;
-}
-
-.c3 {
-  font-size: 2rem;
-  line-height: 2.625rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #3F3F42;
-  display: block;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-.c3:focus {
-  outline: none;
-}
-
-.c5 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  padding-bottom: 1.5rem;
-  margin: 0;
-}
-
-.c24 {
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #6E6E73;
-  display: block;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c12 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FFFFFF;
-  margin: 1rem 0;
-  padding-left: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c8 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c7 {
-  position: relative;
-  margin-top: 2rem;
-}
-
-.c9 {
-  margin: 0;
-  padding: 0;
-}
-
-.c15 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  grid-auto-flow: column;
-  grid-template-rows: repeat( 5,[col-start] auto [col-end] );
-}
-
-.c20 {
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2rem;
-  line-height: 2.25rem;
-  position: relative;
-  color: #B80000;
-  margin: 0;
-  padding: 0;
-}
-
-.c22 {
-  font-size: 1rem;
-  line-height: 1.625rem;
-  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-}
-
-.c22:hover,
-.c22:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c22:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c21 {
-  padding-top: 0.375rem;
-  padding-bottom: 1.5rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-.c23 {
-  padding-top: 0.5rem;
-}
-
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-}
-
-.c17 {
-  position: relative;
-}
-
-.c6 {
-  margin: 0 0.5rem;
-}
-
-.c0 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-@media (max-width:37.4375rem) {
-  .c1 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c1 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c1 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
-@media (max-width:25rem) {
-  .c4 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c4 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    grid-column: 1 / span 5;
-    max-width: 83.33%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c4 {
-    grid-column: 3 / span 5;
-    max-width: 37.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    grid-column: 6 / span 10;
-    max-width: 38.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c4 {
-    max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c2 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c2 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 2.375rem;
-    line-height: 2.875rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 2.75rem;
-    line-height: 3.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1.375rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    padding-left: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c8 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    margin-top: 1.5rem;
-  }
-}
-
-@supports (display:grid) {
-  .c14 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c16 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c16 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c16 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c16 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c16 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c16 {
-    width: calc(20%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c16 {
-    display: block;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c15 {
-    grid-template-rows: repeat( 10,[col-start] auto [col-end] );
-  }
-}
-
-@media (min-width:80rem) {
-  .c15 {
-    grid-auto-flow: row;
-    grid-template-rows: repeat( 5,[col-start] auto [col-end] );
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c19 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c19 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c19 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:80rem) {
-  .c19 {
-    min-width: auto;
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    min-width: auto;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c25 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c25 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c25 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:80rem) {
-  .c25 {
-    min-width: 1.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c25 {
-    min-width: auto;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c26 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c26 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c26 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:80rem) {
-  .c26 {
-    min-width: auto;
-  }
-}
-
-@media (min-width:80rem) {
-  .c26 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c27 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c27 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c27 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:80rem) {
-  .c27 {
-    min-width: 1.75rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c27 {
-    min-width: auto;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c28 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c28 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c28 {
-    min-width: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:80rem) {
-  .c28 {
-    min-width: auto;
-  }
-}
-
-@media (min-width:80rem) {
-  .c28 {
-    min-width: auto;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
-    font-size: 2.5rem;
-    line-height: 2.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c20 {
-    font-size: 3.5rem;
-    line-height: 3.75rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c22 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c22 {
-    font-size: 1.375rem;
-    line-height: 1.75rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c21 {
-    padding-left: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c13 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:80rem) {
-  .c6 {
-    margin: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c6 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-<div>
-  <noscript />
-  <div>
-    chartbeat
-  </div>
-  <main
-    class="c0"
-    role="main"
-  >
-    <div
-      class="c1"
-    >
-      <div
-        class="c2"
-      >
-        <h1
-          class="c3"
-          id="content"
-          tabindex="-1"
-        >
-          سرصفحه مقاله
-        </h1>
-      </div>
-      <div
-        class="c4"
-      >
-        <p
-          class="c5"
-        >
-          یک پاراگراف.
-        </p>
-      </div>
-    </div>
-    <div
-      class="c6"
-    >
-      <section
-        aria-labelledby="Most-Read"
-        role="region"
-      >
-        <div
-          class="c7"
-        >
-          <div
-            class="c8"
-          />
-          <h2
-            class="c9"
-          >
-            <div
-              class="c10"
-            >
-              <span
-                class="c11"
-              >
-                <span
-                  class="c12"
-                  dir="rtl"
-                  id="Most-Read"
-                >
-                  پربیننده‌ترین‌ها
-                </span>
-              </span>
-            </div>
-          </h2>
-        </div>
-        <div
-          class="c13"
-        >
-          <ol
-            class="c14 c15"
-            dir="rtl"
-            role="list"
-          >
-            <li
-              class="c16 c17"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="c18"
-              >
-                <div
-                  class="c19"
-                  dir="rtl"
-                >
-                  <span
-                    class="c20"
-                  >
-                    ۱
-                  </span>
-                </div>
-                <div
-                  class="c21"
-                  dir="rtl"
-                >
-                  <a
-                    class="c22"
-                    href="/persian/world-50317704"
-                  >
-                    توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
-                  </a>
-                  <div
-                    class="c23"
-                  >
-                    <time
-                      class="c24"
-                      datetime="2019-11-06"
-                    >
-                      به روز شده در 
-                      ۶ نوامبر ۲۰۱۹
-                    </time>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              class="c16 c17"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="c18"
-              >
-                <div
-                  class="c25"
-                  dir="rtl"
-                >
-                  <span
-                    class="c20"
-                  >
-                    ۲
-                  </span>
-                </div>
-                <div
-                  class="c21"
-                  dir="rtl"
-                >
-                  <a
-                    class="c22"
-                    href="/persian/iran-50319870"
-                  >
-                    فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
-                  </a>
-                  <div
-                    class="c23"
-                  >
-                    <time
-                      class="c24"
-                      datetime="2019-11-06"
-                    >
-                      به روز شده در 
-                      ۶ نوامبر ۲۰۱۹
-                    </time>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              class="c16 c17"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="c18"
-              >
-                <div
-                  class="c19"
-                  dir="rtl"
-                >
-                  <span
-                    class="c20"
-                  >
-                    ۳
-                  </span>
-                </div>
-                <div
-                  class="c21"
-                  dir="rtl"
-                >
-                  <a
-                    class="c22"
-                    href="/persian/world-50320610"
-                  >
-                    ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
-                  </a>
-                  <div
-                    class="c23"
-                  >
-                    <time
-                      class="c24"
-                      datetime="2019-11-06"
-                    >
-                      به روز شده در 
-                      ۶ نوامبر ۲۰۱۹
-                    </time>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              class="c16 c17"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="c18"
-              >
-                <div
-                  class="c25"
-                  dir="rtl"
-                >
-                  <span
-                    class="c20"
-                  >
-                    ۴
-                  </span>
-                </div>
-                <div
-                  class="c21"
-                  dir="rtl"
-                >
-                  <a
-                    class="c22"
-                    href="/persian/world-50316456"
-                  >
-                    غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
-                  </a>
-                  <div
-                    class="c23"
-                  >
-                    <time
-                      class="c24"
-                      datetime="2019-11-06"
-                    >
-                      به روز شده در 
-                      ۶ نوامبر ۲۰۱۹
-                    </time>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              class="c16 c17"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="c18"
-              >
-                <div
-                  class="c26"
-                  dir="rtl"
-                >
-                  <span
-                    class="c20"
-                  >
-                    ۵
-                  </span>
-                </div>
-                <div
-                  class="c21"
-                  dir="rtl"
-                >
-                  <a
-                    class="c22"
-                    href="/persian/magazine-50249226"
-                  >
-                    دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
-                  </a>
-                  <div
-                    class="c23"
-                  >
-                    <time
-                      class="c24"
-                      datetime="2019-11-06"
-                    >
-                      به روز شده در 
-                      ۶ نوامبر ۲۰۱۹
-                    </time>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              class="c16 c17"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="c18"
-              >
-                <div
-                  class="c27"
-                  dir="rtl"
-                >
-                  <span
-                    class="c20"
-                  >
-                    ۶
-                  </span>
-                </div>
-                <div
-                  class="c21"
-                  dir="rtl"
-                >
-                  <a
-                    class="c22"
-                    href="/persian/world-50317700"
-                  >
-                    انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
-                  </a>
-                  <div
-                    class="c23"
-                  >
-                    <time
-                      class="c24"
-                      datetime="2019-11-06"
-                    >
-                      به روز شده در 
-                      ۶ نوامبر ۲۰۱۹
-                    </time>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              class="c16 c17"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="c18"
-              >
-                <div
-                  class="c28"
-                  dir="rtl"
-                >
-                  <span
-                    class="c20"
-                  >
-                    ۷
-                  </span>
-                </div>
-                <div
-                  class="c21"
-                  dir="rtl"
-                >
-                  <a
-                    class="c22"
-                    href="/persian/sport-50322486"
-                  >
-                    عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
-                  </a>
-                  <div
-                    class="c23"
-                  >
-                    <time
-                      class="c24"
-                      datetime="2019-11-06"
-                    >
-                      به روز شده در 
-                      ۶ نوامبر ۲۰۱۹
-                    </time>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              class="c16 c17"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="c18"
-              >
-                <div
-                  class="c27"
-                  dir="rtl"
-                >
-                  <span
-                    class="c20"
-                  >
-                    ۸
-                  </span>
-                </div>
-                <div
-                  class="c21"
-                  dir="rtl"
-                >
-                  <a
-                    class="c22"
-                    href="/persian/iran-features-50310665"
-                  >
-                    آیا تهران بازی هسته ای را به هم می‌زند؟
-                  </a>
-                  <div
-                    class="c23"
-                  >
-                    <time
-                      class="c24"
-                      datetime="2019-11-06"
-                    >
-                      به روز شده در 
-                      ۶ نوامبر ۲۰۱۹
-                    </time>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              class="c16 c17"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="c18"
-              >
-                <div
-                  class="c28"
-                  dir="rtl"
-                >
-                  <span
-                    class="c20"
-                  >
-                    ۹
-                  </span>
-                </div>
-                <div
-                  class="c21"
-                  dir="rtl"
-                >
-                  <a
-                    class="c22"
-                    href="/persian/world-50316450"
-                  >
-                    آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
-                  </a>
-                  <div
-                    class="c23"
-                  >
-                    <time
-                      class="c24"
-                      datetime="2019-11-06"
-                    >
-                      به روز شده در 
-                      ۶ نوامبر ۲۰۱۹
-                    </time>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              class="c16 c17"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="c18"
-              >
-                <div
-                  class="c27"
-                  dir="rtl"
-                >
-                  <span
-                    class="c20"
-                  >
-                    ۱۰
-                  </span>
-                </div>
-                <div
-                  class="c21"
-                  dir="rtl"
-                >
-                  <a
-                    class="c22"
-                    href="/persian/sport-50318030"
-                  >
-                    فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
-                  </a>
-                  <div
-                    class="c23"
-                  >
-                    <time
-                      class="c24"
-                      datetime="2019-11-06"
-                    >
-                      به روز شده در 
-                      ۶ نوامبر ۲۰۱۹
                     </time>
                   </div>
                 </div>
