@@ -1,6 +1,6 @@
 import { includeBlock } from '#app/models/blocks';
 
-const convertInclude = ({ tile, href, platform }) => {
+const convertInclude = ({ tile, html, href, platform }) => {
   return includeBlock(tile, href, platform);
 };
 
