@@ -79,21 +79,26 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             const mediaAssetPageType = 'mediaAssetPage';
             const articlesPageType = 'articles';
             const photoGalleryPageType = 'photoGalleryPage';
+            const storyPageType = 'storyPage';
+
+            const cpsPageTypes = [
+              mediaAssetPageType,
+              photoGalleryPageType,
+              storyPageType,
+            ];
 
             const { indexImage } = body.promo;
             const imagePath = indexImage ? indexImage.path : null;
 
             const imageAltText =
               indexImage &&
-              (pageType === mediaAssetPageType ||
-                pageType === photoGalleryPageType) &&
+              cpsPageTypes.includes(pageType) &&
               indexImage.altText
                 ? indexImage.altText
                 : appConfig[config[service].name][variant].defaultImageAltText;
 
             const imageSrc =
-              (imagePath && pageType === mediaAssetPageType) ||
-              (imagePath && pageType === photoGalleryPageType)
+              imagePath && cpsPageTypes.includes(pageType)
                 ? getBrandedImage({
                     imagePath,
                     serviceName: config[service].name,
@@ -104,6 +109,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
               articlesPageType,
               mediaAssetPageType,
               photoGalleryPageType,
+              storyPageType,
             ].includes(pageType)
               ? 'article'
               : 'website';
@@ -222,6 +228,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     title = body.promo.headlines.headline;
                     break;
                   case 'photoGalleryPage':
+                    description = body.promo.summary;
+                    title = body.promo.headlines.headline;
+                    break;
+                  case 'storyPage':
                     description = body.promo.summary;
                     title = body.promo.headlines.headline;
                     break;
@@ -458,8 +468,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           );
       });
     });
-    if (pageType === 'mediaAssetPage' || pageType === 'photoGalleryPage') {
-      describe('Photo Gallery Page and MAP Tests', () => {
+    if (
+      ['mediaAssetPage', 'photoGalleryPage', 'storyPage'].includes(pageType)
+    ) {
+      describe('Photo Gallery, Story Page and MAP Tests', () => {
         // Expects a second timestamp only if lastPublished is 1 minute later than firstPublished.
         // This is due to a CPS asset bug, see issue simorgh#5065
         it('should render a timestamp', () => {
@@ -491,9 +503,18 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             },
           );
         });
+        if (['photoGalleryPage', 'storyPage'].includes(pageType)) {
+          it('should render a H1, which displays the headline', () => {
+            cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+              ({ body }) => {
+                cy.get('h1').should('contain', body.promo.headlines.headline);
+              },
+            );
+          });
+        }
       });
     }
-    // End of block (pageType === 'mediaAssetPage' || pageType === 'photoGalleryPage')
+    // End of block (['mediaAssetPage', 'photoGalleryPage', 'storyPage'].includes(pageType))
   });
 };
 

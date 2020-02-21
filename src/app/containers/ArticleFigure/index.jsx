@@ -48,6 +48,7 @@ const ArticleFigure = ({
     ParentWrapper = NestedGridParentSmall;
     ChildWrapper = NestedGridItemChildSmall;
     imageSpan.default = '4';
+    imageSpan.group1 = '6';
   }
 
   return (
