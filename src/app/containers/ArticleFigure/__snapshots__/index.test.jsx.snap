@@ -1027,7 +1027,7 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
 
 @media (max-width:24.9375rem) {
   .c2 {
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 6;
   }
 }
 
