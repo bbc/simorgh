@@ -5,19 +5,17 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import RadioPageMain from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
-import preprocessor from '#lib/utilities/preprocessor';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { radioPagePreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
+import getInitialData from '#app/routes/radio/getInitialData';
+
+fetch.mockResponse(JSON.stringify(amharicPageData));
 
 analyticsUtils.getAtUserId = jest.fn();
 
 describe('Radio Page Main', () => {
   it('should match snapshot for Canonical', async () => {
-    const pageData = await preprocessor(
-      amharicPageData,
-      radioPagePreprocessorRules,
-    );
+    const { pageData } = await getInitialData('some-live-radio-path');
 
     await matchSnapshotAsync(
       <ToggleContextProvider>
@@ -40,10 +38,7 @@ describe('Radio Page Main', () => {
   });
 
   it('should match snapshot for AMP', async () => {
-    const pageData = await preprocessor(
-      amharicPageData,
-      radioPagePreprocessorRules,
-    );
+    const { pageData } = await getInitialData('some-live-radio-path');
 
     await matchSnapshotAsync(
       <ToggleContextProvider>

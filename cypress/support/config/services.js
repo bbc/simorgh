@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 const isLive = appEnv => appEnv === 'live';
 
 const isTest = appEnv => appEnv === 'test';
@@ -198,7 +199,9 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: undefined,
+        path: isLive(appEnv)
+          ? undefined
+          : '/azeri/multimedia/2015/08/150804_azeri_test',
         smoke: false,
       },
       photoGalleryPage: {
@@ -270,7 +273,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/burmese',
+        path: '/burmese',
         smoke: false,
       },
       liveRadio: {
@@ -336,7 +339,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/gahuza',
+        path: '/gahuza',
         smoke: false,
       },
       liveRadio: {
@@ -344,7 +347,9 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: isLive(appEnv)
+          ? undefined
+          : '/gahuza/video/2015/12/151217_test_long',
         smoke: false,
       },
       photoGalleryPage: {
@@ -656,7 +661,9 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: isLive(appEnv)
+          ? undefined
+          : '/kyrgyz/multimedia/2015/03/150330_map_test',
         smoke: false,
       },
       photoGalleryPage: {
@@ -863,7 +870,9 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: isLive(appEnv)
+          ? undefined
+          : '/pashto/world/2016/09/160921_tc2_testmap1',
         smoke: false,
       },
       photoGalleryPage: {
@@ -906,7 +915,9 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: isLive(appEnv)
+          ? undefined
+          : '/persian/iran/2016/09/160907_tc2_testmap1',
         smoke: false,
       },
       photoGalleryPage: {
@@ -1194,7 +1205,10 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path:
-          isLive(appEnv) || isTest(appEnv) ? undefined : '/sinhala/23248970',
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292',
+
         smoke: false,
       },
       photoGalleryPage: {
@@ -1718,7 +1732,10 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: undefined,
+        // eslint-disable-next-line no-nested-ternary
+        path: isLive(appEnv)
+          ? undefined
+          : '/vietnamese/sport/2016/09/160922_tc2_testmap2',
         smoke: false,
       },
       photoGalleryPage: {
