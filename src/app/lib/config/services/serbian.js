@@ -119,13 +119,13 @@ export const service = {
         url: '/serbian/lat/popular/read',
       },
     ],
-    navigationSection: 'Odeljci',
     translations: {
       seeAll: 'Pogledajte sve',
       home: 'Glavna stranica',
       currentPage: 'Otvorena stranica',
       skipLinkText: 'Pređite na sadržaj',
       relatedContent: 'Povezano',
+      sections: 'Odeljci',
       mediaAssetPage: {
         mediaPlayer: 'Media plejer',
         audioPlayer: 'Audio plejer',
@@ -310,13 +310,13 @@ export const service = {
         url: '/serbian/cyr/popular/read',
       },
     ],
-    navigationSection: 'Одељци',
     translations: {
       seeAll: 'Погледајте све',
       home: 'Главна страница',
       currentPage: 'Отворена страница',
       skipLinkText: 'Пређите на садржај',
       relatedContent: 'Повезано',
+      sections: 'Одељци',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плејер',
         audioPlayer: 'Аудио плејер',
