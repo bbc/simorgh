@@ -1,4 +1,5 @@
 import envConfig from '../../support/config/envs';
+import config from '../../support/config/services';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -42,6 +43,23 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
           });
         });
       }
+    }
+    if (['storyPage', 'photoGalleryPage'].includes(pageType)) {
+      describe('AMP Status', () => {
+        it('should return a 200 response', () => {
+          cy.testResponseCodeAndType(
+            `${config[service].pageTypes[pageType].path}.amp`,
+            200,
+            'text/html',
+          );
+        });
+      });
+      it('should render at least one amp image', () => {
+        cy.get('figure')
+          .first()
+          .find('amp-img')
+          .should('be.visible');
+      });
     }
   });
 };
