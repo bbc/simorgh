@@ -1,6 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`defaultPageWrapper should render default page wrapper with children 1`] = `
+.c12 {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  background-color: #FFFFFF;
+  border: 0.1875rem solid #000;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c12:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+  -webkit-clip: auto;
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: 0;
+  left: 0;
+}
+
 .c11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -42,7 +75,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border-bottom: 0.0625rem solid transparent;
 }
 
-.c21 {
+.c30 {
   background-color: #B80000;
   min-height: 2.5rem;
   width: 100%;
@@ -85,69 +118,107 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   margin-bottom: -0.25rem;
 }
 
-.c13 {
-  position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
+.c17 {
+  color: #fff;
+  fill: currentColor;
 }
 
-.c14 {
-  position: absolute;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  width: 1px;
+.c25 {
+  background-color: #222222;
+  clear: both;
   overflow: hidden;
-  padding: 0.75rem 0.5rem;
-  background-color: #ffffff;
-  border: 0.1875rem solid #000;
-  color: #333;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+.c26 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.c27 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.c27:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.c28 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.c14:focus {
-  -webkit-clip-path: none;
-  clip-path: none;
-  -webkit-clip: auto;
-  clip: auto;
-  height: auto;
-  width: auto;
-  top: -3rem;
-  left: 0.5rem;
+.c28:hover,
+.c28:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
-.c15 {
+.c29 {
+  border-left: 0.25rem solid #FFFFFF;
+  padding-left: 0.5rem;
+}
+
+.c16 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.c16:hover,
+.c16:focus {
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.c16:hover::after,
+.c16:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c16 svg {
+  vertical-align: middle;
+}
+
+.c14 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c19 {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
-  overflow: hidden;
 }
 
-.c17 {
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-}
-
-.c17::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 80rem;
-  border-bottom: 0.0625rem solid #eab3b3;
-  z-index: -1;
-}
-
-.c18 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -158,10 +229,10 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
 }
 
-.c18:hover::after {
+.c22:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -171,7 +242,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c18:focus::after {
+.c22:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -182,7 +253,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border: 0.25rem solid #FFFFFF;
 }
 
-.c20 {
+.c24 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -193,10 +264,10 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
 }
 
-.c20:hover::after {
+.c24:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -205,7 +276,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c20:focus::after {
+.c24:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -216,7 +287,13 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border: 0.25rem solid #FFFFFF;
 }
 
-.c19::after {
+.c21 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.c23::after {
   content: '';
   position: absolute;
   left: 0;
@@ -225,12 +302,18 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c12 {
+.c13 {
+  position: relative;
   background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
 }
 
-.c12 .c16::after {
+.c13 .c20::after {
   left: 0;
+}
+
+.c15 {
+  position: relative;
 }
 
 .c0 {
@@ -323,7 +406,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   color: #FFFFFF;
 }
 
-.c27 {
+.c36 {
   padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
@@ -332,7 +415,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   display: block;
 }
 
-.c30 {
+.c39 {
   padding: 0.5rem 0 0.5rem;
   color: #FFFFFF;
   font-weight: 700;
@@ -341,13 +424,13 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   display: inline;
 }
 
-.c26:hover .c28,
-.c26:focus .c28 {
+.c35:hover .c37,
+.c35:focus .c37 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c24 {
+.c33 {
   border-bottom: 0.0625rem solid #3F3F42;
   list-style-type: none;
   margin: 0;
@@ -356,7 +439,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   column-count: 4;
 }
 
-.c24 > li:first-child {
+.c33 > li:first-child {
   border-bottom: 0.0625rem solid #3F3F42;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
@@ -366,7 +449,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   column-span: all;
 }
 
-.c25 {
+.c34 {
   min-width: 50%;
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
@@ -374,7 +457,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   break-inside: avoid-column;
 }
 
-.c22 {
+.c31 {
   background-color: #222222;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -383,16 +466,42 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   font-style: normal;
 }
 
-.c23 {
+.c32 {
   max-width: 80rem;
   margin: 0 auto;
   padding-top: 0.5rem);
 }
 
-.c29 {
+.c38 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c12:focus {
+    top: 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c12 {
+    padding: 0.5rem;
+  }
 }
 
 @media (max-width:14.9375rem) {
@@ -409,7 +518,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width:25rem) {
-  .c21 {
+  .c30 {
     min-height: 3.25rem;
     padding: 0 1rem;
   }
@@ -441,69 +550,142 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (min-width:37.5rem) {
-  .c14 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+  .c25 {
+    display: none;
+    visibility: hidden;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c14:focus {
-    top: -4rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c14:focus {
-    left: 0;
+@media (prefers-reduced-motion:reduce) {
+  .c25 {
+    -webkit-transition: none;
+    transition: none;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
+  .c28 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c28 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (max-width:24.9375rem) {
-  .c18 {
+@media (min-width:37.5rem) {
+  .c16 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) {
+  .c16 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    overflow: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c22 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c22 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
+  .c24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (max-width:24.9375rem) {
-  .c20 {
+@media (max-width:37.4375rem) {
+  .c24 {
     padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c21:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c21::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c18 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c18::-webkit-scrollbar {
+    display: none;
+  }
+
+  .c18:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
   }
 }
 
@@ -593,14 +775,14 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c24 {
+  .c33 {
     display: grid;
     grid-auto-flow: column;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c24 {
+  .c33 {
     grid-auto-flow: row;
     -webkit-column-count: 1;
     column-count: 1;
@@ -608,7 +790,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width:15rem) and (max-width:37.4375rem) {
-  .c24 {
+  .c33 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat( 4,auto );
@@ -618,7 +800,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c24 {
+  .c33 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat( 3,auto );
@@ -628,7 +810,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c24 {
+  .c33 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat( 3,auto );
@@ -638,7 +820,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (min-width:80rem) {
-  .c24 {
+  .c33 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat( 3,auto );
@@ -648,25 +830,25 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 @media (max-width:25rem) {
-  .c22 {
+  .c31 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c22 {
+  .c31 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c31 {
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c31 {
     font-size: 0.8125rem;
   }
 }
@@ -780,170 +962,370 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 BBC News
               </span>
             </a>
-          </div>
-        </div>
-        <nav
-          class="c12"
-          dir="ltr"
-          role="navigation"
-        >
-          <div
-            class="c13"
-          >
             <a
-              class="c14"
+              class="c12"
+              dir="ltr"
               href="#content"
             >
               Skip to content
             </a>
-            <ul
+          </div>
+        </div>
+        <nav
+          class="c13"
+          dir="ltr"
+          role="navigation"
+        >
+          <div
+            class="c14"
+          >
+            <div
               class="c15"
-              role="list"
             >
-              <li
-                class="c16 c17"
-                role="listitem"
+              <button
+                aria-expanded="false"
+                class="c16"
+                dir="ltr"
+                type="button"
               >
-                <a
-                  class="c18"
-                  href="/news"
+                <svg
+                  aria-hidden="true"
+                  class="c17"
+                  focusable="false"
+                  height="2.75rem"
+                  viewBox="0 0 44 44"
+                  width="2.75rem"
                 >
-                  <span
-                    class="c19"
-                    role="text"
+                  <path
+                    d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+                  />
+                </svg>
+                <span
+                  class="c11"
+                >
+                  Sections
+                </span>
+              </button>
+              <div
+                class="c18"
+                dir="ltr"
+              >
+                <ul
+                  class="c19"
+                  role="list"
+                >
+                  <li
+                    class="c20 c21"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <a
+                      class="c22"
+                      href="/news"
+                    >
+                      <span
+                        class="c23"
+                        role="text"
+                      >
+                        <span
+                          class="c11"
+                        >
+                          Current page
+                          , 
+                        </span>
+                        Home
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <a
+                      class="c24"
+                      href="/news/uk"
+                    >
+                      UK
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <a
+                      class="c24"
+                      href="/news/world"
+                    >
+                      World
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <a
+                      class="c24"
+                      href="/news/business"
+                    >
+                      Business
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <a
+                      class="c24"
+                      href="/news/politics"
+                    >
+                      Politics
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <a
+                      class="c24"
+                      href="/news/technology"
+                    >
+                      Tech
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <a
+                      class="c24"
+                      href="/news/science_and_environment"
+                    >
+                      Science
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <a
+                      class="c24"
+                      href="/news/health"
+                    >
+                      Health
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <a
+                      class="c24"
+                      href="/news/education"
+                    >
+                      Family & Education
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <a
+                      class="c24"
+                      href="/news/entertainment_and_arts"
+                    >
+                      Entertainment & Arts
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <a
+                      class="c24"
+                      href="/news/stories"
+                    >
+                      Stories
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="ltr"
+                    role="listitem"
+                  >
+                    <a
+                      class="c24"
+                      href="/news/video_and_audio/headlines"
+                    >
+                      Video & Audio
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="c25"
+              height="0"
+            >
+              <ul
+                class="c26"
+                role="list"
+              >
+                <li
+                  class="c27"
+                  role="listitem"
+                >
+                  <a
+                    class="c28"
+                    href="/news"
                   >
                     <span
-                      class="c11"
+                      class="c29"
+                      dir="ltr"
+                      role="text"
                     >
-                      Current page
-                      , 
+                      <span
+                        class="c11"
+                      >
+                        Current page
+                        , 
+                      </span>
+                      Home
                     </span>
-                    Home
-                  </span>
-                </a>
-              </li>
-              <li
-                class="c16 c17"
-                role="listitem"
-              >
-                <a
-                  class="c20"
-                  href="/news/uk"
+                  </a>
+                </li>
+                <li
+                  class="c27"
+                  role="listitem"
                 >
-                  UK
-                </a>
-              </li>
-              <li
-                class="c16 c17"
-                role="listitem"
-              >
-                <a
-                  class="c20"
-                  href="/news/world"
+                  <a
+                    class="c28"
+                    href="/news/uk"
+                  >
+                    UK
+                  </a>
+                </li>
+                <li
+                  class="c27"
+                  role="listitem"
                 >
-                  World
-                </a>
-              </li>
-              <li
-                class="c16 c17"
-                role="listitem"
-              >
-                <a
-                  class="c20"
-                  href="/news/business"
+                  <a
+                    class="c28"
+                    href="/news/world"
+                  >
+                    World
+                  </a>
+                </li>
+                <li
+                  class="c27"
+                  role="listitem"
                 >
-                  Business
-                </a>
-              </li>
-              <li
-                class="c16 c17"
-                role="listitem"
-              >
-                <a
-                  class="c20"
-                  href="/news/politics"
+                  <a
+                    class="c28"
+                    href="/news/business"
+                  >
+                    Business
+                  </a>
+                </li>
+                <li
+                  class="c27"
+                  role="listitem"
                 >
-                  Politics
-                </a>
-              </li>
-              <li
-                class="c16 c17"
-                role="listitem"
-              >
-                <a
-                  class="c20"
-                  href="/news/technology"
+                  <a
+                    class="c28"
+                    href="/news/politics"
+                  >
+                    Politics
+                  </a>
+                </li>
+                <li
+                  class="c27"
+                  role="listitem"
                 >
-                  Tech
-                </a>
-              </li>
-              <li
-                class="c16 c17"
-                role="listitem"
-              >
-                <a
-                  class="c20"
-                  href="/news/science_and_environment"
+                  <a
+                    class="c28"
+                    href="/news/technology"
+                  >
+                    Tech
+                  </a>
+                </li>
+                <li
+                  class="c27"
+                  role="listitem"
                 >
-                  Science
-                </a>
-              </li>
-              <li
-                class="c16 c17"
-                role="listitem"
-              >
-                <a
-                  class="c20"
-                  href="/news/health"
+                  <a
+                    class="c28"
+                    href="/news/science_and_environment"
+                  >
+                    Science
+                  </a>
+                </li>
+                <li
+                  class="c27"
+                  role="listitem"
                 >
-                  Health
-                </a>
-              </li>
-              <li
-                class="c16 c17"
-                role="listitem"
-              >
-                <a
-                  class="c20"
-                  href="/news/education"
+                  <a
+                    class="c28"
+                    href="/news/health"
+                  >
+                    Health
+                  </a>
+                </li>
+                <li
+                  class="c27"
+                  role="listitem"
                 >
-                  Family & Education
-                </a>
-              </li>
-              <li
-                class="c16 c17"
-                role="listitem"
-              >
-                <a
-                  class="c20"
-                  href="/news/entertainment_and_arts"
+                  <a
+                    class="c28"
+                    href="/news/education"
+                  >
+                    Family & Education
+                  </a>
+                </li>
+                <li
+                  class="c27"
+                  role="listitem"
                 >
-                  Entertainment & Arts
-                </a>
-              </li>
-              <li
-                class="c16 c17"
-                role="listitem"
-              >
-                <a
-                  class="c20"
-                  href="/news/stories"
+                  <a
+                    class="c28"
+                    href="/news/entertainment_and_arts"
+                  >
+                    Entertainment & Arts
+                  </a>
+                </li>
+                <li
+                  class="c27"
+                  role="listitem"
                 >
-                  Stories
-                </a>
-              </li>
-              <li
-                class="c16 c17"
-                role="listitem"
-              >
-                <a
-                  class="c20"
-                  href="/news/video_and_audio/headlines"
+                  <a
+                    class="c28"
+                    href="/news/stories"
+                  >
+                    Stories
+                  </a>
+                </li>
+                <li
+                  class="c27"
+                  role="listitem"
                 >
-                  Video & Audio
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="c28"
+                    href="/news/video_and_audio/headlines"
+                  >
+                    Video & Audio
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </header>
@@ -954,7 +1336,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
         role="contentinfo"
       >
         <div
-          class="c21"
+          class="c30"
         >
           <div
             class="c7"
@@ -997,115 +1379,115 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
           </div>
         </div>
         <div
-          class="c22"
+          class="c31"
         >
           <div
-            class="c23"
+            class="c32"
           >
             <ul
-              class="c24"
+              class="c33"
               role="list"
             >
               <li
-                class="c25"
+                class="c34"
                 role="listitem"
               >
                 <a
-                  class="c26 c27"
+                  class="c35 c36"
                   href="https://www.bbc.com/news/help-41670342"
                 >
                   <span
-                    class="c28"
+                    class="c37"
                   >
                     Why you can trust the BBC
                   </span>
                 </a>
               </li>
               <li
-                class="c25"
+                class="c34"
                 role="listitem"
               >
                 <a
-                  class="c26 c27"
+                  class="c35 c36"
                   href="https://www.bbc.com/terms"
                 >
                   <span
-                    class="c28"
+                    class="c37"
                   >
                     Terms of Use
                   </span>
                 </a>
               </li>
               <li
-                class="c25"
+                class="c34"
                 role="listitem"
               >
                 <a
-                  class="c26 c27"
+                  class="c35 c36"
                   href="https://www.bbc.co.uk/aboutthebbc/"
                 >
                   <span
-                    class="c28"
+                    class="c37"
                   >
                     About the BBC
                   </span>
                 </a>
               </li>
               <li
-                class="c25"
+                class="c34"
                 role="listitem"
               >
                 <a
-                  class="c26 c27"
+                  class="c35 c36"
                   href="https://www.bbc.com/privacy/"
                 >
                   <span
-                    class="c28"
+                    class="c37"
                   >
                     Privacy Policy
                   </span>
                 </a>
               </li>
               <li
-                class="c25"
+                class="c34"
                 role="listitem"
               >
                 <a
-                  class="c26 c27"
+                  class="c35 c36"
                   href="https://www.bbc.com/usingthebbc/cookies/"
                 >
                   <span
-                    class="c28"
+                    class="c37"
                   >
                     Cookies
                   </span>
                 </a>
               </li>
               <li
-                class="c25"
+                class="c34"
                 role="listitem"
               >
                 <a
-                  class="c26 c27"
+                  class="c35 c36"
                   href="https://www.bbc.com/accessibility/"
                 >
                   <span
-                    class="c28"
+                    class="c37"
                   >
                     Accessibility Help
                   </span>
                 </a>
               </li>
               <li
-                class="c25"
+                class="c34"
                 role="listitem"
               >
                 <a
-                  class="c26 c27"
+                  class="c35 c36"
                   href="https://www.bbc.com/contact/"
                 >
                   <span
-                    class="c28"
+                    class="c37"
                   >
                     Contact the BBC
                   </span>
@@ -1113,7 +1495,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
               </li>
             </ul>
             <p
-              class="c29"
+              class="c38"
             >
               <span
                 lang="en-GB"
@@ -1124,11 +1506,11 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
               2020 BBC. The BBC is not responsible for the content of external sites.
                
               <a
-                class="c26 c30"
+                class="c35 c39"
                 href="https://www.bbc.co.uk/help/web/links/"
               >
                 <span
-                  class="c28"
+                  class="c37"
                 >
                   Read about our approach to external linking.
                 </span>
