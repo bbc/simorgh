@@ -278,7 +278,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 @media (max-width:24.9375rem) {
   .c15 {
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 6;
   }
 }
 
@@ -1709,7 +1709,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 @media (max-width:24.9375rem) {
   .c17 {
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 6;
   }
 }
 
@@ -6508,7 +6508,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (max-width:24.9375rem) {
   .c18 {
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 6;
   }
 }
 
