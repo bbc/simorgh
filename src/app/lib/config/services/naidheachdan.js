@@ -58,7 +58,7 @@ export const service = {
       currentPage: 'An duilleag seo',
       skipLinkText: 'Air adhart',
       relatedContent: 'Co-cheangailte',
-      sections: 'Earrannan',
+      navMenuText: 'Earrannan',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

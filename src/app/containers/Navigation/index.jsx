@@ -32,7 +32,7 @@ const NavigationContainer = () => {
   const { script, translations, navigation, service, dir } = useContext(
     ServiceContext,
   );
-  const { currentPage, sections } = translations;
+  const { currentPage, navMenuText } = translations;
 
   if (!navigation || navigation.length === 0) {
     return null;
@@ -70,7 +70,7 @@ const NavigationContainer = () => {
     <Navigation
       scrollableListItems={scrollableListItems}
       dropdownListItems={dropdownListItems}
-      menuAnnouncedText={sections}
+      menuAnnouncedText={navMenuText}
       dir={dir}
       script={script}
       service={service}
