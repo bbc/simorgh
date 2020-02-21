@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import Brand from '@bbc/psammead-brand';
-import { bool } from 'prop-types';
+import { bool, node } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const BrandContainer = props => {
+const BrandContainer = ({ skipLink, ...props }) => {
   const {
     product,
     serviceLocalizedName,
@@ -29,6 +29,7 @@ const BrandContainer = props => {
       maxWidth={maxWidth}
       svg={brandSVG}
       url={`/${service}`}
+      skipLink={skipLink}
       {...props}
     />
   );
@@ -37,11 +38,13 @@ const BrandContainer = props => {
 BrandContainer.propTypes = {
   borderTop: bool,
   borderBottom: bool,
+  skipLink: node,
 };
 
 BrandContainer.defaultProps = {
   borderTop: false,
   borderBottom: false,
+  skipLink: null,
 };
 
 export default BrandContainer;
