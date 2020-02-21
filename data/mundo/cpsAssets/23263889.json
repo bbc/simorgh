@@ -72,20 +72,14 @@
           "thingLabel": "Life",
           "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
           "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": []
         },
         {
           "thingLabel": "Fake news",
           "thingUri": "http://www.bbc.co.uk/things/e7539dc8-5cfb-413a-b4fe-0ad77bc665aa#id",
           "thingId": "e7539dc8-5cfb-413a-b4fe-0ad77bc665aa",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Fake_news",
             "http://www.wikidata.org/entity/Q28549308"
@@ -323,9 +317,7 @@
         "versions": [
           {
             "versionId": "p01k6msp",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 191,
             "durationISO8601": "PT3M11S",
             "warnings": {
@@ -363,9 +355,7 @@
         "versions": [
           {
             "versionId": "p01m7d09",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 127,
             "durationISO8601": "PT2M7S",
             "warnings": {
@@ -391,7 +381,7 @@
       {
         "required": false,
         "tile": "Include from VisJo",
-        "href": "/include/vjamericas/176-eclipse-lookup/mundo/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png",
+        "href": "/include/newsspec/19077-brexit-glossary/english/app",
         "platform": "highweb",
         "type": "include"
       },
