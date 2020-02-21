@@ -12,9 +12,8 @@ import {
   isLastRelative,
   formatType,
   isValidDateTime,
-  isSameDay,
-  isToday,
 } from './helpers';
+import shouldLastUpdatedTimestampBeShown from './shouldLastUpdatedTimestampBeShown';
 
 const FirstPublishedTimestamp = Timestamp;
 const LastUpdatedTimestamp = Timestamp;
@@ -62,23 +61,11 @@ const ArticleTimestamp = ({
 
   const Wrapper = popOut ? PopOutGridItemMedium : GridItemConstrainedMedium;
 
-  const timeDifferenceMinutes = (lastPublished - firstPublished) / 1000 / 60;
-
-  const hasBeenUpdated = timeDifferenceMinutes > minutesTolerance;
-
-  const publishedAndUpdatedOnSameDay = isSameDay(firstPublished, lastPublished);
-
-  const publishedToday = isToday(firstPublished);
-
-  const publishedAndUpdatedToday =
-    publishedAndUpdatedOnSameDay && publishedToday;
-
-  const publishedAndUpdatedOnSameDayAndNotRelative =
-    publishedAndUpdatedOnSameDay && !isLastRelative(lastPublished);
-
-  const showLastUpdatedTimestamp =
-    hasBeenUpdated &&
-    (publishedAndUpdatedToday || !publishedAndUpdatedOnSameDayAndNotRelative);
+  const showLastUpdatedTimestamp = shouldLastUpdatedTimestampBeShown({
+    minutesTolerance,
+    firstPublished,
+    lastPublished,
+  });
 
   return (
     <Wrapper className={className}>
