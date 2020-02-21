@@ -6,10 +6,18 @@ import { RequestContext } from '#contexts/RequestContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 
-const renderListItems = (Li, navigation, script, currentPage, service, dir) =>
+const renderListItems = (
+  Li,
+  navigation,
+  script,
+  currentPage,
+  service,
+  dir,
+  activeIndex,
+) =>
   navigation.map((item, index) => {
     const { title, url } = item;
-    const active = index === 0;
+    const active = index === activeIndex;
 
     return (
       <Li
@@ -32,7 +40,13 @@ const NavigationContainer = () => {
   const { script, translations, navigation, service, dir } = useContext(
     ServiceContext,
   );
+  const { canonicalLink, origin } = useContext(RequestContext);
   const { currentPage, sections } = translations;
+
+  const matchingLink = linkUrl => `${origin}${linkUrl.url}` === canonicalLink;
+  const activeIndex = navigation
+    .map(matchingLink)
+    .findIndex(item => item === true);
 
   if (!navigation || navigation.length === 0) {
     return null;
@@ -47,6 +61,7 @@ const NavigationContainer = () => {
         currentPage,
         service,
         dir,
+        activeIndex,
       )}
     </NavigationUl>
   );
@@ -60,6 +75,7 @@ const NavigationContainer = () => {
         currentPage,
         service,
         dir,
+        activeIndex,
       )}
     </DropdownUl>
   );
