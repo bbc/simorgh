@@ -2,7 +2,7 @@
 
 exports[`Story Page should not show the pop-out timestamp when allowDateStamp is false 1`] = `
 <DocumentFragment>
-  .c29 {
+  .c30 {
   margin: 0 auto;
   background: #FDFDFD;
   padding-bottom: 2rem;
@@ -17,7 +17,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   grid-column-gap: 1rem;
 }
 
-.c28 {
+.c29 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -186,21 +186,21 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   transition: visibility 0.2s linear;
 }
 
-.c26 {
+.c27 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c25 {
+.c26 {
   margin-top: 0.5rem;
 }
 
-.c25 figure {
+.c26 figure {
   padding-bottom: 0;
 }
 
-.c35 {
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -210,7 +210,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   flex-direction: column;
 }
 
-.c36 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -229,7 +229,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   align-items: baseline;
 }
 
-.c37 {
+.c38 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -249,47 +249,47 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   align-items: center;
 }
 
-.c33 {
+.c34 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c31 {
+.c32 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c34 {
+.c35 {
   margin: 0;
   padding: 0;
 }
 
-.c39 {
+.c40 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c39:first-child {
+.c40:first-child {
   padding-top: 0;
 }
 
-.c39:last-child {
+.c40:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c38 {
+.c39 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c30 {
+.c31 {
   margin-bottom: 1rem;
   z-index: 0;
 }
 
-.c32 {
+.c33 {
   margin-top: 0;
 }
 
@@ -325,6 +325,34 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   color: #5A5A5A;
 }
 
+.c25 {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  color: #3F3F42;
+  margin-bottom: 1.5rem;
+  max-width: 550px;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c25 .twitter-tweet {
+  margin: 0;
+  padding: 1rem;
+}
+
+.c25 .twitter-tweet > p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.c25 .twitter-tweet > a {
+  display: block;
+  margin-top: 0.5rem;
+}
+
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -340,7 +368,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-bottom: 1rem;
 }
 
-.c27 {
+.c28 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -351,39 +379,39 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (max-width:37.4375rem) {
-  .c29 {
+  .c30 {
     grid-column-gap: 0.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c30 {
     grid-column-gap: 1rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c29 {
+  .c30 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c29 {
+  .c30 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c29 {
+  .c30 {
     grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
     max-width: 46.4rem;
   }
 }
 
 @supports (display:grid) {
-  .c29 {
+  .c30 {
     display: grid;
     max-width: initial;
     margin: initial;
@@ -538,21 +566,21 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c28 {
+  .c29 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c28 {
+  .c29 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c28 {
+  .c29 {
     padding-top: 2rem;
   }
 }
@@ -632,50 +660,50 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (max-width:63rem) {
-  .c25 {
+  .c26 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c25 {
+  .c26 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c25 {
+  .c26 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c25 {
+  .c26 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c25 {
+  .c26 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c25 {
+  .c26 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c25 {
+  .c26 {
     padding-top: 0.5rem;
     margin-top: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c36 {
+  .c37 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -684,39 +712,39 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c37 {
+  .c38 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c37 {
+  .c38 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c37 {
+  .c38 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c37 {
+  .c38 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c33 {
+  .c34 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c34 {
     position: absolute;
     left: 0;
     right: 0;
@@ -725,67 +753,67 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c32 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c39 {
+  .c40 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c39 {
+  .c40 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c39:first-child {
+  .c40:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c39:first-child {
+  .c40:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c30 {
+  .c31 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c30 {
+  .c31 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c30 {
+  .c31 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c30 {
+  .c31 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c30 {
+  .c31 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     margin-bottom: 1.5rem;
   }
 }
@@ -793,6 +821,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @media (min-width:37.5rem) {
   .c6 {
     font-size: 0.875rem;
+  }
+}
+
+@media (min-width:20rem) {
+  .c25 {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -1216,6 +1251,32 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
               <div
                 class="c3"
               >
+                <div
+                  class="c25"
+                >
+                  <div>
+                    <blockquote
+                      class="twitter-tweet"
+                    >
+                      <p
+                        dir="ltr"
+                        lang="en"
+                      >
+                        Much of today’s news about Spider-Man has mischaracterized recent discussions about Kevin Feige’s involvement in the franchise. We are disappointed, but respect Disney’s decision not to have him continue as a lead producer of our next live action Spider-Man film. (1/3)
+                      </p>
+                      — Sony Pictures (@SonyPictures) 
+                      <a
+                        href="https://twitter.com/SonyPictures/status/1164036827667238912?ref_src=twsrc%5Etfw"
+                      >
+                        August 21, 2019
+                      </a>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="c3"
+              >
                 <p
                   class="c19"
                 >
@@ -1223,18 +1284,18 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 </p>
               </div>
               <div
-                class="c25"
+                class="c26"
               >
                 <figure
                   class="c10"
                 >
                   <div
-                    class="c26"
+                    class="c27"
                   >
                     <iframe
                       allow="autoplay; fullscreen"
                       allowfullscreen=""
-                      class="c27"
+                      class="c28"
                       scrolling="no"
                       src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
                       title="Media player"
@@ -1247,7 +1308,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 class="c3"
               >
                 <h2
-                  class="c28"
+                  class="c29"
                   id="This-is-a-heading"
                   tabindex="-1"
                 >
@@ -1258,7 +1319,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 class="c3"
               >
                 <h2
-                  class="c28"
+                  class="c29"
                   id="This-is-a-subheading"
                   tabindex="-1"
                 >
@@ -1278,7 +1339,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 class="c3"
               >
                 <h2
-                  class="c28"
+                  class="c29"
                   id="This-is-a-crosshead"
                   tabindex="-1"
                 >
@@ -1321,29 +1382,29 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
             </main>
             <section
               aria-labelledby="related-content-heading"
-              class="c29"
+              class="c30"
               role="region"
             >
               <div
-                class="c30"
+                class="c31"
               >
                 <div
-                  class="c31 c32"
+                  class="c32 c33"
                 >
                   <div
-                    class="c33"
+                    class="c34"
                   />
                   <h2
-                    class="c34"
+                    class="c35"
                   >
                     <div
-                      class="c35"
+                      class="c36"
                     >
                       <span
-                        class="c36"
+                        class="c37"
                       >
                         <span
-                          class="c37"
+                          class="c38"
                           dir="ltr"
                           id="related-content-heading"
                         >
@@ -1354,11 +1415,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </h2>
                 </div>
                 <ul
-                  class="c38"
+                  class="c39"
                   role="list"
                 >
                   <li
-                    class="c39"
+                    class="c40"
                     role="listitem"
                   />
                 </ul>
@@ -1373,7 +1434,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 `;
 
 exports[`Story Page snapshots should match snapshot for STY 1`] = `
-.c31 {
+.c32 {
   margin: 0 auto;
   background: #FDFDFD;
   padding-bottom: 2rem;
@@ -1388,7 +1449,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   grid-column-gap: 1rem;
 }
 
-.c30 {
+.c31 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1572,21 +1633,21 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   transition: visibility 0.2s linear;
 }
 
-.c28 {
+.c29 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c27 {
+.c28 {
   margin-top: 0.5rem;
 }
 
-.c27 figure {
+.c28 figure {
   padding-bottom: 0;
 }
 
-.c37 {
+.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1596,7 +1657,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.c38 {
+.c39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1615,7 +1676,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   align-items: baseline;
 }
 
-.c39 {
+.c40 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1635,47 +1696,47 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   align-items: center;
 }
 
-.c35 {
+.c36 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c33 {
+.c34 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c36 {
+.c37 {
   margin: 0;
   padding: 0;
 }
 
-.c41 {
+.c42 {
   border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
-.c41:first-child {
+.c42:first-child {
   padding-top: 0;
 }
 
-.c41:last-child {
+.c42:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c40 {
+.c41 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c32 {
+.c33 {
   margin-bottom: 1rem;
   z-index: 0;
 }
 
-.c34 {
+.c35 {
   margin-top: 0;
 }
 
@@ -1711,6 +1772,34 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   color: #5A5A5A;
 }
 
+.c27 {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  color: #3F3F42;
+  margin-bottom: 1.5rem;
+  max-width: 550px;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c27 .twitter-tweet {
+  margin: 0;
+  padding: 1rem;
+}
+
+.c27 .twitter-tweet > p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.c27 .twitter-tweet > a {
+  display: block;
+  margin-top: 0.5rem;
+}
+
 .c0 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -1730,7 +1819,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 1rem;
 }
 
-.c29 {
+.c30 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -1741,39 +1830,39 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width:37.4375rem) {
-  .c31 {
+  .c32 {
     grid-column-gap: 0.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c32 {
     grid-column-gap: 1rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c31 {
+  .c32 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c31 {
+  .c32 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c31 {
+  .c32 {
     grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
     max-width: 46.4rem;
   }
 }
 
 @supports (display:grid) {
-  .c31 {
+  .c32 {
     display: grid;
     max-width: initial;
     margin: initial;
@@ -1928,21 +2017,21 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c30 {
+  .c31 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c31 {
     padding-top: 2rem;
   }
 }
@@ -2036,50 +2125,50 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c27 {
+  .c28 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c27 {
+  .c28 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c27 {
+  .c28 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c27 {
+  .c28 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c27 {
+  .c28 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c27 {
+  .c28 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c27 {
+  .c28 {
     padding-top: 0.5rem;
     margin-top: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c38 {
+  .c39 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -2088,39 +2177,39 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c39 {
+  .c40 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c39 {
+  .c40 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c39 {
+  .c40 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c39 {
+  .c40 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c35 {
+  .c36 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c35 {
+  .c36 {
     position: absolute;
     left: 0;
     right: 0;
@@ -2129,67 +2218,67 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c34 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c41 {
+  .c42 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c41 {
+  .c42 {
     padding: 1.5rem 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c41:first-child {
+  .c42:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c41:first-child {
+  .c42:first-child {
     padding-top: 1.5rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c32 {
+  .c33 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:80rem) {
-  .c32 {
+  .c33 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c32 {
+  .c33 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c32 {
+  .c33 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c32 {
+  .c33 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c33 {
     margin-bottom: 1.5rem;
   }
 }
@@ -2197,6 +2286,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) {
   .c6 {
     font-size: 0.875rem;
+  }
+}
+
+@media (min-width:20rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -2859,6 +2955,32 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   <div
                     class="c3"
                   >
+                    <div
+                      class="c27"
+                    >
+                      <div>
+                        <blockquote
+                          class="twitter-tweet"
+                        >
+                          <p
+                            dir="ltr"
+                            lang="en"
+                          >
+                            Much of today’s news about Spider-Man has mischaracterized recent discussions about Kevin Feige’s involvement in the franchise. We are disappointed, but respect Disney’s decision not to have him continue as a lead producer of our next live action Spider-Man film. (1/3)
+                          </p>
+                          — Sony Pictures (@SonyPictures) 
+                          <a
+                            href="https://twitter.com/SonyPictures/status/1164036827667238912?ref_src=twsrc%5Etfw"
+                          >
+                            August 21, 2019
+                          </a>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="c3"
+                  >
                     <p
                       class="c21"
                     >
@@ -2866,18 +2988,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     </p>
                   </div>
                   <div
-                    class="c27"
+                    class="c28"
                   >
                     <figure
                       class="c10"
                     >
                       <div
-                        class="c28"
+                        class="c29"
                       >
                         <iframe
                           allow="autoplay; fullscreen"
                           allowfullscreen=""
-                          class="c29"
+                          class="c30"
                           scrolling="no"
                           src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                           title="Media player"
@@ -2890,7 +3012,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     class="c3"
                   >
                     <h2
-                      class="c30"
+                      class="c31"
                       id="This-is-a-heading"
                       tabindex="-1"
                     >
@@ -2910,7 +3032,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     class="c3"
                   >
                     <h2
-                      class="c30"
+                      class="c31"
                       id="This-is-a-crosshead"
                       tabindex="-1"
                     >
@@ -2953,29 +3075,29 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                 </main>
                 <section
                   aria-labelledby="related-content-heading"
-                  class="c31"
+                  class="c32"
                   role="region"
                 >
                   <div
-                    class="c32"
+                    class="c33"
                   >
                     <div
-                      class="c33 c34"
+                      class="c34 c35"
                     >
                       <div
-                        class="c35"
+                        class="c36"
                       />
                       <h2
-                        class="c36"
+                        class="c37"
                       >
                         <div
-                          class="c37"
+                          class="c38"
                         >
                           <span
-                            class="c38"
+                            class="c39"
                           >
                             <span
-                              class="c39"
+                              class="c40"
                               dir="ltr"
                               id="related-content-heading"
                             >
@@ -2986,11 +3108,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </h2>
                     </div>
                     <ul
-                      class="c40"
+                      class="c41"
                       role="list"
                     >
                       <li
-                        class="c41"
+                        class="c42"
                         role="listitem"
                       />
                     </ul>
