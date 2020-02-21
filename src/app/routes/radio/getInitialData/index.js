@@ -1,5 +1,5 @@
 import fetchPageData from '../../utils/fetchPageData';
-import addIdsToBlocks from '../transformers/addIdsToBlocks';
+import addIdsToBlocks from './addIdsToBlocks';
 
 export default async path => {
   const { json, ...rest } = await fetchPageData(path);

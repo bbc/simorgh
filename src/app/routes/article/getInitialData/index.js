@@ -4,7 +4,7 @@ import {
   augmentWithTimestamp,
   addIdsToBlocks,
   applyBlockPositioning,
-} from '../../utils/sharedTransformers';
+} from '../../utils/sharedDataTransformers';
 
 const transformJson = pipe(
   augmentWithTimestamp,

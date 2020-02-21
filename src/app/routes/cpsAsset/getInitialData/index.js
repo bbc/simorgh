@@ -4,17 +4,15 @@ import {
   augmentWithTimestamp,
   addIdsToBlocks,
   applyBlockPositioning,
-} from '../../utils/sharedTransformers';
-import parseInternalLinks from '../transformers/convertToOptimoBlocks/blocks/internalLinks';
-import {
-  addHeadlineBlock,
-  timestampToMilliseconds,
-  addSummaryBlock,
-  cpsOnlyOnwardJourneys,
-  addBylineBlock,
-  addAnalyticsCounterName,
-  convertToOptimoBlocks,
-} from '../transformers';
+} from '../../utils/sharedDataTransformers';
+import parseInternalLinks from './convertToOptimoBlocks/blocks/internalLinks';
+import addHeadlineBlock from './addHeadlineBlock';
+import timestampToMilliseconds from './timestampToMilliseconds';
+import addSummaryBlock from './addSummaryBlock';
+import cpsOnlyOnwardJourneys from './cpsOnlyOnwardJourneys';
+import addBylineBlock from './addBylineBlock';
+import addAnalyticsCounterName from './addAnalyticsCounterName';
+import convertToOptimoBlocks from './convertToOptimoBlocks';
 
 const formatPageData = pipe(
   addAnalyticsCounterName,
