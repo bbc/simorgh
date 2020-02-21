@@ -98,9 +98,10 @@ const StoryPromoContainer = ({
   item,
   promoType,
   lazyLoadImage,
+  dir,
   displayImage,
 }) => {
-  const { script, datetimeLocale, service, timezone, dir } = useContext(
+  const { script, datetimeLocale, service, timezone } = useContext(
     ServiceContext,
   );
   const isAssetTypeCode = getAssetTypeCode(item);
@@ -205,6 +206,7 @@ const StoryPromoContainer = ({
       info={Info}
       mediaIndicator={MediaIndicator}
       promoType={promoType}
+      dir={dir}
       displayImage={displayImage}
     />
   );
@@ -214,12 +216,14 @@ StoryPromoContainer.propTypes = {
   item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
   promoType: oneOf(PROMO_TYPES),
   lazyLoadImage: bool,
+  dir: oneOf(['ltr', 'rtl']),
   displayImage: bool,
 };
 
 StoryPromoContainer.defaultProps = {
   promoType: 'regular',
   lazyLoadImage: true,
+  dir: 'ltr',
   displayImage: true,
 };
 

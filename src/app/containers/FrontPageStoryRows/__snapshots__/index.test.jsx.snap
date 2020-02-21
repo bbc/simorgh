@@ -536,7 +536,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
 <div>
   <li
     class="c0 c1"
-    dir="ltr"
+    dir="rtl"
     role="listitem"
   >
     <div
@@ -618,7 +618,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   </li>
   <li
     class="c0 c13"
-    dir="ltr"
+    dir="rtl"
     role="listitem"
   >
     <div
@@ -626,7 +626,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
     >
       <div
         class="c15"
-        dir="ltr"
+        dir="rtl"
       >
         <div
           class="c16"
@@ -668,7 +668,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
       </div>
       <div
         class="c22"
-        dir="ltr"
+        dir="rtl"
       >
         <h3
           class="c23"
@@ -1787,7 +1787,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
 <div>
   <li
     class="c0 c1"
-    dir="ltr"
+    dir="rtl"
     role="listitem"
   >
     <div
@@ -1869,7 +1869,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   </li>
   <li
     class="c0 c1"
-    dir="ltr"
+    dir="rtl"
     role="listitem"
   >
     <div
@@ -1877,7 +1877,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
     >
       <div
         class="c14"
-        dir="ltr"
+        dir="rtl"
       >
         <div
           class="c15"
@@ -1919,7 +1919,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
       </div>
       <div
         class="c21"
-        dir="ltr"
+        dir="rtl"
       >
         <h3
           class="c22"
@@ -1947,7 +1947,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   </li>
   <li
     class="c0 c1"
-    dir="ltr"
+    dir="rtl"
     role="listitem"
   >
     <div
@@ -1955,7 +1955,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
     >
       <div
         class="c14"
-        dir="ltr"
+        dir="rtl"
       >
         <div
           class="c15"
@@ -1974,7 +1974,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
       </div>
       <div
         class="c21"
-        dir="ltr"
+        dir="rtl"
       >
         <h3
           class="c22"
@@ -2002,7 +2002,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   </li>
   <li
     class="c0 c1"
-    dir="ltr"
+    dir="rtl"
     role="listitem"
   >
     <div
@@ -2010,7 +2010,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
     >
       <div
         class="c14"
-        dir="ltr"
+        dir="rtl"
       >
         <div
           class="c15"
@@ -2029,7 +2029,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
       </div>
       <div
         class="c21"
-        dir="ltr"
+        dir="rtl"
       >
         <h3
           class="c22"
@@ -3051,7 +3051,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 <div>
   <li
     class="c0 c1"
-    dir="ltr"
+    dir="rtl"
     role="listitem"
   >
     <div
@@ -3133,7 +3133,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   </li>
   <li
     class="c0 c1"
-    dir="ltr"
+    dir="rtl"
     role="listitem"
   >
     <div
@@ -3141,7 +3141,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
     >
       <div
         class="c14"
-        dir="ltr"
+        dir="rtl"
       >
         <div
           aria-hidden="true"
@@ -3186,7 +3186,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   </li>
   <li
     class="c0 c1"
-    dir="ltr"
+    dir="rtl"
     role="listitem"
   >
     <div
@@ -3194,7 +3194,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
     >
       <div
         class="c14"
-        dir="ltr"
+        dir="rtl"
       >
         <h3
           class="c18"
@@ -3217,7 +3217,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   </li>
   <li
     class="c0 c1"
-    dir="ltr"
+    dir="rtl"
     role="listitem"
   >
     <div
@@ -3225,7 +3225,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
     >
       <div
         class="c14"
-        dir="ltr"
+        dir="rtl"
       >
         <h3
           class="c18"
@@ -3926,7 +3926,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
 
 <li
   class="c0 c1"
-  dir="ltr"
+  dir="rtl"
   role="listitem"
 >
   <div

@@ -18,7 +18,7 @@ const getRow = (Type, service, dir, number) => (
       isAmp={false}
       service={service}
     >
-      <Type stories={getNumberPromoFixtures(dir, number)} />
+      <Type dir={dir} stories={getNumberPromoFixtures(dir, number)} />
     </RequestContextProvider>
   </ServiceContextProvider>
 );
