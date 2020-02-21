@@ -43,14 +43,14 @@ const NavigationContainer = () => {
   const { canonicalLink, origin } = useContext(RequestContext);
   const { currentPage, sections } = translations;
 
+  if (!navigation || navigation.length === 0) {
+    return null;
+  }
+
   const matchingLink = linkUrl => `${origin}${linkUrl.url}` === canonicalLink;
   const activeIndex = navigation
     .map(matchingLink)
     .findIndex(item => item === true);
-
-  if (!navigation || navigation.length === 0) {
-    return null;
-  }
 
   const scrollableListItems = (
     <NavigationUl>
