@@ -21,8 +21,8 @@ const FooterContainer = () => {
   const { externalLink, links, copyrightText, trustProjectLink } = footer;
 
   return (
-    <footer role="contentinfo">
-      <BrandContainer borderTop />
+    <footer role="contentinfo" data-e2e="page-footer">
+      <BrandContainer borderTop data-e2e="footer-brand" />
       <SitewideLinks
         links={links}
         copyrightText={getCopyrightText(copyrightText)}

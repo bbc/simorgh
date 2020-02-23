@@ -148,7 +148,7 @@ const MediaPlayerContainer = ({
   return (
     <>
       <Metadata aresMediaBlock={aresMediaBlock} embedSource={embedSource} />
-      <Figure>
+      <Figure data-e2e="media-player">
         {isAmp ? (
           <AmpMediaPlayer
             src={embedSource}

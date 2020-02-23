@@ -30,6 +30,7 @@ const BrandContainer = ({ skipLink, ...props }) => {
       svg={brandSVG}
       url={`/${service}`}
       skipLink={skipLink}
+      data-e2e="brand-banner"
       {...props}
     />
   );

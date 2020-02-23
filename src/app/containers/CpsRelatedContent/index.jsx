@@ -53,6 +53,7 @@ const CpsRelatedContent = ({ content }) => {
       as="section"
       role="region"
       aria-labelledby="related-content-heading"
+      data-e2e="related-content"
     >
       <Wrapper>
         <StyledSectionLabel
@@ -68,7 +69,10 @@ const CpsRelatedContent = ({ content }) => {
           {content
             .map(item => formatItem(item, env))
             .map(item => (
-              <StoryPromoLi key={item.id || item.uri}>
+              <StoryPromoLi
+                key={item.id || item.uri}
+                data-e2e="related-content-item"
+              >
                 <StoryPromo item={item} />
               </StoryPromoLi>
             ))}
