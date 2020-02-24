@@ -1,4 +1,4 @@
-import filterUnknownContentTypes from './filterContentType';
+import filterUnknownContentTypes from '.';
 import azeriFixtureData from '#data/azeri/frontpage/index.json';
 import igboFixtureData from '#data/igbo/frontpage/index.json';
 
