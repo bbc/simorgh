@@ -1,5 +1,5 @@
-import getInitialData from '../fetchPageData';
 import FrontPage from '#pages/FrontPage';
+import getInitialData from './getInitialData';
 import { frontPagePath } from '../regex';
 
 export default {

@@ -1,21 +1,18 @@
 import 'isomorphic-fetch';
-import path from 'ramda/src/path';
 import nodeLogger from '#lib/logger.node';
-import preprocess from '#lib/utilities/preprocessor';
 import onClient from '#lib/utilities/onClient';
 import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
 import getBaseUrl from './utils/getBaseUrl';
-import getPreprocessorRules from './utils/getPreprocessorRules';
 import isLive from '#lib/utilities/isLive';
 
 const logger = nodeLogger(__filename);
-const STATUS_CODE_OK = 200;
-const STATUS_CODE_BAD_GATEWAY = 502;
-const STATUS_CODE_INTERNAL_SERVER_ERROR = 500;
-const STATUS_CODE_NOT_FOUND = 404;
-const upstreamStatusCodesToPropagate = [STATUS_CODE_OK, STATUS_CODE_NOT_FOUND];
+const STATUS_OK = 200;
+const STATUS_BAD_GATEWAY = 502;
+const STATUS_INTERNAL_SERVER_ERROR = 500;
+const STATUS_NOT_FOUND = 404;
+const upstreamStatusCodesToPropagate = [STATUS_OK, STATUS_NOT_FOUND];
 
-const ampRegex = /(.amp)$/;
+const ampRegex = /.amp$/;
 
 const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)
@@ -25,63 +22,50 @@ export const getUrl = pathname => {
   if (!pathname) return '';
 
   const params = isLive() ? '' : getQueryString(pathname);
-
   const basePath = getUrlPath(pathname);
 
-  return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`;
+  return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
 
-const handleResponse = async response => {
+const handleResponse = url => async response => {
   const { status } = response;
 
-  if (status === STATUS_CODE_OK) {
-    const pageData = await response.json();
-    const type = path(['metadata', 'type'], pageData);
-    const processedPageData = await preprocess(
-      pageData,
-      getPreprocessorRules(type),
-    );
+  if (upstreamStatusCodesToPropagate.includes(status)) {
+    if (status === STATUS_NOT_FOUND) {
+      logger.error(`Data not found when requesting ${url}`);
+    }
 
     return {
       status,
-      pageData: processedPageData,
+      ...(status === STATUS_OK && {
+        json: await response.json(),
+      }),
     };
   }
 
-  return { status };
-};
-
-const checkForError = pathname => ({ status, pageData }) => {
-  const isHandledStatus = upstreamStatusCodesToPropagate.includes(status);
-
-  if (isHandledStatus) {
-    return { status, pageData };
-  }
-  logger.error(
-    `Unexpected upstream response (HTTP status code ${status}) when requesting ${pathname}`,
+  throw new Error(
+    `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`,
   );
-  throw new Error();
 };
 
-const handleError = error => {
-  if (error.message) {
-    logger.error(error.message);
-  }
+const handleError = e => {
+  const error = e.toString();
 
-  const status = onClient()
-    ? STATUS_CODE_BAD_GATEWAY
-    : STATUS_CODE_INTERNAL_SERVER_ERROR;
+  logger.error(error);
 
-  return { error, status };
+  return {
+    error,
+    status: onClient() ? STATUS_BAD_GATEWAY : STATUS_INTERNAL_SERVER_ERROR,
+  };
 };
 
 const fetchData = pathname => {
-  const url = getUrl(pathname); // Remove .amp at the end of pathnames for AMP pages.
+  const url = getUrl(pathname);
+
   logger.info(`DataRequest: [${url}]`);
 
   return fetch(url)
-    .then(handleResponse)
-    .then(checkForError(url))
+    .then(handleResponse(url))
     .catch(handleError);
 };
 
