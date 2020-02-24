@@ -200,7 +200,7 @@ const StoryPageContainer = ({ pageData }) => {
           role="main"
         >
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-          <CpsRelatedContent content={relatedContent} noGhostGrid />
+          <CpsRelatedContent content={relatedContent} />
         </Grid>
         <GridSecondaryColumn item columns={gridColsSecondary}>
           <ComponentWrapper>

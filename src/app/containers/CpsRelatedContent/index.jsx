@@ -42,7 +42,7 @@ const formatItem = (item, env) => {
   return assocPath(['locators', 'assetUri'], `${baseUri}${uriSuffix}`, item);
 };
 
-const CpsRelatedContent = ({ content, noGhostGrid }) => {
+const CpsRelatedContent = ({ content, enableGridWrapper }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const { env } = useContext(RequestContext);
   const ConditionalWrapper = ({ condition, wrapper, children }) =>
@@ -56,12 +56,12 @@ const CpsRelatedContent = ({ content, noGhostGrid }) => {
 
   return (
     <ConditionalWrapper
-      condition={!noGhostGrid}
+      condition={enableGridWrapper}
       wrapper={children => (
         <GhostGrid {...a11yAttributes}>{children}</GhostGrid>
       )}
     >
-      <Wrapper {...(noGhostGrid && a11yAttributes)}>
+      <Wrapper {...(enableGridWrapper || a11yAttributes)}>
         <StyledSectionLabel
           script={script}
           service={service}
@@ -90,12 +90,12 @@ CpsRelatedContent.propTypes = {
   // Both pages use CPS, so the data schema is the same
   // This can be found under CPS ARES payloads: relatedContent.groups[0].promos
   content: arrayOf(shape(storyItem)),
-  noGhostGrid: bool,
+  enableGridWrapper: bool,
 };
 
 CpsRelatedContent.defaultProps = {
   content: [],
-  noGhostGrid: false,
+  enableGridWrapper: false,
 };
 
 export default CpsRelatedContent;
