@@ -8,6 +8,12 @@ import yorubaData from '#data/yoruba/frontpage';
 import punjabiData from '#data/punjabi/frontpage';
 import serbianCyrData from '#data/serbian/frontpage/cyr';
 import serbianLatData from '#data/serbian/frontpage/lat';
+import { service as igboConfig } from '#lib/config/services/igbo';
+import { service as pidginConfig } from '#lib/config/services/pidgin';
+import { service as thaiConfig } from '#lib/config/services/thai';
+import { service as yorubaConfig } from '#lib/config/services/yoruba';
+import { service as punjabiConfig } from '#lib/config/services/punjabi';
+import { service as serbianConfig } from '#lib/config/services/serbian';
 import FrontPage from '.';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import getInitialData from '#app/routes/home/getInitialData';
@@ -22,6 +28,15 @@ const serviceDatasets = {
     cyr: serbianCyrData,
     lat: serbianLatData,
   },
+};
+
+const serviceConfig = {
+  igbo: igboConfig,
+  pidgin: pidginConfig,
+  thai: thaiConfig,
+  yoruba: yorubaConfig,
+  punjabi: punjabiConfig,
+  serbian: serbianConfig,
 };
 
 const getPageData = async (service, variant) => {
@@ -67,6 +82,7 @@ Object.keys(serviceDatasets).forEach(service => {
                   loading={false}
                   error={null}
                   pageType="frontPage"
+                  pathname={serviceConfig[service][variant].navigation[0].url}
                   mostReadEndpointOverride={`./data/${service}/mostRead/index.json`}
                 />
               )}
