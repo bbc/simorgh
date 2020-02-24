@@ -1,31 +1,23 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
+import { render, wait, waitForElement } from '@testing-library/react';
 import FrontPageMain from '.';
 
 // 'index-light' is a lighter version of front page data that improves the
 // speed of this suite by reducing the amount of pre-processing required.
-import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
-
-import preprocessor from '#lib/utilities/preprocessor';
-import { indexPreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import newsMostReadData from '#data/news/mostRead';
+import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
+import pidginMostReadData from '#data/pidgin/mostRead';
+import getInitialData from '#app/routes/home/getInitialData';
 
-const processedPidgin = () =>
-  preprocessor(frontPageDataPidgin, indexPreprocessorRules);
-
-jest.mock('uuid', () =>
-  (() => {
-    let x = 1;
-    return () => {
-      x += 1;
-      return `mockid-${x}`;
-    };
-  })(),
-);
+jest.mock('uuid', () => {
+  let x = 1;
+  return () => {
+    x += 1;
+    return `mockid-${x}`;
+  };
+});
 
 jest.mock('../ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
@@ -50,29 +42,39 @@ const FrontPageMainWithContext = props => (
   </ToggleContextProvider>
 );
 
+let pageData;
+
+beforeEach(async () => {
+  fetch.mockResponse(JSON.stringify(frontPageDataPidgin));
+
+  const response = await getInitialData('some-front-page-path');
+
+  pageData = response.pageData;
+
+  fetch.mockResponse(JSON.stringify(pidginMostReadData));
+});
+
 describe('FrontPageMain', () => {
-  let frontPageData;
-
-  beforeAll(async () => {
-    frontPageData = await processedPidgin();
-    fetch.mockResponse(JSON.stringify(newsMostReadData));
-  });
-
   describe('snapshots', () => {
     it('should render a pidgin frontpage correctly', async () => {
-      await matchSnapshotAsync(
-        <FrontPageMainWithContext frontPageData={frontPageData} />,
+      const { container } = render(
+        <FrontPageMainWithContext frontPageData={pageData} />,
       );
+
+      // Waiting to ensure most read data is loaded and element is rendered
+      // The data is loaded separately which was previously causing snapshots to fail
+      await waitForElement(() => container.querySelector('#Most-Read'));
+
+      expect(container).toMatchSnapshot();
     });
   });
 
   describe('assertions', () => {
-    afterEach(cleanup);
-
     it('should render visually hidden text as h1', async () => {
       const { container } = render(
-        <FrontPageMainWithContext frontPageData={frontPageData} />,
+        <FrontPageMainWithContext frontPageData={pageData} />,
       );
+
       const h1 = container.querySelector('h1');
       const content = h1.getAttribute('id');
       const tabIndex = h1.getAttribute('tabIndex');
@@ -87,11 +89,13 @@ describe('FrontPageMain', () => {
       const langSpan = span.querySelector('span');
       expect(langSpan.getAttribute('lang')).toEqual('en-GB');
       expect(langSpan.textContent).toEqual('BBC News');
+
+      await wait();
     });
 
     it('should render front page sections', async () => {
       const { container } = render(
-        <FrontPageMainWithContext frontPageData={frontPageData} />,
+        <FrontPageMainWithContext frontPageData={pageData} />,
       );
       const sections = container.querySelectorAll('section');
 
@@ -99,6 +103,7 @@ describe('FrontPageMain', () => {
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
+      await wait();
     });
   });
 });

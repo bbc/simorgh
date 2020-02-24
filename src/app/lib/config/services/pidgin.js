@@ -53,6 +53,7 @@ export const service = {
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
       relatedContent: 'Another thing we de for inside dis tori',
+      sections: 'Plenti seshon',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -200,7 +201,6 @@ export const service = {
         url: '/pidgin/popular/read',
       },
     ],
-    navigationSection: 'Plenti seshon',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/pidgin/institutional-48528766',

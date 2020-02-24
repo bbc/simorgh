@@ -46,6 +46,9 @@ Object.keys(serviceDataSets).forEach(service => {
             <UserContextProvider>
               <FrontPageMain
                 frontPageData={serviceDataSets[service][variant]}
+                mostReadEndpointOverride={`./data/${service}/mostRead/${
+                  variant === 'default' ? 'index' : variant
+                }.json`}
               />
             </UserContextProvider>
           </RequestContextProvider>
