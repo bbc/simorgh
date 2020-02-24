@@ -111,6 +111,27 @@ const RadioScheduleContainer = ({ endpoint }) => {
         dir="ltr"
       />
     </>
+    // <>
+    //   <p>Radio Schedules</p>
+    //   {schedule.map(
+    //     ({
+    //       broadcast,
+    //       transmissionTimeStart,
+    //       transmissionTimeEnd,
+    //       episode: {
+    //         presentationTitle,
+    //         synopses: { short },
+    //       },
+    //     }) => (
+    //       <ul key={broadcast.pid}>
+    //         <li>{presentationTitle}</li>
+    //         <li>{short}</li>
+    //         <li>{transmissionTimeStart}</li>
+    //         <li>{transmissionTimeEnd}</li>
+    //       </ul>
+    //     ),
+    //   )}
+    // </>
   );
 };
 
