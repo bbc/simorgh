@@ -32,29 +32,27 @@ import LastUpdated from './LastUpdated';
 const logger = webLogger();
 
 const MarginWrapper = styled.div`
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin-bottom: ${GEL_SPACING_QUAD};
-  }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_DBL};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_TRPL};
-    margin-bottom: ${GEL_SPACING_QUIN};
   }
-
-  margin-bottom: ${GEL_SPACING_TRPL};
 `;
 
 const MaxWidthWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX};
+    margin: 0 ${GEL_MARGIN_ABOVE_400PX} ${GEL_SPACING_QUAD};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin-bottom: ${GEL_SPACING_QUIN};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    margin: 0 auto;
+    margin: 0 auto ${GEL_SPACING_TRPL};
     max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
   }
-  margin: 0 ${GEL_MARGIN_BELOW_400PX};
+
+  margin: 0 ${GEL_MARGIN_BELOW_400PX} ${GEL_SPACING_TRPL};
 `;
 
 const CanonicalMostRead = ({ endpoint, constrainMaxWidth }) => {
