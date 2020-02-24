@@ -6,13 +6,6 @@ const hasBeenUpdated = (timeDifferenceMinutes, minutesTolerance) =>
 const publishedAndUpdatedToday = (firstPublished, lastPublished) =>
   isToday(firstPublished) && isSameDay(firstPublished, lastPublished);
 
-const publishedAndUpdatedOnSameDayAndNotRelative = (
-  firstPublished,
-  lastPublished,
-) => isSameDay(firstPublished, lastPublished) && !isLastRelative(lastPublished);
-// Could this be reconsidered as publishedAndUpdatedOnDifferentDaysAndLastUpdatedNotRelative
-// !isSameDay
-
 const shouldLastUpdatedTimestampBeShown = ({
   minutesTolerance,
   firstPublished,
@@ -24,15 +17,19 @@ const shouldLastUpdatedTimestampBeShown = ({
     firstPublished,
     lastPublished,
   );
-  const isPublishedAndUpdatedOnSameDayNotRelative = publishedAndUpdatedOnSameDayAndNotRelative(
+
+  const updatedWithinRelativeTimePeriod = isLastRelative(lastPublished);
+
+  const publishedAndUpdatedOnDifferentDays = !isSameDay(
     firstPublished,
     lastPublished,
   );
 
   return (
     isUpdated &&
-    (isPublishedAndUpdatedToday || !isPublishedAndUpdatedOnSameDayNotRelative)
-    // Avoid double-negatives and flipping a 'show' condition
+    (isPublishedAndUpdatedToday ||
+      updatedWithinRelativeTimePeriod ||
+      publishedAndUpdatedOnDifferentDays)
   );
 };
 
