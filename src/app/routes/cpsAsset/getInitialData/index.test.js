@@ -1,5 +1,5 @@
-import getInitialData from './getInitialData';
-import mapJson from '../../../../data/pidgin/cpsAssets/media-23256549.json';
+import getInitialData from '.';
+import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
 
 fetch.mockResponse(JSON.stringify(mapJson));
 
