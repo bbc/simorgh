@@ -15,7 +15,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   pageType,
   variant,
 }) =>
-  describe(`testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {
+  describe(`testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {
     it('should render a media player', () => {
       cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
         ({ body }) => {
@@ -37,7 +37,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         },
       );
     });
-    it('should render an SMP player that is ready to play media', () => {
+
+    it('should play media', () => {
       cy.window().then(win => {
         const assetUriString =
           win.SIMORGH_DATA.pageData.metadata.locators.assetUri;
@@ -50,20 +51,34 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
           if (!media) throw new Error('no media');
 
-          if (media) {
-            cy.get(
-              'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
-            ).then($iframe => {
-              cy.wrap($iframe.prop('contentWindow'), {
-                // `timeout` only applies to the methods chained below.
-                // `its()` benefits from this, and will wait up to 8s
-                // for the mediaPlayer instance to become available.
-                timeout: 8000,
-              })
-                .its('embeddedMedia.playerInstances.mediaPlayer.ready')
-                .should('eq', true);
-            });
-          }
+          // Ensure media player is ready
+          cy.get(
+            'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
+          ).then($iframe => {
+            cy.wrap($iframe.prop('contentWindow'), {
+              timeout: 8000,
+            })
+              .its('embeddedMedia.playerInstances.mediaPlayer.ready')
+              .should('eq', true);
+          });
+
+          const playButton = 'button.p_cta';
+
+          cy.get('iframe').then(iframe => {
+            cy.wrap(iframe.contents().find('iframe'))
+              .should(
+                inner => expect(inner.contents().find(playButton)).to.exist,
+              )
+              .then(inner => cy.wrap(inner.contents().find(playButton)).click())
+              .then(() => {
+                cy.wrap(iframe.prop('contentWindow'), {
+                  timeout: 8000,
+                })
+                  .its('embeddedMedia.playerInstances.mediaPlayer')
+                  .invoke('currentTime')
+                  .should('be.gt', 0);
+              });
+          });
         }
       });
     });
