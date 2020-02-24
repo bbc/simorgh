@@ -55,6 +55,8 @@ const BrandContainerWithContext = (context, skipLink) => (
   </ServiceContext.Provider>
 );
 
+const mockSkipLink = <div data-testid="skip-link">Skip Link</div>;
+
 describe(`BrandContainer`, () => {
   shouldMatchSnapshot(
     'should render correctly',
@@ -62,13 +64,12 @@ describe(`BrandContainer`, () => {
   );
 
   shouldMatchSnapshot(
-    'should render script link correctly',
-    BrandContainerWithContext(variantServiceContextStub),
+    'should render correctly with script link and skip link',
+    BrandContainerWithContext(variantServiceContextStub, mockSkipLink),
   );
 
   describe('Assertions', () => {
     it('should render skip to content link if provided', () => {
-      const mockSkipLink = <div data-testid="skip-link">Skip Link</div>;
       const { getByTestId } = render(
         BrandContainerWithContext(newsServiceContextStub, mockSkipLink),
       );
