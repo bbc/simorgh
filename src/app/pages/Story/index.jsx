@@ -32,6 +32,7 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import categoryType from './categoryMap/index';
+import Include from '#containers/Include';
 
 // Page Handlers
 import withContexts from '#containers/PageHandlers/withContexts';
@@ -80,6 +81,7 @@ const StoryPageContainer = ({ pageData }) => {
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
     byline: props => <StyledByline {...props} />,
     social_embed: props => <SocialEmbed {...props} />,
+    include: Include,
   };
 
   const StyledGhostGrid = styled(GhostGrid)`

@@ -6,6 +6,7 @@ import list from './blocks/list';
 import subheadline from './blocks/subheadline';
 import version from './blocks/version';
 import socialEmbed from './blocks/social_embed';
+import include from './blocks/include';
 
 const handleMissingType = block =>
   console.log(`Missing type field on block ${block.type}`); // eslint-disable-line no-console
@@ -21,6 +22,7 @@ const typesToConvert = {
   version,
   legacyMedia: block => ({ model: {}, ...block }),
   social_embed: socialEmbed,
+  include,
 };
 
 const parseBlockByType = block => {
