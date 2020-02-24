@@ -1,6 +1,6 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import applySquashTopstories from '../../../../src/app/lib/utilities/preprocessor/rules/topstories';
+import applySquashTopstories from '../../../../src/app/routes/home/getInitialData/squashTopStories';
 
 const serviceJsonPath = service =>
   `${config[service].pageTypes.frontPage.path}.json`;
