@@ -14,7 +14,7 @@ import {
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import Grid from '@bbc/psammead-grid';
-import { getImageParts } from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks/blocks/image/helpers';
+import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
