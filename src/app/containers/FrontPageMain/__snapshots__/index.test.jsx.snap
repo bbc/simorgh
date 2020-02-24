@@ -30,11 +30,20 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
       </span>
     </h1>
     <div
+<<<<<<< HEAD
       class="StyledFrontPageDiv-uw1dw6-0 jgyWdg"
     >
       <section
         aria-labelledby="Top-stories"
         role="region"
+=======
+      class="GridComponent-nf79gm-0 iakllL GridMaxWidthGroup5-ylca1m-2 FrontPageGrid-ylca1m-3 kkrFlK"
+      dir="ltr"
+    >
+      <div
+        class="GridComponent-nf79gm-0 kMhoTR"
+        dir="ltr"
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
       >
         <div
           class="SectionLabelWrapper-sc-1x4gwjz-1 sdoTA"
@@ -735,18 +744,31 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             dir="ltr"
             role="list"
           >
+<<<<<<< HEAD
             <li
               class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+=======
+            <ol
+              class="GridComponent-nf79gm-0 gjgzxV TwoColumnGrid-sc-1ofyujo-0 ewnImn"
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
               dir="ltr"
               role="listitem"
             >
+<<<<<<< HEAD
               <div
                 class="ItemWrapper-u0d8kd-3 juBlKT"
+=======
+              <li
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
               >
                 <div
                   class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 cwekyj"
                   dir="ltr"
                 >
+<<<<<<< HEAD
                   <span
                     class="StyledSpan-fs4y6m-2 bbVUNN"
                   >
@@ -763,6 +785,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   >
                     Public Holidays wey go happun for 2019
                   </a>
+=======
+                  <div
+                    class="TwoColumnWrapper-fs4y6m-0 bzxOYC"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
+                    >
+                      1
+                    </span>
+                  </div>
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
                   <div
                     class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
@@ -774,6 +808,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     </time>
                   </div>
                 </div>
+<<<<<<< HEAD
               </div>
             </li>
             <li
@@ -783,11 +818,19 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="ItemWrapper-u0d8kd-3 juBlKT"
+=======
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
               >
                 <div
                   class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 PiyPX"
                   dir="ltr"
                 >
+<<<<<<< HEAD
                   <span
                     class="StyledSpan-fs4y6m-2 bbVUNN"
                   >
@@ -804,6 +847,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   >
                     Liberia banks don run out of money
                   </a>
+=======
+                  <div
+                    class="TwoColumnWrapper-fs4y6m-0 hIrEwW"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
+                    >
+                      2
+                    </span>
+                  </div>
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
                   <div
                     class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
@@ -815,6 +870,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     </time>
                   </div>
                 </div>
+<<<<<<< HEAD
               </div>
             </li>
             <li
@@ -824,11 +880,19 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="ItemWrapper-u0d8kd-3 juBlKT"
+=======
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
               >
                 <div
                   class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 cwekyj"
                   dir="ltr"
                 >
+<<<<<<< HEAD
                   <span
                     class="StyledSpan-fs4y6m-2 bbVUNN"
                   >
@@ -845,6 +909,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   >
                     Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
                   </a>
+=======
+                  <div
+                    class="TwoColumnWrapper-fs4y6m-0 bzxOYC"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
+                    >
+                      3
+                    </span>
+                  </div>
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
                   <div
                     class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
@@ -856,6 +932,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     </time>
                   </div>
                 </div>
+<<<<<<< HEAD
               </div>
             </li>
             <li
@@ -865,11 +942,19 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="ItemWrapper-u0d8kd-3 juBlKT"
+=======
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
               >
                 <div
                   class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 PiyPX"
                   dir="ltr"
                 >
+<<<<<<< HEAD
                   <span
                     class="StyledSpan-fs4y6m-2 bbVUNN"
                   >
@@ -886,6 +971,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   >
                     Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
                   </a>
+=======
+                  <div
+                    class="TwoColumnWrapper-fs4y6m-0 hIrEwW"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
+                    >
+                      4
+                    </span>
+                  </div>
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
                   <div
                     class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
@@ -897,6 +994,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     </time>
                   </div>
                 </div>
+<<<<<<< HEAD
               </div>
             </li>
             <li
@@ -906,11 +1004,19 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="ItemWrapper-u0d8kd-3 juBlKT"
+=======
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
               >
                 <div
                   class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 kOEYxy"
                   dir="ltr"
                 >
+<<<<<<< HEAD
                   <span
                     class="StyledSpan-fs4y6m-2 bbVUNN"
                   >
@@ -927,6 +1033,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   >
                     How Balogun market fire kill Policeman for Lagos
                   </a>
+=======
+                  <div
+                    class="TwoColumnWrapper-fs4y6m-0 bzxOYC"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
+                    >
+                      5
+                    </span>
+                  </div>
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
                   <div
                     class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
@@ -938,6 +1056,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     </time>
                   </div>
                 </div>
+<<<<<<< HEAD
               </div>
             </li>
             <li
@@ -947,11 +1066,19 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="ItemWrapper-u0d8kd-3 juBlKT"
+=======
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
               >
                 <div
                   class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 dbwFjy"
                   dir="ltr"
                 >
+<<<<<<< HEAD
                   <span
                     class="StyledSpan-fs4y6m-2 bbVUNN"
                   >
@@ -968,6 +1095,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   >
                     Labour, FG finally agree minimum wage salary adjustment
                   </a>
+=======
+                  <div
+                    class="TwoColumnWrapper-fs4y6m-0 ldSGOP"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
+                    >
+                      6
+                    </span>
+                  </div>
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
                   <div
                     class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
@@ -979,6 +1118,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     </time>
                   </div>
                 </div>
+<<<<<<< HEAD
               </div>
             </li>
             <li
@@ -988,11 +1128,19 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="ItemWrapper-u0d8kd-3 juBlKT"
+=======
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
               >
                 <div
                   class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 SBwNm"
                   dir="ltr"
                 >
+<<<<<<< HEAD
                   <span
                     class="StyledSpan-fs4y6m-2 bbVUNN"
                   >
@@ -1009,6 +1157,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   >
                     Naira Marley na 'Bad Influence'?
                   </a>
+=======
+                  <div
+                    class="TwoColumnWrapper-fs4y6m-0 fOLghQ"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
+                    >
+                      7
+                    </span>
+                  </div>
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
                   <div
                     class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
@@ -1020,6 +1180,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     </time>
                   </div>
                 </div>
+<<<<<<< HEAD
               </div>
             </li>
             <li
@@ -1029,11 +1190,19 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="ItemWrapper-u0d8kd-3 juBlKT"
+=======
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
               >
                 <div
                   class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 dbwFjy"
                   dir="ltr"
                 >
+<<<<<<< HEAD
                   <span
                     class="StyledSpan-fs4y6m-2 bbVUNN"
                   >
@@ -1050,6 +1219,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   >
                     Tins you suppose know about Naira Marley
                   </a>
+=======
+                  <div
+                    class="TwoColumnWrapper-fs4y6m-0 ldSGOP"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
+                    >
+                      8
+                    </span>
+                  </div>
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
                   <div
                     class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
@@ -1061,6 +1242,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     </time>
                   </div>
                 </div>
+<<<<<<< HEAD
               </div>
             </li>
             <li
@@ -1070,11 +1252,19 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="ItemWrapper-u0d8kd-3 juBlKT"
+=======
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
               >
                 <div
                   class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 SBwNm"
                   dir="ltr"
                 >
+<<<<<<< HEAD
                   <span
                     class="StyledSpan-fs4y6m-2 bbVUNN"
                   >
@@ -1091,6 +1281,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   >
                     Golden Eaglets crash out of Fifa U17 World Cup
                   </a>
+=======
+                  <div
+                    class="TwoColumnWrapper-fs4y6m-0 fOLghQ"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
+                    >
+                      9
+                    </span>
+                  </div>
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
                   <div
                     class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >
@@ -1102,6 +1304,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                     </time>
                   </div>
                 </div>
+<<<<<<< HEAD
               </div>
             </li>
             <li
@@ -1111,11 +1314,19 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             >
               <div
                 class="ItemWrapper-u0d8kd-3 juBlKT"
+=======
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                dir="ltr"
+                role="listitem"
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
               >
                 <div
                   class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 dbwFjy"
                   dir="ltr"
                 >
+<<<<<<< HEAD
                   <span
                     class="StyledSpan-fs4y6m-2 bbVUNN"
                   >
@@ -1132,6 +1343,18 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   >
                     Tiger nut drink fit wake up your sex drive - Nutritionist
                   </a>
+=======
+                  <div
+                    class="TwoColumnWrapper-fs4y6m-0 ldSGOP"
+                    dir="ltr"
+                  >
+                    <span
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
+                    >
+                      10
+                    </span>
+                  </div>
+>>>>>>> f774a306cb7e19905a3fd068a35d8bf31c2fca71
                   <div
                     class="TimestampWrapper-u0d8kd-2 hlECaE"
                   >

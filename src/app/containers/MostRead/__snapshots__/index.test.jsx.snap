@@ -1,70 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MostReadContainerCanonical Assertion should render most read correctly for arabic 1`] = `
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c5 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FFFFFF;
-  margin: 1rem 0;
-  padding-left: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c0 {
-  position: relative;
-  margin-top: 2rem;
-}
-
-.c2 {
-  margin: 0;
-  padding: 0;
-}
-
 .c8 {
   list-style-type: none;
   margin: 0;
@@ -139,60 +75,68 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   position: relative;
 }
 
-@media (min-width:37.5rem) {
-  .c4 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
-  }
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-  }
+.c5 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FFFFFF;
+  margin: 1rem 0;
+  padding-left: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-@media (min-width:37.5rem) {
-  .c5 {
-    margin: 0;
-  }
+.c1 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
 }
 
-@media (min-width:37.5rem) {
-  .c5 {
-    padding-left: 1rem;
-  }
+.c0 {
+  position: relative;
+  margin-top: 2rem;
 }
 
-@media screen and (-ms-high-contrast:active) {
-  .c1 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    margin-top: 1.5rem;
-  }
+.c2 {
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width:63rem) {
@@ -463,6 +407,62 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 @supports (grid-template-columns:fit-content(200px)) {
   .c14 {
     padding-left: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 1.625rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c1 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    margin-top: 1.5rem;
   }
 }
 

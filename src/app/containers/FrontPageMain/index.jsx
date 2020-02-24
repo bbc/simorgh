@@ -7,12 +7,16 @@ import findIndex from 'ramda/src/findIndex';
 import styled from 'styled-components';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_SPACING_QUIN,
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
@@ -34,13 +38,19 @@ export const StyledFrontPageDiv = styled.div`
   }
 
   /* To add extra spacing */
-  padding-bottom: ${GEL_SPACING_QUAD};
   margin-top: ${GEL_SPACING};
+  padding-bottom: ${GEL_SPACING_QUAD};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_DBL};
   }
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    padding-bottom: ${GEL_SPACING_TRPL};
+  }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: 0;
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-bottom: ${GEL_SPACING_QUIN};
   }
 `;
 
@@ -89,6 +99,7 @@ const FrontPageMain = ({ frontPageData, mostReadEndpointOverride }) => {
               {group.type === 'useful-links' && (
                 <MostReadContainer
                   mostReadEndpointOverride={mostReadEndpointOverride}
+                  maxTwoColumns
                 />
               )}
               <FrontPageSection group={group} sectionNumber={index} />
@@ -97,6 +108,7 @@ const FrontPageMain = ({ frontPageData, mostReadEndpointOverride }) => {
           {!hasUsefulLinks && (
             <MostReadContainer
               mostReadEndpointOverride={mostReadEndpointOverride}
+              maxTwoColumns
             />
           )}
         </StyledFrontPageDiv>
