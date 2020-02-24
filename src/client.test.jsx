@@ -23,7 +23,7 @@ jest.mock('@loadable/component', () => {
   };
 });
 
-jest.mock('./app/routes/getInitialData/utils/getRouteProps');
+jest.mock('./app/routes/utils/fetchPageData/utils/getRouteProps');
 
 const mockRootElement = <div />;
 document.getElementById = jest.fn().mockReturnValue(mockRootElement);

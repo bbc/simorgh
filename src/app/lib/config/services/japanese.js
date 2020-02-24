@@ -50,6 +50,7 @@ export const service = {
       currentPage: '現在のページ',
       skipLinkText: 'コンテンツへ移動',
       relatedContent: '関連コンテンツ',
+      sections: 'ジャンル',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -134,6 +135,7 @@ export const service = {
       },
       media: {
         noJs: 'お使いの端末ではメディアプレイバックはご利用になれません',
+        contentExpired: 'このコンテンツはもうご利用いただけません。',
         audio: '音声',
         photogallery: '写真ギャラリー',
         video: 'ビデオ',
@@ -148,7 +150,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: '一番人気',
-      lastUpdated: 'Last updated: ',
+      lastUpdated: 'Last updated:',
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -223,7 +227,6 @@ export const service = {
         url: 'https://www.bbcworldnews-japan.com/',
       },
     ],
-    navigationSection: 'ジャンル',
   },
 };
 

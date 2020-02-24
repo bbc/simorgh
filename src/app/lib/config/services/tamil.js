@@ -50,6 +50,7 @@ export const service = {
       currentPage: 'தற்போதுள்ள பக்கம்',
       skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',
       relatedContent: 'தொடர்புடைய உள்ளடக்கம்',
+      sections: 'பிரிவுகள்',
       mediaAssetPage: {
         mediaPlayer: 'ஊடக இயக்கி',
         audioPlayer: 'கேட்பொலி பிளேயர்',
@@ -139,6 +140,7 @@ export const service = {
       },
       media: {
         noJs: 'ஒலிபரப்பு மென்பொருள் உங்கள் கணினியில் இல்லை',
+        contentExpired: 'இந்த நிகழ்ச்சி இனி கிடைக்காது.',
         audio: 'ஒலி',
         photogallery: 'படத் தொகுப்பு',
         video: 'காணொளி',
@@ -163,11 +165,13 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'அதிகம் படிக்கப்பட்டது',
-      lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது: ',
+      lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது:',
+      numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/tamil/institutional-50435459',
+        href: 'https://www.bbc.com/tamil/institutional-50288575',
         text: 'நீங்கள் ஏன் பிபிசி மீது நம்பிக்கை வைக்க முடியும்?',
       },
       externalLink: {
@@ -212,51 +216,34 @@ export const service = {
         url: '/tamil/global',
       },
       {
-        title: 'இலங்கை',
-        url: '/tamil/sri_lanka',
+        title: 'இந்தியா',
+        url: '/tamil/topics/c2dwqdn01v5t',
       },
       {
-        title: 'இந்தியா',
-        url: '/tamil/india',
+        title: 'இலங்கை',
+        url: '/tamil/topics/cz74k7p3qw7t',
+      },
+      {
+        title: 'விளையாட்டு',
+        url: '/tamil/topics/cdr56rv4qwdt',
       },
       {
         title: 'அறிவியல்',
         url: '/tamil/science',
       },
       {
-        title: 'விளையாட்டு',
-        url: '/tamil/sport',
-      },
-      {
-        title: 'கலை & கலாச்சாரம்',
-        url: '/tamil/arts_and_culture',
-      },
-      {
         title: 'சினிமா',
-        url: '/tamil/topics/2611f753-ece7-47ea-9782-f912bc1e4088',
+        url: '/tamil/topics/cyx5kxz4wkgt',
       },
       {
-        title: 'ஒலி',
-        url: '/tamil/media/audio',
-      },
-      {
-        title: 'ஒளி',
+        title: 'வீடியோ',
         url: '/tamil/media/video',
-      },
-      {
-        title: 'படத்தொகுப்பு',
-        url: '/tamil/media/photogalleries',
-      },
-      {
-        title: 'முந்தைய தொலைக்காட்சி நிகழ்ச்சிகள்',
-        url: '/tamil/media-38734063',
       },
       {
         title: '#ISWOTY',
         url: '/tamil/resources/idt-ce219e77-9003-42b8-b276-1214e232fdc0',
       },
     ],
-    navigationSection: 'பிரிவுகள்',
   },
 };
 

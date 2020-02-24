@@ -1,6 +1,6 @@
 import React from 'react';
 import { shape } from 'prop-types';
-import compose from 'ramda/src/compose';
+import pipe from 'ramda/src/pipe';
 import articlePropTypes from '#models/propTypes/article';
 import ArticleMain from '../../containers/ArticleMain';
 
@@ -23,13 +23,13 @@ ArticleContainer.defaultProps = {
   pageData: null,
 };
 
-const EnhancedArticleContainer = compose(
-  withVariant,
-  withContexts,
-  withPageWrapper,
-  withLoading,
-  withError,
+const EnhancedArticleContainer = pipe(
   withData,
+  withError,
+  withLoading,
+  withPageWrapper,
+  withContexts,
+  withVariant,
 )(ArticleContainer);
 
 export default EnhancedArticleContainer;

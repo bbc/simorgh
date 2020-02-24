@@ -28,7 +28,7 @@ exports[`MediaPlayer render the amp player 1`] = `
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .c0 figure {
@@ -62,6 +62,12 @@ exports[`MediaPlayer render the amp player 1`] = `
 @media (min-width:25rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    margin-top: 1rem;
   }
 }
 
@@ -101,6 +107,7 @@ exports[`MediaPlayer render the amp player 1`] = `
                 srcset="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 240w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 320w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 480w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 624w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 800w"
                 width="9"
               />
+              <noscript />
             </amp-iframe>
           </div>
         </figure>
@@ -124,7 +131,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 }
 
 .c0 {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .c0 figure {
@@ -171,6 +178,12 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
   }
 }
 
+@media (min-width:25rem) {
+  .c0 {
+    margin-top: 1rem;
+  }
+}
+
 @media (min-width:63rem) {
   .c0 {
     padding-top: 0.5rem;
@@ -205,6 +218,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
               src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB"
               title="Media player"
             />
+            <noscript />
           </div>
         </figure>
       </div>

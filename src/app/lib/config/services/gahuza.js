@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
       relatedContent: 'Ibindi bisa n’ibi',
+      sections: 'Imice',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -136,6 +137,7 @@ export const service = {
       },
       media: {
         noJs: 'Ntibishobora gukina mu cuma cawe',
+        contentExpired: 'Ibi ntibikiboneka.',
         audio: 'Umviriza',
         photogallery: 'Amasanamu',
         video: 'Video',
@@ -155,7 +157,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Ibisomwa cane',
-      lastUpdated: 'Ibiheruka kuvugururwa: ',
+      lastUpdated: 'Ibiheruka kuvugururwa:',
+      numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -214,7 +218,6 @@ export const service = {
         url: '/gahuza/media/video',
       },
     ],
-    navigationSection: 'Imice',
   },
 };
 

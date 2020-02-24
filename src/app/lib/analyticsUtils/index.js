@@ -1,6 +1,7 @@
 import Cookie from 'js-cookie';
 import uuid from 'uuid/v4';
 import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import onClient from '../utilities/onClient';
 
 export const getDestination = statsDestination => {
@@ -15,8 +16,8 @@ export const getDestination = statsDestination => {
     NEWS_GNL_TEST: 598288,
     WS_NEWS_LANGUAGES: 598342,
     WS_NEWS_LANGUAGES_TEST: 598343,
-    PLACEHOLDER: 598295,
-    PLACEHOLDER_TEST: 598297,
+    PS_HOMEPAGE: 598273,
+    PS_HOMEPAGE_TEST: 598274,
     BBC_ARCHIVE_PS: 605565,
     BBC_ARCHIVE_PS_TEST: 605566,
   };
@@ -161,6 +162,13 @@ export const getPublishedDatetime = (attribute, data) => {
   return publishedDatetime && isValidDateTime(publishedDatetime)
     ? getISODate(publishedDatetime)
     : null;
+};
+
+export const getContentId = (assetType, pageData) => {
+  const curie = path(['metadata', 'locators', 'curie'], pageData);
+  const guid = curie.split('/').pop();
+  const contentId = `urn:bbc:${assetType}:`.concat(guid);
+  return contentId;
 };
 
 export const getProducer = service => {

@@ -1,5 +1,4 @@
 import config from '../../../support/config/services';
-import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
 const getParagraphText = blocks => {
   const textReplacements = {
@@ -19,6 +18,10 @@ const getParagraphText = blocks => {
     .text.replace(replacementsRegex, match => textReplacements[match]);
 };
 
+const extractHrefAttribute = textBlock => {
+  return textBlock.text.match(/href="([^"]*)/)[1];
+};
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
@@ -26,11 +29,7 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfig = ({
-  service,
-  pageType,
-  variant,
-}) => {
+export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
     it('should render a H1, which contains/displays a styled headline', () => {
       cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
@@ -43,37 +42,42 @@ export const testsThatFollowSmokeTestConfig = ({
     it('should render a paragraph, which contains/displays styled text', () => {
       cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
         ({ body }) => {
-          const text = getParagraphText(body.content.blocks);
-
-          cy.get('p').should('contain', text);
+          const textCheck = body.content.blocks.find(
+            el => el.type === 'paragraph' && el.markupType === 'plain_text',
+          );
+          if (textCheck) {
+            const text = getParagraphText(body.content.blocks);
+            cy.get('p').should('contain', text);
+          } else {
+            cy.log('No paragraph text present');
+          }
         },
       );
     });
 
-    it('should render a timestamp', () => {
-      cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-        ({ body }) => {
-          const { lastPublished, firstPublished } = body.metadata;
-          const timeDifferenceMinutes =
-            (lastPublished - firstPublished) / 1000 / 60;
-          const minutesTolerance = 1;
-          cy.get('time')
-            .eq(0)
-            .should('exist')
-            .should('be.visible')
-            .should('have.attr', 'datetime')
-            .should('not.be.empty');
+    it('legacy MAP should render a link using an <a> with href rather than a plain text <link>', () => {
+      const requestPath = Cypress.env('currentPath');
+      const isLegacyAsset = requestPath.split('/').length > 4;
 
-          if (timeDifferenceMinutes > minutesTolerance) {
-            cy.get('time')
-              .eq(1)
-              .should(
-                'contain',
-                appConfig[config[service].name][variant].articleTimestampPrefix,
-              );
+      if (isLegacyAsset) {
+        cy.request(`${requestPath}.json`).then(({ body }) => {
+          const textWithPlainTextLinkTag = body.content.blocks.find(block => {
+            return block.text && block.text.includes('</link>');
+          });
+          if (textWithPlainTextLinkTag) {
+            const text = getParagraphText([textWithPlainTextLinkTag]);
+            const href = extractHrefAttribute(textWithPlainTextLinkTag);
+            cy.get('p')
+              .contains(text)
+              .should('not.exist');
+            cy.get(`a[href*="${href}"]`).should('exist');
+          } else {
+            cy.log('No </link> - skipping');
           }
-        },
-      );
+        });
+      } else {
+        cy.log('Not a legacy asset - skipping');
+      }
     });
 
     it('should have href that matches assetURI for 1st related content link', () => {

@@ -7,6 +7,7 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
+  F_REITH_SERIF_LIGHT,
 } from '@bbc/psammead-styles/fonts';
 import { turkce as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Istanbul';
@@ -57,6 +58,7 @@ export const service = {
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
       relatedContent: 'İlgili haberler',
+      sections: 'Kategoriler',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -144,6 +146,7 @@ export const service = {
       },
       media: {
         noJs: 'Cihazınızda ses/video gösterim programı bulunamadı',
+        contentExpired: 'Bu içerik artık oynatılabilir durumda değil.',
         audio: 'Ses dosyası',
         photogallery: 'Fotoğraf galerisi',
         video: 'Video',
@@ -158,7 +161,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'En çok okunanlar',
-      lastUpdated: 'Son güncelleme: ',
+      lastUpdated: 'Son güncelleme:',
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -197,6 +202,7 @@ export const service = {
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
       F_REITH_SERIF_MEDIUM_ITALIC,
+      F_REITH_SERIF_LIGHT,
     ],
     timezone: 'Asia/Istanbul',
     navigation: [
@@ -237,7 +243,6 @@ export const service = {
         url: '/turkce/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
       },
     ],
-    navigationSection: 'Kategoriler',
   },
 };
 

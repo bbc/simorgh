@@ -51,6 +51,7 @@ export const service = {
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       relatedContent: 'อ่านข่าวนี้เพิ่มเติม',
+      sections: 'หมวดข่าว',
       mediaAssetPage: {
         mediaPlayer: 'มีเดีย เพลเยอร์',
         audioPlayer: 'ออดิโอ เพลเยอร์',
@@ -138,6 +139,7 @@ export const service = {
       },
       media: {
         noJs: 'อุปกรณ์ของท่านไม่สามารถใช้งานเครื่องเล่นสื่อได้',
+        contentExpired: 'เนื้อหานี้ไม่สามารถใช้งานได้แล้ว',
         audio: 'เสียง',
         photogallery: 'แกลเลอรีภาพ',
         video: 'วิดีโอ',
@@ -152,7 +154,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'ได้รับความนิยมสูงสุด',
-      lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา ',
+      lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา',
+      numberOfItems: 5,
+      hasMostRead: true,
     },
     navigation: [
       {
@@ -184,7 +188,6 @@ export const service = {
         url: '/thai/popular/read',
       },
     ],
-    navigationSection: 'หมวดข่าว',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/thai/institutional-49281839',

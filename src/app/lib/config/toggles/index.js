@@ -13,7 +13,7 @@ const toggles = {
       enabled: true,
     },
     mostRead: {
-      enabled: false,
+      enabled: true,
     },
     radioSchedule: {
       enabled: true,
@@ -21,7 +21,7 @@ const toggles = {
   },
   test: {
     chartbeatAnalytics: {
-      enabled: false,
+      enabled: true,
     },
     mediaPlayer: {
       enabled: true,
@@ -33,7 +33,7 @@ const toggles = {
       enabled: true,
     },
     mostRead: {
-      enabled: false,
+      enabled: true,
     },
     radioSchedule: {
       enabled: false,
@@ -70,7 +70,7 @@ const toggles = {
       enabled: true,
     },
     navOnArticles: {
-      enabled: false,
+      enabled: true,
     },
     mostRead: {
       enabled: false,

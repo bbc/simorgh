@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'अहिलेको पृष्ठ',
       skipLinkText: 'सामग्रीमा जानुहोस्',
       relatedContent: 'सम्बन्धित सामग्री',
+      sections: 'सूची',
       mediaAssetPage: {
         mediaPlayer: 'मिडिया प्लेअर',
         audioPlayer: 'अडिओ प्लेअर',
@@ -137,6 +138,7 @@ export const service = {
       },
       media: {
         noJs: 'तपाईंको उपकरणमा मिडिया प्लेब्याक सपोर्ट छैन',
+        contentExpired: 'यो सामग्री उपलब्ध छैन',
         audio: 'अडिओ',
         photogallery: 'तस्बिर सङ्ग्रह',
         video: 'भिडिओ',
@@ -145,8 +147,8 @@ export const service = {
           subtitle:
             'नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य.',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'सुन्नुहोस्',
+        watch: 'हेर्नुहोस्',
         liveLabel: 'प्रत्यक्ष प्रसारण',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -156,7 +158,9 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'धेरै पढिएको',
-      lastUpdated: 'अन्तिम चोटि अद्यावधिक गरिएको मिति: ',
+      lastUpdated: 'अन्तिम चोटि अद्यावधिक गरिएको मिति:',
+      numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -216,7 +220,6 @@ export const service = {
         url: '/nepali/media/video',
       },
     ],
-    navigationSection: 'सूची',
   },
 };
 

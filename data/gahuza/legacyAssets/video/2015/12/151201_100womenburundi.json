@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:gahuza/video/2015/12/151201_100womenburundi",
+    "locators": {
+      "assetUri": "/gahuza/video/2015/12/151201_100womenburundi",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2015/12/151201_100womenburundi",
+      "curie": "http://www.bbc.co.uk/asset/20eca0f4-983d-11e5-8063-fed53db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "greatlakes",
+    "language": "rw",
+    "lastUpdated": 1550780605362,
+    "firstPublished": 1448982902,
+    "lastPublished": 1448983018,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": false,
+      "allowAdvertising": true,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "41561035" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "image", "paragraph" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "41561035",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/gahuza/meta/dps/2015/12/emp/151201_100womenburundi.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "id": "d5e512",
+        "subType": "body",
+        "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/12/01/151201150123_lucie_nzorijana_512x288_bbc.jpg",
+        "path": "/amz/worldservice/live/assets/images/2015/12/01/151201150123_lucie_nzorijana_512x288_bbc.jpg",
+        "height": 288,
+        "width": 512,
+        "altText": "Lucie Nzorijana",
+        "caption": "Lucie Nzorijana",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Inyuma yo kubona ko abakenyezi n'abakobwa bagize ica kabiri c'isi batagaragara ku rugero rumwe n'abagabo mu binyamakuru, BBC imaze imyaka itatu yaratanguye kubaha umwanya ukwiye.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Lucie Nzorijana ni umushingwamanza(avocat), akaba n'umushumba (pasitori) mw'ishengero mu Burundi.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Aravuga akamaro n'agaciro k'umugore mu rugo, mu kazi no mu gihugu.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Agaciro k'abagore n'abakobwa",
+      "headline": "Agaciro k'abagore n'abakobwa"
+    },
+    "locators": {
+      "assetUri": "/gahuza/video/2015/12/151201_100womenburundi",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2015/12/151201_100womenburundi",
+      "curie": "http://www.bbc.co.uk/asset/20eca0f4-983d-11e5-8063-fed53db9bd6e"
+    },
+    "summary": "BBC imaze iminsi iha ijambo abagore n'abakobwa kugirango bamenyekanishe agaciro kabo",
+    "timestamp": 1550780605362,
+    "passport": {},
+    "media": {
+      "id": "41561035",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/gahuza/meta/dps/2015/12/emp/151201_100womenburundi.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e235",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/12/01/151201144722_lucie_nzorijana_144x81_b_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2015/12/01/151201144722_lucie_nzorijana_144x81_b_nocredit.jpg",
+      "height": 81,
+      "width": 144,
+      "altText": "Lucie Nzorijana",
+      "copyrightHolder": "b",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:gahuza/video/2015/12/151201_100womenburundi",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": { "subType": "index", "name": "Video", "uri": "/gahuza/video", "type": "simple" },
+    "site": { "subType": "site", "name": "BBCGahuza.com", "uri": "/gahuza", "type": "simple" },
+    "groups": []
+  }
+}
