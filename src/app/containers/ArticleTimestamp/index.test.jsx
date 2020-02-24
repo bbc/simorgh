@@ -151,10 +151,10 @@ describe('ArticleTimestamp', () => {
   });
 
   it('should render one timestamp with date when firstPublished before today and lastPublished === firstPublished', () => {
-    const twentyFourHoursAgo = {
+    const twentyFourHoursAgo = timestampGenerator({
       hours: 24,
       seconds: 1,
-    };
+    });
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={twentyFourHoursAgo}
