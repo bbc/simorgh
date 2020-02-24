@@ -80,8 +80,6 @@ it('should render a news article correctly', async () => {
     </Context>,
   );
 
-  await waitForElement(() => container.querySelector('#Most-Read'));
-
   expect(container).toMatchSnapshot();
 });
 
@@ -99,8 +97,7 @@ it('should render a persian article correctly', async () => {
   expect(container).toMatchSnapshot();
 });
 
-// TODO: Is this change removing navigation?
-it('should render a pidgin article correctly (with navigation)', async () => {
+it('should render a pidgin article correctly', async () => {
   fetch.mockResponse(JSON.stringify(pidginMostReadData));
 
   const { container } = render(
