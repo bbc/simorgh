@@ -33,7 +33,7 @@ const toggles = {
       enabled: true,
     },
     mostRead: {
-      enabled: true,
+      enabled: false,
     },
     radioSchedule: {
       enabled: false,
