@@ -33,6 +33,10 @@ exports[`Useful links should render multiple correctly 1`] = `
   width: 100%;
 }
 
+.c0 {
+  padding-bottom: 1.5rem;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c3 {
     font-size: 1rem;
