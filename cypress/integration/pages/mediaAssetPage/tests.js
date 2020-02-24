@@ -18,6 +18,10 @@ const getParagraphText = blocks => {
     .text.replace(replacementsRegex, match => textReplacements[match]);
 };
 
+const extractHrefAttribute = textBlock => {
+  return textBlock.text.match(/href="([^"]*)/)[1];
+};
+
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
@@ -38,11 +42,42 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
     it('should render a paragraph, which contains/displays styled text', () => {
       cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
         ({ body }) => {
-          const text = getParagraphText(body.content.blocks);
-
-          cy.get('p').should('contain', text);
+          const textCheck = body.content.blocks.find(
+            el => el.type === 'paragraph' && el.markupType === 'plain_text',
+          );
+          if (textCheck) {
+            const text = getParagraphText(body.content.blocks);
+            cy.get('p').should('contain', text);
+          } else {
+            cy.log('No paragraph text present');
+          }
         },
       );
+    });
+
+    it('legacy MAP should render a link using an <a> with href rather than a plain text <link>', () => {
+      const requestPath = Cypress.env('currentPath');
+      const isLegacyAsset = requestPath.split('/').length > 4;
+
+      if (isLegacyAsset) {
+        cy.request(`${requestPath}.json`).then(({ body }) => {
+          const textWithPlainTextLinkTag = body.content.blocks.find(block => {
+            return block.text && block.text.includes('</link>');
+          });
+          if (textWithPlainTextLinkTag) {
+            const text = getParagraphText([textWithPlainTextLinkTag]);
+            const href = extractHrefAttribute(textWithPlainTextLinkTag);
+            cy.get('p')
+              .contains(text)
+              .should('not.exist');
+            cy.get(`a[href*="${href}"]`).should('exist');
+          } else {
+            cy.log('No </link> - skipping');
+          }
+        });
+      } else {
+        cy.log('Not a legacy asset - skipping');
+      }
     });
 
     it('should have href that matches assetURI for 1st related content link', () => {
