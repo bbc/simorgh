@@ -49,17 +49,23 @@ const RadioScheduleContainer = ({ endpoint }) => {
       propSatisfies(time => time < currentTime, 'publishedTimeStart'),
     )(radioScheduleData.schedules);
 
-    console.log(latestProgrammeIndex);
-    
     const schedulesToShow = radioScheduleData.schedules.slice(
       latestProgrammeIndex - 2,
       latestProgrammeIndex + 2,
     );
-    const latestProgram = radioScheduleData.schedules[latestProgrammeIndex];
 
-    console.log('current time', new Date());
-
-    console.log('current time from var', new Date(currentTime));
+    const latestProgram = schedulesToShow[2];
+    if (
+      getProgramState(
+        currentTime,
+        latestProgram.publishedTimeStart,
+        latestProgram.publishedTimeEnd,
+      ) === 'live'
+    ) {
+      // Display live program card at the beginning of the schedule
+      schedulesToShow.splice(0, 0, latestProgram);
+      schedulesToShow.splice(3, 1);
+    }
 
     const schedules = schedulesToShow.map(program => {
       const currentState = getProgramState(
@@ -70,7 +76,7 @@ const RadioScheduleContainer = ({ endpoint }) => {
       return {
         id: program.broadcast.pid,
         state: currentState,
-        stateLabel: 'Live',
+        stateLabel: currentState,
         startTime: program.publishedTimeStart,
         link: getLink(currentState, program),
         brandTitle: program.brand.title,
@@ -94,49 +100,6 @@ const RadioScheduleContainer = ({ endpoint }) => {
     }
   }, [endpoint, radioScheduleEnabled]);
 
-  // if (!radioScheduleEnabled) {
-  //   return null;
-  // }
-
-  // const schedules = [
-  //   {
-  //     id: 1,
-  //     state: 'live',
-  //     stateLabel: 'Live',
-  //     startTime: 1566914061212,
-  //     link: 'www.bbc.co.uk',
-  //     brandTitle: 'This is a brand title',
-  //     episodeTitle: 'This is an episode title',
-  //     summary: 'This is a summary',
-  //     duration: '45:00',
-  //     durationLabel: 'Duration',
-  //   },
-  //   {
-  //     id: 2,
-  //     state: 'next',
-  //     stateLabel: 'Live',
-  //     startTime: 1566914061212,
-  //     link: 'www.bbc.co.uk',
-  //     brandTitle: 'This is a brand title',
-  //     episodeTitle: 'This is an episode title',
-  //     summary: 'This is a summary',
-  //     duration: '45:00',
-  //     durationLabel: 'Duration',
-  //   },
-  //   {
-  //     id: 2,
-  //     state: 'onDemand',
-  //     stateLabel: 'Live',
-  //     startTime: 1566914061212,
-  //     link: 'www.bbc.co.uk',
-  //     brandTitle: 'This is a brand title',
-  //     episodeTitle: 'This is an episode title',
-  //     summary: 'This is a summary',
-  //     duration: '45:00',
-  //     durationLabel: 'Duration',
-  //   },
-  // ];
-
   return (
     <>
       <RadioSchedule
@@ -148,27 +111,6 @@ const RadioScheduleContainer = ({ endpoint }) => {
         dir="ltr"
       />
     </>
-    // <>
-    //   <p>Radio Schedules</p>
-    //   {schedule.map(
-    //     ({
-    //       broadcast,
-    //       transmissionTimeStart,
-    //       transmissionTimeEnd,
-    //       episode: {
-    //         presentationTitle,
-    //         synopses: { short },
-    //       },
-    //     }) => (
-    //       <ul key={broadcast.pid}>
-    //         <li>{presentationTitle}</li>
-    //         <li>{short}</li>
-    //         <li>{transmissionTimeStart}</li>
-    //         <li>{transmissionTimeEnd}</li>
-    //       </ul>
-    //     ),
-    //   )}
-    // </>
   );
 };
 
