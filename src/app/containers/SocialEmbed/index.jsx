@@ -21,7 +21,7 @@ const SocialEmbed = ({ source, className }) => {
       ({
         twitter: 'https://platform.twitter.com/widgets.js',
         youtube: null,
-        instagram: null,
+        instagram: 'https://platform.instagram.com/en_US/embeds.js',
       }[provider]);
     setWidgetUrl(getWidgetUrl(source));
     setEmbed(getEmbedephantData(source));
