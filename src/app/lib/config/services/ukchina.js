@@ -99,6 +99,10 @@ export const service = {
         url: '/ukchina/simp/media/video',
       },
     ],
+    scriptLink: {
+      text: '繁',
+      offscreenText: 'Traditional',
+    },
     translations: {
       seeAll: '浏览全部',
       home: '主页',
@@ -260,6 +264,10 @@ export const service = {
         url: '/ukchina/trad/media/video',
       },
     ],
+    scriptLink: {
+      text: '简',
+      offscreenText: 'Simplified',
+    },
     translations: {
       seeAll: '瀏覽全部',
       home: '主頁',

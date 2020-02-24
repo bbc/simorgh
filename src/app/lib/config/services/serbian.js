@@ -119,6 +119,10 @@ export const service = {
         url: '/serbian/lat/popular/read',
       },
     ],
+    scriptLink: {
+      text: 'Ћир',
+      offscreenText: 'Cyrillic',
+    },
     translations: {
       seeAll: 'Pogledajte sve',
       home: 'Glavna stranica',
@@ -310,6 +314,10 @@ export const service = {
         url: '/serbian/cyr/popular/read',
       },
     ],
+    scriptLink: {
+      text: 'Lat',
+      offscreenText: 'Latin',
+    },
     translations: {
       seeAll: 'Погледајте све',
       home: 'Главна страница',
