@@ -139,6 +139,10 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   position: relative;
 }
 
+.c6 {
+  margin-bottom: 1.5rem;
+}
+
 @media (min-width:37.5rem) {
   .c4 {
     -webkit-align-items: stretch;
@@ -460,6 +464,12 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   }
 }
 
+@media (min-width:25rem) {
+  .c6 {
+    margin-bottom: 2rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c6 {
     margin-top: 1rem;
@@ -469,6 +479,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 @media (min-width:63rem) {
   .c6 {
     margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 }
 
