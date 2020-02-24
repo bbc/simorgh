@@ -1,5 +1,5 @@
 import ErrorPage from '#pages/Error';
-import { errorPagePath } from '../regex';
+import { errorPagePath } from '../utils/regex';
 
 export default {
   path: errorPagePath,

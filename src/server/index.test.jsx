@@ -3,7 +3,7 @@ import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
-import getRouteProps from '../app/routes/fetchPageData/utils/getRouteProps';
+import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import Document from './Document/component';
 import routes from '../app/routes';
 import { localBaseUrl } from '../testHelpers/config';
@@ -48,7 +48,7 @@ jest.mock('@loadable/server', () => ({
   }),
 }));
 
-jest.mock('../app/routes/fetchPageData/utils/getRouteProps');
+jest.mock('#app/routes/utils/fetchPageData/utils/getRouteProps');
 
 const mockRouteProps = ({
   id,
