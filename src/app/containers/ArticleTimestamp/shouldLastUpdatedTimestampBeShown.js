@@ -19,13 +19,19 @@ const shouldLastUpdatedTimestampBeShown = ({
   lastPublished,
 }) => {
   const timeDifferenceMinutes = (lastPublished - firstPublished) / 1000 / 60;
+  const isUpdated = hasBeenUpdated(timeDifferenceMinutes, minutesTolerance);
+  const isPublishedAndUpdatedToday = publishedAndUpdatedToday(
+    firstPublished,
+    lastPublished,
+  );
+  const isPublishedAndUpdatedOnSameDayNotRelative = publishedAndUpdatedOnSameDayAndNotRelative(
+    firstPublished,
+    lastPublished,
+  );
+
   return (
-    hasBeenUpdated(timeDifferenceMinutes, minutesTolerance) &&
-    (publishedAndUpdatedToday(firstPublished, lastPublished) ||
-      !publishedAndUpdatedOnSameDayAndNotRelative(
-        firstPublished,
-        lastPublished,
-      ))
+    isUpdated &&
+    (isPublishedAndUpdatedToday || !isPublishedAndUpdatedOnSameDayNotRelative)
     // Avoid double-negatives and flipping a 'show' condition
   );
 };
