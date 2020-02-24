@@ -84,6 +84,7 @@ Object.keys(serviceDatasets).forEach(service => {
                   pageType="frontPage"
                   pathname={serviceConfig[service][variant].navigation[0].url}
                   mostReadEndpointOverride={`./data/${service}/mostRead/index.json`}
+                  variant={variant}
                 />
               )}
             </DataWrapper>
