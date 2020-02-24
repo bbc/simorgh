@@ -54,7 +54,7 @@ const RadioScheduleContainer = ({ endpoint }) => {
       latestProgrammeIndex + 2,
     );
 
-    const latestProgram = schedulesToShow[2];
+    const latestProgram = radioScheduleData.schedules[latestProgrammeIndex];
     if (
       getProgramState(
         currentTime,
