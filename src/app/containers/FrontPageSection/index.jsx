@@ -50,9 +50,12 @@ const FirstSectionTopMargin = styled.div`
 `;
 
 // Apply the right margin-top between the section label and the promos
-const TopMargin = styled.div`
+const SpacingDiv = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin-top: ${GEL_SPACING_DBL};
+    padding-top: ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-bottom: ${GEL_SPACING_TRPL};
   }
 `;
 
@@ -68,7 +71,7 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
   }
 
   if (oneItem) {
-    return <TopMargin>{children}</TopMargin>;
+    return <SpacingDiv>{children}</SpacingDiv>;
   }
 
   return children;
