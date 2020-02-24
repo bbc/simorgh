@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, bool } from 'prop-types';
+import { arrayOf, shape, bool, node } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from 'styled-components';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
@@ -45,43 +45,45 @@ const formatItem = (item, env) => {
 const CpsRelatedContent = ({ content, enableGridWrapper }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const { env } = useContext(RequestContext);
-  const ConditionalWrapper = ({ condition, wrapper, children }) =>
-    condition ? wrapper(children) : children;
   const a11yAttributes = {
     as: 'section',
     role: 'region',
     'aria-labelledby': 'related-content-heading',
   };
+  const RelatedContentWrapper = ({ children }) =>
+    enableGridWrapper ? (
+      <GhostGrid {...a11yAttributes}>
+        <Wrapper>{children}</Wrapper>
+      </GhostGrid>
+    ) : (
+      <Wrapper {...a11yAttributes}>{children}</Wrapper>
+    );
+  RelatedContentWrapper.propTypes = {
+    children: node.isRequired,
+  };
   if (!content.length) return null;
 
   return (
-    <ConditionalWrapper
-      condition={enableGridWrapper}
-      wrapper={children => (
-        <GhostGrid {...a11yAttributes}>{children}</GhostGrid>
-      )}
-    >
-      <Wrapper {...(enableGridWrapper || a11yAttributes)}>
-        <StyledSectionLabel
-          script={script}
-          service={service}
-          dir={dir}
-          labelId="related-content-heading"
-        >
-          {translations.relatedContent}
-        </StyledSectionLabel>
+    <RelatedContentWrapper>
+      <StyledSectionLabel
+        script={script}
+        service={service}
+        dir={dir}
+        labelId="related-content-heading"
+      >
+        {translations.relatedContent}
+      </StyledSectionLabel>
 
-        <StoryPromoUl>
-          {content
-            .map(item => formatItem(item, env))
-            .map(item => (
-              <StoryPromoLi key={item.id || item.uri}>
-                <StoryPromo item={item} />
-              </StoryPromoLi>
-            ))}
-        </StoryPromoUl>
-      </Wrapper>
-    </ConditionalWrapper>
+      <StoryPromoUl>
+        {content
+          .map(item => formatItem(item, env))
+          .map(item => (
+            <StoryPromoLi key={item.id || item.uri}>
+              <StoryPromo item={item} />
+            </StoryPromoLi>
+          ))}
+      </StoryPromoUl>
+    </RelatedContentWrapper>
   );
 };
 
