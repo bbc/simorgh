@@ -13,6 +13,7 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 
@@ -62,7 +63,7 @@ export const FrontPageGrid = styled(GridMaxWidthGroup5)`
     margin-top: 0;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-bottom: ${GEL_SPACING_QUAD};
+    padding-bottom: ${GEL_SPACING_QUIN};
   }
 `;
 
