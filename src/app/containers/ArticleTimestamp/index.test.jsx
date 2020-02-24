@@ -151,10 +151,10 @@ describe('ArticleTimestamp', () => {
   });
 
   it('should render one timestamp with date when firstPublished before today and lastPublished === firstPublished', () => {
-    const twentyFourHoursAgo = timestampGenerator({
+    const twentyFourHoursAgo = {
       hours: 24,
       seconds: 1,
-    });
+    };
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={twentyFourHoursAgo}
@@ -261,18 +261,6 @@ describe('ArticleTimestamp', () => {
     expect(renderedWrapper.length).toEqual(2);
     expect(firstChild(renderedWrapper)).toMatch(regexDate);
     expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
-  });
-
-  it('should render one timestamp - published: date when both the published and updated date is the same and today is > 10 hrs after the article was published', () => {
-    const renderedWrapper = renderedTimestamps(
-      <WrappedArticleTimestamp
-        firstPublished={1400140005000}
-        lastPublished={1400153537000}
-      />,
-    );
-
-    expect(renderedWrapper.length).toEqual(1);
-    expect(firstChild(renderedWrapper)).toMatch(regexDate);
   });
 
   describe('With different timezones', () => {

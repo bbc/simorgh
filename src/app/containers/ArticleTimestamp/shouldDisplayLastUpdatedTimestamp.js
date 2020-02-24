@@ -1,9 +1,10 @@
 import { isLastRelative, isSameDay, isToday } from './helpers';
 
-const hasBeenUpdated = (timeDifferenceMinutes, minutesTolerance) =>
-  timeDifferenceMinutes > minutesTolerance;
+export const hasBeenUpdated = (timeDifferenceMinutes, minutesTolerance) => {
+  return timeDifferenceMinutes > minutesTolerance;
+};
 
-const publishedAndUpdatedToday = (firstPublished, lastPublished) =>
+export const publishedAndUpdatedToday = (firstPublished, lastPublished) =>
   isToday(firstPublished) && isSameDay(firstPublished, lastPublished);
 
 const shouldDisplayLastUpdatedTimestamp = ({
