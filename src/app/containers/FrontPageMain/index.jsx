@@ -38,17 +38,21 @@ export const StyledFrontPageDiv = styled.div`
   }
 
   /* To add extra spacing */
-  margin-top: ${GEL_SPACING};
-  padding-bottom: ${GEL_SPACING_QUAD};
+  padding-top: ${GEL_SPACING};
+
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_DBL};
+    padding-top: ${GEL_SPACING_DBL};
   }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding-top: 0;
+  }
+
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     padding-bottom: ${GEL_SPACING_TRPL};
   }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-top: 0;
-  }
+
+  padding-bottom: ${GEL_SPACING_QUAD};
+
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding-bottom: ${GEL_SPACING_QUIN};
   }
