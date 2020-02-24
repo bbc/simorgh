@@ -6,7 +6,7 @@ import {
   radioAndTvPath,
   frontPagePath,
   errorPagePath,
-} from './regex';
+} from './utils/regex';
 import {
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
@@ -15,7 +15,7 @@ import {
   INDEX_PAGE,
   ARTICLE_PAGE,
   LIVE_RADIO_PAGE,
-} from './pageTypes';
+} from './utils/pageTypes';
 
 jest.mock('#pages/Article', () => jest.fn());
 jest.mock('#pages/FrontPage', () => jest.fn());
