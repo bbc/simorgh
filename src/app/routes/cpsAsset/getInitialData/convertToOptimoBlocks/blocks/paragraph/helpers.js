@@ -24,9 +24,14 @@ const parseReplacements = (
 };
 
 export const processBlock = _block => {
-  const block = _block;
+  const block = { ..._block };
 
   if (path(['text'], block)) {
+    // catch plain_text ARES response for legacy MAPs with <link> elements
+    if (block.text.includes('</link>')) {
+      block.markupType = 'candy_xml';
+    }
+
     // make introductions bold
     if (block.role === 'introduction') {
       block.text = boldWrap(block.text);
