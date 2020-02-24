@@ -51,6 +51,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
           if (!media) throw new Error('no media');
 
+          // Ensure media player is ready
           cy.get(
             'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
           ).then($iframe => {
@@ -61,6 +62,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               .should('eq', true);
           });
 
+          // Click the play button
           cy.get('iframe').then(iframe => {
             cy.wrap(iframe.contents().find('iframe'))
               .should(
