@@ -13,6 +13,11 @@ fetch.mockResponse(JSON.stringify(amharicPageData));
 
 analyticsUtils.getAtUserId = jest.fn();
 
+jest.mock('../ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  return ChartbeatAnalytics;
+});
+
 describe('Radio Page Main', () => {
   it('should match snapshot for Canonical', async () => {
     const { pageData } = await getInitialData('some-live-radio-path');
