@@ -106,7 +106,7 @@ exports[`should render a persian article correctly 1`] = `
           </h2>
         </div>
         <div
-          class="MarginWrapper-sc-6bm912-0 bmzrWW"
+          class="MarginWrapper-sc-6bm912-0 eNHNsN"
         >
           <ol
             class="GridComponent-nf79gm-0 iUNUcT StyledGrid-sc-1ofyujo-0 iUmfRN"
@@ -609,7 +609,7 @@ exports[`should render a pidgin article correctly 1`] = `
           </h2>
         </div>
         <div
-          class="MarginWrapper-sc-6bm912-0 bmzrWW"
+          class="MarginWrapper-sc-6bm912-0 eNHNsN"
         >
           <ol
             class="GridComponent-nf79gm-0 iUNUcT StyledGrid-sc-1ofyujo-0 iUmfRN"

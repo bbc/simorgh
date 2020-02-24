@@ -14,6 +14,8 @@ import {
   GEL_MARGIN_BELOW_400PX,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
 import {
   MostReadList,
@@ -30,12 +32,18 @@ import LastUpdated from './LastUpdated';
 const logger = webLogger();
 
 const MarginWrapper = styled.div`
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin-bottom: ${GEL_SPACING_QUAD};
+  }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_DBL};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_TRPL};
+    margin-bottom: ${GEL_SPACING_QUIN};
   }
+
+  margin-bottom: ${GEL_SPACING_TRPL};
 `;
 
 const MaxWidthWrapper = styled.div`
