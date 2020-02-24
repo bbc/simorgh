@@ -6,7 +6,7 @@ const hasBeenUpdated = (timeDifferenceMinutes, minutesTolerance) =>
 const publishedAndUpdatedToday = (firstPublished, lastPublished) =>
   isToday(firstPublished) && isSameDay(firstPublished, lastPublished);
 
-const shouldLastUpdatedTimestampBeShown = ({
+const shouldDisplayLastUpdatedTimestamp = ({
   minutesTolerance,
   firstPublished,
   lastPublished,
@@ -33,4 +33,4 @@ const shouldLastUpdatedTimestampBeShown = ({
   );
 };
 
-export default shouldLastUpdatedTimestampBeShown;
+export default shouldDisplayLastUpdatedTimestamp;
