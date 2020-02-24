@@ -92,7 +92,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           status: path(['status'], data),
           error: path(['error'], data),
           errorCode: null,
-          timeOnServer: path(['timeOnServer', data]),
+          timeOnServer: path(['timeOnServer'], data),
         });
       });
     }

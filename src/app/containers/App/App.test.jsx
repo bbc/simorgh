@@ -12,11 +12,7 @@ jest.mock('react-router-config');
 
 describe('App', () => {
   let wrapper;
-  // const timeOnServer = jest
-  //   .spyOn(global.Date, 'now')
-  //   .mockImplementationOnce(() => 1582534951721);
   const timeOnServer = 1582534951721;
-  // const testTimeOnServer = timeOnServer();
   const initialData = {
     pageData: 'Some initial data',
     timeOnServer,
@@ -158,80 +154,80 @@ describe('App', () => {
               pathname: 'pathnameTwo',
               previousPath: 'pathnameOne',
               variant: 'simp',
-              timeOnServer,
+              timeOnServer: null,
             },
           );
         });
       });
 
-      // describe('successful fetch of route, match, and initial props', () => {
-      //   it('should call set state with new data', async () => {
-      //     const pathname = 'pathnameThree';
-      //     const data = {
-      //       pageData: 'Really cool data',
-      //       status: 200,
-      //     };
+      describe('successful fetch of route, match, and initial props', () => {
+        it('should call set state with new data', async () => {
+          const pathname = 'pathnameThree';
+          const data = {
+            pageData: 'Really cool data',
+            status: 200,
+          };
 
-      //     route.getInitialData.mockImplementation(() => {
-      //       return new Promise(resolve => {
-      //         setTimeout(() => resolve(data), 600);
-      //       });
-      //     });
+          route.getInitialData.mockImplementation(() => {
+            return new Promise(resolve => {
+              setTimeout(() => resolve(data), 600);
+            });
+          });
 
-      //     await act(async () => {
-      //       wrapper.setProps({ location: { pathname } });
-      //     });
+          await act(async () => {
+            wrapper.setProps({ location: { pathname } });
+          });
 
-      //     await act(route.getInitialData);
+          await act(route.getInitialData);
 
-      //     expect.assertions(3);
+          expect.assertions(3);
 
-      //     expect(route.getInitialData).toHaveBeenCalledWith(pathname);
+          expect(route.getInitialData).toHaveBeenCalledWith(pathname);
 
-      //     // start data fetch and set loading to true
-      //     expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
-      //       2,
-      //       [],
-      //       {
-      //         bbcOrigin: 'https://www.bbc.co.uk',
-      //         pageData: null,
-      //         status: null,
-      //         error: null,
-      //         errorCode: null,
-      //         id: undefined,
-      //         isAmp: false,
-      //         loading: true,
-      //         pageType: 'article',
-      //         service: 'news',
-      //         pathname: 'pathnameThree',
-      //         previousPath: 'pathnameTwo',
-      //         variant: 'simp',
-      //         timeOnServer: null,
-      //       },
-      //     );
+          // start data fetch and set loading to true
+          expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
+            2,
+            [],
+            {
+              bbcOrigin: 'https://www.bbc.co.uk',
+              pageData: null,
+              status: null,
+              error: null,
+              errorCode: null,
+              id: undefined,
+              isAmp: false,
+              loading: true,
+              pageType: 'article',
+              service: 'news',
+              pathname: 'pathnameThree',
+              previousPath: 'pathnameTwo',
+              variant: 'simp',
+              timeOnServer: null,
+            },
+          );
 
-      //     // data fetch promise resolved, set data to fetched data and loading to false
-      //     expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
-      //       3,
-      //       [],
-      //       {
-      //         bbcOrigin: 'https://www.bbc.co.uk',
-      //         pageData: data.pageData,
-      //         status: data.status,
-      //         error: undefined,
-      //         errorCode: null,
-      //         id: undefined,
-      //         isAmp: false,
-      //         loading: false,
-      //         pageType: 'article',
-      //         service: 'news',
-      //         pathname: 'pathnameThree',
-      //         previousPath: 'pathnameTwo',
-      //         variant: 'simp',
-      //       },
-      //     );
-      //   });
-      // });
+          // data fetch promise resolved, set data to fetched data and loading to false
+          expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
+            3,
+            [],
+            {
+              bbcOrigin: 'https://www.bbc.co.uk',
+              pageData: data.pageData,
+              status: data.status,
+              error: undefined,
+              errorCode: null,
+              id: undefined,
+              isAmp: false,
+              loading: false,
+              pageType: 'article',
+              service: 'news',
+              pathname: 'pathnameThree',
+              previousPath: 'pathnameTwo',
+              variant: 'simp',
+            },
+          );
+        });
+      });
     });
   });
 });
