@@ -1,5 +1,5 @@
 import cpsAssetRoute from '../cpsAsset';
-import { legacyAssetPagePath } from '../regex';
+import { legacyAssetPagePath } from '../utils/regex';
 
 export default {
   ...cpsAssetRoute,

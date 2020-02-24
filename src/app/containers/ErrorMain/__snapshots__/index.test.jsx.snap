@@ -111,7 +111,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
@@ -165,7 +165,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     margin: 0 auto;
     max-width: 63rem;
@@ -467,7 +467,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
@@ -521,7 +521,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     margin: 0 auto;
     max-width: 63rem;
@@ -773,7 +773,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
@@ -827,7 +827,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     margin: 0 auto;
     max-width: 63rem;
@@ -1074,7 +1074,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
@@ -1128,7 +1128,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     margin: 0 auto;
     max-width: 63rem;
@@ -1375,7 +1375,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
@@ -1429,7 +1429,7 @@ exports[`ErrorMain should correctly render for other status code 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     margin: 0 auto;
     max-width: 63rem;
