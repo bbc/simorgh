@@ -60,6 +60,16 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
             expect(matches).to.equal(1);
           });
       });
+      if (['photoGalleryPage', 'storyPage'].includes(pageType)) {
+        describe('CPS PGL and STY Tests', () => {
+          it('should render at least one image', () => {
+            cy.get('figure')
+              .first()
+              .find('img')
+              .should('be.visible');
+          });
+        });
+      }
     });
   }
   describe(`Canonical Tests`, () => {

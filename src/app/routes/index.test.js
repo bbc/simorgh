@@ -21,8 +21,8 @@ jest.mock('#pages/Article', () => jest.fn());
 jest.mock('#pages/FrontPage', () => jest.fn());
 jest.mock('#pages/RadioPage', () => jest.fn());
 jest.mock('#pages/MediaAssetPage', () => jest.fn());
-jest.mock('#pages/CpsSty', () => jest.fn());
-jest.mock('#pages/CpsPgl', () => jest.fn());
+jest.mock('#pages/Story', () => jest.fn());
+jest.mock('#pages/PhotoGallery', () => jest.fn());
 jest.mock('#pages/Error', () => jest.fn());
 
 const generateFixtureData = type => ({
@@ -36,8 +36,8 @@ const generateFixtureData = type => ({
 const articlePage = jest.requireMock('#pages/Article');
 const mediaPage = jest.requireMock('#pages/MediaAssetPage');
 const frontPage = jest.requireMock('#pages/FrontPage');
-const storyPage = jest.requireMock('#pages/CpsSty');
-const photoGalleryPage = jest.requireMock('#pages/CpsPgl');
+const storyPage = jest.requireMock('#pages/Story');
+const photoGalleryPage = jest.requireMock('#pages/PhotoGallery');
 const radioPage = jest.requireMock('#pages/RadioPage');
 const errorPage = jest.requireMock('#pages/Error');
 
@@ -120,14 +120,14 @@ describe('Routes', () => {
       expect(mediaPage).toHaveBeenCalled();
     });
 
-    it('should route to CpsSty component', () => {
+    it('should route to StoryPage component', () => {
       const data = generateFixtureData(STORY_PAGE);
       Component(data);
 
       expect(storyPage).toHaveBeenCalled();
     });
 
-    it('should route to CpsPgl component', () => {
+    it('should route to PhotoGalleryPage component', () => {
       const data = generateFixtureData(PHOTO_GALLERY_PAGE);
       Component(data);
 
@@ -163,14 +163,14 @@ describe('Routes', () => {
       expect(mediaPage).toHaveBeenCalled();
     });
 
-    it('should route to CpsSty component', () => {
+    it('should route to StoryPage component', () => {
       const data = generateFixtureData(STORY_PAGE);
       Component(data);
 
       expect(storyPage).toHaveBeenCalled();
     });
 
-    it('should route to CpsPgl component', () => {
+    it('should route to PhotoGalleryPage component', () => {
       const data = generateFixtureData(PHOTO_GALLERY_PAGE);
       Component(data);
 
