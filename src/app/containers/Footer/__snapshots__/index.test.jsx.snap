@@ -173,7 +173,7 @@ exports[`FooterContainer should render correctly 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c8 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4,1fr);
