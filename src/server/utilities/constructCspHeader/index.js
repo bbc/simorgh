@@ -90,8 +90,10 @@ export const generateConnectSrc = context => {
   }
 
   if (context.isAmp) {
-    connectSrc.push('https://cdn.ampproject.org');
-    connectSrc.push('https://amp-error-reporting.appspot.com');
+    connectSrc.push(
+      'https://cdn.ampproject.org',
+      'https://amp-error-reporting.appspot.com',
+    );
     return connectSrc;
   }
 
