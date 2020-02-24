@@ -11,13 +11,13 @@ Then('the radio plays', () => {
   assertMediaIsPlaying();
 });
 
-Then('the correct radio name is displayed', () => {
+Then('the radio name is displayed', () => {
   cy.get('@pageData').then(({ body }) => {
     hasHeadline(body.promo.name);
   });
 });
 
-Then('the correct radio description is displayed', () => {
+Then('the radio description is displayed', () => {
   cy.get('@pageData').then(({ body }) => {
     hasParagraph(body.promo.summary);
   });

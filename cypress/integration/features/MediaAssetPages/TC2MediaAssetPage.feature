@@ -2,7 +2,7 @@ Feature: Media Asset Page (TC2)
 
     Scenario Outline: Verify TC2 MAP page with video content
         Given I navigate to <URL>
-        Then the correct headline is displayed
+        Then the headline is displayed
         And a placeholder with the text "content is unavailable" is displayed
         Examples:
             | URL                                                                         |

@@ -12,7 +12,7 @@ Then("the subheadline '{}' is displayed", subheadline => {
   cy.get('h2').contains(subheadline);
 });
 
-Then('the correct headline is displayed', () => {
+Then('the headline is displayed', () => {
   cy.get('@pageData').then(({ body }) => {
     hasHeadline(body.promo.headlines.headline);
   });

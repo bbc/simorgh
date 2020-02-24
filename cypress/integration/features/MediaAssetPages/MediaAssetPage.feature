@@ -2,7 +2,7 @@ Feature: Media Asset Page (CPS)
 
     Scenario: Verify MAP page renders
         Given I navigate to pidgin/23248703
-        Then the correct headline is displayed
+        Then the headline is displayed
 
     Scenario: Verify MAP page can play video
         Given I navigate to igbo/media-23256786
