@@ -49,23 +49,13 @@ const RadioScheduleContainer = ({ endpoint }) => {
       propSatisfies(time => time < currentTime, 'publishedTimeStart'),
     )(radioScheduleData.schedules);
 
-    const schedulesToShow = radioScheduleData.schedules.slice(
-      latestProgrammeIndex - 2,
-      latestProgrammeIndex + 2,
-    );
-
-    const latestProgram = radioScheduleData.schedules[latestProgrammeIndex];
-    if (
-      getProgramState(
-        currentTime,
-        latestProgram.publishedTimeStart,
-        latestProgram.publishedTimeEnd,
-      ) === 'live'
-    ) {
-      // Display live program card at the beginning of the schedule
-      schedulesToShow.splice(0, 0, latestProgram);
-      schedulesToShow.splice(3, 1);
-    }
+    const radioSchedules = radioScheduleData.schedules;
+    const schedulesToShow = [
+      radioSchedules[latestProgrammeIndex],
+      radioSchedules[latestProgrammeIndex - 1],
+      radioSchedules[latestProgrammeIndex - 2],
+      radioSchedules[latestProgrammeIndex + 1],
+    ];
 
     const schedules = schedulesToShow.map(program => {
       const currentState = getProgramState(
@@ -99,7 +89,6 @@ const RadioScheduleContainer = ({ endpoint }) => {
       fetchRadioScheduleData(endpoint);
     }
   }, [endpoint, radioScheduleEnabled]);
-
 
   return (
     <>
