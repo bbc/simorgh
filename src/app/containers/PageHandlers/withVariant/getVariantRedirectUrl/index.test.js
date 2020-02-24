@@ -3,7 +3,7 @@ import {
   getVariant,
   servicesWithVariants,
 } from '#lib/utilities/variantHandler';
-import { articlePath, frontPagePath } from '#app/routes/regex';
+import { articlePath, frontPagePath } from '#app/routes/utils/regex';
 import getVariantRedirectUrl from './index';
 
 const serviceNames = Object.keys(servicesWithVariants);
