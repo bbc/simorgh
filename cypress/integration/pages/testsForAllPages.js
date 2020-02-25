@@ -523,6 +523,5 @@ export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
   service,
   pageType,
 }) => {
-  // TODO: Move these 404 link tests to a different service, they take wayyyyyyyyy to long.
   describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {});
 };
