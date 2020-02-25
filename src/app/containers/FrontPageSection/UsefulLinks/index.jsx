@@ -21,6 +21,8 @@ import { storyItem } from '#models/propTypes/storyItem';
 
 // Apply the right margin-top between the section label and multiple useful items
 const UsefulLinksWrapper = styled.div`
+  padding-bottom: ${GEL_SPACING_TRPL};
+
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING};
   }
