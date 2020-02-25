@@ -75,6 +75,7 @@ const CpsRelatedContent = ({ content }) => {
           }}
           as={StoryPromoUl}
           enableGelGutters
+          dir={dir}
         >
           {content
             .map(item => formatItem(item, env))
@@ -91,6 +92,7 @@ const CpsRelatedContent = ({ content }) => {
                 }}
                 as={StoryPromoLi}
                 key={item.id || item.uri}
+                dir={dir}
               >
                 <StoryPromo item={item} />
               </Grid>
