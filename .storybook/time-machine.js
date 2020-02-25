@@ -20,4 +20,3 @@ export const startTimeMachine = (tick = true) => {
     tick,
   });
 };
-
