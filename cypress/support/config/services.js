@@ -147,39 +147,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/amharic/articles/c0lgxqknqkdo'
-          : '/amharic/articles/czqverekrldo',
+        path: {
+          local: '/amharic/articles/czqverekrldo',
+          test: '/amharic/articles/czqverekrldo',
+          live: '/amharic/articles/c0lgxqknqkdo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/amharic/articles/c123456abcdo',
+        path: {
+          local: '/amharic/articles/c123456abcdo',
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/amharic',
+        path: {
+          local: '/amharic',
+          test: '/amharic',
+          live: '/amharic',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/amharic/bbc_amharic_radio/liveradio',
+        path: {
+          local: '/amharic/bbc_amharic_radio/liveradio',
+          test: '/amharic/bbc_amharic_radio/liveradio',
+          live: '/amharic/bbc_amharic_radio/liveradio',
+        },
         smoke: true,
       },
       mediaAssetPage: {
-        path: isLive(appEnv)
-          ? '/amharic/news-51270657'
-          : '/amharic/news-23263266',
+        path: {
+          local: '/amharic/news-23263266',
+          test: '/amharic/news-23263266',
+          live: '/amharic/news-51270657',
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv) ? undefined : '/amharic/42743191',
+        path: {
+          local: '/amharic/42743191',
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          local: undefined,
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
     },
