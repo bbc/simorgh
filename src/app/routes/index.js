@@ -1,5 +1,6 @@
 import article from './article';
 import cpsAsset from './cpsAsset';
+import learningenglish from './learningEnglish';
 import legacyCpsAsset from './legacyCpsAsset';
 import home from './home';
 import radio from './radio';
@@ -9,6 +10,7 @@ import error404 from './error404';
 export default [
   article,
   cpsAsset,
+  learningenglish,
   legacyCpsAsset,
   home,
   radio,
