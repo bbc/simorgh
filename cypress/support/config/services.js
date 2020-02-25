@@ -20,15 +20,15 @@ const genServices = appEnv => ({
     pageTypes: {
       articles: {
         path: {
-          local: ['/afaanoromoo/articles/c4g19kgl85ko'],
-          test: ['/afaanoromoo/articles/c4g19kgl85ko'],
-          live: ['/afaanoromoo/articles/ce3nlgrelv1o'],
+          local: '/afaanoromoo/articles/c4g19kgl85ko',
+          test: '/afaanoromoo/articles/c4g19kgl85ko',
+          live: '/afaanoromoo/articles/ce3nlgrelv1o',
         },
         smoke: false,
       },
       errorPage404: {
         path: {
-          local: ['/afaanoromoo/articles/c123456abcdo'],
+          local: '/afaanoromoo/articles/c123456abcdo',
           test: undefined,
           live: undefined,
         },
@@ -36,31 +36,31 @@ const genServices = appEnv => ({
       },
       frontPage: {
         path: {
-          local: ['/afaanoromoo'],
-          test: ['/afaanoromoo'],
-          live: ['/afaanoromoo'],
+          local: '/afaanoromoo',
+          test: '/afaanoromoo',
+          live: '/afaanoromoo',
         },
         smoke: false,
       },
       liveRadio: {
         path: {
-          local: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
-          test: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
-          live: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
+          local: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
+          test: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
+          live: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
         },
         smoke: false,
       },
       mediaAssetPage: {
         path: {
-          local: ['/afaanoromoo/23149891'],
-          test: ['afaanoromoo/23149891'],
-          live: ['afaanoromoo/oduu-51248626'],
+          local: '/afaanoromoo/23149891',
+          test: 'afaanoromoo/23149891',
+          live: 'afaanoromoo/oduu-51248626',
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          local: ['/afaanoromoo/oduu-41217768'],
+          local: '/afaanoromoo/oduu-41217768',
           test: undefined,
           live: undefined,
         },
