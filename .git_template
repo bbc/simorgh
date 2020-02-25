@@ -1,17 +1,41 @@
-type(scope?): subject
+# Please use the following guidelines to format all your commit messages:
+#
+      type(scope): subject
 
-body?
+      <body>
 
-footer?
-
-# build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-# ci: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
-# chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
-# docs: Documentation only changes
-# feat: A new feature
-# fix: A bug fix
-# perf: A code change that improves performance
-# refactor: A code change that neither fixes a bug nor adds a feature
-# revert: Reverts a previous commit
-# style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-# test: Adding missing or correcting existing tests
+      <footer>
+# 
+# Please note that:
+#  - The HEADER is a single line of max. 50 characters that         
+#    contains a succinct description of the change. It contains a   
+#    type, an optional scope, and a subject
+#       + <type> describes the kind of change that this commit is   
+#                providing. Allowed types are:
+#             * build: Changes that affect the build system or external dependencies
+#             * ci: Changes to our CI configuration files and scripts
+#             * chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
+#             * docs: Documentation only changes
+#             * feat: A new feature
+#             * fix: A bug fix
+#             * perf: A code change that improves performance
+#             * refactor: A code change that neither fixes a bug nor adds a feature
+#             * revert: Reverts a previous commit
+#             * style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+#             * test: Adding missing or correcting existing tests
+#             * chore (maintain)
+#       + <scope> can be anything specifying the place of the commit    
+#                 change
+#       + <subject> is a very short description of the change, in   
+#                   the following format:
+#             * imperative, present tense: “change” not             
+#               “changed”/“changes”
+#             * no capitalised first letter
+#             * no dot (.) at the end
+#  - The BODY should include the motivation for the change and      
+#    contrast this with previous behavior and must be phrased in   
+#    imperative present tense 
+#  - The FOOTER should contain any information about Breaking       
+#    Changes and is also the place to reference GitHub issues that   
+#    this commit closes
+#
