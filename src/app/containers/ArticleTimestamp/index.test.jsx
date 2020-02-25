@@ -262,6 +262,17 @@ describe('ArticleTimestamp', () => {
     expect(firstChild(renderedWrapper)).toMatch(regexDate);
     expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
   });
+  it('should render one timestamp when firstPublished and lastPublished is the same day, and lastPublished is outside of the relative window', () => {
+    const renderedWrapper = renderedTimestamps(
+      <WrappedArticleTimestamp
+        firstPublished={1400140005000}
+        lastPublished={1400153537000}
+      />,
+    );
+
+    expect(renderedWrapper.length).toEqual(1);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
+  });
 
   describe('With different timezones', () => {
     it('should show the correct local date', () => {

@@ -1,7 +1,3 @@
-import React from 'react';
-import { render } from 'enzyme';
-import ArticleTimestamp from '.';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   hasBeenUpdated,
   publishedAndUpdatedToday,
@@ -9,29 +5,13 @@ import {
 } from './shouldDisplayLastUpdatedTimestamp';
 import { timestampGenerator, sameDayTimestampsGenerator } from './testHelpers';
 
-const regexDate = /[0-9]{1,2} \w+ [0-9]{4}/;
+// const regexDate = /[0-9]{1,2} \w+ [0-9]{4}/;
 // const regexDatetime = /[0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
 
 // const regexUpdatedDatetime = /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
 // const regexUpdatedDate = /^Updated [0-9]{1,2} \w+ [0-9]{4}$/;
 
-const firstChild = wrapper => wrapper[0].children[0].data;
-// const secondChild = wrapper => wrapper[1].children[0].children[0].data;
-
-const renderedTimestamps = jsx => render(jsx).get(0).children;
-
-// eslint-disable-next-line react/prop-types
-const WrappedArticleTimestamp = ({ service, ...props }) => (
-  <ServiceContextProvider service={service}>
-    <ArticleTimestamp {...props} />
-  </ServiceContextProvider>
-);
-
-WrappedArticleTimestamp.defaultProps = {
-  service: 'news',
-};
-
-describe('ArticleTimestamp', () => {
+describe('shouldDisplayLastUpdatedTimestamp functions', () => {
   let originalDate;
 
   beforeEach(() => {
@@ -43,7 +23,14 @@ describe('ArticleTimestamp', () => {
   });
 
   it('hasBeenUpdated should return true when the time difference between firstPublished and lastPublished in minutes is greater than the minutes tolerance', () => {
-    expect(hasBeenUpdated(97732.683333, 1)).toEqual(true);
+    const firstPublishedTimestamp = originalDate();
+    const lastUpdatedTimestamp = timestampGenerator({ minutes: 2 });
+
+    const msDifference = firstPublishedTimestamp - lastUpdatedTimestamp;
+    const minutesDifference = msDifference / 1000 / 60;
+    const minutesTolerance = 1;
+
+    expect(hasBeenUpdated(minutesDifference, minutesTolerance)).toEqual(true);
   });
   it('hasBeenUpdated should return false when the time difference between firstPublished and lastPublished in minutes is less than the minutes tolerance', () => {
     const firstPublishedTimestamp = originalDate();
@@ -80,15 +67,19 @@ describe('ArticleTimestamp', () => {
     expect(wasPublishedAndUpdatedToday).toEqual(false);
   });
 
-  it('should render one timestamp - published: date when both the published and updated date is the same and current time is outside of relative window', () => {
-    const renderedWrapper = renderedTimestamps(
-      <WrappedArticleTimestamp
-        firstPublished={1400140005000}
-        lastPublished={1400153537000}
-      />,
-    );
+  // should render both timestamps when article was published and updated today
+  // shouldDisplayLastUpdatedTimestamp is true when article was published and updated today
+  // true
 
-    expect(renderedWrapper.length).toEqual(1);
-    expect(firstChild(renderedWrapper)).toMatch(regexDate);
-  });
+  // should render both timestamps when lastUpdated is within relative time period
+  // shouldDisplayLastUpdatedTimestamp is true when article was lastUpdated within relative time period
+  // true
+
+  // should render one timestamp when firstPublished and lastPublished is the same day, and lastPublished is outside of the relative window
+  // shouldDisplayLastUpdatedTimestamp is false when article was firstPublished and lastPublished on the same day, and lastPublished is outside of the relative window
+  // false
+
+  // should render both timestamps when firstUpdated and lastUpdated are on different days
+  // shouldDisplayLastUpdatedTimestamp is true when firstUpdated and lastUpdated are on different days
+  // true
 });
