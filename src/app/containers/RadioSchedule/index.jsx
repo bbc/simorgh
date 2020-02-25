@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import 'isomorphic-fetch';
 import { string } from 'prop-types';
-import { latin } from '@bbc/gel-foundations/scripts';
 import RadioSchedule from '@bbc/psammead-radio-schedule';
 import moment from 'moment';
 import findLastIndex from 'ramda/src/findLastIndex';
@@ -14,7 +13,14 @@ const logger = webLogger();
 
 const RadioScheduleContainer = ({ endpoint }) => {
   const { enabled } = useToggle('radioSchedule');
-  const { hasRadioSchedule, service } = useContext(ServiceContext);
+  const {
+    hasRadioSchedule,
+    service,
+    script,
+    dir,
+    timezone,
+    locale,
+  } = useContext(ServiceContext);
   const radioScheduleEnabled = enabled && hasRadioSchedule;
 
   const [schedule, setRadioSchedule] = useState([]);
@@ -94,34 +100,13 @@ const RadioScheduleContainer = ({ endpoint }) => {
     <>
       <RadioSchedule
         schedules={schedule}
-        locale="en-gb"
-        timezone="Europe/London"
-        script={latin}
-        service="news"
-        dir="ltr"
+        locale={locale}
+        timezone={timezone}
+        script={script}
+        service={service}
+        dir={dir}
       />
     </>
-    // <>
-    //   <p>Radio Schedules</p>
-    //   {schedule.map(
-    //     ({
-    //       broadcast,
-    //       transmissionTimeStart,
-    //       transmissionTimeEnd,
-    //       episode: {
-    //         presentationTitle,
-    //         synopses: { short },
-    //       },
-    //     }) => (
-    //       <ul key={broadcast.pid}>
-    //         <li>{presentationTitle}</li>
-    //         <li>{short}</li>
-    //         <li>{transmissionTimeStart}</li>
-    //         <li>{transmissionTimeEnd}</li>
-    //       </ul>
-    //     ),
-    //   )}
-    // </>
   );
 };
 
