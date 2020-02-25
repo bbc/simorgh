@@ -21,7 +21,7 @@ const toggles = {
   },
   test: {
     chartbeatAnalytics: {
-      enabled: false,
+      enabled: true,
     },
     mediaPlayer: {
       enabled: true,
@@ -33,7 +33,7 @@ const toggles = {
       enabled: true,
     },
     mostRead: {
-      enabled: true,
+      enabled: false,
     },
     radioSchedule: {
       enabled: false,
