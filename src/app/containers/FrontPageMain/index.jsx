@@ -99,6 +99,7 @@ const FrontPageMain = ({ frontPageData, mostReadEndpointOverride }) => {
                 {group.type === 'useful-links' && (
                   <MostReadContainer
                     mostReadEndpointOverride={mostReadEndpointOverride}
+                    maxTwoColumns
                   />
                 )}
                 <FrontPageSection group={group} sectionNumber={index} />
@@ -107,6 +108,7 @@ const FrontPageMain = ({ frontPageData, mostReadEndpointOverride }) => {
             {!hasUsefulLinks && (
               <MostReadContainer
                 mostReadEndpointOverride={mostReadEndpointOverride}
+                maxTwoColumns
               />
             )}
           </Grid>

@@ -55,7 +55,7 @@ const MaxWidthWrapper = styled.div`
   margin: 0 ${GEL_MARGIN_BELOW_400PX} ${GEL_SPACING_TRPL};
 `;
 
-const CanonicalMostRead = ({ endpoint, constrainMaxWidth }) => {
+const CanonicalMostRead = ({ endpoint, maxTwoColumns, constrainMaxWidth }) => {
   const [items, setItems] = useState([]);
   const {
     service,
@@ -127,7 +127,11 @@ const CanonicalMostRead = ({ endpoint, constrainMaxWidth }) => {
         {header}
       </SectionLabel>
       <MarginWrapper>
-        <MostReadList numberOfItems={items.length} dir={dir}>
+        <MostReadList
+          numberOfItems={items.length}
+          dir={dir}
+          maxTwoColumns={maxTwoColumns}
+        >
           {items.map((item, i) => (
             <MostReadItemWrapper dir={dir} key={item.id}>
               <MostReadRank
@@ -136,6 +140,7 @@ const CanonicalMostRead = ({ endpoint, constrainMaxWidth }) => {
                 listIndex={i + 1}
                 numberOfItems={items.length}
                 dir={dir}
+                maxTwoColumns={maxTwoColumns}
               />
               <MostReadLink
                 dir={dir}
@@ -165,6 +170,11 @@ const CanonicalMostRead = ({ endpoint, constrainMaxWidth }) => {
 CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
   constrainMaxWidth: bool.isRequired,
+  maxTwoColumns: bool,
+};
+
+CanonicalMostRead.defaultProps = {
+  maxTwoColumns: false,
 };
 
 export default CanonicalMostRead;
