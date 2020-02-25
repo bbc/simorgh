@@ -64,7 +64,7 @@ Create a new topic branch (off the main project `latest` branch) that will conta
 git checkout -b <topic-branch-name>
 ```
 
-When committing, please use the git commit message template available in the repository `.gitmessage`, set the template as your default commit message template: 
+When committing, please use the git commit message template (`.gitmessage`) available in the repository, set the template as your default commit message template: 
 
 ```
 git config --local commit.template "path_to_template_file/filename"
