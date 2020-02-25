@@ -3087,7 +3087,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 .c25 {
-  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -3106,10 +3105,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   padding: 0;
 }
 
-.c26 {
-  position: relative;
-}
-
 .c27 {
   display: inline-block;
   vertical-align: top;
@@ -3117,19 +3112,35 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   width: 33.33%;
 }
 
+.c30 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c26 {
+  position: relative;
+}
+
 .c28 {
   position: relative;
 }
 
+.c29 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
 .c31 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c33 {
@@ -3141,13 +3152,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c30 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
 }
 
 .c32 {
@@ -3180,16 +3184,14 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 .c35 {
-  padding: 0.5rem 0.25rem;
+  color: #222222;
   background-color: #FFFFFF;
-  display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #222222;
-  height: 2rem;
+  display: block;
 }
 
 .c36 {
@@ -3559,6 +3561,18 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
+@media (min-width:63rem) {
+  .c17 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c25 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c25 {
     padding: 1rem 0 1rem;
@@ -3567,19 +3581,50 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 @media (min-width:63rem) {
   .c25 {
-    padding: 1.5rem 0 1.5rem;
+    padding: 0 0 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c25:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c25:first-child {
-    padding-top: 1.5rem;
+  .c27 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c27 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c30 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c30 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c30 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -3591,24 +3636,17 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-@media (min-width:80rem) {
-  .c27 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c27 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
 @media (min-width:25rem) {
   .c29 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c29 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 
@@ -3623,13 +3661,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   .c31 {
     font-size: 1rem;
     line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c31 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
   }
 }
 
@@ -3654,31 +3685,24 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
-@media (min-width:37.5rem) {
-  .c30 {
-    padding: 0 1rem;
+@media (min-width:63rem) {
+  .c33 {
+    display: none;
+    visibility: hidden;
   }
 }
 
-@media (min-width:80rem) {
-  .c30 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c30 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
-@media (max-width:24.9375rem) {
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c35 {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c35 {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
@@ -4318,6 +4342,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         >
                           <div
                             class="c27"
+                            dir="ltr"
                           >
                             <div
                               class="c28"
@@ -4336,6 +4361,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           </div>
                           <div
                             class="c30"
+                            dir="ltr"
                           >
                             <h3
                               class="c31"
@@ -4381,6 +4407,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         >
                           <div
                             class="c27"
+                            dir="ltr"
                           >
                             <div
                               class="c28"
@@ -4394,6 +4421,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                                 <div
                                   aria-hidden="true"
                                   class="c35"
+                                  dir="ltr"
                                 >
                                   <div
                                     class="c36"
@@ -4422,6 +4450,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           </div>
                           <div
                             class="c30"
+                            dir="ltr"
                           >
                             <h3
                               class="c31"
@@ -6209,7 +6238,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 .c44 {
-  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -6228,10 +6256,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   padding: 0;
 }
 
-.c45 {
-  position: relative;
-}
-
 .c46 {
   display: inline-block;
   vertical-align: top;
@@ -6239,19 +6263,35 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   width: 33.33%;
 }
 
+.c50 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c45 {
+  position: relative;
+}
+
 .c47 {
   position: relative;
 }
 
+.c49 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
 .c51 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 .c53 {
@@ -6263,13 +6303,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
-}
-
-.c50 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
 }
 
 .c52 {
@@ -6807,6 +6840,18 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
+@media (min-width:63rem) {
+  .c36 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c44 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c44 {
     padding: 1rem 0 1rem;
@@ -6815,19 +6860,50 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 @media (min-width:63rem) {
   .c44 {
-    padding: 1.5rem 0 1.5rem;
+    padding: 0 0 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c44:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c44:first-child {
-    padding-top: 1.5rem;
+  .c46 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c46 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c50 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c50 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c50 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
   }
 }
 
@@ -6839,24 +6915,17 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (min-width:80rem) {
-  .c46 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c46 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
 @media (min-width:25rem) {
   .c49 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c49 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 
@@ -6871,13 +6940,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   .c51 {
     font-size: 1rem;
     line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c51 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
   }
 }
 
@@ -6902,24 +6964,10 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
-@media (min-width:37.5rem) {
-  .c50 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c50 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c50 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
+@media (min-width:63rem) {
+  .c53 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -8155,6 +8203,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8173,6 +8222,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8207,6 +8257,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8225,6 +8276,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8259,6 +8311,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8277,6 +8330,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8311,6 +8365,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8329,6 +8384,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8363,6 +8419,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8381,6 +8438,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8415,6 +8473,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8433,6 +8492,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8478,6 +8538,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8496,6 +8557,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8530,6 +8592,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8548,6 +8611,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
@@ -8582,6 +8646,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="c46"
+                            dir="ltr"
                           >
                             <div
                               class="c47"
@@ -8600,6 +8665,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           </div>
                           <div
                             class="c50"
+                            dir="ltr"
                           >
                             <h3
                               class="c51"
