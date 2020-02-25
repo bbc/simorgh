@@ -51,15 +51,33 @@ describe('UserContext cookies', () => {
   describe('setPreferredVariant', () => {
     Cookie.set = jest.fn();
     it('should not set invalid service or variant', () => {
+      Cookie.get.mockReturnValue('111');
       setPreferredVariantCookie('news', '');
       expect(Cookie.set).not.toHaveBeenCalled();
       setPreferredVariantCookie('');
       expect(Cookie.set).not.toHaveBeenCalled();
     });
 
-    it('should set preferred variant', () => {
+    it('should set preferred variant if personalisation cookies enabled', () => {
+      Cookie.get.mockReturnValue('111');
       setPreferredVariantCookie('serbian', 'lat');
       expect(Cookie.set).toHaveBeenCalledWith('ckps_serbian', 'lat');
+    });
+
+    it('should not set preferred variant if cookies not enabled', () => {
+      Cookie.get.mockReturnValue('000');
+      setPreferredVariantCookie('serbian', 'lat');
+      expect(Cookie.set).not.toHaveBeenCalled();
+    });
+
+    it('should not set preferred variant if personalisation cookies not enabled', () => {
+      Cookie.get.mockReturnValue('100');
+      setPreferredVariantCookie('serbian', 'lat');
+      expect(Cookie.set).not.toHaveBeenCalled();
+
+      Cookie.get.mockReturnValue('110');
+      setPreferredVariantCookie('serbian', 'lat');
+      expect(Cookie.set).not.toHaveBeenCalled();
     });
   });
 

@@ -144,7 +144,6 @@ describe(`Header`, () => {
     });
 
     afterEach(() => {
-      document.cookie = '';
       jest.clearAllMocks();
     });
 
@@ -152,22 +151,9 @@ describe(`Header`, () => {
       expect(scriptLink.getAttribute('href')).toBe('/pidgin/test');
     });
 
-    it('should set preferred variant cookie when ScriptLink is clicked and cookie is not defined', () => {
-      document.cookie = '';
-
+    it('should set preferred variant cookie when ScriptLink is clicked', () => {
       fireEvent.click(scriptLink);
-
       expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(1);
-      expect(document.cookie).toEqual('; ckps_pidgin=test');
-    });
-
-    it('should update preferred variant cookie when ScriptLink is clicked and cookie exists', () => {
-      document.cookie = 'ckps_pidgin=lat';
-
-      fireEvent.click(scriptLink);
-
-      expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(1);
-      expect(document.cookie).toEqual('; ckps_pidgin=test');
     });
   });
 });
