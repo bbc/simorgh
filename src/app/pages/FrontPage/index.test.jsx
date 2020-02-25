@@ -64,7 +64,7 @@ jest.mock('../../containers/PageHandlers/withVariant', () => Component => {
 jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
   const DataContainer = props => (
     <div id="ContextsContainer">
-      <Component {...props} />{' '}
+      <Component {...props} />
     </div>
   );
 
