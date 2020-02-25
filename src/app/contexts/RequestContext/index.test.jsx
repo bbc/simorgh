@@ -61,6 +61,7 @@ const expectedOutput = {
   isAmp: true,
   platform: 'amp',
   variant: 'simp',
+  timeOnServer: null,
   statsDestination: 'getStatsDestination',
   statsPageIdentifier: 'getStatsPageIdentifier',
   statusCode: 200,
