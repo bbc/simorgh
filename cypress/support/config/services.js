@@ -19,41 +19,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/afaanoromoo/articles/ce3nlgrelv1o'
-          : '/afaanoromoo/articles/c4g19kgl85ko',
+        path: {
+          local: ['/afaanoromoo/articles/c4g19kgl85ko'],
+          test: ['/afaanoromoo/articles/c4g19kgl85ko'],
+          live: ['/afaanoromoo/articles/ce3nlgrelv1o'],
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/afaanoromoo/articles/c123456abcdo',
+        path: {
+          local: ['/afaanoromoo/articles/c123456abcdo'],
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/afaanoromoo',
+        path: {
+          local: ['/afaanoromoo'],
+          test: ['/afaanoromoo'],
+          live: ['/afaanoromoo'],
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
+        path: {
+          local: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
+          test: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
+          live: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv)
-          ? '/afaanoromoo/oduu-51248626'
-          : '/afaanoromoo/23149891',
+        path: {
+          local: ['/afaanoromoo/23149891'],
+          test: ['afaanoromoo/23149891'],
+          live: ['afaanoromoo/oduu-51248626'],
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/afaanoromoo/oduu-41217768',
+        path: {
+          local: ['/afaanoromoo/oduu-41217768'],
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          local: undefined,
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
     },
