@@ -43,7 +43,7 @@ exports[`FauxHeadline with headline data should render correctly 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-column: 3 / span 6;
   }
@@ -128,7 +128,7 @@ exports[`FauxHeadline with plain text headline should render <strong> containing
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-column: 3 / span 6;
   }

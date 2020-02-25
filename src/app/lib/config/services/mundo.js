@@ -216,10 +216,6 @@ export const service = {
         url: '/mundo',
       },
       {
-        title: 'Hay Festival',
-        url: '/mundo/noticias-36795069',
-      },
-      {
         title: 'América Latina',
         url: '/mundo/america_latina',
       },
@@ -254,6 +250,10 @@ export const service = {
       {
         title: 'Video',
         url: '/mundo/media/video',
+      },
+      {
+        title: 'Hay Festival',
+        url: '/mundo/noticias-36795069',
       },
       {
         title: 'Centroamérica Cuenta',

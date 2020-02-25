@@ -29,11 +29,11 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
       </span>
     </h1>
     <div
-      class="GridComponent-nf79gm-0 iUNUcT GridMaxWidthGroup5-ylca1m-2 FrontPageGrid-ylca1m-3 jlqJlc"
+      class="GridComponent-nf79gm-0 iakllL GridMaxWidthGroup5-ylca1m-2 FrontPageGrid-ylca1m-3 kkrFlK"
       dir="ltr"
     >
       <div
-        class="GridComponent-nf79gm-0 eplZSI"
+        class="GridComponent-nf79gm-0 kMhoTR"
         dir="ltr"
       >
         <section
@@ -924,12 +924,12 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
             class="MarginWrapper-sc-6bm912-0 bmzrWW"
           >
             <ol
-              class="GridComponent-nf79gm-0 iUNUcT StyledGrid-sc-1ofyujo-0 iUmfRN"
+              class="GridComponent-nf79gm-0 gjgzxV TwoColumnGrid-sc-1ofyujo-0 ewnImn"
               dir="ltr"
               role="list"
             >
               <li
-                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
                 dir="ltr"
                 role="listitem"
               >
@@ -937,11 +937,11 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   class="ItemWrapper-u0d8kd-3 juBlKT"
                 >
                   <div
-                    class="StyledWrapper-fs4y6m-0 efQjRq"
+                    class="TwoColumnWrapper-fs4y6m-0 bzxOYC"
                     dir="ltr"
                   >
                     <span
-                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
                     >
                       1
                     </span>
@@ -971,7 +971,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </div>
               </li>
               <li
-                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
                 dir="ltr"
                 role="listitem"
               >
@@ -979,11 +979,11 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   class="ItemWrapper-u0d8kd-3 juBlKT"
                 >
                   <div
-                    class="StyledWrapper-fs4y6m-0 joapIi"
+                    class="TwoColumnWrapper-fs4y6m-0 hIrEwW"
                     dir="ltr"
                   >
                     <span
-                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
                     >
                       2
                     </span>
@@ -1013,7 +1013,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </div>
               </li>
               <li
-                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
                 dir="ltr"
                 role="listitem"
               >
@@ -1021,11 +1021,11 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   class="ItemWrapper-u0d8kd-3 juBlKT"
                 >
                   <div
-                    class="StyledWrapper-fs4y6m-0 efQjRq"
+                    class="TwoColumnWrapper-fs4y6m-0 bzxOYC"
                     dir="ltr"
                   >
                     <span
-                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
                     >
                       3
                     </span>
@@ -1055,7 +1055,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </div>
               </li>
               <li
-                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
                 dir="ltr"
                 role="listitem"
               >
@@ -1063,11 +1063,11 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   class="ItemWrapper-u0d8kd-3 juBlKT"
                 >
                   <div
-                    class="StyledWrapper-fs4y6m-0 joapIi"
+                    class="TwoColumnWrapper-fs4y6m-0 hIrEwW"
                     dir="ltr"
                   >
                     <span
-                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
                     >
                       4
                     </span>
@@ -1097,7 +1097,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </div>
               </li>
               <li
-                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
                 dir="ltr"
                 role="listitem"
               >
@@ -1105,11 +1105,11 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   class="ItemWrapper-u0d8kd-3 juBlKT"
                 >
                   <div
-                    class="StyledWrapper-fs4y6m-0 fIElbG"
+                    class="TwoColumnWrapper-fs4y6m-0 bzxOYC"
                     dir="ltr"
                   >
                     <span
-                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
                     >
                       5
                     </span>
@@ -1139,7 +1139,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </div>
               </li>
               <li
-                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
                 dir="ltr"
                 role="listitem"
               >
@@ -1147,11 +1147,11 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   class="ItemWrapper-u0d8kd-3 juBlKT"
                 >
                   <div
-                    class="StyledWrapper-fs4y6m-0 iEwnJq"
+                    class="TwoColumnWrapper-fs4y6m-0 ldSGOP"
                     dir="ltr"
                   >
                     <span
-                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
                     >
                       6
                     </span>
@@ -1181,7 +1181,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </div>
               </li>
               <li
-                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
                 dir="ltr"
                 role="listitem"
               >
@@ -1189,11 +1189,11 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   class="ItemWrapper-u0d8kd-3 juBlKT"
                 >
                   <div
-                    class="StyledWrapper-fs4y6m-0 jXbaUI"
+                    class="TwoColumnWrapper-fs4y6m-0 fOLghQ"
                     dir="ltr"
                   >
                     <span
-                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
                     >
                       7
                     </span>
@@ -1223,7 +1223,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </div>
               </li>
               <li
-                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
                 dir="ltr"
                 role="listitem"
               >
@@ -1231,11 +1231,11 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   class="ItemWrapper-u0d8kd-3 juBlKT"
                 >
                   <div
-                    class="StyledWrapper-fs4y6m-0 iEwnJq"
+                    class="TwoColumnWrapper-fs4y6m-0 ldSGOP"
                     dir="ltr"
                   >
                     <span
-                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
                     >
                       8
                     </span>
@@ -1265,7 +1265,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </div>
               </li>
               <li
-                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
                 dir="ltr"
                 role="listitem"
               >
@@ -1273,11 +1273,11 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   class="ItemWrapper-u0d8kd-3 juBlKT"
                 >
                   <div
-                    class="StyledWrapper-fs4y6m-0 jXbaUI"
+                    class="TwoColumnWrapper-fs4y6m-0 fOLghQ"
                     dir="ltr"
                   >
                     <span
-                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
                     >
                       9
                     </span>
@@ -1307,7 +1307,7 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                 </div>
               </li>
               <li
-                class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
+                class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
                 dir="ltr"
                 role="listitem"
               >
@@ -1315,11 +1315,11 @@ exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] 
                   class="ItemWrapper-u0d8kd-3 juBlKT"
                 >
                   <div
-                    class="StyledWrapper-fs4y6m-0 iEwnJq"
+                    class="TwoColumnWrapper-fs4y6m-0 ldSGOP"
                     dir="ltr"
                   >
                     <span
-                      class="StyledSpan-fs4y6m-1 jEBnPJ"
+                      class="StyledSpan-fs4y6m-2 bbVUNN"
                     >
                       10
                     </span>
