@@ -1,6 +1,6 @@
-import getInitialData from '../fetchPageData';
 import Article from '#pages/Article';
-import { articlePath } from '../regex';
+import getInitialData from './getInitialData';
+import { articlePath } from '../utils/regex';
 
 export default {
   path: articlePath,

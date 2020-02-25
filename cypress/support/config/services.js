@@ -52,6 +52,10 @@ const genServices = appEnv => ({
             : '/afaanoromoo/oduu-41217768',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   afrique: {
@@ -90,6 +94,10 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv)
             ? undefined
             : '/afrique/region-39269126',
+        smoke: false,
+      },
+      storyPage: {
+        path: undefined,
         smoke: false,
       },
     },
@@ -132,6 +140,10 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv) ? undefined : '/amharic/42743191',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   arabic: {
@@ -172,6 +184,10 @@ const genServices = appEnv => ({
             : '/arabic/art-and-culture-38260491',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   azeri: {
@@ -201,9 +217,7 @@ const genServices = appEnv => ({
       mediaAssetPage: {
         path: isLive(appEnv)
           ? undefined
-          : isTest(appEnv)
-          ? '/azeri/multimedia/2015/08/150804_azeri_test'
-          : '/azeri/multimedia/2012/09/120919_georgia_prison_video',
+          : '/azeri/multimedia/2015/08/150804_azeri_test',
         smoke: false,
       },
       photoGalleryPage: {
@@ -211,6 +225,10 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv)
             ? undefined
             : '/azeri/azerbaijan-44208474',
+        smoke: false,
+      },
+      storyPage: {
+        path: undefined,
         smoke: false,
       },
     },
@@ -253,6 +271,10 @@ const genServices = appEnv => ({
             : '/bengali/news-38827173',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   burmese: {
@@ -293,6 +315,10 @@ const genServices = appEnv => ({
             : '/burmese/media-47680015',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   cymrufyw: {
@@ -319,6 +345,10 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
       photoGalleryPage: { path: undefined, smoke: false },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   gahuza: {
@@ -351,9 +381,7 @@ const genServices = appEnv => ({
       mediaAssetPage: {
         path: isLive(appEnv)
           ? undefined
-          : isTest(appEnv)
-          ? '/gahuza/video/2015/12/151217_test_long'
-          : '/gahuza/video/2015/12/151201_100womenburundi',
+          : '/gahuza/video/2015/12/151217_test_long',
         smoke: false,
       },
       photoGalleryPage: {
@@ -361,6 +389,10 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv)
             ? undefined
             : '/gahuza/amakuru-43894701',
+        smoke: false,
+      },
+      storyPage: {
+        path: undefined,
         smoke: false,
       },
     },
@@ -402,6 +434,10 @@ const genServices = appEnv => ({
             : '/gujarati/international-41345658',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   hausa: {
@@ -436,6 +472,10 @@ const genServices = appEnv => ({
         smoke: false,
       },
       photoGalleryPage: {
+        path: undefined,
+        smoke: false,
+      },
+      storyPage: {
         path: undefined,
         smoke: false,
       },
@@ -479,6 +519,10 @@ const genServices = appEnv => ({
             : '/hindi/india-50198153',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   igbo: {
@@ -512,6 +556,13 @@ const genServices = appEnv => ({
             ? undefined
             : '/igbo/afirika-49666505',
         smoke: false,
+      },
+      storyPage: {
+        path:
+          isLive(appEnv) || isTest(appEnv)
+            ? undefined
+            : '/igbo/afirika-23252735',
+        smoke: true,
       },
     },
   },
@@ -553,6 +604,10 @@ const genServices = appEnv => ({
             : '/indonesia/indonesia-41635759',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   japanese: {
@@ -591,6 +646,10 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv)
             ? undefined
             : '/japanese/features-and-analysis-42786589',
+        smoke: false,
+      },
+      storyPage: {
+        path: undefined,
         smoke: false,
       },
     },
@@ -635,6 +694,10 @@ const genServices = appEnv => ({
             : '/korean/features-41397333',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   kyrgyz: {
@@ -667,9 +730,7 @@ const genServices = appEnv => ({
       mediaAssetPage: {
         path: isLive(appEnv)
           ? undefined
-          : isTest(appEnv)
-          ? '/kyrgyz/multimedia/2015/03/150330_map_test'
-          : '/kyrgyz/entertainment/2014/07/140725_egypt_tentmaking',
+          : '/kyrgyz/multimedia/2015/03/150330_map_test',
         smoke: false,
       },
       photoGalleryPage: {
@@ -677,6 +738,10 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv)
             ? undefined
             : '/kyrgyz/world-40847556',
+        smoke: false,
+      },
+      storyPage: {
+        path: undefined,
         smoke: false,
       },
     },
@@ -718,6 +783,10 @@ const genServices = appEnv => ({
             : '/marathi/india-42894522',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   mundo: {
@@ -755,6 +824,10 @@ const genServices = appEnv => ({
             : '/mundo/deportes-36935058',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   naidheachdan: {
@@ -781,6 +854,10 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
       photoGalleryPage: { path: undefined, smoke: false },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   nepali: {
@@ -821,6 +898,10 @@ const genServices = appEnv => ({
             : '/nepali/news-50627370',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   news: {
@@ -846,6 +927,10 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
       photoGalleryPage: { path: undefined, smoke: false },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   pashto: {
@@ -878,9 +963,7 @@ const genServices = appEnv => ({
       mediaAssetPage: {
         path: isLive(appEnv)
           ? undefined
-          : isTest(appEnv)
-          ? '/pashto/world/2016/09/160921_tc2_testmap1'
-          : '/pashto/multimedia/2012/09/120928_naghma_video',
+          : '/pashto/world/2016/09/160921_tc2_testmap1',
         smoke: false,
       },
       photoGalleryPage: {
@@ -888,6 +971,10 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv)
             ? undefined
             : '/pashto/arts-and-literature-50230813',
+        smoke: false,
+      },
+      storyPage: {
+        path: undefined,
         smoke: false,
       },
     },
@@ -923,10 +1010,9 @@ const genServices = appEnv => ({
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/persian/arts/2011/08/110802_doublage_sherlock_promo',
+        path: isLive(appEnv)
+          ? undefined
+          : '/persian/iran/2016/09/160907_tc2_testmap1',
         smoke: false,
       },
       photoGalleryPage: {
@@ -935,6 +1021,10 @@ const genServices = appEnv => ({
             ? undefined
             : '/persian/magazine-49281981',
         smoke: true,
+      },
+      storyPage: {
+        path: undefined,
+        smoke: false,
       },
     },
   },
@@ -969,6 +1059,10 @@ const genServices = appEnv => ({
             ? undefined
             : '/pidgin/sport-23252855',
         smoke: true,
+      },
+      storyPage: {
+        path: undefined,
+        smoke: false,
       },
     },
   },
@@ -1005,6 +1099,10 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv)
             ? undefined
             : '/portuguese/geral-40302633',
+        smoke: false,
+      },
+      storyPage: {
+        path: undefined,
         smoke: false,
       },
     },
@@ -1045,6 +1143,10 @@ const genServices = appEnv => ({
             : '/punjabi/india-42928885',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   russian: {
@@ -1082,6 +1184,10 @@ const genServices = appEnv => ({
             : '/russian/features-45782775',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   scotland: {
@@ -1107,6 +1213,10 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
       photoGalleryPage: { path: undefined, smoke: false },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   serbianCyr: {
@@ -1145,6 +1255,10 @@ const genServices = appEnv => ({
         smoke: false,
       },
       photoGalleryPage: { path: undefined, smoke: false },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   serbianLat: {
@@ -1181,6 +1295,10 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv)
             ? undefined
             : '/serbian/srbija-46748932/lat',
+        smoke: false,
+      },
+      storyPage: {
+        path: undefined,
         smoke: false,
       },
     },
@@ -1227,6 +1345,10 @@ const genServices = appEnv => ({
             : '/sinhala/world-37657374',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   somali: {
@@ -1264,6 +1386,10 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv) ? undefined : '/somali/war-45947544',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   sport: {
@@ -1277,6 +1403,10 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
       photoGalleryPage: { path: undefined, smoke: false },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   swahili: {
@@ -1315,6 +1445,10 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv)
             ? undefined
             : '/swahili/habari-48185450',
+        smoke: false,
+      },
+      storyPage: {
+        path: undefined,
         smoke: false,
       },
     },
@@ -1357,6 +1491,10 @@ const genServices = appEnv => ({
             : '/tamil/global-47758688',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   telugu: {
@@ -1396,6 +1534,10 @@ const genServices = appEnv => ({
             : '/telugu/india-42321552',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   thai: {
@@ -1433,6 +1575,10 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv)
             ? undefined
             : '/thai/thailand-49950038',
+        smoke: false,
+      },
+      storyPage: {
+        path: undefined,
         smoke: false,
       },
     },
@@ -1477,6 +1623,10 @@ const genServices = appEnv => ({
             : '/tigrinya/news-49944566',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   turkce: {
@@ -1514,6 +1664,10 @@ const genServices = appEnv => ({
             : '/turkce/haberler-dunya-50924340',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   ukchinaSimp: {
@@ -1546,6 +1700,10 @@ const genServices = appEnv => ({
         smoke: false,
       },
       photoGalleryPage: {
+        path: undefined,
+        smoke: false,
+      },
+      storyPage: {
         path: undefined,
         smoke: false,
       },
@@ -1593,6 +1751,10 @@ const genServices = appEnv => ({
             : '/ukchina/cool-britannia-38434549/trad',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   ukrainian: {
@@ -1628,6 +1790,10 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv)
             ? undefined
             : '/ukrainian/features-41278900',
+        smoke: false,
+      },
+      storyPage: {
+        path: undefined,
         smoke: false,
       },
     },
@@ -1668,6 +1834,10 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv)
             ? undefined
             : '/urdu/pakistan-48242478',
+        smoke: false,
+      },
+      storyPage: {
+        path: undefined,
         smoke: false,
       },
     },
@@ -1714,6 +1884,10 @@ const genServices = appEnv => ({
             : '/uzbek/central-asia-46716844',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   vietnamese: {
@@ -1744,9 +1918,7 @@ const genServices = appEnv => ({
         // eslint-disable-next-line no-nested-ternary
         path: isLive(appEnv)
           ? undefined
-          : isTest(appEnv)
-          ? '/vietnamese/sport/2016/09/160922_tc2_testmap2'
-          : '/vietnamese/multimedia/2015/04/150428_david_wheat_interview',
+          : '/vietnamese/sport/2016/09/160922_tc2_testmap2',
         smoke: false,
       },
       photoGalleryPage: {
@@ -1754,6 +1926,10 @@ const genServices = appEnv => ({
           isLive(appEnv) || isTest(appEnv)
             ? undefined
             : '/vietnamese/world-48605529',
+        smoke: false,
+      },
+      storyPage: {
+        path: undefined,
         smoke: false,
       },
     },
@@ -1792,6 +1968,10 @@ const genServices = appEnv => ({
             : '/yoruba/media-50970014',
         smoke: false,
       },
+      storyPage: {
+        path: undefined,
+        smoke: false,
+      },
     },
   },
   zhongwenSimp: {
@@ -1824,6 +2004,10 @@ const genServices = appEnv => ({
         smoke: false,
       },
       photoGalleryPage: {
+        path: undefined,
+        smoke: false,
+      },
+      storyPage: {
         path: undefined,
         smoke: false,
       },
@@ -1870,6 +2054,10 @@ const genServices = appEnv => ({
             ? undefined
             : '/zhongwen/chinese-news-49065935/trad',
         smoke: true,
+      },
+      storyPage: {
+        path: undefined,
+        smoke: false,
       },
     },
   },

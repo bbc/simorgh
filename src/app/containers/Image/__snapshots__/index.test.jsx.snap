@@ -31,7 +31,7 @@ exports[`Image with data should render a lazyload container instead of an image 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-column: 3 / span 6;
   }
@@ -55,7 +55,7 @@ exports[`Image with data should render a lazyload container instead of an image 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c3 {
     grid-column: 1 / span 6;
   }
@@ -79,7 +79,7 @@ exports[`Image with data should render a lazyload container instead of an image 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c5 {
     grid-column: 1 / span 5;
   }
@@ -91,7 +91,7 @@ exports[`Image with data should render a lazyload container instead of an image 
   }
 }
 
-@media (max-width:80rem) {
+@media (max-width:79.9375rem) {
   .c2 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -175,7 +175,7 @@ exports[`Image with data should render an image with alt text 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-column: 3 / span 6;
   }
@@ -199,7 +199,7 @@ exports[`Image with data should render an image with alt text 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c3 {
     grid-column: 1 / span 6;
   }
@@ -223,7 +223,7 @@ exports[`Image with data should render an image with alt text 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c6 {
     grid-column: 1 / span 5;
   }
@@ -235,7 +235,7 @@ exports[`Image with data should render an image with alt text 1`] = `
   }
 }
 
-@media (max-width:80rem) {
+@media (max-width:79.9375rem) {
   .c2 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -382,7 +382,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-column: 3 / span 6;
   }
@@ -406,7 +406,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c3 {
     grid-column: 1 / span 6;
   }
@@ -430,7 +430,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c6 {
     grid-column: 1 / span 5;
   }
@@ -442,7 +442,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 }
 
-@media (max-width:80rem) {
+@media (max-width:79.9375rem) {
   .c2 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -566,7 +566,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-column: 3 / span 6;
   }
@@ -590,7 +590,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c3 {
     grid-column: 1 / span 6;
   }
@@ -614,7 +614,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c8 {
     grid-column: 1 / span 5;
   }
@@ -626,7 +626,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
   }
 }
 
-@media (max-width:80rem) {
+@media (max-width:79.9375rem) {
   .c2 {
     grid-template-columns: repeat(6,1fr);
   }
@@ -748,7 +748,7 @@ exports[`Image with data should render an image with other originCode - this wou
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-column: 3 / span 6;
   }
@@ -772,7 +772,7 @@ exports[`Image with data should render an image with other originCode - this wou
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c3 {
     grid-column: 1 / span 6;
   }
@@ -796,7 +796,7 @@ exports[`Image with data should render an image with other originCode - this wou
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c8 {
     grid-column: 1 / span 5;
   }
@@ -808,7 +808,7 @@ exports[`Image with data should render an image with other originCode - this wou
   }
 }
 
-@media (max-width:80rem) {
+@media (max-width:79.9375rem) {
   .c2 {
     grid-template-columns: repeat(6,1fr);
   }
