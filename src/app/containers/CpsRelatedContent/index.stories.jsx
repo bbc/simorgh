@@ -3,12 +3,12 @@ import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import CpsRelatedContent from '.';
 
-import igboData from '#data/igbo/cpsAssets/media-23256786.json';
+import pidginData from '#data/pidgin/cpsAssets/tori-49450859.json';
 import arabicData from '#data/arabic/cpsAssets/media-49580542.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
-const igboRelatedContentData = igboData.relatedContent.groups[0].promos;
+const pidginRelatedContentData = pidginData.relatedContent.groups[0].promos;
 const arabicRelatedContentData = arabicData.relatedContent.groups[0].promos;
 
 const getRelatedContent = platform => ({ service, dir, data }) => (
@@ -33,11 +33,11 @@ const ampRelatedContent = getRelatedContent('amp');
 
 storiesOf('Containers|CPS Related Content/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
-  .add('igbo (ltr)', () =>
+  .add('pidgin (ltr)', () =>
     canonicalRelatedContent({
-      service: 'igbo',
+      service: 'pidgin',
       dir: 'ltr',
-      data: igboRelatedContentData,
+      data: pidginRelatedContentData,
     }),
   )
   .add('arabic (rtl)', () =>
@@ -51,11 +51,11 @@ storiesOf('Containers|CPS Related Content/Canonical', module)
 storiesOf('Containers|CPS Related Content/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
-  .add('igbo (ltr) - amp', () =>
+  .add('pidgin (ltr) - amp', () =>
     ampRelatedContent({
-      service: 'igbo',
+      service: 'pidgin',
       dir: 'ltr',
-      data: igboRelatedContentData,
+      data: pidginRelatedContentData,
     }),
   )
   .add('arabic (rtl) - amp', () =>
