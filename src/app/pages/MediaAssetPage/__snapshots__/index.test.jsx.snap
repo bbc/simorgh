@@ -974,10 +974,10 @@ exports[`Media Asset Page should render component 1`] = `
                 class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 jJqbCR"
               >
                 <div
-                  class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP StyledSectionLabel-sc-1itct8j-1 hlmzdc"
+                  class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc StyledSectionLabel-sc-1itct8j-1 hlmzdc"
                 >
                   <div
-                    class="Bar-sc-1x4gwjz-0 qaAlR"
+                    class="Bar-sc-1x4gwjz-0 jsgdXU"
                   />
                   <h2
                     class="Heading-sc-1x4gwjz-2 eZofTG"
@@ -1004,17 +1004,18 @@ exports[`Media Asset Page should render component 1`] = `
                   role="list"
                 >
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
                     role="listitem"
                   >
                     <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
+                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
                     >
                       <div
-                        class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
+                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                        dir="ltr"
                       >
                         <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
+                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                         >
                           <div
                             class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
@@ -1024,25 +1025,26 @@ exports[`Media Asset Page should render component 1`] = `
                             />
                           </div>
                           <div
-                            class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
+                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
                           />
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
+                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                        dir="ltr"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-4 cWuUJx"
+                          class="Headline-sc-1dvfmi3-3 hSJrur"
                         >
                           <a
-                            class="Link-sc-1dvfmi3-7 iSHpco"
+                            class="Link-sc-1dvfmi3-5 yQgSu"
                             href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                           >
                             Police Arrest 3 ontop Anambra Church Attack
                           </a>
                         </h3>
                         <p
-                          class="Summary-sc-1dvfmi3-5 itgvLR"
+                          class="Summary-sc-1dvfmi3-4 eaCWBB"
                         >
                           Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
                         </p>
@@ -1056,17 +1058,18 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
                     role="listitem"
                   >
                     <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
+                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
                     >
                       <div
-                        class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
+                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                        dir="ltr"
                       >
                         <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
+                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                         >
                           <div
                             class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
@@ -1076,25 +1079,26 @@ exports[`Media Asset Page should render component 1`] = `
                             />
                           </div>
                           <div
-                            class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
+                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
                           />
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
+                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                        dir="ltr"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-4 cWuUJx"
+                          class="Headline-sc-1dvfmi3-3 hSJrur"
                         >
                           <a
-                            class="Link-sc-1dvfmi3-7 iSHpco"
+                            class="Link-sc-1dvfmi3-5 yQgSu"
                             href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                           >
                             Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
                           </a>
                         </h3>
                         <p
-                          class="Summary-sc-1dvfmi3-5 itgvLR"
+                          class="Summary-sc-1dvfmi3-4 eaCWBB"
                         >
                           The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.
                         </p>
@@ -1108,27 +1112,29 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
                     role="listitem"
                   >
                     <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
+                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
                     >
                       <div
-                        class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
+                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                        dir="ltr"
                       >
                         <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
+                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                         >
                           <div
                             class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                           />
                           <div
-                            class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
+                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
                           >
                             <div
                               aria-hidden="true"
-                              class="MediaIndicatorWrapper-sc-1p6h86b-0 hRcKme"
+                              class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                              dir="ltr"
                             >
                               <div
                                 class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
@@ -1156,13 +1162,14 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
+                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                        dir="ltr"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-4 cWuUJx"
+                          class="Headline-sc-1dvfmi3-3 hSJrur"
                         >
                           <a
-                            class="Link-sc-1dvfmi3-7 iSHpco"
+                            class="Link-sc-1dvfmi3-5 yQgSu"
                             href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                           >
                             <span
@@ -1180,7 +1187,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <p
-                          class="Summary-sc-1dvfmi3-5 itgvLR"
+                          class="Summary-sc-1dvfmi3-4 eaCWBB"
                         >
                           This na some of the picture wey our eye see as Kenya people go vote for election today
                         </p>
@@ -1194,17 +1201,18 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 diwbBz"
+                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
                     role="listitem"
                   >
                     <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 eYdwfL"
+                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
                     >
                       <div
-                        class="ImageGridItem-sc-1dvfmi3-1 diQWZw"
+                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                        dir="ltr"
                       >
                         <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-2 hEkcUX"
+                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                         >
                           <div
                             class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
@@ -1214,11 +1222,12 @@ exports[`Media Asset Page should render component 1`] = `
                             />
                           </div>
                           <div
-                            class="InlineMediaIndicator-sc-1dvfmi3-3 ivGVpf"
+                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
                           >
                             <div
                               aria-hidden="true"
-                              class="MediaIndicatorWrapper-sc-1p6h86b-0 hRcKme"
+                              class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                              dir="ltr"
                             >
                               <div
                                 class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
@@ -1239,7 +1248,7 @@ exports[`Media Asset Page should render component 1`] = `
                                   />
                                 </svg>
                                 <time
-                                  class="TimeDuration-sc-1p6h86b-2 dLCVKn"
+                                  class="StyledTime-jpt91x-0 bYtFje"
                                   datetime="PT15S"
                                 >
                                   0:15
@@ -1250,13 +1259,14 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1dvfmi3-6 fdmIIY"
+                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                        dir="ltr"
                       >
                         <h3
-                          class="Headline-sc-1dvfmi3-4 cWuUJx"
+                          class="Headline-sc-1dvfmi3-3 hSJrur"
                         >
                           <a
-                            class="Link-sc-1dvfmi3-7 iSHpco"
+                            class="Link-sc-1dvfmi3-5 yQgSu"
                             href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                           >
                             <span
@@ -1279,7 +1289,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <p
-                          class="Summary-sc-1dvfmi3-5 itgvLR"
+                          class="Summary-sc-1dvfmi3-4 eaCWBB"
                         >
                           All di local and world tori wey you suppose know in 60 seconds!
                         </p>
