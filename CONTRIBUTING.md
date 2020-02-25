@@ -64,9 +64,11 @@ Create a new topic branch (off the main project `latest` branch) that will conta
 git checkout -b <topic-branch-name>
 ```
 
-When committing, please use these commit guidelines:
+When committing, please use the git commit message template available in the repository `.gitmessage`, set the template as your default commit message template: 
 
-If you have a breaking change in a commit, prefix the commit message with `BREAKING CHANGE:`
+```
+git config --local commit.template "path_to_template_file/filename"
+```
 
 ### Naming conventions
 
