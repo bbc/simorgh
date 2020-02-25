@@ -30,15 +30,16 @@ const variantServiceContextStub = {
   },
 };
 
-const BrandContainerWithContext = (context, skipLink) => (
+const BrandContainerWithContext = (context, skipLink, scriptLink) => (
   <ServiceContext.Provider value={context}>
     <RequestContext.Provider value={{ variant: 'test' }}>
-      <BrandContainer skipLink={skipLink} />
+      <BrandContainer skipLink={skipLink} scriptLink={scriptLink} />
     </RequestContext.Provider>
   </ServiceContext.Provider>
 );
 
 const mockSkipLink = <div data-testid="skip-link">Skip Link</div>;
+const mockScriptLink = <div data-testid="script-link">Script Link</div>;
 
 describe(`BrandContainer`, () => {
   shouldMatchSnapshot(
@@ -47,8 +48,22 @@ describe(`BrandContainer`, () => {
   );
 
   shouldMatchSnapshot(
+    'should render correctly with skip link',
+    BrandContainerWithContext(newsServiceContextStub, mockSkipLink),
+  );
+
+  shouldMatchSnapshot(
+    'should render correctly with script link',
+    BrandContainerWithContext(variantServiceContextStub, null, mockScriptLink),
+  );
+
+  shouldMatchSnapshot(
     'should render correctly with script link and skip link',
-    BrandContainerWithContext(variantServiceContextStub, mockSkipLink),
+    BrandContainerWithContext(
+      variantServiceContextStub,
+      mockSkipLink,
+      mockScriptLink,
+    ),
   );
 
   describe('Assertions', () => {
@@ -59,6 +74,15 @@ describe(`BrandContainer`, () => {
 
       const skipLink = getByTestId('skip-link');
       expect(skipLink).not.toBeNull();
+    });
+
+    it('should render script switch link if provided', () => {
+      const { getByTestId } = render(
+        BrandContainerWithContext(newsServiceContextStub, null, mockScriptLink),
+      );
+
+      const scriptLink = getByTestId('script-link');
+      expect(scriptLink).not.toBeNull();
     });
   });
 });

@@ -1,9 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { news as brandSVG } from '@bbc/psammead-assets/svgs';
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
 import '@testing-library/jest-dom/extend-expect';
 import HeaderContainer from './index';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -28,22 +25,8 @@ const defaultToggleState = {
 
 const mockToggleDispatch = jest.fn();
 
-const newsServiceContextStub = {
-  product: 'BBC News',
-  service: 'news',
-  brandSVG,
-  svgHeight: 24,
-  maxWidth: 280,
-  minWidth: 180,
-  theming: {
-    brandBackgroundColour: `${C_POSTBOX}`,
-    brandLogoColour: `${C_WHITE}`,
-  },
-};
-
-const variantServiceContextStub = {
-  ...newsServiceContextStub,
-  script: latin,
+const variantServiceConfig = {
+  ...pidginServiceConfig.default,
   scriptLink: {
     text: 'Test',
     offscreenText: 'Test-variant',
@@ -152,7 +135,10 @@ describe(`Header`, () => {
 
     beforeEach(() => {
       const { container } = render(
-        HeaderContainerWithContext(variantServiceContextStub),
+        HeaderContainerWithContext({
+          pageType: 'frontPage',
+          serviceContext: variantServiceConfig,
+        }),
       );
       scriptLink = container.querySelector('a[data-variant="test"]');
     });
@@ -163,7 +149,7 @@ describe(`Header`, () => {
     });
 
     it('Script Link should contain link to other variant', () => {
-      expect(scriptLink.getAttribute('href')).toBe('/news/test');
+      expect(scriptLink.getAttribute('href')).toBe('/pidgin/test');
     });
 
     it('should set preferred variant cookie when ScriptLink is clicked and cookie is not defined', () => {
@@ -172,16 +158,16 @@ describe(`Header`, () => {
       fireEvent.click(scriptLink);
 
       expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(1);
-      expect(document.cookie).toEqual('; ckps_news=test');
+      expect(document.cookie).toEqual('; ckps_pidgin=test');
     });
 
     it('should update preferred variant cookie when ScriptLink is clicked and cookie exists', () => {
-      document.cookie = 'ckps_news=lat';
+      document.cookie = 'ckps_pidgin=lat';
 
       fireEvent.click(scriptLink);
 
       expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(1);
-      expect(document.cookie).toEqual('; ckps_news=test');
+      expect(document.cookie).toEqual('; ckps_pidgin=test');
     });
   });
 });
