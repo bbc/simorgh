@@ -265,7 +265,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .c39 {
-  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -730,6 +729,18 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
+@media (min-width:63rem) {
+  .c31 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c39 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c39 {
     padding: 1rem 0 1rem;
@@ -738,19 +749,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) {
   .c39 {
-    padding: 1.5rem 0 1.5rem;
+    padding: 0 0 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c39:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c39:first-child {
-    padding-top: 1.5rem;
   }
 }
 
@@ -1651,7 +1656,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c41 {
-  border-bottom: 0.0625rem solid #F2F2F2;
   padding: 0.5rem 0 1rem;
 }
 
@@ -2134,6 +2138,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
+@media (min-width:63rem) {
+  .c33 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c41 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c41 {
     padding: 1rem 0 1rem;
@@ -2142,19 +2158,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) {
   .c41 {
-    padding: 1.5rem 0 1.5rem;
+    padding: 0 0 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c41:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c41:first-child {
-    padding-top: 1.5rem;
   }
 }
 
