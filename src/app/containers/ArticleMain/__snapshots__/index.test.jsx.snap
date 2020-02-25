@@ -80,10 +80,10 @@ exports[`should render a persian article correctly 1`] = `
         role="region"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc"
         >
           <div
-            class="Bar-sc-1x4gwjz-0 fDhhto"
+            class="Bar-sc-1x4gwjz-0 kXOyLn"
           />
           <h2
             class="Heading-sc-1x4gwjz-2 eZofTG"
@@ -583,10 +583,10 @@ exports[`should render a pidgin article correctly 1`] = `
         role="region"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc"
         >
           <div
-            class="Bar-sc-1x4gwjz-0 qaAlR"
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
           />
           <h2
             class="Heading-sc-1x4gwjz-2 eZofTG"
