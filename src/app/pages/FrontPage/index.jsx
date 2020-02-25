@@ -2,10 +2,26 @@
 import React, { Fragment, useContext } from 'react';
 import pipe from 'ramda/src/pipe';
 import { string } from 'prop-types';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
-import Grid, { FrontPageGrid } from '#app/components/Grid';
+import styled from 'styled-components';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_QUIN,
+  GEL_MARGIN_BELOW_400PX,
+  GEL_MARGIN_ABOVE_400PX,
+} from '@bbc/gel-foundations/spacings';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { StyledFrontPageMain } from '#app/components/Grid';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
@@ -23,39 +39,33 @@ import withLoading from '#containers/PageHandlers/withLoading';
 import withError from '#containers/PageHandlers/withError';
 import withData from '#containers/PageHandlers/withData';
 
-const mainColumns = {
-  group0: 6,
-  group1: 6,
-  group2: 6,
-  group3: 6,
-  group4: 8,
-  group5: 20,
-};
+export const StyledFrontPageDiv = styled.div`
+  /* To add GEL Margins */
+  margin: 0 ${GEL_MARGIN_BELOW_400PX};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin: 0 ${GEL_MARGIN_ABOVE_400PX};
+  }
 
-const itemColumns = {
-  group0: 6,
-  group1: 6,
-  group2: 6,
-  group3: 6,
-  group4: 6,
-  group5: 12,
-};
+  /* To add extra spacing */
+  padding-top: ${GEL_SPACING};
+  padding-bottom: ${GEL_SPACING_QUAD};
 
-const itemMargins = {
-  group0: true,
-  group1: true,
-  group2: true,
-  group3: true,
-};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding-top: ${GEL_SPACING_DBL};
+  }
 
-const startOffsets = {
-  group0: 1,
-  group1: 1,
-  group2: 1,
-  group3: 1,
-  group4: 2,
-  group5: 5,
-};
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    padding-bottom: ${GEL_SPACING_TRPL};
+  }
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding-top: 0;
+  }
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-bottom: ${GEL_SPACING_QUIN};
+  }
+`;
 
 const FrontPageContainer = ({ pageData, mostReadEndpointOverride }) => {
   const {
@@ -92,35 +102,30 @@ const FrontPageContainer = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <main role="main">
+      <StyledFrontPageMain role="main">
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
-        <FrontPageGrid columns={mainColumns} enableGelGutters>
-          <Grid
-            item
-            columns={itemColumns}
-            startOffset={startOffsets}
-            margins={itemMargins}
-          >
-            {groups.map((group, index) => (
-              <Fragment key={group.title}>
-                {group.type === 'useful-links' && (
-                  <MostReadContainer
-                    mostReadEndpointOverride={mostReadEndpointOverride}
-                  />
-                )}
-                <FrontPageSection group={group} sectionNumber={index} />
-              </Fragment>
-            ))}
-            {!hasUsefulLinks && (
-              <MostReadContainer
-                mostReadEndpointOverride={mostReadEndpointOverride}
-              />
-            )}
-          </Grid>
-        </FrontPageGrid>
-      </main>
+        <StyledFrontPageDiv>
+          {groups.map((group, index) => (
+            <Fragment key={group.title}>
+              {group.type === 'useful-links' && (
+                <MostReadContainer
+                  mostReadEndpointOverride={mostReadEndpointOverride}
+                  maxTwoColumns
+                />
+              )}
+              <FrontPageSection group={group} sectionNumber={index} />
+            </Fragment>
+          ))}
+          {!hasUsefulLinks && (
+            <MostReadContainer
+              mostReadEndpointOverride={mostReadEndpointOverride}
+              maxTwoColumns
+            />
+          )}
+        </StyledFrontPageDiv>
+      </StyledFrontPageMain>
     </>
   );
 };

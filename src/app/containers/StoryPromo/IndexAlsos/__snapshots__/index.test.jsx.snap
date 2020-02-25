@@ -10,8 +10,29 @@ exports[`Index Alsos should render multiple correctly 1`] = `
   height: 0.75rem;
 }
 
-.c6 > svg {
-  margin: 0;
+.c5 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 0.5rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
 }
 
 .c1 {
@@ -43,10 +64,6 @@ exports[`Index Alsos should render multiple correctly 1`] = `
   margin: 0;
 }
 
-.c5 {
-  padding-right: 0.5rem;
-}
-
 .c8 {
   display: inline;
   vertical-align: middle;
@@ -71,6 +88,24 @@ exports[`Index Alsos should render multiple correctly 1`] = `
 
 .c4:visited {
   color: #6E6E73;
+}
+
+.c4 svg {
+  margin: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -108,12 +143,12 @@ exports[`Index Alsos should render multiple correctly 1`] = `
         class="c4"
         href="/hausa/labarai-48916590"
       >
-        <span
+        <div
+          aria-hidden="true"
           class="c5"
           dir="ltr"
         >
-          <span
-            aria-hidden="true"
+          <div
             class="c6"
           >
             <svg
@@ -128,8 +163,8 @@ exports[`Index Alsos should render multiple correctly 1`] = `
                 points="3,32 29,16 3,0"
               />
             </svg>
-          </span>
-        </span>
+          </div>
+        </div>
         <span
           class=""
           role="text"
@@ -137,8 +172,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
           <span
             class="c1"
           >
-            Bidiyo
-            , 
+            Bidiyo, 
           </span>
           <span
             class="c8"
@@ -177,8 +211,29 @@ exports[`Index Alsos should render one correctly 1`] = `
   height: 0.75rem;
 }
 
-.c5 > svg {
-  margin: 0;
+.c4 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 0.5rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
 }
 
 .c1 {
@@ -202,10 +257,6 @@ exports[`Index Alsos should render one correctly 1`] = `
 .c2 {
   border-top: 1px solid #F2F2F2;
   padding: 0.5rem 0;
-}
-
-.c4 {
-  padding-right: 0.5rem;
 }
 
 .c7 {
@@ -232,6 +283,24 @@ exports[`Index Alsos should render one correctly 1`] = `
 
 .c3:visited {
   color: #6E6E73;
+}
+
+.c3 svg {
+  margin: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -264,12 +333,12 @@ exports[`Index Alsos should render one correctly 1`] = `
       class="c3"
       href="/hausa/labarai-48916590"
     >
-      <span
+      <div
+        aria-hidden="true"
         class="c4"
         dir="ltr"
       >
-        <span
-          aria-hidden="true"
+        <div
           class="c5"
         >
           <svg
@@ -284,8 +353,8 @@ exports[`Index Alsos should render one correctly 1`] = `
               points="3,32 29,16 3,0"
             />
           </svg>
-        </span>
-      </span>
+        </div>
+      </div>
       <span
         class=""
         role="text"
@@ -293,8 +362,7 @@ exports[`Index Alsos should render one correctly 1`] = `
         <span
           class="c1"
         >
-          Bidiyo
-          , 
+          Bidiyo, 
         </span>
         <span
           class="c7"

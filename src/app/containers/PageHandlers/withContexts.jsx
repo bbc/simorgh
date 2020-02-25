@@ -22,6 +22,7 @@ const WithContexts = Component => {
       pathname,
       previousPath,
       variant,
+      timeOnServer,
     } = props;
 
     return (
@@ -37,6 +38,7 @@ const WithContexts = Component => {
             pathname={pathname}
             previousPath={previousPath}
             variant={variant}
+            timeOnServer={timeOnServer}
           >
             <EventContextProvider>
               <UserContextProvider>
@@ -60,6 +62,7 @@ const WithContexts = Component => {
     previousPath: string,
     service: string.isRequired,
     variant: variantPropType,
+    timeOnServer: number,
   };
 
   WithContextsContainer.defaultProps = {
@@ -69,6 +72,7 @@ const WithContexts = Component => {
     pageData: null,
     previousPath: null,
     variant: null,
+    timeOnServer: null,
   };
 
   return WithContextsContainer;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
 import styled from 'styled-components';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -33,7 +33,7 @@ const MarginWrapper = styled.div`
   }
 `;
 
-const CanonicalMostRead = ({ endpoint }) => {
+const CanonicalMostRead = ({ endpoint, maxTwoColumns }) => {
   const [items, setItems] = useState([]);
   const {
     service,
@@ -101,7 +101,11 @@ const CanonicalMostRead = ({ endpoint }) => {
         {header}
       </SectionLabel>
       <MarginWrapper>
-        <MostReadList numberOfItems={items.length} dir={dir}>
+        <MostReadList
+          numberOfItems={items.length}
+          dir={dir}
+          maxTwoColumns={maxTwoColumns}
+        >
           {items.map((item, i) => (
             <MostReadItemWrapper dir={dir} key={item.id}>
               <MostReadRank
@@ -110,6 +114,7 @@ const CanonicalMostRead = ({ endpoint }) => {
                 listIndex={i + 1}
                 numberOfItems={items.length}
                 dir={dir}
+                maxTwoColumns={maxTwoColumns}
               />
               <MostReadLink
                 dir={dir}
@@ -130,6 +135,11 @@ const CanonicalMostRead = ({ endpoint }) => {
 
 CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
+  maxTwoColumns: bool,
+};
+
+CanonicalMostRead.defaultProps = {
+  maxTwoColumns: false,
 };
 
 export default CanonicalMostRead;
