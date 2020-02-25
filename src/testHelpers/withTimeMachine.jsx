@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { element } from 'prop-types';
 import {
   startTimeMachine,
@@ -6,11 +6,17 @@ import {
 } from '../../.storybook/time-machine';
 // This affects the global Date object for the storybook application, to ensure consistency in chromaticQA testing.
 const WithTimeMachine = ({ children }) => {
+  const [componentToRender, setComponentToRender] = useState(null);
+
   useEffect(() => {
-    startTimeMachine(true);
-    return resetTimeMachine();
+    function handleStateChange() {
+      setComponentToRender(children);
+    }
+    startTimeMachine();
+    handleStateChange();
+    return () => resetTimeMachine();
   });
-  return <>{children}</>;
+  return componentToRender;
 };
 WithTimeMachine.propTypes = {
   children: element.isRequired,
