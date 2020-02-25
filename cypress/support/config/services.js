@@ -83,39 +83,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/afrique/articles/cx80n852v6mo'
-          : '/afrique/articles/cz216x22106o',
+        path: {
+          local: '/afrique/articles/cz216x22106o',
+          test: '/afrique/articles/cz216x22106o',
+          live: 'afrique/articles/cx80n852v6mo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/afrique/articles/c123456abcdo',
+        path: {
+          local: '/afrique/articles/c123456abcdo',
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/afrique',
+        path: {
+          local: '/afrique',
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/afrique/bbc_afrique_radio/liveradio',
+        path: {
+          local: '/afrique/bbc_afrique_radio/liveradio',
+          test: '/afrique/bbc_afrique_radio/liveradio',
+          live: '/afrique/bbc_afrique_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          local: undefined,
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/afrique/region-39269126',
+        path: {
+          local: '/afrique/region-39269126',
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          local: undefined,
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
     },
