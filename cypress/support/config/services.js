@@ -211,39 +211,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/arabic/articles/c8j91j2ljppo'
-          : '/arabic/articles/c1er5mjnznzo',
+        path: {
+          local: '/arabic/articles/c1er5mjnznzo',
+          test: '/arabic/articles/c1er5mjnznzo',
+          live: '/arabic/articles/c8j91j2ljppo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/arabic/articles/c123456abcdo',
+        path: {
+          local: '/arabic/articles/c123456abcdo',
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/arabic',
+        path: {
+          local: '/arabic',
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/arabic/bbc_arabic_radio/liveradio',
+        path: {
+          local: '/arabic/bbc_arabic_radio/liveradio',
+          test: '/arabic/bbc_arabic_radio/liveradio',
+          live: '/arabic/bbc_arabic_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          local: undefined,
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/arabic/art-and-culture-38260491',
+        path: {
+          local: '/arabic/art-and-culture-38260491',
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          local: undefined,
+          test: undefined,
+          live: undefined,
+        },
         smoke: false,
       },
     },
