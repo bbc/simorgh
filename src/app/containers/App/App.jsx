@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router';
 import path from 'ramda/src/path';
-import getRouteProps from '../../routes/fetchPageData/utils/getRouteProps';
+import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
 
 export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
@@ -15,7 +15,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
-  const { pageData, status, error } = initialData;
+  const { pageData, status, error, timeOnServer } = initialData;
 
   const [state, setState] = useState({
     pageData,
@@ -28,6 +28,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     error,
     loading: false,
     errorCode,
+    timeOnServer,
   });
 
   const isInitialMount = useRef(true);
@@ -73,6 +74,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           loading: true,
           error: null,
           errorCode: null,
+          timeOnServer: null,
         });
       });
 
@@ -90,6 +92,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           status: path(['status'], data),
           error: path(['error'], data),
           errorCode: null,
+          timeOnServer: path(['timeOnServer'], data),
         });
       });
     }
