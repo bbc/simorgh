@@ -90,7 +90,10 @@ export const generateConnectSrc = context => {
   }
 
   if (context.isAmp) {
-    connectSrc.push('https://cdn.ampproject.org');
+    connectSrc.push(
+      'https://cdn.ampproject.org',
+      'https://amp-error-reporting.appspot.com',
+    );
     return connectSrc;
   }
 
@@ -117,6 +120,8 @@ const constructCspHeader = context => ({
       'https://chartbeat.com',
       'https://*.chartbeat.com',
     ],
+    'worker-src': context.isAmp ? ['blob:'] : ["'self'"],
+    'child-src': context.isAmp ? ['blob:'] : ["'self'"],
   },
 });
 
