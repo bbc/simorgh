@@ -304,7 +304,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
@@ -383,7 +383,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     margin: 0 auto;
     max-width: 63rem;
@@ -572,7 +572,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
@@ -651,7 +651,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     margin: 0 auto;
     max-width: 63rem;
