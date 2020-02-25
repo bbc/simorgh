@@ -3,10 +3,8 @@ import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { news as brandSVG } from '@bbc/psammead-assets/svgs';
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
-import { latin } from '@bbc/gel-foundations/scripts';
 import BrandContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
 
 const newsServiceContextStub = {
   product: 'BBC News',
@@ -21,20 +19,9 @@ const newsServiceContextStub = {
   },
 };
 
-const variantServiceContextStub = {
-  ...newsServiceContextStub,
-  script: latin,
-  scriptLink: {
-    text: 'Test',
-    offscreenText: 'Test-variant',
-  },
-};
-
 const BrandContainerWithContext = (context, skipLink, scriptLink) => (
   <ServiceContext.Provider value={context}>
-    <RequestContext.Provider value={{ variant: 'test' }}>
-      <BrandContainer skipLink={skipLink} scriptLink={scriptLink} />
-    </RequestContext.Provider>
+    <BrandContainer skipLink={skipLink} scriptLink={scriptLink} />
   </ServiceContext.Provider>
 );
 
@@ -54,13 +41,13 @@ describe(`BrandContainer`, () => {
 
   shouldMatchSnapshot(
     'should render correctly with script link',
-    BrandContainerWithContext(variantServiceContextStub, null, mockScriptLink),
+    BrandContainerWithContext(newsServiceContextStub, null, mockScriptLink),
   );
 
   shouldMatchSnapshot(
     'should render correctly with script link and skip link',
     BrandContainerWithContext(
-      variantServiceContextStub,
+      newsServiceContextStub,
       mockSkipLink,
       mockScriptLink,
     ),
