@@ -523,33 +523,33 @@ export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
   service,
   pageType,
 }) => {
-  describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {
-    if (Cypress.env('APP_ENV') === 'live') {
-      describe('Page links test', () => {
-        it('Top navigation links should not 404', () => {
-          cy.get('header a').each(element => {
-            const url = element.attr('href');
-            cy.request({
-              url,
-              failOnStatusCode: false,
-            }).then(resp => {
-              expect(resp.status).to.not.equal(404, `Received 404 for ${url}`);
-            });
-          });
-        });
-
-        it('Footer links should not 404', () => {
-          cy.get('footer a').each(element => {
-            const url = element.attr('href');
-            cy.request({
-              url,
-              failOnStatusCode: false,
-            }).then(resp => {
-              expect(resp.status).to.not.equal(404, `Received 404 for ${url}`);
-            });
-          });
-        });
-      });
-    }
-  });
+  // TODO: Move these 404 link tests to a different service, they take wayyyyyyyyy to long.
+  // describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {
+  //   if (Cypress.env('APP_ENV') === 'live') {
+  //     describe('Page links test', () => {
+  //       it('Top navigation links should not 404', () => {
+  //         cy.get('header a').each(element => {
+  //           const url = element.attr('href');
+  //           cy.request({
+  //             url,
+  //             failOnStatusCode: false,
+  //           }).then(resp => {
+  //             expect(resp.status).to.not.equal(404, `Received 404 for ${url}`);
+  //           });
+  //         });
+  //       });
+  //       it('Footer links should not 404', () => {
+  //         cy.get('footer a').each(element => {
+  //           const url = element.attr('href');
+  //           cy.request({
+  //             url,
+  //             failOnStatusCode: false,
+  //           }).then(resp => {
+  //             expect(resp.status).to.not.equal(404, `Received 404 for ${url}`);
+  //           });
+  //         });
+  //       });
+  //     });
+  //   }
+  // });
 };
