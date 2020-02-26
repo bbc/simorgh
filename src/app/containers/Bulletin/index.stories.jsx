@@ -19,6 +19,16 @@ const bulletinFixture = type =>
         !pathOr(null, ['isLive'], item),
     );
 
+const noImageBulletinFixture = type =>
+  pathOr(null, ['content', 'groups'], fixture)
+    .flatMap(group => pathOr(null, ['items'], group))
+    .find(
+      item =>
+        pathOr(null, ['assetTypeCode'], item) === 'PRO' &&
+        pathOr(null, ['contentType'], item) === type &&
+        !pathOr(null, ['indexImage'], item),
+    );
+
 const liveBulletinFixture = type =>
   pathOr(null, ['content', 'groups'], fixture)
     .flatMap(group => pathOr(null, ['items'], group))
@@ -31,6 +41,7 @@ const liveBulletinFixture = type =>
 
 const tvFixture = bulletinFixture('TVBulletin');
 const audioFixture = bulletinFixture('RadioBulletin');
+const noImageAudioFixture = noImageBulletinFixture('RadioBulletin');
 
 const liveTvFixture = liveBulletinFixture('TVBulletin');
 const audioLiveFixture = liveBulletinFixture('RadioBulletin');
@@ -66,6 +77,9 @@ storiesOf('Containers|Bulletin/Canonical', module)
   .add('Radio Bulletin', ({ service }) =>
     getCanonicalBulletin(service, audioFixture),
   )
+  .add('No Image Radio Bulletin', ({ service }) =>
+    getCanonicalBulletin(service, noImageAudioFixture),
+  )
   .add('Radio Bulletin - Live', ({ service }) =>
     getCanonicalBulletin(service, audioLiveFixture),
   );
@@ -80,6 +94,9 @@ storiesOf('Containers|Bulletin/AMP', module)
     getAmpBulletin(service, liveTvFixture),
   )
   .add('Radio Bulletin', ({ service }) => getAmpBulletin(service, audioFixture))
+  .add('No Image Radio Bulletin', ({ service }) =>
+    getAmpBulletin(service, noImageAudioFixture),
+  )
   .add('Radio Bulletin - Live', ({ service }) =>
     getAmpBulletin(service, audioLiveFixture),
   );
