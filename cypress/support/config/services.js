@@ -1083,38 +1083,52 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/marathi/articles/cvjxwvn04yjo'
-          : '/marathi/articles/cp47g4myxz7o',
+        path: {
+          live: '/marathi/articles/cvjxwvn04yjo',
+          test: '/marathi/articles/cp47g4myxz7o',
+          local: '/marathi/articles/cp47g4myxz7o',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/marathi/articles/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/marathi/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/marathi',
+        path: {
+          live: '/marathi',
+          test: '/marathi',
+          local: '/marathi',
+        },
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv)
-          ? '/marathi/media-51314817'
-          : '/marathi/media-23127353',
+        path: {
+          live: '/marathi/media-51314817',
+          test: '/marathi/media-23127353',
+          local: '/marathi/media-23127353',
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/marathi/india-42894522',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/marathi/india-42894522',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
