@@ -409,39 +409,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/burmese/articles/c41px3vd4nxo'
-          : '/burmese/articles/cn0exdy1jzvo',
+        path: {
+          live: '/burmese/articles/c41px3vd4nxo',
+          test: '/burmese/articles/cn0exdy1jzvo',
+          local: '/burmese/articles/cn0exdy1jzvo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/burmese/articles/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/burmese/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/burmese',
+        path: {
+          live: '/burmese',
+          test: '/burmese',
+          local: '/burmese',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/burmese/bbc_burmese_radio/liveradio',
+        path: {
+          live: '/burmese/bbc_burmese_radio/liveradio',
+          test: '/burmese/bbc_burmese_radio/liveradio',
+          local: '/burmese/bbc_burmese_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/burmese/media-47680015',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/burmese/media-47680015',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
