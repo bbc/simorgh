@@ -949,41 +949,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/korean/articles/crym1243d97o'
-          : '/korean/articles/c3mn1lvz65xo',
+        path: {
+          live: '/korean/articles/crym1243d97o',
+          test: '/korean/articles/c3mn1lvz65xo',
+          local: '/korean/articles/c3mn1lvz65xo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/korean/articles/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/korean/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/korean',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/korean',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/korean/bbc_korean_radio/liveradio',
+        path: {
+          live: '/korean/bbc_korean_radio/liveradio',
+          test: '/korean/bbc_korean_radio/liveradio',
+          local: '/korean/bbc_korean_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv)
-          ? '/korean/international-51367672'
-          : '/korean/media-23248686',
+        path: {
+          live: '/korean/international-51367672',
+          test: undefined,
+          local: '/korean/media-23248686',
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/korean/features-41397333',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/korean/features-41397333',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
