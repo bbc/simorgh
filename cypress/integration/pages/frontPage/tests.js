@@ -2,8 +2,7 @@ import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import applySquashTopstories from '../../../../src/app/routes/home/getInitialData/squashTopStories';
 
-const serviceJsonPath = service =>
-  `${config[service].pageTypes.frontPage.path}.json`;
+const serviceJsonPath = () => `${Cypress.env('currentPath')}.json`;
 
 // Limiting to only one service
 const serviceHasIndexAlsos = service => service === 'thai';
@@ -174,7 +173,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         }
 
         it('should contain Index Alsos if relatedItems block exists, but only within topstories block', () => {
-          cy.request(serviceJsonPath(service)).then(({ body }) => {
+          cy.request(serviceJsonPath()).then(({ body }) => {
             const topstories = body.content.groups[0].items[0];
             const relatedItemsExists = 'relatedItems' in topstories;
 
@@ -216,7 +215,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         });
 
         it('should contain Useful Links if valid usefulLinks block data exists', () => {
-          cy.request(serviceJsonPath(service)).then(({ body }) => {
+          cy.request(serviceJsonPath()).then(({ body }) => {
             const pageData = body.content.groups;
             if (isValidUsefulLinks(pageData)) {
               cy.get('[data-e2e="useful-links"]')
@@ -235,7 +234,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         });
 
         it('should contain Radio Bulletin if a promo of type RadioBulletin is in the feed', () => {
-          cy.request(serviceJsonPath(service)).then(({ body }) => {
+          cy.request(serviceJsonPath()).then(({ body }) => {
             const pageData = applySquashTopstories(body);
             const { groups } = pageData.content;
 
@@ -250,7 +249,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         });
 
         it('should contain TV Bulletin if a promo of type TVBulletin is in the feed in correct group', () => {
-          cy.request(serviceJsonPath(service)).then(({ body }) => {
+          cy.request(serviceJsonPath()).then(({ body }) => {
             const pageData = applySquashTopstories(body);
             const { groups } = pageData.content;
 
