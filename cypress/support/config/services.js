@@ -481,32 +481,11 @@ const genServices = appEnv => ({
         },
         smoke: false,
       },
-      frontPage: {},
+      frontPage: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: {
-        path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
-        },
-        smoke: false,
-      },
-      photoGalleryPage: {
-        path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
-        },
-        smoke: false,
-      },
-      storyPage: {
-        path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
-        },
-        smoke: false,
-      },
+      mediaAssetPage: { path: undefined, smoke: false },
+      photoGalleryPage: { path: undefined, smoke: false },
+      storyPage: { path: undefined, smoke: false },
     },
   },
   gahuza: {
