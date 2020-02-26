@@ -2,14 +2,14 @@ import React, { useContext } from 'react';
 import { string, shape, object, arrayOf } from 'prop-types';
 import styled from 'styled-components';
 import path from 'ramda/src/path';
-import ATIAnalytics from '../ATIAnalytics';
-import MetadataContainer from '../Metadata';
+import ATIAnalytics from '../../containers/ATIAnalytics';
+import MetadataContainer from '../../containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
-import LinkedData from '../LinkedData';
-import RadioPageBlocks from '../RadioPageBlocks';
+import LinkedData from '../../containers/LinkedData';
+import RadioPageBlocks from '../../containers/RadioPageBlocks';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-const RadioPageMain = ({ pageData }) => {
+const RadioPage = ({ pageData }) => {
   const blocks = path(['content', 'blocks'], pageData);
   const promo = path(['promo'], pageData);
   const metadata = path(['metadata'], pageData);
@@ -70,7 +70,7 @@ const RadioPageMain = ({ pageData }) => {
   );
 };
 
-RadioPageMain.propTypes = {
+RadioPage.propTypes = {
   pageData: shape({
     metadata: shape({
       id: string,
@@ -94,4 +94,4 @@ RadioPageMain.propTypes = {
   }).isRequired,
 };
 
-export default RadioPageMain;
+export default RadioPage;

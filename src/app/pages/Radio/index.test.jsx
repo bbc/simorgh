@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import RadioPageMain from '.';
+import RadioPage from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import getInitialData from '#app/routes/radio/getInitialData';
@@ -27,7 +27,7 @@ describe('Radio Page Main', () => {
           statusCode={200}
         >
           <BrowserRouter>
-            <RadioPageMain service="amharic" pageData={pageData} />
+            <RadioPage service="amharic" pageData={pageData} />
           </BrowserRouter>
         </RequestContextProvider>
       </ServiceContextProvider>,
@@ -48,7 +48,7 @@ describe('Radio Page Main', () => {
           statusCode={200}
         >
           <BrowserRouter>
-            <RadioPageMain service="amharic" pageData={pageData} />
+            <RadioPage service="amharic" pageData={pageData} />
           </BrowserRouter>
         </RequestContextProvider>
       </ServiceContextProvider>,
