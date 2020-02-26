@@ -1247,39 +1247,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/nepali/articles/c16ljg1v008o'
-          : '/nepali/articles/cl90j9m3mn6o',
+        path: {
+          live: '/nepali/articles/c16ljg1v008o',
+          test: '/nepali/articles/cl90j9m3mn6o',
+          local: '/nepali/articles/cl90j9m3mn6o',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/nepali/articles/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/nepali/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/nepali',
+        path: {
+          live: '/nepali',
+          test: '/nepali',
+          local: '/nepali',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/nepali/bbc_nepali_radio/liveradio',
+        path: {
+          live: '/nepali/bbc_nepali_radio/liveradio',
+          test: '/nepali/bbc_nepali_radio/liveradio',
+          local: '/nepali/bbc_nepali_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/nepali/news-50627370',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/nepali/news-50627370',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
