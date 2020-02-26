@@ -28,8 +28,8 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/afaanoromoo/articles/c123456abcdo',
         },
         smoke: false,
@@ -60,17 +60,17 @@ const genServices = appEnv => ({
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/afaanoromoo/oduu-41217768',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -92,16 +92,16 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/afrique/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/afrique',
         },
         smoke: false,
@@ -116,25 +116,25 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/afrique/region-39269126',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -156,8 +156,8 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/amharic/articles/c123456abcdo',
         },
         smoke: false,
@@ -188,17 +188,17 @@ const genServices = appEnv => ({
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/amharic/42743191',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -220,16 +220,16 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/arabic/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/arabic',
         },
         smoke: false,
@@ -244,25 +244,25 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/arabic/art-and-culture-38260491',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -284,8 +284,8 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/azeri/articles/c123456abcdo',
         },
         smoke: false,
@@ -301,7 +301,7 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path: {
-          live: undefined,
+          live: null,
           test: [
             '/azeri/azerbaijan-23257464', // CPS MAP
             '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP
@@ -315,17 +315,17 @@ const genServices = appEnv => ({
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/azeri/azerbaijan-44208474',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -347,8 +347,8 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/bengali/articles/c123456abcdo',
         },
         smoke: false,
@@ -371,25 +371,25 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/bengali/news-38827173',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -411,8 +411,8 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/burmese/articles/c123456abcdo',
         },
         smoke: false,
@@ -435,25 +435,25 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/burmese/media-47680015',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -467,16 +467,16 @@ const genServices = appEnv => ({
     pageTypes: {
       articles: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/cymrufyw/erthyglau/c06p32z9x2mo',
         },
         smoke: false,
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/cymrufyw/erthyglau/c123456abcdo',
         },
         smoke: false,
@@ -504,8 +504,8 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/gahuza/articles/c123456abcdo',
         },
         smoke: false,
@@ -528,7 +528,7 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: {
-          live: undefined,
+          live: null,
           test: [
             '/gahuza/amakuru-23257470', // CPS MAP
             '/gahuza/video/2015/12/151217_test_long', // TC2 MAP
@@ -542,17 +542,17 @@ const genServices = appEnv => ({
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/gahuza/amakuru-43894701',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -574,8 +574,8 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/gujarati/articles/c123456abcdo',
         },
         smoke: false,
@@ -599,17 +599,17 @@ const genServices = appEnv => ({
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/gujarati/international-41345658',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -631,16 +631,16 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/hausa/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/hausa',
         },
         smoke: false,
@@ -655,25 +655,25 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -695,16 +695,16 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/hindi/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/hindi',
         },
         smoke: false,
@@ -719,25 +719,25 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/hindi/india-50198153',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -759,8 +759,8 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/igbo/articles/cxvxrj8tvppo',
         },
         smoke: false,
@@ -784,16 +784,16 @@ const genServices = appEnv => ({
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/igbo/afirika-49666505',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/igbo/afirika-23252735',
         },
         smoke: false,
@@ -816,8 +816,8 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/indonesia/articles/c123456abcdo',
         },
         smoke: false,
@@ -840,25 +840,25 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/indonesia/indonesia-41635759',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -880,8 +880,8 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/japanese/articles/c123456abcdo',
         },
         smoke: false,
@@ -897,25 +897,25 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/japanese/video-23248670',
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/japanese/features-and-analysis-42786589',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -937,16 +937,16 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/korean/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/korean',
         },
         smoke: false,
@@ -962,24 +962,24 @@ const genServices = appEnv => ({
       mediaAssetPage: {
         path: {
           live: '/korean/international-51367672',
-          test: undefined,
+          test: null,
           local: '/korean/media-23248686',
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/korean/features-41397333',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -1001,8 +1001,8 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/kyrgyz/articles/c123456abcdo',
         },
         smoke: false,
@@ -1025,7 +1025,7 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: {
-          live: undefined,
+          live: null,
           test: [
             '/kyrgyz/kyrgyzstan-23095373', // CPS MAP
             '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP
@@ -1039,17 +1039,17 @@ const genServices = appEnv => ({
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/kyrgyz/world-40847556',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -1071,8 +1071,8 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/marathi/articles/c123456abcdo',
         },
         smoke: false,
@@ -1096,17 +1096,17 @@ const genServices = appEnv => ({
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/marathi/india-42894522',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -1128,16 +1128,16 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/mundo/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/mundo',
         },
         smoke: false,
@@ -1145,25 +1145,25 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/mundo/deportes-36935058',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -1177,16 +1177,16 @@ const genServices = appEnv => ({
     pageTypes: {
       articles: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/naidheachdan/sgeulachdan/c18q7nedn2ko',
         },
         smoke: false,
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/naidheachdan/sgeulachdan/c123456abcdo',
         },
         smoke: false,
@@ -1214,8 +1214,8 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/nepali/articles/c123456abcdo',
         },
         smoke: false,
@@ -1238,25 +1238,25 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/nepali/news-50627370',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -1278,8 +1278,8 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/news/articles/cxvxrj8tvppo',
         },
         smoke: true,
@@ -1307,16 +1307,16 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/pashto/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/pashto',
         },
         smoke: false,
@@ -1331,7 +1331,7 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: {
-          live: undefined,
+          live: null,
           test: [
             '/pashto/media-23257523', // CPS MAP
             '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
@@ -1345,17 +1345,17 @@ const genServices = appEnv => ({
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/pashto/arts-and-literature-50230813',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
