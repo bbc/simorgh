@@ -1817,43 +1817,65 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/sinhala/articles/cldr38jnwd2o'
-          : '/sinhala/articles/c45w255zlexo',
+        path: {
+          live: '/sinhala/articles/cldr38jnwd2o',
+          test: '/sinhala/articles/c45w255zlexo',
+          local: '/sinhala/articles/c45w255zlexo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/sinhala/articles/c123456abcdo',
+        path: {
+          live: null,
+          test: null,
+          local: '/sinhala/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/sinhala',
+        path: {
+          live: '/sinhala',
+          test: '/sinhala',
+          local: '/sinhala',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/sinhala/bbc_sinhala_radio/liveradio',
+        path: {
+          live: '/sinhala/bbc_sinhala_radio/liveradio',
+          test: '/sinhala/bbc_sinhala_radio/liveradio',
+          local: '/sinhala/bbc_sinhala_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292',
-
+        path: {
+          live: null,
+          test: [
+            '/sinhala/world-23257567', // CPS MAP
+            '/sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292', // TC2 MAP
+          ],
+          local: [
+            '/sinhala/23248970', // CPS MAP
+            '/sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292', // TC2 MAP
+          ],
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/sinhala/world-37657374',
+        path: {
+          live: null,
+          test: null,
+          local: '/sinhala/world-37657374',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
