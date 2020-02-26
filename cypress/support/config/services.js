@@ -1504,36 +1504,52 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/portuguese/articles/cpg5prg95lmo'
-          : '/portuguese/articles/cd61pm8gzmpo',
+        path: {
+          live: '/portuguese/articles/cpg5prg95lmo',
+          test: '/portuguese/articles/cd61pm8gzmpo',
+          local: '/portuguese/articles/cd61pm8gzmpo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/portuguese/articles/cxvxrj8tvppo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/portuguese/articles/cxvxrj8tvppo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/portuguese',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/portuguese',
+        },
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/portuguese/geral-40302633',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/portuguese/geral-40302633',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
