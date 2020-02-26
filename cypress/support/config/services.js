@@ -345,39 +345,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/bengali/articles/cv90149zq1eo'
-          : '/bengali/articles/c6p3yp5zzmeo',
+        path: {
+          live: '/bengali/articles/cv90149zq1eo',
+          test: '/bengali/articles/c6p3yp5zzmeo',
+          local: '/bengali/articles/c6p3yp5zzmeo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/bengali/articles/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/bengali/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/bengali',
+        path: {
+          live: '/bengali',
+          test: '/bengali',
+          local: '/bengali',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/bengali/bbc_bangla_radio/liveradio',
+        path: {
+          live: '/bengali/bbc_bangla_radio/liveradio',
+          test: '/bengali/bbc_bangla_radio/liveradio',
+          local: '/bengali/bbc_bangla_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/bengali/news-38827173',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/bengali/news-38827173',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
