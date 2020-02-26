@@ -71,7 +71,7 @@ const genServices = () => ({
     pageTypes: {
       articles: {
         path: {
-          live: 'afrique/articles/cx80n852v6mo',
+          live: '/afrique/articles/cx80n852v6mo',
           test: '/afrique/articles/cz216x22106o',
           local: '/afrique/articles/cz216x22106o',
         },
@@ -738,7 +738,7 @@ const genServices = () => ({
     pageTypes: {
       articles: {
         path: {
-          live: '/igbo/articles/ckjn8jnrn75o',
+          live: '/igbo/articles/ckjn8jnrn75o', // CPS MAP with audio clip
           test: '/igbo/articles/cr1lw620ygjo',
           local: '/igbo/articles/cr1lw620ygjo',
         },
@@ -1399,7 +1399,7 @@ const genServices = () => ({
         path: {
           live: null,
           test: [
-            '/persian/iran-23231114', // CPS MAP with audio
+            '/persian/iran-23231114', // CPS MAP with audio clip
             '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
           ],
           local: [
@@ -1460,7 +1460,7 @@ const genServices = () => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path: {
-          live: '/pidgin/tori-50974590', // CPS MAP with video
+          live: '/pidgin/tori-50974590', // CPS MAP with video clip & related content
           test: '/pidgin/23248703',
           local: '/pidgin/23248703',
         },
