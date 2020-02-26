@@ -1560,38 +1560,52 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/punjabi/articles/c39p51156lyo'
-          : '/punjabi/articles/c0l79lr39qyo',
+        path: {
+          live: '/punjabi/articles/c39p51156lyo',
+          test: '/punjabi/articles/c0l79lr39qyo',
+          local: '/punjabi/articles/c0l79lr39qyo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/punjabi/articles/c123456abcdo',
+        path: {
+          live: null,
+          test: null,
+          local: '/punjabi/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/punjabi',
+        path: {
+          live: '/punjabi',
+          test: '/punjabi',
+          local: '/punjabi',
+        },
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv)
-          ? '/punjabi/india-51325361'
-          : '/punjabi/media-23248705',
+        path: {
+          live: '/punjabi/india-51325361',
+          test: '/punjabi/media-23248705',
+          local: '/punjabi/media-23248705',
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/punjabi/india-42928885',
+        path: {
+          live: null,
+          test: null,
+          local: '/punjabi/india-42928885',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
