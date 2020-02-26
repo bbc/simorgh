@@ -1760,37 +1760,52 @@ const genServices = appEnv => ({
     variant: 'lat',
     pageTypes: {
       articles: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/serbian/articles/c805k05kr73o/lat',
+        path: {
+          live: null,
+          test: null,
+          local: '/serbian/articles/c805k05kr73o/lat',
+        },
         smoke: true,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/serbian/articles/cabcdefghijo/lat',
+        path: {
+          live: null,
+          test: null,
+          local: '/serbian/articles/cabcdefghijo/lat',
+        },
         smoke: true,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/serbian/lat',
+        path: {
+          live: null,
+          test: null,
+          local: '/serbian/lat',
+        },
         smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/serbian/srbija-46748932/lat',
+        path: {
+          live: null,
+          test: null,
+          local: '/serbian/srbija-46748932/lat',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
