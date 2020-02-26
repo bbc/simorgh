@@ -1,5 +1,5 @@
 import pipe from 'ramda/src/pipe';
-import Radio from './Radio';
+import _RadioPage from './RadioPage';
 import withContexts from '../containers/PageHandlers/withContexts';
 import withPageWrapper from '../containers/PageHandlers/withPageWrapper';
 import withError from '../containers/PageHandlers/withError';
@@ -15,4 +15,4 @@ const enhancePage = pipe(
 );
 
 // eslint-disable-next-line import/prefer-default-export
-export const RadioPage = enhancePage(Radio);
+export const RadioPage = enhancePage(_RadioPage);
