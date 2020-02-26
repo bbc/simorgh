@@ -707,39 +707,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/hindi/articles/cd80y3ezl8go'
-          : '/hindi/articles/c0469479x9xo',
+        path: {
+          live: '/hindi/articles/cd80y3ezl8go',
+          test: '/hindi/articles/c0469479x9xo',
+          local: '/hindi/articles/c0469479x9xo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/hindi/articles/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/hindi/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/hindi',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/hindi',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/hindi/bbc_hindi_radio/liveradio',
+        path: {
+          live: '/hindi/bbc_hindi_radio/liveradio',
+          test: '/hindi/bbc_hindi_radio/liveradio',
+          local: '/hindi/bbc_hindi_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/hindi/india-50198153',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/hindi/india-50198153',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
