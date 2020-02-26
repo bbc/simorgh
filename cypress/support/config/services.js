@@ -586,7 +586,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/indonesia',
+        path: '/indonesia',
         smoke: false,
       },
       liveRadio: {
