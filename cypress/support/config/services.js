@@ -828,39 +828,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/indonesia/articles/cvd36dly8zdo'
-          : '/indonesia/articles/c0q2zq8pzvzo',
+        path: {
+          live: '/indonesia/articles/cvd36dly8zdo',
+          test: '/indonesia/articles/c0q2zq8pzvzo',
+          local: '/indonesia/articles/c0q2zq8pzvzo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/indonesia/articles/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/indonesia/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/indonesia',
+        path: {
+          live: '/indonesia',
+          test: '/indonesia',
+          local: '/indonesia',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/indonesia/bbc_indonesian_radio/liveradio',
+        path: {
+          live: '/indonesia/bbc_indonesian_radio/liveradio',
+          test: '/indonesia/bbc_indonesian_radio/liveradio',
+          local: '/indonesia/bbc_indonesian_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/indonesia/indonesia-41635759',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/indonesia/indonesia-41635759',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
