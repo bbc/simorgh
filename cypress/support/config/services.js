@@ -298,14 +298,7 @@ const genServices = appEnv => ({
         },
         smoke: false,
       },
-      liveRadio: {
-        path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
-        },
-        smoke: false,
-      },
+      liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path: {
           live: undefined,
@@ -489,14 +482,7 @@ const genServices = appEnv => ({
         smoke: false,
       },
       frontPage: {},
-      liveRadio: {
-        path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
-        },
-        smoke: false,
-      },
+      liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path: {
           live: undefined,
@@ -600,38 +586,52 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/gujarati/articles/c2rnxj48elwo'
-          : '/gujarati/articles/cr5el5kw591o',
+        path: {
+          live: '/gujarati/articles/c2rnxj48elwo',
+          test: '/gujarati/articles/cr5el5kw591o',
+          local: '/gujarati/articles/cr5el5kw591o',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/gujarati/articles/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/gujarati/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/gujarati',
+        path: {
+          live: '/gujarati',
+          test: '/gujarati',
+          local: '/gujarati',
+        },
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv)
-          ? '/gujarati/media-51389006'
-          : '/gujarati/other-news-23130286',
+        path: {
+          live: '/gujarati/media-51389006',
+          test: '/gujarati/other-news-23130286',
+          local: '/gujarati/other-news-23130286',
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/gujarati/international-41345658',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/gujarati/international-41345658',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
