@@ -1377,16 +1377,16 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/persian/articles/cxvxrj8tvppo',
         },
         smoke: true,
       },
       frontPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/persian',
         },
         smoke: true,
@@ -1410,7 +1410,7 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: {
-          live: undefined,
+          live: null,
           test: [
             '/persian/iran-23231114', // CPS MAP with audio
             '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
@@ -1424,17 +1424,17 @@ const genServices = appEnv => ({
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/persian/magazine-49281981', // CPS PGL
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -1456,8 +1456,8 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/pidgin/articles/cxvxrj8tvppo',
         },
         smoke: false,
@@ -1481,17 +1481,17 @@ const genServices = appEnv => ({
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/pidgin/sport-23252855',
         },
         smoke: true,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
@@ -1513,16 +1513,16 @@ const genServices = appEnv => ({
       },
       errorPage404: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/portuguese/articles/cxvxrj8tvppo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/portuguese',
         },
         smoke: false,
@@ -1530,25 +1530,25 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: undefined,
-          test: undefined,
+          live: null,
+          test: null,
           local: '/portuguese/geral-40302633',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: undefined,
-          test: undefined,
-          local: undefined,
+          live: null,
+          test: null,
+          local: null,
         },
         smoke: false,
       },
