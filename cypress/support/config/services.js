@@ -2092,38 +2092,52 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/telugu/articles/c1x76pey3x3o'
-          : '/telugu/articles/cq0y4008d4vo',
+        path: {
+          live: '/telugu/articles/c1x76pey3x3o',
+          test: '/telugu/articles/cq0y4008d4vo',
+          local: '/telugu/articles/cq0y4008d4vo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/telugu/articles/c123456abcdo',
+        path: {
+          live: null,
+          test: null,
+          local: '/telugu/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/telugu',
+        path: {
+          live: '/telugu',
+          test: '/telugu',
+          local: '/telugu',
+        },
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv)
-          ? '/telugu/india-51309092'
-          : '/telugu/international-23263261',
+        path: {
+          live: '/telugu/india-51309092',
+          test: '/telugu/international-23263261',
+          local: '/telugu/international-23263261',
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/telugu/india-42321552',
+        path: {
+          live: null,
+          test: null,
+          local: '/telugu/india-42321552',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
