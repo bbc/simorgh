@@ -2028,39 +2028,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/tamil/articles/cvr4752gr13o'
-          : '/tamil/articles/cwl08ll3me8o',
+        path: {
+          live: '/tamil/articles/cvr4752gr13o',
+          test: '/tamil/articles/cwl08ll3me8o',
+          local: '/tamil/articles/cwl08ll3me8o',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/tamil/articles/c123456abcdo',
+        path: {
+          live: null,
+          test: null,
+          local: '/tamil/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/tamil',
+        path: {
+          live: '/tamil',
+          test: '/tamil',
+          local: '/tamil',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/tamil/bbc_tamil_radio/liveradio',
+        path: {
+          live: '/tamil/bbc_tamil_radio/liveradio',
+          test: '/tamil/bbc_tamil_radio/liveradio',
+          local: '/tamil/bbc_tamil_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/tamil/global-47758688',
+        path: {
+          live: null,
+          test: null,
+          local: '/tamil/global-47758688',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
