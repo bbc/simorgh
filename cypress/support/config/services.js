@@ -2206,41 +2206,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/tigrinya/articles/c3vq38ve33xo'
-          : '/tigrinya/articles/ck62z3rjwdeo',
+        path: {
+          live: '/tigrinya/articles/c3vq38ve33xo',
+          test: '/tigrinya/articles/ck62z3rjwdeo',
+          local: '/tigrinya/articles/ck62z3rjwdeo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/tigrinya/articles/c123456abcdo',
+        path: {
+          live: null,
+          test: null,
+          local: '/tigrinya/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/tigrinya',
+        path: {
+          live: '/tigrinya',
+          test: '/tigrinya',
+          local: '/tigrinya',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/tigrinya/bbc_tigrinya_radio/liveradio',
+        path: {
+          live: '/tigrinya/bbc_tigrinya_radio/liveradio',
+          test: '/tigrinya/bbc_tigrinya_radio/liveradio',
+          local: '/tigrinya/bbc_tigrinya_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv)
-          ? '/tigrinya/news-51249937'
-          : '/tigrinya/news-23263262',
+        path: {
+          live: '/tigrinya/news-51249937',
+          test: '/tigrinya/news-23263262',
+          local: '/tigrinya/news-23263262',
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/tigrinya/news-49944566',
+        path: {
+          live: null,
+          test: null,
+          local: '/tigrinya/news-49944566',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
