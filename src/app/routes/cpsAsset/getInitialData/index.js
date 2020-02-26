@@ -29,9 +29,13 @@ const processOptimoBlocks = pipe(
   cpsOnlyOnwardJourneys,
 );
 const transformJson = async json => {
-  const formattedPageData = formatPageData(json);
-  const optimoBlocks = await convertToOptimoBlocks(formattedPageData);
-  return processOptimoBlocks(optimoBlocks);
+  try {
+    const formattedPageData = formatPageData(json);
+    const optimoBlocks = await convertToOptimoBlocks(formattedPageData);
+    return processOptimoBlocks(optimoBlocks);
+  } catch (e) {
+    return json;
+  }
 };
 
 export default async path => {
