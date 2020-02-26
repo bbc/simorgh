@@ -58,6 +58,16 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'IDX',
       },
       {
+        type: 'MAP',
+        expectedDefaultType: 'article-media-asset',
+        expectedShortType: 'article-media-asset',
+      },
+      {
+        type: 'media',
+        expectedDefaultType: 'Live Radio',
+        expectedShortType: 'Live Radio',
+      },
+      {
         type: null,
         expectedDefaultType: null,
         expectedShortType: null,
@@ -164,14 +174,46 @@ describe('Chartbeat utilities', () => {
         description: 'should not append pageType if not present',
         expected: 'News, News - business, News - foo',
       },
+      {
+        service: 'afrique',
+        sectionName: 'Media',
+        categoryName: 'News',
+        pageType: 'MAP',
+        description: 'should add section and category to MAPs',
+        expected:
+          'Afrique, Afrique - Media, Afrique - MAP, Afrique - Media - MAP, Afrique - News-category',
+      },
+      {
+        service: 'korean',
+        pageType: 'media',
+        description: 'should return expected section for live radio',
+        expected:
+          'Korean, Korean - , Korean - unknown, Korean - unknown, Korean - unknown',
+      },
     ];
 
     sectionFixtures.forEach(
-      ({ service, producer, chapter, pageType, description, expected }) => {
+      ({
+        service,
+        producer,
+        chapter,
+        pageType,
+        description,
+        expected,
+        sectionName,
+        categoryName,
+      }) => {
         it(description, () => {
-          expect(buildSections(service, pageType, producer, chapter)).toBe(
-            expected,
-          );
+          expect(
+            buildSections({
+              service,
+              pageType,
+              producer,
+              chapter,
+              sectionName,
+              categoryName,
+            }),
+          ).toBe(expected);
         });
       },
     );
@@ -229,11 +271,35 @@ describe('Chartbeat utilities', () => {
 
       expect(getTitle(pageType, pageData, brandName)).toBe(null);
     });
+
+    it('should return correct title when pageType is MAP', () => {
+      const pageType = 'MAP';
+      const pageData = {
+        promo: {
+          headlines: {
+            headline: 'MAP Page Title',
+          },
+        },
+      };
+
+      expect(getTitle(pageType, pageData)).toBe('MAP Page Title');
+    });
+
+    it('should return correct title when pageType is media (Live radio)', () => {
+      const pageType = 'media';
+      const pageData = {
+        promo: {
+          name: 'Live Radio Page Title',
+        },
+      };
+
+      expect(getTitle(pageType, pageData)).toBe('Live Radio Page Title');
+    });
   });
 
   describe('Chartbeat Config', () => {
     isOnClient = true;
-    it('should return config  for amp pages when page type is article and env is live', () => {
+    it('should return config for amp pages when page type is article and env is live', () => {
       const fixtureData = {
         isAmp: true,
         platform: 'amp',
@@ -261,7 +327,7 @@ describe('Chartbeat utilities', () => {
       expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
     });
 
-    it('should return config  for canonical pages when page type is frontPage and env is not live', () => {
+    it('should return config for canonical pages when page type is frontPage and env is not live', () => {
       const fixtureData = {
         isAmp: false,
         platform: 'canonical',
@@ -286,6 +352,88 @@ describe('Chartbeat utilities', () => {
         uid: 50924,
         useCanonical: true,
         virtualReferrer: 'test.bbc.com/previous-path',
+      };
+
+      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+    });
+
+    it('should return config for canonical pages when page type is MAP and env is live', () => {
+      const fixtureData = {
+        isAmp: false,
+        platform: 'canonical',
+        pageType: 'MAP',
+        data: {
+          promo: {
+            headlines: {
+              headline: 'MAP Page Title',
+            },
+          },
+          relatedContent: {
+            section: {
+              name: 'Media',
+            },
+          },
+          metadata: {
+            passport: {
+              category: {
+                categoryName: 'News',
+              },
+            },
+          },
+        },
+        brandName: '',
+        env: 'live',
+        service: 'afrique',
+        origin: 'bbc.com',
+        previousPath: '/previous-path',
+      };
+
+      const expectedConfig = {
+        domain: 'afrique.bbc.co.uk',
+        idSync: {
+          bbc_hid: 'foobar',
+        },
+        path: '/',
+        sections:
+          'Afrique, Afrique - Media, Afrique - MAP, Afrique - Media - MAP, Afrique - News-category',
+        title: 'MAP Page Title',
+        type: 'article-media-asset',
+        uid: 50924,
+        useCanonical: true,
+        virtualReferrer: 'bbc.com/previous-path',
+      };
+
+      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+    });
+
+    it('should return config for amp pages when page type is media (live radio) and env is not live', () => {
+      const fixtureData = {
+        isAmp: true,
+        platform: 'amp',
+        pageType: 'media',
+        data: {
+          promo: {
+            name: 'Live Radio Page Title',
+          },
+        },
+        brandName: '',
+        env: 'test',
+        service: 'korean',
+        origin: 'test.bbc.com',
+        previousPath: '/previous-path',
+      };
+
+      const expectedConfig = {
+        domain: 'test.bbc.co.uk',
+        idSync: {
+          bbc_hid: 'foobar',
+        },
+        sections:
+          'Korean, Korean - , Korean - unknown, Korean - unknown, Korean - unknown',
+        title: 'Live Radio Page Title',
+        contentType: 'Live Radio',
+        uid: 50924,
+        virtualReferrer: `\${documentReferrer}`,
       };
 
       expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
