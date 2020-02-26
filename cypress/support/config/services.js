@@ -2746,34 +2746,52 @@ const genServices = appEnv => ({
     variant: 'simp',
     pageTypes: {
       articles: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/zhongwen/articles/c3xd4x9prgyo/simp',
+        path: {
+          live: null,
+          test: null,
+          local: '/zhongwen/articles/c3xd4x9prgyo/simp',
+        },
         smoke: true,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/zhongwen/articles/cabcdefghijo/simp',
+        path: {
+          live: null,
+          test: null,
+          local: '/zhongwen/articles/cabcdefghijo/simp',
+        },
         smoke: true,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/zhongwen/simp',
+        path: {
+          live: null,
+          test: null,
+          local: '/zhongwen/simp',
+        },
         smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
