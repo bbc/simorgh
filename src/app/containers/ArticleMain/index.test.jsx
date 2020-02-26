@@ -83,7 +83,7 @@ it('should render a news article correctly', async () => {
   expect(container).toMatchSnapshot();
 });
 
-it('should render a persian article correctly', async () => {
+it('should render a rtl article (persian) with most read correctly', async () => {
   fetch.mockResponse(JSON.stringify(persianMostReadData));
 
   const { container } = render(
@@ -97,7 +97,7 @@ it('should render a persian article correctly', async () => {
   expect(container).toMatchSnapshot();
 });
 
-it('should render a pidgin article correctly', async () => {
+it('should render a ltr article (pidgin) with most read correctly', async () => {
   fetch.mockResponse(JSON.stringify(pidginMostReadData));
 
   const { container } = render(
