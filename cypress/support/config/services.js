@@ -2626,39 +2626,58 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/vietnamese/articles/cpgqngyexq7o'
-          : '/vietnamese/articles/c3y59g5zm19o',
+        path: {
+          live: '/vietnamese/articles/cpgqngyexq7o',
+          test: '/vietnamese/articles/c3y59g5zm19o',
+          local: '/vietnamese/articles/c3y59g5zm19o',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/vietnamese/articles/c123456abcdo',
+        path: {
+          live: null,
+          test: null,
+          local: '/vietnamese/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/vietnamese',
+        path: {
+          live: null,
+          test: null,
+          local: '/vietnamese',
+        },
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        // eslint-disable-next-line no-nested-ternary
-        path: isLive(appEnv)
-          ? undefined
-          : '/vietnamese/sport/2016/09/160922_tc2_testmap2',
+        path: {
+          live: null,
+          test: [
+            '/vietnamese/media-23257614', // CPS MAP
+            '/vietnamese/sport/2016/09/160922_tc2_testmap2', // TC2 MAP
+          ],
+          local: [
+            '/vietnamese/media-49614583', // CPS MAP
+            '/vietnamese/sport/2016/09/160922_tc2_testmap2', // TC2 MAP
+          ],
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/vietnamese/world-48605529',
+        path: {
+          live: null,
+          test: null,
+          local: '/vietnamese/world-48605529',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
