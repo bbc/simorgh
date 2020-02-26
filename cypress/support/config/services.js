@@ -2149,38 +2149,52 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/thai/articles/czx7w3zyme1o'
-          : '/thai/articles/c442rl3md0eo',
+        path: {
+          live: '/thai/articles/czx7w3zyme1o',
+          test: '/thai/articles/c442rl3md0eo',
+          local: '/thai/articles/c442rl3md0eo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/thai/articles/c123456abcdo',
+        path: {
+          live: null,
+          test: null,
+          local: '/thai/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/thai',
+        path: {
+          live: '/thai',
+          test: '/thai',
+          local: '/thai',
+        },
         smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv)
-          ? '/thai/international-51285795'
-          : '/thai/thailand-23248713',
+        path: {
+          live: '/thai/international-51285795',
+          test: '/thai/thailand-23248713',
+          local: '/thai/thailand-23248713',
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/thai/thailand-49950038',
+        path: {
+          live: null,
+          test: null,
+          local: '/thai/thailand-49950038',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
