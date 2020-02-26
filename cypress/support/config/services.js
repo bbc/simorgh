@@ -1674,26 +1674,26 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/scotland/articles/cm49v4x1r9lo'
-          : '/scotland/articles/czwj5l0n210o',
+        path: {
+          live: '/scotland/articles/cm49v4x1r9lo',
+          test: '/scotland/articles/czwj5l0n210o',
+          local: '/scotland/articles/czwj5l0n210o',
+        },
         smoke: true,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/scotland/articles/cabcdefghijo',
+        path: {
+          live: null,
+          test: null,
+          local: '/scotland/articles/cabcdefghijo',
+        },
         smoke: false,
       },
       frontPage: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
       photoGalleryPage: { path: undefined, smoke: false },
-      storyPage: {
-        path: undefined,
-        smoke: false,
-      },
+      storyPage: { path: undefined, smoke: false },
     },
   },
   serbianCyr: {
