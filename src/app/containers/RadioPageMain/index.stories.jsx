@@ -7,6 +7,7 @@ import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { UserContextProvider } from '#contexts/UserContext';
 import RadioPageMain from '.';
 import indonesia from '#data/indonesia/bbc_indonesian_radio/liveradio.json';
 import korean from '#data/korean/bbc_korean_radio/liveradio.json';
@@ -58,13 +59,15 @@ storiesOf('Main|Radio Page', module)
             origin="https://www.bbc.com"
             service={service}
           >
-            <BrowserRouter>
-              <RadioPageMain
-                pageData={liveRadioFixtures[service]}
-                match={matchFixtures(service)}
-                service={service}
-              />
-            </BrowserRouter>
+            <UserContextProvider>
+              <BrowserRouter>
+                <RadioPageMain
+                  pageData={liveRadioFixtures[service]}
+                  match={matchFixtures(service)}
+                  service={service}
+                />
+              </BrowserRouter>
+            </UserContextProvider>
           </RequestContextProvider>
         </ServiceContextProvider>
       </ToggleContextProvider>
