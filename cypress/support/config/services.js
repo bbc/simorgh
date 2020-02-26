@@ -1140,36 +1140,52 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/mundo/articles/cdwrpl7qwqqo'
-          : '/mundo/articles/ce42wzqr2mko',
+        path: {
+          live: '/mundo/articles/cdwrpl7qwqqo',
+          test: '/mundo/articles/ce42wzqr2mko',
+          local: '/mundo/articles/ce42wzqr2mko',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/mundo/articles/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/mundo/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/mundo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/mundo',
+        },
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/mundo/deportes-36935058',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/mundo/deportes-36935058',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
