@@ -94,7 +94,7 @@ const CpsRelatedContent = ({ content }) => {
                 key={item.id || item.uri}
                 dir={dir}
               >
-                <StoryPromo item={item} />
+                <StoryPromo item={item} dir={dir} />
               </Grid>
             ))}
         </Grid>
