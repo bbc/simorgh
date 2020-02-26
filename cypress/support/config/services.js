@@ -1447,33 +1447,52 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/pidgin/articles/cgwk9w4zlg8o'
-          : '/pidgin/articles/cwl08rd38l6o',
+        path: {
+          live: '/pidgin/articles/cgwk9w4zlg8o',
+          test: '/pidgin/articles/cwl08rd38l6o',
+          local: '/pidgin/articles/cwl08rd38l6o',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/pidgin/articles/cxvxrj8tvppo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/pidgin/articles/cxvxrj8tvppo',
+        },
         smoke: false,
       },
-      frontPage: { path: '/pidgin', smoke: false },
+      frontPage: {
+        path: {
+          live: '/pidgin',
+          test: '/pidgin',
+          local: '/pidgin',
+        },
+        smoke: false,
+      },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? '/pidgin/tori-50974590' : '/pidgin/23248703', // live is video with related content
+        path: {
+          live: '/pidgin/tori-50974590', // CPS MAP with video
+          test: '/pidgin/23248703',
+          local: '/pidgin/23248703',
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/pidgin/sport-23252855',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/pidgin/sport-23252855',
+        },
         smoke: true,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
