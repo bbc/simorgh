@@ -8,14 +8,12 @@ import {
 const WithTimeMachine = ({ children }) => {
   const [componentToRender, setComponentToRender] = useState(null);
 
+  // This effect will start the time-machine, render the component, then reset the time-machine after the component has been rendered.
   useEffect(() => {
-    function handleStateChange() {
-      setComponentToRender(children);
-    }
     startTimeMachine();
-    handleStateChange();
-    return () => resetTimeMachine();
-  });
+    setComponentToRender(children);
+    return resetTimeMachine;
+  }, [children]);
   return componentToRender;
 };
 WithTimeMachine.propTypes = {
