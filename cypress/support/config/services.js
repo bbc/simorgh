@@ -1886,37 +1886,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/somali/articles/c8z79d4mzrlo'
-          : '/somali/articles/cgn6emk3jm8o',
+        path: {
+          live: '/somali/articles/c8z79d4mzrlo',
+          test: '/somali/articles/cgn6emk3jm8o',
+          local: '/somali/articles/cgn6emk3jm8o',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/somali/articles/c123456abcdo',
+        path: {
+          live: null,
+          test: null,
+          local: '/somali/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/somali',
+        path: {
+          live: null,
+          test: null,
+          local: '/somali',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/somali/bbc_somali_radio/liveradio',
+        path: {
+          live: '/somali/bbc_somali_radio/liveradio',
+          test: '/somali/bbc_somali_radio/liveradio',
+          local: '/somali/bbc_somali_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv) ? undefined : '/somali/war-45947544',
+        path: {
+          live: null,
+          test: null,
+          local: '/somali/war-45947544',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
