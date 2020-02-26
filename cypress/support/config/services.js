@@ -2327,34 +2327,52 @@ const genServices = appEnv => ({
     variant: 'simp',
     pageTypes: {
       articles: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/ukchina/articles/c0e8weny66ko/simp',
+        path: {
+          live: null,
+          test: null,
+          local: '/ukchina/articles/c0e8weny66ko/simp',
+        },
         smoke: true,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/ukchina/articles/cabcdefghijo/simp',
+        path: {
+          live: null,
+          test: null,
+          local: '/ukchina/articles/cabcdefghijo/simp',
+        },
         smoke: true,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/ukchina/simp',
+        path: {
+          live: null,
+          test: null,
+          local: '/ukchina/simp',
+        },
         smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
