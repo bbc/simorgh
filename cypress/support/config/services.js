@@ -1,17 +1,4 @@
-/* eslint-disable no-nested-ternary */
-const isLive = appEnv => appEnv === 'live';
-
-const isTest = appEnv => appEnv === 'test';
-
-const serviceMapper = appEnv => {
-  if (appEnv === 'stage') {
-    return 'test';
-  }
-
-  return appEnv;
-};
-
-const genServices = appEnv => ({
+const genServices = () => ({
   afaanoromoo: {
     name: 'afaanoromoo',
     font: undefined,
@@ -2803,43 +2790,52 @@ const genServices = appEnv => ({
     variant: 'trad',
     pageTypes: {
       articles: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/zhongwen/articles/c3xd4x9prgyo/trad',
+        path: {
+          live: null,
+          test: null,
+          local: '/zhongwen/articles/c3xd4x9prgyo/trad',
+        },
         smoke: true,
       },
       errorPage404: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/zhongwen/articles/cabcdefghijo/trad',
+        path: {
+          live: null,
+          test: null,
+          local: '/zhongwen/articles/cabcdefghijo/trad',
+        },
         smoke: true,
       },
       frontPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/zhongwen/trad',
+        path: {
+          live: null,
+          test: null,
+          local: '/zhongwen/trad',
+        },
         smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : undefined, // '/zhongwen/chinese-news-49631219/trad'
+        path: {
+          live: null,
+          test: null,
+          local: null, // Once variant support is available '/zhongwen/chinese-news-49631219/trad'
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/zhongwen/chinese-news-49065935/trad',
+        path: {
+          live: null,
+          test: null,
+          local: '/zhongwen/chinese-news-49065935/trad',
+        },
         smoke: true,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
@@ -2848,15 +2844,11 @@ const genServices = appEnv => ({
 
 // Allow runs to be limited to a single service via the CYPRESS_ONLY_SERVICE env var
 const runOnlyService = Cypress.env('ONLY_SERVICE');
-const environment = serviceMapper(Cypress.env('APP_ENV'));
 
-if (
-  runOnlyService &&
-  Object.keys(genServices(environment)).includes(runOnlyService)
-) {
+if (runOnlyService && Object.keys(genServices).includes(runOnlyService)) {
   module.exports = {
-    [runOnlyService]: genServices(environment)[runOnlyService],
+    [runOnlyService]: genServices[runOnlyService],
   };
 } else {
-  module.exports = genServices(environment);
+  module.exports = genServices;
 }
