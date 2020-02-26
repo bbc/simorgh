@@ -1,10 +1,10 @@
 import { isLastRelative, isSameDay, isToday } from './helpers';
 
-export const hasBeenUpdated = (timeDifferenceMinutes, minutesTolerance) => {
+export const hasBeenUpdated = ({ timeDifferenceMinutes, minutesTolerance }) => {
   return timeDifferenceMinutes > minutesTolerance;
 };
 
-export const publishedAndUpdatedToday = (firstPublished, lastPublished) =>
+export const publishedAndUpdatedToday = ({ firstPublished, lastPublished }) =>
   isToday(firstPublished) && isSameDay(firstPublished, lastPublished);
 
 const shouldDisplayLastUpdatedTimestamp = ({
@@ -13,11 +13,11 @@ const shouldDisplayLastUpdatedTimestamp = ({
   lastPublished,
 }) => {
   const timeDifferenceMinutes = (lastPublished - firstPublished) / 1000 / 60;
-  const isUpdated = hasBeenUpdated(timeDifferenceMinutes, minutesTolerance);
-  const isPublishedAndUpdatedToday = publishedAndUpdatedToday(
+  const isUpdated = hasBeenUpdated({ timeDifferenceMinutes, minutesTolerance });
+  const isPublishedAndUpdatedToday = publishedAndUpdatedToday({
     firstPublished,
     lastPublished,
-  );
+  });
 
   const updatedWithinRelativeTimePeriod = isLastRelative(lastPublished);
 

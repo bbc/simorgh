@@ -1,15 +1,8 @@
-import {
+import shouldDisplayLastUpdatedTimestamp, {
   hasBeenUpdated,
   publishedAndUpdatedToday,
-  // shouldDisplayLastUpdatedTimestamp,
 } from './shouldDisplayLastUpdatedTimestamp';
 import { timestampGenerator, sameDayTimestampsGenerator } from './testHelpers';
-
-// const regexDate = /[0-9]{1,2} \w+ [0-9]{4}/;
-// const regexDatetime = /[0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
-
-// const regexUpdatedDatetime = /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
-// const regexUpdatedDate = /^Updated [0-9]{1,2} \w+ [0-9]{4}$/;
 
 describe('shouldDisplayLastUpdatedTimestamp functions', () => {
   let originalDate;
@@ -23,24 +16,28 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
   });
 
   it('hasBeenUpdated should return true when the time difference between firstPublished and lastPublished in minutes is greater than the minutes tolerance', () => {
-    const firstPublishedTimestamp = originalDate();
-    const lastUpdatedTimestamp = timestampGenerator({ minutes: 2 });
+    const currentTime = originalDate();
+    const twoMinutesAgo = timestampGenerator({ minutes: 2 });
 
-    const msDifference = firstPublishedTimestamp - lastUpdatedTimestamp;
-    const minutesDifference = msDifference / 1000 / 60;
+    const msDifference = currentTime - twoMinutesAgo;
+    const timeDifferenceMinutes = msDifference / 1000 / 60;
     const minutesTolerance = 1;
 
-    expect(hasBeenUpdated(minutesDifference, minutesTolerance)).toEqual(true);
+    expect(hasBeenUpdated({ timeDifferenceMinutes, minutesTolerance })).toEqual(
+      true,
+    );
   });
   it('hasBeenUpdated should return false when the time difference between firstPublished and lastPublished in minutes is less than the minutes tolerance', () => {
-    const firstPublishedTimestamp = originalDate();
-    const lastUpdatedTimestamp = timestampGenerator({ minutes: 0.8 });
+    const currentTime = originalDate();
+    const fortyEightSecondsAgo = timestampGenerator({ minutes: 0.8 });
 
-    const msDifference = firstPublishedTimestamp - lastUpdatedTimestamp;
-    const minutesDifference = msDifference / 1000 / 60;
+    const msDifference = currentTime - fortyEightSecondsAgo;
+    const timeDifferenceMinutes = msDifference / 1000 / 60;
     const minutesTolerance = 1;
 
-    expect(hasBeenUpdated(minutesDifference, minutesTolerance)).toEqual(false);
+    expect(hasBeenUpdated({ timeDifferenceMinutes, minutesTolerance })).toEqual(
+      false,
+    );
   });
 
   it(`publishedAndUpdatedToday should return true when firstPublished and lastPublished today`, () => {
@@ -48,38 +45,93 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
       intervals: [{ hours: 1 }],
     });
 
-    const wasPublishedAndUpdatedToday = publishedAndUpdatedToday(
-      midnightToday,
-      oneAmToday,
-    );
+    const wasPublishedAndUpdatedToday = publishedAndUpdatedToday({
+      firstPublished: midnightToday,
+      lastPublished: oneAmToday,
+    });
     expect(wasPublishedAndUpdatedToday).toEqual(true);
   });
 
   it('publishedAndUpdatedToday should return false when firstPublished is not today', () => {
-    const firstPublishedTimestamp = timestampGenerator({ days: 1, minutes: 3 });
-    const lastPublishedTimestamp = timestampGenerator({ days: 1, minutes: 1 });
+    const oneDayAndThreeMinutesAgo = timestampGenerator({
+      days: 1,
+      minutes: 3,
+    });
+    const oneDayAndOneMinuteAgo = timestampGenerator({ days: 1, minutes: 1 });
 
-    const wasPublishedAndUpdatedToday = publishedAndUpdatedToday(
-      firstPublishedTimestamp,
-      lastPublishedTimestamp,
-    );
+    const wasPublishedAndUpdatedToday = publishedAndUpdatedToday({
+      firstPublished: oneDayAndThreeMinutesAgo,
+      lastPublished: oneDayAndOneMinuteAgo,
+    });
 
     expect(wasPublishedAndUpdatedToday).toEqual(false);
   });
+  it('shouldDisplayLastUpdatedTimestamp is true when article was published and updated today', () => {
+    const [midnightToday, oneAmToday] = sameDayTimestampsGenerator({
+      intervals: [{ hours: 1 }],
+    });
 
-  // should render both timestamps when article was published and updated today
-  // shouldDisplayLastUpdatedTimestamp is true when article was published and updated today
-  // true
+    const minutesTolerance = 1;
 
-  // should render both timestamps when lastUpdated is within relative time period
-  // shouldDisplayLastUpdatedTimestamp is true when article was lastUpdated within relative time period
-  // true
+    const shouldLastUpdatedTimestampBeDisplayed = shouldDisplayLastUpdatedTimestamp(
+      {
+        minutesTolerance,
+        firstPublished: midnightToday,
+        lastPublished: oneAmToday,
+      },
+    );
 
-  // should render one timestamp when firstPublished and lastPublished is the same day, and lastPublished is outside of the relative window
-  // shouldDisplayLastUpdatedTimestamp is false when article was firstPublished and lastPublished on the same day, and lastPublished is outside of the relative window
-  // false
+    expect(shouldLastUpdatedTimestampBeDisplayed).toEqual(true);
+  });
 
-  // should render both timestamps when firstUpdated and lastUpdated are on different days
-  // shouldDisplayLastUpdatedTimestamp is true when firstUpdated and lastUpdated are on different days
-  // true
+  it('shouldDisplayLastUpdatedTimestamp is true when article was lastUpdated within relative time period', () => {
+    const nineHoursAgo = timestampGenerator({ hours: 9 });
+    const currentTime = originalDate();
+
+    const minutesTolerance = 1;
+
+    const shouldLastUpdatedTimestampBeDisplayed = shouldDisplayLastUpdatedTimestamp(
+      {
+        minutesTolerance,
+        firstPublished: nineHoursAgo,
+        lastPublished: currentTime,
+      },
+    );
+
+    expect(shouldLastUpdatedTimestampBeDisplayed).toEqual(true);
+  });
+
+  it('shouldDisplayLastUpdatedTimestamp is false when article was firstPublished and lastPublished on the same day, and lastPublished is outside of the relative window', () => {
+    const twentySixHoursAgo = timestampGenerator({ days: 1, hours: 2 });
+    const twentyFiveHoursAgo = timestampGenerator({ days: 1, hours: 1 });
+
+    const minutesTolerance = 1;
+
+    const shouldLastUpdatedTimestampBeDisplayed = shouldDisplayLastUpdatedTimestamp(
+      {
+        minutesTolerance,
+        firstPublished: twentySixHoursAgo,
+        lastPublished: twentyFiveHoursAgo,
+      },
+    );
+
+    expect(shouldLastUpdatedTimestampBeDisplayed).toEqual(false);
+  });
+
+  it('shouldDisplayLastUpdatedTimestamp is true when firstUpdated and lastUpdated are on different days', () => {
+    const twoDaysAgo = timestampGenerator({ days: 2 });
+    const oneDayAgo = timestampGenerator({ days: 1 });
+
+    const minutesTolerance = 1;
+
+    const shouldLastUpdatedTimestampBeDisplayed = shouldDisplayLastUpdatedTimestamp(
+      {
+        minutesTolerance,
+        firstPublished: twoDaysAgo,
+        lastPublished: oneDayAgo,
+      },
+    );
+
+    expect(shouldLastUpdatedTimestampBeDisplayed).toEqual(true);
+  });
 });
