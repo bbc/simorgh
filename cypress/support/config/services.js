@@ -1013,41 +1013,65 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/kyrgyz/articles/c414v42gy75o'
-          : '/kyrgyz/articles/c3xd4xg3rm9o',
+        path: {
+          live: '/kyrgyz/articles/c414v42gy75o',
+          test: '/kyrgyz/articles/c3xd4xg3rm9o',
+          local: '/kyrgyz/articles/c3xd4xg3rm9o',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/kyrgyz/articles/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/kyrgyz/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/kyrgyz',
+        path: {
+          live: '/kyrgyz',
+          test: '/kyrgyz',
+          local: '/kyrgyz',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/kyrgyz/bbc_kyrgyz_radio/liveradio',
+        path: {
+          live: '/kyrgyz/bbc_kyrgyz_radio/liveradio',
+          test: '/kyrgyz/bbc_kyrgyz_radio/liveradio',
+          local: '/kyrgyz/bbc_kyrgyz_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv)
-          ? undefined
-          : '/kyrgyz/multimedia/2015/03/150330_map_test',
+        path: {
+          live: undefined,
+          test: [
+            '/kyrgyz/kyrgyzstan-23095373', // CPS MAP
+            '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP
+          ],
+          local: [
+            '/kyrgyz/sapar-tv-48695523', // CPS MAP
+            '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP
+          ],
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/kyrgyz/world-40847556',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/kyrgyz/world-40847556',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
