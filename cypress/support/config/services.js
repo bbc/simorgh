@@ -771,37 +771,53 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/igbo/articles/ckjn8jnrn75o'
-          : '/igbo/articles/cr1lw620ygjo',
+        path: {
+          live: '/igbo/articles/ckjn8jnrn75o',
+          test: '/igbo/articles/cr1lw620ygjo',
+          local: '/igbo/articles/cr1lw620ygjo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/igbo/articles/cxvxrj8tvppo',
-        smoke: true,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/igbo/articles/cxvxrj8tvppo',
+        },
+        smoke: false,
       },
-      frontPage: { path: '/igbo', smoke: false },
+      frontPage: {
+        path: {
+          live: '/igbo',
+          test: '/igbo',
+          local: '/igbo',
+        },
+        smoke: false,
+      },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv) ? '/igbo/media-42986440' : '/igbo/media-23256786', // live is audio clip
+        path: {
+          live: '/igbo/media-42986440',
+          test: '/igbo/media-23256786',
+          local: '/igbo/media-23256786',
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/igbo/afirika-49666505',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/igbo/afirika-49666505',
+        },
         smoke: false,
       },
       storyPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/igbo/afirika-23252735',
-        smoke: true,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/igbo/afirika-23252735',
+        },
+        smoke: false,
       },
     },
   },
