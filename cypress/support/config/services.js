@@ -473,25 +473,52 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/cymrufyw/erthyglau/c06p32z9x2mo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/cymrufyw/erthyglau/c06p32z9x2mo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/cymrufyw/erthyglau/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/cymrufyw/erthyglau/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {},
-      liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
-      photoGalleryPage: { path: undefined, smoke: false },
+      liveRadio: {
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
+        smoke: false,
+      },
+      mediaAssetPage: {
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
+        smoke: false,
+      },
+      photoGalleryPage: {
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
+        smoke: false,
+      },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
