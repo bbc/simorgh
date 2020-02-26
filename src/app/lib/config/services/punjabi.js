@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
       relatedContent: 'ਇਸ ਖ਼ਬਰ ਬਾਰੇ ਹੋਰ',
+      sections: 'ਸੈਕਸ਼ਨਜ਼',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -178,7 +179,6 @@ export const service = {
         url: '/punjabi/resources/idt-681afed0-03f5-4d5f-a640-3011a722d1c8',
       },
     ],
-    navigationSection: 'ਸੈਕਸ਼ਨਜ਼',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/punjabi/institutional-49282853',

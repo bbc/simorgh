@@ -58,6 +58,7 @@ export const service = {
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
+      sections: 'Secciones',
       mediaAssetPage: {
         mediaPlayer: 'Reproductor multimedia',
         audioPlayer: 'Reproductor de audio',
@@ -215,10 +216,6 @@ export const service = {
         url: '/mundo',
       },
       {
-        title: 'Hay Festival',
-        url: '/mundo/noticias-36795069',
-      },
-      {
         title: 'América Latina',
         url: '/mundo/america_latina',
       },
@@ -255,11 +252,14 @@ export const service = {
         url: '/mundo/media/video',
       },
       {
+        title: 'Hay Festival',
+        url: '/mundo/noticias-36795069',
+      },
+      {
         title: 'Centroamérica Cuenta',
         url: '/mundo/noticias-43826245',
       },
     ],
-    navigationSection: 'Secciones',
   },
 };
 

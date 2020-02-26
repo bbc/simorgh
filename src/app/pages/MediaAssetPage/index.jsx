@@ -13,13 +13,14 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import MediaMessage from './MediaMessage';
 import { GhostGrid } from '#lib/styledGrid';
-import { getImageParts } from '#lib/utilities/preprocessor/rules/cpsAssetPage/convertToOptimoBlocks/blocks/image/helpers';
+import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/CpsText';
 import image from '#containers/Image';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
@@ -42,7 +43,7 @@ import withError from '#containers/PageHandlers/withError';
 import withLoading from '#containers/PageHandlers/withLoading';
 import withData from '#containers/PageHandlers/withData';
 
-const isLegacyMAP = url => url.split('/').length > 7;
+const isLegacyMediaAssetPage = url => url.split('/').length > 7;
 
 const MediaAssetPageContainer = ({ pageData }) => {
   const requestContext = useContext(RequestContext);
@@ -77,7 +78,7 @@ const MediaAssetPageContainer = ({ pageData }) => {
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
       ) : null,
-    video: isLegacyMAP(requestContext.canonicalLink)
+    video: isLegacyMediaAssetPage(requestContext.canonicalLink)
       ? MediaMessage
       : props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
@@ -102,6 +103,7 @@ const MediaAssetPageContainer = ({ pageData }) => {
 
   return (
     <>
+      <ChartbeatAnalytics data={pageData} />
       <CpsMetadata
         title={title}
         language={metadata.language}
