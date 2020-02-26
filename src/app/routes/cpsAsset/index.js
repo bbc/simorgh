@@ -5,13 +5,13 @@ import StoryPage from '#pages/Story';
 import PhotoGalleryPage from '#pages/PhotoGallery';
 import FrontPage from '#pages/FrontPage';
 import ErrorPage from '#pages/Error';
-import { cpsAssetPagePath } from '../regex';
+import { cpsAssetPagePath } from '../utils/regex';
 import {
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
-} from '../pageTypes';
+} from '../utils/pageTypes';
 
 // CPS Asset Mapping to PageType
 const CpsAsset = props => {

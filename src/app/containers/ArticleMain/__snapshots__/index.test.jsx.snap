@@ -63,7 +63,7 @@ exports[`should render a news article correctly 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -104,7 +104,7 @@ exports[`should render a news article correctly 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c4 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -130,7 +130,7 @@ exports[`should render a news article correctly 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
     grid-column: 3 / span 6;
   }
@@ -751,7 +751,7 @@ exports[`should render a persian article correctly 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -792,7 +792,7 @@ exports[`should render a persian article correctly 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c4 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -818,7 +818,7 @@ exports[`should render a persian article correctly 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
     grid-column: 3 / span 6;
   }
@@ -1195,7 +1195,7 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
     max-width: 45.5rem;
@@ -1236,7 +1236,7 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c4 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -1262,7 +1262,7 @@ exports[`should render a pidgin article correctly (with navigation) 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
     grid-column: 3 / span 6;
   }
