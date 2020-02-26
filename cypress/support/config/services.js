@@ -530,41 +530,65 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/gahuza/articles/cryd02nzn81o'
-          : '/gahuza/articles/cey23zx8wx8o',
+        path: {
+          live: '/gahuza/articles/cryd02nzn81o',
+          test: '/gahuza/articles/cey23zx8wx8o',
+          local: '/gahuza/articles/cey23zx8wx8o',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/gahuza/articles/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/gahuza/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/gahuza',
+        path: {
+          live: '/gahuza',
+          test: '/gahuza',
+          local: '/gahuza',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/gahuza/bbc_gahuza_radio/liveradio',
+        path: {
+          live: '/gahuza/bbc_gahuza_radio/liveradio',
+          test: '/gahuza/bbc_gahuza_radio/liveradio',
+          local: '/gahuza/bbc_gahuza_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv)
-          ? undefined
-          : '/gahuza/video/2015/12/151217_test_long',
+        path: {
+          live: undefined,
+          test: [
+            '/gahuza/amakuru-23257470', // CPS MAP
+            '/gahuza/video/2015/12/151217_test_long', // TC2 MAP
+          ],
+          local: [
+            '/gahuza/amakuru-49534170', // CPS MAP
+            '/gahuza/video/2015/12/151217_test_long', // TC2 MAP
+          ],
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/gahuza/amakuru-43894701',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/gahuza/amakuru-43894701',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
