@@ -20,57 +20,57 @@ const genServices = appEnv => ({
     pageTypes: {
       articles: {
         path: {
-          local: '/afaanoromoo/articles/c4g19kgl85ko',
-          test: '/afaanoromoo/articles/c4g19kgl85ko',
           live: '/afaanoromoo/articles/ce3nlgrelv1o',
+          test: '/afaanoromoo/articles/c4g19kgl85ko',
+          local: '/afaanoromoo/articles/c4g19kgl85ko',
         },
         smoke: false,
       },
       errorPage404: {
         path: {
-          local: '/afaanoromoo/articles/c123456abcdo',
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: '/afaanoromoo/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          local: '/afaanoromoo',
-          test: '/afaanoromoo',
           live: '/afaanoromoo',
+          test: '/afaanoromoo',
+          local: '/afaanoromoo',
         },
         smoke: false,
       },
       liveRadio: {
         path: {
-          local: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
-          test: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
           live: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
+          test: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
+          local: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
         },
         smoke: false,
       },
       mediaAssetPage: {
         path: {
-          local: '/afaanoromoo/23149891',
-          test: 'afaanoromoo/23149891',
           live: 'afaanoromoo/oduu-51248626',
+          test: 'afaanoromoo/23149891',
+          local: '/afaanoromoo/23149891',
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          local: '/afaanoromoo/oduu-41217768',
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: '/afaanoromoo/oduu-41217768',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          local: undefined,
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: undefined,
         },
         smoke: false,
       },
@@ -84,57 +84,57 @@ const genServices = appEnv => ({
     pageTypes: {
       articles: {
         path: {
-          local: '/afrique/articles/cz216x22106o',
-          test: '/afrique/articles/cz216x22106o',
           live: 'afrique/articles/cx80n852v6mo',
+          test: '/afrique/articles/cz216x22106o',
+          local: '/afrique/articles/cz216x22106o',
         },
         smoke: false,
       },
       errorPage404: {
         path: {
-          local: '/afrique/articles/c123456abcdo',
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: '/afrique/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          local: '/afrique',
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: '/afrique',
         },
         smoke: false,
       },
       liveRadio: {
         path: {
-          local: '/afrique/bbc_afrique_radio/liveradio',
-          test: '/afrique/bbc_afrique_radio/liveradio',
           live: '/afrique/bbc_afrique_radio/liveradio',
+          test: '/afrique/bbc_afrique_radio/liveradio',
+          local: '/afrique/bbc_afrique_radio/liveradio',
         },
         smoke: false,
       },
       mediaAssetPage: {
         path: {
-          local: undefined,
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: undefined,
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          local: '/afrique/region-39269126',
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: '/afrique/region-39269126',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          local: undefined,
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: undefined,
         },
         smoke: false,
       },
@@ -148,57 +148,57 @@ const genServices = appEnv => ({
     pageTypes: {
       articles: {
         path: {
-          local: '/amharic/articles/czqverekrldo',
-          test: '/amharic/articles/czqverekrldo',
           live: '/amharic/articles/c0lgxqknqkdo',
+          test: '/amharic/articles/czqverekrldo',
+          local: '/amharic/articles/czqverekrldo',
         },
         smoke: false,
       },
       errorPage404: {
         path: {
-          local: '/amharic/articles/c123456abcdo',
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: '/amharic/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          local: '/amharic',
-          test: '/amharic',
           live: '/amharic',
+          test: '/amharic',
+          local: '/amharic',
         },
         smoke: false,
       },
       liveRadio: {
         path: {
-          local: '/amharic/bbc_amharic_radio/liveradio',
-          test: '/amharic/bbc_amharic_radio/liveradio',
           live: '/amharic/bbc_amharic_radio/liveradio',
+          test: '/amharic/bbc_amharic_radio/liveradio',
+          local: '/amharic/bbc_amharic_radio/liveradio',
         },
         smoke: true,
       },
       mediaAssetPage: {
         path: {
-          local: '/amharic/news-23263266',
-          test: '/amharic/news-23263266',
           live: '/amharic/news-51270657',
+          test: '/amharic/news-23263266',
+          local: '/amharic/news-23263266',
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          local: '/amharic/42743191',
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: '/amharic/42743191',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          local: undefined,
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: undefined,
         },
         smoke: false,
       },
@@ -212,57 +212,57 @@ const genServices = appEnv => ({
     pageTypes: {
       articles: {
         path: {
-          local: '/arabic/articles/c1er5mjnznzo',
-          test: '/arabic/articles/c1er5mjnznzo',
           live: '/arabic/articles/c8j91j2ljppo',
+          test: '/arabic/articles/c1er5mjnznzo',
+          local: '/arabic/articles/c1er5mjnznzo',
         },
         smoke: false,
       },
       errorPage404: {
         path: {
-          local: '/arabic/articles/c123456abcdo',
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: '/arabic/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          local: '/arabic',
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: '/arabic',
         },
         smoke: false,
       },
       liveRadio: {
         path: {
-          local: '/arabic/bbc_arabic_radio/liveradio',
-          test: '/arabic/bbc_arabic_radio/liveradio',
           live: '/arabic/bbc_arabic_radio/liveradio',
+          test: '/arabic/bbc_arabic_radio/liveradio',
+          local: '/arabic/bbc_arabic_radio/liveradio',
         },
         smoke: false,
       },
       mediaAssetPage: {
         path: {
-          local: undefined,
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: undefined,
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          local: '/arabic/art-and-culture-38260491',
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: '/arabic/art-and-culture-38260491',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          local: undefined,
-          test: undefined,
           live: undefined,
+          test: undefined,
+          local: undefined,
         },
         smoke: false,
       },
@@ -275,38 +275,65 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/azeri/articles/cv0lm08kngmo'
-          : '/azeri/articles/c5k08pqnzexo',
+        path: {
+          live: '/azeri/articles/cv0lm08kngmo',
+          test: '/azeri/articles/c5k08pqnzexo',
+          local: '/azeri/articles/c5k08pqnzexo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/azeri/articles/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/azeri/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/azeri',
+        path: {
+          live: '/azeri',
+          test: '/azeri',
+          local: '/azeri',
+        },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: {
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
-        path: isLive(appEnv)
-          ? undefined
-          : '/azeri/multimedia/2015/08/150804_azeri_test',
+        path: {
+          live: undefined,
+          test: [
+            '/azeri/azerbaijan-23257464', // CPS MAP
+            '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP
+          ],
+          local: [
+            '/azeri/region-49364777', // CPS MAP
+            '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP
+          ],
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/azeri/azerbaijan-44208474',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/azeri/azerbaijan-44208474',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
