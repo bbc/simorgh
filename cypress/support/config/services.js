@@ -2441,36 +2441,52 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/ukrainian/articles/c8zv0eed9gko'
-          : '/ukrainian/articles/cp4l2mrejvdo',
+        path: {
+          live: '/ukrainian/articles/c8zv0eed9gko',
+          test: '/ukrainian/articles/cp4l2mrejvdo',
+          local: '/ukrainian/articles/cp4l2mrejvdo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/ukrainian/articles/c123456abcdo',
+        path: {
+          live: null,
+          test: null,
+          local: '/ukrainian/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/ukrainian',
+        path: {
+          live: null,
+          test: null,
+          local: '/ukrainian',
+        },
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/ukrainian/features-41278900',
+        path: {
+          live: null,
+          test: null,
+          local: '/ukrainian/features-41278900',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
