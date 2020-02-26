@@ -1703,37 +1703,52 @@ const genServices = appEnv => ({
     variant: 'cyr',
     pageTypes: {
       articles: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/serbian/articles/c805k05kr73o/cyr',
+        path: {
+          live: null,
+          test: null,
+          local: '/serbian/articles/c805k05kr73o/cyr',
+        },
         smoke: true,
       },
       errorPage404: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/serbian/articles/cabcdefghijo/cyr',
+        path: {
+          live: null,
+          test: null,
+          local: '/serbian/articles/cabcdefghijo/cyr',
+        },
         smoke: true,
       },
       frontPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/serbian/cyr',
+        path: {
+          live: null,
+          test: null,
+          local: '/serbian/cyr',
+        },
         smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : undefined, // '/serbian/srbija-49427344/cyr'
+        path: {
+          live: null,
+          test: null,
+          local: null, // Once support for variants is available: '/serbian/srbija-49427344/cyr'
+        },
         smoke: false,
       },
-      photoGalleryPage: { path: undefined, smoke: false },
+      photoGalleryPage: {
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
+        smoke: false,
+      },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
