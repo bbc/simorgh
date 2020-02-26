@@ -793,7 +793,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   .c33 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat( 4,auto );
+    grid-template-rows: repeat( 5,auto );
     -webkit-column-count: 2;
     column-count: 2;
   }
@@ -803,7 +803,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   .c33 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat( 3,auto );
+    grid-template-rows: repeat( 4,auto );
     -webkit-column-count: 3;
     column-count: 3;
   }
@@ -1490,6 +1490,21 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                     class="c37"
                   >
                     Contact the BBC
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c34"
+                role="listitem"
+              >
+                <a
+                  class="c35 c36"
+                  href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                >
+                  <span
+                    class="c37"
+                  >
+                    AdChoices / Do Not Sell My Info
                   </span>
                 </a>
               </li>
