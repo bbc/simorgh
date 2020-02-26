@@ -1,6 +1,6 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import applySquashTopstories from '../../../../src/app/lib/utilities/preprocessor/rules/topstories';
+import applySquashTopstories from '../../../../src/app/routes/home/getInitialData/squashTopStories';
 
 const serviceJsonPath = service =>
   `${config[service].pageTypes.frontPage.path}.json`;
@@ -45,8 +45,9 @@ const isValidTvBulletin = pageData => {
     const hasTvBulletin = group.items.some(
       item => item.assetTypeCode === 'PRO' && item.contentType === 'TVBulletin',
     );
+    const isInCorrectGroup = group.type === 'av-live-streams';
 
-    return hasStrapline && hasTvBulletin;
+    return hasStrapline && hasTvBulletin && isInCorrectGroup;
   });
 };
 
@@ -248,7 +249,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           });
         });
 
-        it('should contain TV Bulletin if a promo of type TVBulletin is in the feed', () => {
+        it('should contain TV Bulletin if a promo of type TVBulletin is in the feed in correct group', () => {
           cy.request(serviceJsonPath(service)).then(({ body }) => {
             const pageData = applySquashTopstories(body);
             const { groups } = pageData.content;
