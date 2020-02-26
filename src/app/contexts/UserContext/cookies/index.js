@@ -17,8 +17,9 @@ export const getPreferredVariant = service => {
 };
 
 export const setPreferredVariantCookie = (service, variant) => {
-  if (!service || !variant || !personalisationEnabled(getCookiePolicy()))
+  if (!service || !variant || !personalisationEnabled(getCookiePolicy())) {
     return;
+  }
 
   const variantCookieName = `ckps_${service}`;
   Cookie.set(variantCookieName, variant);
