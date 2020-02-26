@@ -1964,39 +1964,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/swahili/articles/cw794z3gpd5o'
-          : '/swahili/articles/czjqge2jwn2o',
+        path: {
+          live: '/swahili/articles/cw794z3gpd5o',
+          test: '/swahili/articles/czjqge2jwn2o',
+          local: '/swahili/articles/czjqge2jwn2o',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/swahili/articles/c123456abcdo',
+        path: {
+          live: null,
+          test: null,
+          local: '/swahili/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/swahili',
+        path: {
+          live: null,
+          test: null,
+          local: '/swahili',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/swahili/bbc_swahili_radio/liveradio',
+        path: {
+          live: '/swahili/bbc_swahili_radio/liveradio',
+          test: '/swahili/bbc_swahili_radio/liveradio',
+          local: '/swahili/bbc_swahili_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/swahili/habari-48185450',
+        path: {
+          live: null,
+          test: null,
+          local: '/swahili/habari-48185450',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
