@@ -1298,41 +1298,65 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/pashto/articles/c70970g2251o'
-          : '/pashto/articles/cyjmdl92z3ro',
+        path: {
+          live: '/pashto/articles/c70970g2251o',
+          test: '/pashto/articles/cyjmdl92z3ro',
+          local: '/pashto/articles/cyjmdl92z3ro',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/pashto/articles/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/pashto/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/pashto',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/pashto',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/pashto/bbc_pashto_radio/liveradio',
+        path: {
+          live: '/pashto/bbc_pashto_radio/liveradio',
+          test: '/pashto/bbc_pashto_radio/liveradio',
+          local: '/pashto/bbc_pashto_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv)
-          ? undefined
-          : '/pashto/world/2016/09/160921_tc2_testmap1',
+        path: {
+          live: undefined,
+          test: [
+            '/pashto/media-23257523', // CPS MAP
+            '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
+          ],
+          local: [
+            '/pashto/afghanistan-49628873', // CPS MAP
+            '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
+          ],
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/pashto/arts-and-literature-50230813',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/pashto/arts-and-literature-50230813',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
