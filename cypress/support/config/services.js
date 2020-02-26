@@ -1617,36 +1617,52 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/russian/articles/c6ygxgl53w9o'
-          : '/russian/articles/ck7pz7re3zgo',
+        path: {
+          live: '/russian/articles/c6ygxgl53w9o',
+          test: '/russian/articles/ck7pz7re3zgo',
+          local: '/russian/articles/ck7pz7re3zgo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/russian/articles/c123456abcdo',
+        path: {
+          live: null,
+          test: null,
+          local: '/russian/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/russian',
+        path: {
+          live: null,
+          test: null,
+          local: '/russian',
+        },
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/russian/features-45782775',
+        path: {
+          live: null,
+          test: null,
+          local: '/russian/features-45782775',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
