@@ -2498,39 +2498,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/urdu/articles/c4qg7qq63y6o'
-          : '/urdu/articles/cwgq7rzv172o',
+        path: {
+          live: '/urdu/articles/c4qg7qq63y6o',
+          test: '/urdu/articles/cwgq7rzv172o',
+          local: '/urdu/articles/cwgq7rzv172o',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/urdu/articles/c123456abcdo',
+        path: {
+          live: null,
+          test: null,
+          local: '/urdu/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/urdu',
+        path: {
+          live: null,
+          test: null,
+          local: '/urdu',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/urdu/bbc_urdu_radio/liveradio',
+        path: {
+          live: '/urdu/bbc_urdu_radio/liveradio',
+          test: '/urdu/bbc_urdu_radio/liveradio',
+          local: '/urdu/bbc_urdu_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/urdu/pakistan-48242478',
+        path: {
+          live: null,
+          test: null,
+          local: '/urdu/pakistan-48242478',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
