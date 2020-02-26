@@ -2689,35 +2689,52 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/yoruba/articles/cg7qz71en35o'
-          : '/yoruba/articles/clw06m0nj8qo',
+        path: {
+          live: '/yoruba/articles/cg7qz71en35o',
+          test: '/yoruba/articles/clw06m0nj8qo',
+          local: '/yoruba/articles/clw06m0nj8qo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/yoruba/articles/cxvxrj8tvppo',
+        path: {
+          live: null,
+          test: null,
+          local: '/yoruba/articles/cxvxrj8tvppo',
+        },
         smoke: false,
       },
-      frontPage: { path: '/yoruba', smoke: false },
+      frontPage: {
+        path: {
+          live: '/yoruba',
+          test: '/yoruba',
+          local: '/yoruba',
+        },
+        smoke: false,
+      },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: isLive(appEnv)
-          ? '/yoruba/afrika-51116686'
-          : '/yoruba/media-23256797', // live is video clip
+        path: {
+          live: '/yoruba/afrika-51116686', // CPS MAP with video
+          test: '/yoruba/media-23256797',
+          local: '/yoruba/media-23256797',
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/yoruba/media-50970014',
+        path: {
+          live: null,
+          test: null,
+          local: '/yoruba/media-50970014',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
