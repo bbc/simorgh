@@ -2562,43 +2562,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/uzbek/articles/cxj3rjxm6r0o',
+        path: {
+          live: null,
+          test: null,
+          local: '/uzbek/articles/cxj3rjxm6r0o',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/uzbek/articles/c123456abcdo',
+        path: {
+          live: null,
+          test: null,
+          local: '/uzbek/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/uzbek',
+        path: {
+          live: '/uzbek',
+          test: '/uzbek',
+          local: '/uzbek',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/uzbek/bbc_uzbek_radio/liveradio',
+        path: {
+          live: '/uzbek/bbc_uzbek_radio/liveradio',
+          test: '/uzbek/bbc_uzbek_radio/liveradio',
+          local: '/uzbek/bbc_uzbek_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/uzbek/sport-23248721',
+        path: {
+          live: null,
+          test: null,
+          local: '/uzbek/sport-23248721',
+        },
         smoke: true,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/uzbek/central-asia-46716844',
+        path: {
+          live: null,
+          test: null,
+          local: '/uzbek/central-asia-46716844',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
