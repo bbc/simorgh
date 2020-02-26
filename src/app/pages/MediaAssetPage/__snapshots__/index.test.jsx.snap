@@ -1000,11 +1000,13 @@ exports[`Media Asset Page should render component 1`] = `
                   </h2>
                 </div>
                 <ul
-                  class="StoryPromoUl-sc-171lqjd-1 isCYWc"
+                  class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                  dir="ltr"
                   role="list"
                 >
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                    dir="ltr"
                     role="listitem"
                   >
                     <div
@@ -1058,7 +1060,8 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                    dir="ltr"
                     role="listitem"
                   >
                     <div
@@ -1112,7 +1115,8 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                    dir="ltr"
                     role="listitem"
                   >
                     <div
@@ -1201,7 +1205,8 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                    dir="ltr"
                     role="listitem"
                   >
                     <div
