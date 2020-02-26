@@ -1954,10 +1954,7 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
       photoGalleryPage: { path: undefined, smoke: false },
-      storyPage: {
-        path: undefined,
-        smoke: false,
-      },
+      storyPage: { path: undefined, smoke: false },
     },
   },
   swahili: {
