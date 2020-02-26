@@ -1311,26 +1311,26 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/news/articles/cj7xrxz0e8zo'
-          : '/news/articles/cn7k01xp8kxo',
+        path: {
+          live: '/news/articles/cj7xrxz0e8zo',
+          test: '/news/articles/cn7k01xp8kxo',
+          local: '/news/articles/cn7k01xp8kxo',
+        },
         smoke: true,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/news/articles/cxvxrj8tvppo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/news/articles/cxvxrj8tvppo',
+        },
         smoke: true,
       },
       frontPage: { path: undefined, smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: { path: undefined, smoke: false },
       photoGalleryPage: { path: undefined, smoke: false },
-      storyPage: {
-        path: undefined,
-        smoke: false,
-      },
+      storyPage: { path: undefined, smoke: false },
     },
   },
   pashto: {
