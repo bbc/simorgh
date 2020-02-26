@@ -165,7 +165,7 @@ export const service = {
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/marathi/institutional-50418391',
-        text: 'तुम्ही बीबीसीवर विश्वास का ठेवू शकता',
+        text: 'तुम्ही बीबीसीवर विश्वास ठेवू शकता कारणा',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
