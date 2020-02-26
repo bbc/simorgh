@@ -2384,43 +2384,52 @@ const genServices = appEnv => ({
     variant: 'trad',
     pageTypes: {
       articles: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/ukchina/articles/c0e8weny66ko/trad',
+        path: {
+          live: null,
+          test: null,
+          local: '/ukchina/articles/c0e8weny66ko/trad',
+        },
         smoke: true,
       },
       errorPage404: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/ukchina/articles/cabcdefghijo/trad',
+        path: {
+          live: null,
+          test: null,
+          local: '/ukchina/articles/cabcdefghijo/trad',
+        },
         smoke: true,
       },
       frontPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : '/ukchina/trad',
+        path: {
+          live: null,
+          test: null,
+          local: '/ukchina/trad',
+        },
         smoke: true,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
-            ? undefined
-            : undefined, // '/ukchina/49375846/trad'
+        path: {
+          live: null,
+          test: null,
+          local: null, // Enable once variants supported '/ukchina/49375846/trad'
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/ukchina/cool-britannia-38434549/trad',
+        path: {
+          live: null,
+          test: null,
+          local: '/ukchina/cool-britannia-38434549/trad',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
