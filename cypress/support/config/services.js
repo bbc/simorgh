@@ -2270,36 +2270,52 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/turkce/articles/cpgzpzjl3pdo'
-          : '/turkce/articles/c8q1ze59n25o',
+        path: {
+          live: '/turkce/articles/cpgzpzjl3pdo',
+          test: '/turkce/articles/c8q1ze59n25o',
+          local: '/turkce/articles/c8q1ze59n25o',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/turkce/articles/c123456abcdo',
+        path: {
+          live: null,
+          test: null,
+          local: '/turkce/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/turkce',
+        path: {
+          live: null,
+          test: null,
+          local: '/turkce',
+        },
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/turkce/haberler-dunya-50924340',
+        path: {
+          live: null,
+          test: null,
+          local: '/turkce/haberler-dunya-50924340',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: null,
+          test: null,
+          local: null,
+        },
         smoke: false,
       },
     },
