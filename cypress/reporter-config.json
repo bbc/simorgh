@@ -1,8 +1,0 @@
-{
-  "reporterEnabled": "spec, mocha-junit-reporter",
-  "reporterOptions": {
-    "mochaFile": "cypress/results/results-[hash].xml",
-    "jenkinsMode": true,
-    "rootSuiteTitle": "e2e tests"
-  }
-}
