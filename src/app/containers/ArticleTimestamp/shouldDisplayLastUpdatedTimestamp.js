@@ -7,11 +7,7 @@ export const hasBeenUpdated = ({ timeDifferenceMinutes, minutesTolerance }) => {
 export const publishedAndUpdatedToday = ({ firstPublished, lastPublished }) =>
   isToday(firstPublished) && isSameDay(firstPublished, lastPublished);
 
-const shouldDisplayLastUpdatedTimestamp = ({
-  minutesTolerance,
-  firstPublished,
-  lastPublished,
-}) => {
+export default ({ minutesTolerance, firstPublished, lastPublished }) => {
   const timeDifferenceMinutes = (lastPublished - firstPublished) / 1000 / 60;
   const isUpdated = hasBeenUpdated({ timeDifferenceMinutes, minutesTolerance });
   const isPublishedAndUpdatedToday = publishedAndUpdatedToday({
@@ -33,5 +29,3 @@ const shouldDisplayLastUpdatedTimestamp = ({
       publishedAndUpdatedOnDifferentDays)
   );
 };
-
-export default shouldDisplayLastUpdatedTimestamp;

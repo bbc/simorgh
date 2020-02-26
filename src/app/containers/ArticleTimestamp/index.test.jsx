@@ -262,6 +262,7 @@ describe('ArticleTimestamp', () => {
     expect(firstChild(renderedWrapper)).toMatch(regexDate);
     expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
   });
+
   it('should render one timestamp when firstPublished and lastPublished is the same day, and lastPublished is outside of the relative window', () => {
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
