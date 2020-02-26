@@ -892,39 +892,52 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/japanese/articles/cj4m7n5nrd8o'
-          : '/japanese/articles/cdd6p3r9g7jo',
+        path: {
+          live: '/japanese/articles/cj4m7n5nrd8o',
+          test: '/japanese/articles/cdd6p3r9g7jo',
+          local: '/japanese/articles/cdd6p3r9g7jo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/japanese/articles/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/japanese/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: '/japanese',
+        path: {
+          live: '/japanese',
+          test: '/japanese',
+          local: '/japanese',
+        },
         smoke: false,
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/japanese/video-23248670',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/japanese/video-23248670',
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/japanese/features-and-analysis-42786589',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/japanese/features-and-analysis-42786589',
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
