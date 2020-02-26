@@ -29,9 +29,15 @@ const processOptimoBlocks = pipe(
   cpsOnlyOnwardJourneys,
 );
 const transformJson = async json => {
-  const formattedPageData = formatPageData(json);
-  const optimoBlocks = await convertToOptimoBlocks(formattedPageData);
-  return processOptimoBlocks(optimoBlocks);
+  try {
+    const formattedPageData = formatPageData(json);
+    const optimoBlocks = await convertToOptimoBlocks(formattedPageData);
+    return processOptimoBlocks(optimoBlocks);
+  } catch (e) {
+    // We can arrive here if the CPS asset is a FIX page
+    // TODO: consider checking if FIX then don't transform JSON
+    return json;
+  }
 };
 
 export default async path => {
