@@ -1368,44 +1368,74 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/persian/articles/c7eel0lmr4do'
-          : '/persian/articles/cej3lzd5e0go',
+        path: {
+          live: '/persian/articles/c7eel0lmr4do',
+          test: '/persian/articles/cej3lzd5e0go',
+          local: '/persian/articles/cej3lzd5e0go',
+        },
         smoke: true,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/persian/articles/cxvxrj8tvppo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/persian/articles/cxvxrj8tvppo',
+        },
         smoke: true,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/persian',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/persian',
+        },
         smoke: true,
       },
       liveRadio: {
-        path: [
-          '/persian/bbc_persian_radio/liveradio',
-          '/persian/bbc_dari_radio/liveradio',
-        ],
+        path: {
+          live: [
+            '/persian/bbc_persian_radio/liveradio',
+            '/persian/bbc_dari_radio/liveradio',
+          ],
+          test: [
+            '/persian/bbc_persian_radio/liveradio',
+            '/persian/bbc_dari_radio/liveradio',
+          ],
+          local: [
+            '/persian/bbc_persian_radio/liveradio',
+            '/persian/bbc_dari_radio/liveradio',
+          ],
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: isLive(appEnv)
-          ? undefined
-          : '/persian/iran/2016/09/160907_tc2_testmap1',
+        path: {
+          live: undefined,
+          test: [
+            '/persian/iran-23231114', // CPS MAP with audio
+            '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
+          ],
+          local: [
+            '/persian/world-49653162', // CPS MAP
+            '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
+          ],
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/persian/magazine-49281981',
-        smoke: true,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/persian/magazine-49281981', // CPS PGL
+        },
+        smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
