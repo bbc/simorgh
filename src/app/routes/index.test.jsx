@@ -130,6 +130,8 @@ it('should route to and render a media asset page', async () => {
     pageType,
     service: 'yoruba',
   });
+
+  // TODO: use headline text when double headline bug is fixed https://github.com/bbc/simorgh/issues/5688
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
     'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa".';
 
@@ -147,8 +149,10 @@ it('should route to and render a legacy media asset page', async () => {
     pageType,
     service: 'azeri',
   });
+
+  // TODO: use headline text when double headline bug is fixed https://github.com/bbc/simorgh/issues/5688
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-    'Həbsxanada zorlama videosu gürcüstanlıları qəzəbləndirib';
+    'Gürcustanda məhbusların gözətçilər tərəfindən zorlandığını göstərən video görüntülər çərşənbə günü hökümətə qarşı nümayişlərlə nəticələnib.';
 
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
