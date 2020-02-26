@@ -643,36 +643,59 @@ const genServices = appEnv => ({
     variant: 'default',
     pageTypes: {
       articles: {
-        path: isLive(appEnv)
-          ? '/hausa/articles/c41rj1z261zo'
-          : '/hausa/articles/c2nr6xqmnewo',
+        path: {
+          live: '/hausa/articles/c41rj1z261zo',
+          test: '/hausa/articles/c2nr6xqmnewo',
+          local: '/hausa/articles/c2nr6xqmnewo',
+        },
         smoke: false,
       },
       errorPage404: {
-        path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/hausa/articles/c123456abcdo',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/hausa/articles/c123456abcdo',
+        },
         smoke: false,
       },
       frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/hausa',
+        path: {
+          live: undefined,
+          test: undefined,
+          local: '/hausa',
+        },
         smoke: false,
       },
       liveRadio: {
-        path: '/hausa/bbc_hausa_radio/liveradio',
+        path: {
+          live: '/hausa/bbc_hausa_radio/liveradio',
+          test: '/hausa/bbc_hausa_radio/liveradio',
+          local: '/hausa/bbc_hausa_radio/liveradio',
+        },
         smoke: false,
       },
       mediaAssetPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
       photoGalleryPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
       storyPage: {
-        path: undefined,
+        path: {
+          live: undefined,
+          test: undefined,
+          local: undefined,
+        },
         smoke: false,
       },
     },
