@@ -18,10 +18,18 @@ storiesOf('Main|Article', module)
   .addDecorator(withKnobs)
   .add('Articles', () => (
     <ToggleContextProvider>
-      <ServiceContextProvider service="news">
-        <RequestContextProvider isAmp={false} pageType="article" service="news">
+      {/* Service set to pidgin to enable most read. Article data is in english */}
+      <ServiceContextProvider service="pidgin">
+        <RequestContextProvider
+          isAmp={false}
+          pageType="article"
+          service="pidgin"
+        >
           <UserContextProvider>
-            <ArticleMain articleData={articleData} />
+            <ArticleMain
+              articleData={articleData}
+              mostReadEndpointOverride="./data/news/mostRead/index.json"
+            />
           </UserContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
