@@ -1,74 +1,67 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { BrowserRouter } from 'react-router-dom';
+import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import RadioPage from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
+import * as analyticsUtils from '#lib/analyticsUtils';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import getInitialData from '#app/routes/radio/getInitialData';
 
-const liveRadioScaffoldProps = {
-  isAmp: false,
-  pageType: 'media',
-  service: 'amharic',
-  pathname: '/pathname',
-  match: {
-    params: {
-      serviceId: 'bbc_amharic_radio',
-      mediaId: 'liveradio',
-      pageData: amharicPageData,
-    },
-  },
-  status: 200,
-};
+fetch.mockResponse(JSON.stringify(amharicPageData));
 
-jest.mock('../../containers/PageHandlers/withPageWrapper', () => Component => {
-  const PageWrapperContainer = props => (
-    <div id="PageWrapperContainer">
-      <Component {...props} />
-    </div>
-  );
+analyticsUtils.getAtUserId = jest.fn();
 
-  return PageWrapperContainer;
+jest.mock('../../containers/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  return ChartbeatAnalytics;
 });
 
-jest.mock('../../containers/PageHandlers/withLoading', () => Component => {
-  const LoadingContainer = props => (
-    <div id="LoadingContainer">
-      <Component {...props} />
-    </div>
-  );
+describe('Radio Page Main', () => {
+  it('should match snapshot for Canonical', async () => {
+    const { pageData } = await getInitialData('some-live-radio-path');
 
-  return LoadingContainer;
-});
+    await matchSnapshotAsync(
+      <ToggleContextProvider>
+        <ServiceContextProvider service="amharic">
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            isAmp={false}
+            pageType="media"
+            pathname="/pathname"
+            service="amharic"
+            statusCode={200}
+          >
+            <BrowserRouter>
+              <RadioPage service="amharic" pageData={pageData} />
+            </BrowserRouter>
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>,
+    );
+  });
 
-jest.mock('../../containers/PageHandlers/withError', () => Component => {
-  const ErrorContainer = props => (
-    <div id="ErrorContainer">
-      <Component {...props} />
-    </div>
-  );
+  it('should match snapshot for AMP', async () => {
+    const { pageData } = await getInitialData('some-live-radio-path');
 
-  return ErrorContainer;
-});
-
-jest.mock('../../containers/PageHandlers/withData', () => Component => {
-  const DataContainer = props => (
-    <div id="DataContainer">
-      <Component {...props} />
-    </div>
-  );
-
-  return DataContainer;
-});
-
-jest.mock('../../containers/RadioPageMain', () => {
-  const RadioPageMain = () => <div>RadioPageMain</div>;
-
-  return RadioPageMain;
-});
-
-describe('Radio Page', () => {
-  describe('snapshots', () => {
-    shouldMatchSnapshot(
-      'should match scaffold snapshot',
-      <RadioPage {...liveRadioScaffoldProps} />,
+    await matchSnapshotAsync(
+      <ToggleContextProvider>
+        <ServiceContextProvider service="amharic">
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            isAmp
+            pageType="media"
+            pathname="/pathname"
+            service="amharic"
+            statusCode={200}
+          >
+            <BrowserRouter>
+              <RadioPage service="amharic" pageData={pageData} />
+            </BrowserRouter>
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>,
     );
   });
 });
