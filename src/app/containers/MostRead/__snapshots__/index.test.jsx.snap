@@ -460,6 +460,12 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   }
 }
 
+@media (min-width:63rem) {
+  .c0 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c6 {
     margin-top: 1rem;
@@ -474,6 +480,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 <section
   aria-labelledby="Most-Read"
+  class=""
   role="region"
 >
   <div
