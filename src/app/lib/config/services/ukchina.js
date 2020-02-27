@@ -102,6 +102,7 @@ export const service = {
     scriptLink: {
       text: '繁',
       offscreenText: 'Traditional',
+      otherVariant: 'trad',
     },
     translations: {
       seeAll: '浏览全部',
@@ -267,6 +268,7 @@ export const service = {
     scriptLink: {
       text: '简',
       offscreenText: 'Simplified',
+      otherVariant: 'simp',
     },
     translations: {
       seeAll: '瀏覽全部',
