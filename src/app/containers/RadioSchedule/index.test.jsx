@@ -54,13 +54,11 @@ describe('RadioScheduleData', () => {
     fetch.resetMocks();
   });
 
-  it('returns expected data for a service with a radio schedule', async () => {
-    const ulContent = arabicRadioScheduleData.schedules.length;
-
+  it('contains four programs for a service with a radio schedule', async () => {
     fetch.mockResponse(JSON.stringify(arabicRadioScheduleData));
     await renderRadioScheduleContainer('arabic', true);
 
-    expect(container.querySelectorAll('ul').length).toEqual(ulContent);
+    expect(container.querySelectorAll('li').length).toEqual(4);
   });
 
   it('returns empty string when radio schedule toggle is disabled', async () => {
