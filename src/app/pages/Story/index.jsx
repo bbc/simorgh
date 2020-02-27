@@ -7,10 +7,7 @@ import {
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import { C_CHALK } from '@bbc/psammead-styles/colours';
-import {
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import Grid from '@bbc/psammead-grid';
@@ -102,24 +99,18 @@ const StoryPageContainer = ({ pageData }) => {
 
   const StyledGrid = styled(Grid)`
     flex-grow: 1;
-
-    @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-      padding-bottom: ${GEL_SPACING_QUAD};
-    }
   `;
 
   const GridSecondaryColumn = styled(Grid)`
-    margin-top: ${GEL_SPACING_QUAD};
-
-    @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-      margin-top: 0;
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      margin-top: ${GEL_SPACING_QUAD};
     }
   `;
 
   const ComponentWrapper = styled.div`
     background: ${C_CHALK};
+    margin-bottom: ${GEL_SPACING_TRPL};
     padding: ${GEL_SPACING_DBL};
-    margin-top: ${GEL_SPACING_DBL};
   `;
 
   const gridColumns = {
