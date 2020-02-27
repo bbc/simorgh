@@ -56,6 +56,8 @@ describe('UserContext cookies', () => {
       expect(Cookie.set).not.toHaveBeenCalled();
       setPreferredVariantCookie('');
       expect(Cookie.set).not.toHaveBeenCalled();
+      setPreferredVariantCookie('news', undefined);
+      expect(Cookie.set).not.toHaveBeenCalled();
     });
 
     it('should set preferred variant if personalisation cookies enabled', () => {
