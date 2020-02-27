@@ -46,6 +46,30 @@ describe('UserContext cookies', () => {
       Cookie.get.mockReturnValue('trad');
       expect(getPreferredVariant('zhongwen')).toEqual('trad');
     });
+
+    it('should get cookie with cookieName from js-cookie when cookieName provided', () => {
+      Cookie.get.mockReturnValue('trad');
+      getPreferredVariant('zhongwen', 'chinese');
+      expect(Cookie.get).toBeCalledWith('ckps_chinese');
+    });
+
+    it('should get cookie with service from js-cookie when cookieName undefined', () => {
+      Cookie.get.mockReturnValue('cyr');
+      getPreferredVariant('serbian', undefined);
+      expect(Cookie.get).toBeCalledWith('ckps_serbian');
+    });
+
+    it('should get cookie with service from js-cookie when cookieName null', () => {
+      Cookie.get.mockReturnValue('cyr');
+      getPreferredVariant('serbian', null);
+      expect(Cookie.get).toBeCalledWith('ckps_serbian');
+    });
+
+    it('should get cookie with service from js-cookie when cookieName empty string', () => {
+      Cookie.get.mockReturnValue('cyr');
+      getPreferredVariant('serbian', '');
+      expect(Cookie.get).toBeCalledWith('ckps_serbian');
+    });
   });
 
   describe('setPreferredVariant', () => {

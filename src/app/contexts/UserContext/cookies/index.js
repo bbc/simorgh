@@ -9,9 +9,9 @@ export const getCookiePolicy = () => {
 export const personalisationEnabled = cookiePolicy =>
   cookiePolicy && cookiePolicy.length === 3 && cookiePolicy[2] === '1';
 
-export const getPreferredVariant = service => {
+export const getPreferredVariant = (service, cookieName) => {
   if (!service) return null;
-  const VARIANT_COOKIE = `ckps_${service}`;
+  const VARIANT_COOKIE = `ckps_${cookieName || service}`;
 
   return Cookie.get(VARIANT_COOKIE);
 };
