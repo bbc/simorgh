@@ -96,6 +96,10 @@ const RadioScheduleContainer = ({ endpoint }) => {
     }
   }, [endpoint, radioScheduleEnabled]);
 
+  if (!radioScheduleEnabled) {
+    return null;
+  }
+
   return (
     <>
       <RadioSchedule
