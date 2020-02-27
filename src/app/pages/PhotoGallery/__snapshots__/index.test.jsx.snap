@@ -2891,7 +2891,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
     </script>
   </head>
   <body>
-    .c37 {
+    .c39 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2946,7 +2946,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   padding-bottom: 1rem;
 }
 
-.c34 {
+.c36 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -3086,16 +3086,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   padding: 0;
 }
 
-.c25 {
-  border-bottom: 0.0625rem solid #F2F2F2;
+.c26 {
   padding: 0.5rem 0 1rem;
 }
 
-.c25:first-child {
+.c26:first-child {
   padding-top: 0;
 }
 
-.c25:last-child {
+.c26:last-child {
   padding-bottom: 0;
   border: none;
 }
@@ -3106,33 +3105,45 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   padding: 0;
 }
 
-.c26 {
-  position: relative;
-}
-
-.c27 {
+.c29 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
+.c32 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c28 {
   position: relative;
 }
 
-.c31 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
+.c30 {
+  position: relative;
+}
+
+.c31 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
 }
 
 .c33 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c35 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3143,21 +3154,14 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   padding-bottom: 0.5rem;
 }
 
-.c30 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-.c32 {
+.c34 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c32:before {
+.c34:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -3169,30 +3173,28 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   z-index: 1;
 }
 
-.c32:hover,
-.c32:focus {
+.c34:hover,
+.c34:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c32:visited {
+.c34:visited {
   color: #6E6E73;
 }
 
-.c35 {
-  padding: 0.5rem 0.25rem;
+.c37 {
+  color: #222222;
   background-color: #FFFFFF;
-  display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #222222;
-  height: 2rem;
+  display: block;
 }
 
-.c36 {
+.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3450,14 +3452,14 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c34 {
+  .c36 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c34 {
+  .c36 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -3559,115 +3561,66 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
+@media (min-width:63rem) {
+  .c17 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c26 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 @media (min-width:37.5rem) {
-  .c25 {
+  .c26 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c25 {
-    padding: 1.5rem 0 1.5rem;
+  .c26 {
+    padding: 0 0 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c25:first-child {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c26:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c25:first-child {
-    padding-top: 1.5rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c26 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c27 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c27 {
+  .c29 {
     display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c29 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
-@media (min-width:25rem) {
-  .c29 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c31 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
 @media (min-width:37.5rem) {
-  .c31 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c31 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c33 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c33 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c33 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c30 {
+  .c32 {
     padding: 0 1rem;
   }
 }
 
-@media (min-width:80rem) {
-  .c30 {
-    width: 66.67%;
+@media (min-width:63rem) {
+  .c32 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c30 {
+  .c32 {
     display: block;
     width: initial;
     padding: initial;
@@ -3675,10 +3628,148 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
+@supports (grid-template-columns:fit-content(200px)) {
+  .c28 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c31 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
 @media (max-width:24.9375rem) {
-  .c35 {
+  .c31 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c33 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c33 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c35 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c35 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c35 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c35 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c37 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c37 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c25 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c27 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c27 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c27 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c27 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c27 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c27 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c27 {
+    display: block;
   }
 }
 
@@ -4280,186 +4371,198 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     class="c16"
                   >
                     <div
-                      class="c17 c18"
+                      class="c16"
                     >
                       <div
-                        class="c19"
-                      />
-                      <h2
-                        class="c20"
+                        class="c17 c18"
                       >
                         <div
-                          class="c21"
+                          class="c19"
+                        />
+                        <h2
+                          class="c20"
                         >
-                          <span
-                            class="c22"
+                          <div
+                            class="c21"
                           >
                             <span
-                              class="c23"
-                              dir="ltr"
-                              id="related-content-heading"
+                              class="c22"
                             >
-                              Another thing we de for inside dis tori
+                              <span
+                                class="c23"
+                                dir="ltr"
+                                id="related-content-heading"
+                              >
+                                Another thing we de for inside dis tori
+                              </span>
                             </span>
-                          </span>
-                        </div>
-                      </h2>
-                    </div>
-                    <ul
-                      class="c24"
-                      role="list"
-                    >
-                      <li
-                        class="c25"
-                        role="listitem"
+                          </div>
+                        </h2>
+                      </div>
+                      <ul
+                        class="c24 c25"
+                        dir="ltr"
+                        role="list"
                       >
-                        <div
-                          class="c26"
+                        <li
+                          class="c26 c27"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c27"
+                            class="c28"
                           >
                             <div
-                              class="c28"
+                              class="c29"
+                              dir="ltr"
                             >
                               <div
-                                class="c11"
+                                class="c30"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="c29"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="c30"
-                          >
-                            <h3
-                              class="c31"
-                            >
-                              <a
-                                class="c32"
-                                href="/pidgin/media-45132087?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                <span
-                                  role="text"
-                                >
-                                  <span
-                                    class="c14"
-                                  >
-                                    , 
-                                  </span>
-                                  <span>
-                                    Bole na correct Port Harcourt food.
-                                  </span>
-                                </span>
-                              </a>
-                            </h3>
-                            <p
-                              class="c33"
-                            >
-                              Bole festival showcase di different types of bole dem.
-                            </p>
-                            <time
-                              class="c34"
-                              datetime="2018-08-09"
-                            >
-                              9th August 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c25"
-                        role="listitem"
-                      >
-                        <div
-                          class="c26"
-                        >
-                          <div
-                            class="c27"
-                          >
-                            <div
-                              class="c28"
-                            >
-                              <div
-                                class="c11"
-                              />
-                              <div
-                                class="c29"
-                              >
-                                <div
-                                  aria-hidden="true"
-                                  class="c35"
+                                  class="c11"
                                 >
                                   <div
-                                    class="c36"
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c31"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="c32"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c33"
+                              >
+                                <a
+                                  class="c34"
+                                  href="/pidgin/media-45132087?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  <span
+                                    role="text"
                                   >
-                                    <svg
-                                      aria-hidden="true"
-                                      class="c37"
-                                      focusable="false"
-                                      height="13px"
-                                      viewBox="0 0 32 26"
-                                      width="16px"
+                                    <span
+                                      class="c14"
                                     >
-                                      <path
-                                        d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
-                                      />
-                                      <circle
-                                        cx="20"
-                                        cy="14.02"
-                                        r="5.5"
-                                      />
-                                    </svg>
+                                      , 
+                                    </span>
+                                    <span>
+                                      Bole na correct Port Harcourt food.
+                                    </span>
+                                  </span>
+                                </a>
+                              </h3>
+                              <p
+                                class="c35"
+                              >
+                                Bole festival showcase di different types of bole dem.
+                              </p>
+                              <time
+                                class="c36"
+                                datetime="2018-08-09"
+                              >
+                                9th August 2018
+                              </time>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="c26 c27"
+                          dir="ltr"
+                          role="listitem"
+                        >
+                          <div
+                            class="c28"
+                          >
+                            <div
+                              class="c29"
+                              dir="ltr"
+                            >
+                              <div
+                                class="c30"
+                              >
+                                <div
+                                  class="c11"
+                                />
+                                <div
+                                  class="c31"
+                                >
+                                  <div
+                                    aria-hidden="true"
+                                    class="c37"
+                                    dir="ltr"
+                                  >
+                                    <div
+                                      class="c38"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class="c39"
+                                        focusable="false"
+                                        height="13px"
+                                        viewBox="0 0 32 26"
+                                        width="16px"
+                                      >
+                                        <path
+                                          d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
+                                        />
+                                        <circle
+                                          cx="20"
+                                          cy="14.02"
+                                          r="5.5"
+                                        />
+                                      </svg>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                          <div
-                            class="c30"
-                          >
-                            <h3
-                              class="c31"
+                            <div
+                              class="c32"
+                              dir="ltr"
                             >
-                              <a
-                                class="c32"
-                                href="/pidgin/tori-45242255?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                              <h3
+                                class="c33"
                               >
-                                <span
-                                  role="text"
+                                <a
+                                  class="c34"
+                                  href="/pidgin/tori-45242255?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                                 >
                                   <span
-                                    class="c14"
+                                    role="text"
                                   >
-                                    Image gallery
-                                    , 
+                                    <span
+                                      class="c14"
+                                    >
+                                      Image gallery
+                                      , 
+                                    </span>
+                                    <span>
+                                      Jollof Festival: West Africa no wan kwanta again unto which pesin jollof sweet pass
+                                    </span>
                                   </span>
-                                  <span>
-                                    Jollof Festival: West Africa no wan kwanta again unto which pesin jollof sweet pass
-                                  </span>
-                                </span>
-                              </a>
-                            </h3>
-                            <p
-                              class="c33"
-                            >
-                              Jollof Festival happun for Lagos Nigeria on Sunday and na time for pipo wey show to sample West Africa fine food dem.
-                            </p>
-                            <time
-                              class="c34"
-                              datetime="2018-08-19"
-                            >
-                              19th August 2018
-                            </time>
+                                </a>
+                              </h3>
+                              <p
+                                class="c35"
+                              >
+                                Jollof Festival happun for Lagos Nigeria on Sunday and na time for pipo wey show to sample West Africa fine food dem.
+                              </p>
+                              <time
+                                class="c36"
+                                datetime="2018-08-19"
+                              >
+                                19th August 2018
+                              </time>
+                            </div>
                           </div>
-                        </div>
-                      </li>
-                    </ul>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </section>
               </div>
@@ -5859,7 +5962,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   padding-bottom: 1rem;
 }
 
-.c54 {
+.c56 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -5936,7 +6039,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   font-style: normal;
 }
 
-.c48 {
+.c50 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -6208,16 +6311,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   padding: 0;
 }
 
-.c44 {
-  border-bottom: 0.0625rem solid #F2F2F2;
+.c45 {
   padding: 0.5rem 0 1rem;
 }
 
-.c44:first-child {
+.c45:first-child {
   padding-top: 0;
 }
 
-.c44:last-child {
+.c45:last-child {
   padding-bottom: 0;
   border: none;
 }
@@ -6228,33 +6330,45 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   padding: 0;
 }
 
-.c45 {
-  position: relative;
-}
-
-.c46 {
+.c48 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
+.c52 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
 .c47 {
   position: relative;
 }
 
-.c51 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
+.c49 {
+  position: relative;
+}
+
+.c51 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
 }
 
 .c53 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c55 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6265,21 +6379,14 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   padding-bottom: 0.5rem;
 }
 
-.c50 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-.c52 {
+.c54 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c52:before {
+.c54:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -6291,13 +6398,13 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   z-index: 1;
 }
 
-.c52:hover,
-.c52:focus {
+.c54:hover,
+.c54:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c52:visited {
+.c54:visited {
   color: #6E6E73;
 }
 
@@ -6698,14 +6805,14 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c54 {
+  .c56 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c54 {
+  .c56 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -6807,119 +6914,201 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
+@media (min-width:63rem) {
+  .c36 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c45 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
 @media (min-width:37.5rem) {
-  .c44 {
+  .c45 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c44 {
-    padding: 1.5rem 0 1.5rem;
+  .c45 {
+    padding: 0 0 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c44:first-child {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c45:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c44:first-child {
-    padding-top: 1.5rem;
+  .c48 {
+    display: block;
+    width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c45 {
+  .c48 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c52 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c52 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c52 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c47 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
   }
 }
 
-@media (min-width:80rem) {
-  .c46 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c46 {
-    display: block;
-    width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
 @media (min-width:25rem) {
-  .c49 {
+  .c51 {
     position: absolute;
     bottom: 0;
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c51 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c51 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c51 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+@media (max-width:24.9375rem) {
+  .c51 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c53 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c53 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c55 {
     font-size: 0.9375rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c53 {
+  .c55 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c53 {
+  .c55 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c50 {
-    padding: 0 1rem;
+@media (min-width:63rem) {
+  .c55 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@supports (display:grid) {
+  .c44 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c46 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c46 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c46 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c46 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c46 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
-  .c50 {
-    width: 66.67%;
+  .c46 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .c50 {
+@supports (display:grid) {
+  .c46 {
     display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
   }
 }
 
@@ -8117,515 +8306,547 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     class="c35"
                   >
                     <div
-                      class="c36 c37"
+                      class="c35"
                     >
                       <div
-                        class="c38"
-                      />
-                      <h2
-                        class="c39"
+                        class="c36 c37"
                       >
                         <div
-                          class="c40"
+                          class="c38"
+                        />
+                        <h2
+                          class="c39"
                         >
-                          <span
-                            class="c41"
+                          <div
+                            class="c40"
                           >
                             <span
-                              class="c42"
-                              dir="ltr"
-                              id="related-content-heading"
+                              class="c41"
                             >
-                              Bu barədə daha geniş
+                              <span
+                                class="c42"
+                                dir="ltr"
+                                id="related-content-heading"
+                              >
+                                Bu barədə daha geniş
+                              </span>
                             </span>
-                          </span>
-                        </div>
-                      </h2>
-                    </div>
-                    <ul
-                      class="c43"
-                      role="list"
-                    >
-                      <li
-                        class="c44"
-                        role="listitem"
+                          </div>
+                        </h2>
+                      </div>
+                      <ul
+                        class="c43 c44"
+                        dir="ltr"
+                        role="list"
                       >
-                        <div
-                          class="c45"
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c46"
+                            class="c47"
                           >
                             <div
-                              class="c47"
+                              class="c48"
+                              dir="ltr"
                             >
-                              <div
-                                class="c48"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
                               <div
                                 class="c49"
-                              />
+                              >
+                                <div
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-44124647?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edir.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2018-05-17"
+                              >
+                                17 May 2018
+                              </time>
                             </div>
                           </div>
-                          <div
-                            class="c50"
-                          >
-                            <h3
-                              class="c51"
-                            >
-                              <a
-                                class="c52"
-                                href="/azeri/azerbaijan-44124647?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
-                              </a>
-                            </h3>
-                            <p
-                              class="c53"
-                            >
-                              Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edir.
-                            </p>
-                            <time
-                              class="c54"
-                              datetime="2018-05-17"
-                            >
-                              17 May 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c44"
-                        role="listitem"
-                      >
-                        <div
-                          class="c45"
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c46"
+                            class="c47"
                           >
                             <div
-                              class="c47"
+                              class="c48"
+                              dir="ltr"
                             >
-                              <div
-                                class="c48"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
                               <div
                                 class="c49"
-                              />
+                              >
+                                <div
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-43540056?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                ADR-100 layihəmizdə növbəti yazı: 1918-ci il martın 3-də Bolşeviklər Almaniya, Bolqarıstan, Avstriya-Macarıstan və Osmanlı nümayəndələri ilə Brest-Litovsk Sülh Sazişi imzalayır. İmzalanma Bakının azadlığı ilə nəticələnən bir sıra hadisələrə səbəb olur.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2018-03-27"
+                              >
+                                27 Mart 2018
+                              </time>
                             </div>
                           </div>
-                          <div
-                            class="c50"
-                          >
-                            <h3
-                              class="c51"
-                            >
-                              <a
-                                class="c52"
-                                href="/azeri/azerbaijan-43540056?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
-                              </a>
-                            </h3>
-                            <p
-                              class="c53"
-                            >
-                              ADR-100 layihəmizdə növbəti yazı: 1918-ci il martın 3-də Bolşeviklər Almaniya, Bolqarıstan, Avstriya-Macarıstan və Osmanlı nümayəndələri ilə Brest-Litovsk Sülh Sazişi imzalayır. İmzalanma Bakının azadlığı ilə nəticələnən bir sıra hadisələrə səbəb olur.
-                            </p>
-                            <time
-                              class="c54"
-                              datetime="2018-03-27"
-                            >
-                              27 Mart 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c44"
-                        role="listitem"
-                      >
-                        <div
-                          class="c45"
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c46"
+                            class="c47"
                           >
                             <div
-                              class="c47"
+                              class="c48"
+                              dir="ltr"
                             >
-                              <div
-                                class="c48"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
                               <div
                                 class="c49"
-                              />
+                              >
+                                <div
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-44022776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                #ADR100 layihəmizdə: 1918-1920-ci illərdə Gürcüstanla Azərbaycan arasında əməkdaşlıq yeni respublikalar üçün olduqca mühüm idi. Eyni zamanda Bakı ilə Tbilisi arasında gərginlik yaradan məsələlər mövcud idi. Belə məsələlərdən biri də ərazi mübahisələri idi.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2018-05-10"
+                              >
+                                10 May 2018
+                              </time>
                             </div>
                           </div>
-                          <div
-                            class="c50"
-                          >
-                            <h3
-                              class="c51"
-                            >
-                              <a
-                                class="c52"
-                                href="/azeri/azerbaijan-44022776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
-                              </a>
-                            </h3>
-                            <p
-                              class="c53"
-                            >
-                              #ADR100 layihəmizdə: 1918-1920-ci illərdə Gürcüstanla Azərbaycan arasında əməkdaşlıq yeni respublikalar üçün olduqca mühüm idi. Eyni zamanda Bakı ilə Tbilisi arasında gərginlik yaradan məsələlər mövcud idi. Belə məsələlərdən biri də ərazi mübahisələri idi.
-                            </p>
-                            <time
-                              class="c54"
-                              datetime="2018-05-10"
-                            >
-                              10 May 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c44"
-                        role="listitem"
-                      >
-                        <div
-                          class="c45"
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c46"
+                            class="c47"
                           >
                             <div
-                              class="c47"
+                              class="c48"
+                              dir="ltr"
                             >
-                              <div
-                                class="c48"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
                               <div
                                 class="c49"
-                              />
+                              >
+                                <div
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-43713137?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                1918-ci il mayın 28-də Azərbaycanın istiqlaliyyəti elan olunanda bu hadisədən bir gün əvvəl dağılmış Zaqafqaziya Seyminin 44 nəfər müsəlman nümayəndəsi Tiflisdə toplanır və özlərini Azərbaycanın Milli Şurası elan edirlər.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2018-04-10"
+                              >
+                                10 Aprel 2018
+                              </time>
                             </div>
                           </div>
-                          <div
-                            class="c50"
-                          >
-                            <h3
-                              class="c51"
-                            >
-                              <a
-                                class="c52"
-                                href="/azeri/azerbaijan-43713137?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
-                              </a>
-                            </h3>
-                            <p
-                              class="c53"
-                            >
-                              1918-ci il mayın 28-də Azərbaycanın istiqlaliyyəti elan olunanda bu hadisədən bir gün əvvəl dağılmış Zaqafqaziya Seyminin 44 nəfər müsəlman nümayəndəsi Tiflisdə toplanır və özlərini Azərbaycanın Milli Şurası elan edirlər.
-                            </p>
-                            <time
-                              class="c54"
-                              datetime="2018-04-10"
-                            >
-                              10 Aprel 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c44"
-                        role="listitem"
-                      >
-                        <div
-                          class="c45"
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c46"
+                            class="c47"
                           >
                             <div
-                              class="c47"
+                              class="c48"
+                              dir="ltr"
                             >
-                              <div
-                                class="c48"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
                               <div
                                 class="c49"
-                              />
+                              >
+                                <div
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-37688691?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  1918-1991: Bir müstəqilliyin iki bəyanı
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                25 il əvvəl bu gün Azərbaycan çökməkdə olan Sovet İttifaqından özünün müstəqillyini bəyan edib. Bu, Azərbaycan Respublikasının ikinci doğuluşu idi.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2016-10-18"
+                              >
+                                18 Oktyabr 2016
+                              </time>
                             </div>
                           </div>
-                          <div
-                            class="c50"
-                          >
-                            <h3
-                              class="c51"
-                            >
-                              <a
-                                class="c52"
-                                href="/azeri/azerbaijan-37688691?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                1918-1991: Bir müstəqilliyin iki bəyanı
-                              </a>
-                            </h3>
-                            <p
-                              class="c53"
-                            >
-                              25 il əvvəl bu gün Azərbaycan çökməkdə olan Sovet İttifaqından özünün müstəqillyini bəyan edib. Bu, Azərbaycan Respublikasının ikinci doğuluşu idi.
-                            </p>
-                            <time
-                              class="c54"
-                              datetime="2016-10-18"
-                            >
-                              18 Oktyabr 2016
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c44"
-                        role="listitem"
-                      >
-                        <div
-                          class="c45"
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c46"
+                            class="c47"
                           >
                             <div
-                              class="c47"
+                              class="c48"
+                              dir="ltr"
                             >
-                              <div
-                                class="c48"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
                               <div
                                 class="c49"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="c50"
-                          >
-                            <h3
-                              class="c51"
-                            >
-                              <a
-                                class="c52"
-                                href="/azeri/azerbaijan-37691096?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                               >
-                                <span
-                                  role="text"
+                                <div
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-37691096?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                                 >
                                   <span
-                                    class="c13"
+                                    role="text"
                                   >
-                                    , 
+                                    <span
+                                      class="c13"
+                                    >
+                                      , 
+                                    </span>
+                                    <span>
+                                      Bakı sakinləri müstəqillik barədə danışır
+                                    </span>
                                   </span>
-                                  <span>
-                                    Bakı sakinləri müstəqillik barədə danışır
-                                  </span>
-                                </span>
-                              </a>
-                            </h3>
-                            <p
-                              class="c53"
-                            >
-                              Çərşənbə axşamı şəhər sakinləri BBC Azərbaycancanın "Müstəqillik sizə nə verib?" sualını cavablandırıb.
-                            </p>
-                            <time
-                              class="c54"
-                              datetime="2016-10-18"
-                            >
-                              18 Oktyabr 2016
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c44"
-                        role="listitem"
-                      >
-                        <div
-                          class="c45"
-                        >
-                          <div
-                            class="c46"
-                          >
-                            <div
-                              class="c47"
-                            >
-                              <div
-                                class="c48"
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
                               >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="c49"
-                              />
+                                Çərşənbə axşamı şəhər sakinləri BBC Azərbaycancanın "Müstəqillik sizə nə verib?" sualını cavablandırıb.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2016-10-18"
+                              >
+                                18 Oktyabr 2016
+                              </time>
                             </div>
                           </div>
-                          <div
-                            class="c50"
-                          >
-                            <h3
-                              class="c51"
-                            >
-                              <a
-                                class="c52"
-                                href="/azeri/azerbaijan-43499221?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
-                              </a>
-                            </h3>
-                            <p
-                              class="c53"
-                            >
-                              Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edəcək.
-                            </p>
-                            <time
-                              class="c54"
-                              datetime="2018-03-22"
-                            >
-                              22 Mart 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c44"
-                        role="listitem"
-                      >
-                        <div
-                          class="c45"
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c46"
+                            class="c47"
                           >
                             <div
-                              class="c47"
+                              class="c48"
+                              dir="ltr"
                             >
-                              <div
-                                class="c48"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
                               <div
                                 class="c49"
-                              />
+                              >
+                                <div
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-43499221?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edəcək.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2018-03-22"
+                              >
+                                22 Mart 2018
+                              </time>
                             </div>
                           </div>
-                          <div
-                            class="c50"
-                          >
-                            <h3
-                              class="c51"
-                            >
-                              <a
-                                class="c52"
-                                href="/azeri/azerbaijan-44004471?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
-                              </a>
-                            </h3>
-                            <p
-                              class="c53"
-                            >
-                              Bir çox azərbaycanlı və gürcüstanlı siyasətçiləri anlayırdılar ki, onların içində olduğu həssas dövrdən salamat çıxmaq üçün iqtisadi, siyasi və hərbi müttəfiqlik vacibdir. Eyni zamanda hər iki respublika arasında bir sıra mübahisələr də mövcud idi.
-                            </p>
-                            <time
-                              class="c54"
-                              datetime="2018-05-04"
-                            >
-                              4 May 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c44"
-                        role="listitem"
-                      >
-                        <div
-                          class="c45"
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c46"
+                            class="c47"
                           >
                             <div
-                              class="c47"
+                              class="c48"
+                              dir="ltr"
                             >
-                              <div
-                                class="c48"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
                               <div
                                 class="c49"
-                              />
+                              >
+                                <div
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-44004471?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                Bir çox azərbaycanlı və gürcüstanlı siyasətçiləri anlayırdılar ki, onların içində olduğu həssas dövrdən salamat çıxmaq üçün iqtisadi, siyasi və hərbi müttəfiqlik vacibdir. Eyni zamanda hər iki respublika arasında bir sıra mübahisələr də mövcud idi.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2018-05-04"
+                              >
+                                4 May 2018
+                              </time>
                             </div>
                           </div>
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
+                        >
                           <div
-                            class="c50"
+                            class="c47"
                           >
-                            <h3
-                              class="c51"
+                            <div
+                              class="c48"
+                              dir="ltr"
                             >
-                              <a
-                                class="c52"
-                                href="/azeri/azerbaijan-43870815?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                              <div
+                                class="c49"
                               >
-                                Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
-                              </a>
-                            </h3>
-                            <p
-                              class="c53"
+                                <div
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
                             >
-                              İranın Xəzər sahilinə çıxan bölgələrində Azərbaycan Respublikasını böyük ticari imkanlar gözləyirdi. İran ixracatının 60-70 faizinin istehsalı ənənəvi olaraq məhz həmin regionun payına düşüb. Azərbaycan və xüsusilə Bakı-Batumi dəhlizi isə Avropa bazarına aparan təbii çıxış idi. Bəs milli hökümət iqtisadi imkanları gəlirli xarici ticarətə çevirə bildimi?
-                            </p>
-                            <time
-                              class="c54"
-                              datetime="2018-04-29"
-                            >
-                              29 Aprel 2018
-                            </time>
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-43870815?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                İranın Xəzər sahilinə çıxan bölgələrində Azərbaycan Respublikasını böyük ticari imkanlar gözləyirdi. İran ixracatının 60-70 faizinin istehsalı ənənəvi olaraq məhz həmin regionun payına düşüb. Azərbaycan və xüsusilə Bakı-Batumi dəhlizi isə Avropa bazarına aparan təbii çıxış idi. Bəs milli hökümət iqtisadi imkanları gəlirli xarici ticarətə çevirə bildimi?
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2018-04-29"
+                              >
+                                29 Aprel 2018
+                              </time>
+                            </div>
                           </div>
-                        </div>
-                      </li>
-                    </ul>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </section>
               </div>

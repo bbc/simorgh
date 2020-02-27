@@ -17,6 +17,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GhostGrid, GridItemConstrainedLarge } from '#lib/styledGrid';
 import StoryPromo from '../StoryPromo';
+import Grid from '../../components/Grid';
 
 const Wrapper = styled(GridItemConstrainedLarge)`
   margin-bottom: ${GEL_SPACING_DBL};
@@ -65,24 +66,50 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
 
   return (
     <RelatedContentWrapper>
-      <StyledSectionLabel
-        script={script}
-        service={service}
-        dir={dir}
-        labelId="related-content-heading"
-      >
-        {translations.relatedContent}
-      </StyledSectionLabel>
-
-      <StoryPromoUl>
-        {content
-          .map(item => formatItem(item, env))
-          .map(item => (
-            <StoryPromoLi key={item.id || item.uri}>
-              <StoryPromo item={item} />
-            </StoryPromoLi>
-          ))}
-      </StoryPromoUl>
+      <Wrapper>
+        <StyledSectionLabel
+          script={script}
+          service={service}
+          dir={dir}
+          labelId="related-content-heading"
+        >
+          {translations.relatedContent}
+        </StyledSectionLabel>
+        <Grid
+          columns={{
+            group0: 6,
+            group1: 6,
+            group2: 6,
+            group3: 6,
+            group4: 8,
+            group5: 8,
+          }}
+          as={StoryPromoUl}
+          enableGelGutters
+          dir={dir}
+        >
+          {content
+            .map(item => formatItem(item, env))
+            .map(item => (
+              <Grid
+                item
+                columns={{
+                  group0: 6,
+                  group1: 6,
+                  group2: 6,
+                  group3: 6,
+                  group4: 4,
+                  group5: 4,
+                }}
+                as={StoryPromoLi}
+                key={item.id || item.uri}
+                dir={dir}
+              >
+                <StoryPromo item={item} dir={dir} />
+              </Grid>
+            ))}
+        </Grid>
+      </Wrapper>
     </RelatedContentWrapper>
   );
 };
