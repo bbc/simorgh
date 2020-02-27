@@ -1,7 +1,6 @@
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 import useAppToggles from '../../../support/helpers/useAppToggles';
-import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
 // Limiting to two services
 const serviceHasMostRead = service => ['persian', 'yoruba'].includes(service);
@@ -23,16 +22,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     if (serviceHasMostRead(service)) {
       it('should contain most read component if the toggle is enabled', () => {
         if (useAppToggles.mostRead) {
-          cy.get('[aria-labelledby="Most-Read"]')
-            .should('be.visible')
-            .within(() => {
-              cy.get('li')
-                .should(
-                  'to.have.lengthOf',
-                  appConfig[service].default.mostRead.numberOfItems,
-                )
-                .should('be.visible');
-            });
+          cy.get('[aria-labelledby="Most-Read"]').should('be.visible');
         }
       });
     }
