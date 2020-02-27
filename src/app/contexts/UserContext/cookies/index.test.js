@@ -66,6 +66,18 @@ describe('UserContext cookies', () => {
       expect(Cookie.set).toHaveBeenCalledWith('ckps_serbian', 'lat');
     });
 
+    it('should set preferred variant with cookie name if provided', () => {
+      Cookie.get.mockReturnValue('111');
+      setPreferredVariantCookie('zhongwen', 'simp', 'chinese');
+      expect(Cookie.set).toHaveBeenCalledWith('ckps_chinese', 'simp');
+    });
+
+    it('should set preferred variant with service cookie name if null cookie name', () => {
+      Cookie.get.mockReturnValue('111');
+      setPreferredVariantCookie('serbian', 'cyr', null);
+      expect(Cookie.set).toHaveBeenCalledWith('ckps_serbian', 'cyr');
+    });
+
     it('should not set preferred variant if cookies not enabled', () => {
       Cookie.get.mockReturnValue('000');
       setPreferredVariantCookie('serbian', 'lat');

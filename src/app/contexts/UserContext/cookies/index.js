@@ -16,11 +16,11 @@ export const getPreferredVariant = service => {
   return Cookie.get(VARIANT_COOKIE);
 };
 
-export const setPreferredVariantCookie = (service, variant) => {
+export const setPreferredVariantCookie = (service, variant, cookieName) => {
   if (!service || !variant || !personalisationEnabled(getCookiePolicy())) {
     return;
   }
 
-  const variantCookieName = `ckps_${service}`;
+  const variantCookieName = `ckps_${cookieName || service}`;
   Cookie.set(variantCookieName, variant);
 };
