@@ -56,7 +56,7 @@ beforeEach(async () => {
 
 describe('FrontPageMain', () => {
   describe('snapshots', () => {
-    it('should render a pidgin frontpage correctly', async () => {
+    it('should render a pidgin frontpage correctly with most read', async () => {
       const { container } = render(
         <FrontPageMainWithContext frontPageData={pageData} />,
       );
@@ -99,6 +99,11 @@ describe('FrontPageMain', () => {
       );
       const sections = container.querySelectorAll('section');
 
+      // Waiting to ensure most read data is loaded and element is rendered
+      await waitForElement(() => container.querySelector('#Most-Read'));
+      const mostReadSection = container.querySelector('#Most-Read');
+
+      expect(mostReadSection).not.toBeNull();
       expect(sections).toHaveLength(2);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');

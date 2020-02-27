@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FrontPageMain snapshots should render a pidgin frontpage correctly 1`] = `
+exports[`FrontPageMain snapshots should render a pidgin frontpage correctly with most read 1`] = `
 <div>
   <noscript />
   <div>
