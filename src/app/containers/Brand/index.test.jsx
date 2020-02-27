@@ -44,13 +44,31 @@ describe(`BrandContainer`, () => {
       expect(skipLink).not.toBeNull();
     });
 
-    it('should render script switch link if provided', () => {
+    it('should render script link if provided', () => {
       const { getByTestId } = render(
         BrandContainerWithContext(newsServiceContextStub, null, mockScriptLink),
       );
 
       const scriptLink = getByTestId('script-link');
       expect(scriptLink).not.toBeNull();
+    });
+
+    it('should not render skip to content link if not provided', () => {
+      const { queryByTestId } = render(
+        BrandContainerWithContext(newsServiceContextStub),
+      );
+
+      const skipLink = queryByTestId('skip-link');
+      expect(skipLink).toBeNull();
+    });
+
+    it('should not render script link if not provided', () => {
+      const { queryByTestId } = render(
+        BrandContainerWithContext(newsServiceContextStub, mockSkipLink),
+      );
+
+      const scriptLink = queryByTestId('script-link');
+      expect(scriptLink).toBeNull();
     });
   });
 });
