@@ -74,7 +74,7 @@ export const service = {
         },
         500: {
           statusCode: '၅၀၀',
-          title: 'ဘီီဘီစီဆာဗာ၏ အမှား',
+          title: 'ဘီဘီစီဆာဗာ၏ အမှား',
           message:
             'သင်ရှာနေသော စာမျက်နှာကို လောလောဆယ် ရှာမတွေ့ပါ။ ဒီမှာ ကြိုးစားကြည့်ပါ။',
           solutions: [
@@ -155,11 +155,11 @@ export const service = {
             'မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။',
         },
         listen: 'Listen',
-        watch: 'Watch',
+        watch: 'ကြည့်ရှုရန်',
         liveLabel: 'တိုကျရိုကျထုတျလှှငျ့မှု',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        previousRadioShow: 'ယခင် ရေဒီယိုအစီအစဉ်',
+        nextRadioShow: 'နောက် ရေဒီယိုအစီအစဉ်',
+        duration: 'ကြာမြင့်ချိန်',
       },
     },
     brandSVG,
@@ -194,7 +194,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/burmese/institutional-37577525',
-          text: 'ဘီီဘီစီကို ဆက်သွယ်ရန်',
+          text: 'ဘီဘီစီကို ဆက်သွယ်ရန်',
         },
       ],
       copyrightText:

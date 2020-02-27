@@ -178,7 +178,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/privacy/',
-          text: 'गोपनीयता धोरण',
+          text: 'गोपनीयतेचं धोरण',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
@@ -186,11 +186,11 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/marathi/institutional-42227676',
-          text: 'बीबीसीला संपर्क करा',
+          text: 'बीबीसीशी संपर्क साधाा',
         },
       ],
       copyrightText:
-        'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही',
+        'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही.',
     },
     fonts: [],
     timezone: 'Asia/Kolkata',
