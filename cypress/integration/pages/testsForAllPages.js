@@ -366,13 +366,13 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
       });
 
       if (variant === 'default') {
-        it('should not render a script switch component if the default variant', () => {
+        it('should not render a script link component if the service does not have variants', () => {
           cy.get('header')
             .find('a[data-variant]')
             .should('have.lengthOf', 0);
         });
       } else {
-        it('should render a script switch component if not the default variant', () => {
+        it('should render a script switch component if the component has variants', () => {
           cy.get('header')
             .find('a[data-variant]')
             .should('have.lengthOf', 1);

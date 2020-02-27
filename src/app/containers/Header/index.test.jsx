@@ -1,14 +1,13 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
 import HeaderContainer from './index';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import { UserContext } from '#contexts/UserContext';
 import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
-import * as cookies from '#contexts/UserContext/cookies';
+// import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 
 const defaultToggleState = {
   test: {
@@ -25,27 +24,6 @@ const defaultToggleState = {
 
 const mockToggleDispatch = jest.fn();
 
-const variantServiceConfig = {
-  ...pidginServiceConfig.default,
-  scriptLink: {
-    text: 'Test',
-    offscreenText: 'Test-variant',
-  },
-};
-
-jest.mock('#lib/utilities/variantHandler');
-const variantHandlers = require('#lib/utilities/variantHandler');
-
-variantHandlers.getOtherVariant.mockImplementation(() => 'test');
-
-const setPreferredVariantCookieSpy = jest.spyOn(
-  cookies,
-  'setPreferredVariantCookie',
-);
-const userContextMock = {
-  setPreferredVariantCookie: cookies.setPreferredVariantCookie,
-};
-
 /* eslint-disable react/prop-types */
 const HeaderContainerWithContext = ({
   pageType,
@@ -60,18 +38,16 @@ const HeaderContainerWithContext = ({
     }}
   >
     <ServiceContext.Provider value={serviceContext}>
-      <UserContext.Provider value={userContextMock}>
-        <RequestContextProvider
-          isAmp={false}
-          pageType={pageType}
-          service={service}
-          statusCode={200}
-          bbcOrigin={bbcOrigin}
-          pathname="/pathname"
-        >
-          <HeaderContainer />
-        </RequestContextProvider>
-      </UserContext.Provider>
+      <RequestContextProvider
+        isAmp={false}
+        pageType={pageType}
+        service={service}
+        statusCode={200}
+        bbcOrigin={bbcOrigin}
+        pathname="/pathname"
+      >
+        <HeaderContainer />
+      </RequestContextProvider>
     </ServiceContext.Provider>
   </ToggleContext.Provider>
 );
@@ -130,30 +106,7 @@ describe(`Header`, () => {
     expect(skipLink).toBeVisible();
   });
 
-  describe('Script Link and Preferred Variant Cookie', () => {
-    let scriptLink;
+  // it('should not render script link for a service without variants', () => {});
 
-    beforeEach(() => {
-      const { container } = render(
-        HeaderContainerWithContext({
-          pageType: 'frontPage',
-          serviceContext: variantServiceConfig,
-        }),
-      );
-      scriptLink = container.querySelector('a[data-variant="test"]');
-    });
-
-    afterEach(() => {
-      jest.clearAllMocks();
-    });
-
-    it('Script Link should contain link to other variant', () => {
-      expect(scriptLink.getAttribute('href')).toBe('/pidgin/test');
-    });
-
-    it('should set preferred variant cookie when ScriptLink is clicked', () => {
-      fireEvent.click(scriptLink);
-      expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(1);
-    });
-  });
+  // it('should render script link for a service with variants', () => {});
 });

@@ -1,6 +1,5 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import applySquashTopstories from '../../../../src/app/routes/home/getInitialData/squashTopStories';
 
 const serviceJsonPath = service =>
   `${config[service].pageTypes.frontPage.path}.json`;
@@ -25,30 +24,6 @@ const isValidUsefulLinks = pageData => {
   }
 
   return false;
-};
-
-const isValidRadioBulletin = pageData => {
-  return pageData.some(group => {
-    const hasStrapline = 'strapline' in group;
-    const hasRadioBulletin = group.items.some(
-      item =>
-        item.assetTypeCode === 'PRO' && item.contentType === 'RadioBulletin',
-    );
-
-    return hasStrapline && hasRadioBulletin;
-  });
-};
-
-const isValidTvBulletin = pageData => {
-  return pageData.some(group => {
-    const hasStrapline = 'strapline' in group;
-    const hasTvBulletin = group.items.some(
-      item => item.assetTypeCode === 'PRO' && item.contentType === 'TVBulletin',
-    );
-    const isInCorrectGroup = group.type === 'av-live-streams';
-
-    return hasStrapline && hasTvBulletin && isInCorrectGroup;
-  });
 };
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
@@ -230,36 +205,6 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               cy.get('[aria-labelledby="Useful-links"]').should(
                 'not.be.visible',
               );
-            }
-          });
-        });
-
-        it('should contain Radio Bulletin if a promo of type RadioBulletin is in the feed', () => {
-          cy.request(serviceJsonPath(service)).then(({ body }) => {
-            const pageData = applySquashTopstories(body);
-            const { groups } = pageData.content;
-
-            if (isValidRadioBulletin(groups)) {
-              cy.get('[class^="RadioBulletin"]')
-                .eq(0)
-                .should('be.visible');
-            } else {
-              cy.get('[class^="RadioBulletin"').should('not.be.visible');
-            }
-          });
-        });
-
-        it('should contain TV Bulletin if a promo of type TVBulletin is in the feed in correct group', () => {
-          cy.request(serviceJsonPath(service)).then(({ body }) => {
-            const pageData = applySquashTopstories(body);
-            const { groups } = pageData.content;
-
-            if (isValidTvBulletin(groups)) {
-              cy.get('[class^="TVBulletin"]')
-                .eq(0)
-                .should('be.visible');
-            } else {
-              cy.get('[class^="TVBulletin"').should('not.be.visible');
             }
           });
         });
