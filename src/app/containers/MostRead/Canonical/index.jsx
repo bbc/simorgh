@@ -42,7 +42,12 @@ const MarginWrapper = styled.div`
   }
 `;
 
-const MaxWidthWrapper = styled.div`
+const MostReadSection = styled.section.attrs(() => ({
+  role: 'region',
+  'aria-labelledby': 'Most-Read',
+}))``;
+
+const ConstrainedMostReadSection = styled(MostReadSection)`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     margin: 0 ${GEL_MARGIN_BELOW_400PX} ${GEL_SPACING_TRPL};
   }
@@ -118,9 +123,12 @@ const CanonicalMostRead = ({ endpoint, maxTwoColumns, constrainMaxWidth }) => {
     return null;
   }
 
-  const MostReadSection = () => (
-    // eslint-disable-next-line jsx-a11y/no-redundant-roles
-    <section role="region" aria-labelledby="Most-Read">
+  const MostReadSectionWrapper = constrainMaxWidth
+    ? ConstrainedMostReadSection
+    : MostReadSection;
+
+  return (
+    <MostReadSectionWrapper>
       <SectionLabel
         script={script}
         labelId="Most-Read"
@@ -158,15 +166,7 @@ const CanonicalMostRead = ({ endpoint, maxTwoColumns, constrainMaxWidth }) => {
           ))}
         </MostReadList>
       </MarginWrapper>
-    </section>
-  );
-
-  return constrainMaxWidth ? (
-    <MaxWidthWrapper>
-      <MostReadSection />
-    </MaxWidthWrapper>
-  ) : (
-    <MostReadSection />
+    </MostReadSectionWrapper>
   );
 };
 
