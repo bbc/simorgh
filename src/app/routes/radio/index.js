@@ -1,6 +1,6 @@
-import RadioPage from '#pages/RadioPage';
-import getInitialData from './getInitialData';
+import { RadioPage } from '#pages';
 import { radioAndTvPath } from '../utils/regex';
+import getInitialData from './getInitialData';
 
 export default {
   path: radioAndTvPath,
