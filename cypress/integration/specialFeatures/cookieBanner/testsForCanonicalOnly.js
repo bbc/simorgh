@@ -22,7 +22,7 @@ const assertCookieExpiryDate = (cookieName, timestamp) => {
 };
 
 const filterPageTypes = (pageType, service) =>
-  config[service].pageTypes[pageType].path !== undefined;
+  config[service].pageTypes[pageType].path;
 
 const getPrivacyBanner = (service, variant) =>
   cy.contains(
