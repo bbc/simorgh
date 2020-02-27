@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import styled from 'styled-components';
+import { string } from 'prop-types';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '../ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -14,6 +15,7 @@ import ATIAnalytics from '../ATIAnalytics';
 import ChartbeatAnalytics from '../ChartbeatAnalytics';
 import articleMediaPlayer from '../ArticleMediaPlayer';
 import LinkedData from '../LinkedData';
+import MostReadContainer from '../MostRead';
 import {
   getArticleId,
   getHeadline,
@@ -40,7 +42,7 @@ const StyledMain = styled.main`
   flex-grow: 1;
 `;
 
-const ArticleMain = ({ articleData: data }) => {
+const ArticleMain = ({ articleData: data, mostReadEndpointOverride }) => {
   const { articleAuthor } = useContext(ServiceContext);
   const headline = getHeadline(data);
   const description = getSummary(data) || getHeadline(data);
@@ -80,11 +82,21 @@ const ArticleMain = ({ articleData: data }) => {
             componentsToRender={componentsToRender}
           />
         </GhostGrid>
+        <MostReadContainer
+          mostReadEndpointOverride={mostReadEndpointOverride}
+          constrainMaxWidth
+        />
       </StyledMain>
     </>
   );
 };
 ArticleMain.propTypes = {
   articleData: articleDataPropTypes.isRequired,
+  mostReadEndpointOverride: string,
 };
+
+ArticleMain.defaultProps = {
+  mostReadEndpointOverride: null,
+};
+
 export default ArticleMain;
