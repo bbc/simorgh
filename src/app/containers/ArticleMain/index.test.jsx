@@ -93,7 +93,9 @@ it('should render a rtl article (persian) with most read correctly', async () =>
   );
 
   await waitForElement(() => container.querySelector('#Most-Read'));
+  const mostReadSection = container.querySelector('#Most-Read');
 
+  expect(mostReadSection).not.toBeNull();
   expect(container).toMatchSnapshot();
 });
 
@@ -107,6 +109,8 @@ it('should render a ltr article (pidgin) with most read correctly', async () => 
   );
 
   await waitForElement(() => container.querySelector('#Most-Read'));
+  const mostReadSection = container.querySelector('#Most-Read');
 
+  expect(mostReadSection).not.toBeNull();
   expect(container).toMatchSnapshot();
 });
