@@ -64,6 +64,7 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
         firstPublished: oneDayAndThreeMinutesAgo,
         lastPublished: oneDayAndOneMinuteAgo,
       });
+
       expect(wasPublishedAndUpdatedToday).toEqual(false);
     });
   });
