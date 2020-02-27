@@ -1,4 +1,5 @@
 import config from '../../../support/config/services';
+import getAppEnv from '../../../support/helpers/getAppEnv';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import describeForEuOnly from '../../../support/helpers/describeForEuOnly';
 
@@ -8,7 +9,7 @@ const serviceFilter = service =>
   Cypress.env('SMOKE') ? ['news', 'thai'].includes(service) : service;
 
 const filterPageTypes = (service, pageType) =>
-  config[service].pageTypes[pageType].path !== undefined;
+  config[service].pageTypes[pageType].path;
 
 const getPrivacyBanner = (service, variant) =>
   cy.contains(
@@ -60,7 +61,8 @@ Object.keys(config)
     Object.keys(config[service].pageTypes)
       .filter(pageType => filterPageTypes(service, pageType))
       .forEach(pageType => {
-        const paths = makeArray(config[service].pageTypes[pageType].path);
+        const envPath = config[service].pageTypes[pageType].path[getAppEnv()];
+        const paths = makeArray(envPath);
         paths.forEach(path => {
           describeForEuOnly(
             `Amp Cookie Banner Test for ${service} ${pageType} ${path}`,

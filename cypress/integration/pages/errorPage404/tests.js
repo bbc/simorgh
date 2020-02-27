@@ -15,31 +15,18 @@ export const testsThatFollowSmokeTestConfig = ({
   variant,
 }) =>
   describe(`Tests for ${service} ${pageType}`, () => {
-    describe(`${service} Test we get a 404`, () => {
-      it('should return a 404 error code', () => {
-        cy.testResponseCodeAndType(
-          config[service].pageTypes.errorPage404.path,
-          404,
-          'text/html',
-        );
-      });
-    });
+    const errorPath = Cypress.env('currentPath');
 
     describe(`${service} Test we get a 404`, () => {
       it('should return a 404 error code', () => {
-        cy.testResponseCodeAndType(
-          config[service].pageTypes.errorPage404.path,
-          404,
-          'text/html',
-        );
+        cy.testResponseCodeAndType(errorPath, 404, 'text/html');
       });
     });
 
-    describe(`${service} Article Error Page Tests`, () => {
+    describe(`${service} Error Page Tests`, () => {
       before(() => {
-        const { path } = config[service].pageTypes.errorPage404;
-        cy.testResponseCodeAndType(path, 404, 'text/html');
-        cy.visit(path, {
+        cy.testResponseCodeAndType(errorPath, 404, 'text/html');
+        cy.visit(errorPath, {
           failOnStatusCode: false,
         });
       });

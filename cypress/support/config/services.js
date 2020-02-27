@@ -1,4 +1,4 @@
-const genServices = () => ({
+const genServices = {
   afaanoromoo: {
     name: 'afaanoromoo',
     font: undefined,
@@ -2840,7 +2840,7 @@ const genServices = () => ({
       },
     },
   },
-});
+};
 
 // Allow runs to be limited to a single service via the CYPRESS_ONLY_SERVICE env var
 const runOnlyService = Cypress.env('ONLY_SERVICE');

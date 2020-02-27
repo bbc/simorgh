@@ -1,5 +1,3 @@
-import config from '../../../support/config/services';
-
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
@@ -13,11 +11,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 }) =>
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
     it('should return a 404 error code', () => {
-      cy.testResponseCodeAndType(
-        config[service].pageTypes.errorPage404.path,
-        404,
-        'text/html',
-      );
+      cy.testResponseCodeAndType(Cypress.env('currentPath'), 404, 'text/html');
     });
   });
 

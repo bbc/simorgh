@@ -1,5 +1,6 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import config from '../../../support/config/services';
+import getAppEnv from '../../../support/helpers/getAppEnv';
 
 // Limited to 1 UK & 1 WS service when a smoke test due to time test takes to run per page.
 // This is why this file doesn't check smoke test values.
@@ -86,7 +87,8 @@ Object.keys(config)
     Object.keys(config[service].pageTypes)
       .filter(pageType => filterPageTypes(pageType, service))
       .forEach(pageType => {
-        const paths = makeArray(config[service].pageTypes[pageType].path);
+        const envPath = config[service].pageTypes[pageType].path[getAppEnv()];
+        const paths = makeArray(envPath);
         paths.forEach(path => {
           const { variant } = config[service];
 
