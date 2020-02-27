@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import path from 'ramda/src/path';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import MetadataContainer from '../../containers/Metadata';
+import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '../../containers/LinkedData';
 import RadioPageBlocks from '../../containers/RadioPageBlocks';
@@ -20,6 +21,7 @@ const RadioPage = ({ pageData }) => {
   return (
     <>
       <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
         title={promo.name}
         lang={metadata.language}
