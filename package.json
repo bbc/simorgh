@@ -18,7 +18,7 @@
     "cypress:ci": "rm -rf cypress/results; xvfb-run -a cypress run && npm run cypress:reports",
     "cypress:interactive": "cypress open",
     "cypress:reports": "npx mochawesome-merge 'cypress/results/*.json' > mochawesome.json && npx marge -f ${CODEBUILD_BUILD_NUMBER} -t 'Simorgh E2E Report' --cdn true mochawesome.json",
-    "cypress:reports:publish": "s3-deploy './mochawesome-report/mochawesome.html' --cwd './mochawesome-report/' --region eu-west-1 --bucket simorgh-e2e-reports",
+    "cypress:reports:publish": "s3-deploy './mochawesome-report/*.html' --cwd './mochawesome-report/' --region eu-west-1 --bucket simorgh-e2e-reports",
     "cypress:3rdParty": "npm run cypress -- --project ./3rdPartyCypress/.",
     "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
     "lighthouse": "./scripts/lighthouseRun.sh",
