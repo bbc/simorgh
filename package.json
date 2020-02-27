@@ -17,7 +17,7 @@
     "cypress": "cypress run",
     "cypress:ci": "rm -rf cypress/results; xvfb-run -a cypress run && npm run cypress:reports",
     "cypress:interactive": "cypress open",
-    "cypress:reports": "npx mochawesome-merge 'cypress/results/*.json' > mochawesome.json && npx marge mochawesome.json",
+    "cypress:reports": "npx mochawesome-merge 'cypress/results/*.json' > mochawesome.json && npx marge -f ${CODEBUILD_BUILD_NUMBER} -t 'Simorgh E2E Report' --cdn true mochawesome.json",
     "cypress:reports:publish": "s3-deploy './mochawesome-report/mochawesome.html' --cwd './mochawesome-report/' --region eu-west-1 --bucket simorgh-e2e-reports",
     "cypress:3rdParty": "npm run cypress -- --project ./3rdPartyCypress/.",
     "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
@@ -35,7 +35,8 @@
     "test:unit": "test -z $CI && jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"puppeteer\" || jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"puppeteer\"",
     "test:unit:watch": "npm run test:unit -- --watch",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
-    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'"
+    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'",
+    "env:test": "echo $FILE_NAME"
   },
   "husky": {
     "hooks": {
