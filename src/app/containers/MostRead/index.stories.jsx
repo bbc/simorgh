@@ -1,7 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import {
+  withServicesKnob,
+  buildRTLSubstories,
+} from '@bbc/psammead-storybook-helpers';
 import MostReadContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -34,9 +37,10 @@ const renderMostReadContainer = (service, variant, maxTwoColumns) => (
   </ToggleContextProvider>
 );
 
-const stories = storiesOf('Containers|MostRead/Canonical', module)
+const MOST_READ_STORIES = 'Containers|MostRead/Canonical';
+const stories = storiesOf(MOST_READ_STORIES, module)
   .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob({ defaultService: 'arabic' }))
+  .addDecorator(withServicesKnob({ defaultService: 'pidgin' }))
   .addParameters({
     chromatic: { disable: true },
   });
@@ -48,3 +52,5 @@ stories.add('Front Page (2 Columns)', ({ service, variant }) => {
 stories.add('Article Page (5 Columns)', ({ service, variant }) => {
   return renderMostReadContainer(service, variant, false);
 });
+
+buildRTLSubstories(MOST_READ_STORIES);
