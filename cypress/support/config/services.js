@@ -216,7 +216,7 @@ const genServices = appEnv => ({
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path: isLive(appEnv)
-          ? undefined
+          ? '/azeri/multimedia/2012/09/120919_georgia_prison_video'
           : '/azeri/multimedia/2015/08/150804_azeri_test',
         smoke: false,
       },
@@ -380,7 +380,7 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: isLive(appEnv)
-          ? undefined
+          ? '/gahuza/video/2016/01/160108_australia_fire_video'
           : '/gahuza/video/2015/12/151217_test_long',
         smoke: false,
       },
@@ -729,7 +729,7 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: isLive(appEnv)
-          ? undefined
+          ? '/kyrgyz/multimedia/2014/09/140903_iv_auturgan'
           : '/kyrgyz/multimedia/2015/03/150330_map_test',
         smoke: false,
       },
@@ -1011,7 +1011,7 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path: isLive(appEnv)
-          ? undefined
+          ? '/persian/world/2016/06/160613_om_naked_dining'
           : '/persian/iran/2016/09/160907_tc2_testmap1',
         smoke: false,
       },
@@ -1332,9 +1332,11 @@ const genServices = appEnv => ({
       },
       mediaAssetPage: {
         path:
-          isLive(appEnv) || isTest(appEnv)
-            ? undefined
-            : '/sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292',
+          (isLive(appEnv) &&
+            '/sinhala/world/2015/09/150919_technology_at_schools') ||
+          (!isTest(appEnv) &&
+            '/sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292') ||
+          undefined,
 
         smoke: false,
       },
@@ -1915,9 +1917,8 @@ const genServices = appEnv => ({
       },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
-        // eslint-disable-next-line no-nested-ternary
         path: isLive(appEnv)
-          ? undefined
+          ? '/vietnamese/multimedia/2015/04/150428_david_wheat_interview'
           : '/vietnamese/sport/2016/09/160922_tc2_testmap2',
         smoke: false,
       },
