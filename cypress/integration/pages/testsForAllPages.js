@@ -372,7 +372,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             .should('have.lengthOf', 0);
         });
       } else {
-        it('should render a script switch component if the component has variants', () => {
+        it('should render a script link component if the component has variants', () => {
           cy.get('header')
             .find('a[data-variant]')
             .should('have.lengthOf', 1);
