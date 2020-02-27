@@ -285,7 +285,7 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: null,
@@ -468,11 +468,11 @@ const genServices = {
         },
         smoke: false,
       },
-      frontPage: { path: undefined, smoke: false },
-      liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
-      photoGalleryPage: { path: undefined, smoke: false },
-      storyPage: { path: undefined, smoke: false },
+      frontPage: { path: null, smoke: false },
+      liveRadio: { path: null, smoke: false },
+      mediaAssetPage: { path: null, smoke: false },
+      photoGalleryPage: { path: null, smoke: false },
+      storyPage: { path: null, smoke: false },
     },
   },
   gahuza: {
@@ -575,7 +575,7 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: '/gujarati/media-51389006',
@@ -760,7 +760,7 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: '/igbo/media-42986440',
@@ -881,7 +881,7 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: null,
@@ -1072,7 +1072,7 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: '/marathi/media-51314817',
@@ -1129,7 +1129,7 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: null,
@@ -1178,11 +1178,11 @@ const genServices = {
         },
         smoke: false,
       },
-      frontPage: { path: undefined, smoke: false },
-      liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
-      photoGalleryPage: { path: undefined, smoke: false },
-      storyPage: { path: undefined, smoke: false },
+      frontPage: { path: null, smoke: false },
+      liveRadio: { path: null, smoke: false },
+      mediaAssetPage: { path: null, smoke: false },
+      photoGalleryPage: { path: null, smoke: false },
+      storyPage: { path: null, smoke: false },
     },
   },
   nepali: {
@@ -1271,11 +1271,11 @@ const genServices = {
         },
         smoke: true,
       },
-      frontPage: { path: undefined, smoke: false },
-      liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
-      photoGalleryPage: { path: undefined, smoke: false },
-      storyPage: { path: undefined, smoke: false },
+      frontPage: { path: null, smoke: false },
+      liveRadio: { path: null, smoke: false },
+      mediaAssetPage: { path: null, smoke: false },
+      photoGalleryPage: { path: null, smoke: false },
+      storyPage: { path: null, smoke: false },
     },
   },
   pashto: {
@@ -1457,7 +1457,7 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: '/pidgin/tori-50974590', // CPS MAP with video clip & related content
@@ -1514,7 +1514,7 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: null,
@@ -1570,7 +1570,7 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: '/punjabi/india-51325361',
@@ -1627,7 +1627,7 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: null,
@@ -1676,11 +1676,11 @@ const genServices = {
         },
         smoke: false,
       },
-      frontPage: { path: undefined, smoke: false },
-      liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
-      photoGalleryPage: { path: undefined, smoke: false },
-      storyPage: { path: undefined, smoke: false },
+      frontPage: { path: null, smoke: false },
+      liveRadio: { path: null, smoke: false },
+      mediaAssetPage: { path: null, smoke: false },
+      photoGalleryPage: { path: null, smoke: false },
+      storyPage: { path: null, smoke: false },
     },
   },
   serbianCyr: {
@@ -1713,7 +1713,7 @@ const genServices = {
         },
         smoke: true,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: null,
@@ -1770,7 +1770,7 @@ const genServices = {
         },
         smoke: true,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: null,
@@ -1935,13 +1935,13 @@ const genServices = {
     font: undefined,
     variant: 'default',
     pageTypes: {
-      articles: { path: undefined, smoke: false },
-      errorPage404: { path: undefined, smoke: false },
-      frontPage: { path: undefined, smoke: false },
-      liveRadio: { path: undefined, smoke: false },
-      mediaAssetPage: { path: undefined, smoke: false },
-      photoGalleryPage: { path: undefined, smoke: false },
-      storyPage: { path: undefined, smoke: false },
+      articles: { path: null, smoke: false },
+      errorPage404: { path: null, smoke: false },
+      frontPage: { path: null, smoke: false },
+      liveRadio: { path: null, smoke: false },
+      mediaAssetPage: { path: null, smoke: false },
+      photoGalleryPage: { path: null, smoke: false },
+      storyPage: { path: null, smoke: false },
     },
   },
   swahili: {
@@ -2102,7 +2102,7 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: '/telugu/india-51309092',
@@ -2159,7 +2159,7 @@ const genServices = {
         },
         smoke: true,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: '/thai/international-51285795',
@@ -2280,7 +2280,7 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: null,
@@ -2337,7 +2337,7 @@ const genServices = {
         },
         smoke: true,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: null,
@@ -2394,7 +2394,7 @@ const genServices = {
         },
         smoke: true,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: null,
@@ -2451,7 +2451,7 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: null,
@@ -2636,7 +2636,7 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: null,
@@ -2699,7 +2699,7 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: '/yoruba/afrika-51116686', // CPS MAP with video
@@ -2756,7 +2756,7 @@ const genServices = {
         },
         smoke: true,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: null,
@@ -2813,7 +2813,7 @@ const genServices = {
         },
         smoke: true,
       },
-      liveRadio: { path: undefined, smoke: false },
+      liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
           live: null,
