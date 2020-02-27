@@ -88,7 +88,7 @@ Object.keys(config)
       .filter(pageType => filterPageTypes(pageType, service))
       .forEach(pageType => {
         const envPath = config[service].pageTypes[pageType].path[getAppEnv()];
-        const paths = makeArray(envPath);
+        const paths = envPath ? makeArray(envPath) : [];
         paths.forEach(path => {
           const { variant } = config[service];
 

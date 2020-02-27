@@ -62,7 +62,7 @@ Object.keys(config)
       .filter(pageType => filterPageTypes(service, pageType))
       .forEach(pageType => {
         const envPath = config[service].pageTypes[pageType].path[getAppEnv()];
-        const paths = makeArray(envPath);
+        const paths = envPath ? makeArray(envPath) : [];
         paths.forEach(path => {
           describeForEuOnly(
             `Amp Cookie Banner Test for ${service} ${pageType} ${path}`,
