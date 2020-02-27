@@ -47,27 +47,21 @@ describe('UserContext cookies', () => {
       expect(getPreferredVariant('zhongwen')).toEqual('trad');
     });
 
-    it('should get cookie with cookieName from js-cookie when cookieName provided', () => {
+    it('should get a cookie using check ckps_chinese for zhongwen', () => {
       Cookie.get.mockReturnValue('trad');
-      getPreferredVariant('zhongwen', 'chinese');
+      getPreferredVariant('zhongwen');
       expect(Cookie.get).toBeCalledWith('ckps_chinese');
     });
 
-    it('should get cookie with service from js-cookie when cookieName undefined', () => {
-      Cookie.get.mockReturnValue('cyr');
-      getPreferredVariant('serbian', undefined);
-      expect(Cookie.get).toBeCalledWith('ckps_serbian');
+    it('should get a cookie using check ckps_chinese for ukchina', () => {
+      Cookie.get.mockReturnValue('trad');
+      getPreferredVariant('ukchina');
+      expect(Cookie.get).toBeCalledWith('ckps_chinese');
     });
 
-    it('should get cookie with service from js-cookie when cookieName null', () => {
-      Cookie.get.mockReturnValue('cyr');
-      getPreferredVariant('serbian', null);
-      expect(Cookie.get).toBeCalledWith('ckps_serbian');
-    });
-
-    it('should get cookie with service from js-cookie when cookieName empty string', () => {
-      Cookie.get.mockReturnValue('cyr');
-      getPreferredVariant('serbian', '');
+    it('should get a cookie using check ckps_serbian for serbian', () => {
+      Cookie.get.mockReturnValue('lat');
+      getPreferredVariant('serbian');
       expect(Cookie.get).toBeCalledWith('ckps_serbian');
     });
   });
@@ -90,32 +84,22 @@ describe('UserContext cookies', () => {
       expect(Cookie.set).toHaveBeenCalledWith('ckps_serbian', 'lat');
     });
 
-    it('should set preferred variant with cookie name if provided', () => {
+    it('should set ckps_serbian for serbian', () => {
       Cookie.get.mockReturnValue('111');
-      setPreferredVariantCookie('zhongwen', 'simp', 'chinese');
+      setPreferredVariantCookie('serbian', 'lat');
+      expect(Cookie.set).toHaveBeenCalledWith('ckps_serbian', 'lat');
+    });
+
+    it('should set ckps_chinese for zhongwen', () => {
+      Cookie.get.mockReturnValue('111');
+      setPreferredVariantCookie('zhongwen', 'simp');
       expect(Cookie.set).toHaveBeenCalledWith('ckps_chinese', 'simp');
     });
 
-    it('should set preferred variant with service cookie name if null cookie name', () => {
+    it('should set ckps_chinese for ukchina', () => {
       Cookie.get.mockReturnValue('111');
-      setPreferredVariantCookie('serbian', 'cyr', null);
-      expect(Cookie.set).toHaveBeenCalledWith('ckps_serbian', 'cyr');
-    });
-
-    it('should not set preferred variant if cookies not enabled', () => {
-      Cookie.get.mockReturnValue('000');
-      setPreferredVariantCookie('serbian', 'lat');
-      expect(Cookie.set).not.toHaveBeenCalled();
-    });
-
-    it('should not set preferred variant if personalisation cookies not enabled', () => {
-      Cookie.get.mockReturnValue('100');
-      setPreferredVariantCookie('serbian', 'lat');
-      expect(Cookie.set).not.toHaveBeenCalled();
-
-      Cookie.get.mockReturnValue('110');
-      setPreferredVariantCookie('serbian', 'lat');
-      expect(Cookie.set).not.toHaveBeenCalled();
+      setPreferredVariantCookie('ukchina', 'simp');
+      expect(Cookie.set).toHaveBeenCalledWith('ckps_chinese', 'simp');
     });
   });
 
