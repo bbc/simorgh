@@ -1,4 +1,5 @@
 import Cookie from 'js-cookie';
+import pathOr from 'ramda/src/pathOr';
 import {
   getVariant,
   servicesWithVariants,
@@ -7,6 +8,14 @@ import { articlePath, frontPagePath } from '#app/routes/utils/regex';
 import getVariantRedirectUrl from './index';
 
 const serviceNames = Object.keys(servicesWithVariants);
+
+const variantCookieConfig = {
+  ukchina: 'chinese',
+  zhongwen: 'chinese',
+};
+
+const getVariantCookieName = service =>
+  pathOr(service, [service], variantCookieConfig);
 
 describe('getVariantRedirectUrl', () => {
   afterEach(() => {
@@ -71,7 +80,10 @@ describe('getVariantRedirectUrl', () => {
         const [, secondaryVariant] = variants;
         describe(`visit /${service}`, () => {
           it(`should redirect to /${service}/${secondaryVariant}`, () => {
-            Cookie.set(`ckps_${service}`, secondaryVariant);
+            Cookie.set(
+              `ckps_${getVariantCookieName(service)}`,
+              secondaryVariant,
+            );
             const params = {
               service,
               variant: null,
@@ -99,7 +111,10 @@ describe('getVariantRedirectUrl', () => {
         const defaultVariant = getVariant({ service });
         describe(`visit /${service}/${defaultVariant}`, () => {
           it(`should redirect to /${service}/${secondaryVariant}`, () => {
-            Cookie.set(`ckps_${service}`, secondaryVariant);
+            Cookie.set(
+              `ckps_${getVariantCookieName(service)}`,
+              secondaryVariant,
+            );
             const params = {
               service,
               variant: defaultVariant,
@@ -126,7 +141,10 @@ describe('getVariantRedirectUrl', () => {
         const defaultVariant = getVariant({ service });
         describe(`visit /${service}`, () => {
           it(`should redirect to /${service}/${defaultVariant}`, () => {
-            Cookie.set(`ckps_${service}`, invalidSecondaryVariant);
+            Cookie.set(
+              `ckps_${getVariantCookieName(service)}`,
+              invalidSecondaryVariant,
+            );
             const params = {
               service,
               variant: null,
@@ -214,7 +232,10 @@ describe('getVariantRedirectUrl', () => {
         const [, secondaryVariant] = variants;
         describe(`visit /${service}/${local}/${id}`, () => {
           it(`should redirect to /${service}/${local}/${id}/${secondaryVariant}`, () => {
-            Cookie.set(`ckps_${service}`, secondaryVariant);
+            Cookie.set(
+              `ckps_${getVariantCookieName(service)}`,
+              secondaryVariant,
+            );
             const params = {
               id,
               local,
@@ -246,7 +267,10 @@ describe('getVariantRedirectUrl', () => {
         const defaultVariant = getVariant({ service });
         describe(`visit /${service}/${local}/${id}/${defaultVariant}`, () => {
           it(`should redirect to /${service}/${local}/${id}/${secondaryVariant}`, () => {
-            Cookie.set(`ckps_${service}`, secondaryVariant);
+            Cookie.set(
+              `ckps_${getVariantCookieName(service)}`,
+              secondaryVariant,
+            );
             const params = {
               id,
               local,
@@ -277,7 +301,10 @@ describe('getVariantRedirectUrl', () => {
         const defaultVariant = getVariant({ service });
         describe(`visit /${service}/${local}/${id}`, () => {
           it(`should redirect to /${service}/${local}/${id}/${defaultVariant}`, () => {
-            Cookie.set(`ckps_${service}`, invalidSecondaryVariant);
+            Cookie.set(
+              `ckps_${getVariantCookieName(service)}`,
+              invalidSecondaryVariant,
+            );
             const params = {
               id,
               local,
