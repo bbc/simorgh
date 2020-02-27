@@ -37,11 +37,13 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
         </h2>
       </div>
       <ul
-        class="StoryPromoUl-sc-171lqjd-1 isCYWc"
+        class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+        dir="ltr"
         role="list"
       >
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+          dir="ltr"
           role="listitem"
         >
           <div
@@ -106,7 +108,8 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+          dir="ltr"
           role="listitem"
         >
           <div
@@ -160,7 +163,8 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+          dir="ltr"
           role="listitem"
         >
           <div
@@ -256,11 +260,13 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
         </h2>
       </div>
       <ul
-        class="StoryPromoUl-sc-171lqjd-1 isCYWc"
+        class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+        dir="ltr"
         role="list"
       >
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+          dir="ltr"
           role="listitem"
         >
           <div
@@ -325,7 +331,8 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+          dir="ltr"
           role="listitem"
         >
           <div
@@ -379,7 +386,8 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+          dir="ltr"
           role="listitem"
         >
           <div
