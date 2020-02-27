@@ -6,6 +6,7 @@ import { timestampGenerator, sameDayTimestampsGenerator } from './testHelpers';
 
 describe('shouldDisplayLastUpdatedTimestamp functions', () => {
   let originalDate;
+  const minutesTolerance = 1;
 
   beforeEach(() => {
     originalDate = Date.now;
@@ -21,7 +22,6 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
       const twoMinutesAgo = timestampGenerator({ minutes: 2 });
       const msDifference = currentTime - twoMinutesAgo;
       const timeDifferenceMinutes = msDifference / 1000 / 60;
-      const minutesTolerance = 1;
 
       expect(
         hasBeenUpdated({ timeDifferenceMinutes, minutesTolerance }),
@@ -33,7 +33,6 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
       const fortyEightSecondsAgo = timestampGenerator({ minutes: 0.8 });
       const msDifference = currentTime - fortyEightSecondsAgo;
       const timeDifferenceMinutes = msDifference / 1000 / 60;
-      const minutesTolerance = 1;
 
       expect(
         hasBeenUpdated({ timeDifferenceMinutes, minutesTolerance }),
@@ -74,7 +73,6 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
       const [midnightToday, oneAmToday] = sameDayTimestampsGenerator({
         intervals: [{ hours: 1 }],
       });
-      const minutesTolerance = 1;
       const shouldLastUpdatedTimestampBeDisplayed = shouldDisplayLastUpdatedTimestamp(
         {
           minutesTolerance,
@@ -89,7 +87,6 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
     it('should return true when article was lastUpdated within relative time period', () => {
       const nineHoursAgo = timestampGenerator({ hours: 9 });
       const currentTime = originalDate();
-      const minutesTolerance = 1;
       const shouldLastUpdatedTimestampBeDisplayed = shouldDisplayLastUpdatedTimestamp(
         {
           minutesTolerance,
@@ -104,7 +101,6 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
     it('should return false when article was firstPublished and lastPublished on the same day, and lastPublished is outside of the relative window', () => {
       const twentySixHoursAgo = timestampGenerator({ days: 1, hours: 2 });
       const twentyFiveHoursAgo = timestampGenerator({ days: 1, hours: 1 });
-      const minutesTolerance = 1;
       const shouldLastUpdatedTimestampBeDisplayed = shouldDisplayLastUpdatedTimestamp(
         {
           minutesTolerance,
@@ -119,7 +115,7 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
     it('should return true when firstUpdated and lastUpdated are on different days', () => {
       const twoDaysAgo = timestampGenerator({ days: 2 });
       const oneDayAgo = timestampGenerator({ days: 1 });
-      const minutesTolerance = 1;
+
       const shouldLastUpdatedTimestampBeDisplayed = shouldDisplayLastUpdatedTimestamp(
         {
           minutesTolerance,
