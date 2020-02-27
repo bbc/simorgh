@@ -34,25 +34,6 @@ describe(`BrandContainer`, () => {
     BrandContainerWithContext(newsServiceContextStub),
   );
 
-  shouldMatchSnapshot(
-    'should render correctly with skip link',
-    BrandContainerWithContext(newsServiceContextStub, mockSkipLink),
-  );
-
-  shouldMatchSnapshot(
-    'should render correctly with script link',
-    BrandContainerWithContext(newsServiceContextStub, null, mockScriptLink),
-  );
-
-  shouldMatchSnapshot(
-    'should render correctly with script link and skip link',
-    BrandContainerWithContext(
-      newsServiceContextStub,
-      mockSkipLink,
-      mockScriptLink,
-    ),
-  );
-
   describe('Assertions', () => {
     it('should render skip to content link if provided', () => {
       const { getByTestId } = render(
