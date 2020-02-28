@@ -288,7 +288,10 @@ const genServices = {
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
-          live: null,
+          live: [
+            '/azeri/international-51331762', // CPS MAP
+            '/azeri/multimedia/2012/09/120919_georgia_prison_video', // TC2 MAP
+          ],
           test: [
             '/azeri/azerbaijan-23257464', // CPS MAP
             '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP
@@ -515,7 +518,10 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
+          live: [
+            '/gahuza/48549182', // CPS MAP
+            '/gahuza/video/2015/12/151201_100womenburundi', // TC2 MAP
+          ],
           test: [
             '/gahuza/amakuru-23257470', // CPS MAP
             '/gahuza/video/2015/12/151217_test_long', // TC2 MAP
@@ -1012,7 +1018,10 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
+          live: [
+            '/kyrgyz/magazine-51509456', // CPS MAP
+            '/kyrgyz/multimedia/2014/09/140903_iv_auturgan', // TC2 MAP
+          ],
           test: [
             '/kyrgyz/kyrgyzstan-23095373', // CPS MAP
             '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP
@@ -1397,7 +1406,10 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
+          live: [
+            '/persian/world-51497110', // CPS MAP
+            '/persian/world/2016/06/160613_om_naked_dining', // TC2 MAP
+          ],
           test: [
             '/persian/iran-23231114', // CPS MAP with audio clip
             '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
@@ -1837,7 +1849,10 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
+          live: [
+            '/sinhala/sri-lanka-51375061', // CPS MAP
+            '/sinhala/world/2015/09/150919_technology_at_schools', // TC2 MAP
+          ],
           test: [
             '/sinhala/world-23257567', // CPS MAP
             '/sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292', // TC2 MAP
@@ -2639,7 +2654,10 @@ const genServices = {
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
-          live: null,
+          live: [
+            '/vietnamese/forum-51506476', // CPS MAP
+            '/vietnamese/multimedia/2015/04/150428_david_wheat_interview', // TC2 MAP
+          ],
           test: [
             '/vietnamese/media-23257614', // CPS MAP
             '/vietnamese/sport/2016/09/160922_tc2_testmap2', // TC2 MAP

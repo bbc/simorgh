@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import RadioPage from '.';
+import { RadioPage } from '..';
 import indonesia from '#data/indonesia/bbc_indonesian_radio/liveradio.json';
 import korean from '#data/korean/bbc_korean_radio/liveradio.json';
 import tigrinya from '#data/tigrinya/bbc_tigrinya_radio/liveradio.json';
