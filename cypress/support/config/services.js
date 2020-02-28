@@ -294,7 +294,7 @@ const genServices = {
             '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP
           ],
           local: [
-            '/azeri/region-49364777', // CPS MAP
+            '/azeri/azerbaijan-23257464', // CPS MAP
             '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP
           ],
         },
