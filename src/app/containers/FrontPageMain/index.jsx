@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
-import pipe from 'ramda/src/pipe';
 import { string } from 'prop-types';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from 'styled-components';
@@ -20,53 +20,44 @@ import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
-import FrontPageSection from '#containers/FrontPageSection';
-import MetadataContainer from '#containers/Metadata';
-import MostReadContainer from '#containers/MostRead';
-import LinkedData from '#containers/LinkedData';
-import ATIAnalytics from '#containers/ATIAnalytics';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-
-// Page Handlers
-import withVariant from '#containers/PageHandlers/withVariant';
-import withContexts from '#containers/PageHandlers/withContexts';
-import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
-import withLoading from '#containers/PageHandlers/withLoading';
-import withError from '#containers/PageHandlers/withError';
-import withData from '#containers/PageHandlers/withData';
+import FrontPageSection from '../FrontPageSection';
+import MetadataContainer from '../Metadata';
+import MostReadContainer from '../MostRead';
+import LinkedData from '../LinkedData';
+import ATIAnalytics from '../ATIAnalytics';
+import ChartbeatAnalytics from '../ChartbeatAnalytics';
 
 export const StyledFrontPageDiv = styled.div`
   /* To add GEL Margins */
   margin: 0 ${GEL_MARGIN_BELOW_400PX};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX};
   }
+  margin: 0 ${GEL_MARGIN_ABOVE_400PX};
 
   /* To add extra spacing */
   padding-top: ${GEL_SPACING};
-  padding-bottom: ${GEL_SPACING_QUAD};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding-top: ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding-top: 0;
   }
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     padding-bottom: ${GEL_SPACING_TRPL};
   }
 
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding-top: 0;
-  }
+  padding-bottom: ${GEL_SPACING_QUAD};
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding-bottom: ${GEL_SPACING_QUIN};
   }
 `;
 
-const FrontPageContainer = ({ pageData, mostReadEndpointOverride }) => {
+const FrontPageMain = ({ frontPageData, mostReadEndpointOverride }) => {
   const {
     product,
     serviceLocalizedName,
@@ -74,10 +65,10 @@ const FrontPageContainer = ({ pageData, mostReadEndpointOverride }) => {
     frontPageTitle,
   } = useContext(ServiceContext);
   const home = path(['home'], translations);
-  const groups = path(['content', 'groups'], pageData);
-  const lang = path(['metadata', 'language'], pageData);
-  const description = path(['metadata', 'summary'], pageData);
-  const seoTitle = path(['promo', 'name'], pageData);
+  const groups = path(['content', 'groups'], frontPageData);
+  const lang = path(['metadata', 'language'], frontPageData);
+  const description = path(['metadata', 'summary'], frontPageData);
+  const seoTitle = path(['promo', 'name'], frontPageData);
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
@@ -92,8 +83,8 @@ const FrontPageContainer = ({ pageData, mostReadEndpointOverride }) => {
 
   return (
     <>
-      <ATIAnalytics data={pageData} />
-      <ChartbeatAnalytics data={pageData} />
+      <ATIAnalytics data={frontPageData} />
+      <ChartbeatAnalytics data={frontPageData} />
       <MetadataContainer
         title={frontPageTitle}
         lang={lang}
@@ -104,7 +95,7 @@ const FrontPageContainer = ({ pageData, mostReadEndpointOverride }) => {
       <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
         {offScreenText}
       </VisuallyHiddenText>
-      <StyledFrontPageDiv>
+      <StyledFrontPageDiv role="main">
         {groups.map((group, index) => (
           <Fragment key={group.title}>
             {group.type === 'useful-links' && (
@@ -127,22 +118,13 @@ const FrontPageContainer = ({ pageData, mostReadEndpointOverride }) => {
   );
 };
 
-FrontPageContainer.propTypes = {
-  pageData: frontPageDataPropTypes.isRequired,
+FrontPageMain.propTypes = {
+  frontPageData: frontPageDataPropTypes.isRequired,
   mostReadEndpointOverride: string,
 };
 
-FrontPageContainer.defaultProps = {
+FrontPageMain.defaultProps = {
   mostReadEndpointOverride: null,
 };
 
-const EnhancedFrontPageContainer = pipe(
-  withData,
-  withError,
-  withLoading,
-  withPageWrapper,
-  withContexts,
-  withVariant,
-)(FrontPageContainer);
-
-export default EnhancedFrontPageContainer;
+export default FrontPageMain;
