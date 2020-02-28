@@ -48,7 +48,7 @@ export const getCpsAssetRegex = services => {
 
 export const getLegacyAssetRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:assetUri(${legacyAssetUriRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/:assetUri(${legacyAssetUriRegex})?:amp(${ampRegex})?`;
 };
 
 export const getRadioAndTVRegex = services => {

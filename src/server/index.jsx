@@ -50,11 +50,26 @@ class LoggerStream {
   }
 }
 
-const constructDataFilePath = ({ pageType, service, id, variant = '' }) => {
-  const pageTypes = ['frontpage', 'mostRead'];
-  const dataPath = pageTypes.includes(pageType)
-    ? `${variant || 'index'}.json`
-    : `${id}${variant}.json`;
+const constructDataFilePath = ({
+  pageType,
+  service,
+  id,
+  variant = '',
+  assetUri,
+}) => {
+  let dataPath;
+
+  switch (pageType) {
+    case 'frontpage':
+    case 'mostRead':
+      dataPath = `${variant || 'index'}.json`;
+      break;
+    case 'legacyAssets':
+      dataPath = `${variant}/${assetUri}.json`;
+      break;
+    default:
+      dataPath = `${id}${variant}.json`;
+  }
 
   return path.join(process.cwd(), 'data', service, pageType, dataPath);
 };
@@ -177,15 +192,14 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
       sendDataFile(res, dataFilePath, next);
     })
     .get(legacyAssetPageDataPath, async ({ params }, res, next) => {
-      const { service, assetUri: id, variant } = params;
+      const { service, assetUri, variant } = params;
 
       const dataFilePath = constructDataFilePath({
         pageType: 'legacyAssets',
         service,
-        id,
+        assetUri,
         variant,
       });
-
       sendDataFile(res, dataFilePath, next);
     })
     .get('/ckns_policy/*', (req, res) => {
