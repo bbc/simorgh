@@ -54,90 +54,97 @@ const runTestsForPage = ({
     .forEach(service => {
       const { path } = config[service].pageTypes[pageType];
       const envPaths = path && path[getAppEnv()];
-      const paths = Array.isArray(envPaths) ? envPaths : [envPaths];
 
-      paths.forEach(currentPath => {
-        describe(`${pageType} - ${service} -${
-          paths.length > 1 ? ` ${currentPath} -` : ''
-        } Canonical`, () => {
-          before(() => {
-            Cypress.env('currentPath', currentPath);
-            visitPage(currentPath, pageType);
+      if (envPaths) {
+        const paths = Array.isArray(envPaths) ? envPaths : [envPaths];
+
+        paths.forEach(currentPath => {
+          describe(`${pageType} - ${service} -${
+            paths.length > 1 ? ` ${currentPath} -` : ''
+          } Canonical`, () => {
+            before(() => {
+              Cypress.env('currentPath', currentPath);
+              visitPage(currentPath, pageType);
+            });
+
+            const testArgs = {
+              service,
+              pageType,
+              variant: config[service].variant,
+            };
+
+            // Enables overriding of the smoke test values in the config/services.js file
+            testsThatAlwaysRunForAllPages(testArgs);
+            testsThatAlwaysRunForAllCanonicalPages(testArgs);
+            // Page specific tests
+            testsThatAlwaysRunForCanonicalOnly(testArgs);
+            testsThatAlwaysRun(testArgs);
+
+            // This runs most tests but only on Service:PageType combinations with smoke enabled
+            if (shouldSmokeTest(pageType, service)) {
+              testsThatFollowSmokeTestConfigforAllPages(testArgs);
+              testsThatFollowSmokeTestConfigForAllCanonicalPages(testArgs);
+              // Page specific tests
+              testsThatFollowSmokeTestConfig(testArgs);
+              testsThatFollowSmokeTestConfigForCanonicalOnly(testArgs);
+            }
+
+            // This is for low priority and long running tests and ensures they're only run when not smoke testing.
+            if (!Cypress.env('SMOKE')) {
+              testsThatNeverRunDuringSmokeTestingForAllPageTypes(testArgs);
+              testsThatNeverRunDuringSmokeTestingForAllCanonicalPages(testArgs);
+              // Page specific tests
+              testsThatNeverRunDuringSmokeTestingForCanonicalOnly(testArgs);
+              testsThatNeverRunDuringSmokeTesting(testArgs);
+            }
           });
 
-          const testArgs = {
-            service,
-            pageType,
-            variant: config[service].variant,
-          };
+          // Switch to AMP page URL (NB all our pages have AMP variants)
+          describe(`${pageType} - ${service} -${
+            paths.length > 1 ? ` ${currentPath} -` : ''
+          } Amp`, () => {
+            before(() => {
+              Cypress.env('currentPath', currentPath);
+              visitPage(`${currentPath}.amp`, pageType);
+            });
 
-          // Enables overriding of the smoke test values in the config/services.js file
-          testsThatAlwaysRunForAllPages(testArgs);
-          testsThatAlwaysRunForAllCanonicalPages(testArgs);
-          // Page specific tests
-          testsThatAlwaysRunForCanonicalOnly(testArgs);
-          testsThatAlwaysRun(testArgs);
+            const testArgs = {
+              service,
+              pageType,
+              variant: config[service].variant,
+            };
 
-          // This runs most tests but only on Service:PageType combinations with smoke enabled
-          if (shouldSmokeTest(pageType, service)) {
-            testsThatFollowSmokeTestConfigforAllPages(testArgs);
-            testsThatFollowSmokeTestConfigForAllCanonicalPages(testArgs);
+            // Enables overriding of the smoke test values in the config/services.js file
+            testsThatAlwaysRunForAllPages(testArgs);
+            testsThatAlwaysRunForAllAMPPages(testArgs);
             // Page specific tests
-            testsThatFollowSmokeTestConfig(testArgs);
-            testsThatFollowSmokeTestConfigForCanonicalOnly(testArgs);
-          }
+            testsThatAlwaysRunForAMPOnly(testArgs);
+            testsThatAlwaysRun(testArgs);
 
-          // This is for low priority and long running tests and ensures they're only run when not smoke testing.
-          if (!Cypress.env('SMOKE')) {
-            testsThatNeverRunDuringSmokeTestingForAllPageTypes(testArgs);
-            testsThatNeverRunDuringSmokeTestingForAllCanonicalPages(testArgs);
-            // Page specific tests
-            testsThatNeverRunDuringSmokeTestingForCanonicalOnly(testArgs);
-            testsThatNeverRunDuringSmokeTesting(testArgs);
-          }
-        });
+            // This runs most tests but only on Service:PageType combinations with smoke enabled
+            if (shouldSmokeTest(pageType, service)) {
+              testsThatFollowSmokeTestConfigforAllPages(testArgs);
+              testsThatFollowSmokeTestConfigForAllAMPPages(testArgs);
+              // Page specific tests
+              testsThatFollowSmokeTestConfig(testArgs);
+              testsThatFollowSmokeTestConfigForAMPOnly(testArgs);
+            }
 
-        // Switch to AMP page URL (NB all our pages have AMP variants)
-        describe(`${pageType} - ${service} -${
-          paths.length > 1 ? ` ${currentPath} -` : ''
-        } Amp`, () => {
-          before(() => {
-            Cypress.env('currentPath', currentPath);
-            visitPage(`${currentPath}.amp`, pageType);
+            // This is for low priority and long running tests and ensures they're only run when not smoke testing.
+            if (!Cypress.env('SMOKE')) {
+              testsThatNeverRunDuringSmokeTestingForAllPageTypes(testArgs);
+              testsThatNeverRunDuringSmokeTestingForAllAMPPages(testArgs);
+              // Page specific tests
+              testsThatNeverRunDuringSmokeTestingForAMPOnly(testArgs);
+              testsThatNeverRunDuringSmokeTesting(testArgs);
+            }
           });
-
-          const testArgs = {
-            service,
-            pageType,
-            variant: config[service].variant,
-          };
-
-          // Enables overriding of the smoke test values in the config/services.js file
-          testsThatAlwaysRunForAllPages(testArgs);
-          testsThatAlwaysRunForAllAMPPages(testArgs);
-          // Page specific tests
-          testsThatAlwaysRunForAMPOnly(testArgs);
-          testsThatAlwaysRun(testArgs);
-
-          // This runs most tests but only on Service:PageType combinations with smoke enabled
-          if (shouldSmokeTest(pageType, service)) {
-            testsThatFollowSmokeTestConfigforAllPages(testArgs);
-            testsThatFollowSmokeTestConfigForAllAMPPages(testArgs);
-            // Page specific tests
-            testsThatFollowSmokeTestConfig(testArgs);
-            testsThatFollowSmokeTestConfigForAMPOnly(testArgs);
-          }
-
-          // This is for low priority and long running tests and ensures they're only run when not smoke testing.
-          if (!Cypress.env('SMOKE')) {
-            testsThatNeverRunDuringSmokeTestingForAllPageTypes(testArgs);
-            testsThatNeverRunDuringSmokeTestingForAllAMPPages(testArgs);
-            // Page specific tests
-            testsThatNeverRunDuringSmokeTestingForAMPOnly(testArgs);
-            testsThatNeverRunDuringSmokeTesting(testArgs);
-          }
         });
-      });
+      } else {
+        describe(`No path defined for ${service} ${pageType} for ${Cypress.env(
+          'APP_ENV',
+        )} environment`, () => {});
+      }
     });
 };
 
