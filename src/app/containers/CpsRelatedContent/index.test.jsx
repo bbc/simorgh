@@ -27,7 +27,7 @@ const renderRelatedContent = ({
         service="pidgin"
         statusCode={200}
       >
-        <CpsRelatedContent content={content} />
+        <CpsRelatedContent content={content} enableGridWrapper />
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
