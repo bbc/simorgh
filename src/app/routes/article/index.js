@@ -1,11 +1,11 @@
-import Article from '#pages/Article';
+import { ArticlePage } from '#pages';
 import getInitialData from './getInitialData';
 import { articlePath } from '../utils/regex';
 
 export default {
   path: articlePath,
   exact: true,
-  component: Article,
+  component: ArticlePage,
   getInitialData,
   pageType: 'article',
 };
