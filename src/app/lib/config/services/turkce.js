@@ -167,7 +167,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/turkce/kurumsal-50221017',
         text: "Neden BBC'ye güvenebilirsiniz",
       },
       externalLink: {
