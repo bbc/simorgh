@@ -2,7 +2,19 @@
 
 exports[`Photo Gallery Page should not show the pop-out timestamp when allowDateStamp is false 1`] = `
 <DocumentFragment>
-  .c3 {
+  .c12 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c3 {
   grid-column: 1 / span 6;
 }
 
@@ -47,18 +59,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
-}
-
-.c12 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
 }
 
 .c11 {
@@ -1414,7 +1414,19 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
     </script>
   </head>
   <body>
-    .c3 {
+    .c14 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c3 {
   grid-column: 1 / span 6;
 }
 
@@ -1474,18 +1486,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
-}
-
-.c14 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
 }
 
 .c13 {
@@ -2900,6 +2900,18 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   height: 0.8125rem;
 }
 
+.c14 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 .c15 {
   margin: 0 auto;
   background: #FDFDFD;
@@ -2971,18 +2983,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
-}
-
-.c14 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
 }
 
 .c13 {
@@ -4576,6 +4576,18 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 `;
 
 exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onward journeys 1`] = `
+.c13 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 .c3 {
   grid-column: 1 / span 6;
 }
@@ -4631,18 +4643,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
-}
-
-.c13 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
 }
 
 .c12 {
@@ -5911,7 +5911,19 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
     </script>
   </head>
   <body>
-    .c34 {
+    .c13 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c34 {
   margin: 0 auto;
   background: #FDFDFD;
   padding-bottom: 2rem;
@@ -5987,18 +5999,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
-}
-
-.c13 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
 }
 
 .c12 {
