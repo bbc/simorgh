@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string, bool } from 'prop-types';
+import { bool, string } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '../Toggle/useToggle';
@@ -10,7 +10,11 @@ const getMostReadEndpoint = ({ service, variant }) =>
     ? `/${service}/mostread/${variant}.json`
     : `/${service}/mostread.json`;
 
-const MostReadContainer = ({ mostReadEndpointOverride, maxTwoColumns }) => {
+const MostReadContainer = ({
+  mostReadEndpointOverride,
+  maxTwoColumns,
+  constrainMaxWidth,
+}) => {
   const { variant, isAmp } = useContext(RequestContext);
   const {
     service,
@@ -28,16 +32,24 @@ const MostReadContainer = ({ mostReadEndpointOverride, maxTwoColumns }) => {
   const endpoint =
     mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
 
-  return <Canonical endpoint={endpoint} maxTwoColumns={maxTwoColumns} />;
+  return (
+    <Canonical
+      endpoint={endpoint}
+      constrainMaxWidth={constrainMaxWidth}
+      maxTwoColumns={maxTwoColumns}
+    />
+  );
 };
 
 MostReadContainer.propTypes = {
   mostReadEndpointOverride: string,
+  constrainMaxWidth: bool,
   maxTwoColumns: bool,
 };
 
 MostReadContainer.defaultProps = {
   mostReadEndpointOverride: null,
+  constrainMaxWidth: false,
   maxTwoColumns: false,
 };
 

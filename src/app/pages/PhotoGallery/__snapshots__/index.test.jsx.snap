@@ -4353,194 +4353,198 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     class="c16"
                   >
                     <div
-                      class="c17 c18"
+                      class="c16"
                     >
                       <div
-                        class="c19"
-                      />
-                      <h2
-                        class="c20"
+                        class="c17 c18"
                       >
                         <div
-                          class="c21"
+                          class="c19"
+                        />
+                        <h2
+                          class="c20"
                         >
-                          <span
-                            class="c22"
+                          <div
+                            class="c21"
                           >
                             <span
-                              class="c23"
-                              dir="ltr"
-                              id="related-content-heading"
+                              class="c22"
                             >
-                              Another thing we de for inside dis tori
+                              <span
+                                class="c23"
+                                dir="ltr"
+                                id="related-content-heading"
+                              >
+                                Another thing we de for inside dis tori
+                              </span>
                             </span>
-                          </span>
-                        </div>
-                      </h2>
-                    </div>
-                    <ul
-                      class="c24 c25"
-                      dir="ltr"
-                      role="list"
-                    >
-                      <li
-                        class="c26 c27"
+                          </div>
+                        </h2>
+                      </div>
+                      <ul
+                        class="c24 c25"
                         dir="ltr"
-                        role="listitem"
+                        role="list"
                       >
-                        <div
-                          class="c28"
+                        <li
+                          class="c26 c27"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c29"
-                            dir="ltr"
+                            class="c28"
                           >
                             <div
-                              class="c30"
+                              class="c29"
+                              dir="ltr"
                             >
                               <div
-                                class="c11"
+                                class="c30"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="c31"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="c32"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c33"
-                            >
-                              <a
-                                class="c34"
-                                href="/pidgin/media-45132087?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                <span
-                                  role="text"
-                                >
-                                  <span
-                                    class="c14"
-                                  >
-                                    , 
-                                  </span>
-                                  <span>
-                                    Bole na correct Port Harcourt food.
-                                  </span>
-                                </span>
-                              </a>
-                            </h3>
-                            <p
-                              class="c35"
-                            >
-                              Bole festival showcase di different types of bole dem.
-                            </p>
-                            <time
-                              class="c36"
-                              datetime="2018-08-09"
-                            >
-                              9th August 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c26 c27"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="c28"
-                        >
-                          <div
-                            class="c29"
-                            dir="ltr"
-                          >
-                            <div
-                              class="c30"
-                            >
-                              <div
-                                class="c11"
-                              />
-                              <div
-                                class="c31"
-                              >
-                                <div
-                                  aria-hidden="true"
-                                  class="c37"
-                                  dir="ltr"
+                                  class="c11"
                                 >
                                   <div
-                                    class="c38"
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c31"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="c32"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c33"
+                              >
+                                <a
+                                  class="c34"
+                                  href="/pidgin/media-45132087?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  <span
+                                    role="text"
                                   >
-                                    <svg
-                                      aria-hidden="true"
-                                      class="c39"
-                                      focusable="false"
-                                      height="13px"
-                                      viewBox="0 0 32 26"
-                                      width="16px"
+                                    <span
+                                      class="c14"
                                     >
-                                      <path
-                                        d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
-                                      />
-                                      <circle
-                                        cx="20"
-                                        cy="14.02"
-                                        r="5.5"
-                                      />
-                                    </svg>
+                                      , 
+                                    </span>
+                                    <span>
+                                      Bole na correct Port Harcourt food.
+                                    </span>
+                                  </span>
+                                </a>
+                              </h3>
+                              <p
+                                class="c35"
+                              >
+                                Bole festival showcase di different types of bole dem.
+                              </p>
+                              <time
+                                class="c36"
+                                datetime="2018-08-09"
+                              >
+                                9th August 2018
+                              </time>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="c26 c27"
+                          dir="ltr"
+                          role="listitem"
+                        >
+                          <div
+                            class="c28"
+                          >
+                            <div
+                              class="c29"
+                              dir="ltr"
+                            >
+                              <div
+                                class="c30"
+                              >
+                                <div
+                                  class="c11"
+                                />
+                                <div
+                                  class="c31"
+                                >
+                                  <div
+                                    aria-hidden="true"
+                                    class="c37"
+                                    dir="ltr"
+                                  >
+                                    <div
+                                      class="c38"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class="c39"
+                                        focusable="false"
+                                        height="13px"
+                                        viewBox="0 0 32 26"
+                                        width="16px"
+                                      >
+                                        <path
+                                          d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
+                                        />
+                                        <circle
+                                          cx="20"
+                                          cy="14.02"
+                                          r="5.5"
+                                        />
+                                      </svg>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                          <div
-                            class="c32"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c33"
+                            <div
+                              class="c32"
+                              dir="ltr"
                             >
-                              <a
-                                class="c34"
-                                href="/pidgin/tori-45242255?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                              <h3
+                                class="c33"
                               >
-                                <span
-                                  role="text"
+                                <a
+                                  class="c34"
+                                  href="/pidgin/tori-45242255?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                                 >
                                   <span
-                                    class="c14"
+                                    role="text"
                                   >
-                                    Image gallery
-                                    , 
+                                    <span
+                                      class="c14"
+                                    >
+                                      Image gallery
+                                      , 
+                                    </span>
+                                    <span>
+                                      Jollof Festival: West Africa no wan kwanta again unto which pesin jollof sweet pass
+                                    </span>
                                   </span>
-                                  <span>
-                                    Jollof Festival: West Africa no wan kwanta again unto which pesin jollof sweet pass
-                                  </span>
-                                </span>
-                              </a>
-                            </h3>
-                            <p
-                              class="c35"
-                            >
-                              Jollof Festival happun for Lagos Nigeria on Sunday and na time for pipo wey show to sample West Africa fine food dem.
-                            </p>
-                            <time
-                              class="c36"
-                              datetime="2018-08-19"
-                            >
-                              19th August 2018
-                            </time>
+                                </a>
+                              </h3>
+                              <p
+                                class="c35"
+                              >
+                                Jollof Festival happun for Lagos Nigeria on Sunday and na time for pipo wey show to sample West Africa fine food dem.
+                              </p>
+                              <time
+                                class="c36"
+                                datetime="2018-08-19"
+                              >
+                                19th August 2018
+                              </time>
+                            </div>
                           </div>
-                        </div>
-                      </li>
-                    </ul>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </section>
               </div>
@@ -8275,543 +8279,547 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     class="c35"
                   >
                     <div
-                      class="c36 c37"
+                      class="c35"
                     >
                       <div
-                        class="c38"
-                      />
-                      <h2
-                        class="c39"
+                        class="c36 c37"
                       >
                         <div
-                          class="c40"
+                          class="c38"
+                        />
+                        <h2
+                          class="c39"
                         >
-                          <span
-                            class="c41"
+                          <div
+                            class="c40"
                           >
                             <span
-                              class="c42"
-                              dir="ltr"
-                              id="related-content-heading"
+                              class="c41"
                             >
-                              Bu barədə daha geniş
+                              <span
+                                class="c42"
+                                dir="ltr"
+                                id="related-content-heading"
+                              >
+                                Bu barədə daha geniş
+                              </span>
                             </span>
-                          </span>
-                        </div>
-                      </h2>
-                    </div>
-                    <ul
-                      class="c43 c44"
-                      dir="ltr"
-                      role="list"
-                    >
-                      <li
-                        class="c45 c46"
+                          </div>
+                        </h2>
+                      </div>
+                      <ul
+                        class="c43 c44"
                         dir="ltr"
-                        role="listitem"
+                        role="list"
                       >
-                        <div
-                          class="c47"
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c48"
-                            dir="ltr"
+                            class="c47"
                           >
                             <div
-                              class="c49"
+                              class="c48"
+                              dir="ltr"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
-                                  class="lazyload-placeholder"
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
                                 />
                               </div>
-                              <div
-                                class="c51"
-                              />
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-44124647?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edir.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2018-05-17"
+                              >
+                                17 May 2018
+                              </time>
                             </div>
                           </div>
-                          <div
-                            class="c52"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c53"
-                            >
-                              <a
-                                class="c54"
-                                href="/azeri/azerbaijan-44124647?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
-                              </a>
-                            </h3>
-                            <p
-                              class="c55"
-                            >
-                              Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edir.
-                            </p>
-                            <time
-                              class="c56"
-                              datetime="2018-05-17"
-                            >
-                              17 May 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c45 c46"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="c47"
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c48"
-                            dir="ltr"
+                            class="c47"
                           >
                             <div
-                              class="c49"
+                              class="c48"
+                              dir="ltr"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
-                                  class="lazyload-placeholder"
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
                                 />
                               </div>
-                              <div
-                                class="c51"
-                              />
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-43540056?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                ADR-100 layihəmizdə növbəti yazı: 1918-ci il martın 3-də Bolşeviklər Almaniya, Bolqarıstan, Avstriya-Macarıstan və Osmanlı nümayəndələri ilə Brest-Litovsk Sülh Sazişi imzalayır. İmzalanma Bakının azadlığı ilə nəticələnən bir sıra hadisələrə səbəb olur.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2018-03-27"
+                              >
+                                27 Mart 2018
+                              </time>
                             </div>
                           </div>
-                          <div
-                            class="c52"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c53"
-                            >
-                              <a
-                                class="c54"
-                                href="/azeri/azerbaijan-43540056?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
-                              </a>
-                            </h3>
-                            <p
-                              class="c55"
-                            >
-                              ADR-100 layihəmizdə növbəti yazı: 1918-ci il martın 3-də Bolşeviklər Almaniya, Bolqarıstan, Avstriya-Macarıstan və Osmanlı nümayəndələri ilə Brest-Litovsk Sülh Sazişi imzalayır. İmzalanma Bakının azadlığı ilə nəticələnən bir sıra hadisələrə səbəb olur.
-                            </p>
-                            <time
-                              class="c56"
-                              datetime="2018-03-27"
-                            >
-                              27 Mart 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c45 c46"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="c47"
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c48"
-                            dir="ltr"
+                            class="c47"
                           >
                             <div
-                              class="c49"
+                              class="c48"
+                              dir="ltr"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
-                                  class="lazyload-placeholder"
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
                                 />
                               </div>
-                              <div
-                                class="c51"
-                              />
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-44022776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                #ADR100 layihəmizdə: 1918-1920-ci illərdə Gürcüstanla Azərbaycan arasında əməkdaşlıq yeni respublikalar üçün olduqca mühüm idi. Eyni zamanda Bakı ilə Tbilisi arasında gərginlik yaradan məsələlər mövcud idi. Belə məsələlərdən biri də ərazi mübahisələri idi.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2018-05-10"
+                              >
+                                10 May 2018
+                              </time>
                             </div>
                           </div>
-                          <div
-                            class="c52"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c53"
-                            >
-                              <a
-                                class="c54"
-                                href="/azeri/azerbaijan-44022776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
-                              </a>
-                            </h3>
-                            <p
-                              class="c55"
-                            >
-                              #ADR100 layihəmizdə: 1918-1920-ci illərdə Gürcüstanla Azərbaycan arasında əməkdaşlıq yeni respublikalar üçün olduqca mühüm idi. Eyni zamanda Bakı ilə Tbilisi arasında gərginlik yaradan məsələlər mövcud idi. Belə məsələlərdən biri də ərazi mübahisələri idi.
-                            </p>
-                            <time
-                              class="c56"
-                              datetime="2018-05-10"
-                            >
-                              10 May 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c45 c46"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="c47"
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c48"
-                            dir="ltr"
+                            class="c47"
                           >
                             <div
-                              class="c49"
+                              class="c48"
+                              dir="ltr"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
-                                  class="lazyload-placeholder"
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
                                 />
                               </div>
-                              <div
-                                class="c51"
-                              />
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-43713137?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                1918-ci il mayın 28-də Azərbaycanın istiqlaliyyəti elan olunanda bu hadisədən bir gün əvvəl dağılmış Zaqafqaziya Seyminin 44 nəfər müsəlman nümayəndəsi Tiflisdə toplanır və özlərini Azərbaycanın Milli Şurası elan edirlər.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2018-04-10"
+                              >
+                                10 Aprel 2018
+                              </time>
                             </div>
                           </div>
-                          <div
-                            class="c52"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c53"
-                            >
-                              <a
-                                class="c54"
-                                href="/azeri/azerbaijan-43713137?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
-                              </a>
-                            </h3>
-                            <p
-                              class="c55"
-                            >
-                              1918-ci il mayın 28-də Azərbaycanın istiqlaliyyəti elan olunanda bu hadisədən bir gün əvvəl dağılmış Zaqafqaziya Seyminin 44 nəfər müsəlman nümayəndəsi Tiflisdə toplanır və özlərini Azərbaycanın Milli Şurası elan edirlər.
-                            </p>
-                            <time
-                              class="c56"
-                              datetime="2018-04-10"
-                            >
-                              10 Aprel 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c45 c46"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="c47"
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c48"
-                            dir="ltr"
+                            class="c47"
                           >
                             <div
-                              class="c49"
+                              class="c48"
+                              dir="ltr"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
-                                  class="lazyload-placeholder"
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
                                 />
                               </div>
-                              <div
-                                class="c51"
-                              />
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-37688691?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  1918-1991: Bir müstəqilliyin iki bəyanı
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                25 il əvvəl bu gün Azərbaycan çökməkdə olan Sovet İttifaqından özünün müstəqillyini bəyan edib. Bu, Azərbaycan Respublikasının ikinci doğuluşu idi.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2016-10-18"
+                              >
+                                18 Oktyabr 2016
+                              </time>
                             </div>
                           </div>
-                          <div
-                            class="c52"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c53"
-                            >
-                              <a
-                                class="c54"
-                                href="/azeri/azerbaijan-37688691?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                1918-1991: Bir müstəqilliyin iki bəyanı
-                              </a>
-                            </h3>
-                            <p
-                              class="c55"
-                            >
-                              25 il əvvəl bu gün Azərbaycan çökməkdə olan Sovet İttifaqından özünün müstəqillyini bəyan edib. Bu, Azərbaycan Respublikasının ikinci doğuluşu idi.
-                            </p>
-                            <time
-                              class="c56"
-                              datetime="2016-10-18"
-                            >
-                              18 Oktyabr 2016
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c45 c46"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="c47"
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c48"
-                            dir="ltr"
+                            class="c47"
                           >
                             <div
-                              class="c49"
+                              class="c48"
+                              dir="ltr"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
-                                  class="lazyload-placeholder"
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
                                 />
                               </div>
-                              <div
-                                class="c51"
-                              />
                             </div>
-                          </div>
-                          <div
-                            class="c52"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c53"
+                            <div
+                              class="c52"
+                              dir="ltr"
                             >
-                              <a
-                                class="c54"
-                                href="/azeri/azerbaijan-37691096?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                              <h3
+                                class="c53"
                               >
-                                <span
-                                  role="text"
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-37691096?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                                 >
                                   <span
-                                    class="c13"
+                                    role="text"
                                   >
-                                    , 
+                                    <span
+                                      class="c13"
+                                    >
+                                      , 
+                                    </span>
+                                    <span>
+                                      Bakı sakinləri müstəqillik barədə danışır
+                                    </span>
                                   </span>
-                                  <span>
-                                    Bakı sakinləri müstəqillik barədə danışır
-                                  </span>
-                                </span>
-                              </a>
-                            </h3>
-                            <p
-                              class="c55"
-                            >
-                              Çərşənbə axşamı şəhər sakinləri BBC Azərbaycancanın "Müstəqillik sizə nə verib?" sualını cavablandırıb.
-                            </p>
-                            <time
-                              class="c56"
-                              datetime="2016-10-18"
-                            >
-                              18 Oktyabr 2016
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c45 c46"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="c47"
-                        >
-                          <div
-                            class="c48"
-                            dir="ltr"
-                          >
-                            <div
-                              class="c49"
-                            >
-                              <div
-                                class="c50"
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
                               >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="c51"
-                              />
+                                Çərşənbə axşamı şəhər sakinləri BBC Azərbaycancanın "Müstəqillik sizə nə verib?" sualını cavablandırıb.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2016-10-18"
+                              >
+                                18 Oktyabr 2016
+                              </time>
                             </div>
                           </div>
-                          <div
-                            class="c52"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c53"
-                            >
-                              <a
-                                class="c54"
-                                href="/azeri/azerbaijan-43499221?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
-                              </a>
-                            </h3>
-                            <p
-                              class="c55"
-                            >
-                              Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edəcək.
-                            </p>
-                            <time
-                              class="c56"
-                              datetime="2018-03-22"
-                            >
-                              22 Mart 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c45 c46"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="c47"
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c48"
-                            dir="ltr"
+                            class="c47"
                           >
                             <div
-                              class="c49"
+                              class="c48"
+                              dir="ltr"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
-                                  class="lazyload-placeholder"
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
                                 />
                               </div>
-                              <div
-                                class="c51"
-                              />
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-43499221?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edəcək.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2018-03-22"
+                              >
+                                22 Mart 2018
+                              </time>
                             </div>
                           </div>
-                          <div
-                            class="c52"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c53"
-                            >
-                              <a
-                                class="c54"
-                                href="/azeri/azerbaijan-44004471?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                              >
-                                #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
-                              </a>
-                            </h3>
-                            <p
-                              class="c55"
-                            >
-                              Bir çox azərbaycanlı və gürcüstanlı siyasətçiləri anlayırdılar ki, onların içində olduğu həssas dövrdən salamat çıxmaq üçün iqtisadi, siyasi və hərbi müttəfiqlik vacibdir. Eyni zamanda hər iki respublika arasında bir sıra mübahisələr də mövcud idi.
-                            </p>
-                            <time
-                              class="c56"
-                              datetime="2018-05-04"
-                            >
-                              4 May 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c45 c46"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="c47"
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
                         >
                           <div
-                            class="c48"
-                            dir="ltr"
+                            class="c47"
                           >
                             <div
-                              class="c49"
+                              class="c48"
+                              dir="ltr"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
-                                  class="lazyload-placeholder"
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
                                 />
                               </div>
-                              <div
-                                class="c51"
-                              />
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-44004471?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                Bir çox azərbaycanlı və gürcüstanlı siyasətçiləri anlayırdılar ki, onların içində olduğu həssas dövrdən salamat çıxmaq üçün iqtisadi, siyasi və hərbi müttəfiqlik vacibdir. Eyni zamanda hər iki respublika arasında bir sıra mübahisələr də mövcud idi.
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2018-05-04"
+                              >
+                                4 May 2018
+                              </time>
                             </div>
                           </div>
+                        </li>
+                        <li
+                          class="c45 c46"
+                          dir="ltr"
+                          role="listitem"
+                        >
                           <div
-                            class="c52"
-                            dir="ltr"
+                            class="c47"
                           >
-                            <h3
-                              class="c53"
+                            <div
+                              class="c48"
+                              dir="ltr"
                             >
-                              <a
-                                class="c54"
-                                href="/azeri/azerbaijan-43870815?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                              <div
+                                class="c49"
                               >
-                                Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
-                              </a>
-                            </h3>
-                            <p
-                              class="c55"
+                                <div
+                                  class="c50"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c51"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="c52"
+                              dir="ltr"
                             >
-                              İranın Xəzər sahilinə çıxan bölgələrində Azərbaycan Respublikasını böyük ticari imkanlar gözləyirdi. İran ixracatının 60-70 faizinin istehsalı ənənəvi olaraq məhz həmin regionun payına düşüb. Azərbaycan və xüsusilə Bakı-Batumi dəhlizi isə Avropa bazarına aparan təbii çıxış idi. Bəs milli hökümət iqtisadi imkanları gəlirli xarici ticarətə çevirə bildimi?
-                            </p>
-                            <time
-                              class="c56"
-                              datetime="2018-04-29"
-                            >
-                              29 Aprel 2018
-                            </time>
+                              <h3
+                                class="c53"
+                              >
+                                <a
+                                  class="c54"
+                                  href="/azeri/azerbaijan-43870815?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                >
+                                  Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
+                                </a>
+                              </h3>
+                              <p
+                                class="c55"
+                              >
+                                İranın Xəzər sahilinə çıxan bölgələrində Azərbaycan Respublikasını böyük ticari imkanlar gözləyirdi. İran ixracatının 60-70 faizinin istehsalı ənənəvi olaraq məhz həmin regionun payına düşüb. Azərbaycan və xüsusilə Bakı-Batumi dəhlizi isə Avropa bazarına aparan təbii çıxış idi. Bəs milli hökümət iqtisadi imkanları gəlirli xarici ticarətə çevirə bildimi?
+                              </p>
+                              <time
+                                class="c56"
+                                datetime="2018-04-29"
+                              >
+                                29 Aprel 2018
+                              </time>
+                            </div>
                           </div>
-                        </div>
-                      </li>
-                    </ul>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </section>
               </div>
