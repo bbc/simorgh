@@ -5,22 +5,22 @@ import shouldDisplayLastUpdatedTimestamp, {
 import { timestampGenerator, sameDayTimestampsGenerator } from './testHelpers';
 
 describe('shouldDisplayLastUpdatedTimestamp functions', () => {
-  let mockedCurrentTime;
-  const RealDate = Date.now;
+  let mockedDate;
+  const realDate = Date.now;
   const minutesTolerance = 1;
 
   beforeEach(() => {
     global.Date.now = jest.fn(() => new Date('2020-02-28T08:20:00Z').getTime());
-    mockedCurrentTime = Date.now;
+    mockedDate = Date.now;
   });
 
   afterAll(() => {
-    global.Date.now = RealDate;
+    global.Date.now = realDate;
   });
 
   describe('hasBeenUpdated', () => {
     it('should return true when the time difference between firstPublished and lastPublished in minutes is greater than the minutes tolerance', () => {
-      const currentTime = mockedCurrentTime();
+      const currentTime = mockedDate();
       const twoMinutesAgo = timestampGenerator({
         minutes: 2,
       });
@@ -33,7 +33,7 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
     });
 
     it('should return false when the time difference between firstPublished and lastPublished in minutes is less than the minutes tolerance', () => {
-      const currentTime = mockedCurrentTime();
+      const currentTime = mockedDate();
       const fortyEightSecondsAgo = timestampGenerator({ minutes: 0.8 });
       const msDifference = currentTime - fortyEightSecondsAgo;
       const timeDifferenceMinutes = msDifference / 1000 / 60;
@@ -89,7 +89,7 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
     });
 
     it('should return true when article was lastUpdated within relative time period', () => {
-      const currentTime = mockedCurrentTime();
+      const currentTime = mockedDate();
       const nineHoursAgo = timestampGenerator({ hours: 9 });
       const shouldLastUpdatedTimestampBeDisplayed = shouldDisplayLastUpdatedTimestamp(
         {
