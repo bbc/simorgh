@@ -44,7 +44,7 @@ const ErrorPage = ({ status, errorCode }) => {
     translations,
   } = useContext(ServiceContext);
   const messaging =
-    translations.error[status || errorCode] || translations.error[500];
+    translations.error[errorCode || status] || translations.error[500];
 
   return (
     <>
