@@ -5,21 +5,25 @@ import shouldDisplayLastUpdatedTimestamp, {
 import { timestampGenerator, sameDayTimestampsGenerator } from './testHelpers';
 
 describe('shouldDisplayLastUpdatedTimestamp functions', () => {
-  let originalDate;
+  let mockedCurrentTime;
+  const RealDate = Date.now;
   const minutesTolerance = 1;
 
   beforeEach(() => {
-    originalDate = Date.now;
+    global.Date.now = jest.fn(() => new Date('2020-02-28T08:20:00Z').getTime());
+    mockedCurrentTime = Date.now;
   });
 
-  afterEach(() => {
-    Date.now = originalDate;
+  afterAll(() => {
+    global.Date.now = RealDate;
   });
 
   describe('hasBeenUpdated', () => {
     it('should return true when the time difference between firstPublished and lastPublished in minutes is greater than the minutes tolerance', () => {
-      const currentTime = originalDate();
-      const twoMinutesAgo = timestampGenerator({ minutes: 2 });
+      const currentTime = mockedCurrentTime();
+      const twoMinutesAgo = timestampGenerator({
+        minutes: 2,
+      });
       const msDifference = currentTime - twoMinutesAgo;
       const timeDifferenceMinutes = msDifference / 1000 / 60;
 
@@ -29,7 +33,7 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
     });
 
     it('should return false when the time difference between firstPublished and lastPublished in minutes is less than the minutes tolerance', () => {
-      const currentTime = originalDate();
+      const currentTime = mockedCurrentTime();
       const fortyEightSecondsAgo = timestampGenerator({ minutes: 0.8 });
       const msDifference = currentTime - fortyEightSecondsAgo;
       const timeDifferenceMinutes = msDifference / 1000 / 60;
@@ -86,7 +90,7 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
 
     it('should return true when article was lastUpdated within relative time period', () => {
       const nineHoursAgo = timestampGenerator({ hours: 9 });
-      const currentTime = originalDate();
+      const currentTime = mockedCurrentTime();
       const shouldLastUpdatedTimestampBeDisplayed = shouldDisplayLastUpdatedTimestamp(
         {
           minutesTolerance,
@@ -102,6 +106,7 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
       const twentySixHoursAgo = timestampGenerator({ days: 1, hours: 2 });
       const twentyFiveHoursAgo = timestampGenerator({ days: 1, hours: 1 });
       const shouldLastUpdatedTimestampBeDisplayed = shouldDisplayLastUpdatedTimestamp(
+        // is there a way to mock Date.now?
         {
           minutesTolerance,
           firstPublished: twentySixHoursAgo,
