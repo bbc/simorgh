@@ -88,14 +88,14 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
       expect(shouldLastUpdatedTimestampBeDisplayed).toEqual(true);
     });
 
-    it('should return true when article was lastUpdated within relative time period', () => {
-      const currentTime = mockedDate();
+    it('should return true when article was firstPublished and lastUpdated yesterday, but is viewed within the lastPublished relative time period', () => {
+      const twentyFourHoursAgo = timestampGenerator({ days: 1 });
       const nineHoursAgo = timestampGenerator({ hours: 9 });
       const shouldLastUpdatedTimestampBeDisplayed = shouldDisplayLastUpdatedTimestamp(
         {
           minutesTolerance,
-          firstPublished: nineHoursAgo,
-          lastPublished: currentTime,
+          firstPublished: twentyFourHoursAgo,
+          lastPublished: nineHoursAgo,
         },
       );
 
