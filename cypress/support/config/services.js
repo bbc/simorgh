@@ -521,7 +521,7 @@ const genServices = {
             '/gahuza/video/2015/12/151217_test_long', // TC2 MAP
           ],
           local: [
-            '/gahuza/amakuru-49534170', // CPS MAP
+            '/gahuza/amakuru-23257470', // CPS MAP
             '/gahuza/video/2015/12/151217_test_long', // TC2 MAP
           ],
         },
