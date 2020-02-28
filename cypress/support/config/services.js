@@ -1413,7 +1413,7 @@ const genServices = {
         path: {
           live: null,
           test: null,
-          local: '/persian/magazine-49281981', // CPS PGL
+          local: '/persian/magazine-49281981',
         },
         smoke: false,
       },
