@@ -7,7 +7,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 
-const group4WrapperMaxWidth = `63rem`; // 1008px
+export const group4WrapperMaxWidth = `63rem`; // 1008px
 const group5WrapperMaxWidth = `80rem`; // 1280px
 
 const gelMaxWidths = css`
@@ -30,22 +30,7 @@ export const GhostGelPageGrid = styled(Grid)`
   background-color: ${C_GHOST};
 `;
 
-// export const StyledFrontPageMain = styled.main`
-//   /* To centre page layout for Group 4+ */
-//   margin: 0 auto;
-//   width: 100%; /* Needed for IE11 */
-// `;
-
-export const StyledFrontPageSection = styled.div`
-  /* To centre page layout for Group 4+ */
-  margin: 0 auto;
-  width: 100%; /* Needed for IE11 */
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    max-width: ${group4WrapperMaxWidth};
-  }
-`;
-
-export const StyledMostRead = styled.section`
+export const StyledFrontPageSection = styled.section`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */

@@ -30,6 +30,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import webLogger from '#lib/logger.web';
 import { mostReadRecordIsFresh, shouldRenderLastUpdated } from '../utilities';
 import LastUpdated from './LastUpdated';
+import { group4WrapperMaxWidth } from '#app/components/Grid';
 
 const logger = webLogger();
 
@@ -45,7 +46,14 @@ const MarginWrapper = styled.div`
 const MostReadSection = styled.section.attrs(() => ({
   role: 'region',
   'aria-labelledby': 'Most-Read',
-}))``;
+}))`
+  /* To centre page layout for Group 4+ */
+  margin: 0 auto;
+  width: 100%; /* Needed for IE11 */
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    max-width: ${group4WrapperMaxWidth};
+  }
+`;
 
 const ConstrainedMostReadSection = styled(MostReadSection)`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
