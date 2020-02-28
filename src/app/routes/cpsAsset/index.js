@@ -4,7 +4,7 @@ import MediaAssetPage from '#pages/MediaAssetPage';
 import StoryPage from '#pages/Story';
 import PhotoGalleryPage from '#pages/PhotoGallery';
 import FrontPage from '#pages/FrontPage';
-import ErrorPage from '#pages/Error';
+import { ErrorPage } from '#pages';
 import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
 import {
   FEATURE_INDEX_PAGE,

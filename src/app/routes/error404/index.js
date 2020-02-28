@@ -1,4 +1,4 @@
-import ErrorPage from '#pages/Error';
+import { ErrorPage } from '#pages';
 
 export default {
   component: ErrorPage,

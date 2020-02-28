@@ -11,7 +11,7 @@ import WithData from '.';
 import frontPageDataPidgin from '#data/pidgin/frontpage';
 
 // eslint-disable-next-line react/prop-types
-jest.mock('../../ErrorMain', () => ({ status }) => (
+jest.mock('#pages/ErrorPage', () => ({ status }) => (
   <h1>This is a {status} error.</h1>
 ));
 
