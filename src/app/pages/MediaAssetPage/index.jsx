@@ -127,7 +127,7 @@ const MediaAssetPageContainer = ({ pageData }) => {
       <StyledGhostGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledGhostGrid>
-      <CpsRelatedContent content={relatedContent} />
+      <CpsRelatedContent content={relatedContent} enableGridWrapper />
     </>
   );
 };

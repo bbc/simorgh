@@ -6,10 +6,11 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
+import { C_CHALK } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { GhostGrid } from '#lib/styledGrid';
+import Grid from '@bbc/psammead-grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -80,15 +81,6 @@ const StoryPageContainer = ({ pageData }) => {
     byline: props => <StyledByline {...props} />,
   };
 
-  const StyledGhostGrid = styled(GhostGrid)`
-    flex-grow: 1;
-    padding-bottom: ${GEL_SPACING_TRPL};
-
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      padding-bottom: ${GEL_SPACING_QUAD};
-    }
-  `;
-
   const StyledTimestamp = styled(Timestamp)`
     padding-bottom: ${GEL_SPACING_DBL};
 
@@ -104,6 +96,67 @@ const StoryPageContainer = ({ pageData }) => {
       padding-bottom: ${GEL_SPACING_TRPL};
     }
   `;
+
+  const StyledGrid = styled(Grid)`
+    flex-grow: 1;
+  `;
+
+  const GridSecondaryColumn = styled(Grid)`
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      margin-top: ${GEL_SPACING_QUAD};
+    }
+  `;
+
+  const ComponentWrapper = styled.div`
+    background: ${C_CHALK};
+    margin-bottom: ${GEL_SPACING_TRPL};
+    padding: ${GEL_SPACING_DBL};
+  `;
+
+  const gridColumns = {
+    group0: 8,
+    group1: 8,
+    group2: 8,
+    group3: 8,
+    group4: 12,
+    group5: 12,
+  };
+
+  const gridMargins = {
+    group0: false,
+    group1: false,
+    group2: false,
+    group3: false,
+    group4: true,
+    group5: true,
+  };
+
+  const gridOffset = {
+    group0: 1,
+    group1: 1,
+    group2: 1,
+    group3: 1,
+    group4: 1,
+    group5: 3,
+  };
+
+  const gridColsMain = {
+    group0: 8,
+    group1: 8,
+    group2: 8,
+    group3: 8,
+    group4: 8,
+    group5: 5,
+  };
+
+  const gridColsSecondary = {
+    group0: 8,
+    group1: 8,
+    group2: 8,
+    group3: 8,
+    group4: 4,
+    group5: 3,
+  };
 
   return (
     <>
@@ -128,10 +181,33 @@ const StoryPageContainer = ({ pageData }) => {
         aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
-      <StyledGhostGrid as="main" role="main">
-        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </StyledGhostGrid>
-      <CpsRelatedContent content={relatedContent} />
+
+      <StyledGrid columns={gridColumns} enableGelGutters margins={gridMargins}>
+        <Grid
+          item
+          columns={gridColsMain}
+          startOffset={gridOffset}
+          as="main"
+          role="main"
+        >
+          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+          <CpsRelatedContent content={relatedContent} />
+        </Grid>
+        <GridSecondaryColumn item columns={gridColsSecondary}>
+          <ComponentWrapper>
+            <h2>This is a component in the second column</h2>
+          </ComponentWrapper>
+          <ComponentWrapper>
+            <h2>This is a component in the second column</h2>
+          </ComponentWrapper>
+          <ComponentWrapper>
+            <h2>This is a component in the second column</h2>
+          </ComponentWrapper>
+          <ComponentWrapper>
+            <h2>This is a component in the second column</h2>
+          </ComponentWrapper>
+        </GridSecondaryColumn>
+      </StyledGrid>
     </>
   );
 };
