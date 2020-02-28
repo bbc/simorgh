@@ -89,8 +89,8 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
     });
 
     it('should return true when article was lastUpdated within relative time period', () => {
-      const nineHoursAgo = timestampGenerator({ hours: 9 });
       const currentTime = mockedCurrentTime();
+      const nineHoursAgo = timestampGenerator({ hours: 9 });
       const shouldLastUpdatedTimestampBeDisplayed = shouldDisplayLastUpdatedTimestamp(
         {
           minutesTolerance,
@@ -106,7 +106,6 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
       const twentySixHoursAgo = timestampGenerator({ days: 1, hours: 2 });
       const twentyFiveHoursAgo = timestampGenerator({ days: 1, hours: 1 });
       const shouldLastUpdatedTimestampBeDisplayed = shouldDisplayLastUpdatedTimestamp(
-        // is there a way to mock Date.now?
         {
           minutesTolerance,
           firstPublished: twentySixHoursAgo,
@@ -120,7 +119,6 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
     it('should return true when firstUpdated and lastUpdated are on different days', () => {
       const twoDaysAgo = timestampGenerator({ days: 2 });
       const oneDayAgo = timestampGenerator({ days: 1 });
-
       const shouldLastUpdatedTimestampBeDisplayed = shouldDisplayLastUpdatedTimestamp(
         {
           minutesTolerance,
