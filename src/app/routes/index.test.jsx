@@ -24,7 +24,14 @@ const getMatchingRoute = pathname =>
     }),
   );
 
-const renderRouter = ({ pathname, pageData, pageType, service, status }) =>
+const renderRouter = ({
+  pathname,
+  pageData,
+  pageType,
+  service,
+  status,
+  errorCode,
+}) =>
   render(
     <MemoryRouter initialEntries={[pathname]}>
       {renderRoutes(routes, {
@@ -34,6 +41,7 @@ const renderRouter = ({ pathname, pageData, pageType, service, status }) =>
         service,
         isAmp: false,
         status: status || 200,
+        ...(errorCode && { errorCode }),
       })}
     </MemoryRouter>,
   );
@@ -208,7 +216,23 @@ it('should route to and render a feature index page', async () => {
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
 
-it('should route fallback to and render a 500 error page', async () => {
+it('should route to and render a 500 error page', async () => {
+  const pathname = '/igbo/500';
+  const { getInitialData, pageType } = getMatchingRoute(pathname);
+  const { status } = await getInitialData();
+  const { getByText } = renderRouter({
+    pathname,
+    status,
+    pageType,
+    service: 'igbo',
+    errorCode: 500,
+  });
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '500';
+
+  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+});
+
+it('should fallback to and render a 500 error page if there is a problem with page data', async () => {
   fetch.mockResponse(undefined);
   const pathname = '/afrique';
   const { getByText } = renderRouter({
@@ -222,7 +246,23 @@ it('should route fallback to and render a 500 error page', async () => {
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
 
-it('should fallback to and render a 404 error page', async () => {
+it('should route to and render a 404 error page', async () => {
+  const pathname = '/igbo/404';
+  const { getInitialData, pageType } = getMatchingRoute(pathname);
+  const { status } = await getInitialData();
+  const { getByText } = renderRouter({
+    pathname,
+    status,
+    pageType,
+    errorCode: 404,
+    service: 'igbo',
+  });
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
+
+  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+});
+
+it('should fallback to and render a 404 error page if a route does not match', async () => {
   fetch.mockResponse(JSON.stringify({ status: 404 }));
   const pathname = '/pidgin/articles/cwl08rd38p6o';
   const { pageType } = getMatchingRoute(pathname);
