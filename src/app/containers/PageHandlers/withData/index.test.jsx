@@ -6,7 +6,7 @@ import {
 import {
   articleDataNews,
   articleDataPersian,
-} from '#pages/Article/fixtureData';
+} from '#pages/ArticlePage/fixtureData';
 import WithData from '.';
 import frontPageDataPidgin from '#data/pidgin/frontpage';
 
