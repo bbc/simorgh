@@ -114,7 +114,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   fill: currentColor;
 }
 
-.c25 {
+.c23 {
   background-color: #222222;
   clear: both;
   overflow: hidden;
@@ -126,24 +126,24 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   visibility: hidden;
 }
 
-.c26 {
+.c24 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.125rem solid #3F3F42;
 }
 
-.c27 {
+.c25 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #3F3F42;
 }
 
-.c27:last-child {
+.c25:last-child {
   padding-bottom: 1rem;
   border: 0;
 }
 
-.c28 {
+.c26 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -154,15 +154,10 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   text-decoration: none;
 }
 
-.c28:hover,
-.c28:focus {
+.c26:hover,
+.c26:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-}
-
-.c29 {
-  border-left: 0.25rem solid #FFFFFF;
-  padding-left: 0.5rem;
 }
 
 .c16 {
@@ -230,44 +225,9 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #FFFFFF;
-  border-bottom: 0.3125rem solid #FFFFFF;
 }
 
 .c22:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-  top: 0;
-  border: 0.25rem solid #FFFFFF;
-}
-
-.c24 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FDFDFD;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.75rem;
-}
-
-.c24:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
-.c24:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -282,15 +242,6 @@ exports[`Header should render correctly for WS frontPage 1`] = `
   display: inline-block;
   position: relative;
   z-index: 2;
-}
-
-.c23::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .c13 {
@@ -463,28 +414,28 @@ exports[`Header should render correctly for WS frontPage 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c23 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .c25 {
+  .c23 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c28 {
+  .c26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c28 {
+  .c26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
@@ -526,26 +477,6 @@ exports[`Header should render correctly for WS frontPage 1`] = `
 
 @media (max-width:37.4375rem) {
   .c22 {
-    padding: 0.75rem 0.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c24 {
     padding: 0.75rem 0.5rem;
   }
 }
@@ -849,18 +780,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
                 class="c22"
                 href="/pidgin"
               >
-                <span
-                  class="c23"
-                  role="text"
-                >
-                  <span
-                    class="c11"
-                  >
-                    Page where you dey
-                    , 
-                  </span>
-                  Home
-                </span>
+                Home
               </a>
             </li>
             <li
@@ -869,7 +789,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
               >
                 Nigeria
@@ -881,7 +801,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
               >
                 Africa
@@ -893,7 +813,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/world"
               >
                 World
@@ -905,7 +825,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/media/video"
               >
                 Video
@@ -917,7 +837,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/media/audio"
               >
                 Audio
@@ -929,7 +849,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
               >
                 Sport
@@ -941,7 +861,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
               >
                 Entertainment
@@ -953,7 +873,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/popular/read"
               >
                 Most popular
@@ -963,119 +883,107 @@ exports[`Header should render correctly for WS frontPage 1`] = `
         </div>
       </div>
       <div
-        class="c25"
+        class="c23"
         height="0"
       >
         <ul
-          class="c26"
+          class="c24"
           role="list"
         >
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin"
             >
-              <span
-                class="c29"
-                dir="ltr"
-                role="text"
-              >
-                <span
-                  class="c11"
-                >
-                  Page where you dey
-                  , 
-                </span>
-                Home
-              </span>
+              Home
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
             >
               Nigeria
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
             >
               Africa
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/world"
             >
               World
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/media/video"
             >
               Video
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/media/audio"
             >
               Audio
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
             >
               Sport
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
             >
               Entertainment
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/popular/read"
             >
               Most popular
@@ -1203,7 +1111,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
   fill: currentColor;
 }
 
-.c25 {
+.c23 {
   background-color: #222222;
   clear: both;
   overflow: hidden;
@@ -1215,24 +1123,24 @@ exports[`Header should render correctly for WS radio page 1`] = `
   visibility: hidden;
 }
 
-.c26 {
+.c24 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.125rem solid #3F3F42;
 }
 
-.c27 {
+.c25 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #3F3F42;
 }
 
-.c27:last-child {
+.c25:last-child {
   padding-bottom: 1rem;
   border: 0;
 }
 
-.c28 {
+.c26 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1243,15 +1151,10 @@ exports[`Header should render correctly for WS radio page 1`] = `
   text-decoration: none;
 }
 
-.c28:hover,
-.c28:focus {
+.c26:hover,
+.c26:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-}
-
-.c29 {
-  border-left: 0.25rem solid #FFFFFF;
-  padding-left: 0.5rem;
 }
 
 .c16 {
@@ -1319,44 +1222,9 @@ exports[`Header should render correctly for WS radio page 1`] = `
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #FFFFFF;
-  border-bottom: 0.3125rem solid #FFFFFF;
 }
 
 .c22:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-  top: 0;
-  border: 0.25rem solid #FFFFFF;
-}
-
-.c24 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FDFDFD;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.75rem;
-}
-
-.c24:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
-.c24:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1371,15 +1239,6 @@ exports[`Header should render correctly for WS radio page 1`] = `
   display: inline-block;
   position: relative;
   z-index: 2;
-}
-
-.c23::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .c13 {
@@ -1552,28 +1411,28 @@ exports[`Header should render correctly for WS radio page 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c23 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .c25 {
+  .c23 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c28 {
+  .c26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c28 {
+  .c26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
@@ -1615,26 +1474,6 @@ exports[`Header should render correctly for WS radio page 1`] = `
 
 @media (max-width:37.4375rem) {
   .c22 {
-    padding: 0.75rem 0.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c24 {
     padding: 0.75rem 0.5rem;
   }
 }
@@ -1938,18 +1777,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
                 class="c22"
                 href="/pidgin"
               >
-                <span
-                  class="c23"
-                  role="text"
-                >
-                  <span
-                    class="c11"
-                  >
-                    Page where you dey
-                    , 
-                  </span>
-                  Home
-                </span>
+                Home
               </a>
             </li>
             <li
@@ -1958,7 +1786,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
               >
                 Nigeria
@@ -1970,7 +1798,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
               >
                 Africa
@@ -1982,7 +1810,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/world"
               >
                 World
@@ -1994,7 +1822,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/media/video"
               >
                 Video
@@ -2006,7 +1834,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/media/audio"
               >
                 Audio
@@ -2018,7 +1846,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
               >
                 Sport
@@ -2030,7 +1858,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
               >
                 Entertainment
@@ -2042,7 +1870,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/popular/read"
               >
                 Most popular
@@ -2052,119 +1880,107 @@ exports[`Header should render correctly for WS radio page 1`] = `
         </div>
       </div>
       <div
-        class="c25"
+        class="c23"
         height="0"
       >
         <ul
-          class="c26"
+          class="c24"
           role="list"
         >
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin"
             >
-              <span
-                class="c29"
-                dir="ltr"
-                role="text"
-              >
-                <span
-                  class="c11"
-                >
-                  Page where you dey
-                  , 
-                </span>
-                Home
-              </span>
+              Home
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
             >
               Nigeria
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
             >
               Africa
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/world"
             >
               World
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/media/video"
             >
               Video
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/media/audio"
             >
               Audio
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
             >
               Sport
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
             >
               Entertainment
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/popular/read"
             >
               Most popular
@@ -2292,7 +2108,7 @@ exports[`Header should render correctly for news article 1`] = `
   fill: currentColor;
 }
 
-.c25 {
+.c23 {
   background-color: #222222;
   clear: both;
   overflow: hidden;
@@ -2304,24 +2120,24 @@ exports[`Header should render correctly for news article 1`] = `
   visibility: hidden;
 }
 
-.c26 {
+.c24 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.125rem solid #3F3F42;
 }
 
-.c27 {
+.c25 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #3F3F42;
 }
 
-.c27:last-child {
+.c25:last-child {
   padding-bottom: 1rem;
   border: 0;
 }
 
-.c28 {
+.c26 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2332,15 +2148,10 @@ exports[`Header should render correctly for news article 1`] = `
   text-decoration: none;
 }
 
-.c28:hover,
-.c28:focus {
+.c26:hover,
+.c26:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-}
-
-.c29 {
-  border-left: 0.25rem solid #FFFFFF;
-  padding-left: 0.5rem;
 }
 
 .c16 {
@@ -2408,44 +2219,9 @@ exports[`Header should render correctly for news article 1`] = `
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #FFFFFF;
-  border-bottom: 0.3125rem solid #FFFFFF;
 }
 
 .c22:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-  top: 0;
-  border: 0.25rem solid #FFFFFF;
-}
-
-.c24 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FDFDFD;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.75rem;
-}
-
-.c24:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
-.c24:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -2460,15 +2236,6 @@ exports[`Header should render correctly for news article 1`] = `
   display: inline-block;
   position: relative;
   z-index: 2;
-}
-
-.c23::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .c13 {
@@ -2641,28 +2408,28 @@ exports[`Header should render correctly for news article 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c23 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .c25 {
+  .c23 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c28 {
+  .c26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c28 {
+  .c26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
@@ -2704,26 +2471,6 @@ exports[`Header should render correctly for news article 1`] = `
 
 @media (max-width:37.4375rem) {
   .c22 {
-    padding: 0.75rem 0.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c24 {
     padding: 0.75rem 0.5rem;
   }
 }
@@ -3027,18 +2774,7 @@ exports[`Header should render correctly for news article 1`] = `
                 class="c22"
                 href="/pidgin"
               >
-                <span
-                  class="c23"
-                  role="text"
-                >
-                  <span
-                    class="c11"
-                  >
-                    Page where you dey
-                    , 
-                  </span>
-                  Home
-                </span>
+                Home
               </a>
             </li>
             <li
@@ -3047,7 +2783,7 @@ exports[`Header should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
               >
                 Nigeria
@@ -3059,7 +2795,7 @@ exports[`Header should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
               >
                 Africa
@@ -3071,7 +2807,7 @@ exports[`Header should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/world"
               >
                 World
@@ -3083,7 +2819,7 @@ exports[`Header should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/media/video"
               >
                 Video
@@ -3095,7 +2831,7 @@ exports[`Header should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/media/audio"
               >
                 Audio
@@ -3107,7 +2843,7 @@ exports[`Header should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
               >
                 Sport
@@ -3119,7 +2855,7 @@ exports[`Header should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
               >
                 Entertainment
@@ -3131,7 +2867,7 @@ exports[`Header should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
-                class="c24"
+                class="c22"
                 href="/pidgin/popular/read"
               >
                 Most popular
@@ -3141,119 +2877,107 @@ exports[`Header should render correctly for news article 1`] = `
         </div>
       </div>
       <div
-        class="c25"
+        class="c23"
         height="0"
       >
         <ul
-          class="c26"
+          class="c24"
           role="list"
         >
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin"
             >
-              <span
-                class="c29"
-                dir="ltr"
-                role="text"
-              >
-                <span
-                  class="c11"
-                >
-                  Page where you dey
-                  , 
-                </span>
-                Home
-              </span>
+              Home
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
             >
               Nigeria
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
             >
               Africa
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/world"
             >
               World
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/media/video"
             >
               Video
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/media/audio"
             >
               Audio
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
             >
               Sport
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
             >
               Entertainment
             </a>
           </li>
           <li
-            class="c27"
+            class="c25"
             role="listitem"
           >
             <a
-              class="c28"
+              class="c26"
               href="/pidgin/popular/read"
             >
               Most popular

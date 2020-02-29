@@ -5,16 +5,16 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
-import ArticleMain from '.';
+import ArticlePage from '.';
 
 // article c5jje4ejkqvo contains a Headline, a Paragraph, a timestamp
 // a Portrait Image with Caption, a Landscape Image with Caption and Square Image with Caption.
-import articleData from '../../../../data/news/articles/c5jje4ejkqvo';
+import articleData from '#data/news/articles/c5jje4ejkqvo';
 
 // Not all services have fixtures for article data yet
 // the service selector will be constrained to services that have article fixtures:
 
-storiesOf('Main|Article', module)
+storiesOf('Pages|Article Page', module)
   .addDecorator(withKnobs)
   .add('Articles', () => (
     <ToggleContextProvider>
@@ -26,8 +26,8 @@ storiesOf('Main|Article', module)
           service="pidgin"
         >
           <UserContextProvider>
-            <ArticleMain
-              articleData={articleData}
+            <ArticlePage
+              pageData={articleData}
               mostReadEndpointOverride="./data/news/mostRead/index.json"
             />
           </UserContextProvider>

@@ -2,7 +2,7 @@ import React from 'react';
 import { node, string } from 'prop-types';
 import { render } from '@testing-library/react';
 import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
-import { articleDataNews } from '#pages/Article/fixtureData';
+import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
 import pglAssetData from '#pages/PhotoGalleryPage/fixtureData.json';
 import styAssetData from '#pages/StoryPage/fixtureData.json';
