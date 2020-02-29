@@ -66,7 +66,7 @@ ErrorPage.propTypes = {
 };
 
 ErrorPage.defaultProps = {
-  errorCode: 500,
+  errorCode: null,
 };
 
 ErrorMetadata.propTypes = {
