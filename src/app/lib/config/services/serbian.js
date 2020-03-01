@@ -122,7 +122,7 @@ export const service = {
     scriptLink: {
       text: 'Ћир',
       offscreenText: 'Cyrillic',
-      otherVariant: 'cyr',
+      variant: 'cyr',
     },
     translations: {
       seeAll: 'Pogledajte sve',
@@ -318,7 +318,7 @@ export const service = {
     scriptLink: {
       text: 'Lat',
       offscreenText: 'Latin',
-      otherVariant: 'lat',
+      variant: 'lat',
     },
     translations: {
       seeAll: 'Погледајте све',

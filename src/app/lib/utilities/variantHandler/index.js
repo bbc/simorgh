@@ -21,3 +21,10 @@ export const getVariant = ({ service, variant }) => {
 
   return 'default';
 };
+
+export const getOtherVariant = ({ service, variant }) => {
+  const allowedVariants = servicesWithVariants[service];
+  return allowedVariants
+    ? allowedVariants.find(serviceVariant => serviceVariant !== variant)
+    : null;
+};

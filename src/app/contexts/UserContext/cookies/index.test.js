@@ -74,7 +74,9 @@ describe('UserContext cookies', () => {
       expect(Cookie.set).not.toHaveBeenCalled();
       setPreferredVariantCookie('');
       expect(Cookie.set).not.toHaveBeenCalled();
-      setPreferredVariantCookie('news', undefined);
+      setPreferredVariantCookie('news');
+      expect(Cookie.set).not.toHaveBeenCalled();
+      setPreferredVariantCookie();
       expect(Cookie.set).not.toHaveBeenCalled();
     });
 

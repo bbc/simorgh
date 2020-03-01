@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
@@ -129,6 +130,9 @@ describe(`Header`, () => {
         serviceContext: serbianServiceConfig,
         variant: 'cyr',
       }),
+      {
+        wrapper: MemoryRouter,
+      },
     );
 
     expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
