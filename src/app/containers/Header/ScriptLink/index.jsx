@@ -5,11 +5,6 @@ import ScriptLink from '@bbc/psammead-script-link';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { UserContext } from '#contexts/UserContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
-import {
-  getOtherVariant,
-  variantSanitiser,
-} from '#lib/utilities/variantHandler';
 
 export const getVariantHref = ({ path, params, variant }) => {
   return compile(path)(
@@ -26,15 +21,9 @@ export const getVariantHref = ({ path, params, variant }) => {
 const ScriptLinkContainer = () => {
   const { setPreferredVariantCookie } = useContext(UserContext);
   const { service, script, scriptLink } = useContext(ServiceContext);
-  const { variant } = useContext(RequestContext);
 
-  const { text, offscreenText } = scriptLink;
+  const { text, offscreenText, variant } = scriptLink;
   const { path, params } = useRouteMatch();
-
-  const otherVariant = getOtherVariant({
-    service,
-    variant: variantSanitiser(variant),
-  });
 
   return (
     <ScriptLink
@@ -44,10 +33,10 @@ const ScriptLinkContainer = () => {
         path,
         params,
         service,
-        variant: otherVariant,
+        variant,
       })}
-      variant={otherVariant}
-      onClick={() => setPreferredVariantCookie(service, otherVariant)}
+      variant={variant}
+      onClick={() => setPreferredVariantCookie(service, variant)}
     >
       <span aria-hidden="true">{text}</span>
       <VisuallyHiddenText>{` ${offscreenText}`}</VisuallyHiddenText>

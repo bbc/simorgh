@@ -1,4 +1,4 @@
-import { variantSanitiser, getVariant, getOtherVariant } from '.';
+import { variantSanitiser, getVariant } from '.';
 
 describe('variantSanitiser', () => {
   it('should remove leading slash', () => {
@@ -27,35 +27,5 @@ describe('getVariant', () => {
 
   it('should return "default" when service without variants is passed', () => {
     expect(getVariant({ service: 'news', variant: 'simp' })).toEqual('default');
-  });
-});
-
-describe('getOtherVariant', () => {
-  it('should get correct variant for serbian', () => {
-    expect(getOtherVariant({ service: 'serbian', variant: 'lat' })).toBe('cyr');
-    expect(getOtherVariant({ service: 'serbian', variant: 'cyr' })).toBe('lat');
-  });
-
-  it('should get correct variant for ukchina', () => {
-    expect(getOtherVariant({ service: 'ukchina', variant: 'simp' })).toBe(
-      'trad',
-    );
-    expect(getOtherVariant({ service: 'ukchina', variant: 'trad' })).toBe(
-      'simp',
-    );
-  });
-
-  it('should get correct variant for zhongwen', () => {
-    expect(getOtherVariant({ service: 'zhongwen', variant: 'simp' })).toBe(
-      'trad',
-    );
-    expect(getOtherVariant({ service: 'zhongwen', variant: 'trad' })).toBe(
-      'simp',
-    );
-  });
-
-  it('should return null if no variant for service', () => {
-    expect(getOtherVariant({ service: 'news', variant: 'simp' })).toBe(null);
-    expect(getOtherVariant({ service: 'news' })).toBe(null);
   });
 });
