@@ -8,15 +8,15 @@ import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContext } from '#contexts/UserContext';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
+import { service as ukChinaServiceConfig } from '#lib/config/services/ukchina';
 import * as cookies from '#contexts/UserContext/cookies';
 import ScriptLinkContainer, { getVariantHref } from '.';
 import {
-  // articlePath,
-  // cpsAssetPagePath,
-  // errorPagePath,
+  articlePath,
+  cpsAssetPagePath,
+  errorPagePath,
   frontPagePath,
-  // legacyAssetPagePath,
-  // radioAndTvPath,
+  legacyAssetPagePath,
 } from '#app/routes/utils/regex';
 
 const setPreferredVariantCookieSpy = jest.spyOn(
@@ -32,11 +32,7 @@ const requestContextMock = {
   variant: 'lat',
 };
 
-const withRouter = (
-  component,
-  matchPath = frontPagePath,
-  path = '/serbian/lat',
-) => {
+const withRouter = (component, matchPath, path) => {
   const Wrapper = ({ children }) => (
     <MemoryRouter initialEntries={[path]}>
       <Route path={matchPath}>{children}</Route>
@@ -53,10 +49,13 @@ const withRouter = (
 };
 
 /* eslint-disable react/prop-types */
-const ScriptLinkContainerWithContext = () => (
-  <ServiceContext.Provider value={serbianServiceConfig.lat}>
+const ScriptLinkContainerWithContext = ({
+  serviceContext = serbianServiceConfig.lat,
+  requestContext = requestContextMock,
+}) => (
+  <ServiceContext.Provider value={serviceContext}>
     <UserContext.Provider value={userContextMock}>
-      <RequestContext.Provider value={requestContextMock}>
+      <RequestContext.Provider value={requestContext}>
         <ScriptLinkContainer />
       </RequestContext.Provider>
     </UserContext.Provider>
@@ -74,41 +73,123 @@ describe(`Script Link`, () => {
   );
 
   describe('assertions', () => {
-    afterEach(() => {
-      jest.clearAllMocks();
+    const testCases = {
+      article: {
+        matchPath: articlePath,
+        path: '/serbian/articles/c805k05kr73o/lat',
+        variantPath: '/serbian/articles/c805k05kr73o/cyr',
+      },
+      cpsAssetPage: {
+        matchPath: cpsAssetPagePath,
+        path: '/serbian/srbija-46748932/lat',
+        variantPath: '/serbian/srbija-46748932/cyr',
+      },
+      errorPage: {
+        matchPath: errorPagePath,
+        path: '/serbian/404/lat',
+        variantPath: '/serbian/404/cyr',
+      },
+      frontPage: {
+        matchPath: frontPagePath,
+        path: '/serbian/lat',
+        variantPath: '/serbian/cyr',
+      },
+      legacyAssetPage: {
+        matchPath: legacyAssetPagePath,
+        path:
+          '/ukchina/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs/trad',
+        variantPath:
+          '/ukchina/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs/simp',
+        serviceContext: ukChinaServiceConfig.trad,
+        requestContext: { variant: 'trad' },
+        otherVariant: 'simp',
+      },
+    };
+
+    describe('canonical', () => {
+      Object.keys(testCases).forEach(testCase => {
+        it(`Script Link should contain link to other variant when on ${testCase}`, () => {
+          const {
+            matchPath,
+            path,
+            variantPath,
+            serviceContext = serbianServiceConfig.lat,
+            requestContext = requestContextMock,
+            otherVariant = 'cyr',
+          } = testCases[testCase];
+
+          const { container } = withRouter(
+            <ScriptLinkContainerWithContext
+              serviceContext={serviceContext}
+              requestContext={requestContext}
+            />,
+            matchPath,
+            path,
+          );
+
+          const scriptLink = container.querySelector(
+            `a[data-variant="${otherVariant}"]`,
+          );
+
+          expect(scriptLink.getAttribute('href')).toBe(variantPath);
+        });
+      });
     });
 
-    it('Script Link should contain link to other variant', () => {
-      const { container } = withRouter(<ScriptLinkContainerWithContext />);
-      const scriptLink = container.querySelector('a[data-variant="cyr"]');
-      expect(scriptLink.getAttribute('href')).toBe('/serbian/cyr');
-    });
+    describe('amp', () => {
+      const { errorPage, ...ampTestCases } = testCases;
+      Object.keys(ampTestCases).forEach(testCase => {
+        it(`Script Link should contain link to other variant when on ${testCase}`, () => {
+          const {
+            matchPath,
+            path,
+            variantPath,
+            serviceContext = serbianServiceConfig.lat,
+            requestContext = requestContextMock,
+            otherVariant = 'cyr',
+          } = testCases[testCase];
 
-    it('Script Link should contain link to other variant', () => {
-      const { container } = withRouter(<ScriptLinkContainerWithContext />);
-      const scriptLink = container.querySelector('a[data-variant="cyr"]');
-      expect(scriptLink.getAttribute('href')).toBe('/serbian/cyr');
-    });
+          const { container } = withRouter(
+            <ScriptLinkContainerWithContext
+              serviceContext={serviceContext}
+              requestContext={requestContext}
+            />,
+            matchPath,
+            `${path}.amp`,
+          );
 
-    // write a test to cover other than just front pages
+          const scriptLink = container.querySelector(
+            `a[data-variant="${otherVariant}"]`,
+          );
+
+          expect(scriptLink.getAttribute('href')).toBe(`${variantPath}.amp`);
+        });
+      });
+    });
 
     it('should set preferred variant cookie when ScriptLink is clicked', () => {
-      const { container } = withRouter(<ScriptLinkContainerWithContext />);
+      const { container } = withRouter(
+        <ScriptLinkContainerWithContext />,
+        frontPagePath,
+        '/serbian/lat',
+      );
       const scriptLink = container.querySelector('a[data-variant="cyr"]');
       fireEvent.click(scriptLink);
       expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(1);
     });
   });
 
-  // write a test to cover other than just front pages
+  describe('getVariantHref', () => {
+    it('should generate correct variant href', () => {
+      const path = '/:foo(foo)/:bar(bar):variant(/simp|/trad|/cyr|/lat)';
 
-  it('should generate correct variant URL', () => {
-    expect(
-      getVariantHref({
-        path: frontPagePath,
-        params: { service: 'serbian', variant: '/lat' },
-        variant: 'cyr',
-      }),
-    ).toEqual('/serbian/cyr');
+      expect(
+        getVariantHref({
+          path,
+          params: { foo: 'foo', bar: 'bar', variant: '/lat' },
+          variant: 'cyr',
+        }),
+      ).toEqual('/foo/bar/cyr');
+    });
   });
 });
