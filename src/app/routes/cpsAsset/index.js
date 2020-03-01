@@ -1,8 +1,6 @@
 import path from 'ramda/src/path';
 import getInitialData from './getInitialData';
-import MediaAssetPage from '#pages/MediaAssetPage';
-import StoryPage from '#pages/Story';
-import PhotoGalleryPage from '#pages/PhotoGallery';
+import { MediaAssetPage, PhotoGalleryPage, StoryPage } from '#pages';
 import FrontPage from '#pages/FrontPage';
 import ErrorPage from '#pages/Error';
 import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
