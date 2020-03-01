@@ -55,7 +55,7 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
-      sections: 'صفحه ها',
+      navMenuText: 'صفحه ها',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

@@ -54,7 +54,7 @@ export const service = {
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
       relatedContent: 'اسی بارے میں',
-      sections: 'سیکشن',
+      navMenuText: 'سیکشن',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

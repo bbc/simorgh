@@ -58,7 +58,7 @@ export const service = {
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
-      sections: 'Secciones',
+      navMenuText: 'Secciones',
       mediaAssetPage: {
         mediaPlayer: 'Reproductor multimedia',
         audioPlayer: 'Reproductor de audio',
