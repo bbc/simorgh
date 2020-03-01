@@ -103,12 +103,6 @@ module.exports = ({
         emitErrors: true,
         // Display full duplicates information? (Default: `false`)
         verbose: true,
-        /*
-         * Temporarily ignoring the gel-foundation package in the duplicate check,
-         * as some packages use a old version of it.
-         * This should be removed a part of an issue in the future: https://github.com/bbc/simorgh/issues/5625
-         */
-        ignoredPackages: ['@bbc/gel-foundations'],
       }),
       new webpack.DefinePlugin({
         'process.env': getClientEnvVars(DOT_ENV_CONFIG),
