@@ -25,7 +25,6 @@ import {
   MostReadRank,
   MostReadLink,
 } from '@bbc/psammead-most-read';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
 import SectionLabel from '@bbc/psammead-section-label';
 import { ServiceContext } from '#contexts/ServiceContext';
 import webLogger from '#lib/logger.web';
@@ -57,7 +56,6 @@ const MostReadSection = styled.section.attrs(() => ({
 `;
 
 const ConstrainedMostReadSection = styled(MostReadSection)`
-  background-color: ${C_GHOST};
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     margin: 0 ${GEL_MARGIN_BELOW_400PX} ${GEL_SPACING_TRPL};
   }
