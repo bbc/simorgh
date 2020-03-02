@@ -3058,7 +3058,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   font-weight: 400;
   font-style: normal;
   color: #222222;
-  background-color: #FFFFFF;
+  background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -6283,7 +6283,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   font-weight: 400;
   font-style: normal;
   color: #222222;
-  background-color: #FFFFFF;
+  background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;

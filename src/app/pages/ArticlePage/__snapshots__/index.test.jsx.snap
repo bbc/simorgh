@@ -55,7 +55,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
               class="FlexRow-wx5kdp-2 dVBNyZ"
             >
               <span
-                class="Title-wx5kdp-4 jiurmA"
+                class="Title-wx5kdp-4 BeqZV"
                 dir="ltr"
                 id="Most-Read"
               >
@@ -593,7 +593,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
               class="FlexRow-wx5kdp-2 dVBNyZ"
             >
               <span
-                class="Title-wx5kdp-4 dAMIcO"
+                class="Title-wx5kdp-4 htLcbq"
                 dir="rtl"
                 id="Most-Read"
               >
