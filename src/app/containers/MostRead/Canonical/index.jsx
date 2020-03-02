@@ -30,7 +30,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import webLogger from '#lib/logger.web';
 import { mostReadRecordIsFresh, shouldRenderLastUpdated } from '../utilities';
 import LastUpdated from './LastUpdated';
-import { group4WrapperMaxWidth } from '#app/components/Grid';
 
 const logger = webLogger();
 
@@ -51,7 +50,7 @@ const MostReadSection = styled.section.attrs(() => ({
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    max-width: ${group4WrapperMaxWidth};
+    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   }
 `;
 

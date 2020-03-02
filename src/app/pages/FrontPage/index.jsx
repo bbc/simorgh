@@ -21,6 +21,7 @@ import {
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
@@ -37,6 +38,11 @@ import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withLoading from '#containers/PageHandlers/withLoading';
 import withError from '#containers/PageHandlers/withError';
 import withData from '#containers/PageHandlers/withData';
+
+export const StyledFrontPageMain = styled.main`
+  background-color: ${C_GHOST};
+  z-index: 0;
+`;
 
 export const StyledFrontPageDiv = styled.div`
   /* To add GEL Margins */
@@ -101,28 +107,30 @@ const FrontPageContainer = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
-        {offScreenText}
-      </VisuallyHiddenText>
-      <StyledFrontPageDiv>
-        {groups.map((group, index) => (
-          <Fragment key={group.title}>
-            {group.type === 'useful-links' && (
-              <MostReadContainer
-                mostReadEndpointOverride={mostReadEndpointOverride}
-                maxTwoColumns
-              />
-            )}
-            <FrontPageSection group={group} sectionNumber={index} />
-          </Fragment>
-        ))}
-        {!hasUsefulLinks && (
-          <MostReadContainer
-            mostReadEndpointOverride={mostReadEndpointOverride}
-            maxTwoColumns
-          />
-        )}
-      </StyledFrontPageDiv>
+      <StyledFrontPageMain role="main">
+        <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
+          {offScreenText}
+        </VisuallyHiddenText>
+        <StyledFrontPageDiv>
+          {groups.map((group, index) => (
+            <Fragment key={group.title}>
+              {group.type === 'useful-links' && (
+                <MostReadContainer
+                  mostReadEndpointOverride={mostReadEndpointOverride}
+                  maxTwoColumns
+                />
+              )}
+              <FrontPageSection group={group} sectionNumber={index} />
+            </Fragment>
+          ))}
+          {!hasUsefulLinks && (
+            <MostReadContainer
+              mostReadEndpointOverride={mostReadEndpointOverride}
+              maxTwoColumns
+            />
+          )}
+        </StyledFrontPageDiv>
+      </StyledFrontPageMain>
     </>
   );
 };

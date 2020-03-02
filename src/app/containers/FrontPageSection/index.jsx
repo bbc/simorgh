@@ -29,7 +29,15 @@ import {
 import getRows from './utilities/storyRowsSplitter';
 import getRowDetails from './utilities/rowDetails';
 import { TopRow } from '../FrontPageStoryRows';
-import { StyledFrontPageSection } from '#app/components/Grid';
+
+const StyledFrontPageSection = styled.section`
+  /* To centre page layout for Group 4+ */
+  margin: 0 auto;
+  width: 100%; /* Needed for IE11 */
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+  }
+`;
 
 // Apply the right margin-top to the first section of the page when there is one or multiple items.
 const FirstSectionTopMargin = styled.div`
