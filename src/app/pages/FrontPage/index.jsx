@@ -42,6 +42,7 @@ import withData from '#containers/PageHandlers/withData';
 
 export const StyledFrontPageMain = styled.main`
   background-color: ${C_GHOST};
+  z-index: 0;
 `;
 
 const StyledFrontPageWrapper = styled.div`
