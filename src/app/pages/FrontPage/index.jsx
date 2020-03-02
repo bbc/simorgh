@@ -32,7 +32,6 @@ import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 
 export const StyledFrontPageMain = styled.main`
   background-color: ${C_GHOST};
-  z-index: 0;
 `;
 
 export const StyledFrontPageDiv = styled.div`
