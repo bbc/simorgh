@@ -2655,7 +2655,7 @@ const genServices = {
       mediaAssetPage: {
         path: {
           live: [
-            '/vietnamese/23222411', // CPS MAP
+            '/vietnamese/forum-51506476', // CPS MAP
             '/vietnamese/multimedia/2015/04/150428_david_wheat_interview', // TC2 MAP
           ],
           test: [
