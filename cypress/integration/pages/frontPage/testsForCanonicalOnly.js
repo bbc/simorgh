@@ -3,13 +3,13 @@
 import useAppToggles from '../../../support/helpers/useAppToggles';
 
 // Limiting to two services
-const serviceHasMostRead = service => ['persian', 'yoruba'].includes(service);
+const serviceHasMostRead = service => ['pidgin', 'yoruba'].includes(service);
 
 export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service} ${pageType}`, () => {});
 };
 
-// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+// For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
@@ -23,6 +23,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       it('should contain most read component if the toggle is enabled', () => {
         if (useAppToggles.mostRead) {
           // For testing most read renders when ARES endpoint returns correctly.
+          // eslint-disable-next-line cypress/no-unnecessary-waiting
+          cy.wait(2000); // wait for 2 seconds
           cy.get('[data-e2e="most-read"]').should('be.visible');
         }
       });
