@@ -49,7 +49,7 @@ export const service = {
       currentPage: 'વર્તમાન પેજ',
       skipLinkText: 'સામગ્રી પર જાઓ',
       relatedContent: 'સંબંધિત સમાચાર',
-      sections: 'વિભાગો',
+      navMenuText: 'વિભાગો',
       mediaAssetPage: {
         mediaPlayer: 'મીડિયા પ્લેયર',
         audioPlayer: 'ઓડિયો પ્લેયર',

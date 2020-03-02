@@ -49,7 +49,7 @@ export const service = {
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',
       relatedContent: 'Berita terkait',
-      sections: 'Kategori',
+      navMenuText: 'Kategori',
       mediaAssetPage: {
         mediaPlayer: 'Pemutar Media',
         audioPlayer: 'Pemutar Audio',

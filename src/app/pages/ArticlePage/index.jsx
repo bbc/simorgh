@@ -3,19 +3,19 @@ import path from 'ramda/src/path';
 import styled from 'styled-components';
 import { string } from 'prop-types';
 import { articleDataPropTypes } from '#models/propTypes/article';
-import ArticleMetadata from '../ArticleMetadata';
+import ArticleMetadata from '#containers/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
-import headings from '../Headings';
-import text from '../Text';
-import image from '../Image';
-import Blocks from '../Blocks';
-import timestamp from '../ArticleTimestamp';
+import headings from '#containers/Headings';
+import text from '#containers/Text';
+import image from '#containers/Image';
+import Blocks from '#containers/Blocks';
+import timestamp from '#containers/ArticleTimestamp';
 import { GhostGrid } from '#lib/styledGrid';
-import ATIAnalytics from '../ATIAnalytics';
-import ChartbeatAnalytics from '../ChartbeatAnalytics';
-import articleMediaPlayer from '../ArticleMediaPlayer';
-import LinkedData from '../LinkedData';
-import MostReadContainer from '../MostRead';
+import ATIAnalytics from '#containers/ATIAnalytics';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import articleMediaPlayer from '#containers/ArticleMediaPlayer';
+import LinkedData from '#containers/LinkedData';
+import MostReadContainer from '#containers/MostRead';
 import {
   getArticleId,
   getHeadline,
@@ -42,28 +42,28 @@ const StyledMain = styled.main`
   flex-grow: 1;
 `;
 
-const ArticleMain = ({ articleData: data, mostReadEndpointOverride }) => {
+const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { articleAuthor } = useContext(ServiceContext);
-  const headline = getHeadline(data);
-  const description = getSummary(data) || getHeadline(data);
-  const firstPublished = getFirstPublished(data);
-  const lastPublished = getLastPublished(data);
-  const aboutTags = getAboutTags(data);
+  const headline = getHeadline(pageData);
+  const description = getSummary(pageData) || getHeadline(pageData);
+  const firstPublished = getFirstPublished(pageData);
+  const lastPublished = getLastPublished(pageData);
+  const aboutTags = getAboutTags(pageData);
 
   return (
     <>
-      <ATIAnalytics data={data} />
-      <ChartbeatAnalytics data={data} />
+      <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} />
       <ArticleMetadata
-        articleId={getArticleId(data)}
+        articleId={getArticleId(pageData)}
         title={headline}
         author={articleAuthor}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
-        section={getArticleSection(data)}
+        section={getArticleSection(pageData)}
         aboutTags={aboutTags}
-        mentionsTags={getMentions(data)}
-        lang={getLang(data)}
+        mentionsTags={getMentions(pageData)}
+        lang={getLang(pageData)}
         description={description}
       />
       <LinkedData
@@ -78,7 +78,7 @@ const ArticleMain = ({ articleData: data, mostReadEndpointOverride }) => {
       <StyledMain role="main">
         <GhostGrid>
           <Blocks
-            blocks={path(['content', 'model', 'blocks'], data)}
+            blocks={path(['content', 'model', 'blocks'], pageData)}
             componentsToRender={componentsToRender}
           />
         </GhostGrid>
@@ -90,13 +90,13 @@ const ArticleMain = ({ articleData: data, mostReadEndpointOverride }) => {
     </>
   );
 };
-ArticleMain.propTypes = {
-  articleData: articleDataPropTypes.isRequired,
+ArticlePage.propTypes = {
+  pageData: articleDataPropTypes.isRequired,
   mostReadEndpointOverride: string,
 };
 
-ArticleMain.defaultProps = {
+ArticlePage.defaultProps = {
   mostReadEndpointOverride: null,
 };
 
-export default ArticleMain;
+export default ArticlePage;

@@ -1,5 +1,4 @@
 import React from 'react';
-import pipe from 'ramda/src/pipe';
 import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
@@ -24,27 +23,14 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
-import Byline from '#containers/Byline';
 import {
+  getAboutTags,
   getFirstPublished,
   getLastPublished,
-  getAboutTags,
 } from '#lib/utilities/parseAssetData';
-import categoryType from './categoryMap/index';
 
-// Page Handlers
-import withContexts from '#containers/PageHandlers/withContexts';
-import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
-import withError from '#containers/PageHandlers/withError';
-import withLoading from '#containers/PageHandlers/withLoading';
-import withData from '#containers/PageHandlers/withData';
-
-const StoryPageContainer = ({ pageData }) => {
+const PhotoGalleryPage = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
-  const category = path(
-    ['promo', 'passport', 'category', 'categoryName'],
-    pageData,
-  );
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
   const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
@@ -77,7 +63,6 @@ const StoryPageContainer = ({ pageData }) => {
       ) : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    byline: props => <StyledByline {...props} />,
   };
 
   const StyledGhostGrid = styled(GhostGrid)`
@@ -90,14 +75,6 @@ const StoryPageContainer = ({ pageData }) => {
   `;
 
   const StyledTimestamp = styled(Timestamp)`
-    padding-bottom: ${GEL_SPACING_DBL};
-
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      padding-bottom: ${GEL_SPACING_TRPL};
-    }
-  `;
-
-  const StyledByline = styled(Byline)`
     padding-bottom: ${GEL_SPACING_DBL};
 
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -118,7 +95,7 @@ const StoryPageContainer = ({ pageData }) => {
         aboutTags={aboutTags}
       />
       <LinkedData
-        type={categoryType(category)}
+        type="Article"
         seoTitle={title}
         headline={title}
         description={summary}
@@ -131,19 +108,11 @@ const StoryPageContainer = ({ pageData }) => {
       <StyledGhostGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledGhostGrid>
-      <CpsRelatedContent content={relatedContent} />
+      <CpsRelatedContent content={relatedContent} enableGridWrapper />
     </>
   );
 };
 
-StoryPageContainer.propTypes = cpsAssetPagePropTypes;
+PhotoGalleryPage.propTypes = cpsAssetPagePropTypes;
 
-const EnhancedStoryPageContainer = pipe(
-  withData,
-  withError,
-  withLoading,
-  withPageWrapper,
-  withContexts,
-)(StoryPageContainer);
-
-export default EnhancedStoryPageContainer;
+export default PhotoGalleryPage;
