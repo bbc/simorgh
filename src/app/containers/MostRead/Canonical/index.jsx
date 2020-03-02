@@ -46,6 +46,7 @@ const MarginWrapper = styled.div`
 const MostReadSection = styled.section.attrs(() => ({
   role: 'region',
   'aria-labelledby': 'Most-Read',
+  'data-e2e': 'most-read',
 }))`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
@@ -54,6 +55,7 @@ const MostReadSection = styled.section.attrs(() => ({
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   }
 `;
+}))``;
 
 const ConstrainedMostReadSection = styled(MostReadSection)`
   background-color: ${C_GHOST};
