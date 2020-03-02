@@ -59,6 +59,7 @@ const ConstrainedMostReadSection = styled(MostReadSection)`
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     margin: 0 auto ${GEL_SPACING_TRPL};
+    padding: 0 ${GEL_SPACING_DBL};
     max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
   }
 `;
