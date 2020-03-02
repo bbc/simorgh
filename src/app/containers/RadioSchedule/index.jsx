@@ -56,32 +56,36 @@ const RadioScheduleContainer = ({ endpoint }) => {
     )(radioScheduleData.schedules);
 
     const radioSchedules = radioScheduleData.schedules;
-    const schedulesToShow = [
-      radioSchedules[latestProgrammeIndex],
-      radioSchedules[latestProgrammeIndex - 1],
-      radioSchedules[latestProgrammeIndex - 2],
-      radioSchedules[latestProgrammeIndex + 1],
-    ];
 
-    const schedules = schedulesToShow.map(program => {
-      const currentState = getProgramState(
-        currentTime,
-        program.publishedTimeStart,
-        program.publishedTimeEnd,
-      );
-      return {
-        id: program.broadcast.pid,
-        state: currentState,
-        stateLabel: currentState,
-        startTime: program.publishedTimeStart,
-        link: getLink(currentState, program),
-        brandTitle: program.brand.title,
-        episodeTitle: program.episode.presentationTitle,
-        summary: program.episode.synopses.short,
-        duration: program.publishedTimeDuration,
-        durationLabel: 'Duration',
-      };
-    });
+    const schedulesToShow = radioSchedules[latestProgrammeIndex - 2] &&
+      radioSchedules[latestProgrammeIndex + 1] && [
+        radioSchedules[latestProgrammeIndex],
+        radioSchedules[latestProgrammeIndex - 1],
+        radioSchedules[latestProgrammeIndex - 2],
+        radioSchedules[latestProgrammeIndex + 1],
+      ];
+
+    const schedules =
+      schedulesToShow &&
+      schedulesToShow.map(program => {
+        const currentState = getProgramState(
+          currentTime,
+          program.publishedTimeStart,
+          program.publishedTimeEnd,
+        );
+        return {
+          id: program.broadcast.pid,
+          state: currentState,
+          stateLabel: currentState,
+          startTime: program.publishedTimeStart,
+          link: getLink(currentState, program),
+          brandTitle: program.brand.title,
+          episodeTitle: program.episode.presentationTitle,
+          summary: program.episode.synopses.short,
+          duration: program.publishedTimeDuration,
+          durationLabel: 'Duration',
+        };
+      });
     setRadioSchedule(schedules);
   };
 
@@ -102,14 +106,16 @@ const RadioScheduleContainer = ({ endpoint }) => {
 
   return (
     <>
-      <RadioSchedule
-        schedules={schedule}
-        locale={locale}
-        timezone={timezone}
-        script={script}
-        service={service}
-        dir={dir}
-      />
+      {schedule && (
+        <RadioSchedule
+          schedules={schedule}
+          locale={locale}
+          timezone={timezone}
+          script={script}
+          service={service}
+          dir={dir}
+        />
+      )}
     </>
   );
 };
