@@ -42,15 +42,9 @@
         }
       ]
     },
-    "tags": {
-      
-    },
+    "tags": {},
     "version": "v1.0.10",
-    "blockTypes": [
-      "media",
-      "paragraph",
-      "list"
-    ],
+    "blockTypes": ["media", "paragraph", "list"],
     "includeComments": false
   },
   "content": {
@@ -72,9 +66,7 @@
         "versions": [
           {
             "versionId": "p07ksjjr",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 132,
             "durationISO8601": "PT2M12S",
             "warnings": {
@@ -231,9 +223,7 @@
       "versions": [
         {
           "versionId": "p07ksjjr",
-          "types": [
-            "Original"
-          ],
+          "types": ["Original"],
           "duration": 132,
           "durationISO8601": "PT2M12S",
           "warnings": {
