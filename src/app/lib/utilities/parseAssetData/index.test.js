@@ -9,7 +9,7 @@ import {
 } from '.';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 
-describe('ArticleMain utils', () => {
+describe('ArticlePage utils', () => {
   it('getHeadline › it should return the correct value', () => {
     const actual = getHeadline(articleDataNews);
     const expected = 'Article Headline for SEO';
