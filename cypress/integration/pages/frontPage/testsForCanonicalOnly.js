@@ -23,7 +23,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       it('should contain most read component if the toggle is enabled', () => {
         if (useAppToggles.mostRead) {
           // For testing most read renders when ARES endpoint returns correctly.
-          cy.get('[aria-labelledby="Most-Read"]').should('be.visible');
+          cy.get('[data-e2e="most-read"]').should('be.visible');
         }
       });
     }
