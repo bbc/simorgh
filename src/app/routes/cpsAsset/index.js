@@ -1,7 +1,12 @@
 import path from 'ramda/src/path';
 import getInitialData from './getInitialData';
-import { ErrorPage, MediaAssetPage, PhotoGalleryPage, StoryPage } from '#pages';
-import FrontPage from '#pages/FrontPage';
+import {
+  ErrorPage,
+  FrontPage,
+  MediaAssetPage,
+  PhotoGalleryPage,
+  StoryPage,
+} from '#pages';
 import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
 import {
   FEATURE_INDEX_PAGE,
