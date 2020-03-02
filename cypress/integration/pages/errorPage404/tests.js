@@ -16,7 +16,7 @@ export const testsThatFollowSmokeTestConfig = ({
   variant,
 }) =>
   describe(`Tests for ${service} ${pageType}`, () => {
-    const errorPath = config[service].pageTypes[pageType].path[getAppEnv()];
+    const errorPath = config[service].pageTypes[pageType].paths[getAppEnv()];
 
     if (errorPath) {
       describe(`${service} Test we get a 404`, () => {

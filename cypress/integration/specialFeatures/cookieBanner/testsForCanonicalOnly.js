@@ -1,6 +1,7 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import config from '../../../support/config/services';
-import getAppEnv from '../../../support/helpers/getAppEnv';
+import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
+import getPaths from '../../../support/helpers/getPaths';
 
 // Limited to 1 UK & 1 WS service when a smoke test due to time test takes to run per page.
 // This is why this file doesn't check smoke test values.
@@ -20,9 +21,6 @@ const assertCookieExpiryDate = (cookieName, timestamp) => {
     );
   });
 };
-
-const filterPageTypes = (pageType, service) =>
-  config[service].pageTypes[pageType].path;
 
 const getPrivacyBanner = (service, variant) =>
   cy.contains(
@@ -79,16 +77,13 @@ const visitPage = (pageType, path) => {
   });
 };
 
-const makeArray = arrayOrString => [].concat(arrayOrString);
-
 Object.keys(config)
   .filter(serviceFilter)
   .forEach(service => {
     Object.keys(config[service].pageTypes)
-      .filter(pageType => filterPageTypes(pageType, service))
+      .filter(pageType => serviceHasPageType(service, pageType))
       .forEach(pageType => {
-        const envPath = config[service].pageTypes[pageType].path[getAppEnv()];
-        const paths = envPath ? makeArray(envPath) : [];
+        const paths = getPaths(service, pageType);
         paths.forEach(path => {
           const { variant } = config[service];
 

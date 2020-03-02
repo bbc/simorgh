@@ -16,10 +16,8 @@ import {
   testsThatNeverRunDuringSmokeTestingForAllCanonicalPages,
 } from '../../integration/pages/testsForAllCanonicalPages';
 
-import getAppEnv from './getAppEnv';
-
-const serviceHasPageType = (service, pageType) =>
-  config[service].pageTypes[pageType].path;
+import getPaths from './getPaths';
+import serviceHasPageType from './serviceHasPageType';
 
 const visitPage = (path, pageType) => {
   const expectedContentType = 'text/html';
@@ -52,14 +50,7 @@ const runTestsForPage = ({
   Object.keys(config)
     .filter(service => serviceHasPageType(service, pageType))
     .forEach(service => {
-      const { path } = config[service].pageTypes[pageType];
-      const envPaths = path && path[getAppEnv()];
-
-      let paths = [];
-
-      if (envPaths) {
-        paths = paths.concat(envPaths);
-      }
+      const paths = getPaths(service, pageType);
 
       paths.forEach(currentPath => {
         describe(`${pageType} - ${service} -${

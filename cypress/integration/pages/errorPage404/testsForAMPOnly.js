@@ -13,7 +13,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   pageType,
 }) =>
   describe(`Amp Tests for ${service} ${pageType}`, () => {
-    const errorPath = config[service].pageTypes[pageType].path[getAppEnv()];
+    const errorPath = config[service].pageTypes[pageType].paths[getAppEnv()];
 
     if (errorPath) {
       it('should return a 404 error code', () => {
