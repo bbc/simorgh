@@ -35,7 +35,7 @@ NB there is further documentation colocated with relevant code. The above list i
 
 A request to a BBC article (https://www.bbc.co.uk/news/articles/clldg965yzjo) is passed on to the Simorgh application from a proprietary routing and caching service (called Mozart).
 
-The request matches a route in our express server using a regex match (`articleRegexPath` || `frontPageRegexPath`). If the URL matches the pre-defined regex pattern for an article or a front page we fetch some params from the route using the `getRouteProps` function. This returns the service, isAmp, route and match properties. Route is a react-router route that defines a method to fetch the initial JSON used to render the page and the react container in which to render i.e. `ArticleContainer`, this is typically called `getInitialData`
+The request matches a route in our express server using a regex match (`articleRegexPath` || `frontPageRegexPath`). If the URL matches the pre-defined regex pattern for an article or a front page we fetch some params from the route using the `getRouteProps` function. This returns the service, isAmp, route and match properties. Route is a react-router route that defines a method to fetch the initial JSON used to render the page and the React component in which to render i.e. `ArticlePage`, this is typically called `getInitialData`.
 
 Once data is returned we pull the status code and pass all of this data as props to our main document using `renderDocument`.
 
@@ -59,13 +59,13 @@ The routes container is rendered again, this time loading is set to false so the
 
 The JSON payload for an article consists of a number of Blocks. Each block is an object which represents an element on the page, this could be a Heading, an Image, a Paragraph etc. Each of these blocks has a block type and a block type will match up to a specific container in Simorgh e.g. blockType: image will match to the Image container.
 
-The ArticleMain container will iterate over each JSON block, match it against its corresponding react container and pass the data via props. These containers are where the logic for rendering each block type sits. It is at this point where we use the installed frontend components from the Psammead component library. For example the Image container will import the Figure container, and Figure will import and use the psammead-image and the psammead-image-placeholder components. An image on an article will generally have a caption, so the Figure container will import the caption container which may include more frontend components from Psammead to render a caption on top of the image.
+The ArticlePage component will iterate over each JSON block, match it against its corresponding react container and pass the data via props. These containers are where the logic for rendering each block type sits. It is at this point where we use the installed frontend components from the Psammead component library. For example the Image container will import the Figure container, and Figure will import and use the psammead-image and the psammead-image-placeholder components. An image on an article will generally have a caption, so the Figure container will import the caption container which may include more frontend components from Psammead to render a caption on top of the image.
 
 This process is repeated for each block within an article, ultimately rendering the main body of a news article using a combination of React containers for the business logic and React components for the frontend markup.
 
 ### A Page Render Lifecycle
 
-Each render is passed through a set of HOC's (Higher Order Components) to enhance the page, these HOC's are;
+Each page component is passed through a set of HOC's (Higher Order Components) to enhance the page, these HOC's are;
 
 - withVariant
 - withContexts
