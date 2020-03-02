@@ -43,7 +43,7 @@ export const getManifestRegex = services => {
 
 export const getCpsAssetRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:assetUri(${assetUriRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/:assetUri(${assetUriRegex}):amp(${ampRegex})?`;
 };
 
 export const getLegacyAssetRegex = services => {

@@ -64,6 +64,7 @@ const constructDataFilePath = ({
     case 'mostRead':
       dataPath = `${variant || 'index'}.json`;
       break;
+    case 'cpsAssets':
     case 'legacyAssets':
       dataPath = `${variant}/${assetUri}.json`;
       break;
@@ -180,12 +181,12 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
     .get(cpsAssetPageDataPath, async ({ params }, res, next) => {
-      const { service, assetUri: id, variant } = params;
+      const { service, assetUri, variant } = params;
 
       const dataFilePath = constructDataFilePath({
         pageType: 'cpsAssets',
         service,
-        id,
+        assetUri,
         variant,
       });
 
