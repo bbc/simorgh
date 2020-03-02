@@ -6,7 +6,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   articleDataNews,
   articleDataPersian,
-} from '#pages/Article/fixtureData';
+} from '#pages/ArticlePage/fixtureData';
 import services from '#server/utilities/serviceConfigs';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import frontPageData from '#data/igbo/frontpage/index.json';

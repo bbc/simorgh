@@ -53,7 +53,7 @@ export const service = {
       currentPage: 'መነሻ ገፅ',
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
-      sections: 'ክፍሎች',
+      navMenuText: 'ክፍሎች',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

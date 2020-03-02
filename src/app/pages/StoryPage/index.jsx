@@ -1,15 +1,15 @@
 import React from 'react';
-import pipe from 'ramda/src/pipe';
 import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
+import { C_CHALK } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { GhostGrid } from '#lib/styledGrid';
+import Grid from '@bbc/psammead-grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -24,21 +24,20 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
+import Byline from '#containers/Byline';
 import {
-  getAboutTags,
   getFirstPublished,
   getLastPublished,
+  getAboutTags,
 } from '#lib/utilities/parseAssetData';
+import categoryType from './categoryMap/index';
 
-// Page Handlers
-import withContexts from '#containers/PageHandlers/withContexts';
-import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
-import withError from '#containers/PageHandlers/withError';
-import withLoading from '#containers/PageHandlers/withLoading';
-import withData from '#containers/PageHandlers/withData';
-
-const PhotoGalleryPageContainer = ({ pageData }) => {
+const StoryPage = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
+  const category = path(
+    ['promo', 'passport', 'category', 'categoryName'],
+    pageData,
+  );
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
   const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
@@ -71,16 +70,8 @@ const PhotoGalleryPageContainer = ({ pageData }) => {
       ) : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
+    byline: props => <StyledByline {...props} />,
   };
-
-  const StyledGhostGrid = styled(GhostGrid)`
-    flex-grow: 1;
-    padding-bottom: ${GEL_SPACING_TRPL};
-
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      padding-bottom: ${GEL_SPACING_QUAD};
-    }
-  `;
 
   const StyledTimestamp = styled(Timestamp)`
     padding-bottom: ${GEL_SPACING_DBL};
@@ -89,6 +80,75 @@ const PhotoGalleryPageContainer = ({ pageData }) => {
       padding-bottom: ${GEL_SPACING_TRPL};
     }
   `;
+
+  const StyledByline = styled(Byline)`
+    padding-bottom: ${GEL_SPACING_DBL};
+
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding-bottom: ${GEL_SPACING_TRPL};
+    }
+  `;
+
+  const StyledGrid = styled(Grid)`
+    flex-grow: 1;
+  `;
+
+  const GridSecondaryColumn = styled(Grid)`
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      margin-top: ${GEL_SPACING_QUAD};
+    }
+  `;
+
+  const ComponentWrapper = styled.div`
+    background: ${C_CHALK};
+    margin-bottom: ${GEL_SPACING_TRPL};
+    padding: ${GEL_SPACING_DBL};
+  `;
+
+  const gridColumns = {
+    group0: 8,
+    group1: 8,
+    group2: 8,
+    group3: 8,
+    group4: 12,
+    group5: 12,
+  };
+
+  const gridMargins = {
+    group0: false,
+    group1: false,
+    group2: false,
+    group3: false,
+    group4: true,
+    group5: true,
+  };
+
+  const gridOffset = {
+    group0: 1,
+    group1: 1,
+    group2: 1,
+    group3: 1,
+    group4: 1,
+    group5: 3,
+  };
+
+  const gridColsMain = {
+    group0: 8,
+    group1: 8,
+    group2: 8,
+    group3: 8,
+    group4: 8,
+    group5: 5,
+  };
+
+  const gridColsSecondary = {
+    group0: 8,
+    group1: 8,
+    group2: 8,
+    group3: 8,
+    group4: 4,
+    group5: 3,
+  };
 
   return (
     <>
@@ -103,7 +163,7 @@ const PhotoGalleryPageContainer = ({ pageData }) => {
         aboutTags={aboutTags}
       />
       <LinkedData
-        type="Article"
+        type={categoryType(category)}
         seoTitle={title}
         headline={title}
         description={summary}
@@ -113,22 +173,37 @@ const PhotoGalleryPageContainer = ({ pageData }) => {
         aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
-      <StyledGhostGrid as="main" role="main">
-        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </StyledGhostGrid>
-      <CpsRelatedContent content={relatedContent} />
+
+      <StyledGrid columns={gridColumns} enableGelGutters margins={gridMargins}>
+        <Grid
+          item
+          columns={gridColsMain}
+          startOffset={gridOffset}
+          as="main"
+          role="main"
+        >
+          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+          <CpsRelatedContent content={relatedContent} />
+        </Grid>
+        <GridSecondaryColumn item columns={gridColsSecondary}>
+          <ComponentWrapper>
+            <h2>This is a component in the second column</h2>
+          </ComponentWrapper>
+          <ComponentWrapper>
+            <h2>This is a component in the second column</h2>
+          </ComponentWrapper>
+          <ComponentWrapper>
+            <h2>This is a component in the second column</h2>
+          </ComponentWrapper>
+          <ComponentWrapper>
+            <h2>This is a component in the second column</h2>
+          </ComponentWrapper>
+        </GridSecondaryColumn>
+      </StyledGrid>
     </>
   );
 };
 
-PhotoGalleryPageContainer.propTypes = cpsAssetPagePropTypes;
+StoryPage.propTypes = cpsAssetPagePropTypes;
 
-const EnhancedPhotoGalleryPageContainer = pipe(
-  withData,
-  withError,
-  withLoading,
-  withPageWrapper,
-  withContexts,
-)(PhotoGalleryPageContainer);
-
-export default EnhancedPhotoGalleryPageContainer;
+export default StoryPage;
