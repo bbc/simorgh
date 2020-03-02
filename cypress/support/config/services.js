@@ -1415,7 +1415,7 @@ const genServices = {
             '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
           ],
           local: [
-            '/persian/iran-23231114', // CPS MAP with audio clip
+            '/persian/world-49653162', // CPS MAP with audio clip
             '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
           ],
         },
