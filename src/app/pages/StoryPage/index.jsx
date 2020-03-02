@@ -20,6 +20,7 @@ import image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
+import MostReadContainer from '#containers/MostRead';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
@@ -187,7 +188,7 @@ const StoryPage = ({ pageData }) => {
         </Grid>
         <GridSecondaryColumn item columns={gridColsSecondary}>
           <ComponentWrapper>
-            <h2>This is a component in the second column</h2>
+            <MostReadContainer />
           </ComponentWrapper>
           <ComponentWrapper>
             <h2>This is a component in the second column</h2>
