@@ -7,7 +7,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
     chartbeat
   </div>
   <main
-    class="StyledMain-sc-1we5ejh-0 hruWCP"
+    class="StyledMain-sc-1onvfv8-0 hAQCOp"
     role="main"
   >
     <div
@@ -507,7 +507,7 @@ exports[`should render a news article correctly 1`] = `
     chartbeat
   </div>
   <main
-    class="StyledMain-sc-1we5ejh-0 hruWCP"
+    class="StyledMain-sc-1onvfv8-0 hAQCOp"
     role="main"
   >
     <div
@@ -545,7 +545,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
     chartbeat
   </div>
   <main
-    class="StyledMain-sc-1we5ejh-0 hruWCP"
+    class="StyledMain-sc-1onvfv8-0 hAQCOp"
     role="main"
   >
     <div

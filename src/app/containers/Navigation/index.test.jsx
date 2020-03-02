@@ -17,7 +17,7 @@ describe('Navigation Container', () => {
         pageType="article"
         service="news"
         statusCode={200}
-        pathname="/pathname"
+        pathname="/news"
       >
         <Navigation />
       </RequestContextProvider>
@@ -34,7 +34,75 @@ describe('Navigation Container', () => {
         pageType="article"
         service="news"
         statusCode={200}
-        pathname="/pathname"
+        pathname="/news"
+      >
+        <Navigation />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
+  );
+
+  shouldMatchSnapshot(
+    'should correctly render amp navigation on non-home navigation page',
+    <ServiceContextProvider service="news">
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp
+        pageType="article"
+        service="news"
+        statusCode={200}
+        pathname="/uk"
+      >
+        <Navigation />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
+  );
+
+  shouldMatchSnapshot(
+    'should correctly render canonical navigation on non-home navigation page',
+    <ServiceContextProvider service="news">
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={false}
+        pageType="article"
+        service="news"
+        statusCode={200}
+        pathname="/uk"
+      >
+        <Navigation />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
+  );
+
+  shouldMatchSnapshot(
+    'should correctly render amp navigation on non-navigation page',
+    <ServiceContextProvider service="news">
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp
+        pageType="article"
+        service="news"
+        statusCode={200}
+        pathname="/not-a-navigation-page"
+      >
+        <Navigation />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
+  );
+
+  shouldMatchSnapshot(
+    'should correctly render canonical navigation on non-navigation page',
+    <ServiceContextProvider service="news">
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={false}
+        pageType="article"
+        service="news"
+        statusCode={200}
+        pathname="/not-a-navigation-page"
       >
         <Navigation />
       </RequestContextProvider>
@@ -53,7 +121,7 @@ describe('Navigation Container', () => {
           pageType="article"
           service="news"
           statusCode={200}
-          pathname="/pathname"
+          pathname="/news"
         >
           <Navigation />
         </RequestContextProvider>
