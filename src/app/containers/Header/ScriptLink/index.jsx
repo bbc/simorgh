@@ -6,20 +6,17 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { UserContext } from '#contexts/UserContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-export const getVariantHref = ({ path, params, variant }) => {
-  // How to deal with error pages served when page is not matched by a Simorgh route?
-  // Is this a case to consider or can we safely ignore? A mistyped link could take to 404 page locally.
-  // What should we do for AMP pages? Link to canonical or AMP? This currently links to AMP, but could remove .amp easily.
-  return compile(path)(
+export const getVariantHref = ({ path, params, variant }) =>
+  compile(path)(
     {
       ...params,
       variant: `/${variant}`,
+      amp: undefined, // we don't want to link to AMP pages directly
     },
     {
       encode: value => value,
     },
   );
-};
 
 const ScriptLinkContainer = () => {
   const { setPreferredVariantCookie } = useContext(UserContext);

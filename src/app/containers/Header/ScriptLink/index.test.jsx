@@ -162,7 +162,7 @@ describe(`Script Link`, () => {
             `a[data-variant="${otherVariant}"]`,
           );
 
-          expect(scriptLink.getAttribute('href')).toBe(`${variantPath}.amp`);
+          expect(scriptLink.getAttribute('href')).toBe(`${variantPath}`);
         });
       });
     });
