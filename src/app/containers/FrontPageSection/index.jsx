@@ -183,12 +183,11 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
   }
 
   return (
+    // jsx-a11y considers `role="region"` on a <section> to be redundant.
+    // (<section> tags *should* imply `role="region"`)
+    // While this may be true in a perfect world, we set it in order to get
+    // the greatest possible support.
     <StyledFrontPageSection role="region" aria-labelledby={sectionLabelId}>
-      {/* jsx-a11y considers `role="region"` on a <section> to be redundant.
-        (<section> tags *should* imply `role="region"`)
-        While this may be true in a perfect world, we set it in order to get
-        the greatest possible support. */}
-      {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
       <SectionLabel
         script={script}
         labelId={sectionLabelId}
