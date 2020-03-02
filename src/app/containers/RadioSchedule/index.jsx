@@ -26,15 +26,14 @@ const RadioScheduleContainer = ({ endpoint }) => {
   const [schedule, setRadioSchedule] = useState([]);
 
   const getProgramState = (currentTime, startTime, endTime) => {
-    // live - currentTime < endTime && currentTime > startTime
-    if (currentTime < endTime && currentTime > startTime) {
+    const isCurrentlyLive = currentTime < endTime && currentTime > startTime;
+    if (isCurrentlyLive) {
       return 'live';
     }
-    // onDemand - is live that just ended
-    if (currentTime > endTime) {
+    const isEndedLive = currentTime > endTime;
+    if (isEndedLive) {
       return 'onDemand';
     }
-    // next - is immedeately after what's live
     return 'next';
   };
 
