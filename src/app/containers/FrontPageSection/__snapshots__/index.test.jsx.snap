@@ -685,329 +685,326 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 }
 
 <section
+  aria-labelledby="Top-Stories"
   class="c0"
+  role="region"
 >
-  <section
-    aria-labelledby="Top-Stories"
-    role="region"
+  <div
+    class="c1"
   >
     <div
-      class="c1"
+      class="c2"
+    />
+    <h2
+      class="c3"
     >
       <div
-        class="c2"
-      />
-      <h2
-        class="c3"
+        class="c4"
       >
-        <div
-          class="c4"
+        <span
+          class="c5"
         >
           <span
-            class="c5"
+            class="c6"
+            dir="ltr"
+            id="Top-Stories"
           >
-            <span
-              class="c6"
-              dir="ltr"
-              id="Top-Stories"
-            >
-              Top Stories
-            </span>
+            Top Stories
           </span>
-        </div>
-      </h2>
-    </div>
-    <div
-      class="c7"
+        </span>
+      </div>
+    </h2>
+  </div>
+  <div
+    class="c7"
+  >
+    <ul
+      class="c8 c9"
+      dir="ltr"
+      role="list"
     >
-      <ul
-        class="c8 c9"
+      <li
+        class="c10 c11"
         dir="ltr"
-        role="list"
+        role="listitem"
       >
-        <li
-          class="c10 c11"
-          dir="ltr"
-          role="listitem"
+        <div
+          class="c12"
         >
           <div
-            class="c12"
+            class="c13"
+            dir="ltr"
           >
             <div
-              class="c13"
-              dir="ltr"
+              class="c14"
             >
               <div
-                class="c14"
+                class="c15"
               >
-                <div
-                  class="c15"
-                >
-                  <img
-                    alt="Image Alt text 1"
-                    class="c16"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
-                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
-                    srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg 320w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image1.jpg 624w"
-                    width="2048"
-                  />
-                </div>
-                <div
-                  class="c17"
+                <img
+                  alt="Image Alt text 1"
+                  class="c16"
+                  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
+                  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
+                  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg 320w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0A06/production/image1.jpg 624w"
+                  width="2048"
                 />
               </div>
-            </div>
-            <div
-              class="c18"
-              dir="ltr"
-            >
-              <h3
-                class="c19"
-              >
-                <a
-                  class="c20"
-                  href="https://www.bbc.co.uk"
-                >
-                  Top Story 1 headline
-                </a>
-              </h3>
-              <p
-                class="c21"
-              >
-                Summary text 1
-              </p>
-              <time
-                class="c22"
-                datetime="1970-01-19"
-              >
-                19 January 1970
-              </time>
+              <div
+                class="c17"
+              />
             </div>
           </div>
-        </li>
-        <li
-          class="c10 c23"
-          dir="ltr"
-          role="listitem"
+          <div
+            class="c18"
+            dir="ltr"
+          >
+            <h3
+              class="c19"
+            >
+              <a
+                class="c20"
+                href="https://www.bbc.co.uk"
+              >
+                Top Story 1 headline
+              </a>
+            </h3>
+            <p
+              class="c21"
+            >
+              Summary text 1
+            </p>
+            <time
+              class="c22"
+              datetime="1970-01-19"
+            >
+              19 January 1970
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="c10 c23"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="c24"
         >
           <div
-            class="c24"
+            class="c25"
+            dir="ltr"
           >
             <div
-              class="c25"
-              dir="ltr"
+              class="c14"
             >
               <div
-                class="c14"
+                class="c15"
               >
                 <div
-                  class="c15"
-                >
-                  <div
-                    class="lazyload-placeholder"
-                  />
-                </div>
-                <div
-                  class="c26"
+                  class="lazyload-placeholder"
                 />
               </div>
-            </div>
-            <div
-              class="c27"
-              dir="ltr"
-            >
-              <h3
-                class="c28"
-              >
-                <a
-                  class="c20"
-                  href="https://www.bbc.co.uk"
-                >
-                  Top Story 2 headline
-                </a>
-              </h3>
-              <p
-                class="c29"
-              >
-                Summary text 2
-              </p>
-              <time
-                class="c22"
-                datetime="1970-01-19"
-              >
-                19 January 1970
-              </time>
+              <div
+                class="c26"
+              />
             </div>
           </div>
-        </li>
-        <li
-          class="c10 c23"
-          dir="ltr"
-          role="listitem"
+          <div
+            class="c27"
+            dir="ltr"
+          >
+            <h3
+              class="c28"
+            >
+              <a
+                class="c20"
+                href="https://www.bbc.co.uk"
+              >
+                Top Story 2 headline
+              </a>
+            </h3>
+            <p
+              class="c29"
+            >
+              Summary text 2
+            </p>
+            <time
+              class="c22"
+              datetime="1970-01-19"
+            >
+              19 January 1970
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="c10 c23"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="c24"
         >
           <div
-            class="c24"
+            class="c25"
+            dir="ltr"
           >
             <div
-              class="c25"
-              dir="ltr"
+              class="c14"
             >
               <div
-                class="c14"
+                class="c15"
               >
                 <div
-                  class="c15"
-                >
-                  <div
-                    class="lazyload-placeholder"
-                  />
-                </div>
-                <div
-                  class="c26"
+                  class="lazyload-placeholder"
                 />
               </div>
-            </div>
-            <div
-              class="c27"
-              dir="ltr"
-            >
-              <h3
-                class="c28"
-              >
-                <a
-                  class="c20"
-                  href="https://www.bbc.co.uk"
-                >
-                  Top Story 3 headline
-                </a>
-              </h3>
-              <p
-                class="c29"
-              >
-                Summary text 3
-              </p>
-              <time
-                class="c22"
-                datetime="1970-01-19"
-              >
-                19 January 1970
-              </time>
+              <div
+                class="c26"
+              />
             </div>
           </div>
-        </li>
-        <li
-          class="c10 c23"
-          dir="ltr"
-          role="listitem"
+          <div
+            class="c27"
+            dir="ltr"
+          >
+            <h3
+              class="c28"
+            >
+              <a
+                class="c20"
+                href="https://www.bbc.co.uk"
+              >
+                Top Story 3 headline
+              </a>
+            </h3>
+            <p
+              class="c29"
+            >
+              Summary text 3
+            </p>
+            <time
+              class="c22"
+              datetime="1970-01-19"
+            >
+              19 January 1970
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="c10 c23"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="c24"
         >
           <div
-            class="c24"
+            class="c25"
+            dir="ltr"
           >
             <div
-              class="c25"
-              dir="ltr"
+              class="c14"
             >
               <div
-                class="c14"
+                class="c15"
               >
                 <div
-                  class="c15"
-                >
-                  <div
-                    class="lazyload-placeholder"
-                  />
-                </div>
-                <div
-                  class="c26"
+                  class="lazyload-placeholder"
                 />
               </div>
-            </div>
-            <div
-              class="c27"
-              dir="ltr"
-            >
-              <h3
-                class="c28"
-              >
-                <a
-                  class="c20"
-                  href="https://www.bbc.co.uk"
-                >
-                  Top Story 4 headline
-                </a>
-              </h3>
-              <p
-                class="c29"
-              >
-                Summary text 4
-              </p>
-              <time
-                class="c22"
-                datetime="1970-01-19"
-              >
-                19 January 1970
-              </time>
+              <div
+                class="c26"
+              />
             </div>
           </div>
-        </li>
-        <li
-          class="c10 c23"
-          dir="ltr"
-          role="listitem"
+          <div
+            class="c27"
+            dir="ltr"
+          >
+            <h3
+              class="c28"
+            >
+              <a
+                class="c20"
+                href="https://www.bbc.co.uk"
+              >
+                Top Story 4 headline
+              </a>
+            </h3>
+            <p
+              class="c29"
+            >
+              Summary text 4
+            </p>
+            <time
+              class="c22"
+              datetime="1970-01-19"
+            >
+              19 January 1970
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="c10 c23"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="c24"
         >
           <div
-            class="c24"
+            class="c25"
+            dir="ltr"
           >
             <div
-              class="c25"
-              dir="ltr"
+              class="c14"
             >
               <div
-                class="c14"
+                class="c15"
               >
                 <div
-                  class="c15"
-                >
-                  <div
-                    class="lazyload-placeholder"
-                  />
-                </div>
-                <div
-                  class="c26"
+                  class="lazyload-placeholder"
                 />
               </div>
-            </div>
-            <div
-              class="c27"
-              dir="ltr"
-            >
-              <h3
-                class="c28"
-              >
-                <a
-                  class="c20"
-                  href="https://www.bbc.co.uk"
-                >
-                  Top Story 5 headline
-                </a>
-              </h3>
-              <p
-                class="c29"
-              >
-                Summary text 5
-              </p>
-              <time
-                class="c22"
-                datetime="1970-01-19"
-              >
-                19 January 1970
-              </time>
+              <div
+                class="c26"
+              />
             </div>
           </div>
-        </li>
-      </ul>
-    </div>
-  </section>
+          <div
+            class="c27"
+            dir="ltr"
+          >
+            <h3
+              class="c28"
+            >
+              <a
+                class="c20"
+                href="https://www.bbc.co.uk"
+              >
+                Top Story 5 headline
+              </a>
+            </h3>
+            <p
+              class="c29"
+            >
+              Summary text 5
+            </p>
+            <time
+              class="c22"
+              datetime="1970-01-19"
+            >
+              19 January 1970
+            </time>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </section>
 `;
 
@@ -1649,155 +1646,152 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 }
 
 <section
+  aria-labelledby="Top-Stories"
   class="c0"
+  role="region"
 >
-  <section
-    aria-labelledby="Top-Stories"
-    role="region"
+  <div
+    class="c1"
   >
     <div
-      class="c1"
+      class="c2"
+    />
+    <h2
+      class="c3"
     >
       <div
-        class="c2"
-      />
-      <h2
-        class="c3"
+        class="c4"
       >
-        <div
-          class="c4"
+        <span
+          class="c5"
         >
           <span
-            class="c5"
+            class="c6"
+            dir="ltr"
+            id="Top-Stories"
           >
-            <span
-              class="c6"
-              dir="ltr"
-              id="Top-Stories"
-            >
-              Top Stories
-            </span>
+            Top Stories
           </span>
-        </div>
-      </h2>
-    </div>
-    <ul
-      class="c7 c8"
+        </span>
+      </div>
+    </h2>
+  </div>
+  <ul
+    class="c7 c8"
+    dir="ltr"
+    role="list"
+  >
+    <li
+      class="c9 c10"
       dir="ltr"
-      role="list"
+      role="listitem"
     >
-      <li
-        class="c9 c10"
-        dir="ltr"
-        role="listitem"
+      <div
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
+          dir="ltr"
+        >
+          <h3
+            class="c13"
+          >
+            <a
+              class="c14"
+              href="https://www.bbc.co.uk"
+            >
+              Top Story 1 headline
+            </a>
+          </h3>
+          <p
+            class="c15"
+          >
+            Summary text 1
+          </p>
+          <time
+            class="c16"
+            datetime="1970-01-19"
+          >
+            19 January 1970
+          </time>
+        </div>
+        <div
+          class="c17"
+          dir="ltr"
         >
           <div
-            class="c12"
-            dir="ltr"
-          >
-            <h3
-              class="c13"
-            >
-              <a
-                class="c14"
-                href="https://www.bbc.co.uk"
-              >
-                Top Story 1 headline
-              </a>
-            </h3>
-            <p
-              class="c15"
-            >
-              Summary text 1
-            </p>
-            <time
-              class="c16"
-              datetime="1970-01-19"
-            >
-              19 January 1970
-            </time>
-          </div>
-          <div
-            class="c17"
-            dir="ltr"
+            class="c18"
           >
             <div
-              class="c18"
+              class="c19"
             >
               <div
-                class="c19"
-              >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-              <div
-                class="c20"
+                class="lazyload-placeholder"
               />
             </div>
+            <div
+              class="c20"
+            />
           </div>
         </div>
-      </li>
-      <li
-        class="c9 c21"
-        dir="ltr"
-        role="listitem"
+      </div>
+    </li>
+    <li
+      class="c9 c21"
+      dir="ltr"
+      role="listitem"
+    >
+      <div
+        class="c22"
       >
         <div
-          class="c22"
+          class="c23"
+          dir="ltr"
         >
           <div
-            class="c23"
-            dir="ltr"
+            class="c18"
           >
             <div
-              class="c18"
+              class="c19"
             >
               <div
-                class="c19"
-              >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-              <div
-                class="c24"
+                class="lazyload-placeholder"
               />
             </div>
-          </div>
-          <div
-            class="c25"
-            dir="ltr"
-          >
-            <h3
-              class="c26"
-            >
-              <a
-                class="c14"
-                href="https://www.bbc.co.uk"
-              >
-                Top Story 2 headline
-              </a>
-            </h3>
-            <p
-              class="c15"
-            >
-              Summary text 2
-            </p>
-            <time
-              class="c16"
-              datetime="1970-01-19"
-            >
-              19 January 1970
-            </time>
+            <div
+              class="c24"
+            />
           </div>
         </div>
-      </li>
-    </ul>
-  </section>
+        <div
+          class="c25"
+          dir="ltr"
+        >
+          <h3
+            class="c26"
+          >
+            <a
+              class="c14"
+              href="https://www.bbc.co.uk"
+            >
+              Top Story 2 headline
+            </a>
+          </h3>
+          <p
+            class="c15"
+          >
+            Summary text 2
+          </p>
+          <time
+            class="c16"
+            datetime="1970-01-19"
+          >
+            19 January 1970
+          </time>
+        </div>
+      </div>
+    </li>
+  </ul>
 </section>
 `;
 
@@ -2164,92 +2158,89 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 }
 
 <section
+  aria-labelledby="Top-Stories"
   class="c0"
+  role="region"
 >
-  <section
-    aria-labelledby="Top-Stories"
-    role="region"
+  <div
+    class="c1"
   >
     <div
-      class="c1"
+      class="c2"
+    />
+    <h2
+      class="c3"
     >
       <div
-        class="c2"
-      />
-      <h2
-        class="c3"
+        class="c4"
       >
-        <div
-          class="c4"
+        <span
+          class="c5"
         >
           <span
-            class="c5"
+            class="c6"
+            dir="ltr"
+            id="Top-Stories"
           >
-            <span
-              class="c6"
-              dir="ltr"
-              id="Top-Stories"
-            >
-              Top Stories
-            </span>
+            Top Stories
           </span>
-        </div>
-      </h2>
-    </div>
+        </span>
+      </div>
+    </h2>
+  </div>
+  <div
+    class="c7"
+  >
     <div
-      class="c7"
+      class="c8"
     >
       <div
-        class="c8"
+        class="c9"
+        dir="ltr"
       >
         <div
-          class="c9"
-          dir="ltr"
+          class="c10"
         >
           <div
-            class="c10"
+            class="c11"
           >
             <div
-              class="c11"
-            >
-              <div
-                class="lazyload-placeholder"
-              />
-            </div>
-            <div
-              class="c12"
+              class="lazyload-placeholder"
             />
           </div>
-        </div>
-        <div
-          class="c13"
-          dir="ltr"
-        >
-          <h3
-            class="c14"
-          >
-            <a
-              class="c15"
-              href="https://www.bbc.co.uk"
-            >
-              Top Story 1 headline
-            </a>
-          </h3>
-          <p
-            class="c16"
-          >
-            Summary text 1
-          </p>
-          <time
-            class="c17"
-            datetime="1970-01-19"
-          >
-            19 January 1970
-          </time>
+          <div
+            class="c12"
+          />
         </div>
       </div>
+      <div
+        class="c13"
+        dir="ltr"
+      >
+        <h3
+          class="c14"
+        >
+          <a
+            class="c15"
+            href="https://www.bbc.co.uk"
+          >
+            Top Story 1 headline
+          </a>
+        </h3>
+        <p
+          class="c16"
+        >
+          Summary text 1
+        </p>
+        <time
+          class="c17"
+          datetime="1970-01-19"
+        >
+          19 January 1970
+        </time>
+      </div>
     </div>
-  </section>
+  </div>
 </section>
 `;
 
@@ -2892,316 +2883,313 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 }
 
 <section
+  aria-labelledby="Top-Stories"
   class="c0"
+  role="region"
 >
-  <section
-    aria-labelledby="Top-Stories"
-    role="region"
+  <div
+    class="c1"
   >
-    <div
-      class="c1"
+    <h2
+      class="c2"
     >
-      <h2
-        class="c2"
+      <div
+        class="c3"
       >
-        <div
-          class="c3"
+        <span
+          class="c4"
         >
           <span
-            class="c4"
+            class="c5"
+            dir="ltr"
+            id="Top-Stories"
           >
-            <span
-              class="c5"
-              dir="ltr"
-              id="Top-Stories"
-            >
-              Top Stories
-            </span>
+            Top Stories
           </span>
-        </div>
-      </h2>
-    </div>
-    <ul
-      class="c6 c7"
+        </span>
+      </div>
+    </h2>
+  </div>
+  <ul
+    class="c6 c7"
+    dir="ltr"
+    role="list"
+  >
+    <li
+      class="c8 c9"
       dir="ltr"
-      role="list"
+      role="listitem"
     >
-      <li
-        class="c8 c9"
-        dir="ltr"
-        role="listitem"
+      <div
+        class="c10"
       >
         <div
-          class="c10"
+          class="c11"
+          dir="ltr"
         >
           <div
-            class="c11"
-            dir="ltr"
+            class="c12"
           >
             <div
-              class="c12"
+              class="c13"
             >
               <div
-                class="c13"
-              >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-              <div
-                class="c14"
+                class="lazyload-placeholder"
               />
             </div>
-          </div>
-          <div
-            class="c15"
-            dir="ltr"
-          >
-            <h3
-              class="c16"
-            >
-              <a
-                class="c17"
-                href="https://www.bbc.co.uk"
-              >
-                Top Story 1 headline
-              </a>
-            </h3>
-            <p
-              class="c18"
-            >
-              Summary text 1
-            </p>
-            <time
-              class="c19"
-              datetime="1970-01-19"
-            >
-              19 January 1970
-            </time>
+            <div
+              class="c14"
+            />
           </div>
         </div>
-      </li>
-      <li
-        class="c8 c20"
-        dir="ltr"
-        role="listitem"
+        <div
+          class="c15"
+          dir="ltr"
+        >
+          <h3
+            class="c16"
+          >
+            <a
+              class="c17"
+              href="https://www.bbc.co.uk"
+            >
+              Top Story 1 headline
+            </a>
+          </h3>
+          <p
+            class="c18"
+          >
+            Summary text 1
+          </p>
+          <time
+            class="c19"
+            datetime="1970-01-19"
+          >
+            19 January 1970
+          </time>
+        </div>
+      </div>
+    </li>
+    <li
+      class="c8 c20"
+      dir="ltr"
+      role="listitem"
+    >
+      <div
+        class="c21"
       >
         <div
-          class="c21"
+          class="c22"
+          dir="ltr"
         >
           <div
-            class="c22"
-            dir="ltr"
+            class="c12"
           >
             <div
-              class="c12"
+              class="c13"
             >
               <div
-                class="c13"
-              >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-              <div
-                class="c23"
+                class="lazyload-placeholder"
               />
             </div>
-          </div>
-          <div
-            class="c24"
-            dir="ltr"
-          >
-            <h3
-              class="c25"
-            >
-              <a
-                class="c17"
-                href="https://www.bbc.co.uk"
-              >
-                Top Story 2 headline
-              </a>
-            </h3>
-            <p
-              class="c26"
-            >
-              Summary text 2
-            </p>
-            <time
-              class="c19"
-              datetime="1970-01-19"
-            >
-              19 January 1970
-            </time>
+            <div
+              class="c23"
+            />
           </div>
         </div>
-      </li>
-      <li
-        class="c8 c20"
-        dir="ltr"
-        role="listitem"
+        <div
+          class="c24"
+          dir="ltr"
+        >
+          <h3
+            class="c25"
+          >
+            <a
+              class="c17"
+              href="https://www.bbc.co.uk"
+            >
+              Top Story 2 headline
+            </a>
+          </h3>
+          <p
+            class="c26"
+          >
+            Summary text 2
+          </p>
+          <time
+            class="c19"
+            datetime="1970-01-19"
+          >
+            19 January 1970
+          </time>
+        </div>
+      </div>
+    </li>
+    <li
+      class="c8 c20"
+      dir="ltr"
+      role="listitem"
+    >
+      <div
+        class="c21"
       >
         <div
-          class="c21"
+          class="c22"
+          dir="ltr"
         >
           <div
-            class="c22"
-            dir="ltr"
+            class="c12"
           >
             <div
-              class="c12"
+              class="c13"
             >
               <div
-                class="c13"
-              >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-              <div
-                class="c23"
+                class="lazyload-placeholder"
               />
             </div>
-          </div>
-          <div
-            class="c24"
-            dir="ltr"
-          >
-            <h3
-              class="c25"
-            >
-              <a
-                class="c17"
-                href="https://www.bbc.co.uk"
-              >
-                Top Story 3 headline
-              </a>
-            </h3>
-            <p
-              class="c26"
-            >
-              Summary text 3
-            </p>
-            <time
-              class="c19"
-              datetime="1970-01-19"
-            >
-              19 January 1970
-            </time>
+            <div
+              class="c23"
+            />
           </div>
         </div>
-      </li>
-      <li
-        class="c8 c20"
-        dir="ltr"
-        role="listitem"
+        <div
+          class="c24"
+          dir="ltr"
+        >
+          <h3
+            class="c25"
+          >
+            <a
+              class="c17"
+              href="https://www.bbc.co.uk"
+            >
+              Top Story 3 headline
+            </a>
+          </h3>
+          <p
+            class="c26"
+          >
+            Summary text 3
+          </p>
+          <time
+            class="c19"
+            datetime="1970-01-19"
+          >
+            19 January 1970
+          </time>
+        </div>
+      </div>
+    </li>
+    <li
+      class="c8 c20"
+      dir="ltr"
+      role="listitem"
+    >
+      <div
+        class="c21"
       >
         <div
-          class="c21"
+          class="c22"
+          dir="ltr"
         >
           <div
-            class="c22"
-            dir="ltr"
+            class="c12"
           >
             <div
-              class="c12"
+              class="c13"
             >
               <div
-                class="c13"
-              >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-              <div
-                class="c23"
+                class="lazyload-placeholder"
               />
             </div>
-          </div>
-          <div
-            class="c24"
-            dir="ltr"
-          >
-            <h3
-              class="c25"
-            >
-              <a
-                class="c17"
-                href="https://www.bbc.co.uk"
-              >
-                Top Story 4 headline
-              </a>
-            </h3>
-            <p
-              class="c26"
-            >
-              Summary text 4
-            </p>
-            <time
-              class="c19"
-              datetime="1970-01-19"
-            >
-              19 January 1970
-            </time>
+            <div
+              class="c23"
+            />
           </div>
         </div>
-      </li>
-      <li
-        class="c8 c20"
-        dir="ltr"
-        role="listitem"
+        <div
+          class="c24"
+          dir="ltr"
+        >
+          <h3
+            class="c25"
+          >
+            <a
+              class="c17"
+              href="https://www.bbc.co.uk"
+            >
+              Top Story 4 headline
+            </a>
+          </h3>
+          <p
+            class="c26"
+          >
+            Summary text 4
+          </p>
+          <time
+            class="c19"
+            datetime="1970-01-19"
+          >
+            19 January 1970
+          </time>
+        </div>
+      </div>
+    </li>
+    <li
+      class="c8 c20"
+      dir="ltr"
+      role="listitem"
+    >
+      <div
+        class="c21"
       >
         <div
-          class="c21"
+          class="c22"
+          dir="ltr"
         >
           <div
-            class="c22"
-            dir="ltr"
+            class="c12"
           >
             <div
-              class="c12"
+              class="c13"
             >
               <div
-                class="c13"
-              >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-              <div
-                class="c23"
+                class="lazyload-placeholder"
               />
             </div>
-          </div>
-          <div
-            class="c24"
-            dir="ltr"
-          >
-            <h3
-              class="c25"
-            >
-              <a
-                class="c17"
-                href="https://www.bbc.co.uk"
-              >
-                Top Story 5 headline
-              </a>
-            </h3>
-            <p
-              class="c26"
-            >
-              Summary text 5
-            </p>
-            <time
-              class="c19"
-              datetime="1970-01-19"
-            >
-              19 January 1970
-            </time>
+            <div
+              class="c23"
+            />
           </div>
         </div>
-      </li>
-    </ul>
-  </section>
+        <div
+          class="c24"
+          dir="ltr"
+        >
+          <h3
+            class="c25"
+          >
+            <a
+              class="c17"
+              href="https://www.bbc.co.uk"
+            >
+              Top Story 5 headline
+            </a>
+          </h3>
+          <p
+            class="c26"
+          >
+            Summary text 5
+          </p>
+          <time
+            class="c19"
+            datetime="1970-01-19"
+          >
+            19 January 1970
+          </time>
+        </div>
+      </div>
+    </li>
+  </ul>
 </section>
 `;
