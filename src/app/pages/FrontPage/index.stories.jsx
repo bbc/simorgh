@@ -17,7 +17,7 @@ import { service as thaiConfig } from '#lib/config/services/thai';
 import { service as yorubaConfig } from '#lib/config/services/yoruba';
 import { service as punjabiConfig } from '#lib/config/services/punjabi';
 import { service as serbianConfig } from '#lib/config/services/serbian';
-import FrontPage from '.';
+import { FrontPage } from '..';
 
 const serviceDataSets = {
   news: { default: newsData },
