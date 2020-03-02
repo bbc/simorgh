@@ -1569,7 +1569,7 @@ const genServices = appEnv => ({
       mediaAssetPage: {
         path: isLive(appEnv)
           ? '/thai/international-51285795'
-          : '/thai/thailand-23248713',
+          : '/thai/23122810',
         smoke: false,
       },
       photoGalleryPage: {
