@@ -1650,10 +1650,7 @@ const genServices = appEnv => ({
             : '/turkce/articles/c123456abcdo',
         smoke: false,
       },
-      frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/turkce',
-        smoke: false,
-      },
+      frontPage: { path: '/turkce', smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path: undefined,
@@ -1819,10 +1816,7 @@ const genServices = appEnv => ({
             : '/urdu/articles/c123456abcdo',
         smoke: false,
       },
-      frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/urdu',
-        smoke: false,
-      },
+      frontPage: { path: '/urdu', smoke: false },
       liveRadio: {
         path: '/urdu/bbc_urdu_radio/liveradio',
         smoke: false,
@@ -1911,10 +1905,7 @@ const genServices = appEnv => ({
             : '/vietnamese/articles/c123456abcdo',
         smoke: false,
       },
-      frontPage: {
-        path: isLive(appEnv) || isTest(appEnv) ? undefined : '/vietnamese',
-        smoke: false,
-      },
+      frontPage: { path: '/vietnamese', smoke: false },
       liveRadio: { path: undefined, smoke: false },
       mediaAssetPage: {
         path: isLive(appEnv)
