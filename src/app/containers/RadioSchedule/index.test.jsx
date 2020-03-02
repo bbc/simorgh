@@ -1,13 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import { render, wait } from '@testing-library/react';
 import RadioScheduleContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/radioschedule.json';
-
-let container;
 
 const localRadioScheduleEndpoint = service => {
   const localhostURL = 'http://localhost:7080';
@@ -20,51 +17,53 @@ const getToggleState = enabled => ({
   test: { radioSchedule: { enabled } },
 });
 
-const renderRadioScheduleContainer = (service, radioScheduleToggle = false) =>
-  act(async () => {
-    ReactDOM.render(
-      <ToggleContext.Provider
-        value={{ toggleState: getToggleState(radioScheduleToggle) }}
-      >
-        <RequestContextProvider
-          isAmp={false}
-          pageType="frontPage"
-          service={service}
-          pathname={`/${service}`}
-        >
-          <ServiceContextProvider service={service}>
-            <RadioScheduleContainer
-              endpoint={localRadioScheduleEndpoint(service)}
-            />
-          </ServiceContextProvider>
-        </RequestContextProvider>
-      </ToggleContext.Provider>,
-      container,
-    );
-  });
+/* eslint-disable react/prop-types */
+const RadioSchedulesWithContext = ({
+  service,
+  radioScheduleToggle = false,
+}) => (
+  <ToggleContext.Provider
+    value={{ toggleState: getToggleState(radioScheduleToggle) }}
+  >
+    <RequestContextProvider
+      isAmp={false}
+      pageType="frontPage"
+      service={service}
+      pathname={`/${service}`}
+    >
+      <ServiceContextProvider service={service}>
+        <RadioScheduleContainer
+          endpoint={localRadioScheduleEndpoint(service)}
+        />
+      </ServiceContextProvider>
+    </RequestContextProvider>
+  </ToggleContext.Provider>
+);
+/* eslint-enable react/prop-types */
 
 describe('RadioScheduleData', () => {
-  beforeEach(() => {
-    container = document.createElement('div');
-    document.body.appendChild(container);
-  });
-
   afterEach(() => {
-    container = null;
     fetch.resetMocks();
   });
 
   it('contains four programs for a service with a radio schedule', async () => {
     fetch.mockResponse(JSON.stringify(arabicRadioScheduleData));
-    await renderRadioScheduleContainer('arabic', true);
+    const { container } = render(
+      <RadioSchedulesWithContext service="arabic" radioScheduleToggle />,
+    );
 
-    expect(container.querySelectorAll('li').length).toEqual(4);
+    await wait(() => {
+      expect(container.querySelectorAll('li').length).toEqual(4);
+    });
   });
 
   it('returns empty string when radio schedule toggle is disabled', async () => {
     fetch.mockResponse(JSON.stringify(arabicRadioScheduleData));
-    await renderRadioScheduleContainer('arabic');
-
-    expect(container.innerHTML).toEqual('');
+    const { container } = render(
+      <RadioSchedulesWithContext service="arabic" />,
+    );
+    await wait(() => {
+      expect(container.innerHTML).toEqual('');
+    });
   });
 });
