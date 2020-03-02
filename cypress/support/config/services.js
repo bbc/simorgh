@@ -39,8 +39,8 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: 'afaanoromoo/oduu-51248626',
-          test: 'afaanoromoo/23149891',
+          live: '/afaanoromoo/oduu-51248626',
+          test: '/afaanoromoo/23149891',
           local: '/afaanoromoo/23149891',
         },
         smoke: false,
