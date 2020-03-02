@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MostReadContainerCanonical Assertion should render most read correctly for arabic 1`] = `
-.c8 {
+.c9 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   grid-template-rows: repeat( 5,[col-start] auto [col-end] );
 }
 
-.c13 {
+.c14 {
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -21,7 +21,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   padding: 0;
 }
 
-.c15 {
+.c16 {
   font-size: 1rem;
   line-height: 1.625rem;
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -34,13 +34,13 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   margin-bottom: 0.5rem;
 }
 
-.c15:hover,
-.c15:focus {
+.c16:hover,
+.c16:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c15:before {
+.c16:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -52,14 +52,14 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   z-index: 1;
 }
 
-.c14 {
+.c15 {
   padding-top: 0.375rem;
   padding-bottom: 1.5rem;
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -71,11 +71,11 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   padding: 0;
 }
 
-.c10 {
+.c11 {
   position: relative;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -85,7 +85,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   flex-direction: column;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -104,7 +104,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   align-items: baseline;
 }
 
-.c5 {
+.c6 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -124,30 +124,35 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   align-items: center;
 }
 
-.c1 {
+.c2 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c0 {
+.c1 {
   position: relative;
   margin-top: 2rem;
 }
 
-.c2 {
+.c3 {
   margin: 0;
   padding: 0;
 }
 
+.c0 {
+  margin: 0 auto;
+  width: 100%;
+}
+
 @supports (display:grid) {
-  .c7 {
+  .c8 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c9 {
+  .c10 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -155,7 +160,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c9 {
+  .c10 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -163,7 +168,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c10 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -171,7 +176,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c9 {
+  .c10 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -179,7 +184,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c9 {
+  .c10 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -187,7 +192,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 }
 
 @media (min-width:80rem) {
-  .c9 {
+  .c10 {
     width: calc(20%);
     display: inline-block;
     vertical-align: top;
@@ -195,217 +200,217 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 }
 
 @supports (display:grid) {
-  .c9 {
+  .c10 {
     display: block;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c8 {
+  .c9 {
     grid-template-rows: repeat( 10,[col-start] auto [col-end] );
   }
 }
 
 @media (min-width:80rem) {
-  .c8 {
+  .c9 {
     grid-auto-flow: row;
     grid-template-rows: repeat( 5,[col-start] auto [col-end] );
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c12 {
+  .c13 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c12 {
+  .c13 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c13 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c13 {
     min-width: auto;
   }
 }
 
 @media (min-width:80rem) {
-  .c12 {
+  .c13 {
     min-width: auto;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c16 {
+  .c17 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c16 {
+  .c17 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c16 {
+  .c17 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c17 {
     min-width: 4rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c16 {
+  .c17 {
     min-width: auto;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c17 {
+  .c18 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c17 {
+  .c18 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c17 {
+  .c18 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c18 {
     min-width: auto;
   }
 }
 
 @media (min-width:80rem) {
-  .c17 {
+  .c18 {
     min-width: 3.7rem;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c18 {
+  .c19 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c18 {
+  .c19 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c18 {
+  .c19 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c19 {
     min-width: 4rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c18 {
+  .c19 {
     min-width: auto;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c19 {
+  .c20 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c19 {
+  .c20 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c19 {
+  .c20 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19 {
+  .c20 {
     min-width: auto;
   }
 }
 
 @media (min-width:80rem) {
-  .c19 {
+  .c20 {
     min-width: auto;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c14 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c14 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
+  .c16 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c16 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c15 {
+  .c16 {
     font-size: 1.375rem;
     line-height: 1.75rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c14 {
+  .c15 {
     padding-left: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c5 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -414,39 +419,39 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c6 {
     font-size: 1.625rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c6 {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c6 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c5 {
+  .c6 {
     padding-left: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c1 {
+  .c2 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c2 {
     position: absolute;
     left: 0;
     right: 0;
@@ -455,51 +460,57 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
+  .c1 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c0 {
+  .c1 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c7 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c6 {
+  .c7 {
     margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    max-width: 63rem;
   }
 }
 
 <section
   aria-labelledby="Most-Read"
-  class=""
+  class="c0"
   role="region"
 >
   <div
-    class="c0"
+    class="c1"
   >
     <div
-      class="c1"
+      class="c2"
     />
     <h2
-      class="c2"
+      class="c3"
     >
       <div
-        class="c3"
+        class="c4"
       >
         <span
-          class="c4"
+          class="c5"
         >
           <span
-            class="c5"
+            class="c6"
             dir="rtl"
             id="Most-Read"
           >
@@ -510,37 +521,37 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
     </h2>
   </div>
   <div
-    class="c6"
+    class="c7"
   >
     <ol
-      class="c7 c8"
+      class="c8 c9"
       dir="rtl"
       role="list"
     >
       <li
-        class="c9 c10"
+        class="c10 c11"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c11"
+          class="c12"
         >
           <div
-            class="c12"
+            class="c13"
             dir="rtl"
           >
             <span
-              class="c13"
+              class="c14"
             >
               ۱
             </span>
           </div>
           <div
-            class="c14"
+            class="c15"
             dir="rtl"
           >
             <a
-              class="c15"
+              class="c16"
               href="/arabic/science-and-tech-50304255"
             >
               "ضغط زوجي على يدي وقال إنه يريد أن يعيش، فوجدت طريقة لإنقاذه"
@@ -549,29 +560,29 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
         </div>
       </li>
       <li
-        class="c9 c10"
+        class="c10 c11"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c11"
+          class="c12"
         >
           <div
-            class="c16"
+            class="c17"
             dir="rtl"
           >
             <span
-              class="c13"
+              class="c14"
             >
               ۲
             </span>
           </div>
           <div
-            class="c14"
+            class="c15"
             dir="rtl"
           >
             <a
-              class="c15"
+              class="c16"
               href="/arabic/trending-50318120"
             >
               موجة دعم لصاحب مطعم خسر أمواله بسبب قطار الرياض
@@ -580,29 +591,29 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
         </div>
       </li>
       <li
-        class="c9 c10"
+        class="c10 c11"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c11"
+          class="c12"
         >
           <div
-            class="c12"
+            class="c13"
             dir="rtl"
           >
             <span
-              class="c13"
+              class="c14"
             >
               ۳
             </span>
           </div>
           <div
-            class="c14"
+            class="c15"
             dir="rtl"
           >
             <a
-              class="c15"
+              class="c16"
               href="/arabic/inthepress-50311506"
             >
               صحيفة آي: الصين ترغم نساء الإيغور على "النوم" مع المراقبين الحكوميين
@@ -611,29 +622,29 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
         </div>
       </li>
       <li
-        class="c9 c10"
+        class="c10 c11"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c11"
+          class="c12"
         >
           <div
-            class="c16"
+            class="c17"
             dir="rtl"
           >
             <span
-              class="c13"
+              class="c14"
             >
               ۴
             </span>
           </div>
           <div
-            class="c14"
+            class="c15"
             dir="rtl"
           >
             <a
-              class="c15"
+              class="c16"
               href="/arabic/world-50289909"
             >
               قتل الآلاف ومثل جرائمه على الشاشة ورحل بهدوء
@@ -642,29 +653,29 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
         </div>
       </li>
       <li
-        class="c9 c10"
+        class="c10 c11"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c11"
+          class="c12"
         >
           <div
-            class="c17"
+            class="c18"
             dir="rtl"
           >
             <span
-              class="c13"
+              class="c14"
             >
               ۵
             </span>
           </div>
           <div
-            class="c14"
+            class="c15"
             dir="rtl"
           >
             <a
-              class="c15"
+              class="c16"
               href="/arabic/middleeast-50315873"
             >
               هل تفضي "مبادرة" نائب البرلمان المصري أحمد طنطاوي إلى عزله؟
@@ -673,29 +684,29 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
         </div>
       </li>
       <li
-        class="c9 c10"
+        class="c10 c11"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c11"
+          class="c12"
         >
           <div
-            class="c18"
+            class="c19"
             dir="rtl"
           >
             <span
-              class="c13"
+              class="c14"
             >
               ۶
             </span>
           </div>
           <div
-            class="c14"
+            class="c15"
             dir="rtl"
           >
             <a
-              class="c15"
+              class="c16"
               href="/arabic/middleeast-50310165"
             >
               تقرير أممي: طائرة اجنبية هاجمت مركز المهاجرين في ليبيا
@@ -704,29 +715,29 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
         </div>
       </li>
       <li
-        class="c9 c10"
+        class="c10 c11"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c11"
+          class="c12"
         >
           <div
-            class="c19"
+            class="c20"
             dir="rtl"
           >
             <span
-              class="c13"
+              class="c14"
             >
               ۷
             </span>
           </div>
           <div
-            class="c14"
+            class="c15"
             dir="rtl"
           >
             <a
-              class="c15"
+              class="c16"
               href="/arabic/world-50315560"
             >
               زين منزله بمليون مصباح وزحمة الزوار دفعته لإطفائها
@@ -735,29 +746,29 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
         </div>
       </li>
       <li
-        class="c9 c10"
+        class="c10 c11"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c11"
+          class="c12"
         >
           <div
-            class="c18"
+            class="c19"
             dir="rtl"
           >
             <span
-              class="c13"
+              class="c14"
             >
               ۸
             </span>
           </div>
           <div
-            class="c14"
+            class="c15"
             dir="rtl"
           >
             <a
-              class="c15"
+              class="c16"
               href="/arabic/middleeast-50321488"
             >
               أردوغان يعلن إلقاء القبض على زوجة أبو بكر البغدادي
@@ -766,29 +777,29 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
         </div>
       </li>
       <li
-        class="c9 c10"
+        class="c10 c11"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c11"
+          class="c12"
         >
           <div
-            class="c19"
+            class="c20"
             dir="rtl"
           >
             <span
-              class="c13"
+              class="c14"
             >
               ۹
             </span>
           </div>
           <div
-            class="c14"
+            class="c15"
             dir="rtl"
           >
             <a
-              class="c15"
+              class="c16"
               href="/arabic/middleeast-50315489"
             >
               الجيش العراقي يندد بقطع المنشآت وسد الطرق
@@ -797,29 +808,29 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
         </div>
       </li>
       <li
-        class="c9 c10"
+        class="c10 c11"
         dir="rtl"
         role="listitem"
       >
         <div
-          class="c11"
+          class="c12"
         >
           <div
-            class="c18"
+            class="c19"
             dir="rtl"
           >
             <span
-              class="c13"
+              class="c14"
             >
               ۱۰
             </span>
           </div>
           <div
-            class="c14"
+            class="c15"
             dir="rtl"
           >
             <a
-              class="c15"
+              class="c16"
               href="/arabic/vert-cul-50292811"
             >
               عالم فني رائع كان يُمنع تصويره خلال الحقبة السوفيتية
