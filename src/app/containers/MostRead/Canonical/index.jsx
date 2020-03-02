@@ -45,6 +45,7 @@ const MarginWrapper = styled.div`
 const MostReadSection = styled.section.attrs(() => ({
   role: 'region',
   'aria-labelledby': 'Most-Read',
+  'data-e2e': 'most-read',
 }))``;
 
 const ConstrainedMostReadSection = styled(MostReadSection)`
