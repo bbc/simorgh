@@ -17,6 +17,7 @@ export const service = {
     articleTimestampPrefix: 'اپ ڈیٹ کی گئی',
     atiAnalyticsAppName: 'news-urdu',
     atiAnalyticsProducerId: '95',
+    chartbeatDomain: 'urdu.bbc.co.uk',
     brandName: 'BBC News اردو',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png',
     defaultImageAltText: 'BBC News اردو',

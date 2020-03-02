@@ -20,6 +20,7 @@ export const service = {
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'archive',
     atiAnalyticsProducerId: '127',
+    chartbeatDomain: 'archive.bbc.co.uk',
     brandName: 'BBC Archive',
     product: 'BBC Archive',
     defaultImage:
