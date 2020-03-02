@@ -5,15 +5,14 @@ export const updateToggles = data => ({
 });
 
 export const toggleReducer = (toggleState, action) => {
+  console.log('toggleState', toggleState);
   const { type, data } = action;
-
+  console.log('data', data);
   switch (type) {
     case 'UPDATE_TOGGLE_STATE':
       // TODO: In future update toggles with the data passed in, this would be from a 3rd party API.
-      console.log('toggleState', toggleState);
-      console.log('data', data);
-      // {...toggleState, ads: action.data.adValue}
-      return toggleState;
+
+      return { ...toggleState, ...data.toggles };
     default:
       return toggleState;
   }

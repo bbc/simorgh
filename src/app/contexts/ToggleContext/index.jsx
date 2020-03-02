@@ -6,26 +6,39 @@ import defaultToggles from '#lib/config/toggles';
 const ToggleContext = createContext({});
 
 const ToggleContextProvider = ({ children }) => {
+  const simorghToggles = defaultToggles[process.env.SIMORGH_APP_ENV];
   const [toggleState, toggleDispatch] = useReducer(
     toggleReducer,
-    defaultToggles,
+    simorghToggles,
   );
 
   useEffect(() => {
-    const fetchTogglesData = async () => {
-      const data = await fetch(
-        `https://toggles.test.api.bbci.co.uk/toggles?application=amp&service=mundo`,
-        {
-          credentials: 'include',
-          headers: { Origin: 'https://www.bbc.com' },
-          mode: 'no-cors',
+    const fetchAndUpdateToggles = async () => {
+      // Following is commented out since we get CORS issues
+
+      // const data = await fetch(
+      //   `https://toggles.test.api.bbci.co.uk/toggles?application=amp&service=mundo&__amp_source_origin=https://www.bbc.com`,
+      //   {
+      //     credentials: 'include',
+      //   },
+      // );
+      // const jsonData = await data.json();
+      const fixtureData = {
+        toggles: {
+          ads: { enabled: true, value: '' },
+          wsoj: { enabled: true, value: '' },
         },
-      );
-      const jsonData = await data.json();
-      toggleDispatch(updateToggles(jsonData));
+      };
+
+      // container code: const { ads } = toggleContext(); if(ads && ads.enabled)
+      // When we make the server request, the geoiplookup won't need to be made.
+      // Containers that require a geoip-specific setup
+      //
+      console.log('useeffect');
+      toggleDispatch(updateToggles(fixtureData));
     };
-    console.log(fetchTogglesData());
-  });
+    fetchAndUpdateToggles();
+  }, []);
 
   return (
     <ToggleContext.Provider value={{ toggleState, toggleDispatch }}>
