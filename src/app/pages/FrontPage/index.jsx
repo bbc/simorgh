@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
-import pipe from 'ramda/src/pipe';
 import { string } from 'prop-types';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
@@ -30,14 +29,6 @@ import MostReadContainer from '#containers/MostRead';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-
-// Page Handlers
-import withVariant from '#containers/PageHandlers/withVariant';
-import withContexts from '#containers/PageHandlers/withContexts';
-import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
-import withLoading from '#containers/PageHandlers/withLoading';
-import withError from '#containers/PageHandlers/withError';
-import withData from '#containers/PageHandlers/withData';
 
 export const StyledFrontPageMain = styled.main`
   background-color: ${C_GHOST};
@@ -72,7 +63,7 @@ export const StyledFrontPageDiv = styled.div`
   }
 `;
 
-const FrontPageContainer = ({ pageData, mostReadEndpointOverride }) => {
+const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     product,
     serviceLocalizedName,
@@ -135,22 +126,13 @@ const FrontPageContainer = ({ pageData, mostReadEndpointOverride }) => {
   );
 };
 
-FrontPageContainer.propTypes = {
+FrontPage.propTypes = {
   pageData: frontPageDataPropTypes.isRequired,
   mostReadEndpointOverride: string,
 };
 
-FrontPageContainer.defaultProps = {
+FrontPage.defaultProps = {
   mostReadEndpointOverride: null,
 };
 
-const EnhancedFrontPageContainer = pipe(
-  withData,
-  withError,
-  withLoading,
-  withPageWrapper,
-  withContexts,
-  withVariant,
-)(FrontPageContainer);
-
-export default EnhancedFrontPageContainer;
+export default FrontPage;
