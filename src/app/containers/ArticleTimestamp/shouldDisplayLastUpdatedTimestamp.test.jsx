@@ -71,7 +71,7 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
     });
   });
 
-  describe('shouldDisplayLastUpdatedTiemstamp', () => {
+  describe('shouldDisplayLastUpdatedTimestamp', () => {
     it('should return true when article was published and updated today', () => {
       const [midnightToday, oneAmToday] = sameDayTimestampsGenerator({
         intervals: [{ hours: 1 }],
