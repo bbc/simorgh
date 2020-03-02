@@ -1,5 +1,4 @@
 import React from 'react';
-import pipe from 'ramda/src/pipe';
 import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
@@ -33,14 +32,7 @@ import {
 } from '#lib/utilities/parseAssetData';
 import categoryType from './categoryMap/index';
 
-// Page Handlers
-import withContexts from '#containers/PageHandlers/withContexts';
-import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
-import withError from '#containers/PageHandlers/withError';
-import withLoading from '#containers/PageHandlers/withLoading';
-import withData from '#containers/PageHandlers/withData';
-
-const StoryPageContainer = ({ pageData }) => {
+const StoryPage = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const category = path(
     ['promo', 'passport', 'category', 'categoryName'],
@@ -212,14 +204,6 @@ const StoryPageContainer = ({ pageData }) => {
   );
 };
 
-StoryPageContainer.propTypes = cpsAssetPagePropTypes;
+StoryPage.propTypes = cpsAssetPagePropTypes;
 
-const EnhancedStoryPageContainer = pipe(
-  withData,
-  withError,
-  withLoading,
-  withPageWrapper,
-  withContexts,
-)(StoryPageContainer);
-
-export default EnhancedStoryPageContainer;
+export default StoryPage;
