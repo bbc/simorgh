@@ -1,5 +1,4 @@
-import config from '../../../support/config/services';
-import getAppEnv from '../../../support/helpers/getAppEnv';
+import getErrorPath from './getErrorPath';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -13,7 +12,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   pageType,
 }) =>
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
-    const errorPath = config[service].pageTypes[pageType].paths[getAppEnv()];
+    const errorPath = getErrorPath(service, pageType);
 
     if (errorPath) {
       it('should return a 404 error code', () => {

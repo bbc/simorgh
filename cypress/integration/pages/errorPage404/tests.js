@@ -1,7 +1,7 @@
 import config from '../../../support/config/services';
-import getAppEnv from '../../../support/helpers/getAppEnv';
 import envConfig from '../../../support/config/envs';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
+import getErrorPath from './getErrorPath';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -16,7 +16,7 @@ export const testsThatFollowSmokeTestConfig = ({
   variant,
 }) =>
   describe(`Tests for ${service} ${pageType}`, () => {
-    const errorPath = config[service].pageTypes[pageType].paths[getAppEnv()];
+    const errorPath = getErrorPath(service, pageType);
 
     if (errorPath) {
       describe(`${service} Test we get a 404`, () => {
