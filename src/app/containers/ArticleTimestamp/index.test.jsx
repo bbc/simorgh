@@ -49,8 +49,8 @@ describe('ArticleTimestamp', () => {
   shouldMatchSnapshot(
     "should render a 'created' Timestamp correctly",
     <WrappedArticleTimestamp
-      firstPublished={1530947227000}
-      lastPublished={1530947227000}
+      firstPublished={1530947227000} // Sat Jul 07 2018 07:07:07 UTC
+      lastPublished={1530947227000} // Sat Jul 07 2018 07:07:07 UTC
     />,
   );
 
@@ -114,8 +114,8 @@ describe('ArticleTimestamp', () => {
     isNull(
       'should return null',
       <WrappedArticleTimestamp
-        firstPublished={8640000000000001}
-        lastPublished={8640000000000001}
+        firstPublished={8640000000000001} // undefined
+        lastPublished={8640000000000001} // undefined
       />,
     );
   });
@@ -168,8 +168,8 @@ describe('ArticleTimestamp', () => {
   it('should render one timestamp with date when firstPublished before today and lastPublished was published less than 1 minute after firstPublished', () => {
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
-        firstPublished={1530947280000}
-        lastPublished={1530947286000}
+        firstPublished={1530947280000} // Sat Jul 07 2018 07:08:00 UTC
+        lastPublished={1530947286000} // Sat Jul 07 2018 07:08:06 UTC
         minutesTolerance={1}
       />,
     );
@@ -180,8 +180,8 @@ describe('ArticleTimestamp', () => {
   it('should render two timestamps with date when firstPublished before today and lastPublished was published more than 1 minute after firstPublished', () => {
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
-        firstPublished={1530947280000}
-        lastPublished={1531047280000}
+        firstPublished={1530947280000} // Sat Jul 07 2018 07:08:00 UTC
+        lastPublished={1531047280000} // Sun Jul 08 2018 10:54:40 UTC
         minutesTolerance={1}
       />,
     );
@@ -266,8 +266,8 @@ describe('ArticleTimestamp', () => {
   it('should render one timestamp when firstPublished and lastPublished is the same day, and lastPublished is outside of the relative window', () => {
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
-        firstPublished={1400140005000}
-        lastPublished={1400153537000}
+        firstPublished={1400140005000} // Thu May 15 2014 07:46:45 UTC
+        lastPublished={1400153537000} // Thu May 15 2014 11:32:17 UTC
       />,
     );
 
@@ -278,8 +278,8 @@ describe('ArticleTimestamp', () => {
   describe('With different timezones', () => {
     it('should show the correct local date', () => {
       const props = {
-        firstPublished: 1565380800000,
-        lastPublished: 1565380800000,
+        firstPublished: 1565380800000, // Fri Aug 09 2019 20:00:00 UTC
+        lastPublished: 1565380800000, // Fri Aug 09 2019 20:00:00 UTC
       };
       const newsContainer = mount(
         <WrappedArticleTimestamp {...props} service="news" />,
