@@ -37,7 +37,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   font-weight: 400;
   font-style: normal;
   color: #222222;
-  background-color: #FFFFFF;
+  background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1045,7 +1045,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   font-weight: 400;
   font-style: normal;
   color: #222222;
-  background-color: #FFFFFF;
+  background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1832,7 +1832,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   font-weight: 400;
   font-style: normal;
   color: #222222;
-  background-color: #FFFFFF;
+  background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -2281,7 +2281,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   font-weight: 400;
   font-style: normal;
   color: #222222;
-  background-color: #FFFFFF;
+  background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
