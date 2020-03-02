@@ -6,7 +6,6 @@ import { timestampGenerator, sameDayTimestampsGenerator } from './testHelpers';
 
 describe('shouldDisplayLastUpdatedTimestamp functions', () => {
   let mockedDate;
-  const realDate = Date.now;
   const minutesTolerance = 1;
 
   beforeEach(() => {
@@ -15,7 +14,7 @@ describe('shouldDisplayLastUpdatedTimestamp functions', () => {
   });
 
   afterAll(() => {
-    global.Date.now = realDate;
+    jest.resetAllMocks();
   });
 
   describe('hasBeenUpdated', () => {
