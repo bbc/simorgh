@@ -6,7 +6,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
-import FrontPageContainer from './index';
+import { FrontPage } from '..';
 
 const requestContextData = {
   isAmp: false,
@@ -20,7 +20,7 @@ const FrontPageWithContext = props => (
   <ToggleContextProvider>
     <RequestContextProvider {...requestContextData}>
       <ServiceContextProvider service="pidgin">
-        <FrontPageContainer {...props} />
+        <FrontPage {...props} />
       </ServiceContextProvider>
     </RequestContextProvider>
   </ToggleContextProvider>
@@ -46,12 +46,12 @@ jest.mock('uuid', () => {
   };
 });
 
-jest.mock('../../containers/ChartbeatAnalytics', () => {
+jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
 
-jest.mock('../../containers/PageHandlers/withVariant', () => Component => {
+jest.mock('#containers/PageHandlers/withVariant', () => Component => {
   const VariantContainer = props => (
     <div id="VariantContainer">
       <Component {...props} />
@@ -61,7 +61,7 @@ jest.mock('../../containers/PageHandlers/withVariant', () => Component => {
   return VariantContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
+jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   const DataContainer = props => (
     <div id="ContextsContainer">
       <Component {...props} />
@@ -71,7 +71,7 @@ jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
   return DataContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withPageWrapper', () => Component => {
+jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
     <div id="PageWrapperContainer">
       <Component {...props} />
@@ -81,7 +81,7 @@ jest.mock('../../containers/PageHandlers/withPageWrapper', () => Component => {
   return PageWrapperContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withLoading', () => Component => {
+jest.mock('#containers/PageHandlers/withLoading', () => Component => {
   const LoadingContainer = props => (
     <div id="LoadingContainer">
       <Component {...props} />
@@ -91,7 +91,7 @@ jest.mock('../../containers/PageHandlers/withLoading', () => Component => {
   return LoadingContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withError', () => Component => {
+jest.mock('#containers/PageHandlers/withError', () => Component => {
   const ErrorContainer = props => (
     <div id="ErrorContainer">
       <Component {...props} />
@@ -101,7 +101,7 @@ jest.mock('../../containers/PageHandlers/withError', () => Component => {
   return ErrorContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withData', () => Component => {
+jest.mock('#containers/PageHandlers/withData', () => Component => {
   const DataContainer = props => (
     <div id="DataContainer">
       <Component {...props} />
@@ -111,7 +111,7 @@ jest.mock('../../containers/PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
+jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   const ContextsContainer = props => (
     <div id="ContextsContainer">
       <Component {...props} />

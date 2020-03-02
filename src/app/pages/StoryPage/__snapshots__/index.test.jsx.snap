@@ -224,6 +224,25 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 0;
 }
 
+.c41 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c41:first-child {
+  padding-top: 0;
+}
+
+.c41:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c39 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .c25 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -256,25 +275,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 .c27 figure {
   padding-bottom: 0;
-}
-
-.c41 {
-  padding: 0.5rem 0 1rem;
-}
-
-.c41:first-child {
-  padding-top: 0;
-}
-
-.c41:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
-.c39 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
 .c31 {
@@ -792,6 +792,30 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
+@media (max-width:62.9375rem) {
+  .c41 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c41 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c41 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c41:first-child {
+    padding-top: 1rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c25 {
     font-size: 1rem;
@@ -846,30 +870,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   .c27 {
     padding-top: 0.5rem;
     margin-top: 2rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c41 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c41 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c41 {
-    padding: 0 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c41:first-child {
-    padding-top: 1rem;
   }
 }
 
@@ -1730,6 +1730,25 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 0;
 }
 
+.c43 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c43:first-child {
+  padding-top: 0;
+}
+
+.c43:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c41 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .c27 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -1762,25 +1781,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 .c29 figure {
   padding-bottom: 0;
-}
-
-.c43 {
-  padding: 0.5rem 0 1rem;
-}
-
-.c43:first-child {
-  padding-top: 0;
-}
-
-.c43:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
-.c41 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
 .c33 {
@@ -2316,6 +2316,30 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
+@media (max-width:62.9375rem) {
+  .c43 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c43 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c43 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c43:first-child {
+    padding-top: 1rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c27 {
     font-size: 1rem;
@@ -2370,30 +2394,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   .c29 {
     padding-top: 0.5rem;
     margin-top: 2rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c43 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c43 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c43 {
-    padding: 0 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c43:first-child {
-    padding-top: 1rem;
   }
 }
 
