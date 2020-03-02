@@ -49,7 +49,7 @@ export const service = {
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
       relatedContent: 'ਇਸ ਖ਼ਬਰ ਬਾਰੇ ਹੋਰ',
-      sections: 'ਸੈਕਸ਼ਨਜ਼',
+      navMenuText: 'ਸੈਕਸ਼ਨਜ਼',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

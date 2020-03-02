@@ -49,7 +49,7 @@ export const service = {
       currentPage: 'Поточна сторінка',
       skipLinkText: 'Перейти до змісту',
       relatedContent: 'Статті на цю ж тему',
-      sections: 'Розділи',
+      navMenuText: 'Розділи',
       mediaAssetPage: {
         mediaPlayer: 'Медіаплеєр',
         audioPlayer: 'Аудіоплеєр',

@@ -75,32 +75,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   color: #B80000;
 }
 
-.c25 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 0;
-  list-style-type: none;
-}
-
-.c25 > li::before {
-  content: ' ';
-  display: inline-block;
-  width: 2rem;
-  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
-  margin-left: -2rem;
-}
-
-.c26 {
-  margin-bottom: 1rem;
-}
-
-.c24 {
-  margin-bottom: 1.5rem;
-}
-
 .c12 {
   margin: 0;
   padding-bottom: 1.5rem;
@@ -186,14 +160,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   overflow: hidden;
 }
 
-.c27 {
-  margin-top: 0.5rem;
-}
-
-.c27 figure {
-  padding-bottom: 0;
-}
-
 .c36 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -277,6 +243,40 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 0;
 }
 
+.c25 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+.c25 > li::before {
+  content: ' ';
+  display: inline-block;
+  width: 2rem;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
+  margin-left: -2rem;
+}
+
+.c26 {
+  margin-bottom: 1rem;
+}
+
+.c24 {
+  margin-bottom: 1.5rem;
+}
+
+.c27 {
+  margin-top: 0.5rem;
+}
+
+.c27 figure {
+  padding-bottom: 0;
+}
+
 .c31 {
   margin-bottom: 1rem;
   z-index: 0;
@@ -343,164 +343,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c2 {
-    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
-    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
-    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
-    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem - 0%);
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    width: calc(8/12*(100% - 12 * 1rem) + 7 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    width: calc(5/12*(100% - 12 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 16.666666666666668%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c2 {
-    display: block;
-  }
-}
-
-@supports (display:grid) {
-  .c40 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c42 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c42 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c42 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c42 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c42 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c42 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c42 {
-    display: block;
-  }
-}
-
-@supports (display:grid) {
-  .c43 {
-    display: block;
-  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -705,20 +547,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c25 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c25 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c20 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
@@ -744,46 +572,161 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (max-width:63rem) {
-  .c27 {
-    grid-column: 1 / span 6;
-  }
-}
-
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c27 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c27 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c27 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c27 {
+  .c0 {
     padding: 0 1rem;
   }
 }
 
-@media (min-width:25rem) {
-  .c27 {
-    margin-top: 1rem;
+@media (min-width:80rem) {
+  .c0 {
+    padding: 0 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .c27 {
-    padding-top: 0.5rem;
-    margin-top: 2rem;
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(8/12*(100% - 12 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(5/12*(100% - 12 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 16.666666666666668%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c40 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c42 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c42 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c42 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c42 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c42 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c42 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c42 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c43 {
+    display: block;
   }
 }
 
@@ -870,6 +813,63 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c41:first-child {
     padding-top: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c25 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c25 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c27 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c27 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c27 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c27 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c27 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c27 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c27 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -1537,21 +1537,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   outline: none;
 }
 
-.c22 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  padding-bottom: 0.25rem;
-}
-
-.c22:last-child {
-  padding-bottom: 1rem;
-}
-
 .c23 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -1579,32 +1564,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 .c24:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
-}
-
-.c27 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 0;
-  list-style-type: none;
-}
-
-.c27 > li::before {
-  content: ' ';
-  display: inline-block;
-  width: 2rem;
-  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
-  margin-left: -2rem;
-}
-
-.c28 {
-  margin-bottom: 1rem;
-}
-
-.c26 {
-  margin-bottom: 1.5rem;
 }
 
 .c12 {
@@ -1686,18 +1645,25 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   transition: visibility 0.2s linear;
 }
 
+.c22 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+.c22:last-child {
+  padding-bottom: 1rem;
+}
+
 .c30 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
-}
-
-.c29 {
-  margin-top: 0.5rem;
-}
-
-.c29 figure {
-  padding-bottom: 0;
 }
 
 .c38 {
@@ -1783,6 +1749,40 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 0;
 }
 
+.c27 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+.c27 > li::before {
+  content: ' ';
+  display: inline-block;
+  width: 2rem;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
+  margin-left: -2rem;
+}
+
+.c28 {
+  margin-bottom: 1rem;
+}
+
+.c26 {
+  margin-bottom: 1.5rem;
+}
+
+.c29 {
+  margin-top: 0.5rem;
+}
+
+.c29 figure {
+  padding-bottom: 0;
+}
+
 .c33 {
   margin-bottom: 1rem;
   z-index: 0;
@@ -1853,164 +1853,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    padding: 0 1rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c2 {
-    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
-    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
-    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
-    margin: 0 0.25rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
-    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem - 0%);
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
-    width: calc(8/12*(100% - 12 * 1rem) + 7 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 0%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    width: calc(5/12*(100% - 12 * 1rem) + 4 * 1rem );
-    margin: 0 0.5rem;
-    margin-left: 16.666666666666668%;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c2 {
-    display: block;
-  }
-}
-
-@supports (display:grid) {
-  .c42 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c44 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c44 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c44 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c44 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c44 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c44 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c44 {
-    display: block;
-  }
-}
-
-@supports (display:grid) {
-  .c45 {
-    display: block;
-  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -2201,20 +2043,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c22 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c23 {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -2223,20 +2051,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) {
   .c23 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c27 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c27 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -2268,46 +2082,175 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (max-width:63rem) {
-  .c29 {
-    grid-column: 1 / span 6;
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c22 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c29 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c29 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c29 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c29 {
+  .c0 {
     padding: 0 1rem;
   }
 }
 
-@media (min-width:25rem) {
-  .c29 {
-    margin-top: 1rem;
+@media (min-width:80rem) {
+  .c0 {
+    padding: 0 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .c29 {
-    padding-top: 0.5rem;
-    margin-top: 2rem;
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(8/12*(100% - 12 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(5/12*(100% - 12 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 16.666666666666668%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c42 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c44 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c44 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c44 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c44 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c44 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c44 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c44 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c45 {
+    display: block;
   }
 }
 
@@ -2394,6 +2337,63 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c43:first-child {
     padding-top: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c29 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c29 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c29 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c29 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c29 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c29 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c29 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
   }
 }
 

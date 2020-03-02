@@ -5,7 +5,7 @@ import {
   waitForElement,
 } from '@testing-library/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
-import ArticleMain from '.';
+import ArticlePage from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -13,7 +13,7 @@ import {
   articleDataNews,
   articleDataPersian,
   articleDataPidgin,
-} from '#pages/Article/fixtureData';
+} from '#pages/ArticlePage/fixtureData';
 import newsMostReadData from '#data/news/mostRead';
 import persianMostReadData from '#data/persian/mostRead';
 import pidginMostReadData from '#data/pidgin/mostRead';
@@ -22,7 +22,7 @@ import pidginMostReadData from '#data/pidgin/mostRead';
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
 articleDataNewsNoHeadline.content.model.blocks.shift();
 
-jest.mock('../ChartbeatAnalytics', () => {
+jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
@@ -58,7 +58,7 @@ it('should use headline for meta description if summary does not exist', async (
 
   render(
     <Context service="news">
-      <ArticleMain articleData={articleDataNewsWithSummary} />
+      <ArticlePage pageData={articleDataNewsWithSummary} />
     </Context>,
   );
 
@@ -76,7 +76,7 @@ it('should render a news article correctly', async () => {
 
   const { container } = render(
     <Context service="news">
-      <ArticleMain articleData={articleDataNews} />
+      <ArticlePage pageData={articleDataNews} />
     </Context>,
   );
 
@@ -88,7 +88,7 @@ it('should render a rtl article (persian) with most read correctly', async () =>
 
   const { container } = render(
     <Context service="persian">
-      <ArticleMain articleData={articleDataPersian} />
+      <ArticlePage pageData={articleDataPersian} />
     </Context>,
   );
 
@@ -104,7 +104,7 @@ it('should render a ltr article (pidgin) with most read correctly', async () => 
 
   const { container } = render(
     <Context service="pidgin">
-      <ArticleMain articleData={articleDataPidgin} />
+      <ArticlePage pageData={articleDataPidgin} />
     </Context>,
   );
 
