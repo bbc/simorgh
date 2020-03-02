@@ -39,26 +39,6 @@ const toggles = {
       enabled: false,
     },
   },
-  stage: {
-    chartbeatAnalytics: {
-      enabled: false,
-    },
-    mediaPlayer: {
-      enabled: true,
-    },
-    mpulse: {
-      enabled: true,
-    },
-    navOnArticles: {
-      enabled: true,
-    },
-    mostRead: {
-      enabled: true,
-    },
-    radioSchedule: {
-      enabled: false,
-    },
-  },
   live: {
     chartbeatAnalytics: {
       enabled: true,
