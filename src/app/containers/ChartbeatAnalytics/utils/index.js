@@ -111,10 +111,11 @@ export const getConfig = ({
   service,
   origin,
   previousPath,
+  chartbeatDomain,
 }) => {
   const referrer = getReferrer(platform, origin, previousPath);
   const title = getTitle(pageType, data, brandName);
-  const domain = env !== 'live' ? getDomain('test') : getDomain(service);
+  const domain = env !== 'live' ? 'test.bbc.co.uk' : chartbeatDomain;
   const sectionName = path(['relatedContent', 'section', 'name'], data);
   const categoryName = path(
     ['metadata', 'passport', 'category', 'categoryName'],
