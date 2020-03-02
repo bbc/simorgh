@@ -56,7 +56,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 sdoTA"
+                      class="SectionLabelWrapper-sc-1x4gwjz-1 chnGCx"
                     >
                       <div
                         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -203,7 +203,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc"
+                      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
                     >
                       <div
                         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -719,10 +719,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </section>
                   <section
                     aria-labelledby="Most-Read"
+                    class="MostReadSection-sc-6bm912-1 kEDORG"
+                    data-e2e="most-read"
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc"
+                      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
                     >
                       <div
                         class="Bar-sc-1x4gwjz-0 jsgdXU"

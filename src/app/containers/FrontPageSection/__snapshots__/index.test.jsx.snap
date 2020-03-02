@@ -57,6 +57,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 
 .c1 {
   position: relative;
+  z-index: 0;
   margin-top: 2rem;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -1065,6 +1066,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 
 .c1 {
   position: relative;
+  z-index: 0;
   margin-top: 2rem;
 }
 
@@ -1852,6 +1854,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 
 .c1 {
   position: relative;
+  z-index: 0;
   margin-top: 2rem;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -2296,6 +2299,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 
 .c1 {
   position: relative;
+  z-index: 0;
   margin-top: 2rem;
 }
 

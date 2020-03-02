@@ -55,7 +55,6 @@ const MostReadSection = styled.section.attrs(() => ({
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   }
 `;
-}))``;
 
 const ConstrainedMostReadSection = styled(MostReadSection)`
   background-color: ${C_GHOST};
