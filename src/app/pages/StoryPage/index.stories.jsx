@@ -3,23 +3,23 @@ import { storiesOf } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
-import PhotoGalleryPage from '.';
+import { StoryPage } from '..';
 import pageData from './fixtureData';
 
-const pglStories = storiesOf('Pages|Photo Gallery Page', module);
+const styStories = storiesOf('Pages|Story Page', module);
 
-pglStories.addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
+styStories.addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
-pglStories.add('Azeri', () => {
+styStories.add('Mundo', () => {
   return (
     <BrowserRouter>
-      <PhotoGalleryPage
-        pageType="PGL"
+      <StoryPage
+        pageType="STY"
         isAmp={false}
         pathname="/path"
         status={200}
         pageData={pageData}
-        service="azeri"
+        service="mundo"
       />
     </BrowserRouter>
   );
