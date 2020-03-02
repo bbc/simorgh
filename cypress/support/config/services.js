@@ -7,57 +7,57 @@ const genServices = {
     pageTypes: {
       articles: {
         path: {
-          live: '/afaanoromoo/articles/ce3nlgrelv1o',
-          test: '/afaanoromoo/articles/c4g19kgl85ko',
-          local: '/afaanoromoo/articles/c4g19kgl85ko',
+          live: ['/afaanoromoo/articles/ce3nlgrelv1o'],
+          test: ['/afaanoromoo/articles/c4g19kgl85ko'],
+          local: ['/afaanoromoo/articles/c4g19kgl85ko'],
         },
         smoke: false,
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
-          local: '/afaanoromoo/articles/c123456abcdo',
+          live: [],
+          test: [],
+          local: ['/afaanoromoo/articles/c123456abcdo'],
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: '/afaanoromoo',
-          test: '/afaanoromoo',
-          local: '/afaanoromoo',
+          live: ['/afaanoromoo'],
+          test: ['/afaanoromoo'],
+          local: ['/afaanoromoo'],
         },
         smoke: false,
       },
       liveRadio: {
         path: {
-          live: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
-          test: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
-          local: '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
+          live: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
+          test: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
+          local: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
         },
         smoke: false,
       },
       mediaAssetPage: {
         path: {
-          live: '/afaanoromoo/oduu-51248626',
-          test: '/afaanoromoo/23149891',
-          local: '/afaanoromoo/23149891',
+          live: ['/afaanoromoo/oduu-51248626'],
+          test: ['/afaanoromoo/23149891'],
+          local: ['/afaanoromoo/23149891'],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
-          local: '/afaanoromoo/oduu-41217768',
+          live: [],
+          test: [],
+          local: ['/afaanoromoo/oduu-41217768'],
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -79,16 +79,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/afrique/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/afrique',
         },
         smoke: false,
@@ -103,25 +103,25 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/afrique/region-39269126',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -143,8 +143,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/amharic/articles/c123456abcdo',
         },
         smoke: false,
@@ -175,17 +175,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/amharic/42743191',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -207,16 +207,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/arabic/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/arabic',
         },
         smoke: false,
@@ -231,25 +231,25 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/arabic/art-and-culture-38260491',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -271,8 +271,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/azeri/articles/c123456abcdo',
         },
         smoke: false,
@@ -305,17 +305,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/azeri/azerbaijan-44208474',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -337,8 +337,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/bengali/articles/c123456abcdo',
         },
         smoke: false,
@@ -361,25 +361,25 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/bengali/news-38827173',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -401,8 +401,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/burmese/articles/c123456abcdo',
         },
         smoke: false,
@@ -425,25 +425,25 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/burmese/media-47680015',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -457,16 +457,16 @@ const genServices = {
     pageTypes: {
       articles: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/cymrufyw/erthyglau/c06p32z9x2mo',
         },
         smoke: false,
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/cymrufyw/erthyglau/c123456abcdo',
         },
         smoke: false,
@@ -494,8 +494,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/gahuza/articles/c123456abcdo',
         },
         smoke: false,
@@ -535,17 +535,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/gahuza/amakuru-43894701',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -567,8 +567,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/gujarati/articles/c123456abcdo',
         },
         smoke: false,
@@ -592,17 +592,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/gujarati/international-41345658',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -624,16 +624,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/hausa/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/hausa',
         },
         smoke: false,
@@ -648,25 +648,25 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -688,16 +688,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/hindi/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/hindi',
         },
         smoke: false,
@@ -712,25 +712,25 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/hindi/india-50198153',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -752,8 +752,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/igbo/articles/cxvxrj8tvppo',
         },
         smoke: false,
@@ -777,16 +777,16 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/igbo/afirika-49666505',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/igbo/afirika-23252735',
         },
         smoke: false,
@@ -809,8 +809,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/indonesia/articles/c123456abcdo',
         },
         smoke: false,
@@ -833,25 +833,25 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/indonesia/indonesia-41635759',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -873,8 +873,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/japanese/articles/c123456abcdo',
         },
         smoke: false,
@@ -890,25 +890,25 @@ const genServices = {
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/japanese/video-23248670',
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/japanese/features-and-analysis-42786589',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -930,16 +930,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/korean/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/korean',
         },
         smoke: false,
@@ -955,24 +955,24 @@ const genServices = {
       mediaAssetPage: {
         path: {
           live: '/korean/international-51367672',
-          test: null,
+          test: [],
           local: '/korean/media-23248686',
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/korean/features-41397333',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -994,8 +994,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/kyrgyz/articles/c123456abcdo',
         },
         smoke: false,
@@ -1035,17 +1035,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/kyrgyz/world-40847556',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -1067,8 +1067,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/marathi/articles/c123456abcdo',
         },
         smoke: false,
@@ -1092,17 +1092,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/marathi/india-42894522',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -1124,16 +1124,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/mundo/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/mundo',
         },
         smoke: false,
@@ -1141,25 +1141,25 @@ const genServices = {
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/mundo/deportes-36935058',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -1173,16 +1173,16 @@ const genServices = {
     pageTypes: {
       articles: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/naidheachdan/sgeulachdan/c18q7nedn2ko',
         },
         smoke: false,
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/naidheachdan/sgeulachdan/c123456abcdo',
         },
         smoke: false,
@@ -1210,8 +1210,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/nepali/articles/c123456abcdo',
         },
         smoke: false,
@@ -1234,25 +1234,25 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/nepali/news-50627370',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -1274,8 +1274,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/news/articles/cxvxrj8tvppo',
         },
         smoke: true,
@@ -1303,16 +1303,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/pashto/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/pashto',
         },
         smoke: false,
@@ -1327,7 +1327,7 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
+          live: [],
           test: [
             '/pashto/media-23257523', // CPS MAP
             '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
@@ -1341,17 +1341,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/pashto/arts-and-literature-50230813',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -1373,16 +1373,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/persian/articles/cxvxrj8tvppo',
         },
         smoke: true,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/persian',
         },
         smoke: true,
@@ -1423,17 +1423,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/persian/magazine-49281981',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -1455,8 +1455,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/pidgin/articles/cxvxrj8tvppo',
         },
         smoke: false,
@@ -1480,17 +1480,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/pidgin/sport-23252855',
         },
         smoke: true,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -1512,16 +1512,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/portuguese/articles/cxvxrj8tvppo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/portuguese',
         },
         smoke: false,
@@ -1529,25 +1529,25 @@ const genServices = {
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/portuguese/geral-40302633',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -1568,8 +1568,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/punjabi/articles/c123456abcdo',
         },
         smoke: false,
@@ -1593,17 +1593,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/punjabi/india-42928885',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -1625,16 +1625,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/russian/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/russian',
         },
         smoke: false,
@@ -1642,25 +1642,25 @@ const genServices = {
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/russian/features-45782775',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -1682,8 +1682,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/scotland/articles/cabcdefghijo',
         },
         smoke: false,
@@ -1703,24 +1703,24 @@ const genServices = {
     pageTypes: {
       articles: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/serbian/articles/c805k05kr73o/cyr',
         },
         smoke: true,
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/serbian/articles/cabcdefghijo/cyr',
         },
         smoke: true,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/serbian/cyr',
         },
         smoke: true,
@@ -1728,25 +1728,25 @@ const genServices = {
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null, // Once support for variants is available: '/serbian/srbija-49427344/cyr'
+          live: [],
+          test: [],
+          local: [], // Once support for variants is available: '/serbian/srbija-49427344/cyr'
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -1760,24 +1760,24 @@ const genServices = {
     pageTypes: {
       articles: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/serbian/articles/c805k05kr73o/lat',
         },
         smoke: true,
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/serbian/articles/cabcdefghijo/lat',
         },
         smoke: true,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/serbian/lat',
         },
         smoke: true,
@@ -1785,25 +1785,25 @@ const genServices = {
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/serbian/srbija-46748932/lat',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -1825,8 +1825,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/sinhala/articles/c123456abcdo',
         },
         smoke: false,
@@ -1866,17 +1866,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/sinhala/world-37657374',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -1897,16 +1897,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/somali/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/somali',
         },
         smoke: false,
@@ -1921,25 +1921,25 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/somali/war-45947544',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -1975,16 +1975,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/swahili/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/swahili',
         },
         smoke: false,
@@ -1999,25 +1999,25 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/swahili/habari-48185450',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -2039,8 +2039,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/tamil/articles/c123456abcdo',
         },
         smoke: false,
@@ -2063,25 +2063,25 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/tamil/global-47758688',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -2103,8 +2103,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/telugu/articles/c123456abcdo',
         },
         smoke: false,
@@ -2128,17 +2128,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/telugu/india-42321552',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -2160,8 +2160,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/thai/articles/c123456abcdo',
         },
         smoke: false,
@@ -2185,17 +2185,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/thai/thailand-49950038',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -2217,8 +2217,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/tigrinya/articles/c123456abcdo',
         },
         smoke: false,
@@ -2249,17 +2249,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/tigrinya/news-49944566',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -2281,16 +2281,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/turkce/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/turkce',
         },
         smoke: false,
@@ -2298,25 +2298,25 @@ const genServices = {
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/turkce/haberler-dunya-50924340',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -2330,24 +2330,24 @@ const genServices = {
     pageTypes: {
       articles: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/ukchina/articles/c0e8weny66ko/simp',
         },
         smoke: true,
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/ukchina/articles/cabcdefghijo/simp',
         },
         smoke: true,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/ukchina/simp',
         },
         smoke: true,
@@ -2355,25 +2355,25 @@ const genServices = {
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -2387,24 +2387,24 @@ const genServices = {
     pageTypes: {
       articles: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/ukchina/articles/c0e8weny66ko/trad',
         },
         smoke: true,
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/ukchina/articles/cabcdefghijo/trad',
         },
         smoke: true,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/ukchina/trad',
         },
         smoke: true,
@@ -2412,25 +2412,25 @@ const genServices = {
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null, // Enable once variants supported '/ukchina/49375846/trad'
+          live: [],
+          test: [],
+          local: [], // Enable once variants supported '/ukchina/49375846/trad'
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/ukchina/cool-britannia-38434549/trad',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -2452,16 +2452,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/ukrainian/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/ukrainian',
         },
         smoke: false,
@@ -2469,25 +2469,25 @@ const genServices = {
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/ukrainian/features-41278900',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -2509,16 +2509,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/urdu/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/urdu',
         },
         smoke: false,
@@ -2533,25 +2533,25 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/urdu/pakistan-48242478',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -2565,16 +2565,16 @@ const genServices = {
     pageTypes: {
       articles: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/uzbek/articles/cxj3rjxm6r0o',
         },
         smoke: false,
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/uzbek/articles/c123456abcdo',
         },
         smoke: false,
@@ -2597,25 +2597,25 @@ const genServices = {
       },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/uzbek/sport-23248721',
         },
         smoke: true,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/uzbek/central-asia-46716844',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -2637,16 +2637,16 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/vietnamese/articles/c123456abcdo',
         },
         smoke: false,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/vietnamese',
         },
         smoke: false,
@@ -2671,17 +2671,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/vietnamese/world-48605529',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -2703,8 +2703,8 @@ const genServices = {
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/yoruba/articles/cxvxrj8tvppo',
         },
         smoke: false,
@@ -2728,17 +2728,17 @@ const genServices = {
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/yoruba/media-50970014',
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -2752,24 +2752,24 @@ const genServices = {
     pageTypes: {
       articles: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/zhongwen/articles/c3xd4x9prgyo/simp',
         },
         smoke: true,
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/zhongwen/articles/cabcdefghijo/simp',
         },
         smoke: true,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/zhongwen/simp',
         },
         smoke: true,
@@ -2777,25 +2777,25 @@ const genServices = {
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
@@ -2809,24 +2809,24 @@ const genServices = {
     pageTypes: {
       articles: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/zhongwen/articles/c3xd4x9prgyo/trad',
         },
         smoke: true,
       },
       errorPage404: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/zhongwen/articles/cabcdefghijo/trad',
         },
         smoke: true,
       },
       frontPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/zhongwen/trad',
         },
         smoke: true,
@@ -2834,25 +2834,25 @@ const genServices = {
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
         path: {
-          live: null,
-          test: null,
-          local: null, // Once variant support is available '/zhongwen/chinese-news-49631219/trad'
+          live: [],
+          test: [],
+          local: [], // Once variant support is available '/zhongwen/chinese-news-49631219/trad'
         },
         smoke: false,
       },
       photoGalleryPage: {
         path: {
-          live: null,
-          test: null,
+          live: [],
+          test: [],
           local: '/zhongwen/chinese-news-49065935/trad',
         },
         smoke: true,
       },
       storyPage: {
         path: {
-          live: null,
-          test: null,
-          local: null,
+          live: [],
+          test: [],
+          local: [],
         },
         smoke: false,
       },
