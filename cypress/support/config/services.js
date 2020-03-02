@@ -6,7 +6,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: ['/afaanoromoo/articles/ce3nlgrelv1o'],
           test: ['/afaanoromoo/articles/c4g19kgl85ko'],
           local: ['/afaanoromoo/articles/c4g19kgl85ko'],
@@ -14,7 +14,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: ['/afaanoromoo/articles/c123456abcdo'],
@@ -22,7 +22,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: ['/afaanoromoo'],
           test: ['/afaanoromoo'],
           local: ['/afaanoromoo'],
@@ -30,7 +30,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
           test: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
           local: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
@@ -38,7 +38,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: ['/afaanoromoo/oduu-51248626'],
           test: ['/afaanoromoo/23149891'],
           local: ['/afaanoromoo/23149891'],
@@ -46,7 +46,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: ['/afaanoromoo/oduu-41217768'],
@@ -54,7 +54,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -70,7 +70,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/afrique/articles/cx80n852v6mo',
           test: '/afrique/articles/cz216x22106o',
           local: '/afrique/articles/cz216x22106o',
@@ -78,7 +78,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/afrique/articles/c123456abcdo',
@@ -86,7 +86,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/afrique',
@@ -94,7 +94,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/afrique/bbc_afrique_radio/liveradio',
           test: '/afrique/bbc_afrique_radio/liveradio',
           local: '/afrique/bbc_afrique_radio/liveradio',
@@ -102,7 +102,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -110,7 +110,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/afrique/region-39269126',
@@ -118,7 +118,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -134,7 +134,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/amharic/articles/c0lgxqknqkdo',
           test: '/amharic/articles/czqverekrldo',
           local: '/amharic/articles/czqverekrldo',
@@ -142,7 +142,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/amharic/articles/c123456abcdo',
@@ -150,7 +150,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/amharic',
           test: '/amharic',
           local: '/amharic',
@@ -158,7 +158,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/amharic/bbc_amharic_radio/liveradio',
           test: '/amharic/bbc_amharic_radio/liveradio',
           local: '/amharic/bbc_amharic_radio/liveradio',
@@ -166,7 +166,7 @@ const genServices = {
         smoke: true,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: '/amharic/news-51270657',
           test: '/amharic/news-23263266',
           local: '/amharic/news-23263266',
@@ -174,7 +174,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/amharic/42743191',
@@ -182,7 +182,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -198,7 +198,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/arabic/articles/c8j91j2ljppo',
           test: '/arabic/articles/c1er5mjnznzo',
           local: '/arabic/articles/c1er5mjnznzo',
@@ -206,7 +206,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/arabic/articles/c123456abcdo',
@@ -214,7 +214,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/arabic',
@@ -222,7 +222,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/arabic/bbc_arabic_radio/liveradio',
           test: '/arabic/bbc_arabic_radio/liveradio',
           local: '/arabic/bbc_arabic_radio/liveradio',
@@ -230,7 +230,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -238,7 +238,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/arabic/art-and-culture-38260491',
@@ -246,7 +246,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -262,7 +262,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/azeri/articles/cv0lm08kngmo',
           test: '/azeri/articles/c5k08pqnzexo',
           local: '/azeri/articles/c5k08pqnzexo',
@@ -270,7 +270,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/azeri/articles/c123456abcdo',
@@ -278,7 +278,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/azeri',
           test: '/azeri',
           local: '/azeri',
@@ -287,7 +287,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [
             '/azeri/international-51331762', // CPS MAP
             '/azeri/multimedia/2012/09/120919_georgia_prison_video', // TC2 MAP
@@ -304,7 +304,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/azeri/azerbaijan-44208474',
@@ -312,7 +312,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -328,7 +328,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/bengali/articles/cv90149zq1eo',
           test: '/bengali/articles/c6p3yp5zzmeo',
           local: '/bengali/articles/c6p3yp5zzmeo',
@@ -336,7 +336,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/bengali/articles/c123456abcdo',
@@ -344,7 +344,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/bengali',
           test: '/bengali',
           local: '/bengali',
@@ -352,7 +352,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/bengali/bbc_bangla_radio/liveradio',
           test: '/bengali/bbc_bangla_radio/liveradio',
           local: '/bengali/bbc_bangla_radio/liveradio',
@@ -360,7 +360,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -368,7 +368,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/bengali/news-38827173',
@@ -376,7 +376,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -392,7 +392,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/burmese/articles/c41px3vd4nxo',
           test: '/burmese/articles/cn0exdy1jzvo',
           local: '/burmese/articles/cn0exdy1jzvo',
@@ -400,7 +400,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/burmese/articles/c123456abcdo',
@@ -408,7 +408,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/burmese',
           test: '/burmese',
           local: '/burmese',
@@ -416,7 +416,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/burmese/bbc_burmese_radio/liveradio',
           test: '/burmese/bbc_burmese_radio/liveradio',
           local: '/burmese/bbc_burmese_radio/liveradio',
@@ -424,7 +424,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -432,7 +432,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/burmese/media-47680015',
@@ -440,7 +440,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -456,7 +456,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/cymrufyw/erthyglau/c06p32z9x2mo',
@@ -464,7 +464,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/cymrufyw/erthyglau/c123456abcdo',
@@ -485,7 +485,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/gahuza/articles/cryd02nzn81o',
           test: '/gahuza/articles/cey23zx8wx8o',
           local: '/gahuza/articles/cey23zx8wx8o',
@@ -493,7 +493,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/gahuza/articles/c123456abcdo',
@@ -501,7 +501,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/gahuza',
           test: '/gahuza',
           local: '/gahuza',
@@ -509,7 +509,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/gahuza/bbc_gahuza_radio/liveradio',
           test: '/gahuza/bbc_gahuza_radio/liveradio',
           local: '/gahuza/bbc_gahuza_radio/liveradio',
@@ -517,7 +517,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [
             '/gahuza/48549182', // CPS MAP
             '/gahuza/video/2015/12/151201_100womenburundi', // TC2 MAP
@@ -534,7 +534,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/gahuza/amakuru-43894701',
@@ -542,7 +542,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -558,7 +558,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/gujarati/articles/c2rnxj48elwo',
           test: '/gujarati/articles/cr5el5kw591o',
           local: '/gujarati/articles/cr5el5kw591o',
@@ -566,7 +566,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/gujarati/articles/c123456abcdo',
@@ -574,7 +574,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/gujarati',
           test: '/gujarati',
           local: '/gujarati',
@@ -583,7 +583,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: '/gujarati/media-51389006',
           test: '/gujarati/other-news-23130286',
           local: '/gujarati/other-news-23130286',
@@ -591,7 +591,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/gujarati/international-41345658',
@@ -599,7 +599,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -615,7 +615,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/hausa/articles/c41rj1z261zo',
           test: '/hausa/articles/c2nr6xqmnewo',
           local: '/hausa/articles/c2nr6xqmnewo',
@@ -623,7 +623,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/hausa/articles/c123456abcdo',
@@ -631,7 +631,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/hausa',
@@ -639,7 +639,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/hausa/bbc_hausa_radio/liveradio',
           test: '/hausa/bbc_hausa_radio/liveradio',
           local: '/hausa/bbc_hausa_radio/liveradio',
@@ -647,7 +647,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -655,7 +655,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -663,7 +663,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -679,7 +679,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/hindi/articles/cd80y3ezl8go',
           test: '/hindi/articles/c0469479x9xo',
           local: '/hindi/articles/c0469479x9xo',
@@ -687,7 +687,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/hindi/articles/c123456abcdo',
@@ -695,7 +695,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/hindi',
@@ -703,7 +703,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/hindi/bbc_hindi_radio/liveradio',
           test: '/hindi/bbc_hindi_radio/liveradio',
           local: '/hindi/bbc_hindi_radio/liveradio',
@@ -711,7 +711,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -719,7 +719,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/hindi/india-50198153',
@@ -727,7 +727,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -743,7 +743,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/igbo/articles/ckjn8jnrn75o', // CPS MAP with audio clip
           test: '/igbo/articles/cr1lw620ygjo',
           local: '/igbo/articles/cr1lw620ygjo',
@@ -751,7 +751,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/igbo/articles/cxvxrj8tvppo',
@@ -759,7 +759,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/igbo',
           test: '/igbo',
           local: '/igbo',
@@ -768,7 +768,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: '/igbo/media-42986440',
           test: '/igbo/media-23256786',
           local: '/igbo/media-23256786',
@@ -776,7 +776,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/igbo/afirika-49666505',
@@ -784,7 +784,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/igbo/afirika-23252735',
@@ -800,7 +800,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/indonesia/articles/cvd36dly8zdo',
           test: '/indonesia/articles/c0q2zq8pzvzo',
           local: '/indonesia/articles/c0q2zq8pzvzo',
@@ -808,7 +808,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/indonesia/articles/c123456abcdo',
@@ -816,7 +816,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/indonesia',
           test: '/indonesia',
           local: '/indonesia',
@@ -824,7 +824,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/indonesia/bbc_indonesian_radio/liveradio',
           test: '/indonesia/bbc_indonesian_radio/liveradio',
           local: '/indonesia/bbc_indonesian_radio/liveradio',
@@ -832,7 +832,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -840,7 +840,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/indonesia/indonesia-41635759',
@@ -848,7 +848,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -864,7 +864,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/japanese/articles/cj4m7n5nrd8o',
           test: '/japanese/articles/cdd6p3r9g7jo',
           local: '/japanese/articles/cdd6p3r9g7jo',
@@ -872,7 +872,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/japanese/articles/c123456abcdo',
@@ -880,7 +880,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/japanese',
           test: '/japanese',
           local: '/japanese',
@@ -889,7 +889,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/japanese/video-23248670',
@@ -897,7 +897,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/japanese/features-and-analysis-42786589',
@@ -905,7 +905,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -921,7 +921,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/korean/articles/crym1243d97o',
           test: '/korean/articles/c3mn1lvz65xo',
           local: '/korean/articles/c3mn1lvz65xo',
@@ -929,7 +929,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/korean/articles/c123456abcdo',
@@ -937,7 +937,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/korean',
@@ -945,7 +945,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/korean/bbc_korean_radio/liveradio',
           test: '/korean/bbc_korean_radio/liveradio',
           local: '/korean/bbc_korean_radio/liveradio',
@@ -953,7 +953,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: '/korean/international-51367672',
           test: [],
           local: '/korean/media-23248686',
@@ -961,7 +961,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/korean/features-41397333',
@@ -969,7 +969,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -985,7 +985,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/kyrgyz/articles/c414v42gy75o',
           test: '/kyrgyz/articles/c3xd4xg3rm9o',
           local: '/kyrgyz/articles/c3xd4xg3rm9o',
@@ -993,7 +993,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/kyrgyz/articles/c123456abcdo',
@@ -1001,7 +1001,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/kyrgyz',
           test: '/kyrgyz',
           local: '/kyrgyz',
@@ -1009,7 +1009,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/kyrgyz/bbc_kyrgyz_radio/liveradio',
           test: '/kyrgyz/bbc_kyrgyz_radio/liveradio',
           local: '/kyrgyz/bbc_kyrgyz_radio/liveradio',
@@ -1017,7 +1017,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [
             '/kyrgyz/magazine-51509456', // CPS MAP
             '/kyrgyz/multimedia/2014/09/140903_iv_auturgan', // TC2 MAP
@@ -1034,7 +1034,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/kyrgyz/world-40847556',
@@ -1042,7 +1042,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1058,7 +1058,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/marathi/articles/cvjxwvn04yjo',
           test: '/marathi/articles/cp47g4myxz7o',
           local: '/marathi/articles/cp47g4myxz7o',
@@ -1066,7 +1066,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/marathi/articles/c123456abcdo',
@@ -1074,7 +1074,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/marathi',
           test: '/marathi',
           local: '/marathi',
@@ -1083,7 +1083,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: '/marathi/media-51314817',
           test: '/marathi/media-23127353',
           local: '/marathi/media-23127353',
@@ -1091,7 +1091,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/marathi/india-42894522',
@@ -1099,7 +1099,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1115,7 +1115,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/mundo/articles/cdwrpl7qwqqo',
           test: '/mundo/articles/ce42wzqr2mko',
           local: '/mundo/articles/ce42wzqr2mko',
@@ -1123,7 +1123,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/mundo/articles/c123456abcdo',
@@ -1131,7 +1131,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/mundo',
@@ -1140,7 +1140,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1148,7 +1148,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/mundo/deportes-36935058',
@@ -1156,7 +1156,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1172,7 +1172,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/naidheachdan/sgeulachdan/c18q7nedn2ko',
@@ -1180,7 +1180,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/naidheachdan/sgeulachdan/c123456abcdo',
@@ -1201,7 +1201,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/nepali/articles/c16ljg1v008o',
           test: '/nepali/articles/cl90j9m3mn6o',
           local: '/nepali/articles/cl90j9m3mn6o',
@@ -1209,7 +1209,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/nepali/articles/c123456abcdo',
@@ -1217,7 +1217,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/nepali',
           test: '/nepali',
           local: '/nepali',
@@ -1225,7 +1225,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/nepali/bbc_nepali_radio/liveradio',
           test: '/nepali/bbc_nepali_radio/liveradio',
           local: '/nepali/bbc_nepali_radio/liveradio',
@@ -1233,7 +1233,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1241,7 +1241,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/nepali/news-50627370',
@@ -1249,7 +1249,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1265,7 +1265,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/news/articles/cj7xrxz0e8zo',
           test: '/news/articles/cn7k01xp8kxo',
           local: '/news/articles/cn7k01xp8kxo',
@@ -1273,7 +1273,7 @@ const genServices = {
         smoke: true,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/news/articles/cxvxrj8tvppo',
@@ -1294,7 +1294,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/pashto/articles/c70970g2251o',
           test: '/pashto/articles/cyjmdl92z3ro',
           local: '/pashto/articles/cyjmdl92z3ro',
@@ -1302,7 +1302,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/pashto/articles/c123456abcdo',
@@ -1310,7 +1310,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/pashto',
@@ -1318,7 +1318,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/pashto/bbc_pashto_radio/liveradio',
           test: '/pashto/bbc_pashto_radio/liveradio',
           local: '/pashto/bbc_pashto_radio/liveradio',
@@ -1326,7 +1326,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [
             '/pashto/media-23257523', // CPS MAP
@@ -1340,7 +1340,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/pashto/arts-and-literature-50230813',
@@ -1348,7 +1348,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1364,7 +1364,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/persian/articles/c7eel0lmr4do',
           test: '/persian/articles/cej3lzd5e0go',
           local: '/persian/articles/cej3lzd5e0go',
@@ -1372,7 +1372,7 @@ const genServices = {
         smoke: true,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/persian/articles/cxvxrj8tvppo',
@@ -1380,7 +1380,7 @@ const genServices = {
         smoke: true,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/persian',
@@ -1388,7 +1388,7 @@ const genServices = {
         smoke: true,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: [
             '/persian/bbc_persian_radio/liveradio',
             '/persian/bbc_dari_radio/liveradio',
@@ -1405,7 +1405,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [
             '/persian/world-51497110', // CPS MAP
             '/persian/world/2016/06/160613_om_naked_dining', // TC2 MAP
@@ -1422,7 +1422,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/persian/magazine-49281981',
@@ -1430,7 +1430,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1446,7 +1446,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/pidgin/articles/cgwk9w4zlg8o',
           test: '/pidgin/articles/cwl08rd38l6o',
           local: '/pidgin/articles/cwl08rd38l6o',
@@ -1454,7 +1454,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/pidgin/articles/cxvxrj8tvppo',
@@ -1462,7 +1462,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/pidgin',
           test: '/pidgin',
           local: '/pidgin',
@@ -1471,7 +1471,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: '/pidgin/tori-50974590', // CPS MAP with video clip & related content
           test: '/pidgin/23248703',
           local: '/pidgin/23248703',
@@ -1479,7 +1479,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/pidgin/sport-23252855',
@@ -1487,7 +1487,7 @@ const genServices = {
         smoke: true,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1503,7 +1503,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/portuguese/articles/cpg5prg95lmo',
           test: '/portuguese/articles/cd61pm8gzmpo',
           local: '/portuguese/articles/cd61pm8gzmpo',
@@ -1511,7 +1511,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/portuguese/articles/cxvxrj8tvppo',
@@ -1519,7 +1519,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/portuguese',
@@ -1528,7 +1528,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1536,7 +1536,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/portuguese/geral-40302633',
@@ -1544,7 +1544,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1559,7 +1559,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/punjabi/articles/c39p51156lyo',
           test: '/punjabi/articles/c0l79lr39qyo',
           local: '/punjabi/articles/c0l79lr39qyo',
@@ -1567,7 +1567,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/punjabi/articles/c123456abcdo',
@@ -1575,7 +1575,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/punjabi',
           test: '/punjabi',
           local: '/punjabi',
@@ -1584,7 +1584,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: '/punjabi/india-51325361',
           test: '/punjabi/media-23248705',
           local: '/punjabi/media-23248705',
@@ -1592,7 +1592,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/punjabi/india-42928885',
@@ -1600,7 +1600,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1616,7 +1616,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/russian/articles/c6ygxgl53w9o',
           test: '/russian/articles/ck7pz7re3zgo',
           local: '/russian/articles/ck7pz7re3zgo',
@@ -1624,7 +1624,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/russian/articles/c123456abcdo',
@@ -1632,7 +1632,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/russian',
@@ -1641,7 +1641,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1649,7 +1649,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/russian/features-45782775',
@@ -1657,7 +1657,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1673,7 +1673,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/scotland/articles/cm49v4x1r9lo',
           test: '/scotland/articles/czwj5l0n210o',
           local: '/scotland/articles/czwj5l0n210o',
@@ -1681,7 +1681,7 @@ const genServices = {
         smoke: true,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/scotland/articles/cabcdefghijo',
@@ -1702,7 +1702,7 @@ const genServices = {
     variant: 'cyr',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/serbian/articles/c805k05kr73o/cyr',
@@ -1710,7 +1710,7 @@ const genServices = {
         smoke: true,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/serbian/articles/cabcdefghijo/cyr',
@@ -1718,7 +1718,7 @@ const genServices = {
         smoke: true,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/serbian/cyr',
@@ -1727,7 +1727,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [], // Once support for variants is available: '/serbian/srbija-49427344/cyr'
@@ -1735,7 +1735,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1743,7 +1743,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1759,7 +1759,7 @@ const genServices = {
     variant: 'lat',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/serbian/articles/c805k05kr73o/lat',
@@ -1767,7 +1767,7 @@ const genServices = {
         smoke: true,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/serbian/articles/cabcdefghijo/lat',
@@ -1775,7 +1775,7 @@ const genServices = {
         smoke: true,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/serbian/lat',
@@ -1784,7 +1784,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1792,7 +1792,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/serbian/srbija-46748932/lat',
@@ -1800,7 +1800,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1816,7 +1816,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/sinhala/articles/cldr38jnwd2o',
           test: '/sinhala/articles/c45w255zlexo',
           local: '/sinhala/articles/c45w255zlexo',
@@ -1824,7 +1824,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/sinhala/articles/c123456abcdo',
@@ -1832,7 +1832,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/sinhala',
           test: '/sinhala',
           local: '/sinhala',
@@ -1840,7 +1840,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/sinhala/bbc_sinhala_radio/liveradio',
           test: '/sinhala/bbc_sinhala_radio/liveradio',
           local: '/sinhala/bbc_sinhala_radio/liveradio',
@@ -1848,7 +1848,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [
             '/sinhala/sri-lanka-51375061', // CPS MAP
             '/sinhala/world/2015/09/150919_technology_at_schools', // TC2 MAP
@@ -1865,7 +1865,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/sinhala/world-37657374',
@@ -1873,7 +1873,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1888,7 +1888,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/somali/articles/c8z79d4mzrlo',
           test: '/somali/articles/cgn6emk3jm8o',
           local: '/somali/articles/cgn6emk3jm8o',
@@ -1896,7 +1896,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/somali/articles/c123456abcdo',
@@ -1904,7 +1904,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/somali',
@@ -1912,7 +1912,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/somali/bbc_somali_radio/liveradio',
           test: '/somali/bbc_somali_radio/liveradio',
           local: '/somali/bbc_somali_radio/liveradio',
@@ -1920,7 +1920,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1928,7 +1928,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/somali/war-45947544',
@@ -1936,7 +1936,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -1966,7 +1966,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/swahili/articles/cw794z3gpd5o',
           test: '/swahili/articles/czjqge2jwn2o',
           local: '/swahili/articles/czjqge2jwn2o',
@@ -1974,7 +1974,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/swahili/articles/c123456abcdo',
@@ -1982,7 +1982,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/swahili',
@@ -1990,7 +1990,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/swahili/bbc_swahili_radio/liveradio',
           test: '/swahili/bbc_swahili_radio/liveradio',
           local: '/swahili/bbc_swahili_radio/liveradio',
@@ -1998,7 +1998,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2006,7 +2006,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/swahili/habari-48185450',
@@ -2014,7 +2014,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2030,7 +2030,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/tamil/articles/cvr4752gr13o',
           test: '/tamil/articles/cwl08ll3me8o',
           local: '/tamil/articles/cwl08ll3me8o',
@@ -2038,7 +2038,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/tamil/articles/c123456abcdo',
@@ -2046,7 +2046,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/tamil',
           test: '/tamil',
           local: '/tamil',
@@ -2054,7 +2054,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/tamil/bbc_tamil_radio/liveradio',
           test: '/tamil/bbc_tamil_radio/liveradio',
           local: '/tamil/bbc_tamil_radio/liveradio',
@@ -2062,7 +2062,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2070,7 +2070,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/tamil/global-47758688',
@@ -2078,7 +2078,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2094,7 +2094,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/telugu/articles/c1x76pey3x3o',
           test: '/telugu/articles/cq0y4008d4vo',
           local: '/telugu/articles/cq0y4008d4vo',
@@ -2102,7 +2102,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/telugu/articles/c123456abcdo',
@@ -2110,7 +2110,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/telugu',
           test: '/telugu',
           local: '/telugu',
@@ -2119,7 +2119,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: '/telugu/india-51309092',
           test: '/telugu/international-23263261',
           local: '/telugu/international-23263261',
@@ -2127,7 +2127,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/telugu/india-42321552',
@@ -2135,7 +2135,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2151,7 +2151,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/thai/articles/czx7w3zyme1o',
           test: '/thai/articles/c442rl3md0eo',
           local: '/thai/articles/c442rl3md0eo',
@@ -2159,7 +2159,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/thai/articles/c123456abcdo',
@@ -2167,7 +2167,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/thai',
           test: '/thai',
           local: '/thai',
@@ -2176,7 +2176,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: '/thai/international-51285795',
           test: '/thai/thailand-23248713',
           local: '/thai/thailand-23248713',
@@ -2184,7 +2184,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/thai/thailand-49950038',
@@ -2192,7 +2192,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2208,7 +2208,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/tigrinya/articles/c3vq38ve33xo',
           test: '/tigrinya/articles/ck62z3rjwdeo',
           local: '/tigrinya/articles/ck62z3rjwdeo',
@@ -2216,7 +2216,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/tigrinya/articles/c123456abcdo',
@@ -2224,7 +2224,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/tigrinya',
           test: '/tigrinya',
           local: '/tigrinya',
@@ -2232,7 +2232,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/tigrinya/bbc_tigrinya_radio/liveradio',
           test: '/tigrinya/bbc_tigrinya_radio/liveradio',
           local: '/tigrinya/bbc_tigrinya_radio/liveradio',
@@ -2240,7 +2240,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: '/tigrinya/news-51249937',
           test: '/tigrinya/news-23263262',
           local: '/tigrinya/news-23263262',
@@ -2248,7 +2248,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/tigrinya/news-49944566',
@@ -2256,7 +2256,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2272,7 +2272,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/turkce/articles/cpgzpzjl3pdo',
           test: '/turkce/articles/c8q1ze59n25o',
           local: '/turkce/articles/c8q1ze59n25o',
@@ -2280,7 +2280,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/turkce/articles/c123456abcdo',
@@ -2288,7 +2288,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/turkce',
@@ -2297,7 +2297,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2305,7 +2305,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/turkce/haberler-dunya-50924340',
@@ -2313,7 +2313,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2329,7 +2329,7 @@ const genServices = {
     variant: 'simp',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/ukchina/articles/c0e8weny66ko/simp',
@@ -2337,7 +2337,7 @@ const genServices = {
         smoke: true,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/ukchina/articles/cabcdefghijo/simp',
@@ -2345,7 +2345,7 @@ const genServices = {
         smoke: true,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/ukchina/simp',
@@ -2354,7 +2354,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2362,7 +2362,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2370,7 +2370,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2386,7 +2386,7 @@ const genServices = {
     variant: 'trad',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/ukchina/articles/c0e8weny66ko/trad',
@@ -2394,7 +2394,7 @@ const genServices = {
         smoke: true,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/ukchina/articles/cabcdefghijo/trad',
@@ -2402,7 +2402,7 @@ const genServices = {
         smoke: true,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/ukchina/trad',
@@ -2411,7 +2411,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [], // Enable once variants supported '/ukchina/49375846/trad'
@@ -2419,7 +2419,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/ukchina/cool-britannia-38434549/trad',
@@ -2427,7 +2427,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2443,7 +2443,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/ukrainian/articles/c8zv0eed9gko',
           test: '/ukrainian/articles/cp4l2mrejvdo',
           local: '/ukrainian/articles/cp4l2mrejvdo',
@@ -2451,7 +2451,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/ukrainian/articles/c123456abcdo',
@@ -2459,7 +2459,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/ukrainian',
@@ -2468,7 +2468,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2476,7 +2476,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/ukrainian/features-41278900',
@@ -2484,7 +2484,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2500,7 +2500,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/urdu/articles/c4qg7qq63y6o',
           test: '/urdu/articles/cwgq7rzv172o',
           local: '/urdu/articles/cwgq7rzv172o',
@@ -2508,7 +2508,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/urdu/articles/c123456abcdo',
@@ -2516,7 +2516,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/urdu',
@@ -2524,7 +2524,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/urdu/bbc_urdu_radio/liveradio',
           test: '/urdu/bbc_urdu_radio/liveradio',
           local: '/urdu/bbc_urdu_radio/liveradio',
@@ -2532,7 +2532,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2540,7 +2540,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/urdu/pakistan-48242478',
@@ -2548,7 +2548,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2564,7 +2564,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/uzbek/articles/cxj3rjxm6r0o',
@@ -2572,7 +2572,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/uzbek/articles/c123456abcdo',
@@ -2580,7 +2580,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/uzbek',
           test: '/uzbek',
           local: '/uzbek',
@@ -2588,7 +2588,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        path: {
+        paths: {
           live: '/uzbek/bbc_uzbek_radio/liveradio',
           test: '/uzbek/bbc_uzbek_radio/liveradio',
           local: '/uzbek/bbc_uzbek_radio/liveradio',
@@ -2596,7 +2596,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/uzbek/sport-23248721',
@@ -2604,7 +2604,7 @@ const genServices = {
         smoke: true,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/uzbek/central-asia-46716844',
@@ -2612,7 +2612,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2628,7 +2628,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/vietnamese/articles/cpgqngyexq7o',
           test: '/vietnamese/articles/c3y59g5zm19o',
           local: '/vietnamese/articles/c3y59g5zm19o',
@@ -2636,7 +2636,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/vietnamese/articles/c123456abcdo',
@@ -2644,7 +2644,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/vietnamese',
@@ -2653,7 +2653,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [
             '/vietnamese/forum-51506476', // CPS MAP
             '/vietnamese/multimedia/2015/04/150428_david_wheat_interview', // TC2 MAP
@@ -2670,7 +2670,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/vietnamese/world-48605529',
@@ -2678,7 +2678,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2694,7 +2694,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: '/yoruba/articles/cg7qz71en35o',
           test: '/yoruba/articles/clw06m0nj8qo',
           local: '/yoruba/articles/clw06m0nj8qo',
@@ -2702,7 +2702,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/yoruba/articles/cxvxrj8tvppo',
@@ -2710,7 +2710,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        path: {
+        paths: {
           live: '/yoruba',
           test: '/yoruba',
           local: '/yoruba',
@@ -2719,7 +2719,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: '/yoruba/afrika-51116686', // CPS MAP with video
           test: '/yoruba/media-23256797',
           local: '/yoruba/media-23256797',
@@ -2727,7 +2727,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/yoruba/media-50970014',
@@ -2735,7 +2735,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2751,7 +2751,7 @@ const genServices = {
     variant: 'simp',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/zhongwen/articles/c3xd4x9prgyo/simp',
@@ -2759,7 +2759,7 @@ const genServices = {
         smoke: true,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/zhongwen/articles/cabcdefghijo/simp',
@@ -2767,7 +2767,7 @@ const genServices = {
         smoke: true,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/zhongwen/simp',
@@ -2776,7 +2776,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2784,7 +2784,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2792,7 +2792,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
@@ -2808,7 +2808,7 @@ const genServices = {
     variant: 'trad',
     pageTypes: {
       articles: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/zhongwen/articles/c3xd4x9prgyo/trad',
@@ -2816,7 +2816,7 @@ const genServices = {
         smoke: true,
       },
       errorPage404: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/zhongwen/articles/cabcdefghijo/trad',
@@ -2824,7 +2824,7 @@ const genServices = {
         smoke: true,
       },
       frontPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/zhongwen/trad',
@@ -2833,7 +2833,7 @@ const genServices = {
       },
       liveRadio: { path: null, smoke: false },
       mediaAssetPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [], // Once variant support is available '/zhongwen/chinese-news-49631219/trad'
@@ -2841,7 +2841,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: '/zhongwen/chinese-news-49065935/trad',
@@ -2849,7 +2849,7 @@ const genServices = {
         smoke: true,
       },
       storyPage: {
-        path: {
+        paths: {
           live: [],
           test: [],
           local: [],
