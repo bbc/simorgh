@@ -36,7 +36,7 @@ const FeaturesAnalysis = ({ content, enableGridWrapper }) => {
   const a11yAttributes = {
     as: 'section',
     role: 'region',
-    'aria-labelledby': 'related-content-heading',
+    'aria-labelledby': 'features-analysis-heading',
   };
   const FeaturesAnalysisWrapper = ({ children }) =>
     enableGridWrapper ? (
