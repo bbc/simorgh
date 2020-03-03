@@ -48,22 +48,22 @@ const RadioScheduleContainer = ({ endpoint }) => {
     const radioScheduleData = await response.json();
 
     const currentTime = parseInt(moment.utc().format('x'), 10);
-    // finding latest programme, that may or may not still be live. this is because there isn't
-    // always a live programme, in which case we show the most recently played programme on demand.
-    const latestProgrammeIndex = findLastIndex(
+    // finding latest program, that may or may not still be live. this is because there isn't
+    // always a live program, in which case we show the most recently played program on demand.
+    const latestProgramIndex = findLastIndex(
       propSatisfies(time => time < currentTime, 'publishedTimeStart'),
     )(radioScheduleData.schedules);
 
     const radioSchedules = radioScheduleData.schedules;
 
     const scheduleDataIsComplete =
-      radioSchedules[latestProgrammeIndex - 2] &&
-      radioSchedules[latestProgrammeIndex + 1];
+      radioSchedules[latestProgramIndex - 2] &&
+      radioSchedules[latestProgramIndex + 1];
     const schedulesToShow = scheduleDataIsComplete && [
-      radioSchedules[latestProgrammeIndex],
-      radioSchedules[latestProgrammeIndex - 1],
-      radioSchedules[latestProgrammeIndex - 2],
-      radioSchedules[latestProgrammeIndex + 1],
+      radioSchedules[latestProgramIndex],
+      radioSchedules[latestProgramIndex - 1],
+      radioSchedules[latestProgramIndex - 2],
+      radioSchedules[latestProgramIndex + 1],
     ];
 
     const schedules =
