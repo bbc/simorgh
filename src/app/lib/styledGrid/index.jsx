@@ -6,7 +6,6 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
@@ -28,14 +27,8 @@ import {
   gridContainerLargeCss,
 } from '../layoutGrid';
 
-export const Grid = styled.div`
+export const GridWrapper = styled.div`
   ${layoutGridWrapper};
-  padding-bottom: ${GEL_SPACING_QUAD};
-`;
-
-export const GhostGrid = styled.div`
-  ${layoutGridWrapper};
-  background: ${C_GHOST};
   padding-bottom: ${GEL_SPACING_QUAD};
 `;
 
