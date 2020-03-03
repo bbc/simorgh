@@ -88,6 +88,8 @@ describe('rich-text-transforms JS bundle request', () => {
               ).toEqual(true);
             });
           });
+        } else {
+          describe(`No rich-text-transforms tests for ${service} ${pageType}`, () => {});
         }
       });
   });
