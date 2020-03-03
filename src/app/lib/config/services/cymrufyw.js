@@ -58,7 +58,7 @@ export const service = {
       currentPage: 'Y dudalen bresennol',
       skipLinkText: `Neidio i'r cynnwys`,
       relatedContent: 'Cynnwys perthnasol',
-      sections: 'Adrannau',
+      navMenuText: 'Adrannau',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

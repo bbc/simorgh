@@ -10,7 +10,14 @@ import yorubaData from '#data/yoruba/frontpage';
 import punjabiData from '#data/punjabi/frontpage';
 import serbianCyrData from '#data/serbian/frontpage/cyr';
 import serbianLatData from '#data/serbian/frontpage/lat';
-import FrontPage from '.';
+import { service as newsConfig } from '#lib/config/services/news';
+import { service as igboConfig } from '#lib/config/services/igbo';
+import { service as pidginConfig } from '#lib/config/services/pidgin';
+import { service as thaiConfig } from '#lib/config/services/thai';
+import { service as yorubaConfig } from '#lib/config/services/yoruba';
+import { service as punjabiConfig } from '#lib/config/services/punjabi';
+import { service as serbianConfig } from '#lib/config/services/serbian';
+import { FrontPage } from '..';
 
 const serviceDataSets = {
   news: { default: newsData },
@@ -25,6 +32,16 @@ const serviceDataSets = {
   },
 };
 
+const serviceConfigs = {
+  news: newsConfig,
+  igbo: igboConfig,
+  pidgin: pidginConfig,
+  thai: thaiConfig,
+  yoruba: yorubaConfig,
+  punjabi: punjabiConfig,
+  serbian: serbianConfig,
+};
+
 const stories = storiesOf('Pages|Front Page', module).addDecorator(story => (
   <WithTimeMachine>{story()}</WithTimeMachine>
 ));
@@ -37,7 +54,7 @@ Object.keys(serviceDataSets).forEach(service => {
           isAmp={false}
           pageType="frontPage"
           status={200}
-          pathname="/pathname"
+          pathname={serviceConfigs[service][variant].navigation[0].url}
           service={service}
           variant={variant}
           pageData={serviceDataSets[service][variant]}

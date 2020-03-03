@@ -49,7 +49,7 @@ export const service = {
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
-      sections: 'Bölümlər',
+      navMenuText: 'Bölümlər',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

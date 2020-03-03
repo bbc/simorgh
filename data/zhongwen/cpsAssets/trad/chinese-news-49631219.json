@@ -1,0 +1,173 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49631219",
+    "locators": {
+      "assetUri": "/zhongwen/trad/chinese-news-49631219",
+      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49631219",
+      "curie": "http://www.bbc.co.uk/asset/4ef85b8b-be8d-1a4b-851c-db9c073e76dc"
+    },
+    "type": "MAP",
+    "createdBy": "zhongwen-traditional-v6",
+    "language": "zh-Hant",
+    "lastUpdated": 1568077214115,
+    "firstPublished": 1568077193,
+    "lastPublished": 1568077207,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "zhongwentrad.chinese_news.media_asset.49631219.page",
+      "cps_asset_id": "49631219"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07mvfms",
+        "subType": "clip",
+        "format": "video",
+        "title": "丧失爱宠后，中国商人克隆了自己的猫",
+        "synopses": {
+          "short": "丧失爱宠后，中国商人克隆了自己的猫",
+          "long": "中国商人黄雨几个月前失去了他的爱猫“大蒜”，为此悲痛欲绝。他找到一家生物科技公司，不久后，一只和“大蒜”几乎一模一样的猫诞生了。\n\n它便是中国首只克隆猫。",
+          "medium": "中国首只克隆猫诞生背后有什么故事？"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mvfpm.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "喪失愛寵後，中國商人克隆了自己的貓",
+        "versions": [
+          {
+            "versionId": "p07mvfmw",
+            "types": ["Original"],
+            "duration": 125,
+            "durationISO8601": "PT2M5S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
+            },
+            "availableFrom": 1568021741
+          }
+        ],
+        "type": "media"
+      },
+      {
+        "text": "中國商人黃雨失去了他的愛貓「大蒜」，為此悲痛欲絶。他找到一家生物科技公司對「大蒜」進行克隆，不久後，一隻和「大蒜」幾乎一模一樣的貓誕生了，它亦是中國首只「克隆貓」。",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "喪失愛寵後，中國商人克隆了自己的貓",
+      "headline": "喪失愛寵後，中國商人克隆了自己的貓"
+    },
+    "locators": {
+      "assetUri": "/zhongwen/trad/chinese-news-49631219",
+      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49631219",
+      "curie": "http://www.bbc.co.uk/asset/4ef85b8b-be8d-1a4b-851c-db9c073e76dc"
+    },
+    "summary": "中國首只克隆貓誕生背後有什麼故事？",
+    "timestamp": 1568077214115,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
+    },
+    "media": {
+      "id": "p07mvfms",
+      "subType": "clip",
+      "format": "video",
+      "title": "丧失爱宠后，中国商人克隆了自己的猫",
+      "synopses": {
+        "short": "丧失爱宠后，中国商人克隆了自己的猫",
+        "long": "中国商人黄雨几个月前失去了他的爱猫“大蒜”，为此悲痛欲绝。他找到一家生物科技公司，不久后，一只和“大蒜”几乎一模一样的猫诞生了。\n\n它便是中国首只克隆猫。",
+        "medium": "中国首只克隆猫诞生背后有什么故事？"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mvfpm.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "喪失愛寵後，中國商人克隆了自己的貓",
+      "versions": [
+        {
+          "versionId": "p07mvfmw",
+          "types": ["Original"],
+          "duration": 125,
+          "durationISO8601": "PT2M5S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1568021741
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108664417",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/11716/production/_108664417_p07mvfpm.jpg",
+      "path": "/cpsprodpb/11716/production/_108664417_p07mvfpm.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "中國首只克隆貓誕生背後有什麼故事？",
+      "copyrightHolder": "中國商人黃雨幾個月前失去了他的愛貓「大蒜」，為此悲痛欲絶。他找到一家生物科技公司，不久後，一隻和「大",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:zhongwen/trad/chinese-news-49631219",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "兩岸三地",
+      "uri": "/zhongwen/trad/chinese_news",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC 中文網",
+      "uri": "/zhongwen/trad",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

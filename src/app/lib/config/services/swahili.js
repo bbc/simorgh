@@ -49,7 +49,7 @@ export const service = {
       currentPage: 'Ukurasa uliopo',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
-      sections: 'Yaliyomo',
+      navMenuText: 'Yaliyomo',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
