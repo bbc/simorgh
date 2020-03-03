@@ -267,9 +267,9 @@ describe('cpsAssetPagePath', () => {
     '/punjabi/international-49567825.amp',
     '/kyrgyz/sapar-tv-48695523',
     '/mundo/test_underscore-12345678',
-    '/zhongwen/test-12345678/simp',
-    '/zhongwen/test-12345678/trad',
-    '/zhongwen/test-12345678/simp.amp',
+    '/zhongwen/simp/test-12345678',
+    '/zhongwen/trad/test-12345678',
+    '/zhongwen/simp/test-12345678.amp',
   ];
 
   shouldMatchValidRoutes(validRoutes, cpsAssetPagePath);
@@ -297,8 +297,8 @@ describe('cpsAssetPageDataPath', () => {
     '/pidgin/test-49450859.json',
     '/kyrgyz/test-tv-48695523.json',
     '/mundo/test_underscore-12345678.json',
-    '/zhongwen/test-12345678/simp.json',
-    '/zhongwen/test-12345678/trad.json',
+    '/zhongwen/simp/test-12345678.json',
+    '/zhongwen/trad/test-12345678.json',
   ];
 
   shouldMatchValidRoutes(validRoutes, cpsAssetPageDataPath);
@@ -323,6 +323,7 @@ describe('legacyAssetPagePath', () => {
   const validRoutes = [
     '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl',
     '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery',
+    '/zhongwen/simp/multimedia/2016/05/160511_vid_cultural_revolution_explainer',
   ];
 
   shouldMatchValidRoutes(validRoutes, legacyAssetPagePath);
