@@ -12,7 +12,7 @@ import {
   GEL_FF_REITH_SANS,
 } from '@bbc/gel-foundations/typography';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import Grid, { GhostGelPageGrid } from '#app/components/Grid';
+import Grid, { GelPageGrid } from '#app/components/Grid';
 
 const StatusCode = styled.span`
   ${props => (props.script ? getParagon(props.script) : '')};
@@ -30,7 +30,7 @@ const Heading = styled.h1`
   margin-top: 0;
 `;
 
-const StyledGhostGelPageGrid = styled(GhostGelPageGrid)`
+const StyledGelPageGrid = styled(GelPageGrid)`
   padding-bottom: 4rem;
   flex-grow: 1;
 `;
@@ -52,7 +52,7 @@ const ErrorPage = ({
   script,
   service,
 }) => (
-  <StyledGhostGelPageGrid
+  <StyledGelPageGrid
     forwardedAs="main"
     role="main"
     dir={dir}
@@ -114,7 +114,7 @@ const ErrorPage = ({
         {callToActionLast}
       </CustomParagraph>
     </Grid>
-  </StyledGhostGelPageGrid>
+  </StyledGelPageGrid>
 );
 
 ErrorPage.propTypes = {

@@ -9,7 +9,6 @@ exports[`withLoading HOC and no loading prop should return the passed in compone
 exports[`withLoading HOC and the loading prop set to true should return the loading component 1`] = `
 .c0 {
   margin: 0 auto;
-  background: #FDFDFD;
   padding-bottom: 2rem;
 }
 

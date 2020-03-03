@@ -15,7 +15,7 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { GhostGrid, GridItemConstrainedLarge } from '#lib/styledGrid';
+import { GridWrapper, GridItemConstrainedLarge } from '#lib/styledGrid';
 import StoryPromo from '../StoryPromo';
 import Grid from '../../components/Grid';
 
@@ -53,9 +53,9 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
   };
   const RelatedContentWrapper = ({ children }) =>
     enableGridWrapper ? (
-      <GhostGrid {...a11yAttributes}>
+      <GridWrapper {...a11yAttributes}>
         <Wrapper>{children}</Wrapper>
-      </GhostGrid>
+      </GridWrapper>
     ) : (
       <Wrapper {...a11yAttributes}>{children}</Wrapper>
     );

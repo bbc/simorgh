@@ -11,10 +11,10 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
     role="main"
   >
     <div
-      class="GhostGrid-sc-12lwanc-1 kGasFS"
+      class="GridWrapper-sc-12lwanc-0 hgpaqH"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-5 dBAoSC"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae"
       >
         <h1
           class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
@@ -25,7 +25,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </h1>
       </div>
       <div
-        class="GridItemConstrainedMedium-sc-12lwanc-3 imiJTj"
+        class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
       >
         <p
           class="Paragraph-k859h4-0 hymSIv"
@@ -42,7 +42,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
     role="region"
   >
     <div
-      class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc"
+      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
     >
       <div
         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -57,7 +57,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="FlexRow-wx5kdp-2 dVBNyZ"
           >
             <span
-              class="Title-wx5kdp-4 jiurmA"
+              class="Title-wx5kdp-4 BeqZV"
               dir="ltr"
               id="Most-Read"
             >
@@ -512,10 +512,10 @@ exports[`should render a news article correctly 1`] = `
     role="main"
   >
     <div
-      class="GhostGrid-sc-12lwanc-1 kGasFS"
+      class="GridWrapper-sc-12lwanc-0 hgpaqH"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-5 dBAoSC"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae"
       >
         <h1
           class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 aNHLE"
@@ -526,7 +526,7 @@ exports[`should render a news article correctly 1`] = `
         </h1>
       </div>
       <div
-        class="GridItemConstrainedMedium-sc-12lwanc-3 imiJTj"
+        class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
       >
         <p
           class="Paragraph-k859h4-0 dSVJxu"
@@ -550,10 +550,10 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
     role="main"
   >
     <div
-      class="GhostGrid-sc-12lwanc-1 kGasFS"
+      class="GridWrapper-sc-12lwanc-0 hgpaqH"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-5 dBAoSC"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae"
       >
         <h1
           class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 bYbRDq"
@@ -564,7 +564,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </h1>
       </div>
       <div
-        class="GridItemConstrainedMedium-sc-12lwanc-3 imiJTj"
+        class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
       >
         <p
           class="Paragraph-k859h4-0 jfPMLX"
@@ -581,7 +581,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
     role="region"
   >
     <div
-      class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc"
+      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
     >
       <div
         class="Bar-sc-1x4gwjz-0 kXOyLn"
@@ -596,7 +596,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="FlexRow-wx5kdp-2 dVBNyZ"
           >
             <span
-              class="Title-wx5kdp-4 dAMIcO"
+              class="Title-wx5kdp-4 htLcbq"
               dir="rtl"
               id="Most-Read"
             >

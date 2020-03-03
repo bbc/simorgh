@@ -40,7 +40,6 @@ exports[`ErrorMain should correctly render for an error page for News 1`] = `
 }
 
 .c1 {
-  background-color: #FDFDFD;
   padding-bottom: 4rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -287,7 +286,6 @@ exports[`ErrorMain should correctly render for an error page for arabic 1`] = `
 }
 
 .c1 {
-  background-color: #FDFDFD;
   padding-bottom: 4rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -534,7 +532,6 @@ exports[`ErrorMain should correctly render for an error page for pashto 1`] = `
 }
 
 .c1 {
-  background-color: #FDFDFD;
   padding-bottom: 4rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -781,7 +778,6 @@ exports[`ErrorMain should correctly render for an error page for persian 1`] = `
 }
 
 .c1 {
-  background-color: #FDFDFD;
   padding-bottom: 4rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -1028,7 +1024,6 @@ exports[`ErrorMain should correctly render for an error page for urdu 1`] = `
 }
 
 .c1 {
-  background-color: #FDFDFD;
   padding-bottom: 4rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;

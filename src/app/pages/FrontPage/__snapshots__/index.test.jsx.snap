@@ -25,7 +25,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                 chartbeat
               </div>
               <main
-                class="StyledFrontPageMain-ylca1m-2 ftqRFA"
+                class="StyledFrontPageMain-ylca1m-1 jIkkvC"
                 role="main"
               >
                 <h1
@@ -55,7 +55,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 sdoTA"
+                      class="SectionLabelWrapper-sc-1x4gwjz-1 chnGCx"
                     >
                       <div
                         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -70,7 +70,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="FlexRow-wx5kdp-2 dVBNyZ"
                           >
                             <span
-                              class="Title-wx5kdp-4 jiurmA"
+                              class="Title-wx5kdp-4 BeqZV"
                               dir="ltr"
                               id="Top-stories"
                             >
@@ -201,7 +201,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc"
+                      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
                     >
                       <div
                         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -216,7 +216,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="FlexRow-wx5kdp-2 dVBNyZ"
                           >
                             <span
-                              class="Title-wx5kdp-4 jiurmA"
+                              class="Title-wx5kdp-4 BeqZV"
                               dir="ltr"
                               id="Frequency-info"
                             >
@@ -722,7 +722,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc"
+                      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
                     >
                       <div
                         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -737,7 +737,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="FlexRow-wx5kdp-2 dVBNyZ"
                           >
                             <span
-                              class="Title-wx5kdp-4 jiurmA"
+                              class="Title-wx5kdp-4 BeqZV"
                               dir="ltr"
                               id="Most-Read"
                             >

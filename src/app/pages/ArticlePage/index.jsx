@@ -10,7 +10,7 @@ import text from '#containers/Text';
 import image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import timestamp from '#containers/ArticleTimestamp';
-import { GhostGrid } from '#lib/styledGrid';
+import { GridWrapper } from '#lib/styledGrid';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
@@ -76,12 +76,12 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
       />
       <StyledMain role="main">
-        <GhostGrid>
+        <GridWrapper>
           <Blocks
             blocks={path(['content', 'model', 'blocks'], pageData)}
             componentsToRender={componentsToRender}
           />
-        </GhostGrid>
+        </GridWrapper>
       </StyledMain>
       <MostReadContainer
         mostReadEndpointOverride={mostReadEndpointOverride}
