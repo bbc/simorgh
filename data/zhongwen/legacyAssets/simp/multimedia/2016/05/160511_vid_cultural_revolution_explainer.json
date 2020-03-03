@@ -20,10 +20,13 @@
       "allowAdvertising": true,
       "isBreakingNews": false
     },
-    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "43781435" },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "cps_asset_id": "43781435"
+    },
     "tags": {},
     "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "includeComments": false
   },
   "content": {
@@ -47,11 +50,18 @@
         "markupType": "plain_text",
         "type": "paragraph"
       },
-      { "text": "50年过去了，我们一起回顾这段历史。", "markupType": "plain_text", "type": "paragraph" }
+      {
+        "text": "50年过去了，我们一起回顾这段历史。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
     ]
   },
   "promo": {
-    "headlines": { "shortHeadline": "视频：毛泽东发动文革来龙去脉", "headline": "视频：毛泽东发动文革来龙去脉" },
+    "headlines": {
+      "shortHeadline": "视频：毛泽东发动文革来龙去脉",
+      "headline": "视频：毛泽东发动文革来龙去脉"
+    },
     "locators": {
       "assetUri": "/zhongwen/simp/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
       "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
@@ -84,8 +94,18 @@
     "type": "cps"
   },
   "relatedContent": {
-    "section": { "subType": "index", "name": "多媒体", "uri": "/zhongwen/simp/multimedia", "type": "simple" },
-    "site": { "subType": "site", "name": "bbcchinese.com", "uri": "/zhongwen/simp", "type": "simple" },
+    "section": {
+      "subType": "index",
+      "name": "多媒体",
+      "uri": "/zhongwen/simp/multimedia",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "bbcchinese.com",
+      "uri": "/zhongwen/simp",
+      "type": "simple"
+    },
     "groups": []
   }
 }

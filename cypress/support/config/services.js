@@ -1251,7 +1251,7 @@ const genServices = appEnv => ({
         path:
           Cypress.env('APP_ENV') === 'live' || Cypress.env('APP_ENV') === 'test'
             ? undefined
-            : undefined, // '/serbian/srbija-49427344/cyr'
+            : undefined, // '/serbian/cyr/srbija-49427344'
         smoke: false,
       },
       photoGalleryPage: { path: undefined, smoke: false },
@@ -1747,7 +1747,7 @@ const genServices = appEnv => ({
         path:
           isLive(appEnv) || isTest(appEnv)
             ? undefined
-            : '/ukchina/cool-britannia-38434549/trad',
+            : '/ukchina/trad/cool-britannia-38434549',
         smoke: false,
       },
       storyPage: {
@@ -2044,7 +2044,7 @@ const genServices = appEnv => ({
         path:
           isLive(appEnv) || isTest(appEnv)
             ? undefined
-            : '/zhongwen/chinese-news-49065935/trad',
+            : '/zhongwen/trad/chinese-news-49065935',
         smoke: true,
       },
       storyPage: {

@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Imeboreshwa',
     atiAnalyticsAppName: 'news-swahili',
     atiAnalyticsProducerId: '86',
+    chartbeatDomain: 'swahili.bbc.co.uk',
     brandName: 'BBC News Swahili',
     product: 'BBC News',
     serviceLocalizedName: 'Swahili',
