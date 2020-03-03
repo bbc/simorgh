@@ -21,6 +21,7 @@ export const service = {
     articleTimestampPrefix: 'Обновлено',
     atiAnalyticsAppName: 'news-russian',
     atiAnalyticsProducerId: '75',
+    chartbeatDomain: 'russian.bbc.co.uk',
     brandName: 'BBC News Русская служба',
     product: 'BBC News',
     serviceLocalizedName: 'Русская служба',
