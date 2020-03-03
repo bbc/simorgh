@@ -2663,7 +2663,7 @@ const genServices = {
             '/vietnamese/sport/2016/09/160922_tc2_testmap2', // TC2 MAP
           ],
           local: [
-            '/vietnamese/media-49614583', // CPS MAP
+            '/vietnamese/23222411', // CPS MAP
             '/vietnamese/sport/2016/09/160922_tc2_testmap2', // TC2 MAP
           ],
         },
