@@ -20,6 +20,7 @@ export const service = {
     articleTimestampPrefix: 'Wedi ei ddiweddaru',
     atiAnalyticsAppName: 'news-cymrufyw',
     atiAnalyticsProducerId: '100',
+    chartbeatDomain: 'cymrufyw.bbc.co.uk',
     brandName: 'BBC Cymru Fyw',
     product: 'BBC News',
     serviceLocalizedName: 'Cymru Fyw',
