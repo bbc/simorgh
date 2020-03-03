@@ -52,10 +52,7 @@
           "thingLabel": "History",
           "thingUri": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
           "thingId": "03eb3674-6190-4cd7-8104-1a00991d67a3",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/History",
             "http://www.wikidata.org/entity/Q309"
@@ -65,48 +62,27 @@
           "thingLabel": "Serbia",
           "thingUri": "http://www.bbc.co.uk/things/1791445f-977a-4e6d-b490-51f84bb4fc52#id",
           "thingId": "1791445f-977a-4e6d-b490-51f84bb4fc52",
-          "thingType": [
-            "Thing",
-            "Place",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/6290252/"
-          ]
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/6290252/"]
         },
         {
           "thingLabel": "Belgrade",
           "thingUri": "http://www.bbc.co.uk/things/859a0d03-bc25-4ae8-938f-e494f0ffee02#id",
           "thingId": "859a0d03-bc25-4ae8-938f-e494f0ffee02",
-          "thingType": [
-            "Thing",
-            "Place",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/792680/"
-          ]
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/792680/"]
         },
         {
           "thingLabel": "LGBT",
           "thingUri": "http://www.bbc.co.uk/things/911f368c-e756-4ac3-9667-ec8900ceb4ce#id",
           "thingId": "911f368c-e756-4ac3-9667-ec8900ceb4ce",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/LGBT"
-          ]
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/LGBT"]
         }
       ]
     },
     "version": "v1.0.10",
-    "blockTypes": [
-      "media",
-      "paragraph",
-      "image"
-    ],
+    "blockTypes": ["media", "paragraph", "image"],
     "includeComments": false
   },
   "content": {
@@ -126,14 +102,10 @@
         "versions": [
           {
             "versionId": "p07l78wb",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 171,
             "durationISO8601": "PT2M51S",
-            "warnings": {
-              
-            },
+            "warnings": {},
             "availableTerritories": {
               "uk": true,
               "nonUk": true
@@ -216,14 +188,10 @@
       "versions": [
         {
           "versionId": "p07l78wb",
-          "types": [
-            "Original"
-          ],
+          "types": ["Original"],
           "duration": 171,
           "durationISO8601": "PT2M51S",
-          "warnings": {
-            
-          },
+          "warnings": {},
           "availableTerritories": {
             "uk": true,
             "nonUk": true
