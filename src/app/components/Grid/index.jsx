@@ -5,7 +5,6 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
 
 const group4WrapperMaxWidth = `63rem`; // 1008px
 const group5WrapperMaxWidth = `80rem`; // 1280px
@@ -23,11 +22,6 @@ const gelMaxWidths = css`
 
 export const GelPageGrid = styled(Grid)`
   ${gelMaxWidths}
-`;
-
-export const GhostGelPageGrid = styled(Grid)`
-  ${gelMaxWidths}
-  background-color: ${C_GHOST};
 `;
 
 export const StyledFrontPageMain = styled.main`
