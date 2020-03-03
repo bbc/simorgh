@@ -57,8 +57,8 @@ describe('ArticleTimestamp', () => {
   shouldMatchSnapshot(
     "should render both a 'created' and an 'updated' Timestamp correctly",
     <WrappedArticleTimestamp
-      firstPublished={1530947227000}
-      lastPublished={1552666749637}
+      firstPublished={1530947227000} // Sat Jul 07 2018 07:07:07
+      lastPublished={1552666749637} // Fri Mar 15 2019 16:19:09
     />,
   );
 
@@ -178,6 +178,7 @@ describe('ArticleTimestamp', () => {
   });
 
   it('should render two timestamps with date when firstPublished before today and lastPublished was published more than 1 minute after firstPublished', () => {
+    // this should be relative time rather than separating by different days
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={1530947280000} // Sat Jul 07 2018 07:08:00 UTC
@@ -263,7 +264,7 @@ describe('ArticleTimestamp', () => {
     expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
   });
 
-  it('should render one timestamp when firstPublished and lastPublished is the same day, and lastPublished is outside of the relative window', () => {
+  it('should render one timestamp when firstPublished and lastPublished is the same day, and current time is outside of the lastPublished relative window', () => {
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
         firstPublished={1400140005000} // Thu May 15 2014 07:46:45 UTC
@@ -272,6 +273,21 @@ describe('ArticleTimestamp', () => {
     );
 
     expect(renderedWrapper.length).toEqual(1);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
+  });
+
+  it('should render two timestamps when firstPublished and lastPublished is the same day, not today, and current time is within the lastPublished relative window', () => {
+    Date.now = jest.fn(() => new Date('2020-02-28T08:20:00Z').getTime());
+    const twentyFourHoursAgo = timestampGenerator({ days: 1 });
+    const nineHoursAgo = timestampGenerator({ hours: 9 });
+    const renderedWrapper = renderedTimestamps(
+      <WrappedArticleTimestamp
+        firstPublished={twentyFourHoursAgo}
+        lastPublished={nineHoursAgo}
+      />,
+    );
+
+    expect(renderedWrapper.length).toEqual(2);
     expect(firstChild(renderedWrapper)).toMatch(regexDate);
   });
 
