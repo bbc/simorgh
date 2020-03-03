@@ -480,6 +480,8 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 <section
   aria-labelledby="Most-Read"
+  class=""
+  data-e2e="most-read"
   role="region"
 >
   <div

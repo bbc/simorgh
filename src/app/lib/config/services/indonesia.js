@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Diperbarui',
     atiAnalyticsAppName: 'news-indonesia',
     atiAnalyticsProducerId: '54',
+    chartbeatDomain: 'indonesian.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Indonesia',
     product: 'BBC News',
     serviceLocalizedName: 'Indonesia',
@@ -49,7 +50,7 @@ export const service = {
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',
       relatedContent: 'Berita terkait',
-      sections: 'Kategori',
+      navMenuText: 'Kategori',
       mediaAssetPage: {
         mediaPlayer: 'Pemutar Media',
         audioPlayer: 'Pemutar Audio',

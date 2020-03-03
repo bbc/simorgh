@@ -1,11 +1,8 @@
 import path from 'ramda/src/path';
 import getInitialData from './getInitialData';
-import MediaAssetPage from '#pages/MediaAssetPage';
-import StoryPage from '#pages/Story';
-import PhotoGalleryPage from '#pages/PhotoGallery';
-import FrontPage from '#pages/FrontPage';
+import { MediaAssetPage, PhotoGalleryPage, StoryPage, FrontPage } from '#pages';
 import ErrorPage from '#pages/Error';
-import { cpsAssetPagePath } from '../utils/regex';
+import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
 import {
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
@@ -33,7 +30,7 @@ const CpsAsset = props => {
 };
 
 export default {
-  path: cpsAssetPagePath,
+  path: [cpsAssetPagePath, legacyAssetPagePath],
   exact: true,
   component: CpsAsset,
   getInitialData,
