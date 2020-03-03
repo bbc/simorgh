@@ -16,6 +16,7 @@ export const service = {
     articleTimestampPrefix: 'ተሻሽሏል',
     atiAnalyticsAppName: 'news-amharic',
     atiAnalyticsProducerId: '4',
+    chartbeatDomain: 'amharic.bbc.co.uk',
     brandName: 'BBC News አማርኛ',
     product: 'BBC News',
     serviceLocalizedName: 'አማርኛ',

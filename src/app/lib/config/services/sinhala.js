@@ -16,6 +16,7 @@ export const service = {
     articleTimestampPrefix: 'යාවත්කාලීනවී ඇත',
     atiAnalyticsAppName: 'news-sinhala',
     atiAnalyticsProducerId: '82',
+    chartbeatDomain: 'sinhala.bbc.co.uk',
     brandName: 'BBC News සිංහල',
     product: 'BBC News',
     serviceLocalizedName: 'සිංහල',
