@@ -1023,7 +1023,7 @@ const genServices = {
             '/kyrgyz/multimedia/2014/09/140903_iv_auturgan', // TC2 MAP
           ],
           test: [
-            '/kyrgyz/kyrgyzstan-23095373', // CPS MAP
+            '/kyrgyz/media-23257484', // CPS MAP
             '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP
           ],
           local: [
