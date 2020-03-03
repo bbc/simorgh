@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::asset:ukchina/simp/49375846",
+    "id": "urn:bbc:ares::asset:ukchina/trad/49375846",
     "locators": {
-      "assetUri": "/ukchina/simp/49375846",
-      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/49375846",
-      "curie": "http://www.bbc.co.uk/asset/c30b716c-ff6b-d849-9cc8-0f68e40c74e1"
+      "assetUri": "/ukchina/trad/49375846",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/49375846",
+      "curie": "http://www.bbc.co.uk/asset/c30b716c-ff6b-d849-9cc8-0f68e40c74e2"
     },
     "type": "MAP",
-    "createdBy": "ukchina-v6",
-    "language": "zh-Hans",
-    "lastUpdated": 1566213224765,
+    "createdBy": "ukchina-traditional-v6",
+    "language": "zh-Hant",
+    "lastUpdated": 1566213240367,
     "firstPublished": 1565970259,
-    "lastPublished": 1566213216,
+    "lastPublished": 1566213233,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -27,7 +27,7 @@
     },
     "analyticsLabels": {
       "cps_asset_type": "map",
-      "counterName": "ukchinasimp.media_asset.49375846.page",
+      "counterName": "ukchinatrad.media_asset.49375846.page",
       "cps_asset_id": "49375846"
     },
     "passport": {
@@ -42,15 +42,9 @@
         }
       ]
     },
-    "tags": {
-      
-    },
+    "tags": {},
     "version": "v1.0.10",
-    "blockTypes": [
-      "media",
-      "paragraph",
-      "list"
-    ],
+    "blockTypes": ["media", "paragraph", "list"],
     "includeComments": false
   },
   "content": {
@@ -68,13 +62,11 @@
         "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07kskwc.jpg",
         "embedding": true,
         "advertising": true,
-        "caption": "李小牧：东京红灯区走出的华裔政治家",
+        "caption": "李小牧：東京紅燈區走出的華裔政治家",
         "versions": [
           {
             "versionId": "p07ksjjr",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 132,
             "durationISO8601": "PT2M12S",
             "warnings": {
@@ -91,13 +83,13 @@
         "type": "media"
       },
       {
-        "text": "他出生中国，移民日本后长期在东京红灯区里做拉客的“案内人”，甚至曾遭黑道绑架勒索，被认为是电影《新宿事件》的原型。",
+        "text": "他出生中國，移民日本後長期在東京紅燈區裏做拉客的「案內人」，甚至曾遭黑道綁架勒索，被認為是電影《新宿事件》的原型。",
         "role": "introduction",
         "markupType": "plain_text",
         "type": "paragraph"
       },
       {
-        "text": "他就是在日本华人群体中家喻户晓的李小牧。近年来，他走上从政之路，两次参选议员。虽然竞选失败，但他说，这是为了“还爸爸一个心愿”。",
+        "text": "他就是在日本華人群體中家喻戶曉的李小牧。近年來，他走上從政之路，兩次參選議員。雖然競選失敗，但他說，這是為了「還爸爸一個心願」。",
         "markupType": "plain_text",
         "type": "paragraph"
       },
@@ -105,18 +97,18 @@
         "numbered": false,
         "items": [
           {
-            "text": "<itemMeta>ukchina/simp/vert-tra-49007946</itemMeta>",
+            "text": "<itemMeta>ukchina/trad/vert-tra-49007946</itemMeta>",
             "meta": [
               {
                 "headlines": {
-                  "shortHeadline": "旅游计划：去台湾玩的5个理由",
-                  "headline": "台湾旅游：去台湾玩的5个理由",
-                  "overtyped": "旅游计划：去台湾玩的5个理由"
+                  "shortHeadline": "旅遊計劃：去台灣玩的5個理由",
+                  "headline": "台灣旅遊：去台灣玩的5個理由",
+                  "overtyped": "旅遊計劃：去台灣玩的5個理由"
                 },
                 "locators": {
-                  "href": "http://www.bbc.com/ukchina/simp/vert-tra-49007946"
+                  "href": "http://www.bbc.com/ukchina/trad/vert-tra-49007946"
                 },
-                "summary": "去台湾玩还需要理由吗？台湾有山有水，自然景观丰富多样，人情味浓厚，还有吃不完的美食和放松身心灵的温泉。",
+                "summary": "去台灣玩還需要理由嗎？台灣有山有水，自然景觀豐富多樣，人情味濃厚，還有吃不完的美食和放鬆身心靈的溫泉。",
                 "timestamp": 1563552098,
                 "passport": {
                   "category": {
@@ -124,7 +116,7 @@
                     "categoryName": "Feature"
                   }
                 },
-                "id": "urn:bbc:ares::asset:ukchina/simp/vert-tra-49007946",
+                "id": "urn:bbc:ares::asset:ukchina/trad/vert-tra-49007946",
                 "type": "cps"
               }
             ],
@@ -132,18 +124,18 @@
             "type": "listItem"
           },
           {
-            "text": "<itemMeta>ukchina/simp/vert-fut-48773560</itemMeta>",
+            "text": "<itemMeta>ukchina/trad/vert-fut-48773560</itemMeta>",
             "meta": [
               {
                 "headlines": {
-                  "shortHeadline": "福冈：日本最具创新力的城市",
-                  "headline": "福冈能成为日本最具创新力的城市吗？",
-                  "overtyped": "福冈：日本最具创新力的城市"
+                  "shortHeadline": "福岡：日本最具創新力的城市",
+                  "headline": "福岡能成為日本最具創新力的城市嗎？",
+                  "overtyped": "福岡：日本最具創新力的城市"
                 },
                 "locators": {
-                  "href": "http://www.bbc.com/ukchina/simp/vert-fut-48773560"
+                  "href": "http://www.bbc.com/ukchina/trad/vert-fut-48773560"
                 },
-                "summary": "位于日本九州的福冈，虽然比不上首都东京受到关注，但福冈正在成为日本的“硅谷”——为初创企业提供成长的沃土。",
+                "summary": "位於日本九州的福岡，雖然比不上首都東京受到關注，但福岡正在成為日本的「硅谷」——為初創企業提供成長的沃土。",
                 "timestamp": 1561644756,
                 "passport": {
                   "category": {
@@ -151,7 +143,7 @@
                     "categoryName": "Feature"
                   }
                 },
-                "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48773560",
+                "id": "urn:bbc:ares::asset:ukchina/trad/vert-fut-48773560",
                 "type": "cps"
               }
             ],
@@ -159,18 +151,18 @@
             "type": "listItem"
           },
           {
-            "text": "<itemMeta>ukchina/simp/vert-tra-48735307</itemMeta>",
+            "text": "<itemMeta>ukchina/trad/vert-tra-48735307</itemMeta>",
             "meta": [
               {
                 "headlines": {
-                  "shortHeadline": "流水素面：必须眼疾手快用筷子夹住的日本美食",
-                  "headline": "流水素面：必须眼疾手快用筷子夹住的日本美食",
-                  "overtyped": "流水素面：必须眼疾手快用筷子夹住的日本美食"
+                  "shortHeadline": "流水素麵：必須眼疾手快用筷子夾住的日本美食",
+                  "headline": "流水素麵：必須眼疾手快用筷子夾住的日本美食",
+                  "overtyped": "流水素麵：必須眼疾手快用筷子夾住的日本美食"
                 },
                 "locators": {
-                  "href": "http://www.bbc.com/ukchina/simp/vert-tra-48735307"
+                  "href": "http://www.bbc.com/ukchina/trad/vert-tra-48735307"
                 },
-                "summary": "流水素面是日本最有趣的一种夏日美食习俗：面条随着竹槽中的流水一同流下，你得眼疾手快，用筷子夹出你的面条。",
+                "summary": "流水素麵是日本最有趣的一種夏日美食習俗：麵條隨著竹槽中的流水一同流下，你得眼疾手快，用筷子夾出你的麵條。",
                 "timestamp": 1561268435,
                 "passport": {
                   "category": {
@@ -178,7 +170,7 @@
                     "categoryName": "Feature"
                   }
                 },
-                "id": "urn:bbc:ares::asset:ukchina/simp/vert-tra-48735307",
+                "id": "urn:bbc:ares::asset:ukchina/trad/vert-tra-48735307",
                 "type": "cps"
               }
             ],
@@ -192,16 +184,16 @@
   },
   "promo": {
     "headlines": {
-      "shortHeadline": "李小牧：东京红灯区走出的华裔政治参选人",
-      "headline": "李小牧：东京红灯区走出的华裔政治参选人"
+      "shortHeadline": "李小牧：東京紅燈區走出的華裔政治參選人",
+      "headline": "李小牧：東京紅燈區走出的華裔政治參選人"
     },
     "locators": {
-      "assetUri": "/ukchina/simp/49375846",
-      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/49375846",
-      "curie": "http://www.bbc.co.uk/asset/c30b716c-ff6b-d849-9cc8-0f68e40c74e1"
+      "assetUri": "/ukchina/trad/49375846",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/49375846",
+      "curie": "http://www.bbc.co.uk/asset/c30b716c-ff6b-d849-9cc8-0f68e40c74e2"
     },
-    "summary": "他出生中国，移民日本后长期在东京红灯区里做拉客的案内人，甚至曾遭黑道绑架勒索，但他现在走上了从政的道路。",
-    "timestamp": 1566213224765,
+    "summary": "他出生中國，移民日本後長期在東京紅燈區裏做拉客的案內人，甚至曾遭黑道綁架勒索，但他現在走上了從政的道路。",
+    "timestamp": 1566213240367,
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
@@ -227,13 +219,11 @@
       "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07kskwc.jpg",
       "embedding": true,
       "advertising": true,
-      "caption": "李小牧：东京红灯区走出的华裔政治家",
+      "caption": "李小牧：東京紅燈區走出的華裔政治家",
       "versions": [
         {
           "versionId": "p07ksjjr",
-          "types": [
-            "Original"
-          ],
+          "types": ["Original"],
           "duration": 132,
           "durationISO8601": "PT2M12S",
           "warnings": {
@@ -256,24 +246,24 @@
       "path": "/cpsprodpb/1DD1/production/_108333670_p07ksjvw.jpg",
       "height": 576,
       "width": 1024,
-      "altText": "他出生中国，移民日本后长期在东京红灯区里做拉客的案内人，甚至曾遭黑道绑架勒索，但他现在走上了从政的道路。",
-      "copyrightHolder": "他出生中国，移民日本后长期在东京红灯区里做拉客的案内人，甚至曾遭黑道绑架勒索，被认为是电影《新宿事件",
+      "altText": "他出生中國，移民日本後長期在東京紅燈區裏做拉客的案內人，甚至曾遭黑道綁架勒索，但他現在走上了從政的道路。",
+      "copyrightHolder": "他出生中國，移民日本後長期在東京紅燈區裏做拉客的案內人，甚至曾遭黑道綁架勒索，被認為是電影《新宿事件",
       "type": "image"
     },
-    "id": "urn:bbc:ares::asset:ukchina/simp/49375846",
+    "id": "urn:bbc:ares::asset:ukchina/trad/49375846",
     "type": "cps"
   },
   "relatedContent": {
     "section": {
       "subType": "index",
-      "name": "主页",
-      "uri": "/ukchina/simp/front_page",
+      "name": "主頁",
+      "uri": "/ukchina/trad/front_page",
       "type": "simple"
     },
     "site": {
       "subType": "site",
-      "name": "BBC英伦网",
-      "uri": "/ukchina/simp",
+      "name": "BBC英倫網",
+      "uri": "/ukchina/trad",
       "type": "simple"
     },
     "groups": [
@@ -282,14 +272,14 @@
         "promos": [
           {
             "headlines": {
-              "shortHeadline": "旅游计划：去台湾玩的5个理由",
-              "headline": "台湾旅游：去台湾玩的5个理由"
+              "shortHeadline": "旅遊計劃：去台灣玩的5個理由",
+              "headline": "台灣旅遊：去台灣玩的5個理由"
             },
             "locators": {
-              "assetUri": "/ukchina/simp/vert-tra-49007946",
-              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/vert-tra-49007946"
+              "assetUri": "/ukchina/trad/vert-tra-49007946",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/trad/vert-tra-49007946"
             },
-            "summary": "去台湾玩还需要理由吗？台湾有山有水，自然景观丰富多样，人情味浓厚，还有吃不完的美食和放松身心灵的温泉。",
+            "summary": "去台灣玩還需要理由嗎？台灣有山有水，自然景觀豐富多樣，人情味濃厚，還有吃不完的美食和放鬆身心靈的溫泉。",
             "timestamp": 1563552098,
             "cpsType": "STY",
             "indexImage": {
@@ -304,19 +294,19 @@
               "copyrightHolder": "Getty Images",
               "type": "image"
             },
-            "id": "urn:bbc:ares::asset:ukchina/simp/vert-tra-49007946",
+            "id": "urn:bbc:ares::asset:ukchina/trad/vert-tra-49007946",
             "type": "cps"
           },
           {
             "headlines": {
-              "shortHeadline": "福冈：日本最具创新力的城市",
-              "headline": "福冈能成为日本最具创新力的城市吗？"
+              "shortHeadline": "福岡：日本最具創新力的城市",
+              "headline": "福岡能成為日本最具創新力的城市嗎？"
             },
             "locators": {
-              "assetUri": "/ukchina/simp/vert-fut-48773560",
-              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/vert-fut-48773560"
+              "assetUri": "/ukchina/trad/vert-fut-48773560",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/trad/vert-fut-48773560"
             },
-            "summary": "位于日本九州的福冈，虽然比不上首都东京受到关注，但福冈正在成为日本的“硅谷”——为初创企业提供成长的沃土。",
+            "summary": "位於日本九州的福岡，雖然比不上首都東京受到關注，但福岡正在成為日本的「硅谷」——為初創企業提供成長的沃土。",
             "timestamp": 1561644756,
             "cpsType": "STY",
             "indexImage": {
@@ -326,23 +316,23 @@
               "path": "/cpsprodpb/131AE/production/_107545287_p078m43k.jpg",
               "height": 549,
               "width": 976,
-              "altText": "福冈",
+              "altText": "福岡",
               "copyrightHolder": "Getty Images",
               "type": "image"
             },
-            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48773560",
+            "id": "urn:bbc:ares::asset:ukchina/trad/vert-fut-48773560",
             "type": "cps"
           },
           {
             "headlines": {
-              "shortHeadline": "流水素面：必须眼疾手快用筷子夹住的日本美食",
-              "headline": "流水素面：必须眼疾手快用筷子夹住的日本美食"
+              "shortHeadline": "流水素麵：必須眼疾手快用筷子夾住的日本美食",
+              "headline": "流水素麵：必須眼疾手快用筷子夾住的日本美食"
             },
             "locators": {
-              "assetUri": "/ukchina/simp/vert-tra-48735307",
-              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/vert-tra-48735307"
+              "assetUri": "/ukchina/trad/vert-tra-48735307",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/trad/vert-tra-48735307"
             },
-            "summary": "流水素面是日本最有趣的一种夏日美食习俗：面条随着竹槽中的流水一同流下，你得眼疾手快，用筷子夹出你的面条。",
+            "summary": "流水素麵是日本最有趣的一種夏日美食習俗：麵條隨著竹槽中的流水一同流下，你得眼疾手快，用筷子夾出你的麵條。",
             "timestamp": 1561268435,
             "cpsType": "STY",
             "indexImage": {
@@ -356,7 +346,7 @@
               "copyrightHolder": "Getty Images",
               "type": "image"
             },
-            "id": "urn:bbc:ares::asset:ukchina/simp/vert-tra-48735307",
+            "id": "urn:bbc:ares::asset:ukchina/trad/vert-tra-48735307",
             "type": "cps"
           }
         ]

@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Жаңылоо',
     atiAnalyticsAppName: 'news-kyrgyz',
     atiAnalyticsProducerId: '58',
+    chartbeatDomain: 'kyrgyz.bbc.co.uk',
     brandName: 'BBC News Кыргыз Кызматы',
     product: 'BBC News',
     serviceLocalizedName: 'Кыргыз КызMATы',

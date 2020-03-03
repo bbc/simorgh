@@ -20,6 +20,7 @@ export const service = {
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'scotland',
     atiAnalyticsProducerId: '79',
+    chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Scotland',
     product: 'BBC Scotland',
     defaultImage:

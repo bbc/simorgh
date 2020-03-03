@@ -21,6 +21,7 @@ export const service = {
     articleTimestampPrefix: 'Güncelleme',
     atiAnalyticsAppName: 'news-turkce',
     atiAnalyticsProducerId: '92',
+    chartbeatDomain: 'turkish.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Türkçe',
     product: 'BBC News',
     serviceLocalizedName: 'Türkçe',
