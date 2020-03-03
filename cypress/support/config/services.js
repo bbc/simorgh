@@ -1730,7 +1730,7 @@ const genServices = {
         paths: {
           live: [],
           test: [],
-          local: [], // Once support for variants is available: '/serbian/srbija-49427344/cyr'
+          local: [], // Once support for variants is available: '/serbian/cyr/srbija-49427344'
         },
         smoke: false,
       },
@@ -2414,7 +2414,7 @@ const genServices = {
         paths: {
           live: [],
           test: [],
-          local: [], // Enable once variants supported '/ukchina/49375846/trad'
+          local: [], // Enable once variants supported '/ukchina/trad/49375846'
         },
         smoke: false,
       },
@@ -2422,7 +2422,7 @@ const genServices = {
         paths: {
           live: [],
           test: [],
-          local: ['/ukchina/cool-britannia-38434549/trad'],
+          local: ['/ukchina/trad/cool-britannia-38434549'],
         },
         smoke: false,
       },
@@ -2836,7 +2836,7 @@ const genServices = {
         paths: {
           live: [],
           test: [],
-          local: [], // Once variant support is available '/zhongwen/chinese-news-49631219/trad'
+          local: [], // Once variant support is available '/zhongwen/trad/chinese-news-49631219'
         },
         smoke: false,
       },
@@ -2844,7 +2844,7 @@ const genServices = {
         paths: {
           live: [],
           test: [],
-          local: ['/zhongwen/chinese-news-49065935/trad'],
+          local: ['/zhongwen/trad/chinese-news-49065935'],
         },
         smoke: true,
       },
