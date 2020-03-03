@@ -2289,8 +2289,8 @@ const genServices = {
       },
       frontPage: {
         paths: {
-          live: [],
-          test: [],
+          live: ['/turkce'],
+          test: ['/turkce'],
           local: ['/turkce'],
         },
         smoke: false,
@@ -2517,8 +2517,8 @@ const genServices = {
       },
       frontPage: {
         paths: {
-          live: [],
-          test: [],
+          live: ['/urdu'],
+          test: ['/urdu'],
           local: ['/urdu'],
         },
         smoke: false,
@@ -2645,8 +2645,8 @@ const genServices = {
       },
       frontPage: {
         paths: {
-          live: [],
-          test: [],
+          live: ['/vietnamese'],
+          test: ['/vietnamese'],
           local: ['/vietnamese'],
         },
         smoke: false,
@@ -2655,7 +2655,7 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/vietnamese/23222411', // CPS MAP
+            '/vietnamese/forum-51506476', // CPS MAP
             '/vietnamese/multimedia/2015/04/150428_david_wheat_interview', // TC2 MAP
           ],
           test: [
