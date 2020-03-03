@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'अद्यावधिक गरिएको समय',
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
+    chartbeatDomain: 'nepali.bbc.co.uk',
     brandName: 'BBC News नेपाली',
     product: 'BBC News',
     serviceLocalizedName: 'नेपाली',
