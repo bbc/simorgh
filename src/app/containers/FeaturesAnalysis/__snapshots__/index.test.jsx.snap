@@ -3,7 +3,7 @@
 exports[`CpsRelatedContent should render Story Feature components in Live environment 1`] = `
 <DocumentFragment>
   <section
-    aria-labelledby="related-content-heading"
+    aria-labelledby="features-analysis-heading"
     class="GhostGrid-sc-12lwanc-1 kGasFS"
     role="region"
   >
@@ -88,12 +88,6 @@ exports[`CpsRelatedContent should render Story Feature components in Live enviro
                 >
                   This is a test asset used in Simorgh, please do not edit it without asking.
                 </p>
-                <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
-                  datetime="2019-10-23"
-                >
-                  23rd October 2019
-                </time>
               </div>
             </div>
           </li>
@@ -142,12 +136,6 @@ exports[`CpsRelatedContent should render Story Feature components in Live enviro
                 >
                   Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
                 </p>
-                <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
-                  datetime="2019-09-14"
-                >
-                  14th September 2019
-                </time>
               </div>
             </div>
           </li>
@@ -161,7 +149,7 @@ exports[`CpsRelatedContent should render Story Feature components in Live enviro
 exports[`CpsRelatedContent should render Story Feature components when given appropriate data 1`] = `
 <DocumentFragment>
   <section
-    aria-labelledby="related-content-heading"
+    aria-labelledby="features-analysis-heading"
     class="GhostGrid-sc-12lwanc-1 kGasFS"
     role="region"
   >
@@ -246,12 +234,6 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 >
                   This is a test asset used in Simorgh, please do not edit it without asking.
                 </p>
-                <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
-                  datetime="2019-10-23"
-                >
-                  23rd October 2019
-                </time>
               </div>
             </div>
           </li>
@@ -300,12 +282,6 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 >
                   Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
                 </p>
-                <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
-                  datetime="2019-09-14"
-                >
-                  14th September 2019
-                </time>
               </div>
             </div>
           </li>

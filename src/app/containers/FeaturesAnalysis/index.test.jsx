@@ -20,7 +20,7 @@ const renderFeaturesAnalysis = ({
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         isAmp={false}
-        pageType="MAP"
+        pageType="STY"
         pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}
