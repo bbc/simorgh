@@ -20,6 +20,7 @@ import image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
+import FeaturesAnalysis from '#containers/FeaturesAnalysis';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
@@ -190,7 +191,7 @@ const StoryPage = ({ pageData }) => {
             <h2>This is a component in the second column</h2>
           </ComponentWrapper>
           <ComponentWrapper>
-            <h2>This is a component in the second column</h2>
+            <FeaturesAnalysis />
           </ComponentWrapper>
           <ComponentWrapper>
             <h2>This is a component in the second column</h2>
