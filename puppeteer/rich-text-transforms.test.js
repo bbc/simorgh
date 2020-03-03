@@ -2,6 +2,8 @@
 import puppeteer from 'puppeteer';
 import { localBaseUrl } from '#testHelpers/config';
 import shouldSmokeTest from '../cypress/support/helpers/shouldSmokeTest';
+import serviceHasPageType from '../cypress/support/helpers/serviceHasPageType';
+import getPaths from '../cypress/support/helpers/getPaths';
 
 global.Cypress = { env: () => 'local' };
 
@@ -37,52 +39,58 @@ describe('rich-text-transforms JS bundle request', () => {
         pageType =>
           pageType === 'mediaAssetPage' &&
           shouldSmokeTest(pageType, service) &&
-          config[service].pageTypes[pageType].path !== undefined,
+          serviceHasPageType(service, pageType),
       )
       .forEach(pageType => {
-        const { path } = config[service].pageTypes[pageType];
+        const paths = getPaths(service, pageType);
 
-        describe(service, () => {
-          beforeAll(async () => {
-            await page.goto(`${localBaseUrl}${path}`, {
-              waitUntil: 'networkidle2',
-            });
-          });
+        if (paths.length > 0) {
+          const path = paths[0];
 
-          afterAll(() => {
-            requests = [];
-          });
-
-          it('does not load the rich-text-transforms bundle on initial page load', async () => {
-            expect(
-              requests.some(url => url.match(richTextTransformsBundleRegex)),
-            ).toEqual(false);
-          });
-
-          // This scenario will not currently apply as we do not do client-side navigation on MAP pages
-          // Once client side nav is enabled, we should consider adding a test to ensure that the
-          // rich-text-transforms bundle is loaded in to deal with the data transformations
-          it.skip('only loads rich-text-transforms bundle after client navigation to MAP asset', async () => {
-            await page.evaluate(() => {
-              document.querySelector(
-                'a[data-e2e="cpsAssetDummyLink"]',
-              ).style.display = 'inline';
+          describe(service, () => {
+            beforeAll(async () => {
+              await page.goto(`${localBaseUrl}${path}`, {
+                waitUntil: 'networkidle2',
+              });
             });
 
-            await Promise.all([
-              page.click('a[data-e2e="cpsAssetDummyLink"]'),
-              page.waitForNavigation({ waitUntil: 'networkidle2' }),
-            ]);
+            afterAll(() => {
+              requests = [];
+            });
 
-            await page.waitForRequest(request =>
-              request.url().match(richTextTransformsBundleRegex),
-            );
+            it('does not load the rich-text-transforms bundle on initial page load', async () => {
+              expect(
+                requests.some(url => url.match(richTextTransformsBundleRegex)),
+              ).toEqual(false);
+            });
 
-            expect(
-              requests.some(url => url.match(richTextTransformsBundleRegex)),
-            ).toEqual(true);
+            // This scenario will not currently apply as we do not do client-side navigation on MAP pages
+            // Once client side nav is enabled, we should consider adding a test to ensure that the
+            // rich-text-transforms bundle is loaded in to deal with the data transformations
+            it.skip('only loads rich-text-transforms bundle after client navigation to MAP asset', async () => {
+              await page.evaluate(() => {
+                document.querySelector(
+                  'a[data-e2e="cpsAssetDummyLink"]',
+                ).style.display = 'inline';
+              });
+
+              await Promise.all([
+                page.click('a[data-e2e="cpsAssetDummyLink"]'),
+                page.waitForNavigation({ waitUntil: 'networkidle2' }),
+              ]);
+
+              await page.waitForRequest(request =>
+                request.url().match(richTextTransformsBundleRegex),
+              );
+
+              expect(
+                requests.some(url => url.match(richTextTransformsBundleRegex)),
+              ).toEqual(true);
+            });
           });
-        });
+        } else {
+          describe(`No rich-text-transforms tests for ${service} ${pageType}`, () => {});
+        }
       });
   });
 });

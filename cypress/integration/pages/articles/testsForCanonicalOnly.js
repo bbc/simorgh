@@ -1,5 +1,4 @@
 import envConfig from '../../../support/config/envs';
-import config from '../../../support/config/services';
 import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockData, getBlockByType } from './helpers';
 
@@ -39,7 +38,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       cy.get('head link[rel="amphtml"]').should(
         'have.attr',
         'href',
-        `${window.location.origin}${config[service].pageTypes.articles.path}.amp`,
+        `${window.location.origin}${Cypress.env('currentPath')}.amp`,
       );
     });
 

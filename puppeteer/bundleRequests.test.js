@@ -2,6 +2,8 @@
 import puppeteer from 'puppeteer';
 import { localBaseUrl } from '#testHelpers/config';
 import shouldSmokeTest from '../cypress/support/helpers/shouldSmokeTest';
+import serviceHasPageType from '../cypress/support/helpers/serviceHasPageType';
+import getPaths from '../cypress/support/helpers/getPaths';
 
 global.Cypress = { env: () => 'local' };
 
@@ -36,49 +38,55 @@ describe('Js bundle requests', () => {
       .filter(
         pageType =>
           shouldSmokeTest(pageType, service) &&
-          config[service].pageTypes[pageType].path !== undefined,
+          serviceHasPageType(service, pageType),
       )
       .forEach(pageType => {
-        const { path } = config[service].pageTypes[pageType];
+        const paths = getPaths(service, pageType);
 
-        describe(service, () => {
-          beforeAll(async () => {
-            await page.goto(`${localBaseUrl}${path}`, {
-              waitUntil: 'networkidle2',
+        if (paths.length > 0) {
+          const path = paths[0];
+
+          describe(service, () => {
+            beforeAll(async () => {
+              await page.goto(`${localBaseUrl}${path}`, {
+                waitUntil: 'networkidle2',
+              });
             });
-          });
 
-          afterAll(() => {
-            requests = [];
-          });
+            afterAll(() => {
+              requests = [];
+            });
 
-          it('only loads expected js bundles', () => {
-            requests
-              .filter(url => url.endsWith('.js'))
-              .filter(isJsBundle)
-              .forEach(url => {
-                expect(url).toMatch(
+            it('only loads expected js bundles', () => {
+              requests
+                .filter(url => url.endsWith('.js'))
+                .filter(isJsBundle)
+                .forEach(url => {
+                  expect(url).toMatch(
+                    new RegExp(
+                      `(\\/static\\/js\\/(main|vendor|${config[service].name})-\\w+\\.\\w+\\.js)`,
+                      'g',
+                    ),
+                  );
+                });
+            });
+
+            it('loads at least 1 service bundle', () => {
+              const serviceMatches = requests.filter(url =>
+                url.match(
                   new RegExp(
-                    `(\\/static\\/js\\/(main|vendor|${config[service].name})-\\w+\\.\\w+\\.js)`,
+                    `(\\/static\\/js\\/${config[service].name}-\\w+\\.\\w+\\.js)`,
                     'g',
                   ),
-                );
-              });
-          });
-
-          it('loads at least 1 service bundle', () => {
-            const serviceMatches = requests.filter(url =>
-              url.match(
-                new RegExp(
-                  `(\\/static\\/js\\/${config[service].name}-\\w+\\.\\w+\\.js)`,
-                  'g',
                 ),
-              ),
-            );
+              );
 
-            expect(serviceMatches.length).toBeGreaterThanOrEqual(1);
+              expect(serviceMatches.length).toBeGreaterThanOrEqual(1);
+            });
           });
-        });
+        } else {
+          describe(`No bundle request tests for ${service} ${pageType}`, () => {});
+        }
       });
   });
 });
