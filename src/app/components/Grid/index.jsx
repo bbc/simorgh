@@ -7,17 +7,14 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 
-const group4WrapperMaxWidth = `63rem`; // 1008px
-const group5WrapperMaxWidth = `80rem`; // 1280px
-
 const gelMaxWidths = css`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     margin: 0 auto;
-    max-width: ${group4WrapperMaxWidth};
+    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     margin: 0 auto;
-    max-width: ${group5WrapperMaxWidth};
+    max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
   }
 `;
 
