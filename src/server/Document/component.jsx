@@ -8,6 +8,7 @@ import {
   AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
 import ResourceHints from '#app/components/ResourceHints';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
 
@@ -32,6 +33,7 @@ const Document = ({
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: ${C_GHOST};
   `;
 
   // The JS to remove the no-js class will not run on AMP, therefore only add it to canonical
