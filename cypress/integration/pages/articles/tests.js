@@ -11,8 +11,6 @@ const serviceHasCaption = service => service === 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
 const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
-const serviceHasTimestamp = service => ['news', 'urdu'].includes(service);
-
 // TODO: Remove once we have inline link on article pages linking to another article page
 const serviceHasInlineLink = service => service === 'news';
 
@@ -164,32 +162,6 @@ export const testsThatFollowSmokeTestConfig = ({
             });
         });
       }
-
-      if (serviceHasTimestamp(service)) {
-        it('should render a timestamp', () => {
-          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-            ({ body }) => {
-              const { lastPublished, firstPublished } = body.metadata;
-              cy.get('time')
-                .eq(0)
-                .should('exist')
-                .should('be.visible')
-                .should('have.attr', 'datetime')
-                .should('not.be.empty');
-
-              if (lastPublished !== firstPublished) {
-                cy.get('time')
-                  .eq(1)
-                  .should(
-                    'contain',
-                    appConfig[config[service].name].articleTimestampPrefix,
-                  );
-              }
-            },
-          );
-        });
-      }
-
       // `appToggles` tells us whether a feature is toggled on or off in the current environment.
       if (appToggles.mediaPlayer.enabled) {
         describe('Media Player', () => {
