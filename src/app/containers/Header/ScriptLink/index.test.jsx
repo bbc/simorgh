@@ -81,8 +81,8 @@ describe(`Script Link`, () => {
       },
       cpsAssetPage: {
         matchPath: cpsAssetPagePath,
-        path: '/serbian/srbija-46748932/lat',
-        variantPath: '/serbian/srbija-46748932/cyr',
+        path: '/serbian/lat/srbija-46748932',
+        variantPath: '/serbian/cyr/srbija-46748932',
       },
       errorPage: {
         matchPath: errorPagePath,
@@ -97,9 +97,9 @@ describe(`Script Link`, () => {
       legacyAssetPage: {
         matchPath: legacyAssetPagePath,
         path:
-          '/ukchina/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs/trad',
+          '/ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs',
         variantPath:
-          '/ukchina/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs/simp',
+          '/ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs',
         serviceContext: ukChinaServiceConfig.trad,
         requestContext: { variant: 'trad' },
         otherVariant: 'simp',

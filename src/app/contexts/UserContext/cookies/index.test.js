@@ -82,8 +82,22 @@ describe('UserContext cookies', () => {
 
     it('should set preferred variant if personalisation cookies enabled', () => {
       Cookie.get.mockReturnValue('111');
+      setPreferredVariantCookie('foo', 'bar');
+      expect(Cookie.set).toHaveBeenCalledWith('ckps_foo', 'bar');
+    });
+
+    it('should not set preferred variant if personalisation cookies not enabled', () => {
+      Cookie.get.mockReturnValue('110');
       setPreferredVariantCookie('serbian', 'lat');
-      expect(Cookie.set).toHaveBeenCalledWith('ckps_serbian', 'lat');
+      expect(Cookie.set).not.toHaveBeenCalled();
+
+      Cookie.get.mockReturnValue('100');
+      setPreferredVariantCookie('serbian', 'lat');
+      expect(Cookie.set).not.toHaveBeenCalled();
+
+      Cookie.get.mockReturnValue('000');
+      setPreferredVariantCookie('serbian', 'lat');
+      expect(Cookie.set).not.toHaveBeenCalled();
     });
 
     it('should set ckps_serbian for serbian', () => {
