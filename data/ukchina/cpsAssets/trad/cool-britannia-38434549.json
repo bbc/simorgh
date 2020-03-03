@@ -39,10 +39,7 @@
           "thingLabel": "Entertainment",
           "thingUri": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
           "thingId": "1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Entertainment",
             "http://www.wikidata.org/entity/Q173799"
@@ -52,23 +49,14 @@
           "thingLabel": "United Kingdom",
           "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
           "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
-          "thingType": [
-            "Thing",
-            "Place",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/2635167/"
-          ]
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/2635167/"]
         },
         {
           "thingLabel": "Culture",
           "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
           "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Culture",
             "http://www.wikidata.org/entity/Q11042"
@@ -80,10 +68,7 @@
           "thingLabel": "Art",
           "thingUri": "http://www.bbc.co.uk/things/37dcc888-51a7-4470-82d8-8ef2b811d482#id",
           "thingId": "37dcc888-51a7-4470-82d8-8ef2b811d482",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Art",
             "http://www.wikidata.org/entity/Q735"
@@ -93,11 +78,7 @@
           "thingLabel": "China",
           "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
           "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
-          "thingType": [
-            "geoname:GeoTagConcept",
-            "Place",
-            "Thing"
-          ],
+          "thingType": ["geoname:GeoTagConcept", "Place", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/China",
             "http://sws.geonames.org/1814991/",
@@ -108,10 +89,7 @@
           "thingLabel": "China-UK relations",
           "thingUri": "http://www.bbc.co.uk/things/ac90f011-0779-4da9-8ac5-4de96fcc2b93#id",
           "thingId": "ac90f011-0779-4da9-8ac5-4de96fcc2b93",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/China%E2%80%93United_Kingdom_relations",
             "http://www.wikidata.org/entity/Q906604"
@@ -120,9 +98,7 @@
       ]
     },
     "version": "v1.1.4",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {
