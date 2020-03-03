@@ -2289,8 +2289,8 @@ const genServices = {
       },
       frontPage: {
         paths: {
-          live: [],
-          test: [],
+          live: ['/turkce'],
+          test: ['/turkce'],
           local: ['/turkce'],
         },
         smoke: false,
@@ -2517,8 +2517,8 @@ const genServices = {
       },
       frontPage: {
         paths: {
-          live: [],
-          test: [],
+          live: ['/urdu'],
+          test: ['/urdu'],
           local: ['/urdu'],
         },
         smoke: false,
@@ -2645,8 +2645,8 @@ const genServices = {
       },
       frontPage: {
         paths: {
-          live: [],
-          test: [],
+          live: ['/vietnamese'],
+          test: ['/vietnamese'],
           local: ['/vietnamese'],
         },
         smoke: false,
