@@ -86,6 +86,14 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const hasUsefulLinks =
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
+  const renderMostRead = () => (
+    <MostReadContainer
+      mostReadEndpointOverride={mostReadEndpointOverride}
+      maxTwoColumns
+      isOnFrontPage
+    />
+  );
+
   return (
     <>
       <ATIAnalytics data={pageData} />
@@ -104,21 +112,11 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         <StyledFrontPageDiv>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
-              {group.type === 'useful-links' && (
-                <MostReadContainer
-                  mostReadEndpointOverride={mostReadEndpointOverride}
-                  maxTwoColumns
-                />
-              )}
+              {group.type === 'useful-links' && renderMostRead()}
               <FrontPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}
-          {!hasUsefulLinks && (
-            <MostReadContainer
-              mostReadEndpointOverride={mostReadEndpointOverride}
-              maxTwoColumns
-            />
-          )}
+          {!hasUsefulLinks && renderMostRead()}
         </StyledFrontPageDiv>
       </StyledFrontPageMain>
     </>
