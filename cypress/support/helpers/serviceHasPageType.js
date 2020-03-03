@@ -1,5 +1,5 @@
-import config from '../config/services';
+import getPaths from './getPaths';
 
 export default (service, pageType) => {
-  return config[service].pageTypes[pageType].paths;
+  return getPaths(service, pageType).length > 0;
 };
