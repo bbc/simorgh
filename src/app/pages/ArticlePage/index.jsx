@@ -82,11 +82,11 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
             componentsToRender={componentsToRender}
           />
         </GhostGrid>
-        <MostReadContainer
-          mostReadEndpointOverride={mostReadEndpointOverride}
-          constrainMaxWidth
-        />
       </StyledMain>
+      <MostReadContainer
+        mostReadEndpointOverride={mostReadEndpointOverride}
+        constrainMaxWidth
+      />
     </>
   );
 };
