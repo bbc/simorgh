@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'अपडेटेड',
     atiAnalyticsAppName: 'news-marathi',
     atiAnalyticsProducerId: '59',
+    chartbeatDomain: 'marathi.bbc.co.uk',
     brandName: 'BBC News मराठी',
     product: 'BBC News',
     serviceLocalizedName: 'मराठी',

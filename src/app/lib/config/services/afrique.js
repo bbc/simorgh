@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Mise à jour',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
+    chartbeatDomain: 'afrique.bbc.co.uk',
     brandName: 'BBC News Afrique',
     product: 'BBC News',
     serviceLocalizedName: 'Afrique',
