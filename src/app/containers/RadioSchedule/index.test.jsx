@@ -78,4 +78,16 @@ describe('RadioScheduleData', () => {
       expect(container.innerHTML).toEqual('');
     });
   });
+
+  it('does not render when data contains no programs', async () => {
+    fetch.mockResponse(
+      JSON.stringify(arabicRadioScheduleData.schedules.slice(0, 0)),
+    );
+    const { container } = render(
+      <RadioSchedulesWithContext service="arabic" />,
+    );
+    await wait(() => {
+      expect(container.innerHTML).toEqual('');
+    });
+  });
 });
