@@ -2178,8 +2178,8 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: ['/thai/international-51285795'],
-          test: ['/thai/thailand-23248713'],
-          local: ['/thai/thailand-23248713'],
+          test: ['/thai/23122810'],
+          local: ['/thai/23122810'],
         },
         smoke: false,
       },
