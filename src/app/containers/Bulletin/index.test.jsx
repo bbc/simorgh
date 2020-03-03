@@ -98,7 +98,7 @@ describe('Bulletin Container', () => {
 
       expect(span.getAttribute('aria-hidden')).toBeDefined();
       expect(span.getAttribute('aria-hidden')).toEqual('true');
-      expect(span.textContent).toEqual('LIVE');
+      expect(span.textContent).toEqual('NA EME UGBU A');
     });
   });
 });

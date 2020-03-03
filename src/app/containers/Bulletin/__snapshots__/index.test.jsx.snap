@@ -300,7 +300,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
             class="c7"
             dir="ltr"
           >
-            LIVE
+            NA EME UGBU A
           </span>
           <span>
             Test Radio Bulletin promo
@@ -648,7 +648,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
             class="c7"
             dir="ltr"
           >
-            LIVE
+            NA EME UGBU A
           </span>
           <span>
             Test TV Bulletin promo

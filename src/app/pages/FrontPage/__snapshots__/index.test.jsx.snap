@@ -124,13 +124,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                   class="LiveLabel-sc-1dvfmi3-6 halTGG"
                                   dir="ltr"
                                 >
-                                  LIVE
-                                </span>
-                                <span
-                                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
-                                  lang="en-GB"
-                                >
-                                   Live, 
+                                  AS E DE HAPPEN
                                 </span>
                                 Senators don begin vote for Senate President
                               </span>

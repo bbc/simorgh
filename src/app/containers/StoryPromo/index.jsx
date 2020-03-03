@@ -77,21 +77,39 @@ StoryPromoImage.defaultProps = {
   }),
 };
 
-const LiveComponent = ({ headline, service, dir }) => (
-  // eslint-disable-next-line jsx-a11y/aria-role
-  <span role="text">
-    <LiveLabel service={service} dir={dir}>
-      LIVE
-    </LiveLabel>
-    <VisuallyHiddenText lang="en-GB">{' Live, '}</VisuallyHiddenText>
-    {headline}
-  </span>
-);
+const LiveComponent = ({
+  headline,
+  service,
+  liveLabel,
+  hiddenLiveLabel,
+  dir,
+}) => {
+  const ariaHidden = hiddenLiveLabel && { 'aria-hidden': 'true' };
+
+  return (
+    // eslint-disable-next-line jsx-a11y/aria-role
+    <span role="text">
+      <LiveLabel service={service} dir={dir} {...ariaHidden}>
+        {liveLabel}
+      </LiveLabel>
+      {hiddenLiveLabel && (
+        <VisuallyHiddenText lang="en-GB">{` ${hiddenLiveLabel}, `}</VisuallyHiddenText>
+      )}
+      {headline}
+    </span>
+  );
+};
 
 LiveComponent.propTypes = {
   service: string.isRequired,
   dir: string.isRequired,
   headline: element.isRequired,
+  liveLabel: string.isRequired,
+  hiddenLiveLabel: string,
+};
+
+LiveComponent.defaultProps = {
+  hiddenLiveLabel: null,
 };
 
 const StoryPromoContainer = ({
@@ -101,9 +119,17 @@ const StoryPromoContainer = ({
   dir,
   displayImage,
 }) => {
-  const { script, datetimeLocale, service, timezone } = useContext(
-    ServiceContext,
-  );
+  const {
+    script,
+    datetimeLocale,
+    service,
+    translations,
+    timezone,
+  } = useContext(ServiceContext);
+
+  const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
+  const hiddenLiveLabel = liveLabel === 'LIVE' ? 'Live' : null;
+
   const isAssetTypeCode = getAssetTypeCode(item);
   const isStoryPromoPodcast =
     isAssetTypeCode === 'PRO' &&
@@ -139,6 +165,8 @@ const StoryPromoContainer = ({
               <LiveComponent
                 service={service}
                 headline={linkcontents}
+                liveLabel={liveLabel}
+                hiddenLiveLabel={hiddenLiveLabel}
                 dir={dir}
               />
             ) : (
