@@ -21,6 +21,7 @@ export const service = {
     articleTimestampPrefix: 'Actualización',
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
+    chartbeatDomain: 'mundo.bbc.co.uk',
     brandName: 'BBC News Mundo',
     product: 'BBC News',
     serviceLocalizedName: 'Mundo',

@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Cập nhật',
     atiAnalyticsAppName: 'news-vietnamese',
     atiAnalyticsProducerId: '97',
+    chartbeatDomain: 'vietnamese.bbc.co.uk',
     brandName: 'BBC News Tiếng Việt',
     product: 'BBC News',
     serviceLocalizedName: 'Tiếng Việt',
