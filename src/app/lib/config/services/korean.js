@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: '최종 송고일',
     atiAnalyticsAppName: 'news-korean',
     atiAnalyticsProducerId: '57',
+    chartbeatDomain: 'korean.bbc.co.uk',
     brandName: 'BBC News 코리아',
     product: 'BBC News',
     serviceLocalizedName: '코리아',
