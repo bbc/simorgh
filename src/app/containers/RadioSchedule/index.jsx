@@ -23,7 +23,7 @@ const RadioScheduleContainer = ({ endpoint }) => {
   } = useContext(ServiceContext);
   const radioScheduleEnabled = enabled && hasRadioSchedule;
 
-  const [schedule, setRadioSchedule] = useState([]);
+  const [schedule, setRadioSchedule] = useState();
 
   const getProgramState = (currentTime, startTime, endTime) => {
     const isCurrentlyLive = currentTime < endTime && currentTime > startTime;
@@ -56,13 +56,15 @@ const RadioScheduleContainer = ({ endpoint }) => {
 
     const radioSchedules = radioScheduleData.schedules;
 
-    const schedulesToShow = radioSchedules[latestProgrammeIndex - 2] &&
-      radioSchedules[latestProgrammeIndex + 1] && [
-        radioSchedules[latestProgrammeIndex],
-        radioSchedules[latestProgrammeIndex - 1],
-        radioSchedules[latestProgrammeIndex - 2],
-        radioSchedules[latestProgrammeIndex + 1],
-      ];
+    const scheduleDataIsComplete =
+      radioSchedules[latestProgrammeIndex - 2] &&
+      radioSchedules[latestProgrammeIndex + 1];
+    const schedulesToShow = scheduleDataIsComplete && [
+      radioSchedules[latestProgrammeIndex],
+      radioSchedules[latestProgrammeIndex - 1],
+      radioSchedules[latestProgrammeIndex - 2],
+      radioSchedules[latestProgrammeIndex + 1],
+    ];
 
     const schedules =
       schedulesToShow &&
