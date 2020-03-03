@@ -20,7 +20,7 @@ export const service = {
     articleTimestampPrefix: 'Ùraichte',
     atiAnalyticsAppName: 'news-naidheachdan',
     atiAnalyticsProducerId: '79',
-    chartbeatDomain: 'naidheachdan.bbc.co.uk',
+    chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Naidheachdan',
     product: 'BBC News',
     serviceLocalizedName: 'Naidheachdan',
