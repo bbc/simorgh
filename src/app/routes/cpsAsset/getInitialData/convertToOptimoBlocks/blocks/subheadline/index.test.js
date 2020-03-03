@@ -1,3 +1,4 @@
+import loggerMock from '#testHelpers/loggerMock';
 import convertToSubheadline from '.';
 import { optimoSubheadline } from '../../utils/helpers';
 
@@ -53,8 +54,6 @@ describe('convertToSubheadline', () => {
   });
 
   it(`should not convert a non-heading CPS block to Optimo format`, async () => {
-    const originalConsoleLog = global.console.log;
-    global.console.log = jest.fn();
     const input = {
       model: {
         copyrightHolder: 'Joe Maher',
@@ -67,9 +66,8 @@ describe('convertToSubheadline', () => {
     };
 
     expect(await convertToSubheadline(input)).toBeNull();
-    expect(global.console.log).toHaveBeenCalledWith(
+    expect(loggerMock.error).toHaveBeenCalledWith(
       'Incorrect block type rawImage',
     );
-    global.console.log = originalConsoleLog;
   });
 });
