@@ -1,15 +1,15 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::asset:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+    "id": "urn:bbc:ares::asset:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
     "locators": {
-      "assetUri": "/ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-      "curie": "http://www.bbc.co.uk/asset/5225b412-8f73-11e5-b663-a5a63db9bd6e"
+      "assetUri": "/ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+      "curie": "http://www.bbc.co.uk/asset/2383c460-8f72-11e5-82c3-08ef3db9bd6e"
     },
     "type": "MAP",
-    "createdBy": "ukchina_traditional",
-    "language": "zh-Hant",
-    "lastUpdated": 1555696045559,
+    "createdBy": "ukchina_simplified",
+    "language": "zh-Hans",
+    "lastUpdated": 1561042947383,
     "firstPublished": 1448016091,
     "lastPublished": 1448017134,
     "options": {
@@ -25,7 +25,7 @@
       "cps_asset_id": "41406410"
     },
     "tags": {},
-    "version": "v1.0.0",
+    "version": "v1.0.10",
     "blockTypes": ["legacyMedia", "paragraph"],
     "includeComments": false
   },
@@ -41,37 +41,37 @@
         "type": "legacyMedia"
       },
       {
-        "text": "BBC2015年度「巾幗百名」 （100 Women）系列節目上演，這也是BBC連續第三年推出這個節目。",
+        "text": "BBC2015年度“巾帼百名” （100 Women）系列节目上演，这也是BBC连续第三年推出这个节目。",
         "markupType": "plain_text",
         "type": "paragraph"
       },
       {
-        "text": "BBC在這個節目中列出了世界上最具激勵精神的100名婦女。",
+        "text": "BBC在这个节目中列出了世界上最具激励精神的100名妇女。",
         "markupType": "plain_text",
         "type": "paragraph"
       },
       {
-        "text": "在今年的「巾幗百名」名單中有30名30歲以下的企業家，還有年齡超過80歲的巾幗英雄。",
+        "text": "在今年的“巾帼百名”名单中有30名30岁以下的企业家，还有年龄超过80岁的巾帼英雄。",
         "markupType": "plain_text",
         "type": "paragraph"
       },
       {
-        "text": "BBC英倫網也將目光投向在倫敦的華裔女性，聽聽她們的創業故事和心得。",
+        "text": "BBC英伦网也将目光投向在伦敦的华裔女性，听听她们的创业故事和心得。",
         "markupType": "plain_text",
         "type": "paragraph"
       },
       {
-        "text": "Dara Huang是位於倫敦的建築和市內設計公司Design Haus Liberty的創始人，哈佛研究生，白手起家在倫敦創業。",
+        "text": "Dara Huang是位于伦敦的建筑和市内设计公司Design Haus Liberty的创始人，哈佛研究生，白手起家在伦敦创业。",
         "markupType": "plain_text",
         "type": "paragraph"
       },
       {
-        "text": "她的公司三年裏迅速發展，有20多位建築設計師。Dara的父母從台灣移民美國，她在美國長大。",
+        "text": "她的公司三年里迅速发展，有20多位建筑设计师。Dara的父母从台湾移民美国，她在美国长大。",
         "markupType": "plain_text",
         "type": "paragraph"
       },
       {
-        "text": "另一位創業女性是Sally Wang，來自中國安徽。在英國留學畢業後，她專注英國房地產業，有自己的公司，目前潛心寫書，解讀英國房地產市場和投資置業。",
+        "text": "另一位创业女性是Sally Wang，来自中国安徽。在英国留学毕业后，她专注英国房地产业，有自己的公司，目前潜心写书，解读英国房地产市场和投资置业。",
         "markupType": "plain_text",
         "type": "paragraph"
       }
@@ -79,16 +79,16 @@
   },
   "promo": {
     "headlines": {
-      "shortHeadline": "視頻：倫敦華裔女性談海外創業",
-      "headline": "視頻：倫敦華裔女性談海外創業"
+      "shortHeadline": "视频：伦敦华裔女性谈海外创业",
+      "headline": "视频：伦敦华裔女性谈海外创业"
     },
     "locators": {
-      "assetUri": "/ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-      "curie": "http://www.bbc.co.uk/asset/5225b412-8f73-11e5-b663-a5a63db9bd6e"
+      "assetUri": "/ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+      "curie": "http://www.bbc.co.uk/asset/2383c460-8f72-11e5-82c3-08ef3db9bd6e"
     },
-    "summary": "BBC「巾幗百人」特別報道之際，兩位在倫敦創業的華裔女性分享她們的經驗。",
-    "timestamp": 1555696045559,
+    "summary": "BBC“巾帼百人”特别报道之际，两位在伦敦创业的华裔女性分享她们的经验。",
+    "timestamp": 1561042947383,
     "passport": {},
     "media": {
       "id": "41406410",
@@ -110,20 +110,20 @@
       "copyrightHolder": "BBC",
       "type": "image"
     },
-    "id": "urn:bbc:ares::asset:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+    "id": "urn:bbc:ares::asset:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
     "type": "cps"
   },
   "relatedContent": {
     "section": {
       "subType": "index",
-      "name": "音視圖片",
-      "uri": "/ukchina/trad/multimedia",
+      "name": "音视图片",
+      "uri": "/ukchina/simp/multimedia",
       "type": "simple"
     },
     "site": {
       "subType": "site",
       "name": "bbcukchina.com",
-      "uri": "/ukchina/trad",
+      "uri": "/ukchina/simp",
       "type": "simple"
     },
     "groups": []
