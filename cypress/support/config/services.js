@@ -1855,6 +1855,7 @@ const genServices = {
           ],
           test: [
             '/sinhala/world-23257567', // CPS MAP
+            '/sinhala/multimedia/2016/03/160323_si_test_audio_map', // TC2 MAP
           ],
           local: [
             '/sinhala/23248970', // CPS MAP with audio clip
