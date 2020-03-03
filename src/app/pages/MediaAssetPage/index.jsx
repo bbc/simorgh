@@ -74,7 +74,9 @@ const MediaAssetPage = ({ pageData }) => {
       ? MediaMessage
       : props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    legacyMedia: MediaMessage,
+    legacyMedia: props => (
+      <MediaPlayer {...props} assetUri={assetUri} isLegacyMedia />
+    ),
   };
 
   const StyledGhostGrid = styled(GhostGrid)`

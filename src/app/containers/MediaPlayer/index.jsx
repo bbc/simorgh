@@ -33,12 +33,12 @@ const MediaPlayerContainer = ({
   assetType,
   showPlaceholder,
   available,
+  isLegacyMedia,
 }) => {
   const { isAmp } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
   const location = useLocation();
-
   if (!enabled || !blocks) {
     return null;
   }
@@ -50,7 +50,8 @@ const MediaPlayerContainer = ({
     return null;
   }
 
-  const { originCode, locator } = path(
+  const { originCode, locator } = pathOr(
+    {},
     ['model', 'blocks', 1, 'model', 'blocks', 0, 'model'],
     aresMediaBlock,
   );
@@ -58,6 +59,11 @@ const MediaPlayerContainer = ({
     ['model', 'blocks', 0, 'model', 'versions', 0, 'versionId'],
     aresMediaBlock,
   );
+  const blockId = path(
+    ['model', 'blocks', 0, 'model', 'blockId'],
+    aresMediaBlock,
+  );
+
   const format = path(
     ['model', 'blocks', 0, 'model', 'format'],
     aresMediaBlock,
@@ -75,7 +81,7 @@ const MediaPlayerContainer = ({
   const separator = ',';
 
   const mediaInfo = {
-    title: path(['model', 'blocks', 0, 'model', 'title'], aresMediaBlock),
+    title: pathOr('', ['model', 'blocks', 0, 'model', 'title'], aresMediaBlock),
     duration: formatDuration({ duration, padMinutes: true }),
     durationSpoken: `${durationSpokenPrefix} ${formatDuration({
       duration,
@@ -92,7 +98,7 @@ const MediaPlayerContainer = ({
     ),
   };
 
-  if (!versionId) {
+  if (!versionId && !isLegacyMedia) {
     return null; // this should be the holding image with an error overlay
   }
 
@@ -104,7 +110,7 @@ const MediaPlayerContainer = ({
   });
 
   const embedSource = getEmbedUrl({
-    mediaId: `${assetId}/${versionId}/${lang}`,
+    mediaId: `${assetId}/${isLegacyMedia ? blockId : versionId}/${lang}`,
     type: assetType,
     isAmp,
     queryString: location.search,
@@ -183,10 +189,12 @@ MediaPlayerContainer.propTypes = {
   assetType: string.isRequired,
   showPlaceholder: bool.isRequired,
   available: bool,
+  isLegacyMedia: bool,
 };
 MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
   available: true,
+  isLegacyMedia: false,
 };
 
 export default MediaPlayerContainer;

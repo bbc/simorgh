@@ -1,6 +1,7 @@
 import getEmbedUrl from '.';
 
 const mediaId = 'foo/bar';
+const legacyId = 'russian/multimedia/2016/05/160505_v_diving_record';
 const liveOverrideParam = '?renderer_env=live';
 const testOverrideParam = '?renderer_env=test';
 
@@ -144,6 +145,29 @@ const testCases = [
       isAmp: true,
       mediaId,
       type: 'articles',
+      queryString: liveOverrideParam,
+    },
+  },
+  {
+    description: `should build a CANONICAL url for legacy media in live environment with live override`,
+    expected: `https://polling.bbc.co.uk/ws/av-embeds/legacy/${legacyId}`,
+    environment: 'live',
+    before: setEnvironment,
+    embedObject: {
+      mediaId: legacyId,
+      type: 'legacy',
+      queryString: liveOverrideParam,
+    },
+  },
+  {
+    description: `should build an AMP url for legacy media in live environment with live override`,
+    expected: `https://polling.bbc.co.uk/ws/av-embeds/legacy/${legacyId}/amp`,
+    environment: 'live',
+    before: setEnvironment,
+    embedObject: {
+      isAmp: true,
+      mediaId: legacyId,
+      type: 'legacy',
       queryString: liveOverrideParam,
     },
   },

@@ -9,7 +9,6 @@ const convertToSubheadline = async block => {
       blocks: [innerParagraph],
     });
   }
-  console.log(`Incorrect block type ${block.type}`);
   return null;
 };
 
