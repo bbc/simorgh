@@ -30,8 +30,8 @@ const RadioScheduleContainer = ({ endpoint }) => {
     if (isCurrentlyLive) {
       return 'live';
     }
-    const isEndedLive = currentTime > endTime;
-    if (isEndedLive) {
+    const hasEnded = currentTime > endTime;
+    if (hasEnded) {
       return 'onDemand';
     }
     return 'next';
