@@ -7,6 +7,7 @@ import ManifestContainer from '../containers/Manifest';
 import ServiceWorkerContainer from '../containers/ServiceWorker';
 import MPulseBeacon from '../containers/MPulseBeacon';
 import { ServiceContext } from '../contexts/ServiceContext';
+import FirebasePerfBeacon from '#containers/FirebasePerf';
 
 const PageWrapper = ({ children }) => {
   const { fonts: fontFunctions } = useContext(ServiceContext);
@@ -19,6 +20,7 @@ const PageWrapper = ({ children }) => {
       <ServiceWorkerContainer />
       <ManifestContainer />
       <MPulseBeacon />
+      <FirebasePerfBeacon />
       <HeaderContainer />
       {children}
       <FooterContainer />

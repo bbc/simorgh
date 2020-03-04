@@ -18,6 +18,9 @@ const toggles = {
     radioSchedule: {
       enabled: true,
     },
+    firebasePerf: {
+      enabled: true,
+    },
   },
   test: {
     chartbeatAnalytics: {
