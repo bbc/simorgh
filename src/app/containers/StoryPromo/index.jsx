@@ -78,16 +78,14 @@ StoryPromoImage.defaultProps = {
 };
 
 const LiveComponent = ({ headline, service, liveLabel, dir }) => {
-  const liveLabelIsEnglish = liveLabel === 'LIVE';
-
   // As screenreaders mispronounce the word 'LIVE', we use visually hidden
   // text to read 'Live' instead, which screenreaders pronounce correctly.
-  const ariaHidden = liveLabelIsEnglish && { 'aria-hidden': 'true' };
+  const liveLabelIsEnglish = liveLabel === 'LIVE';
 
   return (
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text">
-      <LiveLabel service={service} dir={dir} {...ariaHidden}>
+      <LiveLabel service={service} dir={dir} ariaHidden={liveLabelIsEnglish}>
         {liveLabel}
       </LiveLabel>
       {liveLabelIsEnglish && (
