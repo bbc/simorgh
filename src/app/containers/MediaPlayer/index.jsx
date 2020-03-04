@@ -81,7 +81,7 @@ const MediaPlayerContainer = ({
   const separator = ',';
 
   const mediaInfo = {
-    title: pathOr('', ['model', 'blocks', 0, 'model', 'title'], aresMediaBlock),
+    title: path(['model', 'blocks', 0, 'model', 'title'], aresMediaBlock),
     duration: formatDuration({ duration, padMinutes: true }),
     durationSpoken: `${durationSpokenPrefix} ${formatDuration({
       duration,
@@ -98,7 +98,7 @@ const MediaPlayerContainer = ({
     ),
   };
 
-  if (!versionId && !isLegacyMedia) {
+  if (!(versionId || blockId)) {
     return null; // this should be the holding image with an error overlay
   }
 

@@ -1,5 +1,3 @@
-import is from 'ramda/src/is';
-
 const generateVideoBlock = block => {
   const generatedBlock = {
     type: 'aresMediaMetadata',
@@ -7,30 +5,11 @@ const generateVideoBlock = block => {
     model: {
       available: true,
       blockId: block.id,
+      format: 'audio_format',
     },
   };
-
-  if (generatedBlock.model.format === 'video') {
-    generatedBlock.model.format = 'audio_video';
-  }
 
   return generatedBlock;
-};
-
-const generateImageBlock = block => {
-  if (!is(String, block.imageUrl)) return {};
-
-  return {
-    type: 'image',
-    model: {
-      blocks: [
-        {
-          type: 'rawImage',
-          model: {},
-        },
-      ],
-    },
-  };
 };
 
 const convertMedia = block => {
@@ -42,7 +21,7 @@ const convertMedia = block => {
         {
           type: 'aresMedia',
           model: {
-            blocks: [generateVideoBlock(block), generateImageBlock(block)],
+            blocks: [generateVideoBlock(block), {}],
           },
         },
       ],
