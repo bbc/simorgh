@@ -26,8 +26,8 @@ const RadioScheduleContainer = ({ endpoint }) => {
   const [schedule, setRadioSchedule] = useState();
 
   const getProgramState = (currentTime, startTime, endTime) => {
-    const isCurrentlyLive = currentTime < endTime && currentTime > startTime;
-    if (isCurrentlyLive) {
+    const isLive = currentTime < endTime && currentTime > startTime;
+    if (isLive) {
       return 'live';
     }
     const isEndedLive = currentTime > endTime;
@@ -37,11 +37,11 @@ const RadioScheduleContainer = ({ endpoint }) => {
     return 'next';
   };
 
-  const getLink = (state, latestProgram) => {
-    const url = `/${service}/${latestProgram.serviceId}`;
+  const getLink = (state, program) => {
+    const url = `/${service}/${program.serviceId}`;
     return state === 'live'
       ? `${url}/liveradio`
-      : `${url}/${latestProgram.broadcast.pid}`;
+      : `${url}/${program.broadcast.pid}`;
   };
 
   const handleResponse = async response => {
