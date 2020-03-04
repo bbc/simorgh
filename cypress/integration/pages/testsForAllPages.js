@@ -502,6 +502,8 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                 .should('be.visible')
                 .should('have.attr', 'datetime')
                 .should('not.be.empty');
+            } else {
+              cy.log('Test skipped - allowDateStamp false within metadata');
             }
           });
         });
