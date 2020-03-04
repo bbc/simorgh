@@ -494,7 +494,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
       ['mediaAssetPage', 'photoGalleryPage', 'storyPage'].includes(pageType)
     ) {
       describe('Photo Gallery, Story Page and MAP Tests', () => {
-        it.only('should render a timestamp', () => {
+        it('should render a timestamp', () => {
           cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
             if (body.metadata.options.allowDateStamp) {
               cy.get('time')
