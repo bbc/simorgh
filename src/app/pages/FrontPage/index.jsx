@@ -116,7 +116,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
               maxTwoColumns
             />
           )}
-          <RadioScheduleContainer endpoint="/korean/bbc_korean_radio/radioschedule.json" />
+          <RadioScheduleContainer />
         </StyledFrontPageDiv>
       </StyledFrontPageMain>
     </>
