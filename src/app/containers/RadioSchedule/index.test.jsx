@@ -4,6 +4,7 @@ import RadioScheduleContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
+import '@testing-library/jest-dom/extend-expect';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/radioschedule.json';
 
 const localRadioScheduleEndpoint = service => {
@@ -57,13 +58,13 @@ describe('RadioScheduleData', () => {
     });
   });
 
-  it('returns empty string when radio schedule toggle is disabled', async () => {
+  it('does not render when radio schedule toggle is disabled', async () => {
     fetch.mockResponse(JSON.stringify(arabicRadioScheduleData));
     const { container } = render(
       <RadioSchedulesWithContext service="arabic" />,
     );
     await wait(() => {
-      expect(container.innerHTML).toEqual('');
+      expect(container).toBeEmpty();
     });
   });
 
@@ -75,7 +76,7 @@ describe('RadioScheduleData', () => {
       <RadioSchedulesWithContext service="arabic" />,
     );
     await wait(() => {
-      expect(container.innerHTML).toEqual('');
+      expect(container).toBeEmpty();
     });
   });
 
@@ -87,7 +88,7 @@ describe('RadioScheduleData', () => {
       <RadioSchedulesWithContext service="arabic" />,
     );
     await wait(() => {
-      expect(container.innerHTML).toEqual('');
+      expect(container).toBeEmpty();
     });
   });
 });
