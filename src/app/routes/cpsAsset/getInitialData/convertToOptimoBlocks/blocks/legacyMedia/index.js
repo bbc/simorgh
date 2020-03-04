@@ -21,7 +21,7 @@ const convertMedia = block => {
         {
           type: 'aresMedia',
           model: {
-            blocks: [generateVideoBlock(block), {}],
+            blocks: [generateVideoBlock(block)],
           },
         },
       ],
