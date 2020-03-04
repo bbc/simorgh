@@ -77,14 +77,12 @@ StoryPromoImage.defaultProps = {
   }),
 };
 
-const LiveComponent = ({
-  headline,
-  service,
-  liveLabel,
-  hiddenLiveLabel,
-  dir,
-}) => {
-  const ariaHidden = hiddenLiveLabel && { 'aria-hidden': 'true' };
+const LiveComponent = ({ headline, service, liveLabel, dir }) => {
+  const liveLabelIsEnglish = liveLabel === 'LIVE';
+
+  // As screenreaders mispronounce the word 'LIVE', we use visually hidden
+  // text to read 'Live' instead, which screenreaders pronounce correctly.
+  const ariaHidden = liveLabelIsEnglish && { 'aria-hidden': 'true' };
 
   return (
     // eslint-disable-next-line jsx-a11y/aria-role
@@ -92,8 +90,8 @@ const LiveComponent = ({
       <LiveLabel service={service} dir={dir} {...ariaHidden}>
         {liveLabel}
       </LiveLabel>
-      {hiddenLiveLabel && (
-        <VisuallyHiddenText lang="en-GB">{` ${hiddenLiveLabel}, `}</VisuallyHiddenText>
+      {liveLabelIsEnglish && (
+        <VisuallyHiddenText lang="en-GB">{` Live, `}</VisuallyHiddenText>
       )}
       {headline}
     </span>
@@ -105,11 +103,6 @@ LiveComponent.propTypes = {
   dir: string.isRequired,
   headline: element.isRequired,
   liveLabel: string.isRequired,
-  hiddenLiveLabel: string,
-};
-
-LiveComponent.defaultProps = {
-  hiddenLiveLabel: null,
 };
 
 const StoryPromoContainer = ({
@@ -128,7 +121,6 @@ const StoryPromoContainer = ({
   } = useContext(ServiceContext);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
-  const hiddenLiveLabel = liveLabel === 'LIVE' ? 'Live' : null;
 
   const isAssetTypeCode = getAssetTypeCode(item);
   const isStoryPromoPodcast =
@@ -166,7 +158,6 @@ const StoryPromoContainer = ({
                 service={service}
                 headline={linkcontents}
                 liveLabel={liveLabel}
-                hiddenLiveLabel={hiddenLiveLabel}
                 dir={dir}
               />
             ) : (
