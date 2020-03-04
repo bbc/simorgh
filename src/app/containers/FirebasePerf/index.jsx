@@ -21,7 +21,7 @@ const FirebasePerfBeacon = () => {
     try {
       beacon(firebasePerfSdk, firebaseConfig);
     } catch (err) {
-      console.log(`Erro Initialising Firebase Perf SDK: ${err}`);
+      console.log(`Error initialising Firebase Perf SDK: ${err}`);
     }
   }
 
