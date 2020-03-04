@@ -15,6 +15,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GhostGrid, GridItemConstrainedLarge } from '#lib/styledGrid';
 import StoryPromo from '../StoryPromo';
+import DivHeadline from '../StoryPromo/DivHeadlines';
 
 const Wrapper = styled(GridItemConstrainedLarge)`
   margin-bottom: ${GEL_SPACING_DBL};
@@ -69,7 +70,11 @@ const FeaturesAnalysis = ({ content, enableGridWrapper }) => {
         <StoryPromoUl>
           {featuresAnalysis.map(item => (
             <StoryPromoLi key={item.id || item.uri}>
-              <StoryPromo item={item} displayImage />
+              <StoryPromo
+                item={item}
+                headlineTag={props => <DivHeadline {...props} />}
+                displayImage
+              />
             </StoryPromoLi>
           ))}
         </StoryPromoUl>

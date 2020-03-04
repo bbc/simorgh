@@ -1,5 +1,13 @@
 import React, { useContext } from 'react';
-import { shape, bool, string, element, oneOf, oneOfType } from 'prop-types';
+import {
+  shape,
+  bool,
+  string,
+  element,
+  oneOf,
+  oneOfType,
+  node,
+} from 'prop-types';
 import StoryPromo, {
   Headline,
   Summary,
@@ -100,6 +108,7 @@ const StoryPromoContainer = ({
   lazyLoadImage,
   dir,
   displayImage,
+  headlineTag,
 }) => {
   const { script, datetimeLocale, service, timezone } = useContext(
     ServiceContext,
@@ -125,10 +134,12 @@ const StoryPromoContainer = ({
 
   const topStory = promoType === 'top';
 
+  const HeadlineTag = headlineTag || Headline;
+
   const Info = (
     <>
       {headline && (
-        <Headline
+        <HeadlineTag
           script={script}
           service={service}
           promoType={promoType}
@@ -145,7 +156,7 @@ const StoryPromoContainer = ({
               linkcontents
             )}
           </Link>
-        </Headline>
+        </HeadlineTag>
       )}
       {summary && displayImage && (
         <Summary
@@ -214,6 +225,7 @@ const StoryPromoContainer = ({
 
 StoryPromoContainer.propTypes = {
   item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
+  headlineTag: node,
   promoType: oneOf(PROMO_TYPES),
   lazyLoadImage: bool,
   dir: oneOf(['ltr', 'rtl']),
@@ -225,6 +237,7 @@ StoryPromoContainer.defaultProps = {
   lazyLoadImage: true,
   dir: 'ltr',
   displayImage: true,
+  headlineTag: null,
 };
 
 export default StoryPromoContainer;
