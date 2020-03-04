@@ -15,7 +15,6 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GhostGrid, GridItemConstrainedLarge } from '#lib/styledGrid';
 import StoryPromo from '../StoryPromo';
-import Grid from '../../components/Grid';
 
 const Wrapper = styled(GridItemConstrainedLarge)`
   margin-bottom: ${GEL_SPACING_DBL};
@@ -60,7 +59,7 @@ const FeaturesAnalysis = ({ content, enableGridWrapper }) => {
           dir={dir}
           labelId="features-analysis-heading"
         >
-          Features Analysis {/** this should be translated */}
+          Featured &amp; Analysis {/** this should be translated */}
         </StyledSectionLabel>
 
         <StoryPromoUl>
