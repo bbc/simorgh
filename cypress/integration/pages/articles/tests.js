@@ -156,7 +156,7 @@ export const testsThatFollowSmokeTestConfig = ({
       }
 
       if (serviceHasTimestamp(service)) {
-        it.only('should render a timestamp', () => {
+        it('should render a timestamp', () => {
           cy.get('time')
             .eq(0)
             .should('exist')
