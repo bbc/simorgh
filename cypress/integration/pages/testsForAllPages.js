@@ -508,31 +508,16 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
       ['mediaAssetPage', 'photoGalleryPage', 'storyPage'].includes(pageType)
     ) {
       describe('Photo Gallery, Story Page and MAP Tests', () => {
-        // Expects a second timestamp only if lastPublished is 1 minute later than firstPublished.
-        // This is due to a CPS asset bug, see issue simorgh#5065
         it('should render a timestamp', () => {
           cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-            const { lastPublished, firstPublished } = body.metadata;
-            const timeDifferenceMinutes =
-              (lastPublished - firstPublished) / 1000 / 60;
-            const minutesTolerance = 1;
-            const hasTimestampPrefix = timeDifferenceMinutes > minutesTolerance;
-            cy.get('time')
-              .eq(0)
-              .should('be.visible')
-              .should('have.attr', 'datetime')
-              .should('not.be.empty');
-
-            if (hasTimestampPrefix) {
+            if (body.metadata.options.allowDateStamp) {
               cy.get('time')
-                .eq(1)
+                .eq(0)
                 .should('be.visible')
-                .should(
-                  'contain',
-                  appConfig[config[service].name][variant || 'default']
-                    .articleTimestampPrefix,
-                )
-                .should('have.attr', 'datetime');
+                .should('have.attr', 'datetime')
+                .should('not.be.empty');
+            } else {
+              cy.log('Test skipped - allowDateStamp false within metadata');
             }
           });
         });
