@@ -387,20 +387,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           .should('have.attr', 'href', '#content');
       });
 
-      if (variant === 'default') {
-        it('should not render a script link component if the service does not have variants', () => {
-          cy.get('header')
-            .find('a[data-variant]')
-            .should('have.lengthOf', 0);
-        });
-      } else {
-        it('should render a script link component if the component has variants', () => {
-          cy.get('header')
-            .find('a[data-variant]')
-            .should('have.lengthOf', 1);
-        });
-      }
-
       if (appConfig[config[service].name][variant].navigation) {
         if (
           pageType !== 'articles' ||
