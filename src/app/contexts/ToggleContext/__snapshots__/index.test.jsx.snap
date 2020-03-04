@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ToggleContext should provide a toggles object 1`] = `
+exports[`ToggleContext with remote feature toggles should provide a toggles object 1`] = `
 <span>
-  {"toggleState":{"local":{"foobarFeature":{"enabled":true}},"test":{"foobarFeature":{"enabled":true}},"live":{"foobarFeature":{"enabled":false}}},"toggleDispatch":"*function - bound dispatchAction*"}
+  {"toggleState":{"foobarFeature":{"enabled":true},"remoteFeatureToggles":{"enabled":false}},"toggleDispatch":"*function - bound dispatchAction*"}
+</span>
+`;
+
+exports[`ToggleContext without remote feature toggles should provide a toggles object 1`] = `
+<span>
+  {"toggleState":{"foobarFeature":{"enabled":true},"remoteFeatureToggles":{"enabled":false}},"toggleDispatch":"*function - bound dispatchAction*"}
 </span>
 `;
