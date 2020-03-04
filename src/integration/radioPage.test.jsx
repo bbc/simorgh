@@ -46,8 +46,10 @@ it('should render a paragraph, which contains/displays a styled summary', async 
   const summaryEl = getByText(
     '세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다',
   );
-  const headlineElType = summaryEl.tagName;
+  const summaryElType = summaryEl.tagName;
+  const summaryElRole = summaryEl.getAttribute('role');
 
   expect(summaryEl).toBeInTheDocument();
-  expect(headlineElType).toEqual('P');
+  expect(summaryElType).toEqual('P');
+  expect(summaryElRole).toEqual('main');
 });
