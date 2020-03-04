@@ -96,10 +96,9 @@ describe('Bulletin Container', () => {
       const { container } = render(BulletinWithContext(liveTvBulletinItem));
       const span = container.getElementsByTagName('span')[2];
 
+      expect(span.getAttribute('aria-hidden')).toBeDefined();
+      expect(span.getAttribute('aria-hidden')).toEqual('true');
       expect(span.textContent).toEqual('NA EME UGBU A');
-      if (span.textContent === 'LIVE') {
-        expect(span.getAttribute('aria-hidden')).toEqual('true');
-      }
     });
   });
 });
