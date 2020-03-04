@@ -103,7 +103,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
               {group.type === 'useful-links' && (
                 <MostReadContainer
                   mostReadEndpointOverride={mostReadEndpointOverride}
-                  maxTwoColumns
+                  columnLayout="twoColumn"
                 />
               )}
               <FrontPageSection group={group} sectionNumber={index} />
@@ -112,7 +112,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           {!hasUsefulLinks && (
             <MostReadContainer
               mostReadEndpointOverride={mostReadEndpointOverride}
-              maxTwoColumns
+              columnLayout="twoColumn"
             />
           )}
         </StyledFrontPageDiv>

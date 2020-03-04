@@ -63,7 +63,7 @@ const ConstrainedMostReadSection = styled(MostReadSection)`
   }
 `;
 
-const CanonicalMostRead = ({ endpoint, maxTwoColumns, constrainMaxWidth }) => {
+const CanonicalMostRead = ({ endpoint, columnLayout, constrainMaxWidth }) => {
   const [items, setItems] = useState([]);
   const {
     service,
@@ -126,7 +126,6 @@ const CanonicalMostRead = ({ endpoint, maxTwoColumns, constrainMaxWidth }) => {
   const MostReadSectionWrapper = constrainMaxWidth
     ? ConstrainedMostReadSection
     : MostReadSection;
-
   return (
     <MostReadSectionWrapper>
       <SectionLabel
@@ -141,7 +140,7 @@ const CanonicalMostRead = ({ endpoint, maxTwoColumns, constrainMaxWidth }) => {
         <MostReadList
           numberOfItems={items.length}
           dir={dir}
-          maxTwoColumns={maxTwoColumns}
+          columnLayout={columnLayout}
         >
           {items.map((item, i) => (
             <MostReadItemWrapper dir={dir} key={item.id}>
@@ -151,7 +150,7 @@ const CanonicalMostRead = ({ endpoint, maxTwoColumns, constrainMaxWidth }) => {
                 listIndex={i + 1}
                 numberOfItems={items.length}
                 dir={dir}
-                maxTwoColumns={maxTwoColumns}
+                columnLayout={columnLayout}
               />
               <MostReadLink
                 dir={dir}
@@ -173,11 +172,11 @@ const CanonicalMostRead = ({ endpoint, maxTwoColumns, constrainMaxWidth }) => {
 CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
   constrainMaxWidth: bool.isRequired,
-  maxTwoColumns: bool,
+  columnLayout: string,
 };
 
 CanonicalMostRead.defaultProps = {
-  maxTwoColumns: false,
+  columnLayout: 'multiColumn',
 };
 
 export default CanonicalMostRead;

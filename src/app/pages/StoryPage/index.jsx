@@ -188,7 +188,7 @@ const StoryPage = ({ pageData }) => {
         </Grid>
         <GridSecondaryColumn item columns={gridColsSecondary}>
           <ComponentWrapper>
-            <MostReadContainer />
+            <MostReadContainer columnLayout="oneColumn" />
           </ComponentWrapper>
           <ComponentWrapper>
             <h2>This is a component in the second column</h2>
