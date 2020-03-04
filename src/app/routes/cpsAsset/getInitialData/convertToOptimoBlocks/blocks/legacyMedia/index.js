@@ -5,7 +5,7 @@ const generateVideoBlock = block => {
     model: {
       available: true,
       blockId: block.id,
-      format: 'audio_format',
+      format: 'audio_video',
     },
   };
 

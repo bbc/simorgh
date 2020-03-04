@@ -1,7 +1,7 @@
 import getEmbedUrl from '.';
 
 const mediaId = 'foo/bar';
-const legacyId = 'russian/multimedia/2016/05/160505_v_diving_record';
+const legacyId = 'russian/multimedia/2016/05/160505_v_diving_record/123/ru';
 const liveOverrideParam = '?renderer_env=live';
 const testOverrideParam = '?renderer_env=test';
 
