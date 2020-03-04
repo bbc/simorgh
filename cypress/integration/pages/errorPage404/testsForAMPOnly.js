@@ -1,4 +1,4 @@
-import config from '../../../support/config/services';
+import getErrorPath from './getErrorPath';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -12,13 +12,15 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   pageType,
 }) =>
   describe(`Amp Tests for ${service} ${pageType}`, () => {
-    it('should return a 404 error code', () => {
-      cy.testResponseCodeAndType(
-        `${config[service].pageTypes.errorPage404.path}.amp`,
-        404,
-        'text/html',
-      );
-    });
+    const errorPath = getErrorPath(service, pageType);
+
+    if (errorPath) {
+      it('should return a 404 error code', () => {
+        cy.testResponseCodeAndType(`${errorPath}.amp`, 404, 'text/html');
+      });
+    } else {
+      describe(`No ${pageType} found for ${service}`, () => {});
+    }
   });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
