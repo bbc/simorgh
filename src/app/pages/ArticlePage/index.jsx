@@ -117,11 +117,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
           />
         </GhostGrid>
       </StyledMain>
-      <ConstrainedMostReadSection>
-        <MostReadContainer
-          mostReadEndpointOverride={mostReadEndpointOverride}
-        />
-      </ConstrainedMostReadSection>
+      <MostReadContainer
+        mostReadEndpointOverride={mostReadEndpointOverride}
+        wrapper={ConstrainedMostReadSection}
+      />
     </>
   );
 };

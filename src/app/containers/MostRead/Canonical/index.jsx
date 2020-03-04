@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
-import { bool, string } from 'prop-types';
+import { bool, string, elementType } from 'prop-types';
 import styled from 'styled-components';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -39,7 +39,7 @@ export const MostReadSection = styled.section.attrs(() => ({
   'data-e2e': 'most-read',
 }))``;
 
-const CanonicalMostRead = ({ endpoint, maxTwoColumns }) => {
+const CanonicalMostRead = ({ endpoint, maxTwoColumns, wrapper }) => {
   const [items, setItems] = useState([]);
   const {
     service,
@@ -49,6 +49,7 @@ const CanonicalMostRead = ({ endpoint, maxTwoColumns }) => {
     timezone,
     mostRead: { header, lastUpdated, numberOfItems },
   } = useContext(ServiceContext);
+  const MostReadSectioWrapper = wrapper;
 
   useEffect(() => {
     const handleResponse = async response => {
@@ -100,7 +101,7 @@ const CanonicalMostRead = ({ endpoint, maxTwoColumns }) => {
   }
 
   return (
-    <>
+    <MostReadSectioWrapper>
       <SectionLabel
         script={script}
         labelId="Most-Read"
@@ -138,12 +139,13 @@ const CanonicalMostRead = ({ endpoint, maxTwoColumns }) => {
           ))}
         </MostReadList>
       </MarginWrapper>
-    </>
+    </MostReadSectioWrapper>
   );
 };
 
 CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
+  wrapper: elementType.isRequired,
   maxTwoColumns: bool,
 };
 

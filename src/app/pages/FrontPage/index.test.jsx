@@ -165,6 +165,7 @@ describe('Front Page', () => {
         <FrontPageWithContext pageData={pageData} />,
       );
       const sections = container.querySelectorAll('section');
+      console.log('--------', sections);
 
       expect(sections).toHaveLength(2);
       sections.forEach(section => {

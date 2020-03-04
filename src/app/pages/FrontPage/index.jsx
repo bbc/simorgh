@@ -97,12 +97,11 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
   const renderMostRead = () => (
-    <FrontPageMostReadSection>
-      <MostReadContainer
-        mostReadEndpointOverride={mostReadEndpointOverride}
-        maxTwoColumns
-      />
-    </FrontPageMostReadSection>
+    <MostReadContainer
+      mostReadEndpointOverride={mostReadEndpointOverride}
+      wrapper={FrontPageMostReadSection}
+      maxTwoColumns
+    />
   );
 
   return (

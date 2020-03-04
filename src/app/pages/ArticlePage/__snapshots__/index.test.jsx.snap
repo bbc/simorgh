@@ -536,12 +536,6 @@ exports[`should render a news article correctly 1`] = `
       </div>
     </div>
   </main>
-  <section
-    aria-labelledby="Most-Read"
-    class="MostReadSection-sc-6bm912-1 ConstrainedMostReadSection-sc-1onvfv8-1 dALsUv"
-    data-e2e="most-read"
-    role="region"
-  />
 </div>
 `;
 
