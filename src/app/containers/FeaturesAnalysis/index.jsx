@@ -27,6 +27,10 @@ const Wrapper = styled(GridItemConstrainedLarge)`
 
 const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
+
+  span {
+    background-color: transparent;
+  }
 `;
 
 const FeaturesAnalysis = ({ content, enableGridWrapper }) => {
