@@ -10,6 +10,7 @@ const baseServiceConfig = {
   articleTimestampPrefix: '最近更新：',
   atiAnalyticsAppName: 'news-ukchina',
   atiAnalyticsProducerId: '93',
+  chartbeatDomain: 'ukchina.bbc.co.uk',
   brandName: 'BBC 英伦网',
   product: 'BBC',
   serviceLocalizedName: '英伦网',

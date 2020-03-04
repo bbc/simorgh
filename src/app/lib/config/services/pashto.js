@@ -19,6 +19,7 @@ export const service = {
     atiAnalyticsAppName: 'news-pashto',
     atiAnalyticsProducerId: '68',
     brandName: 'BBC News پښتو',
+    chartbeatDomain: 'pashto.bbc.co.uk',
     serviceLocalizedName: 'پښتو',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png',
     defaultImageAltText: 'BBC News پښتو',

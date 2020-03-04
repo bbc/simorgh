@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Янгиланди',
     atiAnalyticsAppName: 'news-uzbek',
     atiAnalyticsProducerId: '96',
+    chartbeatDomain: 'uzbek.bbc.co.uk',
     brandName: "BBC News O'zbek",
     product: 'BBC News',
     serviceLocalizedName: "O'zbek",
