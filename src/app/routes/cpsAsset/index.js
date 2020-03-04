@@ -30,7 +30,7 @@ const CpsAsset = props => {
       return FrontPage({ ...props, pageType: type });
     default:
       // Return 404 error page if page type does not match those above
-      return ErrorPage({ ...props, pageType: 'error', status: 404 });
+      return ErrorPage({ ...props, pageType: 'error', errorCode: 404 });
   }
 };
 

@@ -33,7 +33,7 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
   );
 };
 
-const ErrorPage = ({ status, errorCode }) => {
+const ErrorPage = ({ errorCode }) => {
   const {
     brandName,
     dir,
@@ -43,8 +43,7 @@ const ErrorPage = ({ status, errorCode }) => {
     themeColor,
     translations,
   } = useContext(ServiceContext);
-  const messaging =
-    translations.error[errorCode || status] || translations.error[500];
+  const messaging = translations.error[errorCode] || translations.error[500];
 
   return (
     <>
@@ -61,7 +60,6 @@ const ErrorPage = ({ status, errorCode }) => {
 };
 
 ErrorPage.propTypes = {
-  status: number.isRequired,
   errorCode: number,
 };
 

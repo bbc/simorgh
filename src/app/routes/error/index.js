@@ -5,6 +5,11 @@ export default {
   path: errorPagePath,
   exact: true,
   component: ErrorPage,
-  getInitialData: () => Promise.resolve({ status: 200 }),
+  getInitialData: pathname => {
+    const [, , errorPage] = pathname.split('/');
+    const errorCode = Number(errorPage);
+
+    return Promise.resolve({ status: 200, errorCode });
+  },
   pageType: 'error',
 };

@@ -5,7 +5,7 @@ import ErrorPage from '#pages/ErrorPage';
 const WithError = Component => {
   const ErrorContainer = ({ error, ...props }) => {
     if (!error) return <Component {...props} />;
-    return <ErrorPage status={500} />;
+    return <ErrorPage errorCode={500} />;
   };
 
   ErrorContainer.propTypes = {

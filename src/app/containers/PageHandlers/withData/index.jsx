@@ -18,7 +18,7 @@ const WithData = Component => {
       return <Component pageData={pageData} {...props} />;
     }
 
-    return <ErrorPage status={statusCode} />;
+    return <ErrorPage errorCode={statusCode} />;
   };
 
   DataContainer.propTypes = {

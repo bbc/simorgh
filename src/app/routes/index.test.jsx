@@ -219,13 +219,12 @@ it('should route to and render a feature index page', async () => {
 it('should route to and render a 500 error page', async () => {
   const pathname = '/igbo/500';
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { status } = await getInitialData();
+  const { errorCode } = await getInitialData(pathname);
   const { getByText } = renderRouter({
     pathname,
-    status,
     pageType,
+    errorCode,
     service: 'igbo',
-    errorCode: 500,
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '500';
 
@@ -249,12 +248,11 @@ it('should fallback to and render a 500 error page if there is a problem with pa
 it('should route to and render a 404 error page', async () => {
   const pathname = '/igbo/404';
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { status } = await getInitialData();
+  const { errorCode } = await getInitialData(pathname);
   const { getByText } = renderRouter({
     pathname,
-    status,
     pageType,
-    errorCode: 404,
+    errorCode,
     service: 'igbo',
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
@@ -262,16 +260,32 @@ it('should route to and render a 404 error page', async () => {
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
 
-it('should fallback to and render a 404 error page if a route does not match', async () => {
-  fetch.mockResponse(JSON.stringify({ status: 404 }));
+it('should render a 404 error page if a data fetch responds with a 404', async () => {
+  fetch.mockResponse(null, { status: 404 });
   const pathname = '/pidgin/articles/cwl08rd38p6o';
-  const { pageType } = getMatchingRoute(pathname);
+  const { pageType, getInitialData } = getMatchingRoute(pathname);
+  const { status } = await getInitialData(pathname);
   const { getByText } = renderRouter({
     pathname,
-    pageData: undefined,
     pageType,
+    status,
     service: 'pidgin',
-    status: 404,
+  });
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
+
+  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+});
+
+it('should fallback to and render a 404 error page if no route match is found', async () => {
+  const pathname = '/a/path/that/does/not/exist';
+  const { pageType, getInitialData } =
+    getMatchingRoute(pathname) || routes[routes.length - 1];
+  const { errorCode } = await getInitialData(pathname);
+  const { getByText } = renderRouter({
+    pathname,
+    pageType,
+    errorCode,
+    service: 'pidgin',
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
 
