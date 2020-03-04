@@ -48,6 +48,17 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
 
       if (pageType !== 'errorPage404') {
         it('should include the canonical URL', () => {
+          // ============================================================================
+          const deleteMessage = `DEBUG CANONICAL URL: ${JSON.stringify(
+            envConfig,
+          )}; APP_ENV: ${Cypress.env('APP_ENV')}; CurrentPath: ${Cypress.env(
+            'currentPath',
+          )}`;
+
+          // eslint-disable-next-line no-console
+          console.log(deleteMessage);
+          cy.log(deleteMessage);
+          // ============================================================================
           cy.get('head link[rel="canonical"]').should(
             'have.attr',
             'href',
@@ -145,6 +156,17 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                 'content',
                 ogType,
               );
+              // ============================================================================
+              const deleteMessage = `DEBUG SHARED METADATA: ${JSON.stringify(
+                envConfig,
+              )}; APP_ENV: ${Cypress.env(
+                'APP_ENV',
+              )}; CurrentPath: ${Cypress.env('currentPath')}`;
+
+              // eslint-disable-next-line no-console
+              console.log(deleteMessage);
+              cy.log(deleteMessage);
+              // ============================================================================
               cy.get('meta[property="og:url"]').should(
                 'have.attr',
                 'content',
@@ -520,33 +542,5 @@ export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
   service,
   pageType,
 }) => {
-  describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {
-    if (Cypress.env('APP_ENV') === 'live') {
-      describe('Page links test', () => {
-        it('Top navigation links should not 404', () => {
-          cy.get('header a').each(element => {
-            const url = element.attr('href');
-            cy.request({
-              url,
-              failOnStatusCode: false,
-            }).then(resp => {
-              expect(resp.status).to.not.equal(404, `Received 404 for ${url}`);
-            });
-          });
-        });
-
-        it('Footer links should not 404', () => {
-          cy.get('footer a').each(element => {
-            const url = element.attr('href');
-            cy.request({
-              url,
-              failOnStatusCode: false,
-            }).then(resp => {
-              expect(resp.status).to.not.equal(404, `Received 404 for ${url}`);
-            });
-          });
-        });
-      });
-    }
-  });
+  describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {});
 };
