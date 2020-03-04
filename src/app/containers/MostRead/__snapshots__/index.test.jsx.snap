@@ -215,19 +215,19 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (max-width:14.9375rem) {
   .c12 {
-    min-width: 2.5rem;
+    min-width: 1.8rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c12 {
-    min-width: 2.5rem;
+    min-width: 1.8rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c12 {
-    min-width: 2.5rem;
+    min-width: 2.1rem;
   }
 }
 
@@ -245,25 +245,25 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (max-width:14.9375rem) {
   .c16 {
-    min-width: 2.5rem;
+    min-width: 1.8rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c16 {
-    min-width: 2.5rem;
+    min-width: 1.8rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c16 {
-    min-width: 2.5rem;
+    min-width: 2.1rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c16 {
-    min-width: 4rem;
+    min-width: 3rem;
   }
 }
 
@@ -275,19 +275,19 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (max-width:14.9375rem) {
   .c17 {
-    min-width: 2.5rem;
+    min-width: 1.8rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c17 {
-    min-width: 2.5rem;
+    min-width: 1.8rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c17 {
-    min-width: 2.5rem;
+    min-width: 2.1rem;
   }
 }
 
@@ -299,31 +299,31 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (min-width:80rem) {
   .c17 {
-    min-width: 3.7rem;
+    min-width: 3rem;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c18 {
-    min-width: 2.5rem;
+    min-width: 1.8rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c18 {
-    min-width: 2.5rem;
+    min-width: 1.8rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c18 {
-    min-width: 2.5rem;
+    min-width: 2.1rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c18 {
-    min-width: 4rem;
+    min-width: 3rem;
   }
 }
 
@@ -335,19 +335,19 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (max-width:14.9375rem) {
   .c19 {
-    min-width: 2.5rem;
+    min-width: 1.8rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c19 {
-    min-width: 2.5rem;
+    min-width: 1.8rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c19 {
-    min-width: 2.5rem;
+    min-width: 2.1rem;
   }
 }
 
@@ -533,7 +533,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
             <span
               class="c13"
             >
-              ۱
+              1
             </span>
           </div>
           <div
@@ -564,7 +564,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
             <span
               class="c13"
             >
-              ۲
+              2
             </span>
           </div>
           <div
@@ -595,7 +595,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
             <span
               class="c13"
             >
-              ۳
+              3
             </span>
           </div>
           <div
@@ -626,7 +626,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
             <span
               class="c13"
             >
-              ۴
+              4
             </span>
           </div>
           <div
@@ -657,7 +657,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
             <span
               class="c13"
             >
-              ۵
+              5
             </span>
           </div>
           <div
@@ -688,7 +688,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
             <span
               class="c13"
             >
-              ۶
+              6
             </span>
           </div>
           <div
@@ -719,7 +719,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
             <span
               class="c13"
             >
-              ۷
+              7
             </span>
           </div>
           <div
@@ -750,7 +750,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
             <span
               class="c13"
             >
-              ۸
+              8
             </span>
           </div>
           <div
@@ -781,7 +781,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
             <span
               class="c13"
             >
-              ۹
+              9
             </span>
           </div>
           <div
@@ -812,7 +812,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
             <span
               class="c13"
             >
-              ۱۰
+              10
             </span>
           </div>
           <div
