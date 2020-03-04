@@ -494,12 +494,16 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
       ['mediaAssetPage', 'photoGalleryPage', 'storyPage'].includes(pageType)
     ) {
       describe('Photo Gallery, Story Page and MAP Tests', () => {
-        it('should render a timestamp', () => {
-          cy.get('time')
-            .eq(0)
-            .should('be.visible')
-            .should('have.attr', 'datetime')
-            .should('not.be.empty');
+        it.only('should render a timestamp', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            if (body.metadata.options.allowDateStamp) {
+              cy.get('time')
+                .eq(0)
+                .should('be.visible')
+                .should('have.attr', 'datetime')
+                .should('not.be.empty');
+            }
+          });
         });
         if (['photoGalleryPage', 'storyPage'].includes(pageType)) {
           it('should render a H1, which displays the headline', () => {
