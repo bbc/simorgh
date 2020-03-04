@@ -120,7 +120,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 role="text"
                               >
                                 <span
-                                  aria-hidden="true"
                                   class="LiveLabel-sc-1dvfmi3-6 halTGG"
                                   dir="ltr"
                                 >
