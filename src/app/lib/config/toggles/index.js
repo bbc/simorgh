@@ -18,6 +18,10 @@ const toggles = {
     radioSchedule: {
       enabled: true,
     },
+    remoteFeatureToggles: {
+      enabled: true,
+      value: '(mundo|news)',
+    },
   },
   test: {
     chartbeatAnalytics: {
@@ -38,6 +42,10 @@ const toggles = {
     radioSchedule: {
       enabled: false,
     },
+    remoteFeatureToggles: {
+      enabled: true,
+      value: '(mundo|news)',
+    },
   },
   live: {
     chartbeatAnalytics: {
@@ -57,6 +65,10 @@ const toggles = {
     },
     radioSchedule: {
       enabled: false,
+    },
+    remoteFeatureToggles: {
+      enabled: false,
+      value: '(mundo|news)',
     },
   },
 };
