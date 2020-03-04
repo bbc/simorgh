@@ -20,6 +20,7 @@ export const service = {
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'archive',
     atiAnalyticsProducerId: '127',
+    chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Archive',
     product: 'BBC Archive',
     defaultImage:
@@ -56,6 +57,7 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
       relatedContent: 'Related content',
+      navMenuText: 'Sections',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -157,6 +159,7 @@ export const service = {
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated:',
+      hasMostRead: false,
     },
     footer: {
       externalLink: {

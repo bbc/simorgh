@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:zhongwen/simp/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+    "locators": {
+      "assetUri": "/zhongwen/simp/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+      "curie": "http://www.bbc.co.uk/asset/564dd19c-1780-11e6-99b3-89c23db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "chinese_simplified",
+    "language": "zh-Hans",
+    "lastUpdated": 1551088861352,
+    "firstPublished": 1462975922,
+    "lastPublished": 1462976617,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": false,
+      "allowAdvertising": true,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "cps_asset_id": "43781435"
+    },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "43781435",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/zhongwen/simp/meta/dps/2016/05/emp/160511_vid_cultural_revolution_explainer.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "中共领导人毛泽东50年前发动的“无产阶级文化大革命”，掀起了一场持续10年的疯狂运动，改变了至少一代人的命运。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "多少人颠沛流离、家破人亡、迫害致死；又有多少人在革命的口号中疯狂。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "50年过去了，我们一起回顾这段历史。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "视频：毛泽东发动文革来龙去脉",
+      "headline": "视频：毛泽东发动文革来龙去脉"
+    },
+    "locators": {
+      "assetUri": "/zhongwen/simp/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+      "curie": "http://www.bbc.co.uk/asset/564dd19c-1780-11e6-99b3-89c23db9bd6e"
+    },
+    "summary": "中共领导人毛泽东发动“无产阶级文化大革命”，掀起了一场持续10年的疯狂政治运动。50年过去了，我们一起来回顾这段历史。",
+    "timestamp": 1551088861352,
+    "passport": {},
+    "media": {
+      "id": "43781435",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/zhongwen/simp/meta/dps/2016/05/emp/160511_vid_cultural_revolution_explainer.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e225",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/11/160511135650_cult_rev_144x81__nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2016/05/11/160511135650_cult_rev_144x81__nocredit.jpg",
+      "height": 81,
+      "width": 144,
+      "altText": "文革",
+      "copyrightHolder": " ",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:zhongwen/simp/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "多媒体",
+      "uri": "/zhongwen/simp/multimedia",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "bbcchinese.com",
+      "uri": "/zhongwen/simp",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

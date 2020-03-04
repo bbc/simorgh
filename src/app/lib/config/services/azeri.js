@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Yeniləndi',
     atiAnalyticsAppName: 'news-azeri',
     atiAnalyticsProducerId: '6',
+    chartbeatDomain: 'azeri.bbc.co.uk',
     brandName: 'BBC News Azərbaycanca',
     product: 'BBC News',
     serviceLocalizedName: 'Azərbaycanca',
@@ -49,6 +50,7 @@ export const service = {
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
+      navMenuText: 'Bölümlər',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -136,6 +138,7 @@ export const service = {
       },
       media: {
         noJs: 'Sizin qurğunuzda yenidən səsləndirmə mümkün deyil',
+        contentExpired: 'Bu proqramı izləmək/dinləmək artıq mümkün deyil.',
         audio: 'Audio',
         photogallery: 'Foto-qalereya',
         video: 'Video',
@@ -152,6 +155,7 @@ export const service = {
       header: 'Ən çox oxunan',
       lastUpdated: 'Ən son yeniləmə:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -219,7 +223,6 @@ export const service = {
         url: '/azeri/media/video',
       },
     ],
-    navigationSection: 'Bölümlər',
   },
 };
 

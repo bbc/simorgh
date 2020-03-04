@@ -2,12 +2,12 @@ import React from 'react';
 import { node, string } from 'prop-types';
 import { render } from '@testing-library/react';
 import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
-import { articleDataNews } from '#pages/Article/fixtureData';
-import mapAssetData from '#pages/CpsMap/fixtureData.json';
-import pglAssetData from '#pages/CpsPgl/fixtureData.json';
+import { articleDataNews } from '#pages/ArticlePage/fixtureData';
+import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
+import pglAssetData from '#pages/PhotoGalleryPage/fixtureData.json';
+import styAssetData from '#pages/StoryPage/fixtureData.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
@@ -197,7 +197,7 @@ describe('ATI Analytics Container', () => {
         're=1024x768',
         'hl=00-00-00',
         'lng=en-US',
-        'x1=[urn:bbc:ares::asset:pidgin/23248703]',
+        'x1=[urn:bbc:cps:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]',
         'x2=[responsive]',
         'x3=[news]',
         'x4=[pcm]',
@@ -234,7 +234,7 @@ describe('ATI Analytics Container', () => {
         `re=\${availableScreenWidth}x\${availableScreenHeight}`,
         'hl=00-00-00',
         `lng=\${browserLanguage}`,
-        'x1=[urn:bbc:ares::asset:pidgin/23248703]',
+        'x1=[urn:bbc:cps:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]',
         'x2=[amp]',
         'x3=[news]',
         'x4=[pcm]',
@@ -274,7 +274,7 @@ describe('ATI Analytics Container', () => {
         're=1024x768',
         'hl=00-00-00',
         'lng=en-US',
-        'x1=[urn:bbc:ares::asset:azeri/azerbaijan-44208474]',
+        'x1=[urn:bbc:cps:38229308-a0fb-654a-a274-19bec0414560]',
         'x2=[responsive]',
         'x3=[news]',
         'x4=[az]',
@@ -311,7 +311,7 @@ describe('ATI Analytics Container', () => {
         `re=\${availableScreenWidth}x\${availableScreenHeight}`,
         'hl=00-00-00',
         `lng=\${browserLanguage}`,
-        'x1=[urn:bbc:ares::asset:azeri/azerbaijan-44208474]',
+        'x1=[urn:bbc:cps:38229308-a0fb-654a-a274-19bec0414560]',
         'x2=[amp]',
         'x3=[news]',
         'x4=[az]',
@@ -332,6 +332,85 @@ describe('ATI Analytics Container', () => {
       render(
         <ContextWrap platform="amp" pageType="PGL">
           <ATIAnalytics data={pglAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockAmp.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+  });
+
+  describe('pageType=STY', () => {
+    it('should call CanonicalATIAnalytics when platform is canonical', () => {
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=story::mundo.story.23263889.page',
+        'r=0x0x24x24',
+        're=1024x768',
+        'hl=00-00-00',
+        'lng=en-US',
+        'x1=[urn:bbc:cps:f776ad93-e486-b14a-b5ea-55955dd0644f]',
+        'x2=[responsive]',
+        'x3=[news]',
+        'x4=[es]',
+        'x5=[http://localhost/]',
+        'x7=[article]',
+        'x8=[simorgh]',
+        'x9=[WS+STY+TEST+-+Full+Headline+-+BBC+News]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x13=[Life~Fake+news]',
+        'x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]',
+        'x16=[Amuse%20me]',
+        'x17=[News]',
+      ].join('&');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      canonical.default = mockCanonical;
+
+      render(
+        <ContextWrap platform="canonical" pageType="STY">
+          <ATIAnalytics data={styAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockCanonical.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+
+    it('should call AmpATIAnalytics when platform is Amp', () => {
+      const pageviewParams = [
+        's=598286',
+        's2=64',
+        'p=story::mundo.story.23263889.page',
+        `r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
+        `re=\${availableScreenWidth}x\${availableScreenHeight}`,
+        'hl=00-00-00',
+        `lng=\${browserLanguage}`,
+        'x1=[urn:bbc:cps:f776ad93-e486-b14a-b5ea-55955dd0644f]',
+        'x2=[amp]',
+        'x3=[news]',
+        'x4=[es]',
+        `x5=[\${sourceUrl}]`,
+        `x6=[\${documentReferrer}]`,
+        'x7=[article]',
+        'x8=[simorgh]',
+        'x9=[WS+STY+TEST+-+Full+Headline+-+BBC+News]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x13=[Life~Fake+news]',
+        'x14=[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]',
+        'x16=[Amuse%20me]',
+        'x17=[News]',
+      ].join('&');
+      const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      amp.default = mockAmp;
+
+      render(
+        <ContextWrap platform="amp" pageType="STY">
+          <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
 

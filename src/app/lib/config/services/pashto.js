@@ -19,6 +19,7 @@ export const service = {
     atiAnalyticsAppName: 'news-pashto',
     atiAnalyticsProducerId: '68',
     brandName: 'BBC News پښتو',
+    chartbeatDomain: 'pashto.bbc.co.uk',
     serviceLocalizedName: 'پښتو',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png',
     defaultImageAltText: 'BBC News پښتو',
@@ -55,6 +56,7 @@ export const service = {
       currentPage: 'اوسنۍ پاڼه',
       skipLinkText: 'مطلب ته ورشئ',
       relatedContent: 'اسی بارے میں',
+      navMenuText: 'برخې',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -139,6 +141,7 @@ export const service = {
       },
       media: {
         noJs: 'په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.',
+        contentExpired: 'دغه فایل نور د لاسرسي وړ نه دی.',
         audio: 'غږ',
         photogallery: 'د عکسونو البوم',
         video: 'ویډیو',
@@ -165,6 +168,7 @@ export const service = {
       header: 'ډېر لوستل شوي',
       lastUpdated: 'د خپرېدو نیټه',
       numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -243,7 +247,6 @@ export const service = {
         url: '/pashto/columns',
       },
     ],
-    navigationSection: 'برخې',
   },
 };
 

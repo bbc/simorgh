@@ -10,6 +10,7 @@ const baseServiceConfig = {
   articleTimestampPrefix: '最近更新：',
   atiAnalyticsAppName: 'news-ukchina',
   atiAnalyticsProducerId: '93',
+  chartbeatDomain: 'ukchina.bbc.co.uk',
   brandName: 'BBC 英伦网',
   product: 'BBC',
   serviceLocalizedName: '英伦网',
@@ -82,7 +83,8 @@ export const service = {
     mostRead: {
       header: '热读',
       lastUpdated: '最近更新：',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: false,
     },
     navigation: [
       {
@@ -98,13 +100,13 @@ export const service = {
         url: '/ukchina/simp/media/video',
       },
     ],
-    navigationSection: '分类',
     translations: {
       seeAll: '浏览全部',
       home: '主页',
       currentPage: '目前页面',
       skipLinkText: '跳过此内容',
       relatedContent: '更多相关内容',
+      navMenuText: '分类',
       mediaAssetPage: {
         mediaPlayer: '多媒体播放器',
         audioPlayer: '音频播放器',
@@ -186,6 +188,7 @@ export const service = {
       },
       media: {
         noJs: '你的器材不支持播放多媒体材料',
+        contentExpired: '此内容已不存在',
         audio: '音频',
         photogallery: '图辑专页',
         video: '视频',
@@ -241,7 +244,8 @@ export const service = {
     mostRead: {
       header: '熱讀',
       lastUpdated: '最近更新：',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: false,
     },
     navigation: [
       {
@@ -257,13 +261,13 @@ export const service = {
         url: '/ukchina/trad/media/video',
       },
     ],
-    navigationSection: '分類',
     translations: {
       seeAll: '瀏覽全部',
       home: '主頁',
       currentPage: '目前頁面',
       skipLinkText: '跳過此內容',
       relatedContent: '更多相關內容',
+      navMenuText: '分類',
       mediaAssetPage: {
         mediaPlayer: '多媒體播放器',
         audioPlayer: '音頻播放器',
@@ -345,6 +349,7 @@ export const service = {
       },
       media: {
         noJs: '你的器材不支持播放多媒體材料',
+        contentExpired: '有關內容已經不再向讀者觀眾提供。',
         audio: '音頻',
         photogallery: '圖輯專頁',
         video: '視頻',

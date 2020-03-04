@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'ਅਪਡੇਟ',
     atiAnalyticsAppName: 'news-punjabi',
     atiAnalyticsProducerId: '73',
+    chartbeatDomain: 'punjabi.bbc.co.uk',
     brandName: 'BBC News ਪੰਜਾਬੀ',
     product: 'BBC News',
     serviceLocalizedName: 'ਪੰਜਾਬੀ',
@@ -49,6 +50,7 @@ export const service = {
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
       relatedContent: 'ਇਸ ਖ਼ਬਰ ਬਾਰੇ ਹੋਰ',
+      navMenuText: 'ਸੈਕਸ਼ਨਜ਼',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -133,6 +135,7 @@ export const service = {
       },
       media: {
         noJs: "ਮੀਡੀਆ ਪਲੇਬੈਕ ਤੁਹਾਡੀ ਡਿਵਾਈਸ 'ਤੇ ਸਪੋਰਟ ਨਹੀਂ ਕਰਦਾ",
+        contentExpired: 'ਇਹ ਸਮੱਗਰੀ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।',
         audio: 'ਔਡੀਓ',
         photogallery: 'ਫੋਟੋ ਗੈਲਰੀ',
         video: 'ਵੀਡੀਓ',
@@ -148,7 +151,8 @@ export const service = {
     mostRead: {
       header: 'ਸਭ ਤੋਂ ਵੱਧ ਪੜ੍ਹਿਆ ਗਿਆ',
       lastUpdated: 'ਆਖ਼ਰੀ ਅਪਡੇਟ:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     navigation: [
       {
@@ -176,7 +180,6 @@ export const service = {
         url: '/punjabi/resources/idt-681afed0-03f5-4d5f-a640-3011a722d1c8',
       },
     ],
-    navigationSection: 'ਸੈਕਸ਼ਨਜ਼',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/punjabi/institutional-49282853',

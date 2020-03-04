@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Imeboreshwa',
     atiAnalyticsAppName: 'news-swahili',
     atiAnalyticsProducerId: '86',
+    chartbeatDomain: 'swahili.bbc.co.uk',
     brandName: 'BBC News Swahili',
     product: 'BBC News',
     serviceLocalizedName: 'Swahili',
@@ -49,6 +50,7 @@ export const service = {
       currentPage: 'Ukurasa uliopo',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
+      navMenuText: 'Yaliyomo',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -136,6 +138,7 @@ export const service = {
       },
       media: {
         noJs: 'Huwezi kusikiliza tena',
+        contentExpired: 'Taarifa hii haipatikani tena.',
         audio: 'Sauti',
         photogallery: 'Mkusanyiko wa picha',
         video: 'Video',
@@ -162,6 +165,7 @@ export const service = {
       header: 'Iliyosomwa zaidi',
       lastUpdated: 'Imeboreshwa mwisho:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -225,7 +229,6 @@ export const service = {
         url: '/swahili/media/photogalleries',
       },
     ],
-    navigationSection: 'Yaliyomo',
   },
 };
 

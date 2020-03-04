@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Оновлення даних: ',
     atiAnalyticsAppName: 'news-ukrainian',
     atiAnalyticsProducerId: '94',
+    chartbeatDomain: 'ukrainian.bbc.co.uk',
     brandName: 'BBC News Україна',
     product: 'BBC News',
     serviceLocalizedName: 'Україна',
@@ -49,6 +50,7 @@ export const service = {
       currentPage: 'Поточна сторінка',
       skipLinkText: 'Перейти до змісту',
       relatedContent: 'Статті на цю ж тему',
+      navMenuText: 'Розділи',
       mediaAssetPage: {
         mediaPlayer: 'Медіаплеєр',
         audioPlayer: 'Аудіоплеєр',
@@ -138,6 +140,7 @@ export const service = {
       },
       media: {
         noJs: 'Ваш пристрій не підтримує відтворення мультимедійних файлів',
+        contentExpired: 'Контент більше не доступний',
         audio: 'Аудіо',
         photogallery: 'Фотогалерея',
         video: 'Відео',
@@ -158,7 +161,8 @@ export const service = {
     mostRead: {
       header: 'Найпопулярніше',
       lastUpdated: 'Останнє оновлення:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: false,
     },
     footer: {
       trustProjectLink: {
@@ -266,7 +270,6 @@ export const service = {
         url: '/ukrainian/learning_english',
       },
     ],
-    navigationSection: 'Розділи',
   },
 };
 

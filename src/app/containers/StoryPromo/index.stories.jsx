@@ -40,8 +40,9 @@ const videoPromo = promoFixture('Video');
 const featurePromo = promoFixture('Feature');
 const audioPromo = promoFixture('Audio');
 const galleryPromo = promoFixture('Gallery');
+const podcastPromo = promoFixture('Podcast');
 
-const getStoryPromo = platform => item => (
+const getStoryPromo = (platform, item, promoType) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
@@ -51,33 +52,42 @@ const getStoryPromo = platform => item => (
       pageType="article"
       service="news"
     >
-      <StoryPromoContainer item={item} />
+      <StoryPromoContainer item={item} promoType={promoType} />
     </RequestContextProvider>
   </ServiceContextProvider>
 );
 
-const getCanonicalStoryPromo = getStoryPromo('canonical');
-const getAmpStoryPromo = getStoryPromo('amp');
+const getCanonicalStoryPromo = (item, promoType = 'regular') =>
+  getStoryPromo('canonical', item, promoType);
+
+const getAmpStoryPromo = (item, promoType = 'regular') =>
+  getStoryPromo('amp', item, promoType);
 
 storiesOf('Containers|Story Promo/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
-  .add('canonical', () => getCanonicalStoryPromo(firstFixture))
-  .add('audio fixture', () => getCanonicalStoryPromo(audioFixture))
-  .add('video fixture', () => getCanonicalStoryPromo(videoFixture))
-  .add('standard link promo', () => getCanonicalStoryPromo(standardPromo))
-  .add('feature link promo', () => getCanonicalStoryPromo(featurePromo))
-  .add('video link promo', () => getCanonicalStoryPromo(videoPromo))
-  .add('audio link promo', () => getCanonicalStoryPromo(audioPromo))
-  .add('gallery link promo', () => getCanonicalStoryPromo(galleryPromo));
+  .add('Audio fixture', () => getCanonicalStoryPromo(audioFixture))
+  .add('Video fixture', () => getCanonicalStoryPromo(videoFixture))
+  .add('Standard link promo', () => getCanonicalStoryPromo(standardPromo))
+  .add('Feature link promo', () => getCanonicalStoryPromo(featurePromo))
+  .add('Video link promo', () => getCanonicalStoryPromo(videoPromo))
+  .add('Audio link promo', () => getCanonicalStoryPromo(audioPromo))
+  .add('Gallery link promo', () => getCanonicalStoryPromo(galleryPromo))
+  .add('Podcast link promo', () => getCanonicalStoryPromo(podcastPromo))
+  .add('Regular', () => getCanonicalStoryPromo(firstFixture))
+  .add('Leading', () => getCanonicalStoryPromo(firstFixture, 'leading'))
+  .add('Top', () => getCanonicalStoryPromo(firstFixture, 'top'));
 
 storiesOf('Containers|Story Promo/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
-  .add('amp', () => getAmpStoryPromo(firstFixture))
-  .add('audio fixture - amp', () => getAmpStoryPromo(audioFixture))
-  .add('video fixture - amp', () => getAmpStoryPromo(videoFixture))
-  .add('standard link promo - amp', () => getAmpStoryPromo(standardPromo))
-  .add('video link promo - amp', () => getAmpStoryPromo(videoPromo))
-  .add('feature link promo - amp', () => getAmpStoryPromo(featurePromo))
-  .add('audio link promo - amp', () => getAmpStoryPromo(audioPromo))
-  .add('gallery link promo - amp', () => getAmpStoryPromo(galleryPromo));
+  .add('Audio fixture', () => getAmpStoryPromo(audioFixture))
+  .add('Video fixture', () => getAmpStoryPromo(videoFixture))
+  .add('Standard link promo', () => getAmpStoryPromo(standardPromo))
+  .add('Video link promo', () => getAmpStoryPromo(videoPromo))
+  .add('Feature link promo', () => getAmpStoryPromo(featurePromo))
+  .add('Audio link promo', () => getAmpStoryPromo(audioPromo))
+  .add('Gallery link promo', () => getAmpStoryPromo(galleryPromo))
+  .add('Podcast link promo', () => getAmpStoryPromo(podcastPromo))
+  .add('Regular', () => getAmpStoryPromo(firstFixture))
+  .add('Leading', () => getAmpStoryPromo(firstFixture, 'leading'))
+  .add('Top', () => getAmpStoryPromo(firstFixture, 'top'));

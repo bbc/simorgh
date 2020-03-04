@@ -43,6 +43,23 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
         });
       }
     }
+    if (['storyPage', 'photoGalleryPage'].includes(pageType)) {
+      describe('AMP Status', () => {
+        it('should return a 200 response', () => {
+          cy.testResponseCodeAndType(
+            `${Cypress.env('currentPath')}.amp`,
+            200,
+            'text/html',
+          );
+        });
+      });
+      it('should render at least one amp image', () => {
+        cy.get('figure')
+          .first()
+          .find('amp-img')
+          .should('be.visible');
+      });
+    }
   });
 };
 

@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Haaromsameera',
     atiAnalyticsAppName: 'news-afaanoromoo',
     atiAnalyticsProducerId: '2',
+    chartbeatDomain: 'afaanoromoo.bbc.co.uk',
     brandName: 'BBC News Afaan Oromoo',
     product: 'BBC News',
     serviceLocalizedName: 'Afaan Oromoo',
@@ -50,6 +51,7 @@ export const service = {
       currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
       relatedContent: 'Odeessa kana irratti dabalata',
+      navMenuText: 'Kutaawwan',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -137,6 +139,7 @@ export const service = {
       },
       media: {
         noJs: "Meeshaan kee Miidiyaa taphachiisuu hin danda'u",
+        contentExpired: 'This content is no longer available',
         audio: 'Sagalee',
         photogallery: 'Kuusaa suuraa',
         video: 'Viidiyoo',
@@ -152,7 +155,8 @@ export const service = {
     mostRead: {
       header: "Baay'ee kan dubbifame",
       lastUpdated: 'Yeroo dhuma kan haaromfame:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -207,7 +211,6 @@ export const service = {
         url: '/afaanoromoo/popular/read',
       },
     ],
-    navigationSection: 'Kutaawwan',
     timezone: 'Africa/Addis_Ababa',
     liveRadio: {
       externalIdOverrides: { bbc_oromo_radio: 'bbc_afaanoromoo_radio' },

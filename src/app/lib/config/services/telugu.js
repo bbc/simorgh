@@ -13,6 +13,7 @@ export const service = {
     articleTimestampPrefix: 'అప్‌డేట్ అయ్యింది',
     atiAnalyticsAppName: 'news-telugu',
     atiAnalyticsProducerId: '89',
+    chartbeatDomain: 'telugu.bbc.co.uk',
     brandName: 'BBC News తెలుగు',
     product: 'BBC News',
     serviceLocalizedName: 'తెలుగు',
@@ -50,6 +51,7 @@ export const service = {
       currentPage: 'ప్రస్తుత పేజీ',
       skipLinkText: 'కంటెంట్‌కు వెళ్లండి',
       relatedContent: 'సంబంధిత కథనాలు',
+      navMenuText: 'విభాగాలు',
       mediaAssetPage: {
         mediaPlayer: 'మీడియా ప్లేయర్',
         audioPlayer: 'ఆడియో ప్లేయర్',
@@ -138,6 +140,7 @@ export const service = {
       },
       media: {
         noJs: 'మీ పరికరంలో మీడియా ప్లేబ్యాక్ సదుపాయం లేదు.',
+        contentExpired: 'ఈ కంటెంట్ ఇప్పుడు అందుబాటులో లేదు.',
         audio: 'ఆడియో',
         photogallery: 'ఫొటో గ్యాలరీ',
         video: 'వీడియో',
@@ -158,7 +161,8 @@ export const service = {
     mostRead: {
       header: 'ఎక్కువమంది చదివినవి',
       lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -222,7 +226,6 @@ export const service = {
         url: '/telugu/resources/idt-47054a9b-b97c-4190-bed0-0416210e698b',
       },
     ],
-    navigationSection: 'విభాగాలు',
   },
 };
 

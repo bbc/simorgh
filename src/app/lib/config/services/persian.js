@@ -18,6 +18,7 @@ export const service = {
     articleTimestampPrefix: 'به روز شده در',
     atiAnalyticsAppName: 'news-persian',
     atiAnalyticsProducerId: '69',
+    chartbeatDomain: 'persian.bbc.co.uk',
     brandName: 'BBC News فارسی',
     serviceLocalizedName: 'فارسی',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
@@ -55,6 +56,7 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
+      navMenuText: 'صفحه ها',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -144,6 +146,7 @@ export const service = {
       },
       media: {
         noJs: 'پخش این فایل در دستگاه شما پشتیبانی نمی شود.',
+        contentExpired: 'این محتوا دیگر قابل دسترس نیست.',
         audio: 'صدا',
         photogallery: 'عکس',
         video: 'ویدیو',
@@ -174,7 +177,8 @@ export const service = {
     mostRead: {
       header: 'پربیننده‌ترین‌ها',
       lastUpdated: 'به روز شده در',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -285,7 +289,6 @@ export const service = {
         url: '/persian/learningenglish',
       },
     ],
-    navigationSection: 'صفحه ها',
   },
 };
 

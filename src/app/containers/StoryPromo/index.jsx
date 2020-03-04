@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { shape, bool, string, element, oneOfType } from 'prop-types';
+import { shape, bool, string, element, oneOf, oneOfType } from 'prop-types';
 import StoryPromo, {
   Headline,
   Summary,
@@ -16,11 +16,16 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { createSrcset } from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
-
+import {
+  getAssetTypeCode,
+  getHeadlineUrlAndLive,
+} from '#lib/utilities/getStoryPromoInfo';
 import LinkContents from './LinkContents';
-import MediaIndicator from './MediaIndicator';
+import MediaIndicatorContainer from './MediaIndicator';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
+
+const PROMO_TYPES = ['top', 'regular', 'leading'];
 
 const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   if (!imageValues) {
@@ -33,7 +38,7 @@ const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   const ratio = (height / width) * 100;
   const originCode = getOriginCode(path);
   const locator = getLocator(path);
-  const imageResolutions = [70, 95, 144, 183, 240, 320, 480, 624];
+  const imageResolutions = [70, 95, 144, 183, 240, 320, 624];
   const srcset = createSrcset(originCode, locator, width, imageResolutions);
   const sizes = topStory
     ? '(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px'
@@ -78,7 +83,7 @@ const LiveComponent = ({ headline, service, dir }) => (
     <LiveLabel service={service} dir={dir}>
       LIVE
     </LiveLabel>
-    <VisuallyHiddenText lang="en-GB">Live, </VisuallyHiddenText>
+    <VisuallyHiddenText lang="en-GB">{' Live, '}</VisuallyHiddenText>
     {headline}
   </span>
 );
@@ -89,38 +94,46 @@ LiveComponent.propTypes = {
   headline: element.isRequired,
 };
 
-const StoryPromoContainer = ({ item, lazyLoadImage, topStory }) => {
-  const { script, datetimeLocale, service, timezone, dir } = useContext(
+const StoryPromoContainer = ({
+  item,
+  promoType,
+  lazyLoadImage,
+  dir,
+  displayImage,
+}) => {
+  const { script, datetimeLocale, service, timezone } = useContext(
     ServiceContext,
   );
-  const isAssetTypeCode = pathOr(null, ['assetTypeCode'], item);
-  let headline;
-  let url;
-  let isLive;
+  const isAssetTypeCode = getAssetTypeCode(item);
+  const isStoryPromoPodcast =
+    isAssetTypeCode === 'PRO' &&
+    pathOr(null, ['contentType'], item) === 'Podcast';
 
-  if (isAssetTypeCode !== null) {
-    headline = pathOr(null, ['name'], item);
-    url = pathOr(null, ['uri'], item);
-  } else {
-    headline = pathOr(null, ['headlines', 'headline'], item);
-    url = pathOr(null, ['locators', 'assetUri'], item);
-    isLive = pathOr(null, ['cpsType'], item) === 'LIV';
-  }
-
+  const { headline, url, isLive } = getHeadlineUrlAndLive(
+    item,
+    isAssetTypeCode,
+  );
   const summary = pathOr(null, ['summary'], item);
   const timestamp = pathOr(null, ['timestamp'], item);
   const relatedItems = pathOr(null, ['relatedItems'], item);
 
-  const linkcontents = <LinkContents item={item} />;
+  const linkcontents = <LinkContents item={item} isInline={!displayImage} />;
 
   if (!headline || !url) {
     return null;
   }
 
+  const topStory = promoType === 'top';
+
   const Info = (
     <>
       {headline && (
-        <Headline script={script} service={service} topStory={topStory}>
+        <Headline
+          script={script}
+          service={service}
+          promoType={promoType}
+          promoHasImage={displayImage}
+        >
           <Link href={url}>
             {isLive ? (
               <LiveComponent
@@ -134,12 +147,17 @@ const StoryPromoContainer = ({ item, lazyLoadImage, topStory }) => {
           </Link>
         </Headline>
       )}
-      {summary && (
-        <Summary script={script} service={service} topStory={topStory}>
+      {summary && displayImage && (
+        <Summary
+          script={script}
+          service={service}
+          promoType={promoType}
+          promoHasImage={displayImage}
+        >
           {summary}
         </Summary>
       )}
-      {timestamp && (
+      {timestamp && !isStoryPromoPodcast && (
         <Timestamp
           locale={datetimeLocale}
           timestamp={timestamp}
@@ -152,7 +170,7 @@ const StoryPromoContainer = ({ item, lazyLoadImage, topStory }) => {
           isRelative={isTenHoursAgo(timestamp)}
         />
       )}
-      {topStory && relatedItems && (
+      {promoType === 'top' && relatedItems && (
         <IndexAlsosContainer
           alsoItems={relatedItems}
           script={script}
@@ -172,27 +190,41 @@ const StoryPromoContainer = ({ item, lazyLoadImage, topStory }) => {
     />
   );
 
+  const MediaIndicator = (
+    <MediaIndicatorContainer
+      item={item}
+      script={script}
+      service={service}
+      dir={dir}
+      isInline={!displayImage}
+    />
+  );
+
   return (
     <StoryPromo
       image={Image}
       info={Info}
-      mediaIndicator={
-        <MediaIndicator item={item} topStory={topStory} service={service} />
-      }
-      topStory={topStory}
+      mediaIndicator={MediaIndicator}
+      promoType={promoType}
+      dir={dir}
+      displayImage={displayImage}
     />
   );
 };
 
 StoryPromoContainer.propTypes = {
   item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
+  promoType: oneOf(PROMO_TYPES),
   lazyLoadImage: bool,
-  topStory: bool,
+  dir: oneOf(['ltr', 'rtl']),
+  displayImage: bool,
 };
 
 StoryPromoContainer.defaultProps = {
+  promoType: 'regular',
   lazyLoadImage: true,
-  topStory: false,
+  dir: 'ltr',
+  displayImage: true,
 };
 
 export default StoryPromoContainer;

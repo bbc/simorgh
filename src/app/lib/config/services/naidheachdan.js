@@ -20,6 +20,7 @@ export const service = {
     articleTimestampPrefix: 'Ùraichte',
     atiAnalyticsAppName: 'news-naidheachdan',
     atiAnalyticsProducerId: '79',
+    chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Naidheachdan',
     product: 'BBC News',
     serviceLocalizedName: 'Naidheachdan',
@@ -58,6 +59,7 @@ export const service = {
       currentPage: 'An duilleag seo',
       skipLinkText: 'Air adhart',
       relatedContent: 'Co-cheangailte',
+      navMenuText: 'Earrannan',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -149,6 +151,7 @@ export const service = {
       media: {
         noJs:
           'To play this content, please enable JavaScript, or try a different browser',
+        contentExpired: 'This content is no longer available',
         audio: 'Fuaim',
         photogallery: 'Gailearaidh dhealbhan',
         video: 'Bhidio',
@@ -165,6 +168,7 @@ export const service = {
       header: 'As motha leughte',
       lastUpdated: 'Air ùrachadh mu dheireadh:',
       numberOfItems: 5,
+      hasMostRead: false,
     },
     footer: {
       trustProjectLink: {
@@ -220,7 +224,6 @@ export const service = {
         url: '/news/scotland',
       },
     ],
-    navigationSection: 'Earrannan',
   },
 };
 

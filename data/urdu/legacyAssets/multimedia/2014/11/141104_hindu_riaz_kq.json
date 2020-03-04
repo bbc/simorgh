@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:urdu/multimedia/2014/11/141104_hindu_riaz_kq",
+    "locators": {
+      "assetUri": "/urdu/multimedia/2014/11/141104_hindu_riaz_kq",
+      "cpsUrn": "urn:bbc:content:assetUri:urdu/multimedia/2014/11/141104_hindu_riaz_kq",
+      "curie": "http://www.bbc.co.uk/asset/322bd766-6438-11e4-88bd-d1de3db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "urdu",
+    "language": "ur",
+    "lastUpdated": 1562271173791,
+    "firstPublished": 1415122981,
+    "lastPublished": 1417646660,
+    "options": {
+      "includeComments": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": false,
+      "allowAdvertising": false,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "35668404" },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "35668404",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/urdu/meta/dps/2014/11/emp/141104_hindu_riaz_kq.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "گزشتہ ایک عشرے میں پاکستان میں فرقہ ورانہ تشدد بھی بڑھا ہے۔ لیکن صوبہ سندھ میں کچھ ایسے علاقے بھی ہیں جہاں یہ عشرہ اِتنے امن و امان اور مذہبی ہم آہنگی سے منایا جاتا ہے کہ اِس میں صرف مسلمان ہي نہیں بلکہ ہندو عقیدت مند بھی شریک ہوتے ہیں۔ عمرکوٹ سے ریاض سہیل کی رپورٹ۔",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "shortHeadline": "سندھ کے ہندو عزادار", "headline": "سندھ کے ہندو عزادار" },
+    "locators": {
+      "assetUri": "/urdu/multimedia/2014/11/141104_hindu_riaz_kq",
+      "cpsUrn": "urn:bbc:content:assetUri:urdu/multimedia/2014/11/141104_hindu_riaz_kq",
+      "curie": "http://www.bbc.co.uk/asset/322bd766-6438-11e4-88bd-d1de3db9bd6e"
+    },
+    "summary": "صوبہ سندھ میں کچھ ایسے علاقے بھی ہیں جہاں یہ عشرہ اِتنے امن و امان اور مذہبی ہم آہنگی سے منایا جاتا ہے کہ اِس میں صرف مسلمان ہي نہیں بلکہ ہندو عقیدت مند  بھی شریک ہوتے ہیں۔ ",
+    "timestamp": 1562271173791,
+    "passport": {},
+    "media": {
+      "id": "35668404",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/urdu/meta/dps/2014/11/emp/141104_hindu_riaz_kq.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e225",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/04/141104181306_hindu_azadar_sindh_640x360_bbc_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2014/11/04/141104181306_hindu_azadar_sindh_640x360_bbc_nocredit.jpg",
+      "height": 360,
+      "width": 640,
+      "altText": "",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:urdu/multimedia/2014/11/141104_hindu_riaz_kq",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": { "subType": "index", "name": "ملٹی میڈیا", "uri": "/urdu/multimedia", "type": "simple" },
+    "site": { "subType": "site", "name": "BBCUrdu.com", "uri": "/urdu", "type": "simple" },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "عاشورہ: تعزیے اور ماتمی جلوس   ",
+              "headline": "عاشورہ: تعزیے اور ماتمی جلوس   "
+            },
+            "locators": {
+              "assetUri": "/urdu/multimedia/2014/11/141104_ashura_around_world_sq",
+              "cpsUrn": "urn:bbc:content:assetUri:/urdu/multimedia/2014/11/141104_ashura_around_world_sq"
+            },
+            "summary": "مختلف ممالک سے عاشورہ کے اجتماعات کی چند جھلکیاں",
+            "timestamp": 1415115158,
+            "cpsType": "PGL",
+            "id": "urn:bbc:ares::asset:urdu/multimedia/2014/11/141104_ashura_around_world_sq",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "عاشورہ کے ماتمی جلوسوں کا پرامن اختتام",
+              "headline": "عاشورہ کے ماتمی جلوسوں کا پرامن اختتام"
+            },
+            "locators": {
+              "assetUri": "/urdu/pakistan/2014/11/141104_pak_ashura_security_zz",
+              "cpsUrn": "urn:bbc:content:assetUri:/urdu/pakistan/2014/11/141104_pak_ashura_security_zz"
+            },
+            "summary": "پاکستان میں سخت سکیورٹی انتظامات میں یومِ عاشور روایتی عقیدت سے منایا گیا اور ملک کے مختلف شہروں میں ماتمی جلوس اختتام پذیر ہو گئے ہیں۔ پورے ملک سے کسی ناخوشگوار واقعے کی اطلاع نہیں ملی۔",
+            "timestamp": 1415074871,
+            "cpsType": "STY",
+            "id": "urn:bbc:ares::asset:urdu/pakistan/2014/11/141104_pak_ashura_security_zz",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "بھارت: عزاداری اور تعزیہ داری میں ہندو بھی پیش پیش",
+              "headline": "بھارت: عزاداری اور تعزیہ داری میں ہندو بھی پیش پیش"
+            },
+            "locators": {
+              "assetUri": "/urdu/regional/2014/11/141104_india_hindu_ashura_muharram_mb",
+              "cpsUrn": "urn:bbc:content:assetUri:/urdu/regional/2014/11/141104_india_hindu_ashura_muharram_mb"
+            },
+            "summary": "عام طور پر محرم کے جلوسوں کے سبب بھارت کے بیشتر علاقوں میں کشیدگی کے آثار رہتے ہیں تاہم بہت سی جگہوں پر ہندو نہ صرف اس میں شریک ہوتے ہیں بلکہ عقیدت و احترام میں تعزیے بناتے اور نکالتے ہیں۔",
+            "timestamp": 1415087484,
+            "cpsType": "STY",
+            "id": "urn:bbc:ares::asset:urdu/regional/2014/11/141104_india_hindu_ashura_muharram_mb",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

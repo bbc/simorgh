@@ -16,6 +16,7 @@ export const service = {
     articleTimestampPrefix: 'আপডেট হয়েছে',
     atiAnalyticsAppName: 'news-bengali',
     atiAnalyticsProducerId: '31',
+    chartbeatDomain: 'bengali.bbc.co.uk',
     brandName: 'BBC News বাংলা',
     product: 'BBC News',
     serviceLocalizedName: 'বাংলা',
@@ -54,6 +55,7 @@ export const service = {
       currentPage: 'বর্তমান পেজ',
       skipLinkText: 'সরাসরি কনটেন্টে যান',
       relatedContent: 'এই খবর নিয়ে আরো তথ্য',
+      navMenuText: 'সেকশন',
       mediaAssetPage: {
         mediaPlayer: 'মিডিয়া প্লেয়ার',
         audioPlayer: 'অডিও প্লেয়ার',
@@ -141,6 +143,7 @@ export const service = {
       },
       media: {
         noJs: 'আপনার ডিভাইস মিডিয়া প্লেব্যাক সমর্থন করে না',
+        contentExpired: 'এই ফাইলটি আর পাওয়া যাবে না',
         audio: 'অডিও',
         photogallery: 'ফটো গ্যালারি',
         video: 'ভিডিও',
@@ -162,6 +165,7 @@ export const service = {
       header: 'সর্বাধিক পঠিত',
       lastUpdated: 'সর্বশেষ আপডেট হয়েছে:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -221,7 +225,6 @@ export const service = {
         url: '/bengali/media/photogalleries',
       },
     ],
-    navigationSection: 'সেকশন',
   },
 };
 

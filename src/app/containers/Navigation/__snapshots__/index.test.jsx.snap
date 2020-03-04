@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Navigation Container snapshots should render a Navigation with igbo links correctly 1`] = `
-.c8 {
+exports[`Navigation Container should correctly render amp navigation 1`] = `
+.c3 {
+  color: #fff;
+  fill: currentColor;
+}
+
+.c4 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -11,6 +16,81 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   position: absolute;
   width: 1px;
   margin: 0;
+}
+
+.c5 {
+  background-color: #222222;
+  clear: both;
+}
+
+.c6 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.c7 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.c7:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.c8 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8:hover,
+.c8:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c9 {
+  border-left: 0.25rem solid #FFFFFF;
+  padding-left: 0.5rem;
+}
+
+.c2 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.c2:hover,
+.c2:focus {
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.c2:hover::after,
+.c2:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c2 svg {
+  vertical-align: middle;
 }
 
 .c1 {
@@ -19,66 +99,17 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   margin: 0 auto;
 }
 
-.c2 {
-  position: absolute;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  padding: 0.75rem 0.5rem;
-  background-color: #ffffff;
-  border: 0.1875rem solid #000;
-  color: #333;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c2:focus {
-  -webkit-clip-path: none;
-  clip-path: none;
-  -webkit-clip: auto;
-  clip: auto;
-  height: auto;
-  width: auto;
-  top: -3rem;
-  left: 0.5rem;
-}
-
-.c3 {
+.c12 {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
-  overflow: hidden;
 }
 
-.c5 {
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-}
-
-.c5::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 80rem;
-  border-bottom: 0.0625rem solid #eab3b3;
-  z-index: -1;
-}
-
-.c6 {
+.c15 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #FDFDFD;
@@ -86,10 +117,10 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   -webkit-text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
 }
 
-.c6:hover::after {
+.c15:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -99,7 +130,2113 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   border-bottom: 0.3125rem solid #FFFFFF;
 }
 
-.c6:focus::after {
+.c15:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c17 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+.c17:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c17:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c14 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.c16::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c0 {
+  position: relative;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
+}
+
+.c0 .c13::after {
+  left: 0;
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) {
+  .c2 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    overflow: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c15 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c17 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c14:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0.si-nav-open {
+    background-color: #222222;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c10 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c10::-webkit-scrollbar {
+    display: none;
+  }
+
+  .c10:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c11.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-bind"
+      src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    />
+  </head>
+  <body>
+    <div>
+      <nav
+        class="c0"
+        dir="ltr"
+        id="si-nav"
+        role="navigation"
+      >
+        <div
+          class="c1"
+        >
+          <amp-state
+            id="menuState"
+          >
+            <script
+              type="application/json"
+            >
+              {"expanded":false}
+            </script>
+          </amp-state>
+          <button
+            aria-expanded="false"
+            class="c2"
+            data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
+            dir="ltr"
+            on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="c3"
+              data-amp-bind-hidden="menuState.expanded"
+              focusable="false"
+              height="2.75rem"
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              class="c3"
+              data-amp-bind-hidden="!menuState.expanded"
+              focusable="false"
+              height="2.75rem"
+              hidden=""
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <span
+              class="c4"
+            >
+              Sections
+            </span>
+          </button>
+          <div
+            class="c5"
+            hidden=""
+            id="si-nav-dropdown-menu"
+          >
+            <ul
+              class="c6"
+              role="list"
+            >
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news"
+                >
+                  <span
+                    class="c9"
+                    dir="ltr"
+                    role="text"
+                  >
+                    <span
+                      class="c4"
+                    >
+                      Current page
+                      , 
+                    </span>
+                    Home
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/uk"
+                >
+                  UK
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/world"
+                >
+                  World
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/business"
+                >
+                  Business
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/politics"
+                >
+                  Politics
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/technology"
+                >
+                  Tech
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/science_and_environment"
+                >
+                  Science
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/health"
+                >
+                  Health
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/education"
+                >
+                  Family & Education
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/entertainment_and_arts"
+                >
+                  Entertainment & Arts
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/stories"
+                >
+                  Stories
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/video_and_audio/headlines"
+                >
+                  Video & Audio
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="c10 c11"
+            dir="ltr"
+            id="si-nav-scrollable"
+          >
+            <ul
+              class="c12"
+              role="list"
+            >
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c15"
+                  href="/news"
+                >
+                  <span
+                    class="c16"
+                    role="text"
+                  >
+                    <span
+                      class="c4"
+                    >
+                      Current page
+                      , 
+                    </span>
+                    Home
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/uk"
+                >
+                  UK
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/world"
+                >
+                  World
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/business"
+                >
+                  Business
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/politics"
+                >
+                  Politics
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/technology"
+                >
+                  Tech
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/science_and_environment"
+                >
+                  Science
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/health"
+                >
+                  Health
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/education"
+                >
+                  Family & Education
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/entertainment_and_arts"
+                >
+                  Entertainment & Arts
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/stories"
+                >
+                  Stories
+                </a>
+              </li>
+              <li
+                class="c13 c14"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c17"
+                  href="/news/video_and_audio/headlines"
+                >
+                  Video & Audio
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Navigation Container should correctly render amp navigation on non-home navigation page 1`] = `
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-bind"
+      src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    />
+  </head>
+  <body>
+    .c3 {
+  color: #fff;
+  fill: currentColor;
+}
+
+.c4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c5 {
+  background-color: #222222;
+  clear: both;
+}
+
+.c6 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.c7 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.c7:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.c8 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8:hover,
+.c8:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.c2:hover,
+.c2:focus {
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.c2:hover::after,
+.c2:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c2 svg {
+  vertical-align: middle;
+}
+
+.c1 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c11 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.c14 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+.c14:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c14:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c13 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.c0 {
+  position: relative;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
+}
+
+.c0 .c12::after {
+  left: 0;
+}
+
+.c15 .c12::after {
+  left: 0;
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) {
+  .c2 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    overflow: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c14 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c13:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0.si-nav-open {
+    background-color: #222222;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c9 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c9::-webkit-scrollbar {
+    display: none;
+  }
+
+  .c9:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c10.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+<div>
+      <nav
+        class="c0"
+        dir="ltr"
+        id="si-nav"
+        role="navigation"
+      >
+        <div
+          class="c1"
+        >
+          <amp-state
+            id="menuState"
+          >
+            <script
+              type="application/json"
+            >
+              {"expanded":false}
+            </script>
+          </amp-state>
+          <button
+            aria-expanded="false"
+            class="c2"
+            data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
+            dir="ltr"
+            on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="c3"
+              data-amp-bind-hidden="menuState.expanded"
+              focusable="false"
+              height="2.75rem"
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              class="c3"
+              data-amp-bind-hidden="!menuState.expanded"
+              focusable="false"
+              height="2.75rem"
+              hidden=""
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <span
+              class="c4"
+            >
+              Sections
+            </span>
+          </button>
+          <div
+            class="c5"
+            hidden=""
+            id="si-nav-dropdown-menu"
+          >
+            <ul
+              class="c6"
+              role="list"
+            >
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/uk"
+                >
+                  UK
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/world"
+                >
+                  World
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/business"
+                >
+                  Business
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/politics"
+                >
+                  Politics
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/technology"
+                >
+                  Tech
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/science_and_environment"
+                >
+                  Science
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/health"
+                >
+                  Health
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/education"
+                >
+                  Family & Education
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/entertainment_and_arts"
+                >
+                  Entertainment & Arts
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/stories"
+                >
+                  Stories
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/video_and_audio/headlines"
+                >
+                  Video & Audio
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="c9 c10"
+            dir="ltr"
+            id="si-nav-scrollable"
+          >
+            <ul
+              class="c11"
+              role="list"
+            >
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/uk"
+                >
+                  UK
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/world"
+                >
+                  World
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/business"
+                >
+                  Business
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/politics"
+                >
+                  Politics
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/technology"
+                >
+                  Tech
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/science_and_environment"
+                >
+                  Science
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/health"
+                >
+                  Health
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/education"
+                >
+                  Family & Education
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/entertainment_and_arts"
+                >
+                  Entertainment & Arts
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/stories"
+                >
+                  Stories
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/video_and_audio/headlines"
+                >
+                  Video & Audio
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Navigation Container should correctly render amp navigation on non-navigation page 1`] = `
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-bind"
+      src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    />
+  </head>
+  <body>
+    .c3 {
+  color: #fff;
+  fill: currentColor;
+}
+
+.c4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c5 {
+  background-color: #222222;
+  clear: both;
+}
+
+.c6 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.c7 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.c7:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.c8 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8:hover,
+.c8:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.c2:hover,
+.c2:focus {
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.c2:hover::after,
+.c2:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c2 svg {
+  vertical-align: middle;
+}
+
+.c1 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c11 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.c14 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+.c14:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c14:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c13 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.c0 {
+  position: relative;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
+}
+
+.c0 .c12::after {
+  left: 0;
+}
+
+.c15 .c12::after {
+  left: 0;
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) {
+  .c2 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    overflow: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c14 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c13:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0.si-nav-open {
+    background-color: #222222;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c9 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c9::-webkit-scrollbar {
+    display: none;
+  }
+
+  .c9:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c10.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+<div>
+      <nav
+        class="c0"
+        dir="ltr"
+        id="si-nav"
+        role="navigation"
+      >
+        <div
+          class="c1"
+        >
+          <amp-state
+            id="menuState"
+          >
+            <script
+              type="application/json"
+            >
+              {"expanded":false}
+            </script>
+          </amp-state>
+          <button
+            aria-expanded="false"
+            class="c2"
+            data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
+            dir="ltr"
+            on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="c3"
+              data-amp-bind-hidden="menuState.expanded"
+              focusable="false"
+              height="2.75rem"
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              class="c3"
+              data-amp-bind-hidden="!menuState.expanded"
+              focusable="false"
+              height="2.75rem"
+              hidden=""
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <span
+              class="c4"
+            >
+              Sections
+            </span>
+          </button>
+          <div
+            class="c5"
+            hidden=""
+            id="si-nav-dropdown-menu"
+          >
+            <ul
+              class="c6"
+              role="list"
+            >
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/uk"
+                >
+                  UK
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/world"
+                >
+                  World
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/business"
+                >
+                  Business
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/politics"
+                >
+                  Politics
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/technology"
+                >
+                  Tech
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/science_and_environment"
+                >
+                  Science
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/health"
+                >
+                  Health
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/education"
+                >
+                  Family & Education
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/entertainment_and_arts"
+                >
+                  Entertainment & Arts
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/stories"
+                >
+                  Stories
+                </a>
+              </li>
+              <li
+                class="c7"
+                role="listitem"
+              >
+                <a
+                  class="c8"
+                  href="/news/video_and_audio/headlines"
+                >
+                  Video & Audio
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="c9 c10"
+            dir="ltr"
+            id="si-nav-scrollable"
+          >
+            <ul
+              class="c11"
+              role="list"
+            >
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/uk"
+                >
+                  UK
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/world"
+                >
+                  World
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/business"
+                >
+                  Business
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/politics"
+                >
+                  Politics
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/technology"
+                >
+                  Tech
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/science_and_environment"
+                >
+                  Science
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/health"
+                >
+                  Health
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/education"
+                >
+                  Family & Education
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/entertainment_and_arts"
+                >
+                  Entertainment & Arts
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/stories"
+                >
+                  Stories
+                </a>
+              </li>
+              <li
+                class="c12 c13"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c14"
+                  href="/news/video_and_audio/headlines"
+                >
+                  Video & Audio
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Navigation Container should correctly render canonical navigation 1`] = `
+.c4 {
+  color: #fff;
+  fill: currentColor;
+}
+
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c13 {
+  background-color: #222222;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+.c14 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.c15 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.c15:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.c16 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c16:hover,
+.c16:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c17 {
+  border-left: 0.25rem solid #FFFFFF;
+  padding-left: 0.5rem;
+}
+
+.c3 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.c3:hover,
+.c3:focus {
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.c3:hover::after,
+.c3:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c3 svg {
+  vertical-align: middle;
+}
+
+.c1 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c7 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.c10 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+.c10:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  border-bottom: 0.3125rem solid #FFFFFF;
+}
+
+.c10:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c12 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+.c12:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c12:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -111,20 +2248,12 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
 }
 
 .c9 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FDFDFD;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1rem;
+  position: relative;
+  z-index: 2;
 }
 
-.c9:hover::after {
+.c11::after {
   content: '';
   position: absolute;
   left: 0;
@@ -133,97 +2262,160 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.c9:focus::after {
-  content: '';
-  position: absolute;
+.c18 .c8::after {
   left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-  top: 0;
-  border: 0.25rem solid #FFFFFF;
-}
-
-.c7::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .c0 {
+  position: relative;
   background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
 }
 
-.c0 .c4::after {
+.c0 .c8::after {
   left: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
+.c2 {
+  position: relative;
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+  .c13 {
+    display: none;
+    visibility: hidden;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c2:focus {
-    top: -4rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2:focus {
-    left: 0;
+@media (prefers-reduced-motion:reduce) {
+  .c13 {
+    -webkit-transition: none;
+    transition: none;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (max-width:24.9375rem) {
-  .c6 {
+@media (min-width:37.5rem) {
+  .c3 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) {
+  .c3 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    overflow: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c10 {
     padding: 0.75rem 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c12 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (max-width:24.9375rem) {
-  .c9 {
+@media (max-width:37.4375rem) {
+  .c12 {
     padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c9:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c6 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c6::-webkit-scrollbar {
+    display: none;
+  }
+
+  .c6:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
   }
 }
 
@@ -235,72 +2427,1595 @@ exports[`Navigation Container snapshots should render a Navigation with igbo lin
   <div
     class="c1"
   >
-    <a
+    <div
       class="c2"
-      href="#content"
     >
-      Wụga n’ọdịnaya
-    </a>
-    <ul
-      class="c3"
-      role="list"
-    >
-      <li
-        class="c4 c5"
-        role="listitem"
+      <button
+        aria-expanded="false"
+        class="c3"
+        dir="ltr"
+        type="button"
       >
-        <a
-          class="c6"
-          href="/igbo"
+        <svg
+          aria-hidden="true"
+          class="c4"
+          focusable="false"
+          height="2.75rem"
+          viewBox="0 0 44 44"
+          width="2.75rem"
         >
-          <span
-            class="c7"
-            role="text"
+          <path
+            d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+          />
+        </svg>
+        <span
+          class="c5"
+        >
+          Sections
+        </span>
+      </button>
+      <div
+        class="c6"
+        dir="ltr"
+      >
+        <ul
+          class="c7"
+          role="list"
+        >
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news"
+            >
+              <span
+                class="c11"
+                role="text"
+              >
+                <span
+                  class="c5"
+                >
+                  Current page
+                  , 
+                </span>
+                Home
+              </span>
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/uk"
+            >
+              UK
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/world"
+            >
+              World
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/business"
+            >
+              Business
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/politics"
+            >
+              Politics
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/technology"
+            >
+              Tech
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/science_and_environment"
+            >
+              Science
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/health"
+            >
+              Health
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/education"
+            >
+              Family & Education
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/entertainment_and_arts"
+            >
+              Entertainment & Arts
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/stories"
+            >
+              Stories
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c12"
+              href="/news/video_and_audio/headlines"
+            >
+              Video & Audio
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="c13"
+      height="0"
+    >
+      <ul
+        class="c14"
+        role="list"
+      >
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
+            href="/news"
           >
             <span
-              class="c8"
+              class="c17"
+              dir="ltr"
+              role="text"
             >
-              Peegi ị nọ ugbua
-              , 
+              <span
+                class="c5"
+              >
+                Current page
+                , 
+              </span>
+              Home
             </span>
-            Akụkọ
-          </span>
-        </a>
-      </li>
-      <li
-        class="c4 c5"
-        role="listitem"
-      >
-        <a
-          class="c9"
-          href="/igbo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
         >
-          Egwuregwu
-        </a>
-      </li>
-      <li
-        class="c4 c5"
-        role="listitem"
-      >
-        <a
-          class="c9"
-          href="/igbo/media/video"
+          <a
+            class="c16"
+            href="/news/uk"
+          >
+            UK
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
         >
-          Ihe nkiri
-        </a>
-      </li>
-      <li
-        class="c4 c5"
-        role="listitem"
-      >
-        <a
-          class="c9"
-          href="/igbo/popular/read"
+          <a
+            class="c16"
+            href="/news/world"
+          >
+            World
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
         >
-          Nke ka ewuewu
-        </a>
-      </li>
-    </ul>
+          <a
+            class="c16"
+            href="/news/business"
+          >
+            Business
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
+            href="/news/politics"
+          >
+            Politics
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
+            href="/news/technology"
+          >
+            Tech
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
+            href="/news/science_and_environment"
+          >
+            Science
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
+            href="/news/health"
+          >
+            Health
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
+            href="/news/education"
+          >
+            Family & Education
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
+            href="/news/entertainment_and_arts"
+          >
+            Entertainment & Arts
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
+            href="/news/stories"
+          >
+            Stories
+          </a>
+        </li>
+        <li
+          class="c15"
+          role="listitem"
+        >
+          <a
+            class="c16"
+            href="/news/video_and_audio/headlines"
+          >
+            Video & Audio
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`Navigation Container should correctly render canonical navigation on non-home navigation page 1`] = `
+.c4 {
+  color: #fff;
+  fill: currentColor;
+}
+
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c11 {
+  background-color: #222222;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+.c12 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.c13 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.c13:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.c14 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c14:hover,
+.c14:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.c3:hover,
+.c3:focus {
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.c3:hover::after,
+.c3:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c3 svg {
+  vertical-align: middle;
+}
+
+.c1 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c7 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.c10 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+.c10:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c10:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c9 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.c15 .c8::after {
+  left: 0;
+}
+
+.c0 {
+  position: relative;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
+}
+
+.c0 .c8::after {
+  left: 0;
+}
+
+.c2 {
+  position: relative;
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c11 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) {
+  .c3 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    overflow: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c10 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c9:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c6 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c6::-webkit-scrollbar {
+    display: none;
+  }
+
+  .c6:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
+  }
+}
+
+<nav
+  class="c0"
+  dir="ltr"
+  role="navigation"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <button
+        aria-expanded="false"
+        class="c3"
+        dir="ltr"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="c4"
+          focusable="false"
+          height="2.75rem"
+          viewBox="0 0 44 44"
+          width="2.75rem"
+        >
+          <path
+            d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+          />
+        </svg>
+        <span
+          class="c5"
+        >
+          Sections
+        </span>
+      </button>
+      <div
+        class="c6"
+        dir="ltr"
+      >
+        <ul
+          class="c7"
+          role="list"
+        >
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/uk"
+            >
+              UK
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/world"
+            >
+              World
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/business"
+            >
+              Business
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/politics"
+            >
+              Politics
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/technology"
+            >
+              Tech
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/science_and_environment"
+            >
+              Science
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/health"
+            >
+              Health
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/education"
+            >
+              Family & Education
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/entertainment_and_arts"
+            >
+              Entertainment & Arts
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/stories"
+            >
+              Stories
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/video_and_audio/headlines"
+            >
+              Video & Audio
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="c11"
+      height="0"
+    >
+      <ul
+        class="c12"
+        role="list"
+      >
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/uk"
+          >
+            UK
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/world"
+          >
+            World
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/business"
+          >
+            Business
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/politics"
+          >
+            Politics
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/technology"
+          >
+            Tech
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/science_and_environment"
+          >
+            Science
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/health"
+          >
+            Health
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/education"
+          >
+            Family & Education
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/entertainment_and_arts"
+          >
+            Entertainment & Arts
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/stories"
+          >
+            Stories
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/video_and_audio/headlines"
+          >
+            Video & Audio
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`Navigation Container should correctly render canonical navigation on non-navigation page 1`] = `
+.c4 {
+  color: #fff;
+  fill: currentColor;
+}
+
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c11 {
+  background-color: #222222;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+.c12 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.c13 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.c13:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.c14 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c14:hover,
+.c14:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.c3:hover,
+.c3:focus {
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.c3:hover::after,
+.c3:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c3 svg {
+  vertical-align: middle;
+}
+
+.c1 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c7 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.c10 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+.c10:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c10:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c9 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.c15 .c8::after {
+  left: 0;
+}
+
+.c0 {
+  position: relative;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
+}
+
+.c0 .c8::after {
+  left: 0;
+}
+
+.c2 {
+  position: relative;
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c11 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) {
+  .c3 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    overflow: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c10 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c9:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c6 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c6::-webkit-scrollbar {
+    display: none;
+  }
+
+  .c6:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
+  }
+}
+
+<nav
+  class="c0"
+  dir="ltr"
+  role="navigation"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <button
+        aria-expanded="false"
+        class="c3"
+        dir="ltr"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="c4"
+          focusable="false"
+          height="2.75rem"
+          viewBox="0 0 44 44"
+          width="2.75rem"
+        >
+          <path
+            d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+          />
+        </svg>
+        <span
+          class="c5"
+        >
+          Sections
+        </span>
+      </button>
+      <div
+        class="c6"
+        dir="ltr"
+      >
+        <ul
+          class="c7"
+          role="list"
+        >
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/uk"
+            >
+              UK
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/world"
+            >
+              World
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/business"
+            >
+              Business
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/politics"
+            >
+              Politics
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/technology"
+            >
+              Tech
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/science_and_environment"
+            >
+              Science
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/health"
+            >
+              Health
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/education"
+            >
+              Family & Education
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/entertainment_and_arts"
+            >
+              Entertainment & Arts
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/stories"
+            >
+              Stories
+            </a>
+          </li>
+          <li
+            class="c8 c9"
+            dir="ltr"
+            role="listitem"
+          >
+            <a
+              class="c10"
+              href="/news/video_and_audio/headlines"
+            >
+              Video & Audio
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="c11"
+      height="0"
+    >
+      <ul
+        class="c12"
+        role="list"
+      >
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/uk"
+          >
+            UK
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/world"
+          >
+            World
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/business"
+          >
+            Business
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/politics"
+          >
+            Politics
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/technology"
+          >
+            Tech
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/science_and_environment"
+          >
+            Science
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/health"
+          >
+            Health
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/education"
+          >
+            Family & Education
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/entertainment_and_arts"
+          >
+            Entertainment & Arts
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/stories"
+          >
+            Stories
+          </a>
+        </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="/news/video_and_audio/headlines"
+          >
+            Video & Audio
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 `;

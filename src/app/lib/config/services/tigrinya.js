@@ -16,6 +16,7 @@ export const service = {
     articleTimestampPrefix: 'ዝተመሓየሸ',
     atiAnalyticsAppName: 'news-tigrinya',
     atiAnalyticsProducerId: '91',
+    chartbeatDomain: 'tigrinya.bbc.co.uk',
     brandName: 'BBC News ትግርኛ',
     product: 'BBC News',
     serviceLocalizedName: 'ትግርኛ',
@@ -53,6 +54,7 @@ export const service = {
       currentPage: 'ዘለኹሞ ገጽ',
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽሉ',
       relatedContent: 'ተዛማዲ ትሕዝቶ',
+      navMenuText: 'ክፍልታት',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -134,6 +136,7 @@ export const service = {
       },
       media: {
         noJs: 'ትጥቀምሉ ዘለኹም መሳርሒ ኣይተቐበሎን።',
+        contentExpired: 'እዚ እትደልይዎ ዘለኹም ትሕዝቶ የለን',
         audio: 'ድምጺ',
         photogallery: 'ስእልታት',
         video: 'ቪድዮ',
@@ -149,7 +152,8 @@ export const service = {
     mostRead: {
       header: 'ብብዝሒ ዝተነበ',
       lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -199,7 +203,6 @@ export const service = {
         url: '/tigrinya/popular/read',
       },
     ],
-    navigationSection: 'ክፍልታት',
     timezone: 'Africa/Addis_Ababa',
   },
 };

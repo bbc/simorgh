@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Янгиланди',
     atiAnalyticsAppName: 'news-uzbek',
     atiAnalyticsProducerId: '96',
+    chartbeatDomain: 'uzbek.bbc.co.uk',
     brandName: "BBC News O'zbek",
     product: 'BBC News',
     serviceLocalizedName: "O'zbek",
@@ -49,6 +50,7 @@ export const service = {
       currentPage: 'Жорий саҳифа',
       skipLinkText: 'Саҳифага ўтиш',
       relatedContent: 'Бу мавзуда батафсилроқ',
+      navMenuText: 'Бўлимлар',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плейер',
         audioPlayer: 'Аудио плейер',
@@ -121,7 +123,7 @@ export const service = {
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'Биз ва бизнинг ҳамкорларимиз',
+              first: 'Биз ва бизнинг ҳамкорларимиз ',
               linkText: 'кукисга',
               last:
                 ', сингари технологиядан фойдаланамиз ва уларни сизга янада яхшироқ онлайн маҳсулот тақдим этиш, контентни ва ҳамда сизга кўрсатилаётган рекламани айнан сизга мослаш мақсадида тўплаймиз. Агар рози бўлсангиз, марҳамат қилиб буни бизга маълум қилинг!',
@@ -136,7 +138,8 @@ export const service = {
         },
       },
       media: {
-        noJS: 'Мултимедиа ўйнаш бу қурилмада дастакланмайди',
+        noJs: 'Мултимедиа ўйнаш бу қурилмада дастакланмайди',
+        contentExpired: 'Бу контентни ортиқ тинглаб/томоша қилиб бўлмайди.',
         audio: 'Аудио',
         photogallery: 'Фото галерея',
         video: 'Видео',
@@ -162,6 +165,7 @@ export const service = {
       header: 'Энг кўп ўқилган',
       lastUpdated: 'Сўнгги янгиланиш:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -233,7 +237,6 @@ export const service = {
         url: '/uzbek/media/video',
       },
     ],
-    navigationSection: 'Бўлимлар',
   },
 };
 

@@ -1,9 +1,7 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import applySquashTopstories from '../../../../src/app/lib/utilities/preprocessor/rules/topstories';
 
-const serviceJsonPath = service =>
-  `${config[service].pageTypes.frontPage.path}.json`;
+const serviceJsonPath = () => `${Cypress.env('currentPath')}.json`;
 
 // Limiting to only one service
 const serviceHasIndexAlsos = service => service === 'thai';
@@ -25,29 +23,6 @@ const isValidUsefulLinks = pageData => {
   }
 
   return false;
-};
-
-const isValidRadioBulletin = pageData => {
-  return pageData.some(group => {
-    const hasStrapline = 'strapline' in group;
-    const hasRadioBulletin = group.items.some(
-      item =>
-        item.assetTypeCode === 'PRO' && item.contentType === 'RadioBulletin',
-    );
-
-    return hasStrapline && hasRadioBulletin;
-  });
-};
-
-const isValidTvBulletin = pageData => {
-  return pageData.some(group => {
-    const hasStrapline = 'strapline' in group;
-    const hasTvBulletin = group.items.some(
-      item => item.assetTypeCode === 'PRO' && item.contentType === 'TVBulletin',
-    );
-
-    return hasStrapline && hasTvBulletin;
-  });
 };
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
@@ -173,7 +148,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         }
 
         it('should contain Index Alsos if relatedItems block exists, but only within topstories block', () => {
-          cy.request(serviceJsonPath(service)).then(({ body }) => {
+          cy.request(serviceJsonPath()).then(({ body }) => {
             const topstories = body.content.groups[0].items[0];
             const relatedItemsExists = 'relatedItems' in topstories;
 
@@ -215,7 +190,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         });
 
         it('should contain Useful Links if valid usefulLinks block data exists', () => {
-          cy.request(serviceJsonPath(service)).then(({ body }) => {
+          cy.request(serviceJsonPath()).then(({ body }) => {
             const pageData = body.content.groups;
             if (isValidUsefulLinks(pageData)) {
               cy.get('[data-e2e="useful-links"]')
@@ -229,36 +204,6 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               cy.get('[aria-labelledby="Useful-links"]').should(
                 'not.be.visible',
               );
-            }
-          });
-        });
-
-        it('should contain Radio Bulletin if a promo of type RadioBulletin is in the feed', () => {
-          cy.request(serviceJsonPath(service)).then(({ body }) => {
-            const pageData = applySquashTopstories(body);
-            const { groups } = pageData.content;
-
-            if (isValidRadioBulletin(groups)) {
-              cy.get('[class^="RadioBulletin"]')
-                .eq(0)
-                .should('be.visible');
-            } else {
-              cy.get('[class^="RadioBulletin"').should('not.be.visible');
-            }
-          });
-        });
-
-        it('should contain TV Bulletin if a promo of type TVBulletin is in the feed', () => {
-          cy.request(serviceJsonPath(service)).then(({ body }) => {
-            const pageData = applySquashTopstories(body);
-            const { groups } = pageData.content;
-
-            if (isValidTvBulletin(groups)) {
-              cy.get('[class^="TVBulletin"]')
-                .eq(0)
-                .should('be.visible');
-            } else {
-              cy.get('[class^="TVBulletin"').should('not.be.visible');
             }
           });
         });

@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Mgbe ikpeazụ e tinyere ya ozi ọhụrụ',
     atiAnalyticsAppName: 'news-igbo',
     atiAnalyticsProducerId: '53',
+    chartbeatDomain: 'igbo.bbc.co.uk',
     brandName: 'BBC News Ìgbò',
     product: 'BBC News',
     serviceLocalizedName: 'Ìgbò',
@@ -53,6 +54,7 @@ export const service = {
       currentPage: 'Peegi ị nọ ugbua',
       skipLinkText: 'Wụga n’ọdịnaya',
       relatedContent: "Ihe ndị ọzọ n'akụkọ a",
+      navMenuText: 'Ngalaba',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -143,6 +145,7 @@ export const service = {
       },
       media: {
         noJs: 'Ngwaọrụ gị akwadoghi ọkpụkpọ mgbasa ozi',
+        contentExpired: 'Ọdịnaya a adịghịzị',
         audio: 'Ọdịyo',
         photogallery: 'Image gallery',
         video: 'Vidio',
@@ -161,7 +164,8 @@ export const service = {
     mostRead: {
       header: 'Akachasị Gụọ',
       lastUpdated: 'Emelitere ikpeazụ na:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     navigation: [
       {
@@ -212,7 +216,6 @@ export const service = {
           text: 'Kpọtụrụ BBC',
         },
       ],
-      navigationSection: 'Ngalaba',
       copyrightText:
         'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
     },

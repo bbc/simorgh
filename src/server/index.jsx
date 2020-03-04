@@ -16,10 +16,11 @@ import {
   cpsAssetPageDataPath,
   radioAndTvDataPath,
   mostReadDataRegexPath,
-} from '../app/routes/regex';
+  legacyAssetPageDataPath,
+} from '../app/routes/utils/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
-import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
+import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
 import injectCspHeader, {
   localInjectHostCspHeader,
@@ -49,11 +50,27 @@ class LoggerStream {
   }
 }
 
-const constructDataFilePath = ({ pageType, service, id, variant = '' }) => {
-  const pageTypes = ['frontpage', 'mostRead'];
-  const dataPath = pageTypes.includes(pageType)
-    ? `${variant || 'index'}.json`
-    : `${id}${variant}.json`;
+const constructDataFilePath = ({
+  pageType,
+  service,
+  id,
+  variant = '',
+  assetUri,
+}) => {
+  let dataPath;
+
+  switch (pageType) {
+    case 'frontpage':
+    case 'mostRead':
+      dataPath = `${variant || 'index'}.json`;
+      break;
+    case 'cpsAssets':
+    case 'legacyAssets':
+      dataPath = `${variant}/${assetUri}.json`;
+      break;
+    default:
+      dataPath = `${id}${variant}.json`;
+  }
 
   return path.join(process.cwd(), 'data', service, pageType, dataPath);
 };
@@ -164,15 +181,26 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
     .get(cpsAssetPageDataPath, async ({ params }, res, next) => {
-      const { service, assetUri: id, variant } = params;
+      const { service, assetUri, variant } = params;
 
       const dataFilePath = constructDataFilePath({
         pageType: 'cpsAssets',
         service,
-        id,
+        assetUri,
         variant,
       });
 
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(legacyAssetPageDataPath, async ({ params }, res, next) => {
+      const { service, assetUri, variant } = params;
+
+      const dataFilePath = constructDataFilePath({
+        pageType: 'legacyAssets',
+        service,
+        assetUri,
+        variant,
+      });
       sendDataFile(res, dataFilePath, next);
     })
     .get('/ckns_policy/*', (req, res) => {
@@ -222,6 +250,7 @@ server
       logger.info(`Headers: ${JSON.stringify(headers, null, 2)}`);
 
       data.path = urlPath;
+      data.timeOnServer = Date.now();
 
       const result = await renderDocument({
         bbcOrigin,

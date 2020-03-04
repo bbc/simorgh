@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'अपडेटेड',
     atiAnalyticsAppName: 'news-marathi',
     atiAnalyticsProducerId: '59',
+    chartbeatDomain: 'marathi.bbc.co.uk',
     brandName: 'BBC News मराठी',
     product: 'BBC News',
     serviceLocalizedName: 'मराठी',
@@ -49,6 +50,7 @@ export const service = {
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
       relatedContent: 'संबंधित मजकूर',
+      navMenuText: 'विभाग',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिओ प्लेयर',
@@ -137,6 +139,7 @@ export const service = {
       },
       media: {
         noJs: 'मीडिया प्लेबॅक आपल्या डिव्हाइसवर असमर्थित आहे',
+        contentExpired: 'ही सामग्री यापुढे उपलब्ध नाही',
         audio: 'ऑडिओ',
         photogallery: 'फोटो गॅलरी',
         video: 'व्हीडिओ',
@@ -157,12 +160,13 @@ export const service = {
     mostRead: {
       header: 'सर्वाधिक वाचलेले',
       lastUpdated: 'शेवटचा अपडेट:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/marathi/institutional-50418391',
-        text: 'तुम्ही बीबीसीवर विश्वास का ठेवू शकता',
+        text: 'तुम्ही बीबीसीवर विश्वास ठेवू शकता कारणा',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
@@ -175,7 +179,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/privacy/',
-          text: 'गोपनीयता धोरण',
+          text: 'गोपनीयतेचं धोरण',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
@@ -183,11 +187,11 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/marathi/institutional-42227676',
-          text: 'बीबीसीला संपर्क करा',
+          text: 'बीबीसीशी संपर्क साधाा',
         },
       ],
       copyrightText:
-        'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही',
+        'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही.',
     },
     fonts: [],
     timezone: 'Asia/Kolkata',
@@ -221,7 +225,6 @@ export const service = {
         url: '/marathi/resources/idt-43ff5603-f85f-47c1-972f-097e67eeb035',
       },
     ],
-    navigationSection: 'विभाग',
   },
 };
 

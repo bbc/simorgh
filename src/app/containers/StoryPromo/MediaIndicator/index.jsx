@@ -1,7 +1,10 @@
 import React from 'react';
 import moment from 'moment-timezone';
-import { shape, bool, string, oneOfType } from 'prop-types';
-import MediaIndicatorComp from '@bbc/psammead-media-indicator';
+import styled from 'styled-components';
+import { shape, string, oneOf, oneOfType, bool } from 'prop-types';
+import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import MediaIndicator from '@bbc/psammead-media-indicator';
+import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
@@ -40,7 +43,11 @@ const getMediaType = item => {
   return isAssetTypeMedia ? getAssetContentTypes(item) : getCpsMediaTypes(item);
 };
 
-const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
+const StyledTime = styled.time`
+  padding: 0 ${GEL_SPACING_HLF};
+`;
+
+const MediaIndicatorContainer = ({ item, script, service, dir, isInline }) => {
   const type = getMediaType(item);
 
   if (!type) {
@@ -50,36 +57,38 @@ const MediaIndicator = ({ item, topStory, service, indexAlsos }) => {
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = path(['media', 'versions', 0, 'duration'], item);
 
-  if (rawDuration) {
+  if (rawDuration && !isInline) {
     const duration = moment.duration(rawDuration, 'seconds');
     const durationString = formatDuration({ duration });
     const isoDuration = duration.toISOString();
     return (
-      <MediaIndicatorComp
-        duration={durationString}
-        datetime={isoDuration}
-        type={type}
-        topStory={topStory}
-        service={service}
-      />
+      <MediaIndicator type={type} script={script} service={service} dir={dir}>
+        <StyledTime dateTime={isoDuration}>{durationString}</StyledTime>
+      </MediaIndicator>
     );
   }
 
   return (
-    <MediaIndicatorComp type={type} service={service} indexAlsos={indexAlsos} />
+    <MediaIndicator
+      type={type}
+      script={script}
+      service={service}
+      dir={dir}
+      isInline={isInline}
+    />
   );
 };
 
-MediaIndicator.propTypes = {
+MediaIndicatorContainer.propTypes = {
   item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
-  topStory: bool,
+  script: shape(scriptPropType).isRequired,
   service: string.isRequired,
-  indexAlsos: bool,
+  dir: oneOf(['ltr', 'rtl']),
+  isInline: bool,
 };
 
-MediaIndicator.defaultProps = {
-  topStory: false,
-  indexAlsos: false,
+MediaIndicatorContainer.defaultProps = {
+  dir: 'ltr',
+  isInline: false,
 };
-
-export default MediaIndicator;
+export default MediaIndicatorContainer;

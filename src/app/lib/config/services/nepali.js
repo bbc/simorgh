@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'अद्यावधिक गरिएको समय',
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
+    chartbeatDomain: 'nepali.bbc.co.uk',
     brandName: 'BBC News नेपाली',
     product: 'BBC News',
     serviceLocalizedName: 'नेपाली',
@@ -49,6 +50,7 @@ export const service = {
       currentPage: 'अहिलेको पृष्ठ',
       skipLinkText: 'सामग्रीमा जानुहोस्',
       relatedContent: 'सम्बन्धित सामग्री',
+      navMenuText: 'सूची',
       mediaAssetPage: {
         mediaPlayer: 'मिडिया प्लेअर',
         audioPlayer: 'अडिओ प्लेअर',
@@ -137,6 +139,7 @@ export const service = {
       },
       media: {
         noJs: 'तपाईंको उपकरणमा मिडिया प्लेब्याक सपोर्ट छैन',
+        contentExpired: 'यो सामग्री उपलब्ध छैन',
         audio: 'अडिओ',
         photogallery: 'तस्बिर सङ्ग्रह',
         video: 'भिडिओ',
@@ -158,6 +161,7 @@ export const service = {
       header: 'धेरै पढिएको',
       lastUpdated: 'अन्तिम चोटि अद्यावधिक गरिएको मिति:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -217,7 +221,6 @@ export const service = {
         url: '/nepali/media/video',
       },
     ],
-    navigationSection: 'सूची',
   },
 };
 

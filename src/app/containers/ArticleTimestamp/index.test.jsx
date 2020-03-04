@@ -20,7 +20,7 @@ const regexUpdatedDatetime = /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9
 const regexUpdatedDate = /^Updated [0-9]{1,2} \w+ [0-9]{4}$/;
 
 const firstChild = wrapper => wrapper[0].children[0].data;
-const secondChild = wrapper => wrapper[1].children[0].data;
+const secondChild = wrapper => wrapper[1].children[0].children[0].data;
 
 const renderedTimestamps = jsx => render(jsx).get(0).children; // helper as output is wrapped in a grid
 
@@ -49,16 +49,16 @@ describe('ArticleTimestamp', () => {
   shouldMatchSnapshot(
     "should render a 'created' Timestamp correctly",
     <WrappedArticleTimestamp
-      firstPublished={1530947227000}
-      lastPublished={1530947227000}
+      firstPublished={1530947227000} // Sat Jul 07 2018 07:07:07 UTC
+      lastPublished={1530947227000} // Sat Jul 07 2018 07:07:07 UTC
     />,
   );
 
   shouldMatchSnapshot(
     "should render both a 'created' and an 'updated' Timestamp correctly",
     <WrappedArticleTimestamp
-      firstPublished={1530947227000}
-      lastPublished={1552666749637}
+      firstPublished={1530947227000} // Sat Jul 07 2018 07:07:07
+      lastPublished={1552666749637} // Fri Mar 15 2019 16:19:09
     />,
   );
 
@@ -114,8 +114,8 @@ describe('ArticleTimestamp', () => {
     isNull(
       'should return null',
       <WrappedArticleTimestamp
-        firstPublished={8640000000000001}
-        lastPublished={8640000000000001}
+        firstPublished={8640000000000001} // undefined
+        lastPublished={8640000000000001} // undefined
       />,
     );
   });
@@ -168,8 +168,8 @@ describe('ArticleTimestamp', () => {
   it('should render one timestamp with date when firstPublished before today and lastPublished was published less than 1 minute after firstPublished', () => {
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
-        firstPublished={1530947280000}
-        lastPublished={1530947286000}
+        firstPublished={1530947280000} // Sat Jul 07 2018 07:08:00 UTC
+        lastPublished={1530947286000} // Sat Jul 07 2018 07:08:06 UTC
         minutesTolerance={1}
       />,
     );
@@ -178,10 +178,11 @@ describe('ArticleTimestamp', () => {
   });
 
   it('should render two timestamps with date when firstPublished before today and lastPublished was published more than 1 minute after firstPublished', () => {
+    // this should be relative time rather than separating by different days
     const renderedWrapper = renderedTimestamps(
       <WrappedArticleTimestamp
-        firstPublished={1530947280000}
-        lastPublished={1530947406000}
+        firstPublished={1530947280000} // Sat Jul 07 2018 07:08:00 UTC
+        lastPublished={1531047280000} // Sun Jul 08 2018 10:54:40 UTC
         minutesTolerance={1}
       />,
     );
@@ -263,11 +264,38 @@ describe('ArticleTimestamp', () => {
     expect(secondChild(renderedWrapper)).toMatch(regexUpdatedDate);
   });
 
+  it('should render one timestamp when firstPublished and lastPublished is the same day, and current time is outside of the lastPublished relative window', () => {
+    const renderedWrapper = renderedTimestamps(
+      <WrappedArticleTimestamp
+        firstPublished={1400140005000} // Thu May 15 2014 07:46:45 UTC
+        lastPublished={1400153537000} // Thu May 15 2014 11:32:17 UTC
+      />,
+    );
+
+    expect(renderedWrapper.length).toEqual(1);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
+  });
+
+  it('should render two timestamps when firstPublished and lastPublished is the same day, not today, and current time is within the lastPublished relative window', () => {
+    Date.now = jest.fn(() => new Date('2020-02-28T08:20:00Z').getTime());
+    const twentyFourHoursAgo = timestampGenerator({ days: 1 });
+    const nineHoursAgo = timestampGenerator({ hours: 9 });
+    const renderedWrapper = renderedTimestamps(
+      <WrappedArticleTimestamp
+        firstPublished={twentyFourHoursAgo}
+        lastPublished={nineHoursAgo}
+      />,
+    );
+
+    expect(renderedWrapper.length).toEqual(2);
+    expect(firstChild(renderedWrapper)).toMatch(regexDate);
+  });
+
   describe('With different timezones', () => {
     it('should show the correct local date', () => {
       const props = {
-        firstPublished: 1565380800000,
-        lastPublished: 1565380800000,
+        firstPublished: 1565380800000, // Fri Aug 09 2019 20:00:00 UTC
+        lastPublished: 1565380800000, // Fri Aug 09 2019 20:00:00 UTC
       };
       const newsContainer = mount(
         <WrappedArticleTimestamp {...props} service="news" />,

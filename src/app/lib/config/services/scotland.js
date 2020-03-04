@@ -20,6 +20,7 @@ export const service = {
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'scotland',
     atiAnalyticsProducerId: '79',
+    chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Scotland',
     product: 'BBC Scotland',
     defaultImage:
@@ -57,6 +58,7 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
       relatedContent: 'Related content',
+      navMenuText: 'Sections',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -159,6 +161,7 @@ export const service = {
       header: 'Most read',
       lastUpdated: 'Last updated:',
       numberOfItems: 5,
+      hasMostRead: false,
     },
     footer: {
       externalLink: {

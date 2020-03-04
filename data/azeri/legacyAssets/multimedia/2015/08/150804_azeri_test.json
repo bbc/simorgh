@@ -1,0 +1,84 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/azeri/meta/dps/junk/2015/08/emp/150804_azeri_test.emp.xml",
+        "id": "17692696",
+        "live": false,
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      { "markupType": "plain_text", "text": "blah blah", "type": "paragraph" }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_id": "17692696", "cps_asset_type": "map" },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "azeri",
+    "firstPublished": 1438686912000,
+    "id": "urn:bbc:ares::asset:azeri/multimedia/2015/08/150804_azeri_test",
+    "includeComments": false,
+    "language": "az",
+    "lastPublished": 1452178359000,
+    "lastUpdated": 1581959937665,
+    "locators": {
+      "assetId": "17692696",
+      "assetUri": "/azeri/multimedia/2015/08/150804_azeri_test",
+      "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2015/08/150804_azeri_test",
+      "curie": "http://www.bbc.co.uk/asset/dd784ca2-3a99-11e5-9d74-f6fa66e7eb9d"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1438686912000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": { "headline": "test1" },
+    "id": "urn:bbc:ares::asset:azeri/multimedia/2015/08/150804_azeri_test",
+    "language": "az",
+    "locators": {
+      "assetId": "17692696",
+      "assetUri": "/azeri/multimedia/2015/08/150804_azeri_test",
+      "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2015/08/150804_azeri_test",
+      "curie": "http://www.bbc.co.uk/asset/dd784ca2-3a99-11e5-9d74-f6fa66e7eb9d"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/azeri/meta/dps/junk/2015/08/emp/150804_azeri_test.emp.xml",
+      "id": "17692696",
+      "live": false,
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": { "taggings": [] },
+    "summary": "test2",
+    "timestamp": 1438686912000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Multimedia",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/azeri/multimedia"
+    },
+    "site": {
+      "name": "BBCAzeri.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/azeri"
+    }
+  }
+}

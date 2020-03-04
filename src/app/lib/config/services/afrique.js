@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Mise à jour',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
+    chartbeatDomain: 'afrique.bbc.co.uk',
     brandName: 'BBC News Afrique',
     product: 'BBC News',
     serviceLocalizedName: 'Afrique',
@@ -49,6 +50,7 @@ export const service = {
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
       relatedContent: 'Lire plus',
+      navMenuText: 'Rubriques',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -141,6 +143,7 @@ export const service = {
       media: {
         noJs:
           'Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.',
+        contentExpired: "Ce contenu n'est pas disponible",
         audio: 'Audio',
         photogallery: 'Galerie de photos',
         video: 'Vidéo',
@@ -166,6 +169,7 @@ export const service = {
       header: 'Les plus lus',
       lastUpdated: 'Dernière mise à jour:',
       numberOfItems: 5,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -253,7 +257,6 @@ export const service = {
         url: '/afrique/nos_emissions/radio',
       },
     ],
-    navigationSection: 'Rubriques',
   },
 };
 

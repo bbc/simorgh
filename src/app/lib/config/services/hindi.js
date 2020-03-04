@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'अपडेटेड',
     atiAnalyticsAppName: 'news-hindi',
     atiAnalyticsProducerId: '52',
+    chartbeatDomain: 'hindi.bbc.co.uk',
     brandName: 'BBC News हिंदी',
     product: 'BBC News',
     serviceLocalizedName: 'हिंदी',
@@ -50,6 +51,7 @@ export const service = {
       currentPage: 'मौजूदा पन्ना',
       skipLinkText: 'सामग्री को स्किप करें',
       relatedContent: 'संबंधित समाचार',
+      navMenuText: 'सेक्शन',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिया प्लेयर',
@@ -138,6 +140,7 @@ export const service = {
       },
       media: {
         noJs: 'प्लेबैक आपके उपकरण पर नहीं हो पा रहा',
+        contentExpired: 'यह सामग्री अब उपलब्ध नहीं है.',
         audio: 'ऑडियो',
         photogallery: 'फ़ोटो गैलरी',
         video: 'वीडियो',
@@ -163,11 +166,12 @@ export const service = {
     mostRead: {
       header: 'सबसे अधिक पढ़ी गईं',
       lastUpdated: 'अंतिम अपडेट:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/hindi/institutional-50223932',
         text: 'आप बीबीसी पर क्यों भरोसा कर सकते हैं',
       },
       externalLink: {
@@ -247,7 +251,6 @@ export const service = {
         url: '/hindi/resources/idt-a6da5349-3698-4f42-9e5b-35513c8c0537',
       },
     ],
-    navigationSection: 'सेक्शन',
   },
 };
 

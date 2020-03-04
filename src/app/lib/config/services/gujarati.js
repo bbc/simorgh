@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'અપડેટેડ',
     atiAnalyticsAppName: 'news-gujarati',
     atiAnalyticsProducerId: '50',
+    chartbeatDomain: 'gujarati.bbc.co.uk',
     brandName: 'BBC News ગુજરાતી',
     product: 'BBC News',
     serviceLocalizedName: 'ગુજરાતી',
@@ -49,6 +50,7 @@ export const service = {
       currentPage: 'વર્તમાન પેજ',
       skipLinkText: 'સામગ્રી પર જાઓ',
       relatedContent: 'સંબંધિત સમાચાર',
+      navMenuText: 'વિભાગો',
       mediaAssetPage: {
         mediaPlayer: 'મીડિયા પ્લેયર',
         audioPlayer: 'ઓડિયો પ્લેયર',
@@ -137,6 +139,7 @@ export const service = {
       },
       media: {
         noJs: 'તમારું ડિવાઇસ મીડિયા પ્લેબૅક સપોર્ટ નથી કરતું',
+        contentExpired: 'આ સામગ્રી હવેથી ઉપલબ્ધ નથી.',
         audio: 'ઓડિયો',
         photogallery: 'ફોટો ગૅલરી',
         video: 'વીડિયો',
@@ -157,7 +160,8 @@ export const service = {
     mostRead: {
       header: 'સૌથી વધારે વંચાયેલા સમાચાર',
       lastUpdated: 'લાસ્ટ અપડેટ:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -220,7 +224,6 @@ export const service = {
         url: '/gujarati/resources/idt-0370808c-2dea-4f55-b69f-309a2881ef25',
       },
     ],
-    navigationSection: 'વિભાગો',
   },
 };
 

@@ -16,6 +16,7 @@ export const service = {
     articleTimestampPrefix: 'ተሻሽሏል',
     atiAnalyticsAppName: 'news-amharic',
     atiAnalyticsProducerId: '4',
+    chartbeatDomain: 'amharic.bbc.co.uk',
     brandName: 'BBC News አማርኛ',
     product: 'BBC News',
     serviceLocalizedName: 'አማርኛ',
@@ -53,6 +54,7 @@ export const service = {
       currentPage: 'መነሻ ገፅ',
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
+      navMenuText: 'ክፍሎች',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -134,6 +136,7 @@ export const service = {
       },
       media: {
         noJs: 'የእርሶ መሳሪያ ሚዲያ ፕሌይ ባክን ማጫወት ኣልተቻለም።',
+        contentExpired: 'ይህንን ካሁን በኋላ ማግኘት አይችሉም፡፡',
         audio: 'ድምጽ',
         photogallery: 'የፎቶ መድብሎች',
         video: 'ቪዲዮ',
@@ -149,7 +152,8 @@ export const service = {
     mostRead: {
       header: 'ብዙ የተነበቡ',
       lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
     },
     footer: {
       trustProjectLink: {
@@ -203,7 +207,6 @@ export const service = {
         url: '/amharic/popular/read',
       },
     ],
-    navigationSection: 'ክፍሎች',
     timezone: 'Africa/Addis_Ababa',
   },
 };
