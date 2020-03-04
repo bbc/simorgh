@@ -16,6 +16,7 @@ export const service = {
     articleTimestampPrefix: 'ዝተመሓየሸ',
     atiAnalyticsAppName: 'news-tigrinya',
     atiAnalyticsProducerId: '91',
+    chartbeatDomain: 'tigrinya.bbc.co.uk',
     brandName: 'BBC News ትግርኛ',
     product: 'BBC News',
     serviceLocalizedName: 'ትግርኛ',
@@ -53,7 +54,7 @@ export const service = {
       currentPage: 'ዘለኹሞ ገጽ',
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽሉ',
       relatedContent: 'ተዛማዲ ትሕዝቶ',
-      sections: 'ክፍልታት',
+      navMenuText: 'ክፍልታት',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

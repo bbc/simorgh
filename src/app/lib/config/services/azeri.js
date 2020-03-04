@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Yeniləndi',
     atiAnalyticsAppName: 'news-azeri',
     atiAnalyticsProducerId: '6',
+    chartbeatDomain: 'azeri.bbc.co.uk',
     brandName: 'BBC News Azərbaycanca',
     product: 'BBC News',
     serviceLocalizedName: 'Azərbaycanca',
@@ -49,7 +50,7 @@ export const service = {
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
-      sections: 'Bölümlər',
+      navMenuText: 'Bölümlər',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

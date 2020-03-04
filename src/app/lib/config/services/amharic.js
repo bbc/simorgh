@@ -16,6 +16,7 @@ export const service = {
     articleTimestampPrefix: 'ተሻሽሏል',
     atiAnalyticsAppName: 'news-amharic',
     atiAnalyticsProducerId: '4',
+    chartbeatDomain: 'amharic.bbc.co.uk',
     brandName: 'BBC News አማርኛ',
     product: 'BBC News',
     serviceLocalizedName: 'አማርኛ',
@@ -53,7 +54,7 @@ export const service = {
       currentPage: 'መነሻ ገፅ',
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
-      sections: 'ክፍሎች',
+      navMenuText: 'ክፍሎች',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

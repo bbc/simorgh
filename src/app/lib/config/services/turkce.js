@@ -21,6 +21,7 @@ export const service = {
     articleTimestampPrefix: 'Güncelleme',
     atiAnalyticsAppName: 'news-turkce',
     atiAnalyticsProducerId: '92',
+    chartbeatDomain: 'turkish.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Türkçe',
     product: 'BBC News',
     serviceLocalizedName: 'Türkçe',
@@ -58,7 +59,7 @@ export const service = {
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
       relatedContent: 'İlgili haberler',
-      sections: 'Kategoriler',
+      navMenuText: 'Kategoriler',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -167,7 +168,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/turkce/kurumsal-50221017',
         text: "Neden BBC'ye güvenebilirsiniz",
       },
       externalLink: {

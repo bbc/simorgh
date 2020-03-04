@@ -14,6 +14,7 @@ export const service = {
     articleTimestampPrefix: 'ปรับปรุงแล้ว',
     atiAnalyticsAppName: 'news-thai',
     atiAnalyticsProducerId: '90',
+    chartbeatDomain: 'thai.bbc.co.uk',
     brandName: 'BBC News ไทย',
     product: 'BBC News',
     serviceLocalizedName: 'ไทย',
@@ -51,7 +52,7 @@ export const service = {
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       relatedContent: 'อ่านข่าวนี้เพิ่มเติม',
-      sections: 'หมวดข่าว',
+      navMenuText: 'หมวดข่าว',
       mediaAssetPage: {
         mediaPlayer: 'มีเดีย เพลเยอร์',
         audioPlayer: 'ออดิโอ เพลเยอร์',

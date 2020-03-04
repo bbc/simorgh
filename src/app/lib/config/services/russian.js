@@ -21,6 +21,7 @@ export const service = {
     articleTimestampPrefix: 'Обновлено',
     atiAnalyticsAppName: 'news-russian',
     atiAnalyticsProducerId: '75',
+    chartbeatDomain: 'russian.bbc.co.uk',
     brandName: 'BBC News Русская служба',
     product: 'BBC News',
     serviceLocalizedName: 'Русская служба',
@@ -58,7 +59,7 @@ export const service = {
       currentPage: 'Текущая страница',
       skipLinkText: 'Перейти к содержанию',
       relatedContent: 'Новости по теме',
-      sections: 'Разделы',
+      navMenuText: 'Разделы',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плеер',
         audioPlayer: 'Аудио плеер',

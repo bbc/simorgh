@@ -16,6 +16,7 @@ export const service = {
     articleTimestampPrefix: 'යාවත්කාලීනවී ඇත',
     atiAnalyticsAppName: 'news-sinhala',
     atiAnalyticsProducerId: '82',
+    chartbeatDomain: 'sinhala.bbc.co.uk',
     brandName: 'BBC News සිංහල',
     product: 'BBC News',
     serviceLocalizedName: 'සිංහල',
@@ -53,7 +54,7 @@ export const service = {
       currentPage: 'දැන් සිටින පිටුව',
       skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
       relatedContent: 'මේ පුවතට සම්බන්ධ තවත් විස්තර',
-      sections: 'අංශ',
+      navMenuText: 'අංශ',
       mediaAssetPage: {
         mediaPlayer: 'මීඩියා ධාවකය',
         audioPlayer: 'හඬ වාදකය',

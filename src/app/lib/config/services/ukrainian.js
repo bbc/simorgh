@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Оновлення даних: ',
     atiAnalyticsAppName: 'news-ukrainian',
     atiAnalyticsProducerId: '94',
+    chartbeatDomain: 'ukrainian.bbc.co.uk',
     brandName: 'BBC News Україна',
     product: 'BBC News',
     serviceLocalizedName: 'Україна',
@@ -49,7 +50,7 @@ export const service = {
       currentPage: 'Поточна сторінка',
       skipLinkText: 'Перейти до змісту',
       relatedContent: 'Статті на цю ж тему',
-      sections: 'Розділи',
+      navMenuText: 'Розділи',
       mediaAssetPage: {
         mediaPlayer: 'Медіаплеєр',
         audioPlayer: 'Аудіоплеєр',

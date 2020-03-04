@@ -10,6 +10,7 @@ const baseServiceConfig = {
   articleTimestampPrefix: '最近更新：',
   atiAnalyticsAppName: 'news-ukchina',
   atiAnalyticsProducerId: '93',
+  chartbeatDomain: 'ukchina.bbc.co.uk',
   brandName: 'BBC 英伦网',
   product: 'BBC',
   serviceLocalizedName: '英伦网',
@@ -105,7 +106,7 @@ export const service = {
       currentPage: '目前页面',
       skipLinkText: '跳过此内容',
       relatedContent: '更多相关内容',
-      sections: '分类',
+      navMenuText: '分类',
       mediaAssetPage: {
         mediaPlayer: '多媒体播放器',
         audioPlayer: '音频播放器',
@@ -266,7 +267,7 @@ export const service = {
       currentPage: '目前頁面',
       skipLinkText: '跳過此內容',
       relatedContent: '更多相關內容',
-      sections: '分類',
+      navMenuText: '分類',
       mediaAssetPage: {
         mediaPlayer: '多媒體播放器',
         audioPlayer: '音頻播放器',

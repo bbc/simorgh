@@ -13,6 +13,7 @@ export const service = {
     articleTimestampPrefix: 'అప్‌డేట్ అయ్యింది',
     atiAnalyticsAppName: 'news-telugu',
     atiAnalyticsProducerId: '89',
+    chartbeatDomain: 'telugu.bbc.co.uk',
     brandName: 'BBC News తెలుగు',
     product: 'BBC News',
     serviceLocalizedName: 'తెలుగు',
@@ -50,7 +51,7 @@ export const service = {
       currentPage: 'ప్రస్తుత పేజీ',
       skipLinkText: 'కంటెంట్‌కు వెళ్లండి',
       relatedContent: 'సంబంధిత కథనాలు',
-      sections: 'విభాగాలు',
+      navMenuText: 'విభాగాలు',
       mediaAssetPage: {
         mediaPlayer: 'మీడియా ప్లేయర్',
         audioPlayer: 'ఆడియో ప్లేయర్',

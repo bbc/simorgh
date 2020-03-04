@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'New Informate',
     atiAnalyticsAppName: 'news-pidgin',
     atiAnalyticsProducerId: '70',
+    chartbeatDomain: 'pidgin.bbc.co.uk',
     brandName: 'BBC News Pidgin',
     product: 'BBC News',
     serviceLocalizedName: 'Pidgin',
@@ -53,7 +54,7 @@ export const service = {
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
       relatedContent: 'Another thing we de for inside dis tori',
-      sections: 'Plenti seshon',
+      navMenuText: 'Plenti seshon',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
