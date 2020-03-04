@@ -2,13 +2,23 @@ import React, { createContext, useEffect, useReducer } from 'react';
 import { node, string } from 'prop-types';
 import { toggleReducer, updateToggles } from './reducer';
 import defaultToggles from '#lib/config/toggles';
+import onClient from '../../lib/utilities/onClient';
 
 const ToggleContext = createContext({});
 
-const getTogglesEndpoint = service =>
-  `${process.env.SIMORGH_TOGGLES_URL}/toggles?application=amp&service=${service}&__amp_source_origin=https://www.bbc.com`;
+const getTogglesEndpoint = (service, origin) => {
+  const requestOrigin = origin ? origin : 'https://www.test.bbc.com';
+  const baseTogglesUrl = `${process.env.SIMORGH_TOGGLES_URL}/toggles?application=amp&service=${service}&__amp_source_origin=${requestOrigin}`;
 
-const ToggleContextProvider = ({ children, service }) => {
+  // client side renders should trigger a geoIPLookup
+  if (onClient()) {
+    return `${baseTogglesUrl}&geoiplookup=true`;
+  }
+
+  return baseTogglesUrl;
+};
+
+const ToggleContextProvider = ({ children, service, origin }) => {
   const simorghToggles = defaultToggles[process.env.SIMORGH_APP_ENV];
   const [toggleState, toggleDispatch] = useReducer(
     toggleReducer,
@@ -24,7 +34,7 @@ const ToggleContextProvider = ({ children, service }) => {
   ) {
     useEffect(() => {
       const fetchAndUpdateToggles = async () => {
-        const response = await fetch(getTogglesEndpoint(service));
+        const response = await fetch(getTogglesEndpoint(service, origin));
         const jsonData = await response.json();
 
         // container code: const { ads } = toggleContext(); if(ads && ads.enabled)

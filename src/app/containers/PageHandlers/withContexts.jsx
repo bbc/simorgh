@@ -26,7 +26,11 @@ const WithContexts = Component => {
     } = props;
 
     return (
-      <ToggleContextProvider service={service} pathname={pathname}>
+      <ToggleContextProvider
+        service={service}
+        pathname={pathname}
+        bbcOrigin={bbcOrigin}
+      >
         <ServiceContextProvider service={service} variant={variant}>
           <RequestContextProvider
             bbcOrigin={bbcOrigin}
