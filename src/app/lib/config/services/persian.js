@@ -18,6 +18,7 @@ export const service = {
     articleTimestampPrefix: 'به روز شده در',
     atiAnalyticsAppName: 'news-persian',
     atiAnalyticsProducerId: '69',
+    chartbeatDomain: 'persian.bbc.co.uk',
     brandName: 'BBC News فارسی',
     serviceLocalizedName: 'فارسی',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',

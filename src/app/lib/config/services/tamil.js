@@ -13,6 +13,7 @@ export const service = {
     articleTimestampPrefix: 'புதுப்பிக்கப்பட்டது',
     atiAnalyticsAppName: 'news-tamil',
     atiAnalyticsProducerId: '87',
+    chartbeatDomain: 'tamil.bbc.co.uk',
     brandName: 'BBC News தமிழ்',
     product: 'BBC News',
     serviceLocalizedName: 'தமிழ்',
