@@ -29,7 +29,6 @@ exports[`MostReadCanonical - LastUpdated should render LastUpdated correctly 1`]
   class="c0"
   datetime="1970-01-11"
 >
-  Last Updated: 
-  11 January 1970
+  Last Updated: 11 January 1970
 </time>
 `;
