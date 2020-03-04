@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Haaromsameera',
     atiAnalyticsAppName: 'news-afaanoromoo',
     atiAnalyticsProducerId: '2',
+    chartbeatDomain: 'afaanoromoo.bbc.co.uk',
     brandName: 'BBC News Afaan Oromoo',
     product: 'BBC News',
     serviceLocalizedName: 'Afaan Oromoo',
