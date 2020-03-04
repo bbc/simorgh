@@ -297,7 +297,7 @@ const genServices = {
             '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP
           ],
           local: [
-            '/azeri/region-49364777', // CPS MAP
+            '/azeri/azerbaijan-23257464', // CPS MAP
             '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP
           ],
         },
@@ -527,7 +527,7 @@ const genServices = {
             '/gahuza/video/2015/12/151217_test_long', // TC2 MAP
           ],
           local: [
-            '/gahuza/amakuru-49534170', // CPS MAP
+            '/gahuza/amakuru-23257470', // CPS MAP
             '/gahuza/video/2015/12/151217_test_long', // TC2 MAP
           ],
         },
@@ -1023,11 +1023,11 @@ const genServices = {
             '/kyrgyz/multimedia/2014/09/140903_iv_auturgan', // TC2 MAP
           ],
           test: [
-            '/kyrgyz/kyrgyzstan-23095373', // CPS MAP
+            '/kyrgyz/media-23257484', // CPS MAP
             '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP
           ],
           local: [
-            '/kyrgyz/sapar-tv-48695523', // CPS MAP
+            '/kyrgyz/media-23257484', // CPS MAP
             '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP
           ],
         },
@@ -1415,7 +1415,7 @@ const genServices = {
             '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
           ],
           local: [
-            '/persian/world-49653162', // CPS MAP with audio clip
+            '/persian/iran-23231114', // CPS MAP with audio clip
             '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
           ],
         },
@@ -1855,7 +1855,7 @@ const genServices = {
           ],
           test: [
             '/sinhala/world-23257567', // CPS MAP
-            '/sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292', // TC2 MAP
+            '/sinhala/multimedia/2016/03/160323_si_test_audio_map', // TC2 MAP
           ],
           local: [
             '/sinhala/23248970', // CPS MAP with audio clip
@@ -2663,7 +2663,7 @@ const genServices = {
             '/vietnamese/sport/2016/09/160922_tc2_testmap2', // TC2 MAP
           ],
           local: [
-            '/vietnamese/media-49614583', // CPS MAP
+            '/vietnamese/23222411', // CPS MAP
             '/vietnamese/sport/2016/09/160922_tc2_testmap2', // TC2 MAP
           ],
         },
