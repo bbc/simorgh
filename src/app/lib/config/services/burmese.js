@@ -13,6 +13,7 @@ export const service = {
     articleTimestampPrefix: 'အသစ်တင်ချိန်',
     atiAnalyticsAppName: 'news-burmese',
     atiAnalyticsProducerId: '35',
+    chartbeatDomain: 'burmese.bbc.co.uk',
     brandName: 'BBC News မြန်မာ',
     product: 'BBC News',
     serviceLocalizedName: 'မြန်မာ',

@@ -1,5 +1,3 @@
-import config from '../../../support/config/services';
-
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
@@ -10,14 +8,12 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
     it('should render a description for the page', () => {
-      cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-        ({ body }) => {
-          const description = body.promo.summary;
-          cy.get('main p')
-            .first()
-            .should('contain', description);
-        },
-      );
+      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+        const description = body.promo.summary;
+        cy.get('main p')
+          .first()
+          .should('contain', description);
+      });
     });
   });
 };

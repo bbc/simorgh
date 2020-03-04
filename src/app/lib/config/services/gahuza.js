@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Vyavuguruwe ',
     atiAnalyticsAppName: 'news-gahuza',
     atiAnalyticsProducerId: '40',
+    chartbeatDomain: 'gahuza.bbc.co.uk',
     brandName: 'BBC News Gahuza',
     product: 'BBC News',
     serviceLocalizedName: 'Gahuza',

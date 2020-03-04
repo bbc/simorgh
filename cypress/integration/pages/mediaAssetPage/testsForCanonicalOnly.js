@@ -17,25 +17,23 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 }) =>
   describe(`testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {
     it('should render a media player', () => {
-      cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-        ({ body }) => {
-          const assetUriString = body.metadata.locators.assetUri;
-          if (assetUriString.split('/').length > 4) {
-            cy.log('Test skipped because legacy MAP');
-          } else {
-            const mediaBlock = body.content.blocks[0];
-            const isLiveStream = mediaBlock.type === 'version';
-            const serviceId = isLiveStream
-              ? mediaBlock.externalId
-              : mediaBlock.versions[0].versionId;
-            const language = appConfig[config[service].name][variant].lang;
-            const { assetUri } = body.metadata.locators;
-            cy.get(
-              `iframe[src*="${envConfig.avEmbedBaseUrl}/ws/av-embeds/cps${assetUri}/${serviceId}/${language}"]`,
-            ).should('be.visible');
-          }
-        },
-      );
+      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+        const assetUriString = body.metadata.locators.assetUri;
+        if (assetUriString.split('/').length > 4) {
+          cy.log('Test skipped because legacy MAP');
+        } else {
+          const mediaBlock = body.content.blocks[0];
+          const isLiveStream = mediaBlock.type === 'version';
+          const serviceId = isLiveStream
+            ? mediaBlock.externalId
+            : mediaBlock.versions[0].versionId;
+          const language = appConfig[config[service].name][variant].lang;
+          const { assetUri } = body.metadata.locators;
+          cy.get(
+            `iframe[src*="${envConfig.avEmbedBaseUrl}/ws/av-embeds/cps${assetUri}/${serviceId}/${language}"]`,
+          ).should('be.visible');
+        }
+      });
     });
 
     it('should play media', () => {
