@@ -296,7 +296,6 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
             Gee ntị Live,
           </span>
           <span
-            aria-hidden="true"
             class="c7"
             dir="ltr"
           >
@@ -644,7 +643,6 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
             Lee Live,
           </span>
           <span
-            aria-hidden="true"
             class="c7"
             dir="ltr"
           >

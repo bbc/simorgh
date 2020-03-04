@@ -5389,7 +5389,6 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
           role="text"
         >
           <span
-            aria-hidden="true"
             class="c8"
             dir="ltr"
           >
@@ -5677,7 +5676,6 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
           role="text"
         >
           <span
-            aria-hidden="true"
             class="c8"
             dir="ltr"
           >
@@ -5952,7 +5950,6 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
           role="text"
         >
           <span
-            aria-hidden="true"
             class="c4"
             dir="ltr"
           >
@@ -6257,7 +6254,6 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
           role="text"
         >
           <span
-            aria-hidden="true"
             class="c8"
             dir="ltr"
           >
