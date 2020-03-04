@@ -1,5 +1,5 @@
 import Cookie from 'js-cookie';
-import pathOr from 'ramda/src/pathOr';
+import { getVariantCookieName } from '#lib/utilities/variantHandler';
 
 export const getCookiePolicy = () => {
   const POLICY_COOKIE = 'ckns_policy';
@@ -9,14 +9,6 @@ export const getCookiePolicy = () => {
 
 export const personalisationEnabled = cookiePolicy =>
   cookiePolicy && cookiePolicy.length === 3 && cookiePolicy[2] === '1';
-
-const variantCookieConfig = {
-  ukchina: 'chinese',
-  zhongwen: 'chinese',
-};
-
-const getVariantCookieName = service =>
-  pathOr(service, [service], variantCookieConfig);
 
 export const getPreferredVariant = service => {
   if (!service) return null;

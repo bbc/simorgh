@@ -1,21 +1,13 @@
 import Cookie from 'js-cookie';
-import pathOr from 'ramda/src/pathOr';
 import {
   getVariant,
   servicesWithVariants,
+  getVariantCookieName,
 } from '#lib/utilities/variantHandler';
 import { articlePath, frontPagePath } from '#app/routes/utils/regex';
 import getVariantRedirectUrl from './index';
 
 const serviceNames = Object.keys(servicesWithVariants);
-
-const variantCookieConfig = {
-  ukchina: 'chinese',
-  zhongwen: 'chinese',
-};
-
-const getVariantCookieName = service =>
-  pathOr(service, [service], variantCookieConfig);
 
 describe('getVariantRedirectUrl', () => {
   afterEach(() => {
