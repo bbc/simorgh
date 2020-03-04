@@ -1,66 +1,35 @@
-import React, { useContext, useEffect, useState } from 'react';
-import 'isomorphic-fetch';
-import { string } from 'prop-types';
+import React, { useContext } from 'react';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '../Toggle/useToggle';
-import webLogger from '#lib/logger.web';
+import Canonical from './Canonical';
 
-const logger = webLogger();
+// The logic here is sufficient for now for testing locally. This should change once we are ready to put radioschedules on live
+const getRadioScheduleEndpoint = (service, environment) =>
+  environment === 'test'
+    ? `/${service}/bbc_${service}_radio/schedule.json`
+    : `/${service}/bbc_${service}_radio/radioschedule.json`;
 
-const RadioScheduleContainer = ({ endpoint }) => {
+const RadioScheduleContainer = () => {
+  const { isAmp } = useContext(RequestContext);
   const { enabled } = useToggle('radioSchedule');
-  const { hasRadioSchedule } = useContext(ServiceContext);
-  const radioScheduleEnabled = enabled && hasRadioSchedule;
-
-  const [schedule, setRadioSchedule] = useState([]);
-
-  const handleResponse = async response => {
-    const radioScheduleData = await response.json();
-    setRadioSchedule(radioScheduleData.schedules);
-  };
-
-  useEffect(() => {
-    const fetchRadioScheduleData = pathname =>
-      fetch(pathname, { mode: 'no-cors' })
-        .then(handleResponse)
-        .catch(e => logger.error(`HTTP Error: "${e}"`));
-
-    if (radioScheduleEnabled) {
-      fetchRadioScheduleData(endpoint);
-    }
-  }, [endpoint, radioScheduleEnabled]);
+  const { service, hasRadioSchedule } = useContext(ServiceContext);
+  const radioScheduleEnabled = !isAmp && enabled && hasRadioSchedule;
 
   if (!radioScheduleEnabled) {
     return null;
   }
 
-  return (
-    <>
-      <p>Radio Schedules</p>
-      {schedule.map(
-        ({
-          broadcast,
-          transmissionTimeStart,
-          transmissionTimeEnd,
-          episode: {
-            presentationTitle,
-            synopses: { short },
-          },
-        }) => (
-          <ul key={broadcast.pid}>
-            <li>{presentationTitle}</li>
-            <li>{short}</li>
-            <li>{transmissionTimeStart}</li>
-            <li>{transmissionTimeEnd}</li>
-          </ul>
-        ),
-      )}
-    </>
+  const endpoint = getRadioScheduleEndpoint(
+    service,
+    process.env.SIMORGH_APP_ENV,
   );
+
+  return <Canonical endpoint={endpoint} />;
 };
 
-RadioScheduleContainer.propTypes = {
-  endpoint: string.isRequired,
-};
+// RadioScheduleContainer.propTypes = {
+
+// };
 
 export default RadioScheduleContainer;
