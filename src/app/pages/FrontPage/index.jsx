@@ -26,6 +26,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
 import MetadataContainer from '#containers/Metadata';
 import MostReadContainer from '#containers/MostRead';
+import { MostReadSection } from '#containers/MostRead/Canonical';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -62,6 +63,15 @@ export const StyledFrontPageDiv = styled.div`
   }
 `;
 
+const FrontPageMostReadSection = styled(MostReadSection)`
+  /* To centre page layout for Group 4+ */
+  margin: 0 auto;
+  width: 100%; /* Needed for IE11 */
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+  }
+`;
+
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     product,
@@ -87,11 +97,12 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
   const renderMostRead = () => (
-    <MostReadContainer
-      mostReadEndpointOverride={mostReadEndpointOverride}
-      maxTwoColumns
-      isOnFrontPage
-    />
+    <FrontPageMostReadSection>
+      <MostReadContainer
+        mostReadEndpointOverride={mostReadEndpointOverride}
+        maxTwoColumns
+      />
+    </FrontPageMostReadSection>
   );
 
   return (

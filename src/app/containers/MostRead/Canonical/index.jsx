@@ -42,20 +42,11 @@ const MarginWrapper = styled.div`
   }
 `;
 
-const MostReadSection = styled.section.attrs(() => ({
+export const MostReadSection = styled.section.attrs(() => ({
   role: 'region',
   'aria-labelledby': 'Most-Read',
   'data-e2e': 'most-read',
 }))``;
-
-const FrontPageMostReadSection = styled(MostReadSection)`
-  /* To centre page layout for Group 4+ */
-  margin: 0 auto;
-  width: 100%; /* Needed for IE11 */
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
-  }
-`;
 
 const ConstrainedMostReadSection = styled(MostReadSection)`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
@@ -74,12 +65,7 @@ const ConstrainedMostReadSection = styled(MostReadSection)`
   }
 `;
 
-const CanonicalMostRead = ({
-  endpoint,
-  maxTwoColumns,
-  constrainMaxWidth,
-  isOnFrontPage,
-}) => {
+const CanonicalMostRead = ({ endpoint, maxTwoColumns, constrainMaxWidth }) => {
   const [items, setItems] = useState([]);
   const {
     service,
@@ -139,13 +125,9 @@ const CanonicalMostRead = ({
     return null;
   }
 
-  const StyledMostRead = isOnFrontPage
-    ? FrontPageMostReadSection
-    : MostReadSection;
-
   const MostReadSectionWrapper = constrainMaxWidth
     ? ConstrainedMostReadSection
-    : StyledMostRead;
+    : MostReadSection;
 
   return (
     <MostReadSectionWrapper>
@@ -194,12 +176,10 @@ CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
   constrainMaxWidth: bool.isRequired,
   maxTwoColumns: bool,
-  isOnFrontPage: bool,
 };
 
 CanonicalMostRead.defaultProps = {
   maxTwoColumns: false,
-  isOnFrontPage: false,
 };
 
 export default CanonicalMostRead;
