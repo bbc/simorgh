@@ -395,7 +395,8 @@
            "tile":"Include from VisJo",
            "href":"/include/vjamericas/176-eclipse-lookup/mundo/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png",
            "platform":"highweb",
-           "type":"include"
+           "type":"include",
+           "url":"https://simorgh-include-test.s3-eu-west-1.amazonaws.com/vj.html"
         },
         {
            "text":"Includes: IDT2",
@@ -407,7 +408,8 @@
            "tile":"IDT2 Include",
            "href":"/idt2/41a6ad82-8bad-482e-9645-301af4a8e857",
            "platform":"highweb",
-           "type":"include"
+           "type":"include",
+           "url":"https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt2.html"
         },
         {
            "text":"Includes: IDT1: A quiz!",
