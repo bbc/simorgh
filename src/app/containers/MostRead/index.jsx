@@ -10,11 +10,7 @@ const getMostReadEndpoint = ({ service, variant }) =>
     ? `/${service}/mostread/${variant}.json`
     : `/${service}/mostread.json`;
 
-const MostReadContainer = ({
-  mostReadEndpointOverride,
-  maxTwoColumns,
-  constrainMaxWidth,
-}) => {
+const MostReadContainer = ({ mostReadEndpointOverride, maxTwoColumns }) => {
   const { variant, isAmp } = useContext(RequestContext);
   const {
     service,
@@ -32,24 +28,16 @@ const MostReadContainer = ({
   const endpoint =
     mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
 
-  return (
-    <Canonical
-      endpoint={endpoint}
-      constrainMaxWidth={constrainMaxWidth}
-      maxTwoColumns={maxTwoColumns}
-    />
-  );
+  return <Canonical endpoint={endpoint} maxTwoColumns={maxTwoColumns} />;
 };
 
 MostReadContainer.propTypes = {
   mostReadEndpointOverride: string,
-  constrainMaxWidth: bool,
   maxTwoColumns: bool,
 };
 
 MostReadContainer.defaultProps = {
   mostReadEndpointOverride: null,
-  constrainMaxWidth: false,
   maxTwoColumns: false,
 };
 

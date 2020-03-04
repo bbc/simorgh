@@ -2,6 +2,22 @@ import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import styled from 'styled-components';
 import { string } from 'prop-types';
+import {
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MAX,
+  GEL_GROUP_5_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_MARGIN_ABOVE_400PX,
+  GEL_MARGIN_BELOW_400PX,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_QUIN,
+} from '@bbc/gel-foundations/spacings';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -16,6 +32,7 @@ import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import LinkedData from '#containers/LinkedData';
 import MostReadContainer from '#containers/MostRead';
+import { MostReadSection } from '#containers/MostRead/Canonical';
 import {
   getArticleId,
   getHeadline,
@@ -40,6 +57,23 @@ const componentsToRender = {
 
 const StyledMain = styled.main`
   flex-grow: 1;
+`;
+
+const ConstrainedMostReadSection = styled(MostReadSection)`
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    margin: 0 ${GEL_MARGIN_BELOW_400PX} ${GEL_SPACING_TRPL};
+  }
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    margin: 0 ${GEL_MARGIN_ABOVE_400PX} ${GEL_SPACING_QUAD};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+    margin: 0 ${GEL_MARGIN_ABOVE_400PX} ${GEL_SPACING_QUIN};
+  }
+  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    margin: 0 auto ${GEL_SPACING_TRPL};
+    padding: 0 ${GEL_SPACING_DBL};
+    max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
+  }
 `;
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
@@ -83,10 +117,11 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
           />
         </GhostGrid>
       </StyledMain>
-      <MostReadContainer
-        mostReadEndpointOverride={mostReadEndpointOverride}
-        constrainMaxWidth
-      />
+      <ConstrainedMostReadSection>
+        <MostReadContainer
+          mostReadEndpointOverride={mostReadEndpointOverride}
+        />
+      </ConstrainedMostReadSection>
     </>
   );
 };

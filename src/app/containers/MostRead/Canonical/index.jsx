@@ -3,21 +3,12 @@ import 'isomorphic-fetch';
 import { bool, string } from 'prop-types';
 import styled from 'styled-components';
 import {
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MAX,
-  GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
-  GEL_MARGIN_ABOVE_400PX,
-  GEL_MARGIN_BELOW_400PX,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-  GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
 import {
   MostReadList,
@@ -48,24 +39,7 @@ export const MostReadSection = styled.section.attrs(() => ({
   'data-e2e': 'most-read',
 }))``;
 
-const ConstrainedMostReadSection = styled(MostReadSection)`
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_BELOW_400PX} ${GEL_SPACING_TRPL};
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX} ${GEL_SPACING_QUAD};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX} ${GEL_SPACING_QUIN};
-  }
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    margin: 0 auto ${GEL_SPACING_TRPL};
-    padding: 0 ${GEL_SPACING_DBL};
-    max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
-  }
-`;
-
-const CanonicalMostRead = ({ endpoint, maxTwoColumns, constrainMaxWidth }) => {
+const CanonicalMostRead = ({ endpoint, maxTwoColumns }) => {
   const [items, setItems] = useState([]);
   const {
     service,
@@ -125,12 +99,8 @@ const CanonicalMostRead = ({ endpoint, maxTwoColumns, constrainMaxWidth }) => {
     return null;
   }
 
-  const MostReadSectionWrapper = constrainMaxWidth
-    ? ConstrainedMostReadSection
-    : MostReadSection;
-
   return (
-    <MostReadSectionWrapper>
+    <>
       <SectionLabel
         script={script}
         labelId="Most-Read"
@@ -168,13 +138,12 @@ const CanonicalMostRead = ({ endpoint, maxTwoColumns, constrainMaxWidth }) => {
           ))}
         </MostReadList>
       </MarginWrapper>
-    </MostReadSectionWrapper>
+    </>
   );
 };
 
 CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
-  constrainMaxWidth: bool.isRequired,
   maxTwoColumns: bool,
 };
 
