@@ -48,6 +48,17 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
 
       if (pageType !== 'errorPage404') {
         it('should include the canonical URL', () => {
+          // ============================================================================
+          const deleteMessage = `DEBUG CANONICAL URL: ${JSON.stringify(
+            envConfig,
+          )}; APP_ENV: ${Cypress.env('APP_ENV')}; CurrentPath: ${Cypress.env(
+            'currentPath',
+          )}`;
+
+          // eslint-disable-next-line no-console
+          console.log(deleteMessage);
+          cy.log(deleteMessage);
+          // ============================================================================
           cy.get('head link[rel="canonical"]').should(
             'have.attr',
             'href',
@@ -145,6 +156,17 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                 'content',
                 ogType,
               );
+              // ============================================================================
+              const deleteMessage = `DEBUG SHARED METADATA: ${JSON.stringify(
+                envConfig,
+              )}; APP_ENV: ${Cypress.env(
+                'APP_ENV',
+              )}; CurrentPath: ${Cypress.env('currentPath')}`;
+
+              // eslint-disable-next-line no-console
+              console.log(deleteMessage);
+              cy.log(deleteMessage);
+              // ============================================================================
               cy.get('meta[property="og:url"]').should(
                 'have.attr',
                 'content',
@@ -475,37 +497,34 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         // Expects a second timestamp only if lastPublished is 1 minute later than firstPublished.
         // This is due to a CPS asset bug, see issue simorgh#5065
         it('should render a timestamp', () => {
-          cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-            ({ body }) => {
-              const { lastPublished, firstPublished } = body.metadata;
-              const timeDifferenceMinutes =
-                (lastPublished - firstPublished) / 1000 / 60;
-              const minutesTolerance = 1;
-              const hasTimestampPrefix =
-                timeDifferenceMinutes > minutesTolerance;
-              cy.get('time')
-                .eq(0)
-                .should('be.visible')
-                .should('have.attr', 'datetime')
-                .should('not.be.empty');
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const { lastPublished, firstPublished } = body.metadata;
+            const timeDifferenceMinutes =
+              (lastPublished - firstPublished) / 1000 / 60;
+            const minutesTolerance = 1;
+            const hasTimestampPrefix = timeDifferenceMinutes > minutesTolerance;
+            cy.get('time')
+              .eq(0)
+              .should('be.visible')
+              .should('have.attr', 'datetime')
+              .should('not.be.empty');
 
-              if (hasTimestampPrefix) {
-                cy.get('time')
-                  .eq(1)
-                  .should('be.visible')
-                  .should(
-                    'contain',
-                    appConfig[config[service].name][variant || 'default']
-                      .articleTimestampPrefix,
-                  )
-                  .should('have.attr', 'datetime');
-              }
-            },
-          );
+            if (hasTimestampPrefix) {
+              cy.get('time')
+                .eq(1)
+                .should('be.visible')
+                .should(
+                  'contain',
+                  appConfig[config[service].name][variant || 'default']
+                    .articleTimestampPrefix,
+                )
+                .should('have.attr', 'datetime');
+            }
+          });
         });
         if (['photoGalleryPage', 'storyPage'].includes(pageType)) {
           it('should render a H1, which displays the headline', () => {
-            cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
+            cy.request(`${Cypress.env('currentPath')}.json`).then(
               ({ body }) => {
                 cy.get('h1').should('contain', body.promo.headlines.headline);
               },
@@ -523,33 +542,5 @@ export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
   service,
   pageType,
 }) => {
-  describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {
-    if (Cypress.env('APP_ENV') === 'live') {
-      describe('Page links test', () => {
-        it('Top navigation links should not 404', () => {
-          cy.get('header a').each(element => {
-            const url = element.attr('href');
-            cy.request({
-              url,
-              failOnStatusCode: false,
-            }).then(resp => {
-              expect(resp.status).to.not.equal(404, `Received 404 for ${url}`);
-            });
-          });
-        });
-
-        it('Footer links should not 404', () => {
-          cy.get('footer a').each(element => {
-            const url = element.attr('href');
-            cy.request({
-              url,
-              failOnStatusCode: false,
-            }).then(resp => {
-              expect(resp.status).to.not.equal(404, `Received 404 for ${url}`);
-            });
-          });
-        });
-      });
-    }
-  });
+  describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {});
 };

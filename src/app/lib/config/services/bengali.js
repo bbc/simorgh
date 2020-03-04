@@ -16,6 +16,7 @@ export const service = {
     articleTimestampPrefix: 'আপডেট হয়েছে',
     atiAnalyticsAppName: 'news-bengali',
     atiAnalyticsProducerId: '31',
+    chartbeatDomain: 'bengali.bbc.co.uk',
     brandName: 'BBC News বাংলা',
     product: 'BBC News',
     serviceLocalizedName: 'বাংলা',

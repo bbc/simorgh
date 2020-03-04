@@ -23,12 +23,6 @@ const capitalize = s => s.charAt(0).toUpperCase() + s.slice(1);
 export const getSylphidCookie = () =>
   onClient() ? Cookie.get(ID_COOKIE) : null;
 
-export const getDomain = service => {
-  const serviceLower = service.toLowerCase();
-
-  return serviceLower === 'news' ? 'bbc.co.uk' : `${service}.bbc.co.uk`;
-};
-
 export const getType = (pageType, shorthand = false) => {
   switch (pageType) {
     case 'frontPage':
@@ -111,10 +105,11 @@ export const getConfig = ({
   service,
   origin,
   previousPath,
+  chartbeatDomain,
 }) => {
   const referrer = getReferrer(platform, origin, previousPath);
   const title = getTitle(pageType, data, brandName);
-  const domain = env !== 'live' ? getDomain('test') : getDomain(service);
+  const domain = env !== 'live' ? 'test.bbc.co.uk' : chartbeatDomain;
   const sectionName = path(['relatedContent', 'section', 'name'], data);
   const categoryName = path(
     ['metadata', 'passport', 'category', 'categoryName'],

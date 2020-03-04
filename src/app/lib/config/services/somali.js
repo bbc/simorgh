@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Waa la cusbooneysiiyay',
     atiAnalyticsAppName: 'news-somali',
     atiAnalyticsProducerId: '83',
+    chartbeatDomain: 'somali.bbc.co.uk',
     brandName: 'BBC News Somali',
     product: 'BBC News',
     serviceLocalizedName: 'Somali',

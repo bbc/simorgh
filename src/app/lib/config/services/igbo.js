@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Mgbe ikpeazụ e tinyere ya ozi ọhụrụ',
     atiAnalyticsAppName: 'news-igbo',
     atiAnalyticsProducerId: '53',
+    chartbeatDomain: 'igbo.bbc.co.uk',
     brandName: 'BBC News Ìgbò',
     product: 'BBC News',
     serviceLocalizedName: 'Ìgbò',
