@@ -369,7 +369,10 @@ const genServices = {
             '/bengali/media-23269006', // CPS MAP
             '/bengali/multimedia/2016/08/160803_tc2_testmap1', // TC2 MAP
           ],
-          local: [],
+          local: [
+            'bengali/media-23269006', // CPS MAP
+            '/bengali/multimedia/2016/08/160803_tc2_testmap1', // TC2 MAP
+          ],
         },
         smoke: false,
       },

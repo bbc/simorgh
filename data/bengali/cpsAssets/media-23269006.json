@@ -1,0 +1,297 @@
+{
+    "content": {
+      "blocks": [
+        {
+          "advertising": true,
+          "caption": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
+          "embedding": true,
+          "format": "video",
+          "id": "p01k6msm",
+          "imageCopyright": "BBC",
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+          "subType": "clip",
+          "synopses": {
+            "short": "They may be tiny, but us humans could learn a thing or two from ants."
+          },
+          "title": "Five things ants can teach us about management",
+          "type": "media",
+          "versions": [
+            {
+              "availableFrom": 1540218932000,
+              "availableTerritories": {
+                "nonUk": true,
+                "uk": true,
+                "world": false
+              },
+              "duration": 191,
+              "durationISO8601": "PT3M11S",
+              "types": [
+                "Original"
+              ],
+              "versionId": "p01k6msp",
+              "warnings": {
+                "long": "Contains strong language and adult humour.",
+                "short": "Contains strong language and adult humour."
+              }
+            }
+          ]
+        },
+        {
+          "markupType": "plain_text",
+          "role": "introduction",
+          "text": "মার্কিন নির্বাচনে ডোনাল্ড ট্রাম্পের প্রতিদ্বন্দ্বী কে হবেন? কেউ কি ট্রাম্পকে হারাতে পারবেন? যুক্তরাষ্ট্রের অনেক ডেমোক্রেটের মনেই এখন এই প্রশ্ন। ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "'সুপার টিউসডে' বলে পরিচিত ২০২০ সালের তেসরা মার্চ, মঙ্গলবারই কি বোঝা যাবে, নভেম্বরের নির্বাচনে কে হতে যাচ্ছেন ট্রাম্পের প্রতিদ্বন্দ্বী?",
+          "type": "heading"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?",
+          "type": "heading"
+        },
+        {
+          "markupType": "candy_xml",
+          "meta": [
+            {
+              "headlines": {
+                "headline": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন",
+                "overtyped": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন",
+                "shortHeadline": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন"
+              },
+              "id": "urn:bbc:ares::asset:bengali/media-23269008",
+              "language": "bn",
+              "locators": {
+                "href": "http://www.bbc.com/bengali/media-23269008"
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "",
+                  "categoryName": ""
+                },
+                "taggings": []
+              },
+              "summary": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
+              "timestamp": 1583163835000,
+              "type": "cps"
+            }
+          ],
+          "text": "মার্কিন নির্বাচনে ডোনাল্ড ট্রাম্পের প্রতিদ্বন্দ্বী কে হবেন? <itemMeta>bengali/media-23269008</itemMeta> কেউ কি ট্রাম্পকে হারাতে পারবেন? যুক্তরাষ্ট্রের অনেক ডেমোক্রেটের মনেই এখন এই প্রশ্ন। ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "'সুপার টিউসডে' বলে পরিচিত ২০২০ সালের তেসরা মার্চ, বোঝা যাবে, নভেম্বরের নির্বাচনে কে হতে যাচ্ছেন ট্রাম্পের প্রতিদ্বন্দ্বী?",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "মার্কিন নির্বাচনে ডোনাল্ড ট্রাম্পের প্রতিদ্বন্দ্বী কে হবেন? কেউ কি ট্রাম্পকে হারাতে পারবেন? যুক্তরাষ্ট্রের অনেক ডেমোক্রেটের মনেই এখন এই প্রশ্ন। ",
+          "type": "subheading"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "'সুপার টিউসডে' বলে পরিচিত ২০২০ সালের তেসরা মার্চ, মঙ্গলবারই কি বোঝা যাবে, নভেম্বরের নির্বাচনে কে হতে যাচ্ছেন ট্রাম্পের প্রতিদ্বন্দ্বী?",
+          "type": "crosshead"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?  দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?",
+          "type": "paragraph"
+        },
+        {
+          "items": [
+            {
+              "markupType": "candy_xml",
+              "text": "<link><caption>মার্কিন নির্বাচনে ডোনাল্ড ট্রাম্পের প্রতিদ্বন্দ্বী কে হবেন? কেউ কি ট্রাম্পকে হারাতে পারবেন? যুক্তরাষ্ট্রের অনেক ডেমোক্রেটের মনেই এখন এই প্রশ্ন। </caption><url href=\"https://bbc.com/bengali\" platform=\"highweb\"/></link>",
+              "type": "listItem"
+            },
+            {
+              "markupType": "plain_text",
+              "text": "'সুপার টিউসডে' বলে পরিচিত ২০২০ সালের তেসরা মার্চ, মঙ্গলবারই কি বোঝা যাবে, নভেম্বরের নির্বাচনে কে হতে যাচ্ছেন ট্রাম্পের প্রতিদ্বন্দ্বী?",
+              "type": "listItem"
+            },
+            {
+              "markupType": "plain_text",
+              "text": "দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?",
+              "type": "listItem"
+            }
+          ],
+          "numbered": false,
+          "type": "list"
+        },
+        {
+          "items": [
+            {
+              "markupType": "candy_xml",
+              "text": "<italic>মার্কিন নির্বাচনে ডোনাল্ড ট্রাম্পের প্রতিদ্বন্দ্বী কে হবেন? কেউ কি ট্রাম্পকে হারাতে পারবেন? যুক্তরাষ্ট্রের অনেক ডেমোক্রেটের মনেই এখন এই প্রশ্ন। </italic>",
+              "type": "listItem"
+            },
+            {
+              "markupType": "plain_text",
+              "text": "'সুপার টিউসডে' বলে পরিচিত ২০২০ সালের তেসরা মার্চ, মঙ্গলবারই কি বোঝা যাবে, নভেম্বরের নির্বাচনে কে হতে যাচ্ছেন ট্রাম্পের প্রতিদ্বন্দ্বী?",
+              "type": "listItem"
+            },
+            {
+              "markupType": "candy_xml",
+              "text": "<bold>দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?</bold>",
+              "type": "listItem"
+            },
+            {
+              "markupType": "candy_xml",
+              "meta": [
+                {
+                  "headlines": {
+                    "headline": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন",
+                    "overtyped": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন",
+                    "shortHeadline": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন"
+                  },
+                  "id": "urn:bbc:ares::asset:bengali/media-23269008",
+                  "language": "bn",
+                  "locators": {
+                    "href": "http://www.bbc.com/bengali/media-23269008"
+                  },
+                  "passport": {
+                    "category": {
+                      "categoryId": "",
+                      "categoryName": ""
+                    },
+                    "taggings": []
+                  },
+                  "summary": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
+                  "timestamp": 1583163835000,
+                  "type": "cps"
+                }
+              ],
+              "text": "<itemMeta>bengali/media-23269008</itemMeta>",
+              "type": "listItem"
+            }
+          ],
+          "numbered": true,
+          "type": "list"
+        }
+      ]
+    },
+    "metadata": {
+      "analyticsLabels": {
+        "counterName": "bengali.embedded_media.media_asset.23269006.page",
+        "cps_asset_id": "23269006",
+        "cps_asset_type": "map"
+      },
+      "blockTypes": [
+        "media",
+        "paragraph",
+        "heading",
+        "subheading",
+        "crosshead",
+        "list"
+      ],
+      "createdBy": "bengali-v6",
+      "firstPublished": 1583163908000,
+      "id": "urn:bbc:ares::asset:bengali/media-23269006",
+      "includeComments": false,
+      "language": "bn",
+      "lastPublished": 1583163909000,
+      "lastUpdated": 1583163919155,
+      "locators": {
+        "assetId": "23269006",
+        "assetUri": "/bengali/media-23269006",
+        "cpsUrn": "urn:bbc:content:assetUri:bengali/media-23269006",
+        "curie": "http://www.bbc.co.uk/asset/4908ebb9-6362-c740-98ac-9d9f9e5cdb69"
+      },
+      "options": {
+        "allowDateStamp": true,
+        "allowHeadline": true,
+        "allowPrintingSharingLinks": true,
+        "allowRelatedStoriesBox": true,
+        "allowRightHandSide": true,
+        "hasNewsTracker": false,
+        "includeComments": false,
+        "isBreakingNews": false,
+        "isFactCheck": false,
+        "isIgorSeoTagsEnabled": false,
+        "isKeyContent": false
+      },
+      "tags": {},
+      "timestamp": 1583163908000,
+      "type": "MAP",
+      "version": "v1.1.6"
+    },
+    "promo": {
+      "headlines": {
+        "headline": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
+        "shortHeadline": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?"
+      },
+      "id": "urn:bbc:ares::asset:bengali/media-23269006",
+      "language": "bn",
+      "locators": {
+        "assetId": "23269006",
+        "assetUri": "/bengali/media-23269006",
+        "cpsUrn": "urn:bbc:content:assetUri:bengali/media-23269006",
+        "curie": "http://www.bbc.co.uk/asset/4908ebb9-6362-c740-98ac-9d9f9e5cdb69"
+      },
+      "media": {
+        "advertising": true,
+        "caption": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
+        "embedding": true,
+        "format": "video",
+        "id": "p01k6msm",
+        "imageCopyright": "BBC",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+        "subType": "clip",
+        "synopses": {
+          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+        },
+        "title": "Five things ants can teach us about management",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1540218932000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "duration": 191,
+            "durationISO8601": "PT3M11S",
+            "types": [
+              "Original"
+            ],
+            "versionId": "p01k6msp",
+            "warnings": {
+              "long": "Contains strong language and adult humour.",
+              "short": "Contains strong language and adult humour."
+            }
+          }
+        ]
+      },
+      "passport": {
+        "taggings": []
+      },
+      "summary": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
+      "timestamp": 1583163908000,
+      "type": "cps"
+    },
+    "relatedContent": {
+      "groups": [],
+      "section": {
+        "name": "Media",
+        "subType": "index",
+        "type": "simple",
+        "uri": "/bengali/media"
+      },
+      "site": {
+        "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news",
+        "subType": "site",
+        "type": "simple",
+        "uri": "/bengali"
+      }
+    }
+  }
