@@ -77,23 +77,28 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
     it('should have href that matches assetURI for 1st related content link', () => {
       cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
         const numRelatedContentGroups = body.relatedContent.groups.length;
-        const assetUriString = body.metadata.locators.assetUri;
-        if (
-          numRelatedContentGroups > 0 &&
-          assetUriString.split('/').length <= 5
-        ) {
-          const assetURI =
-            body.relatedContent.groups[0].promos[0].locators.assetUri;
 
-          cy.get('li[class^="StoryPromoLi"] > div[class^="StoryPromoWrapper"]')
-            .find('h3')
-            .within(() => {
-              cy.get('a')
-                .should('have.attr', 'href')
-                .and('include', assetURI);
-            });
+        const requestPath = Cypress.env('currentPath');
+        const isLegacyAsset = requestPath.split('/').length > 5;
+        if (!isLegacyAsset) {
+          if (numRelatedContentGroups > 0) {
+            const assetURI =
+              body.relatedContent.groups[0].promos[0].locators.assetUri;
+
+            cy.get(
+              'li[class^="StoryPromoLi"] > div[class^="StoryPromoWrapper"]',
+            )
+              .find('h3')
+              .within(() => {
+                cy.get('a')
+                  .should('have.attr', 'href')
+                  .and('include', assetURI);
+              });
+          } else {
+            cy.log('Test skipped because no related content');
+          }
         } else {
-          cy.log('Test skipped because no related content or is legacy MAP');
+          cy.log('Test skipped because legacy MAP');
         }
       });
     });
