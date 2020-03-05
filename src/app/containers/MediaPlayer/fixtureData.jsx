@@ -353,6 +353,36 @@ export const validAresMediaVideoLiveStreamBlock = {
   type: 'aresMediaMetadata',
 };
 
+export const validAresMediaLiveAudioBlock = {
+  type: 'aresMediaMetadata',
+  blockId: 'urn:bbc:ares::primary:63501300',
+  model: {
+    embedding: false,
+    id: '63501300',
+    subType: 'primary',
+    live: true,
+    available: true,
+    format: 'audio',
+    title: '',
+    imageCopyright: 'AFP',
+    imageUrl: 'http://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg',
+    synopses: {
+      short: '',
+      medium: '',
+      long: '',
+    },
+    versions: [
+      {
+        kind: 'programme',
+        live: true,
+        versionId: 'bbc_world_service_west_africa',
+      },
+    ],
+  },
+  id: 'fca18d0a-6037-4e39-bde9-71fbb8a05f6a',
+  position: [2, 1, 1],
+};
+
 export const defaultToggles = {
   local: {
     mediaPlayer: {

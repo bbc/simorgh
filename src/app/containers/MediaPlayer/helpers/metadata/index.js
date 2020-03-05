@@ -50,6 +50,7 @@ export const getMetadataBlock = aresMediaBlocks => {
   const aresMetadataBlock = aresMediaBlocks.filter(
     block => block.type === 'aresMediaMetadata',
   );
+
   return aresMetadataBlock[0];
 };
 
