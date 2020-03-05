@@ -1,7 +1,6 @@
 import '@testing-library/jest-dom/extend-expect';
 import renderApp from './renderApp';
-
-const LIVE_RADIO_PATH = 'https://www.bbc.com/korean/bbc_korean_radio/liveradio';
+import { LIVE_RADIO_PATH } from './pathnames';
 
 describe('Sighted user tests', () => {
   it('should render the headline', async () => {

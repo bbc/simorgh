@@ -3,7 +3,6 @@ import { render } from '@testing-library/react';
 import { within } from '@testing-library/dom';
 import { MemoryRouter } from 'react-router-dom';
 import { matchPath } from 'react-router';
-import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
 import routes from '../app/routes';
 // eslint-disable-next-line import/no-named-as-default
 import App from '#containers/App/App';
@@ -21,7 +20,8 @@ const getByTextSpecial = getByText => text =>
 
 export default async _pathname => {
   const pathname = _pathname.replace('https://www.bbc.com', '');
-  fetch.mockResponse(JSON.stringify(liveRadioPageJson));
+  const jsonData = require(`./pageData/${pathname}`); // eslint-disable-line import/no-dynamic-require, global-require
+  fetch.mockResponse(JSON.stringify(jsonData));
 
   const { getInitialData } = routes.find(({ path }) =>
     matchPath(pathname, {
