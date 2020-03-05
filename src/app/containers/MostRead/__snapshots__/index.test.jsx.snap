@@ -479,7 +479,12 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   }
 }
 
-<div>
+<section
+  aria-labelledby="Most-Read"
+  class=""
+  data-e2e="most-read"
+  role="region"
+>
   <div
     class="c0"
   >
@@ -826,5 +831,5 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
       </li>
     </ol>
   </div>
-</div>
+</section>
 `;

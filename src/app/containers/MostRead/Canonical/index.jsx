@@ -1,14 +1,23 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
-import { bool, string, elementType } from 'prop-types';
+import { bool, string } from 'prop-types';
 import styled from 'styled-components';
 import {
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MAX,
+  GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
+  GEL_MARGIN_ABOVE_400PX,
+  GEL_MARGIN_BELOW_400PX,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
 import {
   MostReadList,
@@ -33,13 +42,44 @@ const MarginWrapper = styled.div`
   }
 `;
 
-export const MostReadSection = styled.section.attrs(() => ({
+const MostReadSection = styled.section.attrs(() => ({
   role: 'region',
   'aria-labelledby': 'Most-Read',
   'data-e2e': 'most-read',
 }))``;
 
-const CanonicalMostRead = ({ endpoint, maxTwoColumns, wrapper }) => {
+const FrontPageMostReadSection = styled(MostReadSection)`
+  /* To centre page layout for Group 4+ */
+  margin: 0 auto;
+  width: 100%; /* Needed for IE11 */
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+  }
+`;
+
+const ConstrainedMostReadSection = styled(MostReadSection)`
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    margin: 0 ${GEL_MARGIN_BELOW_400PX} ${GEL_SPACING_TRPL};
+  }
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    margin: 0 ${GEL_MARGIN_ABOVE_400PX} ${GEL_SPACING_QUAD};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+    margin: 0 ${GEL_MARGIN_ABOVE_400PX} ${GEL_SPACING_QUIN};
+  }
+  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    margin: 0 auto ${GEL_SPACING_TRPL};
+    padding: 0 ${GEL_SPACING_DBL};
+    max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
+  }
+`;
+
+const CanonicalMostRead = ({
+  endpoint,
+  maxTwoColumns,
+  constrainMaxWidth,
+  isOnFrontPage,
+}) => {
   const [items, setItems] = useState([]);
   const {
     service,
@@ -49,7 +89,6 @@ const CanonicalMostRead = ({ endpoint, maxTwoColumns, wrapper }) => {
     timezone,
     mostRead: { header, lastUpdated, numberOfItems },
   } = useContext(ServiceContext);
-  const MostReadSectioWrapper = wrapper;
 
   useEffect(() => {
     const handleResponse = async response => {
@@ -100,8 +139,16 @@ const CanonicalMostRead = ({ endpoint, maxTwoColumns, wrapper }) => {
     return null;
   }
 
+  const StyledMostRead = isOnFrontPage
+    ? FrontPageMostReadSection
+    : MostReadSection;
+
+  const MostReadSectionWrapper = constrainMaxWidth
+    ? ConstrainedMostReadSection
+    : StyledMostRead;
+
   return (
-    <MostReadSectioWrapper>
+    <MostReadSectionWrapper>
       <SectionLabel
         script={script}
         labelId="Most-Read"
@@ -139,18 +186,20 @@ const CanonicalMostRead = ({ endpoint, maxTwoColumns, wrapper }) => {
           ))}
         </MostReadList>
       </MarginWrapper>
-    </MostReadSectioWrapper>
+    </MostReadSectionWrapper>
   );
 };
 
 CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
-  wrapper: elementType.isRequired,
+  constrainMaxWidth: bool.isRequired,
   maxTwoColumns: bool,
+  isOnFrontPage: bool,
 };
 
 CanonicalMostRead.defaultProps = {
   maxTwoColumns: false,
+  isOnFrontPage: false,
 };
 
 export default CanonicalMostRead;
