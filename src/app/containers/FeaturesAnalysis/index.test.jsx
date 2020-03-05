@@ -42,11 +42,17 @@ describe('CpsRelatedContent', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should have a section with a "region" role (a11y) and [aria-labelledby]', () => {
+  it('should have a section with a "region" role (a11y) and [aria-labelledby="features-analysis-heading"]', () => {
     renderFeaturesAnalysis();
     expect(
-      document.querySelectorAll(`section[role='region'][aria-labelledby]`)
-        .length,
+      document.querySelectorAll(
+        `section[role='region'][aria-labelledby="features-analysis-heading"]`,
+      ).length,
     ).toBe(1);
+  });
+
+  it('should have an [id] #features-analysis-heading', () => {
+    renderFeaturesAnalysis();
+    expect(document.querySelector(`#features-analysis-heading`)).toBeTruthy();
   });
 });
