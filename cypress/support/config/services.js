@@ -2331,10 +2331,7 @@ const genServices = {
         paths: {
           live: [],
           test: [],
-          local: [
-            '/turkce/haberler-dunya-50924340', // CPS MAP
-            '/turkce/multimedya/2016/02/160216_vid_genclerde_depresyon', // TC2 MAP
-          ],
+          local: ['/turkce/haberler-dunya-50924340'],
         },
         smoke: false,
       },
