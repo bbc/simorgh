@@ -542,10 +542,11 @@ const genServices = {
           ],
           test: [
             '/gahuza/amakuru-23257470', // CPS MAP
-            '/gahuza/video/2015/12/151217_test_long', // TC2 MAP
+            '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP
           ],
           local: [
-            '/gahuza/video/2015/12/151217_test_long', // TC2 MAP
+            '/gahuza/amakuru-23257470', // CPS MAP
+            '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP
           ],
         },
         smoke: false,
