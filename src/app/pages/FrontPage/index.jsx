@@ -108,6 +108,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
                 />
               )}
               <FrontPageSection group={group} sectionNumber={index} />
+              {group.type === 'top-stories' && <RadioScheduleContainer />}
             </Fragment>
           ))}
           {!hasUsefulLinks && (
@@ -116,7 +117,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
               maxTwoColumns
             />
           )}
-          <RadioScheduleContainer />
         </StyledFrontPageDiv>
       </StyledFrontPageMain>
     </>
