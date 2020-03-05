@@ -1,0 +1,282 @@
+{
+    "content": {
+      "blocks": [
+        {
+          "advertising": true,
+          "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+          "embedding": true,
+          "format": "video",
+          "id": "p01k6msm",
+          "imageCopyright": "BBC",
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+          "subType": "clip",
+          "synopses": {
+            "short": "They may be tiny, but us humans could learn a thing or two from ants."
+          },
+          "title": "Five things ants can teach us about management",
+          "type": "media",
+          "versions": [
+            {
+              "availableFrom": 1540218932000,
+              "availableTerritories": {
+                "nonUk": true,
+                "uk": true,
+                "world": false
+              },
+              "duration": 191,
+              "durationISO8601": "PT3M11S",
+              "types": [
+                "Original"
+              ],
+              "versionId": "p01k6msp",
+              "warnings": {
+                "long": "Contains strong language and adult humour.",
+                "short": "Contains strong language and adult humour."
+              }
+            }
+          ]
+        },
+        {
+          "markupType": "plain_text",
+          "role": "introduction",
+          "text": "Latsa hoton da ke sama don jin cikakken shirin:",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Latsa hoton da ke sama don jin cikakken shirin",
+          "type": "heading"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Latsa hoton da ke sama don jin cikakken shirin",
+          "type": "subheading"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Latsa hoton da ke sama don jin cikakken shirin",
+          "type": "crosshead"
+        },
+        {
+          "markupType": "plain_text",
+          "role": "transmission-info",
+          "text": "Latsa hoton da ke sama don jin cikakken shirin",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Mata, musamman wadanda suka fito daga gidajen marasa galihu na fuskantar barazanar kamuwa da wasu cututtuka, saboda rashin samun abubuwan da suka dace su yi amfani da su wajen kula da kansu a yayin da suke jinin al'ada.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "A wasu lokutan 'yan mata kan yi amfani da takarda ko tsumma har ma da safa don tare jinin da ke zuba daga jikinsu. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Lamarin da likitoci ke gargadin cewa rashin tsaftar wadannan abubuwa ka iya shafar lafiyar iyayen gobe.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "candy_xml",
+          "meta": [
+            {
+              "headlines": {
+                "headline": "Lafiya Zinariya: Me ke",
+                "overtyped": "Lafiya Zinariya: Me ke ",
+                "shortHeadline": "Lafiya Zinariya: Me ke"
+              },
+              "id": "urn:bbc:ares::asset:hausa/media-23269029",
+              "language": "ha",
+              "locators": {
+                "href": "http://www.bbc.com/hausa/media-23269029"
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "",
+                  "categoryName": ""
+                },
+                "taggings": []
+              },
+              "summary": "Lafiya Zinariya: Me ke",
+              "timestamp": 1583165690000,
+              "type": "cps"
+            }
+          ],
+          "text": "Ga wasu shirye-shiryen na baya da za ku so ku karanta da saurara <itemMeta>hausa/media-23269029</itemMeta>",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Ga wasu shirye-shiryen na baya da za ku so ku karanta da saurara",
+          "type": "paragraph"
+        },
+        {
+          "items": [
+            {
+              "markupType": "candy_xml",
+              "text": "<bold>Lafiya Zinariya: Jinin haila a tsakanin 'yan mata</bold>",
+              "type": "listItem"
+            },
+            {
+              "markupType": "plain_text",
+              "text": "Lafiya Zinariya: Dalilan da ke sa wasu masu jego yunkurin raunata kansu ko jariransu",
+              "type": "listItem"
+            },
+            {
+              "markupType": "candy_xml",
+              "text": "<italic>Lafiya Zinariya: Ko daukewar jinin al'ada kan shafi jima'in ma'aurata?</italic>",
+              "type": "listItem"
+            },
+            {
+              "markupType": "candy_xml",
+              "meta": [
+                {
+                  "headlines": {
+                    "headline": "Lafiya Zinariya: Me ke",
+                    "overtyped": "Lafiya Zinariya: Me ke ",
+                    "shortHeadline": "Lafiya Zinariya: Me ke"
+                  },
+                  "id": "urn:bbc:ares::asset:hausa/media-23269029",
+                  "language": "ha",
+                  "locators": {
+                    "href": "http://www.bbc.com/hausa/media-23269029"
+                  },
+                  "passport": {
+                    "category": {
+                      "categoryId": "",
+                      "categoryName": ""
+                    },
+                    "taggings": []
+                  },
+                  "summary": "Lafiya Zinariya: Me ke",
+                  "timestamp": 1583165690000,
+                  "type": "cps"
+                }
+              ],
+              "text": "<itemMeta>hausa/media-23269029</itemMeta>",
+              "type": "listItem"
+            }
+          ],
+          "numbered": false,
+          "type": "list"
+        }
+      ]
+    },
+    "metadata": {
+      "analyticsLabels": {
+        "counterName": "hausa.media_asset.23269030.page",
+        "cps_asset_id": "23269030",
+        "cps_asset_type": "map"
+      },
+      "blockTypes": [
+        "media",
+        "paragraph",
+        "heading",
+        "subheading",
+        "crosshead",
+        "list"
+      ],
+      "createdBy": "hausa-v6",
+      "firstPublished": 1583166303000,
+      "id": "urn:bbc:ares::asset:hausa/23269030",
+      "includeComments": false,
+      "language": "ha",
+      "lastPublished": 1583166303000,
+      "lastUpdated": 1583166317368,
+      "locators": {
+        "assetId": "23269030",
+        "assetUri": "/hausa/23269030",
+        "cpsUrn": "urn:bbc:content:assetUri:hausa/23269030",
+        "curie": "http://www.bbc.co.uk/asset/6df6257b-2fdd-0344-9382-bad1fe40e0b2"
+      },
+      "options": {
+        "allowDateStamp": true,
+        "allowHeadline": true,
+        "allowPrintingSharingLinks": true,
+        "allowRelatedStoriesBox": true,
+        "allowRightHandSide": true,
+        "hasNewsTracker": false,
+        "includeComments": false,
+        "isBreakingNews": false,
+        "isFactCheck": false,
+        "isIgorSeoTagsEnabled": false,
+        "isKeyContent": false
+      },
+      "tags": {},
+      "timestamp": 1583166303000,
+      "type": "MAP",
+      "version": "v1.1.6"
+    },
+    "promo": {
+      "headlines": {
+        "headline": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
+        "shortHeadline": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?"
+      },
+      "id": "urn:bbc:ares::asset:hausa/23269030",
+      "language": "ha",
+      "locators": {
+        "assetId": "23269030",
+        "assetUri": "/hausa/23269030",
+        "cpsUrn": "urn:bbc:content:assetUri:hausa/23269030",
+        "curie": "http://www.bbc.co.uk/asset/6df6257b-2fdd-0344-9382-bad1fe40e0b2"
+      },
+      "media": {
+        "advertising": true,
+        "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+        "embedding": true,
+        "format": "video",
+        "id": "p01k6msm",
+        "imageCopyright": "BBC",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+        "subType": "clip",
+        "synopses": {
+          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+        },
+        "title": "Five things ants can teach us about management",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1540218932000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "duration": 191,
+            "durationISO8601": "PT3M11S",
+            "types": [
+              "Original"
+            ],
+            "versionId": "p01k6msp",
+            "warnings": {
+              "long": "Contains strong language and adult humour.",
+              "short": "Contains strong language and adult humour."
+            }
+          }
+        ]
+      },
+      "passport": {
+        "taggings": []
+      },
+      "summary": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
+      "timestamp": 1583166303000,
+      "type": "cps"
+    },
+    "relatedContent": {
+      "groups": [],
+      "section": {
+        "name": "Labaran Duniya",
+        "subType": "index",
+        "type": "simple",
+        "uri": "/hausa/hausa"
+      },
+      "site": {
+        "name": "BBC Hausa",
+        "subType": "site",
+        "type": "simple",
+        "uri": "/hausa"
+      }
+    }
+  }

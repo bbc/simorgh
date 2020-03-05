@@ -672,9 +672,12 @@ const genServices = {
           ],
           test: [
             '/hausa/23269030', // CPS MAP
-            '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP
+            '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
           ],
-          local: [],
+          local: [
+            '/hausa/23269030', // CPS MAP
+            '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
+          ],
         },
         smoke: false,
       },
@@ -1891,7 +1894,7 @@ const genServices = {
           ],
           test: [
             '/sinhala/world-23257567', // CPS MAP
-            '/sinhala/multimedia/2016/03/160323_si_test_audio_map', // TC2 MAP
+            '/sinhala/multimedia/2016/03/160323_si_test_audio_map', // TC2 MAP with audio clip
           ],
           local: [
             '/sinhala/23248970', // CPS MAP with audio clip

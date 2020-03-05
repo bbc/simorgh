@@ -1,0 +1,108 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "format": "audio",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/hausa/meta/dps/junk/2016/07/emp/160714_tc2_audiomap.emp.xml",
+        "id": "17697852",
+        "live": false,
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "gdfgdgd",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "cps_asset_id": "17697852",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": [
+      "legacyMedia",
+      "paragraph"
+    ],
+    "createdBy": "hausa",
+    "firstPublished": 1468508148000,
+    "id": "urn:bbc:ares::asset:hausa/multimedia/2016/07/160714_tc2_audiomap",
+    "includeComments": false,
+    "language": "ha",
+    "lastPublished": 1468508148000,
+    "lastUpdated": 1583261241369,
+    "locators": {
+      "assetId": "17697852",
+      "assetUri": "/hausa/multimedia/2016/07/160714_tc2_audiomap",
+      "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2016/07/160714_tc2_audiomap",
+      "curie": "http://www.bbc.co.uk/asset/d3fbb72e-49d2-11e6-9d7d-707d16b40aaf"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1468508148000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Mawaka sun baje kolinsu da sallah a Kaduna",
+      "shortHeadline": "Mawaka sun baje kolinsu da sallah a Kaduna"
+    },
+    "id": "urn:bbc:ares::asset:hausa/multimedia/2016/07/160714_tc2_audiomap",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "Getty",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_144x81_getty_nocredit.jpg",
+      "id": "d5e210",
+      "path": "/amz/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_144x81_getty_nocredit.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "ha",
+    "locators": {
+      "assetId": "17697852",
+      "assetUri": "/hausa/multimedia/2016/07/160714_tc2_audiomap",
+      "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2016/07/160714_tc2_audiomap",
+      "curie": "http://www.bbc.co.uk/asset/d3fbb72e-49d2-11e6-9d7d-707d16b40aaf"
+    },
+    "media": {
+      "format": "audio",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/hausa/meta/dps/junk/2016/07/emp/160714_tc2_audiomap.emp.xml",
+      "id": "17697852",
+      "live": false,
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "Mawaka sun baje kolinsu da sallah a Kaduna summary",
+    "timestamp": 1468508148000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Hotuna da Bidiyo",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/hausa/multimedia"
+    },
+    "site": {
+      "name": "BBCHausa.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/hausa"
+    }
+  }
+}
