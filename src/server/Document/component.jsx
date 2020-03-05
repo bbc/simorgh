@@ -7,6 +7,7 @@ import {
   AMP_GEO_JS,
   AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
+  AMP_ADS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import ResourceHints from '#app/components/ResourceHints';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
@@ -52,6 +53,8 @@ const Document = ({
         {links}
         {styleTags}
         {headScript}
+        {/* {AMP_JS} */}
+        {/* {AMP_ADS_JS} */}
         {isAmp && (
           <>
             <style amp-boilerplate="">{AMP_SCRIPT}</style>
