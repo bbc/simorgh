@@ -31,7 +31,9 @@ const renderRadioScheduleContainer = service => (
       pathname={`/${service}`}
     >
       <ServiceContextProvider service={service}>
-        <RadioScheduleContainer endpoint={staticRadioScheduleURL(service)} />
+        <RadioScheduleContainer
+          radioScheduleEndpointOverride={staticRadioScheduleURL(service)}
+        />
       </ServiceContextProvider>
     </RequestContextProvider>
   </ToggleContextProvider>

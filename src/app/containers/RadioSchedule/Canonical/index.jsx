@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
 import { string } from 'prop-types';
+import SectionLabel from '@bbc/psammead-section-label';
+import { ServiceContext } from '#contexts/ServiceContext';
 import webLogger from '#lib/logger.web';
 
 const logger = webLogger();
 
 const CanonicalRadioSchedule = ({ endpoint }) => {
+  const header = 'BBC News Radio';
   const [schedule, setRadioSchedule] = useState([]);
-  // const { service, script, dir } = useContext(ServiceContext);
+  const { service, script, dir } = useContext(ServiceContext);
 
   const handleResponse = async response => {
     const radioScheduleData = await response.json();
@@ -28,7 +31,14 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
   }
   return (
     <>
-      <p>Radio Schedules</p>
+      <SectionLabel
+        script={script}
+        labelId="Radio-Schedule"
+        service={service}
+        dir={dir}
+      >
+        {header}
+      </SectionLabel>
       {schedule.map(
         ({
           broadcast,

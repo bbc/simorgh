@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { string } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '../Toggle/useToggle';
@@ -10,7 +11,7 @@ const getRadioScheduleEndpoint = (service, environment) =>
     ? `/${service}/bbc_${service}_radio/schedule.json`
     : `/${service}/bbc_${service}_radio/radioschedule.json`;
 
-const RadioScheduleContainer = () => {
+const RadioScheduleContainer = ({ radioScheduleEndpointOverride }) => {
   const { isAmp } = useContext(RequestContext);
   const { enabled } = useToggle('radioSchedule');
   const { service, hasRadioSchedule } = useContext(ServiceContext);
@@ -20,16 +21,19 @@ const RadioScheduleContainer = () => {
     return null;
   }
 
-  const endpoint = getRadioScheduleEndpoint(
-    service,
-    process.env.SIMORGH_APP_ENV,
-  );
+  const endpoint =
+    radioScheduleEndpointOverride ||
+    getRadioScheduleEndpoint(service, process.env.SIMORGH_APP_ENV);
 
   return <Canonical endpoint={endpoint} />;
 };
 
-// RadioScheduleContainer.propTypes = {
+RadioScheduleContainer.propTypes = {
+  radioScheduleEndpointOverride: string,
+};
 
-// };
+RadioScheduleContainer.defaultProps = {
+  radioScheduleEndpointOverride: null,
+};
 
 export default RadioScheduleContainer;
