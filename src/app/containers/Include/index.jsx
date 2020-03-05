@@ -4,7 +4,7 @@ import { string } from 'prop-types';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import useToggle from '../Toggle/useToggle';
 
-const Include = ({ html }) => {
+const IncludeContainer = ({ html }) => {
   const { enabled } = useToggle('styIncludes');
   return (
     <>
@@ -17,12 +17,12 @@ const Include = ({ html }) => {
   );
 };
 
-Include.propTypes = {
+IncludeContainer.propTypes = {
   html: string,
 };
 
-Include.defaultProps = {
+IncludeContainer.defaultProps = {
   html: null,
 };
 
-export default Include;
+export default IncludeContainer;
