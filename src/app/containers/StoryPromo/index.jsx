@@ -6,7 +6,7 @@ import {
   element,
   oneOf,
   oneOfType,
-  node,
+  func,
 } from 'prop-types';
 import StoryPromo, {
   Headline,
@@ -225,7 +225,7 @@ const StoryPromoContainer = ({
 
 StoryPromoContainer.propTypes = {
   item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
-  headlineTag: node,
+  headlineTag: func,
   promoType: oneOf(PROMO_TYPES),
   lazyLoadImage: bool,
   dir: oneOf(['ltr', 'rtl']),
