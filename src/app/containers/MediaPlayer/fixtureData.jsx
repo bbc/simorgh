@@ -323,6 +323,36 @@ export const validAresMetadataBlock = {
   type: 'aresMediaMetadata',
 };
 
+export const validAresMediaVideoLiveStreamBlock = {
+  blockId: 'urn:bbc:ares::primary:63501296',
+  model: {
+    embedding: false,
+    id: '63501296',
+    subType: 'primary',
+    live: true,
+    available: true,
+    format: 'audio_video',
+    title: 'live stream from event',
+    imageCopyright: 'BBC',
+    imageUrl: 'http://b.files.bbci.co.uk/15E0C/test/_63721698_p01kx435.jpg',
+    synopses: {
+      short: 'live stream from event',
+      medium: 'live stream from event',
+      long: 'live stream from event',
+    },
+    versions: [
+      {
+        kind: 'programme',
+        live: true,
+        versionId: 'journalism_uk_news_stream_01',
+      },
+    ],
+  },
+  id: 'b66165d9-f1b6-44e2-a903-b8f8cdecfb4f',
+  position: [2, 1, 1],
+  type: 'aresMediaMetadata',
+};
+
 export const defaultToggles = {
   local: {
     mediaPlayer: {

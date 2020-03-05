@@ -9,6 +9,7 @@ import {
   validAresMediaVideoBlock,
   validAresMediaAudioBlock,
   validAresMetadataBlock,
+  validAresMediaVideoLiveStreamBlock,
   missingAresMediaMetadataBlock,
   multipleAresMetadataBlock,
 } from '../../fixtureData';
@@ -63,6 +64,12 @@ describe('helper', () => {
         'https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg',
       );
     });
+  });
+
+  it('should return a valid thumbnail Uri for live video assets', () => {
+    expect(getThumbnailUri(validAresMediaVideoLiveStreamBlock)).toEqual(
+      'https://b.files.bbci.co.uk/15E0C/test/_63721698_p01kx435.jpg',
+    );
   });
 
   describe('getUploadDate', () => {
