@@ -120,17 +120,10 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 role="text"
                               >
                                 <span
-                                  aria-hidden="true"
                                   class="LiveLabel-sc-1dvfmi3-6 halTGG"
                                   dir="ltr"
                                 >
-                                  LIVE
-                                </span>
-                                <span
-                                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
-                                  lang="en-GB"
-                                >
-                                   Live, 
+                                  AS E DE HAPPEN
                                 </span>
                                 Senators don begin vote for Senate President
                               </span>
@@ -718,6 +711,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   <section
                     aria-labelledby="Most-Read"
                     class="MostReadSection-sc-6bm912-1 gLMjih"
+                    data-e2e="most-read"
                     role="region"
                   >
                     <div

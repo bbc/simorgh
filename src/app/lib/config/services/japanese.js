@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: '更新',
     atiAnalyticsAppName: 'news-japanese',
     atiAnalyticsProducerId: '56',
+    chartbeatDomain: 'japanese.bbc.co.uk',
     brandName: 'BBCニュース',
     product: 'BBC News',
     serviceLocalizedName: 'ニュース',

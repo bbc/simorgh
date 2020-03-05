@@ -13,6 +13,7 @@ const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/BBCNewsnasrpskom`,
   atiAnalyticsAppName: 'news-serbian',
   atiAnalyticsProducerId: '81',
+  chartbeatDomain: 'serbian.bbc.co.uk',
   product: 'BBC News',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png',
   dir: `ltr`,
