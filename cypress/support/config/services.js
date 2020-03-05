@@ -2137,7 +2137,10 @@ const genServices = {
             '/tamil/india-23268994', // CPS MAP
             '/tamil/global/2016/08/160822_tc2_testmap1', // TC2 MAP
           ],
-          local: [],
+          local: [
+            '/tamil/india-23268994', // CPS MAP
+            '/tamil/global/2016/08/160822_tc2_testmap1', // TC2 MAP
+          ],
         },
         smoke: false,
       },

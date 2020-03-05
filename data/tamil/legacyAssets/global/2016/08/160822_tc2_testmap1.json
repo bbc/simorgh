@@ -1,0 +1,125 @@
+{
+    "content": {
+      "blocks": [
+        {
+          "aspectRatio": "16:9",
+          "format": "video",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/tamil/meta/dps/junk/2016/08/emp/160822_tc2_testmap1.emp.xml",
+          "id": "17698131",
+          "live": false,
+          "subType": "primary",
+          "type": "legacyMedia"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "விழாவை மிகச் சிறப்பாக நடத்திக் காட்டியதற்காக, தன்னுடைய நகரம், நாடு மற்றும் நாட்டு மக்கள் குறித்து பெருமைப்படுவதாக ரியோ ஒலிம்பிக் விழா குழுவின் தலைவர் கார்லோஸ் ஆர்தர் நூஸ்மன் கருத்து தெரிவித்துள்ளார்.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "அற்புதமான விளையாட்டுகள், அற்புதமான நகரில் நடைபெற்றதாக சர்வதேச ஒலிம்பிக் அமைப்பின் தலைவர் தாமஸ் பேக் கருத்து தெரிவித்துள்ளார்.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "அடுத்த (2020-ம் ஆண்டு) ஒலிம்பிக் போட்டிகள் டோக்கியோவில் நடைபெற உள்ள நிலையில், ஒலிம்பிக் கொடி ஜப்பானிடம் வழங்கப்பட்டது.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "தொடர்ந்து, ஜப்பான் பிரதமர் ஷின்சோ அபே, ஜப்பானியர்களின் உருவாக்கமான பிரபல வீடியோ கேம் பாத்திரமான சூப்பர் மரியோவின் அலங்காரத்தில் மேடையில் தோன்றினார்.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    "metadata": {
+      "analyticsLabels": {
+        "cps_asset_id": "17698131",
+        "cps_asset_type": "map"
+      },
+      "blockTypes": [
+        "legacyMedia",
+        "paragraph"
+      ],
+      "createdBy": "tamil",
+      "firstPublished": 1471863765000,
+      "id": "urn:bbc:ares::asset:tamil/global/2016/08/160822_tc2_testmap1",
+      "includeComments": false,
+      "language": "ta",
+      "lastPublished": 1471865728000,
+      "lastUpdated": 1583262036425,
+      "locators": {
+        "assetId": "17698131",
+        "assetUri": "/tamil/global/2016/08/160822_tc2_testmap1",
+        "cpsUrn": "urn:bbc:content:assetUri:tamil/global/2016/08/160822_tc2_testmap1",
+        "curie": "http://www.bbc.co.uk/asset/bdc62c6c-6856-11e6-a110-6a547fcad303"
+      },
+      "options": {
+        "allowAdvertising": true,
+        "allowDateStamp": true,
+        "allowRightHandSide": true,
+        "includeComments": false,
+        "isBreakingNews": false,
+        "suitableForSyndication": false
+      },
+      "tags": {},
+      "timestamp": 1471863765000,
+      "type": "MAP",
+      "version": "v1.1.6"
+    },
+    "promo": {
+      "headlines": {
+        "headline": "கோலாகலமாக நிறைவு பெற்ற ரியோ ஒலிம்பிக் போட்டிகள்",
+        "shortHeadline": "கோலாகலமாக நிறைவு பெற்ற ரியோ ஒலிம்பிக் போட்டிகள்"
+      },
+      "id": "urn:bbc:ares::asset:tamil/global/2016/08/160822_tc2_testmap1",
+      "indexImage": {
+        "altText": "",
+        "copyrightHolder": "BBC",
+        "height": 81,
+        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
+        "id": "d5e212",
+        "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
+        "subType": "index",
+        "type": "image",
+        "width": 144
+      },
+      "language": "ta",
+      "locators": {
+        "assetId": "17698131",
+        "assetUri": "/tamil/global/2016/08/160822_tc2_testmap1",
+        "cpsUrn": "urn:bbc:content:assetUri:tamil/global/2016/08/160822_tc2_testmap1",
+        "curie": "http://www.bbc.co.uk/asset/bdc62c6c-6856-11e6-a110-6a547fcad303"
+      },
+      "media": {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/tamil/meta/dps/junk/2016/08/emp/160822_tc2_testmap1.emp.xml",
+        "id": "17698131",
+        "live": false,
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      "passport": {
+        "taggings": []
+      },
+      "summary": "ரியோ டி ஜெனிரோ நகரில் உள்ள மரக்கானா மைதானத்தில் ஒலிம்பிக் போட்டிகள் வண்ணமயமான கலைநிகழ்ச்சிகளுடன் நிறைவு பெற்றன.",
+      "timestamp": 1471863765000,
+      "type": "cps"
+    },
+    "relatedContent": {
+      "groups": [],
+      "section": {
+        "name": "உலகம்",
+        "subType": "index",
+        "type": "simple",
+        "uri": "/tamil/global"
+      },
+      "site": {
+        "name": "BBCTamil.com",
+        "subType": "site",
+        "type": "simple",
+        "uri": "/tamil"
+      }
+    }
+  }
