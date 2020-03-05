@@ -430,6 +430,7 @@ const genServices = {
         paths: {
           live: [],
           test: [
+            '/burmese/media-23269011', // CPS MAP
             '/burmese/sport/2016/08/160811_tc2_testmap1', // TC2 MAP
           ],
           local: [],
