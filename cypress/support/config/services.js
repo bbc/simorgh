@@ -2378,10 +2378,13 @@ const genServices = {
             '/turkce/multimedya/2016/02/160216_vid_genclerde_depresyon', // TC2 MAP
           ],
           test: [
-            '/turkce/media-23268997', // CPS MAP
+            '/turkce/media-23268997', // CPS MAP with audio clip
             '/turkce/multimedya/2016/05/160524_tc2_testmap1', // TC2 MAP
           ],
-          local: [],
+          local: [
+            '/turkce/media-23268997', // CPS MAP with audio clip
+            '/turkce/multimedya/2016/05/160524_tc2_testmap1', // TC2 MAP
+          ],
         },
         smoke: false,
       },
