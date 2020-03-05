@@ -5,7 +5,7 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
-import { C_CHALK } from '@bbc/psammead-styles/colours';
+import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -101,7 +101,7 @@ const StoryPage = ({ pageData }) => {
   `;
 
   const ComponentWrapper = styled.div`
-    background: ${C_CHALK};
+    background: ${C_LUNAR};
     margin-bottom: ${GEL_SPACING_TRPL};
     padding: ${GEL_SPACING_DBL};
   `;
