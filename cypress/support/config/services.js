@@ -362,7 +362,10 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [],
-          test: [],
+          test: [
+            '/bengali/media-23269006', // CPS MAP
+            '/bengali/multimedia/2016/08/160803_tc2_testmap1', // TC2 MAP
+          ],
           local: [],
         },
         smoke: false,
@@ -426,7 +429,10 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [],
-          test: [],
+          test: [
+            '/burmese/media-23269011', // CPS MAP
+            '/burmese/sport/2016/08/160811_tc2_testmap1', // TC2 MAP
+          ],
           local: [],
         },
         smoke: false,
@@ -527,7 +533,6 @@ const genServices = {
             '/gahuza/video/2015/12/151217_test_long', // TC2 MAP
           ],
           local: [
-            '/gahuza/amakuru-23257470', // CPS MAP
             '/gahuza/video/2015/12/151217_test_long', // TC2 MAP
           ],
         },
@@ -649,7 +654,10 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [],
-          test: [],
+          test: [
+            '/hausa/23269030', // CPS MAP
+            '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP
+          ],
           local: [],
         },
         smoke: false,
@@ -834,7 +842,10 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [],
-          test: [],
+          test: [
+            '/indonesia/media-23269037', // CPS MAP
+            '/indonesia/olahraga/2016/10/161003_tc2_videomap1', // TC2 MAP
+          ],
           local: [],
         },
         smoke: false,
@@ -1235,7 +1246,10 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [],
-          test: [],
+          test: [
+            '/nepali/media-23269034', // CPS MAP
+            '/nepali/multimedia/2016/07/160725_tc2_testmap1', // TC2 MAP
+          ],
           local: [],
         },
         smoke: false,
@@ -1332,10 +1346,7 @@ const genServices = {
             '/pashto/media-23257523', // CPS MAP
             '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
           ],
-          local: [
-            '/pashto/afghanistan-49628873', // CPS MAP
-            '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
-          ],
+          local: [],
         },
         smoke: false,
       },
@@ -1922,7 +1933,10 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [],
-          test: [],
+          test: [
+            '/somali/hayadeed-23269042', // CPS MAP
+            '/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1', // TC2 MAP
+          ],
           local: [],
         },
         smoke: false,
@@ -2000,7 +2014,10 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [],
-          test: [],
+          test: [
+            '/swahili/media-23268999', // CPS MAP
+            '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP
+          ],
           local: [],
         },
         smoke: false,
@@ -2064,7 +2081,10 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [],
-          test: [],
+          test: [
+            '/tamil/india-23268994', // CPS MAP
+            '/tamil/global/2016/08/160822_tc2_testmap1', // TC2 MAP
+          ],
           local: [],
         },
         smoke: false,
@@ -2299,7 +2319,10 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [],
-          test: [],
+          test: [
+            '/turkce/media-23268997', // CPS MAP
+            '/turkce/multimedya/2016/05/160524_tc2_testmap1', // TC2 MAP
+          ],
           local: [],
         },
         smoke: false,
@@ -2534,7 +2557,10 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [],
-          test: [],
+          test: [
+            '/urdu/world-23268929', // CPS MAP
+            '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP
+          ],
           local: [],
         },
         smoke: false,
