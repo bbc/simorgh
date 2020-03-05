@@ -14,7 +14,7 @@ exports[`CpsRelatedContent should render Story Feature components in Live enviro
         class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-r0jyv5-0 ftAujp"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc StyledSectionLabel-r0jyv5-1 dRpDSS"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc StyledSectionLabel-r0jyv5-1 QKVG"
         >
           <div
             class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -33,7 +33,7 @@ exports[`CpsRelatedContent should render Story Feature components in Live enviro
                   dir="ltr"
                   id="features-analysis-heading"
                 >
-                  Features Analysis 
+                  Featured & Analysis 
                 </span>
               </span>
             </div>
@@ -73,8 +73,8 @@ exports[`CpsRelatedContent should render Story Feature components in Live enviro
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                 dir="ltr"
               >
-                <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                <div
+                  class="DivHeadline-sc-1813wac-0 lkrGCE"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 yQgSu"
@@ -82,7 +82,7 @@ exports[`CpsRelatedContent should render Story Feature components in Live enviro
                   >
                     STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
                   </a>
-                </h3>
+                </div>
                 <p
                   class="Summary-sc-1dvfmi3-4 eaCWBB"
                 >
@@ -121,8 +121,8 @@ exports[`CpsRelatedContent should render Story Feature components in Live enviro
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                 dir="ltr"
               >
-                <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                <div
+                  class="DivHeadline-sc-1813wac-0 lkrGCE"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 yQgSu"
@@ -130,7 +130,7 @@ exports[`CpsRelatedContent should render Story Feature components in Live enviro
                   >
                     Robert Mugabe: Zimbabwe eferela nwa amadi a aka
                   </a>
-                </h3>
+                </div>
                 <p
                   class="Summary-sc-1dvfmi3-4 eaCWBB"
                 >
@@ -160,7 +160,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
         class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-r0jyv5-0 ftAujp"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc StyledSectionLabel-r0jyv5-1 dRpDSS"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc StyledSectionLabel-r0jyv5-1 QKVG"
         >
           <div
             class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -179,7 +179,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                   dir="ltr"
                   id="features-analysis-heading"
                 >
-                  Features Analysis 
+                  Featured & Analysis 
                 </span>
               </span>
             </div>
@@ -219,8 +219,8 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                 dir="ltr"
               >
-                <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                <div
+                  class="DivHeadline-sc-1813wac-0 lkrGCE"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 yQgSu"
@@ -228,7 +228,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                   >
                     STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
                   </a>
-                </h3>
+                </div>
                 <p
                   class="Summary-sc-1dvfmi3-4 eaCWBB"
                 >
@@ -267,8 +267,8 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                 dir="ltr"
               >
-                <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                <div
+                  class="DivHeadline-sc-1813wac-0 lkrGCE"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 yQgSu"
@@ -276,7 +276,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                   >
                     Robert Mugabe: Zimbabwe eferela nwa amadi a aka
                   </a>
-                </h3>
+                </div>
                 <p
                   class="Summary-sc-1dvfmi3-4 eaCWBB"
                 >
