@@ -1,6 +1,10 @@
 import '@testing-library/jest-dom/extend-expect';
 import renderApp from './renderApp';
 import { LIVE_RADIO_PAGE_PATH } from './pathnames';
+import {
+  shouldHaveFooterBranding,
+  shouldHaveFooterCopyrightText,
+} from './common';
 
 describe('Sighted user tests', () => {
   it('should render the headline', async () => {
@@ -21,16 +25,16 @@ describe('Sighted user tests', () => {
     expect(summaryEl).toBeInTheDocument();
   });
 
-  it('should have footer copyright text', async () => {
-    const app = await renderApp(LIVE_RADIO_PAGE_PATH);
-    const footerEl = document.querySelector('footer');
-    const copyrightEl = app
-      .within(footerEl)
-      .getByTextSpecial(
-        '© 2020 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다. 외부 콘텐츠 링크에 대한 본사 정책 보기.',
-      );
+  shouldHaveFooterBranding({
+    text: 'BBC News, 코리아',
+    link: '/korean',
+    pathname: LIVE_RADIO_PAGE_PATH,
+  });
 
-    expect(copyrightEl).toBeInTheDocument();
+  shouldHaveFooterCopyrightText({
+    text:
+      '© 2020 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다. 외부 콘텐츠 링크에 대한 본사 정책 보기.',
+    pathname: LIVE_RADIO_PAGE_PATH,
   });
 });
 
