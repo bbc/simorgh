@@ -1342,7 +1342,10 @@ const genServices = {
       },
       mediaAssetPage: {
         paths: {
-          live: ['/pashto/world-51657953'],
+          live: [
+            '/pashto/world-51657953', // CPS MAP
+            '/pashto/multimedia/2016/08/160827_gn_southafrica_female_farmer', // TC2 MAP
+          ],
           test: [
             '/pashto/media-23257523', // CPS MAP
             '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
@@ -1936,7 +1939,10 @@ const genServices = {
       },
       mediaAssetPage: {
         paths: {
-          live: ['/somali/51642476'],
+          live: [
+            '/somali/51642476', // CPS MAP
+            '/somali/war/2010/09/100929_business', // TC2 MAP
+          ],
           test: [],
           local: [],
         },
@@ -2014,7 +2020,10 @@ const genServices = {
       },
       mediaAssetPage: {
         paths: {
-          live: ['/swahili/gnb-51703829'],
+          live: [
+            '/swahili/gnb-51703829', // CPS MAP
+            '/swahili/medianuai/2016/05/160517_apatae_fatacky', // TC2 MAP
+          ],
           test: [],
           local: [],
         },
