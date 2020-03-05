@@ -2031,15 +2031,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       21 Fuulbaana 2017
                     </time>
-                    <div>
-                      <time
-                        class="c5"
-                        datetime="2017-09-21"
-                      >
-                        Haaromsameera 
-                        21 Fuulbaana 2017
-                      </time>
-                    </div>
                   </div>
                   <div
                     class="c3"
@@ -3903,15 +3894,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       3 August 2019
                     </time>
-                    <div>
-                      <time
-                        class="c5"
-                        datetime="2019-08-03"
-                      >
-                        New Informate 
-                        3 August 2019
-                      </time>
-                    </div>
                   </div>
                   <div
                     class="c3"
@@ -5243,15 +5225,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       23 October 2019
                     </time>
-                    <div>
-                      <time
-                        class="c5"
-                        datetime="2019-10-23"
-                      >
-                        New Informate 
-                        23 October 2019
-                      </time>
-                    </div>
                   </div>
                   <div
                     class="c3"
