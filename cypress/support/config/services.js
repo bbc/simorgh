@@ -2625,7 +2625,10 @@ const genServices = {
             '/urdu/world-23268929', // CPS MAP
             '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP
           ],
-          local: [],
+          local: [
+            '/urdu/world-23268929', // CPS MAP
+            '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP
+          ],
         },
         smoke: false,
       },
