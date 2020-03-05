@@ -59,6 +59,26 @@ describe('MediaPlayer', () => {
     />,
   );
 
+  shouldMatchSnapshot(
+    'render canonical legacy media player',
+    <GenerateMediaPlayer
+      platform="canonical"
+      blocks={[videoBlock]}
+      assetUri="/russian/multimedia/2016/05/160505_v_diving_record"
+      isLegacyMedia
+    />,
+  );
+
+  shouldMatchSnapshot(
+    'render amp legacy media player',
+    <GenerateMediaPlayer
+      platform="amp"
+      blocks={[videoBlock]}
+      assetUri="/russian/multimedia/2016/05/160505_v_diving_record"
+      isLegacyMedia
+    />,
+  );
+
   suppressPropWarnings(['assetUri']);
   isNull(
     'is Null when assetUri is not provided',
