@@ -1,0 +1,110 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/burmese/meta/dps/junk/2016/08/emp/160811_tc2_testmap1.emp.xml",
+        "id": "17698099",
+        "live": false,
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "ဗင်နီဇွဲလား နိုင်ငံမှာ စားနပ်ရိက္ခာ ပြတ်လပ်မှုတွေနဲ့ရင်ဆိုင်နေရပါတယ်။ သမ္မတ နစ်ကိုးလပ်စ် မဒူရိုကတော့ ပြည်ပ အင်အားကြီးတွေနဲ့ စီးပွားရေး သမားတွေက သူ့ဆိုရှယ်လစ် အစိုးရ ပြိုလဲအောင် ထိုးနှက်နေတဲ့ စီးပွားရေးစစ်ပွဲကြောင့် ဖြစ်တယ်လို့ အပြစ်ဖို့ပါတယ်။ ဝေဖန်သူတွေကတော့ ရေနံကြွယ်ဝတဲ့ တိုင်းပြည်ကို သူအုပ်ချုပ်တာ မဟုတ်လို့ ဒီလိုဖြစ်ရတာလို့ ဆိုနေကြပါတယ်။ ကိုဘိုဘိုက ပြောပြမှာပါ။",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "cps_asset_id": "17698099",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": [
+      "legacyMedia",
+      "paragraph"
+    ],
+    "createdBy": "burmese",
+    "firstPublished": 1470925531000,
+    "id": "urn:bbc:ares::asset:burmese/sport/2016/08/160811_tc2_testmap1",
+    "includeComments": false,
+    "language": "my",
+    "lastPublished": 1470925531000,
+    "lastUpdated": 1583261160518,
+    "locators": {
+      "assetId": "17698099",
+      "assetUri": "/burmese/sport/2016/08/160811_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:burmese/sport/2016/08/160811_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/236c11c0-5fcf-11e6-8341-9f9f1e3e95e6"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1470925531000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "ဗင်နီဇွဲလားမှာ စားနပ်ရိက္ခာ ပြတ်လပ်",
+      "shortHeadline": "ဗင်နီဇွဲလားမှာ စားနပ်ရိက္ခာ ပြတ်လပ်"
+    },
+    "id": "urn:bbc:ares::asset:burmese/sport/2016/08/160811_tc2_testmap1",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "Getty",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "id": "d5e210",
+      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "my",
+    "locators": {
+      "assetId": "17698099",
+      "assetUri": "/burmese/sport/2016/08/160811_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:burmese/sport/2016/08/160811_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/236c11c0-5fcf-11e6-8341-9f9f1e3e95e6"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/burmese/meta/dps/junk/2016/08/emp/160811_tc2_testmap1.emp.xml",
+      "id": "17698099",
+      "live": false,
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "ဗင်နီဇွဲလား နိုင်ငံမှာ စားနပ်ရိက္ခာ ပြတ်လပ်မှုတွေနဲ့ရင်ဆိုင်နေရပါတယ်။ သမ္မတ နစ်ကိုးလပ်စ် မဒူရိုကတော့ ပြည်ပ အင်အားကြီးတွေနဲ့ စီးပွားရေး သမားတွေက သူ့ဆိုရှယ်လစ် အစိုးရ ပြိုလဲအောင် ထိုးနှက်နေတဲ့ စီးပွားရေးစစ်ပွဲကြောင့် ဖြစ်တယ်လို့ အပြစ်ဖို့ပါတယ်။ ဝေဖန်သူတွေကတ",
+    "timestamp": 1470925531000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "အားကစား",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/burmese/sport"
+    },
+    "site": {
+      "name": "BBCBurmese.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/burmese"
+    }
+  }
+}
