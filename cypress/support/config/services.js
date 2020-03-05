@@ -1275,10 +1275,13 @@ const genServices = {
             '/nepali/multimedia/2013/08/130806_boudhavideo', // TC2 MAP
           ],
           test: [
-            '/nepali/media-23269034', // CPS MAP
+            '/nepali/media-23269034', // CPS MAP with audio clip
             '/nepali/multimedia/2016/07/160725_tc2_testmap1', // TC2 MAP
           ],
-          local: [],
+          local: [
+            '/nepali/media-23269034', // CPS MAP with audio clip
+            '/nepali/multimedia/2016/07/160725_tc2_testmap1', // TC2 MAP
+          ],
         },
         smoke: false,
       },
