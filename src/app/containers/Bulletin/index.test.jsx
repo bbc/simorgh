@@ -82,14 +82,14 @@ describe('Bulletin Container', () => {
       const { container } = render(BulletinWithContext(liveTvBulletinItem));
       const span = container.getElementsByTagName('span')[1];
 
-      expect(span.textContent).toEqual('Lee Live,');
+      expect(span.textContent).toEqual('Lee Live, ');
     });
 
     it('should render the Live Radio offscreen text', () => {
       const { container } = render(BulletinWithContext(liveRadioBulletinItem));
       const span = container.getElementsByTagName('span')[1];
 
-      expect(span.textContent).toEqual('Gee ntị Live,');
+      expect(span.textContent).toEqual('Gee ntị Live, ');
     });
 
     it('should render the LIVE label', () => {
@@ -98,7 +98,7 @@ describe('Bulletin Container', () => {
 
       expect(span.getAttribute('aria-hidden')).toBeDefined();
       expect(span.getAttribute('aria-hidden')).toEqual('true');
-      expect(span.textContent).toEqual('LIVE');
+      expect(span.textContent).toEqual('NA EME UGBU A ');
     });
   });
 });
