@@ -21,6 +21,7 @@ export const service = {
     articleTimestampPrefix: 'Atualizado',
     atiAnalyticsAppName: 'news-portuguese',
     atiAnalyticsProducerId: '33',
+    chartbeatDomain: 'brasil.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Brasil',
     product: 'BBC News',
     serviceLocalizedName: 'Brasil',
@@ -60,7 +61,7 @@ export const service = {
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',
-      sections: 'Seções',
+      navMenuText: 'Seções',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

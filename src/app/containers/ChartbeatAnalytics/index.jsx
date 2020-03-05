@@ -8,7 +8,7 @@ import { getConfig } from './utils';
 import useToggle from '../Toggle/useToggle';
 
 const ChartbeatAnalytics = ({ data }) => {
-  const { service, brandName } = useContext(ServiceContext);
+  const { service, brandName, chartbeatDomain } = useContext(ServiceContext);
   const { sendCanonicalChartbeatBeacon } = useContext(UserContext);
   const { enabled } = useToggle('chartbeatAnalytics');
   const { env, isAmp, platform, pageType, previousPath, origin } = useContext(
@@ -23,6 +23,7 @@ const ChartbeatAnalytics = ({ data }) => {
     pageType,
     data,
     brandName,
+    chartbeatDomain,
     env,
     service,
     origin,

@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Waa la cusbooneysiiyay',
     atiAnalyticsAppName: 'news-somali',
     atiAnalyticsProducerId: '83',
+    chartbeatDomain: 'somali.bbc.co.uk',
     brandName: 'BBC News Somali',
     product: 'BBC News',
     serviceLocalizedName: 'Somali',
@@ -49,7 +50,7 @@ export const service = {
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
-      sections: 'Qaybaha',
+      navMenuText: 'Qaybaha',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

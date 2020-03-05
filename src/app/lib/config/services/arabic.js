@@ -16,6 +16,7 @@ export const service = {
     articleTimestampPrefix: 'جدّد في',
     atiAnalyticsAppName: 'news-arabic',
     atiAnalyticsProducerId: '5',
+    chartbeatDomain: 'arabic.bbc.co.uk',
     brandName: 'BBC News عربي',
     product: 'BBC News',
     serviceLocalizedName: 'عربي',
@@ -53,7 +54,7 @@ export const service = {
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
       relatedContent: 'المزيد حول هذه القصة',
-      sections: 'أقسام',
+      navMenuText: 'أقسام',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

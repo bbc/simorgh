@@ -1,24 +1,57 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import FrontPageContainer from './index';
-import { service as igboConfig } from '#lib/config/services/igbo';
-import igboData from '#data/igbo/frontpage';
-import toggleReducer from '../../reducers/ToggleReducer';
-import defaultToggles from '#lib/config/toggles';
+import { render, wait, waitForElement } from '@testing-library/react';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
+import pidginMostReadData from '#data/pidgin/mostRead';
+import getInitialData from '#app/routes/home/getInitialData';
+import { FrontPage } from '..';
 
-// explicitly ignore console.log errors for Article/index:getInitialProps() error logging
-global.console.log = jest.fn();
-
-const defaultProps = {
+const requestContextData = {
   isAmp: false,
   pageType: 'frontPage',
-  service: 'news',
+  service: 'pidgin',
   pathname: '/pathname',
   data: { status: 200 },
 };
 
-jest.mock('../../containers/PageHandlers/withVariant', () => Component => {
+const FrontPageWithContext = props => (
+  <ToggleContextProvider>
+    <RequestContextProvider {...requestContextData}>
+      <ServiceContextProvider service="pidgin">
+        <FrontPage {...props} />
+      </ServiceContextProvider>
+    </RequestContextProvider>
+  </ToggleContextProvider>
+);
+
+let pageData;
+
+beforeEach(async () => {
+  fetch.mockResponse(JSON.stringify(frontPageDataPidgin));
+
+  const response = await getInitialData('some-front-page-path');
+
+  pageData = response.pageData;
+
+  fetch.mockResponse(JSON.stringify(pidginMostReadData));
+});
+
+jest.mock('uuid', () => {
+  let x = 1;
+  return () => {
+    x += 1;
+    return `mockid-${x}`;
+  };
+});
+
+jest.mock('#containers/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  return ChartbeatAnalytics;
+});
+
+jest.mock('#containers/PageHandlers/withVariant', () => Component => {
   const VariantContainer = props => (
     <div id="VariantContainer">
       <Component {...props} />
@@ -28,7 +61,7 @@ jest.mock('../../containers/PageHandlers/withVariant', () => Component => {
   return VariantContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
+jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   const DataContainer = props => (
     <div id="ContextsContainer">
       <Component {...props} />
@@ -38,7 +71,7 @@ jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
   return DataContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withPageWrapper', () => Component => {
+jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
     <div id="PageWrapperContainer">
       <Component {...props} />
@@ -48,7 +81,7 @@ jest.mock('../../containers/PageHandlers/withPageWrapper', () => Component => {
   return PageWrapperContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withLoading', () => Component => {
+jest.mock('#containers/PageHandlers/withLoading', () => Component => {
   const LoadingContainer = props => (
     <div id="LoadingContainer">
       <Component {...props} />
@@ -58,7 +91,7 @@ jest.mock('../../containers/PageHandlers/withLoading', () => Component => {
   return LoadingContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withError', () => Component => {
+jest.mock('#containers/PageHandlers/withError', () => Component => {
   const ErrorContainer = props => (
     <div id="ErrorContainer">
       <Component {...props} />
@@ -68,7 +101,7 @@ jest.mock('../../containers/PageHandlers/withError', () => Component => {
   return ErrorContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withData', () => Component => {
+jest.mock('#containers/PageHandlers/withData', () => Component => {
   const DataContainer = props => (
     <div id="DataContainer">
       <Component {...props} />
@@ -78,7 +111,7 @@ jest.mock('../../containers/PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
+jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   const ContextsContainer = props => (
     <div id="ContextsContainer">
       <Component {...props} />
@@ -88,90 +121,56 @@ jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
   return ContextsContainer;
 });
 
-jest.mock('../../containers/FrontPageMain', () => {
-  return jest.fn().mockReturnValue(<div>FrontPageMain</div>);
-});
-
-describe('FrontPageContainer', () => {
-  describe('Component', () => {
-    describe('Composing the Front Page Container using the page handlers', () => {
-      shouldMatchSnapshot(
-        'should compose frontPageContainer with the Page Handler in the correct order',
-        <FrontPageContainer {...defaultProps} />,
+describe('Front Page', () => {
+  describe('snapshots', () => {
+    it('should render a pidgin frontpage correctly', async () => {
+      const { container } = render(
+        <FrontPageWithContext pageData={pageData} />,
       );
+
+      // Waiting to ensure most read data is loaded and element is rendered
+      // The data is loaded separately which was previously causing snapshots to fail
+      await waitForElement(() => container.querySelector('#Most-Read'));
+
+      expect(container).toMatchSnapshot();
+    });
+  });
+
+  describe('Assertions', () => {
+    it('should render visually hidden text as h1', async () => {
+      const { container } = render(
+        <FrontPageWithContext pageData={pageData} />,
+      );
+
+      const h1 = container.querySelector('h1');
+      const content = h1.getAttribute('id');
+      const tabIndex = h1.getAttribute('tabIndex');
+
+      expect(content).toEqual('content');
+      expect(tabIndex).toBe('-1');
+
+      const span = h1.querySelector('span');
+      expect(span.getAttribute('role')).toEqual('text');
+      expect(span.textContent).toEqual('BBC News, Pidgin - Home');
+
+      const langSpan = span.querySelector('span');
+      expect(langSpan.getAttribute('lang')).toEqual('en-GB');
+      expect(langSpan.textContent).toEqual('BBC News');
+
+      await wait();
     });
 
-    describe('Assertions', () => {
-      let FrontPageComponent;
-      beforeAll(() => {
-        jest.resetModules();
-        jest.unmock('../../containers/PageHandlers/withError');
-        jest.unmock('../../containers/PageHandlers/withLoading');
-        jest.unmock('../../containers/PageHandlers/withData');
+    it('should render front page sections', async () => {
+      const { container } = render(
+        <FrontPageWithContext pageData={pageData} />,
+      );
+      const sections = container.querySelectorAll('section');
 
-        jest.mock('react', () => {
-          const original = jest.requireActual('react');
-          return {
-            ...original,
-            useContext: jest.fn(),
-            useReducer: jest.fn(),
-            useState: jest.fn(),
-          };
-        });
-
-        const { useContext, useReducer, useState } = jest.requireMock('react');
-        useContext.mockReturnValue(igboConfig.default);
-        FrontPageComponent = jest.requireActual('.').default;
-        useReducer.mockReturnValue([toggleReducer, defaultToggles]);
-        useState.mockImplementation(input => [input, () => {}]);
+      expect(sections).toHaveLength(2);
+      sections.forEach(section => {
+        expect(section.getAttribute('role')).toEqual('region');
       });
-
-      it('should not render frontpage if still loading', () => {
-        const { container } = render(
-          <FrontPageComponent {...defaultProps} loading />,
-        );
-        const { textContent } = container.querySelector('main');
-
-        expect(textContent).toEqual('');
-        expect(textContent).not.toContain('FrontPageMain');
-      });
-
-      it('should render error page when an error occurs', () => {
-        const { container } = render(
-          <FrontPageComponent {...defaultProps} error={new Error('oh no')} />,
-        );
-
-        const { textContent } = container.querySelector('main');
-        expect(textContent).toContain('Mperi');
-        expect(textContent).not.toContain('FrontPageMain');
-      });
-
-      it('should render the frontpage with data', () => {
-        const pageData = igboData;
-        const status = 200;
-
-        const frontPageMainMock = jest.requireMock(
-          '../../containers/FrontPageMain',
-        );
-        const { container } = render(
-          <FrontPageComponent
-            {...defaultProps}
-            error={null}
-            service="igbo"
-            pageData={pageData}
-            status={status}
-          />,
-        );
-
-        const expectedProps = {
-          frontPageData: igboData,
-          mostReadEndpointOverride: null,
-        };
-
-        expect(frontPageMainMock.mock.calls).toHaveLength(1);
-        expect(frontPageMainMock.mock.calls[0][0]).toEqual(expectedProps);
-        expect(container.textContent).toEqual('FrontPageMain');
-      });
+      await wait();
     });
   });
 });

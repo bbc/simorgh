@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'अपडेटेड',
     atiAnalyticsAppName: 'news-hindi',
     atiAnalyticsProducerId: '52',
+    chartbeatDomain: 'hindi.bbc.co.uk',
     brandName: 'BBC News हिंदी',
     product: 'BBC News',
     serviceLocalizedName: 'हिंदी',
@@ -50,7 +51,7 @@ export const service = {
       currentPage: 'मौजूदा पन्ना',
       skipLinkText: 'सामग्री को स्किप करें',
       relatedContent: 'संबंधित समाचार',
-      sections: 'सेक्शन',
+      navMenuText: 'सेक्शन',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिया प्लेयर',

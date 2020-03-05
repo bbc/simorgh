@@ -21,6 +21,7 @@ export const service = {
     articleTimestampPrefix: 'Actualización',
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
+    chartbeatDomain: 'mundo.bbc.co.uk',
     brandName: 'BBC News Mundo',
     product: 'BBC News',
     serviceLocalizedName: 'Mundo',
@@ -58,7 +59,7 @@ export const service = {
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
-      sections: 'Secciones',
+      navMenuText: 'Secciones',
       mediaAssetPage: {
         mediaPlayer: 'Reproductor multimedia',
         audioPlayer: 'Reproductor de audio',

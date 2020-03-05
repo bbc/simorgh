@@ -1,0 +1,351 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:serbian/cyr/srbija-46748932",
+    "locators": {
+      "assetUri": "/serbian/cyr/srbija-46748932",
+      "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/srbija-46748932",
+      "curie": "http://www.bbc.co.uk/asset/16f49edd-55b1-7f48-a20f-233699e75bd2"
+    },
+    "type": "PGL",
+    "createdBy": "serbian-v6",
+    "language": "sr-Cyrl",
+    "lastUpdated": 1546522253363,
+    "firstPublished": 1546521664,
+    "lastPublished": 1546522238,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "counterName": "serbiancyr.serbia.photo_gallery.46748932.page",
+      "cps_asset_id": "46748932",
+      "cps_asset_type": "pgl"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e2139461b000e9dabf7",
+          "campaignName": "Inspire me"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Life",
+          "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+          "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": []
+        },
+        {
+          "thingLabel": "Serbia",
+          "thingUri": "http://www.bbc.co.uk/things/1791445f-977a-4e6d-b490-51f84bb4fc52#id",
+          "thingId": "1791445f-977a-4e6d-b490-51f84bb4fc52",
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/6290252/"]
+        },
+        {
+          "thingLabel": "Sport",
+          "thingUri": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+          "thingId": "4063f80f-cccc-44c8-9449-5ca44e4c8592",
+          "thingType": [
+            "http://data.press.net/ontology/classification/Classification",
+            "http://www.bbc.co.uk/ontologies/classification/RootClassification",
+            "Theme",
+            "Thing",
+            "skos:Concept"
+          ],
+          "thingSameAs": ["http://dbpedia.org/resource/Sport"]
+        },
+        {
+          "thingLabel": "Health",
+          "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+          "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Health",
+            "http://www.wikidata.org/entity/Q12147"
+          ]
+        },
+        {
+          "thingLabel": "Biology",
+          "thingUri": "http://www.bbc.co.uk/things/e6628cd5-c2d2-421f-a04d-7de92a105ba1#id",
+          "thingId": "e6628cd5-c2d2-421f-a04d-7de92a105ba1",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Biology",
+            "http://www.wikidata.org/entity/Q420"
+          ]
+        }
+      ]
+    },
+    "version": "v0.4.12",
+    "blockTypes": ["image"]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "105049988",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/15BA2/production/_105049988_ika_4646.jpg",
+        "path": "/cpsprodpb/15BA2/production/_105049988_ika_4646.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Планинари на Трему",
+        "caption": "Новогодишњи успон на Трем се већ више од осам година организује на Сувој планини надомак Ниша. Стотинак планинара је другог јануара пошло да освоји највиши врх ове планине. Рута је подељена у две етапе - пут до Девојачког гроба, одакле се наставља до самог циља - Трема. На првој етапи, планинари су били заштићени шумом.",
+        "copyrightHolder": "Иван Динић",
+        "type": "image"
+      },
+      {
+        "id": "105049990",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/270A/production/_105049990_ika_4651.jpg",
+        "path": "/cpsprodpb/270A/production/_105049990_ika_4651.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Планинари на Трему",
+        "caption": "„Први део је био лакши. Стаза је била утабана и није било ветра\", прича фотограф Иван Динић. „Међутим, како се шума проредила, услови су постајали све тежи.\"",
+        "copyrightHolder": "Иван Динић",
+        "type": "image"
+      },
+      {
+        "id": "105049992",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/752A/production/_105049992_ika_4653.jpg",
+        "path": "/cpsprodpb/752A/production/_105049992_ika_4653.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Успон на Трем",
+        "caption": "До Девојачког гроба (1.311 метара) је било ведро.",
+        "copyrightHolder": "Иван Динић",
+        "type": "image"
+      },
+      {
+        "id": "105050375",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/DFD9/production/_105050375_ika_4657.jpg",
+        "path": "/cpsprodpb/DFD9/production/_105050375_ika_4657.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Успон на Трем",
+        "caption": "И више личило на зимску идилу.",
+        "copyrightHolder": "Иван Динић",
+        "type": "image"
+      },
+      {
+        "id": "105050377",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12DF9/production/_105050377_ika_4659.jpg",
+        "path": "/cpsprodpb/12DF9/production/_105050377_ika_4659.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Планинари на Девојачком гробу",
+        "caption": "„Као фоторепортер, ретко кад идем негде без апарата, па сам тако и овог пута хтео да забележим овај, за мене, необичан почетак године\", прича Динић.",
+        "copyrightHolder": "Иван Динић",
+        "type": "image"
+      },
+      {
+        "id": "105050379",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/17C19/production/_105050379_ika_4660.jpg",
+        "path": "/cpsprodpb/17C19/production/_105050379_ika_4660.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Трем",
+        "caption": "Али други део пута је био прави изазов. „Тежина успона се повећала, па сам се мало осећао и несигурно, због јаког ветра и снега који је падао унутар облака\", каже Динић.",
+        "copyrightHolder": "Иван Динић",
+        "type": "image"
+      },
+      {
+        "id": "105050381",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/4781/production/_105050381_ika_4668.jpg",
+        "path": "/cpsprodpb/4781/production/_105050381_ika_4668.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Планинари на Трему",
+        "caption": "Нишка експедиција је наставила пут ка Трему (1810 метара), упркос слабој видљивости.",
+        "copyrightHolder": "Иван Динић",
+        "type": "image"
+      },
+      {
+        "id": "105050663",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8EFD/production/_105050663_ika_4679.jpg",
+        "path": "/cpsprodpb/8EFD/production/_105050663_ika_4679.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Планинари на Трему",
+        "caption": "„На последњој деоници сам јако мало фотграфисао. Пењање је захтевало изузетан напор, а са ранцем на леђима, апарат око врата је у неким тренуцима био тежак као камен и више престављао терет, него алат.\"",
+        "copyrightHolder": "Иван Динић",
+        "type": "image"
+      },
+      {
+        "id": "105049986",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/10D82/production/_105049986_ika_4695.jpg",
+        "path": "/cpsprodpb/10D82/production/_105049986_ika_4695.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Планинари на Трему",
+        "caption": "Планинари су на врх стигли „завејани\".",
+        "copyrightHolder": "Иван Динић",
+        "type": "image"
+      },
+      {
+        "id": "105051331",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/3403/production/_105051331_img_8591-2.jpg",
+        "path": "/cpsprodpb/3403/production/_105051331_img_8591-2.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Иван Динић",
+        "caption": "Апарат није једина ствар која се заледила фотографу",
+        "copyrightHolder": "Душан Драгосављевић",
+        "type": "image"
+      },
+      {
+        "id": "105050787",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13371/production/_105050787_5a14bb5e-37a2-469e-9490-88dd1a914a65.jpg",
+        "path": "/cpsprodpb/13371/production/_105050787_5a14bb5e-37a2-469e-9490-88dd1a914a65.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Планинари на Трему",
+        "caption": "„На врху ми се следио објектив са предње стране, а и сам апарат је посустајао\", каже Динић. Ипак, планинари су направили неколико брзих фотографија и кренули назад. Укупно су прешли више од 30 километара, узбрдо и низбрдо.",
+        "copyrightHolder": "Иван Динић",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "У фотографијама: Новогодишњи успон на Трем",
+      "headline": "У фотографијама: Новогодишњи успон на Трем"
+    },
+    "locators": {
+      "assetUri": "/serbian/cyr/srbija-46748932",
+      "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/srbija-46748932",
+      "curie": "http://www.bbc.co.uk/asset/16f49edd-55b1-7f48-a20f-233699e75bd2"
+    },
+    "summary": "Нишлије, сада већ традиционално, сваког другог јануара освајају Трем, највиши врх Суве планине",
+    "timestamp": 1546522253363,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e2139461b000e9dabf7",
+          "campaignName": "Inspire me"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "105049986",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/10D82/production/_105049986_ika_4695.jpg",
+      "path": "/cpsprodpb/10D82/production/_105049986_ika_4695.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Планинари на Трему",
+      "caption": "Планинари су на врх стигли „завејани\".",
+      "copyrightHolder": "Иван Динић",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:serbian/cyr/srbija-46748932",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Србија",
+      "uri": "/serbian/cyr/srbija",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News na srpskom",
+      "uri": "/serbian/cyr",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Овако је свет дочекао нову 2019. годину",
+              "headline": "Фотографије дочека Нове 2019. године широм света"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/svet-46728481",
+              "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/svet-46728481"
+            },
+            "summary": "Од Сиднеја до Лондона - овако је свет испратио 2018. и дочекао 2019. годину.",
+            "timestamp": 1546338629,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105018327",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/11ABD/production/_105018327_0700208f-4d4f-40b5-a00c-e53f7348f542.jpg",
+              "path": "/cpsprodpb/11ABD/production/_105018327_0700208f-4d4f-40b5-a00c-e53f7348f542.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Fireworks illuminate the sky over the Quadriga statue of the Brandenburg Gate during New Year's Eve celebrations in Berlin",
+              "caption": "Fireworks shoot across the sky over the Quadriga statue of the Brandenburg Gate in Berlin",
+              "copyrightHolder": "EPA",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/svet-46728481",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Ауто од пластике на путу преко Антарктика",
+              "headline": "Бачена пластика и сунце: Све што вам је потребно за пут преко Антарктика"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/svet-46702774",
+              "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/svet-46702774"
+            },
+            "summary": "Возило је направљено од пластичног ђубрета и напаја се само сунчевом енергијом.",
+            "timestamp": 1546240346,
+            "cpsType": "MAP",
+            "indexImage": {
+              "id": "104970412",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/539F/production/_104970412_p06wqqv7.jpg",
+              "path": "/cpsprodpb/539F/production/_104970412_p06wqqv7.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "Ауто од пластике на путу преко Антарктика",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/svet-46702774",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

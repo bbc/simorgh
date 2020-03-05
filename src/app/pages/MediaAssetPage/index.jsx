@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
-import pipe from 'ramda/src/pipe';
 import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
@@ -20,6 +19,7 @@ import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/CpsText';
 import image from '#containers/Image';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
@@ -35,16 +35,9 @@ import {
 
 import { RequestContext } from '#contexts/RequestContext';
 
-// Page Handlers
-import withContexts from '#containers/PageHandlers/withContexts';
-import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
-import withError from '#containers/PageHandlers/withError';
-import withLoading from '#containers/PageHandlers/withLoading';
-import withData from '#containers/PageHandlers/withData';
-
 const isLegacyMediaAssetPage = url => url.split('/').length > 7;
 
-const MediaAssetPageContainer = ({ pageData }) => {
+const MediaAssetPage = ({ pageData }) => {
   const requestContext = useContext(RequestContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
@@ -102,6 +95,7 @@ const MediaAssetPageContainer = ({ pageData }) => {
 
   return (
     <>
+      <ChartbeatAnalytics data={pageData} />
       <CpsMetadata
         title={title}
         language={metadata.language}
@@ -125,19 +119,11 @@ const MediaAssetPageContainer = ({ pageData }) => {
       <StyledGhostGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledGhostGrid>
-      <CpsRelatedContent content={relatedContent} />
+      <CpsRelatedContent content={relatedContent} enableGridWrapper />
     </>
   );
 };
 
-MediaAssetPageContainer.propTypes = cpsAssetPagePropTypes;
+MediaAssetPage.propTypes = cpsAssetPagePropTypes;
 
-const EnhancedMediaAssetPageContainer = pipe(
-  withData,
-  withError,
-  withLoading,
-  withPageWrapper,
-  withContexts,
-)(MediaAssetPageContainer);
-
-export default EnhancedMediaAssetPageContainer;
+export default MediaAssetPage;

@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Wanda aka sabunta',
     atiAnalyticsAppName: 'news-hausa',
     atiAnalyticsProducerId: '51',
+    chartbeatDomain: 'hausa.bbc.co.uk',
     brandName: 'BBC News Hausa',
     product: 'BBC News',
     serviceLocalizedName: 'Hausa',
@@ -49,7 +50,7 @@ export const service = {
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',
-      sections: 'Sassa',
+      navMenuText: 'Sassa',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

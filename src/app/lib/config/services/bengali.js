@@ -16,6 +16,7 @@ export const service = {
     articleTimestampPrefix: 'আপডেট হয়েছে',
     atiAnalyticsAppName: 'news-bengali',
     atiAnalyticsProducerId: '31',
+    chartbeatDomain: 'bengali.bbc.co.uk',
     brandName: 'BBC News বাংলা',
     product: 'BBC News',
     serviceLocalizedName: 'বাংলা',
@@ -54,7 +55,7 @@ export const service = {
       currentPage: 'বর্তমান পেজ',
       skipLinkText: 'সরাসরি কনটেন্টে যান',
       relatedContent: 'এই খবর নিয়ে আরো তথ্য',
-      sections: 'সেকশন',
+      navMenuText: 'সেকশন',
       mediaAssetPage: {
         mediaPlayer: 'মিডিয়া প্লেয়ার',
         audioPlayer: 'অডিও প্লেয়ার',

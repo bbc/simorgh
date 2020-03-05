@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'અપડેટેડ',
     atiAnalyticsAppName: 'news-gujarati',
     atiAnalyticsProducerId: '50',
+    chartbeatDomain: 'gujarati.bbc.co.uk',
     brandName: 'BBC News ગુજરાતી',
     product: 'BBC News',
     serviceLocalizedName: 'ગુજરાતી',
@@ -49,7 +50,7 @@ export const service = {
       currentPage: 'વર્તમાન પેજ',
       skipLinkText: 'સામગ્રી પર જાઓ',
       relatedContent: 'સંબંધિત સમાચાર',
-      sections: 'વિભાગો',
+      navMenuText: 'વિભાગો',
       mediaAssetPage: {
         mediaPlayer: 'મીડિયા પ્લેયર',
         audioPlayer: 'ઓડિયો પ્લેયર',
