@@ -446,27 +446,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
               : appConfig[config[service].name][variant].product,
           );
       });
-
-      it('should contain copyright text', () => {
-        cy.get('footer p').should(
-          'contain',
-          appConfig[config[service].name][variant].footer.copyrightText,
-        );
-      });
-
-      it('copyright symbol should be wrapped in span', () => {
-        cy.get('footer span').should('contain', '©');
-      });
-
-      it('should contain a link in the copyright text', () => {
-        cy.get('footer p')
-          .children('a')
-          .should('have.attr', 'href')
-          .and(
-            'contain',
-            appConfig[config[service].name][variant].footer.externalLink.href,
-          );
-      });
     });
     if (
       ['mediaAssetPage', 'photoGalleryPage', 'storyPage'].includes(pageType)
