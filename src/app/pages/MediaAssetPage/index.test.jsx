@@ -13,7 +13,6 @@ import mapPageData from '#data/pidgin/cpsAssets/23248703';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
-import legacyPageData from '#data/hausa/legacyAssets/multimedia/2012/07/120712_click';
 
 const toggleState = {
   local: {
@@ -360,21 +359,4 @@ it('should only render firstPublished timestamp for Igbo when lastPublished is l
   const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
 
   expect(getByText('23 Ọktọba 2019')).toBeInTheDocument();
-});
-
-describe('Legacy Media Asset Page', () => {
-  it('displays a media message placeholder in place of video', async () => {
-    fetch.mockResponse(JSON.stringify(legacyPageData));
-
-    const { pageData: legacyMapData } = await getInitialData(
-      'some-legacy-map-path',
-    );
-    const { getByText } = render(
-      createAssetPage({ pageData: legacyMapData }, 'hausa'),
-    );
-
-    expect(
-      getByText('Yanzu an daina samar da wannan shiri.'),
-    ).toBeInTheDocument();
-  });
 });
