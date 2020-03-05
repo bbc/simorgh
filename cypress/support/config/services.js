@@ -2061,10 +2061,13 @@ const genServices = {
             '/swahili/medianuai/2016/05/160517_apatae_fatacky', // TC2 MAP
           ],
           test: [
-            '/swahili/media-23268999', // CPS MAP
-            '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP
+            '/swahili/media-23268999', // CPS MAP with audio clip
+            '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
           ],
-          local: [],
+          local: [
+            '/swahili/media-23268999', // CPS MAP with audio clip
+            '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
+          ],
         },
         smoke: false,
       },
