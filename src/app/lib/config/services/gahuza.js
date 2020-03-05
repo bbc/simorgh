@@ -111,7 +111,7 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Tumenyeshe nimba wemeye cookies',
+          title: 'Tumenyesha niba wemeye cookies',
           description: {
             uk: {
               first: 'Dukoresha ',
