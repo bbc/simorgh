@@ -1,0 +1,110 @@
+{
+    "content": {
+      "blocks": [
+        {
+          "aspectRatio": "16:9",
+          "format": "video",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/somali/meta/dps/junk/2016/06/emp/160628_tc2_testmap1.emp.xml",
+          "id": "17697751",
+          "live": false,
+          "subType": "primary",
+          "type": "legacyMedia"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "16-kii bishii June 1976, kumanyaal ardey Koonfur Afrika ah ayaa isugu soo baxay jidadka magalaada Soweto si ay uga mudaharaadaan xukunkii caddaankii tirada yaraa ee dalkaasi. Boqolaal ayaa booliisku ay ku dileen taasi oo wax weyn ka beddeshay xaaladdii bulsho iyo siyaasadeed ee Koonfur Afrika. Weriyaha BBC Chris Parkinson ayaa ku laabtay isla jidadkii banaanbaxo ka dhacay oo la kulmay qaar ka mid ah dadkii badbaaday.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    "metadata": {
+      "analyticsLabels": {
+        "cps_asset_id": "17697751",
+        "cps_asset_type": "map"
+      },
+      "blockTypes": [
+        "legacyMedia",
+        "paragraph"
+      ],
+      "createdBy": "somali",
+      "firstPublished": 1467128537000,
+      "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
+      "includeComments": false,
+      "language": "so",
+      "lastPublished": 1467297186000,
+      "lastUpdated": 1583316623062,
+      "locators": {
+        "assetId": "17697751",
+        "assetUri": "/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
+        "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
+        "curie": "http://www.bbc.co.uk/asset/b204250e-3d46-11e6-a639-d4813ba0532c"
+      },
+      "options": {
+        "allowAdvertising": true,
+        "allowDateStamp": true,
+        "allowRightHandSide": true,
+        "includeComments": false,
+        "isBreakingNews": false,
+        "suitableForSyndication": false
+      },
+      "tags": {},
+      "timestamp": 1467128537000,
+      "type": "MAP",
+      "version": "v1.1.6"
+    },
+    "promo": {
+      "headlines": {
+        "headline": "Maxaa xiga ka bixista UK ee EU?",
+        "shortHeadline": "Maxaa xiga ka bixista UK ee EU?"
+      },
+      "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
+      "indexImage": {
+        "altText": "",
+        "copyrightHolder": "BBC",
+        "height": 81,
+        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
+        "id": "d5e212",
+        "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
+        "subType": "index",
+        "type": "image",
+        "width": 144
+      },
+      "language": "so",
+      "locators": {
+        "assetId": "17697751",
+        "assetUri": "/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
+        "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
+        "curie": "http://www.bbc.co.uk/asset/b204250e-3d46-11e6-a639-d4813ba0532c"
+      },
+      "media": {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/somali/meta/dps/junk/2016/06/emp/160628_tc2_testmap1.emp.xml",
+        "id": "17697751",
+        "live": false,
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      "passport": {
+        "taggings": []
+      },
+      "summary": "Markii ugu danbaysay ee la cusbooneysiiyay.",
+      "timestamp": 1467128537000,
+      "type": "cps"
+    },
+    "relatedContent": {
+      "groups": [],
+      "section": {
+        "name": "Maqal iyo Muuqaal",
+        "subType": "index",
+        "type": "simple",
+        "uri": "/somali/maqal_iyo_muuqaal"
+      },
+      "site": {
+        "name": "BBCSomali.com",
+        "subType": "site",
+        "type": "simple",
+        "uri": "/somali"
+      }
+    }
+  }

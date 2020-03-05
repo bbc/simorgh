@@ -1977,7 +1977,10 @@ const genServices = {
             '/somali/hayadeed-23269042', // CPS MAP
             '/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1', // TC2 MAP
           ],
-          local: [],
+          local: [
+            '/somali/hayadeed-23269042', // CPS MAP
+            '/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1', // TC2 MAP
+          ],
         },
         smoke: false,
       },
