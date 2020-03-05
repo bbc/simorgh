@@ -1,10 +1,10 @@
 import '@testing-library/jest-dom/extend-expect';
 import renderApp from './renderApp';
-import { LIVE_RADIO_PATH } from './pathnames';
+import { LIVE_RADIO_PAGE_PATH } from './pathnames';
 
 describe('Sighted user tests', () => {
   it('should render the headline', async () => {
-    const app = await renderApp(LIVE_RADIO_PATH);
+    const app = await renderApp(LIVE_RADIO_PAGE_PATH);
     const mainEl = document.querySelector('[role="main"]');
     const headlineEl = app.within(mainEl).getByText('BBC 코리아 라디오');
 
@@ -12,7 +12,7 @@ describe('Sighted user tests', () => {
   });
 
   it('should render the summary', async () => {
-    const app = await renderApp(LIVE_RADIO_PATH);
+    const app = await renderApp(LIVE_RADIO_PAGE_PATH);
     const mainEl = document.querySelector('[role="main"]');
     const summaryEl = app
       .within(mainEl)
@@ -22,7 +22,7 @@ describe('Sighted user tests', () => {
   });
 
   it('should have footer copyright text', async () => {
-    const app = await renderApp(LIVE_RADIO_PATH);
+    const app = await renderApp(LIVE_RADIO_PAGE_PATH);
     const footerEl = document.querySelector('footer');
     const copyrightEl = app
       .within(footerEl)
@@ -36,7 +36,7 @@ describe('Sighted user tests', () => {
 
 describe('a11y tests', () => {
   it('should have an H1 with the headline with the id="content"', async () => {
-    await renderApp(LIVE_RADIO_PATH);
+    await renderApp(LIVE_RADIO_PAGE_PATH);
     const headlineId = document
       .querySelector('[role="main"] h1')
       .getAttribute('id');
@@ -47,14 +47,14 @@ describe('a11y tests', () => {
 
 describe('SEO tests', () => {
   it('should have an H1 with the headline', async () => {
-    await renderApp(LIVE_RADIO_PATH);
+    await renderApp(LIVE_RADIO_PAGE_PATH);
     const headline = document.querySelector('[role="main"] h1');
 
     expect(headline.textContent).toEqual('BBC 코리아 라디오');
   });
 
   it('should have a title tag', async () => {
-    await renderApp(LIVE_RADIO_PATH);
+    await renderApp(LIVE_RADIO_PAGE_PATH);
     const title = document.querySelector('head title');
 
     expect(title.textContent).toEqual('BBC 코리아 라디오 - BBC News 코리아');
