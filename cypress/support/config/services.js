@@ -1380,7 +1380,10 @@ const genServices = {
             '/pashto/media-23257523', // CPS MAP
             '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
           ],
-          local: [],
+          local: [
+            '/pashto/media-23257523', // CPS MAP
+            '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
+          ],
         },
         smoke: false,
       },
