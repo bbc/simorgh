@@ -1907,7 +1907,7 @@ const genServices = {
           ],
           local: [
             '/sinhala/23248970', // CPS MAP with audio clip
-            '/sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292', // TC2 MAP
+            '/sinhala/multimedia/2016/03/160323_si_test_audio_map', // TC2 MAP with audio clip
           ],
         },
         smoke: false,
