@@ -4,143 +4,139 @@ exports[`CpsRelatedContent should render Story Feature components in Live enviro
 <DocumentFragment>
   <section
     aria-labelledby="features-analysis-heading"
-    class="GhostGrid-sc-12lwanc-1 kGasFS"
+    class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-r0jyv5-0 ftAujp"
     role="region"
   >
     <div
       class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-r0jyv5-0 ftAujp"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-r0jyv5-0 ftAujp"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc StyledSectionLabel-r0jyv5-1 QKVG"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc StyledSectionLabel-r0jyv5-1 QKVG"
+          class="Bar-sc-1x4gwjz-0 jsgdXU"
+        />
+        <h2
+          class="Heading-sc-1x4gwjz-2 eZofTG"
         >
           <div
-            class="Bar-sc-1x4gwjz-0 jsgdXU"
-          />
-          <h2
-            class="Heading-sc-1x4gwjz-2 eZofTG"
+            class="FlexColumn-wx5kdp-0 dgpsiS"
           >
-            <div
-              class="FlexColumn-wx5kdp-0 dgpsiS"
+            <span
+              class="FlexRow-wx5kdp-2 dVBNyZ"
             >
               <span
-                class="FlexRow-wx5kdp-2 dVBNyZ"
+                class="Title-wx5kdp-4 jiurmA"
+                dir="ltr"
+                id="features-analysis-heading"
               >
-                <span
-                  class="Title-wx5kdp-4 jiurmA"
-                  dir="ltr"
-                  id="features-analysis-heading"
-                >
-                  Featured & Analysis 
-                </span>
+                Featured & Analysis 
               </span>
-            </div>
-          </h2>
-        </div>
-        <ul
-          class="StoryPromoUl-sc-171lqjd-1 isCYWc"
-          role="list"
-        >
-          <li
-            class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
-            role="listitem"
-          >
-            <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-            >
-              <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
-              >
-                <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                >
-                  <div
-                    class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                  <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                  />
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="ltr"
-              >
-                <div
-                  class="DivHeadline-sc-1813wac-0 lkrGCE"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 yQgSu"
-                    href="/igbo/afirika-23252735"
-                  >
-                    STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
-                  </a>
-                </div>
-                <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
-                >
-                  This is a test asset used in Simorgh, please do not edit it without asking.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li
-            class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
-            role="listitem"
-          >
-            <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-            >
-              <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
-              >
-                <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                >
-                  <div
-                    class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                  <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                  />
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="ltr"
-              >
-                <div
-                  class="DivHeadline-sc-1813wac-0 lkrGCE"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 yQgSu"
-                    href="/igbo/afirika-49666505"
-                  >
-                    Robert Mugabe: Zimbabwe eferela nwa amadi a aka
-                  </a>
-                </div>
-                <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
-                >
-                  Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
+            </span>
+          </div>
+        </h2>
       </div>
+      <ul
+        class="StoryPromoUl-sc-171lqjd-1 isCYWc"
+        role="list"
+      >
+        <li
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          role="listitem"
+        >
+          <div
+            class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+          >
+            <div
+              class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+              dir="ltr"
+            >
+              <div
+                class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+              >
+                <div
+                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                />
+              </div>
+            </div>
+            <div
+              class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+              dir="ltr"
+            >
+              <div
+                class="DivHeadline-sc-1813wac-0 lkrGCE"
+              >
+                <a
+                  class="Link-sc-1dvfmi3-5 yQgSu"
+                  href="/igbo/afirika-23252735"
+                >
+                  STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
+                </a>
+              </div>
+              <p
+                class="Summary-sc-1dvfmi3-4 eaCWBB"
+              >
+                This is a test asset used in Simorgh, please do not edit it without asking.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          role="listitem"
+        >
+          <div
+            class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+          >
+            <div
+              class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+              dir="ltr"
+            >
+              <div
+                class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+              >
+                <div
+                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                />
+              </div>
+            </div>
+            <div
+              class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+              dir="ltr"
+            >
+              <div
+                class="DivHeadline-sc-1813wac-0 lkrGCE"
+              >
+                <a
+                  class="Link-sc-1dvfmi3-5 yQgSu"
+                  href="/igbo/afirika-49666505"
+                >
+                  Robert Mugabe: Zimbabwe eferela nwa amadi a aka
+                </a>
+              </div>
+              <p
+                class="Summary-sc-1dvfmi3-4 eaCWBB"
+              >
+                Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
 </DocumentFragment>
@@ -150,143 +146,139 @@ exports[`CpsRelatedContent should render Story Feature components when given app
 <DocumentFragment>
   <section
     aria-labelledby="features-analysis-heading"
-    class="GhostGrid-sc-12lwanc-1 kGasFS"
+    class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-r0jyv5-0 ftAujp"
     role="region"
   >
     <div
       class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-r0jyv5-0 ftAujp"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-r0jyv5-0 ftAujp"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc StyledSectionLabel-r0jyv5-1 QKVG"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc StyledSectionLabel-r0jyv5-1 QKVG"
+          class="Bar-sc-1x4gwjz-0 jsgdXU"
+        />
+        <h2
+          class="Heading-sc-1x4gwjz-2 eZofTG"
         >
           <div
-            class="Bar-sc-1x4gwjz-0 jsgdXU"
-          />
-          <h2
-            class="Heading-sc-1x4gwjz-2 eZofTG"
+            class="FlexColumn-wx5kdp-0 dgpsiS"
           >
-            <div
-              class="FlexColumn-wx5kdp-0 dgpsiS"
+            <span
+              class="FlexRow-wx5kdp-2 dVBNyZ"
             >
               <span
-                class="FlexRow-wx5kdp-2 dVBNyZ"
+                class="Title-wx5kdp-4 jiurmA"
+                dir="ltr"
+                id="features-analysis-heading"
               >
-                <span
-                  class="Title-wx5kdp-4 jiurmA"
-                  dir="ltr"
-                  id="features-analysis-heading"
-                >
-                  Featured & Analysis 
-                </span>
+                Featured & Analysis 
               </span>
-            </div>
-          </h2>
-        </div>
-        <ul
-          class="StoryPromoUl-sc-171lqjd-1 isCYWc"
-          role="list"
-        >
-          <li
-            class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
-            role="listitem"
-          >
-            <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-            >
-              <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
-              >
-                <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                >
-                  <div
-                    class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                  <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                  />
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="ltr"
-              >
-                <div
-                  class="DivHeadline-sc-1813wac-0 lkrGCE"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 yQgSu"
-                    href="/igbo/afirika-23252735"
-                  >
-                    STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
-                  </a>
-                </div>
-                <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
-                >
-                  This is a test asset used in Simorgh, please do not edit it without asking.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li
-            class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
-            role="listitem"
-          >
-            <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-            >
-              <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
-              >
-                <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                >
-                  <div
-                    class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                  <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                  />
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="ltr"
-              >
-                <div
-                  class="DivHeadline-sc-1813wac-0 lkrGCE"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 yQgSu"
-                    href="/igbo/afirika-49666505"
-                  >
-                    Robert Mugabe: Zimbabwe eferela nwa amadi a aka
-                  </a>
-                </div>
-                <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
-                >
-                  Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
+            </span>
+          </div>
+        </h2>
       </div>
+      <ul
+        class="StoryPromoUl-sc-171lqjd-1 isCYWc"
+        role="list"
+      >
+        <li
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          role="listitem"
+        >
+          <div
+            class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+          >
+            <div
+              class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+              dir="ltr"
+            >
+              <div
+                class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+              >
+                <div
+                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                />
+              </div>
+            </div>
+            <div
+              class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+              dir="ltr"
+            >
+              <div
+                class="DivHeadline-sc-1813wac-0 lkrGCE"
+              >
+                <a
+                  class="Link-sc-1dvfmi3-5 yQgSu"
+                  href="/igbo/afirika-23252735"
+                >
+                  STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
+                </a>
+              </div>
+              <p
+                class="Summary-sc-1dvfmi3-4 eaCWBB"
+              >
+                This is a test asset used in Simorgh, please do not edit it without asking.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li
+          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          role="listitem"
+        >
+          <div
+            class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+          >
+            <div
+              class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+              dir="ltr"
+            >
+              <div
+                class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+              >
+                <div
+                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                />
+              </div>
+            </div>
+            <div
+              class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+              dir="ltr"
+            >
+              <div
+                class="DivHeadline-sc-1813wac-0 lkrGCE"
+              >
+                <a
+                  class="Link-sc-1dvfmi3-5 yQgSu"
+                  href="/igbo/afirika-49666505"
+                >
+                  Robert Mugabe: Zimbabwe eferela nwa amadi a aka
+                </a>
+              </div>
+              <p
+                class="Summary-sc-1dvfmi3-4 eaCWBB"
+              >
+                Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
 </DocumentFragment>

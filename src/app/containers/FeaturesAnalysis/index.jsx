@@ -10,10 +10,9 @@ import {
 } from '@bbc/gel-foundations/spacings';
 
 import featuresAnalysis from '#pages/StoryPage/featuresAnalysis.json';
-import { RequestContext } from '#contexts/RequestContext';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { GhostGrid, GridItemConstrainedLarge } from '#lib/styledGrid';
+import { GridItemConstrainedLarge } from '#lib/styledGrid';
 import StoryPromo from '../StoryPromo';
 import DivHeadline from '../StoryPromo/DivHeadlines';
 
@@ -34,22 +33,16 @@ const StyledSectionLabel = styled(SectionLabel)`
   }
 `;
 
-const FeaturesAnalysis = ({ content, enableGridWrapper }) => {
-  const { script, service, dir, translations } = useContext(ServiceContext);
-  const { env } = useContext(RequestContext);
+const FeaturesAnalysis = ({ content }) => {
+  const { script, service, dir } = useContext(ServiceContext);
   const a11yAttributes = {
     as: 'section',
     role: 'region',
     'aria-labelledby': 'features-analysis-heading',
   };
-  const FeaturesAnalysisWrapper = ({ children }) =>
-    enableGridWrapper ? (
-      <GhostGrid {...a11yAttributes}>
-        <Wrapper>{children}</Wrapper>
-      </GhostGrid>
-    ) : (
-      <Wrapper {...a11yAttributes}>{children}</Wrapper>
-    );
+  const FeaturesAnalysisWrapper = ({ children }) => (
+    <Wrapper {...a11yAttributes}>{children}</Wrapper>
+  );
   FeaturesAnalysisWrapper.propTypes = {
     children: node.isRequired,
   };
@@ -68,7 +61,7 @@ const FeaturesAnalysis = ({ content, enableGridWrapper }) => {
         </StyledSectionLabel>
 
         <StoryPromoUl>
-          {featuresAnalysis.map(item => (
+          {content.map(item => (
             <StoryPromoLi key={item.id || item.uri}>
               <StoryPromo
                 item={item}
@@ -92,7 +85,7 @@ FeaturesAnalysis.propTypes = {
 };
 
 FeaturesAnalysis.defaultProps = {
-  content: [],
+  content: featuresAnalysis, // @TODO: rm this
   enableGridWrapper: false,
 };
 
