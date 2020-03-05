@@ -31,7 +31,7 @@ const getOriginContext = bbcOrigin => {
     isUK = false;
   }
 
-  logger.debug(`${logPrefix}: ${origin}; isUK: ${isUK}`);
+  logger.info(`${logPrefix}: ${origin}; isUK: ${isUK}`);
 
   return {
     origin,
