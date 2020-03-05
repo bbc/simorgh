@@ -1,13 +1,18 @@
 import 'isomorphic-fetch';
+import webLogger from '#lib/logger.web';
+
+const logger = webLogger();
 
 const fetchMarkup = async url =>
   fetch(url, { mode: 'no-cors' })
     .then(html => {
+      if (html.status !== 200) return null;
+
       return html.text().then(text => {
         return text;
       });
     })
-    .catch(e => console.error(`HTTP Error: "${e}"`));
+    .catch(e => logger.error(`HTTP Error: "${e}"`));
 
 const convertInclude = async ({ tile, href, platform, url }) => {
   return {
