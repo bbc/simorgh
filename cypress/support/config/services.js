@@ -868,7 +868,10 @@ const genServices = {
             '/indonesia/media-23269037', // CPS MAP
             '/indonesia/olahraga/2016/10/161003_tc2_videomap1', // TC2 MAP
           ],
-          local: [],
+          local: [
+            '/indonesia/media-23269037', // CPS MAP
+            '/indonesia/olahraga/2016/10/161003_tc2_videomap1', // TC2 MAP
+          ],
         },
         smoke: false,
       },
