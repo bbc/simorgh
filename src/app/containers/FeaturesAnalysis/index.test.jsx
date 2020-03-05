@@ -1,14 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import path from 'ramda/src/path';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
 import FeaturesAnalysis from '.';
 import features from '#pages/StoryPage/featuresAnalysis.json';
-
-import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
 // eslint-disable-next-line react/prop-types
 const renderFeaturesAnalysis = ({
@@ -45,18 +42,11 @@ describe('CpsRelatedContent', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render Story Feature components in Live environment', () => {
-    const { asFragment } = renderFeaturesAnalysis({
-      bbcOrigin: 'https://www.bbc.co.uk',
-    });
-
-    // x_candy_override should not be used in the live environment
-    expect(document.querySelector(`[href*='x_candy_override']`)).toBeNull();
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  it('should have a "region" role (a11y)', () => {
+  it('should have a section with a "region" role (a11y) and [aria-labelledby]', () => {
     renderFeaturesAnalysis();
-    expect(document.querySelectorAll(`[role='region']`).length).toBe(1);
+    expect(
+      document.querySelectorAll(`section[role='region'][aria-labelledby]`)
+        .length,
+    ).toBe(1);
   });
 });
