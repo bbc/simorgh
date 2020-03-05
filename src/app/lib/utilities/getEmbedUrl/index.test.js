@@ -171,6 +171,29 @@ const testCases = [
       queryString: liveOverrideParam,
     },
   },
+  {
+    description: `should build a CANONICAL url for legacy media in test environment with no override`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/legacy/${legacyId}`,
+    environment: 'test',
+    before: setEnvironment,
+    embedObject: {
+      mediaId: legacyId,
+      type: 'legacy',
+      queryString: '',
+    },
+  },
+  {
+    description: `should build an AMP url for legacy media in test environment with no override`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/legacy/${legacyId}/amp`,
+    environment: 'test',
+    before: setEnvironment,
+    embedObject: {
+      isAmp: true,
+      mediaId: legacyId,
+      type: 'legacy',
+      queryString: '',
+    },
+  },
 ];
 
 describe('Media Player: Embed URL', () => {

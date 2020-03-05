@@ -31,9 +31,8 @@ export const createSrcset = (
   return urls.join(', ');
 };
 export const getPlaceholderSrcSet = ({ originCode, locator }) => {
-  if (!originCode || !locator) {
-    return '';
-  }
+  if (!originCode) return '';
+  if (!locator) return '';
   return DEFAULT_RESOLUTIONS.map(
     resolution =>
       `${buildIChefUrl({ originCode, locator, resolution })} ${resolution}w`,
