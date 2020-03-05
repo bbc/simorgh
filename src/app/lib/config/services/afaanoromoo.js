@@ -145,7 +145,7 @@ export const service = {
         video: 'Viidiyoo',
         listen: 'Dhaggeeffadhaa',
         watch: 'Daawwadhu',
-        liveLabel: 'JIRADHU',
+        liveLabel: 'KALLATTIIN',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
