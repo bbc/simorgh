@@ -332,13 +332,13 @@ export const validAresMediaVideoLiveStreamBlock = {
     live: true,
     available: true,
     format: 'audio_video',
-    title: 'live stream from event',
+    title: 'พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบ',
     imageCopyright: 'BBC',
     imageUrl: 'http://b.files.bbci.co.uk/15E0C/test/_63721698_p01kx435.jpg',
     synopses: {
-      short: 'live stream from event',
-      medium: 'live stream from event',
-      long: 'live stream from event',
+      short: 'พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบ',
+      medium: 'พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบ',
+      long: 'พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบ',
     },
     versions: [
       {
@@ -363,13 +363,13 @@ export const validAresMediaLiveAudioBlock = {
     live: true,
     available: true,
     format: 'audio',
-    title: '',
+    title: 'Ўзбек деҳқонининг косаси нега оқармайдиshort',
     imageCopyright: 'AFP',
     imageUrl: 'http://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg',
     synopses: {
-      short: '',
-      medium: '',
-      long: '',
+      short: 'Ўзбек деҳқонининг косаси нега оқармайдиshort',
+      medium: 'Ўзбек деҳқонининг косаси нега оқармайдиshort',
+      long: 'Ўзбек деҳқонининг косаси нега оқармайдиshort',
     },
     versions: [
       {
