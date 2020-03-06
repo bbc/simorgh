@@ -53,7 +53,7 @@ const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
       src={src}
       fallback={false}
       {...imageValues}
-      lazyLoad={lazyLoad}
+      // lazyLoad={lazyLoad}
       copyright={imageValues.copyrightHolder}
       srcset={srcset}
       sizes={sizes}
