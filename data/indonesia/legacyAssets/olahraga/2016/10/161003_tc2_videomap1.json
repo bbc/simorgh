@@ -1,0 +1,110 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/indonesia/meta/dps/junk/2016/10/emp/161003_tc2_videomap1.emp.xml",
+        "id": "17698522",
+        "live": false,
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Seorang anak laki-laki berusia enam tahun menulis surat kepada Presiden Barack Obama, menawarkan tempat di rumahnya untuk anak Suriah. Alex yang berasal dari New York menulis surat setelah melihat foto anak lima tahun Omran Dagneesh, yang luka-luka dan berdarah. Foto itu membuat marah banyak orang. Obama mengatakan surat itu dari seorang anak &quot;yang belum belajar cara menjadi sinis, atau curiga atau takut dengan orang lain karena asal mereka atau cara mereka beribadah.&quot;",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "cps_asset_id": "17698522",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": [
+      "legacyMedia",
+      "paragraph"
+    ],
+    "createdBy": "indonesia",
+    "firstPublished": 1475488380000,
+    "id": "urn:bbc:ares::asset:indonesia/olahraga/2016/10/161003_tc2_videomap1",
+    "includeComments": false,
+    "language": "id",
+    "lastPublished": 1475489454000,
+    "lastUpdated": 1583244419880,
+    "locators": {
+      "assetId": "17698522",
+      "assetUri": "/indonesia/olahraga/2016/10/161003_tc2_videomap1",
+      "cpsUrn": "urn:bbc:content:assetUri:indonesia/olahraga/2016/10/161003_tc2_videomap1",
+      "curie": "http://www.bbc.co.uk/asset/d52a9014-894e-11e6-8973-adfd122641ab"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1475489454000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Surat Alex, anak usia enam tahun: Pak Presiden Obama, tolong jemput anak Suriah",
+      "shortHeadline": "Surat Alex, anak usia enam tahun: Pak Presiden Obama, tolong jemput anak Suriah"
+    },
+    "id": "urn:bbc:ares::asset:indonesia/olahraga/2016/10/161003_tc2_videomap1",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "Getty",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "id": "d5e222",
+      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "id",
+    "locators": {
+      "assetId": "17698522",
+      "assetUri": "/indonesia/olahraga/2016/10/161003_tc2_videomap1",
+      "cpsUrn": "urn:bbc:content:assetUri:indonesia/olahraga/2016/10/161003_tc2_videomap1",
+      "curie": "http://www.bbc.co.uk/asset/d52a9014-894e-11e6-8973-adfd122641ab"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/indonesia/meta/dps/junk/2016/10/emp/161003_tc2_videomap1.emp.xml",
+      "id": "17698522",
+      "live": false,
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "Seorang anak laki-laki berusia enam tahun menulis surat kepada Presiden Barack Obama, menawarkan tempat di rumahnya untuk anak Suriah.",
+    "timestamp": 1475489454000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Olahraga",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/indonesia/olahraga"
+    },
+    "site": {
+      "name": "BBCIndonesia.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/indonesia"
+    }
+  }
+}
