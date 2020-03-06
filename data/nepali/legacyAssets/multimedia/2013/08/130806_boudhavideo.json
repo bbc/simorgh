@@ -1,0 +1,95 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares::asset:nepali/multimedia/2013/08/130806_boudhavideo",
+      "locators": {
+        "assetUri": "/nepali/multimedia/2013/08/130806_boudhavideo",
+        "cpsUrn": "urn:bbc:content:assetUri:nepali/multimedia/2013/08/130806_boudhavideo",
+        "curie": "http://www.bbc.co.uk/asset/15e3a16a-feb3-11e2-9142-5fbf3db9bd6e"
+      },
+      "type": "MAP",
+      "createdBy": "nepali",
+      "language": "ne",
+      "lastUpdated": 1569320152312,
+      "firstPublished": 1375805582,
+      "lastPublished": 1375806507,
+      "options": {
+        "allowDateStamp": true,
+        "includeComments": false,
+        "allowAdvertising": false,
+        "suitableForSyndication": false
+      },
+      "analyticsLabels": { "cps_asset_type": "map" },
+      "tags": {},
+      "version": "v1.0.10",
+      "blockTypes": [ "legacyMedia", "paragraph" ],
+      "includeComments": false
+    },
+    "content": {
+      "blocks": [
+        {
+          "id": "26308269",
+          "subType": "primary",
+          "format": "video",
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/nepali/meta/dps/2013/08/emp/130806_boudhavideo.emp.xml",
+          "type": "legacyMedia"
+        },
+        {
+          "text": "काठमाण्डूको बौध्दनाथ स्तुपमा अगष्ट ६ तारीख मंगलबार एक तिब्बती शरणार्थीले आफ्नो शरीरमा आगो लगाएर आत्मदाह गरेका छन्।",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "बौध्द स्तुप परिसरमा पुजा गर्न गएका ठानिएका ती व्यक्तिलाई तत्कालै त्यहाँ तैनाथ प्रहरीले उपचारको लागि अस्पताल पुर्\u200dयाएका थिए।",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "तर शरिरको अधिकांश भाग नराम्ररी जलेका  ३८ वर्षिय तिब्बती भिक्षु कर्मा निदोन् ग्यात्सोको काठमान्डू स्थित शिक्षण अस्पतालमा उपचारका क्रममा मृत्यु भएको प्रहरीले जनाएको छ।",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "उनले तिब्बतमा चिनीयाँ साशनको विरोधमा आत्मदाह गरेका हुन् वा आत्महत्या भन्ने कुरा खुलिनसेकेको प्रहरी प्रवक्ता नवराज सिलवालले बताएका छन्।",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "यस अघि पनि बौद्धमै दुई जना तिब्बती शरणार्थीले आत्मदाहको प्रयास गरेका थिए जसमध्ये जलेर एक जनाको जलेर मृत्यु भएको थियो।",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        }
+      ]
+    },
+    "promo": {
+      "headlines": {
+        "shortHeadline": "बौद्धमा एक भिक्षुबाट आत्मदाह",
+        "headline": "बौद्धमा एक भिक्षुबाट आत्मदाह"
+      },
+      "locators": {
+        "assetUri": "/nepali/multimedia/2013/08/130806_boudhavideo",
+        "cpsUrn": "urn:bbc:content:assetUri:nepali/multimedia/2013/08/130806_boudhavideo",
+        "curie": "http://www.bbc.co.uk/asset/15e3a16a-feb3-11e2-9142-5fbf3db9bd6e"
+      },
+      "summary": "काठमाण्डूको बौध्दनाथ स्तुपमा अगष्ट ६ तारीख मंगलबार एक तिब्बती शरणार्थीले आफ्नो शरीरमा आगो लगाएर आत्मदाह गरेको स्थलको भीडियो",
+      "timestamp": 1569320152312,
+      "passport": {},
+      "media": {
+        "id": "26308269",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/nepali/meta/dps/2013/08/emp/130806_boudhavideo.emp.xml",
+        "type": "legacyMedia"
+      },
+      "id": "urn:bbc:ares::asset:nepali/multimedia/2013/08/130806_boudhavideo",
+      "type": "cps"
+    },
+    "relatedContent": {
+      "section": { "subType": "index", "name": "Multimedia", "uri": "/nepali/multimedia", "type": "simple" },
+      "site": { "subType": "site", "name": "BBCNepali.com", "uri": "/nepali", "type": "simple" },
+      "groups": []
+    }
+  }
