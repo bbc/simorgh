@@ -5,6 +5,7 @@ const fetchMarkup = async url => {
     const html = await fetch(url, { mode: 'no-cors' });
     return await html.text();
   } catch (e) {
+    // eslint-disable-next-line no-console
     console.error(`Error fetching include ${url}: ${e}`);
     return null;
   }
