@@ -39,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: "Urupapuro rw'itangiriro",
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -111,7 +110,7 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Tumenyeshe nimba wemeye cookies',
+          title: 'Tumenyesha niba wemeye cookies',
           description: {
             uk: {
               first: 'Dukoresha ',
@@ -161,6 +160,9 @@ export const service = {
       lastUpdated: 'Ibiheruka kuvugururwa:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
