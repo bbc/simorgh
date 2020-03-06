@@ -1,10 +1,10 @@
 import { matchPath } from 'react-router';
 
 export default pathRegex => pathname => {
-  const match = matchPath(pathname, {
+  const { params } = matchPath(pathname, {
     path: pathRegex,
   });
-  const errorCode = match ? Number(match.params.errorCode) : 404;
+  const errorCode = Number(params.errorCode);
 
   return Promise.resolve({ status: 200, errorCode });
 };
