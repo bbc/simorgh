@@ -7,6 +7,7 @@ import '@testing-library/jest-dom/extend-expect';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContext } from '#contexts/UserContext';
+import { ToggleContext } from '#contexts/ToggleContext';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 import { service as ukChinaServiceConfig } from '#lib/config/services/ukchina';
 import * as cookies from '#contexts/UserContext/cookies';
@@ -30,6 +31,7 @@ const userContextMock = {
 
 const requestContextMock = {
   variant: 'lat',
+  env: 'test',
 };
 
 const withRouter = (component, matchPath, path) => {
@@ -48,18 +50,55 @@ const withRouter = (component, matchPath, path) => {
   };
 };
 
+const defaultToggleState = {
+  local: {
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
+    },
+  },
+  test: {
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
+    },
+  },
+  live: {
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
+    },
+  },
+};
+
+const mockToggleDispatch = jest.fn();
+
+const toggleContextMock = {
+  toggleState: defaultToggleState,
+  toggleDispatch: mockToggleDispatch,
+};
+
 /* eslint-disable react/prop-types */
 const ScriptLinkContainerWithContext = ({
   serviceContext = serbianServiceConfig.lat,
   requestContext = requestContextMock,
+  toggleContext = toggleContextMock,
 }) => (
-  <ServiceContext.Provider value={serviceContext}>
-    <UserContext.Provider value={userContextMock}>
-      <RequestContext.Provider value={requestContext}>
-        <ScriptLinkContainer />
-      </RequestContext.Provider>
-    </UserContext.Provider>
-  </ServiceContext.Provider>
+  <ToggleContext.Provider value={toggleContext}>
+    <ServiceContext.Provider value={serviceContext}>
+      <UserContext.Provider value={userContextMock}>
+        <RequestContext.Provider value={requestContext}>
+          <ScriptLinkContainer />
+        </RequestContext.Provider>
+      </UserContext.Provider>
+    </ServiceContext.Provider>
+  </ToggleContext.Provider>
 );
 
 describe(`Script Link`, () => {
@@ -101,7 +140,7 @@ describe(`Script Link`, () => {
         variantPath:
           '/ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs',
         serviceContext: ukChinaServiceConfig.trad,
-        requestContext: { variant: 'trad' },
+        requestContext: { variant: 'trad', env: 'test' },
         otherVariant: 'simp',
       },
     };
@@ -115,6 +154,7 @@ describe(`Script Link`, () => {
             variantPath,
             serviceContext = serbianServiceConfig.lat,
             requestContext = requestContextMock,
+            toggleContext = toggleContextMock,
             otherVariant = 'cyr',
           } = testCases[testCase];
 
@@ -122,6 +162,7 @@ describe(`Script Link`, () => {
             <ScriptLinkContainerWithContext
               serviceContext={serviceContext}
               requestContext={requestContext}
+              toggleContext={toggleContext}
             />,
             matchPath,
             path,
@@ -146,6 +187,7 @@ describe(`Script Link`, () => {
             variantPath,
             serviceContext = serbianServiceConfig.lat,
             requestContext = requestContextMock,
+            toggleContext = toggleContextMock,
             otherVariant = 'cyr',
           } = testCases[testCase];
 
@@ -153,6 +195,7 @@ describe(`Script Link`, () => {
             <ScriptLinkContainerWithContext
               serviceContext={serviceContext}
               requestContext={requestContext}
+              toggleContext={toggleContext}
             />,
             matchPath,
             `${path}.amp`,
