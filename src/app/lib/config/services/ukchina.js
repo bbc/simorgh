@@ -29,7 +29,6 @@ const baseServiceConfig = {
   script: noAscendersOrDescenders,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
-  hasRadioSchedule: false,
   brandSVG,
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
@@ -85,6 +84,9 @@ export const service = {
       lastUpdated: '最近更新：',
       numberOfItems: 10,
       hasMostRead: false,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     navigation: [
       {
