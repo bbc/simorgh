@@ -60,11 +60,7 @@ const ErrorPage = ({ errorCode }) => {
 };
 
 ErrorPage.propTypes = {
-  errorCode: number,
-};
-
-ErrorPage.defaultProps = {
-  errorCode: null,
+  errorCode: number.isRequired,
 };
 
 ErrorMetadata.propTypes = {
