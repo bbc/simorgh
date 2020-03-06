@@ -9,7 +9,9 @@ const logger = webLogger();
 
 const RadioScheduleContainer = ({ endpoint }) => {
   const { enabled } = useToggle('radioSchedule');
-  const { hasRadioSchedule } = useContext(ServiceContext);
+  const {
+    radioSchedule: { hasRadioSchedule },
+  } = useContext(ServiceContext);
   const radioScheduleEnabled = enabled && hasRadioSchedule;
 
   const [schedule, setRadioSchedule] = useState([]);

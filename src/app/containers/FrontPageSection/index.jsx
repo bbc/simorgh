@@ -30,6 +30,15 @@ import getRows from './utilities/storyRowsSplitter';
 import getRowDetails from './utilities/rowDetails';
 import { TopRow } from '../FrontPageStoryRows';
 
+const StyledFrontPageSection = styled.section`
+  /* To centre page layout for Group 4+ */
+  margin: 0 auto;
+  width: 100%; /* Needed for IE11 */
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+  }
+`;
+
 // Apply the right margin-top to the first section of the page when there is one or multiple items.
 const FirstSectionTopMargin = styled.div`
   ${({ oneItem }) =>
@@ -186,8 +195,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
     // (<section> tags *should* imply `role="region"`)
     // While this may be true in a perfect world, we set it in order to get
     // the greatest possible support.
-    // eslint-disable-next-line jsx-a11y/no-redundant-roles
-    <section role="region" aria-labelledby={sectionLabelId}>
+    <StyledFrontPageSection role="region" aria-labelledby={sectionLabelId}>
       <SectionLabel
         script={script}
         labelId={sectionLabelId}
@@ -208,7 +216,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
         isFirstSection,
         dir,
       })}
-    </section>
+    </StyledFrontPageSection>
   );
 };
 
