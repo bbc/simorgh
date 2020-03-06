@@ -20,7 +20,7 @@ import {
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { StyledFrontPageMain } from '#app/components/Grid';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
@@ -30,6 +30,10 @@ import AdContainer from '#containers/Ad';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+
+export const StyledFrontPageMain = styled.main`
+  background-color: ${C_GHOST};
+`;
 
 export const StyledFrontPageDiv = styled.div`
   /* To add GEL Margins */
@@ -83,6 +87,14 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const hasUsefulLinks =
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
+  const renderMostRead = () => (
+    <MostReadContainer
+      mostReadEndpointOverride={mostReadEndpointOverride}
+      maxTwoColumns
+      isOnFrontPage
+    />
+  );
+
   return (
     <>
       <ATIAnalytics data={pageData} />
@@ -102,21 +114,11 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           <AdContainer />
           {groups.map((group, index) => (
             <Fragment key={group.title}>
-              {group.type === 'useful-links' && (
-                <MostReadContainer
-                  mostReadEndpointOverride={mostReadEndpointOverride}
-                  maxTwoColumns
-                />
-              )}
+              {group.type === 'useful-links' && renderMostRead()}
               <FrontPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}
-          {!hasUsefulLinks && (
-            <MostReadContainer
-              mostReadEndpointOverride={mostReadEndpointOverride}
-              maxTwoColumns
-            />
-          )}
+          {!hasUsefulLinks && renderMostRead()}
         </StyledFrontPageDiv>
       </StyledFrontPageMain>
     </>

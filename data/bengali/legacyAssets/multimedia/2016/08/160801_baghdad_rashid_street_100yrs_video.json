@@ -1,34 +1,83 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
-    "locators": {
-      "assetUri": "/bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
-      "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
-      "curie": "http://www.bbc.co.uk/asset/0d680c18-580d-11e6-b7b8-14a33db9bd6e"
+    "metadata": {
+      "id": "urn:bbc:ares::asset:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
+      "locators": {
+        "assetUri": "/bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
+        "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
+        "curie": "http://www.bbc.co.uk/asset/0d680c18-580d-11e6-b7b8-14a33db9bd6e"
+      },
+      "type": "MAP",
+      "createdBy": "bengali",
+      "language": "bn",
+      "lastUpdated": 1550217083788,
+      "firstPublished": 1470129105,
+      "lastPublished": 1470129105,
+      "options": {
+        "includeComments": false,
+        "allowRightHandSide": true,
+        "allowDateStamp": true,
+        "suitableForSyndication": true,
+        "allowAdvertising": true,
+        "isBreakingNews": false
+      },
+      "analyticsLabels": { "cps_asset_id": "44752897", "cps_asset_type": "map" },
+      "tags": {},
+      "version": "v1.0.0",
+      "blockTypes": [ "legacyMedia", "paragraph" ],
+      "includeComments": false
     },
-    "type": "MAP",
-    "createdBy": "bengali",
-    "language": "bn",
-    "lastUpdated": 1550217083788,
-    "firstPublished": 1470129105,
-    "lastPublished": 1470129105,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": true,
-      "allowAdvertising": true,
-      "isBreakingNews": false
+    "content": {
+      "blocks": [
+        {
+          "id": "44752897",
+          "subType": "primary",
+          "format": "video",
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/bengali/meta/dps/2016/08/emp/160801_baghdad_rashid_street_100yrs_video.emp.xml",
+          "type": "legacyMedia"
+        },
+        {
+          "text": "বাগদাদের সবচেয়ে পুরনো রাস্তা রশীদ স্ট্রিট তার শতবর্ষ পূরণ করেছে।",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "অটোমান শাসনের পর ইরাকী ইতিহাসের বহু গুরুত্বপূর্ণ ঘটনার সাক্ষী এই রাস্তা।",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "এই রাস্তার হৃত গৌরব ফিরিয়ে আনতে ব্যাপক সংস্কারের পরিকল্পনা হাতে নেওয়া হয়েছে।",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "মধ্যপ্রাচ্যে বহু জাতিবর্ণ ভিত্তিক সমাজের অন্যতম সবচেয়ে প্রকৃষ্ট স্থান ছিল ইরাকের এই সড়ক।",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "এই সড়কের একাল ও সেকাল নিয়ে এই ভিডিও তৈরি করেছে বিবিসির আরবী বিভাগ।",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        }
+      ]
     },
-    "analyticsLabels": { "cps_asset_id": "44752897", "cps_asset_type": "map" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph" ],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
+    "promo": {
+      "headlines": {
+        "shortHeadline": "একশ' বছরে বাগদাদের রশীদ স্ট্রিট",
+        "headline": "একশ' বছরে বাগদাদের রশীদ স্ট্রিট"
+      },
+      "locators": {
+        "assetUri": "/bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
+        "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
+        "curie": "http://www.bbc.co.uk/asset/0d680c18-580d-11e6-b7b8-14a33db9bd6e"
+      },
+      "summary": "একশ' বছরে বাগদাদের রশীদ স্ট্রিট",
+      "timestamp": 1550217083788,
+      "passport": {},
+      "media": {
         "id": "44752897",
         "subType": "primary",
         "format": "video",
@@ -37,77 +86,28 @@
         "href": "http://www.bbc.co.uk/bengali/meta/dps/2016/08/emp/160801_baghdad_rashid_street_100yrs_video.emp.xml",
         "type": "legacyMedia"
       },
-      {
-        "text": "বাগদাদের সবচেয়ে পুরনো রাস্তা রশীদ স্ট্রিট তার শতবর্ষ পূরণ করেছে।",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "indexImage": {
+        "id": "d5e220",
+        "subType": "index",
+        "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/08/01/160801173405_rashid_street_baghdad_144x81_bbc_nocredit.jpg",
+        "path": "/amz/worldservice/live/assets/images/2016/08/01/160801173405_rashid_street_baghdad_144x81_bbc_nocredit.jpg",
+        "height": 81,
+        "width": 144,
+        "altText": "",
+        "copyrightHolder": "BBC",
+        "type": "image"
       },
-      {
-        "text": "অটোমান শাসনের পর ইরাকী ইতিহাসের বহু গুরুত্বপূর্ণ ঘটনার সাক্ষী এই রাস্তা।",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "id": "urn:bbc:ares::asset:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
+      "type": "cps"
+    },
+    "relatedContent": {
+      "section": {
+        "subType": "index",
+        "name": "মাল্টিমিডিয়া",
+        "uri": "/bengali/multimedia",
+        "type": "simple"
       },
-      {
-        "text": "এই রাস্তার হৃত গৌরব ফিরিয়ে আনতে ব্যাপক সংস্কারের পরিকল্পনা হাতে নেওয়া হয়েছে।",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "মধ্যপ্রাচ্যে বহু জাতিবর্ণ ভিত্তিক সমাজের অন্যতম সবচেয়ে প্রকৃষ্ট স্থান ছিল ইরাকের এই সড়ক।",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "এই সড়কের একাল ও সেকাল নিয়ে এই ভিডিও তৈরি করেছে বিবিসির আরবী বিভাগ।",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "একশ' বছরে বাগদাদের রশীদ স্ট্রিট",
-      "headline": "একশ' বছরে বাগদাদের রশীদ স্ট্রিট"
-    },
-    "locators": {
-      "assetUri": "/bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
-      "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
-      "curie": "http://www.bbc.co.uk/asset/0d680c18-580d-11e6-b7b8-14a33db9bd6e"
-    },
-    "summary": "একশ' বছরে বাগদাদের রশীদ স্ট্রিট",
-    "timestamp": 1550217083788,
-    "passport": {},
-    "media": {
-      "id": "44752897",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/bengali/meta/dps/2016/08/emp/160801_baghdad_rashid_street_100yrs_video.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e220",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/08/01/160801173405_rashid_street_baghdad_144x81_bbc_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2016/08/01/160801173405_rashid_street_baghdad_144x81_bbc_nocredit.jpg",
-      "height": 81,
-      "width": 144,
-      "altText": "",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "মাল্টিমিডিয়া",
-      "uri": "/bengali/multimedia",
-      "type": "simple"
-    },
-    "site": { "subType": "site", "name": "BBCBangla.com", "uri": "/bengali", "type": "simple" },
-    "groups": []
+      "site": { "subType": "site", "name": "BBCBangla.com", "uri": "/bengali", "type": "simple" },
+      "groups": []
+    }
   }
-}
