@@ -33,18 +33,16 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
     fetchRadioScheduleData(endpoint);
   }, [endpoint]);
 
-  const renderFrequencyLink = link => {
-    const RadioFrequencyLink = styled(Link)`
-      font-size: 14px;
-      line-height: 18px;
-    `;
+  const RadioFrequencyLink = styled(Link)`
+    font-size: 14px;
+    line-height: 18px;
+  `;
 
-    return (
-      <RadioFrequencyLink link={link}>
-        Radio frequency link text
-      </RadioFrequencyLink>
-    );
-  };
+  const renderFrequencyLink = link => (
+    <RadioFrequencyLink link={link}>
+      Radio frequency link text
+    </RadioFrequencyLink>
+  );
 
   if (!schedule.length) {
     return null;
