@@ -39,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'बातम्या',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -163,10 +162,13 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/marathi/institutional-50418391',
-        text: 'तुम्ही बीबीसीवर विश्वास का ठेवू शकता',
+        text: 'तुम्ही बीबीसीवर विश्वास ठेवू शकता कारणा',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
@@ -179,7 +181,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/privacy/',
-          text: 'गोपनीयता धोरण',
+          text: 'गोपनीयतेचं धोरण',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
@@ -187,11 +189,11 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/marathi/institutional-42227676',
-          text: 'बीबीसीला संपर्क करा',
+          text: 'बीबीसीशी संपर्क साधाा',
         },
       ],
       copyrightText:
-        'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही',
+        'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही.',
     },
     fonts: [],
     timezone: 'Asia/Kolkata',

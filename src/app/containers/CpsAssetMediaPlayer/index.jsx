@@ -1,6 +1,6 @@
 import React from 'react';
 import path from 'ramda/src/path';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
 import styled from 'styled-components';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -37,7 +37,7 @@ const Wrapper = styled(GridItemConstrainedLarge)`
   }
 `;
 
-const CpsAssetMediaPlayerContainer = ({ blocks, assetUri }) => {
+const CpsAssetMediaPlayerContainer = ({ blocks, assetUri, isLegacyMedia }) => {
   if (!assetUri) return null;
 
   const mediaBlock = filterForBlockType(blocks, 'aresMedia');
@@ -53,9 +53,10 @@ const CpsAssetMediaPlayerContainer = ({ blocks, assetUri }) => {
       <MediaPlayerContainer
         blocks={blocks}
         assetId={assetUri.substr(1)}
-        assetType="cps"
+        assetType={isLegacyMedia ? 'legacy' : 'cps'}
         showPlaceholder={false}
         available={available}
+        isLegacyMedia={isLegacyMedia}
       />
     </Wrapper>
   );
@@ -64,9 +65,11 @@ const CpsAssetMediaPlayerContainer = ({ blocks, assetUri }) => {
 CpsAssetMediaPlayerContainer.propTypes = {
   ...mediaPlayerPropTypes,
   assetUri: string.isRequired,
+  isLegacyMedia: bool,
 };
 CpsAssetMediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
+  isLegacyMedia: false,
 };
 
 export default CpsAssetMediaPlayerContainer;
