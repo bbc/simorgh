@@ -232,5 +232,8 @@
     "commitHash": "383522b",
     "deployEnvironment": "green",
     "version": "1.0.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }
