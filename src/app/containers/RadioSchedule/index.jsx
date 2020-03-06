@@ -7,12 +7,12 @@ import Canonical from './Canonical';
 
 // The logic here is sufficient for now for testing locally. This should change once we are ready to put radioschedules on live
 const getRadioScheduleEndpoint = (service, environment) =>
-  environment === 'test'
-    ? `/${service}/bbc_${service}_radio/schedule.json`
-    : `/${service}/bbc_${service}_radio/radioschedule.json`;
+  environment === 'local'
+    ? `/${service}/bbc_${service}_radio/radioschedule.json`
+    : `/${service}/bbc_${service}_radio/schedule.json`;
 
 const RadioScheduleContainer = ({ radioScheduleEndpointOverride }) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, env } = useContext(RequestContext);
   const { enabled } = useToggle('radioSchedule');
   const {
     service,
@@ -25,8 +25,7 @@ const RadioScheduleContainer = ({ radioScheduleEndpointOverride }) => {
   }
 
   const endpoint =
-    radioScheduleEndpointOverride ||
-    getRadioScheduleEndpoint(service, process.env.SIMORGH_APP_ENV);
+    radioScheduleEndpointOverride || getRadioScheduleEndpoint(service, env);
 
   return <Canonical endpoint={endpoint} />;
 };
