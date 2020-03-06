@@ -1,5 +1,4 @@
 import { Then } from 'cypress-cucumber-preprocessor/steps';
-import serviceConfig from '../../../src/server/utilities/serviceConfigs';
 
 const iframeSelector = 'iframe';
 
