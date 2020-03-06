@@ -248,4 +248,28 @@ describe(`Script Link`, () => {
       ).toEqual('/foo/bar/cyr');
     });
   });
+
+  it('should not render when scriptLink toggle is off', () => {
+    const testToggles = {
+      test: {
+        scriptLink: {
+          enabled: false,
+        },
+        variantCookie: {
+          enabled: false,
+        },
+      },
+    };
+    const { container } = withRouter(
+      <ScriptLinkContainerWithContext
+        toggleContext={{
+          toggleState: testToggles,
+          toggleDispatch: mockToggleDispatch,
+        }}
+      />,
+      frontPagePath,
+      '/serbian/lat',
+    );
+    expect(container).toBeEmpty();
+  });
 });
