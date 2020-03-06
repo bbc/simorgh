@@ -1,27 +1,21 @@
-import 'isomorphic-fetch';
-import webLogger from '#lib/logger.web';
+const convertInclude = async block => {
+  const { href, url, ...rest } = block;
 
-const logger = webLogger();
+  const blockMappings = {
+    idt2: 'idt2',
+    include: 'include',
+  };
+  const type = href.split('/')[1];
 
-const fetchMarkup = async url =>
-  fetch(url, { mode: 'no-cors' })
-    .then(html => {
-      if (html.status !== 200) return null;
-
-      return html.text().then(text => {
-        return text;
-      });
-    })
-    .catch(e => logger.error(`HTTP Error: "${e}"`));
-
-const convertInclude = async ({ tile, href, platform, url }) => {
+  if (!blockMappings[type]) {
+    return null;
+  }
   return {
-    type: 'include',
+    type,
     model: {
-      type: platform,
-      href,
-      tile,
-      html: url ? await fetchMarkup(url) : null,
+      // `url` here should be replaced with `href` once mozart routes have been created. /*TODO: Create issue for this */
+      href: url,
+      ...rest,
     },
   };
 };
