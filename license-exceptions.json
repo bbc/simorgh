@@ -59,6 +59,12 @@
     },
     "xmldom@*": {
       "reason": "Dual license under MIT or LGPL; https://github.com/jindw/xmldom/blob/master/LICENSE"
+    },
+    "JSONStream@*": {
+      "reason": "Dual-licensed under the MIT License or the Apache License, version 2.0; https://github.com/dominictarr/JSONStream#license"
+    },
+    "becke-ch--regex--s0-0-v1--base--pl--lib@*": {
+      "reason": "WORKAROUND, NEED TO CHECK IF THIS IS ACCEPTABLE: (MIT-style) License http://www--s0-v1.becke.ch/tool/becke-ch--regex--s0-v1/becke-ch--regex--s0-v1--license.txt"
     }
   }
 }
