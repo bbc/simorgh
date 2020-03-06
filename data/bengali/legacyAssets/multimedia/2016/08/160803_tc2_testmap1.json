@@ -1,0 +1,110 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/bengali/meta/dps/junk/2016/08/emp/160803_tc2_testmap1.emp.xml",
+        "id": "17698019",
+        "live": false,
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "বাংলাদেশের প্রেক্ষাগৃহে অবাধে ভারতের ছবি মুক্তির প্রতিবাদে আন্দোলনে নেমেছে চলচ্চিত্রের সঙ্গে যুক্ত সব সংগঠন। ২০ জুলাই ঢাকায় প্রতিবাদ সমাবেশ ও মানববন্ধন করেছেন শিল্পী, পরিচালক, প্রযোজক এবং কলাকুশলীরা। কেলোর কীর্তি নামে কলকাতার একটি বাংলা চলচ্চিত্র ঢাকায় বাণিজ্যিকভাবে প্রদর্শনের পরিকল্পনার প্রতিবাদে এই আন্দোলন শুরু করেছেন তারা। যদিও আদালত ছবিটি প্রদর্শনের ওপর অস্থায়ী নিষেধাজ্ঞা দিয়েছে, কিন্তু ঢাকার চলচ্চিত্র শিল্পের সাথে জড়িত লোকজন আশঙ্কা করছেন নিয়মিত ভারতীয় বাংলা ছবি আমদানি ও প্রদর্শনের পরিকল্পনা করা হচ্ছে।",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "cps_asset_id": "17698019",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": [
+      "legacyMedia",
+      "paragraph"
+    ],
+    "createdBy": "bengali",
+    "firstPublished": 1470237945000,
+    "id": "urn:bbc:ares::asset:bengali/multimedia/2016/08/160803_tc2_testmap1",
+    "includeComments": false,
+    "language": "bn",
+    "lastPublished": 1470237945000,
+    "lastUpdated": 1583254550677,
+    "locators": {
+      "assetId": "17698019",
+      "assetUri": "/bengali/multimedia/2016/08/160803_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2016/08/160803_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/3c82f130-5988-11e6-b206-41dae1cf6e69"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1470237945000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "ভারতীয় ছবির অবাধ মুক্তিতে বাংলাদেশি চলচ্চিত্রকর্মীদের বিক্ষোভ",
+      "shortHeadline": "ভারতীয় ছবির অবাধ মুক্তিতে বাংলাদেশি চলচ্চিত্রকর্মীদের বিক্ষোভ"
+    },
+    "id": "urn:bbc:ares::asset:bengali/multimedia/2016/08/160803_tc2_testmap1",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "Getty",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
+      "id": "d5e212",
+      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "bn",
+    "locators": {
+      "assetId": "17698019",
+      "assetUri": "/bengali/multimedia/2016/08/160803_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2016/08/160803_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/3c82f130-5988-11e6-b206-41dae1cf6e69"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/bengali/meta/dps/junk/2016/08/emp/160803_tc2_testmap1.emp.xml",
+      "id": "17698019",
+      "live": false,
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "বাংলাদেশের প্রেক্ষাগৃহে অবাধে ভারতের ছবি মুক্তির প্রতিবাদে আন্দোলনে নেমেছে চলচ্চিত্রের সঙ্গে যুক্ত সব সংগঠন।",
+    "timestamp": 1470237945000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "মাল্টিমিডিয়া",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/bengali/multimedia"
+    },
+    "site": {
+      "name": "BBCBangla.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/bengali"
+    }
+  }
+}
