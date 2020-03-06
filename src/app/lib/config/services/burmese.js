@@ -41,7 +41,6 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle:
       'ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -169,6 +168,9 @@ export const service = {
       lastUpdated: 'နောက်ဆုံးအသစ်တင်ချိန်:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
