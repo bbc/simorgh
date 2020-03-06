@@ -10,6 +10,7 @@ const baseServiceConfig = {
   articleTimestampPrefix: '最近更新：',
   atiAnalyticsAppName: 'news-ukchina',
   atiAnalyticsProducerId: '93',
+  chartbeatDomain: 'ukchina.bbc.co.uk',
   brandName: 'BBC 英伦网',
   product: 'BBC',
   serviceLocalizedName: '英伦网',
@@ -28,7 +29,6 @@ const baseServiceConfig = {
   script: noAscendersOrDescenders,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
-  hasRadioSchedule: false,
   brandSVG,
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
@@ -85,6 +85,9 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: false,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     navigation: [
       {
         title: '主页',
@@ -99,6 +102,11 @@ export const service = {
         url: '/ukchina/simp/media/video',
       },
     ],
+    scriptLink: {
+      text: '繁',
+      offscreenText: 'Traditional',
+      variant: 'trad',
+    },
     translations: {
       seeAll: '浏览全部',
       home: '主页',
@@ -260,6 +268,11 @@ export const service = {
         url: '/ukchina/trad/media/video',
       },
     ],
+    scriptLink: {
+      text: '简',
+      offscreenText: 'Simplified',
+      variant: 'simp',
+    },
     translations: {
       seeAll: '瀏覽全部',
       home: '主頁',

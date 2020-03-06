@@ -20,6 +20,7 @@ export const service = {
     articleTimestampPrefix: 'Ùraichte',
     atiAnalyticsAppName: 'news-naidheachdan',
     atiAnalyticsProducerId: '79',
+    chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Naidheachdan',
     product: 'BBC News',
     serviceLocalizedName: 'Naidheachdan',
@@ -47,7 +48,6 @@ export const service = {
     manifestPath: '/articles/manifest.json',
     swPath: '/articles/sw.js',
     frontPageTitle: 'Dachaigh',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -168,6 +168,9 @@ export const service = {
       lastUpdated: 'Air ùrachadh mu dheireadh:',
       numberOfItems: 5,
       hasMostRead: false,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {

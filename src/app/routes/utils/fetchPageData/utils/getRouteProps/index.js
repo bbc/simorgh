@@ -16,7 +16,7 @@ const getRouteProps = (routes, url) => {
   const variantPath = path(['variant'], params);
   const id = path(['id'], params);
   const errorCode = path(['errorCode'], params);
-
+  const assetUri = path(['assetUri'], params);
   const variant = variantSanitiser(variantPath);
 
   return {
@@ -24,6 +24,7 @@ const getRouteProps = (routes, url) => {
     service: service || fallbackServiceParam(url),
     variant,
     id,
+    assetUri,
     route,
     match,
     errorCode: errorCode ? Number(errorCode) : errorCode,

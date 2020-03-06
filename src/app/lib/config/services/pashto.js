@@ -19,6 +19,7 @@ export const service = {
     atiAnalyticsAppName: 'news-pashto',
     atiAnalyticsProducerId: '68',
     brandName: 'BBC News پښتو',
+    chartbeatDomain: 'pashto.bbc.co.uk',
     serviceLocalizedName: 'پښتو',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png',
     defaultImageAltText: 'BBC News پښتو',
@@ -44,7 +45,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'کور پاڼه',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -168,6 +168,10 @@ export const service = {
       lastUpdated: 'د خپرېدو نیټه',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
     },
     footer: {
       trustProjectLink: {

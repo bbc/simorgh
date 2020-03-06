@@ -42,14 +42,9 @@
         }
       ]
     },
-    "tags": {
-      
-    },
+    "tags": {},
     "version": "v1.0.10",
-    "blockTypes": [
-      "media",
-      "paragraph"
-    ],
+    "blockTypes": ["media", "paragraph"],
     "includeComments": false
   },
   "content": {
@@ -71,14 +66,10 @@
         "versions": [
           {
             "versionId": "p07mvfmw",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 125,
             "durationISO8601": "PT2M5S",
-            "warnings": {
-              
-            },
+            "warnings": {},
             "availableTerritories": {
               "uk": true,
               "nonUk": true
@@ -137,14 +128,10 @@
       "versions": [
         {
           "versionId": "p07mvfmw",
-          "types": [
-            "Original"
-          ],
+          "types": ["Original"],
           "duration": 125,
           "durationISO8601": "PT2M5S",
-          "warnings": {
-            
-          },
+          "warnings": {},
           "availableTerritories": {
             "uk": true,
             "nonUk": true
@@ -181,8 +168,6 @@
       "uri": "/zhongwen/trad",
       "type": "simple"
     },
-    "groups": [
-      
-    ]
+    "groups": []
   }
 }

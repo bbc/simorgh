@@ -51,23 +51,14 @@
           "thingLabel": "Hong Kong extradition bill",
           "thingUri": "http://www.bbc.co.uk/things/5b7a6e71-b3b5-40a0-9d55-dfdf90f8d34e#id",
           "thingId": "5b7a6e71-b3b5-40a0-9d55-dfdf90f8d34e",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q63412799"
-          ]
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://www.wikidata.org/entity/Q63412799"]
         },
         {
           "thingLabel": "China",
           "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
           "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
-          "thingType": [
-            "Place",
-            "Thing",
-            "geoname:GeoTagConcept"
-          ],
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
           "thingSameAs": [
             "http://dbpedia.org/resource/China",
             "http://sws.geonames.org/1814991/",
@@ -78,33 +69,20 @@
           "thingLabel": "Politics",
           "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
           "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Politics"
-          ]
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Politics"]
         },
         {
           "thingLabel": "Hong Kong",
           "thingUri": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
           "thingId": "a3b15769-775e-471d-a511-a7b78f346859",
-          "thingType": [
-            "Place",
-            "Thing",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/1819729/"
-          ]
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1819729/"]
         }
       ]
     },
     "version": "v1.0.10",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

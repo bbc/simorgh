@@ -25,7 +25,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                 chartbeat
               </div>
               <main
-                class="StyledFrontPageMain-ylca1m-2 ftqRFA"
+                class="StyledFrontPageMain-sc-58u5qv-0 jXCNVc"
                 role="main"
               >
                 <h1
@@ -48,14 +48,15 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </span>
                 </h1>
                 <div
-                  class="StyledFrontPageDiv-sc-58u5qv-0 fCyXlu"
+                  class="StyledFrontPageDiv-sc-58u5qv-1 biyoqx"
                 >
                   <section
                     aria-labelledby="Top-stories"
+                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 sdoTA"
+                      class="SectionLabelWrapper-sc-1x4gwjz-1 chnGCx"
                     >
                       <div
                         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -70,7 +71,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="FlexRow-wx5kdp-2 dVBNyZ"
                           >
                             <span
-                              class="Title-wx5kdp-4 jiurmA"
+                              class="Title-wx5kdp-4 BeqZV"
                               dir="ltr"
                               id="Top-stories"
                             >
@@ -81,7 +82,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       </h2>
                     </div>
                     <div
-                      class="FirstSectionTopMargin-sc-1t555e8-0 cnOysi"
+                      class="FirstSectionTopMargin-sc-1t555e8-1 gTFeDc"
                     >
                       <div
                         class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
@@ -120,17 +121,10 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 role="text"
                               >
                                 <span
-                                  aria-hidden="true"
                                   class="LiveLabel-sc-1dvfmi3-6 halTGG"
                                   dir="ltr"
                                 >
-                                  LIVE
-                                </span>
-                                <span
-                                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
-                                  lang="en-GB"
-                                >
-                                   Live, 
+                                  AS E DE HAPPEN
                                 </span>
                                 Senators don begin vote for Senate President
                               </span>
@@ -198,10 +192,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </section>
                   <section
                     aria-labelledby="Frequency-info"
+                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc"
+                      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
                     >
                       <div
                         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -216,7 +211,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="FlexRow-wx5kdp-2 dVBNyZ"
                           >
                             <span
-                              class="Title-wx5kdp-4 jiurmA"
+                              class="Title-wx5kdp-4 BeqZV"
                               dir="ltr"
                               id="Frequency-info"
                             >
@@ -717,12 +712,12 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </section>
                   <section
                     aria-labelledby="Most-Read"
-                    class="MostReadSection-sc-6bm912-1 gLMjih"
+                    class="MostReadSection-sc-6bm912-1 FrontPageMostReadSection-sc-6bm912-2 cdeUrV"
                     data-e2e="most-read"
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc"
+                      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
                     >
                       <div
                         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -737,7 +732,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="FlexRow-wx5kdp-2 dVBNyZ"
                           >
                             <span
-                              class="Title-wx5kdp-4 jiurmA"
+                              class="Title-wx5kdp-4 BeqZV"
                               dir="ltr"
                               id="Most-Read"
                             >

@@ -20,10 +20,13 @@
       "allowAdvertising": true,
       "isBreakingNews": false
     },
-    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "41406410" },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "cps_asset_id": "41406410"
+    },
     "tags": {},
     "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "includeComments": false
   },
   "content": {
@@ -42,7 +45,11 @@
         "markupType": "plain_text",
         "type": "paragraph"
       },
-      { "text": "BBC在這個節目中列出了世界上最具激勵精神的100名婦女。", "markupType": "plain_text", "type": "paragraph" },
+      {
+        "text": "BBC在這個節目中列出了世界上最具激勵精神的100名婦女。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
       {
         "text": "在今年的「巾幗百名」名單中有30名30歲以下的企業家，還有年齡超過80歲的巾幗英雄。",
         "markupType": "plain_text",
@@ -71,7 +78,10 @@
     ]
   },
   "promo": {
-    "headlines": { "shortHeadline": "視頻：倫敦華裔女性談海外創業", "headline": "視頻：倫敦華裔女性談海外創業" },
+    "headlines": {
+      "shortHeadline": "視頻：倫敦華裔女性談海外創業",
+      "headline": "視頻：倫敦華裔女性談海外創業"
+    },
     "locators": {
       "assetUri": "/ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
       "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
@@ -104,8 +114,18 @@
     "type": "cps"
   },
   "relatedContent": {
-    "section": { "subType": "index", "name": "音視圖片", "uri": "/ukchina/trad/multimedia", "type": "simple" },
-    "site": { "subType": "site", "name": "bbcukchina.com", "uri": "/ukchina/trad", "type": "simple" },
+    "section": {
+      "subType": "index",
+      "name": "音視圖片",
+      "uri": "/ukchina/trad/multimedia",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "bbcukchina.com",
+      "uri": "/ukchina/trad",
+      "type": "simple"
+    },
     "groups": []
   }
 }

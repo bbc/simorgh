@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+    "locators": {
+      "assetUri": "/ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+      "curie": "http://www.bbc.co.uk/asset/2383c460-8f72-11e5-82c3-08ef3db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "ukchina_simplified",
+    "language": "zh-Hans",
+    "lastUpdated": 1561042947383,
+    "firstPublished": 1448016091,
+    "lastPublished": 1448017134,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": false,
+      "allowAdvertising": true,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "cps_asset_id": "41406410"
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "41406410",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/11/emp/151120_video_100w_london_chinese_entrepreneurs.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "BBC2015年度“巾帼百名” （100 Women）系列节目上演，这也是BBC连续第三年推出这个节目。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "BBC在这个节目中列出了世界上最具激励精神的100名妇女。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "在今年的“巾帼百名”名单中有30名30岁以下的企业家，还有年龄超过80岁的巾帼英雄。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "BBC英伦网也将目光投向在伦敦的华裔女性，听听她们的创业故事和心得。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Dara Huang是位于伦敦的建筑和市内设计公司Design Haus Liberty的创始人，哈佛研究生，白手起家在伦敦创业。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "她的公司三年里迅速发展，有20多位建筑设计师。Dara的父母从台湾移民美国，她在美国长大。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "另一位创业女性是Sally Wang，来自中国安徽。在英国留学毕业后，她专注英国房地产业，有自己的公司，目前潜心写书，解读英国房地产市场和投资置业。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "视频：伦敦华裔女性谈海外创业",
+      "headline": "视频：伦敦华裔女性谈海外创业"
+    },
+    "locators": {
+      "assetUri": "/ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+      "curie": "http://www.bbc.co.uk/asset/2383c460-8f72-11e5-82c3-08ef3db9bd6e"
+    },
+    "summary": "BBC“巾帼百人”特别报道之际，两位在伦敦创业的华裔女性分享她们的经验。",
+    "timestamp": 1561042947383,
+    "passport": {},
+    "media": {
+      "id": "41406410",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/11/emp/151120_video_100w_london_chinese_entrepreneurs.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e213",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_144x81_bbc_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_144x81_bbc_nocredit.jpg",
+      "height": 81,
+      "width": 144,
+      "altText": "",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "音视图片",
+      "uri": "/ukchina/simp/multimedia",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "bbcukchina.com",
+      "uri": "/ukchina/simp",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

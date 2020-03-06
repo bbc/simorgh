@@ -20,7 +20,7 @@ import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/CpsText';
 import image from '#containers/Image';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import MediaPlayer from '#containers/CpsAssetMediaPlayer';
+import CpsAssetMediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import ATIAnalytics from '#containers/ATIAnalytics';
@@ -70,11 +70,19 @@ const MediaAssetPage = ({ pageData }) => {
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
       ) : null,
+
+    // There are niche scenarios where we receive legacy MAPs that contain modern video blocks
+    // This is not something we currently support, so we return an error message
     video: isLegacyMediaAssetPage(requestContext.canonicalLink)
       ? MediaMessage
-      : props => <MediaPlayer {...props} assetUri={assetUri} />,
-    version: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    legacyMedia: MediaMessage,
+      : props => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
+
+    legacyMedia: props => (
+      <CpsAssetMediaPlayer {...props} assetUri={assetUri} isLegacyMedia />
+    ),
+
+    // "Versions" are live streams
+    version: props => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
   };
 
   const StyledGhostGrid = styled(GhostGrid)`

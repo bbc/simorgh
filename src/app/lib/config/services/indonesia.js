@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Diperbarui',
     atiAnalyticsAppName: 'news-indonesia',
     atiAnalyticsProducerId: '54',
+    chartbeatDomain: 'indonesian.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Indonesia',
     product: 'BBC News',
     serviceLocalizedName: 'Indonesia',
@@ -38,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Berita',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -156,6 +156,9 @@ export const service = {
       lastUpdated: 'Terakhir diperbarui:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
