@@ -16,3 +16,8 @@ export const startTimeMachine = (tick = true) => {
 export const resetTimeMachine = () => {
   timemachine.reset();
 };
+
+// by default, importing the timemachine automatically overrides the system time and sets the tick to false.
+// We only want to override system time once `startTimeMachine` is invoked.
+// This will reset the timemachine so that system time continues normally..
+resetTimeMachine();
