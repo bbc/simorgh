@@ -1,51 +1,207 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:thai/thailand-23248713",
-    "locators": {
-      "assetUri": "/thai/thailand-23248713",
-      "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-23248713",
-      "curie": "http://www.bbc.co.uk/asset/745f0123-f073-e24e-bae8-c3eeab061289"
+    "metadata": {
+      "id": "urn:bbc:ares::asset:thai/thailand-23248713",
+      "locators": {
+        "assetUri": "/thai/thailand-23248713",
+        "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-23248713",
+        "curie": "http://www.bbc.co.uk/asset/745f0123-f073-e24e-bae8-c3eeab061289"
+      },
+      "type": "MAP",
+      "createdBy": "thai-v6",
+      "language": "th",
+      "lastUpdated": 1573487977775,
+      "firstPublished": 1568390012000,
+      "lastPublished": 1572951180000,
+      "options": {
+        "isIgorSeoTagsEnabled": false,
+        "includeComments": false,
+        "allowRightHandSide": true,
+        "isFactCheck": false,
+        "allowDateStamp": true,
+        "suitableForSyndication": true,
+        "hasNewsTracker": false,
+        "allowRelatedStoriesBox": true,
+        "isKeyContent": false,
+        "allowHeadline": true,
+        "allowAdvertising": true,
+        "hasContentWarning": false,
+        "isBreakingNews": false,
+        "allowPrintingSharingLinks": true
+      },
+      "analyticsLabels": {
+        "cps_asset_type": "map",
+        "counterName": "thai.thailand.media_asset.23248713.page",
+        "cps_asset_id": "23248713"
+      },
+      "tags": {},
+      "version": "v1.1.2",
+      "blockTypes": [
+        "version",
+        "paragraph",
+        "list",
+        "image"
+      ],
+      "includeComments": false
     },
-    "type": "MAP",
-    "createdBy": "thai-v6",
-    "language": "th",
-    "lastUpdated": 1573487977775,
-    "firstPublished": 1568390012000,
-    "lastPublished": 1572951180000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "suitableForSyndication": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "allowAdvertising": true,
-      "hasContentWarning": false,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
+    "content": {
+      "blocks": [
+        {
+          "id": "63501296",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "journalism_uk_news_stream_01",
+          "duration": "PT0S",
+          "caption": "live stream from event",
+          "image": {
+            "id": "63501301",
+            "subType": "thumbnail",
+            "href": "http://b.files.bbci.co.uk/15E0C/test/_63721698_p01kx435.jpg",
+            "path": "/cpsdevpb/15E0C/test/_63721698_p01kx435.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "connectionAltText",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "embedding": false,
+          "available": true,
+          "live": true,
+          "type": "version"
+        },
+        {
+          "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช",
+          "role": "introduction",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "<bold>พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</bold><bold> heading</bold>",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "<bold><italic>พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</italic></bold><bold><italic> subheading</italic></bold>",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "<bold>พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</bold><bold> crosshead </bold>",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช",
+              "markupType": "plain_text",
+              "type": "listItem"
+            },
+            {
+              "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช",
+              "markupType": "plain_text",
+              "type": "listItem"
+            },
+            {
+              "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช",
+              "markupType": "plain_text",
+              "type": "listItem"
+            },
+            {
+              "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช",
+              "markupType": "plain_text",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "<link><caption>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</caption><altText>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</altText><url href=\"https://bbc.com/thai\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<link><caption>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</caption><altText>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</altText><url href=\"https://bbc.com/thai\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<link><caption>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</caption><altText>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</altText><url href=\"https://bbc.com/thai\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<link><caption>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</caption><altText>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</altText><url href=\"https://bbc.com/thai\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "id": "63721697",
+          "subType": "body",
+          "href": "http://b.files.bbci.co.uk/136FC/test/_63721697_testimage.jpg",
+          "path": "/cpsdevpb/136FC/test/_63721697_testimage.jpg",
+          "height": 216,
+          "width": 384,
+          "altText": "test",
+          "copyrightHolder": "Photoshot",
+          "type": "image"
+        },
+        {
+          "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมห transmission info",
+          "role": "transmission-info",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช footer ",
+          "role": "footer",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        }
+      ]
     },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "thai.thailand.media_asset.23248713.page",
-      "cps_asset_id": "23248713"
-    },
-    "tags": {},
-    "version": "v1.1.2",
-    "blockTypes": [
-      "version",
-      "paragraph",
-      "list",
-      "image"
-    ],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
+    "promo": {
+      "headlines": {
+        "shortHeadline": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช",
+        "headline": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบ"
+      },
+      "locators": {
+        "assetUri": "/thai/thailand-23248713",
+        "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-23248713",
+        "curie": "http://www.bbc.co.uk/asset/745f0123-f073-e24e-bae8-c3eeab061289"
+      },
+      "summary": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช",
+      "timestamp": 1573487977775,
+      "passport": {
+        "taggings": []
+      },
+      "media": {
         "id": "63501296",
         "subType": "primary",
         "format": "video",
@@ -68,149 +224,9 @@
         "live": true,
         "type": "version"
       },
-      {
-        "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold>พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</bold><bold> heading</bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold><italic>พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</italic></bold><bold><italic> subheading</italic></bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold>พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</bold><bold> crosshead </bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "numbered": false,
-        "items": [
-          {
-            "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช",
-            "markupType": "plain_text",
-            "type": "listItem"
-          },
-          {
-            "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช",
-            "markupType": "plain_text",
-            "type": "listItem"
-          },
-          {
-            "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช",
-            "markupType": "plain_text",
-            "type": "listItem"
-          },
-          {
-            "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช",
-            "markupType": "plain_text",
-            "type": "listItem"
-          }
-        ],
-        "type": "list"
-      },
-      {
-        "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "numbered": false,
-        "items": [
-          {
-            "text": "<link><caption>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</caption><altText>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</altText><url href=\"https://bbc.com/thai\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<link><caption>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</caption><altText>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</altText><url href=\"https://bbc.com/thai\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<link><caption>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</caption><altText>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</altText><url href=\"https://bbc.com/thai\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<link><caption>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</caption><altText>ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช</altText><url href=\"https://bbc.com/thai\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          }
-        ],
-        "type": "list"
-      },
-      {
-        "id": "63721697",
-        "subType": "body",
-        "href": "http://b.files.bbci.co.uk/136FC/test/_63721697_testimage.jpg",
-        "path": "/cpsdevpb/136FC/test/_63721697_testimage.jpg",
-        "height": 216,
-        "width": 384,
-        "altText": "test",
-        "copyrightHolder": "Photoshot",
-        "type": "image"
-      },
-      {
-        "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมห transmission info",
-        "role": "transmission-info",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช footer ",
-        "role": "footer",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช",
-      "headline": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบ"
-    },
-    "locators": {
-      "assetUri": "/thai/thailand-23248713",
-      "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-23248713",
-      "curie": "http://www.bbc.co.uk/asset/745f0123-f073-e24e-bae8-c3eeab061289"
-    },
-    "summary": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช",
-    "timestamp": 1573487977775,
-    "passport": {
-      "taggings": []
-    },
-    "media": {
-      "id": "63501296",
-      "subType": "primary",
-      "format": "video",
-      "externalId": "journalism_uk_news_stream_01",
-      "duration": "PT0S",
-      "caption": "live stream from event",
-      "image": {
-        "id": "63501301",
-        "subType": "thumbnail",
+      "indexImage": {
+        "id": "63721698",
+        "subType": "index",
         "href": "http://b.files.bbci.co.uk/15E0C/test/_63721698_p01kx435.jpg",
         "path": "/cpsdevpb/15E0C/test/_63721698_p01kx435.jpg",
         "height": 360,
@@ -219,38 +235,22 @@
         "copyrightHolder": "BBC",
         "type": "image"
       },
-      "embedding": false,
-      "available": true,
-      "live": true,
-      "type": "version"
+      "id": "urn:bbc:ares::asset:thai/thailand-23248713",
+      "type": "cps"
     },
-    "indexImage": {
-      "id": "63721698",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/15E0C/test/_63721698_p01kx435.jpg",
-      "path": "/cpsdevpb/15E0C/test/_63721698_p01kx435.jpg",
-      "height": 360,
-      "width": 640,
-      "altText": "connectionAltText",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:thai/thailand-23248713",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "ไทย",
-      "uri": "/thai/thailand",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "บีบีซีไทย",
-      "uri": "/thai",
-      "type": "simple"
-    },
-    "groups": []
-  }
+    "relatedContent": {
+      "section": {
+        "subType": "index",
+        "name": "ไทย",
+        "uri": "/thai/thailand",
+        "type": "simple"
+      },
+      "site": {
+        "subType": "site",
+        "name": "บีบีซีไทย",
+        "uri": "/thai",
+        "type": "simple"
+      },
+      "groups": []
+    }
 }
