@@ -82,6 +82,7 @@
     "@bbc/psammead-navigation": "^6.0.2",
     "@bbc/psammead-paragraph": "^2.2.26",
     "@bbc/psammead-rich-text-transforms": "^2.0.0",
+    "@bbc/psammead-script-link": "^1.0.10",
     "@bbc/psammead-section-label": "^4.0.2",
     "@bbc/psammead-sitewide-links": "^4.0.9",
     "@bbc/psammead-story-promo": "^5.1.0",
