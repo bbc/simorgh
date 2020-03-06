@@ -50,7 +50,7 @@ const convertToOptimoBlocks = async jsonRaw => {
 
   if (versionBlock && blocks.length > 0) {
     const headline = path(['promo', 'headlines', 'headline'], json);
-    blocks[0].headline = headline;
+    blocks[0].title = headline;
   }
 
   console.log(`blockLog: ${JSON.stringify(blocks[0])}`);

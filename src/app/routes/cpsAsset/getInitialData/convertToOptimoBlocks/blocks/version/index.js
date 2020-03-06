@@ -11,13 +11,13 @@ const generateVideoBlock = block => {
       // If available is undefined, the video is available
       available: isNil(block.available) ? true : block.available,
       format: block.format === 'video' ? 'audio_video' : block.format,
-      title: block.caption,
+      title: block.title,
       imageCopyright: path(['image', 'copyrightHolder'], block),
       imageUrl: path(['image', 'href'], block),
       synopses: {
-        short: block.caption,
-        medium: block.caption,
-        long: block.caption,
+        short: block.title,
+        medium: block.title,
+        long: block.title,
       },
       versions: [
         {
