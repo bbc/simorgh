@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FrontPageSection Container snapshots should render correctly for canonical 1`] = `
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11,7 +11,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   flex-direction: column;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30,14 +30,14 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   align-items: baseline;
 }
 
-.c5 {
+.c6 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #222222;
-  background-color: #FFFFFF;
+  background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -50,13 +50,14 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   align-items: center;
 }
 
-.c1 {
+.c2 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c0 {
+.c1 {
   position: relative;
+  z-index: 0;
   margin-top: 2rem;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -68,7 +69,1008 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   width: 1px;
 }
 
+.c3 {
+  margin: 0;
+  padding: 0;
+}
+
+.c10 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c10:first-child {
+  padding-top: 0;
+}
+
+.c10:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c8 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c13 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.c25 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c18 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.c27 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c12 {
+  position: relative;
+}
+
+.c24 {
+  position: relative;
+}
+
+.c14 {
+  position: relative;
+}
+
+.c17 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c17 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c26 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c19 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.c28 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c21 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c29 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c20 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c20:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c20:hover,
+.c20:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c20:visited {
+  color: #6E6E73;
+}
+
+.c15 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c16 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+.c22 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c0 {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c2 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c1 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c10 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c10 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c10:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c9 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c11 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c11 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c11 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c23 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c23 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c23 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c23 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c23 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c23 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c23 {
+    display: block;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    width: calc(50% - 0.5rem);
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c13 {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c13 {
+    width: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) {
+  .c25 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c25 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c18 {
+    width: 50%;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c18 {
+    width: 50%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c18 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c27 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c27 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c27 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c12 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c24 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c26 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c26 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c28 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c28 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c21 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c21 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c21 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c29 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c29 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c29 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c29 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c22 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c7 {
+    margin-top: 2rem;
+  }
+}
+
+<section
+  aria-labelledby="Top-Stories"
+  class="c0"
+  role="region"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    />
+    <h2
+      class="c3"
+    >
+      <div
+        class="c4"
+      >
+        <span
+          class="c5"
+        >
+          <span
+            class="c6"
+            dir="ltr"
+            id="Top-Stories"
+          >
+            Top Stories
+          </span>
+        </span>
+      </div>
+    </h2>
+  </div>
+  <div
+    class="c7"
+  >
+    <ul
+      class="c8 c9"
+      dir="ltr"
+      role="list"
+    >
+      <li
+        class="c10 c11"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="c12"
+        >
+          <div
+            class="c13"
+            dir="ltr"
+          >
+            <div
+              class="c14"
+            >
+              <div
+                class="c15"
+              >
+                <img
+                  alt="Image Alt text 1"
+                  class="c16"
+                  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
+                  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
+                  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg 660w"
+                  width="2048"
+                />
+              </div>
+              <div
+                class="c17"
+              />
+            </div>
+          </div>
+          <div
+            class="c18"
+            dir="ltr"
+          >
+            <h3
+              class="c19"
+            >
+              <a
+                class="c20"
+                href="https://www.bbc.co.uk"
+              >
+                Top Story 1 headline
+              </a>
+            </h3>
+            <p
+              class="c21"
+            >
+              Summary text 1
+            </p>
+            <time
+              class="c22"
+              datetime="1970-01-19"
+            >
+              19 January 1970
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="c10 c23"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="c24"
+        >
+          <div
+            class="c25"
+            dir="ltr"
+          >
+            <div
+              class="c14"
+            >
+              <div
+                class="c15"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
+              <div
+                class="c26"
+              />
+            </div>
+          </div>
+          <div
+            class="c27"
+            dir="ltr"
+          >
+            <h3
+              class="c28"
+            >
+              <a
+                class="c20"
+                href="https://www.bbc.co.uk"
+              >
+                Top Story 2 headline
+              </a>
+            </h3>
+            <p
+              class="c29"
+            >
+              Summary text 2
+            </p>
+            <time
+              class="c22"
+              datetime="1970-01-19"
+            >
+              19 January 1970
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="c10 c23"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="c24"
+        >
+          <div
+            class="c25"
+            dir="ltr"
+          >
+            <div
+              class="c14"
+            >
+              <div
+                class="c15"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
+              <div
+                class="c26"
+              />
+            </div>
+          </div>
+          <div
+            class="c27"
+            dir="ltr"
+          >
+            <h3
+              class="c28"
+            >
+              <a
+                class="c20"
+                href="https://www.bbc.co.uk"
+              >
+                Top Story 3 headline
+              </a>
+            </h3>
+            <p
+              class="c29"
+            >
+              Summary text 3
+            </p>
+            <time
+              class="c22"
+              datetime="1970-01-19"
+            >
+              19 January 1970
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="c10 c23"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="c24"
+        >
+          <div
+            class="c25"
+            dir="ltr"
+          >
+            <div
+              class="c14"
+            >
+              <div
+                class="c15"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
+              <div
+                class="c26"
+              />
+            </div>
+          </div>
+          <div
+            class="c27"
+            dir="ltr"
+          >
+            <h3
+              class="c28"
+            >
+              <a
+                class="c20"
+                href="https://www.bbc.co.uk"
+              >
+                Top Story 4 headline
+              </a>
+            </h3>
+            <p
+              class="c29"
+            >
+              Summary text 4
+            </p>
+            <time
+              class="c22"
+              datetime="1970-01-19"
+            >
+              19 January 1970
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="c10 c23"
+        dir="ltr"
+        role="listitem"
+      >
+        <div
+          class="c24"
+        >
+          <div
+            class="c25"
+            dir="ltr"
+          >
+            <div
+              class="c14"
+            >
+              <div
+                class="c15"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
+              <div
+                class="c26"
+              />
+            </div>
+          </div>
+          <div
+            class="c27"
+            dir="ltr"
+          >
+            <h3
+              class="c28"
+            >
+              <a
+                class="c20"
+                href="https://www.bbc.co.uk"
+              >
+                Top Story 5 headline
+              </a>
+            </h3>
+            <p
+              class="c29"
+            >
+              Summary text 5
+            </p>
+            <time
+              class="c22"
+              datetime="1970-01-19"
+            >
+              19 January 1970
+            </time>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+`;
+
+exports[`FrontPageSection Container snapshots should render correctly with a linking strapline 1`] = `
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c6 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c2 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c1 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c3 {
   margin: 0;
   padding: 0;
 }
@@ -92,1049 +1094,61 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   padding: 0;
 }
 
-.c12 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  margin-bottom: 0.5rem;
-  width: 100%;
-}
-
-.c24 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 33.33%;
-}
-
-.c17 {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.c26 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-.c11 {
-  position: relative;
-}
-
 .c23 {
-  position: relative;
-}
-
-.c13 {
-  position: relative;
-}
-
-.c16 {
-  position: absolute;
-  bottom: 0;
-}
-
-.c16 > * {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-.c25 > * {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-.c18 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-}
-
-.c27 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-.c20 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c28 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c19 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c19:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c19:hover,
-.c19:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c19:visited {
-  color: #6E6E73;
-}
-
-.c14 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #ECEAE7;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-.c15 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.c21 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c1 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c0 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c9 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c9 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c9 {
-    padding: 0 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c9:first-child {
-    padding-top: 1rem;
-  }
-}
-
-@supports (display:grid) {
-  .c8 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c10 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c10 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c10 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c10 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c10 {
-    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c10 {
-    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c10 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c22 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c22 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c22 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c22 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c22 {
-    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c22 {
-    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c22 {
-    display: block;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    width: calc(50% - 0.5rem);
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .c12 {
-    width: calc(50% - 0.5rem);
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c12 {
-    width: initial;
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) {
-  .c24 {
-    display: block;
-    width: 100%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c24 {
-    width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c17 {
-    width: 50%;
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c17 {
-    width: 50%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c17 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c26 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c26 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c23 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c25 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .c25 > * {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c18 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c27 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c27 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c20 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c20 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c28 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c28 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c28 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:63rem) {
-  .c28 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c21 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c21 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    margin-top: 0.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c6 {
-    margin-top: 2rem;
-  }
-}
-
-<section
-  aria-labelledby="Top-Stories"
-  role="region"
->
-  <div
-    class="c0"
-  >
-    <div
-      class="c1"
-    />
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      >
-        <span
-          class="c4"
-        >
-          <span
-            class="c5"
-            dir="ltr"
-            id="Top-Stories"
-          >
-            Top Stories
-          </span>
-        </span>
-      </div>
-    </h2>
-  </div>
-  <div
-    class="c6"
-  >
-    <ul
-      class="c7 c8"
-      dir="ltr"
-      role="list"
-    >
-      <li
-        class="c9 c10"
-        dir="ltr"
-        role="listitem"
-      >
-        <div
-          class="c11"
-        >
-          <div
-            class="c12"
-            dir="ltr"
-          >
-            <div
-              class="c13"
-            >
-              <div
-                class="c14"
-              >
-                <img
-                  alt="Image Alt text 1"
-                  class="c15"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px"
-                  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
-                  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg 660w"
-                  width="2048"
-                />
-              </div>
-              <div
-                class="c16"
-              />
-            </div>
-          </div>
-          <div
-            class="c17"
-            dir="ltr"
-          >
-            <h3
-              class="c18"
-            >
-              <a
-                class="c19"
-                href="https://www.bbc.co.uk"
-              >
-                Top Story 1 headline
-              </a>
-            </h3>
-            <p
-              class="c20"
-            >
-              Summary text 1
-            </p>
-            <time
-              class="c21"
-              datetime="1970-01-19"
-            >
-              19 January 1970
-            </time>
-          </div>
-        </div>
-      </li>
-      <li
-        class="c9 c22"
-        dir="ltr"
-        role="listitem"
-      >
-        <div
-          class="c23"
-        >
-          <div
-            class="c24"
-            dir="ltr"
-          >
-            <div
-              class="c13"
-            >
-              <div
-                class="c14"
-              >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-              <div
-                class="c25"
-              />
-            </div>
-          </div>
-          <div
-            class="c26"
-            dir="ltr"
-          >
-            <h3
-              class="c27"
-            >
-              <a
-                class="c19"
-                href="https://www.bbc.co.uk"
-              >
-                Top Story 2 headline
-              </a>
-            </h3>
-            <p
-              class="c28"
-            >
-              Summary text 2
-            </p>
-            <time
-              class="c21"
-              datetime="1970-01-19"
-            >
-              19 January 1970
-            </time>
-          </div>
-        </div>
-      </li>
-      <li
-        class="c9 c22"
-        dir="ltr"
-        role="listitem"
-      >
-        <div
-          class="c23"
-        >
-          <div
-            class="c24"
-            dir="ltr"
-          >
-            <div
-              class="c13"
-            >
-              <div
-                class="c14"
-              >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-              <div
-                class="c25"
-              />
-            </div>
-          </div>
-          <div
-            class="c26"
-            dir="ltr"
-          >
-            <h3
-              class="c27"
-            >
-              <a
-                class="c19"
-                href="https://www.bbc.co.uk"
-              >
-                Top Story 3 headline
-              </a>
-            </h3>
-            <p
-              class="c28"
-            >
-              Summary text 3
-            </p>
-            <time
-              class="c21"
-              datetime="1970-01-19"
-            >
-              19 January 1970
-            </time>
-          </div>
-        </div>
-      </li>
-      <li
-        class="c9 c22"
-        dir="ltr"
-        role="listitem"
-      >
-        <div
-          class="c23"
-        >
-          <div
-            class="c24"
-            dir="ltr"
-          >
-            <div
-              class="c13"
-            >
-              <div
-                class="c14"
-              >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-              <div
-                class="c25"
-              />
-            </div>
-          </div>
-          <div
-            class="c26"
-            dir="ltr"
-          >
-            <h3
-              class="c27"
-            >
-              <a
-                class="c19"
-                href="https://www.bbc.co.uk"
-              >
-                Top Story 4 headline
-              </a>
-            </h3>
-            <p
-              class="c28"
-            >
-              Summary text 4
-            </p>
-            <time
-              class="c21"
-              datetime="1970-01-19"
-            >
-              19 January 1970
-            </time>
-          </div>
-        </div>
-      </li>
-      <li
-        class="c9 c22"
-        dir="ltr"
-        role="listitem"
-      >
-        <div
-          class="c23"
-        >
-          <div
-            class="c24"
-            dir="ltr"
-          >
-            <div
-              class="c13"
-            >
-              <div
-                class="c14"
-              >
-                <div
-                  class="lazyload-placeholder"
-                />
-              </div>
-              <div
-                class="c25"
-              />
-            </div>
-          </div>
-          <div
-            class="c26"
-            dir="ltr"
-          >
-            <h3
-              class="c27"
-            >
-              <a
-                class="c19"
-                href="https://www.bbc.co.uk"
-              >
-                Top Story 5 headline
-              </a>
-            </h3>
-            <p
-              class="c28"
-            >
-              Summary text 5
-            </p>
-            <time
-              class="c21"
-              datetime="1970-01-19"
-            >
-              19 January 1970
-            </time>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-`;
-
-exports[`FrontPageSection Container snapshots should render correctly with a linking strapline 1`] = `
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c5 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FFFFFF;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c0 {
-  position: relative;
-  margin-top: 2rem;
-}
-
-.c2 {
-  margin: 0;
-  padding: 0;
-}
-
-.c8 {
-  padding: 0.5rem 0 1rem;
-}
-
-.c8:first-child {
-  padding-top: 0;
-}
-
-.c8:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
-.c6 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c22 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c16 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 100%;
-}
-
-.c24 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-.c11 {
-  display: inline-block;
-  vertical-align: top;
-  width: 100%;
-}
-
-.c21 {
-  position: relative;
-}
-
-.c10 {
-  position: relative;
-}
-
 .c17 {
+  display: inline-block;
+  vertical-align: top;
   position: relative;
-}
-
-.c19 {
-  position: absolute;
-  bottom: 0;
-}
-
-.c19 > * {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-.c23 > * {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
+  width: 100%;
 }
 
 .c25 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c12 {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+
+.c22 {
+  position: relative;
+}
+
+.c11 {
+  position: relative;
+}
+
+.c18 {
+  position: relative;
+}
+
+.c20 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c20 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c24 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c26 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1145,7 +1159,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   line-height: 1.25rem;
 }
 
-.c12 {
+.c13 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1154,736 +1168,6 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.375rem;
-}
-
-.c14 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c13 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c13:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c13:hover,
-.c13:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c13:visited {
-  color: #6E6E73;
-}
-
-.c18 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #ECEAE7;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-.c15 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c1 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c0 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c8 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c8 {
-    padding: 0 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c8:first-child {
-    padding-top: 1rem;
-  }
-}
-
-@supports (display:grid) {
-  .c7 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c20 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c20 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c20 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c20 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c20 {
-    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c20 {
-    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c20 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c9 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c9 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c9 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c9 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c9 {
-    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c9 {
-    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c9 {
-    display: block;
-  }
-}
-
-@media (min-width:63rem) {
-  .c22 {
-    display: block;
-    width: 100%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c22 {
-    width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
-    padding-left: 0.5rem;
-    width: 50%;
-  }
-}
-
-@media (min-width:63rem) {
-  .c16 {
-    width: 66.67%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c16 {
-    width: initial;
-    padding: 0;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-end: span 6;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c24 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c24 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    padding-right: 0.5rem;
-    width: 50%;
-  }
-}
-
-@media (min-width:63rem) {
-  .c11 {
-    width: 33.33%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c11 {
-    display: block;
-    width: initial;
-    padding: initial;
-    padding: 0;
-    width: 100%;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-end: span 6;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c11 >time {
-    padding-bottom: 0.5rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c21 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c10 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c23 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .c23 > * {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c25 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c25 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c14 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c14 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:63rem) {
-  .c14 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c15 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-<section
-  aria-labelledby="Top-Stories"
-  role="region"
->
-  <div
-    class="c0"
-  >
-    <div
-      class="c1"
-    />
-    <h2
-      class="c2"
-    >
-      <div
-        class="c3"
-      >
-        <span
-          class="c4"
-        >
-          <span
-            class="c5"
-            dir="ltr"
-            id="Top-Stories"
-          >
-            Top Stories
-          </span>
-        </span>
-      </div>
-    </h2>
-  </div>
-  <ul
-    class="c6 c7"
-    dir="ltr"
-    role="list"
-  >
-    <li
-      class="c8 c9"
-      dir="ltr"
-      role="listitem"
-    >
-      <div
-        class="c10"
-      >
-        <div
-          class="c11"
-          dir="ltr"
-        >
-          <h3
-            class="c12"
-          >
-            <a
-              class="c13"
-              href="https://www.bbc.co.uk"
-            >
-              Top Story 1 headline
-            </a>
-          </h3>
-          <p
-            class="c14"
-          >
-            Summary text 1
-          </p>
-          <time
-            class="c15"
-            datetime="1970-01-19"
-          >
-            19 January 1970
-          </time>
-        </div>
-        <div
-          class="c16"
-          dir="ltr"
-        >
-          <div
-            class="c17"
-          >
-            <div
-              class="c18"
-            >
-              <div
-                class="lazyload-placeholder"
-              />
-            </div>
-            <div
-              class="c19"
-            />
-          </div>
-        </div>
-      </div>
-    </li>
-    <li
-      class="c8 c20"
-      dir="ltr"
-      role="listitem"
-    >
-      <div
-        class="c21"
-      >
-        <div
-          class="c22"
-          dir="ltr"
-        >
-          <div
-            class="c17"
-          >
-            <div
-              class="c18"
-            >
-              <div
-                class="lazyload-placeholder"
-              />
-            </div>
-            <div
-              class="c23"
-            />
-          </div>
-        </div>
-        <div
-          class="c24"
-          dir="ltr"
-        >
-          <h3
-            class="c25"
-          >
-            <a
-              class="c13"
-              href="https://www.bbc.co.uk"
-            >
-              Top Story 2 headline
-            </a>
-          </h3>
-          <p
-            class="c14"
-          >
-            Summary text 2
-          </p>
-          <time
-            class="c15"
-            datetime="1970-01-19"
-          >
-            19 January 1970
-          </time>
-        </div>
-      </div>
-    </li>
-  </ul>
-</section>
-`;
-
-exports[`FrontPageSection Container snapshots should render with only one item 1`] = `
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c5 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FFFFFF;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c0 {
-  position: relative;
-  margin-top: 2rem;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-}
-
-.c2 {
-  margin: 0;
-  padding: 0;
-}
-
-.c8 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  margin-bottom: 0.5rem;
-  width: 100%;
-}
-
-.c12 {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.c7 {
-  position: relative;
-}
-
-.c9 {
-  position: relative;
-}
-
-.c11 {
-  position: absolute;
-  bottom: 0;
-}
-
-.c11 > * {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-.c13 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
 }
 
 .c15 {
@@ -1926,7 +1210,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   color: #6E6E73;
 }
 
-.c10 {
+.c19 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1947,6 +1231,1255 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.c0 {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c2 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c1 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c9 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c9:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c8 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c21 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c21 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c21 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c21 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c21 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c21 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c21 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c10 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c10 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c10 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c10 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c10 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c10 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c10 {
+    display: block;
+  }
+}
+
+@media (min-width:63rem) {
+  .c23 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c23 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    padding-left: 0.5rem;
+    width: 50%;
+  }
+}
+
+@media (min-width:63rem) {
+  .c17 {
+    width: 66.67%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c17 {
+    width: initial;
+    padding: 0;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-end: span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c25 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c25 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c25 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    padding-right: 0.5rem;
+    width: 50%;
+  }
+}
+
+@media (min-width:63rem) {
+  .c12 {
+    width: 33.33%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c12 {
+    display: block;
+    width: initial;
+    padding: initial;
+    padding: 0;
+    width: 100%;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-end: span 6;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c12 >time {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c22 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c11 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c24 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c24 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c26 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c26 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c15 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c15 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c15 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c16 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    max-width: 63rem;
+  }
+}
+
+<section
+  aria-labelledby="Top-Stories"
+  class="c0"
+  role="region"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    />
+    <h2
+      class="c3"
+    >
+      <div
+        class="c4"
+      >
+        <span
+          class="c5"
+        >
+          <span
+            class="c6"
+            dir="ltr"
+            id="Top-Stories"
+          >
+            Top Stories
+          </span>
+        </span>
+      </div>
+    </h2>
+  </div>
+  <ul
+    class="c7 c8"
+    dir="ltr"
+    role="list"
+  >
+    <li
+      class="c9 c10"
+      dir="ltr"
+      role="listitem"
+    >
+      <div
+        class="c11"
+      >
+        <div
+          class="c12"
+          dir="ltr"
+        >
+          <h3
+            class="c13"
+          >
+            <a
+              class="c14"
+              href="https://www.bbc.co.uk"
+            >
+              Top Story 1 headline
+            </a>
+          </h3>
+          <p
+            class="c15"
+          >
+            Summary text 1
+          </p>
+          <time
+            class="c16"
+            datetime="1970-01-19"
+          >
+            19 January 1970
+          </time>
+        </div>
+        <div
+          class="c17"
+          dir="ltr"
+        >
+          <div
+            class="c18"
+          >
+            <div
+              class="c19"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
+            <div
+              class="c20"
+            />
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      class="c9 c21"
+      dir="ltr"
+      role="listitem"
+    >
+      <div
+        class="c22"
+      >
+        <div
+          class="c23"
+          dir="ltr"
+        >
+          <div
+            class="c18"
+          >
+            <div
+              class="c19"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
+            <div
+              class="c24"
+            />
+          </div>
+        </div>
+        <div
+          class="c25"
+          dir="ltr"
+        >
+          <h3
+            class="c26"
+          >
+            <a
+              class="c14"
+              href="https://www.bbc.co.uk"
+            >
+              Top Story 2 headline
+            </a>
+          </h3>
+          <p
+            class="c15"
+          >
+            Summary text 2
+          </p>
+          <time
+            class="c16"
+            datetime="1970-01-19"
+          >
+            19 January 1970
+          </time>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+`;
+
+exports[`FrontPageSection Container snapshots should render with only one item 1`] = `
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c6 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c1 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.c3 {
+  margin: 0;
+  padding: 0;
+}
+
+.c9 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.c13 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.c8 {
+  position: relative;
+}
+
+.c10 {
+  position: relative;
+}
+
+.c12 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c12 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c14 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.c16 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c15 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c15:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c15:hover,
+.c15:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c15:visited {
+  color: #6E6E73;
+}
+
+.c11 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c17 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c0 {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c2 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c1 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    width: calc(50% - 0.5rem);
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c9 {
+    width: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    width: 50%;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c13 {
+    width: 50%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c13 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c8 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c14 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c16 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c16 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c17 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c7 {
+    margin-top: 2rem;
+  }
+}
+
+<section
+  aria-labelledby="Top-Stories"
+  class="c0"
+  role="region"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    />
+    <h2
+      class="c3"
+    >
+      <div
+        class="c4"
+      >
+        <span
+          class="c5"
+        >
+          <span
+            class="c6"
+            dir="ltr"
+            id="Top-Stories"
+          >
+            Top Stories
+          </span>
+        </span>
+      </div>
+    </h2>
+  </div>
+  <div
+    class="c7"
+  >
+    <div
+      class="c8"
+    >
+      <div
+        class="c9"
+        dir="ltr"
+      >
+        <div
+          class="c10"
+        >
+          <div
+            class="c11"
+          >
+            <div
+              class="lazyload-placeholder"
+            />
+          </div>
+          <div
+            class="c12"
+          />
+        </div>
+      </div>
+      <div
+        class="c13"
+        dir="ltr"
+      >
+        <h3
+          class="c14"
+        >
+          <a
+            class="c15"
+            href="https://www.bbc.co.uk"
+          >
+            Top Story 1 headline
+          </a>
+        </h3>
+        <p
+          class="c16"
+        >
+          Summary text 1
+        </p>
+        <time
+          class="c17"
+          datetime="1970-01-19"
+        >
+          19 January 1970
+        </time>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`FrontPageSection Container snapshots should render without a bar 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c5 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c2 {
+  margin: 0;
+  padding: 0;
+}
+
+.c8 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c8:first-child {
+  padding-top: 0;
+}
+
+.c8:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c6 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c11 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.c22 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c15 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.c24 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c10 {
+  position: relative;
+}
+
+.c21 {
+  position: relative;
+}
+
+.c12 {
+  position: relative;
+}
+
+.c14 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c14 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c23 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c16 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.c25 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c18 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c26 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c17 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c17:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c17:hover,
+.c17:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c17:visited {
+  color: #6E6E73;
+}
+
+.c13 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c19 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c0 {
+  margin: 0 auto;
+  width: 100%;
 }
 
 @media (min-width:37.5rem) {
@@ -1984,68 +2517,218 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   }
 }
 
-@media screen and (-ms-high-contrast:active) {
-  .c1 {
-    border-color: windowText;
-  }
-}
-
 @media (min-width:37.5rem) {
   .c1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c0 {
+  .c1 {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c8 {
+    border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
   .c8 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c8 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c8:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c7 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c9 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c9 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c9 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c9 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c9 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c9 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c9 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c20 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c20 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c20 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c20 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c20 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c20 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c20 {
+    display: block;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
     width: calc(50% - 0.5rem);
     margin-bottom: 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c8 {
+  .c11 {
     width: calc(50% - 0.5rem);
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c8 {
+  .c11 {
     width: initial;
     grid-column: 1 / span 6;
   }
 }
 
+@media (min-width:63rem) {
+  .c22 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c22 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
 @media (min-width:37.5rem) {
-  .c12 {
+  .c15 {
     width: 50%;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c12 {
+  .c15 {
     width: 50%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c12 {
+  .c15 {
     display: block;
     width: initial;
     padding: initial;
@@ -2053,85 +2736,164 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   }
 }
 
+@media (min-width:37.5rem) {
+  .c24 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c24 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
 @supports (grid-template-columns:fit-content(200px)) {
-  .c7 {
+  .c24 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c10 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
   }
 }
 
+@supports (grid-template-columns:fit-content(200px)) {
+  .c21 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c23 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c23 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c16 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c16 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
+  .c25 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c25 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c18 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c18 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c15 {
+  .c18 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 {
+  .c26 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c26 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c26 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c26 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c6 {
-    margin-top: 1.5rem;
-  }
-}
-
 @media (min-width:63rem) {
-  .c6 {
-    margin-top: 2rem;
+  .c0 {
+    max-width: 63rem;
   }
 }
 
 <section
   aria-labelledby="Top-Stories"
+  class="c0"
   role="region"
 >
   <div
-    class="c0"
+    class="c1"
   >
-    <div
-      class="c1"
-    />
     <h2
       class="c2"
     >
@@ -2152,769 +2914,59 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
       </div>
     </h2>
   </div>
-  <div
-    class="c6"
-  >
-    <div
-      class="c7"
-    >
-      <div
-        class="c8"
-        dir="ltr"
-      >
-        <div
-          class="c9"
-        >
-          <div
-            class="c10"
-          >
-            <div
-              class="lazyload-placeholder"
-            />
-          </div>
-          <div
-            class="c11"
-          />
-        </div>
-      </div>
-      <div
-        class="c12"
-        dir="ltr"
-      >
-        <h3
-          class="c13"
-        >
-          <a
-            class="c14"
-            href="https://www.bbc.co.uk"
-          >
-            Top Story 1 headline
-          </a>
-        </h3>
-        <p
-          class="c15"
-        >
-          Summary text 1
-        </p>
-        <time
-          class="c16"
-          datetime="1970-01-19"
-        >
-          19 January 1970
-        </time>
-      </div>
-    </div>
-  </div>
-</section>
-`;
-
-exports[`FrontPageSection Container snapshots should render without a bar 1`] = `
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c4 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FFFFFF;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c0 {
-  position: relative;
-  margin-top: 2rem;
-}
-
-.c1 {
-  margin: 0;
-  padding: 0;
-}
-
-.c7 {
-  padding: 0.5rem 0 1rem;
-}
-
-.c7:first-child {
-  padding-top: 0;
-}
-
-.c7:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
-.c5 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c10 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  margin-bottom: 0.5rem;
-  width: 100%;
-}
-
-.c21 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 33.33%;
-}
-
-.c14 {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.c23 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-.c9 {
-  position: relative;
-}
-
-.c20 {
-  position: relative;
-}
-
-.c11 {
-  position: relative;
-}
-
-.c13 {
-  position: absolute;
-  bottom: 0;
-}
-
-.c13 > * {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-.c22 > * {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-.c15 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-}
-
-.c24 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-.c17 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c25 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
-.c16 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c16:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.c16:hover,
-.c16:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c16:visited {
-  color: #6E6E73;
-}
-
-.c12 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #ECEAE7;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 30%;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-.c18 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    padding-right: 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c0 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c7 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c7 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c7 {
-    padding: 0 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c7:first-child {
-    padding-top: 1rem;
-  }
-}
-
-@supports (display:grid) {
-  .c6 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c8 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c8 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c8 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c8 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c8 {
-    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c8 {
-    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c8 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c19 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c19 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c19 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c19 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c19 {
-    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c19 {
-    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c19 {
-    display: block;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    width: calc(50% - 0.5rem);
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .c10 {
-    width: calc(50% - 0.5rem);
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c10 {
-    width: initial;
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) {
-  .c21 {
-    display: block;
-    width: 100%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c21 {
-    width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    width: 50%;
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c14 {
-    width: 50%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c14 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c23 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c23 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c9 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c20 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c22 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .c22 > * {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c15 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c24 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c17 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c17 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c17 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c25 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c25 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c25 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:63rem) {
-  .c25 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c18 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c18 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-<section
-  aria-labelledby="Top-Stories"
-  role="region"
->
-  <div
-    class="c0"
-  >
-    <h2
-      class="c1"
-    >
-      <div
-        class="c2"
-      >
-        <span
-          class="c3"
-        >
-          <span
-            class="c4"
-            dir="ltr"
-            id="Top-Stories"
-          >
-            Top Stories
-          </span>
-        </span>
-      </div>
-    </h2>
-  </div>
   <ul
-    class="c5 c6"
+    class="c6 c7"
     dir="ltr"
     role="list"
   >
     <li
-      class="c7 c8"
+      class="c8 c9"
       dir="ltr"
       role="listitem"
     >
       <div
-        class="c9"
+        class="c10"
       >
         <div
-          class="c10"
+          class="c11"
           dir="ltr"
         >
           <div
-            class="c11"
+            class="c12"
           >
             <div
-              class="c12"
+              class="c13"
             >
               <div
                 class="lazyload-placeholder"
               />
             </div>
             <div
-              class="c13"
+              class="c14"
             />
           </div>
         </div>
         <div
-          class="c14"
+          class="c15"
           dir="ltr"
         >
           <h3
-            class="c15"
+            class="c16"
           >
             <a
-              class="c16"
+              class="c17"
               href="https://www.bbc.co.uk"
             >
               Top Story 1 headline
             </a>
           </h3>
           <p
-            class="c17"
+            class="c18"
           >
             Summary text 1
           </p>
           <time
-            class="c18"
+            class="c19"
             datetime="1970-01-19"
           >
             19 January 1970
@@ -2923,53 +2975,53 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
       </div>
     </li>
     <li
-      class="c7 c19"
+      class="c8 c20"
       dir="ltr"
       role="listitem"
     >
       <div
-        class="c20"
+        class="c21"
       >
         <div
-          class="c21"
+          class="c22"
           dir="ltr"
         >
           <div
-            class="c11"
+            class="c12"
           >
             <div
-              class="c12"
+              class="c13"
             >
               <div
                 class="lazyload-placeholder"
               />
             </div>
             <div
-              class="c22"
+              class="c23"
             />
           </div>
         </div>
         <div
-          class="c23"
+          class="c24"
           dir="ltr"
         >
           <h3
-            class="c24"
+            class="c25"
           >
             <a
-              class="c16"
+              class="c17"
               href="https://www.bbc.co.uk"
             >
               Top Story 2 headline
             </a>
           </h3>
           <p
-            class="c25"
+            class="c26"
           >
             Summary text 2
           </p>
           <time
-            class="c18"
+            class="c19"
             datetime="1970-01-19"
           >
             19 January 1970
@@ -2978,53 +3030,53 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
       </div>
     </li>
     <li
-      class="c7 c19"
+      class="c8 c20"
       dir="ltr"
       role="listitem"
     >
       <div
-        class="c20"
+        class="c21"
       >
         <div
-          class="c21"
+          class="c22"
           dir="ltr"
         >
           <div
-            class="c11"
+            class="c12"
           >
             <div
-              class="c12"
+              class="c13"
             >
               <div
                 class="lazyload-placeholder"
               />
             </div>
             <div
-              class="c22"
+              class="c23"
             />
           </div>
         </div>
         <div
-          class="c23"
+          class="c24"
           dir="ltr"
         >
           <h3
-            class="c24"
+            class="c25"
           >
             <a
-              class="c16"
+              class="c17"
               href="https://www.bbc.co.uk"
             >
               Top Story 3 headline
             </a>
           </h3>
           <p
-            class="c25"
+            class="c26"
           >
             Summary text 3
           </p>
           <time
-            class="c18"
+            class="c19"
             datetime="1970-01-19"
           >
             19 January 1970
@@ -3033,53 +3085,53 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
       </div>
     </li>
     <li
-      class="c7 c19"
+      class="c8 c20"
       dir="ltr"
       role="listitem"
     >
       <div
-        class="c20"
+        class="c21"
       >
         <div
-          class="c21"
+          class="c22"
           dir="ltr"
         >
           <div
-            class="c11"
+            class="c12"
           >
             <div
-              class="c12"
+              class="c13"
             >
               <div
                 class="lazyload-placeholder"
               />
             </div>
             <div
-              class="c22"
+              class="c23"
             />
           </div>
         </div>
         <div
-          class="c23"
+          class="c24"
           dir="ltr"
         >
           <h3
-            class="c24"
+            class="c25"
           >
             <a
-              class="c16"
+              class="c17"
               href="https://www.bbc.co.uk"
             >
               Top Story 4 headline
             </a>
           </h3>
           <p
-            class="c25"
+            class="c26"
           >
             Summary text 4
           </p>
           <time
-            class="c18"
+            class="c19"
             datetime="1970-01-19"
           >
             19 January 1970
@@ -3088,53 +3140,53 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
       </div>
     </li>
     <li
-      class="c7 c19"
+      class="c8 c20"
       dir="ltr"
       role="listitem"
     >
       <div
-        class="c20"
+        class="c21"
       >
         <div
-          class="c21"
+          class="c22"
           dir="ltr"
         >
           <div
-            class="c11"
+            class="c12"
           >
             <div
-              class="c12"
+              class="c13"
             >
               <div
                 class="lazyload-placeholder"
               />
             </div>
             <div
-              class="c22"
+              class="c23"
             />
           </div>
         </div>
         <div
-          class="c23"
+          class="c24"
           dir="ltr"
         >
           <h3
-            class="c24"
+            class="c25"
           >
             <a
-              class="c16"
+              class="c17"
               href="https://www.bbc.co.uk"
             >
               Top Story 5 headline
             </a>
           </h3>
           <p
-            class="c25"
+            class="c26"
           >
             Summary text 5
           </p>
           <time
-            class="c18"
+            class="c19"
             datetime="1970-01-19"
           >
             19 January 1970

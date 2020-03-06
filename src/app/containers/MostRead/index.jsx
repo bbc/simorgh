@@ -14,6 +14,7 @@ const MostReadContainer = ({
   mostReadEndpointOverride,
   maxTwoColumns,
   constrainMaxWidth,
+  isOnFrontPage,
 }) => {
   const { variant, isAmp } = useContext(RequestContext);
   const {
@@ -37,6 +38,7 @@ const MostReadContainer = ({
       endpoint={endpoint}
       constrainMaxWidth={constrainMaxWidth}
       maxTwoColumns={maxTwoColumns}
+      isOnFrontPage={isOnFrontPage}
     />
   );
 };
@@ -45,12 +47,14 @@ MostReadContainer.propTypes = {
   mostReadEndpointOverride: string,
   constrainMaxWidth: bool,
   maxTwoColumns: bool,
+  isOnFrontPage: bool,
 };
 
 MostReadContainer.defaultProps = {
   mostReadEndpointOverride: null,
   constrainMaxWidth: false,
   maxTwoColumns: false,
+  isOnFrontPage: false,
 };
 
 export default MostReadContainer;
