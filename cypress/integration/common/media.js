@@ -45,6 +45,14 @@ export const playMediaWithPlaceholder = (outerIFrameClass, playButton) => {
     });
 };
 
+Then('the video clip plays', () => {
+  assertMediaIsPlaying();
+});
+
+Then('the audio clip plays', () => {
+  assertMediaIsPlaying();
+});
+
 Then(
   'a placeholder with the text "content is unavailable" is displayed',
   () => {
