@@ -48,17 +48,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
 
       if (pageType !== 'errorPage404') {
         it('should include the canonical URL', () => {
-          // ============================================================================
-          const deleteMessage = `DEBUG CANONICAL URL: ${JSON.stringify(
-            envConfig,
-          )}; APP_ENV: ${Cypress.env('APP_ENV')}; CurrentPath: ${Cypress.env(
-            'currentPath',
-          )}`;
-
-          // eslint-disable-next-line no-console
-          console.log(deleteMessage);
-          cy.log(deleteMessage);
-          // ============================================================================
           cy.get('head link[rel="canonical"]').should(
             'have.attr',
             'href',
@@ -156,17 +145,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                 'content',
                 ogType,
               );
-              // ============================================================================
-              const deleteMessage = `DEBUG SHARED METADATA: ${JSON.stringify(
-                envConfig,
-              )}; APP_ENV: ${Cypress.env(
-                'APP_ENV',
-              )}; CurrentPath: ${Cypress.env('currentPath')}`;
-
-              // eslint-disable-next-line no-console
-              console.log(deleteMessage);
-              cy.log(deleteMessage);
-              // ============================================================================
               cy.get('meta[property="og:url"]').should(
                 'have.attr',
                 'content',
@@ -466,27 +444,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   appConfig[config[service].name][variant].serviceLocalizedName
                 }`
               : appConfig[config[service].name][variant].product,
-          );
-      });
-
-      it('should contain copyright text', () => {
-        cy.get('footer p').should(
-          'contain',
-          appConfig[config[service].name][variant].footer.copyrightText,
-        );
-      });
-
-      it('copyright symbol should be wrapped in span', () => {
-        cy.get('footer span').should('contain', '©');
-      });
-
-      it('should contain a link in the copyright text', () => {
-        cy.get('footer p')
-          .children('a')
-          .should('have.attr', 'href')
-          .and(
-            'contain',
-            appConfig[config[service].name][variant].footer.externalLink.href,
           );
       });
     });

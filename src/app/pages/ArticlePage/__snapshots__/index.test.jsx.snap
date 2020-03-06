@@ -37,12 +37,12 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   </main>
   <section
     aria-labelledby="Most-Read"
-    class="MostReadSection-sc-6bm912-1 ConstrainedMostReadSection-sc-6bm912-2 eUxNRI"
+    class="MostReadSection-sc-6bm912-1 ConstrainedMostReadSection-sc-6bm912-3 bMQBFX"
     data-e2e="most-read"
     role="region"
   >
     <div
-      class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc"
+      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
     >
       <div
         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -57,7 +57,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="FlexRow-wx5kdp-2 dVBNyZ"
           >
             <span
-              class="Title-wx5kdp-4 jiurmA"
+              class="Title-wx5kdp-4 BeqZV"
               dir="ltr"
               id="Most-Read"
             >
@@ -576,12 +576,12 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   </main>
   <section
     aria-labelledby="Most-Read"
-    class="MostReadSection-sc-6bm912-1 ConstrainedMostReadSection-sc-6bm912-2 eUxNRI"
+    class="MostReadSection-sc-6bm912-1 ConstrainedMostReadSection-sc-6bm912-3 bMQBFX"
     data-e2e="most-read"
     role="region"
   >
     <div
-      class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc"
+      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
     >
       <div
         class="Bar-sc-1x4gwjz-0 kXOyLn"
@@ -596,7 +596,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="FlexRow-wx5kdp-2 dVBNyZ"
           >
             <span
-              class="Title-wx5kdp-4 dAMIcO"
+              class="Title-wx5kdp-4 htLcbq"
               dir="rtl"
               id="Most-Read"
             >
