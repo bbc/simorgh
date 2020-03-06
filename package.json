@@ -70,7 +70,7 @@
     "@bbc/psammead-consent-banner": "^2.3.28",
     "@bbc/psammead-copyright": "^1.2.24",
     "@bbc/psammead-figure": "^1.2.12",
-    "@bbc/psammead-grid": "^1.1.10",
+    "@bbc/psammead-grid": "^1.1.11",
     "@bbc/psammead-headings": "^3.1.28",
     "@bbc/psammead-image": "^1.2.4",
     "@bbc/psammead-image-placeholder": "^1.2.33",
