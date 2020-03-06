@@ -70,8 +70,8 @@ exports[`CpsRelatedContent should render Story Feature components when given app
               class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
               dir="ltr"
             >
-              <div
-                class="DivHeadline-sc-1813wac-0 lkrGCE"
+              <h3
+                class="Headline-sc-1dvfmi3-3 hSJrur"
               >
                 <a
                   class="Link-sc-1dvfmi3-5 yQgSu"
@@ -79,7 +79,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 >
                   STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
                 </a>
-              </div>
+              </h3>
               <p
                 class="Summary-sc-1dvfmi3-4 eaCWBB"
               >
@@ -118,8 +118,8 @@ exports[`CpsRelatedContent should render Story Feature components when given app
               class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
               dir="ltr"
             >
-              <div
-                class="DivHeadline-sc-1813wac-0 lkrGCE"
+              <h3
+                class="Headline-sc-1dvfmi3-3 hSJrur"
               >
                 <a
                   class="Link-sc-1dvfmi3-5 yQgSu"
@@ -127,7 +127,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 >
                   Robert Mugabe: Zimbabwe eferela nwa amadi a aka
                 </a>
-              </div>
+              </h3>
               <p
                 class="Summary-sc-1dvfmi3-4 eaCWBB"
               >

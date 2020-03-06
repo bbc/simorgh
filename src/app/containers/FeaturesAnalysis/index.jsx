@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, bool, node } from 'prop-types';
+import { arrayOf, shape, node } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from 'styled-components';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
@@ -14,7 +14,6 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemConstrainedLarge } from '#lib/styledGrid';
 import StoryPromo from '../StoryPromo';
-import DivHeadline from '../StoryPromo/DivHeadlines';
 
 const Wrapper = styled(GridItemConstrainedLarge)`
   margin-bottom: ${GEL_SPACING_DBL};
@@ -63,11 +62,7 @@ const FeaturesAnalysis = ({ content }) => {
         <StoryPromoUl>
           {content.map(item => (
             <StoryPromoLi key={item.id || item.uri}>
-              <StoryPromo
-                item={item}
-                headlineTag={props => <DivHeadline {...props} />}
-                displayImage
-              />
+              <StoryPromo item={item} displayImage />
             </StoryPromoLi>
           ))}
         </StoryPromoUl>
@@ -79,14 +74,12 @@ const FeaturesAnalysis = ({ content }) => {
 FeaturesAnalysis.propTypes = {
   // We Reuse the front page story item blocks
   // Both pages use CPS, so the data schema is the same
-  // This can be found under CPS ARES payloads: relatedContent.groups[0].promos
+  // This can be found under Frontpage data payloads: content.groups.find(group => group.type === 'feature-main').items
   content: arrayOf(shape(storyItem)),
-  enableGridWrapper: bool,
 };
 
 FeaturesAnalysis.defaultProps = {
   content: featuresAnalysis, // @TODO: rm this
-  enableGridWrapper: false,
 };
 
 export default FeaturesAnalysis;

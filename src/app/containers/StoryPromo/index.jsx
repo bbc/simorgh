@@ -1,13 +1,5 @@
 import React, { useContext } from 'react';
-import {
-  shape,
-  bool,
-  string,
-  element,
-  oneOf,
-  oneOfType,
-  func,
-} from 'prop-types';
+import { shape, bool, string, element, oneOf, oneOfType } from 'prop-types';
 import StoryPromo, {
   Headline,
   Summary,
@@ -117,7 +109,6 @@ const StoryPromoContainer = ({
   lazyLoadImage,
   dir,
   displayImage,
-  headlineTag,
 }) => {
   const {
     script,
@@ -150,12 +141,10 @@ const StoryPromoContainer = ({
 
   const topStory = promoType === 'top';
 
-  const HeadlineTag = headlineTag || Headline;
-
   const Info = (
     <>
       {headline && (
-        <HeadlineTag
+        <Headline
           script={script}
           service={service}
           promoType={promoType}
@@ -173,7 +162,7 @@ const StoryPromoContainer = ({
               linkcontents
             )}
           </Link>
-        </HeadlineTag>
+        </Headline>
       )}
       {summary && displayImage && (
         <Summary
@@ -242,7 +231,6 @@ const StoryPromoContainer = ({
 
 StoryPromoContainer.propTypes = {
   item: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
-  headlineTag: func,
   promoType: oneOf(PROMO_TYPES),
   lazyLoadImage: bool,
   dir: oneOf(['ltr', 'rtl']),
@@ -254,7 +242,6 @@ StoryPromoContainer.defaultProps = {
   lazyLoadImage: true,
   dir: 'ltr',
   displayImage: true,
-  headlineTag: null,
 };
 
 export default StoryPromoContainer;

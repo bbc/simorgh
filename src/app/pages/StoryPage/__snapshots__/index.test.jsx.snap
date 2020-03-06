@@ -270,6 +270,17 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 0.5rem 0.25rem;
 }
 
+.c53 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
 .c55 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -353,17 +364,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   margin-top: 0;
 }
 
-.c53 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
 .c46 {
   margin-bottom: 1rem;
   z-index: 0;
@@ -421,7 +421,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .c45 {
-  background: #F2F2F2;
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
@@ -967,6 +966,20 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
+  .c53 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c53 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c55 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
@@ -1084,20 +1097,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @media (min-width:37.5rem) {
   .c31 {
     margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c53 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c53 {
-    font-size: 1rem;
-    line-height: 1.25rem;
   }
 }
 
@@ -1760,7 +1759,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="c52"
                               dir="ltr"
                             >
-                              <div
+                              <h3
                                 class="c53"
                               >
                                 <a
@@ -1769,7 +1768,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 >
                                   STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
                                 </a>
-                              </div>
+                              </h3>
                               <p
                                 class="c55"
                               >
@@ -1808,7 +1807,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="c52"
                               dir="ltr"
                             >
-                              <div
+                              <h3
                                 class="c53"
                               >
                                 <a
@@ -1817,7 +1816,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 >
                                   Robert Mugabe: Zimbabwe eferela nwa amadi a aka
                                 </a>
-                              </div>
+                              </h3>
                               <p
                                 class="c55"
                               >
@@ -2138,6 +2137,17 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 0.5rem 0.25rem;
 }
 
+.c55 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
 .c57 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -2221,17 +2231,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin-top: 0;
 }
 
-.c55 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
 .c48 {
   margin-bottom: 1rem;
   z-index: 0;
@@ -2293,7 +2292,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c47 {
-  background: #F2F2F2;
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
@@ -2853,6 +2851,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
+  .c55 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c55 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c57 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
@@ -2970,20 +2982,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) {
   .c33 {
     margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c55 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c55 {
-    font-size: 1rem;
-    line-height: 1.25rem;
   }
 }
 
@@ -3874,7 +3872,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   class="c54"
                                   dir="ltr"
                                 >
-                                  <div
+                                  <h3
                                     class="c55"
                                   >
                                     <a
@@ -3883,7 +3881,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     >
                                       STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
                                     </a>
-                                  </div>
+                                  </h3>
                                   <p
                                     class="c57"
                                   >
@@ -3922,7 +3920,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   class="c54"
                                   dir="ltr"
                                 >
-                                  <div
+                                  <h3
                                     class="c55"
                                   >
                                     <a
@@ -3931,7 +3929,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     >
                                       Robert Mugabe: Zimbabwe eferela nwa amadi a aka
                                     </a>
-                                  </div>
+                                  </h3>
                                   <p
                                     class="c57"
                                   >
