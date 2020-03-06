@@ -369,7 +369,10 @@ const genServices = {
             '/bengali/media-23269006', // CPS MAP
             // '/bengali/multimedia/2016/08/160803_tc2_testmap1', // TC2 MAP
           ],
-          local: [],
+          local: [
+            'bengali/media-23269006', // CPS MAP
+            // '/bengali/multimedia/2016/08/160803_tc2_testmap1', // TC2 MAP
+          ],
         },
         smoke: false,
       },
@@ -439,7 +442,10 @@ const genServices = {
             '/burmese/media-23269011', // CPS MAP
             // '/burmese/sport/2016/08/160811_tc2_testmap1', // TC2 MAP
           ],
-          local: [],
+          local: [
+            '/burmese/media-23269011', // CPS MAP
+            // '/burmese/sport/2016/08/160811_tc2_testmap1', // TC2 MAP
+          ],
         },
         smoke: false,
       },
@@ -536,10 +542,11 @@ const genServices = {
           ],
           test: [
             '/gahuza/amakuru-23257470', // CPS MAP
-            // '/gahuza/video/2015/12/151217_test_long', // TC2 MAP
+            // '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP
           ],
           local: [
-            // '/gahuza/video/2015/12/151217_test_long', // TC2 MAP
+            '/gahuza/amakuru-23257470', // CPS MAP
+            // '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP
           ],
         },
         smoke: false,
@@ -665,9 +672,12 @@ const genServices = {
           ],
           test: [
             '/hausa/23269030', // CPS MAP
-            // '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP
+            // '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
           ],
-          local: [],
+          local: [
+            '/hausa/23269030', // CPS MAP
+            // '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
+          ],
         },
         smoke: false,
       },
@@ -858,7 +868,10 @@ const genServices = {
             '/indonesia/media-23269037', // CPS MAP
             // '/indonesia/olahraga/2016/10/161003_tc2_videomap1', // TC2 MAP
           ],
-          local: [],
+          local: [
+            '/indonesia/media-23269037', // CPS MAP
+            // '/indonesia/olahraga/2016/10/161003_tc2_videomap1', // TC2 MAP
+          ],
         },
         smoke: false,
       },
@@ -1262,10 +1275,13 @@ const genServices = {
             // '/nepali/multimedia/2013/08/130806_boudhavideo', // TC2 MAP
           ],
           test: [
+            '/nepali/media-23269034', // CPS MAP with audio clip
+            // '/nepali/multimedia/2016/07/160725_tc2_testmap1', // TC2 MAP
+          ],
+          local: [
             '/nepali/media-23269034', // CPS MAP
             // '/nepali/multimedia/2016/07/160725_tc2_testmap1', // TC2 MAP
           ],
-          local: [],
         },
         smoke: false,
       },
@@ -1364,7 +1380,10 @@ const genServices = {
             '/pashto/media-23257523', // CPS MAP
             // '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
           ],
-          local: [],
+          local: [
+            '/pashto/media-23257523', // CPS MAP
+            // '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
+          ],
         },
         smoke: false,
       },
@@ -1884,11 +1903,11 @@ const genServices = {
           ],
           test: [
             '/sinhala/world-23257567', // CPS MAP
-            // '/sinhala/multimedia/2016/03/160323_si_test_audio_map', // TC2 MAP
+            // '/sinhala/multimedia/2016/03/160323_si_test_audio_map', // TC2 MAP with audio clip
           ],
           local: [
             '/sinhala/23248970', // CPS MAP with audio clip
-            // '/sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292', // TC2 MAP
+            // '/sinhala/multimedia/2016/03/160323_si_test_audio_map', // TC2 MAP with audio clip
           ],
         },
         smoke: false,
@@ -1958,7 +1977,10 @@ const genServices = {
             '/somali/hayadeed-23269042', // CPS MAP
             // '/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1', // TC2 MAP
           ],
-          local: [],
+          local: [
+            '/somali/hayadeed-23269042', // CPS MAP
+            // '/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1', // TC2 MAP
+          ],
         },
         smoke: false,
       },
@@ -2039,10 +2061,13 @@ const genServices = {
             // '/swahili/medianuai/2016/05/160517_apatae_fatacky', // TC2 MAP
           ],
           test: [
-            '/swahili/media-23268999', // CPS MAP
-            // '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP
+            '/swahili/media-23268999', // CPS MAP with audio clip
+            // '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
           ],
-          local: [],
+          local: [
+            '/swahili/media-23268999', // CPS MAP with audio clip
+            // '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
+          ],
         },
         smoke: false,
       },
@@ -2112,7 +2137,10 @@ const genServices = {
             '/tamil/india-23268994', // CPS MAP
             // '/tamil/global/2016/08/160822_tc2_testmap1', // TC2 MAP
           ],
-          local: [],
+          local: [
+            '/tamil/india-23268994', // CPS MAP
+            // '/tamil/global/2016/08/160822_tc2_testmap1', // TC2 MAP
+          ],
         },
         smoke: false,
       },
@@ -2350,10 +2378,13 @@ const genServices = {
             // '/turkce/multimedya/2016/02/160216_vid_genclerde_depresyon', // TC2 MAP
           ],
           test: [
+            '/turkce/media-23268997', // CPS MAP with audio clip
+            // '/turkce/multimedya/2016/05/160524_tc2_testmap1', // TC2 MAP
+          ],
+          local: [
             '/turkce/media-23268997', // CPS MAP
             // '/turkce/multimedya/2016/05/160524_tc2_testmap1', // TC2 MAP
           ],
-          local: [],
         },
         smoke: false,
       },
@@ -2594,7 +2625,10 @@ const genServices = {
             '/urdu/world-23268929', // CPS MAP
             // '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP
           ],
-          local: [],
+          local: [
+            '/urdu/world-23268929', // CPS MAP
+            // '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP
+          ],
         },
         smoke: false,
       },
