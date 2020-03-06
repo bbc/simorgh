@@ -977,7 +977,7 @@ exports[`Media Asset Page should render component 1`] = `
                   class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 jJqbCR"
                 >
                   <div
-                    class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc StyledSectionLabel-sc-1itct8j-1 hlmzdc"
+                    class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc"
                   >
                     <div
                       class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -992,7 +992,7 @@ exports[`Media Asset Page should render component 1`] = `
                           class="FlexRow-wx5kdp-2 dVBNyZ"
                         >
                           <span
-                            class="Title-wx5kdp-4 jiurmA"
+                            class="Title-wx5kdp-4 BeqZV"
                             dir="ltr"
                             id="related-content-heading"
                           >
