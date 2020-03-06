@@ -134,6 +134,11 @@ export const service = {
         url: 'http://www.bbc.co.uk/ukchina/simp',
       },
     ],
+    scriptLink: {
+      text: '繁',
+      offscreenText: 'Traditional',
+      variant: 'trad',
+    },
     translations: {
       seeAll: '浏览全部',
       home: '主页',
@@ -327,6 +332,11 @@ export const service = {
         url: 'http://www.bbc.co.uk/ukchina/trad',
       },
     ],
+    scriptLink: {
+      text: '简',
+      offscreenText: 'Simplified',
+      variant: 'simp',
+    },
     translations: {
       seeAll: '瀏覽全部',
       home: '主頁',
