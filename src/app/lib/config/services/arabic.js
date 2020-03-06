@@ -43,7 +43,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'الرئيسية',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -168,6 +167,11 @@ export const service = {
       lastUpdated: 'آخر تحديث',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      frequenciesPageUrl:
+        '/arabic/institutional/2011/01/000000_frequencies_radio',
     },
     footer: {
       trustProjectLink: {

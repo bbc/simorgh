@@ -51,7 +51,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
 
     it('legacy MAP should render a link using an <a> with href rather than a plain text <link>', () => {
       const requestPath = Cypress.env('currentPath');
-      const isLegacyAsset = requestPath.split('/').length > 4;
+      const isLegacyAsset = requestPath.split('/').length > 5;
 
       if (isLegacyAsset) {
         cy.request(`${requestPath}.json`).then(({ body }) => {

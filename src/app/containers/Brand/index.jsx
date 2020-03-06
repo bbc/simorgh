@@ -3,7 +3,7 @@ import Brand from '@bbc/psammead-brand';
 import { bool, node } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const BrandContainer = ({ skipLink, ...props }) => {
+const BrandContainer = ({ skipLink, scriptLink, ...props }) => {
   const {
     product,
     serviceLocalizedName,
@@ -11,6 +11,7 @@ const BrandContainer = ({ skipLink, ...props }) => {
     service,
     theming,
   } = useContext(ServiceContext);
+
   const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
@@ -30,6 +31,7 @@ const BrandContainer = ({ skipLink, ...props }) => {
       svg={brandSVG}
       url={`/${service}`}
       skipLink={skipLink}
+      scriptLink={scriptLink}
       {...props}
     />
   );
@@ -39,12 +41,14 @@ BrandContainer.propTypes = {
   borderTop: bool,
   borderBottom: bool,
   skipLink: node,
+  scriptLink: node,
 };
 
 BrandContainer.defaultProps = {
   borderTop: false,
   borderBottom: false,
   skipLink: null,
+  scriptLink: null,
 };
 
 export default BrandContainer;
