@@ -14,7 +14,7 @@ const logger = webLogger();
 const RadioScheduleContainer = ({ endpoint }) => {
   const { enabled } = useToggle('radioSchedule');
   const {
-    hasRadioSchedule,
+    radioSchedule: { hasRadioSchedule },
     service,
     script,
     dir,

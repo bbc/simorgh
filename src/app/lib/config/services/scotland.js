@@ -48,7 +48,6 @@ export const service = {
     swPath: '/articles/sw.js',
     frontPageTitle: 'Home',
     passportHomes: ['BBCScotland'],
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_DARK_SALTIRE}`,
       brandLogoColour: `${C_WHITE}`,
@@ -162,6 +161,9 @@ export const service = {
       lastUpdated: 'Last updated:',
       numberOfItems: 5,
       hasMostRead: false,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       externalLink: {
