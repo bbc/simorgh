@@ -6,6 +6,7 @@ const fetchMarkup = async url => {
     return await html.text();
   } catch (e) {
     console.error(`Error fetching include ${url}: ${e}`);
+    return null;
   }
 };
 
