@@ -85,7 +85,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
 
   return (
     <>
-      <AdContainer />
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
@@ -100,6 +99,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           {offScreenText}
         </VisuallyHiddenText>
         <StyledFrontPageDiv>
+          <AdContainer />
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && (

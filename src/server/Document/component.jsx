@@ -66,6 +66,7 @@ const Document = ({
         {isAmp && (
           <>
             {AMP_JS}
+            {AMP_ADS_JS}
             {AMP_GEO_JS}
             {AMP_CONSENT_JS}
             {AMP_ANALYTICS_JS}
