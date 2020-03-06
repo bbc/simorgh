@@ -40,7 +40,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'முகப்பு',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -169,6 +168,9 @@ export const service = {
       lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
