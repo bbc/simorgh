@@ -5160,7 +5160,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   line-height: 1.25rem;
 }
 
-.c10 {
+.c9 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5209,7 +5209,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   margin-right: 0.5rem;
 }
 
-.c11 {
+.c10 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -5217,18 +5217,6 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-.c9 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
 }
 
 .c3 {
@@ -5318,42 +5306,42 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c9 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c10 {
+  .c9 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c10 {
+  .c9 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c10 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c10 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -5401,29 +5389,22 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
           role="text"
         >
           <span
-            aria-hidden="true"
             class="c8"
             dir="ltr"
           >
-            LIVE
-          </span>
-          <span
-            class="c9"
-            lang="en-GB"
-          >
-             Live, 
+            NA EME UGBU A
           </span>
           A live item
         </span>
       </a>
     </h3>
     <p
-      class="c10"
+      class="c9"
     >
       Summary text
     </p>
     <time
-      class="c11"
+      class="c10"
       datetime="2019-05-02"
     >
       2 Mee 2019
@@ -5471,7 +5452,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   line-height: 1.25rem;
 }
 
-.c10 {
+.c9 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5520,7 +5501,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   margin-right: 0.5rem;
 }
 
-.c11 {
+.c10 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -5528,18 +5509,6 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-.c9 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
 }
 
 .c3 {
@@ -5629,42 +5598,42 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c9 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c10 {
+  .c9 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c10 {
+  .c9 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c10 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c10 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -5707,29 +5676,22 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
           role="text"
         >
           <span
-            aria-hidden="true"
             class="c8"
             dir="ltr"
           >
-            LIVE
-          </span>
-          <span
-            class="c9"
-            lang="en-GB"
-          >
-             Live, 
+            NA EME UGBU A
           </span>
           A live item
         </span>
       </a>
     </h3>
     <p
-      class="c10"
+      class="c9"
     >
       Summary text
     </p>
     <time
-      class="c11"
+      class="c10"
       datetime="2019-05-02"
     >
       2 Mee 2019
@@ -5739,7 +5701,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 `;
 
 exports[`StoryPromo Container should render live promoType leading on amp 1`] = `
-.c8 {
+.c7 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -5756,16 +5718,16 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   position: relative;
 }
 
-.c9 {
+.c8 {
   position: relative;
 }
 
-.c11 {
+.c10 {
   position: absolute;
   bottom: 0;
 }
 
-.c11 > * {
+.c10 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
@@ -5781,7 +5743,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   line-height: 1.375rem;
 }
 
-.c6 {
+.c5 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5830,7 +5792,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   margin-right: 0.5rem;
 }
 
-.c7 {
+.c6 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -5840,19 +5802,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   font-style: normal;
 }
 
-.c5 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c10 {
+.c9 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -5866,20 +5816,20 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     padding-left: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width:63rem) {
-  .c8 {
+  .c7 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c8 {
+  .c7 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6,1fr);
@@ -5941,42 +5891,42 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c5 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c5 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c6 {
+  .c5 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c6 {
+  .c5 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c7 {
+  .c6 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c6 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -6000,43 +5950,36 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
           role="text"
         >
           <span
-            aria-hidden="true"
             class="c4"
             dir="ltr"
           >
-            LIVE
-          </span>
-          <span
-            class="c5"
-            lang="en-GB"
-          >
-             Live, 
+            NA EME UGBU A
           </span>
           A live item
         </span>
       </a>
     </h3>
     <p
-      class="c6"
+      class="c5"
     >
       Summary text
     </p>
     <time
-      class="c7"
+      class="c6"
       datetime="2019-05-02"
     >
       2 Mee 2019
     </time>
   </div>
   <div
-    class="c8"
+    class="c7"
     dir="ltr"
   >
     <div
-      class="c9"
+      class="c8"
     >
       <div
-        class="c10"
+        class="c9"
       >
         <amp-img
           alt="Image Alt text"
@@ -6048,7 +5991,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
         />
       </div>
       <div
-        class="c11"
+        class="c10"
       />
     </div>
   </div>
@@ -6098,7 +6041,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   line-height: 1.5rem;
 }
 
-.c10 {
+.c9 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6147,7 +6090,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   margin-right: 0.5rem;
 }
 
-.c11 {
+.c10 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -6155,18 +6098,6 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-.c9 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
 }
 
 .c3 {
@@ -6247,35 +6178,35 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c9 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c9 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c10 {
+  .c9 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c10 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c10 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -6323,29 +6254,22 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
           role="text"
         >
           <span
-            aria-hidden="true"
             class="c8"
             dir="ltr"
           >
-            LIVE
-          </span>
-          <span
-            class="c9"
-            lang="en-GB"
-          >
-             Live, 
+            NA EME UGBU A
           </span>
           A live item
         </span>
       </a>
     </h3>
     <p
-      class="c10"
+      class="c9"
     >
       Summary text
     </p>
     <time
-      class="c11"
+      class="c10"
       datetime="2019-05-02"
     >
       2 Mee 2019
