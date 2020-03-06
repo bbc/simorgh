@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
 import { string } from 'prop-types';
+import styled from 'styled-components';
 import SectionLabel from '@bbc/psammead-section-label';
+import { Link } from '@bbc/psammead-story-promo';
 import { ServiceContext } from '#contexts/ServiceContext';
 import webLogger from '#lib/logger.web';
 
@@ -10,7 +12,12 @@ const logger = webLogger();
 const CanonicalRadioSchedule = ({ endpoint }) => {
   const header = 'BBC News Radio';
   const [schedule, setRadioSchedule] = useState([]);
-  const { service, script, dir } = useContext(ServiceContext);
+  const {
+    service,
+    script,
+    dir,
+    radioSchedule: { frequenciesPageUrl },
+  } = useContext(ServiceContext);
 
   const handleResponse = async response => {
     const radioScheduleData = await response.json();
@@ -25,6 +32,19 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
 
     fetchRadioScheduleData(endpoint);
   }, [endpoint]);
+
+  const renderFrequencyLink = link => {
+    const RadioFrequencyLink = styled(Link)`
+      font-size: 14px;
+      line-height: 18px;
+    `;
+
+    return (
+      <RadioFrequencyLink link={link}>
+        Radio frequency link text
+      </RadioFrequencyLink>
+    );
+  };
 
   if (!schedule.length) {
     return null;
@@ -57,6 +77,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
           </ul>
         ),
       )}
+      {frequenciesPageUrl && renderFrequencyLink(frequenciesPageUrl)}
     </>
   );
 };
