@@ -47,7 +47,6 @@ export const service = {
     manifestPath: '/articles/manifest.json',
     swPath: '/articles/sw.js',
     frontPageTitle: 'Home',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_ARCHIVE_BLUE}`,
       brandLogoColour: `${C_WHITE}`,
@@ -160,6 +159,9 @@ export const service = {
       header: 'Most read',
       lastUpdated: 'Last updated:',
       hasMostRead: false,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       externalLink: {

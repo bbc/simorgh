@@ -3,6 +3,7 @@ import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import paragraph from './blocks/paragraph';
 import media from './blocks/media';
+import legacyMedia from './blocks/legacyMedia';
 import image from './blocks/image';
 import list from './blocks/list';
 import subheadline from './blocks/subheadline';
@@ -21,7 +22,7 @@ const typesToConvert = {
   list,
   media,
   version,
-  legacyMedia: block => ({ model: {}, ...block }),
+  legacyMedia,
   include,
 };
 
