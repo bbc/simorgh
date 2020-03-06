@@ -6,6 +6,6 @@ export default {
   path: errorPagePath,
   exact: true,
   component: ErrorPage,
-  getInitialData,
+  getInitialData: getInitialData(errorPagePath),
   pageType: 'error',
 };
