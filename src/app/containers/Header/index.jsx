@@ -5,11 +5,14 @@ import NavigationContainer from '../Navigation';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import ConsentBanner from '../ConsentBanner';
+import ScriptLink from './ScriptLink';
 import useToggle from '../Toggle/useToggle';
 
 const HeaderContainer = () => {
   const { pageType } = useContext(RequestContext);
-  const { service, script, translations, dir } = useContext(ServiceContext);
+  const { service, script, translations, dir, scriptLink } = useContext(
+    ServiceContext,
+  );
   const { skipLinkText } = translations;
   const borderBottom = pageType !== 'frontPage';
 
@@ -28,7 +31,11 @@ const HeaderContainer = () => {
   return (
     <header role="banner">
       <ConsentBanner />
-      <BrandContainer borderBottom={borderBottom} skipLink={skipLink} />
+      <BrandContainer
+        borderBottom={borderBottom}
+        skipLink={skipLink}
+        scriptLink={scriptLink && <ScriptLink />}
+      />
       {showNav && <NavigationContainer />}
     </header>
   );
