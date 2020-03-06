@@ -1,4 +1,4 @@
-Feature: Article
+Feature: Article Media Player
 
     @test
     Scenario Outline: Video clip plays on an article
@@ -17,3 +17,5 @@ Feature: Article
         Examples:
             | URL                                                     |
             | https://www.test.bbc.com/scotland/articles/czwj5l0n210o |
+
+#Test multiple clips on an article page?

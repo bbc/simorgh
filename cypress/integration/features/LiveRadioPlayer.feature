@@ -1,4 +1,4 @@
-Feature: Live Radio
+Feature: Live Radio Player
 
     @test
     Scenario Outline: Verify audio plays on live radio page
