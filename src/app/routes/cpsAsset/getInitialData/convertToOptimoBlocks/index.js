@@ -24,13 +24,12 @@ const typesToConvert = {
   legacyMedia,
 };
 
-const parseBlockByType = block => {
+const parseBlockByType = (block, json) => {
   if (!path(['type'], block)) return false;
-  // console.log(`block: ${block.type}`);
 
   const { type } = block;
 
-  const parsedBlock = (typesToConvert[type] || handleMissingType)(block);
+  const parsedBlock = (typesToConvert[type] || handleMissingType)(block, json);
 
   if (!parsedBlock) {
     return null;
@@ -44,18 +43,9 @@ const convertToOptimoBlocks = async jsonRaw => {
 
   const blocks = pathOr([], ['content', 'blocks'], json);
 
-  const versionBlock = blocks.filter(block => {
-    return block.type === 'version';
-  });
-
-  if (versionBlock && blocks.length > 0) {
-    const headline = path(['promo', 'headlines', 'headline'], json);
-    blocks[0].title = headline;
-  }
-
-  console.log(`blockLog: ${JSON.stringify(blocks[0])}`);
-
-  const parsedBlocks = await Promise.all(blocks.map(parseBlockByType));
+  const parsedBlocks = await Promise.all(
+    blocks.map(block => parseBlockByType(block, json)),
+  );
 
   return {
     ...json,

@@ -1,8 +1,15 @@
 import pick from 'ramda/src/pick';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import isNil from 'ramda/src/isNil';
 
-const generateVideoBlock = block => {
+const generateVideoBlock = (block, json) => {
+  const headline = pathOr(
+    block.caption,
+    ['promo', 'headlines', 'headline'],
+    json,
+  );
+
   const generatedBlock = {
     type: 'aresMediaMetadata',
     blockId: `urn:bbc:ares::${block.subType}:${block.id}`,
@@ -11,13 +18,13 @@ const generateVideoBlock = block => {
       // If available is undefined, the video is available
       available: isNil(block.available) ? true : block.available,
       format: block.format === 'video' ? 'audio_video' : block.format,
-      title: block.title,
+      title: headline,
       imageCopyright: path(['image', 'copyrightHolder'], block),
       imageUrl: path(['image', 'href'], block),
       synopses: {
-        short: block.title,
-        medium: block.title,
-        long: block.title,
+        short: headline,
+        medium: headline,
+        long: headline,
       },
       versions: [
         {
@@ -75,7 +82,7 @@ const withValidationCheck = convertedBlock => {
   return checks.every(Boolean) && convertedBlock;
 };
 
-const convertVersion = block => {
+const convertVersion = (block, json) => {
   const convertedBlock = {
     type: 'version',
     model: {
@@ -84,7 +91,10 @@ const convertVersion = block => {
         {
           type: 'aresMedia',
           model: {
-            blocks: [generateVideoBlock(block), generateImageBlock(block)],
+            blocks: [
+              generateVideoBlock(block, json),
+              generateImageBlock(block),
+            ],
           },
         },
       ],
