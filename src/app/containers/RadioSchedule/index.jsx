@@ -14,7 +14,10 @@ const getRadioScheduleEndpoint = (service, environment) =>
 const RadioScheduleContainer = ({ radioScheduleEndpointOverride }) => {
   const { isAmp } = useContext(RequestContext);
   const { enabled } = useToggle('radioSchedule');
-  const { service, hasRadioSchedule } = useContext(ServiceContext);
+  const {
+    service,
+    radioSchedule: { hasRadioSchedule },
+  } = useContext(ServiceContext);
   const radioScheduleEnabled = !isAmp && enabled && hasRadioSchedule;
 
   if (!radioScheduleEnabled) {
