@@ -1,13 +1,13 @@
 import 'isomorphic-fetch';
 
-const fetchMarkup = async url =>
-  fetch(url, { mode: 'no-cors' })
-    .then(html => {
-      return html.text().then(text => {
-        return text;
-      });
-    })
-    .catch(e => console.error(`HTTP Error: "${e}"`));
+const fetchMarkup = async url => {
+  try {
+    const html = await fetch(url, { mode: 'no-cors' });
+    return await html.text();
+  } catch (e) {
+    console.error(`Error fetching include ${url}: ${e}`);
+  }
+};
 
 const convertInclude = async ({ tile, href, platform, url }) => {
   return {

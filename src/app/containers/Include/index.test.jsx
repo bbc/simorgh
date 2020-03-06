@@ -33,7 +33,7 @@ describe('IncludeContainer', () => {
     };
     shouldMatchSnapshot(
       'should dangerously render a an html markup',
-      <MockIncludeContainerWithContext toggleState={mockToggles} />,
+      <IncludeContainerWithMockContext toggleState={mockToggles} />,
     );
   });
   describe('when styIncludes toggle is disabled', () => {
@@ -46,7 +46,7 @@ describe('IncludeContainer', () => {
     };
     shouldMatchSnapshot(
       'should not render any markup',
-      <MockIncludeContainerWithContext toggleState={mockToggles} />,
+      <IncludeContainerWithMockContext toggleState={mockToggles} />,
     );
   });
 });
