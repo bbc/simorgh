@@ -18,8 +18,8 @@ const getByTextSpecial = getByText => text =>
     return nodeHasText && childrenDontHaveText;
   });
 
-export default async _pathname => {
-  const pathname = _pathname.replace('https://www.bbc.com', '');
+export default async url => {
+  const pathname = url.replace('https://www.bbc.com', '');
   const jsonData = require(`./pageData/${pathname}`); // eslint-disable-line import/no-dynamic-require, global-require
   fetch.mockResponse(JSON.stringify(jsonData));
 
