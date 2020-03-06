@@ -26,6 +26,7 @@ const typesToConvert = {
 
 const parseBlockByType = block => {
   if (!path(['type'], block)) return false;
+  // console.log(`block: ${block.type}`);
 
   const { type } = block;
 
@@ -40,7 +41,19 @@ const parseBlockByType = block => {
 
 const convertToOptimoBlocks = async jsonRaw => {
   const json = clone(jsonRaw);
+
   const blocks = pathOr([], ['content', 'blocks'], json);
+
+  const versionBlock = blocks.filter(block => {
+    return block.type === 'version';
+  });
+
+  if (versionBlock && blocks.length > 0) {
+    const headline = path(['promo', 'headlines', 'headline'], json);
+    blocks[0].headline = headline;
+  }
+
+  console.log(`blockLog: ${JSON.stringify(blocks[0])}`);
 
   const parsedBlocks = await Promise.all(blocks.map(parseBlockByType));
 
