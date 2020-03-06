@@ -1,5 +1,232 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`MediaPlayer render amp legacy media player 1`] = `
+<html>
+  <head>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB/amp"}
+    </script>
+    <script
+      async="true"
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    />
+  </head>
+  <body>
+    .c1 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.c2 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c0 {
+  margin-top: 0.5rem;
+}
+
+.c0 figure {
+  padding-bottom: 0;
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
+  }
+}
+
+<div>
+      <div
+        class="c0"
+      >
+        <figure
+          class="c1"
+        >
+          <div
+            class="c2"
+          >
+            <amp-iframe
+              allowfullscreen="allowfullscreen"
+              frameborder="0"
+              layout="fill"
+              sandbox="allow-scripts allow-same-origin"
+              scrolling="no"
+              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB/amp"
+              title="Media player"
+            >
+              <amp-img
+                alt=""
+                attribution=""
+                height="16"
+                layout="fill"
+                placeholder="true"
+                src="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg"
+                srcset="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 240w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 320w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 480w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 624w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 800w"
+                width="9"
+              />
+              <noscript />
+            </amp-iframe>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`MediaPlayer render canonical legacy media player 1`] = `
+<html>
+  <head>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB"}
+    </script>
+  </head>
+  <body>
+    .c1 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.c2 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c0 {
+  margin-top: 0.5rem;
+}
+
+.c0 figure {
+  padding-bottom: 0;
+}
+
+.c3 {
+  border: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width:63rem) {
+  .c0 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
+  }
+}
+
+<div>
+      <div
+        class="c0"
+      >
+        <figure
+          class="c1"
+        >
+          <div
+            class="c2"
+          >
+            <iframe
+              allow="autoplay; fullscreen"
+              allowfullscreen=""
+              class="c3"
+              scrolling="no"
+              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB"
+              title="Media player"
+            />
+            <noscript />
+          </div>
+        </figure>
+      </div>
+    </div>
+  </body>
+</html>
+`;
+
 exports[`MediaPlayer render the amp player 1`] = `
 <html>
   <head>
