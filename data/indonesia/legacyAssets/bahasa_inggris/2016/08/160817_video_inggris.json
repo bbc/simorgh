@@ -1,34 +1,90 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
-    "locators": {
-      "assetUri": "/indonesia/bahasa_inggris/2016/08/160817_video_inggris",
-      "cpsUrn": "urn:bbc:content:assetUri:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
-      "curie": "http://www.bbc.co.uk/asset/f426c328-64b6-11e6-8148-16b63db9bd6e"
+    "metadata": {
+      "id": "urn:bbc:ares::asset:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
+      "locators": {
+        "assetUri": "/indonesia/bahasa_inggris/2016/08/160817_video_inggris",
+        "cpsUrn": "urn:bbc:content:assetUri:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
+        "curie": "http://www.bbc.co.uk/asset/f426c328-64b6-11e6-8148-16b63db9bd6e"
+      },
+      "type": "MAP",
+      "createdBy": "indonesia",
+      "language": "id",
+      "lastUpdated": 1553663515344,
+      "firstPublished": 1471465080,
+      "lastPublished": 1471465080,
+      "options": {
+        "includeComments": false,
+        "allowRightHandSide": true,
+        "allowDateStamp": true,
+        "suitableForSyndication": false,
+        "allowAdvertising": true,
+        "isBreakingNews": false
+      },
+      "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "44902668" },
+      "tags": {},
+      "version": "v1.0.0",
+      "blockTypes": [ "legacyMedia", "crosshead", "paragraph" ],
+      "includeComments": false
     },
-    "type": "MAP",
-    "createdBy": "indonesia",
-    "language": "id",
-    "lastUpdated": 1553663515344,
-    "firstPublished": 1471465080,
-    "lastPublished": 1471465080,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": false,
-      "allowAdvertising": true,
-      "isBreakingNews": false
+    "content": {
+      "blocks": [
+        {
+          "id": "44902668",
+          "subType": "primary",
+          "format": "video",
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/indonesia/meta/dps/2016/08/emp/160817_video_inggris.emp.xml",
+          "type": "legacyMedia"
+        },
+        { "text": "Transcript:", "markupType": "plain_text", "type": "crosshead" },
+        {
+          "text": "British couple ride into Olympic history British cycling's Olympic golden couple Jason Kenny and Laura Trott have ridden into the record books.They've now taken their collective gold <bold>medal tally</bold> to ten, winning five in Rio. Also on Tuesday 19-year-old Simone Biles became only the fourth competitor to win four gymnastic gold medals. She won the women's floor final.",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "Scientists discover 400-year-old shark  The Greenland shark lives in the icy Arctic waters and <bold>feeds on</bold> fish and seals. But until now no one knew exactly how long they live. Researchers have found one that could be 400 years old, making it the oldest vertebrate animal.",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "Pigeon race champion banned for life A racing pigeon champion has been banned for life from the sport, after claims he admitted <bold>cheating</bold> to win a major international race. Eamon Kelly, who lives in Oxfordshire, is accused of not sending the pigeons to the start line in France – instead, hiding the birds in the loft of his home. Now the sports chairman in the county wants other big-race results to be investigated.",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        { "text": "Words and definitions:", "markupType": "plain_text", "type": "crosshead" },
+        {
+          "text": "<bold>medal tally</bold>: jumlah medali yang diraih",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "<bold>feeds on</bold>: makan, mengkonsumsi (khususnya untuk satwa) ",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "<bold>cheating</bold>: melanggar peraturan pertandingan",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        }
+      ]
     },
-    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "44902668" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "crosshead", "paragraph" ],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
+    "promo": {
+      "headlines": {
+        "shortHeadline": "British couple ride into Olympic history",
+        "headline": "British couple ride into Olympic history"
+      },
+      "locators": {
+        "assetUri": "/indonesia/bahasa_inggris/2016/08/160817_video_inggris",
+        "cpsUrn": "urn:bbc:content:assetUri:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
+        "curie": "http://www.bbc.co.uk/asset/f426c328-64b6-11e6-8148-16b63db9bd6e"
+      },
+      "summary": "British cycling's Olympic golden couple Jason Kenny and Laura Trott have ridden into the record books.",
+      "timestamp": 1553663515344,
+      "passport": {},
+      "media": {
         "id": "44902668",
         "subType": "primary",
         "format": "video",
@@ -37,84 +93,28 @@
         "href": "http://www.bbc.co.uk/indonesia/meta/dps/2016/08/emp/160817_video_inggris.emp.xml",
         "type": "legacyMedia"
       },
-      { "text": "Transcript:", "markupType": "plain_text", "type": "crosshead" },
-      {
-        "text": "British couple ride into Olympic history British cycling's Olympic golden couple Jason Kenny and Laura Trott have ridden into the record books.They've now taken their collective gold <bold>medal tally</bold> to ten, winning five in Rio. Also on Tuesday 19-year-old Simone Biles became only the fourth competitor to win four gymnastic gold medals. She won the women's floor final.",
-        "markupType": "candy_xml",
-        "type": "paragraph"
+      "indexImage": {
+        "id": "d5e276",
+        "subType": "index",
+        "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/08/17/160817201647_jason_kenny_and_laura_trott__640x360_bbc_nocredit.jpg",
+        "path": "/amz/worldservice/live/assets/images/2016/08/17/160817201647_jason_kenny_and_laura_trott__640x360_bbc_nocredit.jpg",
+        "height": 360,
+        "width": 640,
+        "altText": "Jason Kenny dan Laura Trott ",
+        "copyrightHolder": "BBC",
+        "type": "image"
       },
-      {
-        "text": "Scientists discover 400-year-old shark  The Greenland shark lives in the icy Arctic waters and <bold>feeds on</bold> fish and seals. But until now no one knew exactly how long they live. Researchers have found one that could be 400 years old, making it the oldest vertebrate animal.",
-        "markupType": "candy_xml",
-        "type": "paragraph"
+      "id": "urn:bbc:ares::asset:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
+      "type": "cps"
+    },
+    "relatedContent": {
+      "section": {
+        "subType": "index",
+        "name": "Bahasa Inggris",
+        "uri": "/indonesia/bahasa_inggris",
+        "type": "simple"
       },
-      {
-        "text": "Pigeon race champion banned for life A racing pigeon champion has been banned for life from the sport, after claims he admitted <bold>cheating</bold> to win a major international race. Eamon Kelly, who lives in Oxfordshire, is accused of not sending the pigeons to the start line in France – instead, hiding the birds in the loft of his home. Now the sports chairman in the county wants other big-race results to be investigated.",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      { "text": "Words and definitions:", "markupType": "plain_text", "type": "crosshead" },
-      {
-        "text": "<bold>medal tally</bold>: jumlah medali yang diraih",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold>feeds on</bold>: makan, mengkonsumsi (khususnya untuk satwa) ",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold>cheating</bold>: melanggar peraturan pertandingan",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "British couple ride into Olympic history",
-      "headline": "British couple ride into Olympic history"
-    },
-    "locators": {
-      "assetUri": "/indonesia/bahasa_inggris/2016/08/160817_video_inggris",
-      "cpsUrn": "urn:bbc:content:assetUri:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
-      "curie": "http://www.bbc.co.uk/asset/f426c328-64b6-11e6-8148-16b63db9bd6e"
-    },
-    "summary": "British cycling's Olympic golden couple Jason Kenny and Laura Trott have ridden into the record books.",
-    "timestamp": 1553663515344,
-    "passport": {},
-    "media": {
-      "id": "44902668",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/indonesia/meta/dps/2016/08/emp/160817_video_inggris.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e276",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/08/17/160817201647_jason_kenny_and_laura_trott__640x360_bbc_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2016/08/17/160817201647_jason_kenny_and_laura_trott__640x360_bbc_nocredit.jpg",
-      "height": 360,
-      "width": 640,
-      "altText": "Jason Kenny dan Laura Trott ",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Bahasa Inggris",
-      "uri": "/indonesia/bahasa_inggris",
-      "type": "simple"
-    },
-    "site": { "subType": "site", "name": "BBCIndonesia.com", "uri": "/indonesia", "type": "simple" },
-    "groups": []
+      "site": { "subType": "site", "name": "BBCIndonesia.com", "uri": "/indonesia", "type": "simple" },
+      "groups": []
+    }
   }
-}
