@@ -52,20 +52,3 @@ Then('the video clip plays', () => {
 Then('the audio clip plays', () => {
   assertMediaIsPlaying();
 });
-
-Then(
-  'a placeholder with the text "content is unavailable" is displayed',
-  () => {
-    // Get translation for "content is unavailable" from service config
-    const contentIsUnavailableTranslation =
-      serviceConfig[Cypress.env('service')].default.translations.media
-        .contentExpired;
-
-    cy.get('strong[class^="StyledMessage"]').then(message => {
-      const contentIsUnavailableMessage = message.text();
-      expect(contentIsUnavailableTranslation).to.eq(
-        contentIsUnavailableMessage,
-      );
-    });
-  },
-);
