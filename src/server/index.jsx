@@ -239,12 +239,16 @@ server
   )
   .get('/*', cspInjectFun, async ({ url, headers, path: urlPath }, res) => {
     logger.info(
-      JSON.stringify({
-        event: 'ssr_request_received',
-        url,
-        urlPath,
-        headers,
-      }),
+      JSON.stringify(
+        {
+          event: 'ssr_request_received',
+          url,
+          urlPath,
+          headers,
+        },
+        null,
+        2,
+      ),
     );
 
     try {
@@ -275,14 +279,18 @@ server
       }
     } catch ({ message, status }) {
       logger.error(
-        JSON.stringify({
-          event: 'ssr_request_failed',
-          status: status || 500,
-          message,
-          url,
-          urlPath,
-          headers,
-        }),
+        JSON.stringify(
+          {
+            event: 'ssr_request_failed',
+            status: status || 500,
+            message,
+            url,
+            urlPath,
+            headers,
+          },
+          null,
+          2,
+        ),
       );
 
       // Return an internal server error for any uncaught errors
