@@ -3,20 +3,14 @@ import { BrowserRouter } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import { RadioPage } from '..';
-import indonesia from '#data/indonesia/bbc_indonesian_radio/liveradio.json';
-import korean from '#data/korean/bbc_korean_radio/liveradio.json';
-import tigrinya from '#data/tigrinya/bbc_tigrinya_radio/liveradio.json';
-import afaanoromoo from '#data/afaanoromoo/bbc_afaanoromoo_radio/liveradio.json';
-import amharic from '#data/amharic/bbc_amharic_radio/liveradio.json';
+import { OnDemandRadioPage } from '..';
+import indonesia from '#data/indonesia/bbc_indonesian_radio/w172x6r5000f38s.json';
+import pashto from '#data/pashto/bbc_pashto_radio/w172x8nvf4bchz5.json';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
-const liveRadioFixtures = {
+const onDemandRadioFixtures = {
   indonesia,
-  korean,
-  tigrinya,
-  afaanoromoo,
-  amharic,
+  pashto,
 };
 
 const matchFixtures = service => ({
@@ -24,30 +18,27 @@ const matchFixtures = service => ({
     mediaId: 'liveradio',
     serviceId: {
       indonesia: 'bbc_indonesian_radio',
-      korean: 'bbc_korean_radio',
-      tigrinya: 'bbc_tigrinya_radio',
-      afaanoromoo: 'bbc_afaanoromoo_radio',
-      amharic: 'bbc_amharic_radio',
+      pashto: 'bbc_pashto_radio',
     }[service],
   },
 });
 
 const status = 200;
 
-storiesOf('Pages|Radio Page', module)
+storiesOf('Pages|OnDemand Radio Page', module)
   .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
   .addDecorator(
     withServicesKnob({
       defaultService: 'indonesia',
-      services: Object.keys(liveRadioFixtures),
+      services: Object.keys(onDemandRadioFixtures),
     }),
   )
   .add('default', ({ service }) => (
     <BrowserRouter>
-      <RadioPage
+      <OnDemandRadioPage
         match={matchFixtures(service)}
-        pageData={liveRadioFixtures[service]}
+        pageData={onDemandRadioFixtures[service]}
         status={status}
         service={service}
         isAmp={false}
