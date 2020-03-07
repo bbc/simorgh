@@ -7,7 +7,7 @@ import Grid, { GelPageGrid } from '#app/components/Grid';
 import RadioPageBlocks from '../../containers/RadioPageBlocks';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-const RadioPage = ({ pageData }) => {
+const OnDemandRadioPage = ({ pageData }) => {
   const blocks = path(['content', 'blocks'], pageData);
   const promo = path(['promo'], pageData);
   const metadata = path(['metadata'], pageData);
@@ -66,7 +66,7 @@ const RadioPage = ({ pageData }) => {
   );
 };
 
-RadioPage.propTypes = {
+OnDemandRadioPage.propTypes = {
   pageData: shape({
     metadata: shape({
       id: string,
@@ -90,4 +90,4 @@ RadioPage.propTypes = {
   }).isRequired,
 };
 
-export default RadioPage;
+export default OnDemandRadioPage;

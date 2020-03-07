@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import RadioPage from '.';
+import OnDemandRadioPage from '.';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w172x8nvf4bchz5';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -20,11 +20,11 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 
 describe('OnDemand Radio Page ', () => {
   it('should match snapshot for Canonical', async () => {
-    const { pageData } = await getInitialData('some-radio-path');
+    const { pageData } = await getInitialData('some-ondemand-radio-path');
 
     await matchSnapshotAsync(
       <ToggleContextProvider>
-        <ServiceContextProvider service="amharic">
+        <ServiceContextProvider service="pashto">
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
             isAmp={false}
@@ -34,7 +34,7 @@ describe('OnDemand Radio Page ', () => {
             statusCode={200}
           >
             <BrowserRouter>
-              <RadioPage service="pashto" pageData={pageData} />
+              <OnDemandRadioPage service="pashto" pageData={pageData} />
             </BrowserRouter>
           </RequestContextProvider>
         </ServiceContextProvider>
@@ -43,7 +43,7 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should match snapshot for AMP', async () => {
-    const { pageData } = await getInitialData('some-radio-path');
+    const { pageData } = await getInitialData('some-ondemand-radio-path');
 
     await matchSnapshotAsync(
       <ToggleContextProvider>
@@ -57,7 +57,7 @@ describe('OnDemand Radio Page ', () => {
             statusCode={200}
           >
             <BrowserRouter>
-              <RadioPage service="pashto" pageData={pageData} />
+              <OnDemandRadioPage service="pashto" pageData={pageData} />
             </BrowserRouter>
           </RequestContextProvider>
         </ServiceContextProvider>

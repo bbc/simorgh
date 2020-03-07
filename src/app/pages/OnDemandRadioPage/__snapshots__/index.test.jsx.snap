@@ -484,7 +484,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 .c8 {
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.9375rem;
@@ -546,7 +546,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -557,7 +557,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -568,7 +568,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -579,7 +579,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -589,7 +589,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   .c2 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    margin-left: 12.5%;
+    margin-right: 12.5%;
     display: inline-block;
     vertical-align: top;
   }
@@ -599,7 +599,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   .c2 {
     width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    margin-left: 20%;
+    margin-right: 20%;
     display: inline-block;
     vertical-align: top;
   }
@@ -706,12 +706,12 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 <html
-  dir="ltr"
+  dir="rtl"
   lang="ps"
 >
   <head>
     <title>
-      وروستي خبرونه - BBC News አማርኛ
+      وروستي خبرونه - BBC News پښتو
     </title>
     <link
       href="https://www.test.bbc.com/pathname"
@@ -722,69 +722,69 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       rel="amphtml"
     />
     <link
-      href="http://localhost:7080/amharic/images/icons/icon-192x192.png"
+      href="http://localhost:7080/pashto/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-72x72.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-72x72.png"
       rel="apple-touch-icon"
       sizes="72x72"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-96x96.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-96x96.png"
       rel="apple-touch-icon"
       sizes="96x96"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-128x128.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-128x128.png"
       rel="apple-touch-icon"
       sizes="128x128"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-144x144.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-144x144.png"
       rel="apple-touch-icon"
       sizes="144x144"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-152x152.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-152x152.png"
       rel="apple-touch-icon"
       sizes="152x152"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
       sizes="192x192"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-384x384.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-384x384.png"
       rel="apple-touch-icon"
       sizes="384x384"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-512x512.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-512x512.png"
       rel="apple-touch-icon"
       sizes="512x512"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-72x72.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-72x72.png"
       rel="icon"
       sizes="72x72"
       type="image/png"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-96x96.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-96x96.png"
       rel="icon"
       sizes="96x96"
       type="image/png"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-192x192.png"
       rel="icon"
       sizes="192x192"
       type="image/png"
     />
     <link
-      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-512x512.png"
+      href="https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-512x512.png"
       rel="apple-touch-startup-image"
     />
     <link
@@ -812,11 +812,11 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       name="viewport"
     />
     <meta
-      content="BBC News አማርኛ"
+      content="BBC News پښتو"
       name="apple-mobile-web-app-title"
     />
     <meta
-      content="BBC News አማርኛ"
+      content="BBC News پښتو"
       name="application-name"
     />
     <meta
@@ -840,7 +840,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       name="msapplication-TileColor"
     />
     <meta
-      content="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-144x144.png"
+      content="https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-144x144.png"
       name="msapplication-TileImage"
     />
     <meta
@@ -848,23 +848,23 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       property="og:description"
     />
     <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"
       property="og:image"
     />
     <meta
-      content="BBC News አማርኛ"
+      content="BBC News پښتو"
       property="og:image:alt"
     />
     <meta
-      content="am-ET"
+      content="ps"
       property="og:locale"
     />
     <meta
-      content="BBC News አማርኛ"
+      content="BBC News پښتو"
       property="og:site_name"
     />
     <meta
-      content="وروستي خبرونه - BBC News አማርኛ"
+      content="وروستي خبرونه - BBC News پښتو"
       property="og:title"
     />
     <meta
@@ -880,7 +880,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       name="twitter:card"
     />
     <meta
-      content="@bbcnews"
+      content="@bbcpashto"
       name="twitter:creator"
     />
     <meta
@@ -888,19 +888,19 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       name="twitter:description"
     />
     <meta
-      content="BBC News አማርኛ"
+      content="BBC News پښتو"
       name="twitter:image:alt"
     />
     <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"
       name="twitter:image:src"
     />
     <meta
-      content="@bbcnews"
+      content="@bbcpashto"
       name="twitter:site"
     />
     <meta
-      content="وروستي خبرونه - BBC News አማርኛ"
+      content="وروستي خبرونه - BBC News پښتو"
       name="twitter:title"
     />
   </head>
@@ -908,12 +908,12 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
     <div>
       <main
         class="c0 c1"
-        dir="ltr"
+        dir="rtl"
         role="main"
       >
         <div
           class="c2"
-          dir="ltr"
+          dir="rtl"
         >
           <div
             class="c3"
@@ -936,7 +936,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
                       <strong
                         class="c9"
                       >
-                        ይህንን ካሁን በኋላ ማግኘት አይችሉም፡፡
+                        دغه فایل نور د لاسرسي وړ نه دی.
                       </strong>
                     </div>
                   </div>
