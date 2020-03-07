@@ -22,7 +22,7 @@ server.listen(port, error => {
       JSON.stringify(
         {
           event: 'server_listen_error',
-          message: error.toString(),
+          message: error,
         },
         null,
         2,
