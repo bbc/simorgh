@@ -18,11 +18,11 @@ const MediaPlayerInnerWrapper = styled.div`
   max-width: calc(100vw - ${GEL_SPACING_QUAD});
 `;
 
-const OnDemandRadioContainer = ({ externalId, id }) => {
+const OnDemandRadioContainer = ({ id }) => {
   const { platform } = useContext(RequestContext);
   const isValidPlatform = ['amp', 'canonical'].includes(platform);
 
-  if (!isValidPlatform || !externalId || !id) return null;
+  if (!isValidPlatform || !id) return null;
 
   return (
     <MediaPlayerOuterWrapper>
@@ -34,12 +34,7 @@ const OnDemandRadioContainer = ({ externalId, id }) => {
 };
 
 OnDemandRadioContainer.propTypes = {
-  externalId: string,
   id: string.isRequired,
-};
-
-OnDemandRadioContainer.defaultProps = {
-  externalId: 'bbc_pashto_radio',
 };
 
 export default OnDemandRadioContainer;
