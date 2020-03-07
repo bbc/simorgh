@@ -114,7 +114,16 @@ if (process.env.SIMORGH_APP_ENV !== 'local') {
 const sendDataFile = (res, dataFilePath, next) => {
   res.sendFile(dataFilePath, {}, sendErr => {
     if (sendErr) {
-      logger.error(sendErr);
+      logger.error(
+        JSON.stringify(
+          {
+            event: 'local_sendfile_error',
+            message: sendErr.toString(),
+          },
+          null,
+          2,
+        ),
+      );
       next(sendErr);
     }
   });
@@ -219,7 +228,16 @@ server
     const swPath = `${__dirname}/public/sw.js`;
     res.sendFile(swPath, {}, error => {
       if (error) {
-        logger.error(error);
+        logger.error(
+          JSON.stringify(
+            {
+              event: 'server_sendfile_error_sw',
+              message: error.toString(),
+            },
+            null,
+            2,
+          ),
+        );
         res.status(500).send('Unable to find service worker.');
       }
     });
