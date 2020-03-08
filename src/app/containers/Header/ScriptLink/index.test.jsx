@@ -187,6 +187,7 @@ describe(`Script Link`, () => {
         getVariantHref({
           path,
           params: { foo: 'foo', bar: 'bar', variant: '/lat' },
+          service: 'serbian',
           variant: 'cyr',
         }),
       ).toEqual('/foo/bar/cyr');
@@ -200,9 +201,51 @@ describe(`Script Link`, () => {
         getVariantHref({
           path,
           params: { foo: 'foo', bar: 'bar', variant: '/lat', amp: '.amp' },
+          service: 'serbian',
           variant: 'cyr',
         }),
       ).toEqual('/foo/bar/cyr');
+    });
+
+    it('should generate fallback if no path defined', () => {
+      expect(
+        getVariantHref({
+          params: {},
+          service: 'serbian',
+          variant: 'cyr',
+        }),
+      ).toEqual('/serbian/cyr');
+    });
+
+    it('should generate fallback if path does not match defined route from config', () => {
+      expect(
+        getVariantHref({
+          path: '/',
+          params: {},
+          service: 'serbian',
+          variant: 'cyr',
+        }),
+      ).toEqual('/serbian/cyr');
+    });
+
+    it('should generate fallback if a parameter specified in the path is not provided', () => {
+      expect(
+        getVariantHref({
+          path: '/:foo',
+          params: {},
+          service: 'serbian',
+          variant: 'cyr',
+        }),
+      ).toEqual('/serbian/cyr');
+
+      expect(
+        getVariantHref({
+          path: '/:foo:bar',
+          params: { foo: 'foo' },
+          service: 'serbian',
+          variant: 'cyr',
+        }),
+      ).toEqual('/serbian/cyr');
     });
   });
 });

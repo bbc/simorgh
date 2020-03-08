@@ -10,7 +10,7 @@ export const getVariantHref = ({ path, params, service, variant }) => {
   const fallback = `/${service}/${variant}`;
 
   // On error pages, we may not be on a path defined in router config.
-  // In this case, link to the homepage.
+  // In this case, link to the fallback.
   if (!path || path === '/') {
     return fallback;
   }
