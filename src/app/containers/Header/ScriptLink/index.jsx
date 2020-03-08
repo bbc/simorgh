@@ -6,17 +6,30 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { UserContext } from '#contexts/UserContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-export const getVariantHref = ({ path, params, variant }) =>
-  compile(path)(
-    {
-      ...params,
-      variant: `/${variant}`,
-      amp: undefined, // we don't want to link to AMP pages directly
-    },
-    {
-      encode: value => value,
-    },
-  );
+export const getVariantHref = ({ path, params, service, variant }) => {
+  const fallback = `/${service}/${variant}`;
+
+  // On error pages, we may not be on a path defined in router config.
+  // In this case, link to the homepage.
+  if (!path || path === '/') {
+    return fallback;
+  }
+
+  try {
+    return compile(path)(
+      {
+        ...params,
+        variant: `/${variant}`,
+        amp: undefined, // we don't want to link to AMP pages directly
+      },
+      {
+        encode: value => value,
+      },
+    );
+  } catch {
+    return fallback;
+  }
+};
 
 const ScriptLinkContainer = () => {
   const { setPreferredVariantCookie } = useContext(UserContext);
