@@ -118,7 +118,7 @@ const sendDataFile = (res, dataFilePath, next) => {
         JSON.stringify(
           {
             event: 'local_sendfile_error',
-            message: sendErr.toString(),
+            message: sendErr,
           },
           null,
           2,
@@ -232,7 +232,7 @@ server
           JSON.stringify(
             {
               event: 'server_sendfile_error_sw',
-              message: error.toString(),
+              message: error,
             },
             null,
             2,
