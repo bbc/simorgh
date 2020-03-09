@@ -35,7 +35,12 @@
       },
       "tags": {},
       "version": "v1.1.2",
-      "blockTypes": ["version", "paragraph", "list", "image"],
+      "blockTypes": [
+        "version",
+        "paragraph",
+        "list",
+        "image"
+      ],
       "includeComments": false
     },
     "content": {
@@ -259,4 +264,4 @@
       },
       "groups": []
     }
-}
+  }
