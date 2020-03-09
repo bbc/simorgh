@@ -331,7 +331,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .c45 {
-  background: #ECEAE7;
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
@@ -1831,7 +1830,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c47 {
-  background: #ECEAE7;
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
