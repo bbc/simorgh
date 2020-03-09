@@ -15,10 +15,7 @@ const localRadioScheduleEndpoint = service => {
   return `${localServiceURL}/bbc_${service}_radio/radioschedule.json`;
 };
 
-const getToggleState = enabled => ({
-  local: { radioSchedule: { enabled } },
-  test: { radioSchedule: { enabled } },
-});
+const getToggleState = enabled => ({ radioSchedule: { enabled } });
 
 const renderRadioScheduleContainer = (service, radioScheduleToggle = false) =>
   act(async () => {
