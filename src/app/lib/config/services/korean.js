@@ -154,6 +154,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      header: 'BBC News Radio',
     },
     footer: {
       trustProjectLink: {
