@@ -1,13 +1,11 @@
-const convertInclude = async block => {
-  const { href, url, ...rest } = block;
-
-  const blockMappings = {
+const convertInclude = ({ href, url, ...rest }) => {
+  const supportedTypes = {
     idt2: 'idt2',
     include: 'include',
   };
   const type = href.split('/')[1];
 
-  if (!blockMappings[type]) {
+  if (!supportedTypes[type]) {
     return null;
   }
   return {
