@@ -6,10 +6,8 @@ import useToggle from '../Toggle/useToggle';
 import Canonical from './Canonical';
 
 // The logic here is sufficient for now for testing locally. This should change once we are ready to put radioschedules on live
-const getRadioScheduleEndpoint = (service, environment) =>
-  environment === 'local'
-    ? `/${service}/bbc_${service}_radio/radioschedule.json`
-    : `/${service}/bbc_${service}_radio/schedule.json`;
+const getRadioScheduleEndpoint = service =>
+  `/${service}/bbc_${service}_radio/schedule.json`;
 
 const RadioScheduleContainer = ({ radioScheduleEndpointOverride }) => {
   const { isAmp, env } = useContext(RequestContext);
