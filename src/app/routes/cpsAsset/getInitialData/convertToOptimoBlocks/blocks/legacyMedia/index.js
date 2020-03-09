@@ -1,4 +1,6 @@
-const generateVideoBlock = block => {
+const generateVideoBlock = (block, json) => {
+  console.log(`block: ${JSON.stringify(block)}`);
+  console.log(`json: ${JSON.stringify(json)}`);
   const generatedBlock = {
     type: 'aresMediaMetadata',
     blockId: `urn:bbc:ares::${block.subType}:${block.id}`,
@@ -12,7 +14,7 @@ const generateVideoBlock = block => {
   return generatedBlock;
 };
 
-const convertMedia = block => {
+const convertMedia = (block, json) => {
   const convertedBlock = {
     type: 'legacyMedia',
     model: {
@@ -21,7 +23,7 @@ const convertMedia = block => {
         {
           type: 'aresMedia',
           model: {
-            blocks: [generateVideoBlock(block)],
+            blocks: [generateVideoBlock(block, json)],
           },
         },
       ],
