@@ -102,6 +102,10 @@ const ScriptLinkContainerWithContext = ({
 );
 
 describe(`Script Link`, () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   shouldMatchSnapshot(
     'should render correctly',
     <MemoryRouter initialEntries={['/serbian/lat']}>
