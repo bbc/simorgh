@@ -549,7 +549,7 @@ const genServices = {
             // '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP
           ],
         },
-        smoke: false,
+        smoke: true,
       },
       photoGalleryPage: {
         paths: {
@@ -2069,7 +2069,7 @@ const genServices = {
             // '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
           ],
         },
-        smoke: false,
+        smoke: true,
       },
       photoGalleryPage: {
         paths: {
@@ -2142,7 +2142,7 @@ const genServices = {
             // '/tamil/global/2016/08/160822_tc2_testmap1', // TC2 MAP
           ],
         },
-        smoke: false,
+        smoke: true,
       },
       photoGalleryPage: {
         paths: {
@@ -2630,7 +2630,7 @@ const genServices = {
             // '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP
           ],
         },
-        smoke: false,
+        smoke: true,
       },
       photoGalleryPage: {
         paths: {
