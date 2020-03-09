@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Script Link should render correctly 1`] = `
+.c0 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 2.25rem;
+  border: 0.0625rem solid #FFFFFF;
+  margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.c0 > span {
+  margin: 0.1875rem;
+  display: inline-block;
+  height: calc(100%);
+  padding: 0 1rem;
+}
+
+.c0:hover > span,
+.c0:focus > span {
+  margin: 0;
+  border: 0.1875rem solid #FFFFFF;
+}
+
+.c1 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    line-height: calc(2.25rem - 0.5rem);
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    height: 2.5rem;
+  }
+
+  .c0 > span {
+    padding: 0 0.75rem;
+    line-height: calc(2.5rem - 0.5rem);
+  }
+}
+
+<a
+  class="c0"
+  data-variant="cyr"
+  href="/serbian/cyr"
+>
+  <span>
+    <span
+      aria-hidden="true"
+    >
+      Ћир
+    </span>
+    <span
+      class="c1"
+    >
+       Cyrillic
+    </span>
+  </span>
+</a>
+`;

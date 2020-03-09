@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { bool, string } from 'prop-types';
+import { bool, string, oneOf } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '../Toggle/useToggle';
@@ -14,6 +14,7 @@ const MostReadContainer = ({
   mostReadEndpointOverride,
   columnLayout,
   constrainMaxWidth,
+  isOnFrontPage,
 }) => {
   const { variant, isAmp } = useContext(RequestContext);
   const {
@@ -37,6 +38,7 @@ const MostReadContainer = ({
       endpoint={endpoint}
       constrainMaxWidth={constrainMaxWidth}
       columnLayout={columnLayout}
+      isOnFrontPage={isOnFrontPage}
     />
   );
 };
@@ -44,13 +46,15 @@ const MostReadContainer = ({
 MostReadContainer.propTypes = {
   mostReadEndpointOverride: string,
   constrainMaxWidth: bool,
-  columnLayout: string,
+  columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
+  isOnFrontPage: bool,
 };
 
 MostReadContainer.defaultProps = {
   mostReadEndpointOverride: null,
   constrainMaxWidth: false,
   columnLayout: 'multiColumn',
+  isOnFrontPage: false,
 };
 
 export default MostReadContainer;

@@ -157,24 +157,12 @@ export const testsThatFollowSmokeTestConfig = ({
 
       if (serviceHasTimestamp(service)) {
         it('should render a timestamp', () => {
-          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-            const { lastPublished, firstPublished } = body.metadata;
-            cy.get('time')
-              .eq(0)
-              .should('exist')
-              .should('be.visible')
-              .should('have.attr', 'datetime')
-              .should('not.be.empty');
-
-            if (lastPublished !== firstPublished) {
-              cy.get('time')
-                .eq(1)
-                .should(
-                  'contain',
-                  appConfig[config[service].name].articleTimestampPrefix,
-                );
-            }
-          });
+          cy.get('time')
+            .eq(0)
+            .should('exist')
+            .should('be.visible')
+            .should('have.attr', 'datetime')
+            .should('not.be.empty');
         });
       }
 

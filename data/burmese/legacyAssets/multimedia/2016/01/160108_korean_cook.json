@@ -1,34 +1,63 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:burmese/multimedia/2016/01/160108_korean_cook",
-    "locators": {
-      "assetUri": "/burmese/multimedia/2016/01/160108_korean_cook",
-      "cpsUrn": "urn:bbc:content:assetUri:burmese/multimedia/2016/01/160108_korean_cook",
-      "curie": "http://www.bbc.co.uk/asset/37956914-b622-11e5-9dda-5b823db9bd6e"
+    "metadata": {
+      "id": "urn:bbc:ares::asset:burmese/multimedia/2016/01/160108_korean_cook",
+      "locators": {
+        "assetUri": "/burmese/multimedia/2016/01/160108_korean_cook",
+        "cpsUrn": "urn:bbc:content:assetUri:burmese/multimedia/2016/01/160108_korean_cook",
+        "curie": "http://www.bbc.co.uk/asset/37956914-b622-11e5-9dda-5b823db9bd6e"
+      },
+      "type": "MAP",
+      "createdBy": "burmese",
+      "language": "my",
+      "lastUpdated": 1559036248915,
+      "firstPublished": 1452269598,
+      "lastPublished": 1452269598,
+      "options": {
+        "includeComments": false,
+        "allowRightHandSide": true,
+        "allowDateStamp": true,
+        "suitableForSyndication": false,
+        "allowAdvertising": true,
+        "isBreakingNews": false
+      },
+      "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "42072173" },
+      "tags": {},
+      "version": "v1.0.0",
+      "blockTypes": [ "legacyMedia", "paragraph" ],
+      "includeComments": false
     },
-    "type": "MAP",
-    "createdBy": "burmese",
-    "language": "my",
-    "lastUpdated": 1559036248915,
-    "firstPublished": 1452269598,
-    "lastPublished": 1452269598,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": false,
-      "allowAdvertising": true,
-      "isBreakingNews": false
+    "content": {
+      "blocks": [
+        {
+          "id": "42072173",
+          "subType": "primary",
+          "format": "video",
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/burmese/meta/dps/2016/01/emp/160108_korean_cook.emp.xml",
+          "type": "legacyMedia"
+        },
+        {
+          "text": "တောင်ကိုရီးယားက တီဗွီလိုင်းတွေထဲက ချက်နည်းပြုတ်နည်း အစီအစဉ်တွေမှာ နာမည်ကြီး စားဖိုမှူးတွေက အမျိုးသားတွေက လွှမ်းမိုးထားပါတယ်။ အချက်အပြုတ် ပြိုင်ပွဲတွေမှာ ပါဝင်ကြတဲ့ သူအများစုက အမျိုးသားတွေပဲ ဖြစ်ပါတယ်။ ကိုမိုးမြင့်က ပြောပြထားပါတယ်။",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        }
+      ]
     },
-    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "42072173" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph" ],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
+    "promo": {
+      "headlines": {
+        "shortHeadline": "တောင်ကိုရီးယား ဟင်းချက်အစီအစဉ်မှာ အမျိုးသားတွေစိုးမိုး",
+        "headline": "တောင်ကိုရီးယား ဟင်းချက်အစီအစဉ်မှာ အမျိုးသားတွေစိုးမိုး"
+      },
+      "locators": {
+        "assetUri": "/burmese/multimedia/2016/01/160108_korean_cook",
+        "cpsUrn": "urn:bbc:content:assetUri:burmese/multimedia/2016/01/160108_korean_cook",
+        "curie": "http://www.bbc.co.uk/asset/37956914-b622-11e5-9dda-5b823db9bd6e"
+      },
+      "summary": "တောင်ကိုရီးယားနိုင်ငံမှာ ရုပ်မြင်က အချက်အပြုတ်အစီအစဉ်မှာ ပါဝင်သူတွေက အမျိုးသားတွေပဲ ဖြစ်ကြပါတယ်။",
+      "timestamp": 1559036248915,
+      "passport": {},
+      "media": {
         "id": "42072173",
         "subType": "primary",
         "format": "video",
@@ -37,52 +66,23 @@
         "href": "http://www.bbc.co.uk/burmese/meta/dps/2016/01/emp/160108_korean_cook.emp.xml",
         "type": "legacyMedia"
       },
-      {
-        "text": "တောင်ကိုရီးယားက တီဗွီလိုင်းတွေထဲက ချက်နည်းပြုတ်နည်း အစီအစဉ်တွေမှာ နာမည်ကြီး စားဖိုမှူးတွေက အမျိုးသားတွေက လွှမ်းမိုးထားပါတယ်။ အချက်အပြုတ် ပြိုင်ပွဲတွေမှာ ပါဝင်ကြတဲ့ သူအများစုက အမျိုးသားတွေပဲ ဖြစ်ပါတယ်။ ကိုမိုးမြင့်က ပြောပြထားပါတယ်။",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "တောင်ကိုရီးယား ဟင်းချက်အစီအစဉ်မှာ အမျိုးသားတွေစိုးမိုး",
-      "headline": "တောင်ကိုရီးယား ဟင်းချက်အစီအစဉ်မှာ အမျိုးသားတွေစိုးမိုး"
+      "indexImage": {
+        "id": "d5e200",
+        "subType": "index",
+        "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/01/08/160108160606_korean_chef_112x63_bbc_nocredit.jpg",
+        "path": "/amz/worldservice/live/assets/images/2016/01/08/160108160606_korean_chef_112x63_bbc_nocredit.jpg",
+        "height": 63,
+        "width": 112,
+        "altText": "korean_chef",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:burmese/multimedia/2016/01/160108_korean_cook",
+      "type": "cps"
     },
-    "locators": {
-      "assetUri": "/burmese/multimedia/2016/01/160108_korean_cook",
-      "cpsUrn": "urn:bbc:content:assetUri:burmese/multimedia/2016/01/160108_korean_cook",
-      "curie": "http://www.bbc.co.uk/asset/37956914-b622-11e5-9dda-5b823db9bd6e"
-    },
-    "summary": "တောင်ကိုရီးယားနိုင်ငံမှာ ရုပ်မြင်က အချက်အပြုတ်အစီအစဉ်မှာ ပါဝင်သူတွေက အမျိုးသားတွေပဲ ဖြစ်ကြပါတယ်။",
-    "timestamp": 1559036248915,
-    "passport": {},
-    "media": {
-      "id": "42072173",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/burmese/meta/dps/2016/01/emp/160108_korean_cook.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e200",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/01/08/160108160606_korean_chef_112x63_bbc_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2016/01/08/160108160606_korean_chef_112x63_bbc_nocredit.jpg",
-      "height": 63,
-      "width": 112,
-      "altText": "korean_chef",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:burmese/multimedia/2016/01/160108_korean_cook",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": { "subType": "index", "name": "မာလ်တီမီဒီယာ", "uri": "/burmese/multimedia", "type": "simple" },
-    "site": { "subType": "site", "name": "BBCBurmese.com", "uri": "/burmese", "type": "simple" },
-    "groups": []
+    "relatedContent": {
+      "section": { "subType": "index", "name": "မာလ်တီမီဒီယာ", "uri": "/burmese/multimedia", "type": "simple" },
+      "site": { "subType": "site", "name": "BBCBurmese.com", "uri": "/burmese", "type": "simple" },
+      "groups": []
+    }
   }
-}

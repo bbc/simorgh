@@ -1,6 +1,7 @@
 import getEmbedUrl from '.';
 
 const mediaId = 'foo/bar';
+const legacyId = 'russian/multimedia/2016/05/160505_v_diving_record/123/ru';
 const liveOverrideParam = '?renderer_env=live';
 const testOverrideParam = '?renderer_env=test';
 
@@ -145,6 +146,52 @@ const testCases = [
       mediaId,
       type: 'articles',
       queryString: liveOverrideParam,
+    },
+  },
+  {
+    description: `should build a CANONICAL url for legacy media in live environment with live override`,
+    expected: `https://polling.bbc.co.uk/ws/av-embeds/legacy/${legacyId}`,
+    environment: 'live',
+    before: setEnvironment,
+    embedObject: {
+      mediaId: legacyId,
+      type: 'legacy',
+      queryString: liveOverrideParam,
+    },
+  },
+  {
+    description: `should build an AMP url for legacy media in live environment with live override`,
+    expected: `https://polling.bbc.co.uk/ws/av-embeds/legacy/${legacyId}/amp`,
+    environment: 'live',
+    before: setEnvironment,
+    embedObject: {
+      isAmp: true,
+      mediaId: legacyId,
+      type: 'legacy',
+      queryString: liveOverrideParam,
+    },
+  },
+  {
+    description: `should build a CANONICAL url for legacy media in test environment with no override`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/legacy/${legacyId}`,
+    environment: 'test',
+    before: setEnvironment,
+    embedObject: {
+      mediaId: legacyId,
+      type: 'legacy',
+      queryString: '',
+    },
+  },
+  {
+    description: `should build an AMP url for legacy media in test environment with no override`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/legacy/${legacyId}/amp`,
+    environment: 'test',
+    before: setEnvironment,
+    embedObject: {
+      isAmp: true,
+      mediaId: legacyId,
+      type: 'legacy',
+      queryString: '',
     },
   },
 ];

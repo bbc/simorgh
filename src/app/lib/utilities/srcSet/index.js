@@ -30,8 +30,11 @@ export const createSrcset = (
 
   return urls.join(', ');
 };
-export const getPlaceholderSrcSet = ({ originCode, locator }) =>
-  DEFAULT_RESOLUTIONS.map(
+export const getPlaceholderSrcSet = ({ originCode, locator }) => {
+  if (!originCode) return '';
+  if (!locator) return '';
+  return DEFAULT_RESOLUTIONS.map(
     resolution =>
       `${buildIChefUrl({ originCode, locator, resolution })} ${resolution}w`,
   ).join(', ');
+};

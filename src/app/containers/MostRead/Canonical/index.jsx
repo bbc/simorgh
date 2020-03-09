@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
-import { bool, string } from 'prop-types';
+import { bool, string, oneOf } from 'prop-types';
 import styled from 'styled-components';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -48,6 +48,15 @@ const MostReadSection = styled.section.attrs(() => ({
   'data-e2e': 'most-read',
 }))``;
 
+const FrontPageMostReadSection = styled(MostReadSection)`
+  /* To centre page layout for Group 4+ */
+  margin: 0 auto;
+  width: 100%; /* Needed for IE11 */
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+  }
+`;
+
 const ConstrainedMostReadSection = styled(MostReadSection)`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     margin: 0 ${GEL_MARGIN_BELOW_400PX} ${GEL_SPACING_TRPL};
@@ -65,7 +74,12 @@ const ConstrainedMostReadSection = styled(MostReadSection)`
   }
 `;
 
-const CanonicalMostRead = ({ endpoint, columnLayout, constrainMaxWidth }) => {
+const CanonicalMostRead = ({
+  endpoint,
+  columnLayout,
+  constrainMaxWidth,
+  isOnFrontPage,
+}) => {
   const [items, setItems] = useState([]);
   const {
     service,
@@ -125,9 +139,14 @@ const CanonicalMostRead = ({ endpoint, columnLayout, constrainMaxWidth }) => {
     return null;
   }
 
+  const StyledMostRead = isOnFrontPage
+    ? FrontPageMostReadSection
+    : MostReadSection;
+
   const MostReadSectionWrapper = constrainMaxWidth
     ? ConstrainedMostReadSection
-    : MostReadSection;
+    : StyledMostRead;
+
   return (
     <MostReadSectionWrapper>
       <SectionLabel
@@ -174,11 +193,13 @@ const CanonicalMostRead = ({ endpoint, columnLayout, constrainMaxWidth }) => {
 CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
   constrainMaxWidth: bool.isRequired,
-  columnLayout: string,
+  columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
+  isOnFrontPage: bool,
 };
 
 CanonicalMostRead.defaultProps = {
   columnLayout: 'multiColumn',
+  isOnFrontPage: false,
 };
 
 export default CanonicalMostRead;
