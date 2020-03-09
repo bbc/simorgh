@@ -45,7 +45,7 @@ const ToggleContextProvider = ({ children, service, origin }) => {
 const ToggleContextConsumer = ToggleContext.Consumer;
 
 ToggleContextProvider.propTypes = {
-  children: node.isRequired,
+  // children: node.isRequired, todo add this back in
   service: string.isRequired,
 };
 
