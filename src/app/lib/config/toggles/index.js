@@ -18,7 +18,7 @@ const toggles = {
     radioSchedule: {
       enabled: true,
     },
-    styIncludes: {
+    include: {
       enabled: true,
     },
   },
@@ -41,7 +41,7 @@ const toggles = {
     radioSchedule: {
       enabled: false,
     },
-    styIncludes: {
+    include: {
       enabled: true,
     },
   },
@@ -64,7 +64,7 @@ const toggles = {
     radioSchedule: {
       enabled: false,
     },
-    styIncludes: {
+    include: {
       enabled: false,
     },
   },
@@ -87,7 +87,7 @@ const toggles = {
     radioSchedule: {
       enabled: false,
     },
-    styIncludes: {
+    include: {
       enabled: false,
     },
   },
