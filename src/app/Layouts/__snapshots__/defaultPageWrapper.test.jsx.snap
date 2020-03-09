@@ -1402,15 +1402,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 </a>
               </li>
               <li
-                class="c34"
+                class="c31"
                 role="listitem"
               >
                 <a
-                  class="c35 c36"
+                  class="c32 c33"
                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
                 >
                   <span
-                    class="c37"
+                    class="c34"
                   >
                     AdChoices / Do Not Sell My Info
                   </span>
