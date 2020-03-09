@@ -220,6 +220,32 @@ describe(`Script Link`, () => {
       fireEvent.click(scriptLink);
       expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(1);
     });
+
+    it('should not set preferred variant cookie when variantCookie toggle is disabled', () => {
+      const testToggles = {
+        test: {
+          scriptLink: {
+            enabled: true,
+          },
+          variantCookie: {
+            enabled: false,
+          },
+        },
+      };
+      const { container } = withRouter(
+        <ScriptLinkContainerWithContext
+          toggleContext={{
+            toggleState: testToggles,
+            toggleDispatch: mockToggleDispatch,
+          }}
+        />,
+        frontPagePath,
+        '/serbian/lat',
+      );
+      const scriptLink = container.querySelector('a[data-variant="cyr"]');
+      fireEvent.click(scriptLink);
+      expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(0);
+    });
   });
 
   describe('getVariantHref', () => {
