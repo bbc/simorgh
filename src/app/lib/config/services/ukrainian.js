@@ -89,18 +89,18 @@ export const service = {
       consentBanner: {
         privacy: {
           title:
-            'Ми оновили наші правила використання особистих даних і cookies',
+            'Ми оновили наші правила використання особистих даних і файлів cookies',
           description: {
             uk: {
               first:
-                'Ми змінили правила використання особистих даних і cookies і хотіли б повідомити вам, що це означає для вас і ваших особистих даних.',
+                'Ми змінили правила використання особистих даних і файлів cookies та хотіли б повідомити вам, що це означає для вас і ваших особистих даних.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                'Ми змінили правила використання особистих даних і cookies і хотіли б повідомити вам, що це означає для вас і ваших особистих даних.',
+                'Ми змінили правила використання особистих даних і файлів cookies та хотіли б повідомити вам, що це означає для вас і ваших особистих даних.',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -111,13 +111,14 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Повідомити, що ви погоджуєтесь з використанням cookies',
+          title:
+            'Повідомити, що ви погоджуєтесь з використанням файлів cookies',
           description: {
             uk: {
               first: 'Ми використовуємо ',
               linkText: 'cookies',
               last:
-                ' щоб вам було зручно користуватися сайтом. Повідомте нам, що ви погоджуєтесь з використанням цих cookies.',
+                ', щоб вам було зручно користуватися сайтом. Повідомте нам, що ви погоджуєтесь з використанням цих файлів cookies.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -148,12 +149,12 @@ export const service = {
           subtitle:
             'ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Прослухати',
+        watch: 'Дивитися',
         liveLabel: 'LIVE',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        previousRadioShow: 'Попередня радіопрограма',
+        nextRadioShow: 'Наступна радіопрограма',
+        duration: 'Тривалість',
       },
     },
     brandSVG,
@@ -194,34 +195,14 @@ export const service = {
         },
       ],
       copyrightText:
-        'BBC. ВВС на несе відповідальності за контент інших сайтів.',
+        'BBC. ВВС не несе відповідальності за контент інших сайтів.',
     },
     fonts: [],
     timezone: 'GMT',
     navigation: [
       {
-        title: 'Головна',
-        url: '/ukrainian',
-      },
-      {
         title: 'Новини',
-        url: '/ukrainian/news',
-      },
-      {
-        title: 'Україна',
-        url: '/ukrainian/topics/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c',
-      },
-      {
-        title: 'Політика',
-        url: '/ukrainian/topics/75612fa6-147c-4a43-97fa-fcf70d9cced3',
-      },
-      {
-        title: 'Економіка',
-        url: '/ukrainian/topics/ca170ae3-99c1-48db-9b67-2866f85e7342',
-      },
-      {
-        title: 'Суспільство',
-        url: '/ukrainian/topics/5307a8d9-f620-40f5-92d4-f99c919a6ffa',
+        url: '/ukrainian',
       },
       {
         title: 'Наука',
@@ -236,40 +217,20 @@ export const service = {
         url: '/ukrainian/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
       },
       {
-        title: 'Спорт',
-        url: '/ukrainian/sport',
-      },
-      {
-        title: 'РУС',
-        url: '/ukrainian/ukraine_in_russian',
-      },
-      {
-        title: 'BBC Журнал',
+        title: 'Журнал',
         url: '/ukrainian/magazine',
+      },
+      {
+        title: 'Книга року ВВС',
+        url: '/ukrainian/features-50320117',
       },
       {
         title: 'Блоги',
         url: '/ukrainian/blogs',
       },
       {
-        title: 'Також у новинах',
-        url: '/ukrainian/other_news',
-      },
-      {
-        title: 'Спецпроекти',
-        url: '/ukrainian/in_depth',
-      },
-      {
-        title: 'Фото',
-        url: '/ukrainian/media/photogalleries',
-      },
-      {
-        title: 'Відео',
-        url: '/ukrainian/media/video',
-      },
-      {
-        title: 'Learning English',
-        url: '/ukrainian/learning_english',
+        title: 'РУС',
+        url: '/ukrainian/ukraine_in_russian',
       },
     ],
   },
