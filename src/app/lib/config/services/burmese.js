@@ -13,6 +13,7 @@ export const service = {
     articleTimestampPrefix: 'အသစ်တင်ချိန်',
     atiAnalyticsAppName: 'news-burmese',
     atiAnalyticsProducerId: '35',
+    chartbeatDomain: 'burmese.bbc.co.uk',
     brandName: 'BBC News မြန်မာ',
     product: 'BBC News',
     serviceLocalizedName: 'မြန်မာ',
@@ -40,7 +41,6 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle:
       'ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -74,7 +74,7 @@ export const service = {
         },
         500: {
           statusCode: '၅၀၀',
-          title: 'ဘီီဘီစီဆာဗာ၏ အမှား',
+          title: 'ဘီဘီစီဆာဗာ၏ အမှား',
           message:
             'သင်ရှာနေသော စာမျက်နှာကို လောလောဆယ် ရှာမတွေ့ပါ။ ဒီမှာ ကြိုးစားကြည့်ပါ။',
           solutions: [
@@ -155,11 +155,11 @@ export const service = {
             'မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။',
         },
         listen: 'Listen',
-        watch: 'Watch',
+        watch: 'ကြည့်ရှုရန်',
         liveLabel: 'တိုကျရိုကျထုတျလှှငျ့မှု',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        previousRadioShow: 'ယခင် ရေဒီယိုအစီအစဉ်',
+        nextRadioShow: 'နောက် ရေဒီယိုအစီအစဉ်',
+        duration: 'ကြာမြင့်ချိန်',
       },
     },
     brandSVG,
@@ -168,6 +168,9 @@ export const service = {
       lastUpdated: 'နောက်ဆုံးအသစ်တင်ချိန်:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
@@ -194,7 +197,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/burmese/institutional-37577525',
-          text: 'ဘီီဘီစီကို ဆက်သွယ်ရန်',
+          text: 'ဘီဘီစီကို ဆက်သွယ်ရန်',
         },
       ],
       copyrightText:

@@ -1,0 +1,150 @@
+{
+    "content": {
+      "blocks": [
+        {
+          "advertising": false,
+          "caption": "Trump long headline",
+          "embedding": true,
+          "format": "audio",
+          "id": "p01lmkjh",
+          "imageCopyright": "AFP",
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01lmkk5.jpg",
+          "subType": "clip",
+          "synopses": {
+            "medium": "Trump summary text",
+            "short": "Trump long headline"
+          },
+          "title": "Trump short headline",
+          "type": "media",
+          "versions": [
+            {
+              "availableFrom": 1550234248000,
+              "availableTerritories": {
+                "nonUk": true,
+                "uk": true
+              },
+              "duration": 26,
+              "durationISO8601": "PT26S",
+              "types": [
+                "Original"
+              ],
+              "versionId": "p01lmkjk",
+              "warnings": {}
+            }
+          ]
+        }
+      ]
+    },
+    "metadata": {
+      "analyticsLabels": {
+        "counterName": "persian.iran.media_asset.23231114.page",
+        "cps_asset_id": "23231114",
+        "cps_asset_type": "map"
+      },
+      "blockTypes": [
+        "media"
+      ],
+      "createdBy": "persian-v6",
+      "firstPublished": 1550234871000,
+      "id": "urn:bbc:ares::asset:persian/iran-23231114",
+      "includeComments": false,
+      "language": "fa",
+      "lastPublished": 1550234874000,
+      "lastUpdated": 1567420011583,
+      "locators": {
+        "assetUri": "/persian/iran-23231114",
+        "cpsUrn": "urn:bbc:content:assetUri:persian/iran-23231114",
+        "curie": "http://www.bbc.co.uk/asset/43667729-4c50-834f-a4b5-c0c95c3cafcf"
+      },
+      "options": {
+        "allowDateStamp": true,
+        "allowHeadline": true,
+        "allowPrintingSharingLinks": true,
+        "allowRelatedStoriesBox": true,
+        "allowRightHandSide": true,
+        "hasNewsTracker": false,
+        "includeComments": false,
+        "isBreakingNews": false,
+        "isFactCheck": false,
+        "isIgorSeoTagsEnabled": false,
+        "isKeyContent": false
+      },
+      "tags": {},
+      "type": "MAP",
+      "version": "v1.1.0"
+    },
+    "promo": {
+      "headlines": {
+        "headline": "Trump long headline",
+        "shortHeadline": "Trump short headline"
+      },
+      "id": "urn:bbc:ares::asset:persian/iran-23231114",
+      "indexImage": {
+        "altText": "Trump getting upset",
+        "copyrightHolder": "AFP",
+        "height": 576,
+        "href": "http://b.files.bbci.co.uk/14DFC/test/_63700558_p01lmkk5.jpg",
+        "id": "63700558",
+        "path": "/cpsdevpb/14DFC/test/_63700558_p01lmkk5.jpg",
+        "subType": "index",
+        "type": "image",
+        "width": 1024
+      },
+      "locators": {
+        "assetUri": "/persian/iran-23231114",
+        "cpsUrn": "urn:bbc:content:assetUri:persian/iran-23231114",
+        "curie": "http://www.bbc.co.uk/asset/43667729-4c50-834f-a4b5-c0c95c3cafcf"
+      },
+      "media": {
+        "advertising": false,
+        "caption": "Trump long headline",
+        "embedding": true,
+        "format": "audio",
+        "id": "p01lmkjh",
+        "imageCopyright": "AFP",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01lmkk5.jpg",
+        "subType": "clip",
+        "synopses": {
+          "medium": "Trump summary text",
+          "short": "Trump long headline"
+        },
+        "title": "Trump short headline",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1550234248000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true
+            },
+            "duration": 26,
+            "durationISO8601": "PT26S",
+            "types": [
+              "Original"
+            ],
+            "versionId": "p01lmkjk",
+            "warnings": {}
+          }
+        ]
+      },
+      "passport": {},
+      "summary": "Trump summary text",
+      "timestamp": 1567420011583,
+      "type": "cps"
+    },
+    "relatedContent": {
+      "groups": [],
+      "section": {
+        "name": "صفحه ایران",
+        "subType": "index",
+        "type": "simple",
+        "uri": "/persian/iran"
+      },
+      "site": {
+        "name": "Persian v6",
+        "subType": "site",
+        "type": "simple",
+        "uri": "/persian"
+      }
+    }
+  }

@@ -21,6 +21,7 @@ export const service = {
     articleTimestampPrefix: 'Güncelleme',
     atiAnalyticsAppName: 'news-turkce',
     atiAnalyticsProducerId: '92',
+    chartbeatDomain: 'turkish.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Türkçe',
     product: 'BBC News',
     serviceLocalizedName: 'Türkçe',
@@ -47,7 +48,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Haberler',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -164,6 +164,9 @@ export const service = {
       lastUpdated: 'Son güncelleme:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {

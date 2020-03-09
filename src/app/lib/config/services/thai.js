@@ -14,6 +14,7 @@ export const service = {
     articleTimestampPrefix: 'ปรับปรุงแล้ว',
     atiAnalyticsAppName: 'news-thai',
     atiAnalyticsProducerId: '90',
+    chartbeatDomain: 'thai.bbc.co.uk',
     brandName: 'BBC News ไทย',
     product: 'BBC News',
     serviceLocalizedName: 'ไทย',
@@ -40,7 +41,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -157,6 +157,9 @@ export const service = {
       lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     navigation: [
       {

@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Cập nhật',
     atiAnalyticsAppName: 'news-vietnamese',
     atiAnalyticsProducerId: '97',
+    chartbeatDomain: 'vietnamese.bbc.co.uk',
     brandName: 'BBC News Tiếng Việt',
     product: 'BBC News',
     serviceLocalizedName: 'Tiếng Việt',
@@ -39,7 +40,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Tin chính',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -153,6 +153,9 @@ export const service = {
       lastUpdated: 'Cập nhật gần nhất:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {

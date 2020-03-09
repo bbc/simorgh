@@ -21,6 +21,7 @@ export const service = {
     articleTimestampPrefix: 'Atualizado',
     atiAnalyticsAppName: 'news-portuguese',
     atiAnalyticsProducerId: '33',
+    chartbeatDomain: 'brasil.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Brasil',
     product: 'BBC News',
     serviceLocalizedName: 'Brasil',
@@ -49,7 +50,6 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle: 'Notícias, vídeos, análise e contexto em português',
     passportHomes: ['brasil'],
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -167,6 +167,9 @@ export const service = {
       lastUpdated: 'Última atualização:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {

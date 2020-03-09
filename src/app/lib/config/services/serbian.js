@@ -13,6 +13,7 @@ const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/BBCNewsnasrpskom`,
   atiAnalyticsAppName: 'news-serbian',
   atiAnalyticsProducerId: '81',
+  chartbeatDomain: 'serbian.bbc.co.uk',
   product: 'BBC News',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png',
   dir: `ltr`,
@@ -25,7 +26,9 @@ const baseServiceConfig = {
   isTrustProjectParticipant: true,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
-  hasRadioSchedule: false,
+  radioSchedule: {
+    hasRadioSchedule: false,
+  },
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,
@@ -119,6 +122,11 @@ export const service = {
         url: '/serbian/lat/popular/read',
       },
     ],
+    scriptLink: {
+      text: 'Ћир',
+      offscreenText: 'Cyrillic',
+      variant: 'cyr',
+    },
     translations: {
       seeAll: 'Pogledajte sve',
       home: 'Glavna stranica',
@@ -310,6 +318,11 @@ export const service = {
         url: '/serbian/cyr/popular/read',
       },
     ],
+    scriptLink: {
+      text: 'Lat',
+      offscreenText: 'Latin',
+      variant: 'lat',
+    },
     translations: {
       seeAll: 'Погледајте све',
       home: 'Главна страница',

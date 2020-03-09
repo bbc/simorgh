@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Жаңылоо',
     atiAnalyticsAppName: 'news-kyrgyz',
     atiAnalyticsProducerId: '58',
+    chartbeatDomain: 'kyrgyz.bbc.co.uk',
     brandName: 'BBC News Кыргыз Кызматы',
     product: 'BBC News',
     serviceLocalizedName: 'Кыргыз КызMATы',
@@ -38,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -165,6 +165,9 @@ export const service = {
       lastUpdated: 'Акыркы жаңылоо:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {

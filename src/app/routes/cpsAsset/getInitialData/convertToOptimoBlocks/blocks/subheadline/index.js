@@ -1,5 +1,8 @@
+import nodeLogger from '#lib/logger.node';
 import convertParagraph from '../paragraph';
 import { blockBase } from '#app/models/blocks';
+
+const logger = nodeLogger(__filename);
 
 const convertToSubheadline = async block => {
   const typesArray = ['crosshead', 'heading', 'subheading'];
@@ -9,7 +12,7 @@ const convertToSubheadline = async block => {
       blocks: [innerParagraph],
     });
   }
-  console.log(`Incorrect block type ${block.type}`);
+  logger.error(`Incorrect block type ${block.type}`);
   return null;
 };
 

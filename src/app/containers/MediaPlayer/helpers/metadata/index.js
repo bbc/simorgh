@@ -4,7 +4,7 @@ import pathOr from 'ramda/src/pathOr';
 const DEFAULT_IMAGE_RES = '1024x576';
 
 export const getThumbnailUri = aresMetadataBlock => {
-  const imageUrl = path(['model', 'imageUrl'], aresMetadataBlock);
+  const imageUrl = pathOr('', ['model', 'imageUrl'], aresMetadataBlock);
   return `https://${imageUrl.replace('$recipe', DEFAULT_IMAGE_RES)}`;
 };
 export const getUploadDate = aresMetadataBlock => {
