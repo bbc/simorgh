@@ -545,7 +545,7 @@ const genServices = {
             // '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP
           ],
           local: [
-            // '/gahuza/amakuru-23257470', // CPS MAP
+            '/gahuza/amakuru-23257470', // CPS MAP
             // '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP
           ],
         },
@@ -2065,7 +2065,7 @@ const genServices = {
             // '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
           ],
           local: [
-            // '/swahili/media-23268999', // CPS MAP with audio clip
+            '/swahili/media-23268999', // CPS MAP with audio clip
             // '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
           ],
         },
@@ -2138,7 +2138,7 @@ const genServices = {
             // '/tamil/global/2016/08/160822_tc2_testmap1', // TC2 MAP
           ],
           local: [
-            // '/tamil/india-23268994', // CPS MAP
+            '/tamil/india-23268994', // CPS MAP
             // '/tamil/global/2016/08/160822_tc2_testmap1', // TC2 MAP
           ],
         },
@@ -2626,7 +2626,7 @@ const genServices = {
             // '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP
           ],
           local: [
-            // '/urdu/world-23268929', // CPS MAP
+            '/urdu/world-23268929', // CPS MAP
             // '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP
           ],
         },
