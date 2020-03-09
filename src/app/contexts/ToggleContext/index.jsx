@@ -7,14 +7,16 @@ import constructTogglesEndpoint from './utils/constructTogglesEndpoint';
 const ToggleContext = createContext({});
 
 const ToggleContextProvider = ({ children, service, origin }) => {
-  const simorghToggles = defaultToggles[process.env.SIMORGH_APP_ENV];
+  const simorghToggles = defaultToggles[process.env.SIMORGH_APP_ENV || 'local'];
   const [toggleState, toggleDispatch] = useReducer(
     toggleReducer,
     simorghToggles,
   );
 
+  const environment = process.env.SIMORGH_APP_ENV || 'local';
+
   // temp method to only enable remote freature toggling for test and for a list of services
-  const { remoteFeatureToggles } = defaultToggles[process.env.SIMORGH_APP_ENV];
+  const { remoteFeatureToggles } = defaultToggles[environment];
 
   if (
     remoteFeatureToggles.enabled &&
@@ -22,14 +24,20 @@ const ToggleContextProvider = ({ children, service, origin }) => {
   ) {
     useEffect(() => {
       const fetchAndUpdateToggles = async () => {
-        const response = await fetch(constructTogglesEndpoint(service, origin));
-        const jsonData = await response.json();
+        try {
+          const response = await fetch(
+            constructTogglesEndpoint(service, origin),
+          );
+          const jsonData = await response.json();
 
-        // container code: const { ads } = toggleContext(); if(ads && ads.enabled)
-        // When we make the server request, the geoiplookup won't need to be made.
-        // Containers that require a geoip-specific setup
-        //
-        toggleDispatch(updateToggles(jsonData));
+          // container code: const { ads } = toggleContext(); if(ads && ads.enabled)
+          // When we make the server request, the geoiplookup won't need to be made.
+          // Containers that require a geoip-specific setup
+          //
+          toggleDispatch(updateToggles(jsonData));
+        } catch (error) {
+          console.log(`Error: ${error}`);
+        }
       };
       fetchAndUpdateToggles();
     }, [service]);

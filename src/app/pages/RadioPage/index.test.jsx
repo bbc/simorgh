@@ -23,7 +23,7 @@ describe('Radio Page Main', () => {
     const { pageData } = await getInitialData('some-live-radio-path');
 
     await matchSnapshotAsync(
-      <ToggleContextProvider>
+      <ToggleContextProvider service="mundo">
         <ServiceContextProvider service="amharic">
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"

@@ -33,7 +33,10 @@ platforms.forEach(platform => {
 
   mapStories.add('default', () => {
     return (
-      <ToggleContextProvider value={{ toggleState: defaultToggles }}>
+      <ToggleContextProvider
+        value={{ toggleState: defaultToggles }}
+        service="pidgin"
+      >
         <BrowserRouter>
           <MediaAssetPage
             pageType="MAP"

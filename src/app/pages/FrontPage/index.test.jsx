@@ -17,7 +17,7 @@ const requestContextData = {
 };
 
 const FrontPageWithContext = props => (
-  <ToggleContextProvider>
+  <ToggleContextProvider service="mundo">
     <RequestContextProvider {...requestContextData}>
       <ServiceContextProvider service="pidgin">
         <FrontPage {...props} />

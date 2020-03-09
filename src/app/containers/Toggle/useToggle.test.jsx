@@ -13,7 +13,7 @@ jest.mock('react', () => {
 });
 
 const wrapper = ({ children }) => (
-  <ToggleContextProvider>{children}</ToggleContextProvider>
+  <ToggleContextProvider service="mundo">{children}</ToggleContextProvider>
 );
 
 const { useContext } = jest.requireMock('react');
