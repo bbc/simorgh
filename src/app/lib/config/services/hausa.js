@@ -166,6 +166,8 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',
+      frequenciesPageLabel: 'Radio Frequencies Link Label',
+      header: 'BBC News Radio',
     },
     footer: {
       trustProjectLink: {
