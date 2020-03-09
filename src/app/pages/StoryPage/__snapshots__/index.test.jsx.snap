@@ -378,6 +378,10 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   background-color: transparent;
 }
 
+.c47 span[dir] {
+  background-color: #FFFFFF;
+}
+
 .c7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2244,6 +2248,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 .c49 span {
   background-color: transparent;
+}
+
+.c49 span[dir] {
+  background-color: #FFFFFF;
 }
 
 .c7 {
