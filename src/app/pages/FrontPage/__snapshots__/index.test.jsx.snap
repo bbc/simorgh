@@ -746,7 +746,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       class="MarginWrapper-sc-6bm912-0 bmzrWW"
                     >
                       <ol
-                        class="GridComponent-nf79gm-0 gjgzxV TwoColumnGrid-sc-1ofyujo-0 ewnImn"
+                        class="GridComponent-nf79gm-0 iakllL TwoColumnGrid-sc-1ofyujo-0 MultiColumnGrid-sc-1ofyujo-1 cCvfjo"
                         dir="ltr"
                         role="list"
                       >
@@ -759,7 +759,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 fpGgZU"
+                              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 chtVVr"
                               dir="ltr"
                             >
                               <span
@@ -801,7 +801,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 bLjXLm"
+                              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 dDTbdG"
                               dir="ltr"
                             >
                               <span
@@ -843,7 +843,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 fpGgZU"
+                              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 chtVVr"
                               dir="ltr"
                             >
                               <span
@@ -885,7 +885,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 bLjXLm"
+                              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 dDTbdG"
                               dir="ltr"
                             >
                               <span
@@ -927,7 +927,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 fpGgZU"
+                              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gHHITV"
                               dir="ltr"
                             >
                               <span
@@ -969,7 +969,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 bXogUn"
+                              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gUpuHE"
                               dir="ltr"
                             >
                               <span
@@ -1011,7 +1011,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 jmVRMD"
+                              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 jYgYTA"
                               dir="ltr"
                             >
                               <span
@@ -1053,7 +1053,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 bXogUn"
+                              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gUpuHE"
                               dir="ltr"
                             >
                               <span
@@ -1095,7 +1095,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 jmVRMD"
+                              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 jYgYTA"
                               dir="ltr"
                             >
                               <span
@@ -1137,7 +1137,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 bXogUn"
+                              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gUpuHE"
                               dir="ltr"
                             >
                               <span
