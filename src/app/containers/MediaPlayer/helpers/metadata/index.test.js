@@ -73,6 +73,22 @@ describe('helper', () => {
     );
   });
 
+  it('should return a valid thumbnail Uri for https assets', () => {
+    const clonedObject = {
+      ...validAresMediaVideoLiveStreamBlock,
+      model: {
+        ...{
+          imageUrl:
+            'https://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg',
+        },
+      },
+    };
+
+    expect(getThumbnailUri(clonedObject)).toEqual(
+      'https://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg',
+    );
+  });
+
   it('should return a valid thumbnail Uri for live audio assets', () => {
     expect(getThumbnailUri(validAresMediaLiveAudioBlock)).toEqual(
       'https://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg',
