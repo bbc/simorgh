@@ -74,7 +74,7 @@ describe('helper', () => {
   });
 
   it('should return a valid thumbnail Uri for https assets', () => {
-    const clonedObject = {
+    const liveStreamBlockWithHttpsImageUrl = {
       ...validAresMediaVideoLiveStreamBlock,
       model: {
         ...{
@@ -84,7 +84,7 @@ describe('helper', () => {
       },
     };
 
-    expect(getThumbnailUri(clonedObject)).toEqual(
+    expect(getThumbnailUri(liveStreamBlockWithHttpsImageUrl)).toEqual(
       'https://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg',
     );
   });
