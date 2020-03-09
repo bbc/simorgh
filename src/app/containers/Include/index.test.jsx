@@ -32,7 +32,7 @@ describe('IncludeContainer', () => {
       },
     };
     shouldMatchSnapshot(
-      'should dangerously render a an html markup',
+      'should render HTML',
       <IncludeContainerWithMockContext toggleState={mockToggles} />,
     );
   });
@@ -45,7 +45,7 @@ describe('IncludeContainer', () => {
       },
     };
     shouldMatchSnapshot(
-      'should not render any markup',
+      'should not render any HTML',
       <IncludeContainerWithMockContext toggleState={mockToggles} />,
     );
   });
