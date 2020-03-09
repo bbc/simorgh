@@ -1,35 +1,59 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:hausa/multimedia/2012/07/120712_click",
-    "locators": {
-      "assetUri": "/hausa/multimedia/2012/07/120712_click",
-      "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2012/07/120712_click",
-      "curie": "http://www.bbc.co.uk/asset/f8d0514e-7b5f-11e7-bb5d-9cc73db9bd6e"
+    "metadata": {
+      "id": "urn:bbc:ares::asset:hausa/multimedia/2012/07/120712_click",
+      "locators": {
+        "assetUri": "/hausa/multimedia/2012/07/120712_click",
+        "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2012/07/120712_click",
+        "curie": "http://www.bbc.co.uk/asset/f8d0514e-7b5f-11e7-bb5d-9cc73db9bd6e"
+      },
+      "type": "MAP",
+      "createdBy": "hausa",
+      "language": "ha",
+      "lastUpdated": 1554262764423,
+      "firstPublished": 1342109473,
+      "lastPublished": 1342109541,
+      "options": {
+        "includeComments": false,
+        "allowRightHandSide": true,
+        "allowDateStamp": true,
+        "suitableForSyndication": false,
+        "previouslyArchived": null,
+        "allowAdvertising": false,
+        "isBreakingNews": false
+      },
+      "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "18556827" },
+      "tags": {},
+      "version": "v1.0.0",
+      "blockTypes": [ "legacyMedia" ],
+      "includeComments": false
     },
-    "type": "MAP",
-    "createdBy": "hausa",
-    "language": "ha",
-    "lastUpdated": 1554262764423,
-    "firstPublished": 1342109473,
-    "lastPublished": 1342109541,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": false,
-      "previouslyArchived": null,
-      "allowAdvertising": false,
-      "isBreakingNews": false
+    "content": {
+      "blocks": [
+        {
+          "id": "18556827",
+          "subType": "primary",
+          "format": "video",
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/hausa/meta/dps/2012/07/emp/120712_click.emp.xml",
+          "type": "legacyMedia"
+        }
+      ]
     },
-    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "18556827" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia" ],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
+    "promo": {
+      "headlines": {
+        "shortHeadline": "Yadda birnin Landan yake —Peckham",
+        "headline": "Yadda birnin Landan yake —Peckham"
+      },
+      "locators": {
+        "assetUri": "/hausa/multimedia/2012/07/120712_click",
+        "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2012/07/120712_click",
+        "curie": "http://www.bbc.co.uk/asset/f8d0514e-7b5f-11e7-bb5d-9cc73db9bd6e"
+      },
+      "summary": "Pecham daya ce daga cikin unguwannin birnin Landan.",
+      "timestamp": 1554262764423,
+      "passport": {},
+      "media": {
         "id": "18556827",
         "subType": "primary",
         "format": "video",
@@ -37,53 +61,29 @@
         "live": false,
         "href": "http://www.bbc.co.uk/hausa/meta/dps/2012/07/emp/120712_click.emp.xml",
         "type": "legacyMedia"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Yadda birnin Landan yake —Peckham",
-      "headline": "Yadda birnin Landan yake —Peckham"
+      },
+      "indexImage": {
+        "id": "d7e206",
+        "subType": "index",
+        "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/07/12/120712160932_pearly_king_of_peckham_112x63_bbc_nocredit.jpg",
+        "path": "/amz/worldservice/live/assets/images/2012/07/12/120712160932_pearly_king_of_peckham_112x63_bbc_nocredit.jpg",
+        "height": 63,
+        "width": 112,
+        "altText": "",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:hausa/multimedia/2012/07/120712_click",
+      "type": "cps"
     },
-    "locators": {
-      "assetUri": "/hausa/multimedia/2012/07/120712_click",
-      "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2012/07/120712_click",
-      "curie": "http://www.bbc.co.uk/asset/f8d0514e-7b5f-11e7-bb5d-9cc73db9bd6e"
-    },
-    "summary": "Pecham daya ce daga cikin unguwannin birnin Landan.",
-    "timestamp": 1554262764423,
-    "passport": {},
-    "media": {
-      "id": "18556827",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/hausa/meta/dps/2012/07/emp/120712_click.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d7e206",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/07/12/120712160932_pearly_king_of_peckham_112x63_bbc_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2012/07/12/120712160932_pearly_king_of_peckham_112x63_bbc_nocredit.jpg",
-      "height": 63,
-      "width": 112,
-      "altText": "",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:hausa/multimedia/2012/07/120712_click",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Hotuna da Bidiyo",
-      "uri": "/hausa/multimedia",
-      "type": "simple"
-    },
-    "site": { "subType": "site", "name": "BBCHausa.com", "uri": "/hausa", "type": "simple" },
-    "groups": []
+    "relatedContent": {
+      "section": {
+        "subType": "index",
+        "name": "Hotuna da Bidiyo",
+        "uri": "/hausa/multimedia",
+        "type": "simple"
+      },
+      "site": { "subType": "site", "name": "BBCHausa.com", "uri": "/hausa", "type": "simple" },
+      "groups": []
+    }
   }
-}
