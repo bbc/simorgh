@@ -1,5 +1,5 @@
 import { When } from 'cypress-cucumber-preprocessor/steps';
-import { playMedia } from '../../common/media';
+import { playMedia } from '../../../common/media';
 
 When('I click the play video button', () => {
   playMedia('StyledVideoContainer', 'button.p_cta');
