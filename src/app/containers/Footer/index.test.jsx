@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import FooterContainer from '.';
@@ -43,6 +44,12 @@ const contextStub = {
   },
 };
 
+const FooterWithContext = stub => (
+  <ServiceContext.Provider value={stub}>
+    <FooterContainer />
+  </ServiceContext.Provider>
+);
+
 describe(`FooterContainer`, () => {
   beforeEach(() => {
     global.Date = class extends RealDate {
@@ -59,15 +66,49 @@ describe(`FooterContainer`, () => {
 
   shouldMatchSnapshot(
     'should render correctly',
-    <ServiceContext.Provider value={contextStub}>
-      <FooterContainer />
-    </ServiceContext.Provider>,
+    FooterWithContext(contextStub),
   );
 
   isNull(
-    'should render null when footer config not availible',
-    <ServiceContext.Provider value={{}}>
-      <FooterContainer />
-    </ServiceContext.Provider>,
+    'should render null when footer config not available',
+    FooterWithContext({}),
   );
+
+  describe('assertions', () => {
+    it('should contain copyright text', () => {
+      const { container } = render(FooterWithContext(contextStub));
+
+      const paragraph = container.getElementsByTagName('p')[0];
+
+      const copyrightSymbol = paragraph.getElementsByTagName('span')[0];
+      paragraph.removeChild(copyrightSymbol);
+
+      const externalLink = paragraph.getElementsByTagName('a')[0];
+      paragraph.removeChild(externalLink);
+
+      expect(paragraph.textContent).toEqual(
+        '3000 BBC. The BBC is not responsible for the content of external sites. ',
+      );
+    });
+
+    it('should contain a copyright symbol wrapped in span', () => {
+      const { container } = render(FooterWithContext(contextStub));
+
+      const paragraph = container.getElementsByTagName('p')[0];
+      const copyrightSymbol = paragraph.getElementsByTagName('span')[0];
+
+      expect(copyrightSymbol.textContent).toEqual('© ');
+    });
+
+    it('should contain an external link', () => {
+      const { container } = render(FooterWithContext(contextStub));
+
+      const paragraph = container.getElementsByTagName('p')[0];
+      const externalLink = paragraph.getElementsByTagName('a')[0];
+
+      expect(externalLink.textContent).toEqual(
+        'Read about our approach to external linking.',
+      );
+    });
+  });
 });

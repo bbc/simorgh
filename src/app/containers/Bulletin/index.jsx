@@ -77,9 +77,13 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
 
   const watchText = pathOr('Watch', ['media', 'watch'], translations);
   const listenText = pathOr('Listen', ['media', 'listen'], translations);
+  const liveText = pathOr('LIVE', ['media', 'liveLabel'], translations);
   const ctaText = contentType === 'TVBulletin' ? watchText : listenText;
 
   const isLive = pathOr(null, ['isLive'], item);
+
+  // This offscreen text should come from a fully translated string.
+  // https://github.com/bbc/simorgh/issues/5626
   const offScreenText = isLive ? `${ctaText} Live` : ctaText;
 
   return (
@@ -93,6 +97,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
       summaryText={summary}
       ctaLink={ctaLink}
       ctaText={ctaText}
+      liveText={liveText}
       offScreenText={offScreenText}
       dir={dir}
     />

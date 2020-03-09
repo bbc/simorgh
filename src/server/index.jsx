@@ -50,11 +50,27 @@ class LoggerStream {
   }
 }
 
-const constructDataFilePath = ({ pageType, service, id, variant = '' }) => {
-  const pageTypes = ['frontpage', 'mostRead'];
-  const dataPath = pageTypes.includes(pageType)
-    ? `${variant || 'index'}.json`
-    : `${id}${variant}.json`;
+const constructDataFilePath = ({
+  pageType,
+  service,
+  id,
+  variant = '',
+  assetUri,
+}) => {
+  let dataPath;
+
+  switch (pageType) {
+    case 'frontpage':
+    case 'mostRead':
+      dataPath = `${variant || 'index'}.json`;
+      break;
+    case 'cpsAssets':
+    case 'legacyAssets':
+      dataPath = `${variant}/${assetUri}.json`;
+      break;
+    default:
+      dataPath = `${id}${variant}.json`;
+  }
 
   return path.join(process.cwd(), 'data', service, pageType, dataPath);
 };
@@ -165,27 +181,26 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
     .get(cpsAssetPageDataPath, async ({ params }, res, next) => {
-      const { service, assetUri: id, variant } = params;
+      const { service, assetUri, variant } = params;
 
       const dataFilePath = constructDataFilePath({
         pageType: 'cpsAssets',
         service,
-        id,
+        assetUri,
         variant,
       });
 
       sendDataFile(res, dataFilePath, next);
     })
     .get(legacyAssetPageDataPath, async ({ params }, res, next) => {
-      const { service, assetUri: id, variant } = params;
+      const { service, assetUri, variant } = params;
 
       const dataFilePath = constructDataFilePath({
         pageType: 'legacyAssets',
         service,
-        id,
+        assetUri,
         variant,
       });
-
       sendDataFile(res, dataFilePath, next);
     })
     .get('/ckns_policy/*', (req, res) => {
@@ -223,16 +238,20 @@ server
     },
   )
   .get('/*', cspInjectFun, async ({ url, headers, path: urlPath }, res) => {
-    logger.info(`Path: [${urlPath}] URL: [${url}]`);
+    logger.info(
+      JSON.stringify({
+        event: 'ssr_request_received',
+        url,
+        urlPath,
+        headers,
+      }),
+    );
 
     try {
       const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
       const data = await route.getInitialData(url);
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
-
-      // Temp log to test upstream change
-      logger.info(`Headers: ${JSON.stringify(headers, null, 2)}`);
 
       data.path = urlPath;
       data.timeOnServer = Date.now();
@@ -255,8 +274,18 @@ server
         throw new Error('unknown result');
       }
     } catch ({ message, status }) {
+      logger.error(
+        JSON.stringify({
+          event: 'ssr_request_failed',
+          status: status || 500,
+          message,
+          url,
+          urlPath,
+          headers,
+        }),
+      );
+
       // Return an internal server error for any uncaught errors
-      logger.error(`status: ${status || 500} - ${message}`);
       res.status(500).send(message);
     }
   });

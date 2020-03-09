@@ -49,41 +49,35 @@ export const testsThatFollowSmokeTestConfig = ({
 
     describe(`Article Body`, () => {
       it('should render a H1, which contains/displays a styled headline', () => {
-        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-          ({ body }) => {
-            const headlineData = getBlockData('headline', body);
-            cy.get('h1').should(
-              'contain',
-              headlineData.model.blocks[0].model.blocks[0].model.text,
-            );
-          },
-        );
+        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+          const headlineData = getBlockData('headline', body);
+          cy.get('h1').should(
+            'contain',
+            headlineData.model.blocks[0].model.blocks[0].model.text,
+          );
+        });
       });
 
       it('should render an H2, which contains/displays a styled subheading', () => {
-        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-          ({ body }) => {
-            if (body.metadata.language === 'en-gb') {
-              const subheadingData = getBlockData('subheadline', body);
-              cy.get('h2').should(
-                'contain',
-                subheadingData.model.blocks[0].model.blocks[0].model.text,
-              );
-            }
-          },
-        );
+        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+          if (body.metadata.language === 'en-gb') {
+            const subheadingData = getBlockData('subheadline', body);
+            cy.get('h2').should(
+              'contain',
+              subheadingData.model.blocks[0].model.blocks[0].model.text,
+            );
+          }
+        });
       });
 
       it('should render a paragraph, which contains/displays styled text', () => {
         if (serviceHasCorrectlyRenderedParagraphs(service)) {
-          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-            ({ body }) => {
-              const paragraphData = getBlockData('text', body);
-              const { text } = paragraphData.model.blocks[0].model;
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const paragraphData = getBlockData('text', body);
+            const { text } = paragraphData.model.blocks[0].model;
 
-              cy.get('p').should('contain', text);
-            },
-          );
+            cy.get('p').should('contain', text);
+          });
         }
       });
 
@@ -111,42 +105,38 @@ export const testsThatFollowSmokeTestConfig = ({
         }
 
         it('should have an image copyright label with styling', () => {
-          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-            ({ body }) => {
-              const copyrightData = getBlockData('image', body);
-              const rawImageblock = getBlockByType(
-                copyrightData.model.blocks,
-                'rawImage',
-              );
-              const { copyrightHolder } = rawImageblock.model;
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const copyrightData = getBlockData('image', body);
+            const rawImageblock = getBlockByType(
+              copyrightData.model.blocks,
+              'rawImage',
+            );
+            const { copyrightHolder } = rawImageblock.model;
 
-              cy.get('figure')
-                .eq(0)
-                .within(() => {
-                  if (copyrightHolder === 'BBC') {
-                    // If an image has a BBC copyright, the copyright holder (<p>) does not appear on images.
-                    // This is why we're asserting the value. If the copyright does not appear and is not
-                    // 'BBC' then it is clear there is an error with this component.
-                    cy.get('p[class^="Copyright"]').should('not.exist');
-                  } else {
-                    cy.get('p[class^="Copyright"]')
-                      .should('be.visible')
-                      .and('contain', copyrightHolder);
-                  }
-                });
-            },
-          );
+            cy.get('figure')
+              .eq(0)
+              .within(() => {
+                if (copyrightHolder === 'BBC') {
+                  // If an image has a BBC copyright, the copyright holder (<p>) does not appear on images.
+                  // This is why we're asserting the value. If the copyright does not appear and is not
+                  // 'BBC' then it is clear there is an error with this component.
+                  cy.get('p[class^="Copyright"]').should('not.exist');
+                } else {
+                  cy.get('p[class^="Copyright"]')
+                    .should('be.visible')
+                    .and('contain', copyrightHolder);
+                }
+              });
+          });
         });
       }
 
       it('should have an inline link', () => {
-        cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-          ({ body }) => {
-            if (body.metadata.language === 'en-gb') {
-              cy.get('main a');
-            }
-          },
-        );
+        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+          if (body.metadata.language === 'en-gb') {
+            cy.get('main a');
+          }
+        });
       });
 
       if (serviceHasInlineLink(service) && Cypress.env('APP_ENV') === 'local') {
@@ -167,26 +157,12 @@ export const testsThatFollowSmokeTestConfig = ({
 
       if (serviceHasTimestamp(service)) {
         it('should render a timestamp', () => {
-          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-            ({ body }) => {
-              const { lastPublished, firstPublished } = body.metadata;
-              cy.get('time')
-                .eq(0)
-                .should('exist')
-                .should('be.visible')
-                .should('have.attr', 'datetime')
-                .should('not.be.empty');
-
-              if (lastPublished !== firstPublished) {
-                cy.get('time')
-                  .eq(1)
-                  .should(
-                    'contain',
-                    appConfig[config[service].name].articleTimestampPrefix,
-                  );
-              }
-            },
-          );
+          cy.get('time')
+            .eq(0)
+            .should('exist')
+            .should('be.visible')
+            .should('have.attr', 'datetime')
+            .should('not.be.empty');
         });
       }
 
@@ -194,7 +170,7 @@ export const testsThatFollowSmokeTestConfig = ({
       if (appToggles.mediaPlayer.enabled) {
         describe('Media Player', () => {
           it('should have a visible caption beneath a mediaplayer', () => {
-            cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+            cy.request(`${Cypress.env('currentPath')}.json`).then(
               ({ body }) => {
                 const media = getBlockData('video', body);
                 if (media) {

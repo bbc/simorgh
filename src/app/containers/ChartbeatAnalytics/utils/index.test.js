@@ -3,7 +3,6 @@ import {
   chartbeatUID,
   useCanonical,
   getSylphidCookie,
-  getDomain,
   buildSections,
   getType,
   getTitle,
@@ -85,33 +84,6 @@ describe('Chartbeat utilities', () => {
         });
       },
     );
-  });
-
-  describe('Chartbeat Domains', () => {
-    const services = [
-      {
-        service: 'news',
-        expectedDomain: 'bbc.co.uk',
-      },
-      {
-        service: 'persian',
-        expectedDomain: 'persian.bbc.co.uk',
-      },
-      {
-        service: 'igbo',
-        expectedDomain: 'igbo.bbc.co.uk',
-      },
-      {
-        service: 'thai',
-        expectedDomain: 'thai.bbc.co.uk',
-      },
-    ];
-
-    services.forEach(({ service, expectedDomain }) => {
-      it(`getDomain should return "${expectedDomain}" when service is ${service}`, () => {
-        expect(getDomain(service)).toBe(expectedDomain);
-      });
-    });
   });
 
   describe('Chartbeat Sections', () => {
@@ -306,6 +278,7 @@ describe('Chartbeat utilities', () => {
         pageType: 'article',
         data: {},
         brandName: '',
+        chartbeatDomain: 'bbc.co.uk',
         env: 'live',
         service: 'news',
         origin: 'bbc.com',
@@ -334,6 +307,7 @@ describe('Chartbeat utilities', () => {
         pageType: 'frontPage',
         data: {},
         brandName: 'BBC-News',
+        chartbeatDomain: 'bbc.co.uk',
         env: 'test',
         service: 'news',
         origin: 'test.bbc.com',
@@ -382,6 +356,7 @@ describe('Chartbeat utilities', () => {
           },
         },
         brandName: '',
+        chartbeatDomain: 'afrique.bbc.co.uk',
         env: 'live',
         service: 'afrique',
         origin: 'bbc.com',
@@ -417,6 +392,7 @@ describe('Chartbeat utilities', () => {
           },
         },
         brandName: '',
+        chartbeatDomain: 'korean.bbc.co.uk',
         env: 'test',
         service: 'korean',
         origin: 'test.bbc.com',

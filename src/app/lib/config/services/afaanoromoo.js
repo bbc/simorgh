@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Haaromsameera',
     atiAnalyticsAppName: 'news-afaanoromoo',
     atiAnalyticsProducerId: '2',
+    chartbeatDomain: 'afaanoromoo.bbc.co.uk',
     brandName: 'BBC News Afaan Oromoo',
     product: 'BBC News',
     serviceLocalizedName: 'Afaan Oromoo',
@@ -39,7 +40,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Oduu',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -50,7 +50,7 @@ export const service = {
       currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
       relatedContent: 'Odeessa kana irratti dabalata',
-      sections: 'Kutaawwan',
+      navMenuText: 'Kutaawwan',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -144,7 +144,7 @@ export const service = {
         video: 'Viidiyoo',
         listen: 'Dhaggeeffadhaa',
         watch: 'Daawwadhu',
-        liveLabel: 'JIRADHU',
+        liveLabel: 'KALLATTIIN',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -156,6 +156,9 @@ export const service = {
       lastUpdated: 'Yeroo dhuma kan haaromfame:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {

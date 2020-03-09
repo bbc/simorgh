@@ -10,6 +10,7 @@ const baseServiceConfig = {
   articleTimestampPrefix: '最近更新：',
   atiAnalyticsAppName: 'news-ukchina',
   atiAnalyticsProducerId: '93',
+  chartbeatDomain: 'ukchina.bbc.co.uk',
   brandName: 'BBC 英伦网',
   product: 'BBC',
   serviceLocalizedName: '英伦网',
@@ -28,7 +29,6 @@ const baseServiceConfig = {
   script: noAscendersOrDescenders,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
-  hasRadioSchedule: false,
   brandSVG,
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
@@ -85,6 +85,9 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: false,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     navigation: [
       {
         title: '主页',
@@ -99,13 +102,18 @@ export const service = {
         url: '/ukchina/simp/media/video',
       },
     ],
+    scriptLink: {
+      text: '繁',
+      offscreenText: 'Traditional',
+      variant: 'trad',
+    },
     translations: {
       seeAll: '浏览全部',
       home: '主页',
       currentPage: '目前页面',
       skipLinkText: '跳过此内容',
       relatedContent: '更多相关内容',
-      sections: '分类',
+      navMenuText: '分类',
       mediaAssetPage: {
         mediaPlayer: '多媒体播放器',
         audioPlayer: '音频播放器',
@@ -260,13 +268,18 @@ export const service = {
         url: '/ukchina/trad/media/video',
       },
     ],
+    scriptLink: {
+      text: '简',
+      offscreenText: 'Simplified',
+      variant: 'simp',
+    },
     translations: {
       seeAll: '瀏覽全部',
       home: '主頁',
       currentPage: '目前頁面',
       skipLinkText: '跳過此內容',
       relatedContent: '更多相關內容',
-      sections: '分類',
+      navMenuText: '分類',
       mediaAssetPage: {
         mediaPlayer: '多媒體播放器',
         audioPlayer: '音頻播放器',

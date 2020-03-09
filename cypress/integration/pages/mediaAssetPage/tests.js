@@ -1,5 +1,3 @@
-import config from '../../../support/config/services';
-
 const getParagraphText = blocks => {
   const textReplacements = {
     '&quot;': '"',
@@ -32,32 +30,28 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
     it('should render a H1, which contains/displays a styled headline', () => {
-      cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-        ({ body }) => {
-          cy.get('h1').should('contain', body.promo.headlines.headline);
-        },
-      );
+      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+        cy.get('h1').should('contain', body.promo.headlines.headline);
+      });
     });
 
     it('should render a paragraph, which contains/displays styled text', () => {
-      cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-        ({ body }) => {
-          const textCheck = body.content.blocks.find(
-            el => el.type === 'paragraph' && el.markupType === 'plain_text',
-          );
-          if (textCheck) {
-            const text = getParagraphText(body.content.blocks);
-            cy.get('p').should('contain', text);
-          } else {
-            cy.log('No paragraph text present');
-          }
-        },
-      );
+      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+        const textCheck = body.content.blocks.find(
+          el => el.type === 'paragraph' && el.markupType === 'plain_text',
+        );
+        if (textCheck) {
+          const text = getParagraphText(body.content.blocks);
+          cy.get('p').should('contain', text);
+        } else {
+          cy.log('No paragraph text present');
+        }
+      });
     });
 
     it('legacy MAP should render a link using an <a> with href rather than a plain text <link>', () => {
       const requestPath = Cypress.env('currentPath');
-      const isLegacyAsset = requestPath.split('/').length > 4;
+      const isLegacyAsset = requestPath.split('/').length > 5;
 
       if (isLegacyAsset) {
         cy.request(`${requestPath}.json`).then(({ body }) => {
@@ -81,25 +75,30 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
     });
 
     it('should have href that matches assetURI for 1st related content link', () => {
-      cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-        ({ body }) => {
-          const numRelatedContentGroups = body.relatedContent.groups.length;
+      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+        const numRelatedContentGroups = body.relatedContent.groups.length;
 
-          if (numRelatedContentGroups > 0) {
-            const assetURI =
-              body.relatedContent.groups[0].promos[0].locators.assetUri;
-            cy.get(
-              'li[class^="StoryPromoLi"] > div[class^="StoryPromoWrapper"]',
-            )
-              .find('h3')
-              .within(() => {
-                cy.get('a')
-                  .should('have.attr', 'href')
-                  .and('include', assetURI);
-              });
-          }
-        },
-      );
+        const requestPath = Cypress.env('currentPath');
+        const isLegacyAsset = requestPath.split('/').length > 5;
+        if (isLegacyAsset) {
+          return cy.log('Test skipped because legacy MAP');
+        }
+
+        if (numRelatedContentGroups <= 0) {
+          return cy.log('Test skipped because no related content');
+        }
+        const assetURI =
+          body.relatedContent.groups[0].promos[0].locators.assetUri;
+
+        cy.get('li[class^="StoryPromoLi"] > div[class^="StoryPromoWrapper"]')
+          .find('h3')
+          .within(() => {
+            cy.get('a')
+              .should('have.attr', 'href')
+              .and('include', assetURI);
+          });
+        return cy.log('Not legacy MAP, has related content');
+      });
     });
   });
 };

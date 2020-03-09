@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
-import pipe from 'ramda/src/pipe';
 import { string } from 'prop-types';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
@@ -21,7 +20,7 @@ import {
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { StyledFrontPageMain } from '#app/components/Grid';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
@@ -31,13 +30,9 @@ import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 
-// Page Handlers
-import withVariant from '#containers/PageHandlers/withVariant';
-import withContexts from '#containers/PageHandlers/withContexts';
-import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
-import withLoading from '#containers/PageHandlers/withLoading';
-import withError from '#containers/PageHandlers/withError';
-import withData from '#containers/PageHandlers/withData';
+export const StyledFrontPageMain = styled.main`
+  background-color: ${C_GHOST};
+`;
 
 export const StyledFrontPageDiv = styled.div`
   /* To add GEL Margins */
@@ -67,7 +62,7 @@ export const StyledFrontPageDiv = styled.div`
   }
 `;
 
-const FrontPageContainer = ({ pageData, mostReadEndpointOverride }) => {
+const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     product,
     serviceLocalizedName,
@@ -91,6 +86,14 @@ const FrontPageContainer = ({ pageData, mostReadEndpointOverride }) => {
   const hasUsefulLinks =
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
+  const renderMostRead = () => (
+    <MostReadContainer
+      mostReadEndpointOverride={mostReadEndpointOverride}
+      maxTwoColumns
+      isOnFrontPage
+    />
+  );
+
   return (
     <>
       <ATIAnalytics data={pageData} />
@@ -109,43 +112,24 @@ const FrontPageContainer = ({ pageData, mostReadEndpointOverride }) => {
         <StyledFrontPageDiv>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
-              {group.type === 'useful-links' && (
-                <MostReadContainer
-                  mostReadEndpointOverride={mostReadEndpointOverride}
-                  maxTwoColumns
-                />
-              )}
+              {group.type === 'useful-links' && renderMostRead()}
               <FrontPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}
-          {!hasUsefulLinks && (
-            <MostReadContainer
-              mostReadEndpointOverride={mostReadEndpointOverride}
-              maxTwoColumns
-            />
-          )}
+          {!hasUsefulLinks && renderMostRead()}
         </StyledFrontPageDiv>
       </StyledFrontPageMain>
     </>
   );
 };
 
-FrontPageContainer.propTypes = {
+FrontPage.propTypes = {
   pageData: frontPageDataPropTypes.isRequired,
   mostReadEndpointOverride: string,
 };
 
-FrontPageContainer.defaultProps = {
+FrontPage.defaultProps = {
   mostReadEndpointOverride: null,
 };
 
-const EnhancedFrontPageContainer = pipe(
-  withData,
-  withError,
-  withLoading,
-  withPageWrapper,
-  withContexts,
-  withVariant,
-)(FrontPageContainer);
-
-export default EnhancedFrontPageContainer;
+export default FrontPage;
