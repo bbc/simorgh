@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, node } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
+import { C_WHITE } from '@bbc/psammead-styles/colours';
 import styled from 'styled-components';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
@@ -29,6 +30,10 @@ const StyledSectionLabel = styled(SectionLabel)`
 
   span {
     background-color: transparent;
+  }
+
+  span[dir] {
+    background-color: ${C_WHITE};
   }
 `;
 
