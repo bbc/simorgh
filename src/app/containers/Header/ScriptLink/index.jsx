@@ -24,13 +24,13 @@ const ScriptLinkContainer = () => {
   const { service, script, scriptLink } = useContext(ServiceContext);
   const { enabled: scriptLinkEnabled } = useToggle('scriptLink');
   const { enabled: variantCookieEnabled } = useToggle('variantCookie');
-
-  const { text, offscreenText, variant } = scriptLink;
   const { path, params } = useRouteMatch();
 
   if (!scriptLinkEnabled) {
     return null;
   }
+
+  const { text, offscreenText, variant } = scriptLink;
 
   return (
     <ScriptLink
