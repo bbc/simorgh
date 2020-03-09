@@ -172,6 +172,8 @@ export const service = {
       hasRadioSchedule: true,
       frequenciesPageUrl:
         '/arabic/institutional/2011/01/000000_frequencies_radio',
+      frequenciesPageLabel: 'Radio Frequencies Link Label',
+      header: 'BBC News Radio',
     },
     footer: {
       trustProjectLink: {
