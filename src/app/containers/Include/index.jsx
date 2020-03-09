@@ -10,26 +10,28 @@ const logger = webLogger();
 
 const IncludeContainer = ({ href }) => {
   const [markup, setMarkup] = useState(null);
-  const { enabled } = useToggle('styIncludes');
+  const { enabled } = useToggle('include');
 
   useEffect(() => {
     const fetchMarkup = async () => {
-      const res = await fetch(href);
-      res
-        .text()
-        .then(html => setMarkup(html))
-        .catch(e => logger.error(`HTTP Error: "${e}"`));
+      try {
+        const res = await fetch(href);
+        const html = await res.text();
+        setMarkup(html);
+      } catch (e) {
+        logger.error(`HTTP Error: "${e}"`);
+      }
     };
-    fetchMarkup();
-  }, [href]);
+    if (enabled) {
+      fetchMarkup();
+    }
+  }, [href, enabled]);
 
   if (markup && enabled) {
     return (
-      <>
-        <GridItemConstrainedMedium>
-          <div dangerouslySetInnerHTML={{ __html: markup }} />,
-        </GridItemConstrainedMedium>
-      </>
+      <GridItemConstrainedMedium>
+        <div dangerouslySetInnerHTML={{ __html: markup }} />,
+      </GridItemConstrainedMedium>
     );
   }
   return null;
