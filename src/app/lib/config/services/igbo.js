@@ -217,6 +217,12 @@ export const service = {
           href: 'https://www.bbc.com/igbo/institutional-43090448',
           text: 'Kpọtụrụ BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
