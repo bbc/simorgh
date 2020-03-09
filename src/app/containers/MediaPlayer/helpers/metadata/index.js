@@ -6,7 +6,7 @@ const DEFAULT_IMAGE_RES = '1024x576';
 export const getThumbnailUri = aresMetadataBlock => {
   let imageUrl = pathOr('', ['model', 'imageUrl'], aresMetadataBlock);
 
-  if (imageUrl.includes('http')) {
+  if (imageUrl.startsWith('http')) {
     imageUrl = imageUrl
       .split('/')
       .slice(2)
