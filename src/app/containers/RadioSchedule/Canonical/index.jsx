@@ -9,6 +9,11 @@ import webLogger from '#lib/logger.web';
 
 const logger = webLogger();
 
+const RadioFrequencyLink = styled(Link)`
+  font-size: 14px;
+  line-height: 18px;
+`;
+
 const CanonicalRadioSchedule = ({ endpoint }) => {
   const header = 'BBC News Radio';
   const [schedule, setRadioSchedule] = useState([]);
@@ -32,11 +37,6 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
 
     fetchRadioScheduleData(endpoint);
   }, [endpoint]);
-
-  const RadioFrequencyLink = styled(Link)`
-    font-size: 14px;
-    line-height: 18px;
-  `;
 
   const renderFrequencyLink = link => (
     <RadioFrequencyLink link={link}>
