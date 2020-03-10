@@ -323,6 +323,66 @@ export const validAresMetadataBlock = {
   type: 'aresMediaMetadata',
 };
 
+export const validAresMediaVideoLiveStreamBlock = {
+  blockId: 'urn:bbc:ares::primary:63501296',
+  model: {
+    embedding: false,
+    id: '63501296',
+    subType: 'primary',
+    live: true,
+    available: true,
+    format: 'audio_video',
+    title: 'พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบ',
+    imageCopyright: 'BBC',
+    imageUrl: 'http://b.files.bbci.co.uk/15E0C/test/_63721698_p01kx435.jpg',
+    synopses: {
+      short: 'พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบ',
+      medium: 'พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบ',
+      long: 'พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบ',
+    },
+    versions: [
+      {
+        kind: 'programme',
+        live: true,
+        versionId: 'journalism_uk_news_stream_01',
+      },
+    ],
+  },
+  id: 'b66165d9-f1b6-44e2-a903-b8f8cdecfb4f',
+  position: [2, 1, 1],
+  type: 'aresMediaMetadata',
+};
+
+export const validAresMediaLiveAudioBlock = {
+  type: 'aresMediaMetadata',
+  blockId: 'urn:bbc:ares::primary:63501300',
+  model: {
+    embedding: false,
+    id: '63501300',
+    subType: 'primary',
+    live: true,
+    available: true,
+    format: 'audio',
+    title: 'Ўзбек деҳқонининг косаси нега оқармайдиshort',
+    imageCopyright: 'AFP',
+    imageUrl: 'http://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg',
+    synopses: {
+      short: 'Ўзбек деҳқонининг косаси нега оқармайдиshort',
+      medium: 'Ўзбек деҳқонининг косаси нега оқармайдиshort',
+      long: 'Ўзбек деҳқонининг косаси нега оқармайдиshort',
+    },
+    versions: [
+      {
+        kind: 'programme',
+        live: true,
+        versionId: 'bbc_world_service_west_africa',
+      },
+    ],
+  },
+  id: 'fca18d0a-6037-4e39-bde9-71fbb8a05f6a',
+  position: [2, 1, 1],
+};
+
 export const defaultToggles = {
   local: {
     mediaPlayer: {
