@@ -33,6 +33,7 @@ import {
 import categoryType from './categoryMap/index';
 
 const StoryPage = ({ pageData }) => {
+  const features = pathOr([], ['features'], pageData);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const category = path(
     ['promo', 'passport', 'category', 'categoryName'],
@@ -189,7 +190,7 @@ const StoryPage = ({ pageData }) => {
             <h2>This is a component in the second column</h2>
           </ComponentWrapper>
           <ComponentWrapper>
-            <FeaturesAnalysis />
+            <FeaturesAnalysis content={features} />
           </ComponentWrapper>
           <ComponentWrapper>
             <h2>This is a component in the second column</h2>

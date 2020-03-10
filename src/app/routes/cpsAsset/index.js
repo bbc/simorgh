@@ -3,6 +3,7 @@ import getInitialData from './getInitialData';
 import { MediaAssetPage, PhotoGalleryPage, StoryPage, FrontPage } from '#pages';
 import ErrorPage from '#pages/Error';
 import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
+import withFrontPageData from './withFrontPageData';
 import {
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
@@ -33,6 +34,6 @@ export default {
   path: [cpsAssetPagePath, legacyAssetPagePath],
   exact: true,
   component: CpsAsset,
-  getInitialData,
+  getInitialData: withFrontPageData(getInitialData),
   pageType: 'cpsAsset',
 };

@@ -10,7 +10,6 @@ import {
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 
-import featuresAnalysis from '#pages/StoryPage/featuresAnalysis.json';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemConstrainedLarge } from '#lib/styledGrid';
@@ -50,7 +49,7 @@ const FeaturesAnalysis = ({ content }) => {
   FeaturesAnalysisWrapper.propTypes = {
     children: node.isRequired,
   };
-  if (!featuresAnalysis.length) return null;
+  if (!content.length) return null;
 
   return (
     <FeaturesAnalysisWrapper>
@@ -84,7 +83,7 @@ FeaturesAnalysis.propTypes = {
 };
 
 FeaturesAnalysis.defaultProps = {
-  content: featuresAnalysis, // @TODO: rm this
+  content: [],
 };
 
 export default FeaturesAnalysis;
