@@ -6,8 +6,8 @@ import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';
 
 const baseServiceConfig = {
-  articleAuthor: `https://www.facebook.com/bbcworldservice/`,
-  articleTimestampPrefix: '最近更新：',
+  articleAuthor: 'https://www.facebook.com/bbcnews',
+  articleTimestampPrefix: '更新',
   atiAnalyticsAppName: 'news-ukchina',
   atiAnalyticsProducerId: '93',
   chartbeatDomain: 'ukchina.bbc.co.uk',
@@ -19,7 +19,7 @@ const baseServiceConfig = {
   dir: `ltr`,
   datetimeLocale: `zh-cn`,
   service: 'ukchina',
-  serviceName: '英伦网',
+  serviceName: 'UK China',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBCChina',
   twitterSite: '@BBCChina',
@@ -45,11 +45,11 @@ export const service = {
     frontPageTitle: '主页',
     lang: `zh-hans`,
     locale: `zh-hans`,
-    defaultCaptionOffscreenText: '说明文字，',
-    audioCaptionOffscreenText: '音频加注文字，',
-    videoCaptionOffscreenText: '视频加注文字，',
-    imageCaptionOffscreenText: '图像加注文字，',
-    imageCopyrightOffscreenText: '图像来源，',
+    defaultCaptionOffscreenText: '说明文字, ',
+    audioCaptionOffscreenText: '音频加注文字, ',
+    videoCaptionOffscreenText: '视频加注文字, ',
+    imageCaptionOffscreenText: '图像加注文字, ',
+    imageCopyrightOffscreenText: '图像来源, ',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
@@ -81,7 +81,7 @@ export const service = {
     },
     mostRead: {
       header: '热读',
-      lastUpdated: '最近更新：',
+      lastUpdated: '最近更新: ',
       numberOfItems: 10,
       hasMostRead: true,
     },
@@ -122,7 +122,7 @@ export const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404-页面无法找到',
+          title: '页面无法找到',
           message: '对不起，我们无法找到您所需页面。请尝试：',
           solutions: [
             '双次点击这个链接',
@@ -136,7 +136,7 @@ export const service = {
         },
         500: {
           statusCode: '500',
-          title: '500-内部伺服器错误',
+          title: '内部伺服器错误',
           message: '对不起，我们无法找到您所需页面。请尝试：',
           solutions: ['点击浏览器上的更新钮', '请稍候再试'],
           callToActionFirst: '或者，请访问',
@@ -214,9 +214,9 @@ export const service = {
     locale: `zh-hant`,
     externalLinkText: ', 外部鏈接',
     frontPageTitle: '主頁',
-    defaultCaptionOffscreenText: '說明文字，',
-    audioCaptionOffscreenText: '音频加注文字，',
-    videoCaptionOffscreenText: '音頻加註文字，',
+    defaultCaptionOffscreenText: '說明文字, ',
+    audioCaptionOffscreenText: '音頻加註文字，',
+    videoCaptionOffscreenText: '視頻加註文字，',
     imageCaptionOffscreenText: '圖像加註文字，',
     imageCopyrightOffscreenText: '圖像來源，',
     footer: {
@@ -256,7 +256,7 @@ export const service = {
     },
     mostRead: {
       header: '熱讀',
-      lastUpdated: '最近更新：',
+      lastUpdated: '最近更新: ',
       numberOfItems: 10,
       hasMostRead: true,
     },
@@ -294,7 +294,7 @@ export const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404-頁面無法找到',
+          title: '頁面無法找到',
           message: '對不起，我們無法找到您所需頁面。請嘗試：',
           solutions: [
             '雙次點擊這個鏈接',
@@ -308,7 +308,7 @@ export const service = {
         },
         500: {
           statusCode: '500',
-          title: '500-內部伺服器錯誤',
+          title: '內部伺服器錯誤',
           message: '對不起，我們無法找到您所需頁面。請嘗試：',
           solutions: ['點擊瀏覽器上的更新鈕', '請稍候再試'],
           callToActionFirst: '或者，請訪問',
