@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
+import equals from 'ramda/src/equals';
 import Figure from '@bbc/psammead-figure';
 import styled from 'styled-components';
 import {
@@ -28,41 +29,7 @@ import {
 
 const DEFAULT_WIDTH = 512;
 
-const MemoizedCanonicalMediaPlayer = memo(
-  ({
-    src,
-    placeholderSrc,
-    placeholderSrcset,
-    showPlaceholder,
-    title,
-    service,
-    mediaInfo,
-    noJsMessage,
-    noJsClassName,
-  }) => (
-    <CanonicalMediaPlayer
-      src={src}
-      placeholderSrc={placeholderSrc}
-      placeholderSrcset={placeholderSrcset}
-      showPlaceholder={showPlaceholder}
-      title={title}
-      service={service}
-      mediaInfo={mediaInfo}
-      noJsMessage={noJsMessage}
-      noJsClassName={noJsClassName}
-    />
-  ),
-  (prevProps, nextProps) => {
-    /*
-     * `useLocation` hook state change causes the MediaPlayer to reload
-     * when the hash changes e.g. when skipping to content. This will ensure
-     * the MediaPlayer only rerenders when `src` or `showPlaceholder` changes.
-     */
-    if (prevProps.src === nextProps.src) return true;
-    if (prevProps.showPlaceholder === nextProps.showPlaceholder) return true;
-    return false;
-  },
-);
+const MemoizedCanonicalMediaPlayer = memo(CanonicalMediaPlayer, equals);
 
 const MediaPlayerContainer = ({
   blocks,
