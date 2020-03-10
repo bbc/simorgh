@@ -16,6 +16,10 @@ const buildPlaceholderSrc = (src, resolution) => {
 };
 
 const buildIChefURL = ({ originCode, locator, resolution }) => {
+  if (!originCode) return '';
+
+  if (!locator) return '';
+
   if (originCode === 'pips') {
     return locator;
   }
