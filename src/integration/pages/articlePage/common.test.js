@@ -1,10 +1,20 @@
-import { runFooterTests, runCommonSeoTests } from '../../common';
+import {
+  runCommonAnalyticsTests,
+  runFooterTests,
+  runCommonSeoTests,
+} from '../../common';
 import { ARTICLE_PAGE_URL } from '../../pageUrls';
+
+runCommonAnalyticsTests({
+  pageUrl: ARTICLE_PAGE_URL,
+});
 
 runCommonSeoTests({
   pageUrl: ARTICLE_PAGE_URL,
   pageTitle:
     "Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin",
+  canonicalUrl: 'http://localhost/pidgin/tori-51745682',
+  language: 'pcm',
 });
 
 runFooterTests({

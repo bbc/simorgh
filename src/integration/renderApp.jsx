@@ -1,4 +1,5 @@
 import React from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { render } from '@testing-library/react';
 import { within } from '@testing-library/dom';
 import { MemoryRouter } from 'react-router-dom';
@@ -18,7 +19,7 @@ const getByTextSpecial = getByText => text =>
     return nodeHasText && childrenDontHaveText;
   });
 
-export default async url => {
+const getAppComponent = async url => {
   const pathname = url.replace('https://www.bbc.com', '');
   const jsonData = require(`./pageData/${pathname}`); // eslint-disable-line import/no-dynamic-require, global-require
   fetch.mockResponse(JSON.stringify(jsonData));
@@ -31,7 +32,7 @@ export default async url => {
   );
   const { pageData } = await getInitialData(pathname);
 
-  const renderResult = render(
+  return (
     <MemoryRouter initialEntries={[pathname]}>
       <App
         routes={routes}
@@ -39,8 +40,13 @@ export default async url => {
         bbcOrigin=""
         history={{}}
       />
-    </MemoryRouter>,
+    </MemoryRouter>
   );
+};
+
+export default async url => {
+  const appComponent = await getAppComponent(url);
+  const renderResult = render(appComponent);
 
   return {
     ...renderResult,
@@ -54,4 +60,10 @@ export default async url => {
     },
     getByTextSpecial: getByTextSpecial(renderResult.getByText),
   };
+};
+
+export const renderAppStaticMarkup = async url => {
+  const appComponent = await getAppComponent(url);
+
+  return renderToStaticMarkup(appComponent);
 };

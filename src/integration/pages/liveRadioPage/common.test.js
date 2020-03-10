@@ -4,6 +4,8 @@ import { LIVE_RADIO_PAGE_URL } from '../../pageUrls';
 runCommonSeoTests({
   pageUrl: LIVE_RADIO_PAGE_URL,
   pageTitle: 'BBC 코리아 라디오 - BBC News 코리아',
+  canonicalUrl: 'http://localhost/korean/bbc_korean_radio/liveradio',
+  language: 'ko',
 });
 
 runFooterTests({
