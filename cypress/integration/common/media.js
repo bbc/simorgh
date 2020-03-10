@@ -1,9 +1,11 @@
 import { Then } from 'cypress-cucumber-preprocessor/steps';
 
-const iframeSelector = 'iframe';
+const iframeSelector = () => {
+  return Cypress.env('isAmp') ? 'amp-iframe iframe' : 'iframe';
+};
 
 export const assertMediaIsPlaying = () => {
-  cy.get(iframeSelector).then($iframe => {
+  cy.get(iframeSelector()).then($iframe => {
     cy.wrap($iframe.prop('contentWindow'), { timeout: 20000 })
       .its('embeddedMedia.playerInstances.mediaPlayer')
       .invoke('currentTime')
@@ -19,11 +21,11 @@ export const assertMediaPlayerIsReady = iframe => {
 
 export const playMedia = (outerIFrameClass, playButton) => {
   cy.get(
-    `div[class^="${outerIFrameClass}"] iframe[class^="StyledIframe"]`,
+    `div[class^="${outerIFrameClass}"] ${iframeSelector()}`,
   ).then($iframe => assertMediaPlayerIsReady($iframe));
 
   // Click the play button
-  cy.get('iframe').then(iframe => {
+  cy.get(iframeSelector()).then(iframe => {
     cy.wrap(iframe.contents().find('iframe'))
       .should(inner => expect(inner.contents().find(playButton)).to.exist)
       .then(inner => cy.wrap(inner.contents().find(playButton)).click());
