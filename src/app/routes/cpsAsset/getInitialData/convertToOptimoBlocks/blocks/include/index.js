@@ -1,3 +1,5 @@
+import uuid from 'uuid';
+
 const convertInclude = ({ href, url, ...rest }) => {
   const supportedTypes = {
     idt2: 'idt2',
@@ -13,6 +15,7 @@ const convertInclude = ({ href, url, ...rest }) => {
     model: {
       // `url` here should be replaced with `href` once mozart routes have been created. /*TODO: Create issue for this */
       href: url,
+      id: uuid(),
       ...rest,
     },
   };
