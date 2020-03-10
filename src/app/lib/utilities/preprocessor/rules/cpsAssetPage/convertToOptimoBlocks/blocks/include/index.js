@@ -1,7 +1,7 @@
 import { includeBlock } from '#app/models/blocks';
 
-const convertInclude = ({ tile, html, href, platform }) => {
-  return includeBlock(tile, href, platform);
+const convertInclude = props => {
+  return includeBlock(props);
 };
 
 export default convertInclude;

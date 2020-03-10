@@ -79,7 +79,7 @@ const StoryPageContainer = ({ pageData }) => {
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
     byline: props => <StyledByline {...props} />,
-    include: Include,
+    include: props => <Include {...props} />,
   };
 
   const StyledGhostGrid = styled(GhostGrid)`

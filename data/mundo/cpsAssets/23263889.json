@@ -386,30 +386,6 @@
            "type":"media"
         },
         {
-           "text":"Includes: VisJo",
-           "markupType":"plain_text",
-           "type":"paragraph"
-        },
-        {
-           "required":false,
-           "tile":"Include from VisJo",
-           "href":"/include/vjamericas/176-eclipse-lookup/mundo/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png",
-           "platform":"highweb",
-           "type":"include"
-        },
-        {
-           "text":"Includes: IDT2",
-           "markupType":"plain_text",
-           "type":"paragraph"
-        },
-        {
-           "required":false,
-           "tile":"IDT2 Include",
-           "href":"/idt2/41a6ad82-8bad-482e-9645-301af4a8e857",
-           "platform":"highweb",
-           "type":"include"
-        },
-        {
            "text":"Includes: IDT1: A quiz!",
            "markupType":"plain_text",
            "type":"paragraph"
@@ -419,7 +395,7 @@
            "tile":"A quiz!",
            "href":"/indepthtoolkit/quizzes/sistema_solar_Quiz_Mundo/syndicated?app-clickable=true&app-image=http%3A%2F%2Fnews.files.bbci.co.uk%2Fvj%2Flive%2Fidt-images%2Fquizzes-quiz_cta%2Fstart_geh2q.png",
            "platform":"highweb",
-           "type":"include"
+           "type": "include"
         },
         {
            "text":"Here come some different shape images:",
