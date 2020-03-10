@@ -6,8 +6,10 @@ const getTogglesEndpoint = (service, origin) => {
 
   // client side renders should trigger a geoIPLookup
   if (onClient()) {
+    console.log('zzzzzzz', `${baseTogglesUrl}&geoiplookup=true`);
     return `${baseTogglesUrl}&geoiplookup=true`;
   }
+  console.log('zzzzzzz', baseTogglesUrl);
 
   return baseTogglesUrl;
 };

@@ -2,37 +2,18 @@ import React, { useContext } from 'react';
 import { render, act } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
 import '@testing-library/jest-dom/extend-expect';
+import togglesConfig from '#lib/config/toggles';
 
-const mockRemoteFeatureToggleOn = {
-  local: {
-    foobarFeature: {
-      enabled: false,
-    },
-    remoteFeatureToggles: {
-      enabled: true,
-    },
-  },
+const mockTogglesResponseAdsOn = {
+  toggles: { ads: { enabled: true, value: '' } },
 };
-
-const mockRemoteFeatureToggleOff = {
-  local: {
-    remoteFeatureToggles: {
-      enabled: false,
-    },
-    foobarFeature: {
-      enabled: true,
-    },
-  },
+const mockTogglesResponseAdsOff = {
+  toggles: { ads: { enabled: false, value: '' } },
 };
-
-jest.mock('./utils/constructTogglesEndpoint', () =>
-  jest.fn().mockReturnValue('test.com'),
-);
-
-jest.mock('#lib/config/toggles', () => mockRemoteFeatureToggleOff);
 
 beforeEach(() => {
   process.env.SIMORGH_APP_ENV = 'local';
+  process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
   global.fetch = fetch;
 });
 
@@ -43,52 +24,62 @@ afterEach(() => {
 // Require after mock to allow mocking of JS object
 const { ToggleContext, ToggleContextProvider } = require('./index');
 
-describe('ToggleContext with remote feature toggles', () => {
-  it('integration test', () => {
-    const LogComponenent = () => {
-      const { toggleState } = useContext(ToggleContext);
-
-      return toggleState.foobarFeature.enabled && <div>foobarFeature</div>;
-    };
-    const { getByText } = render(
-      <ToggleContextProvider service="mundo">
-        <LogComponenent />
-      </ToggleContextProvider>,
-    );
-
-    expect(getByText('foobarFeature')).toBeInTheDocument();
-  });
-
-  // given the remote feature toggle and the feature toggle is enabled
-  xit('given the remote feature toggle and the feature toggle is enabled', async () => {
-    jest.mock('#lib/config/toggles', () => mockRemoteFeatureToggleOff); // TODO: This mock is not working
-
-    fetchMock.mock('test.com', {
-      toggles: {
-        foobarFeature: {
-          enabled: false,
-          value: '',
-        },
+fetchMock.mock(
+  'https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com&geoiplookup=true',
+  JSON.stringify({
+    toggles: {
+      ads: {
+        enabled: true,
+        value: '',
       },
-    });
+    },
+  }),
+);
 
-    const LogComponenent = () => {
-      const { toggleState } = useContext(ToggleContext);
-
-      return (
-        toggleState.foobarFeature.enabled && (
-          <div id="test-feature">foobarFeature</div>
-        )
-      );
-    };
-    await act(async () =>
-      render(
+describe('ToggleContext with remote feature toggles', () => {
+  describe('given feature toggle is enabled', () => {
+    it('should render the feature component', () => {
+      togglesConfig.local.chartbeatAnalytics.enabled = true;
+      const LogComponenent = () => {
+        const { toggleState } = useContext(ToggleContext);
+        return (
+          toggleState.chartbeatAnalytics.enabled && (
+            <div>chartbeatAnalytics</div>
+          )
+        );
+      };
+      const { getByText } = render(
         <ToggleContextProvider service="mundo">
           <LogComponenent />
         </ToggleContextProvider>,
-      ),
-    );
+      );
 
-    expect(document.getElementById('test-feature')).not.toBeInTheDocument();
+      expect(getByText('chartbeatAnalytics')).toBeInTheDocument();
+    });
+  });
+
+  xdescribe('given feature toggle is enabled and remote feature toggle is enabled (in iSite)', () => {
+    xit('should render the feature component', async () => {
+      let getByText;
+      togglesConfig.local.ads.enabled = false;
+
+      const LogComponenent = () => {
+        const { toggleState } = useContext(ToggleContext);
+
+        return toggleState.ads.enabled && <div>ads</div>;
+      };
+
+      act(() => {
+        // todo not sure this is working
+        const thing = render(
+          <ToggleContextProvider service="mundo">
+            <LogComponenent />
+          </ToggleContextProvider>,
+        );
+        getByText = thing.getByText;
+      });
+
+      expect(getByText('ads')).toBeInTheDocument();
+    });
   });
 });

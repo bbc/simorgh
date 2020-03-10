@@ -1,7 +1,10 @@
 const toggles = {
   local: {
+    ads: {
+      enabled: true,
+    },
     chartbeatAnalytics: {
-      enabled: false,
+      enabled: true,
     },
     mediaPlayer: {
       enabled: true,
@@ -24,6 +27,9 @@ const toggles = {
     },
   },
   test: {
+    ads: {
+      fetchValue: true,
+    },
     chartbeatAnalytics: {
       enabled: true,
     },

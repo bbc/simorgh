@@ -9,10 +9,8 @@ import { MediaAssetPage } from '..';
 import pageData from './fixtureData';
 
 const defaultToggles = {
-  test: {
-    mediaPlayer: {
-      enabled: true,
-    },
+  mediaPlayer: {
+    enabled: true,
   },
 };
 

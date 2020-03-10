@@ -26,7 +26,7 @@ const { useContext } = jest.requireMock('react');
 describe('ToggleContainer', () => {
   beforeEach(() => {
     useContext.mockReturnValueOnce({ env: 'test' }).mockReturnValueOnce({
-      toggleState: { test: { foo: { enabled: true } } },
+      toggleState: { foo: { enabled: true } },
     });
   });
 

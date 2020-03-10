@@ -11,10 +11,8 @@ import videoBlock from './fixtures';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 const defaultToggles = {
-  test: {
-    mediaPlayer: {
-      enabled: true,
-    },
+  mediaPlayer: {
+    enabled: true,
   },
 };
 

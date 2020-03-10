@@ -11,15 +11,8 @@ import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 
 const defaultToggleState = {
-  test: {
-    navOnArticles: {
-      enabled: true,
-    },
-  },
-  live: {
-    navOnArticles: {
-      enabled: false,
-    },
+  navOnArticles: {
+    enabled: true,
   },
 };
 

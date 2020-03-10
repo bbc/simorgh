@@ -324,28 +324,14 @@ export const validAresMetadataBlock = {
 };
 
 export const defaultToggles = {
-  local: {
-    mediaPlayer: {
-      enabled: true,
-    },
-  },
-  test: {
-    mediaPlayer: {
-      enabled: true,
-    },
-  },
-  live: {
-    mediaPlayer: {
-      enabled: false,
-    },
+  mediaPlayer: {
+    enabled: true,
   },
 };
 
 const toggleStateOff = {
-  local: {
-    mediaPlayer: {
-      enabled: false,
-    },
+  mediaPlayer: {
+    enabled: false,
   },
 };
 
