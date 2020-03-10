@@ -1,7 +1,7 @@
 Feature: Live Radio Player
 
     @smoke
-    Scenario Outline: Verify media plays on live radio page
+    Scenario Outline: Verify media plays on Live Radio page
         Given I navigate to <URL>
         When I click the play radio button
         Then the radio plays
@@ -12,7 +12,7 @@ Feature: Live Radio Player
 # | http://localhost:7080/korean/bbc_korean_radio/liveradio.amp |
 
     @test
-    Scenario Outline: Verify media plays on live radio page
+    Scenario Outline: Verify media plays on Live Radio page
         Given I navigate to <URL>
         When I click the play radio button
         Then the radio plays
@@ -23,7 +23,7 @@ Feature: Live Radio Player
     # | https://www.test.bbc.com/korean/bbc_korean_radio/liveradio.amp |
 
     @live
-    Scenario Outline: Verify media plays on live radio page
+    Scenario Outline: Verify media plays on Live Radio page
         Given I navigate to <URL>
         When I click the play radio button
         Then the radio plays
