@@ -11,6 +11,7 @@ phases:
   build:
     commands:
       - npm run cypress:ci
+      - npm run cucumber:ci
 reports:
   JunitReportsTest:
     files:
