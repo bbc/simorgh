@@ -71,7 +71,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
                         // `timeout` only applies to the methods chained below.
                         // `its()` benefits from this, and will wait up to 8s
                         // for the mediaPlayer instance to become available.
-                        timeout: 8000,
+                        timeout: 20000,
                       })
                         .its('embeddedMedia.playerInstances.mediaPlayer')
                         .invoke('currentTime')
