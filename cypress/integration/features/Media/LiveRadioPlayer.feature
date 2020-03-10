@@ -6,10 +6,9 @@ Feature: Live Radio Player
         When I click the play radio button
         Then the radio plays
         Examples:
-            | URL                                                     |
-            | http://localhost:7080/korean/bbc_korean_radio/liveradio |
-# amp not currently supported
-# | http://localhost:7080/korean/bbc_korean_radio/liveradio.amp |
+            | URL                                                         |
+            | http://localhost:7080/korean/bbc_korean_radio/liveradio     |
+            | http://localhost:7080/korean/bbc_korean_radio/liveradio.amp |
 
     @test
     Scenario Outline: Verify media plays on Live Radio page
@@ -17,10 +16,9 @@ Feature: Live Radio Player
         When I click the play radio button
         Then the radio plays
         Examples:
-            | URL                                                        |
-            | https://www.test.bbc.com/korean/bbc_korean_radio/liveradio |
-    # amp not currently supported
-    # | https://www.test.bbc.com/korean/bbc_korean_radio/liveradio.amp |
+            | URL                                                            |
+            | https://www.test.bbc.com/korean/bbc_korean_radio/liveradio     |
+            | https://www.test.bbc.com/korean/bbc_korean_radio/liveradio.amp |
 
     @live
     Scenario Outline: Verify media plays on Live Radio page
@@ -28,7 +26,6 @@ Feature: Live Radio Player
         When I click the play radio button
         Then the radio plays
         Examples:
-            | URL                                                   |
-            | https://www.bbc.com/korean/bbc_korean_radio/liveradio |
-# amp not currently supported
-# | https://www.bbc.com/korean/bbc_korean_radio/liveradio.amp |
+            | URL                                                       |
+            | https://www.bbc.com/korean/bbc_korean_radio/liveradio     |
+            | https://www.bbc.com/korean/bbc_korean_radio/liveradio.amp |
