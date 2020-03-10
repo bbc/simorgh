@@ -27,6 +27,8 @@ import {
 } from '#models/propTypes';
 
 const DEFAULT_WIDTH = 512;
+const DEFAULT_IMAGE = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/amp_audio_placeholder.png`;
+
 const MediaPlayerContainer = ({
   blocks,
   assetId,
@@ -102,12 +104,15 @@ const MediaPlayerContainer = ({
     return null; // this should be the holding image with an error overlay
   }
 
-  const placeholderSrcset = getPlaceholderSrcSet({ originCode, locator });
-  const placeholderSrc = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_WIDTH,
-  });
+  const placeholderSrcset =
+    getPlaceholderSrcSet({ originCode, locator }) || DEFAULT_IMAGE;
+
+  const placeholderSrc =
+    buildIChefURL({
+      originCode,
+      locator,
+      resolution: DEFAULT_WIDTH,
+    }) || DEFAULT_IMAGE;
 
   const embedSource = getEmbedUrl({
     mediaId: `${assetId}/${isLegacyMedia ? blockId : versionId}/${lang}`,
