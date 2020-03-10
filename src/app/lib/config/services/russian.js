@@ -175,7 +175,7 @@ export const service = {
       header: 'Самое популярное',
       lastUpdated: 'Последнее обновление:',
       numberOfItems: 10,
-      hasMostRead: false,
+      hasMostRead: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
