@@ -37,7 +37,7 @@ const Wrapper = styled(GridItemConstrainedLarge)`
   }
 `;
 
-const CpsAssetMediaPlayerContainer = ({ blocks, assetUri, isLegacyMedia }) => {
+const CpsAssetMediaPlayer = ({ blocks, assetUri, isLegacyMedia }) => {
   if (!assetUri) return null;
 
   const mediaBlock = filterForBlockType(blocks, 'aresMedia');
@@ -62,14 +62,14 @@ const CpsAssetMediaPlayerContainer = ({ blocks, assetUri, isLegacyMedia }) => {
   );
 };
 
-CpsAssetMediaPlayerContainer.propTypes = {
+CpsAssetMediaPlayer.propTypes = {
   ...mediaPlayerPropTypes,
   assetUri: string.isRequired,
   isLegacyMedia: bool,
 };
-CpsAssetMediaPlayerContainer.defaultProps = {
+CpsAssetMediaPlayer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
   isLegacyMedia: false,
 };
 
-export default CpsAssetMediaPlayerContainer;
+export default CpsAssetMediaPlayer;
