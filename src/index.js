@@ -18,7 +18,16 @@ let currentApp = app;
 
 server.listen(port, error => {
   if (error) {
-    logger.error(error);
+    logger.error(
+      JSON.stringify(
+        {
+          event: 'server_listen_error',
+          message: error,
+        },
+        null,
+        2,
+      ),
+    );
   }
 });
 
