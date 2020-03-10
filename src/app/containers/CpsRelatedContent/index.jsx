@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape } from 'prop-types';
+import { arrayOf, shape, bool, node } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from 'styled-components';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
@@ -24,7 +24,6 @@ const Wrapper = styled(GridItemConstrainedLarge)`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-bottom: ${GEL_SPACING_TRPL};
   }
-
   /* z-index needs explicitly set as the psammead section label component uses negative z-indices */
   z-index: 0;
 `;
@@ -44,17 +43,29 @@ const formatItem = (item, env) => {
   return assocPath(['locators', 'assetUri'], `${baseUri}${uriSuffix}`, item);
 };
 
-const CpsRelatedContent = ({ content }) => {
+const CpsRelatedContent = ({ content, enableGridWrapper }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const { env } = useContext(RequestContext);
+  const a11yAttributes = {
+    as: 'section',
+    role: 'region',
+    'aria-labelledby': 'related-content-heading',
+  };
+  const RelatedContentWrapper = ({ children }) =>
+    enableGridWrapper ? (
+      <GhostGrid {...a11yAttributes}>
+        <Wrapper>{children}</Wrapper>
+      </GhostGrid>
+    ) : (
+      <Wrapper {...a11yAttributes}>{children}</Wrapper>
+    );
+  RelatedContentWrapper.propTypes = {
+    children: node.isRequired,
+  };
   if (!content.length) return null;
 
   return (
-    <GhostGrid
-      as="section"
-      role="region"
-      aria-labelledby="related-content-heading"
-    >
+    <RelatedContentWrapper>
       <Wrapper>
         <StyledSectionLabel
           script={script}
@@ -99,7 +110,7 @@ const CpsRelatedContent = ({ content }) => {
             ))}
         </Grid>
       </Wrapper>
-    </GhostGrid>
+    </RelatedContentWrapper>
   );
 };
 
@@ -108,10 +119,12 @@ CpsRelatedContent.propTypes = {
   // Both pages use CPS, so the data schema is the same
   // This can be found under CPS ARES payloads: relatedContent.groups[0].promos
   content: arrayOf(shape(storyItem)),
+  enableGridWrapper: bool,
 };
 
 CpsRelatedContent.defaultProps = {
   content: [],
+  enableGridWrapper: false,
 };
 
 export default CpsRelatedContent;

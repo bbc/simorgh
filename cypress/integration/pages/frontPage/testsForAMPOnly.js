@@ -1,5 +1,3 @@
-import config from '../../../support/config/services';
-
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
@@ -15,7 +13,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     describe('AMP Status', () => {
       it('should return a 200 response', () => {
         cy.testResponseCodeAndType(
-          `${config[service].pageTypes.frontPage.path}.amp`,
+          `${Cypress.env('currentPath')}.amp`,
           200,
           'text/html',
         );

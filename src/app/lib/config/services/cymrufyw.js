@@ -20,6 +20,7 @@ export const service = {
     articleTimestampPrefix: 'Wedi ei ddiweddaru',
     atiAnalyticsAppName: 'news-cymrufyw',
     atiAnalyticsProducerId: '100',
+    chartbeatDomain: 'cymrufyw.bbc.co.uk',
     brandName: 'BBC Cymru Fyw',
     product: 'BBC News',
     serviceLocalizedName: 'Cymru Fyw',
@@ -47,7 +48,6 @@ export const service = {
     manifestPath: '/articles/manifest.json',
     swPath: '/articles/sw.js',
     frontPageTitle: 'Newyddion a mwy',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -58,7 +58,7 @@ export const service = {
       currentPage: 'Y dudalen bresennol',
       skipLinkText: `Neidio i'r cynnwys`,
       relatedContent: 'Cynnwys perthnasol',
-      sections: 'Adrannau',
+      navMenuText: 'Adrannau',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -165,6 +165,9 @@ export const service = {
       lastUpdated: 'Diweddariad diwethaf:',
       numberOfItems: 5,
       hasMostRead: false,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {

@@ -1,0 +1,3249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Story Page should not show the pop-out timestamp when allowDateStamp is false 1`] = `
+<DocumentFragment>
+  .c30 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding: 1.5rem 0;
+}
+
+.c23 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.c5 {
+  grid-column: 1 / span 6;
+}
+
+.c13 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+.c4 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+.c21 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c22 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c22:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c22:focus,
+.c22:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.c12 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.c18 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c17 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  background-color: rgba(34,34,34,0.75);
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 0.25rem 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+}
+
+.c20 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6E6E73;
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+}
+
+.c20 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c20 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c20 i {
+  font-style: normal;
+}
+
+.c15 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c16 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+  -webkit-animation: eMLfYp 0.2s linear;
+  animation: eMLfYp 0.2s linear;
+  -webkit-transition: visibility 0.2s linear;
+  transition: visibility 0.2s linear;
+}
+
+.c28 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c36 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c38 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c34 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c32 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c35 {
+  margin: 0;
+  padding: 0;
+}
+
+.c41 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c41:first-child {
+  padding-top: 0;
+}
+
+.c41:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c39 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c25 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+.c25 > li::before {
+  content: ' ';
+  display: inline-block;
+  width: 2rem;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
+  margin-left: -2rem;
+}
+
+.c26 {
+  margin-bottom: 1rem;
+}
+
+.c24 {
+  margin-bottom: 1.5rem;
+}
+
+.c27 {
+  margin-top: 0.5rem;
+}
+
+.c27 figure {
+  padding-bottom: 0;
+}
+
+.c31 {
+  margin-bottom: 1rem;
+  z-index: 0;
+}
+
+.c33 {
+  margin-top: 0;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c8 {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 0;
+  padding-left: 0;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+}
+
+.c9 {
+  color: #404040;
+}
+
+.c10 {
+  color: #5A5A5A;
+}
+
+.c6 {
+  padding-bottom: 1rem;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c45 {
+  background: #ECEAE7;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.c29 {
+  border: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c30 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c30 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c30 {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width:25rem) {
+  .c5 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c5 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c5 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c5 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c5 {
+    max-width: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c3 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c3 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c3 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c11 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c11 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c14 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c14 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c14 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c14 {
+    grid-column: 1 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c19 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c19 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c19 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
+    grid-column: 1 / span 10;
+  }
+}
+
+@media (max-width:79.9375rem) {
+  .c13 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c13 {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c20 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c20 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c20 {
+    padding: 0.5rem 0 0;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(8/12*(100% - 12 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(5/12*(100% - 12 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 16.666666666666668%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c40 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c42 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c42 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c42 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c42 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c42 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c42 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c42 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c43 {
+    display: block;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c37 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c38 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c34 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c34 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c32 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c32 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c41 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c41 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c41 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c41:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c25 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c25 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c27 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c27 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c27 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c27 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c27 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c27 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c27 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c31 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c31 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c31 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c31 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c31 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c31 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c6 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c44 {
+    margin-top: 2rem;
+  }
+}
+
+<div
+    id="ContextsContainer"
+  >
+    <div
+      id="PageWrapperContainer"
+    >
+      <div
+        id="LoadingContainer"
+      >
+        <div
+          id="ErrorContainer"
+        >
+          <div
+            id="DataContainer"
+          >
+            <noscript />
+            <div
+              class="c0 c1"
+              dir="ltr"
+            >
+              <main
+                class="c2"
+                dir="ltr"
+                role="main"
+              >
+                <div
+                  class="c3"
+                >
+                  <h1
+                    class="c4"
+                    id="content"
+                    tabindex="-1"
+                  >
+                    STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
+                  </h1>
+                </div>
+                <div
+                  class="c5 c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <ul
+                      class="c8"
+                      role="list"
+                    >
+                      <li
+                        class="c9"
+                        role="listitem"
+                      >
+                        By Andrew Overtyped Marr
+                      </li>
+                      <li
+                        class="c10"
+                        role="listitem"
+                      >
+                        BBC News - Overtyped
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="c11"
+                >
+                  <figure
+                    class="c12"
+                  >
+                    <div
+                      class="c13"
+                    >
+                      <div
+                        class="c14"
+                      >
+                        <div
+                          class="c15"
+                        >
+                          <img
+                            alt="Some people at the NTA awards"
+                            class="c16"
+                            src="https://ichef.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+                            srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
+                            width="976"
+                          />
+                          <p
+                            class="c17"
+                            role="text"
+                          >
+                            <span
+                              class="c18"
+                            >
+                              Wia dis foto come from, 
+                            </span>
+                            <span
+                              lang="en-GB"
+                            >
+                              Joe Maher
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="c19"
+                      >
+                        <figcaption
+                          class="c20"
+                        >
+                          <span
+                            class="c18"
+                          >
+                            Wetin we call dis foto, 
+                          </span>
+                          <p>
+                            Some people went to the NTA awards recently.
+                          </p>
+                        </figcaption>
+                      </div>
+                    </div>
+                  </figure>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c21"
+                  >
+                    <b>
+                       This is introduction text, it should be bold by default, but also support 
+                    </b>
+                    <a
+                      class="c22"
+                      href="https://bbc.com/pidgin/23248703"
+                    >
+                      inline links
+                    </a>
+                    <b>
+                       to other pages.
+                    </b>
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c21"
+                  >
+                    <i
+                      class="c23"
+                    >
+                      <b>
+                        This is a subheadline! that has 
+                      </b>
+                    </i>
+                    <a
+                      class="c22"
+                      href="https://bbc.com/pidgin/23248703"
+                    >
+                      a link
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <div
+                    class="c24"
+                  >
+                    <ul
+                      class="c25"
+                      dir="ltr"
+                      role="list"
+                    >
+                      <li
+                        class="c26"
+                        role="listitem"
+                      >
+                        This is a unordered list
+                      </li>
+                      <li
+                        class="c26"
+                        role="listitem"
+                      >
+                        It can have 
+                        <b>
+                          bold text
+                        </b>
+                         in it
+                      </li>
+                      <li
+                        class="c26"
+                        role="listitem"
+                      >
+                        <a
+                          class="c22"
+                          href="https://bbc.com/pidgin/23248703"
+                        >
+                          It can also have links
+                        </a>
+                      </li>
+                      <li
+                        class="c26"
+                        role="listitem"
+                      >
+                        <i
+                          class="c23"
+                        >
+                          It can even have italic text in it!
+                        </i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c21"
+                  >
+                    Feta the big cheese macaroni cheese. 
+                    <a
+                      class="c22"
+                      href="https://bbc.com/pidgin/23248703"
+                    >
+                      Caerphilly danish fontina
+                    </a>
+                     queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
+                    <b>
+                      Cow cheeseburger
+                    </b>
+                     stilton emmental.
+                  </p>
+                </div>
+                <div
+                  class="c11"
+                >
+                  <figure
+                    class="c12"
+                  >
+                    <div
+                      class="c13"
+                    >
+                      <div
+                        class="c14"
+                      >
+                        <div
+                          class="c15"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                          <noscript />
+                          <p
+                            class="c17"
+                            role="text"
+                          >
+                            <span
+                              class="c18"
+                            >
+                              Wia dis foto come from, 
+                            </span>
+                            <span
+                              lang="en-GB"
+                            >
+                              Joe Maher
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="c19"
+                      />
+                    </div>
+                  </figure>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c21"
+                  >
+                    <b>
+                      Start of localised text
+                    </b>
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c21"
+                  >
+                    Minista nọ n'isi ụlọọrụ ahụ bụ Hadi Sirika sị na ya agaghị atụrụ ndị mmadụ asị na ya gaghaị arụcha ya bụ ọdọụgbọelụ na Disemba dịka ha kwuburu mana ya ga-eburu isi ụlọọrụ ya ga-gwunye n'Enugu ịhụ na ha rụchara n'Apreelụ.
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c21"
+                  >
+                    <b>
+                      End of localised text
+                    </b>
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c21"
+                  >
+                    Rubber cheese macaroni 
+                    <i
+                      class="c23"
+                    >
+                      cheese cottage cheese
+                    </i>
+                    . Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <div
+                    class="c24"
+                  >
+                    <ul
+                      class="c25"
+                      dir="ltr"
+                      role="list"
+                    >
+                      <li
+                        class="c26"
+                        role="listitem"
+                      >
+                        This is a ordered list
+                      </li>
+                      <li
+                        class="c26"
+                        role="listitem"
+                      >
+                        It can have 
+                        <b>
+                          bold text
+                        </b>
+                         in it
+                      </li>
+                      <li
+                        class="c26"
+                        role="listitem"
+                      >
+                        <a
+                          class="c22"
+                          href="https://bbc.com/pidgin/23248703"
+                        >
+                          It can also have links
+                        </a>
+                      </li>
+                      <li
+                        class="c26"
+                        role="listitem"
+                      >
+                        <i
+                          class="c23"
+                        >
+                          It can even have italic text in it!
+                        </i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c21"
+                  >
+                    Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
+                  </p>
+                </div>
+                <div
+                  class="c27"
+                >
+                  <figure
+                    class="c12"
+                  >
+                    <div
+                      class="c28"
+                    >
+                      <iframe
+                        allow="autoplay; fullscreen"
+                        allowfullscreen=""
+                        class="c29"
+                        scrolling="no"
+                        src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
+                        title="Media player"
+                      />
+                      <noscript />
+                    </div>
+                  </figure>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <h2
+                    class="c30"
+                    id="This-is-a-heading"
+                    tabindex="-1"
+                  >
+                    This is a heading!
+                  </h2>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <h2
+                    class="c30"
+                    id="This-is-a-subheading"
+                    tabindex="-1"
+                  >
+                    This is a subheading!
+                  </h2>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c21"
+                  >
+                    Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <h2
+                    class="c30"
+                    id="This-is-a-crosshead"
+                    tabindex="-1"
+                  >
+                    This is a crosshead!
+                  </h2>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c21"
+                  >
+                    Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c21"
+                  >
+                    <a
+                      aria-label="This is an external link to google!, outside"
+                      class="c22"
+                      href="https://www.google.com/"
+                    >
+                      This is an external link to google!
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c21"
+                  >
+                    Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
+                  </p>
+                </div>
+                <section
+                  aria-labelledby="related-content-heading"
+                  class="c31"
+                  role="region"
+                >
+                  <div
+                    class="c31"
+                  >
+                    <div
+                      class="c32 c33"
+                    >
+                      <div
+                        class="c34"
+                      />
+                      <h2
+                        class="c35"
+                      >
+                        <div
+                          class="c36"
+                        >
+                          <span
+                            class="c37"
+                          >
+                            <span
+                              class="c38"
+                              dir="ltr"
+                              id="related-content-heading"
+                            >
+                              Another thing we de for inside dis tori
+                            </span>
+                          </span>
+                        </div>
+                      </h2>
+                    </div>
+                    <ul
+                      class="c39 c40"
+                      dir="ltr"
+                      role="list"
+                    >
+                      <li
+                        class="c41 c42"
+                        dir="ltr"
+                        role="listitem"
+                      />
+                    </ul>
+                  </div>
+                </section>
+              </main>
+              <div
+                class="c43 c44"
+                dir="ltr"
+              >
+                <div
+                  class="c45"
+                >
+                  <h2>
+                    This is a component in the second column
+                  </h2>
+                </div>
+                <div
+                  class="c45"
+                >
+                  <h2>
+                    This is a component in the second column
+                  </h2>
+                </div>
+                <div
+                  class="c45"
+                >
+                  <h2>
+                    This is a component in the second column
+                  </h2>
+                </div>
+                <div
+                  class="c45"
+                >
+                  <h2>
+                    This is a component in the second column
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Story Page snapshots should match snapshot for STY 1`] = `
+.c32 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding: 1.5rem 0;
+}
+
+.c25 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.c5 {
+  grid-column: 1 / span 6;
+}
+
+.c13 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+.c4 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+.c23 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c24 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c24:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c24:focus,
+.c24:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.c12 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.c18 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c17 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  background-color: rgba(34,34,34,0.75);
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 0.25rem 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+}
+
+.c20 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6E6E73;
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+}
+
+.c20 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c20 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c20 i {
+  font-style: normal;
+}
+
+.c15 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c16 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+  -webkit-animation: eMLfYp 0.2s linear;
+  animation: eMLfYp 0.2s linear;
+  -webkit-transition: visibility 0.2s linear;
+  transition: visibility 0.2s linear;
+}
+
+.c22 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+.c22:last-child {
+  padding-bottom: 1rem;
+}
+
+.c30 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c38 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c39 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c40 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c36 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c34 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c37 {
+  margin: 0;
+  padding: 0;
+}
+
+.c43 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c43:first-child {
+  padding-top: 0;
+}
+
+.c43:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c41 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c27 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+.c27 > li::before {
+  content: ' ';
+  display: inline-block;
+  width: 2rem;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
+  margin-left: -2rem;
+}
+
+.c28 {
+  margin-bottom: 1rem;
+}
+
+.c26 {
+  margin-bottom: 1.5rem;
+}
+
+.c29 {
+  margin-top: 0.5rem;
+}
+
+.c29 figure {
+  padding-bottom: 0;
+}
+
+.c33 {
+  margin-bottom: 1rem;
+  z-index: 0;
+}
+
+.c35 {
+  margin-top: 0;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c8 {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 0;
+  padding-left: 0;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+}
+
+.c9 {
+  color: #404040;
+}
+
+.c10 {
+  color: #5A5A5A;
+}
+
+.c21 {
+  padding-bottom: 1rem;
+}
+
+.c6 {
+  padding-bottom: 1rem;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c47 {
+  background: #ECEAE7;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.c31 {
+  border: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c32 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c32 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c32 {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width:25rem) {
+  .c5 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c5 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c5 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c5 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c5 {
+    max-width: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c3 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c3 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c3 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c11 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c11 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c14 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c14 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c14 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c14 {
+    grid-column: 1 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c19 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c19 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c19 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
+    grid-column: 1 / span 10;
+  }
+}
+
+@media (max-width:79.9375rem) {
+  .c13 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c13 {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c23 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c20 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c20 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c20 {
+    padding: 0.5rem 0 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c22 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 0.5rem) + 7 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(8/12*(100% - 12 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(5/12*(100% - 12 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 16.666666666666668%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c42 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c44 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c44 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c44 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c44 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c44 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c44 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c44 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c45 {
+    display: block;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c40 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c40 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c40 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c40 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c36 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c34 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c34 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c43 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c43 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c43 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c43:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c29 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c29 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c29 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c29 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c29 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c29 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c29 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c33 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c33 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c33 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c33 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c33 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c33 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c21 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c6 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c46 {
+    margin-top: 2rem;
+  }
+}
+
+<html
+  dir="ltr"
+  lang="pcm"
+>
+  <head>
+    <title>
+      STY - Blood pressure drugs dey work better - BBC News Pidgin
+    </title>
+    <link
+      href="https://www.test.bbc.com/pidgin/world-23252817"
+      rel="canonical"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/pidgin/world-23252817.amp"
+      rel="amphtml"
+    />
+    <link
+      href="http://localhost:7080/pidgin/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="BBC News Pidgin"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News Pidgin"
+      name="application-name"
+    />
+    <meta
+      content="This is a test asset used in Simorgh, please do not edit it without asking."
+      name="description"
+    />
+    <meta
+      content="100004154058350"
+      property="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      property="fb:app_id"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="This is a test asset used in Simorgh, please do not edit it without asking."
+      property="og:description"
+    />
+    <meta
+      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+      property="og:image"
+    />
+    <meta
+      content="Some people at the NTA awards"
+      property="og:image:alt"
+    />
+    <meta
+      content="pcm"
+      property="og:locale"
+    />
+    <meta
+      content="BBC News Pidgin"
+      property="og:site_name"
+    />
+    <meta
+      content="STY - Blood pressure drugs dey work better - BBC News Pidgin"
+      property="og:title"
+    />
+    <meta
+      content="article"
+      property="og:type"
+    />
+    <meta
+      content="https://www.test.bbc.com/pidgin/world-23252817"
+      property="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:creator"
+    />
+    <meta
+      content="This is a test asset used in Simorgh, please do not edit it without asking."
+      name="twitter:description"
+    />
+    <meta
+      content="Some people at the NTA awards"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:site"
+    />
+    <meta
+      content="STY - Blood pressure drugs dey work better - BBC News Pidgin"
+      name="twitter:title"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
+      content="2019-10-23T12:39:30.000Z"
+      name="article:published_time"
+    />
+    <meta
+      content="2019-10-23T12:39:32.000Z"
+      name="article:modified_time"
+    />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
+    </script>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
+    </script>
+  </head>
+  <body>
+    <div>
+      <div
+        id="ContextsContainer"
+      >
+        <div
+          id="PageWrapperContainer"
+        >
+          <div
+            id="LoadingContainer"
+          >
+            <div
+              id="ErrorContainer"
+            >
+              <div
+                id="DataContainer"
+              >
+                <noscript />
+                <div
+                  class="c0 c1"
+                  dir="ltr"
+                >
+                  <main
+                    class="c2"
+                    dir="ltr"
+                    role="main"
+                  >
+                    <div
+                      class="c3"
+                    >
+                      <h1
+                        class="c4"
+                        id="content"
+                        tabindex="-1"
+                      >
+                        STY - Blood pressure drugs dey work better
+                      </h1>
+                    </div>
+                    <div
+                      class="c5 c6"
+                    >
+                      <div
+                        class="c7"
+                      >
+                        <ul
+                          class="c8"
+                          role="list"
+                        >
+                          <li
+                            class="c9"
+                            role="listitem"
+                          >
+                            By Andrew Overtyped Marr
+                          </li>
+                          <li
+                            class="c10"
+                            role="listitem"
+                          >
+                            BBC News - Overtyped
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      class="c11"
+                    >
+                      <figure
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="c14"
+                          >
+                            <div
+                              class="c15"
+                            >
+                              <img
+                                alt="Some people at the NTA awards"
+                                class="c16"
+                                src="https://ichef.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+                                srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
+                                width="976"
+                              />
+                              <p
+                                class="c17"
+                                role="text"
+                              >
+                                <span
+                                  class="c18"
+                                >
+                                  Wia dis foto come from, 
+                                </span>
+                                <span
+                                  lang="en-GB"
+                                >
+                                  Joe Maher
+                                </span>
+                              </p>
+                            </div>
+                          </div>
+                          <div
+                            class="c19"
+                          >
+                            <figcaption
+                              class="c20"
+                            >
+                              <span
+                                class="c18"
+                              >
+                                Wetin we call dis foto, 
+                              </span>
+                              <p>
+                                Some people went to the NTA awards recently.
+                              </p>
+                            </figcaption>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+                    <div
+                      class="c5 c21"
+                    >
+                      <time
+                        class="c22"
+                        datetime="2019-10-23"
+                      >
+                        23 October 2019
+                      </time>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <p
+                        class="c23"
+                      >
+                        <b>
+                           This is introduction text, it should be bold by default, but also support 
+                        </b>
+                        <a
+                          class="c24"
+                          href="https://bbc.com/pidgin/23248703"
+                        >
+                          inline links
+                        </a>
+                        <b>
+                           to other pages.
+                        </b>
+                      </p>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <p
+                        class="c23"
+                      >
+                        <i
+                          class="c25"
+                        >
+                          <b>
+                            This is a subheadline! that has 
+                          </b>
+                        </i>
+                        <a
+                          class="c24"
+                          href="https://bbc.com/pidgin/23248703"
+                        >
+                          a link
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <div
+                        class="c26"
+                      >
+                        <ul
+                          class="c27"
+                          dir="ltr"
+                          role="list"
+                        >
+                          <li
+                            class="c28"
+                            role="listitem"
+                          >
+                            This is a unordered list
+                          </li>
+                          <li
+                            class="c28"
+                            role="listitem"
+                          >
+                            It can have 
+                            <b>
+                              bold text
+                            </b>
+                             in it
+                          </li>
+                          <li
+                            class="c28"
+                            role="listitem"
+                          >
+                            <a
+                              class="c24"
+                              href="https://bbc.com/pidgin/23248703"
+                            >
+                              It can also have links
+                            </a>
+                          </li>
+                          <li
+                            class="c28"
+                            role="listitem"
+                          >
+                            <i
+                              class="c25"
+                            >
+                              It can even have italic text in it!
+                            </i>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <p
+                        class="c23"
+                      >
+                        Feta the big cheese macaroni cheese. 
+                        <a
+                          class="c24"
+                          href="https://bbc.com/pidgin/23248703"
+                        >
+                          Caerphilly danish fontina
+                        </a>
+                         queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
+                        <b>
+                          Cow cheeseburger
+                        </b>
+                         stilton emmental.
+                      </p>
+                    </div>
+                    <div
+                      class="c11"
+                    >
+                      <figure
+                        class="c12"
+                      >
+                        <div
+                          class="c13"
+                        >
+                          <div
+                            class="c14"
+                          >
+                            <div
+                              class="c15"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                              <noscript />
+                              <p
+                                class="c17"
+                                role="text"
+                              >
+                                <span
+                                  class="c18"
+                                >
+                                  Wia dis foto come from, 
+                                </span>
+                                <span
+                                  lang="en-GB"
+                                >
+                                  Joe Maher
+                                </span>
+                              </p>
+                            </div>
+                          </div>
+                          <div
+                            class="c19"
+                          />
+                        </div>
+                      </figure>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <p
+                        class="c23"
+                      >
+                        <b>
+                          Start of localised text
+                        </b>
+                      </p>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <p
+                        class="c23"
+                      >
+                        Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.
+                      </p>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <p
+                        class="c23"
+                      >
+                        <b>
+                          End of localised text
+                        </b>
+                      </p>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <p
+                        class="c23"
+                      >
+                        Rubber cheese macaroni 
+                        <i
+                          class="c25"
+                        >
+                          cheese cottage cheese
+                        </i>
+                        . Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.
+                      </p>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <div
+                        class="c26"
+                      >
+                        <ul
+                          class="c27"
+                          dir="ltr"
+                          role="list"
+                        >
+                          <li
+                            class="c28"
+                            role="listitem"
+                          >
+                            This is a ordered list
+                          </li>
+                          <li
+                            class="c28"
+                            role="listitem"
+                          >
+                            It can have 
+                            <b>
+                              bold text
+                            </b>
+                             in it
+                          </li>
+                          <li
+                            class="c28"
+                            role="listitem"
+                          >
+                            <a
+                              class="c24"
+                              href="https://bbc.com/pidgin/23248703"
+                            >
+                              It can also have links
+                            </a>
+                          </li>
+                          <li
+                            class="c28"
+                            role="listitem"
+                          >
+                            <i
+                              class="c25"
+                            >
+                              It can even have italic text in it!
+                            </i>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <p
+                        class="c23"
+                      >
+                        Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
+                      </p>
+                    </div>
+                    <div
+                      class="c29"
+                    >
+                      <figure
+                        class="c12"
+                      >
+                        <div
+                          class="c30"
+                        >
+                          <iframe
+                            allow="autoplay; fullscreen"
+                            allowfullscreen=""
+                            class="c31"
+                            scrolling="no"
+                            src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                            title="Media player"
+                          />
+                          <noscript />
+                        </div>
+                      </figure>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <h2
+                        class="c32"
+                        id="This-is-a-heading"
+                        tabindex="-1"
+                      >
+                        This is a heading!
+                      </h2>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <p
+                        class="c23"
+                      >
+                        Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
+                      </p>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <h2
+                        class="c32"
+                        id="This-is-a-crosshead"
+                        tabindex="-1"
+                      >
+                        This is a crosshead!
+                      </h2>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <p
+                        class="c23"
+                      >
+                        Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
+                      </p>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <p
+                        class="c23"
+                      >
+                        <a
+                          aria-label="This is an external link to google!, outside"
+                          class="c24"
+                          href="https://www.google.com/"
+                        >
+                          This is an external link to google!
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="c5"
+                    >
+                      <p
+                        class="c23"
+                      >
+                        Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
+                      </p>
+                    </div>
+                    <section
+                      aria-labelledby="related-content-heading"
+                      class="c33"
+                      role="region"
+                    >
+                      <div
+                        class="c33"
+                      >
+                        <div
+                          class="c34 c35"
+                        >
+                          <div
+                            class="c36"
+                          />
+                          <h2
+                            class="c37"
+                          >
+                            <div
+                              class="c38"
+                            >
+                              <span
+                                class="c39"
+                              >
+                                <span
+                                  class="c40"
+                                  dir="ltr"
+                                  id="related-content-heading"
+                                >
+                                  Another thing we de for inside dis tori
+                                </span>
+                              </span>
+                            </div>
+                          </h2>
+                        </div>
+                        <ul
+                          class="c41 c42"
+                          dir="ltr"
+                          role="list"
+                        >
+                          <li
+                            class="c43 c44"
+                            dir="ltr"
+                            role="listitem"
+                          />
+                        </ul>
+                      </div>
+                    </section>
+                  </main>
+                  <div
+                    class="c45 c46"
+                    dir="ltr"
+                  >
+                    <div
+                      class="c47"
+                    >
+                      <h2>
+                        This is a component in the second column
+                      </h2>
+                    </div>
+                    <div
+                      class="c47"
+                    >
+                      <h2>
+                        This is a component in the second column
+                      </h2>
+                    </div>
+                    <div
+                      class="c47"
+                    >
+                      <h2>
+                        This is a component in the second column
+                      </h2>
+                    </div>
+                    <div
+                      class="c47"
+                    >
+                      <h2>
+                        This is a component in the second column
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+`;

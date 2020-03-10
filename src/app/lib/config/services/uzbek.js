@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Янгиланди',
     atiAnalyticsAppName: 'news-uzbek',
     atiAnalyticsProducerId: '96',
+    chartbeatDomain: 'uzbek.bbc.co.uk',
     brandName: "BBC News O'zbek",
     product: 'BBC News',
     serviceLocalizedName: "O'zbek",
@@ -38,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Бош саҳифа',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,7 +49,7 @@ export const service = {
       currentPage: 'Жорий саҳифа',
       skipLinkText: 'Саҳифага ўтиш',
       relatedContent: 'Бу мавзуда батафсилроқ',
-      sections: 'Бўлимлар',
+      navMenuText: 'Бўлимлар',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плейер',
         audioPlayer: 'Аудио плейер',
@@ -165,6 +165,9 @@ export const service = {
       lastUpdated: 'Сўнгги янгиланиш:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {

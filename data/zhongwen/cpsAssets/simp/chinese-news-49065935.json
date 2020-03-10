@@ -1,0 +1,274 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-49065935",
+    "locators": {
+      "assetUri": "/zhongwen/simp/chinese-news-49065935",
+      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49065935",
+      "curie": "http://www.bbc.co.uk/asset/093e8311-37b7-6944-931d-655cc0efb5cf"
+    },
+    "type": "PGL",
+    "createdBy": "zhongwen-v6",
+    "language": "zh-Hans",
+    "lastUpdated": 1563731828400,
+    "firstPublished": 1563730802,
+    "lastPublished": 1563731821,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "zhongwensimp.chinese_news.photo_gallery.49065935.page",
+      "cps_asset_id": "49065935"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Hong Kong extradition bill",
+          "thingUri": "http://www.bbc.co.uk/things/5b7a6e71-b3b5-40a0-9d55-dfdf90f8d34e#id",
+          "thingId": "5b7a6e71-b3b5-40a0-9d55-dfdf90f8d34e",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://www.wikidata.org/entity/Q63412799"]
+        },
+        {
+          "thingLabel": "China",
+          "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+          "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/China",
+            "http://sws.geonames.org/1814991/",
+            "http://www.wikidata.org/entity/Q148"
+          ]
+        },
+        {
+          "thingLabel": "Politics",
+          "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+          "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Politics"]
+        },
+        {
+          "thingLabel": "Hong Kong",
+          "thingUri": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
+          "thingId": "a3b15769-775e-471d-a511-a7b78f346859",
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1819729/"]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": ["image"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "107965611",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/2D88/production/_107965611_mediaitem107965610.jpg",
+        "path": "/cpsprodpb/2D88/production/_107965611_mediaitem107965610.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "香港示威抗议",
+        "caption": "香港周日（21日）继续发生大规模抗议行动，成千上万的民众走上街头，与警察冲突。香港政府深夜发出声明称，继早前冲击中联办大楼后，再有“激进示威者”在上环向警方发动暴力袭击，另外在元朗，有人聚众于港铁车站月台及车厢内袭击乘客，引发冲突，导致有人受伤。香港政府重申香港作为法治社会，完全不能容忍任何暴力行为。",
+        "copyrightHolder": "EPA",
+        "type": "image"
+      },
+      {
+        "id": "107965614",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/A2B8/production/_107965614_hk_2_reuters.jpg",
+        "path": "/cpsprodpb/A2B8/production/_107965614_hk_2_reuters.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "香港示威",
+        "caption": "游行原定终点是湾仔卢押道，但示威者越过终点继续前进，占据金钟政府总部附近的主要道路，以及湾仔警察总部外的马路 。",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "107965616",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/F0D8/production/_107965616_hk_3_epa.jpg",
+        "path": "/cpsprodpb/F0D8/production/_107965616_hk_3_epa.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "抗议者自制盾牌",
+        "caption": "组织者称，估计周日有43万人参加了大游行。这是连续第七个周末香港出现游行示威。",
+        "copyrightHolder": "EPA",
+        "type": "image"
+      },
+      {
+        "id": "107965619",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16608/production/_107965619_hk_5_reuters.jpg",
+        "path": "/cpsprodpb/16608/production/_107965619_hk_5_reuters.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "在场记者受伤",
+        "caption": "抗议期间，有志愿者告诉抗议人士戴上面具防止被警方认出身份，另外有人送水、伞、等。冲突中，有记者受伤。",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "107965741",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/39A4/production/_107965741_hk_8_china_office_getty.jpg",
+        "path": "/cpsprodpb/39A4/production/_107965741_hk_8_china_office_getty.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "中国中央政府驻香港机构的国徽被涂污",
+        "caption": "抗议过程中，有人向中联办的中国国徽泼墨，并在中联办匾牌旁涂写。",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "107965749",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/17224/production/_107965749_hk_gas_7_getty.jpg",
+        "path": "/cpsprodpb/17224/production/_107965749_hk_gas_7_getty.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "香港抗议",
+        "caption": "抗议人群穿着黑色上衣，高喊口号，要求对警方粗暴执法展开调查，要求撤回对被捕抗议者的检控。",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "107965787",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/133A4/production/_107965787_hk_reuters.jpg",
+        "path": "/cpsprodpb/133A4/production/_107965787_hk_reuters.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "香港抗议",
+        "caption": "香港的抗议行动已经持续了一段时间，从最初的抗议“逃犯条例”到现在要求独立调查警方是否过度执法，等。",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      },
+      {
+        "id": "107966057",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/1253A/production/_107966057_hk_getty_protesters.jpg",
+        "path": "/cpsprodpb/1253A/production/_107966057_hk_getty_protesters.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "香港示威",
+        "caption": "过去数周，香港多次爆发大规模抗议活动，部分示威演变成警民冲突，并有暴力升级迹象。",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "图辑：香港示威抗议继续 大规模警民冲突",
+      "headline": "图辑：香港示威抗议继续 大规模警民冲突"
+    },
+    "locators": {
+      "assetUri": "/zhongwen/simp/chinese-news-49065935",
+      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49065935",
+      "curie": "http://www.bbc.co.uk/asset/093e8311-37b7-6944-931d-655cc0efb5cf"
+    },
+    "summary": "香港“反送中”示威抗议周日（21日）在多个地点出现警民冲突，警方发射催泪弹、烟雾弹和橡皮子弹。",
+    "timestamp": 1563731828400,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "107966164",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/B456/production/_107966164_hk_gas_7_getty.jpg",
+      "path": "/cpsprodpb/B456/production/_107966164_hk_gas_7_getty.jpg",
+      "height": 749,
+      "width": 1331,
+      "altText": "香港抗议",
+      "caption": "香港连续第七个周末出现抗议示威",
+      "copyrightHolder": "Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-49065935",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "两岸三地",
+      "uri": "/zhongwen/simp/chinese_news",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC 中文网",
+      "uri": "/zhongwen/simp",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "香港逃犯条例寿终正寝为何仍然对经济不利",
+              "headline": "香港逃犯条例寿终正寝为何仍然对经济不利"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/chinese-news-48972427",
+              "cpsUrn": "urn:bbc:content:assetUri:/zhongwen/simp/chinese-news-48972427"
+            },
+            "summary": "香港这颗东方明珠，在逃犯条例引发大规模游行示威之后，还能继续璀璨下去吗？",
+            "timestamp": 1562968859,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832466",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/10377/production/_107832466_wz59muhl.jpg",
+              "path": "/cpsprodpb/10377/production/_107832466_wz59muhl.jpg",
+              "height": 432,
+              "width": 768,
+              "altText": "Anti extradition bill protesters",
+              "copyrightHolder": "Reuters",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-48972427",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

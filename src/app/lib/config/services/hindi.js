@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'अपडेटेड',
     atiAnalyticsAppName: 'news-hindi',
     atiAnalyticsProducerId: '52',
+    chartbeatDomain: 'hindi.bbc.co.uk',
     brandName: 'BBC News हिंदी',
     product: 'BBC News',
     serviceLocalizedName: 'हिंदी',
@@ -39,7 +40,6 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle:
       'ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -50,7 +50,7 @@ export const service = {
       currentPage: 'मौजूदा पन्ना',
       skipLinkText: 'सामग्री को स्किप करें',
       relatedContent: 'संबंधित समाचार',
-      sections: 'सेक्शन',
+      navMenuText: 'सेक्शन',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिया प्लेयर',
@@ -167,6 +167,9 @@ export const service = {
       lastUpdated: 'अंतिम अपडेट:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {

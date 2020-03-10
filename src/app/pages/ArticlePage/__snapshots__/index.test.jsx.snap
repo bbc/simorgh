@@ -1,0 +1,1021 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
+<div>
+  <noscript />
+  <div>
+    chartbeat
+  </div>
+  <main
+    class="StyledMain-sc-1onvfv8-0 hAQCOp"
+    role="main"
+  >
+    <div
+      class="GhostGrid-sc-12lwanc-1 kGasFS"
+    >
+      <div
+        class="GridItemConstrainedLarge-sc-12lwanc-5 dBAoSC"
+      >
+        <h1
+          class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+          id="content"
+          tabindex="-1"
+        >
+          Article Headline in Pidgin
+        </h1>
+      </div>
+      <div
+        class="GridItemConstrainedMedium-sc-12lwanc-3 imiJTj"
+      >
+        <p
+          class="Paragraph-k859h4-0 hymSIv"
+        >
+          A paragraph in Pidgin.
+        </p>
+      </div>
+    </div>
+  </main>
+  <section
+    aria-labelledby="Most-Read"
+    class="MostReadSection-sc-6bm912-1 ConstrainedMostReadSection-sc-6bm912-3 bMQBFX"
+    data-e2e="most-read"
+    role="region"
+  >
+    <div
+      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
+    >
+      <div
+        class="Bar-sc-1x4gwjz-0 jsgdXU"
+      />
+      <h2
+        class="Heading-sc-1x4gwjz-2 eZofTG"
+      >
+        <div
+          class="FlexColumn-wx5kdp-0 dgpsiS"
+        >
+          <span
+            class="FlexRow-wx5kdp-2 dVBNyZ"
+          >
+            <span
+              class="Title-wx5kdp-4 BeqZV"
+              dir="ltr"
+              id="Most-Read"
+            >
+              De one we dem de read well well
+            </span>
+          </span>
+        </div>
+      </h2>
+    </div>
+    <div
+      class="MarginWrapper-sc-6bm912-0 bmzrWW"
+    >
+      <ol
+        class="GridComponent-nf79gm-0 iakllL TwoColumnGrid-sc-1ofyujo-0 MultiColumnGrid-sc-1ofyujo-1 cCvfjo"
+        dir="ltr"
+        role="list"
+      >
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 chtVVr"
+              dir="ltr"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 bbVUNN"
+              >
+                1
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 ihPUFl"
+              dir="ltr"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 iVuzjN"
+                href="/pidgin/tori-46729879"
+              >
+                Public Holidays wey go happun for 2019
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-05-21"
+                >
+                  De one we dem update for: 21st May 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 dDTbdG"
+              dir="ltr"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 bbVUNN"
+              >
+                2
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 ihPUFl"
+              dir="ltr"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 iVuzjN"
+                href="/pidgin/tori-50304653"
+              >
+                Liberia banks don run out of money
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-11-05"
+                >
+                  De one we dem update for: 5th November 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 chtVVr"
+              dir="ltr"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 bbVUNN"
+              >
+                3
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 ihPUFl"
+              dir="ltr"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 iVuzjN"
+                href="/pidgin/tori-50298882"
+              >
+                Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-11-05"
+                >
+                  De one we dem update for: 5th November 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 dDTbdG"
+              dir="ltr"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 bbVUNN"
+              >
+                4
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 ihPUFl"
+              dir="ltr"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 iVuzjN"
+                href="/pidgin/tori-50315150"
+              >
+                Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-11-06"
+                >
+                  De one we dem update for: 6th November 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gHHITV"
+              dir="ltr"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 bbVUNN"
+              >
+                5
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 ihPUFl"
+              dir="ltr"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 iVuzjN"
+                href="/pidgin/tori-50315157"
+              >
+                How Balogun market fire kill Policeman for Lagos
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-11-06"
+                >
+                  De one we dem update for: 6th November 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gUpuHE"
+              dir="ltr"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 bbVUNN"
+              >
+                6
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 ihPUFl"
+              dir="ltr"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 iVuzjN"
+                href="/pidgin/tori-50093818"
+              >
+                Labour, FG finally agree minimum wage salary adjustment
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-10-18"
+                >
+                  De one we dem update for: 18th October 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 jYgYTA"
+              dir="ltr"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 bbVUNN"
+              >
+                7
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 ihPUFl"
+              dir="ltr"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 iVuzjN"
+                href="/pidgin/tori-50187218"
+              >
+                Naira Marley na 'Bad Influence'?
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-10-25"
+                >
+                  De one we dem update for: 25th October 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gUpuHE"
+              dir="ltr"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 bbVUNN"
+              >
+                8
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 ihPUFl"
+              dir="ltr"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 iVuzjN"
+                href="/pidgin/tori-48347911"
+              >
+                Tins you suppose know about Naira Marley
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-05-23"
+                >
+                  De one we dem update for: 23rd May 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 jYgYTA"
+              dir="ltr"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 bbVUNN"
+              >
+                9
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 ihPUFl"
+              dir="ltr"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 iVuzjN"
+                href="/pidgin/sport-50312710"
+              >
+                Golden Eaglets crash out of Fifa U17 World Cup
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-11-06"
+                >
+                  De one we dem update for: 6th November 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gUpuHE"
+              dir="ltr"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 bbVUNN"
+              >
+                10
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 ihPUFl"
+              dir="ltr"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 iVuzjN"
+                href="/pidgin/tori-42945173"
+              >
+                Tiger nut drink fit wake up your sex drive - Nutritionist
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-05-21"
+                >
+                  De one we dem update for: 21st May 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`should render a news article correctly 1`] = `
+<div>
+  <noscript />
+  <div>
+    chartbeat
+  </div>
+  <main
+    class="StyledMain-sc-1onvfv8-0 hAQCOp"
+    role="main"
+  >
+    <div
+      class="GhostGrid-sc-12lwanc-1 kGasFS"
+    >
+      <div
+        class="GridItemConstrainedLarge-sc-12lwanc-5 dBAoSC"
+      >
+        <h1
+          class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 aNHLE"
+          id="content"
+          tabindex="-1"
+        >
+          Article Headline
+        </h1>
+      </div>
+      <div
+        class="GridItemConstrainedMedium-sc-12lwanc-3 imiJTj"
+      >
+        <p
+          class="Paragraph-k859h4-0 dSVJxu"
+        >
+          A paragraph.
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`should render a rtl article (persian) with most read correctly 1`] = `
+<div>
+  <noscript />
+  <div>
+    chartbeat
+  </div>
+  <main
+    class="StyledMain-sc-1onvfv8-0 hAQCOp"
+    role="main"
+  >
+    <div
+      class="GhostGrid-sc-12lwanc-1 kGasFS"
+    >
+      <div
+        class="GridItemConstrainedLarge-sc-12lwanc-5 dBAoSC"
+      >
+        <h1
+          class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 bYbRDq"
+          id="content"
+          tabindex="-1"
+        >
+          سرصفحه مقاله
+        </h1>
+      </div>
+      <div
+        class="GridItemConstrainedMedium-sc-12lwanc-3 imiJTj"
+      >
+        <p
+          class="Paragraph-k859h4-0 jfPMLX"
+        >
+          یک پاراگراف.
+        </p>
+      </div>
+    </div>
+  </main>
+  <section
+    aria-labelledby="Most-Read"
+    class="MostReadSection-sc-6bm912-1 ConstrainedMostReadSection-sc-6bm912-3 bMQBFX"
+    data-e2e="most-read"
+    role="region"
+  >
+    <div
+      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
+    >
+      <div
+        class="Bar-sc-1x4gwjz-0 kXOyLn"
+      />
+      <h2
+        class="Heading-sc-1x4gwjz-2 eZofTG"
+      >
+        <div
+          class="FlexColumn-wx5kdp-0 dgpsiS"
+        >
+          <span
+            class="FlexRow-wx5kdp-2 dVBNyZ"
+          >
+            <span
+              class="Title-wx5kdp-4 htLcbq"
+              dir="rtl"
+              id="Most-Read"
+            >
+              پربیننده‌ترین‌ها
+            </span>
+          </span>
+        </div>
+      </h2>
+    </div>
+    <div
+      class="MarginWrapper-sc-6bm912-0 bmzrWW"
+    >
+      <ol
+        class="GridComponent-nf79gm-0 iakllL TwoColumnGrid-sc-1ofyujo-0 MultiColumnGrid-sc-1ofyujo-1 cCvfjo"
+        dir="rtl"
+        role="list"
+      >
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 eXXziL"
+              dir="rtl"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 etHPTl"
+              >
+                ۱
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 cCyPWK"
+              dir="rtl"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 dpugAO"
+                href="/persian/world-50317704"
+              >
+                توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gaDNHh"
+              dir="rtl"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 etHPTl"
+              >
+                ۲
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 cCyPWK"
+              dir="rtl"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 dpugAO"
+                href="/persian/iran-50319870"
+              >
+                فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 eXXziL"
+              dir="rtl"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 etHPTl"
+              >
+                ۳
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 cCyPWK"
+              dir="rtl"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 dpugAO"
+                href="/persian/world-50320610"
+              >
+                ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gaDNHh"
+              dir="rtl"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 etHPTl"
+              >
+                ۴
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 cCyPWK"
+              dir="rtl"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 dpugAO"
+                href="/persian/world-50316456"
+              >
+                غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 dldTof"
+              dir="rtl"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 etHPTl"
+              >
+                ۵
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 cCyPWK"
+              dir="rtl"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 dpugAO"
+                href="/persian/magazine-50249226"
+              >
+                دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 kscXFz"
+              dir="rtl"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 etHPTl"
+              >
+                ۶
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 cCyPWK"
+              dir="rtl"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 dpugAO"
+                href="/persian/world-50317700"
+              >
+                انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 dfbaZn"
+              dir="rtl"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 etHPTl"
+              >
+                ۷
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 cCyPWK"
+              dir="rtl"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 dpugAO"
+                href="/persian/sport-50322486"
+              >
+                عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 kscXFz"
+              dir="rtl"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 etHPTl"
+              >
+                ۸
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 cCyPWK"
+              dir="rtl"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 dpugAO"
+                href="/persian/iran-features-50310665"
+              >
+                آیا تهران بازی هسته ای را به هم می‌زند؟
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 dfbaZn"
+              dir="rtl"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 etHPTl"
+              >
+                ۹
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 cCyPWK"
+              dir="rtl"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 dpugAO"
+                href="/persian/world-50316450"
+              >
+                آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="ItemWrapper-u0d8kd-3 juBlKT"
+          >
+            <div
+              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 kscXFz"
+              dir="rtl"
+            >
+              <span
+                class="StyledSpan-fs4y6m-2 etHPTl"
+              >
+                ۱۰
+              </span>
+            </div>
+            <div
+              class="StyledItem-u0d8kd-1 cCyPWK"
+              dir="rtl"
+            >
+              <a
+                class="StyledLink-u0d8kd-0 dpugAO"
+                href="/persian/sport-50318030"
+              >
+                فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
+              </a>
+              <div
+                class="TimestampWrapper-u0d8kd-2 hlECaE"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+</div>
+`;

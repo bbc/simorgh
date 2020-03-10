@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Mise à jour',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
+    chartbeatDomain: 'afrique.bbc.co.uk',
     brandName: 'BBC News Afrique',
     product: 'BBC News',
     serviceLocalizedName: 'Afrique',
@@ -38,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Accueil',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,7 +49,7 @@ export const service = {
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
       relatedContent: 'Lire plus',
-      sections: 'Rubriques',
+      navMenuText: 'Rubriques',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -169,6 +169,13 @@ export const service = {
       lastUpdated: 'Dernière mise à jour:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      frequenciesPageUrl:
+        '/afrique/institutionelles/2010/12/000000_schedules_frequencies_afrique',
+      frequenciesPageLabel: 'Radio Frequencies Link Label',
+      header: 'BBC News Radio',
     },
     footer: {
       trustProjectLink: {

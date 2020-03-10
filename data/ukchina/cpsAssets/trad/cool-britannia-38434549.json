@@ -1,0 +1,316 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:ukchina/trad/cool-britannia-38434549",
+    "locators": {
+      "assetUri": "/ukchina/trad/cool-britannia-38434549",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/cool-britannia-38434549",
+      "curie": "http://www.bbc.co.uk/asset/e802ef60-4ccb-684c-a90f-9d93fca8f412"
+    },
+    "type": "PGL",
+    "createdBy": "ukchina-traditional-v6",
+    "language": "zh-Hant",
+    "lastUpdated": 1579166525627,
+    "firstPublished": 1482728544000,
+    "lastPublished": 1482754403000,
+    "timestamp": 1482728544000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "ukchinatrad.cool_britannia.photo_gallery.38434549.page",
+      "cps_asset_id": "38434549"
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Entertainment",
+          "thingUri": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+          "thingId": "1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Entertainment",
+            "http://www.wikidata.org/entity/Q173799"
+          ]
+        },
+        {
+          "thingLabel": "United Kingdom",
+          "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+          "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/2635167/"]
+        },
+        {
+          "thingLabel": "Culture",
+          "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+          "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Culture",
+            "http://www.wikidata.org/entity/Q11042"
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "thingLabel": "Art",
+          "thingUri": "http://www.bbc.co.uk/things/37dcc888-51a7-4470-82d8-8ef2b811d482#id",
+          "thingId": "37dcc888-51a7-4470-82d8-8ef2b811d482",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Art",
+            "http://www.wikidata.org/entity/Q735"
+          ]
+        },
+        {
+          "thingLabel": "China",
+          "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+          "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+          "thingType": ["geoname:GeoTagConcept", "Place", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/China",
+            "http://sws.geonames.org/1814991/",
+            "http://www.wikidata.org/entity/Q148"
+          ]
+        },
+        {
+          "thingLabel": "China-UK relations",
+          "thingUri": "http://www.bbc.co.uk/things/ac90f011-0779-4da9-8ac5-4de96fcc2b93#id",
+          "thingId": "ac90f011-0779-4da9-8ac5-4de96fcc2b93",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/China%E2%80%93United_Kingdom_relations",
+            "http://www.wikidata.org/entity/Q906604"
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.4",
+    "blockTypes": ["image"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "93125807",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/114C4/production/_93125807_bbc.jpg",
+        "path": "/cpsprodpb/114C4/production/_93125807_bbc.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "1984年的喬治·邁克爾",
+        "caption": "喬治·邁克爾（George Michael）在1980年代以雙人組合「威猛樂隊」（Wham!）走紅，樂隊解散後他在個人表演上也持續獲得極大成功。",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      },
+      {
+        "id": "93125969",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/17AB8/production/_93125969_whamget.jpg",
+        "path": "/cpsprodpb/17AB8/production/_93125969_whamget.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "喬治·邁克爾與安德魯·維治利",
+        "caption": "喬治·邁克爾與安德魯·維治利（Andrew Ridgeley）在中學時相識後組成雙人樂隊。他們有兩張專輯登上排行榜冠軍。熱門單曲包括Last Christmas、Club Tropicana、Wake Me Up Before You Go Go",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "93125971",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/4620/production/_93125971_liveaidpa.jpg",
+        "path": "/cpsprodpb/4620/production/_93125971_liveaidpa.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "喬治·邁克爾1985年",
+        "caption": "喬治·邁克爾1984年以Careless Whisper（無心快語）開啟他的個人職業生涯。這首歌在全世界走紅，也成為他的代表作。",
+        "copyrightHolder": "PA",
+        "type": "image"
+      },
+      {
+        "id": "93125975",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/E260/production/_93125975_liveaidap.jpg",
+        "path": "/cpsprodpb/E260/production/_93125975_liveaidap.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "邁克爾（左一）與格爾多夫（Bob Geldof；右二被遮蔽者）、麥卡特尼（Paul McCartney；右三）等同台演出",
+        "caption": "1985年7月13日，倫敦溫布利球場，邁克爾（左一）參與了格爾多夫（Bob Geldof；右二被遮蔽者）籌辦的LiveAid音樂會，與麥卡特尼（Paul McCartney；右三）等巨星在這場史無前例的國際籌款音樂會上同台演出。",
+        "copyrightHolder": "AP",
+        "type": "image"
+      },
+      {
+        "id": "93125977",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/13080/production/_93125977_arethaap.jpg",
+        "path": "/cpsprodpb/13080/production/_93125977_arethaap.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "邁克爾與艾瑞莎·弗蘭克林",
+        "caption": "邁克爾曾與許多知名藝人合作過，包括圖中的美國「靈魂歌后」艾瑞莎·弗蘭克林（Aretha Franklin）以及皇后樂隊（Queen）、艾爾頓·約翰爵士（Sir Elton John）等人。他和艾瑞莎·弗蘭克林合唱的I Knew You Were Waiting （For Me）在大西洋兩岸都是排行榜冠軍。",
+        "copyrightHolder": "AP",
+        "type": "image"
+      },
+      {
+        "id": "93126051",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/3AD6/production/_93126051_ap89.jpg",
+        "path": "/cpsprodpb/3AD6/production/_93126051_ap89.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "1989年的邁克爾",
+        "caption": "威猛樂隊1985年在中國開演唱會，成為第一個進軍共產中國的西方樂隊，但他們在1986年解散。邁克爾之後的歌曲Faith、Jesus To A Child、Fastlove也大受歡迎，亦獲得許多獎項。",
+        "copyrightHolder": "AP",
+        "type": "image"
+      },
+      {
+        "id": "93126049",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16F6E/production/_93126049_dianapa.jpg",
+        "path": "/cpsprodpb/16F6E/production/_93126049_dianapa.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "戴安娜王妃與邁克爾",
+        "caption": "戴安娜王妃也是邁克爾的歌迷，他們甚至成了朋友。邁克爾參加了1997年戴安娜王妃的葬禮。",
+        "copyrightHolder": "PA",
+        "type": "image"
+      },
+      {
+        "id": "56943922",
+        "subType": "photogallery",
+        "href": "http://news.bbcimg.co.uk/media/images/56943000/jpg/_56943922_003983026-1.jpg",
+        "path": "/mcs/media/images/56943000/jpg/_56943922_003983026-1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "喬治·邁克爾",
+        "caption": "邁克爾在1980、1990年代初大獲成功。但之後他的人生被負面消息圍繞。1997年他因為在洛杉磯公共廁所與人發生性行為遭到逮捕，該事件讓他公開同志身分。",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "93126077",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12D06/production/_93126077_gossafp.jpg",
+        "path": "/cpsprodpb/12D06/production/_93126077_gossafp.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "邁克爾與肯尼·戈斯",
+        "caption": "邁克爾的多年伴侶安塞爾莫·費萊帕（Anselmo Feleppa）在1993年因為腦溢血去世，邁克爾深受打擊。三年之後，他與肯尼·戈斯（Kenny Goss）（圖左）交往，兩人關係持續到2009年。",
+        "copyrightHolder": "AFP",
+        "type": "image"
+      },
+      {
+        "id": "56944404",
+        "subType": "photogallery",
+        "href": "http://news.bbcimg.co.uk/media/images/56944000/jpg/_56944404_gm3.jpg",
+        "path": "/mcs/media/images/56944000/jpg/_56944404_gm3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "喬治·邁克爾",
+        "caption": "近年來他有藥物成癮困擾。2011年他因肺炎在維也納住院一個月。",
+        "copyrightHolder": "Getty Images",
+        "type": "image"
+      },
+      {
+        "id": "93126081",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/468E/production/_93126081_olympicsreu.jpg",
+        "path": "/cpsprodpb/468E/production/_93126081_olympicsreu.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "圖為他在2012年倫敦奧運會閉幕式的演出",
+        "caption": "他的最後一次巡迴演唱會是在2012年倫敦奧運會演出之後。圖為他在2012年倫敦奧運會閉幕式的演出。據報道，邁克爾過世之前仍在籌備新專輯。他的上一張專輯在12年前推出。",
+        "copyrightHolder": "Reuters",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "逝者：前威猛樂隊主唱喬治·邁克爾",
+      "headline": "圖輯：《Last Christmas》原唱喬治·邁克爾起伏一生"
+    },
+    "locators": {
+      "assetUri": "/ukchina/trad/cool-britannia-38434549",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/cool-britannia-38434549",
+      "curie": "http://www.bbc.co.uk/asset/e802ef60-4ccb-684c-a90f-9d93fca8f412"
+    },
+    "summary": "西方流行樂壇赴華演唱第一人，前威猛樂隊主唱喬治·邁克爾（George Michael）聖誕日於英國家中辭世，終年53歲。他的經典聖誕歌曲《Last Christmas》成絶響。",
+    "timestamp": 1482728544000,
+    "passport": {
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "93126194",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/C00A/production/_93126194_liveaidpa.jpg",
+      "path": "/cpsprodpb/C00A/production/_93126194_liveaidpa.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "喬治·邁克爾1985年",
+      "copyrightHolder": "PA",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:ukchina/trad/cool-britannia-38434549",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "英倫風采",
+      "uri": "/ukchina/trad/cool_britannia",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC英倫網",
+      "uri": "/ukchina/trad",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "英國知名唱作人喬治·邁克爾逝世",
+              "headline": "過不了最後聖誕　流行曲巨星喬治·邁克爾家中逝世"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/trad/uk-38434627",
+              "cpsUrn": "urn:bbc:content:assetUri:/zhongwen/trad/uk-38434627"
+            },
+            "summary": "英國知名創作歌手喬治·邁克爾在牛津郡家中「安詳離世」，終年53歲。他曾經隨「威猛」樂隊成為首批在中國演唱的西方流行歌手。",
+            "timestamp": 1482754385000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "93139024",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A46D/production/_93139024_7db4993e-c35d-4f65-a505-87a2bfe5b35f.jpg",
+              "path": "/cpsprodpb/A46D/production/_93139024_7db4993e-c35d-4f65-a505-87a2bfe5b35f.jpg",
+              "height": 1152,
+              "width": 2048,
+              "altText": "悼念民眾在喬治·邁克爾牛津郡家門外留下的照片（26/12/2016）",
+              "copyrightHolder": "AP",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:zhongwen/trad/uk-38434627",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -16,6 +16,7 @@ export const service = {
     articleTimestampPrefix: 'ተሻሽሏል',
     atiAnalyticsAppName: 'news-amharic',
     atiAnalyticsProducerId: '4',
+    chartbeatDomain: 'amharic.bbc.co.uk',
     brandName: 'BBC News አማርኛ',
     product: 'BBC News',
     serviceLocalizedName: 'አማርኛ',
@@ -42,7 +43,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'ዜና',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -53,7 +53,7 @@ export const service = {
       currentPage: 'መነሻ ገፅ',
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
-      sections: 'ክፍሎች',
+      navMenuText: 'ክፍሎች',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -153,6 +153,9 @@ export const service = {
       lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {

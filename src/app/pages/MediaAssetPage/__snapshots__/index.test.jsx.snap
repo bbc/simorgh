@@ -974,340 +974,344 @@ exports[`Media Asset Page should render component 1`] = `
                 class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 jJqbCR"
               >
                 <div
-                  class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc StyledSectionLabel-sc-1itct8j-1 hlmzdc"
+                  class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 jJqbCR"
                 >
                   <div
-                    class="Bar-sc-1x4gwjz-0 jsgdXU"
-                  />
-                  <h2
-                    class="Heading-sc-1x4gwjz-2 eZofTG"
+                    class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc"
                   >
                     <div
-                      class="FlexColumn-wx5kdp-0 dgpsiS"
+                      class="Bar-sc-1x4gwjz-0 jsgdXU"
+                    />
+                    <h2
+                      class="Heading-sc-1x4gwjz-2 eZofTG"
                     >
-                      <span
-                        class="FlexRow-wx5kdp-2 dVBNyZ"
+                      <div
+                        class="FlexColumn-wx5kdp-0 dgpsiS"
                       >
                         <span
-                          class="Title-wx5kdp-4 jiurmA"
-                          dir="ltr"
-                          id="related-content-heading"
+                          class="FlexRow-wx5kdp-2 dVBNyZ"
                         >
-                          Another thing we de for inside dis tori
+                          <span
+                            class="Title-wx5kdp-4 BeqZV"
+                            dir="ltr"
+                            id="related-content-heading"
+                          >
+                            Another thing we de for inside dis tori
+                          </span>
                         </span>
-                      </span>
-                    </div>
-                  </h2>
+                      </div>
+                    </h2>
+                  </div>
+                  <ul
+                    class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                    dir="ltr"
+                    role="list"
+                  >
+                    <li
+                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      dir="ltr"
+                      role="listitem"
+                    >
+                      <div
+                        class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                      >
+                        <div
+                          class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                          dir="ltr"
+                        >
+                          <div
+                            class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                          >
+                            <div
+                              class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                            <div
+                              class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="Headline-sc-1dvfmi3-3 hSJrur"
+                          >
+                            <a
+                              class="Link-sc-1dvfmi3-5 yQgSu"
+                              href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                            >
+                              Police Arrest 3 ontop Anambra Church Attack
+                            </a>
+                          </h3>
+                          <p
+                            class="Summary-sc-1dvfmi3-4 eaCWBB"
+                          >
+                            Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
+                          </p>
+                          <time
+                            class="StyledTimestamp-um718p-0 kVWTyt"
+                            datetime="2017-08-08"
+                          >
+                            8th August 2017
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      dir="ltr"
+                      role="listitem"
+                    >
+                      <div
+                        class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                      >
+                        <div
+                          class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                          dir="ltr"
+                        >
+                          <div
+                            class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                          >
+                            <div
+                              class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                            <div
+                              class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="Headline-sc-1dvfmi3-3 hSJrur"
+                          >
+                            <a
+                              class="Link-sc-1dvfmi3-5 yQgSu"
+                              href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                            >
+                              Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
+                            </a>
+                          </h3>
+                          <p
+                            class="Summary-sc-1dvfmi3-4 eaCWBB"
+                          >
+                            The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.
+                          </p>
+                          <time
+                            class="StyledTimestamp-um718p-0 kVWTyt"
+                            datetime="2017-08-08"
+                          >
+                            8th August 2017
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      dir="ltr"
+                      role="listitem"
+                    >
+                      <div
+                        class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                      >
+                        <div
+                          class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                          dir="ltr"
+                        >
+                          <div
+                            class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                          >
+                            <div
+                              class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                            />
+                            <div
+                              class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                            >
+                              <div
+                                aria-hidden="true"
+                                class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                                dir="ltr"
+                              >
+                                <div
+                                  class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                                    focusable="false"
+                                    height="13px"
+                                    viewBox="0 0 32 26"
+                                    width="16px"
+                                  >
+                                    <path
+                                      d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
+                                    />
+                                    <circle
+                                      cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                                    />
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="Headline-sc-1dvfmi3-3 hSJrur"
+                          >
+                            <a
+                              class="Link-sc-1dvfmi3-5 yQgSu"
+                              href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                            >
+                              <span
+                                role="text"
+                              >
+                                <span
+                                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                                >
+                                  Image gallery, 
+                                </span>
+                                <span>
+                                  Kenya Elections Pictures: 8 August 2017
+                                </span>
+                              </span>
+                            </a>
+                          </h3>
+                          <p
+                            class="Summary-sc-1dvfmi3-4 eaCWBB"
+                          >
+                            This na some of the picture wey our eye see as Kenya people go vote for election today
+                          </p>
+                          <time
+                            class="StyledTimestamp-um718p-0 kVWTyt"
+                            datetime="2017-08-08"
+                          >
+                            8th August 2017
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      dir="ltr"
+                      role="listitem"
+                    >
+                      <div
+                        class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                      >
+                        <div
+                          class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                          dir="ltr"
+                        >
+                          <div
+                            class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                          >
+                            <div
+                              class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                            <div
+                              class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                            >
+                              <div
+                                aria-hidden="true"
+                                class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                                dir="ltr"
+                              >
+                                <div
+                                  class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                                    focusable="false"
+                                    height="12px"
+                                    viewBox="0 0 13 12"
+                                    width="13px"
+                                  >
+                                    <path
+                                      d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                                    />
+                                    <path
+                                      d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                                    />
+                                  </svg>
+                                  <time
+                                    class="StyledTime-jpt91x-0 bYtFje"
+                                    datetime="PT15S"
+                                  >
+                                    0:15
+                                  </time>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="Headline-sc-1dvfmi3-3 hSJrur"
+                          >
+                            <a
+                              class="Link-sc-1dvfmi3-5 yQgSu"
+                              href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                            >
+                              <span
+                                role="text"
+                              >
+                                <span
+                                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                                >
+                                  Audio, 
+                                </span>
+                                <span>
+                                  BBC News Pidgin One Minute News
+                                </span>
+                                <span
+                                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                                >
+                                  , 0,15
+                                </span>
+                              </span>
+                            </a>
+                          </h3>
+                          <p
+                            class="Summary-sc-1dvfmi3-4 eaCWBB"
+                          >
+                            All di local and world tori wey you suppose know in 60 seconds!
+                          </p>
+                          <time
+                            class="StyledTimestamp-um718p-0 kVWTyt"
+                            datetime="2017-08-17"
+                          >
+                            17th August 2017
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                <ul
-                  class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
-                  dir="ltr"
-                  role="list"
-                >
-                  <li
-                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                    >
-                      <div
-                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                        dir="ltr"
-                      >
-                        <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                        >
-                          <div
-                            class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
-                          >
-                            <div
-                              class="lazyload-placeholder"
-                            />
-                          </div>
-                          <div
-                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                        dir="ltr"
-                      >
-                        <h3
-                          class="Headline-sc-1dvfmi3-3 hSJrur"
-                        >
-                          <a
-                            class="Link-sc-1dvfmi3-5 yQgSu"
-                            href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                          >
-                            Police Arrest 3 ontop Anambra Church Attack
-                          </a>
-                        </h3>
-                        <p
-                          class="Summary-sc-1dvfmi3-4 eaCWBB"
-                        >
-                          Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
-                        </p>
-                        <time
-                          class="StyledTimestamp-um718p-0 kVWTyt"
-                          datetime="2017-08-08"
-                        >
-                          8th August 2017
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                    >
-                      <div
-                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                        dir="ltr"
-                      >
-                        <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                        >
-                          <div
-                            class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
-                          >
-                            <div
-                              class="lazyload-placeholder"
-                            />
-                          </div>
-                          <div
-                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                        dir="ltr"
-                      >
-                        <h3
-                          class="Headline-sc-1dvfmi3-3 hSJrur"
-                        >
-                          <a
-                            class="Link-sc-1dvfmi3-5 yQgSu"
-                            href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                          >
-                            Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
-                          </a>
-                        </h3>
-                        <p
-                          class="Summary-sc-1dvfmi3-4 eaCWBB"
-                        >
-                          The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.
-                        </p>
-                        <time
-                          class="StyledTimestamp-um718p-0 kVWTyt"
-                          datetime="2017-08-08"
-                        >
-                          8th August 2017
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                    >
-                      <div
-                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                        dir="ltr"
-                      >
-                        <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                        >
-                          <div
-                            class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
-                          />
-                          <div
-                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                          >
-                            <div
-                              aria-hidden="true"
-                              class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                              dir="ltr"
-                            >
-                              <div
-                                class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
-                                  focusable="false"
-                                  height="13px"
-                                  viewBox="0 0 32 26"
-                                  width="16px"
-                                >
-                                  <path
-                                    d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
-                                  />
-                                  <circle
-                                    cx="20"
-                                    cy="14.02"
-                                    r="5.5"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                        dir="ltr"
-                      >
-                        <h3
-                          class="Headline-sc-1dvfmi3-3 hSJrur"
-                        >
-                          <a
-                            class="Link-sc-1dvfmi3-5 yQgSu"
-                            href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                          >
-                            <span
-                              role="text"
-                            >
-                              <span
-                                class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
-                              >
-                                Image gallery, 
-                              </span>
-                              <span>
-                                Kenya Elections Pictures: 8 August 2017
-                              </span>
-                            </span>
-                          </a>
-                        </h3>
-                        <p
-                          class="Summary-sc-1dvfmi3-4 eaCWBB"
-                        >
-                          This na some of the picture wey our eye see as Kenya people go vote for election today
-                        </p>
-                        <time
-                          class="StyledTimestamp-um718p-0 kVWTyt"
-                          datetime="2017-08-08"
-                        >
-                          8th August 2017
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <div
-                      class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                    >
-                      <div
-                        class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                        dir="ltr"
-                      >
-                        <div
-                          class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                        >
-                          <div
-                            class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
-                          >
-                            <div
-                              class="lazyload-placeholder"
-                            />
-                          </div>
-                          <div
-                            class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                          >
-                            <div
-                              aria-hidden="true"
-                              class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                              dir="ltr"
-                            >
-                              <div
-                                class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
-                                  focusable="false"
-                                  height="12px"
-                                  viewBox="0 0 13 12"
-                                  width="13px"
-                                >
-                                  <path
-                                    d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                                  />
-                                  <path
-                                    d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                                  />
-                                </svg>
-                                <time
-                                  class="StyledTime-jpt91x-0 bYtFje"
-                                  datetime="PT15S"
-                                >
-                                  0:15
-                                </time>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                        dir="ltr"
-                      >
-                        <h3
-                          class="Headline-sc-1dvfmi3-3 hSJrur"
-                        >
-                          <a
-                            class="Link-sc-1dvfmi3-5 yQgSu"
-                            href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                          >
-                            <span
-                              role="text"
-                            >
-                              <span
-                                class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
-                              >
-                                Audio, 
-                              </span>
-                              <span>
-                                BBC News Pidgin One Minute News
-                              </span>
-                              <span
-                                class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
-                              >
-                                , 0,15
-                              </span>
-                            </span>
-                          </a>
-                        </h3>
-                        <p
-                          class="Summary-sc-1dvfmi3-4 eaCWBB"
-                        >
-                          All di local and world tori wey you suppose know in 60 seconds!
-                        </p>
-                        <time
-                          class="StyledTimestamp-um718p-0 kVWTyt"
-                          datetime="2017-08-17"
-                        >
-                          17th August 2017
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
               </div>
             </section>
           </div>

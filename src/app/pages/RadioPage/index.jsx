@@ -1,23 +1,99 @@
-import React from 'react';
-import pipe from 'ramda/src/pipe';
-import RadioPageMain from '../../containers/RadioPageMain';
+import React, { useContext } from 'react';
+import { string, shape, object, arrayOf } from 'prop-types';
+import styled from 'styled-components';
+import path from 'ramda/src/path';
+import ATIAnalytics from '../../containers/ATIAnalytics';
+import MetadataContainer from '../../containers/Metadata';
+import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
+import Grid, { GelPageGrid } from '#app/components/Grid';
+import LinkedData from '../../containers/LinkedData';
+import RadioPageBlocks from '../../containers/RadioPageBlocks';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
-import withContexts from '../../containers/PageHandlers/withContexts';
-import withPageWrapper from '../../containers/PageHandlers/withPageWrapper';
-import withError from '../../containers/PageHandlers/withError';
-import withLoading from '../../containers/PageHandlers/withLoading';
-import withData from '../../containers/PageHandlers/withData';
+const RadioPage = ({ pageData }) => {
+  const blocks = path(['content', 'blocks'], pageData);
+  const promo = path(['promo'], pageData);
+  const metadata = path(['metadata'], pageData);
+  const { dir } = useContext(ServiceContext);
+  const StyledGelPageGrid = styled(GelPageGrid)`
+    flex-grow: 1;
+  `;
+  return (
+    <>
+      <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} />
+      <MetadataContainer
+        title={promo.name}
+        lang={metadata.language}
+        description={promo.summary}
+        openGraphType="website"
+      />
+      <LinkedData type="RadioChannel" seoTitle={promo.name} />
 
-const RadioContainer = props => {
-  return <RadioPageMain {...props} />;
+      <StyledGelPageGrid
+        forwardedAs="main"
+        role="main"
+        dir={dir}
+        columns={{
+          group0: 6,
+          group1: 6,
+          group2: 6,
+          group3: 6,
+          group4: 8,
+          group5: 20,
+        }}
+        enableGelGutters
+      >
+        <Grid
+          item
+          dir={dir}
+          startOffset={{
+            group0: 1,
+            group1: 1,
+            group2: 1,
+            group3: 1,
+            group4: 2,
+            group5: 5,
+          }}
+          columns={{
+            group0: 6,
+            group1: 6,
+            group2: 6,
+            group3: 6,
+            group4: 6,
+            group5: 12,
+          }}
+          margins={{ group0: true, group1: true, group2: true, group3: true }}
+        >
+          <RadioPageBlocks blocks={blocks} />
+        </Grid>
+      </StyledGelPageGrid>
+    </>
+  );
 };
 
-const EnhancedRadioContainer = pipe(
-  withData,
-  withError,
-  withLoading,
-  withPageWrapper,
-  withContexts,
-)(RadioContainer);
+RadioPage.propTypes = {
+  pageData: shape({
+    metadata: shape({
+      id: string,
+      tags: object,
+    }),
+    promo: shape({
+      subtype: string,
+      name: string,
+    }),
+    content: shape({
+      blocks: arrayOf(
+        shape({
+          uuid: string,
+          id: string,
+          externalId: string,
+          text: string,
+          type: string,
+        }),
+      ),
+    }),
+  }).isRequired,
+};
 
-export default EnhancedRadioContainer;
+export default RadioPage;

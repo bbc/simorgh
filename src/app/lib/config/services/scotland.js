@@ -20,6 +20,7 @@ export const service = {
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'scotland',
     atiAnalyticsProducerId: '79',
+    chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Scotland',
     product: 'BBC Scotland',
     defaultImage:
@@ -47,7 +48,6 @@ export const service = {
     swPath: '/articles/sw.js',
     frontPageTitle: 'Home',
     passportHomes: ['BBCScotland'],
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_DARK_SALTIRE}`,
       brandLogoColour: `${C_WHITE}`,
@@ -57,7 +57,7 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
       relatedContent: 'Related content',
-      sections: 'Sections',
+      navMenuText: 'Sections',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -161,6 +161,9 @@ export const service = {
       lastUpdated: 'Last updated:',
       numberOfItems: 5,
       hasMostRead: false,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       externalLink: {

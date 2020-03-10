@@ -8,12 +8,11 @@ import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import CpsMapPage from '.';
+import { MediaAssetPage } from '..';
 import mapPageData from '#data/pidgin/cpsAssets/23248703';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
-import legacyPageData from '#data/hausa/legacyAssets/multimedia/2012/07/120712_click';
 
 const toggleState = {
   local: {
@@ -45,14 +44,14 @@ const createAssetPage = ({ pageData }, service) => (
           service={service}
           statusCode={200}
         >
-          <CpsMapPage service={service} pageData={pageData} />
+          <MediaAssetPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContext.Provider>
   </StaticRouter>
 );
 
-jest.mock('../../containers/PageHandlers/withPageWrapper', () => Component => {
+jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
     <div id="PageWrapperContainer">
       <Component {...props} />
@@ -62,7 +61,7 @@ jest.mock('../../containers/PageHandlers/withPageWrapper', () => Component => {
   return PageWrapperContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withLoading', () => Component => {
+jest.mock('#containers/PageHandlers/withLoading', () => Component => {
   const LoadingContainer = props => (
     <div id="LoadingContainer">
       <Component {...props} />
@@ -72,7 +71,7 @@ jest.mock('../../containers/PageHandlers/withLoading', () => Component => {
   return LoadingContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withError', () => Component => {
+jest.mock('#containers/PageHandlers/withError', () => Component => {
   const ErrorContainer = props => (
     <div id="ErrorContainer">
       <Component {...props} />
@@ -82,7 +81,7 @@ jest.mock('../../containers/PageHandlers/withError', () => Component => {
   return ErrorContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withData', () => Component => {
+jest.mock('#containers/PageHandlers/withData', () => Component => {
   const DataContainer = props => (
     <div id="DataContainer">
       <Component {...props} />
@@ -92,7 +91,7 @@ jest.mock('../../containers/PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
+jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   const ContextsContainer = props => (
     <div id="ContextsContainer">
       <Component {...props} />
@@ -360,21 +359,4 @@ it('should only render firstPublished timestamp for Igbo when lastPublished is l
   const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
 
   expect(getByText('23 Ọktọba 2019')).toBeInTheDocument();
-});
-
-describe('Legacy Media Asset Page', () => {
-  it('displays a media message placeholder in place of video', async () => {
-    fetch.mockResponse(JSON.stringify(legacyPageData));
-
-    const { pageData: legacyMapData } = await getInitialData(
-      'some-legacy-map-path',
-    );
-    const { getByText } = render(
-      createAssetPage({ pageData: legacyMapData }, 'hausa'),
-    );
-
-    expect(
-      getByText('Yanzu an daina samar da wannan shiri.'),
-    ).toBeInTheDocument();
-  });
 });

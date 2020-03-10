@@ -1,652 +1,635 @@
 {
-  "metadata":{
-     "id":"urn:bbc:ares::asset:mundo/23268432",
-     "locators":{
-        "assetUri":"/mundo/23268432",
-        "cpsUrn":"urn:bbc:content:assetUri:mundo/23268432",
-        "curie":"http://www.bbc.co.uk/asset/5306c9bd-a4b8-0b45-8994-bfc5a8ce7521",
-        "assetId":"23268432"
-     },
-     "type":"STY",
-     "createdBy":"mundo-v6",
-     "language":"es",
-     "lastUpdated":1582640929185,
-     "firstPublished":1582639881000,
-     "lastPublished":1582640920000,
-     "timestamp":1582639881000,
-     "options":{
-        "isIgorSeoTagsEnabled":false,
-        "includeComments":false,
-        "allowRightHandSide":true,
-        "isFactCheck":false,
-        "allowDateStamp":true,
-        "suitableForSyndication":true,
-        "hasNewsTracker":false,
-        "allowRelatedStoriesBox":true,
-        "isKeyContent":false,
-        "allowHeadline":true,
-        "allowAdvertising":true,
-        "hasContentWarning":false,
-        "isBreakingNews":false,
-        "allowPrintingSharingLinks":true
-     },
-     "analyticsLabels":{
-        "cps_asset_type":"sty",
-        "counterName":"mundo.story.23268432.page",
-        "cps_asset_id":"23268432"
-     },
-     "tags":{
-
-     },
-     "version":"v1.1.6",
-     "blockTypes":[
-        "paragraph",
-        "crosshead",
-        "media",
-        "list"
-     ],
-     "includeComments":false
+  "metadata": {
+    "id": "urn:bbc:ares::asset:mundo/23268432",
+    "locators": {
+      "assetUri": "/mundo/23268432",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/23268432",
+      "curie": "http://www.bbc.co.uk/asset/5306c9bd-a4b8-0b45-8994-bfc5a8ce7521",
+      "assetId": "23268432"
+    },
+    "type": "STY",
+    "createdBy": "mundo-v6",
+    "language": "es",
+    "lastUpdated": 1583409243273,
+    "firstPublished": 1582639881000,
+    "lastPublished": 1583409230000,
+    "timestamp": 1582639881000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "mundo.story.23268432.page",
+      "cps_asset_id": "23268432"
+    },
+    "tags": {},
+    "version": "v1.1.6",
+    "blockTypes": [
+      "paragraph",
+      "crosshead",
+      "media",
+      "list"
+    ],
+    "includeComments": false
   },
-  "content":{
-     "blocks":[
-        {
-           "text":"Introduction text. ",
-           "role":"introduction",
-           "markupType":"plain_text",
-           "type":"paragraph"
+  "content": {
+    "blocks": [
+      {
+        "text": "Introduction text. ",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "First paragraph of text.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Video, Clip, International and UK, Guidance, Subtitles",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "p01k6msm",
+        "subType": "clip",
+        "format": "video",
+        "title": "Five things ants can teach us about management",
+        "synopses": {
+          "short": "They may be tiny, but us humans could learn a thing or two from ants."
         },
-        {
-           "text":"First paragraph of text.",
-           "markupType":"plain_text",
-           "type":"paragraph"
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Video, Clip, International and UK, Guidance, Subtitles",
+        "versions": [
+          {
+            "versionId": "p01k6msp",
+            "types": [
+              "Original"
+            ],
+            "duration": 191,
+            "durationISO8601": "PT3M11S",
+            "warnings": {
+              "short": "Contains strong language and adult humour.",
+              "long": "Contains strong language and adult humour."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1540218932000
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "Clip, Video, UK-only, guidance, no subtitles, caption with rich formatting",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "p01kdbns",
+        "subType": "clip",
+        "format": "video",
+        "title": "How Germans remember the World Wars",
+        "synopses": {
+          "short": "Remembrance Day: How Germans remember the World Wars",
+          "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+          "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
         },
-        {
-           "text":"Video, Clip, International and UK, Guidance, Subtitles",
-           "markupType":"plain_text",
-           "type":"crosshead"
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Clip, Video, UK-only, guidance, no subtitles. But AV captions can't be multi-paragraph or have rich formatting.",
+        "versions": [
+          {
+            "versionId": "p01kdbnv",
+            "types": [
+              "Original"
+            ],
+            "duration": 162,
+            "durationISO8601": "PT2M42S",
+            "warnings": {
+              "short": "Contains some strong language.",
+              "long": "Contains some strong language."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": false,
+              "world": false
+            },
+            "availableFrom": 1541761851000
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "Note: subtitles are burnt on the video so are appearing, but there should be no subtitle control option.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Video, Clip, International and UK, Guidance, no Subtitles",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "p01kdbwr",
+        "subType": "clip",
+        "format": "video",
+        "title": "How Germans remember the World Wars (INT)",
+        "synopses": {
+          "short": "Remembrance Day: How Germans remember the World Wars",
+          "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+          "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
         },
-        {
-           "id":"p01k6msm",
-           "subType":"clip",
-           "format":"video",
-           "title":"Five things ants can teach us about management",
-           "synopses":{
-              "short":"They may be tiny, but us humans could learn a thing or two from ants."
-           },
-           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-           "embedding":true,
-           "advertising":true,
-           "caption":"Video, Clip, International and UK, Guidance, Subtitles",
-           "versions":[
-              {
-                 "versionId":"p01k6msp",
-                 "types":[
-                    "Original"
-                 ],
-                 "duration":191,
-                 "durationISO8601":"PT3M11S",
-                 "warnings":{
-                    "short":"Contains strong language and adult humour.",
-                    "long":"Contains strong language and adult humour."
-                 },
-                 "availableTerritories":{
-                    "uk":true,
-                    "nonUk":true,
-                    "world":false
-                 },
-                 "availableFrom":1540218932000
-              }
-           ],
-           "imageCopyright":"BBC",
-           "type":"media"
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbxp.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Video, Clip, International and UK, Guidance, no Subtitles",
+        "versions": [
+          {
+            "versionId": "p01kdbwt",
+            "types": [
+              "Original"
+            ],
+            "duration": 162,
+            "durationISO8601": "PT2M42S",
+            "warnings": {
+              "short": "Contains some violence.",
+              "long": "Contains some violent scenes."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1541763741000
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "Note: subtitles are burnt on the video so are appearing, but there should be no subtitle control option.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Video, Clip, International-only, no guidance, no subtitles",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "p01kdbpz",
+        "subType": "clip",
+        "format": "video",
+        "title": "'I lost my leg to type 2 diabetes' (NON UK)",
+        "synopses": {
+          "short": "Diabetes type 2: 'I blame myself for the loss of my leg'",
+          "long": "Every week 170 people in the UK lose a limb because of diabetes. Around four million people in the UK are living with diabetes - and around 90% of them have type 2 diabetes, which is often linked to being overweight or inactive. Diabetes prescriptions are costing the NHS in England more than £1 billion a year, according to figures from NHS Digital. And a further 12 million people could be at risk of getting type 2 diabetes in the future. Stephen Richardson has told the BBC he blames himself for the loss of his limb.",
+          "medium": "Stephen Richardson admits he ignored advice about diet and exercise."
         },
-        {
-           "text":"Clip, Video, UK-only, guidance, no subtitles, caption with rich formatting",
-           "markupType":"plain_text",
-           "type":"crosshead"
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbs1.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Video, Clip, International-only, no guidance, no subtitles",
+        "versions": [
+          {
+            "versionId": "p01kdbq2",
+            "types": [
+              "Original"
+            ],
+            "duration": 122,
+            "durationISO8601": "PT2M2S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1541762499000
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "Note: subtitles are burnt on the video so are appearing, but there should be no subtitle control option.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Audio, Clip, UK+Intl, Guidance",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "p01m7d07",
+        "subType": "clip",
+        "format": "audio",
+        "title": "Birmingham checkout",
+        "synopses": {
+          "short": "Some audio from a supermarket checkout in Birmingham"
         },
-        {
-           "id":"p01kdbns",
-           "subType":"clip",
-           "format":"video",
-           "title":"How Germans remember the World Wars",
-           "synopses":{
-              "short":"Remembrance Day: How Germans remember the World Wars",
-              "long":"Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
-              "medium":"Can people in today's Germany mourn their dead without whitewashing their country's past?"
-           },
-           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
-           "embedding":true,
-           "advertising":true,
-           "caption":"Clip, Video, UK-only, guidance, no subtitles. But AV captions can't be multi-paragraph or have rich formatting.",
-           "versions":[
-              {
-                 "versionId":"p01kdbnv",
-                 "types":[
-                    "Original"
-                 ],
-                 "duration":162,
-                 "durationISO8601":"PT2M42S",
-                 "warnings":{
-                    "short":"Contains some strong language.",
-                    "long":"Contains some strong language."
-                 },
-                 "availableTerritories":{
-                    "uk":true,
-                    "nonUk":false,
-                    "world":false
-                 },
-                 "availableFrom":1541761851000
-              }
-           ],
-           "imageCopyright":"BBC",
-           "type":"media"
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+        "embedding": false,
+        "advertising": false,
+        "caption": "Audio, Clip, UK+Intl, Guidance",
+        "versions": [
+          {
+            "versionId": "p01m7d09",
+            "types": [
+              "Original"
+            ],
+            "duration": 127,
+            "durationISO8601": "PT2M7S",
+            "warnings": {
+              "short": "Contains some strong language.",
+              "long": "Contains some strong language."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1555067395000
+          }
+        ],
+        "imageCopyright": "Getty Images",
+        "type": "media"
+      },
+      {
+        "text": "Clip, Audio, UK-only, no guidance",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "p01m7d3c",
+        "subType": "clip",
+        "format": "audio",
+        "title": "Birmingham Checkout 2",
+        "synopses": {
+          "short": "This is some sound from a supermarket checkout in Birmingham"
         },
-        {
-           "text":"Note: subtitles are burnt on the video so are appearing, but there should be no subtitle control option.",
-           "markupType":"plain_text",
-           "type":"paragraph"
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2gbb.jpg",
+        "embedding": true,
+        "advertising": false,
+        "caption": "Clip, Audio, UK-only, no guidance",
+        "versions": [
+          {
+            "versionId": "p01m7d3h",
+            "types": [
+              "Original"
+            ],
+            "duration": 127,
+            "durationISO8601": "PT2M7S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": false,
+              "world": false
+            },
+            "availableFrom": 1555067786000
+          }
+        ],
+        "imageCopyright": "AP",
+        "type": "media"
+      },
+      {
+        "text": "Clip, Audio, International-only, no guidance",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "p01m7d4m",
+        "subType": "clip",
+        "format": "audio",
+        "title": "Birmingham Checkout 3",
+        "synopses": {
+          "short": "This is some tweaked audio from a supermarket checkout in Birmingham"
         },
-        {
-           "text":"Video, Clip, International and UK, Guidance, no Subtitles",
-           "markupType":"plain_text",
-           "type":"crosshead"
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2gq7.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Clip, Audio, International-only, no guidance",
+        "versions": [
+          {
+            "versionId": "p01m7d4p",
+            "types": [
+              "Original"
+            ],
+            "duration": 127,
+            "durationISO8601": "PT2M7S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1555068044000
+          }
+        ],
+        "imageCopyright": "PA",
+        "type": "media"
+      },
+      {
+        "text": "Video, Clip, Portrait, UK+Intl, no guidance",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "p01n40vn",
+        "subType": "clip",
+        "format": "video",
+        "title": "A vertical video pretending to be a cat title",
+        "synopses": {
+          "short": "A vertical video pretending to be a cat short synopsis"
         },
-        {
-           "id":"p01kdbwr",
-           "subType":"clip",
-           "format":"video",
-           "title":"How Germans remember the World Wars (INT)",
-           "synopses":{
-              "short":"Remembrance Day: How Germans remember the World Wars",
-              "long":"Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
-              "medium":"Can people in today's Germany mourn their dead without whitewashing their country's past?"
-           },
-           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbxp.jpg",
-           "embedding":true,
-           "advertising":true,
-           "caption":"Video, Clip, International and UK, Guidance, no Subtitles",
-           "versions":[
-              {
-                 "versionId":"p01kdbwt",
-                 "types":[
-                    "Original"
-                 ],
-                 "duration":162,
-                 "durationISO8601":"PT2M42S",
-                 "warnings":{
-                    "short":"Contains some violence.",
-                    "long":"Contains some violent scenes."
-                 },
-                 "availableTerritories":{
-                    "uk":true,
-                    "nonUk":true,
-                    "world":false
-                 },
-                 "availableFrom":1541763741000
-              }
-           ],
-           "imageCopyright":"BBC",
-           "type":"media"
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n71w7.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Video, Clip, Portrait, UK+Intl, no guidance",
+        "versions": [
+          {
+            "versionId": "p01n40vq",
+            "types": [
+              "Portrait"
+            ],
+            "duration": 11,
+            "durationISO8601": "PT11S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1563017501000
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "Audio, episode, UK only, guidance",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "p01n6y6z",
+        "subType": "episode",
+        "format": "audio",
+        "title": "Audio test for articles, UK only",
+        "synopses": {
+          "short": "Audio test for articles, UK only"
         },
-        {
-           "text":"Note: subtitles are burnt on the video so are appearing, but there should be no subtitle control option.",
-           "markupType":"plain_text",
-           "type":"paragraph"
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n6y7l.jpg",
+        "embedding": false,
+        "advertising": false,
+        "caption": "Audio test for articles, UK only",
+        "versions": [
+          {
+            "versionId": "p01n6yb1",
+            "types": [
+              "Original"
+            ],
+            "duration": 343,
+            "durationISO8601": "PT5M43S",
+            "warnings": {
+              "short": "Contains some strong language.",
+              "long": "Contains some strong language."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": false,
+              "world": false
+            },
+            "availableFrom": 1563782700000
+          }
+        ],
+        "type": "media"
+      },
+      {
+        "text": "Video, Episode, UK only, subtitles, guidance",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "p01n6yf9",
+        "subType": "episode",
+        "format": "video",
+        "title": "Test video episode for articles, UK only",
+        "synopses": {
+          "short": "Test video episode for articles, UK only"
         },
-        {
-           "text":"Video, Clip, International-only, no guidance, no subtitles",
-           "markupType":"plain_text",
-           "type":"crosshead"
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n6yfm.jpg",
+        "embedding": false,
+        "advertising": false,
+        "caption": "Video, Episode, UK only, subtitles, guidance",
+        "versions": [
+          {
+            "versionId": "p01n6ygf",
+            "types": [
+              "Original"
+            ],
+            "duration": 1652,
+            "durationISO8601": "PT27M32S",
+            "warnings": {
+              "short": "Contains very strong language and some violence.",
+              "long": "Contains very strong language and some violent scenes."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": false,
+              "world": false
+            },
+            "availableFrom": 1563784020000
+          }
+        ],
+        "type": "media"
+      },
+      {
+        "text": "Audio, Episode, worldwide, guidance",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "p01mbrvl",
+        "subType": "episode",
+        "format": "audio",
+        "title": "Test audio episode for articles, worldwide",
+        "synopses": {
+          "short": "This is a test asset created for the articles project"
         },
-        {
-           "id":"p01kdbpz",
-           "subType":"clip",
-           "format":"video",
-           "title":"'I lost my leg to type 2 diabetes' (NON UK)",
-           "synopses":{
-              "short":"Diabetes type 2: 'I blame myself for the loss of my leg'",
-              "long":"Every week 170 people in the UK lose a limb because of diabetes. Around four million people in the UK are living with diabetes - and around 90% of them have type 2 diabetes, which is often linked to being overweight or inactive. Diabetes prescriptions are costing the NHS in England more than £1 billion a year, according to figures from NHS Digital. And a further 12 million people could be at risk of getting type 2 diabetes in the future. Stephen Richardson has told the BBC he blames himself for the loss of his limb.",
-              "medium":"Stephen Richardson admits he ignored advice about diet and exercise."
-           },
-           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbs1.jpg",
-           "embedding":true,
-           "advertising":true,
-           "caption":"Video, Clip, International-only, no guidance, no subtitles",
-           "versions":[
-              {
-                 "versionId":"p01kdbq2",
-                 "types":[
-                    "Original"
-                 ],
-                 "duration":122,
-                 "durationISO8601":"PT2M2S",
-                 "warnings":{
-
-                 },
-                 "availableTerritories":{
-                    "uk":false,
-                    "nonUk":true,
-                    "world":false
-                 },
-                 "availableFrom":1541762499000
-              }
-           ],
-           "imageCopyright":"BBC",
-           "type":"media"
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2j2b.jpg",
+        "embedding": false,
+        "advertising": false,
+        "caption": "Audio, Episode, worldwide, guidance",
+        "versions": [
+          {
+            "versionId": "p01mbrx4",
+            "types": [
+              "Original"
+            ],
+            "duration": 127,
+            "durationISO8601": "PT2M7S",
+            "warnings": {
+              "short": "Contains strong language.",
+              "long": "Contains strong language."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1556298963000
+          }
+        ],
+        "type": "media"
+      },
+      {
+        "text": "Video, Clip, International + UK, no guidance, no subtitles, end date 28/08/2019 16:00",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "p01nl60m",
+        "subType": "clip",
+        "format": "video",
+        "title": "Venice film festival preview",
+        "synopses": {
+          "short": "Stars arrive at Venice film festival preview"
         },
-        {
-           "text":"Note: subtitles are burnt on the video so are appearing, but there should be no subtitle control option.",
-           "markupType":"plain_text",
-           "type":"paragraph"
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01nl639.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Video, Clip, International + UK, no guidance, no subtitles, end date 28/08/2019 16:00",
+        "versions": [
+          {
+            "versionId": "p01nl60p",
+            "types": [
+              "Original"
+            ],
+            "duration": 191,
+            "durationISO8601": "PT3M11S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableUntil": 1567004595000,
+            "availableFrom": 1566918195000
+          }
+        ],
+        "imageCopyright": "Reuters",
+        "type": "media"
+      },
+      {
+        "text": "<bold>Video, Clip, International + UK, no guidance, no subtitles, start date </bold><bold>01</bold><bold>/</bold><bold>07</bold><bold>/</bold><bold>2020</bold><bold> 08:00</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "id": "p01nl5y8",
+        "subType": "clip",
+        "format": "video",
+        "title": "An island without fish?",
+        "synopses": {
+          "short": "Cuba: An island without fish?"
         },
-        {
-           "text":"Audio, Clip, UK+Intl, Guidance",
-           "markupType":"plain_text",
-           "type":"crosshead"
-        },
-        {
-           "id":"p01m7d07",
-           "subType":"clip",
-           "format":"audio",
-           "title":"Birmingham checkout",
-           "synopses":{
-              "short":"Some audio from a supermarket checkout in Birmingham"
-           },
-           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
-           "embedding":false,
-           "advertising":false,
-           "caption":"Audio, Clip, UK+Intl, Guidance",
-           "versions":[
-              {
-                 "versionId":"p01m7d09",
-                 "types":[
-                    "Original"
-                 ],
-                 "duration":127,
-                 "durationISO8601":"PT2M7S",
-                 "warnings":{
-                    "short":"Contains some strong language.",
-                    "long":"Contains some strong language."
-                 },
-                 "availableTerritories":{
-                    "uk":true,
-                    "nonUk":true,
-                    "world":false
-                 },
-                 "availableFrom":1555067395000
-              }
-           ],
-           "imageCopyright":"Getty Images",
-           "type":"media"
-        },
-        {
-           "text":"Clip, Audio, UK-only, no guidance",
-           "markupType":"plain_text",
-           "type":"crosshead"
-        },
-        {
-           "id":"p01m7d3c",
-           "subType":"clip",
-           "format":"audio",
-           "title":"Birmingham Checkout 2",
-           "synopses":{
-              "short":"This is some sound from a supermarket checkout in Birmingham"
-           },
-           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01n2gbb.jpg",
-           "embedding":true,
-           "advertising":false,
-           "caption":"Clip, Audio, UK-only, no guidance",
-           "versions":[
-              {
-                 "versionId":"p01m7d3h",
-                 "types":[
-                    "Original"
-                 ],
-                 "duration":127,
-                 "durationISO8601":"PT2M7S",
-                 "warnings":{
-
-                 },
-                 "availableTerritories":{
-                    "uk":true,
-                    "nonUk":false,
-                    "world":false
-                 },
-                 "availableFrom":1555067786000
-              }
-           ],
-           "imageCopyright":"AP",
-           "type":"media"
-        },
-        {
-           "text":"Clip, Audio, International-only, no guidance",
-           "markupType":"plain_text",
-           "type":"crosshead"
-        },
-        {
-           "id":"p01m7d4m",
-           "subType":"clip",
-           "format":"audio",
-           "title":"Birmingham Checkout 3",
-           "synopses":{
-              "short":"This is some tweaked audio from a supermarket checkout in Birmingham"
-           },
-           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01n2gq7.jpg",
-           "embedding":true,
-           "advertising":true,
-           "caption":"Clip, Audio, International-only, no guidance",
-           "versions":[
-              {
-                 "versionId":"p01m7d4p",
-                 "types":[
-                    "Original"
-                 ],
-                 "duration":127,
-                 "durationISO8601":"PT2M7S",
-                 "warnings":{
-
-                 },
-                 "availableTerritories":{
-                    "uk":false,
-                    "nonUk":true,
-                    "world":false
-                 },
-                 "availableFrom":1555068044000
-              }
-           ],
-           "imageCopyright":"PA",
-           "type":"media"
-        },
-        {
-           "text":"Video, Clip, Portrait, UK+Intl, no guidance",
-           "markupType":"plain_text",
-           "type":"crosshead"
-        },
-        {
-           "id":"p01n40vn",
-           "subType":"clip",
-           "format":"video",
-           "title":"A vertical video pretending to be a cat title",
-           "synopses":{
-              "short":"A vertical video pretending to be a cat short synopsis"
-           },
-           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01n71w7.jpg",
-           "embedding":true,
-           "advertising":true,
-           "caption":"Video, Clip, Portrait, UK+Intl, no guidance",
-           "versions":[
-              {
-                 "versionId":"p01n40vq",
-                 "types":[
-                    "Portrait"
-                 ],
-                 "duration":11,
-                 "durationISO8601":"PT11S",
-                 "warnings":{
-
-                 },
-                 "availableTerritories":{
-                    "uk":true,
-                    "nonUk":true,
-                    "world":false
-                 },
-                 "availableFrom":1563017501000
-              }
-           ],
-           "imageCopyright":"BBC",
-           "type":"media"
-        },
-        {
-           "text":"Audio, episode, UK only, guidance",
-           "markupType":"plain_text",
-           "type":"crosshead"
-        },
-        {
-           "id":"p01n6y6z",
-           "subType":"episode",
-           "format":"audio",
-           "title":"Audio test for articles, UK only",
-           "synopses":{
-              "short":"Audio test for articles, UK only"
-           },
-           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01n6y7l.jpg",
-           "embedding":false,
-           "advertising":false,
-           "caption":"Audio test for articles, UK only",
-           "versions":[
-              {
-                 "versionId":"p01n6yb1",
-                 "types":[
-                    "Original"
-                 ],
-                 "duration":343,
-                 "durationISO8601":"PT5M43S",
-                 "warnings":{
-                    "short":"Contains some strong language.",
-                    "long":"Contains some strong language."
-                 },
-                 "availableTerritories":{
-                    "uk":true,
-                    "nonUk":false,
-                    "world":false
-                 },
-                 "availableFrom":1563782700000
-              }
-           ],
-           "type":"media"
-        },
-        {
-           "text":"Video, Episode, UK only, subtitles, guidance",
-           "markupType":"plain_text",
-           "type":"crosshead"
-        },
-        {
-           "id":"p01n6yf9",
-           "subType":"episode",
-           "format":"video",
-           "title":"Test video episode for articles, UK only",
-           "synopses":{
-              "short":"Test video episode for articles, UK only"
-           },
-           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01n6yfm.jpg",
-           "embedding":false,
-           "advertising":false,
-           "caption":"Video, Episode, UK only, subtitles, guidance",
-           "versions":[
-              {
-                 "versionId":"p01n6ygf",
-                 "types":[
-                    "Original"
-                 ],
-                 "duration":1652,
-                 "durationISO8601":"PT27M32S",
-                 "warnings":{
-                    "short":"Contains very strong language and some violence.",
-                    "long":"Contains very strong language and some violent scenes."
-                 },
-                 "availableTerritories":{
-                    "uk":true,
-                    "nonUk":false,
-                    "world":false
-                 },
-                 "availableFrom":1563784020000
-              }
-           ],
-           "type":"media"
-        },
-        {
-           "text":"Audio, Episode, worldwide, guidance",
-           "markupType":"plain_text",
-           "type":"crosshead"
-        },
-        {
-           "id":"p01mbrvl",
-           "subType":"episode",
-           "format":"audio",
-           "title":"Test audio episode for articles, worldwide",
-           "synopses":{
-              "short":"This is a test asset created for the articles project"
-           },
-           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01n2j2b.jpg",
-           "embedding":false,
-           "advertising":false,
-           "caption":"Audio, Episode, worldwide, guidance",
-           "versions":[
-              {
-                 "versionId":"p01mbrx4",
-                 "types":[
-                    "Original"
-                 ],
-                 "duration":127,
-                 "durationISO8601":"PT2M7S",
-                 "warnings":{
-                    "short":"Contains strong language.",
-                    "long":"Contains strong language."
-                 },
-                 "availableTerritories":{
-                    "uk":true,
-                    "nonUk":true,
-                    "world":false
-                 },
-                 "availableFrom":1556298963000
-              }
-           ],
-           "type":"media"
-        },
-        {
-           "text":"Video, Clip, International + UK, no guidance, no subtitles, end date 28/08/2019 16:00",
-           "markupType":"plain_text",
-           "type":"crosshead"
-        },
-        {
-           "id":"p01nl60m",
-           "subType":"clip",
-           "format":"video",
-           "title":"Venice film festival preview",
-           "synopses":{
-              "short":"Stars arrive at Venice film festival preview"
-           },
-           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01nl639.jpg",
-           "embedding":true,
-           "advertising":true,
-           "caption":"Video, Clip, International + UK, no guidance, no subtitles, end date 28/08/2019 16:00",
-           "versions":[
-              {
-                 "versionId":"p01nl60p",
-                 "types":[
-                    "Original"
-                 ],
-                 "duration":191,
-                 "durationISO8601":"PT3M11S",
-                 "warnings":{
-
-                 },
-                 "availableTerritories":{
-                    "uk":true,
-                    "nonUk":true,
-                    "world":false
-                 },
-                 "availableUntil":1567004595000,
-                 "availableFrom":1566918195000
-              }
-           ],
-           "imageCopyright":"Reuters",
-           "type":"media"
-        },
-        {
-           "text":"Video, Clip, International + UK, no guidance, no subtitles, start date 20/12/19 08:00",
-           "markupType":"plain_text",
-           "type":"crosshead"
-        },
-        {
-           "id":"p01nl5y8",
-           "subType":"clip",
-           "format":"video",
-           "title":"An island without fish?",
-           "synopses":{
-              "short":"Cuba: An island without fish?"
-           },
-           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01nl63k.jpg",
-           "embedding":true,
-           "advertising":true,
-           "caption":"Video, Clip, International + UK, no guidance, no subtitles, start date 20/12/19 08:00",
-           "versions":[
-              {
-                 "versionId":"p01nl5yb",
-                 "types":[
-                    "Original"
-                 ],
-                 "duration":191,
-                 "durationISO8601":"PT3M11S",
-                 "warnings":{
-
-                 },
-                 "availableTerritories":{
-                    "uk":true,
-                    "nonUk":true,
-                    "world":false
-                 },
-                 "availableFrom":1575187200000
-              }
-           ],
-           "type":"media"
-        },
-        {
-           "text":"<bold>Notes</bold><bold> (as a bulleted list)</bold>",
-           "markupType":"candy_xml",
-           "type":"paragraph"
-        },
-        {
-           "numbered":false,
-           "items":[
-              {
-                 "text":"All of these audio and video assets are embedded MAPs",
-                 "markupType":"plain_text",
-                 "type":"listItem"
-              }
-           ],
-           "type":"list"
-        }
-     ]
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01nl63k.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Video, Clip, International + UK, no guidance, no subtitles, start date 20/12/19 08:00",
+        "versions": [
+          {
+            "versionId": "p01nl5yb",
+            "types": [
+              "Original"
+            ],
+            "duration": 191,
+            "durationISO8601": "PT3M11S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableUntil": 1609401660000,
+            "availableFrom": 1593586800000
+          }
+        ],
+        "type": "media"
+      },
+      {
+        "text": "<bold>Notes</bold><bold> (as a bulleted list)</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "All of these audio and video assets are embedded MAPs",
+            "markupType": "plain_text",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      }
+    ]
   },
-  "promo":{
-     "headlines":{
-        "shortHeadline":"Headline of mega AV test STY",
-        "headline":"Full headline of mega AV test STY"
-     },
-     "locators":{
-        "assetUri":"/mundo/23268432",
-        "cpsUrn":"urn:bbc:content:assetUri:mundo/23268432",
-        "curie":"http://www.bbc.co.uk/asset/5306c9bd-a4b8-0b45-8994-bfc5a8ce7521",
-        "assetId":"23268432"
-     },
-     "summary":"Summary of mega AV test STY",
-     "timestamp":1582639881000,
-     "language":"es",
-     "passport":{
-        "taggings":[
-
-        ]
-     },
-     "id":"urn:bbc:ares::asset:mundo/23268432",
-     "type":"cps"
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Headline of mega AV test STY",
+      "headline": "Full headline of mega AV test STY"
+    },
+    "locators": {
+      "assetUri": "/mundo/23268432",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/23268432",
+      "curie": "http://www.bbc.co.uk/asset/5306c9bd-a4b8-0b45-8994-bfc5a8ce7521",
+      "assetId": "23268432"
+    },
+    "summary": "Summary of mega AV test STY",
+    "timestamp": 1582639881000,
+    "language": "es",
+    "passport": {
+      "taggings": []
+    },
+    "id": "urn:bbc:ares::asset:mundo/23268432",
+    "type": "cps"
   },
-  "relatedContent":{
-     "section":{
-        "subType":"index",
-        "name":"Noticias",
-        "uri":"/mundo/front_page",
-        "type":"simple"
-     },
-     "site":{
-        "subType":"site",
-        "name":"BBC Mundo",
-        "uri":"/mundo",
-        "type":"simple"
-     },
-     "groups":[
-
-     ]
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Noticias",
+      "uri": "/mundo/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Mundo",
+      "uri": "/mundo",
+      "type": "simple"
+    },
+    "groups": []
   }
 }

@@ -16,6 +16,7 @@ export const service = {
     articleTimestampPrefix: 'جدّد في',
     atiAnalyticsAppName: 'news-arabic',
     atiAnalyticsProducerId: '5',
+    chartbeatDomain: 'arabic.bbc.co.uk',
     brandName: 'BBC News عربي',
     product: 'BBC News',
     serviceLocalizedName: 'عربي',
@@ -42,7 +43,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'الرئيسية',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -53,7 +53,7 @@ export const service = {
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
       relatedContent: 'المزيد حول هذه القصة',
-      sections: 'أقسام',
+      navMenuText: 'أقسام',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -167,6 +167,13 @@ export const service = {
       lastUpdated: 'آخر تحديث',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      frequenciesPageUrl:
+        '/arabic/institutional/2011/01/000000_frequencies_radio',
+      frequenciesPageLabel: 'Radio Frequencies Link Label',
+      header: 'BBC News Radio',
     },
     footer: {
       trustProjectLink: {

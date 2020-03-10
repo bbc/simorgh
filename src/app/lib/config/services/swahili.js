@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Imeboreshwa',
     atiAnalyticsAppName: 'news-swahili',
     atiAnalyticsProducerId: '86',
+    chartbeatDomain: 'swahili.bbc.co.uk',
     brandName: 'BBC News Swahili',
     product: 'BBC News',
     serviceLocalizedName: 'Swahili',
@@ -38,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Swahili',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,7 +49,7 @@ export const service = {
       currentPage: 'Ukurasa uliopo',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
-      sections: 'Yaliyomo',
+      navMenuText: 'Yaliyomo',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -165,6 +165,10 @@ export const service = {
       lastUpdated: 'Imeboreshwa mwisho:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      header: 'BBC News Radio',
     },
     footer: {
       trustProjectLink: {

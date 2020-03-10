@@ -38,7 +38,7 @@ const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   const ratio = (height / width) * 100;
   const originCode = getOriginCode(path);
   const locator = getLocator(path);
-  const imageResolutions = [70, 95, 144, 183, 240, 320, 624];
+  const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
   const srcset = createSrcset(originCode, locator, width, imageResolutions);
   const sizes = topStory
     ? '(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px'
@@ -77,21 +77,30 @@ StoryPromoImage.defaultProps = {
   }),
 };
 
-const LiveComponent = ({ headline, service, dir }) => (
-  // eslint-disable-next-line jsx-a11y/aria-role
-  <span role="text">
-    <LiveLabel service={service} dir={dir}>
-      LIVE
-    </LiveLabel>
-    <VisuallyHiddenText lang="en-GB">{' Live, '}</VisuallyHiddenText>
-    {headline}
-  </span>
-);
+const LiveComponent = ({ headline, service, liveLabel, dir }) => {
+  // As screenreaders mispronounce the word 'LIVE', we use visually hidden
+  // text to read 'Live' instead, which screenreaders pronounce correctly.
+  const liveLabelIsEnglish = liveLabel === 'LIVE';
+
+  return (
+    // eslint-disable-next-line jsx-a11y/aria-role
+    <span role="text">
+      <LiveLabel service={service} dir={dir} ariaHidden={liveLabelIsEnglish}>
+        {liveLabel}
+      </LiveLabel>
+      {liveLabelIsEnglish && (
+        <VisuallyHiddenText lang="en-GB">{` Live, `}</VisuallyHiddenText>
+      )}
+      {headline}
+    </span>
+  );
+};
 
 LiveComponent.propTypes = {
   service: string.isRequired,
   dir: string.isRequired,
   headline: element.isRequired,
+  liveLabel: string.isRequired,
 };
 
 const StoryPromoContainer = ({
@@ -101,9 +110,16 @@ const StoryPromoContainer = ({
   dir,
   displayImage,
 }) => {
-  const { script, datetimeLocale, service, timezone } = useContext(
-    ServiceContext,
-  );
+  const {
+    script,
+    datetimeLocale,
+    service,
+    translations,
+    timezone,
+  } = useContext(ServiceContext);
+
+  const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
+
   const isAssetTypeCode = getAssetTypeCode(item);
   const isStoryPromoPodcast =
     isAssetTypeCode === 'PRO' &&
@@ -139,6 +155,7 @@ const StoryPromoContainer = ({
               <LiveComponent
                 service={service}
                 headline={linkcontents}
+                liveLabel={liveLabel}
                 dir={dir}
               />
             ) : (

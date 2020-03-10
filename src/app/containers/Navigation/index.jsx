@@ -6,10 +6,18 @@ import { RequestContext } from '#contexts/RequestContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 
-const renderListItems = (Li, navigation, script, currentPage, service, dir) =>
+const renderListItems = (
+  Li,
+  navigation,
+  script,
+  currentPage,
+  service,
+  dir,
+  activeIndex,
+) =>
   navigation.map((item, index) => {
     const { title, url } = item;
-    const active = index === 0;
+    const active = index === activeIndex;
 
     return (
       <Li
@@ -32,11 +40,17 @@ const NavigationContainer = () => {
   const { script, translations, navigation, service, dir } = useContext(
     ServiceContext,
   );
-  const { currentPage, sections } = translations;
+
+  const { canonicalLink, origin } = useContext(RequestContext);
+  const { currentPage, navMenuText } = translations;
 
   if (!navigation || navigation.length === 0) {
     return null;
   }
+
+  const activeIndex = navigation.findIndex(
+    link => `${origin}${link.url}` === canonicalLink,
+  );
 
   const scrollableListItems = (
     <NavigationUl>
@@ -47,6 +61,7 @@ const NavigationContainer = () => {
         currentPage,
         service,
         dir,
+        activeIndex,
       )}
     </NavigationUl>
   );
@@ -60,6 +75,7 @@ const NavigationContainer = () => {
         currentPage,
         service,
         dir,
+        activeIndex,
       )}
     </DropdownUl>
   );
@@ -70,7 +86,7 @@ const NavigationContainer = () => {
     <Navigation
       scrollableListItems={scrollableListItems}
       dropdownListItems={dropdownListItems}
-      menuAnnouncedText={sections}
+      menuAnnouncedText={navMenuText}
       dir={dir}
       script={script}
       service={service}

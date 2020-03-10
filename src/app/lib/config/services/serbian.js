@@ -10,9 +10,10 @@ import '@bbc/psammead-locales/moment/sr';
 import withContext from '../../../contexts/utils/withContext';
 
 const baseServiceConfig = {
-  articleAuthor: `https://www.facebook.com/BBCNewsnasrpskom`,
+  articleAuthor: 'https://www.facebook.com/bbcnews',
   atiAnalyticsAppName: 'news-serbian',
   atiAnalyticsProducerId: '81',
+  chartbeatDomain: 'serbian.bbc.co.uk',
   product: 'BBC News',
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png',
   dir: `ltr`,
@@ -25,7 +26,9 @@ const baseServiceConfig = {
   isTrustProjectParticipant: true,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
-  hasRadioSchedule: false,
+  radioSchedule: {
+    hasRadioSchedule: false,
+  },
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,
@@ -38,7 +41,7 @@ const baseServiceConfig = {
 export const service = {
   lat: {
     ...baseServiceConfig,
-    articleTimestampPrefix: 'Poslednji put ažurirano ',
+    articleTimestampPrefix: 'Ažurirano',
     brandName: 'BBC News na srpskom',
     datetimeLocale: `sr`,
     externalLinkText: ', spoljna stranica',
@@ -85,13 +88,13 @@ export const service = {
           text: 'Kontaktirajte BBC',
         },
       ],
-      copyrightText: 'BBC. BBC nije odgovoran za sadržaj drugih sajtova',
+      copyrightText: 'BBC. BBC nije odgovoran za sadržaj drugih sajtova.',
     },
     mostRead: {
       header: 'Najčitanije',
       lastUpdated: 'Poslednji put ažurirano ',
       numberOfItems: 10,
-      hasMostRead: false,
+      hasMostRead: true,
     },
     navigation: [
       {
@@ -119,13 +122,18 @@ export const service = {
         url: '/serbian/lat/popular/read',
       },
     ],
+    scriptLink: {
+      text: 'Ћир',
+      offscreenText: 'Cyrillic',
+      variant: 'cyr',
+    },
     translations: {
       seeAll: 'Pogledajte sve',
       home: 'Glavna stranica',
       currentPage: 'Otvorena stranica',
       skipLinkText: 'Pređite na sadržaj',
       relatedContent: 'Povezano',
-      sections: 'Odeljci',
+      navMenuText: 'Odeljci',
       mediaAssetPage: {
         mediaPlayer: 'Media plejer',
         audioPlayer: 'Audio plejer',
@@ -134,7 +142,7 @@ export const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Stranica nije pronađena',
+          title: 'Stranica nije pronađena',
           message:
             'Izvinite, stranica koju ste tražili nije nađena. Molimo vas da pokušate:',
           solutions: [
@@ -149,7 +157,7 @@ export const service = {
         },
         500: {
           statusCode: '500',
-          title: '500 - Greška internog servera',
+          title: 'Greška internog servera',
           message:
             'Izvinite, stranica koju ste tražili nije nađena. Molimo vas da pokušate:',
           solutions: [
@@ -192,7 +200,7 @@ export const service = {
               first: 'Koristimo ',
               linkText: 'kolačiće',
               last:
-                '  da bismo vam pružili najbolje iskustvo na internetu. Molimo vas da nas obavestite da li se slažete sa upotrebom svih kolačića.',
+                ' da bismo vam pružili najbolje iskustvo na internetu. Molimo vas da nas obavestite da li se slažete sa upotrebom svih kolačića.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -229,10 +237,10 @@ export const service = {
   },
   cyr: {
     ...baseServiceConfig,
-    articleTimestampPrefix: 'Последњи пут ажурирано: ',
-    brandName: 'ББЦ News на српском',
+    articleTimestampPrefix: 'Ажурирано',
+    brandName: 'BBC News на српском',
     datetimeLocale: `sr-cyrl`,
-    externalLinkText: ', spoljna stranica',
+    externalLinkText: ', спољна страница',
     frontPageTitle: ', спољна страница',
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
@@ -240,10 +248,10 @@ export const service = {
     serviceLocalizedName: 'на српском',
     serviceName: 'News на српском',
     defaultImageAltText: 'ББЦ News на српском',
-    defaultCaptionOffscreenText: 'Потпис ',
-    audioCaptionOffscreenText: 'Потпис испод аудио записа ',
-    videoCaptionOffscreenText: 'Потпис испод видеа ',
-    imageCaptionOffscreenText: 'Потпис испод фотографије ',
+    defaultCaptionOffscreenText: 'Потпис, ',
+    audioCaptionOffscreenText: 'Потпис испод аудио записа, ',
+    videoCaptionOffscreenText: 'Потпис испод видеа, ',
+    imageCaptionOffscreenText: 'Потпис испод фотографије, ',
     imageCopyrightOffscreenText: 'Аутор фотографије, ',
     footer: {
       trustProjectLink: {
@@ -282,7 +290,7 @@ export const service = {
       header: 'Најчитаније',
       lastUpdated: 'Последњи пут ажурирано:',
       numberOfItems: 10,
-      hasMostRead: false,
+      hasMostRead: true,
     },
     navigation: [
       {
@@ -310,13 +318,18 @@ export const service = {
         url: '/serbian/cyr/popular/read',
       },
     ],
+    scriptLink: {
+      text: 'Lat',
+      offscreenText: 'Latin',
+      variant: 'lat',
+    },
     translations: {
       seeAll: 'Погледајте све',
       home: 'Главна страница',
       currentPage: 'Отворена страница',
       skipLinkText: 'Пређите на садржај',
       relatedContent: 'Повезано',
-      sections: 'Одељци',
+      navMenuText: 'Одељци',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плејер',
         audioPlayer: 'Аудио плејер',
@@ -325,7 +338,7 @@ export const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Страница није пронађена',
+          title: 'Страница није пронађена',
           message:
             'Извините, страница коју сте тражили није нађена. Молимо вас да покушате:',
           solutions: [
@@ -340,12 +353,12 @@ export const service = {
         },
         500: {
           statusCode: '500',
-          title: '500 - Greška internog servera',
+          title: 'Грешка интерног сервера',
           message:
             'Извините, страница коју сте тражили није нађена. Молимо вас да покушате:',
           solutions: [
             'Притисните тастер за освежавање у вашем претраживачу',
-            'Posetite kasnije stranicu',
+            'Посетите касније страницу',
           ],
           callToActionFirst: 'Молимо вас да посетите главну страницу ',
           callToActionLinkText: 'BBC News на српском',
@@ -383,13 +396,13 @@ export const service = {
               first: 'Користимо ',
               linkText: 'колачиће',
               last:
-                '  да бисмо вам пружили најбоље искуство на интернету. Молимо вас да нас обавестите да ли се слажете са употребом свих колачића.',
+                ' да бисмо вам пружили најбоље искуство на интернету. Молимо вас да нас обавестите да ли се слажете са употребом свих колачића.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
               first: 'Ми и наши партнери користимо технологије попут ',
-              linkText: 'колачића',
+              linkText: 'колачиће',
               last:
                 ' и прикупљамо податке претраживача да бисмо вам понудили најквалитетније искуство на интернету и персонализовали садржај и огласе који вам се приказују. Молимо вас да нас обавестите да ли се слажете.',
               linkUrl:

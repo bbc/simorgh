@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Ìgbà tí a ṣe àfíkun gbẹ̀yìn',
     atiAnalyticsAppName: 'news-yoruba',
     atiAnalyticsProducerId: '107',
+    chartbeatDomain: 'yoruba.bbc.co.uk',
     brandName: 'BBC News Yorùbá',
     product: 'BBC News',
     serviceLocalizedName: 'Yorùbá',
@@ -33,7 +34,6 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -51,7 +51,7 @@ export const service = {
       currentPage: 'Ojú ewé to wà yìí',
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
       relatedContent: 'Àwọn afíkun lórí ìròyìn yìí',
-      sections: 'Àwọn abala',
+      navMenuText: 'Àwọn abala',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -162,6 +162,9 @@ export const service = {
       lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
