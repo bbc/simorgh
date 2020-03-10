@@ -1902,7 +1902,7 @@ const genServices = {
             // '/sinhala/world/2015/09/150919_technology_at_schools', // TC2 MAP
           ],
           test: [
-            '/sinhala/world-23257567', // CPS MAP
+            // '/sinhala/world-23257567', // CPS MAP
             // '/sinhala/multimedia/2016/03/160323_si_test_audio_map', // TC2 MAP with audio clip
           ],
           local: [
