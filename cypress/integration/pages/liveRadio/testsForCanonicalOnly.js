@@ -26,34 +26,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           ).should('be.visible');
         });
       });
-
-      it('should play the media', () => {
-        cy.get(
-          'div[class^="StyledAudioContainer"] iframe[class^="StyledIframe"]',
-        ).then($iframe => {
-          cy.wrap($iframe.prop('contentWindow'), {
-            timeout: 8000,
-          })
-            .its('embeddedMedia.playerInstances.mediaPlayer.ready')
-            .should('eq', true);
-        });
-
-        const playButton = 'button#p_audioui_playpause.audioButton';
-
-        cy.get('iframe').then(iframe => {
-          cy.wrap(iframe.contents().find('iframe'))
-            .should(inner => expect(inner.contents().find(playButton)).to.exist)
-            .then(inner => cy.wrap(inner.contents().find(playButton)).click())
-            .then(() => {
-              cy.wrap(iframe.prop('contentWindow'), {
-                timeout: 8000,
-              })
-                .its('embeddedMedia.playerInstances.mediaPlayer')
-                .invoke('currentTime')
-                .should('be.gt', 0);
-            });
-        });
-      });
     });
 
     // TODO Chartbeat not yet implemented
