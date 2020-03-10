@@ -9,6 +9,8 @@ import {
   validAresMediaVideoBlock,
   validAresMediaAudioBlock,
   validAresMetadataBlock,
+  validAresMediaVideoLiveStreamBlock,
+  validAresMediaLiveAudioBlock,
   missingAresMediaMetadataBlock,
   multipleAresMetadataBlock,
 } from '../../fixtureData';
@@ -63,6 +65,34 @@ describe('helper', () => {
         'https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg',
       );
     });
+  });
+
+  it('should return a valid thumbnail Uri for video live stream assets', () => {
+    expect(getThumbnailUri(validAresMediaVideoLiveStreamBlock)).toEqual(
+      'https://b.files.bbci.co.uk/15E0C/test/_63721698_p01kx435.jpg',
+    );
+  });
+
+  it('should return a valid thumbnail Uri for https assets', () => {
+    const liveStreamBlockWithHttpsImageUrl = {
+      ...validAresMediaVideoLiveStreamBlock,
+      model: {
+        ...{
+          imageUrl:
+            'https://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg',
+        },
+      },
+    };
+
+    expect(getThumbnailUri(liveStreamBlockWithHttpsImageUrl)).toEqual(
+      'https://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg',
+    );
+  });
+
+  it('should return a valid thumbnail Uri for live audio assets', () => {
+    expect(getThumbnailUri(validAresMediaLiveAudioBlock)).toEqual(
+      'https://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg',
+    );
   });
 
   describe('getUploadDate', () => {

@@ -15,10 +15,22 @@ const defaultToggleState = {
     navOnArticles: {
       enabled: true,
     },
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
+    },
   },
   live: {
     navOnArticles: {
       enabled: false,
+    },
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
     },
   },
 };
