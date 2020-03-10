@@ -8,8 +8,8 @@ Feature: Live Radio Player
         Examples:
             | URL                                                        |
             | https://www.test.bbc.com/korean/bbc_korean_radio/liveradio |
-# amp not currently supported
-# | https://www.test.bbc.com/korean/bbc_korean_radio/liveradio.amp |
+    # amp not currently supported
+    # | https://www.test.bbc.com/korean/bbc_korean_radio/liveradio.amp |
 
     @live
     Scenario Outline: Verify audio plays on live radio page
@@ -17,7 +17,7 @@ Feature: Live Radio Player
         When I click the play radio button
         Then the radio plays
         Examples:
-            | URL                                                        |
+            | URL                                                   |
             | https://www.bbc.com/korean/bbc_korean_radio/liveradio |
 # amp not currently supported
 # | https://www.bbc.com/korean/bbc_korean_radio/liveradio.amp |
