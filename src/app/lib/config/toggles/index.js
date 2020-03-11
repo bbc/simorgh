@@ -18,6 +18,9 @@ const toggles = {
     radioSchedule: {
       enabled: true,
     },
+    ads: {
+      enabled: true,
+    },
   },
   test: {
     chartbeatAnalytics: {
@@ -37,6 +40,9 @@ const toggles = {
     },
     radioSchedule: {
       enabled: false,
+    },
+    ads: {
+      enabled: true,
     },
   },
   stage: {
@@ -58,6 +64,9 @@ const toggles = {
     radioSchedule: {
       enabled: false,
     },
+    ads: {
+      enabled: false,
+    },
   },
   live: {
     chartbeatAnalytics: {
@@ -76,6 +85,9 @@ const toggles = {
       enabled: true,
     },
     radioSchedule: {
+      enabled: false,
+    },
+    ads: {
       enabled: false,
     },
   },

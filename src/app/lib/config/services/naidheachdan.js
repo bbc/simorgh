@@ -15,6 +15,7 @@ import 'moment/locale/gd';
 
 export const service = {
   default: {
+    ads: false,
     lang: `gd`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Ùraichte',

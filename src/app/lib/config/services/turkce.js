@@ -16,6 +16,7 @@ import 'moment/locale/tr';
 
 export const service = {
   default: {
+    ads: false,
     lang: `tr`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Güncelleme',

@@ -15,6 +15,7 @@ import 'moment/locale/cy';
 
 export const service = {
   default: {
+    ads: false,
     lang: `cy`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Wedi ei ddiweddaru',
