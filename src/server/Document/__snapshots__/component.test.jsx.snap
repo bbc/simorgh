@@ -74,7 +74,7 @@ exports[`Document Component should render AMP version correctly 1`] = `
   </head>
   <body>
     <div
-      class="StyledDiv-sc-1dngwtn-0 jooyfy"
+      class="StyledDiv-sc-1dngwtn-0 riLLS"
       id="root"
     >
       <h1
@@ -131,7 +131,7 @@ exports[`Document Component should render correctly 1`] = `
   </head>
   <body>
     <div
-      class="StyledDiv-sc-1dngwtn-0 jooyfy"
+      class="StyledDiv-sc-1dngwtn-0 riLLS"
       id="root"
     >
       <h1

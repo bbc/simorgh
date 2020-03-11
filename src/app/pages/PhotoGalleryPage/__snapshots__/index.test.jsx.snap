@@ -126,7 +126,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 
 .c0 {
   margin: 0 auto;
-  background: #FDFDFD;
   padding-bottom: 2rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -1553,7 +1552,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 .c0 {
   margin: 0 auto;
-  background: #FDFDFD;
   padding-bottom: 2rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -2893,7 +2891,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 .c15 {
   margin: 0 auto;
-  background: #FDFDFD;
   padding-bottom: 2rem;
 }
 
@@ -3209,7 +3206,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 .c0 {
   margin: 0 auto;
-  background: #FDFDFD;
   padding-bottom: 2rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -4681,7 +4677,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 .c0 {
   margin: 0 auto;
-  background: #FDFDFD;
   padding-bottom: 2rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -5887,7 +5882,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   <body>
     .c34 {
   margin: 0 auto;
-  background: #FDFDFD;
   padding-bottom: 2rem;
 }
 
@@ -6394,7 +6388,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 .c0 {
   margin: 0 auto;
-  background: #FDFDFD;
   padding-bottom: 2rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
