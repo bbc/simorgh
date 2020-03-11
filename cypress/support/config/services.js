@@ -809,7 +809,7 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/igbo/media-42986440', // CPS MAP with audio clip
+            // '/igbo/media-42986440', // CPS MAP with audio clip
           ],
           test: [
             // '/igbo/media-23256786'
@@ -1299,7 +1299,7 @@ const genServices = {
             // '/nepali/multimedia/2013/08/130806_boudhavideo', // TC2 MAP
           ],
           test: [
-            '/nepali/media-23269034', // CPS MAP with audio clip
+            // '/nepali/media-23269034', // CPS MAP with audio clip
             // '/nepali/multimedia/2016/07/160725_tc2_testmap1', // TC2 MAP
           ],
           local: [
