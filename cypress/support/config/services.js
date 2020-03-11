@@ -83,7 +83,7 @@ const genServices = {
           },
           test: {
             paths: [
-              // '/afaanoromoo/23149891', // CPS MAP with video clip
+              '/afaanoromoo/23149891', // CPS MAP with video clip
             ],
             enabled: false,
           },
