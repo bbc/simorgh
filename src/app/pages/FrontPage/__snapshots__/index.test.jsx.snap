@@ -25,7 +25,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                 chartbeat
               </div>
               <main
-                class="StyledFrontPageMain-sc-58u5qv-0 jXCNVc"
                 role="main"
               >
                 <h1
@@ -48,7 +47,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </span>
                 </h1>
                 <div
-                  class="StyledFrontPageDiv-sc-58u5qv-1 biyoqx"
+                  class="StyledFrontPageDiv-sc-58u5qv-0 fCyXlu"
                 >
                   <section
                     aria-labelledby="Top-stories"
