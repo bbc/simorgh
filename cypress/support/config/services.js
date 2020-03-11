@@ -171,11 +171,15 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/amharic/bbc_amharic_radio/liveradio'],
-          test: ['/amharic/bbc_amharic_radio/liveradio'],
+          live: [
+            // '/amharic/bbc_amharic_radio/liveradio',
+          ],
+          test: [
+            // '/amharic/bbc_amharic_radio/liveradio',
+          ],
           local: ['/amharic/bbc_amharic_radio/liveradio'],
         },
-        smoke: true,
+        smoke: false,
       },
       mediaAssetPage: {
         paths: {
