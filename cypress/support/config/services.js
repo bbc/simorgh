@@ -2854,8 +2854,8 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            // '/yoruba/afrika-51116686'
-          ], // CPS MAP with video
+            // '/yoruba/afrika-51116686' // CPS MAP with video
+          ],
           test: [
             // '/yoruba/media-23256797'
           ],
