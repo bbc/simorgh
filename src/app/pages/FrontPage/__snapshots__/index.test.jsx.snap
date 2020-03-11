@@ -750,7 +750,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         role="list"
                       >
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -791,7 +791,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -832,7 +832,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -873,7 +873,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -914,7 +914,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -955,7 +955,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -996,7 +996,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1037,7 +1037,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1078,7 +1078,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1119,7 +1119,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >

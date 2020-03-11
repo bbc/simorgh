@@ -165,7 +165,11 @@ const CanonicalMostRead = ({
           maxTwoColumns={maxTwoColumns}
         >
           {items.map((item, i) => (
-            <MostReadItemWrapper dir={dir} key={item.id}>
+            <MostReadItemWrapper
+              dir={dir}
+              key={item.id}
+              maxTwoColumns={maxTwoColumns}
+            >
               <MostReadRank
                 service={service}
                 script={script}
