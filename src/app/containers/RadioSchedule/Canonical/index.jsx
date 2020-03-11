@@ -103,8 +103,6 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
     fetchRadioScheduleData(endpoint);
   }, [endpoint, service, script, timezone, locale]);
 
-  console.log(schedule);
-
   if (!schedule) {
     return null;
   }
