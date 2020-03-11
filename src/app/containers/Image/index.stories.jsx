@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import ImageContainer from '.';
-import { Grid } from '#lib/styledGrid';
+import { GridWrapper } from '#lib/styledGrid';
 import {
   custom,
   imageData,
@@ -13,22 +13,22 @@ import {
 storiesOf('Containers|Image within grid', module)
   .addParameters({ chromatic: { disable: true } })
   .add('landscape image', () => (
-    <Grid>
+    <GridWrapper>
       <ImageContainer {...imageData(landscape)} />
-    </Grid>
+    </GridWrapper>
   ))
   .add('portrait image', () => (
-    <Grid>
+    <GridWrapper>
       <ImageContainer {...imageData(portrait)} />
-    </Grid>
+    </GridWrapper>
   ))
   .add('square image', () => (
-    <Grid>
+    <GridWrapper>
       <ImageContainer {...imageData(square)} />
-    </Grid>
+    </GridWrapper>
   ))
   .add('custom ratio image', () => (
-    <Grid>
+    <GridWrapper>
       <ImageContainer {...imageData(custom)} />
-    </Grid>
+    </GridWrapper>
   ));
