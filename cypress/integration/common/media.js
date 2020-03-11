@@ -23,7 +23,7 @@ export const assertMediaPlayerIsReady = iframe => {
     .should('eq', true);
 };
 
-export const playMedia = (outerIFrameClass, playButton) => {
+export const playMedia = (outerIFrameClass, playButton, options) => {
   cy.get(
     `div[class^="${outerIFrameClass}"] ${iframeSelector()}`,
   ).then($iframe => assertMediaPlayerIsReady($iframe));
@@ -32,34 +32,10 @@ export const playMedia = (outerIFrameClass, playButton) => {
   cy.get(iframeSelector()).then(iframe => {
     cy.wrap(iframe.contents().find('iframe'))
       .should(inner => expect(inner.contents().find(playButton)).to.exist)
-      .then(inner =>
-        cy.wrap(inner.contents().find(playButton)).click({ force: true }),
-      );
+      .then(inner => cy.wrap(inner.contents().find(playButton)).click(options));
   });
 };
 
-export const playMediaWithPlaceholder = (outerIFrameClass, playButton) => {
-  if (isAmp()) {
-    playMedia(outerIFrameClass, playButton);
-  } else {
-    cy.get(`div[class^="${outerIFrameClass}"]`)
-      .within(() => {
-        cy.get(playButton);
-      })
-      .click()
-      .should('not.exist')
-      .then(() => {
-        cy.get('iframe').then($iframe => {
-          assertMediaPlayerIsReady($iframe);
-        });
-      });
-  }
-};
-
-Then('the video clip plays', () => {
-  assertMediaIsPlaying();
-});
-
-Then('the audio clip plays', () => {
+Then(/the (audio|video) clip plays/, () => {
   assertMediaIsPlaying();
 });
