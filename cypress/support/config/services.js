@@ -545,11 +545,11 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            // '/gahuza/48549182', // CPS MAP
+            '/gahuza/amakuru-51710168', // CPS MAP with audio clip
             // '/gahuza/video/2015/12/151201_100womenburundi', // TC2 MAP
           ],
           test: [
-            // '/gahuza/amakuru-23257470', // CPS MAP
+            '/gahuza/amakuru-23257470', // CPS MAP with video clip
             // '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP
           ],
           local: [
@@ -557,7 +557,7 @@ const genServices = {
             // '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP
           ],
         },
-        smoke: false,
+        smoke: true,
       },
       photoGalleryPage: {
         paths: {
@@ -809,7 +809,7 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            // '/igbo/media-42986440'
+            '/igbo/media-42986440', // CPS MAP with audio clip
           ],
           test: [
             // '/igbo/media-23256786'
@@ -1075,7 +1075,7 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            // '/kyrgyz/magazine-51509456', // CPS MAP
+            // '/kyrgyz/magazine-51509456', // CPS MAP with video
             // '/kyrgyz/multimedia/2014/09/140903_iv_auturgan', // TC2 MAP
           ],
           test: [
@@ -1299,7 +1299,7 @@ const genServices = {
             // '/nepali/multimedia/2013/08/130806_boudhavideo', // TC2 MAP
           ],
           test: [
-            // '/nepali/media-23269034', // CPS MAP with audio clip
+            '/nepali/media-23269034', // CPS MAP with audio clip
             // '/nepali/multimedia/2016/07/160725_tc2_testmap1', // TC2 MAP
           ],
           local: [
@@ -1479,7 +1479,7 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/persian/world-51497110', // CPS MAP
+            '/persian/world-51497110', // CPS MAP with video clip
             // '/persian/world/2016/06/160613_om_naked_dining', // TC2 MAP
           ],
           test: [
@@ -2658,11 +2658,11 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            // '/urdu/punjabi-video-42830182', // CPS MAP
+            '/urdu/entertainment-51584098', // CPS MAP with audio clip
             // '/urdu/multimedia/2014/11/141104_hindu_riaz_kq', // TC2 MAP
           ],
           test: [
-            // '/urdu/world-23268929', // CPS MAP
+            '/urdu/world-23268929', // CPS MAP with video clip
             // '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP
           ],
           local: [
@@ -2670,7 +2670,7 @@ const genServices = {
             // '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP
           ],
         },
-        smoke: false,
+        smoke: true,
       },
       photoGalleryPage: {
         paths: {
