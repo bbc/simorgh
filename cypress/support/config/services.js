@@ -1441,11 +1441,11 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            // '/pashto/world-51657953', // CPS MAP with video clip
+            '/pashto/arts-and-literature-46787030', // CPS MAP with audio clip
             // '/pashto/multimedia/2016/08/160827_gn_southafrica_female_farmer', // TC2 MAP with video clip
           ],
           test: [
-            // '/pashto/media-23257523', // CPS MAP with video clip
+            '/pashto/media-23257523', // CPS MAP with video clip
             // '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP with video clip
           ],
           local: [
@@ -1453,7 +1453,7 @@ const genServices = {
             // '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP with video clip
           ],
         },
-        smoke: false,
+        smoke: true,
       },
       photoGalleryPage: {
         paths: {
@@ -2722,11 +2722,11 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/urdu/entertainment-51584098', // CPS MAP with audio clip
+            // '/urdu/entertainment-51584098', // CPS MAP with audio clip
             // '/urdu/multimedia/2014/11/141104_hindu_riaz_kq', // TC2 MAP with video clip
           ],
           test: [
-            '/urdu/world-23268929', // CPS MAP with video clip
+            // '/urdu/world-23268929', // CPS MAP with video clip
             // '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP with video clip
           ],
           local: [
@@ -2734,7 +2734,7 @@ const genServices = {
             // '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP with video clip
           ],
         },
-        smoke: true,
+        smoke: false,
       },
       photoGalleryPage: {
         paths: {
