@@ -1,6 +1,6 @@
 Feature: Media Player
 
-    @smoke
+    @smoke @test
     Scenario Outline: Video clip plays on a Media Asset Page
         Given I navigate to <URL>
         When I click the play video button
@@ -12,7 +12,7 @@ Feature: Media Player
             | gahuza/amakuru/2016/02/160215_map_amakuru_test1     |
             | gahuza/amakuru/2016/02/160215_map_amakuru_test1.amp |
 
-    @smoke
+    @smoke @test
     Scenario Outline: Audio clip plays on a Media Asset Page
         Given I navigate to <URL>
         When I click the play audio button
@@ -48,7 +48,7 @@ Feature: Media Player
             | hausa/multimedia/2016/07/160714_tc2_audiomap     |
             | hausa/multimedia/2016/07/160714_tc2_audiomap.amp |
 
-    @live
+    @smoke @live
     Scenario Outline: Video clip plays on a Media Asset Page
         Given I navigate to <URL>
         When I click the play video button
